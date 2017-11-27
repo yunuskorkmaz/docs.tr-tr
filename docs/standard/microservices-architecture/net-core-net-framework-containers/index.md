@@ -1,0 +1,23 @@
+---
+title: ".NET Core ve .NET Framework arasında Docker kapsayıcıları için seçme"
+description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | .NET Core ve .NET Framework arasında Docker kapsayıcıları için seçme"
+keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+author: CESARDELATORRE
+ms.author: wiwagn
+ms.date: 05/26/2017
+ms.prod: .net-core
+ms.technology: dotnet-docker
+ms.topic: article
+ms.openlocfilehash: f7a5fee26f4d138ae22f3551a25a674b22a2f6d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>.NET Core ve .NET Framework arasında Docker kapsayıcıları için seçme
+
+.NET ile Docker uygulamaları kapsayıcılı sunucu tarafı oluşturmak için iki desteklenen uygulamalar şunlardır: [.NET Framework](https://www.microsoft.com/net/download/framework) ve [.NET Core](https://www.microsoft.com/net/download/core). Birçok .NET standart bileşen paylaştıkları ve kodu arasında iki paylaşabilirsiniz. Ancak, bunları ve kullandığınız hangi uygulama gerçekleştirmek istediğinize göre değişir arasındaki temel farklar vardır. Bu bölümde her uygulama seçmek ne zaman hakkında yönergeler sağlar.
+
+
+>[!div class="step-by-step"]
+[Önceki] (.. / container-docker-introduction/docker-containers-images-registries.md) [sonraki] (genel-guidance.md)
