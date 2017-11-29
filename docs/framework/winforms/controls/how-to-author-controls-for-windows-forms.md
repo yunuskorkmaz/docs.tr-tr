@@ -1,0 +1,71 @@
+---
+title: "Nasıl yapılır: Windows Formları için Denetimler Yazma"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], creating
+- UserControl class [Windows Forms], Windows Forms
+- custom controls [Windows Forms], creating
+ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f42ee49a4690c23a563740993e721207d5dedea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="how-to-author-controls-for-windows-forms"></a><span data-ttu-id="eca54-102">Nasıl yapılır: Windows Formları için Denetimler Yazma</span><span class="sxs-lookup"><span data-stu-id="eca54-102">How to: Author Controls for Windows Forms</span></span>
+<span data-ttu-id="eca54-103">Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="eca54-103">A control represents a graphical link between the user and the program.</span></span> <span data-ttu-id="eca54-104">Bir denetim sağlayın veya verileri işlemek, kullanıcı girişi kabul, olaylara yanıt veya herhangi bir sayıda kullanıcı ve uygulama bağlanan diğer işlevleri gerçekleştirmek.</span><span class="sxs-lookup"><span data-stu-id="eca54-104">A control can provide or process data, accept user input, respond to events, or perform any number of other functions that connect the user and the application.</span></span> <span data-ttu-id="eca54-105">Bir denetim bir bileşen aslında bir grafik arabirimle olduğundan, bir bileşen yapar, yanı sıra kullanıcı etkileşimi sağlayan herhangi bir işlev görebilir.</span><span class="sxs-lookup"><span data-stu-id="eca54-105">Because a control is essentially a component with a graphical interface, it can serve any function that a component does, as well as provide user interaction.</span></span> <span data-ttu-id="eca54-106">Denetimleri belirli amaçlara hizmet için oluşturulan ve denetimleri yazma başka bir programlama bir görevdir.</span><span class="sxs-lookup"><span data-stu-id="eca54-106">Controls are created to serve specific purposes, and authoring controls is just another programming task.</span></span> <span data-ttu-id="eca54-107">Aklınızda aşağıdaki adımları işlem yazma denetimine genel bakış temsil eder.</span><span class="sxs-lookup"><span data-stu-id="eca54-107">With that in mind, the following steps represent an overview of the control authoring process.</span></span> <span data-ttu-id="eca54-108">Bağlantılar tek tek adımları ek bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="eca54-108">Links provide additional information on the individual steps.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="eca54-109">Web Forms kullanmak için bkz: özel bir denetim yazmak istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span><span class="sxs-lookup"><span data-stu-id="eca54-109">If you want to author a custom control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
+>   
+>  <span data-ttu-id="eca54-110">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="eca54-110">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="eca54-111">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="eca54-111">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="eca54-112">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="eca54-112">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+  
+### <a name="to-author-a-control"></a><span data-ttu-id="eca54-113">Bir denetim yazmak için</span><span class="sxs-lookup"><span data-stu-id="eca54-113">To author a control</span></span>  
+  
+1.  <span data-ttu-id="eca54-114">Denetim gerçekleştirmek istediğiniz ya da bu kısım belirlemek, uygulamanızda yürütülür.</span><span class="sxs-lookup"><span data-stu-id="eca54-114">Determine what you want your control to accomplish, or what part it will play in your application.</span></span> <span data-ttu-id="eca54-115">Dikkat edilecek noktalar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="eca54-115">Factors to consider are:</span></span>  
+  
+    -   <span data-ttu-id="eca54-116">Ne tür bir grafik arabirim gerekiyor?</span><span class="sxs-lookup"><span data-stu-id="eca54-116">What kind of graphical interface do you need?</span></span>  
+  
+    -   <span data-ttu-id="eca54-117">Hangi belirli kullanıcı etkileşimleri bu denetim kullanacak mı?</span><span class="sxs-lookup"><span data-stu-id="eca54-117">What specific user interactions will this control handle?</span></span>  
+  
+    -   <span data-ttu-id="eca54-118">Gereksinim duyduğunuz işlevselliği varolan tüm denetimleri tarafından sağlanır?</span><span class="sxs-lookup"><span data-stu-id="eca54-118">Is the functionality you need provided by any existing controls?</span></span>  
+  
+    -   <span data-ttu-id="eca54-119">Çeşitli Windows Forms denetimleri bir araya getirerek gereksinim duyduğunuz işlevselliği alabilir miyim?</span><span class="sxs-lookup"><span data-stu-id="eca54-119">Can you get the functionality you need by combining several Windows Forms controls?</span></span>  
+  
+2.  <span data-ttu-id="eca54-120">Denetim için nesne modeli gerekiyorsa, nasıl işlevselliği nesne modeli dağıtılmış ve işlevselliği denetim ve tüm alt nesnelerinin arasında bölmek belirleyin.</span><span class="sxs-lookup"><span data-stu-id="eca54-120">If you need an object model for your control, determine how functionality will be distributed throughout the object model, and divide up functionality between the control and any subobjects.</span></span> <span data-ttu-id="eca54-121">Karmaşık bir denetim planlama ya da birkaç işlevler eklemek istediğiniz nesne modeli yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="eca54-121">An object model may be useful if you are planning a complex control, or want to incorporate several functionalities.</span></span>  
+  
+3.  <span data-ttu-id="eca54-122">Tür belirleme denetimini (örneğin, kullanıcı denetimi, özel bir denetim, devralınan Windows Forms denetimi) gerekir.</span><span class="sxs-lookup"><span data-stu-id="eca54-122">Determine the type of control (for example, user control, custom control, inherited Windows Forms control) you need.</span></span> <span data-ttu-id="eca54-123">Ayrıntılar için bkz [denetim türü önerileri](../../../../docs/framework/winforms/controls/control-type-recommendations.md) ve [özel denetimler çeşit](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span><span class="sxs-lookup"><span data-stu-id="eca54-123">For details, see [Control Type Recommendations](../../../../docs/framework/winforms/controls/control-type-recommendations.md) and [Varieties of Custom Controls](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span></span>  
+  
+4.  <span data-ttu-id="eca54-124">Özellikleri, yöntemleri ve olayları denetimi ve alt nesnelerinin veya yan yapıları işlevleri hızlı ve uygun erişim düzeyleri (örneğin, ortak, korumalı vb.) atayın.</span><span class="sxs-lookup"><span data-stu-id="eca54-124">Express functionality as properties, methods, and events of the control and its subobjects or subsidiary structures, and assign appropriate access levels (for example, public, protected, and so on).</span></span>  
+  
+5.  <span data-ttu-id="eca54-125">Denetimi için özel boyama gerekiyorsa, bunun için kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="eca54-125">If you need custom painting for your control, add code for it.</span></span> <span data-ttu-id="eca54-126">Ayrıntılar için bkz [özel denetim boyama ve işleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span><span class="sxs-lookup"><span data-stu-id="eca54-126">For details, see [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).</span></span>  
+  
+6.  <span data-ttu-id="eca54-127">Denetim devraldığı varsa <xref:System.Windows.Forms.UserControl>, Denetim proje oluşturma ve çalışır durumda çalışma zamanı davranışını sınama **UserControl Test kapsayıcısı**.</span><span class="sxs-lookup"><span data-stu-id="eca54-127">If your control inherits from <xref:System.Windows.Forms.UserControl>, you can test its runtime behavior by building the control project and running it in the **UserControl Test Container**.</span></span> <span data-ttu-id="eca54-128">Daha fazla bilgi için bkz: [nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="eca54-128">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
+  
+7.  <span data-ttu-id="eca54-129">Ayrıca, test ve bir Windows uygulaması gibi yeni bir proje oluşturma ve bir kapsayıcıya yerleştirme tarafından denetiminizi hata ayıklama.</span><span class="sxs-lookup"><span data-stu-id="eca54-129">You can also test and debug your control by creating a new project, such as a Windows Application, and placing it into a container.</span></span> <span data-ttu-id="eca54-130">Bu işlemin bir parçası olarak gösterilen [izlenecek yol: Visual Basic ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).</span><span class="sxs-lookup"><span data-stu-id="eca54-130">This process is demonstrated as part of [Walkthrough: Authoring a Composite Control with Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md).</span></span>  
+  
+8.  <span data-ttu-id="eca54-131">Her bir özellik ekler gibi özellikleri yeni işlevselliği kullanmak için test projenize ekleyin.</span><span class="sxs-lookup"><span data-stu-id="eca54-131">As you add each feature, add features to your test project to exercise the new functionality.</span></span>  
+  
+9. <span data-ttu-id="eca54-132">Tasarım daraltmayı yineleyin.</span><span class="sxs-lookup"><span data-stu-id="eca54-132">Repeat, refining the design.</span></span>  
+  
+10. <span data-ttu-id="eca54-133">Paket ve denetiminizin dağıtın.</span><span class="sxs-lookup"><span data-stu-id="eca54-133">Package and deploy your control.</span></span> <span data-ttu-id="eca54-134">Ayrıntılar için bkz [dağıtma uygulamaları, hizmetleri ve bileşenleri](https://msdn.microsoft.com/library/wtzawcsz).</span><span class="sxs-lookup"><span data-stu-id="eca54-134">For details, see [Deploying Applications, Services, and Components](https://msdn.microsoft.com/library/wtzawcsz).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="eca54-135">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="eca54-135">See Also</span></span>  
+ [<span data-ttu-id="eca54-136">İzlenecek yol: Visual Basic ile bileşik denetim yazma</span><span class="sxs-lookup"><span data-stu-id="eca54-136">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [<span data-ttu-id="eca54-137">İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden devralma</span><span class="sxs-lookup"><span data-stu-id="eca54-137">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [<span data-ttu-id="eca54-138">Nasıl yapılır: UserControl sınıfından devralma</span><span class="sxs-lookup"><span data-stu-id="eca54-138">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [<span data-ttu-id="eca54-139">Nasıl yapılır: denetim sınıfından devralma</span><span class="sxs-lookup"><span data-stu-id="eca54-139">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [<span data-ttu-id="eca54-140">Nasıl yapılır: mevcut Windows Formları denetimlerinden devralma</span><span class="sxs-lookup"><span data-stu-id="eca54-140">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [<span data-ttu-id="eca54-141">Nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama</span><span class="sxs-lookup"><span data-stu-id="eca54-141">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [<span data-ttu-id="eca54-142">Özel denetim çeşitleri</span><span class="sxs-lookup"><span data-stu-id="eca54-142">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
