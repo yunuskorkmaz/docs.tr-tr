@@ -1,0 +1,66 @@
+---
+title: "CorpubPublish Ortak Sınıfı"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: CorpubPublish Coclass
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: CorpubPublish
+helpviewer_keywords: CorpubPublish coclass [.NET Framework debugging]
+ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
+topic_type: apiref
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3c1565c9321e64536139e02b239fbeb4247a58a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="corpubpublish-coclass"></a>CorpubPublish Coclass’ı
+Uygulama etki alanları ve işlemler hakkında bilgi yayımlamak için arabirimi sağlar.  
+  
+## <a name="syntax"></a>Sözdizimi  
+  
+```  
+coclass CorpubPublish {  
+    [default] interface ICorPublish;  
+    interface           ICorPublishProcess;  
+    interface           ICorPublishAppDomain;  
+    interface           ICorPublishProcessEnum;  
+    interface           ICorPublishAppDomainEnum;  
+};  
+```  
+  
+## <a name="interfaces"></a>Arabirimler  
+  
+|Arabirim|Açıklama|  
+|---------------|-----------------|  
+|[Icorpublish arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Bu işlemleri süreçler ve uygulama etki alanları hakkında bilgi yayımlamak için yöntemleri sağlar.|  
+|[Icorpublishappdomain arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Temsil eder ve bir işlemde bir uygulama etki alanı hakkında bilgi sağlar.|  
+|[Icorpublishappdomainenum arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Şu anda bir işlem içinde mevcut uygulama etki alanları koleksiyonu çapraz yöntemleri sağlar.|  
+|[Icorpublishprocess arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Bir bilgisayarda çalışan bir işlemi temsil eder.|  
+|[Icorpublishprocessenum arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Bir bilgisayarda çalışan işlemlerin bir koleksiyon geçiş yöntemleri sağlar.|  
+  
+## <a name="remarks"></a>Açıklamalar  
+ Tipik bir yayımlama senaryosu uygulama etki alanı içindeki bir bilgisayarda çalışan yönetilen kodda hata ayıklama isteyen bir geliştirici içerir. Barındırma ortamı birden fazla uygulama etki alanı bir işlem içinde çalışmıyor olabilir. Geliştirici, tüm bilgisayar üzerinde çalışan işlemleri listelemek için bir grafik kullanıcı arabirimi veya başka bir şekilde kullanmak ve belirli bir işlemin çekme ister misiniz? Listenin tüm yönetilen kod çalışan işlemleri içinde uygulama etki alanları içermelidir. Geliştirici belirli uygulama etki alanını tanımlamak ve bir hata ayıklayıcı bu etki alanına bağlayın.  
+  
+## <a name="requirements"></a>Gereksinimler  
+ **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Başlık:** CorPub.idl  
+  
+ **Kitaplığı:** CorGuids.lib  
+  
+ **.NET framework sürümleri:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

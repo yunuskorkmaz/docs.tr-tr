@@ -1,0 +1,91 @@
+---
+title: .NET standart yenilikler nelerdir?
+ms.custom: updateeachrelease
+ms.date: 11/08/2017
+ms.prod: .net
+ms.topic: article
+ms.technology: dotnet-standard
+ms.##devlang: dotnet
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e938c009b79af3b2f36094bbb74f4d38baeeac0b
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/11/2017
+---
+# <a name="whats-new-in-the-net-standard"></a>.NET standart yenilikler nelerdir?
+
+.NET standart sürümlü bir dizi standart bu sürümü ile uyumlu .NET uygulamaları üzerinde kullanılabilir olması gereken API tanımlayan bir resmi belirtimidir. .NET standart kitaplığı geliştiricileri yöneliktir. .NET standart sürümünü hedefleyen bir kitaplık standart bu sürümünü destekleyen tüm .NET Framework, .NET Core veya Xamarin uygulaması üzerinde kullanılabilir.
+
+En son .NET standart 2.0 sürümüdür. .NET Core iş yükü yüklü .NET Core 2.0 SDK'sı yanı sıra Visual Studio 2017 sürüm 15.3 ile dahil edilir.
+
+## <a name="supported-net-implementations"></a>Desteklenen .NET uygulamaları
+
+.NET standart 2.0 aşağıdaki .NET uygulamaları tarafından desteklenir:
+
+- .NET core 2.0
+- .NET Framework 4.6.1
+- Mono 5.4
+- Xamarin.iOS 10.14
+- Xamarin.Mac 3.8
+- Xamarin.Android 8.0
+- Evrensel Windows platformu 10.0.16299
+
+## <a name="whats-new-in-the-net-standard-20"></a>.NET standart 2.0 yenilikler nelerdir?
+ 
+.NET standart 2.0 aşağıdaki yeni özellikleri içerir:
+
+**Fazla genişletilmiş bir API kümesi**
+
+Sürüm 1.6 ile .NET standart API'leri daha küçük bir kısmı dahil. Dışlanan bunlar arasında .NET Framework veya Xamarin yaygın olarak kullanılan birçok API'ları bulunuyordu. Uygulamalar ve birden çok .NET uygulamalarında hedefleyen kitaplıklar geliştirirken geliştiriciler bilinen API'leri uygun donanımlarının Bul gerektirdiğinden, geliştirme, daha karmaşık hale getirir. .NET standart 2.0, .NET standart 1.6 içinde standard'ın önceki sürümünü kullanılabilir olan çok fazla 20.000 daha fazla API'leri ekleyerek bu sınırlamaya giderir. .NET standart 2.0 için eklenene API'ları listesi için bkz: [.NET standart 2.0 vs 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md). 
+
+Bazı eklemeler <xref:System> ad alanı .NET standart 2.0 içerir:
+
+- Desteği <xref:System.AppDomain> sınıfı.
+- Diziler ek üyelerinden ile çalışmak için daha iyi destek <xref:System.Array> sınıfı.
+- Ek üyeleri öznitelikleri ile çalışmak için daha iyi destek <xref:System.Attribute> sınıfı.
+- Daha iyi Takvim desteği ve ek biçimlendirme seçeneklerini <xref:System.DateTime> değerleri.
+- Ek <xref:System.Decimal> işlevselliği yuvarlama.
+- Ek işlevsellik <xref:System.Environment> sınıfı.
+- Gelişmiş atık toplayıcı üzerinde denetim <xref:System.GC> sınıfı.
+- Dize karşılaştırması, numaralandırma ve içinde normalleştirme için gelişmiş destek <xref:System.String> sınıfı.
+- Ayarlamaları ve geçiş saat gün ışığından yararlanma desteği <xref:System.TimeZoneInfo.AdjustmentRule> ve <xref:System.TimeZoneInfo.TransitionTime> sınıfları.
+- İşlevindeki'önemli ölçüde geliştirilmiş <xref:System.Type> sınıfı.
+- Bir özel durum Oluşturucusu ile ekleyerek nesneleri seri durumdan çıkarma özel durumu için daha iyi destek <xref:System.Runtime.Serialization.SerializationInfo> ve <xref:System.Runtime.Serialization.StreamingContext> parametreleri.
+
+**.NET Framework kitaplıkları için desteği**
+
+Kitaplıkları zorlamayı çoğunluğu .NET Framework yerine .NET standart hedefleyin. Ancak, bu kitaplıkları çağrılarında .NET standart 2.0 dahil API'lerine çoğu. .NET standart 2.0 ile başlayarak, .NET Framework kitaplıkları .NET standart bir kitaplıktan kullanarak erişebilirsiniz bir [uyumluluk dolgusu](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Bu uyumluluk katmanı geliştiricileri için saydamdır; .NET Framework kitaplıkları yararlanmak için bir şey yapmanız gerekmez.
+
+.NET Framework sınıf kitaplığı tarafından çağırılan API'lerin .NET standart 2.0 dahil edilmesi gerektiğini tek gereksinimdir.
+
+**Visual Basic desteği**
+
+Visual Basic'te .NET standart kitaplıkları şimdi geliştirebilirsiniz. Visual Studio 2017 sürüm 15.3 kullanarak Visual Basic geliştiricileri için ya da yüklü daha sonra .NET Core iş yükü ile Visual Studio artık bir .NET standart sınıf kitaplığı şablonu içerir. Diğer geliştirme araçları ve ortamlar kullanan Visual Basic geliştiricileri için kullandığınız [dotnet yeni](../../core/tools/dotnet-new.md) .NET standart kitaplığı projesi oluşturmak için komutu. Daha fazla bilgi için bkz: [.NET standart kitaplıkları için araç desteği](#tooling).
+
+<a name="tooling" />**.NET standart kitaplıkları için araç desteği**
+
+.NET Core 2.0 ve .NET standart 2.0, hem Visual Studio 2017'in çıkışıyla ve [.NET Core komut satırı arabirimi (CLI)](../../core/tools/index.md) araç .NET standart kitaplıkları oluşturmak için desteği içerir. 
+
+Visual Studio ile yüklerseniz **.NET Core platformlar arası geliştirme** iş yükü, aşağıdaki şekilde gösterildiği gibi bir proje şablonu kullanarak bir .NET standart 2.0 kitaplığı projesi oluşturabilirsiniz. 
+
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+![Yeni .NET standart Kitaplığı projesini ekleyin](./media/std-project-cs.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![Yeni .NET standart Kitaplığı projesini ekleyin](./media/std-project-vb.png)
+---
+
+Aşağıdaki .NET Core CLI kullanıyorsanız [dotnet yeni](../../core/tools/dotnet-new.md) komut .NET standart 2.0 hedefleyen bir sınıf kitaplığı projesi oluşturur.
+
+```csharp
+dotnet new classlib
+```
+```vb
+dotnet new classlib -lang vb
+```
+  
+## <a name="see-also"></a>Ayrıca Bkz.
+[.NET standart](../net-standard.md)
+[.NET standart giriş](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)

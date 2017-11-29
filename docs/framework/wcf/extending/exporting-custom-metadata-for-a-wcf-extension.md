@@ -1,0 +1,57 @@
+---
+title: "WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7615da8e718d75ba7d90e181ab756b3128bc82d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
+İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], meta veri dışarı aktarma, sistemi, hizmet uç noktaları açıklayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Özel meta verileri, sistem tarafından sağlanan meta verileri vericiler veremiyor XML öğelerden oluşur. Genellikle, bu kullanıcı tarafından tanımlanan davranışları ve bağlama öğeleri ve özellikleri ve bağlamalar ve sözleşmeler gereksinimleriyle ilgili ilke onaylamalarını özel WSDL öğeleri içerir.  
+  
+ Bu bölümde özel WSDL veya ilke onaylamalarını dışa aktarma açıklar ve dışarı aktarma işlemi kendisini odaklanmak değil. Meta veriler özel ya da sistem oluşturulmuş olmasına bakılmaksızın meta verileri alma ve verme türlerini kullanma hakkında daha fazla bilgi için bkz: [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+  
+## <a name="overview"></a>Genel Bakış  
+ Meta verileri kullanarak yayımlandığında <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> incelenir ve XSD ve--ilke onaylamalarını dahil olmak üzere--WSDL üretilen tüm sözleşmeler ve bağlamaları için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan özniteliklerini ve bağlamaları kullanarak destekleyebilir. Ancak, doğru olarak verilebilir önce özel davranışı öznitelikleri veya bağlama öğeleri desteği gerektirir.  
+  
+ Bu bölümde açıklanmaktadır:  
+  
+1.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> WSDL yayımlamadan önce WSDL oluşturma verileri, kullanıma sunan arabirim.  
+  
+2.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> ilke onaylamalarını WSDL veri aktarma işleminden önce ilke verilerini size sunar arabirimi.  
+  
+ Özel WSDL ve ilke onaylamalarını içe aktarma hakkında daha fazla bilgi için bkz: [alma özel meta verileri WCF uzantısı için](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).  
+  
+## <a name="exporting-custom-wsdl-elements"></a>Özel WSDL öğeleri dışarı aktarma  
+ Uygulama <xref:System.ServiceModel.Description.IWsdlExportExtension> işlemi davranışı, sözleşme davranışı, uç noktası davranışı veya bağlama öğesi (<xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>, veya <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> sırasıyla) ve davranışları veya bağlama öğeleri içine yerleştirin vermeye çalıştığınız hizmet açıklaması. (Davranışları ekleme hakkında daha fazla bilgi için bkz: [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)). <xref:System.ServiceModel.Description.IWsdlExportExtension> Çağrılır için bunu değil zaten aktarılmış olan, her bitiş noktasıyla ve her bitiş sözleşme ilk dışa aktarır. Gereksinimlerinize bağlı olarak ya da dışa aktarma işlemine katılabilirler:  
+  
+-   Kullanım <xref:System.ServiceModel.Description.WsdlContractConversionContext> dışarı aktarılan meta verilerde değiştirmek için <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> yöntemi.  
+  
+-   Kullanım <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> uç için dışarı aktarılan meta verileri değiştirmeye <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> yöntemi.  
+  
+ <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> Yöntemi tüm çağrılır <xref:System.ServiceModel.Description.IWsdlExportExtension> içinde uygulamaları <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> dışarı aktarılan örnek.  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> Yöntemi tüm çağrılır <xref:System.ServiceModel.Description.IWsdlExportExtension> uygulamaları ile <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> dışarı aktarılan örnek.  
+  
+ Daha fazla bilgi için bkz: [nasıl yapılır: özel WSDL dışarı](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md) ve örnek [özel WSDL yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md).  
+  
+## <a name="exporting-custom-policy-assertions"></a>Özel ilke onaylamalarını dışa aktarma  
+ Uygulama <xref:System.ServiceModel.Description.IPolicyExportExtension> üzerinde bir <xref:System.ServiceModel.Channels.BindingElement> ve WSDL desteği ve sözleşme özelliklerini bağlama hakkında özel ilke onaylamalarını yazmak için bağlama bağlama öğesi ekleyin. <xref:System.ServiceModel.Description.IPolicyExportExtension> Bağlama uygulanan bağlama öğesinde dışarı aktarılırken bir kez çağrılır ve geçirir <xref:System.ServiceModel.Description.PolicyConversionContext> için <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> yöntemi. Yöntemleri kullanabilirsiniz <xref:System.ServiceModel.Description.PolicyConversionContext> iletisi, işlem veya uç nokta konuları adresindeki WSDL bağlama iliştirilmiş ilke onaylamalarını eklemek için örnek.  
+  
+ Daha fazla bilgi için bkz: [nasıl yapılır: özel ilke onaylamalarını dışa](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ [Nasıl yapılır: özel WSDL dışarı aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Nasıl yapılır: özel ilke onaylamalarını dışa aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [WCF uzantısı için özel meta verileri alma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
