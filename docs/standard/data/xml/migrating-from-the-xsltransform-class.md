@@ -1,0 +1,129 @@
+---
+title: "Çok sınıftan geçirme"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b867b2d7eb2f4b1252579bbf1f47430d9a9a48f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="migrating-from-the-xsltransform-class"></a><span data-ttu-id="db3b4-102">Çok sınıftan geçirme</span><span class="sxs-lookup"><span data-stu-id="db3b4-102">Migrating From the XslTransform Class</span></span>
+<span data-ttu-id="db3b4-103">XSLT mimari olarak tasarlandığından [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] serbest bırakın.</span><span class="sxs-lookup"><span data-stu-id="db3b4-103">The XSLT architecture was redesigned in the [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] release.</span></span> <span data-ttu-id="db3b4-104"><xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirildi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-104">The <xref:System.Xml.Xsl.XslTransform> class has been replaced by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
+  
+ <span data-ttu-id="db3b4-105">Aşağıdaki bölümlerde bazı arasındaki farklar açıklanmaktadır <xref:System.Xml.Xsl.XslCompiledTransform> ve <xref:System.Xml.Xsl.XslTransform> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="db3b4-105">The following sections describe some of the main differences between the <xref:System.Xml.Xsl.XslCompiledTransform> and the <xref:System.Xml.Xsl.XslTransform> classes.</span></span>  
+  
+## <a name="performance"></a><span data-ttu-id="db3b4-106">Performans</span><span class="sxs-lookup"><span data-stu-id="db3b4-106">Performance</span></span>  
+ <span data-ttu-id="db3b4-107"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, birçok performans iyileştirmeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-107">The <xref:System.Xml.Xsl.XslCompiledTransform> class includes many performance improvements.</span></span> <span data-ttu-id="db3b4-108">Yeni XSLT işlemci ortak Ara benzer bir biçimde, ortak dil çalışma zamanı (CLR) başka bir programlama dili için yaptığı için aşağıya doğru XSLT stil sayfası derler.</span><span class="sxs-lookup"><span data-stu-id="db3b4-108">The new XSLT processor compiles the XSLT style sheet down to a common intermediate format, similar to what the common language runtime (CLR) does for other programming languages.</span></span> <span data-ttu-id="db3b4-109">Stil sayfası derlenmiş sonra önbelleğe alınmış ve yeniden kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-109">Once the style sheet is compiled, it can be cached and reused.</span></span>  
+  
+ <span data-ttu-id="db3b4-110"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı ayrıca çok daha hızlı hale diğer en iyi duruma getirmeleri içerir <xref:System.Xml.Xsl.XslTransform> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-110">The <xref:System.Xml.Xsl.XslCompiledTransform> class also includes other optimizations that make it much faster than the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="db3b4-111">Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıftır daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı, <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez üzerinde dönüştürme adı verilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-111">Although the overall performance of the <xref:System.Xml.Xsl.XslCompiledTransform> class is better than the <xref:System.Xml.Xsl.XslTransform> class, the <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> method of the <xref:System.Xml.Xsl.XslCompiledTransform> class might perform more slowly than the <xref:System.Xml.Xsl.XslTransform.Load%2A> method of the <xref:System.Xml.Xsl.XslTransform> class the first time it is called on a transformation.</span></span> <span data-ttu-id="db3b4-112">XSLT dosyasının yüklendiği önce derlenmelidir olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="db3b4-112">This is because the XSLT file must be compiled before it is loaded.</span></span> <span data-ttu-id="db3b4-113">Daha fazla bilgi için aşağıdaki blog gönderisine bakın: [XslCompiledTransform çok daha yavaş?](http://go.microsoft.com/fwlink/?LinkId=130590)</span><span class="sxs-lookup"><span data-stu-id="db3b4-113">For more information, see the following blog post: [XslCompiledTransform Slower than XslTransform?](http://go.microsoft.com/fwlink/?LinkId=130590)</span></span>  
+  
+## <a name="security"></a><span data-ttu-id="db3b4-114">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="db3b4-114">Security</span></span>  
+ <span data-ttu-id="db3b4-115">Varsayılan olarak, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, XSLT desteğini devre dışı bırakır `document()` işlevi ve katıştırılmış komut dosyası.</span><span class="sxs-lookup"><span data-stu-id="db3b4-115">By default, the <xref:System.Xml.Xsl.XslCompiledTransform> class disables support for the XSLT `document()` function and embedded scripting.</span></span> <span data-ttu-id="db3b4-116">Bu özellikler oluşturarak etkin hale getirilebilir bir <xref:System.Xml.Xsl.XsltSettings> etkin ve kendisine geçirme özelliklere sahip nesne <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-116">These features can be enabled by creating an <xref:System.Xml.Xsl.XsltSettings> object that has the features enabled and passing it to the <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> method.</span></span> <span data-ttu-id="db3b4-117">Aşağıdaki örnek, betik kullanımını etkinleştirmek ve XSLT dönüşümü gerçekleştirmeye gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-117">The following example shows how to enable scripting and perform an XSLT transformation.</span></span>  
+  
+ [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
+ [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
+  
+ <span data-ttu-id="db3b4-118">Daha fazla bilgi için bkz: [XSLT güvenlik konuları](../../../../docs/standard/data/xml/xslt-security-considerations.md).</span><span class="sxs-lookup"><span data-stu-id="db3b4-118">For more information, see [XSLT Security Considerations](../../../../docs/standard/data/xml/xslt-security-considerations.md).</span></span>  
+  
+## <a name="new-features"></a><span data-ttu-id="db3b4-119">Yeni Özellikler</span><span class="sxs-lookup"><span data-stu-id="db3b4-119">New Features</span></span>  
+  
+### <a name="temporary-files"></a><span data-ttu-id="db3b4-120">Geçici dosyalar</span><span class="sxs-lookup"><span data-stu-id="db3b4-120">Temporary Files</span></span>  
+ <span data-ttu-id="db3b4-121">Geçici dosyalar bazen XSLT sırasında oluşturulan işleniyor.</span><span class="sxs-lookup"><span data-stu-id="db3b4-121">Temporary files are sometimes generated during XSLT processing.</span></span> <span data-ttu-id="db3b4-122">Stil sayfası komut dosyası blokları içeriyorsa ya da hata ayıklama ayar ile derlenmiş ise true, geçici dosyaları % TEMP % klasöründe oluşturulabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-122">If a style sheet contains script blocks, or if it is compiled with the debug setting set to true, temporary files may be created in the %TEMP% folder.</span></span> <span data-ttu-id="db3b4-123">Bazı geçici dosyaları zamanlama sorunları nedeniyle silinmez örnekleri olabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-123">There may be instances when some temporary files are not deleted due to timing issues.</span></span> <span data-ttu-id="db3b4-124">Örneğin, dosyaları geçerli AppDomain veya sonlandırıcıyı, hata ayıklayıcı tarafından kullanılıyorsa <xref:System.CodeDom.Compiler.TempFileCollection> nesne bunları kaldırmak mümkün olmayacak.</span><span class="sxs-lookup"><span data-stu-id="db3b4-124">For example, if the files are in use by the current AppDomain or by the debugger, the finalizer of the <xref:System.CodeDom.Compiler.TempFileCollection> object will not be able to remove them.</span></span>  
+  
+ <span data-ttu-id="db3b4-125"><xref:System.Xml.Xsl.XslCompiledTransform.TemporaryFiles%2A> Özelliği tüm geçici dosyaların istemciden kaldırıldığından emin olmak için ek Temizleme için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-125">The <xref:System.Xml.Xsl.XslCompiledTransform.TemporaryFiles%2A> property can be used for additional cleanup to make sure that all temporary files are removed from the client.</span></span>  
+  
+### <a name="support-for-the-xsloutput-element-and-xmlwriter"></a><span data-ttu-id="db3b4-126">Öğe önceliğiyle desteği ve XmlWriter</span><span class="sxs-lookup"><span data-stu-id="db3b4-126">Support for the xsl:output Element and XmlWriter</span></span>  
+ <span data-ttu-id="db3b4-127"><xref:System.Xml.Xsl.XslTransform> Göz ardı sınıfı `xsl:output` dönüştürme çıkış gönderildiği ayarlarını bir <xref:System.Xml.XmlWriter> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-127">The <xref:System.Xml.Xsl.XslTransform> class ignored `xsl:output` settings when the transform output was sent to an <xref:System.Xml.XmlWriter> object.</span></span> <span data-ttu-id="db3b4-128"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfına sahip bir <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A> döndüren özelliği bir <xref:System.Xml.XmlWriterSettings> çıktı bilgilerini içeren bir nesne türetilen `xsl:output` stil sayfası öğesidir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-128">The <xref:System.Xml.Xsl.XslCompiledTransform> class has an <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A> property that returns an <xref:System.Xml.XmlWriterSettings> object containing the output information derived from the `xsl:output` element of the style sheet.</span></span> <span data-ttu-id="db3b4-129"><xref:System.Xml.XmlWriterSettings> Nesnesi oluşturmak için kullanılan bir <xref:System.Xml.XmlWriter> nesne için geçirilen doğru ayarlarla <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-129">The <xref:System.Xml.XmlWriterSettings> object is used to create an <xref:System.Xml.XmlWriter> object with the correct settings that can be passed to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="db3b4-130">Aşağıdaki C# kod bu davranış gösterir:</span><span class="sxs-lookup"><span data-stu-id="db3b4-130">The following C# code illustrates this behavior:</span></span>  
+  
+```  
+// Create the XslTransform object and load the style sheet.  
+XslCompiledTransform xslt = new XslCompiledTransform();  
+xslt.Load(stylesheet);  
+  
+// Load the file to transform.  
+XPathDocument doc = new XPathDocument(filename);  
+  
+// Create the writer.  
+XmlWriter writer = XmlWriter.Create(Console.Out, xslt.OutputSettings);  
+  
+// Transform the file and send the output to the console.  
+xslt.Transform(doc, writer);  
+writer.Close();  
+```  
+  
+### <a name="debug-option"></a><span data-ttu-id="db3b4-131">Debug seçeneği</span><span class="sxs-lookup"><span data-stu-id="db3b4-131">Debug Option</span></span>  
+ <span data-ttu-id="db3b4-132"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, Microsoft ile stil sayfası ayıklamanızı sağlar hata ayıklama bilgileri üretebilir [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] hata ayıklayıcı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-132">The <xref:System.Xml.Xsl.XslCompiledTransform> class can generate debug information, which enables you to debug the style sheet with the Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Debugger.</span></span> <span data-ttu-id="db3b4-133">Daha fazla bilgi edinmek için bkz. <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-133">See <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> for more information.</span></span>  
+  
+## <a name="behavioral-differences"></a><span data-ttu-id="db3b4-134">Davranış farklılıkları</span><span class="sxs-lookup"><span data-stu-id="db3b4-134">Behavioral Differences</span></span>  
+  
+### <a name="transforming-to-an-xmlreader"></a><span data-ttu-id="db3b4-135">XmlReader değerine dönüştürme</span><span class="sxs-lookup"><span data-stu-id="db3b4-135">Transforming to an XmlReader</span></span>  
+ <span data-ttu-id="db3b4-136"><xref:System.Xml.Xsl.XslTransform> Sınıfına sahip olarak dönüşüm sonuçları döndüren birkaç dönüştürme aşırı bir <xref:System.Xml.XmlReader> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-136">The <xref:System.Xml.Xsl.XslTransform> class has several Transform overloads that return transformation results as an <xref:System.Xml.XmlReader> object.</span></span> <span data-ttu-id="db3b4-137">Bu aşırı yük bir bellek içi gösterimine dönüşüm sonuçları için kullanılabilir (gibi <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument>) yükü serileştirme ve seri durumundan çıkarma sonuç XML yansıtılmasını olmadan ağacı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-137">These overloads can be used to load the transformation results into an in-memory representation (such as <xref:System.Xml.XmlDocument> or <xref:System.Xml.XPath.XPathDocument>) without incurring the overhead of serialization and deserialization of the resulting XML tree.</span></span> <span data-ttu-id="db3b4-138">Aşağıdaki C# kodu yük içine dönüşüm sonuçları gösterilmektedir bir <xref:System.Xml.XmlDocument> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-138">The following C# code shows how to load the transformation results into an <xref:System.Xml.XmlDocument> object.</span></span>  
+  
+```  
+// Load the style sheet  
+XslTransform xslt = new XslTransform();  
+xslt.Load("MyStylesheet.xsl");  
+  
+// Transform input document to XmlDocument for additional processing  
+XmlDocument doc = new XmlDocument();  
+doc.Load(xslt.Transform(input, (XsltArgumentList)null));  
+```  
+  
+ <span data-ttu-id="db3b4-139"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı için dönüştürme desteklemiyor bir <xref:System.Xml.XmlReader> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-139">The <xref:System.Xml.Xsl.XslCompiledTransform> class does not support transforming to an <xref:System.Xml.XmlReader> object.</span></span> <span data-ttu-id="db3b4-140">Ancak, bunu tarafından benzer bir şey kullanarak yapabilirsiniz <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> sonuç XML yüklenmedi yöntemi ağaç doğrudan bir <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-140">However, you can do something similar by using the <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> method to load the resulting XML tree directly from an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="db3b4-141">Aşağıdaki C# kodu kullanarak aynı görevi gerçekleştirmenin gösterilmiştir <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-141">The following C# code shows how to accomplish the same task using <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
+  
+```  
+// Transform input document to XmlDocument for additional processing  
+XmlDocument doc = new XmlDocument();  
+using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {  
+    xslt.Transform(input, (XsltArgumentList)null, writer);  
+}  
+```  
+  
+### <a name="discretionary-behavior"></a><span data-ttu-id="db3b4-142">İsteğe bağlı davranışı</span><span class="sxs-lookup"><span data-stu-id="db3b4-142">Discretionary Behavior</span></span>  
+ <span data-ttu-id="db3b4-143">W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-143">The W3C XSL Transformations (XSLT) Version 1.0 Recommendation includes areas in which the implementation provider may decide how to handle a situation.</span></span> <span data-ttu-id="db3b4-144">Bu alanlar isteğe bağlı davranış olduğu kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-144">These areas are considered to be discretionary behavior.</span></span> <span data-ttu-id="db3b4-145">Bazı alanlar vardır nerede <xref:System.Xml.Xsl.XslCompiledTransform> daha farklı şekilde davranan <xref:System.Xml.Xsl.XslTransform> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-145">There are several areas where the <xref:System.Xml.Xsl.XslCompiledTransform> behaves differently than the <xref:System.Xml.Xsl.XslTransform> class.</span></span> <span data-ttu-id="db3b4-146">Daha fazla bilgi için bkz: [kurtarılabilir XSLT hataları](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).</span><span class="sxs-lookup"><span data-stu-id="db3b4-146">For more information, see [Recoverable XSLT Errors](../../../../docs/standard/data/xml/recoverable-xslt-errors.md).</span></span>  
+  
+### <a name="extension-objects-and-script-functions"></a><span data-ttu-id="db3b4-147">Uzantı nesneleri ve komut dosyası işlevleri</span><span class="sxs-lookup"><span data-stu-id="db3b4-147">Extension Objects and Script Functions</span></span>  
+ <span data-ttu-id="db3b4-148"><xref:System.Xml.Xsl.XslCompiledTransform>iki yeni kullanma kısıtlamaları betik işlevleri sunar:</span><span class="sxs-lookup"><span data-stu-id="db3b4-148"><xref:System.Xml.Xsl.XslCompiledTransform> introduces two new restrictions on the use of script functions:</span></span>  
+  
+-   <span data-ttu-id="db3b4-149">Yalnızca genel yöntemleri gelen XPath ifadeleri çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-149">Only public methods may be called from XPath expressions.</span></span>  
+  
+-   <span data-ttu-id="db3b4-150">Aşırı birbirinden bağımsız değişken sayısına göre ayrılabilen.</span><span class="sxs-lookup"><span data-stu-id="db3b4-150">Overloads are distinguishable from each other based on the number of arguments.</span></span> <span data-ttu-id="db3b4-151">Birden fazla aşırı yüklemesiyle aynı sayıda bağımsız değişken varsa, bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="db3b4-151">If more than one overload has the same number of arguments, an exception will be raised.</span></span>  
+  
+ <span data-ttu-id="db3b4-152">İçinde <xref:System.Xml.Xsl.XslCompiledTransform>derleme zamanında komut dosyası işlevlerinin bir bağlama (yöntemi adı arama) oluşur ve XslTranform ile çalışılan stil sayfaları neden olabilir. özel durum ile yüklenen olduklarında <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-152">In <xref:System.Xml.Xsl.XslCompiledTransform>, a binding (method name lookup) to script functions occurs at compile time, and style sheets that worked with XslTranform may cause an exception when they are loaded with <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
+  
+ <span data-ttu-id="db3b4-153"><xref:System.Xml.Xsl.XslCompiledTransform>destekleyen sahip `msxsl:using` ve `msxsl:assembly` alt öğelerin `msxsl:script` öğesi.</span><span class="sxs-lookup"><span data-stu-id="db3b4-153"><xref:System.Xml.Xsl.XslCompiledTransform> supports having `msxsl:using` and `msxsl:assembly` child elements within the `msxsl:script` element.</span></span> <span data-ttu-id="db3b4-154">`msxsl:using` Ve `msxsl:assembly` öğeleri ek ad alanları ve derlemeler betik bloğundaki kullanılmak bildirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="db3b4-154">The `msxsl:using` and `msxsl:assembly` elements are used to declare additional namespaces and assemblies for use in the script block.</span></span> <span data-ttu-id="db3b4-155">Bkz: [komut dosyası blokları kullanarak msxsl: Script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="db3b4-155">See [Script Blocks Using msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md) for more information.</span></span>  
+  
+ <span data-ttu-id="db3b4-156"><xref:System.Xml.Xsl.XslCompiledTransform>ile aynı sayıda bağımsız değişken birden çok aşırı uzantısı nesneleri engelliyor.</span><span class="sxs-lookup"><span data-stu-id="db3b4-156"><xref:System.Xml.Xsl.XslCompiledTransform> prohibits extension objects that have multiple overloads with the same number of arguments.</span></span>  
+  
+### <a name="msxml-functions"></a><span data-ttu-id="db3b4-157">MSXML işlevleri</span><span class="sxs-lookup"><span data-stu-id="db3b4-157">MSXML Functions</span></span>  
+ <span data-ttu-id="db3b4-158">Ek MSXML işlevleri için eklenene desteği <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="db3b4-158">Support for additional MSXML functions have been added to the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="db3b4-159">Aşağıdaki listede, yeni veya geliştirilmiş işlevselliği açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="db3b4-159">The following list describes new or improved functionality:</span></span>  
+  
+-   <span data-ttu-id="db3b4-160">msxsl:node-ayarlayın: <xref:System.Xml.Xsl.XslTransform> bağımsız değişkeni gerekli [düğüm kümesi işlevi](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) işlevi sonuç ağacı parçası olabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-160">msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> required the argument of the [node-set Function](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) function to be a result tree fragment.</span></span> <span data-ttu-id="db3b4-161"><xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı bu gereksinime sahip değil.</span><span class="sxs-lookup"><span data-stu-id="db3b4-161">The <xref:System.Xml.Xsl.XslCompiledTransform> class does not have this requirement.</span></span>  
+  
+-   <span data-ttu-id="db3b4-162">msxsl:Version: Bu işlev desteklenir <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-162">msxsl:version: This function is supported in <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
+  
+-   <span data-ttu-id="db3b4-163">XPath uzantı işlevleri: [ms:string-compare işlevi](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc işlevi](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-URI işlevi](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-işleviadı](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number işlevi](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-işlevi tarih](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5), ve [ms:format-işlevi zaman](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) işlevleri artık desteklenmektedir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-163">XPath extension functions: The [ms:string-compare Function](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc Function](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri Function](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name Function](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number Function](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date Function](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5), and [ms:format-time Function](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) functions are now supported.</span></span>  
+  
+-   <span data-ttu-id="db3b4-164">Şema ilgili XPath uzantısı işlevleri: Bu işlevler tarafından yerel olarak desteklenmeyen <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="db3b4-164">Schema-related XPath extension functions: These functions are not supported natively by <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span> <span data-ttu-id="db3b4-165">Ancak, uzantı işlevleri uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="db3b4-165">However, they can be implemented as extension functions.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="db3b4-166">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="db3b4-166">See Also</span></span>  
+ [<span data-ttu-id="db3b4-167">XSLT dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="db3b4-167">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [<span data-ttu-id="db3b4-168">XslCompiledTransform sınıfını kullanma</span><span class="sxs-lookup"><span data-stu-id="db3b4-168">Using the XslCompiledTransform Class</span></span>](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
