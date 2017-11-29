@@ -1,0 +1,34 @@
+---
+title: "Önemli İzlemeler"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58322a472a59ee9d3ac9451ff1f20ed95405ac54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="significant-traces"></a><span data-ttu-id="b0ff0-102">Önemli İzlemeler</span><span class="sxs-lookup"><span data-stu-id="b0ff0-102">Significant Traces</span></span>
+<span data-ttu-id="b0ff0-103">Bu konu tarafından gösterilen önemli izlemeler bazıları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b0ff0-103">This topic lists some of the major traces emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>  
+  
+## <a name="significant-traces"></a><span data-ttu-id="b0ff0-104">Önemli İzlemeler</span><span class="sxs-lookup"><span data-stu-id="b0ff0-104">Significant Traces</span></span>  
+  
+|<span data-ttu-id="b0ff0-105">İzleme</span><span class="sxs-lookup"><span data-stu-id="b0ff0-105">Trace</span></span>|<span data-ttu-id="b0ff0-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b0ff0-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="b0ff0-107">İleti günlüğü izleme</span><span class="sxs-lookup"><span data-stu-id="b0ff0-107">Message log trace</span></span>|<span data-ttu-id="b0ff0-108">İzleme yayılan olduğunda bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ileti ileti günlüğü tarafından günlüğe özelliği `System.ServiceModel.MessageLogging` izleme kaynağını etkindir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-108">The trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is logged by the message logging feature when the `System.ServiceModel.MessageLogging` trace source is enabled.</span></span> <span data-ttu-id="b0ff0-109">Bu izleme tıklatarak iletisi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-109">Clicking this trace displays the message.</span></span> <span data-ttu-id="b0ff0-110">Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, ileti günlüğü izleme iletisi kaynak öznitelikte belirttiği.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-110">There are four configurable logging points for a message: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, also indicated by the Message Source attribute in the message log trace.</span></span>|  
+|<span data-ttu-id="b0ff0-111">Alınan ileti izleme</span><span class="sxs-lookup"><span data-stu-id="b0ff0-111">Message received trace</span></span>|<span data-ttu-id="b0ff0-112">Bu izleme yayılan olduğunda bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] varsa iletisi aldı `System.ServiceModel` izleme kaynağını bilgi veya ayrıntılı düzeyinde etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-112">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is received if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="b0ff0-113">Bu izleme iletisi bağıntı oku etkinliği Grafik görünümünde görmek gereklidir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-113">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="b0ff0-114">Gönderilen ileti izleme</span><span class="sxs-lookup"><span data-stu-id="b0ff0-114">Message sent trace</span></span>|<span data-ttu-id="b0ff0-115">Bu izleme yayılan olduğunda bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , iletinin gönderildiği `System.ServiceModel` izleme kaynağını bilgi veya ayrıntılı düzeyinde etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-115">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is sent if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="b0ff0-116">Bu izleme iletisi bağıntı oku etkinliği Grafik görünümünde görmek gereklidir.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-116">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="b0ff0-117">ChannelEndpointElement öğesini Al</span><span class="sxs-lookup"><span data-stu-id="b0ff0-117">Get ChannelEndpointElement</span></span>|<span data-ttu-id="b0ff0-118">Bu izleme bilgileri düzeyinde yapı kanal fabrikası yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-118">This trace is emitted in Construct channel factory, at information level.</span></span> <span data-ttu-id="b0ff0-119">Bu, istemci uç nokta açıklamasını Konuşmayı (uzak adres, bağlama, sözleşme adı) sağlar.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-119">It provides a description of the endpoint the client is talking to (remote address, binding, contract name).</span></span>|  
+|<span data-ttu-id="b0ff0-120">ServiceElement öğesini Al</span><span class="sxs-lookup"><span data-stu-id="b0ff0-120">Get ServiceElement</span></span>|<span data-ttu-id="b0ff0-121">Bu izleme, bilgi düzeyinde yapı hizmeti ana bilgisayarı yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-121">This trace is emitted in Construct service host, at Information level.</span></span> <span data-ttu-id="b0ff0-122">Bağlama ve hizmet sözleşmesini açıklamasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-122">It provides a description of the service contract and binding.</span></span>|  
+|<span data-ttu-id="b0ff0-123">SocketConnection oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0ff0-123">SocketConnection create</span></span>|<span data-ttu-id="b0ff0-124">Bu izleme, istemci tarafından gerçekleştirilen ilk işlem eylem ve hizmet alma bayt faaliyete yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-124">This trace is emitted in the first Process action performed by the client and in the Receive bytes activity on the service.</span></span> <span data-ttu-id="b0ff0-125">Yerel ve uzak IP adresleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-125">It provides the local and remote IP addresses.</span></span> <span data-ttu-id="b0ff0-126">Bilgi düzeyinde yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="b0ff0-126">It is emitted at Information level.</span></span>|
