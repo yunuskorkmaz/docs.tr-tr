@@ -1,0 +1,39 @@
+---
+title: "Özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
+ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90e837739edc74ee469f42720f52789ee1c8f6fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="custom-data-service-providers-wcf-data-services"></a><span data-ttu-id="31eda-102">Özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)</span><span class="sxs-lookup"><span data-stu-id="31eda-102">Custom Data Service Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="31eda-103">geç bağlama veri türlerine bağlı bir veri modeli tanımlamanıza olanak sağlayan bir dizi sağlayıcıları içerir.</span><span class="sxs-lookup"><span data-stu-id="31eda-103"> includes a set of providers that enables you to define a data model based on late-bound data types.</span></span>  
+  
+|<span data-ttu-id="31eda-104">Sağlayıcı</span><span class="sxs-lookup"><span data-stu-id="31eda-104">Provider</span></span>|<span data-ttu-id="31eda-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="31eda-105">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="31eda-106">Meta veri sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-106">Metadata provider</span></span>|<span data-ttu-id="31eda-107">Bu, çalışma zamanında bir özel veri modelini uygulayarak tanımlamanıza olanak sağlayan çekirdek özel veri hizmeti sağlayıcısıdır <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="31eda-107">This is the core custom data service provider that enables you to define a custom data model at runtime by implementing the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span>|  
+|<span data-ttu-id="31eda-108">Sorgu sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-108">Query provider</span></span>|<span data-ttu-id="31eda-109">Bu sağlayıcı kullanılarak tanımlanmış bir özel veri modeli sorguları yürütmek sağlar <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="31eda-109">This provider enables you to execute queries against a custom data model that is defined by using the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span> <span data-ttu-id="31eda-110">Sorgu sağlayıcısı uygulayarak oluşturulup <xref:System.Data.Services.Providers.IDataServiceQueryProvider> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="31eda-110">The query provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interface.</span></span>|  
+|<span data-ttu-id="31eda-111">Sağlayıcı güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="31eda-111">Update provider</span></span>|<span data-ttu-id="31eda-112">Bu sağlayıcı bir özel veri hizmeti sağlayıcısında gösterilen türleri güncelleştirmeler yapmak için ve eşzamanlılık yönetmenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="31eda-112">This provider enables you to make updates to types that are exposed in a custom data service provider and to manage concurrency.</span></span> <span data-ttu-id="31eda-113">Bir güncelleştirme sağlayıcı uygulama tarafından oluşturulan <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> arabirimi</span><span class="sxs-lookup"><span data-stu-id="31eda-113">An update provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interface</span></span>|  
+|<span data-ttu-id="31eda-114">Disk belleği sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-114">Paging provider</span></span>|<span data-ttu-id="31eda-115">Bu sağlayıcı özel veri hizmeti sağlayıcısı ile sunucu tabanlı sayfalama desteğini etkinleştirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="31eda-115">This provider is used with the custom data service provider to enable server-driven paging support.</span></span> <span data-ttu-id="31eda-116">Özel veri hizmeti için bir disk belleği sağlayıcı uygulama tarafından oluşturulan <xref:System.Data.Services.Providers.IDataServicePagingProvider> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="31eda-116">A paging provider for a custom data service is created by implementing the <xref:System.Data.Services.Providers.IDataServicePagingProvider> interface.</span></span>|  
+|<span data-ttu-id="31eda-117">Akış sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-117">Streaming provider</span></span>|<span data-ttu-id="31eda-118">Bu sağlayıcı ikili büyük nesne veri türlerini akışı olarak kullanıma sunmak etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="31eda-118">This provider enables you to expose binary large object data types as a stream.</span></span> <span data-ttu-id="31eda-119">Bir akış sağlayıcı uygulama tarafından oluşturulan <xref:System.Data.Services.Providers.IDataServiceStreamProvider> arabirimi.</span><span class="sxs-lookup"><span data-stu-id="31eda-119">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="31eda-120">Akış sağlayıcısı, Entity Framework ve yansıma veri kaynak sağlayıcıları ile de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="31eda-120">The streaming provider can also be used with Entity Framework and reflection data source providers.</span></span> <span data-ttu-id="31eda-121">Daha fazla bilgi için bkz: [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="31eda-121">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
+  
+ <span data-ttu-id="31eda-122">Daha fazla bilgi için bkz: [özel veri hizmeti sağlayıcıları](http://go.microsoft.com/fwlink/?LinkID=186850) ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] sağlayıcı araç setindeki [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span><span class="sxs-lookup"><span data-stu-id="31eda-122">For more information, see the article [Custom Data Service Providers](http://go.microsoft.com/fwlink/?LinkID=186850) and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Provider Toolkit in the [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="31eda-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="31eda-123">See Also</span></span>  
+ [<span data-ttu-id="31eda-124">Veri Hizmetleri sağlayıcıları</span><span class="sxs-lookup"><span data-stu-id="31eda-124">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="31eda-125">Entity Framework sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-125">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+ [<span data-ttu-id="31eda-126">Yansıma sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="31eda-126">Reflection Provider</span></span>](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
