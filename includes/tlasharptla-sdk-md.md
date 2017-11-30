@@ -1,0 +1,1 @@
+<span data-ttu-id="643e7-101">yazılım geliştirme seti (SDK)</span><span class="sxs-lookup"><span data-stu-id="643e7-101">software development kit (SDK)</span></span>

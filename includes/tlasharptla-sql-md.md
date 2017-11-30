@@ -1,0 +1,1 @@
+<span data-ttu-id="894bf-101">Yapılandırılmış Sorgu Dili (SQL)</span><span class="sxs-lookup"><span data-stu-id="894bf-101">Structured Query Language (SQL)</span></span>

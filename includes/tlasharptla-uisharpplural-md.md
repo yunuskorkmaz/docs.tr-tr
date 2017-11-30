@@ -1,0 +1,1 @@
+<span data-ttu-id="ea1ef-101">kullanıcı arabirimleri (UI’lar)</span><span class="sxs-lookup"><span data-stu-id="ea1ef-101">user interfaces (UIs)</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="88557-101">XAML Tarayıcısı Uygulaması (WPF)</span><span class="sxs-lookup"><span data-stu-id="88557-101">XAML Browser Application (WPF)</span></span>

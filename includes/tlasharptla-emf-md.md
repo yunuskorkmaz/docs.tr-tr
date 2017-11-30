@@ -1,0 +1,1 @@
+<span data-ttu-id="3e794-101">Geliştirilmiş Meta Dosyası (EMF)</span><span class="sxs-lookup"><span data-stu-id="3e794-101">Enhanced Metafile (EMF)</span></span>

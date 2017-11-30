@@ -1,0 +1,1 @@
+<span data-ttu-id="cd803-101">Microsoft Windows Rights Management (RM)</span><span class="sxs-lookup"><span data-stu-id="cd803-101">Microsoft Windows Rights Management (RM)</span></span>

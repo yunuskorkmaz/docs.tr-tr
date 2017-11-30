@@ -1,0 +1,1 @@
+<span data-ttu-id="15f0d-101">Microsoft Arka Plan Akıllı Aktarım Hizmeti (BITS)</span><span class="sxs-lookup"><span data-stu-id="15f0d-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

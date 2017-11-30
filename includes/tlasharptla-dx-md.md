@@ -1,0 +1,1 @@
+<span data-ttu-id="16dc7-101">Microsoft DirectX</span><span class="sxs-lookup"><span data-stu-id="16dc7-101">Microsoft DirectX</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="1f893-101">grafik kullanıcı arabirimleri (GUI'ler)</span><span class="sxs-lookup"><span data-stu-id="1f893-101">graphical user interfaces (GUIs)</span></span>

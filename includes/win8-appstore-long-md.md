@@ -1,0 +1,1 @@
+<span data-ttu-id="86885-101">Windows Mağazası</span><span class="sxs-lookup"><span data-stu-id="86885-101">Windows Store</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="73042-101">ortak dil çalışma zamanı (CLR)</span><span class="sxs-lookup"><span data-stu-id="73042-101">common language runtime (CLR)</span></span>

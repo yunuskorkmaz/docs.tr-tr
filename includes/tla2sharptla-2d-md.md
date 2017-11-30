@@ -1,0 +1,1 @@
+<span data-ttu-id="17e07-101">2B</span><span class="sxs-lookup"><span data-stu-id="17e07-101">2-D</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="424d5-101">genel bütünleştirilmiş kod önbelleği (GAC)</span><span class="sxs-lookup"><span data-stu-id="424d5-101">global assembly cache (GAC)</span></span>

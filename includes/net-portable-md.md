@@ -1,0 +1,1 @@
+<span data-ttu-id="3a935-101">Taşınabilir Sınıf Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="3a935-101">Portable Class Library</span></span>

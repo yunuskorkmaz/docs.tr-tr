@@ -1,0 +1,1 @@
+<span data-ttu-id="13d4b-101">Evrensel Adlandırma Kuralı (UNC)</span><span class="sxs-lookup"><span data-stu-id="13d4b-101">Universal Naming Convention (UNC)</span></span>

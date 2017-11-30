@@ -1,0 +1,1 @@
+<span data-ttu-id="6bd2e-101">cihazdan bağımsız birimler (birim başına 1/96 inç)</span><span class="sxs-lookup"><span data-stu-id="6bd2e-101">device-independent units (1/96th inch per unit)</span></span>

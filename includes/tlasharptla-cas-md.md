@@ -1,0 +1,1 @@
+<span data-ttu-id="07409-101">Kod Erişimi Güvenliği (CAS)</span><span class="sxs-lookup"><span data-stu-id="07409-101">Code Access Security (CAS)</span></span>

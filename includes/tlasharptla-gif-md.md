@@ -1,0 +1,1 @@
+<span data-ttu-id="45ffd-101">Grafik Değişim Biçimi (GIF)</span><span class="sxs-lookup"><span data-stu-id="45ffd-101">Graphics Interchange Format (GIF)</span></span>

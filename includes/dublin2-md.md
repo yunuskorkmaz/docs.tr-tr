@@ -1,0 +1,1 @@
+<span data-ttu-id="3dc53-101">barındırma özellikleri</span><span class="sxs-lookup"><span data-stu-id="3dc53-101">hosting features</span></span>

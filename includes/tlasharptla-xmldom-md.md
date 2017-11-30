@@ -1,0 +1,1 @@
+<span data-ttu-id="8053f-101">XML Belge Nesne Modeli (DOM)</span><span class="sxs-lookup"><span data-stu-id="8053f-101">XML Document Object Model (DOM)</span></span>

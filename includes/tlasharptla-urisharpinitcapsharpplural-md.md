@@ -1,0 +1,1 @@
+<span data-ttu-id="d7e55-101">Tekdüzen kaynak tanımlayıcıları (URI’ler)</span><span class="sxs-lookup"><span data-stu-id="d7e55-101">Uniform resource identifiers (URIs)</span></span>

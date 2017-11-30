@@ -1,0 +1,1 @@
+<span data-ttu-id="9a1cb-101">Microsoft Windows Grafik Cihaz Arabirimi (GDI)</span><span class="sxs-lookup"><span data-stu-id="9a1cb-101">Microsoft Windows Graphics Device Interface (GDI)</span></span>

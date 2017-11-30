@@ -1,12 +1,9 @@
 ---
-title: "Nasıl yapılır: Hangi .NET Framework Güncelleştirmelerinin Yüklü Olduğunu Belirleme"
-ms.custom: 
-ms.date: 03/30/2017
+title: "Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme"
+description: "Hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri bir bilgisayarda yüklü olduğunu belirleme hakkında bilgi edinin."
+ms.date: 11/21/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,69 +12,106 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c35705470a8e1b553eca2ca0c68d3b8b9b3f6fa6
+ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/27/2017
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a><span data-ttu-id="97f4f-102">Nasıl yapılır: Hangi .NET Framework Güncelleştirmelerinin Yüklü Olduğunu Belirleme</span><span class="sxs-lookup"><span data-stu-id="97f4f-102">How to: Determine Which .NET Framework Updates Are Installed</span></span>
-<span data-ttu-id="97f4f-103">Her bir bilgisayarda yüklü .NET Framework sürümü için yüklü güncelleştirmeler Windows Kayıt Defteri'nde listelenir.</span><span class="sxs-lookup"><span data-stu-id="97f4f-103">The installed updates for each version of the .NET Framework installed on a computer are listed in the Windows registry.</span></span> <span data-ttu-id="97f4f-104">Bu bilgileri görüntülemek için Kayıt Defteri Düzenleyicisi'ni (regedit.exe) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="97f4f-104">You can use the Registry Editor (regedit.exe) to view this information.</span></span>  
-  
- <span data-ttu-id="97f4f-105">Kayıt Defteri Düzenleyicisi'nde, .NET Framework sürümleri ve her sürüm için yüklü güncelleştirmeler farklı alt anahtarlarında saklanır.</span><span class="sxs-lookup"><span data-stu-id="97f4f-105">In the Registry Editor, the .NET Framework versions and installed updates for each version are stored in different subkeys.</span></span> <span data-ttu-id="97f4f-106">Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: belirlemek, .NET Framework sürümlerinin yüklendiğini](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span><span class="sxs-lookup"><span data-stu-id="97f4f-106">For information about detecting the installed version numbers, see [How to: Determine Which .NET Framework Versions Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span></span> <span data-ttu-id="97f4f-107">.NET Framework yükleme hakkında daha fazla bilgi için bkz: [geliştiriciler için .NET Framework'ü yüklemek](../../../docs/framework/install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="97f4f-107">For information about installing the .NET Framework, see [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md).</span></span>  
-  
-### <a name="to-find-installed-updates"></a><span data-ttu-id="97f4f-108">Yüklü güncelleştirmeleri bulmak için</span><span class="sxs-lookup"><span data-stu-id="97f4f-108">To find installed updates</span></span>  
-  
-1.  <span data-ttu-id="97f4f-109">Programını açın **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="97f4f-109">Open the program **regedit.exe**.</span></span> <span data-ttu-id="97f4f-110">Windows 8 ve üzeri başlangıç ekranını açmak ve bir ad yazın.</span><span class="sxs-lookup"><span data-stu-id="97f4f-110">In Windows 8 and higher open the Start screen and type the name.</span></span> <span data-ttu-id="97f4f-111">Önceki Windows sürümlerinde üzerinde **Başlat** menüsünde seçin **çalıştırmak** , daha sonra **açık** kutusuna **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="97f4f-111">In earlier versions of Windows, on the **Start** menu, choose **Run** and then, in the **Open** box, enter **regedit.exe**.</span></span>  
-  
-     <span data-ttu-id="97f4f-112">regedit.exe'yi çalıştırmak için yönetici kimlik bilgileriniz olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="97f4f-112">You must have administrative credentials to run regedit.exe.</span></span>  
-  
-2.  <span data-ttu-id="97f4f-113">Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:</span><span class="sxs-lookup"><span data-stu-id="97f4f-113">In the Registry Editor, open the following subkey:</span></span>  
-  
-     <span data-ttu-id="97f4f-114">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates</span><span class="sxs-lookup"><span data-stu-id="97f4f-114">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates</span></span>  
-  
-     <span data-ttu-id="97f4f-115">Yüklü güncelleştirmeler için geçerlidir .NET Framework sürümünü tanımlamak alt anahtarları altında listelenir.</span><span class="sxs-lookup"><span data-stu-id="97f4f-115">The installed updates are listed under subkeys that identify the .NET Framework version they apply to.</span></span> <span data-ttu-id="97f4f-116">Her güncelleştirme bir Bilgi Bankası (KB) numarasına göre tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="97f4f-116">Each update is identified by a Knowledge Base (KB) number.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="97f4f-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="97f4f-117">Example</span></span>  
- <span data-ttu-id="97f4f-118">Aşağıdaki kod, bir bilgisayarda yüklü olan .NET Framework güncelleştirmeleri programlı olarak belirler.</span><span class="sxs-lookup"><span data-stu-id="97f4f-118">The following code programmatically determines the .NET Framework updates that are installed on a computer.</span></span> <span data-ttu-id="97f4f-119">Bu örneği çalıştırmak için yönetici kimlik bilgileriniz olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="97f4f-119">You must have administrative credentials to run this example.</span></span>  
-  
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
-  
- <span data-ttu-id="97f4f-120">Örnekte aşağıdakine benzer bir çıktı oluşturulur:</span><span class="sxs-lookup"><span data-stu-id="97f4f-120">The example produces output that's similar to the following:</span></span>  
-  
-```  
-Microsoft .NET Framework 3.5 SP1  
-  KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
-  SP1  
-    KB2657424  Security Update for Microsoft .NET Framework 3.5 SP1 (KB2657424)  
-    KB958484  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB958484)  
-    KB963707  Update for Microsoft .NET Framework 3.5 SP1 (KB963707)  
-Microsoft .NET Framework 4 Client Profile  
-  KB2160841  Security Update for Microsoft .NET Framework 4 Client Profile (KB2160841)  
-  KB2446708  Security Update for Microsoft .NET Framework 4 Client Profile (KB2446708)  
-  KB2468871  Update for Microsoft .NET Framework 4 Client Profile (KB2468871)  
-  KB2478663  Security Update for Microsoft .NET Framework 4 Client Profile (KB2478663)  
-  KB2518870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2518870)  
-  KB2533523  Update for Microsoft .NET Framework 4 Client Profile (KB2533523)  
-  KB2539636  Security Update for Microsoft .NET Framework 4 Client Profile (KB2539636)  
-  KB2572078  Security Update for Microsoft .NET Framework 4 Client Profile (KB2572078)  
-  KB2633870  Security Update for Microsoft .NET Framework 4 Client Profile (KB2633870)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Client Profile (KB2656351)  
-Microsoft .NET Framework 4 Extended  
-  KB2416472  Security Update for Microsoft .NET Framework 4 Extended (KB2416472)  
-  KB2468871  Update for Microsoft .NET Framework 4 Extended (KB2468871)  
-  KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
-  KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
-  KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="97f4f-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97f4f-121">See also</span></span>
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a><span data-ttu-id="c3d09-103">Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmeleri ve düzeltmeleri yüklü olduğunu belirleme</span><span class="sxs-lookup"><span data-stu-id="c3d09-103">How to: Determine which .NET Framework security updates and hotfixes are installed</span></span>
 
-<span data-ttu-id="97f4f-122">[Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) </span><span class="sxs-lookup"><span data-stu-id="97f4f-122">[How to: Determine Which .NET Framework Versions Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) </span></span>  
-<span data-ttu-id="97f4f-123">[.NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md) </span><span class="sxs-lookup"><span data-stu-id="97f4f-123">[Installing the .NET Framework](../../../docs/framework/install/guide-for-developers.md) </span></span>  
-[<span data-ttu-id="97f4f-124">Sürümleri ve bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="97f4f-124">Versions and Dependencies</span></span>](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+<span data-ttu-id="c3d09-104">Düzeltmeler bir bilgisayarda yüklü olan ve bu makalede hangi .NET Framework güvenlik güncelleştirmeleri çıkışı bulmak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="c3d09-104">This article shows you how to find out which .NET Framework security updates and hotfixes are installed on a computer.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c3d09-105">Bu makalede gösterilen tüm teknikler yönetici ayrıcalıklarına sahip bir hesabı gerektirir.</span><span class="sxs-lookup"><span data-stu-id="c3d09-105">All the techniques shown in this article require an account with administrative privileges.</span></span>
+
+## <a name="to-find-installed-updates-using-the-registry"></a><span data-ttu-id="c3d09-106">Bulmak için kayıt defterini kullanarak güncelleştirmeleri yüklü</span><span class="sxs-lookup"><span data-stu-id="c3d09-106">To find installed updates using the registry</span></span>
+
+<span data-ttu-id="c3d09-107">Yüklü olan güvenlik güncelleştirmeleri ve düzeltmeleri her bir bilgisayarda yüklü .NET Framework sürümü için Windows Kayıt Defteri'nde listelenir.</span><span class="sxs-lookup"><span data-stu-id="c3d09-107">The installed security updates and hotfixes for each version of the .NET Framework installed on a computer are listed in the Windows registry.</span></span> <span data-ttu-id="c3d09-108">Kayıt Defteri Düzenleyicisi'ni kullanabilirsiniz (*regedit.exe*) bu bilgileri görüntülemek için program.</span><span class="sxs-lookup"><span data-stu-id="c3d09-108">You can use the Registry Editor (*regedit.exe*) program to view this information.</span></span>
+
+1. <span data-ttu-id="c3d09-109">Programını açın **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="c3d09-109">Open the program **regedit.exe**.</span></span> <span data-ttu-id="c3d09-110">Windows 8 ve sonraki sürümlerinde sağ **Başlat** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")seçeneğini belirleyip **çalıştırmak**.</span><span class="sxs-lookup"><span data-stu-id="c3d09-110">In Windows 8 and later versions, right-click **Start** ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), then select **Run**.</span></span> <span data-ttu-id="c3d09-111">İçinde **açık** kutusuna **regedit** seçip **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="c3d09-111">In the **Open** box, enter **regedit** and select **OK**.</span></span>
+
+2. <span data-ttu-id="c3d09-112">Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:</span><span class="sxs-lookup"><span data-stu-id="c3d09-112">In the Registry Editor, open the following subkey:</span></span>
+
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates`
+
+     <span data-ttu-id="c3d09-113">Yüklü güncelleştirmeler için geçerlidir .NET Framework sürümünü tanımlamak alt anahtarları altında listelenir.</span><span class="sxs-lookup"><span data-stu-id="c3d09-113">The installed updates are listed under subkeys that identify the .NET Framework version they apply to.</span></span> <span data-ttu-id="c3d09-114">Her güncelleştirme bir Bilgi Bankası (KB) numarasına göre tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="c3d09-114">Each update is identified by a Knowledge Base (KB) number.</span></span>
+
+<span data-ttu-id="c3d09-115">Kayıt Defteri Düzenleyicisi'nde, .NET Framework sürümleri ve her sürüm için yüklü güncelleştirmeler farklı alt anahtarlarında saklanır.</span><span class="sxs-lookup"><span data-stu-id="c3d09-115">In the Registry Editor, the .NET Framework versions and installed updates for each version are stored in different subkeys.</span></span> <span data-ttu-id="c3d09-116">Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span><span class="sxs-lookup"><span data-stu-id="c3d09-116">For information about detecting the installed version numbers, see [How to: Determine which .NET Framework versions are installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</span></span>
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a><span data-ttu-id="c3d09-117">Bulunacak kodu kayıt defterinde sorgulayarak yüklü güncelleştirmeleri</span><span class="sxs-lookup"><span data-stu-id="c3d09-117">To find installed updates by querying the registry in code</span></span>
+
+<span data-ttu-id="c3d09-118">Aşağıdaki örnek, .NET Framework güvenlik güncelleştirmeleri ve bir bilgisayarda yüklü olan düzeltmelerin programlı olarak belirler:</span><span class="sxs-lookup"><span data-stu-id="c3d09-118">The following example programmatically determines the .NET Framework security updates and hotfixes that are installed on a computer:</span></span>
+
+[!code-csharp[ListUpdates](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs)]
+[!code-vb[ListUpdates](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb)]
+
+<span data-ttu-id="c3d09-119">Örnek aşağıdakine benzer bir çıktı üretir:</span><span class="sxs-lookup"><span data-stu-id="c3d09-119">The example produces an output that's similar to the following one:</span></span>
+
+```console
+Microsoft .NET Framework 4 Client Profile
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+Microsoft .NET Framework 4 Extended
+  KB2468871
+  KB2468871v2
+  KB2478063
+  KB2533523
+  KB2544514
+  KB2600211
+  KB2600217
+```
+
+## <a name="to-find-installed-updates-by-querying-the-registry-in-powershell"></a><span data-ttu-id="c3d09-120">Bulmak için PowerShell kayıt defterinde sorgulayarak yüklü güncelleştirmeleri</span><span class="sxs-lookup"><span data-stu-id="c3d09-120">To find installed updates by querying the registry in PowerShell</span></span>
+
+<span data-ttu-id="c3d09-121">Aşağıdaki örnek .NET Framework güvenlik güncelleştirmeleri ve PowerShell kullanarak bir bilgisayarda yüklü olan düzeltmelerin belirlemek nasıl gösterir:</span><span class="sxs-lookup"><span data-stu-id="c3d09-121">The following example shows how to determine the .NET Framework security updates and hotfixes that are installed on a computer using PowerShell:</span></span>
+
+```powershell
+ Get-ChildItem "HKLM:SOFTWARE\Wow6432Node\Microsoft\Updates\*" -Recurse | Where-Object {$_.name -like
+ "*.NET Framework*"}
+```
+
+<span data-ttu-id="c3d09-122">Örnek aşağıdakine benzer bir çıktı üretir:</span><span class="sxs-lookup"><span data-stu-id="c3d09-122">The example produces an output that's similar to the following one:</span></span>
+
+```console
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Client Profile
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+
+
+    Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates\Microsoft .NET Framework 4 Extended
+
+
+Name                           Property
+----                           --------
+KB2468871                      ThisVersionInstalled : Y
+KB2468871v2                    ThisVersionInstalled : Y
+KB2478063                      ThisVersionInstalled : Y
+KB2533523                      ThisVersionInstalled : Y
+KB2544514                      ThisVersionInstalled : Y
+KB2600211                      ThisVersionInstalled : Y
+KB2600217                      ThisVersionInstalled : Y
+```
+
+## <a name="see-also"></a><span data-ttu-id="c3d09-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3d09-123">See also</span></span>
+
+[<span data-ttu-id="c3d09-124">Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme</span><span class="sxs-lookup"><span data-stu-id="c3d09-124">How to: Determine which .NET Framework versions are installed</span></span>](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
+[<span data-ttu-id="c3d09-125">Geliştiriciler için .NET Framework'ü yükleme</span><span class="sxs-lookup"><span data-stu-id="c3d09-125">Install the .NET Framework for developers</span></span>](../../../docs/framework/install/guide-for-developers.md)  
+[<span data-ttu-id="c3d09-126">Sürümleri ve bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="c3d09-126">Versions and dependencies</span></span>](../../../docs/framework/migration-guide/versions-and-dependencies.md)

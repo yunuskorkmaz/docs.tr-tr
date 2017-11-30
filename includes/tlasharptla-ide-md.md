@@ -1,0 +1,1 @@
+<span data-ttu-id="2b5dd-101">Tümleşik Geliştirme Ortamı (IDE)</span><span class="sxs-lookup"><span data-stu-id="2b5dd-101">Integrated Development Environment (IDE)</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="e9cf5-101">Taşınabilir Ağ Grafikleri (PNG)</span><span class="sxs-lookup"><span data-stu-id="e9cf5-101">Portable Network Graphics (PNG)</span></span>

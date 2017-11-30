@@ -1,0 +1,1 @@
+<span data-ttu-id="d8e43-101">masaüstü</span><span class="sxs-lookup"><span data-stu-id="d8e43-101">desktop</span></span>

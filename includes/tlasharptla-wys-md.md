@@ -1,0 +1,1 @@
+<span data-ttu-id="10916-101">"ne görüyorsanız onu alırsınız" (WYSIWYG)</span><span class="sxs-lookup"><span data-stu-id="10916-101">"what you see is what you get" (WYSIWYG)</span></span>

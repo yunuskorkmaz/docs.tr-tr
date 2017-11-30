@@ -1,0 +1,1 @@
+<span data-ttu-id="f5711-101">XAML tarayıcısı uygulaması (XBAP)</span><span class="sxs-lookup"><span data-stu-id="f5711-101">XAML browser application (XBAP)</span></span>

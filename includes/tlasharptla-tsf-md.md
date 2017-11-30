@@ -1,0 +1,1 @@
+<span data-ttu-id="482fd-101">Metin Hizmetleri Altyapısı (TSF)</span><span class="sxs-lookup"><span data-stu-id="482fd-101">Text Services Framework (TSF)</span></span>

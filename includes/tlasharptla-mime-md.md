@@ -1,0 +1,1 @@
+<span data-ttu-id="3eee5-101">Çok Amaçlı İnternet Posta Uzantıları (MIME)</span><span class="sxs-lookup"><span data-stu-id="3eee5-101">Multipurpose Internet Mail Extensions (MIME)</span></span>
