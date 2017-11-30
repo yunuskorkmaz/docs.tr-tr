@@ -1,0 +1,1 @@
+<span data-ttu-id="ab16f-101">grafik kullanıcı arabirimi (GUI)</span><span class="sxs-lookup"><span data-stu-id="ab16f-101">graphical user interface (GUI)</span></span>

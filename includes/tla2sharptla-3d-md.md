@@ -1,0 +1,1 @@
+<span data-ttu-id="258d5-101">3B</span><span class="sxs-lookup"><span data-stu-id="258d5-101">3-D</span></span>

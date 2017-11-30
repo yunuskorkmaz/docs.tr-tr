@@ -1,0 +1,1 @@
+<span data-ttu-id="0af45-101">Değiştirilebilir görüntü dosyası (Exif)</span><span class="sxs-lookup"><span data-stu-id="0af45-101">Exchangeable image file (Exif)</span></span>

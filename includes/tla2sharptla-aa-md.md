@@ -1,0 +1,1 @@
+<span data-ttu-id="65812-101">Etkin Erişilebilirlik</span><span class="sxs-lookup"><span data-stu-id="65812-101">Active Accessibility</span></span>

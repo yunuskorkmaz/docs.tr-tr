@@ -1,0 +1,1 @@
+<span data-ttu-id="5fca6-101">görüntü dosyası dizini (IFD)</span><span class="sxs-lookup"><span data-stu-id="5fca6-101">image file directory (IFD)</span></span>

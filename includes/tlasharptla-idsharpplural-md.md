@@ -1,0 +1,1 @@
+<span data-ttu-id="68f9f-101">tanımlayıcılar (kimlikler)</span><span class="sxs-lookup"><span data-stu-id="68f9f-101">identifiers (IDs)</span></span>

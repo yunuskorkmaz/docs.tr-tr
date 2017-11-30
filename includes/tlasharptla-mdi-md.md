@@ -1,0 +1,1 @@
+<span data-ttu-id="c3d15-101">çok belgeli arabirim (MDI)</span><span class="sxs-lookup"><span data-stu-id="c3d15-101">multiple-document interface (MDI)</span></span>

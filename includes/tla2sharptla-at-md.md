@@ -1,0 +1,1 @@
+<span data-ttu-id="8c2f3-101">yardımcı teknoloji</span><span class="sxs-lookup"><span data-stu-id="8c2f3-101">assistive technology</span></span>

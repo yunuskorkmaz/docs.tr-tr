@@ -1,0 +1,1 @@
+<span data-ttu-id="77d5c-101">Ortak Dil Belirtimi (CLS)</span><span class="sxs-lookup"><span data-stu-id="77d5c-101">Common Language Specification (CLS)</span></span>

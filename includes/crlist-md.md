@@ -1,0 +1,1 @@
+<span data-ttu-id="54aa7-101">Şunun listesi için</span><span class="sxs-lookup"><span data-stu-id="54aa7-101">For a list of</span></span>

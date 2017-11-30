@@ -1,0 +1,1 @@
+<span data-ttu-id="aa637-101">4.6 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="aa637-101">Available since 4.6</span></span>

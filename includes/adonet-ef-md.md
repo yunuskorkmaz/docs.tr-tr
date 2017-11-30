@@ -1,0 +1,1 @@
+<span data-ttu-id="70205-101">Varlık Çerçevesi</span><span class="sxs-lookup"><span data-stu-id="70205-101">Entity Framework</span></span>

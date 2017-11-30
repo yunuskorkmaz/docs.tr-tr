@@ -1,0 +1,1 @@
+<span data-ttu-id="b0f3a-101">Microsoft Etkin Erişilebilirliği</span><span class="sxs-lookup"><span data-stu-id="b0f3a-101">Microsoft Active Accessibility</span></span>

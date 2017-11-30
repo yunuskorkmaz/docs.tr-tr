@@ -1,0 +1,1 @@
+<span data-ttu-id="d6f35-101">Etiketli Resim Dosyası Biçimi (TIFF)</span><span class="sxs-lookup"><span data-stu-id="d6f35-101">Tagged Image File Format (TIFF)</span></span>

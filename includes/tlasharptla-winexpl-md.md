@@ -1,0 +1,1 @@
+<span data-ttu-id="20e20-101">Microsoft Windows Gezgini</span><span class="sxs-lookup"><span data-stu-id="20e20-101">Microsoft Windows Explorer</span></span>

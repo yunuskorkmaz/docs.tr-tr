@@ -1,0 +1,1 @@
+<span data-ttu-id="b5edd-101">Kullanıcı arabirimi (UI)</span><span class="sxs-lookup"><span data-stu-id="b5edd-101">User interface (UI)</span></span>

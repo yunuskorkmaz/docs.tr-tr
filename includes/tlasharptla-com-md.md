@@ -1,0 +1,1 @@
+<span data-ttu-id="16042-101">Bileşen Nesne Modeli (COM)</span><span class="sxs-lookup"><span data-stu-id="16042-101">Component Object Model (COM)</span></span>

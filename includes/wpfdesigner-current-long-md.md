@@ -1,0 +1,1 @@
+<span data-ttu-id="8c652-101">Visual Studio için WPF Tasarımcısı</span><span class="sxs-lookup"><span data-stu-id="8c652-101">WPF Designer for Visual Studio</span></span>
