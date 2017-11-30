@@ -1,0 +1,1 @@
+Tekdüzen kaynak tanımlayıcıları (URI’ler)

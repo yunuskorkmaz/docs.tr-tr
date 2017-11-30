@@ -16,14 +16,14 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31406d7ed98b462a39e0b57bf66988b1c440a33f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: f373696f4d3a92f15ab7c8641e02303da4a54e6d
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="creating-a-new-windows-form"></a>Yeni bir Windows Formu Oluşturma
-Bu konu, ilk Windows Forms uygulamasının nasıl oluşturulacağını açıklayan konulara bağlantılar içerir. Ayrıca, bu bölümdeki konular bazı temel sözlük ve bir Windows Forms uygulaması oluşturmak başlattığınızda anlamanız gereken yönergeler sunar. biçimindeki telefon numarasıdır. Windows Forms uygulaması hakkında daha fazla bilgi edinmek için; bunlar üzerinde kullanabileceğiniz denetimleri, olayları ve olaylarını işleme ve kullanıcı girişi nasıl ele alınacağını ilgili konu listesine bakın.  
+Bu konu, ilk Windows Forms uygulamasının nasıl oluşturulacağını açıklayan konulara bağlantılar içerir. Ayrıca, bu bölümdeki konular bazı temel sözlük ve bir Windows Forms uygulaması oluşturmak başlattığınızda anlamanız gereken yönergeler sunar. Windows Forms uygulamaları hakkında daha fazla bilgi için bunları, olayları ve olaylarını işleme ve kullanıcı girişini işlemek nasıl kullanabileceğiniz denetimleri ilgili konu listesine bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms koordinatları](../../../docs/framework/winforms/windows-forms-coordinates.md).  

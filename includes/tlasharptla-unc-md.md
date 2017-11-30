@@ -1,0 +1,1 @@
+Evrensel Adlandırma Kuralı (UNC)

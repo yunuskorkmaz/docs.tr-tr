@@ -1,0 +1,1 @@
+"ne görüyorsanız onu alırsınız" (WYSIWYG)

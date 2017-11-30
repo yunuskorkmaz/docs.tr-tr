@@ -1,0 +1,139 @@
+---
+title: "WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: db2545470c416fe066226124fb7833ef5d9e5d13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
+WCF artık tek bir noktadaki birden çok kimlik doğrulama şemasını belirtmenize olanak tanır. Ayrıca barındırılan web hizmetleri doğrudan IIS kimlik doğrulaması ayarlarını devralabilirsiniz. Kendini barındıran Hizmetleri düzenleri kullanılabilmesi için hangi kimlik doğrulama belirtebilirsiniz. IIS'de kimlik doğrulama ayarlarını ayarlama hakkında daha fazla bilgi için bkz: [IIS kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=232458)  
+  
+## <a name="iis-hosted-services"></a>IIS barındırılan hizmetleri  
+ IIS barındırılan hizmetler için IIS içinde kullanmak istediğiniz kimlik doğrulama şemasını ayarlayın. Ardından hizmetinizin web.config dosyasına bağlama yapılandırmanızda clientCredential türü "InheritedFromHost" olarak aşağıdaki XML parçacığında gösterildiği gibi belirtin:  
+  
+```xml  
+<bindings>  
+      <basicHttpBinding>  
+        <binding name="secureBinding">  
+          <security mode="Transport">  
+            <transport clientCredentialType="InheritedFromHost" />  
+          </security>  
+        </binding>  
+      </basicHttpBinding>  
+    </bindings>  
+```  
+  
+ Yalnızca bir alt kümesini ServiceAuthenticationBehavior kullanarak, hizmetiniz ile kullanılacak kimlik doğrulama şemasını istediğinizi belirtin veya \<serviceAuthenticationManager > öğesi. Bu kodda yapılandırırken ServiceAuthenticationBehavior aşağıdaki kod parçacığında gösterildiği gibi kullanın.  
+  
+```csharp  
+// ...  
+ServiceAuthenticationBehavior sab = null;  
+sab = serviceHost.Description.Behaviors.Find<ServiceAuthenticationBehavior>();  
+  
+if (sab == null)  
+{  
+    sab = new ServiceAuthenticationBehavior();  
+    sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
+    serviceHost.Description.Behaviors.Add(sab);  
+}  
+else  
+{  
+     sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
+}  
+// ...  
+```  
+  
+ Bu yapılandırma dosyasında yapılandırırken kullandığınız \<serviceAuthenticationManager > aşağıdaki XML parçacığında gösterildiği gibi öğesi.  
+  
+```xml  
+<behaviors>  
+      <serviceBehaviors>  
+        <behavior name="limitedAuthBehavior">  
+          <serviceAuthenticationManager authenticationSchemes="Negotiate, Digest, Basic"/>  
+          <!-- ... -->  
+        </behavior>  
+      </serviceBehaviors>  
+    </behaviors>  
+```  
+  
+ Bu, yalnızca bir alt kümesini burada listelenen kimlik doğrulama şemasını IIS'de belirlemiş bağlı olarak hizmet uç noktası üzerinde uygulamak için değerlendirilir güvence altına alır. Bir geliştirici dışlayabilirsiniz Bunun anlamı deyin listeden temel kimlik doğrulama serviceAuthenticationManager listeden kaldırarak ve IIS etkinleştirilmiş olsa dahi, üzerinde hizmet uç noktası uygulanmaz  
+  
+## <a name="self-hosted-services"></a>Kendini barındıran Hizmetleri  
+ Ayarları devralmak için hiçbir IIS olduğundan kendini barındıran Hizmetleri biraz farklı bir şekilde yapılandırılır. Burada kullandığınız \<serviceAuthenticationManager > öğesi veya ServiceAuthenticationBehavior devralınır kimlik doğrulama ayarlarını belirtin. Kodda şöyle görünür:  
+  
+```csharp  
+// ...  
+ServiceAuthenticationBehavior sab = null;  
+sab = serviceHost.Description.Behaviors.Find<ServiceAuthenticationBehavior>();  
+  
+if (sab == null)  
+{  
+    sab = new ServiceAuthenticationBehavior();  
+    sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
+    serviceHost.Description.Behaviors.Add(sab);  
+}  
+else  
+{  
+     sab.AuthenticationSchemes = AuthenticationSchemes.Basic | AuthenticationSchemes.Negotiate | AuthenticationSchemes.Digest;  
+}  
+// ...  
+```  
+  
+ Yapılandırma dosyasında şöyle görünür:  
+  
+```xml  
+<behaviors>  
+      <serviceBehaviors>  
+        <behavior name="limitedAuthBehavior">  
+          <serviceAuthenticationManager authenticationSchemes="Negotiate, Digest, Basic"/>  
+          <!-- ... -->  
+        </behavior>  
+      </serviceBehaviors>  
+    </behaviors>  
+```  
+  
+ Ve ardından aşağıdaki XML parçacığında gösterildiği gibi bağlama ayarlarında InheritFromHost belirtebilirsiniz.  
+  
+```xml  
+<bindings>  
+      <basicHttpBinding>  
+        <binding name="secureBinding">  
+          <security mode="Transport">  
+            <transport clientCredentialType="InheritedFromHost" />  
+          </security>  
+        </binding>  
+      </basicHttpBinding>  
+    </bindings>  
+```  
+  
+ Alternatif olarak, kimlik doğrulama şemasını özel bir bağlama belirtin, ayarlayarak HTTP kimlik doğrulama şemasını bağlama öğesi, aşağıdaki yapılandırma parçacığında gösterildiği gibi taşıma.  
+  
+```xml  
+<binding name="multipleBinding">  
+      <textMessageEncoding/>  
+      <httpTransport authenticationScheme="Negotiate, Ntlm, Digest, Basic" />  
+    </binding>  
+```  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ [Bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Uç noktalar: Adresler, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [Bağlamaları](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Bağlamaları](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)

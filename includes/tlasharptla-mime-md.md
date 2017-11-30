@@ -1,0 +1,1 @@
+Çok Amaçlı İnternet Posta Uzantıları (MIME)

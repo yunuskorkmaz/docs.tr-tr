@@ -1,0 +1,1 @@
+Tümleşik Geliştirme Ortamı (IDE)

@@ -1,0 +1,1 @@
+grafik işlem birimi (GPU)

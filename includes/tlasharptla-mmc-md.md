@@ -1,0 +1,1 @@
+Microsoft Yönetim Konsolu (MMC)

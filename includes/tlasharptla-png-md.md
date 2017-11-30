@@ -1,0 +1,1 @@
+Taşınabilir Ağ Grafikleri (PNG)

@@ -1,0 +1,1 @@
+Grafik Değişim Biçimi (GIF)

@@ -1,0 +1,77 @@
+---
+title: "Nasıl yapılır Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tile view feature
+- tiling
+- Windows Forms, controls
+- ListView control [Windows Forms], tile view
+ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 280f4929b700e125b094eb1965eb140a3b180b99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Nasıl yapılır Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme
+Döşeme görünümü özelliği ile <xref:System.Windows.Forms.ListView> denetim, grafik ve metin bilgi arasında görsel bir denge sağlayabilir. Döşeme görünümde bir öğe için görüntülenen metin bilgileri, ayrıntı görünümü için tanımlanan sütun bilgileri ile aynıdır. Döşeme görünümü gruplandırma veya ekleme işareti özellikleri ile birlikte çalışır <xref:System.Windows.Forms.ListView> denetim.  
+  
+ Döşeme görünümü bir 32 x 32 piksel simgesi ve birkaç satırlık metin, aşağıdaki görüntüleri gösterildiği gibi kullanır.  
+  
+ ![Görünüm ListView denetiminde döşeme](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+Döşeme görünümü simgeler ve metin  
+  
+ Döşeme görünümü etkinleştirmek için ayarlanmış <xref:System.Windows.Forms.ListView.View%2A> özelliğine <xref:System.Windows.Forms.View.Tile>. Ayarlayarak döşeme boyutunu ayarlayabilirsiniz <xref:System.Windows.Forms.ListView.TileSize%2A> özelliği ve ayarlayarak kutucukta görüntülenen metin satırı sayısını <xref:System.Windows.Forms.ListView.Columns%2A> koleksiyonu.  
+  
+> [!NOTE]
+>  Döşeme görünümü yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde döşeme görünümüne ilgili herhangi bir kod herhangi bir etkisi olmaz ve <xref:System.Windows.Forms.ListView> denetimi büyük simge görünümünü görüntüler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
+  
+### <a name="to-set-tile-view-programmatically"></a>Döşeme görünümü programlı olarak ayarlamak için  
+  
+1.  Kullanım <xref:System.Windows.Forms.View> numaralandırması <xref:System.Windows.Forms.ListView> denetim.  
+  
+    ```vb  
+    ListView1.View = View.Tile  
+    ```  
+  
+    ```csharp  
+    listView1.View = View.Tile;  
+    ```  
+  
+## <a name="example"></a>Örnek  
+ Aşağıdaki tam kod örneğinde üç satırlık metin göstermek için değişiklik döşeme ile döşeme görünümünü gösterir. Döşeme boyutunu satır kaydırma önlemek için düzeltildi.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Tiling#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CPP/listviewtilingexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.Tiling#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CS/listviewtilingexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.Tiling#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/VB/listviewtilingexample.vb#1)]  
+  
+## <a name="compiling-the-code"></a>Kod Derleniyor  
+ Bu örnek gerektirir:  
+  
+-   Sistem ve System.Windows.Forms derlemelerine başvurular.  
+  
+-   Bir simge dosyası yürütülebilir dosya ile aynı dizinde book.ico adlı.  
+  
+ Bu örnek için komut satırından oluşturma hakkında bilgi için [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı derleme ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek ayrıca oluşturmak [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] yeni bir proje kodunu yapıştırma tarafından.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListView.TileSize%2A>  
+ [ListView denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [ListView denetimine genel bakış](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Windows XP özellikleri ve Windows Forms denetimleri](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)

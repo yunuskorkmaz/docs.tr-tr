@@ -1,0 +1,1 @@
+yazılım geliştirme seti (SDK)

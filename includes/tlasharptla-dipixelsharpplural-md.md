@@ -1,0 +1,1 @@
+cihazdan bağımsız birimler (birim başına 1/96 inç)
