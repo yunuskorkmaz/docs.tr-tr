@@ -1,0 +1,33 @@
+---
+title: "SerializationBinder ile Seri Hale Getirme ve Seri Durumdan Çıkarmayı Denetleme"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1c3180d62824f94e27e02c80e09fdf32252f0a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a><span data-ttu-id="aa10e-102">SerializationBinder ile Seri Hale Getirme ve Seri Durumdan Çıkarmayı Denetleme</span><span class="sxs-lookup"><span data-stu-id="aa10e-102">Controlling Serialization and Deserialization with SerializationBinder</span></span>
+<span data-ttu-id="aa10e-103">Serileştirme sırasında bir biçimlendirici doğru türü ve sürümü bir nesne örneğini oluşturmak için gereken bilgileri iletir.</span><span class="sxs-lookup"><span data-stu-id="aa10e-103">During serialization, a formatter transmits the information required to create an instance of an object of the correct type and version.</span></span> <span data-ttu-id="aa10e-104">Bu bilgiler genelde derleme nesnesinin adını ve tam tür adını içerir.</span><span class="sxs-lookup"><span data-stu-id="aa10e-104">This information generally includes the full type name and assembly name of the object.</span></span> <span data-ttu-id="aa10e-105">Varsayılan olarak, seri durumdan çıkarma aynı nesne örneğini oluşturmak için bu bilgileri kullanır.</span><span class="sxs-lookup"><span data-stu-id="aa10e-105">By default, deserialization uses this information to create an instance of an identical object.</span></span> <span data-ttu-id="aa10e-106">Bazı kullanıcılar, hangi sınıfının seri hale getirmek ve seri durumdan çıkarma gerçekleştirme makinede özgün sınıfı olmayabilir için ya da seri durumdan kontrol gerekebilir, özgün sınıf derlemeler arasında taşınmış veya sınıf farklı bir sürümü gerekiyor. Sunucu ve istemci.</span><span class="sxs-lookup"><span data-stu-id="aa10e-106">Some users may need to control which class to serialize and deserialize, either because the original class may not exist on the machine performing deserialization, the original class has moved between assemblies, or a different version of the class is required on the server and client.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="aa10e-107">[Seri hale getirme Bağlayıcısı kullanımı](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).</span><span class="sxs-lookup"><span data-stu-id="aa10e-107"> [Usage of Serialization Binder](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).</span></span>  
+  
+> [!WARNING]
+>  <span data-ttu-id="aa10e-108">Bu işlevsellik yalnızca kullanırken kullanılabilir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="aa10e-108">This functionality is only available when using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> or the <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span>  
+  
+## <a name="using-serializationbinder"></a><span data-ttu-id="aa10e-109">SerializationBinder kullanma</span><span class="sxs-lookup"><span data-stu-id="aa10e-109">Using SerializationBinder</span></span>  
+ <span data-ttu-id="aa10e-110"><xref:System.Runtime.Serialization.SerializationBinder>bir Özet sınıf, seri hale getirme ve seri durumdan çıkarma sırasında kullanılan gerçek türlerini denetlemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="aa10e-110"><xref:System.Runtime.Serialization.SerializationBinder> is an abstract class used to control the actual types used during serialization and deserialization.</span></span> <span data-ttu-id="aa10e-111">Serileştirme ve seri durumundan çıkarma sırasında kullanılan türlerini denetlemek için öğesinden bir sınıf türetin <xref:System.Runtime.Serialization.SerializationBinder> ve geçersiz kılma <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False & autoUpgrade = True ve <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)? qualifyHint = False & autoUpgrade = True yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="aa10e-111">To control the types used during serialization and deserialization, derive a class from <xref:System.Runtime.Serialization.SerializationBinder> and override the <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True and <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True methods.</span></span> <span data-ttu-id="aa10e-112"><xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False & autoUpgrade = True metodu bir <xref:System.Type> ve bir derleme ve tür adını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa10e-112">The <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True method takes a <xref:System.Type> and returns an assembly and type name.</span></span> <span data-ttu-id="aa10e-113"><xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False & autoUpgrade = True yöntemi alır derleme ve tür adı ve döndürür bir <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="aa10e-113">The <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True method takes an assembly and type name and returns a <xref:System.Type>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="aa10e-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="aa10e-114">See Also</span></span>  
+ [<span data-ttu-id="aa10e-115">Seri hale getirme ve seri durumdan çıkarma</span><span class="sxs-lookup"><span data-stu-id="aa10e-115">Serialization and Deserialization</span></span>](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
+ [<span data-ttu-id="aa10e-116">Seri hale getirme Bağlayıcısı kullanımı</span><span class="sxs-lookup"><span data-stu-id="aa10e-116">Usage of Serialization Binder</span></span>](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)

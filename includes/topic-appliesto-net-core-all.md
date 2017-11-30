@@ -1,0 +1,1 @@
+<span data-ttu-id="4aac6-101">**Bu konu uygulanır: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span><span class="sxs-lookup"><span data-stu-id="4aac6-101">**This topic applies to: ✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.x</span></span>

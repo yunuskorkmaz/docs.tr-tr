@@ -1,0 +1,1 @@
+<span data-ttu-id="6e4e8-101">LINQ - Varlıklar</span><span class="sxs-lookup"><span data-stu-id="6e4e8-101">LINQ to Entities</span></span>

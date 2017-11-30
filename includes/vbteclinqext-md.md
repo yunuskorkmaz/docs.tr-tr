@@ -1,0 +1,1 @@
+<span data-ttu-id="f7d47-101">Dil ile Tümleşik Sorgu (LINQ)</span><span class="sxs-lookup"><span data-stu-id="f7d47-101">Language-Integrated Query (LINQ)</span></span>

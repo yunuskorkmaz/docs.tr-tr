@@ -1,0 +1,1 @@
+<span data-ttu-id="f7b13-101">Windows Server AppFabric barındırma özellikleri</span><span class="sxs-lookup"><span data-stu-id="f7b13-101">hosting features of Windows Server AppFabric</span></span>

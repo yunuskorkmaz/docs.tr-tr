@@ -1,0 +1,1 @@
+<span data-ttu-id="c7704-101">Varlık SQL</span><span class="sxs-lookup"><span data-stu-id="c7704-101">Entity SQL</span></span>

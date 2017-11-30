@@ -1,0 +1,1 @@
+<span data-ttu-id="70749-101">Windows Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="70749-101">Windows Runtime</span></span>
