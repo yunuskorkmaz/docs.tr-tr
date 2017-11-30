@@ -1,0 +1,1 @@
+<span data-ttu-id="9a5ea-101">Visual Studio Uygulama Yaşam Döngüsü Yönetimi</span><span class="sxs-lookup"><span data-stu-id="9a5ea-101">Visual Studio Application Lifecycle Management</span></span>

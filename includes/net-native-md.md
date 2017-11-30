@@ -1,0 +1,1 @@
+<span data-ttu-id="b032c-101">.NET Yerel</span><span class="sxs-lookup"><span data-stu-id="b032c-101">.NET Native</span></span>

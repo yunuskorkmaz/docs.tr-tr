@@ -1,0 +1,1 @@
+<span data-ttu-id="9894d-101">bit eşlem (BMP)</span><span class="sxs-lookup"><span data-stu-id="9894d-101">bitmap (BMP)</span></span>

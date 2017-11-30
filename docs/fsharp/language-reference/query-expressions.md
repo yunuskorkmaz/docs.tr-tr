@@ -10,27 +10,27 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 360733d81f049cd4356ecc47a27f97c3ec3a402a
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/30/2017
 ---
-# <a name="query-expressions"></a><span data-ttu-id="6760f-104">Sorgu İfadeleri</span><span class="sxs-lookup"><span data-stu-id="6760f-104">Query Expressions</span></span>
+# <a name="query-expressions"></a><span data-ttu-id="78b55-104">Sorgu İfadeleri</span><span class="sxs-lookup"><span data-stu-id="78b55-104">Query Expressions</span></span>
 
 > [!NOTE]
-<span data-ttu-id="6760f-105">Bu makalede API başvuru bağlantılar için MSDN götürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-105">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="6760f-106">Docs.microsoft.com API Başvurusu tamamlanmadı.</span><span class="sxs-lookup"><span data-stu-id="6760f-106">The docs.microsoft.com API reference is not complete.</span></span>
+<span data-ttu-id="78b55-105">Bu makalede API başvuru bağlantılar için MSDN götürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-105">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="78b55-106">Docs.microsoft.com API Başvurusu tamamlanmadı.</span><span class="sxs-lookup"><span data-stu-id="78b55-106">The docs.microsoft.com API reference is not complete.</span></span>
 
-<span data-ttu-id="6760f-107">Sorgu ifadeleri, bir veri kaynağı sorgulamak ve verileri istediğiniz biçimde yerleştirmek etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="6760f-107">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="6760f-108">Sorgu ifadeleri F # üzerinde LINQ için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="6760f-108">Query expressions provide support for LINQ in F#.</span></span>
+<span data-ttu-id="78b55-107">Sorgu ifadeleri, bir veri kaynağı sorgulamak ve verileri istediğiniz biçimde yerleştirmek etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="78b55-107">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="78b55-108">Sorgu ifadeleri F # üzerinde LINQ için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="78b55-108">Query expressions provide support for LINQ in F#.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="6760f-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6760f-109">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="78b55-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="78b55-109">Syntax</span></span>
 
 ```fsharp
 query { expression }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="6760f-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6760f-110">Remarks</span></span>
-<span data-ttu-id="6760f-111">Sorgu ifadeleri, hesaplama ifadesi sequence ifadeleri benzer türüdür.</span><span class="sxs-lookup"><span data-stu-id="6760f-111">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="6760f-112">Yalnızca bir sıra ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesi belirtin.</span><span class="sxs-lookup"><span data-stu-id="6760f-112">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="6760f-113">Bir sıra ifadesinde `yield` anahtar sözcüğü elde edilen dizisinin bir parçası döndürülecek veri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6760f-113">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="6760f-114">Sorgu ifadelerinde `select` anahtar sözcüğü aynı işlevi gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="6760f-114">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="6760f-115">Ek olarak `select` anahtar sözcüğü, F # de destekler SQL SELECT deyimine bölümlerini benzer sorgu işleçleri sayısı.</span><span class="sxs-lookup"><span data-stu-id="6760f-115">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="6760f-116">Basit sorgu ifadesi, Northwind OData kaynağına bağlar kod ile birlikte bir örneği burada verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="6760f-116">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
+## <a name="remarks"></a><span data-ttu-id="78b55-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="78b55-110">Remarks</span></span>
+<span data-ttu-id="78b55-111">Sorgu ifadeleri, hesaplama ifadesi sequence ifadeleri benzer türüdür.</span><span class="sxs-lookup"><span data-stu-id="78b55-111">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="78b55-112">Yalnızca bir sıra ifadesi kodda sağlayarak bir sıra belirtmek gibi bir sorgu ifadesinde kod sağlayarak bir veri kümesi belirtin.</span><span class="sxs-lookup"><span data-stu-id="78b55-112">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="78b55-113">Bir sıra ifadesinde `yield` anahtar sözcüğü elde edilen dizisinin bir parçası döndürülecek veri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="78b55-113">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="78b55-114">Sorgu ifadelerinde `select` anahtar sözcüğü aynı işlevi gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="78b55-114">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="78b55-115">Ek olarak `select` anahtar sözcüğü, F # de destekler SQL SELECT deyimine bölümlerini benzer sorgu işleçleri sayısı.</span><span class="sxs-lookup"><span data-stu-id="78b55-115">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="78b55-116">Basit sorgu ifadesi, Northwind OData kaynağına bağlar kod ile birlikte bir örneği burada verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="78b55-116">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -52,23 +52,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-<span data-ttu-id="6760f-117">Önceki kod örneğinde sorgu ifadesi süslü ayraçlar içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6760f-117">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="6760f-118">İfade kod anlamı, sorgu sonuçlarında veritabanındaki Müşteriler tablosunda her müşteri döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-118">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="6760f-119">Sorgu ifadeleri dönüş uygulayan bir tür <xref:System.Linq.IQueryable%601> ve <xref:System.Collections.Generic.IEnumerable%601>, ve bunlar kullanarak yinelendiğinde [Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) örnek olarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="6760f-119">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
+<span data-ttu-id="78b55-117">Önceki kod örneğinde sorgu ifadesi süslü ayraçlar içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="78b55-117">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="78b55-118">İfade kod anlamı, sorgu sonuçlarında veritabanındaki Müşteriler tablosunda her müşteri döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-118">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="78b55-119">Sorgu ifadeleri dönüş uygulayan bir tür <xref:System.Linq.IQueryable%601> ve <xref:System.Collections.Generic.IEnumerable%601>, ve bunlar kullanarak yinelendiğinde [Seq Modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) örnek olarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="78b55-119">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
 
-<span data-ttu-id="6760f-120">Her hesaplama ifadesi türü bir oluşturucu sınıftan yerleşik olarak bulunur.</span><span class="sxs-lookup"><span data-stu-id="6760f-120">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="6760f-121">Sorgu hesaplama ifadesi Oluşturucu sınıfı olan `QueryBuilder`.</span><span class="sxs-lookup"><span data-stu-id="6760f-121">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="6760f-122">Daha fazla bilgi için bkz: [hesaplama ifadeleri](computation-expressions.md) ve [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span><span class="sxs-lookup"><span data-stu-id="6760f-122">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
+<span data-ttu-id="78b55-120">Her hesaplama ifadesi türü bir oluşturucu sınıftan yerleşik olarak bulunur.</span><span class="sxs-lookup"><span data-stu-id="78b55-120">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="78b55-121">Sorgu hesaplama ifadesi Oluşturucu sınıfı olan `QueryBuilder`.</span><span class="sxs-lookup"><span data-stu-id="78b55-121">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="78b55-122">Daha fazla bilgi için bkz: [hesaplama ifadeleri](computation-expressions.md) ve [Linq.QueryBuilder sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span><span class="sxs-lookup"><span data-stu-id="78b55-122">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
 
 
-## <a name="query-operators"></a><span data-ttu-id="6760f-123">Sorgu işleçleri</span><span class="sxs-lookup"><span data-stu-id="6760f-123">Query Operators</span></span>
-<span data-ttu-id="6760f-124">Sorgu işleçleri, döndürülen kayıt ölçütleri yerleştirilecek gibi sorgu ayrıntılarını belirtmenize olanak verir veya sonuçlarını sıralama düzenini belirtin.</span><span class="sxs-lookup"><span data-stu-id="6760f-124">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="6760f-125">Sorgu kaynağı sorgu işleci desteklemesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="6760f-125">The query source must support the query operator.</span></span> <span data-ttu-id="6760f-126">Desteklenmeyen sorgu işleci kullanmayı denerseniz, `System.NotSupportedException` oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="6760f-126">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
+## <a name="query-operators"></a><span data-ttu-id="78b55-123">Sorgu işleçleri</span><span class="sxs-lookup"><span data-stu-id="78b55-123">Query Operators</span></span>
+<span data-ttu-id="78b55-124">Sorgu işleçleri, döndürülen kayıt ölçütleri yerleştirilecek gibi sorgu ayrıntılarını belirtmenize olanak verir veya sonuçlarını sıralama düzenini belirtin.</span><span class="sxs-lookup"><span data-stu-id="78b55-124">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="78b55-125">Sorgu kaynağı sorgu işleci desteklemesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="78b55-125">The query source must support the query operator.</span></span> <span data-ttu-id="78b55-126">Desteklenmeyen sorgu işleci kullanmayı denerseniz, `System.NotSupportedException` oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="78b55-126">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
 
-<span data-ttu-id="6760f-127">SQL çevrilebilecek ifadeleri sorgu ifadelerinde izin verilir.</span><span class="sxs-lookup"><span data-stu-id="6760f-127">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="6760f-128">Kullandığınızda Örneğin, hiçbir işlev çağrılarına ifadelerde izin `where` sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="6760f-128">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
+<span data-ttu-id="78b55-127">SQL çevrilebilecek ifadeleri sorgu ifadelerinde izin verilir.</span><span class="sxs-lookup"><span data-stu-id="78b55-127">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="78b55-128">Kullandığınızda Örneğin, hiçbir işlev çağrılarına ifadelerde izin `where` sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="78b55-128">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
 
-<span data-ttu-id="6760f-129">Tablo 1 kullanılabilir sorgu işleçleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="6760f-129">Table 1 shows available query operators.</span></span> <span data-ttu-id="6760f-130">Ayrıca, SQL sorguları ve eşdeğer F # sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştırır tablo2 bakın.</span><span class="sxs-lookup"><span data-stu-id="6760f-130">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="6760f-131">Bazı sorgu işleçleri bazı türü sağlayıcıları tarafından desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="6760f-131">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="6760f-132">Özellikle, OData türü sağlayıcısı OData sınırlamaları nedeniyle destekliyorsa sorgu işleçleri sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="6760f-132">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="6760f-133">Daha fazla bilgi için bkz: [ODataService türü sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span><span class="sxs-lookup"><span data-stu-id="6760f-133">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
+<span data-ttu-id="78b55-129">Tablo 1 kullanılabilir sorgu işleçleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="78b55-129">Table 1 shows available query operators.</span></span> <span data-ttu-id="78b55-130">Ayrıca, SQL sorguları ve eşdeğer F # sorgu ifadeleri bu konunun ilerleyen bölümlerinde karşılaştırır tablo2 bakın.</span><span class="sxs-lookup"><span data-stu-id="78b55-130">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="78b55-131">Bazı sorgu işleçleri bazı türü sağlayıcıları tarafından desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="78b55-131">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="78b55-132">Özellikle, OData türü sağlayıcısı OData sınırlamaları nedeniyle destekliyorsa sorgu işleçleri sınırlıdır.</span><span class="sxs-lookup"><span data-stu-id="78b55-132">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="78b55-133">Daha fazla bilgi için bkz: [ODataService türü sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span><span class="sxs-lookup"><span data-stu-id="78b55-133">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
 
-<span data-ttu-id="6760f-134">Bu tablo aşağıdaki biçimde bir veritabanı varsayılır:</span><span class="sxs-lookup"><span data-stu-id="6760f-134">This table assumes a database in the following form:</span></span>
+<span data-ttu-id="78b55-134">Bu tablo aşağıdaki biçimde bir veritabanı varsayılır:</span><span class="sxs-lookup"><span data-stu-id="78b55-134">This table assumes a database in the following form:</span></span>
 
 ![Örnek veritabanı diyagramı](../media/StudentCourseDB.png)
 
-<span data-ttu-id="6760f-136">Kod izleyin tablolarda ayrıca aşağıdaki veritabanı bağlantı kodu varsayar.</span><span class="sxs-lookup"><span data-stu-id="6760f-136">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="6760f-137">Projeleri System.Data, System.Data.Linq ve FSharp.Data.TypeProviders derlemelerine başvurular eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="6760f-137">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="6760f-138">Bu veritabanı oluşturan kodu, bu konunun sonunda dahil edilir.</span><span class="sxs-lookup"><span data-stu-id="6760f-138">The code that creates this database is included at the end of this topic.</span></span>
+<span data-ttu-id="78b55-136">Kod izleyin tablolarda ayrıca aşağıdaki veritabanı bağlantı kodu varsayar.</span><span class="sxs-lookup"><span data-stu-id="78b55-136">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="78b55-137">Projeleri System.Data, System.Data.Linq ve FSharp.Data.TypeProviders derlemelerine başvurular eklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="78b55-137">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="78b55-138">Bu veritabanı oluşturan kodu, bu konunun sonunda dahil edilir.</span><span class="sxs-lookup"><span data-stu-id="78b55-138">The code that creates this database is included at the end of this topic.</span></span>
 
 ```fsharp
 open System
@@ -85,16 +85,16 @@ let db = schema.GetDataContext()
 let data = [ 1; 5; 7; 11; 18; 21]
 ```
 
-### <a name="table-1-query-operators"></a><span data-ttu-id="6760f-139">Tablo 1.</span><span class="sxs-lookup"><span data-stu-id="6760f-139">Table 1.</span></span> <span data-ttu-id="6760f-140">Sorgu işleçleri</span><span class="sxs-lookup"><span data-stu-id="6760f-140">Query Operators</span></span>
+### <a name="table-1-query-operators"></a><span data-ttu-id="78b55-139">Tablo 1.</span><span class="sxs-lookup"><span data-stu-id="78b55-139">Table 1.</span></span> <span data-ttu-id="78b55-140">Sorgu işleçleri</span><span class="sxs-lookup"><span data-stu-id="78b55-140">Query Operators</span></span>
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="6760f-141">İşleç</span><span class="sxs-lookup"><span data-stu-id="6760f-141">Operator</span></span></th>
-    <th><span data-ttu-id="6760f-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6760f-142">Description</span></span></th>
+    <th><span data-ttu-id="78b55-141">İşleç</span><span class="sxs-lookup"><span data-stu-id="78b55-141">Operator</span></span></th>
+    <th><span data-ttu-id="78b55-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="78b55-142">Description</span></span></th>
   </tr>
   <tr>
-  <td>`contains`</td>
-<td><span data-ttu-id="6760f-143">Seçilen öğeleri belirtilen bir öğe içerip içermediğini belirler.</span><span class="sxs-lookup"><span data-stu-id="6760f-143">Determines whether the selected elements include a specified element.</span></span><br/><br/>
+  <td><code>contains</code></td>
+<td><span data-ttu-id="78b55-143">Seçilen öğeleri belirtilen bir öğe içerip içermediğini belirler.</span><span class="sxs-lookup"><span data-stu-id="78b55-143">Determines whether the selected elements include a specified element.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -108,7 +108,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 
 <tr>
-  <td>`count`</td><td><span data-ttu-id="6760f-144">Seçilen öğelerin sayısını döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-144">Returns the number of selected elements.</span></span><br/><br/>
+  <td><code>count</code></td><td><span data-ttu-id="78b55-144">Seçilen öğelerin sayısını döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-144">Returns the number of selected elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -118,7 +118,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`last`</td><td><span data-ttu-id="6760f-145">Şu ana kadar seçili olanlar son öğesinden seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-145">Selects the last element of those selected so far.</span></span><br/><br/>
+<td><code>last</code></td><td><span data-ttu-id="78b55-145">Şu ana kadar seçili olanlar son öğesinden seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-145">Selects the last element of those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -127,7 +127,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`lastOrDefault`</td><td><span data-ttu-id="6760f-146">Hiçbir öğe bulunursa, o ana kadarki Seçili olanlar veya varsayılan değeri, son öğe seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-146">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
+<td><code>lastOrDefault</code></td><td><span data-ttu-id="78b55-146">Hiçbir öğe bulunursa, o ana kadarki Seçili olanlar veya varsayılan değeri, son öğe seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-146">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -137,7 +137,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOne`</td><td><span data-ttu-id="6760f-147">Şu ana kadar seçili tek, belirli öğesini seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-147">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="6760f-148">Birden çok öğe varsa, özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="6760f-148">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
+<td><code>exactlyOne</code></td><td><span data-ttu-id="78b55-147">Şu ana kadar seçili tek, belirli öğesini seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-147">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="78b55-148">Birden çok öğe varsa, özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="78b55-148">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -148,7 +148,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOneOrDefault`</td><td><span data-ttu-id="6760f-149">Bu öğenin bulunamaması durumunda kadarki Seçili olanlar veya varsayılan bir değer tek, belirli öğesinin seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-149">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="78b55-149">Bu öğenin bulunamaması durumunda kadarki Seçili olanlar veya varsayılan bir değer tek, belirli öğesinin seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-149">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -159,7 +159,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`headOrDefault`</td><td><span data-ttu-id="6760f-150">Öğe sırası içeriyorsa, o ana kadarki Seçili olanlar veya varsayılan değeri ilk öğesi seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-150">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
+<td><code>headOrDefault</code></td><td><span data-ttu-id="78b55-150">Öğe sırası içeriyorsa, o ana kadarki Seçili olanlar veya varsayılan değeri ilk öğesi seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-150">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -169,7 +169,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`select`</td><td><span data-ttu-id="6760f-151">Şu ana kadar Seçili öğelerin her birini projeleri.</span><span class="sxs-lookup"><span data-stu-id="6760f-151">Projects each of the elements selected so far.</span></span><br/><br/>
+<td><code>select</code></td><td><span data-ttu-id="78b55-151">Şu ana kadar Seçili öğelerin her birini projeleri.</span><span class="sxs-lookup"><span data-stu-id="78b55-151">Projects each of the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -178,7 +178,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`where`</td><td><span data-ttu-id="6760f-152">Belirtilen bir koşul temel öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-152">Selects elements based on a specified predicate.</span></span><br/><br/>
+<td><code>where</code></td><td><span data-ttu-id="78b55-152">Belirtilen bir koşul temel öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-152">Selects elements based on a specified predicate.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -188,7 +188,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minBy`</td><td><span data-ttu-id="6760f-153">Şu ana kadar seçili her öğe için bir değer seçer ve sonuçta elde edilen en küçük değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-153">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
+<td><code>minBy</code></td><td><span data-ttu-id="78b55-153">Şu ana kadar seçili her öğe için bir değer seçer ve sonuçta elde edilen en küçük değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-153">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -197,7 +197,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxBy`</td><td><span data-ttu-id="6760f-154">Şu ana kadar seçili her öğe için bir değer seçer ve en çok sonuç değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-154">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
+<td><code>maxBy</code></td><td><span data-ttu-id="78b55-154">Şu ana kadar seçili her öğe için bir değer seçer ve en çok sonuç değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-154">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -206,7 +206,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupBy`</td><td><span data-ttu-id="6760f-155">Belirtilen bir anahtar Seçici göre kadarki seçili öğeleri gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="6760f-155">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
+<td><code>groupBy</code></td><td><span data-ttu-id="78b55-155">Belirtilen bir anahtar Seçici göre kadarki seçili öğeleri gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="78b55-155">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -216,7 +216,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortBy`</td><td><span data-ttu-id="6760f-156">Şu ana kadar artan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="6760f-156">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortBy</code></td><td><span data-ttu-id="78b55-156">Şu ana kadar artan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="78b55-156">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -226,7 +226,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByDescending`</td><td><span data-ttu-id="6760f-157">Şu ana kadar azalan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="6760f-157">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortByDescending</code></td><td><span data-ttu-id="78b55-157">Şu ana kadar azalan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="78b55-157">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -236,7 +236,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenBy`</td><td><span data-ttu-id="6760f-158">Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından o ana kadarki seçili öğeleri sıralamasını gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="6760f-158">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="6760f-159">Bu işleç yalnızca sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`.</span><span class="sxs-lookup"><span data-stu-id="6760f-159">This operator may only be used after a `sortBy`, `sortByDescending`, `thenBy`, or `thenByDescending`.</span></span><br/><br/>
+<td><code>thenBy</code></td><td><span data-ttu-id="78b55-158">Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından o ana kadarki seçili öğeleri sıralamasını gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="78b55-158">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="78b55-159">Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="78b55-159">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -248,7 +248,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByDescending`</td><td><span data-ttu-id="6760f-160">Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından kadarki seçili öğeleri sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="6760f-160">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="6760f-161">Bu işleç yalnızca sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`.</span><span class="sxs-lookup"><span data-stu-id="6760f-161">This operator may only be used after a `sortBy`, `sortByDescending`, `thenBy`, or `thenByDescending`.</span></span><br/><br/>
+<td><code>thenByDescending</code></td><td><span data-ttu-id="78b55-160">Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından kadarki seçili öğeleri sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="78b55-160">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="78b55-161">Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.</span><span class="sxs-lookup"><span data-stu-id="78b55-161">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -260,7 +260,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupValBy`</td><td><span data-ttu-id="6760f-162">Şu ana kadar seçili her öğe için bir değer seçer ve öğeleri tarafından verilen anahtar gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="6760f-162">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
+<td><code>groupValBy</code></td><td><span data-ttu-id="78b55-162">Şu ana kadar seçili her öğe için bir değer seçer ve öğeleri tarafından verilen anahtar gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="78b55-162">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -270,7 +270,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`join`</td><td><span data-ttu-id="6760f-163">İki anahtarları eşleşmesini temel alan seçili değer kümesine hatalarla ilintilidir.</span><span class="sxs-lookup"><span data-stu-id="6760f-163">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="6760f-164">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="6760f-164">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="6760f-165">Birleşimlerde sonra satır bölerseniz tüm, `-&gt;` sembolü girinti olmalıdır girintili en az durum anahtar sözcüğü `for`.</span><span class="sxs-lookup"><span data-stu-id="6760f-165">In all joins, if the line is split after the `-&gt;` symbol, the indentation must be indented at least as far as the keyword `for`.</span></span><br/><br/>
+<td><code>join</code></td><td><span data-ttu-id="78b55-163">İki anahtarları eşleşmesini temel alan seçili değer kümesine hatalarla ilintilidir.</span><span class="sxs-lookup"><span data-stu-id="78b55-163">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="78b55-164">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="78b55-164">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="78b55-165">Birleşimlerde sonra satır bölerseniz tüm, <code>-&gt;</code> sembolü girinti olmalıdır girintili en az durum anahtar sözcüğü <code>for</code>.</span><span class="sxs-lookup"><span data-stu-id="78b55-165">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -281,7 +281,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupJoin`</td><td><span data-ttu-id="6760f-166">İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="6760f-166">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="6760f-167">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="6760f-167">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>groupJoin</code></td><td><span data-ttu-id="78b55-166">İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="78b55-166">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="78b55-167">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="78b55-167">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -295,7 +295,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`leftOuterJoin`</td><td><span data-ttu-id="6760f-168">İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="6760f-168">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="6760f-169">Bir grubu tek varsayılan bir değerle, herhangi bir grup boşsa, bunun yerine kullanılır.</span><span class="sxs-lookup"><span data-stu-id="6760f-169">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="6760f-170">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="6760f-170">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>leftOuterJoin</code></td><td><span data-ttu-id="78b55-168">İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="78b55-168">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="78b55-169">Bir grubu tek varsayılan bir değerle, herhangi bir grup boşsa, bunun yerine kullanılır.</span><span class="sxs-lookup"><span data-stu-id="78b55-169">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="78b55-170">Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.</span><span class="sxs-lookup"><span data-stu-id="78b55-170">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -307,7 +307,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumByNullable`</td><td><span data-ttu-id="6760f-171">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-171">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="6760f-172">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="6760f-172">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>sumByNullable</code></td><td><span data-ttu-id="78b55-171">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-171">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="78b55-172">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="78b55-172">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -316,7 +316,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minByNullable`</td><td><span data-ttu-id="6760f-173">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-173">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="6760f-174">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="6760f-174">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>minByNullable</code></td><td><span data-ttu-id="78b55-173">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-173">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="78b55-174">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="78b55-174">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -325,7 +325,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxByNullable`</td><td><span data-ttu-id="6760f-175">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve maksimum bu değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-175">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="6760f-176">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="6760f-176">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>maxByNullable</code></td><td><span data-ttu-id="78b55-175">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve maksimum bu değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-175">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="78b55-176">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="78b55-176">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -334,7 +334,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageByNullable`</td><td><span data-ttu-id="6760f-177">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-177">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="6760f-178">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="6760f-178">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>averageByNullable</code></td><td><span data-ttu-id="78b55-177">Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-177">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="78b55-178">Varsa boş değer atanabilir bir değeri yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="78b55-178">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -343,7 +343,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageBy`</td><td><span data-ttu-id="6760f-179">Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-179">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
+<td><code>averageBy</code></td><td><span data-ttu-id="78b55-179">Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-179">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -352,7 +352,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`distinct`</td><td><span data-ttu-id="6760f-180">Farklı öğelere kadarki seçili öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-180">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
+<td><code>distinct</code></td><td><span data-ttu-id="78b55-180">Farklı öğelere kadarki seçili öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-180">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -363,7 +363,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exists`</td><td><span data-ttu-id="6760f-181">Şu ana kadar seçili herhangi bir öğe koşulu karşılayıp karşılamadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="6760f-181">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
+<td><code>exists</code></td><td><span data-ttu-id="78b55-181">Şu ana kadar seçili herhangi bir öğe koşulu karşılayıp karşılamadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="78b55-181">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -376,7 +376,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`find`</td><td><span data-ttu-id="6760f-182">Belirtilen bir koşulu karşılayan ilk öğe kadarki seçili seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-182">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
+<td><code>find</code></td><td><span data-ttu-id="78b55-182">Belirtilen bir koşulu karşılayan ilk öğe kadarki seçili seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-182">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -385,7 +385,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`all`</td><td><span data-ttu-id="6760f-183">Şu ana kadar seçili tüm öğeleri bir koşulu karşılıyor olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="6760f-183">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
+<td><code>all</code></td><td><span data-ttu-id="78b55-183">Şu ana kadar seçili tüm öğeleri bir koşulu karşılıyor olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="78b55-183">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -394,7 +394,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`head`</td><td><span data-ttu-id="6760f-184">İlk öğe kadarki seçili olanlardan seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-184">Selects the first element from those selected so far.</span></span><br/><br/>
+<td><code>head</code></td><td><span data-ttu-id="78b55-184">İlk öğe kadarki seçili olanlardan seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-184">Selects the first element from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -403,7 +403,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`nth`</td><td><span data-ttu-id="6760f-185">Seçili olanlar arasında belirtilen dizinindeki öğeyi kadarki seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-185">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
+<td><code>nth</code></td><td><span data-ttu-id="78b55-185">Seçili olanlar arasında belirtilen dizinindeki öğeyi kadarki seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-185">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -412,7 +412,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skip`</td><td><span data-ttu-id="6760f-186">Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve kalan öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-186">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skip</code></td><td><span data-ttu-id="78b55-186">Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve kalan öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-186">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -421,7 +421,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skipWhile`</td><td><span data-ttu-id="6760f-187">Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri seçer sürece bir sırada öğeleri atlar.</span><span class="sxs-lookup"><span data-stu-id="6760f-187">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skipWhile</code></td><td><span data-ttu-id="78b55-187">Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri seçer sürece bir sırada öğeleri atlar.</span><span class="sxs-lookup"><span data-stu-id="78b55-187">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -431,7 +431,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumBy`</td><td><span data-ttu-id="6760f-188">Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="6760f-188">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
+<td><code>sumBy</code></td><td><span data-ttu-id="78b55-188">Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="78b55-188">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -440,7 +440,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`take`</td><td><span data-ttu-id="6760f-189">Belirtilen sayıda bitişik öğeyi bu seçili kadarki seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-189">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
+<td><code>take</code></td><td><span data-ttu-id="78b55-189">Belirtilen sayıda bitişik öğeyi bu seçili kadarki seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-189">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -450,7 +450,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`takeWhile`</td><td><span data-ttu-id="6760f-190">Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri atlar sürece bir dizisinden öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="6760f-190">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
+<td><code>takeWhile</code></td><td><span data-ttu-id="78b55-190">Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri atlar sürece bir dizisinden öğeleri seçer.</span><span class="sxs-lookup"><span data-stu-id="78b55-190">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -459,7 +459,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullable`</td><td><span data-ttu-id="6760f-191">Şu ana kadar artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="6760f-191">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullable</code></td><td><span data-ttu-id="78b55-191">Şu ana kadar artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="78b55-191">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -469,7 +469,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullableDescending`</td><td><span data-ttu-id="6760f-192">Şu ana kadar azalan sırada verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="6760f-192">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="78b55-192">Şu ana kadar azalan sırada verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.</span><span class="sxs-lookup"><span data-stu-id="78b55-192">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -479,7 +479,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullable`</td><td><span data-ttu-id="6760f-193">Bir sonraki kadarki artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="6760f-193">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="6760f-194">Bu işleç yalnızca hemen sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`, ya da boş değer atanabilir bunların türevleri.</span><span class="sxs-lookup"><span data-stu-id="6760f-194">This operator may only be used immediately after a `sortBy`, `sortByDescending`, `thenBy`, or `thenByDescending`, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullable</code></td><td><span data-ttu-id="78b55-193">Bir sonraki kadarki artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="78b55-193">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="78b55-194">Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.</span><span class="sxs-lookup"><span data-stu-id="78b55-194">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -490,7 +490,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullableDescending`</td><td><span data-ttu-id="6760f-195">Bir sonraki azalan sırada belirtilen boş değer atanabilir sıralama anahtarı kadarki seçili öğeleri sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="6760f-195">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="6760f-196">Bu işleç yalnızca hemen sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`, ya da boş değer atanabilir bunların türevleri.</span><span class="sxs-lookup"><span data-stu-id="6760f-196">This operator may only be used immediately after a `sortBy`, `sortByDescending`, `thenBy`, or `thenByDescending`, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="78b55-195">Bir sonraki azalan sırada belirtilen boş değer atanabilir sıralama anahtarı kadarki seçili öğeleri sıralama gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="78b55-195">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="78b55-196">Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.</span><span class="sxs-lookup"><span data-stu-id="78b55-196">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -503,20 +503,20 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="6760f-197">Transact-SQL ve F# Sorgu İfadelerini Karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="6760f-197">Comparison of Transact-SQL and F# Query Expressions</span></span>
-<span data-ttu-id="6760f-198">Aşağıdaki tabloda bazı yaygın Transact-SQL sorguları ve eşdeğerleri F #'de gösterir.</span><span class="sxs-lookup"><span data-stu-id="6760f-198">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="6760f-199">Kodu bu tabloda ayrıca önceki tabloda ve türü Sağlayıcısı'nı ayarlama aynı ilk kodu aynı veritabanında varsayar.</span><span class="sxs-lookup"><span data-stu-id="6760f-199">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="78b55-197">Transact-SQL ve F# Sorgu İfadelerini Karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="78b55-197">Comparison of Transact-SQL and F# Query Expressions</span></span>
+<span data-ttu-id="78b55-198">Aşağıdaki tabloda bazı yaygın Transact-SQL sorguları ve eşdeğerleri F #'de gösterir.</span><span class="sxs-lookup"><span data-stu-id="78b55-198">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="78b55-199">Kodu bu tabloda ayrıca önceki tabloda ve türü Sağlayıcısı'nı ayarlama aynı ilk kodu aynı veritabanında varsayar.</span><span class="sxs-lookup"><span data-stu-id="78b55-199">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
 
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="6760f-200">Tablo 2.</span><span class="sxs-lookup"><span data-stu-id="6760f-200">Table 2.</span></span> <span data-ttu-id="6760f-201">Transact-SQL ve F# Sorgu İfadeleri</span><span class="sxs-lookup"><span data-stu-id="6760f-201">Transact-SQL and F# Query Expressions</span></span>
+### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="78b55-200">Tablo 2.</span><span class="sxs-lookup"><span data-stu-id="78b55-200">Table 2.</span></span> <span data-ttu-id="78b55-201">Transact-SQL ve F# Sorgu İfadeleri</span><span class="sxs-lookup"><span data-stu-id="78b55-201">Transact-SQL and F# Query Expressions</span></span>
 
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="6760f-202">Transact-SQL (büyük/küçük harfe duyarlı değildir)</span><span class="sxs-lookup"><span data-stu-id="6760f-202">Transact-SQL (not case sensitive)</span></span></th>
-    <th><span data-ttu-id="6760f-203">F # sorgu ifadesi (büyük küçük harf duyarlı)</span><span class="sxs-lookup"><span data-stu-id="6760f-203">F# Query Expression (case sensitive)</span></span></th>
+    <th><span data-ttu-id="78b55-202">Transact-SQL (büyük/küçük harfe duyarlı değildir)</span><span class="sxs-lookup"><span data-stu-id="78b55-202">Transact-SQL (not case sensitive)</span></span></th>
+    <th><span data-ttu-id="78b55-203">F # sorgu ifadesi (büyük küçük harf duyarlı)</span><span class="sxs-lookup"><span data-stu-id="78b55-203">F# Query Expression (case sensitive)</span></span></th>
   </tr>
 <tr><td>
-<span data-ttu-id="6760f-204">Tüm alanlar tablosundan seçin.</span><span class="sxs-lookup"><span data-stu-id="6760f-204">Select all fields from table.</span></span></br>
+<span data-ttu-id="78b55-204">Tüm alanlar tablosundan seçin.</span><span class="sxs-lookup"><span data-stu-id="78b55-204">Select all fields from table.</span></span></br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -531,7 +531,7 @@ query {
 
 </td></tr>
 <tr><td>
-<span data-ttu-id="6760f-205">Bir tablodaki kayıtların sayısı.</span><span class="sxs-lookup"><span data-stu-id="6760f-205">Count records in a table.</span></span><br/>
+<span data-ttu-id="78b55-205">Bir tablodaki kayıtların sayısı.</span><span class="sxs-lookup"><span data-stu-id="78b55-205">Count records in a table.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -546,7 +546,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>`EXISTS`
+<td><code>EXISTS</code>
 </br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
@@ -570,7 +570,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td><span data-ttu-id="6760f-206">Gruplandırma</span><span class="sxs-lookup"><span data-stu-id="6760f-206">Grouping</span></span><br/>
+<td><span data-ttu-id="78b55-206">Gruplandırma</span><span class="sxs-lookup"><span data-stu-id="78b55-206">Grouping</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -592,7 +592,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-<span data-ttu-id="6760f-207">Koşulla birlikte gruplandırma.</span><span class="sxs-lookup"><span data-stu-id="6760f-207">Grouping with condition.</span></span><br/>
+<span data-ttu-id="78b55-207">Koşulla birlikte gruplandırma.</span><span class="sxs-lookup"><span data-stu-id="78b55-207">Grouping with condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -612,7 +612,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="6760f-208">Gruplandırma sayısı koşulu.</span><span class="sxs-lookup"><span data-stu-id="6760f-208">Grouping with count condition.</span></span><br/>
+<span data-ttu-id="78b55-208">Gruplandırma sayısı koşulu.</span><span class="sxs-lookup"><span data-stu-id="78b55-208">Grouping with count condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -633,7 +633,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="6760f-209">Gruplandırma, sayım ve toplama.</span><span class="sxs-lookup"><span data-stu-id="6760f-209">Grouping, counting, and summing.</span></span><br/>
+<span data-ttu-id="78b55-209">Gruplandırma, sayım ve toplama.</span><span class="sxs-lookup"><span data-stu-id="78b55-209">Grouping, counting, and summing.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -656,7 +656,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="6760f-210">Gruplandırma, sayım ve sayısına göre sıralama.</span><span class="sxs-lookup"><span data-stu-id="6760f-210">Grouping, counting, and ordering by count.</span></span><br/>
+<span data-ttu-id="78b55-210">Gruplandırma, sayım ve sayısına göre sıralama.</span><span class="sxs-lookup"><span data-stu-id="78b55-210">Grouping, counting, and ordering by count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -679,9 +679,9 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-211">
-`IN`Belirtilen değer kümesi</span><span class="sxs-lookup"><span data-stu-id="6760f-211">
-`IN` a set of specified values</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-211">
+<code>IN</code>Belirtilen değer kümesi</span><span class="sxs-lookup"><span data-stu-id="78b55-211">
+<code>IN</code> a set of specified values</span></span><br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,9 +703,9 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-212">
-`LIKE`ve `TOP`.</span><span class="sxs-lookup"><span data-stu-id="6760f-212">
-`LIKE` and `TOP`.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-212">
+<code>LIKE</code>ve <code>TOP</code>.</span><span class="sxs-lookup"><span data-stu-id="78b55-212">
+<code>LIKE</code> and <code>TOP</code>.</span></span><br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -722,9 +722,9 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-213">
-`LIKE`desenle kümesi ile eşleşmesi.</span><span class="sxs-lookup"><span data-stu-id="6760f-213">
-`LIKE` with pattern match set.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-213">
+<code>LIKE</code>desenle kümesi ile eşleşmesi.</span><span class="sxs-lookup"><span data-stu-id="78b55-213">
+<code>LIKE</code> with pattern match set.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -740,9 +740,9 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-214">
-`LIKE`set dışlama deseni.</span><span class="sxs-lookup"><span data-stu-id="6760f-214">
-`LIKE` with set exclusion pattern.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-214">
+<code>LIKE</code>set dışlama deseni.</span><span class="sxs-lookup"><span data-stu-id="78b55-214">
+<code>LIKE</code> with set exclusion pattern.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -760,9 +760,9 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-215">
-`LIKE`bir alan, ancak farklı bir alan seçin.</span><span class="sxs-lookup"><span data-stu-id="6760f-215">
-`LIKE` on one field, but select a different field.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-215">
+<code>LIKE</code>bir alan, ancak farklı bir alan seçin.</span><span class="sxs-lookup"><span data-stu-id="78b55-215">
+<code>LIKE</code> on one field, but select a different field.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -777,7 +777,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-216">`LIKE`, substring arama ile.</span><span class="sxs-lookup"><span data-stu-id="6760f-216">`LIKE`, with substring search.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-216"><code>LIKE</code>, substring arama ile.</span><span class="sxs-lookup"><span data-stu-id="78b55-216"><code>LIKE</code>, with substring search.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -794,7 +794,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="6760f-217">Basit `JOIN` iki tablo ile.</span><span class="sxs-lookup"><span data-stu-id="6760f-217">Simple `JOIN` with two tables.</span></span><br/>
+<span data-ttu-id="78b55-217">Basit <code>JOIN</code> iki tablo ile.</span><span class="sxs-lookup"><span data-stu-id="78b55-217">Simple <code>JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -812,7 +812,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-218">`LEFT JOIN`iki tablo ile.</span><span class="sxs-lookup"><span data-stu-id="6760f-218">`LEFT JOIN` with two tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-218"><code>LEFT JOIN</code>iki tablo ile.</span><span class="sxs-lookup"><span data-stu-id="78b55-218"><code>LEFT JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -831,7 +831,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-219">`JOIN`ile`COUNT`</span><span class="sxs-lookup"><span data-stu-id="6760f-219">`JOIN` with `COUNT`</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-219"><code>JOIN</code>ile<code>COUNT</code></span><span class="sxs-lookup"><span data-stu-id="78b55-219"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -849,7 +849,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`DISTINCT`<br/>
+</td></tr><tr><td><code>DISTINCT</code><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT StudentID FROM CourseSelection
 </code></pre>
@@ -865,7 +865,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-220">Farklı sayısı.</span><span class="sxs-lookup"><span data-stu-id="6760f-220">Distinct count.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-220">Farklı sayısı.</span><span class="sxs-lookup"><span data-stu-id="78b55-220">Distinct count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT COUNT(StudentID) FROM CourseSelection
 </code></pre>
@@ -882,7 +882,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`BETWEEN`<br/>
+</td></tr><tr><td><code>BETWEEN</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age BETWEEN 10 AND 15
@@ -898,7 +898,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`<br/>
+</td></tr><tr><td><code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -914,7 +914,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-221">`OR`sıralama ile</span><span class="sxs-lookup"><span data-stu-id="6760f-221">`OR` with ordering</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-221"><code>OR</code>sıralama ile</span><span class="sxs-lookup"><span data-stu-id="78b55-221"><code>OR</code> with ordering</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -932,7 +932,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-222">`TOP`, `OR`ve sıralama.</span><span class="sxs-lookup"><span data-stu-id="6760f-222">`TOP`, `OR`, and ordering.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-222"><code>TOP</code>, <code>OR</code>ve sıralama.</span><span class="sxs-lookup"><span data-stu-id="78b55-222"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -954,7 +954,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-223">`UNION`iki sorguları.</span><span class="sxs-lookup"><span data-stu-id="6760f-223">`UNION` of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-223"><code>UNION</code>iki sorguları.</span><span class="sxs-lookup"><span data-stu-id="78b55-223"><code>UNION</code> of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -979,7 +979,7 @@ let query2 =
 query2.Union (query1)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-224">İki sorguları kesişimi.</span><span class="sxs-lookup"><span data-stu-id="6760f-224">Intersection of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-224">İki sorguları kesişimi.</span><span class="sxs-lookup"><span data-stu-id="78b55-224">Intersection of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
@@ -1003,7 +1003,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-225">`CASE`Koşul.</span><span class="sxs-lookup"><span data-stu-id="6760f-225">`CASE` condition.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-225"><code>CASE</code>Koşul.</span><span class="sxs-lookup"><span data-stu-id="78b55-225"><code>CASE</code> condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1025,7 +1025,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-226">Birden çok durumda.</span><span class="sxs-lookup"><span data-stu-id="6760f-226">Multiple cases.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-226">Birden çok durumda.</span><span class="sxs-lookup"><span data-stu-id="78b55-226">Multiple cases.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1051,7 +1051,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-227">Birden çok tablo.</span><span class="sxs-lookup"><span data-stu-id="6760f-227">Multiple tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-227">Birden çok tablo.</span><span class="sxs-lookup"><span data-stu-id="78b55-227">Multiple tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student, Course
 </code></pre>
@@ -1066,7 +1066,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-228">Birden fazla birleşim.</span><span class="sxs-lookup"><span data-stu-id="6760f-228">Multiple joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-228">Birden fazla birleşim.</span><span class="sxs-lookup"><span data-stu-id="78b55-228">Multiple joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1089,7 +1089,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="6760f-229">Birden çok sol dış birleştirme.</span><span class="sxs-lookup"><span data-stu-id="6760f-229">Multiple left outer joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="78b55-229">Birden çok sol dış birleştirme.</span><span class="sxs-lookup"><span data-stu-id="78b55-229">Multiple left outer joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1116,7 +1116,7 @@ query {
 
 </td></tr></table>
 
-<span data-ttu-id="6760f-230">Aşağıdaki kod, bu örnekler örnek veritabanı oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6760f-230">The following code can be used to create the sample database for these examples.</span></span>
+<span data-ttu-id="78b55-230">Aşağıdaki kod, bu örnekler örnek veritabanı oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="78b55-230">The following code can be used to create the sample database for these examples.</span></span>
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1238,7 +1238,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-<span data-ttu-id="6760f-231">Aşağıdaki kod, bu konudaki görünür örnek kodunu içerir.</span><span class="sxs-lookup"><span data-stu-id="6760f-231">The following code contains  the sample code that appears in this topic.</span></span>
+<span data-ttu-id="78b55-231">Aşağıdaki kod, bu konudaki görünür örnek kodunu içerir.</span><span class="sxs-lookup"><span data-stu-id="78b55-231">The following code contains  the sample code that appears in this topic.</span></span>
 
 ```fsharp
 #if INTERACTIVE
@@ -1874,7 +1874,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-<span data-ttu-id="6760f-232">Burada da tam çıkış bu kodu F # Etkileşimli'de çalıştırıldığında.</span><span class="sxs-lookup"><span data-stu-id="6760f-232">And here is the full output when this code is run in F# Interactive.</span></span>
+<span data-ttu-id="78b55-232">Burada da tam çıkış bu kodu F # Etkileşimli'de çalıştırıldığında.</span><span class="sxs-lookup"><span data-stu-id="78b55-232">And here is the full output when this code is run in F# Interactive.</span></span>
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2438,9 +2438,9 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a><span data-ttu-id="6760f-233">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6760f-233">See Also</span></span>
-[<span data-ttu-id="6760f-234">F # dili başvurusu</span><span class="sxs-lookup"><span data-stu-id="6760f-234">F# Language Reference</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="78b55-233">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="78b55-233">See Also</span></span>
+[<span data-ttu-id="78b55-234">F # dili başvurusu</span><span class="sxs-lookup"><span data-stu-id="78b55-234">F# Language Reference</span></span>](index.md)
 
-[<span data-ttu-id="6760f-235">Linq.QueryBuilder sınıfı</span><span class="sxs-lookup"><span data-stu-id="6760f-235">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+[<span data-ttu-id="78b55-235">Linq.QueryBuilder sınıfı</span><span class="sxs-lookup"><span data-stu-id="78b55-235">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 
-[<span data-ttu-id="6760f-236">Hesaplama ifadeleri</span><span class="sxs-lookup"><span data-stu-id="6760f-236">Computation Expressions</span></span>](Computation-Expressions.md)
+[<span data-ttu-id="78b55-236">Hesaplama ifadeleri</span><span class="sxs-lookup"><span data-stu-id="78b55-236">Computation Expressions</span></span>](Computation-Expressions.md)

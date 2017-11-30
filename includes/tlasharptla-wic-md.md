@@ -1,0 +1,1 @@
+<span data-ttu-id="d7c4c-101">Microsoft Windows Presentation Foundation Görüntüleme Bileşeni</span><span class="sxs-lookup"><span data-stu-id="d7c4c-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="e86bc-101">Genişletilebilir Meta Veri Platformu (XMP)</span><span class="sxs-lookup"><span data-stu-id="e86bc-101">Extensible Metadata Platform (XMP)</span></span>

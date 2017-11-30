@@ -1,0 +1,1 @@
+<span data-ttu-id="02772-101">4.6 sonrasında kullanılabilir, yalnızca .NET Native</span><span class="sxs-lookup"><span data-stu-id="02772-101">Available since 4.6, .NET Native only</span></span>
