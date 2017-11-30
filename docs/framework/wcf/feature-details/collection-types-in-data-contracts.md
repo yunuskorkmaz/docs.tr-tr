@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], böyle listeleri dizileri veya diğer türleri çeşitli kullanarak temsil edilebilir (genel listesi, genel <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, veya <xref:System.Collections.ArrayList>). Örneğin, bir koleksiyon için belirli bir müşteri adresleri listesi tutabilir. Bu koleksiyon adı verilen *listesinde koleksiyonları*kendi gerçek türü ne olursa olsun.  
@@ -165,7 +165,7 @@ A *koleksiyonu* belirli bir türdeki öğeleri listesini içerir. İçinde [!INC
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Başvurulan türü|Başvurulan türü tarafından uygulanan arabirimi|Örnek|Kabul türü|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Genel olmayan ya da kapalı genel (parametreleri herhangi sayısı)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> veya<br /><br /> `MyType<T> : IDictionary`Burada T =`int`|Genel kapalı`IDictionary<object,object>`|  
-|Kapalı genel (parametreleri herhangi sayısı)|<xref:System.Collections.Generic.IDictionary%602>, kapalı|`MyType<T> : IDictionary\<string, bool>`Burada T =`int`|Kapalı genel (örneğin, `IDIctionary\<string,bool>`)|  
-|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, bir anahtar veya değer kapalı, diğer açık olduğundan ve tür parametrelerden birini kullanır|`MyType\<T,U,V> : IDictionary\<string,V>`Burada T =`int`, U =`float`, V =`bool`<br /><br /> veya<br /><br /> `MyType<Z> : IDictionary\<Z,bool>`Burada Z =`string`|Kapalı genel (örneğin, `IDictionary\<string,bool>`)|  
-|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, anahtar ve değer açık ve her tür parametrelerden birini kullanır|`MyType\<T,U,V> : IDictionary\<V,U>`Burada T =`int`, U =`bool`, V =`string`|Kapalı genel (örneğin, `IDictionary\<string,bool>`)|  
-|Açık genel (iki parametre)|Genel <xref:System.Collections.Generic.IDictionary%602>, açın, her iki tür genel parametreler göründükleri sırada kullanır|`MyType\<K,V> : IDictionary\<K,V>`, K ve V hem açın|Açık genel (örneğin, `IDictionary\<K,V>`)|  
+|Kapalı genel (parametreleri herhangi sayısı)|<xref:System.Collections.Generic.IDictionary%602>, kapalı|`MyType<T> : IDictionary<string, bool>`Burada T =`int`|Kapalı genel (örneğin, `IDIctionary<string,bool>`)|  
+|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, bir anahtar veya değer kapalı, diğer açık olduğundan ve tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<string,V>`Burada T =`int`, U =`float`, V =`bool`<br /><br /> veya<br /><br /> `MyType<Z> : IDictionary<Z,bool>`Burada Z =`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
+|Kapalı genel (parametreleri herhangi sayısı)|Genel <xref:System.Collections.Generic.IDictionary%602>, anahtar ve değer açık ve her tür parametrelerden birini kullanır|`MyType<T,U,V> : IDictionary<V,U>`Burada T =`int`, U =`bool`, V =`string`|Kapalı genel (örneğin, `IDictionary<string,bool>`)|  
+|Açık genel (iki parametre)|Genel <xref:System.Collections.Generic.IDictionary%602>, açın, her iki tür genel parametreler göründükleri sırada kullanır|`MyType<K,V> : IDictionary<K,V>`, K ve V hem açın|Açık genel (örneğin, `IDictionary<K,V>`)|  
   
  Türü hem de uyguluyorsa <xref:System.Collections.IDictionary> ve genel <xref:System.Collections.Generic.IDictionary%602>, yalnızca genel <xref:System.Collections.Generic.IDictionary%602> olarak kabul edilir.  
   

@@ -1,0 +1,1 @@
+4.6 sonrasında kullanılabilir, yalnızca .NET Native

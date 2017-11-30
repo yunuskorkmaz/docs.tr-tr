@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="document-approval-process"></a>Belge onay işlemi
 Bu örnek birçok kullanımını gösteren [!INCLUDE[wf](../../../../includes/wf-md.md)] ve [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] özellikleri birlikte. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması onay için belge gönderme ve belgeleri onaylayabilirsiniz. Onay Yöneticisi uygulamanın istemciler arasındaki iletişimi kolaylaştırmak için ve onay işlemi kurallarını zorunlu tutmak için bulunmaktadır. Onay, onay çeşitli türlerde yürütebilir bir iş akışı işlemidir. Etkinlikleri tek bir onay, çekirdek onay (onaylayanlar kümesi yüzdesi) ve çekirdek ve bir sırada tek onay oluşan bir karmaşık onay işlemi almak için mevcut.  
@@ -155,6 +155,4 @@ Bu örnek birçok kullanımını gösteren [!INCLUDE[wf](../../../../includes/wf
   
 ##### <a name="to-clean-up"></a>Temizlemek için  
   
-1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemi, DocumentApprovalProcess klasörüne gidin ve Cleanup.cmd çalıştırın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemi, DocumentApprovalProcess klasörüne gidin ve Cleanup.cmd çalıştırın.

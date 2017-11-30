@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9eeaf201c1f5a58044db62e356199b609c4c035a
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="reference-semantics-with-value-types"></a>Başvuru semantiği ile değer türleri
 
@@ -85,7 +85,7 @@ Bir değişkene atadığınızda bir `ref readonly return`, ya da belirtebilirsi
 Uygulama `ref readonly` yapı yüksek trafik kullanımlar için yeterli olabilir.
 Diğer durumlarda, sabit bir yapı oluşturmak isteyebilirsiniz. Ardından readonly başvuruya göre geçirebilirsiniz. Alıştırma savunma kaldırır meydana yöntemleri olarak kullanılan bir yapı eriştiğinizde kopyalar bir `in` parametresi.
 
-Bunu oluşturarak yapabilirsiniz bir `readonly struct` türü. Ekleyebileceğiniz `readonly` yapısı bildirimine değiştiricisi. Tüm yapı üyesi olmalarını derleyici zorlar `readonly`; `struct` sabit olması gerekir.
+Bunu oluşturarak yapabilirsiniz bir `readonly struct` türü. Ekleyebileceğiniz `readonly` yapısı bildirimine değiştiricisi. Tüm örnek yapı üyesi olmalarını derleyici zorlar `readonly`; `struct` sabit olması gerekir.
 
 Diğer en iyi duruma getirme vardır bir `readonly struct`. Kullanabileceğiniz `in` her konumda değiştiricisi burada bir `readonly struct` bir bağımsız değişken. Ayrıca, döndürebilir bir `readonly struct` olarak bir `ref return` zaman iade nesneyi, yaşam süresi genişletir nesnesi döndüren yöntemi kapsamı dışındadır.
 

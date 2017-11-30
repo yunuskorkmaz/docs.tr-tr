@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc55f1a919303abe81735da5ad9347115c827d2a
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
@@ -24,7 +24,7 @@ Kullanabileceğiniz sınıf kitaplıkları üç tür vardır:
 
 *   **Platforma özgü** sınıf kitaplıkları tüm API'leri (örneğin, .NET Framework, Xamarin iOS için) belirli bir platformda erişimi, ancak yalnızca uygulamaları ve bu platformu hedefleyen kitaplıklar tarafından kullanılabilir.
 *   **Taşınabilir** sınıf kitaplıkları API kümesini erişimi ve uygulamaları ve birden çok platformu hedefleyen kitaplıklar tarafından kullanılabilir.
-*   **.NET core** sınıf kitaplıkları olan bir birleşme hem de en iyi sağlayan tek bir modelini platforma özgü ve taşınabilir kitaplığı prototip.
+*   **.NET standart** sınıf kitaplıkları olan bir birleşme hem de en iyi sağlayan tek bir modelini platforma özgü ve taşınabilir kitaplığı prototip.
 
 ## <a name="platform-specific-class-libraries"></a>Platforma özgü sınıf kitaplıkları
 

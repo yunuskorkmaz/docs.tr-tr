@@ -1,0 +1,44 @@
+---
+title: "ComboBox Denetimine Genel Bakış (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ComboBox
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- ComboBox control [Windows Forms], about ComboBox control
+- drop-down lists [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], about combo boxes
+ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 979a410020ab6e3a1f2c15dcee52b062eb00c1ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="combobox-control-overview-windows-forms"></a>ComboBox Denetimine Genel Bakış (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.ComboBox> denetimi açılan kutuya verileri görüntülemek için kullanılır. Varsayılan olarak, <xref:System.Windows.Forms.ComboBox> denetimi iki parça halinde görüntülenir: bir liste öğesi türü kullanıcı sağlayan bir metin kutusu üst parçasıdır. İkinci bölümü, kullanıcı bir seçebileceği öğe listesini görüntüleyen bir liste kutusudur. Birleşik giriş kutusu diğer stilleri hakkında daha fazla bilgi için bkz: [ne zaman bir Windows Forms ComboBox INSTEAD of ListBox kullanılacağı](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  
+  
+ <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> Özelliği seçilen liste öğesine karşılık gelen bir tamsayı değeri döndürür. Seçili öğeyi değiştirerek program aracılığıyla değiştirebilirsiniz <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> değer kodda; listesinde karşılık gelen öğe birleşik giriş kutusu metin kutusu bölümünde görüntülenir. Öğe seçiliyse, <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> değer -1'dir. Listedeki ilk öğe seçiliyse, sonra <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> değer: 0. <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> Özelliği benzer <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> , ancak öğenin kendisini, genellikle bir string değeri döndürür. <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> Özelliği yansıtır liste öğelerinin sayısını ve değerini <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> özelliktir her zaman bir birden çok büyük olası <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> çünkü değer <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> sıfır tabanlı olduğundan.  
+  
+ Ekleme veya öğeleri silmek için bir <xref:System.Windows.Forms.ComboBox> denetlemek, kullanın <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> veya <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> yöntemi. Alternatif olarak, öğeleri listede kullanarak ekleyebileceğiniz <xref:System.Windows.Forms.ComboBox.Items%2A> Tasarımcısı'nda özelliği.  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ <xref:System.Windows.Forms.ComboBox>  
+ [ListBox denetimine genel bakış](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [Windows Forms ComboBox, ListBox yerine kullanmak ne zaman](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ [Nasıl yapılır: ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [Nasıl yapılır: bir Windows içeriğini sıralama Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [Nasıl yapılır: özel erişim öğeleri Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ [Nasıl yapılır: Windows Forms ComboBox veya ListBox denetimini verilere bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox denetimi için arama tablosu oluşturma](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)

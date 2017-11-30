@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir. Bu iş akışları Contoso Ltd. adlı kurgusal bir şirkette BT altyapısının bir parçasıdır  
@@ -242,6 +242,4 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
   
 1.  SQL Server örnek deposuna DbSetup klasöründe Cleanup.bat çalıştırarak silin.  
   
-2.  Kaynak kodu biçiminde sabit silin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+2.  Kaynak kodu biçiminde sabit silin.

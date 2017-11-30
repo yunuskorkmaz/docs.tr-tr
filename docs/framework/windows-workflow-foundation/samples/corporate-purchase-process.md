@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
 Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın alma işlemi çok basit bir istek oluşturulacağını gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.  
@@ -180,6 +180,4 @@ Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın 
   
 -   **Görüntüleme RFP**: varolan bir RFP içeriğini gösterir. Satıcılar kendi teklifleri gönder (davet varsa veya RFP bitmeyen)  
   
--   **Connect olarak**: kullanıcının istenen Katılımcısı seçerek kullanarak farklı kimlikleri RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+-   **Connect olarak**: kullanıcının istenen Katılımcısı seçerek kullanarak farklı kimlikleri RFP erişebildiği **olarak görüntülemek** birleşik giriş kutusu etkin RFPs kılavuzunda.

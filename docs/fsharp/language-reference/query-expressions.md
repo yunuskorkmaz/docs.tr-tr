@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 360733d81f049cd4356ecc47a27f97c3ec3a402a
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 
@@ -93,7 +93,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>Açıklama</th>
   </tr>
   <tr>
-  <td>`contains`</td>
+  <td><code>contains</code></td>
 <td>Seçilen öğeleri belirtilen bir öğe içerip içermediğini belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
@@ -108,7 +108,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 
 <tr>
-  <td>`count`</td><td>Seçilen öğelerin sayısını döndürür.<br/><br/>
+  <td><code>count</code></td><td>Seçilen öğelerin sayısını döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -118,7 +118,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`last`</td><td>Şu ana kadar seçili olanlar son öğesinden seçer.<br/><br/>
+<td><code>last</code></td><td>Şu ana kadar seçili olanlar son öğesinden seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -127,7 +127,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`lastOrDefault`</td><td>Hiçbir öğe bulunursa, o ana kadarki Seçili olanlar veya varsayılan değeri, son öğe seçer.<br/><br/>
+<td><code>lastOrDefault</code></td><td>Hiçbir öğe bulunursa, o ana kadarki Seçili olanlar veya varsayılan değeri, son öğe seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -137,7 +137,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOne`</td><td>Şu ana kadar seçili tek, belirli öğesini seçer. Birden çok öğe varsa, özel durum oluşur.<br/><br/>
+<td><code>exactlyOne</code></td><td>Şu ana kadar seçili tek, belirli öğesini seçer. Birden çok öğe varsa, özel durum oluşur.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -148,7 +148,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOneOrDefault`</td><td>Bu öğenin bulunamaması durumunda kadarki Seçili olanlar veya varsayılan bir değer tek, belirli öğesinin seçer.<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>Bu öğenin bulunamaması durumunda kadarki Seçili olanlar veya varsayılan bir değer tek, belirli öğesinin seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -159,7 +159,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`headOrDefault`</td><td>Öğe sırası içeriyorsa, o ana kadarki Seçili olanlar veya varsayılan değeri ilk öğesi seçer.<br/><br/>
+<td><code>headOrDefault</code></td><td>Öğe sırası içeriyorsa, o ana kadarki Seçili olanlar veya varsayılan değeri ilk öğesi seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -169,7 +169,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`select`</td><td>Şu ana kadar Seçili öğelerin her birini projeleri.<br/><br/>
+<td><code>select</code></td><td>Şu ana kadar Seçili öğelerin her birini projeleri.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -178,7 +178,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`where`</td><td>Belirtilen bir koşul temel öğeleri seçer.<br/><br/>
+<td><code>where</code></td><td>Belirtilen bir koşul temel öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -188,7 +188,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minBy`</td><td>Şu ana kadar seçili her öğe için bir değer seçer ve sonuçta elde edilen en küçük değer döndürür.<br/><br/>
+<td><code>minBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve sonuçta elde edilen en küçük değer döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -197,7 +197,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxBy`</td><td>Şu ana kadar seçili her öğe için bir değer seçer ve en çok sonuç değeri döndürür.<br/><br/>
+<td><code>maxBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve en çok sonuç değeri döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -206,7 +206,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupBy`</td><td>Belirtilen bir anahtar Seçici göre kadarki seçili öğeleri gruplandırır.<br/><br/>
+<td><code>groupBy</code></td><td>Belirtilen bir anahtar Seçici göre kadarki seçili öğeleri gruplandırır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -216,7 +216,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortBy`</td><td>Şu ana kadar artan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortBy</code></td><td>Şu ana kadar artan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -226,7 +226,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByDescending`</td><td>Şu ana kadar azalan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByDescending</code></td><td>Şu ana kadar azalan sırada belirtilen sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -236,7 +236,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenBy`</td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından o ana kadarki seçili öğeleri sıralamasını gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`.<br/><br/>
+<td><code>thenBy</code></td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından o ana kadarki seçili öğeleri sıralamasını gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -248,7 +248,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByDescending`</td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`.<br/><br/>
+<td><code>thenByDescending</code></td><td>Bir sonraki azalan sırada belirtilen sıralama anahtarı tarafından kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -260,7 +260,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupValBy`</td><td>Şu ana kadar seçili her öğe için bir değer seçer ve öğeleri tarafından verilen anahtar gruplandırır.<br/><br/>
+<td><code>groupValBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve öğeleri tarafından verilen anahtar gruplandırır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -270,7 +270,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`join`</td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine hatalarla ilintilidir. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir. Birleşimlerde sonra satır bölerseniz tüm, `-&gt;` sembolü girinti olmalıdır girintili en az durum anahtar sözcüğü `for`.<br/><br/>
+<td><code>join</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine hatalarla ilintilidir. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir. Birleşimlerde sonra satır bölerseniz tüm, <code>-&gt;</code> sembolü girinti olmalıdır girintili en az durum anahtar sözcüğü <code>for</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -281,7 +281,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupJoin`</td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
+<td><code>groupJoin</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -295,7 +295,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`leftOuterJoin`</td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Bir grubu tek varsayılan bir değerle, herhangi bir grup boşsa, bunun yerine kullanılır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
+<td><code>leftOuterJoin</code></td><td>İki anahtarları eşleşmesini temel alan seçili değer kümesine karşılık gelen ve sonuçları gruplandırır. Bir grubu tek varsayılan bir değerle, herhangi bir grup boşsa, bunun yerine kullanılır. Anahtarları = geçici sırasını oturum bir birleşim ifadesinde Not önemlidir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -307,7 +307,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumByNullable`</td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>sumByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin toplamını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -316,7 +316,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minByNullable`</td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>minByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerleri en az döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -325,7 +325,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxByNullable`</td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve maksimum bu değerini döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>maxByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve maksimum bu değerini döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -334,7 +334,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageByNullable`</td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
+<td><code>averageByNullable</code></td><td>Şu ana kadar seçili her öğe için boş değer atanabilir bir değer seçer ve bu değerlerin ortalamasını döndürür. Varsa boş değer atanabilir bir değeri yok sayılır.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -343,7 +343,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageBy`</td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.<br/><br/>
+<td><code>averageBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin ortalamasını döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -352,7 +352,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`distinct`</td><td>Farklı öğelere kadarki seçili öğeleri seçer.<br/><br/>
+<td><code>distinct</code></td><td>Farklı öğelere kadarki seçili öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -363,7 +363,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exists`</td><td>Şu ana kadar seçili herhangi bir öğe koşulu karşılayıp karşılamadığını belirler.<br/><br/>
+<td><code>exists</code></td><td>Şu ana kadar seçili herhangi bir öğe koşulu karşılayıp karşılamadığını belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -376,7 +376,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`find`</td><td>Belirtilen bir koşulu karşılayan ilk öğe kadarki seçili seçer.<br/><br/>
+<td><code>find</code></td><td>Belirtilen bir koşulu karşılayan ilk öğe kadarki seçili seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -385,7 +385,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`all`</td><td>Şu ana kadar seçili tüm öğeleri bir koşulu karşılıyor olup olmadığını belirler.<br/><br/>
+<td><code>all</code></td><td>Şu ana kadar seçili tüm öğeleri bir koşulu karşılıyor olup olmadığını belirler.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -394,7 +394,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`head`</td><td>İlk öğe kadarki seçili olanlardan seçer.<br/><br/>
+<td><code>head</code></td><td>İlk öğe kadarki seçili olanlardan seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -403,7 +403,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`nth`</td><td>Seçili olanlar arasında belirtilen dizinindeki öğeyi kadarki seçer.<br/><br/>
+<td><code>nth</code></td><td>Seçili olanlar arasında belirtilen dizinindeki öğeyi kadarki seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -412,7 +412,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skip`</td><td>Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve kalan öğeleri seçer.<br/><br/>
+<td><code>skip</code></td><td>Şu ana kadar seçilen öğeleri belirtilen sayıda atlar ve kalan öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -421,7 +421,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skipWhile`</td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri seçer sürece bir sırada öğeleri atlar.<br/><br/>
+<td><code>skipWhile</code></td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri seçer sürece bir sırada öğeleri atlar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -431,7 +431,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumBy`</td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.<br/><br/>
+<td><code>sumBy</code></td><td>Şu ana kadar seçili her öğe için bir değer seçer ve bu değerlerin toplamını döndürür.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -440,7 +440,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`take`</td><td>Belirtilen sayıda bitişik öğeyi bu seçili kadarki seçer.<br/><br/>
+<td><code>take</code></td><td>Belirtilen sayıda bitişik öğeyi bu seçili kadarki seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -450,7 +450,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`takeWhile`</td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri atlar sürece bir dizisinden öğeleri seçer.<br/><br/>
+<td><code>takeWhile</code></td><td>Belirtilen bir koşul true olarak ayarlandığında ve kalan öğeleri atlar sürece bir dizisinden öğeleri seçer.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -459,7 +459,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullable`</td><td>Şu ana kadar artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByNullable</code></td><td>Şu ana kadar artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -469,7 +469,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullableDescending`</td><td>Şu ana kadar azalan sırada verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>Şu ana kadar azalan sırada verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğeleri sıralar.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -479,7 +479,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullable`</td><td>Bir sonraki kadarki artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`, ya da boş değer atanabilir bunların türevleri.<br/><br/>
+<td><code>thenByNullable</code></td><td>Bir sonraki kadarki artan düzende verilen boş değer atanabilir sıralama anahtarı tarafından seçilen öğelerin sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -490,7 +490,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullableDescending`</td><td>Bir sonraki azalan sırada belirtilen boş değer atanabilir sıralama anahtarı kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir `sortBy`, `sortByDescending`, `thenBy`, veya `thenByDescending`, ya da boş değer atanabilir bunların türevleri.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Bir sonraki azalan sırada belirtilen boş değer atanabilir sıralama anahtarı kadarki seçili öğeleri sıralama gerçekleştirir. Bu işleç yalnızca hemen sonra kullanılabilir bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, veya <code>thenByDescending</code>, ya da boş değer atanabilir bunların türevleri.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -546,7 +546,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>`EXISTS`
+<td><code>EXISTS</code>
 </br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
@@ -680,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`IN`Belirtilen değer kümesi<br/>
+<code>IN</code>Belirtilen değer kümesi<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +703,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`ve `TOP`.<br/>
+<code>LIKE</code>ve <code>TOP</code>.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`desenle kümesi ile eşleşmesi.<br/>
+<code>LIKE</code>desenle kümesi ile eşleşmesi.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`set dışlama deseni.<br/>
+<code>LIKE</code>set dışlama deseni.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`bir alan, ancak farklı bir alan seçin.<br/>
+<code>LIKE</code>bir alan, ancak farklı bir alan seçin.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>`LIKE`, substring arama ile.<br/>
+</td></tr><tr><td><code>LIKE</code>, substring arama ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Basit `JOIN` iki tablo ile.<br/>
+Basit <code>JOIN</code> iki tablo ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`LEFT JOIN`iki tablo ile.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>iki tablo ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`JOIN`ile`COUNT`<br/>
+</td></tr><tr><td><code>JOIN</code>ile<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -844,7 +844,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`DISTINCT`<br/>
+</td></tr><tr><td><code>DISTINCT</code><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT StudentID FROM CourseSelection
 </code></pre>
@@ -877,7 +877,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`BETWEEN`<br/>
+</td></tr><tr><td><code>BETWEEN</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age BETWEEN 10 AND 15
@@ -893,7 +893,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`<br/>
+</td></tr><tr><td><code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`sıralama ile<br/>
+</td></tr><tr><td><code>OR</code>sıralama ile<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`TOP`, `OR`ve sıralama.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code>ve sıralama.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`UNION`iki sorguları.<br/>
+</td></tr><tr><td><code>UNION</code>iki sorguları.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td>`CASE`Koşul.<br/>
+</td></tr><tr><td><code>CASE</code>Koşul.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

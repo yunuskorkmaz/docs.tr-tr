@@ -1,0 +1,1 @@
+Genişletilebilir Meta Veri Platformu (XMP)

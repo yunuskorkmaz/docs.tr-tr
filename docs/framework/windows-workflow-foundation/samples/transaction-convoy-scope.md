@@ -12,11 +12,11 @@ caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b5fc8834fb72163a615633d81232e25768683278
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 085c52d94db5af12a022fa353a80d69534bfe219
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="transaction-convoy-scope"></a>İşlem Convoy kapsamı
 Bu örnek nasıl paralel etkinlik düzeni ile birlikte Mesajlaşma Convoy oluşturulduğunu gösteren bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> burada birkaç işlem oluşabilir tüm aynı işlem altında herhangi bir sırada bir protokol modellemek için. Bu örnek ayrıca gösterir nasıl bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> istemci kullanmayan şekilde bir sunucuya akıtılan değil, yeni bir işlem otomatik olarak oluşturur işlemler kullanın.  
@@ -50,6 +50,4 @@ Bu örnek nasıl paralel etkinlik düzeni ile birlikte Mesajlaşma Convoy oluşt
 >   
 >  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

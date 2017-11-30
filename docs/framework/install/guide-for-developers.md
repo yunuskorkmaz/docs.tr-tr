@@ -14,18 +14,21 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db8d543b07ede81c8b07e607bedd4ee2a01b0022
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
-ms.translationtype: HT
+ms.openlocfilehash: babcb6f09d44662b71774376d68b063f7a303284
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
 .NET Windows üzerinde çalışan birçok uygulama ayrılmaz bir parçasıdır ve bu uygulamaların çalışması ortak işlevsellik sağlar. Geliştiriciler, uygulamaları oluşturmak için tutarlı programlama modeline sahip kullanıcı deneyimleri ve sorunsuz ve güvenli iletişim şaşırtıcı ve kapsamlı bir .NET Framework sağlar.  
 
-Bu makalede, .NET Framework 4.5, kendi noktası sürümleri (4.5.1, 4.5.2) yüklemek için bağlantılar sağlar [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], kendi bilgisayarınızda sürümleri (4.6.1, 4.6.2) ve .NET Framework 4.7 ve noktası yayınlandığı (4.7.1) gelin. Bir geliştirici değilseniz, bu bağlantıları indirmek ve .NET Framework uygulamalarınızı ile yeniden dağıtmak için de kullanabilirsiniz.
+Bu makalede, .NET Framework'ün tüm sürümleri için .NET Framework 4.5 yükleme için bağlantılar sağlar [!INCLUDE[net_current](../../../includes/net-current-version.md)] bilgisayarınızda. Bir geliştirici değilseniz, bu bağlantıları indirmek ve .NET Framework uygulamalarınızı ile yeniden dağıtmak için de kullanabilirsiniz.
 
+> [!NOTE]
+> Bu konu, ya da kendi sistemde .NET Framework'ü yüklemek isteyen veya bunların uygulamalarla kurmak isteyen geliştiriciler için tasarlanmıştır. .NET Framework yükleme kullanıcıları görmek için .NET Framework gibi belirli işletim sistemlerine yükleyerek ele konularıyla [Windows 10 ve Windows Server 2016 .NET Framework'ü yüklemek](on-windows-10.md).  
+  
 .NET Framework'ün yeni bir sürümünü yükleme her zaman önceki bir sürümü yenisiyle değiştirmez olduğunu unutmayın. .NET Framework sürümleri ve hangi sürümlerinin bir bilgisayarda yüklü olduğunu belirleme hakkında daha fazla bilgi için bkz: [sürümleri ve bağımlılıkları](~/docs/framework/migration-guide/versions-and-dependencies.md) ve [nasıl yapılır: belirlemek, .NET Framework sürümleri Yüklü](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Aşağıdaki tabloda listelenen .NET Framework sürümlerini .NET Framework 4 yerinde güncelleştirmelerinin tümü. .NET Framework 4.6 gibi sonraki bir sürümünü yüklerseniz, diğer bir deyişle, önce .NET Framework 4.5, 4.5.1 veya 4.5.2 gibi önceki sürümlerini yüklemek gerekmez. .NET Framework 4.6 gibi sonraki bir sürümünü yüklerseniz, benzer şekilde, ilk .NET Framework 4.5, 4.5.1 veya 4.5.2 gibi önceki sürümlerini kaldırmanız gerekmez. 
 
 .NET Framework 4.x üstünü yerinde bulunmasına önceki sürümleri anlamına gelir güncelleştirmeleri *olamaz* sonraki bir sürümü zaten yüklüyse tabloda listelenen önceki bir sürümünü yükleyin. Örneğin, .NET Framework 4.6.1 üzerinde önceden yüklenmiş olarak bu yana bir Windows 10 Kasım güncelleştirme sistemde .NET Framework 4.6 yükleyemezsiniz.    

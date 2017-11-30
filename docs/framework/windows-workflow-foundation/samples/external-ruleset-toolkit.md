@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>Dış Ruleset Araç Seti
 Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derlemenin parçası kurallardır. Bazı senaryolarda, böylece yeniden oluşturma ve dağıtma iş akışı derlemesi güncelleştirilebilir ayrı olarak derlemesinden RuleSets korumak isteyebilirsiniz. Bu örnek, yönetme ve bir veritabanında RuleSets düzenlemek ve çalışma zamanında bir iş akışı bu RuleSets erişmek sağlar. Bu otomatik olarak RuleSet değişikliklerin uygulanması çalışan iş akışı örnekleri sağlar.  
@@ -143,6 +143,4 @@ Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derle
 10. Şimdi Çalıştır `RuleSetToolkitUsageSample` proje başka bir iş akışı konsol uygulaması gibi. F5 veya Ctrl + F5 içinde basın [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] veya RuleSetToolkitUsageSample.exe dosyasını doğrudan çalıştırın.  
   
     > [!NOTE]
-    >  Aracın kullanımı örnek derleme yüklediğinden RuleSet aracı kullanım örnek derlenir kapatmanız gerekir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+    >  Aracın kullanımı örnek derleme yüklediğinden RuleSet aracı kullanım örnek derlenir kapatmanız gerekir.

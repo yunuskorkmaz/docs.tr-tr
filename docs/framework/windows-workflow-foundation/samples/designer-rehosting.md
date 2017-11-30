@@ -12,11 +12,11 @@ caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 005d6f98a7341954801c9b98e9eefdb1f0391d6c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="designer-rehosting"></a>Yeniden barındırma Tasarımcısı
 Tasarımcı yeniden barındırılmasını başvuruda bulunan özel bir uygulama içinde iş akışı tasarım tuvale barındırmak için ortak bir senaryodur. Çoğu kişi bilginiz barındırma Visual Studio, ancak bir dizi vardır burada bir uygulamada iş akışı Tasarımcısı'nı gösteren yararlı olabilir senaryoları uygulamadır:  
@@ -136,6 +136,4 @@ protected override void OnInitialized(EventArgs e)
 >   
 >  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
-  
-## <a name="see-also"></a>Ayrıca Bkz.
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

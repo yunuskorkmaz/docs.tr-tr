@@ -16,11 +16,11 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 47009516d4118fec1a075a2dbccfa747f9a63131
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli parametreleri
 Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı sıralama için kolay bir yol sağlamak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] verileri işlemek için birden çok gidiş dönüş veya özel bir sunucu tarafı mantık gerektiren olmadan. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -96,7 +96,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 -   Tablo değerli parametreleri tasarımını değiştirmek için ALTER TABLE deyimleri kullanamaz.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter örnek yapılandırma  
- <xref:System.Data.SqlClient>Tablo değerli parametrelerinden doldurma destekleyen <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>? qualifyHint = False & autoUpgrade = True) nesneleri. Tablo değerli parametre için bir tür adını kullanarak belirtmelisiniz <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliği bir <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Daha önce sunucuda oluşturulan uyumlu bir türü adı eşleşmelidir. Aşağıdaki kod parçası nasıl yapılandırılacağını göstermektedir <xref:System.Data.SqlClient.SqlParameter> veri eklemek için.  
+ <xref:System.Data.SqlClient>Tablo değerli parametrelerinden doldurma destekleyen <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> veya <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> nesneleri. Tablo değerli parametre için bir tür adını kullanarak belirtmelisiniz <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> özelliği bir <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Daha önce sunucuda oluşturulan uyumlu bir türü adı eşleşmelidir. Aşağıdaki kod parçası nasıl yapılandırılacağını göstermektedir <xref:System.Data.SqlClient.SqlParameter> veri eklemek için.  
   
 ```csharp  
 // Configure the command and parameter.  

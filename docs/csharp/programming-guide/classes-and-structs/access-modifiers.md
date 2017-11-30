@@ -11,11 +11,11 @@ ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türleri ve tür üyeleri derlemenizi veya diğer derlemelerden diğer koddan kullanılabilmesi için olup olmadığını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiricileri bildirirken ne zaman bir tür veya üye erişilebilirliğini belirtmek için kullanabilirsiniz:  
@@ -51,7 +51,7 @@ Tüm türleri ve tür üyeleri derlemenizi veya diğer derlemelerden diğer kodd
  Belirli etkinleştirebilirsiniz, iç türlerinizi Internalsvisibletoattribute kullanarak erişmek için diğer derlemeler. Daha fazla bilgi için bkz: [arkadaş derlemeleri](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üyesi erişilebilirlik  
- Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim beş türleri ile bildirilebilir. Yapı üyeleri yapılar devralma desteklemediği için korumalı olarak bildirilemez.  
+ Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim altı tür ile bildirilebilir. Yapı üyeleri yapılar devralma desteklemediği için korumalı olarak bildirilemez.  
   
  Normalde, bir üye erişilebilirliğini içerdiği türü erişilebilirlik büyük değil. Ancak, üye arabirim yöntemleri uygulayan veya ortak bir taban sınıf içinde tanımlı sanal yöntemlerini geçersiz kılar, genel bir iç sınıf üyesi derleme dışında erişilebilir olabilir.  
   
