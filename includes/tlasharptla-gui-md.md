@@ -1,0 +1,1 @@
+grafik kullanıcı arabirimi (GUI)

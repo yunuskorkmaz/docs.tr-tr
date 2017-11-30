@@ -1,0 +1,1 @@
+Değiştirilebilir görüntü dosyası (Exif)

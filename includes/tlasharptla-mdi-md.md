@@ -1,0 +1,1 @@
+çok belgeli arabirim (MDI)

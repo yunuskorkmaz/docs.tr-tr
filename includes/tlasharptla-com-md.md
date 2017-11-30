@@ -1,0 +1,1 @@
+Bileşen Nesne Modeli (COM)

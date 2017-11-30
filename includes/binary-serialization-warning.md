@@ -1,0 +1,2 @@
+> [!WARNING]
+> İkili seri hale getirme tehlikeli olabilir. Hiçbir zaman güvenilmeyen bir kaynaktan verileri ve sistemlere denetiminiz altında hiçbir zaman gidiş dönüş serileştirilmiş verileri seri durumdan çıkarır.

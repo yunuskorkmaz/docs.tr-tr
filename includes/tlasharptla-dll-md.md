@@ -1,0 +1,1 @@
+dinamik bağlantı kitaplığı (DLL)

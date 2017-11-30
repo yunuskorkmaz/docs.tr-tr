@@ -1,0 +1,1 @@
+görüntü dosyası dizini (IFD)

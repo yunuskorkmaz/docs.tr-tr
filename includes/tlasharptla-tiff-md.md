@@ -1,0 +1,1 @@
+Etiketli Resim Dosyası Biçimi (TIFF)
