@@ -1,0 +1,1 @@
+1.1 sürümünden itibaren kullanılabilir

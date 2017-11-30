@@ -1,0 +1,1 @@
+nokta/inç (dpi)

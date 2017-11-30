@@ -1,0 +1,72 @@
+---
+title: "Group Join Tümcesi (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
+ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="group-join-clause-visual-basic"></a>Group Join Tümcesi (Visual Basic)
+Tek bir hiyerarşik koleksiyon iki koleksiyonlara birleştirir. Birleştirme işlemi eşleşen anahtarlarla temel alır.  
+  
+## <a name="syntax"></a>Sözdizimi  
+  
+```  
+Group Join element [As type] In collection _  
+  On key1 Equals key2 [ And key3 Equals key4 [... ] ] _  
+  Into expressionList  
+```  
+  
+## <a name="parts"></a>Bölümler  
+  
+|Terim|Tanım|  
+|---|---|  
+|`element`|Gerekli. Denetim değişkeni birleştirilen koleksiyonu.|  
+|`type`|İsteğe bağlı. Türü `element`. Öyle değilse `type` belirtilirse, türü `element` gelen olayla `collection`.|  
+|`collection`|Gerekli. Sol tarafında koleksiyonu ile birleştirmek için koleksiyon `Group Join` işleci. A `Group Join` yan tümcesi iç içe geçirilemez içinde bir `Join` yan tümcesi veya başka bir `Group Join` yan tümcesi.|  
+|`key1` `Equals` `key2`|Gerekli. Birleştirilen koleksiyonları tuşları tanımlar. Kullanmalısınız `Equals` birleştirilen koleksiyonları anahtarlarından Karşılaştırılacak işleci. Kullanarak birleştirme koşulları birleştirebilirsiniz `And` birden çok anahtar tanımlamak için işleci. `key1` Parametresi sol tarafındaki koleksiyonundan olmalıdır `Join` işleci. `key2` Parametresi sağ tarafında koleksiyonundan olmalıdır `Join` işleci.<br /><br /> Birleşim koşulu kullanılan anahtarları koleksiyonundan birden çok öğe içeren bir ifade olabilir. Bununla birlikte, her anahtar ifadesi yalnızca kendi ilgili koleksiyonundan öğeleri içerebilir.|  
+|`expressionList`|Gerekli. Koleksiyondaki öğelerin grupları nasıl toplanır tanımlayan bir veya daha fazla ifadeler. Gruplandırılmış sonuçlar için bir üye adı tanımlamak için kullanmak `Group` anahtar sözcüğü (`<alias> = Group`). Gruba uygulamak için toplama işlevleri de içerir.|  
+  
+## <a name="remarks"></a>Açıklamalar  
+ `Group Join` Yan tümcesi anahtar değerleri birleştirilen koleksiyonlardan eşleşmesini temel alan iki koleksiyon birleştirir. Sonuçta elde edilen koleksiyon öğe koleksiyonunu ilk koleksiyonundan anahtar değeri ile eşleşecek ikinci koleksiyondan başvuruda bulunan bir üye içerebilir. İkinci koleksiyondan gruplandırılmış öğelerine uygulamak için toplama işlevleri de belirtebilirsiniz. Toplama işlevleri hakkında daha fazla bilgi için bkz: [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+  
+ Örneğin, bir koleksiyon yöneticileri ve çalışanlar koleksiyonu düşünün. Her iki koleksiyon öğeleri belirli bir yöneticiye çalışanlar tanımlayan bir ManagerID özelliği vardır. Bir birleştirme işlemi sonuçlarından her Yöneticisi ve çalışan eşleşen ManagerID değere sahip bir sonuç içerecektir. Sonuçları bir `Group Join` işlem yöneticileri tam listesi içerebilir. Her bir Yöneticisi sonucu belirli Yöneticisi için bir eşleşme olan çalışanların listesini başvurulan üyesi gerekir.  
+  
+ Kaynaklanan koleksiyonu bir `Group Join` işlemi tanımlanan koleksiyondan değerler herhangi bir birleşimini içerebilir `From` yan tümcesi ve tanımlanan ifadeleri `Into` yan tümcesi `Group Join` yan tümcesi. İçin geçerli ifadeler hakkında daha fazla bilgi için `Into` yan tümcesi, bkz: [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+  
+ A `Group Join` işlemi sol tarafında tanımlanan koleksiyonundan tüm sonuçları döndürecektir `Group Join` işleci. Birleştirilen koleksiyondaki herhangi bir eşleşme olsa bile bu geçerlidir. Bu benzer bir `LEFT OUTER JOIN` SQL.  
+  
+ Kullanabileceğiniz `Join` tek bir koleksiyon koleksiyonlara birleştirme yan tümcesi. Bu eşdeğer olan bir `INNER JOIN` SQL.  
+  
+## <a name="example"></a>Örnek  
+ Aşağıdaki kod örneği iki koleksiyonları kullanarak birleştirir `Group Join` yan tümcesi.  
+  
+ [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Sorguları](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Join tümcesi](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Burada yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Group By tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md)

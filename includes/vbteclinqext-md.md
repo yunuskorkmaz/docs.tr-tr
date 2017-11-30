@@ -1,0 +1,1 @@
+Dil ile Tümleşik Sorgu (LINQ)

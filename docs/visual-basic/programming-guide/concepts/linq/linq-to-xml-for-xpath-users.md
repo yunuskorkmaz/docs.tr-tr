@@ -1,0 +1,48 @@
+---
+title: "LINQ-XML XPath kullanıcıların (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bb0666ee1ae5626a4721ea597a53889e1acf8b0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ-XML XPath kullanıcıların (Visual Basic)
+
+Bu konular kümesini Göster XPath ifadeleri sayısı ve bunların [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eşdeğerleri.  
+  
+ Tüm örneklerin XPath işlevleri kullanmak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , kullanılabilir tarafından yapılır uzantı yöntemleri <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>. XPath ifadesi örnekler yürütün ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ifade. Her örneğin sonra XPath ifadesi işlevsel olarak eşdeğerdir olduğunu doğrulama hem sorguların sonuçlarını karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu. Her iki tür sorgular düğümleri aynı XML ağacından dönerken sorgu sonucu karşılaştırma başvuru kimlik bilgileriniz kullanılarak yapılır.  
+  
+## <a name="in-this-section"></a>Bu Bölümde  
+  
+|Konu|Açıklama|  
+|-----------|-----------------|  
+|[XPath ve LINQ-XML karşılaştırması](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|XPath arasındaki farklar ve benzerlikler genel bakış sağlar ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Nasıl yapılır: bir alt öğesi (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|XPath alt öğesi eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.<br /><br /> İlgili XPath ifadesi:`"DeliveryNotes"`.|  
+|[Nasıl yapılır: bir alt öğe (XPath-LINQ-XML) listesi Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|XPath alt öğeleri eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni.<br /><br /> İlgili XPath ifadesi şöyledir:`"./*"`|  
+|[Nasıl yapılır: kök öğe (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|XPath Kök öğeyle alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"/PurchaseOrders"`|  
+|[Nasıl yapılır: Bul alt öğeleri (XPath-LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|XPath ile belirli bir ada sahip alt öğeleri alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"//Name"`|  
+|[Nasıl yapılır: bir öznitelik (XPath-LINQ-XML) üzerinde filtre (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|Belirtilen ada sahip ve bir öznitelik XPath ile belirli bir değerle ile bağımlı öğelerine alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`".//Address[@Type='Shipping']"`|  
+|[Nasıl yapılır: ilgili öğeleri (XPath-LINQ-XML) bulma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|Bir öğe başka bir öğesiyle XPath değeri ile adlandırılır bir öznitelik seçme alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`".//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`|  
+|[Nasıl yapılır: öğeleri Namespace (XPath-LINQ-XML) Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace.md)|XPath kullanımını karşılaştırır <xref:System.Xml.XmlNamespaceManager> ile sınıf [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XName.Namespace%2A> özelliği <xref:System.Xml.Linq.XName> XML ad alanları ile çalışmak için sınıf.<br /><br /> İlgili XPath ifadesi şöyledir:`"./aw:*"`|  
+|[Nasıl yapılır: eşdüzey (XPath-LINQ-XML) önceki Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md)|XPath karşılaştırır `preceding-sibling` eksene [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseni.<br /><br /> İlgili XPath ifadesi şöyledir:`"preceding-sibling::*"`|  
+|[Nasıl yapılır: Bul (XPath-LINQ-XML) alt öğenin alt öğeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md)|XPath ile belirli bir adı olan bir alt öğesi alt öğelerini alma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"./Paragraph//Text/text()"`|  
+|[Nasıl yapılır: iki konum yolları (XPath-LINQ-XML) birleşimini Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath.md)|Birleşim işleci kullanımı karşılaştırır <code>&#124;</code>, XPath ile içindeki <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işleci [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:<code>"//Category&#124;//Price"</code>|  
+|[Nasıl yapılır: Bul eşdüzey düğümleri (XPath-LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|XPath ile belirli bir ada sahip tüm eş düğüm bulma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"../Book"`|  
+|[Nasıl yapılır: bir öznitelik üst (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Üst öğesine gidin ve XPath kullanarak bir ilişkili özniteliği bulmak nasıl karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"../@id"`|  
+|[Nasıl yapılır: belirli bir ada (XPath-LINQ-XML) ile eş özniteliklerini Bul (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|XPath ile bağlam düğümünün eşdüzeyi belirli özniteliklerini bulma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"``../Book/@id``"`|  
+|[Nasıl yapılır: Bul (XPath-LINQ-XML) belirli bir özniteliği olan öğeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|XPath kullanarak belirli bir öznitelik içeren al öğelerin nasıl bulunacağını karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"./*[@Select]"`|  
+|[Nasıl yapılır: Bul konumu (XPath-LINQ-XML) göre alt öğeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|XPath kullanarak kendi göreli konumlarına göre bir öğeyi bulmak nasıl karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"Test[position() >= 2 and position() <= 4]"`|  
+|[Nasıl yapılır: hemen önceki eşdüzey (XPath-LINQ-XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|XPath kullanarak bir düğümü hemen önceki eşdüzey bulma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesi şöyledir:`"preceding-sibling::*[1]"`|  
+  
+## <a name="see-also"></a>Ayrıca Bkz.  
+ <xref:System.Xml.XPath?displayProperty=nameWithType>  
+ [Sorgulama XML ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)  
+ [XPath veri modelini kullanarak işlem XML verileri](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
