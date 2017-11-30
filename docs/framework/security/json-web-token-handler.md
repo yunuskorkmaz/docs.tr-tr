@@ -1,0 +1,39 @@
+---
+title: "JSON Web Belirteci İşleyicisi"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
+caps.latest.revision: "5"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="json-web-token-handler"></a><span data-ttu-id="cab0d-102">JSON Web Belirteci İşleyicisi</span><span class="sxs-lookup"><span data-stu-id="cab0d-102">JSON Web Token Handler</span></span>
+<span data-ttu-id="cab0d-103">Windows Identity Foundation için JSON Web Belirteci İşleyicisi uzantısı, uygulamalarınızda JSON Web Belirteçleri (JWT) oluşturmanıza ve doğrulamanıza olanak verir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-103">The JSON Web Token Handler extension for Windows Identity Foundation enables you to create and validate JSON Web Tokens (JWT) in your applications.</span></span> <span data-ttu-id="cab0d-104">JWT Belirteci İşleyicisi, diğer yerleşik güvenlik belirteci işleyicileri gibi WIF ardışık düzeninde çalışacak şekilde yapılandırılabilir, ancak basit uygulamalarda belirteç doğrulamasını gerçekleştirmek için bağımsız olarak da kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-104">The JWT Token Handler can be configured to run in the WIF pipeline like other built-in security token handlers, but it can also be used independently to perform token validation in lightweight applications.</span></span> <span data-ttu-id="cab0d-105">JWT Belirteci İşleyicisi, Microsoft Azure Active Directory kimlik doğrulaması gibi bir OAuth 2.0 taşıyıcı belirteci düzenini kullanırken özellikle yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="cab0d-105">The JWT Token Handler is particularly useful when using an OAuth 2.0 bearer token scheme, such as authenticating to Windows Azure Active Directory.</span></span>  
+  
+ <span data-ttu-id="cab0d-106">JWT Belirteci İşleyicisi bir NuGet paketi olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-106">The JWT Token Handler is available as a NuGet package.</span></span> <span data-ttu-id="cab0d-107">Bkz: [JSON Web belirteci işleyicisi paketini indirme](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="cab0d-107">See [Downloading the JSON Web Token Handler Package](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) for more information.</span></span>  
+  
+## <a name="scenarios"></a><span data-ttu-id="cab0d-108">Senaryolar</span><span class="sxs-lookup"><span data-stu-id="cab0d-108">Scenarios</span></span>  
+ <span data-ttu-id="cab0d-109">JWT Belirteci İşleyicisi aşağıdaki temel senaryolara olanak tanır:</span><span class="sxs-lookup"><span data-stu-id="cab0d-109">The JWT Token Handler enables the following key scenarios:</span></span>  
+  
+-   <span data-ttu-id="cab0d-110">**Bir JWT belirteci bir sunucu uygulaması, doğrulama**: Bu senaryoda, oturum açma web isteklerini işlemek için WIF kullanan bir sunucu uygulaması Lıtware adlı şirketin sahiptir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-110">**Validate a JWT Token in a Server Application**: In this scenario, a company named Litware has a server application that uses WIF to handle web sign-on requests.</span></span> <span data-ttu-id="cab0d-111">Litware, uygulamasının kimlik doğrulama için JWT belirteçleri kullanmasını sağlamak istemektedir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-111">Litware wants to enable their application to use JWT tokens for authentication.</span></span> <span data-ttu-id="cab0d-112">Uygulama, JWT Belirteci İşleyicisi ile güncelleştirilir ve ardından uygulama yapılandırması, WIF ardışık düzeni içine JWT belirteci işleyicisi eklenecek şekilde güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-112">The application is updated with the JWT Token Handler, and then the application configuration is updated to add the JWT Token Handler in the WIF pipeline.</span></span> <span data-ttu-id="cab0d-113">Güncelleştirmeler yapıldıktan ve yeni istek WIF ardışık düzenine girdikten sonra, JWT belirteci yeni işleyiciyi kullanılarak doğrulanır ve kimlik doğrulama başarıyla gerçekleşmiş olur.</span><span class="sxs-lookup"><span data-stu-id="cab0d-113">After the updates have been made and a new request enters the WIF pipeline, the JWT token is validated using the new handler and successful authentication occurs.</span></span>  
+  
+-   <span data-ttu-id="cab0d-114">**Bir JWT belirteci REST Web hizmeti doğrulamak**: Bu senaryoda, Lıtware adlı bir şirket, Windows Azure Active Directory tarafından güvenliği sağlanan bir REST web hizmeti sahiptir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-114">**Validate a JWT Token in a REST Web Service**: In this scenario, a company named Litware has a REST web service that is secured by Windows Azure Active Directory.</span></span> <span data-ttu-id="cab0d-115">Web hizmetine yapılan isteklerin kimliği, başarılı bir kimlik doğrulamasında sonra JWT belirtecini veren Microsoft Azure AD tarafından doğrulanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cab0d-115">Requests to the web service must be authenticated by Windows Azure AD, which issues a JWT token upon successful authentication.</span></span> <span data-ttu-id="cab0d-116">Litware, web hizmetine erişmesi gereken bir istemci uygulamasına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="cab0d-116">Litware has a client application that needs to access the web service.</span></span> <span data-ttu-id="cab0d-117">İstemci web hizmetine bir istekte bulunur ve Microsoft Azure AD'den aldığı JWT belirtecini sunar. Bu belirteç daha sonra JWT Belirteci İşleyicisi kullanılarak web hizmeti tarafından doğrulanır.</span><span class="sxs-lookup"><span data-stu-id="cab0d-117">The client makes a request to the web service and presents its JWT token from Windows Azure AD, which is then validated by the web service using the JWT Token Handler.</span></span> <span data-ttu-id="cab0d-118">JWT Belirteci İşleyicisi belirteci doğruladıktan sonra, istenen kaynak web hizmeti tarafından istemciye döndürülür.</span><span class="sxs-lookup"><span data-stu-id="cab0d-118">After the JWT Token Handler has validated the token, the desired resource is returned to the client by the web service.</span></span>  
+  
+## <a name="features"></a><span data-ttu-id="cab0d-119">Özellikler</span><span class="sxs-lookup"><span data-stu-id="cab0d-119">Features</span></span>  
+ <span data-ttu-id="cab0d-120">JWT Belirteci İşleyicisi aşağıdaki özellikleri sunar:</span><span class="sxs-lookup"><span data-stu-id="cab0d-120">The JWT Token Handler offers the following features:</span></span>  
+  
+-   <span data-ttu-id="cab0d-121">**Bir JWT belirteci doğrulamak**: JWT belirteçleri kolayca uygulamanın WIF ardışık bir parçası olarak ya da belirteci işleyicinin Doğrulama mantığı tarafından doğrulanan veya WIF bağımsız olarak çağrılır</span><span class="sxs-lookup"><span data-stu-id="cab0d-121">**Validate a JWT Token**: JWT tokens can be easily validated by the token handler’s validation logic, either as a part of the application’s WIF pipeline or called independently of WIF</span></span>  
+  
+-   <span data-ttu-id="cab0d-122">**Bir JWT belirteci oluşturma**: JWT belirteci işleyicisi, aşağı akış Hizmetleri'nde yetkilendirme için JWT belirteçleri oluşturmak için kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="cab0d-122">**Create a JWT Token**: The JWT Token Handler can be used to create JWT tokens for authorization in downstream services</span></span>
