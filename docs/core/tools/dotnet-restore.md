@@ -4,15 +4,15 @@ description: "Bağımlılıklar ve projeye özgü araçları dotnet restore komu
 keywords: DotNet-restore, CLI, CLI komutu, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 887f562803226d99901a6ee13175c1a43956b0cd
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="dotnet-restore"></a>DotNet geri yükleme
 
@@ -53,6 +53,21 @@ Bağımlılıklar için geri yüklenen paketler geri yükleme işlemini kullanar
 Projeye özgü araçları için `dotnet restore` önce aracı paketlenmiştir ve proje dosyasında belirtildiği gibi aracın bağımlılıkları geri sürdürüleceği paketini yükler.
 
 Davranışını `dotnet restore` komut ayarlarında bazıları tarafından etkilenir *Nuget.Config* varsa dosya. Örneğin, ayarlama `globalPackagesFolder` içinde *NuGet.Config* belirtilen klasörde geri yüklenen NuGet paketleri yerleştirir. Bu belirtme alternatiftir `--packages` seçeneği `dotnet restore` komutu. Daha fazla bilgi için bkz: [NuGet.Config başvuru](/nuget/schema/nuget-config-file).
+
+## <a name="implicit-dotnet-restore"></a>Örtük`dotnet restore`
+
+.NET Core 2. 0 ile başlayan `dotnet restore` aşağıdaki komutları kesilirken gerekirse örtük olarak çalıştırılır:
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+Çoğu durumda, artık açıkça kullanmanız gerekebilir `dotnet restore` komutu. 
+
+Bazı durumlarda, kullanışsız için `dotnet restore` örtük olarak çalıştırmak için. Örneğin, yapı sistemleri gibi bazı otomatik sistemleri çağırmanız gerekir `dotnet restore` açıkça ağ kullanımını kontrol edebilirsiniz böylece geri yükleme meydana geldiğinde denetlemek için. Önlemek için `dotnet restore` kullanabileceğiniz örtük olarak çalıştırılmasını `--no-restore` örtük geri yükleme devre dışı bırakmak için aşağıdaki komutlardan birini anahtarıyla.
 
 ## <a name="arguments"></a>Arguments
 

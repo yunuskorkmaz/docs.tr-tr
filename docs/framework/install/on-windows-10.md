@@ -8,11 +8,11 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: d7f8dd4c6ee9f7eeda389a955f806a5765876ea7
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>.NET Framework Windows 10 ve Windows Server 2016 yükleyin
 
@@ -47,11 +47,11 @@ Yükleyebileceğiniz [.NET Framework 4.7.1](https://www.microsoft.com/en-us/down
 
 Windows 10 1507 veya 1511 kullanmakta olduğunuz ve .NET Framework'ü 4.7.1 yüklemek istiyorsanız, önce daha sonraki bir Windows 10 sürüm yükseltme yapmanız gerekir.
 
-## <a name="net-framework-461"></a>.NET Framework 4.6.1
+## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) en son desteklenen .NET Framework sürümü Windows 10 1507 ve 1511'dir.
+[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) en son desteklenen .NET Framework sürümü Windows 10 1507 ve 1511'dir.
 
-.NET Framework 4.6.1, .NET Framework 4.0 4.6.1 aracılığıyla oluşturulan uygulamaları destekler.
+.NET Framework 4.6.2, .NET Framework 4.0 4.6.2 aracılığıyla oluşturulan uygulamaları destekler.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

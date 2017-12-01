@@ -16,11 +16,11 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflarda <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek için System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeler veya bir koleksiyondaki öğelerin aralığını değiştirin.  
@@ -63,17 +63,16 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon ol
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Bir koleksiyon seçme  
  Genel olarak, genel koleksiyonlar kullanmanız gerekir. Aşağıdaki tabloda bazı yaygın toplama senaryolar ve bu senaryolar için kullanabileceğiniz koleksiyon sınıfları açıklar. Genel koleksiyonlar için yeni başladıysanız, bu tablo göreviniz için en iyi şekilde çalışır genel koleksiyon seçmenize yardımcı olur.  
-<!-- todo: All code-formatted API refs in the table need to be changed into links -->  
-|İstiyorum...|Genel koleksiyon Seçenekler|Genel olmayan koleksiyonu Seçenekler|İş parçacığı veya değişmez koleksiyonunu Seçenekler|  
+|İstiyorum...|Genel koleksiyon seçenekleri|Genel olmayan koleksiyonu seçenekleri|İş parçacığı veya değişmez koleksiyonunu seçenekleri|  
 |-|-|-|-|  
-|Öğeleri hızlı arama için anahtar/değer çiftleri olarak anahtarının depolar.|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> (Düzenleme olan anahtar/değer çiftleri koleksiyonu anahtarı karma kodunu temel.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|Dizine göre öğelere erişim|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|Kullanmak öğeleri ilk-giren ilk çıkar (FIFO)|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
-|Kullanım verileri son-giren ilk çıkar (LIFO)|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
-|Erişim sırayla öğeleri|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|Öneri yok|Öneri yok|  
-|Öğeleri kaldırılmış veya koleksiyonuna eklenen olduğunda bildirim alırsınız. (uygulayan <xref:System.ComponentModel.INotifyPropertyChanged> ve <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|Öneri yok|Öneri yok|  
-|Sıralanmış koleksiyon|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|Matematik işlevleri için ayarlanmış A|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|Öneri yok|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Öğeleri hızlı arama için anahtar/değer çiftleri olarak anahtarının depolar.|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Düzenleme olan anahtar/değer çiftleri koleksiyonu anahtarı karma kodunu temel.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|Dizine göre öğelere erişim|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
+|Kullanmak öğeleri ilk-giren ilk çıkar (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
+|Kullanım verileri son-giren ilk çıkar (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
+|Erişim sırayla öğeleri|<xref:System.Collections.Generic.LinkedList%601>|Öneri yok|Öneri yok|  
+|Öğeleri kaldırılmış veya koleksiyonuna eklenen olduğunda bildirim alırsınız. (uygulayan <xref:System.ComponentModel.INotifyPropertyChanged> ve <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Öneri yok|Öneri yok|  
+|Sıralanmış koleksiyon|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
+|Matematik işlevleri için ayarlanmış A|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Öneri yok|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>İlgili Konular  

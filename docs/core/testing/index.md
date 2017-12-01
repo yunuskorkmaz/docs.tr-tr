@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Birim .NET Core ve .NET standart testi
 
@@ -47,6 +47,6 @@ Bu izlenecek yollar kurulumundaki birleşimler hakkında bilgi edinebilirsiniz:
 
 Farklı diller için sınıf kitaplıkları seçebilir ve kitaplıkları, birim testi. Nasıl karıştırma ve eşleşen izlenecek yollar yukarıda başvurulan öğrenebilirsiniz.
 
-* Visual Studio kullanıyorsanız, yalnızca bkz [.NET Core sınama Canlı birim](/visualstudio/test/live-unit-testing)
+* Visual Studio Enterprise .NET Core için harika test araçları sunar. Kullanıma [Canlı birim testi](/visualstudio/test/live-unit-testing) veya [kod kapsamı](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) daha fazla bilgi için.
 * Ek bilgi ve seçmeli birim testi filtreleme kullanma hakkında örnekler için bkz: [seçmeli birim testlerini çalıştırma](selective-unit-tests.md), veya [ve Visual Studio ile testleri hariç dahil](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods).
 * XUnit takım gösteren bir öğretici yazmıştır [xUnit .NET Core ve Visual Studio ile nasıl kullanılacağı](http://xunit.github.io/docs/getting-started-dotnet-core.html).
