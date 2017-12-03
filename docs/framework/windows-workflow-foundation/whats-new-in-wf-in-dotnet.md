@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 91999180c6d1b828630b9fff6f2199cbeaf3501c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92cc99a80c718811d0184a557efd38dd93fcc949
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>&#39; teki .NET 4.5, Windows Workflow Foundation'deki yenilikler
 [!INCLUDE[wf](../../../includes/wf-md.md)]içinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeni etkinlikler, Tasarımcısı özellikleri ve iş akışı geliştirme modeli gibi birçok yeni özellik sunar. Birçok, ancak tüm, sunulan yeni iş akışı özellikleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden barındırılan iş akışı Tasarımcısı'nda desteklenir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]desteklenen, yeni özellikler bkz [Rehosted iş akışı Tasarımcısı'nda yeni iş akışı Foundation 4.5 özellikleri için destek](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]geçirme .NET 3.0 ve en son sürümü kullanmak için .NET 3.5 iş akışı uygulamaları bkz [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Bu konuda sunulan yeni iş akışı özelliklerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

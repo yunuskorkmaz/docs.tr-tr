@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 752137d5e917e22d5c24e78b45714db1fa06b2a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="invoking-activity-validation"></a>Etkinlik doğrulama çağırma
 Etkinlik doğrulama tanımlamak ve yürütülmesinin önce herhangi bir etkinliğe ilişkin yapılandırma hataları rapor için bir yöntem sağlar. Bir iş akışı iş akışı Tasarımcısı'nda değiştirilir ve herhangi bir doğrulama hata veya uyarı iş akışı Tasarımcısı'nda görüntülenen doğrulama oluşur. Doğrulama da ortaya çıkar çalışma zamanında bir iş akışı çalıştırıldığında ve herhangi bir doğrulama hatası oluşursa, bir <xref:System.Activities.InvalidWorkflowException> varsayılan Doğrulama mantığı tarafından oluşturulur. [!INCLUDE[wf](../../../includes/wf-md.md)]sağlar <xref:System.Activities.Validation.ActivityValidationServices> iş akışı uygulaması ve araç geliştiriciler tarafından açıkça bir etkinlik doğrulamak için kullanılabilir sınıfı. Bu konuda nasıl kullanılacağını açıklar <xref:System.Activities.Validation.ActivityValidationServices> etkinlik doğrulama gerçekleştirmek için.  

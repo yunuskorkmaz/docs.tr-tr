@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 69911b2baf0e184957158ac536fa2271524cb2ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma
 Uygulama yapıda iş akışı hizmetlerini barındırma benzer IIS altında barındırma / OLUŞTU. Tek fark, dağıtma, izleme ve yönetme iş akışı hizmetleri için App Fabric sağlayan araçlar olmasıdır. Bu konu içinde oluşturulan iş akışı hizmeti kullanan [uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Bu konu bir iş akışı hizmeti oluşturmada size yol gösterir. Bu konuda App Fabric kullanarak iş akışı hizmeti barındırma açıklanacaktır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric bkz [Windows Server App Fabric belgelerine](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Aşağıdaki adımları gerçekleştirmeden önce Windows Server App Fabric olduğundan emin olun.  Bu açık Internet Information Services (inetmgr.exe) ayarlama yapmak için sunucunuzun adına tıklayın **bağlantıları** görüntülemek, Siteler'i tıklatın ve'ı tıklatın **varsayılan Web sitesi**. Ekranın sağ tarafındaki adlı bir bölüm görmelisiniz **App Fabric**. (Sağ bölmedeki üst kısmında olur) bu bölümü görmüyorsanız, yüklü App Fabric yok. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric yükleme bkz [yükleme Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  

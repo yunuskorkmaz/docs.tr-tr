@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 51d12f091100e73a87b0c7203db1fbf1eeed77bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e41a3cc65df5576c538864aa9e1fe1aacbe7e94
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="retrieving-metadata"></a>Meta Verileri Alma
 Meta veri alma isteme ve WS-MetadataExchange (MEX) meta veri uç noktasına veya bir HTTP/GET meta veri uç noktası gibi bir meta veri uç noktasından meta verilerini alma işlemidir.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 03ee173d25600be437f322d232b791543831df80
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
 WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılır <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma sözleşme belirler. Bu konu, bir WCF hizmeti ve kullanan istemci uygulamak açıklar <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  

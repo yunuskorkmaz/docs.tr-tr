@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c00368f466e151466bdf30a89dffe6baa9b57a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], meta verileri alma, sistemi, hizmet ya da bileşen parçalarından soyut bir temsili kendi meta verilerini oluşturma işlemidir. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> WSDL örneklerden belge için bir hizmet. Hizmet meta verilerde almak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> sınıf WS-Policy yararlanmak alma meta veri biçimleri mantığı almak için destek uygulama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

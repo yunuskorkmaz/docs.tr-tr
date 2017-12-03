@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3902f5fa-8a43-4048-8a6a-6b15472f90f0
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 495cad6d672fd550024cc872bd3cff586326ccbc
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a0cf8bd0368977b665f2ea412e4debbc1f681e5f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>Alma başlatılan özel bir etkinlik yazma
 Bu örnek, basit bir özel etkinlik XAML'de tanımlamak gösterilmiştir. Etkinlik adı verilen `Rhyme`, ve kendi mantığını üç dizi <xref:System.Activities.Statements.WriteLine> etkinlikler.  

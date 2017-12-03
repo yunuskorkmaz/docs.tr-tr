@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1dd63ca472ef5ee9211a8a9a1fd19d983694b43f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gerçekten uygulamayı test amacıyla bir üretim ortamında dağıtmak için Test istemcisi. Son dağıtım plana yürütme önce kullanabileceğiniz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] doğrulamak için Yayımlama hizmeti, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc224de36f607bd1f15e10987c68b14a69e992b5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e18459d985447359d6314b68e48ce1ad4b0b9d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler için oluştururken seçilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  

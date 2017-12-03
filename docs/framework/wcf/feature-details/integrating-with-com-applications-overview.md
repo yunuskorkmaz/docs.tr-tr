@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4e995fc66a925cb0ebe272c9dceca1ba63b9459d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yönetilen kod Geliştirici bağlı uygulamaları oluşturmak için zengin bir ortam sağlar. Ancak, yönetilmeyen COM tabanlı kodunda önemli ölçüde yatırımınız varsa ve geçirmek istemediğiniz hala tümleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri doğrudan varolan kodunuza kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet bilinen adı. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  

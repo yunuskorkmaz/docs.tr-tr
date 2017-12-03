@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1169aae0a2d2db6d020e87b1430e2dbdc1596117
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, her zaman ve ortaya bilgiler, kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını göz önünde bulundurun. Aşağıdaki olası bilgileri açığa saldırıları listeler ve bunları azaltmanın yollarını her sağlar.  

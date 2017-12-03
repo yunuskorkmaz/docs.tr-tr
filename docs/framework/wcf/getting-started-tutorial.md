@@ -14,14 +14,14 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 caps.latest.revision: "47"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programlama deneyimine. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  

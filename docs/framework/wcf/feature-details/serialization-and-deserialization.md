@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6334a5b866d239dc5f961ce4f1c89eac5b6ed3b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca bir yardımcı serileştirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer>. <xref:System.Runtime.Serialization.NetDataContractSerializer> Benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricileri ayrıca yayar çünkü [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] adları serileştirilmiş veriler bir parçası olarak yazın. Seri hale getirme ve seri durumdan çıkarmak uçları aynı türlerini paylaşılan olduğunda kullanılır. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak bir taban sınıftan türetilen <xref:System.Runtime.Serialization.XmlObjectSerializer>.  
   
 > [!WARNING]
->  <xref:System.Runtime.Serialization.DataContractSerializer> 20 XML varlıkları olarak aşağıda onaltılık bir değerle denetim karakterleri içeren bir dize serileştirir. Bu soruna neden bir olmayan-WCF ile istemci bu tür veriler bir WCF hizmetine gönderilirken oluştu.  
+>  <xref:System.Runtime.Serialization.DataContractSerializer> 20 XML varlıkları olarak aşağıda onaltılık bir değerle denetim karakterleri içeren bir dize serileştirir. Bu tür veriler bir WCF hizmetine gönderirken bu olmayan WCF istemcisi ile ilgili bir sorun neden olabilir.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer örneği oluşturma  
  Örneği oluşturma <xref:System.Runtime.Serialization.DataContractSerializer> önemli bir adımdır. Yapım sonra ayarlardan herhangi birini değiştiremezsiniz.  

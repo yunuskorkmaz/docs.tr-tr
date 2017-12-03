@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a2adbc1e281e978c1f579d1e7b0cc0cf75cd36a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu gönderme veya kullanıcı kodu tarafından verilen verilerden iletileri oluşturmak ve bunları bir hedefe teslim et. Gelişmiş geliştiricileri için tasarlanmıştır, bu konu, iletileri ve içerilen verileri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev yönelimli görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  

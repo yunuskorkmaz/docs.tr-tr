@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e21c6eb15e305584b86c35f8a3cb4a7e549b7cae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18f6501d2c5a97f7f267321e9cf0b06737afa5bd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="context-exchange-correlation"></a>Bağlam Değişimi Bağıntısı 
 Bağlam bağıntı açıklanan bağlam değişimi mekanizması temel [.NET bağlam değişimi protokolü belirtimi](http://go.microsoft.com/fwlink/?LinkId=166059). Bağlam bağıntı, doğru örneğini iletileri ilişkilendirmek için iyi bilinen içerik üstbilgisi veya tanımlama bilgisi kullanır. Bir bağlam tabanlı gibi bağlama bağlamı bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, veya <xref:System.ServiceModel.NetTcpContextBinding> için sağlanan uç kullanılmalıdır <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bu konu bir iş akışı hizmeti Mesajlaşma etkinliklerle bağlam bağıntı kullanmayı açıklar.  

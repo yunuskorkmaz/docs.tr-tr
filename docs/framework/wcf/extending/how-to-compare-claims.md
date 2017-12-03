@@ -16,14 +16,14 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fd23edd9e390b1f2018419c3c43be8091500c929
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ecc9ce3c5ae46026be9f6355c8330b4455f45d91
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-compare-claims"></a>Nasıl yapılır: Beyanları Karşılaştırma
 Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, bir ortak istenen eylemi gerçekleştirmek ya da istenen kaynağa erişmek için gerekli talep için talep yetkilendirme bağlamında karşılaştırmak için bir görevdir. Bu konu, yerleşik ve özel talep türleri dahil olmak üzere, talep Karşılaştırılacak açıklar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kimlik modeli altyapı bkz [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

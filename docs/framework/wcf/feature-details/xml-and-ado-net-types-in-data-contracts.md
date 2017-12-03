@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9bc54b4f2a29f9fd082bafd7cf6007441365c35c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Veri sözleşmesi modeli XML doğrudan temsil eden belirli türlerini destekler. Bu tür için XML serileştirildiği zaman seri hale getirici herhangi başka bir işleme olmadan bu tür XML içeriği yazar. Desteklenen türler <xref:System.Xml.XmlElement>, dizilerin <xref:System.Xml.XmlNode> (ama `XmlNode` kendisini yazın), türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> Ve <xref:System.Data.DataTable> türü olarak yazılan veri kümeleri, veritabanı programlaması kullanılan yaygın olarak. Bu türleri uygulayan `IXmlSerializable` arabirimi ve bu nedenle veriler serileştirilebilir sözleşme modeli. Bu tür için bazı özel durumlar, bu konunun sonunda listelenmiştir.  

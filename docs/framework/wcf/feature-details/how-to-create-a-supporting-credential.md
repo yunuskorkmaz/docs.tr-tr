@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2c140b96fab0227a1563c8c1a511053d8d1ab944
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a460a3fdd48813801b18af5a896252134687816d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmet istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlar bir kimlik bilgisi 18 yaş olan. İkinci kimlik bilgisinin bir *kimlik bilgisi destekleyen*. Bu konuda, bu tür kimlik bilgilerini uygulamak açıklanmaktadır bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci.  

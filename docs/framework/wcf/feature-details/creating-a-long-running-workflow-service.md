@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f4204de8c113c2ff553afec934b68f0beeb89580
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 65aa61ec53c00ed69d55d36fb023dc92c77e1f13
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İş akışı hizmetleri uzun süre çalışan uzun bir süre için çalıştırabilirsiniz. Belirli bir noktada iş akışı için bazı ek bilgiler bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanına kalıcı ve bellekten kaldırılır. Ek bilgi kullanılabilir hale geldiğinde iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sıralama sistem uyguluyorsanız.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. Bu, istemciye bir sipariş Kimliğini döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna geçtiğinde ve SQL Server veritabanına kalıcı.  İstemci öğeyi sıralamak için sonraki ileti gönderdiğinde, iş akışı hizmeti belleğe geri yüklenmez ve sipariş işleme tamamlanır. Kod örneğinde öğe siparişe eklenmiş belirten bir dize döndürür. Kod örneği teknolojisi, ancak bunun yerine bir uzun süre çalışan iş akışı hizmetleri gösterilmektedir basit örnek gerçek dünya uygulamasının olması düşünülmemiştir. Bu konu nasıl oluşturulacağını bilmeniz varsayar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projeler ve çözümler.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 caps.latest.revision: "35"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 58e88e319da6d78071293ce92bb7e9ebb33224bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri kullanım verileri sözleşme. Bu konuda açıklanmaktadır sürüm veri sözleşmeleri nasıl. Bu konuda veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Tam genel bakış ve düzenleyici sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

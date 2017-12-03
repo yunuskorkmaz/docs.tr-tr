@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f0968c2ecb22c4d199b7787b25e269a8df74fb25
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="net-standard"></a>.NET standart
 
@@ -80,7 +80,7 @@ Farklar:
 
 ### <a name="official-artifacts"></a>Resmi yapıları
 
-Resmi belirtimi, standart bir parçası olan API'ları tanımlayın .cs dosyaları kümesidir. [Ref dizin](https://github.com/dotnet/standard/tree/master/netstandard/ref) içinde [dotnet/standart depo](https://github.com/dotnet/corefx/tree/master/src) .NET standart API'lerini tanımlar.
+Resmi belirtimi, standart bir parçası olan API'ları tanımlayın .cs dosyaları kümesidir. [Ref dizin](https://github.com/dotnet/standard/tree/master/netstandard/ref) içinde [dotnet/standart depo](https://github.com/dotnet/standard) .NET standart API'lerini tanımlar.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([kaynak](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) (kısmen) bir veya daha fazla .NET standart sürümler tanımlar kitaplıkları açıklar.
 

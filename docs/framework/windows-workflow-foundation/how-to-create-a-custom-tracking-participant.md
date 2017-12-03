@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ef647068e6ec757de391015f4959335c29038cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4818b43c447dbe279a67f372dc846b3b07ecd998
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: özel izleme katılımcı oluşturma
 İş akışı izleme iş akışı yürütme durumu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti sürdürülmesi ve hataları açıklayan izleme kayıtları yayar. Bu izleme kayıtları katılımcıları izleme tarafından kullanılır. [!INCLUDE[wf](../../../includes/wf-md.md)]Olay izleme için Windows (ETW) olayları olarak izleme kayıtları yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalama izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri böylece kullanıcıya gösterilir.  

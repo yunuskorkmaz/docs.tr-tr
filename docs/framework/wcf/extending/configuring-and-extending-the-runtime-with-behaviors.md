@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: aab2d1d8c676a70b0fb4cfa80a16d52cd6f8b800
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7eb8e0853adbc24deb43fc1006804d7707d9a4b8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
 Davranışları etkinleştirmek, hizmet yapılandırması veya çalışma zamanı davranışını denetlemek ve doğrulamak özel uzantıları ekleyin ve varsayılan davranışı değiştirmek [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve hizmet uygulamaları. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) veya uç noktası (istemci uygulamasında) programlı olarak veya bir yapılandırma dosyasında nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  

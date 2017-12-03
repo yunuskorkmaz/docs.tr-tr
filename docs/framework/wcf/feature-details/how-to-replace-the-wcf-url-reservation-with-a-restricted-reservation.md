@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9dd631f08f9367576adf97f9139348bfce69a92f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c25403f298444732f6787979add595bd877bb2c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 Bir URL ayırmasını URL'yi veya URL'leri kümesini kimin ileti alabilir kısıtlamak sağlar. Bir ayırma bir URL şablonu, bir erişim denetimi listesi (ACL) ve bir dizi bayrakları oluşur. URL şablonu ayırma etkiler hangi URL'leri tanımlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]URL şablonları işlenen bkz [yönlendirme gelen istekleri](http://go.microsoft.com/fwlink/?LinkId=136764). Belirtilen URL'lerden iletileri almak için hangi kullanıcı veya kullanıcı grubuna izin ACL denetler. Bayrakları ayırma URL üzerinde doğrudan dinlemek veya başka bir işlem dinlemek için temsilci izni verme için bir kullanıcı veya grup izin vermek için olup olmadığını belirtin.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0607ea270b32aa0ae02e6ed0b0eecfa6c4c0d054
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ae39738284a28e5415b9650349b40a16993e1ec
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="poco-support"></a>POCO Desteği
 Bu örnek işaretsiz türleri için seri hale getirme destek gösterir; diğer bir deyişle, kendisine serileştirme özniteliklerini uygulanmamış, türleri bazen başvurduğu düz eski CLR nesnesi (POCO) türleri olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Veri sözleşmesi varsayılan bir oluşturucuya sahip tüm ortak işaretsiz türleri oluşturur. Veri sözleşmeleri için ve Hizmetleri'nden yapılandırılmış veri iletmek sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]işaretsiz türlerini görmek [seri hale getirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  

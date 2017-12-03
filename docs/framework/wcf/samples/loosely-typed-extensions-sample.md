@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 196f85c89dd64731f2992a382f8f0697310966b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 280445240dae215013069c65ab12b9e38227f5c1
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
 Zengin destek uzantısı verilerle çalışmak için dağıtım nesnesi modeli sunar — akışı bir dağıtım mevcut olan bilgiler XML gösterimi kullanıcının ancak açıkça sınıfları tarafından gibi açığa <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>. Bu örnek uzantısı verilerle çalışmak için temel teknikleri gösterilmektedir.  

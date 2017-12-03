@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 719210e91fc98c7ceb0f6c51252cfcdfe2f1339c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>Kanal Modeli Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını olduğundan işlem iletileri bir veya daha fazla kanallar katmanlı iletişim yığını. Yığının sonuna (örneğin, TCP, HTTP, SMTP ve diğer türleri aktarım.) temel aktarımı kanal yığına uyarlamak için sorumlu bir aktarım kanalıdır. Kanallar ileti gönderme ve alma için alt düzey bir programlama modeli sağlar. Birkaç arabirimleri ve diğer türleri topluca olarak bilinen bu programlama modeli dayanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal modeli. Bu konuda, kanal şekil, temel kanal dinleyicisi (hizmette) ve (istemcide) kanal fabrikası yapımı anlatılmaktadır.  

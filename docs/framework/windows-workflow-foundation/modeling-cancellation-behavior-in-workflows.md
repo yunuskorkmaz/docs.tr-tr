@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6092db3ffd5d282fbb67b9d84cea8e88e1af7206
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 912694eb07a5f95b42f3a0f0cf39f25db1313e69
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>İş akışlarında iptal davranışı modelleme
 Etkinlikler iptal edilemez bir iş akışı içinde örneğin tarafından bir <xref:System.Activities.Statements.Parallel> tamamlanmamış dalları iptal etme Etkinlik zaman kendi <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> değerlendiren `true`, veya konak çağırırsa iş akışını dışında <xref:System.Activities.WorkflowApplication.Cancel%2A>. İptalleri işleme sağlamak için iş akışı yazarları kullanabilirsiniz <xref:System.Activities.Statements.CancellationScope> etkinliği <xref:System.Activities.Statements.CompensableActivity> etkinliği veya iptal mantığın özel etkinlikler oluşturun. Bu konu, iş akışlarında iptal genel bir bakış sağlar.  

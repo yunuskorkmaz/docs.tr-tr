@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 caps.latest.revision: "51"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 81e149292757b320d4c29975de1abb69eb1f8b9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a24f1bd921de848cb75a2c9f35fa3dd279bc741
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  

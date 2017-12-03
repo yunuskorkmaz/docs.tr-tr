@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b08bfd30eae1b33b2bf91eb1b0bd0127c09f9632
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4db4b105bc958a19dc803aa74dc9193e8a8a7edb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir ASP.NET AJAX etkinleştirilmiş uç nokta bir istemci Web sitesinde JavaScript'ten çağrılabilir kullanılabilir hale getirir bir hizmet oluşturmanıza olanak sağlar. Bu tür bir uç nokta oluşturmak için ya da bir yapılandırma dosyası tüm diğer olarak kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uç noktaları veya tüm yapılandırma öğeleri gerektirmeyen bir yöntemi kullanın. Bu konuda yapılandırma yaklaşım gösterilir.  

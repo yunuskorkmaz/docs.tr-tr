@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6fa68698c6c343b29ca39e66150753502cb8f673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) yerlerdir nerede [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama modeli, kanal fabrikaları ve kanal dinleyicileri ile ilişkilendirilmiş. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, kanalda kullanarak etkinleştirmek için en düşük gereksinim ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], geliştirilmesi bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9086489d7b48b459ad92f1712809406cbde7e074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ec4dc2d7f066d79b2cf54c3d474b47e769b626c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  

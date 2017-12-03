@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1d3251d960b00d34c08826957e0db9c30bd5aae3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33147ef4f06a449f74ee683d04225bf31fbff8f9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-description"></a>Hizmet Açıklaması
 Hizmet açıklaması örnek, bir hizmet çalışma zamanında hizmet açıklaması bilgilerini nasıl alabileceğiniz gösterilir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hizmeti hakkında tanımlayıcı bilgileri döndürmek için tanımlanmış bir ek hizmet işlemi. Döndürülen bilgi hizmeti için uç noktalar ve temel adresler listeler. Bu bilgileri kullanarak hizmeti sağlayan <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, ve <xref:System.ServiceModel.Description.ServiceDescription> sınıfları.  

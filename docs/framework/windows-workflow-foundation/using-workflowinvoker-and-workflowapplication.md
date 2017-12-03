@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 53765a681732001a08352066d29f63e5d3126bf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f1e4bb05f1b5f14554ff5183b42bbc8884cb114f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker ve WorkflowApplication kullanma
 [!INCLUDE[wf](../../../includes/wf-md.md)]İş akışları barındırma çeşitli yöntemler sağlar. <xref:System.Activities.WorkflowInvoker>yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication>yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. <xref:System.ServiceModel.Activities.WorkflowServiceHost>Mesajlaşma etkinlikleri için destek sağlar ve iş akışı Hizmetleri ile birincil olarak kullanılır. Bu konu ile iş akışı barındırma için tanıtır <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]iş akışlarıyla barındırma <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md) ve [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

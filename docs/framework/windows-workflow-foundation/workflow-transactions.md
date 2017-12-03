@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 50c720395a8319f4590edb1c495c343d481c73c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dba6762017877824308608bc58f80aed71ca9f21
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-transactions"></a>İş akışı işlemleri
 [!INCLUDE[wf1](../../../includes/wf1-md.md)]katılan için destek sağlar <xref:System.Transactions> kullanarak işlemleri <xref:System.Activities.Statements.TransactionScope> hizmetteki bir iş birimine kapsam için etkinliği. Sırada <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> açıkça doldurulmalıdır <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> etkinlik örtük olarak çağrılarını tamamlamak başarıyla tamamlandıktan sonra işlem üzerinde. İçerdiği tüm etkinlikleri <xref:System.Activities.Statements.TransactionScope.Body%2A> , <xref:System.Activities.Statements.TransactionScope> etkinlik katılmak işlemde. WF için bir iş akışı kullanarak akış işlemleri için <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlik. Gibi <xref:System.Activities.Statements.TransactionScope> etkinliği, bulunan herhangi bir etkinlik <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> işlemde katılır. WF üzerinde bu etkinlikleri bağımlı sağlar <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> ikisi ile çalışır <xref:System.Activities.Statements.TransactionScope> ve <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Sistem tarafından sağlanan etkinlikler tüm gereksinimlere değil, özel etkinlikler kullanılarak oluşturulabilir <xref:System.Activities.RuntimeTransactionHandle> Gelişmiş Akış ve işlem denetimi senaryoları etkinleştirmek için.  

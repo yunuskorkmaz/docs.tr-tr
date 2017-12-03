@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: afe4252a56802ff2796f947afa31a5871f29223e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-channel-security"></a>Eş Kanalı Güvenliği
 Eş kanal çeşitli taraflı mesajlaşmayı bağımlı dağıtılmış uygulama türlerini sağlar. Burada güvenilen bir kaynak (örneğin, medya veya yazılım güncelleştirmeleri) içerik dağıtır, Internet ölçeğinde içerik dağıtımı bazı örnekler bir arkadaş grubuyla exchange müzik ve fotoğraf veya iş arkadaşlarınızı ekibi birliğine dayalı olarak bir belgeyi Düzenle. Bu senaryoların her biri benzersiz güvenlik modelini gerektirir. Eş kanal güvenlik modeli bu senaryosu için tasarlanmıştır ve farklı kimlik, kimlik doğrulama ve yetkilendirme modelleri ilgili gereksinimleriniz için bir güvenlik modeli sağlar.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01998d0ac732f63f6771c47bfc76a8207a5531f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 413adbc25e2f92ae2e989290685db6dfeaf58368
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
 Bir ileti içeriği XML biçiminde, genellikle bir uygulama için uygun bir biçim değil görülür. Uygulamaları alma ve bunların özelliklerini ayarlama nesnelerini yönetme. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kullanan *veri sözleşmesi* dönüştürmek için bir <xref:System.ServiceModel.Channels.Message> nesnesine kolayca bir uygulama tarafından işlenen bir nesne. Bu işlemler, seri hale getirme ve seri durumdan çıkarma denir. Bu aynı koşulları serileştirme tanımlamak ve Aktarım katmanı ilişkisiz bir işlemdir ileti gönderme biçimini gelen ve giden yapılır seri durumundan çıkarma için kullanıldığını unutmayın.  

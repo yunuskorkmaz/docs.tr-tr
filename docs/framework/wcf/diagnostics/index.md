@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zengin bir uygulamanın yaşam farklı aşamalarını izlemenize yardımcı olabilir işlevler sağlar. Örneğin, hizmetleri ve dağıtım istemcilerinde ayarlamak için yapılandırma kullanabilirsiniz. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca İnceleme çalışma zamanında bir hizmetin kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. Uygulama arızalanması veya hatalı davranan başlatıldığında, önemli bir şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. Hangi olayların oluşmasını uçtan uca uygulamanızda olduğunu görmek için ileti günlüğe kaydetme ve izleme de kullanabilirsiniz. Bu özellikler geliştiriciler ve BT uzmanları sorun giderme için yardımcı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] düzgün çalışmıyorsa, uygulama.  

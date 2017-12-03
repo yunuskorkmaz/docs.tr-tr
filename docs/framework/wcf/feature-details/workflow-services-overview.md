@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f33920dbad701d803b9cb062cdd2b11aa1346df4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-services-overview"></a>İş Akışı Hizmetleri Genel Bakış
 İş akışı Hizmetleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-tabanlı iş akışları kullanılarak uygulanan services. İş akışı hizmetlerdir göndermek ve almak için Mesajlaşma etkinlikleri kullanan iş akışları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletileri. .NET framework 4.5 birkaç iş akışı içinden iletilerini gönderip izin Mesajlaşma etkinlikleri tanıtır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Mesajlaşma etkinlikleri ve nasıl farklı ileti exchange desenlerini, uygulama için kullanılabilmesi için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

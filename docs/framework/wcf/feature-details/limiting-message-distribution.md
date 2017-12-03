@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab46b1c908e8eb61ea49315e120973f1ea381bc6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Bununla birlikte, birçok uygulamanın ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almak istiyorsa, örneğin, bu istek kafes her üyesine taşan olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları yakınında sınırlı olabilir. İletileri kafes tek tek bir düğümde yeniden gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçimi için genel yönergeler sağlar.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22dcace51b2c73193356450b4b210d1c1a899e28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen Dağıtım Senaryoları
 Alt kümesini [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen güvenilir uygulamalar kullanımda kullanmak için ancak bazı değil tüm senaryoların gereksinimleri karşılamak üzere tasarlanmıştır için desteklenen özellikler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sunucusunda, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] karşılıyor Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları çalıştırmak barındırma hizmeti sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Orta güven izni güvenlik nedenleriyle ayarlandı. İstemci üzerindeki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak üzere tasarlanmıştır [ClickOnce dağıtımı](http://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s sorunsuz izin XAML tarayıcısı uygulaması teknoloji ve Masaüstü uygulamaları güvenilmeyen sitelerden güvenli dağıtımı.  

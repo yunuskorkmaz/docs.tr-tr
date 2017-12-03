@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 58393f6ed3f14e65b1732c8ec8f90c109be0894a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61c7dd84b802d116721170080bb55a0be1ef1dfc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-control-service-instancing"></a>Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme
 Bir hizmet örneği modunu ayarlama, sağlar, ne zaman belirtmek bir <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (ve onun ilişkili kullanıcı tanımlı bir hizmet nesnesi) oluşturulur. Bkz: <xref:System.ServiceModel.InstanceContextMode> olası modları için numaralandırması. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]davranışları bkz [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Çalışma örnekler için bkz: [davranışları](../../../../docs/framework/wcf/samples/behaviors.md).  

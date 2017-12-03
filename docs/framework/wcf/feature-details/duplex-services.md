@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b5e0e2b1b2aa6292d53f1688ef124d9add42b5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 Çift yönlü hizmet sözleşmesi, her iki uç nokta ileti diğer bağımsız olarak gönderebilirsiniz bir ileti değişim deseni değil. Çift yönlü bir hizmet, bu nedenle, olay benzeri davranışı sağlama geri istemci uç noktaya iletileri gönderebilir. Çift yönlü iletişimi bir istemci bir hizmetine bağlanır ve hizmet üzerinde hizmet istemciye iletiler gönderebilir bir kanal sağlar oluşur. Çift yönlü hizmetler olay benzeri davranışını yalnızca bir oturumunda çalıştığını unutmayın.  

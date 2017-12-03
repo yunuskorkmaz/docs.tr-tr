@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 84218f16f846e640baea663efc7153a40a6c764a
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be7615441f29046fc1a469e3cace86267fc6c031
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-collection-activities"></a>Koleksiyon etkinlikleri kullanma
 Bu örnek, koleksiyon etkinlikleri kullanılacak gösterilmiştir (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, ve <xref:System.Activities.Statements.RemoveFromCollection%601>) uygulayan bir sınıf ile <xref:System.Collections.ICollection> arabirimi ve bir koleksiyon üzerinden yineleme özel bir etkinlik oluşturma koleksiyondaki her öğe içeriklerinin yazdırmak. Adlı özel etkinlik `PrintCollection`, adlı bir koleksiyon öğesi üyeleri konsola yazdırır `Numbers`.  

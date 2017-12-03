@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0e6a0db5ee02f96582fe71414b620e1f78c40a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 103a22a729029118b0770e2889c419074be6ad50
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="concurrency"></a>Eşzamanlılık
 Eşzamanlılık örneği kullanmayı göstermektedir <xref:System.ServiceModel.ServiceBehaviorAttribute> ile <xref:System.ServiceModel.ConcurrencyMode> bir hizmet örneği iletilerin sıralı olarak veya aynı anda işler olup olmadığını denetler numaralandırması. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnek yeni bir sözleşme tanımlar `ICalculatorConcurrency`, devralan `ICalculator`, hizmet eşzamanlılık durumunu incelemek için iki ek işlem sağlama. Eşzamanlılık ayarı değiştirerek istemci çalıştırarak davranışında değişiklik görebilirsiniz.  

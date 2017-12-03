@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b2424766be26003180f40dfd4b2f4ace2c371154
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0089d08604f5d738e04461f4ed5f8efcb1140420
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ikinci ana sürümüne yönelik Microsoft serbest bırakma [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)]içinde yayımlanan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; şimdi WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yanı sıra yeni iş akışı teknolojisi vardır (System.Activities. türlerinde\* ad alanları; için WF4 adlandırılır). WF4 benimsemek ne zaman değerlendirirken zamanlamasını denetlemek ilk bilmek önemlidir.  

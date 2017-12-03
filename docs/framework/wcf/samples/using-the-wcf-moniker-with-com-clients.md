@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 79155d68da65a421cf2aec111402b1780743b8e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8a44ea352f5ff82294a9a28acb5a6b7f0730cf24
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6.0 gibi COM tabanlı geliştirme ortamlara Web Hizmetleri tümleştirmek için hizmet bilinen adı. Bu örnek bir Windows Script Host istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmeti bir hesaplama hizmetidir ve COM istemcisi matematik işlemleri çağırır — ekleme, çıkarma, çarpma ve bölme — hizmet üzerinde. İstemci etkinliği ileti kutusu pencerelerinde görünür olur.  

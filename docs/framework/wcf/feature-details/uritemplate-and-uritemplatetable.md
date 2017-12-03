@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate>ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c1ecdf6c3c8df4c6e69f0877ed8797cb0ac1a25b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42f86762bf40f5c8358b8772548c082844eae1ae
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 Dört ana gruplarını bulmayı kullanılan yapılandırma ayarlarını vardır. Bu konuda kısaca açıklanmaktadır ve bunların nasıl yapılandırılacağı örnekleri gösterilmektedir. Her bölüm aşağıdaki her bir alan hakkında daha fazla ayrıntılı belgeler için bir bağlantı olacaktır.  

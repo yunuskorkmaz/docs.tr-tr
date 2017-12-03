@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ab8f47601f84267d1ac357b313fa5d2215a586d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0df4ddc6f2cc5404c8153b30df66cda41487691
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="conditioned-activity-group"></a>Koşullu etkinlik grubu
 Örnek bir seyahat kayıt uygulaması gösterir. <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) sahip iki kodunu aktivite: bir araba ve uçak etkinliğiyle. İçinde `SimpleCAGWorkflow` oluşturucusu, bir "travelNeedType" ArrayList nesnesi gerekli seyahat kayıtları türleri ile doldurulur. Birini veya her ikisini yorum tarafından `travelNeeds.Add` deyimleri CAG davranış buna göre değiştirin. Araba ve uçak etkinliklerin kendi <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> koşul doldurulmuş ile bir <xref:System.Workflow.Activities.CodeCondition>. Yalnızca araba etkinlik yürütür `travelNeeds` gruplandırmasında bir `TravelNeeds.Car` girişi ve etkinlik yürütür yalnızca uçak `travelNeeds` gruplandırmasında bir `TravelNeeds.Airline` girişi.  

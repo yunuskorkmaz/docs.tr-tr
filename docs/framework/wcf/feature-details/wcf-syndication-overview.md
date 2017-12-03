@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication-overview"></a>WCF Dağıtımı Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Dağıtım Akışları'gösterme için destek sağlayan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Dağıtım, bir sunucu bazı uygulama veri akışı olarak bilinen bir birlikte çalışabilen biçiminde kullanıma sunar uygulama tümleştirme bir mekanizmadır. Bir akış bazı akış düzeyi meta verileri (başlık, yazar, URL ve diğer meta verileri) oluşur uygulama verilerinin bir koleksiyonunu ve akış öğelerini bir dizi ' dir. Akış içinde genellikle zaman ters tarih sırasına göre sıralı akış öğelerdir. Bir akış öğesi (başlık, URL, oluşturulduğu tarih, kategori ve diğer öğe düzeyinde meta verileri) öğe düzeyinde meta verileri ve rasgele bir uygulama belirli veri miktarı standart kümesinden oluşur. İki en yaygın dağıtım akışlarını gerçekten basit dağıtım (RSS) 2.0 ve Atom 1.0, her ikisi de tarafından desteklendiği türleridir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

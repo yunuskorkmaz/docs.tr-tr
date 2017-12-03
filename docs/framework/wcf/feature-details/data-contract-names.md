@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
 caps.latest.revision: "27"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
 Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konuda varsayılan davranışını yanı sıra veri sözleşmeleri adlandırma kuralları açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adları oluşturulurken altyapı.  

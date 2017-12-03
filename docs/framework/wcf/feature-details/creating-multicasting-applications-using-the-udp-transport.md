@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3a743f7da4984c5b434de6cedb44bd4c9d9382cf
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3dde7dc8b051c4238203173bd009a8f71dd9c6c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 Çok noktaya yayın uygulamalar, noktadan noktaya bağlantılar kurmak zorunda kalmadan aynı anda çok sayıda alıcı küçük iletileri gönderir. Bu tür uygulamalar Vurgu güvenilirlik hızıdır. Diğer bir deyişle, belirli bir ileti gerçekte buluttaki sağlamak üzere daha güncel veri göndermek daha önemlidir. WCF artık destekliyor kullanarak çok noktaya yayın uygulamaları yazma <xref:System.ServiceModel.UdpBinding>. Bu aktarma, burada bir hizmet küçük iletilerini istemci sayısı için aynı anda göndermesi gerekir senaryolarda kullanışlıdır. Bu tür bir hizmet örneği bir borsa uygulamasıdır.  

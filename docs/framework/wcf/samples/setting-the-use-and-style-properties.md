@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 21409597b8fe27992c08bbe76f56e78013156c46
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6a8e4b990c7ae9815c8792c0be456463b10660b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="setting-the-use-and-style-properties"></a>Kullanım ve Stil Özelliklerini Ayarlama
 Bu örnek kullanım ve stil özelliklerini kullanmak gösterilmiştir <xref:System.ServiceModel.XmlSerializerFormatAttribute> ve <xref:System.ServiceModel.DataContractFormatAttribute>. Bu özellikler, iletileri nasıl biçimlendirileceğini etkiler. Varsayılan olarak, ileti gövdesi kümesine stiliyle biçimlendirilmiş <xref:System.ServiceModel.OperationFormatStyle.Document>. Bu ayarlar, hizmet sözleşmesi düzeyi veya işlemi sözleşme düzeyinde ya da belirtilebilir.  

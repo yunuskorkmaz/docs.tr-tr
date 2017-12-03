@@ -20,14 +20,14 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 874836c83fbe681692260be03efed3aec85dcfe4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 550b1e8bf04bf7e2cec52ce26d647022688c4004
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="examples-of-xml-serialization"></a>XML serileştirme örnekleri
 XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, gösterildiği gibi genel alanlar ve özellikler, yalnızca oluşan bir sınıf serileştirebilen [Tanıtımı XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md). Aşağıdaki kod örnekleri XML serileştirme için belirli bir XML Şeması (XSD) belge uyan bir XML akışı oluşturmak için nasıl kullanılacağı dahil olmak üzere çeşitli Gelişmiş senaryoları adres.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Bazı yeni geliştirme sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri karar bir komut dosyası veya Visual Basic 6.0 uygulamadan bu hizmetleri çağıran kullanabilmek ister. Bir yöntem oluşturmak için olacak bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme derlemesini COM ile kaydetme, derlemeyi GAC'ye yükleyin ve ardından Visual Basic kodunuzdan COM türlerini başvuru. Uygulamayı dağıttığınızda, dağıtmanız gerekecek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. Ardından, kullanıcı WCF istemcisi derlemesini COM ile kaydetme ve GAC'ye yerleştirmek sahip olur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]COM birlikte çalışma de aynı hizmet çağrıları öğesine bağlı kalmadan almanıza imkan tanır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ad herhangi bir çağrıda olanak tanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet herhangi bir dilden bir meta veri exchange (Mex) uç noktası kullanan hizmet adının URI belirterek COM uyumlu (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) hizmeti hakkında türü bilgi ayıklamak için. Bu konu, Başlarken çağrılacağını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanarak örnek bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Mex uç nokta belirtir ad.  

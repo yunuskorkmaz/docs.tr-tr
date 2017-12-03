@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d8ba436cba284201f14635162ed394abfa9a14db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-resource-service"></a>Temel Kaynak Hizmeti
 Bu örnek, bir HTTP tabanlı hizmet kullanarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] alma destekleyen müşteriler koleksiyonu sunan REST programlama modeli ekleme, silme ve değiştirme işlemlerini. Bu örnek 2 bileşenleri - kendini barındıran oluşur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs).  

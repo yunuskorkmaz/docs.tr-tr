@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7b7a97ef253431b5519de2b3e45485a15ca3f5ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete hata koşulu bilgi hizmet birlikte çalışabilir bir şekilde aktarın. Genellikle bir hizmet özel hata içeriği tanımlar ve hangi işlemleri geri dönebilirsiniz belirtir. (Daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konuda ele alınmıştır nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu oluştu ne zaman ve bir istemci nasıl gönderebilir veya hizmet uygulaması bu hataları işleme. Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

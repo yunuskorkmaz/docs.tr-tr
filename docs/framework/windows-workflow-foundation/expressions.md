@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: faf9e70cbe2c2a035874e5514ac04cf0f291661b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d42249f19b2d9acebf547be9e590813d6bbf7a33
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="expressions"></a>İfadeler
 A [!INCLUDE[wf](../../../includes/wf-md.md)] bir sonuç döndürür herhangi bir etkinlik ifadesidir. Tüm ifade etkinlikleri dolaylı olarak türetilen <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak. [!INCLUDE[wf1](../../../includes/wf1-md.md)]çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi tek bir iş akışı değişken karmaşık etkinliklere işleci etkinlikleri üzerinden erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Bu teklif sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin. Ek ifade etkinlikleri türetme tarafından oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.  

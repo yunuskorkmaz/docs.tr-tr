@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Önceki konusunda [nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanmadı. Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duyuru iletileri gönderir hizmet (`Hello` ve `Bye`) Keşif proxy'si için kaydolun ve kendisini keşif proxy'sine kaydı için neden olur.  

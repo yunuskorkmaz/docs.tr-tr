@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumunu belirten URI), oluşur. Uç nokta adresi temsil edilen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programlama modeli tarafından <xref:System.ServiceModel.EndpointAddress> isteğe bağlı bir içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası ile ileti değiş tokuşu diğer uç noktaları tarafından kimlik doğrulamasını etkinleştirir özelliği ve İsteğe bağlı kümesi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gerekli diğer SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üstbilgi ek sağlar ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşim kurmak için adresleme bilgi. Bir uç nokta adresi kablo WS adresleme uç noktası başvuru olarak (EPR) gösterilir.  

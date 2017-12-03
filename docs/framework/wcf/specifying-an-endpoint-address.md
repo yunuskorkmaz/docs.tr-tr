@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 caps.latest.revision: "41"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8615c4a1b1ebfed2b6779d53422f346456f4fb2a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 44a51c1bc9bd17cab7e3ba59ad36aa6700f82f71
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler, çalışanlarına dosyalara erişmesine izin. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yetkilendirme işlemi gerçekleştirmek için iki mekanizma destekler. İlk mekanizma, varolan ortak dil çalışma zamanı (CLR) yapıları kullanarak yetkilendirmeyi denetlemenizi sağlar. İkinci olarak bilinen bir talep tabanlı modeldir *kimlik modeli*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]gelen iletilere talep oluşturmak üzere kimlik modelini kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini desteklemek için genişletilebilir. Bu konuda özelliğini kullanıyor en önemli sınıfları listesini yanı sıra kimliği Model özelliğinin ana programlama kavramları hakkında genel bir bakış sunulmaktadır.  

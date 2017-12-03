@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 004a37682b855135998ef4620e673421f769326d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06a302b13db3b82dabb43989ac272df0d9aac008
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="basic-xaml-only-service"></a>Temel XAML yalnızca hizmeti
 Bu örnek bir XAML yalnızca hizmetin nasıl oluşturulacağını gösterir. Senaryo bir araba ilgili sorunları tanılama hizmetidir. Hizmet, istemci bir dizi sorunu tanılamak için soru soran bir iş akışı olarak uygulanır. İki tür hizmet tanılama sorunları vardır (car başlatamaz veya çalışmıyor koşullandırma hava). İş Akışı Tasarımcısı'ndan istek/yanıt şablon üç Basit Hizmet işlemleri kullanıma sunmak için kullanır. IIS'de bir sanal dizin oluşturarak IIS'de barındırılan hizmet ve service1.xamlx ve Web.config dosyalarında sanal dizine kopyalama, derlenmiş kod gereklidir. Varsayılan olarak bu örnek otomatik olarak gerekli dosyaların WCF ve WF örnekleri için kurulum yönergeleri izlediğinizde oluşturulan sanal dizine kopyalar: [Windows Communication Foundation örnekleriiçinkerelikKurulumprosedürü](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010'da yapılandırıldığında.  

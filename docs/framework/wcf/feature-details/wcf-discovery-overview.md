@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1afd3d94ceb3389a7d87528371925120f3c92764
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb9fc13d7facf3bdc3f9da43297a47fd1cf4af65
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve bulma WS bulma protokolünü kullanarak bir Web Hizmetleri için birleşik bir programlama modeli sağlar. Bu API'leri kendilerini ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetler sağlar. Bir hizmet bulunabilirlik sağlandıktan sonra hizmet duyuru iletileri gönderme yanı sıra dinler ve bulma isteklerine yanıt özelliğine sahiptir. Bulunabilirlik Hizmetleri Ağ üzerinde kendi varış duyurmaktan Merhaba iletileri ve bunların ayrılma ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşmesi türü, anahtar sözcükleri ve ağ üzerindeki kapsamı gibi belirli bir ölçüte içeren isteği. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleştiğini belirlemek. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` hizmetiyle iletişim için gereken bilgiler ile istemciye ileti. İstemcileri de gönderebilirler `Resolve` bunları kendi uç noktası adresi değişmiş olabilir Hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek isteklerini bir `ResolveMatch` istemciye ileti.  

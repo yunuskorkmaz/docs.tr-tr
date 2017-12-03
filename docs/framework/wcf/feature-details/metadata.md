@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: affc9ed8f9e16834af8d7281ce9a7eaedd7d5e8e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="metadata"></a>Meta Veriler
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  

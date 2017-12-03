@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 694beb74a521c7aa898a0ef7e390accaa8b4ced9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b804064a2b7a7bb0f587ae1dc2014769ca6e058
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde geri bir kullanıcı tanımlı tür seri durumdan serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemci kullanılabilir olması gerekir. Genellikle Bunu başarmak için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tanımlı türler uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu düzenek de JavaScript nesne gösterimi (JSON) nesneleriyle çalışırken konu başlığı altında açıklandığı gibi geçerlidir [nasıl yapılır: seri hale getirmek ve seri durumdan JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

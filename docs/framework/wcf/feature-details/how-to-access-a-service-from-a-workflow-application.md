@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d2d87c045fe81e3f5bf2cb490e47fb5fbd6bc7a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fed03374a21406866b19d0028ee24edfc7edb707
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
 Bu konuda, bir iş akışı konsol uygulamasından bir iş akışı hizmeti çağırma açıklar. Tamamlanma bağlı olduğu [nasıl yapılır: Mesajlaşma etkinlikleriyle iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) konu. Herhangi bir çağrıda için bu konu bir iş akışı uygulamasından bir iş akışı hizmeti nasıl açıklansa da, aynı yöntemleri kullanılabilir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir iş akışı uygulamasından service.  

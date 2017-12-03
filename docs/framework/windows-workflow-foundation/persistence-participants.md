@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a19099ea928e8867dd8206b8add0f1146496d052
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="persistence-participants"></a>Kalıcılık katılımcıları
 Kalıcılık katılımcı bir uygulama ana bilgisayarı tarafından tetiklenen bir sürdürme işlemi (kaydetme veya yük) katılabilirsiniz. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıflar ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık katılımcı oluşturmak için kullanabilirsiniz. Kalıcılık katılımcı bu sınıfların birinden türetilen, ilgi yöntemlerini uygular ve sınıfının bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama ana bilgisayarı gibi iş akışı uzantıları için bir iş akışı örneği kalıcı olduğunda bakın ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırma olabilir.  

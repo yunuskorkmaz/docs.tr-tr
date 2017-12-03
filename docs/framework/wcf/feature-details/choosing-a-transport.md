@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 612ca77c46288df2c78c25b3af241ee4cce333b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konuda yer alan üç ana taşımalar arasından seçim ölçütleri ele alınmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP ve adlandırılmış kanallar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak bu belgede, message queuing kapsamaz.  

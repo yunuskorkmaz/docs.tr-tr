@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d2367f4fe4ebe576eb9a5e2f707eb043e5ee7ccb
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 726ce98f3fe11bbc3cd13d90cdae335c0741efe6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>İş akışı hizmetleri iletilerinde biçimlendirme
 Bu örnek nasıl farklı kullanıcı türleri kullanılabilir Mesajlaşma etkinlikleri (WF Hizmetleri) gösterir. Örnek hizmeti bir basit gider onay hizmetidir ve üç işlemini kullanıma sunar. `ApproveExpense`bir veri sözleşmesi türü alır ve bilinen türleri kullanmayı gösterir. İşlemi döndürür `true` veya `false` gider miktarına bağlı. `ApprovePO`XmlSerializer türü alıp döndüren `true` veya `false` gider miktarına bağlı.`ApprovedVendor` Sözleşme türden bir ileti alıp döndüren `true` veya `false` satıcı onaylanan satıcılar listesinde ise veya istek (Finans departmanı herhangi bir satıcı kullanabilir) Finans departmanından geldiyse.  

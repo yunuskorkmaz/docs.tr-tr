@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c1493e344bfe60a12ad16e3c0d257392b3545a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Integration
 Barındırdığında bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti Internet Information Service (IIS) sanal dizinde .svc dosya yerleştirin. Bu .svc dosya hizmeti uygulayan sınıfa yanı sıra kullanmak için hizmet ana bilgisayar üreteci belirtir. İstekleri hizmete yaparken .svc dosyasındaki URI, örneğin belirttiğiniz: http://contoso.com/EmployeeServce.svc. Bu tür bir URI REST Hizmetleri yazma programcıları için en uygun değil. URI'ler REST Hizmetleri için belirli bir kaynak belirtin ve tüm uzantılar normalde sahip değil. <xref:System.Web.Routing> Tümleştirme özelliği barındırmanıza olanak sağlayan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzantısız URI'ler için yanıt REST hizmeti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yönlendirme Bkz: [ASP.NET yönlendirme](http://go.microsoft.com/fwlink/?LinkId=184660) ve [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) örnek.  

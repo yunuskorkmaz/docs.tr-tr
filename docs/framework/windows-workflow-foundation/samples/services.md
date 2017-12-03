@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 521cdb66-98cb-4ad1-b706-370788a43485
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9334739ccf917979e69eea426ea3c901120837c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2cee42de74609cbfc793822471655d88b32d9ce
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="services"></a>Hizmetler
 Bu bölümde gösteren örnekler bağlantılar içeren [!INCLUDE[wf](../../../../includes/wf-md.md)] hizmet işlevselliği.  
@@ -32,7 +32,7 @@ Bu bölümde gösteren örnekler bağlantılar içeren [!INCLUDE[wf](../../../..
  Nasıl kullanılacağı ortaya <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply> Mesajlaşma etkinlikleri beklenen ve beklenmeyen hataları alıp göndermek için.  
   
  [SendParameters ve ReceiveParameters etkinliklerin temel kullanım](../../../../docs/framework/windows-workflow-foundation/samples/basic-usage-of-sendparameters-and-receiveparameters-activities.md)  
- Kullanımını gösteren <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` ve <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` etkinlikler.  
+ Kullanımını gösteren <!--zz <xref:System.ServiceModel.Activities.SendParameters> --> `System.ServiceModel.Activities.SendParameters` ve <!--zz <xref:System.ServiceModel.Activities.ReceiveParameters> --> `System.ServiceModel.Activities.ReceiveParameters` etkinlikler.
   
  [Temel XAML yalnızca hizmeti](../../../../docs/framework/windows-workflow-foundation/samples/basic-xaml-only-service.md)  
  XAML yalnızca bir hizmetin nasıl oluşturulacağını gösterir.  

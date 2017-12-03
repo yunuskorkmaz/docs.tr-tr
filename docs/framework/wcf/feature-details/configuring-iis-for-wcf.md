@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 Internet Information Services (IIS) 7.0 gerekli bileşenleri seçerek yüklemenize olanak tanıyan bir modüler tasarımı vardır. Bu tasarım, içinde sunulan yeni bildirim temelli temsilinde teknolojisini temel [!INCLUDE[wv](../../../../includes/wv-md.md)]. 40'tan fazla tek başına özelliği bileşenleri vardır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] , yüklenebilir bağımsız olarak. Bu, BT uzmanları kolayca yüklemesini gerektiği gibi özelleştirin sağlar. Bu konuda nasıl yapılandırılacağı açıklanır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ile kullanılmak üzere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve hangi bileşenler gereklidir belirleyin.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1484f3b0af3ee09f1cb18d3d90f81fb0a2044a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545049900ec632aaaf3955656bcd93e845b094de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="exceptions"></a>Özel Durumlar
 İş akışları kullanabilirsiniz <xref:System.Activities.Statements.TryCatch> bir iş akışı yürütme sırasında başlatılan özel durumları işleme etkinlik. Bu özel durumlar işlenebilir veya bunlar kullanarak yeniden atılabilen <xref:System.Activities.Statements.Rethrow> etkinlik. Etkinlikler <xref:System.Activities.Statements.TryCatch.Finally%2A> bölümü olan yürütülmesi ya da <xref:System.Activities.Statements.TryCatch.Try%2A> bölüm veya <xref:System.Activities.Statements.TryCatch.Catches%2A> bölüm tamamlar. İş akışları tarafından barındırılan bir <xref:System.Activities.WorkflowApplication> örneği de kullanabilir <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> tarafından işlenmemiş özel durumları işlemek için olay işleyicisi bir <xref:System.Activities.Statements.TryCatch> etkinlik.  

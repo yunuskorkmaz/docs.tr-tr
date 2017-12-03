@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 caps.latest.revision: "38"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 50d55a9eea39e45a9608f27ad02706ad56de89f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be6262714ad2753d3a6f62a2956a31529641a246
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , Bir Mesajlaşma altyapısı düşünülebilir. Hizmet işlemleri iletilerini işlemek ve iletileri göndermek. İletileri işlemi sözleşmeleri kullanma açıklanmaktadır. Örneğin, aşağıdaki sözleşme göz önünde bulundurun.  

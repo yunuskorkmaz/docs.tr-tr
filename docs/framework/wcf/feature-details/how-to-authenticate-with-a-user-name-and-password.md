@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 73ef3c3f4f4aeb9295cedbbf56635454869b3f4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama
 Bu konuda etkinleştirmeye gösterilmiştir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows etki alanı kullanıcı adı ve parola ile bir istemci kimlik doğrulaması için hizmet. Bu, bir çalışma, kendi kendini barındıran WCF Hizmeti varsayar. Bir temel kendini barındıran WCF Hizmeti bakın, oluşturmanın bir örneği için [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bu konu, hizmet kodunda yapılandırılan varsayar. Bir yapılandırma dosyası kullanarak benzer bir hizmet yapılandırma bir örnek görmek istiyorsanız bkz [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  

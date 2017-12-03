@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 492a82de21c95fe08c361274af2d49e2531535b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri XML'e dönüştürecek ve XML verilerine geri dönüştürmek için kendi varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmek için tasarlanmış *veri sözleşmesi* türleri. Ancak, bir örtük veri sözleşmesi sahip olarak düşünülebilir birçok diğer türleri, destekler. Seri hale getirilebilir türlerinin tam bir listesi verilmiştir:  

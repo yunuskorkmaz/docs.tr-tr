@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dda6e063744b8a745c5f4be576344ff2823de267
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="content-based-correlation"></a>İçeriğe Dayalı Bağıntı
 İş akışı Hizmetleri istemcileri ve diğer hizmetleri ile iletişim kurarken, genellikle var. benzersiz bir ileti belirli bir örneği ile ilişkilendirir bazı veri alışverişi iletilerindeki İçeriğe dayalı bağıntı iletide, müşteri numarası veya sipariş kimliği iletileri yönlendirmek için uygun iş akışı örneği gibi bu verileri kullanır. Bu konuda, iş akışlarında içerik tabanlı bağıntı kullanımı açıklanmaktadır.  

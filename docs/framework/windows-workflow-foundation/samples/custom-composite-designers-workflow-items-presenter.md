@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5390aed3af9146700a4dca7c5b56ddabdca993dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b708d39ba6e5f53579f575d5e228de43db3d90a9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel bileşik tasarımcıları - iş akışı öğeleri sunum
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> İçerilen öğelerin bir koleksiyonu düzenleme için izin veren WF Tasarımcı programlama modeli anahtar türü. Bu örnek düzenlenebilir bir koleksiyonu ortaya çıkarır bir etkinlik Tasarımcısı nasıl oluşturulacağını gösterir.  

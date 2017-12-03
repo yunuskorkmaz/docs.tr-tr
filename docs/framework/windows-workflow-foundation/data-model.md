@@ -10,14 +10,14 @@ ms.topic: article
 helpviewer_keywords: programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 019e4fd5dc506970829fd9505038b71b23574c02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1350cc5a348bf320f0719043bbefcd2b0dd083
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation veri modeli
 Windows Workflow Foundation veri modeli üç kavramlarını oluşur: değişkenleri, bağımsız değişkenleri ve ifadeler. Veri depolama değişkenleri temsil eder ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bağımsız değişkenler (bir değer atanır) bağlı değişkenleri başvurabilir ifadeler kullanarak.  

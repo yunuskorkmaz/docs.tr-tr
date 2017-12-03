@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61a5ecdf05fed6c171a84c4f30f50e9a468a414d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
 Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın alma işlemi çok basit bir istek oluşturulacağını gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7a0153533ce5ec748c6396676988fcdc73eae6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>İleri Uyumlu Veri Sözleşmeleri
 Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] veri sözleşmesi sistemidir sözleşmeleri bölünemez yollarla zamanla gelişmesi. Diğer bir deyişle, bir istemci bir veri sözleşmesi daha eski bir sürümü ile aynı veri sözleşmesi daha yeni bir sürümü olan bir hizmeti ile iletişim kurabilir veya bir istemci bir veri sözleşmesi daha yeni bir sürümü ile aynı veri sözleşmesi daha eski bir sürümü ile iletişim kurabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][En iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

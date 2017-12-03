@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5814850b3d5a25f5f3c118e732930168f9489d9d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81512576e1d26b63cf65b3a0c9992c2d273d2779
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı
 Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağını gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web ana bilgisayar ortamında özel kanal dağıtıcı oluşturma. Kanal dağıtıcı etkileşimde <xref:System.ServiceModel.Channels.IChannelListener> kanal yığından Kanallar ve alır iletileri kabul etmesini. Bu örnek ayrıca kullanarak bir Web ana bilgisayar ortamının kanal yığınında yapı göstermek için temel bir örnek sağlar <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
