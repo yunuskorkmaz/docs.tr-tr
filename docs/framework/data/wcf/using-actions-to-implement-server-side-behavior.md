@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d5f3a949e8cade47876bb578725a130ef7dac934
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için Eylemler kullanma
 OData eylemlerinin bir OData hizmetinden alınan bir kaynağa bağlı görevi gören bir davranış uygulamak için bir yol sağlar.  Örneğin bir kaynak olarak dijital bir filmi göz önünde bulundurun, dijital bir filmi yapabilir pek çok şey vardır: kullanıma, oranı/açıklama veya iade etme. Bunlar tüm dijital filmler yöneten bir WCF veri hizmeti tarafından uygulanan eylemler örneğidir. Eylem çağrılabilen bir kaynağı içeren bir OData yanıtında eylemler açıklanmaktadır. Bir kullanıcının dijital film temsil eden bir kaynak istediğinde WCF veri hizmetinden döndürülen yanıt bu kaynak için kullanılabilir olan eylemler hakkında bilgi içerir. Bir eylem kullanılabilirliğini veri hizmet ya da kaynak durumuna bağlı olabilir. Dijital film teslim iade edildikten sonra örnek başka bir kullanıcı tarafından kullanıma alınamıyor için. İstemciler, bir URL belirterek bir eylem çağırabilirsiniz. Örneğin http://MyServer/MovieService.svc/Movies (6) belirli bir dijital film belirleyin ve http://MyServer/MovieService.svc/Movies (6) / Checkout belirli film eylemini çağıracaktır. Eylemler izin verir, kullanıma sunmak veri modelinizi gösterme olmadan hizmet modeli. Film hizmet örnekle devam edersek, film derecelendirme, ancak bir kaynak olarak derecelendirme verileri doğrudan açığa yapmalarına izin vermek isteyebilirsiniz. Film derecelendirme ancak derecelendirme veri kaynağı olarak doğrudan erişmek kullanıcı izin vermek için bir oran eylem uygulamanız.  

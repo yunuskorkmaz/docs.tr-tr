@@ -16,14 +16,14 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 71df440ee9234071d0ab21cc3c18c5b080279bf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
 SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bir hizmet veya çift yönlü istemci, bu hataları ve bir istemci veya hizmet uygulaması bu hataları nasıl işlediğini gönderebilirsiniz bkz [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

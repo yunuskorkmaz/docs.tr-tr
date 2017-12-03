@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 88e41101ab9a963ac09610b04afee745aa61c8e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ee3fb9547ff0a4e949d9e3a7b251cdbc01d6001
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: veri hizmeti için bir istek (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin
 Varsayılan olarak, kimlik bilgileri istemci kitaplığı için bir istek gönderirken sağlamıyor bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmet. Bununla birlikte, kimlik bilgileri sağlayarak veri hizmeti isteklerine kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere gösterilmiştir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmetinden veri isterken, istemci.  

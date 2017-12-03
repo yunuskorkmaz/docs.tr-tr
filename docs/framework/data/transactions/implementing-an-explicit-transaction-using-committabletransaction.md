@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f045356fa2de6543a3b24490cb7964640a8d802c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cc6f039ffbdeaef70e3bc4eb71aa5046105f4ee9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Açık bir CommittableTransaction kullanarak işlem uygulama
 <xref:System.Transactions.CommittableTransaction> Sınıfı kullanarak bir işlem kullanmak üzere uygulamalar için açık bir yol sağlar <xref:System.Transactions.TransactionScope> örtük olarak sınıf. Birden çok işlev çağrıları veya birden çok iş parçacığı çağrıları arasında aynı işlem kullanmak istediğiniz uygulamalar için kullanışlıdır. Farklı <xref:System.Transactions.TransactionScope> uygulama yazıcısı sınıfının gerekir özellikle çağırmak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> yürütün veya işlem iptal etmek için yöntemleri.  

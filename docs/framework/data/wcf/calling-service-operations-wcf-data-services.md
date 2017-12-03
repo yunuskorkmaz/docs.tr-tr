@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e43fbe2002c19b8203ff048b4200dcfaad27afe0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1480047f14d9528d4d498b417e5d0b4a0f87a622
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Arama hizmet işlemleri (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri hizmeti için hizmet işlemleri tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]veri hizmeti yöntemi olarak gibi işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemlerini URI kullanılarak ele alınır. Bir hizmet işlemi, varlık türleri, tek bir varlık türü örnekleri ve tamsayı ve dize gibi basit türler koleksiyonlarının geri dönebilirsiniz. Bir hizmet işlemi de döndürebilir `null` (`Nothing` Visual Basic'te). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemleri erişmek için kullanılabilir. Bu tür hizmet işlemleri sahip yöntemleri olarak tanımlanan <xref:System.ServiceModel.Web.WebGetAttribute> uygulanır. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

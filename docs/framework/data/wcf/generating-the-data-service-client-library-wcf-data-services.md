@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5fbf45a3447a1dc5fb449628bdd7f741fb3e8324
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 46ddf167a6cbc0ba6c73cfc53020ad33dbf10a2e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma
 Arabirimini uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [OData: hizmeti meta veri belgesi](http://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Kullandığınızda, bu aracı tarafından döndürülen meta veriler için bir başvuru eklemek için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projede akış, aşağıdaki eylemleri gerçekleştirir:  

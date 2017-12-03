@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97726c7faa08477351d4496650b6c08b643cdb76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fc263f0d70e7c1016bab819fb157dde6fad66d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltactivityscheduledqueriesgt-of-wcf"></a>WCF &lt;activityScheduledQueries&gt;
 Üst etkinlik göre çalıştırılmak üzere zamanlanmış bir etkinlik izlemek için kullanılan sorgu koleksiyonunu temsil eder. Sorgu için zamanlanan etkinlik kayıtlarını abone olmak izleme katılımcı gereklidir.  

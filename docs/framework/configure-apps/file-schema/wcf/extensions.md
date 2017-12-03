@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 34acc21230650fe5b8da2f81fd176c253c57f69d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltextensionsgt"></a>&lt;Uzantıları&gt;
 Bu yapılandırma öğesi, standart bulunabilirlik meta verilerin yanı sıra (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanması için özel meta veriler içeren XML öğe koleksiyonunu içerir. Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.  

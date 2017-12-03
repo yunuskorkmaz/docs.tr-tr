@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b56fecef5ace38f728d8cc68df4dcfeb71bfedf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak veri bağlama
 Oluşturulan veri nesneleri temel alan veri kaynakları oluşturabileceğiniz bir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci uygulaması. Kullanarak veri hizmetine başvuru eklediğinizde **hizmet Başvurusu Ekle** iletişim kutusunda, proje veri kaynağı ile birlikte oluşturulan istemci veri sınıflarını oluşturulur. Bir veri kaynağına veri çıkarır hizmeti her varlık kümesi için oluşturulur. Bu veri kaynağı öğeleri sürükleyerek hizmetinden alınan verileri görüntüleyen formlar oluşturabilirsiniz **veri kaynakları** tasarımcıya penceresi. Bu öğeler, veri kaynağı ile ilişkili denetimleri haline gelir. Yürütme sırasında bu veri kaynağı bir örneğine bağlanır <xref:System.Data.Services.Client.DataServiceCollection%601> veri hizmetine bir sorgu tarafından döndürülen nesnelerle doldurulur sınıfı. Daha fazla bilgi için bkz: [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f671d3b41e0812916d1db342c211f2db6456ede3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>Nesne Materialization (WCF Veri Hizmetleri)
 Kullandığınızda **hizmet Başvurusu Ekle** iletişim kullanmak için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir .NET Framework tabanlı istemci uygulamasında akış, eşdeğer veri sınıfları için akış tarafından kullanıma sunulan veri modelindeki her bir varlık türü oluşturulur. Daha fazla bilgi için bkz: [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verilerini bu oluşturulan istemci veri hizmeti sınıfları birinin bir örneğine gerçekleştirildiği. Birleştirme seçeneklerini ve izlenen nesneler için kimlik çözümleme hakkında daha fazla bilgi için bkz: [veri Hizmet bağlamı yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

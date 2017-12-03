@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a43e7fc6ebc4101586b67b0982b16cefbfff2d35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilişkili varlıklar, disk belleğine alınan yanıt verilerini ve gerektiğinde veri hizmetinden ikili veri akışlarını gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza ertelenmiş tür içeriği yüklemek açıklar.  

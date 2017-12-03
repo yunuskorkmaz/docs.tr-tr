@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f6598b1aff20a8b3471ca1ccb59bb5c6576efdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)
 Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gelen [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve isteğe bağlı olarak devre dışı bırak akışı okuma Web tarayıcısında. Sonra hizmet tanımı belge almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı aracılığıyla göndererek veri hizmeti kaynaklara erişim.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 05aeeea7d10c012804fe083890bcc8516aa8c8bc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84e211a0ecd68634a08965a1a4cc1494e0df0713
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-configuration-schema"></a>WCF Yapılandırma Şeması
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]yapılandırma öğeleri etkinleştirmek, yapılandırmak [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturmak ve istemciler ve hizmetler için yapılandırma dosyaları değiştirmek için. Yapılandırma dosyaları XML olarak biçimlendirilir olduğundan, el ile bir metin düzenleyicisi kullanarak bunları düzenlemek istiyorsanız XML ile bilgi sahibi olmanız gerekir. Aksi halde, bir sınıfı XML öğesi etiketi veya öznitelik gibi sorunları içine çalışabilir. Bunun nedeni, XML öğesi etiketleri ve öznitelikleri küçük harfe duyarlıdır.  

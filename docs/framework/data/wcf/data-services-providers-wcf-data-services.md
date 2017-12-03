@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3f794088f2494157e22b8551c6241786c7a73398
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a05927721e55f65db6984c3200e64088a187248
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Veri sağlayıcıları (WCF Veri Hizmetleri) Hizmetleri
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]veri olarak sunmaya yönelik birden çok sağlayıcı modellerini destekleyen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu konu en iyi seçmenize olanak sağlamak için bilgi sağlamaktadır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri kaynağı için sağlayıcı.  

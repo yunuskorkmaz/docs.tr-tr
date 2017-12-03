@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9c86e755d35a57090941551de43aedd07c8f1f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) güncelleştirme
 Kullandığınızda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanmak için istemci kitaplığı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış, kitaplık istemci veri hizmeti sınıfların örneklerini akışa girdileri çevirir. Bu veri hizmeti sınıflarını kullanarak izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait. İstemci üzerinde yöntemleri kullanarak rapor varlıklara değişiklikleri izleyen <xref:System.Data.Services.Client.DataServiceContext>. Bu yöntemler, eklenen ve Silinen varlıkları ve ayrıca özellik değerleri veya varlık örnekleri arasında ilişkiler için yaptığınız değişiklikleri izlemek istemci etkinleştirin. Çağırdığınızda bu izlenen değişiklikleri REST tabanlı işlemler veri hizmetine gönderilen <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi.  

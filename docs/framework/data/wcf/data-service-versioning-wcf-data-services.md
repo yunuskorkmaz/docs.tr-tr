@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228b8d40b14781496b2c71a715008e8bf9caf86b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürüm oluşturma (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'ler kullanarak kaynakları, bir veri modeline bağlı olarak veri erişim sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Ayrıca hizmet işlemleri tanımını destekler. İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra bu veri hizmetleri için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimleri değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için gerekebilir. Varolan bir veri hizmeti bir değişiklik yaptığınızda mi verilerinizi yeni bir sürümünü tanımlamak dikkate almanız gereken service ve mevcut istemci uygulamaları üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. Ayrıca açıklanır nasıl [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir exchange istemcileri ve farklı sürümlerini destekler veri hizmetleri arasında işleme [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü.  

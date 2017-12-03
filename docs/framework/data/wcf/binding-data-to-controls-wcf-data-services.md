@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9e0d7ed9fdae7731fd4b023dcad656ebcdcf280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca580801e6bb8786071ec705d4a86d367b02f622
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>(WCF Veri Hizmetleri) denetimlere veri bağlama
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], denetimleri gibi bağlayabilirsiniz `ComboBox` ve `ListView` örneği denetimlere <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı. Öğesinden devralınan bu koleksiyonu <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfı, verileri içeren bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu sınıf bildirimleri öğeleri eklendiğinde veya kaldırılan sağlayan dinamik veri koleksiyonunu temsil eder. Bir örneğini kullandığınızda <xref:System.Data.Services.Client.DataServiceCollection%601> veri bağlama için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları tarafından izlenen nesneleri emin olmak için bu olayları işleme <xref:System.Data.Services.Client.DataServiceContext> ilişkili kullanıcı Arabirimi öğesi verilerle eşitlenmiş olarak kalır.  

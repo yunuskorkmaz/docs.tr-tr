@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: feac51c92a7e963d440eefbae94a58b94f49797e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dcf4ffd46bbbca0e7e00cad7ae0b2a88f7bd986b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]sunucuda hizmet işlemleri tanımlanan yöntemler kullanıma sunar. Hizmet işlemleri sunucuda tanımlanmış bir yönteme bir URI üzerinden erişim sağlamak için bir veri hizmeti sağlar. Bir hizmet işlemi tanımlamak için uygulama [`WebGet]` veya `[WebInvoke]` özniteliği yöntemi. Sorgu işleçleri desteklemek için hizmet işlemi döndürmelidir bir <xref:System.Linq.IQueryable%601> örneği. Hizmet işlemleri, altta yatan veri kaynağını aracılığıyla erişebilir <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> özelliği <xref:System.Data.Services.DataService%601>. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

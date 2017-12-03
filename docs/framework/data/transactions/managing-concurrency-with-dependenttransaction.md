@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6cb0fa7f328b158613836e6ab20bd33545dc3a5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6512fa09bf83b03b1a294caffdfbbdf778ee0bb6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Eşzamanlılık DependentTransaction ile yönetme
 <xref:System.Transactions.Transaction> Nesnesi kullanılarak oluşturulan <xref:System.Transactions.Transaction.DependentClone%2A> yöntemi. Tek amacı, bazı bir kod (örneğin, bir çalışan iş parçacığı) parçalarını hala iş üzerinde işlem gerçekleştirirken işlem tamamlanamaz garanti olmaktır. Kopyalanan işlem içinde çalışmanın tam ve kabul edilebilmesi için hazır olduğunda, hareket kullanarak Oluşturucusu bildirebilir <xref:System.Transactions.DependentTransaction.Complete%2A> yöntemi. Bu nedenle, tutarlılık ve veri doğruluğunu saklayabilir.  

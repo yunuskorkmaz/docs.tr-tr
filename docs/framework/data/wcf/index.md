@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1ef95ac84872b2cc39ec3a93abab10c39cd7738
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](eski adıyla "ADO.NET Veri Hizmetleri") kullanan hizmetler oluşturmanızı sağlayan .NET Framework'ün bir bileşen olan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için [temsili durum Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Veri URI tarafından adreslenebilir kaynakları olarak kullanıma sunar. Veriler erişilen ve GET, PUT, POST ve DELETE standart HTTP fiillerini kullanarak değiştirildi. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynaklara göre ilişkileri ilişkili varlık kümesi olarak kullanıma sunmak için.  

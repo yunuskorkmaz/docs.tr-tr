@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 43f2b4bf7a7617587d76252108ec1ab5fb194a11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 578f62773fc63ac48977116834bb5cd3238050d3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet işlemleri (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Sunucu üzerindeki yöntemleri kullanıma sunmak için veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemleri URI tarafından ele alınmıştır. Hizmet işlemleri, bir veri hizmeti iş mantığı gibi rol tabanlı güvenlik, uygulamak için doğrulama mantığını uygulamak için kullanıma sunmak etkinleştirin veya özellikleri sorgulama kullanıma sunmak için özelleştirilmiş. Hizmet işlemleri yöntemlerdir türetilen veri hizmet sınıfı eklenen <xref:System.Data.Services.DataService%601>. Tüm veri hizmeti kaynaklar gibi hizmet işlemi yöntemi için parametreler sağlayabilir. Örneğin, aşağıdaki işlemi URI hizmet (temel [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametre:  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2d654ad24f8d23a47d2a3be3b07c42c104bb9b70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 25a6666127d16a8245093bdf11ae7d0e76fc8365
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
 Bu, son görevdir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. Bu görevde, bir konsol uygulaması çözüme eklemek için bir başvuru ekleyin [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış bu yeni istemci uygulaması ve erişim [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] oluşturulan istemci veri hizmeti sınıfları ve istemci kullanarak istemci uygulamasından akışı kitaplıkları.  

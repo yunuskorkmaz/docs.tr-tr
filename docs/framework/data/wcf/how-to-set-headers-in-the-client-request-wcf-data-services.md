@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 62bd78c58f83e0fbe2a6d8ed08104b15e183001b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a2eb85c2adacbe22defe821398168a3f20378acd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Nasıl yapılır: istemci isteği (WCF Veri Hizmetleri) üstbilgilerini Ayarla
 Kullandığınızda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen bir veri hizmete erişmek için İstemci Kitaplığı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], istemci kitaplığı veri hizmete gönderilen istek iletilerinin gerekli HTTP üstbilgileri otomatik olarak ayarlar. Ancak, istemci kitaplığının ne zaman veri hizmeti talep tabanlı kimlik doğrulaması veya tanımlama bilgilerini gerektiren belirli durumlarda gereklidir ileti üstbilgilerini Ayarla bilmez. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Gönderilmeden önce bu gibi durumlarda, el ile ileti üstbilgilerini istek iletisinde ayarlamanız gerekir. Bu konudaki örnek nasıl işleneceğini gösterir <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> veri hizmetine gönderilmeden önce yeni bir üstbilgi istek iletisi eklenecek olay.  
