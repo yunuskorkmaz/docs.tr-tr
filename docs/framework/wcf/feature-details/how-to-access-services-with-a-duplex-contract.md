@@ -14,31 +14,31 @@ dev_langs:
 helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e4c273e674fb7cb0f2801d9858d598baab5973a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="61486-102">Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme</span><span class="sxs-lookup"><span data-stu-id="61486-102">How to: Access Services with a Duplex Contract</span></span>
-<span data-ttu-id="61486-103">Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği.</span><span class="sxs-lookup"><span data-stu-id="61486-103">One feature of [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="61486-104">Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar.</span><span class="sxs-lookup"><span data-stu-id="61486-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="61486-105">Bu konuda oluşturmaya yönelik adımlar gösterilmektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geri çağırma arabirimini uygulayan bir istemci sınıfı istemcisinde.</span><span class="sxs-lookup"><span data-stu-id="61486-105">This topic shows the steps to create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client in a client class that implements the callback interface.</span></span>  
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="b0fab-102">Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme</span><span class="sxs-lookup"><span data-stu-id="b0fab-102">How to: Access Services with a Duplex Contract</span></span>
+<span data-ttu-id="b0fab-103">Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği.</span><span class="sxs-lookup"><span data-stu-id="b0fab-103">One feature of [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="b0fab-104">Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar.</span><span class="sxs-lookup"><span data-stu-id="b0fab-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="b0fab-105">Bu konuda oluşturmaya yönelik adımlar gösterilmektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geri çağırma arabirimini uygulayan bir istemci sınıfı istemcisinde.</span><span class="sxs-lookup"><span data-stu-id="b0fab-105">This topic shows the steps to create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client in a client class that implements the callback interface.</span></span>  
   
- <span data-ttu-id="61486-106">Bir çift bağlama hizmeti istemcinin IP adresini gösterir.</span><span class="sxs-lookup"><span data-stu-id="61486-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="61486-107">İstemci, yalnızca Hizmetleri için güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="61486-107">The client should use security to ensure that it connects only to services it trusts.</span></span>  
+ <span data-ttu-id="b0fab-106">Bir çift bağlama hizmeti istemcinin IP adresini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b0fab-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="b0fab-107">İstemci, yalnızca Hizmetleri için güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b0fab-107">The client should use security to ensure that it connects only to services it trusts.</span></span>  
   
- <span data-ttu-id="61486-108">Temel bir oluşturma bir öğretici için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve istemci, bkz: [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="61486-108">For a tutorial on creating a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
+ <span data-ttu-id="b0fab-108">Temel bir oluşturma bir öğretici için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet ve istemci, bkz: [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="b0fab-108">For a tutorial on creating a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-### <a name="to-access-a-duplex-service"></a><span data-ttu-id="61486-109">Çift yönlü bir hizmete erişmek için</span><span class="sxs-lookup"><span data-stu-id="61486-109">To access a duplex service</span></span>  
+### <a name="to-access-a-duplex-service"></a><span data-ttu-id="b0fab-109">Çift yönlü bir hizmete erişmek için</span><span class="sxs-lookup"><span data-stu-id="b0fab-109">To access a duplex service</span></span>  
   
-1.  <span data-ttu-id="61486-110">İki arabirim içeren bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="61486-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="61486-111">İlk arabirimi hizmet için ikinci için geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="61486-111">The first interface is for the service, the second is for the callback.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="61486-112">bkz. çift yönlü bir hizmet oluşturma [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="61486-112"> creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
+1.  <span data-ttu-id="b0fab-110">İki arabirim içeren bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b0fab-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="b0fab-111">İlk arabirimi hizmet için ikinci için geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="b0fab-111">The first interface is for the service, the second is for the callback.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b0fab-112">bkz. çift yönlü bir hizmet oluşturma [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="b0fab-112"> creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>  
   
-2.  <span data-ttu-id="61486-113">Hizmet çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="61486-113">Run the service.</span></span>  
+2.  <span data-ttu-id="b0fab-113">Hizmet çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="b0fab-113">Run the service.</span></span>  
   
-3.  <span data-ttu-id="61486-114">Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sözleşmeleri (arabirimler) için istemci oluşturulamadı.</span><span class="sxs-lookup"><span data-stu-id="61486-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="61486-115">Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="61486-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
+3.  <span data-ttu-id="b0fab-114">Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sözleşmeleri (arabirimler) için istemci oluşturulamadı.</span><span class="sxs-lookup"><span data-stu-id="b0fab-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="b0fab-115">Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="b0fab-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
   
-4.  <span data-ttu-id="61486-116">Geri çağırma arabirimi, aşağıdaki örnekte gösterildiği gibi istemci sınıfında uygulayın.</span><span class="sxs-lookup"><span data-stu-id="61486-116">Implement the callback interface in the client class, as shown in the following example.</span></span>  
+4.  <span data-ttu-id="b0fab-116">Geri çağırma arabirimi, aşağıdaki örnekte gösterildiği gibi istemci sınıfında uygulayın.</span><span class="sxs-lookup"><span data-stu-id="b0fab-116">Implement the callback interface in the client class, as shown in the following example.</span></span>  
   
     ```csharp  
     public class CallbackHandler : ICalculatorDuplexCallback  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
     End Class  
     ```  
   
-5.  <span data-ttu-id="61486-117">Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.InstanceContext> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="61486-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="61486-118">Oluşturucu istemci sınıfının bir örneğini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="61486-118">The constructor requires an instance of the client class.</span></span>  
+5.  <span data-ttu-id="b0fab-117">Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.InstanceContext> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b0fab-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="b0fab-118">Oluşturucu istemci sınıfının bir örneğini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="b0fab-118">The constructor requires an instance of the client class.</span></span>  
   
     ```csharp  
     InstanceContext site = new InstanceContext(new CallbackHandler());  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  <span data-ttu-id="61486-119">Bir örneğini oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektirir Oluşturucusu kullanılarak istemci bir <xref:System.ServiceModel.InstanceContext> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="61486-119">Create an instance of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="61486-120">Öğesinin ikinci parametresi oluşturucusu, yapılandırma dosyasında bulunan bir uç nokta adıdır.</span><span class="sxs-lookup"><span data-stu-id="61486-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>  
+6.  <span data-ttu-id="b0fab-119">Bir örneğini oluşturmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektirir Oluşturucusu kullanılarak istemci bir <xref:System.ServiceModel.InstanceContext> nesnesi.</span><span class="sxs-lookup"><span data-stu-id="b0fab-119">Create an instance of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="b0fab-120">Öğesinin ikinci parametresi oluşturucusu, yapılandırma dosyasında bulunan bir uç nokta adıdır.</span><span class="sxs-lookup"><span data-stu-id="b0fab-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -87,19 +87,19 @@ ms.lasthandoff: 11/21/2017
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  <span data-ttu-id="61486-121">Yöntemleri çağırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektiği gibi istemci.</span><span class="sxs-lookup"><span data-stu-id="61486-121">Call the methods of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as required.</span></span>  
+7.  <span data-ttu-id="b0fab-121">Yöntemleri çağırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerektiği gibi istemci.</span><span class="sxs-lookup"><span data-stu-id="b0fab-121">Call the methods of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as required.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="61486-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="61486-122">Example</span></span>  
- <span data-ttu-id="61486-123">Aşağıdaki kod örneğinde, çift yönlü sözleşme erişen istemci sınıfın nasıl oluşturulacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="61486-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>  
+## <a name="example"></a><span data-ttu-id="b0fab-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="b0fab-122">Example</span></span>  
+ <span data-ttu-id="b0fab-123">Aşağıdaki kod örneğinde, çift yönlü sözleşme erişen istemci sınıfın nasıl oluşturulacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b0fab-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>  
   
  [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
  [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="61486-124">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="61486-124">.NET Framework Security</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="b0fab-124">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="b0fab-124">.NET Framework Security</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61486-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="61486-125">See Also</span></span>  
- [<span data-ttu-id="61486-126">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="61486-126">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [<span data-ttu-id="61486-127">Nasıl yapılır: çift yönlü sözleşme oluşturma</span><span class="sxs-lookup"><span data-stu-id="61486-127">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [<span data-ttu-id="61486-128">ServiceModel meta veri yardımcı Programracı (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="61486-128">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [<span data-ttu-id="61486-129">Nasıl yapılır: bir istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="61486-129">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [<span data-ttu-id="61486-130">Nasıl yapılır: ChannelFactory kullanma</span><span class="sxs-lookup"><span data-stu-id="61486-130">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a><span data-ttu-id="b0fab-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b0fab-125">See Also</span></span>  
+ [<span data-ttu-id="b0fab-126">Başlangıç Öğreticisi</span><span class="sxs-lookup"><span data-stu-id="b0fab-126">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="b0fab-127">Nasıl yapılır: çift yönlü sözleşme oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0fab-127">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="b0fab-128">ServiceModel meta veri yardımcı Programracı (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="b0fab-128">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="b0fab-129">Nasıl yapılır: bir istemci oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0fab-129">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="b0fab-130">Nasıl yapılır: ChannelFactory kullanma</span><span class="sxs-lookup"><span data-stu-id="b0fab-130">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

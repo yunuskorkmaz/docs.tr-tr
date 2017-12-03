@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f46416596266e5f69abef664d4067d07caf63d43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: efb04f36ad83755edd2e7d49c7cdec3cce77273b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="abd51-102">Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma</span><span class="sxs-lookup"><span data-stu-id="abd51-102">Calling a REST-style service from a WCF service</span></span>
-<span data-ttu-id="abd51-103">Normal bir (SOAP tabanlı) WCF hizmetinden REST tarzı bir hizmete çağırma etkinleştirildiğinde (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlamı geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="abd51-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="abd51-104">Bu değişiklik HTTP POST istekleri için HTTP GET isteklerine neden olur.</span><span class="sxs-lookup"><span data-stu-id="abd51-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="abd51-105">REST stilinde service çağırmak için doğru içeriği kullanmak için WCF Hizmeti zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın.</span><span class="sxs-lookup"><span data-stu-id="abd51-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="abd51-106">Bu konu, bu tekniği gösterir basit bir örnek oluşturmak nasıl anlatmaktadır.</span><span class="sxs-lookup"><span data-stu-id="abd51-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
+# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="0aee3-102">Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma</span><span class="sxs-lookup"><span data-stu-id="0aee3-102">Calling a REST-style service from a WCF service</span></span>
+<span data-ttu-id="0aee3-103">Normal bir (SOAP tabanlı) WCF hizmetinden REST tarzı bir hizmete çağırma etkinleştirildiğinde (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlamı geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="0aee3-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="0aee3-104">Bu değişiklik HTTP POST istekleri için HTTP GET isteklerine neden olur.</span><span class="sxs-lookup"><span data-stu-id="0aee3-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="0aee3-105">REST stilinde service çağırmak için doğru içeriği kullanmak için WCF Hizmeti zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın.</span><span class="sxs-lookup"><span data-stu-id="0aee3-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="0aee3-106">Bu konu, bu tekniği gösterir basit bir örnek oluşturmak nasıl anlatmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0aee3-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
   
-## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="abd51-107">REST stilinde hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="abd51-107">Define the REST-style service contract</span></span>  
- <span data-ttu-id="abd51-108">Basit bir REST stilinde service sözleşme tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="abd51-108">Define a simple  REST-style service contract:</span></span>  
+## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="0aee3-107">REST stilinde hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="0aee3-107">Define the REST-style service contract</span></span>  
+ <span data-ttu-id="0aee3-108">Basit bir REST stilinde service sözleşme tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="0aee3-108">Define a simple  REST-style service contract:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -37,8 +37,8 @@ public interface IRestInterface
 }
 ```
   
-## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="abd51-109">REST stilinde hizmet sözleşmesini uygulama</span><span class="sxs-lookup"><span data-stu-id="abd51-109">Implement the REST-style service contract</span></span>  
- <span data-ttu-id="abd51-110">REST stilinde hizmet sözleşmesini uygulama:</span><span class="sxs-lookup"><span data-stu-id="abd51-110">Implement the REST-style service contract:</span></span>  
+## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="0aee3-109">REST stilinde hizmet sözleşmesini uygulama</span><span class="sxs-lookup"><span data-stu-id="0aee3-109">Implement the REST-style service contract</span></span>  
+ <span data-ttu-id="0aee3-110">REST stilinde hizmet sözleşmesini uygulama:</span><span class="sxs-lookup"><span data-stu-id="0aee3-110">Implement the REST-style service contract:</span></span>  
   
 ```csharp
 public class RestService : IRestInterface
@@ -55,8 +55,8 @@ public class RestService : IRestInterface
 }
 ```
   
-## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="abd51-111">WCF hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="abd51-111">Define the WCF service contract</span></span>  
- <span data-ttu-id="abd51-112">REST stilinde hizmetini çağırmak için kullanılan bir WCF sözleşmesi tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="abd51-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
+## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="0aee3-111">WCF hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="0aee3-111">Define the WCF service contract</span></span>  
+ <span data-ttu-id="0aee3-112">REST stilinde hizmetini çağırmak için kullanılan bir WCF sözleşmesi tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="0aee3-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -70,8 +70,8 @@ public interface INormalInterface
 }
 ```  
   
-## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="abd51-113">WCF hizmet sözleşmesini uygulama</span><span class="sxs-lookup"><span data-stu-id="abd51-113">Implement the WCF service contract</span></span>  
- <span data-ttu-id="abd51-114">WCF hizmet sözleşmesini uygulama:</span><span class="sxs-lookup"><span data-stu-id="abd51-114">Implement the WCF service contract:</span></span>  
+## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="0aee3-113">WCF hizmet sözleşmesini uygulama</span><span class="sxs-lookup"><span data-stu-id="0aee3-113">Implement the WCF service contract</span></span>  
+ <span data-ttu-id="0aee3-114">WCF hizmet sözleşmesini uygulama:</span><span class="sxs-lookup"><span data-stu-id="0aee3-114">Implement the WCF service contract:</span></span>  
   
 ```csharp
 public class NormalService : INormalInterface  
@@ -89,8 +89,8 @@ public class NormalService : INormalInterface
 }  
 ```  
   
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="abd51-115">REST stilinde service için istemci proxy oluşturma</span><span class="sxs-lookup"><span data-stu-id="abd51-115">Create the client proxy for the REST-style service</span></span>  
- <span data-ttu-id="abd51-116">Kullanarak <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` istemci proxy uygulayın.</span><span class="sxs-lookup"><span data-stu-id="abd51-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="abd51-117">Her bir yöntemin adı verilen yeni bir <xref:System.ServiceModel.OperationContextScope> oluşturulur ve çağrı işlemi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="abd51-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="0aee3-115">REST stilinde service için istemci proxy oluşturma</span><span class="sxs-lookup"><span data-stu-id="0aee3-115">Create the client proxy for the REST-style service</span></span>  
+ <span data-ttu-id="0aee3-116">Kullanarak <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` istemci proxy uygulayın.</span><span class="sxs-lookup"><span data-stu-id="0aee3-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="0aee3-117">Her bir yöntemin adı verilen yeni bir <xref:System.ServiceModel.OperationContextScope> oluşturulur ve çağrı işlemi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0aee3-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -119,8 +119,8 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 }
 ```  
   
-## <a name="host-and-call-the-services"></a><span data-ttu-id="abd51-118">Ana bilgisayar ve Hizmetleri çağırın</span><span class="sxs-lookup"><span data-stu-id="abd51-118">Host and call the services</span></span>  
- <span data-ttu-id="abd51-119">Her iki hizmet davranışları ve gerekli uç noktaları ekleme, bir konsol uygulamasında barındırır.</span><span class="sxs-lookup"><span data-stu-id="abd51-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="abd51-120">Ve normal WCF Hizmeti çağırın:</span><span class="sxs-lookup"><span data-stu-id="abd51-120">And then call the regular WCF service:</span></span>  
+## <a name="host-and-call-the-services"></a><span data-ttu-id="0aee3-118">Ana bilgisayar ve Hizmetleri çağırın</span><span class="sxs-lookup"><span data-stu-id="0aee3-118">Host and call the services</span></span>  
+ <span data-ttu-id="0aee3-119">Her iki hizmet davranışları ve gerekli uç noktaları ekleme, bir konsol uygulamasında barındırır.</span><span class="sxs-lookup"><span data-stu-id="0aee3-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="0aee3-120">Ve normal WCF Hizmeti çağırın:</span><span class="sxs-lookup"><span data-stu-id="0aee3-120">And then call the regular WCF service:</span></span>  
   
 ```csharp
 public static void Main()
@@ -143,8 +143,8 @@ public static void Main()
 }
 ```  
   
-## <a name="complete-code-listing"></a><span data-ttu-id="abd51-121">Tam kod listeleri</span><span class="sxs-lookup"><span data-stu-id="abd51-121">Complete code listing</span></span>  
- <span data-ttu-id="abd51-122">Bu konudaki uygulanan örnek tam bir listesi verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="abd51-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
+## <a name="complete-code-listing"></a><span data-ttu-id="0aee3-121">Tam kod listeleri</span><span class="sxs-lookup"><span data-stu-id="0aee3-121">Complete code listing</span></span>  
+ <span data-ttu-id="0aee3-122">Bu konudaki uygulanan örnek tam bir listesi verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="0aee3-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
   
 ```csharp
 public class CallingRESTSample  
@@ -243,6 +243,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a><span data-ttu-id="abd51-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="abd51-123">See Also</span></span>  
- [<span data-ttu-id="abd51-124">Nasıl yapılır: bir temel WCF Web HTTP hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="abd51-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [<span data-ttu-id="abd51-125">WCF Web HTTP programlama nesnesi modeli</span><span class="sxs-lookup"><span data-stu-id="abd51-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="0aee3-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0aee3-123">See Also</span></span>  
+ [<span data-ttu-id="0aee3-124">Nasıl yapılır: bir temel WCF Web HTTP hizmeti oluşturma</span><span class="sxs-lookup"><span data-stu-id="0aee3-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [<span data-ttu-id="0aee3-125">WCF Web HTTP programlama nesnesi modeli</span><span class="sxs-lookup"><span data-stu-id="0aee3-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

@@ -10,45 +10,45 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="09e2f-102">Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma</span><span class="sxs-lookup"><span data-stu-id="09e2f-102">How to: Host a non-service workflow in IIS</span></span>
-<span data-ttu-id="09e2f-103">İş akışı hizmetleri iş akışları IIS altında barındırılan / OLUŞTU.</span><span class="sxs-lookup"><span data-stu-id="09e2f-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="09e2f-104">Başkası tarafından yazılmış bir iş akışı barındırma gerektiğinde kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="09e2f-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="09e2f-105">Örneğin, iş akışı Tasarımcısı'nı yeniden barındırma ve kullanıcılar kendi iş akışları oluşturmak izin verirseniz.</span><span class="sxs-lookup"><span data-stu-id="09e2f-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="09e2f-106">IIS'de hizmet olmayan iş akışı barındırma işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi özellikleri için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="09e2f-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="09e2f-107">IIS barındırılan iş akışı hizmetleri içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve bu IIS tarafından bir ileti alındığında etkinleştirildi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="09e2f-108">Hizmet olmayan iş akışları Mesajlaşma etkinlikleri içermez ve bir ileti göndererek varsayılan olarak devre dışı bırakılamaz.</span><span class="sxs-lookup"><span data-stu-id="09e2f-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="09e2f-109">Öğesinden bir sınıf türetin <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ve iş akışı örneği oluşturmak için işlemleri içeren bir hizmet sözleşmesini tanımlama.</span><span class="sxs-lookup"><span data-stu-id="09e2f-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="09e2f-110">Bu konu basit bir iş akışı oluşturma, bir istemci, iş akışını etkinleştirmek için kullanabileceğiniz bir hizmet sözleşmesini tanımlama ve öğesinden bir sınıf türetme size yol gösterecektir <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istekleri oluşturma iş akışı için dinlemek için hizmet sözleşmesi kullanır.</span><span class="sxs-lookup"><span data-stu-id="09e2f-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="d5684-102">Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma</span><span class="sxs-lookup"><span data-stu-id="d5684-102">How to: Host a non-service workflow in IIS</span></span>
+<span data-ttu-id="d5684-103">İş akışı hizmetleri iş akışları IIS altında barındırılan / OLUŞTU.</span><span class="sxs-lookup"><span data-stu-id="d5684-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="d5684-104">Başkası tarafından yazılmış bir iş akışı barındırma gerektiğinde kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="d5684-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="d5684-105">Örneğin, iş akışı Tasarımcısı'nı yeniden barındırma ve kullanıcılar kendi iş akışları oluşturmak izin verirseniz.</span><span class="sxs-lookup"><span data-stu-id="d5684-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="d5684-106">IIS'de hizmet olmayan iş akışı barındırma işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi özellikleri için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="d5684-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="d5684-107">IIS barındırılan iş akışı hizmetleri içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve bu IIS tarafından bir ileti alındığında etkinleştirildi.</span><span class="sxs-lookup"><span data-stu-id="d5684-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="d5684-108">Hizmet olmayan iş akışları Mesajlaşma etkinlikleri içermez ve bir ileti göndererek varsayılan olarak devre dışı bırakılamaz.</span><span class="sxs-lookup"><span data-stu-id="d5684-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="d5684-109">Öğesinden bir sınıf türetin <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ve iş akışı örneği oluşturmak için işlemleri içeren bir hizmet sözleşmesini tanımlama.</span><span class="sxs-lookup"><span data-stu-id="d5684-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="d5684-110">Bu konu basit bir iş akışı oluşturma, bir istemci, iş akışını etkinleştirmek için kullanabileceğiniz bir hizmet sözleşmesini tanımlama ve öğesinden bir sınıf türetme size yol gösterecektir <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istekleri oluşturma iş akışı için dinlemek için hizmet sözleşmesi kullanır.</span><span class="sxs-lookup"><span data-stu-id="d5684-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
   
-### <a name="create-a-simple-workflow"></a><span data-ttu-id="09e2f-111">Basit bir iş akışı oluşturma</span><span class="sxs-lookup"><span data-stu-id="09e2f-111">Create a simple workflow</span></span>  
+### <a name="create-a-simple-workflow"></a><span data-ttu-id="d5684-111">Basit bir iş akışı oluşturma</span><span class="sxs-lookup"><span data-stu-id="d5684-111">Create a simple workflow</span></span>  
   
-1.  <span data-ttu-id="09e2f-112">Yeni bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] boş adlı çözüm `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="09e2f-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
+1.  <span data-ttu-id="d5684-112">Yeni bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] boş adlı çözüm `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="d5684-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
   
-2.  <span data-ttu-id="09e2f-113">Adlı yeni bir WCF iş akışı hizmeti uygulaması projesi eklemek `SimpleWorkflow` çözüme.</span><span class="sxs-lookup"><span data-stu-id="09e2f-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="09e2f-114">İş Akışı Tasarımcısı'nı açar.</span><span class="sxs-lookup"><span data-stu-id="09e2f-114">The workflow designer will open.</span></span>  
+2.  <span data-ttu-id="d5684-113">Adlı yeni bir WCF iş akışı hizmeti uygulaması projesi eklemek `SimpleWorkflow` çözüme.</span><span class="sxs-lookup"><span data-stu-id="d5684-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="d5684-114">İş Akışı Tasarımcısı'nı açar.</span><span class="sxs-lookup"><span data-stu-id="d5684-114">The workflow designer will open.</span></span>  
   
-3.  <span data-ttu-id="09e2f-115">ReceiveRequest ve SendResponse etkinlikleri silin.</span><span class="sxs-lookup"><span data-stu-id="09e2f-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="09e2f-116">Bu etkinlikler, bir iş akışını bir iş akışı hizmeti kılan ' dir.</span><span class="sxs-lookup"><span data-stu-id="09e2f-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="09e2f-117">Bir iş akışı hizmeti ile çalışmayan olduğundan, artık bunları ihtiyacımız var.</span><span class="sxs-lookup"><span data-stu-id="09e2f-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
+3.  <span data-ttu-id="d5684-115">ReceiveRequest ve SendResponse etkinlikleri silin.</span><span class="sxs-lookup"><span data-stu-id="d5684-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="d5684-116">Bu etkinlikler, bir iş akışını bir iş akışı hizmeti kılan ' dir.</span><span class="sxs-lookup"><span data-stu-id="d5684-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="d5684-117">Bir iş akışı hizmeti ile çalışmayan olduğundan, artık bunları ihtiyacımız var.</span><span class="sxs-lookup"><span data-stu-id="d5684-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
   
-4.  <span data-ttu-id="09e2f-118">DisplayName dizisi etkinliği için "Sıralı iş akışı" olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
+4.  <span data-ttu-id="d5684-118">DisplayName dizisi etkinliği için "Sıralı iş akışı" olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="d5684-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
   
-5.  <span data-ttu-id="09e2f-119">Service1.xamlx Workflow1.xamlx için yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
+5.  <span data-ttu-id="d5684-119">Service1.xamlx Workflow1.xamlx için yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="d5684-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
   
-6.  <span data-ttu-id="09e2f-120">Sıralı etkinlik dışında Tasarımcısı'nı tıklatın ve "Workflow1" için ad ve ConfigurationName özelliklerini ayarlama</span><span class="sxs-lookup"><span data-stu-id="09e2f-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
+6.  <span data-ttu-id="d5684-120">Sıralı etkinlik dışında Tasarımcısı'nı tıklatın ve "Workflow1" için ad ve ConfigurationName özelliklerini ayarlama</span><span class="sxs-lookup"><span data-stu-id="d5684-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
   
-7.  <span data-ttu-id="09e2f-121">Sürükleme bir <xref:System.Activities.Statements.WriteLine> etkinliğini <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="09e2f-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="09e2f-122"><xref:System.Activities.Statements.WriteLine> Etkinlik bulunabilir **Temelleri** araç bölümü.</span><span class="sxs-lookup"><span data-stu-id="09e2f-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="09e2f-123">Ayarlama <xref:System.Activities.Statements.WriteLine.Text%2A> özelliği <xref:System.Activities.Statements.WriteLine> etkinliğe "Hello, world".</span><span class="sxs-lookup"><span data-stu-id="09e2f-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
+7.  <span data-ttu-id="d5684-121">Sürükleme bir <xref:System.Activities.Statements.WriteLine> etkinliğini <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="d5684-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="d5684-122"><xref:System.Activities.Statements.WriteLine> Etkinlik bulunabilir **Temelleri** araç bölümü.</span><span class="sxs-lookup"><span data-stu-id="d5684-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="d5684-123">Ayarlama <xref:System.Activities.Statements.WriteLine.Text%2A> özelliği <xref:System.Activities.Statements.WriteLine> etkinliğe "Hello, world".</span><span class="sxs-lookup"><span data-stu-id="d5684-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
   
-     <span data-ttu-id="09e2f-124">İş akışı, aşağıdaki diyagramda gibi görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="09e2f-124">The workflow should now look like the following diagram.</span></span>  
+     <span data-ttu-id="d5684-124">İş akışı, aşağıdaki diyagramda gibi görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="d5684-124">The workflow should now look like the following diagram.</span></span>  
   
-     <span data-ttu-id="09e2f-125">![Basit bir iş akışı](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="09e2f-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
+     <span data-ttu-id="d5684-125">![Basit bir iş akışı](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="d5684-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
   
-### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="09e2f-126">İş akışı oluşturma hizmet sözleşmesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="09e2f-126">Create the workflow creation service contract</span></span>  
+### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="d5684-126">İş akışı oluşturma hizmet sözleşmesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="d5684-126">Create the workflow creation service contract</span></span>  
   
-1.  <span data-ttu-id="09e2f-127">Adlı yeni bir sınıf kitaplığı proje ekleme `Shared` için `CreationEndpointTest` çözümü.</span><span class="sxs-lookup"><span data-stu-id="09e2f-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="d5684-127">Adlı yeni bir sınıf kitaplığı proje ekleme `Shared` için `CreationEndpointTest` çözümü.</span><span class="sxs-lookup"><span data-stu-id="d5684-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="09e2f-128">System.ServiceModel.dll, System.Configuration ve System.ServiceModel.Activities için bir başvuru ekleyin `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
+2.  <span data-ttu-id="d5684-128">System.ServiceModel.dll, System.Configuration ve System.ServiceModel.Activities için bir başvuru ekleyin `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="d5684-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="09e2f-129">Class1.cs dosyası IWorkflowCreation.cs ve aşağıdaki kodu dosyayı yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
+3.  <span data-ttu-id="d5684-129">Class1.cs dosyası IWorkflowCreation.cs ve aşağıdaki kodu dosyayı yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="d5684-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
   
     ```  
     using System;  
@@ -72,11 +72,11 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-     <span data-ttu-id="09e2f-130">Bu sözleşme, iki işlem hem de yeni oluşturduğunuz hizmet olmayan iş akışı yeni bir örneğini oluşturmak tanımlar.</span><span class="sxs-lookup"><span data-stu-id="09e2f-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="09e2f-131">Bir oluşturulan örnek Kimliğine sahip yeni bir örneğini oluşturur ve diğer yeni iş akışı örneği için örnek kimliği belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="09e2f-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="09e2f-132">Her iki yöntem, yeni iş akışı örneği parametreler olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="09e2f-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="09e2f-133">Bu sözleşme tarafından sunulan <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istemcilerin yeni bir hizmet olmayan iş akışı örneği oluşturmak izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="09e2f-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
+     <span data-ttu-id="d5684-130">Bu sözleşme, iki işlem hem de yeni oluşturduğunuz hizmet olmayan iş akışı yeni bir örneğini oluşturmak tanımlar.</span><span class="sxs-lookup"><span data-stu-id="d5684-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="d5684-131">Bir oluşturulan örnek Kimliğine sahip yeni bir örneğini oluşturur ve diğer yeni iş akışı örneği için örnek kimliği belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="d5684-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="d5684-132">Her iki yöntem, yeni iş akışı örneği parametreler olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="d5684-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="d5684-133">Bu sözleşme tarafından sunulan <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istemcilerin yeni bir hizmet olmayan iş akışı örneği oluşturmak izin vermek için.</span><span class="sxs-lookup"><span data-stu-id="d5684-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
   
-### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="09e2f-134">WorkflowHostingEndpoint bir sınıf türetin</span><span class="sxs-lookup"><span data-stu-id="09e2f-134">Derive a class from WorkflowHostingEndpoint</span></span>  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="d5684-134">WorkflowHostingEndpoint bir sınıf türetin</span><span class="sxs-lookup"><span data-stu-id="d5684-134">Derive a class from WorkflowHostingEndpoint</span></span>  
   
-1.  <span data-ttu-id="09e2f-135">Adlı yeni bir sınıf ekleyin `CreationEndpoint` türetilen <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> için `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
+1.  <span data-ttu-id="d5684-135">Adlı yeni bir sınıf ekleyin `CreationEndpoint` türetilen <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> için `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="d5684-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
   
     ```  
     using System;  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-2.  <span data-ttu-id="09e2f-136">Yerel statik eklemek <xref:System.Uri> adlı değişken `defaultBaseUri` için `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="09e2f-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
+2.  <span data-ttu-id="d5684-136">Yerel statik eklemek <xref:System.Uri> adlı değişken `defaultBaseUri` için `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d5684-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-3.  <span data-ttu-id="09e2f-137">Aşağıdaki oluşturucuyu ekleyin `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="09e2f-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="09e2f-138">Belirttiğimiz fark `IWorkflowCreation` temel oluşturucuyu çağrısında hizmet sözleşme.</span><span class="sxs-lookup"><span data-stu-id="09e2f-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
+3.  <span data-ttu-id="d5684-137">Aşağıdaki oluşturucuyu ekleyin `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d5684-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="d5684-138">Belirttiğimiz fark `IWorkflowCreation` temel oluşturucuyu çağrısında hizmet sözleşme.</span><span class="sxs-lookup"><span data-stu-id="d5684-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-4.  <span data-ttu-id="09e2f-139">Aşağıdaki varsayılan oluşturucu ekleyin `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="09e2f-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
+4.  <span data-ttu-id="d5684-139">Aşağıdaki varsayılan oluşturucu ekleyin `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d5684-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public CreationEndpoint()  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-5.  <span data-ttu-id="09e2f-140">Statik eklemek `DefaultBaseUri` özelliğine `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="09e2f-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="09e2f-141">Bu özellik, bir taban URI sağlanmamış varsayılan tutmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="09e2f-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
+5.  <span data-ttu-id="d5684-140">Statik eklemek `DefaultBaseUri` özelliğine `CreationEndpoint` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="d5684-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="d5684-141">Bu özellik, bir taban URI sağlanmamış varsayılan tutmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="d5684-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
   
     ```  
     static Uri DefaultBaseUri  
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/21/2017
      }  
     ```  
   
-6.  <span data-ttu-id="09e2f-142">Oluşturma uç noktası için kullanılacak varsayılan bağlama almak için aşağıdaki yöntemi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="09e2f-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
+6.  <span data-ttu-id="d5684-142">Oluşturma uç noktası için kullanılacak varsayılan bağlama almak için aşağıdaki yöntemi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d5684-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
   
     ```  
     //defaults to NetNamedPipeBinding  
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-7.  <span data-ttu-id="09e2f-143">Geçersiz kılma <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> iş akışı örneği kimliğine döndürülecek yöntemi</span><span class="sxs-lookup"><span data-stu-id="09e2f-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="09e2f-144">Varsa `Action` "Oluştur" başlığı biter, boş bir GUID dönmek `Action` üstbilgi bitip GUID yönteme geçirilen "CreateWithInstanceId" return ile.</span><span class="sxs-lookup"><span data-stu-id="09e2f-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="09e2f-145">Aksi takdirde, throw bir <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="09e2f-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="09e2f-146">Bunlar `Action` üstbilgileri karşılık tanımlanan iki işlem `IWorkflowCreation` hizmet sözleşme.</span><span class="sxs-lookup"><span data-stu-id="09e2f-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
+7.  <span data-ttu-id="d5684-143">Geçersiz kılma <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> iş akışı örneği kimliğine döndürülecek yöntemi</span><span class="sxs-lookup"><span data-stu-id="d5684-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="d5684-144">Varsa `Action` "Oluştur" başlığı biter, boş bir GUID dönmek `Action` üstbilgi bitip GUID yönteme geçirilen "CreateWithInstanceId" return ile.</span><span class="sxs-lookup"><span data-stu-id="d5684-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="d5684-145">Aksi takdirde, throw bir <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="d5684-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="d5684-146">Bunlar `Action` üstbilgileri karşılık tanımlanan iki işlem `IWorkflowCreation` hizmet sözleşme.</span><span class="sxs-lookup"><span data-stu-id="d5684-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-8.  <span data-ttu-id="09e2f-147">Geçersiz kılma <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> yöntemi oluşturmak için bir <xref:System.ServiceModel.Activities.WorkflowCreationContext> ve iş akışı için herhangi bir bağımsız değişkeni ekleyin, örnek kimliği istemciye göndermek ve sonra geri dönüp <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span><span class="sxs-lookup"><span data-stu-id="09e2f-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
+8.  <span data-ttu-id="d5684-147">Geçersiz kılma <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> yöntemi oluşturmak için bir <xref:System.ServiceModel.Activities.WorkflowCreationContext> ve iş akışı için herhangi bir bağımsız değişkeni ekleyin, örnek kimliği istemciye göndermek ve sonra geri dönüp <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span><span class="sxs-lookup"><span data-stu-id="d5684-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -201,11 +201,11 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="09e2f-148">WorkflowCreationEndpoint yapılandırmanıza izin vermek için bir standart endpoint öğesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="09e2f-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="d5684-148">WorkflowCreationEndpoint yapılandırmanıza izin vermek için bir standart endpoint öğesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="d5684-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
   
-1.  <span data-ttu-id="09e2f-149">İçinde paylaşılan bir başvuru ekleyin `CreationEndpoint` proje</span><span class="sxs-lookup"><span data-stu-id="09e2f-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
+1.  <span data-ttu-id="d5684-149">İçinde paylaşılan bir başvuru ekleyin `CreationEndpoint` proje</span><span class="sxs-lookup"><span data-stu-id="d5684-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
   
-2.  <span data-ttu-id="09e2f-150">Adlı yeni bir sınıf ekleyin `CreationEndpointElement`, türetilmiş <xref:System.ServiceModel.Configuration.StandardEndpointElement> için `CreationEndpoint` projesi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="09e2f-151">Bu sınıfın temsil edecek bir `CreationEndpoint` web.config dosyasında.</span><span class="sxs-lookup"><span data-stu-id="09e2f-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
+2.  <span data-ttu-id="d5684-150">Adlı yeni bir sınıf ekleyin `CreationEndpointElement`, türetilmiş <xref:System.ServiceModel.Configuration.StandardEndpointElement> için `CreationEndpoint` projesi.</span><span class="sxs-lookup"><span data-stu-id="d5684-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="d5684-151">Bu sınıfın temsil edecek bir `CreationEndpoint` web.config dosyasında.</span><span class="sxs-lookup"><span data-stu-id="d5684-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
   
     ```  
     using System;  
@@ -223,7 +223,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-3.  <span data-ttu-id="09e2f-152">Adlı bir özellik eklemek `EndpointType` uç nokta türünü dönün.</span><span class="sxs-lookup"><span data-stu-id="09e2f-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
+3.  <span data-ttu-id="d5684-152">Adlı bir özellik eklemek `EndpointType` uç nokta türünü dönün.</span><span class="sxs-lookup"><span data-stu-id="d5684-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
   
     ```  
     protected override Type EndpointType  
@@ -232,7 +232,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-4.  <span data-ttu-id="09e2f-153">Geçersiz kılma <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> yöntemi ve yeni bir iade `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="09e2f-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
+4.  <span data-ttu-id="d5684-153">Geçersiz kılma <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> yöntemi ve yeni bir iade `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="d5684-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
@@ -241,7 +241,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-5.  <span data-ttu-id="09e2f-154">Aşırı yükleme <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, ve <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="09e2f-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="09e2f-155">Bu yöntemler tanımlanmış olması yeterlidir, bunları için herhangi bir kod eklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="09e2f-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
+5.  <span data-ttu-id="d5684-154">Aşırı yükleme <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, ve <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="d5684-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="d5684-155">Bu yöntemler tanımlanmış olması yeterlidir, bunları için herhangi bir kod eklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="d5684-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -261,7 +261,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-6.  <span data-ttu-id="09e2f-156">Koleksiyon sınıfı ekleme `CreationEndpoint` CreationEndpointElement.cs dosyasında `CreationEndpoint` projesi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="09e2f-157">Bu sınıf tarafından yapılandırma bir dizi tutmak için kullanılan `CreationEndpoint` web.config dosyasında örnekleri.</span><span class="sxs-lookup"><span data-stu-id="09e2f-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
+6.  <span data-ttu-id="d5684-156">Koleksiyon sınıfı ekleme `CreationEndpoint` CreationEndpointElement.cs dosyasında `CreationEndpoint` projesi.</span><span class="sxs-lookup"><span data-stu-id="d5684-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="d5684-157">Bu sınıf tarafından yapılandırma bir dizi tutmak için kullanılan `CreationEndpoint` web.config dosyasında örnekleri.</span><span class="sxs-lookup"><span data-stu-id="d5684-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,17 +269,17 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-7.  <span data-ttu-id="09e2f-158">Çözümü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="09e2f-158">Build the solution.</span></span>  
+7.  <span data-ttu-id="d5684-158">Çözümü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d5684-158">Build the solution.</span></span>  
   
-### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="09e2f-159">IIS'de iş akışı barındırma</span><span class="sxs-lookup"><span data-stu-id="09e2f-159">Host the workflow in IIS</span></span>  
+### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="d5684-159">IIS'de iş akışı barındırma</span><span class="sxs-lookup"><span data-stu-id="d5684-159">Host the workflow in IIS</span></span>  
   
-1.  <span data-ttu-id="09e2f-160">Adlı yeni bir uygulama oluşturmak `MyCreationEndpoint` IIS'de.</span><span class="sxs-lookup"><span data-stu-id="09e2f-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
+1.  <span data-ttu-id="d5684-160">Adlı yeni bir uygulama oluşturmak `MyCreationEndpoint` IIS'de.</span><span class="sxs-lookup"><span data-stu-id="d5684-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
   
-2.  <span data-ttu-id="09e2f-161">Uygulama dizini için iş akışı tasarımcısı tarafından oluşturulan workflow1.xaml dosyasını kopyalayın ve workflow1.xamlx için yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
+2.  <span data-ttu-id="d5684-161">Uygulama dizini için iş akışı tasarımcısı tarafından oluşturulan workflow1.xaml dosyasını kopyalayın ve workflow1.xamlx için yeniden adlandırın.</span><span class="sxs-lookup"><span data-stu-id="d5684-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
   
-3.  <span data-ttu-id="09e2f-162">Shared.dll ve CreationEndpoint.dll dosyalarını uygulamanın bin dizinine kopyalayın (bölme dizini mevcut değilse oluşturun).</span><span class="sxs-lookup"><span data-stu-id="09e2f-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
+3.  <span data-ttu-id="d5684-162">Shared.dll ve CreationEndpoint.dll dosyalarını uygulamanın bin dizinine kopyalayın (bölme dizini mevcut değilse oluşturun).</span><span class="sxs-lookup"><span data-stu-id="d5684-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
   
-4.  <span data-ttu-id="09e2f-163">Web.config dosyasında Değiştir `CreationEndpoint` proje ile aşağıdaki kodu.</span><span class="sxs-lookup"><span data-stu-id="09e2f-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
+4.  <span data-ttu-id="d5684-163">Web.config dosyasında Değiştir `CreationEndpoint` proje ile aşağıdaki kodu.</span><span class="sxs-lookup"><span data-stu-id="d5684-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -290,7 +290,7 @@ ms.lasthandoff: 11/21/2017
     </configuration>  
     ```  
   
-5.  <span data-ttu-id="09e2f-164">Sonra `<system.web>` öğesi, kayıt `CreationEndpoint` aşağıdaki yapılandırma kodunu ekleyerek düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="09e2f-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
+5.  <span data-ttu-id="d5684-164">Sonra `<system.web>` öğesi, kayıt `CreationEndpoint` aşağıdaki yapılandırma kodunu ekleyerek düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="d5684-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -304,9 +304,9 @@ ms.lasthandoff: 11/21/2017
     </system.serviceModel>  
     ```  
   
-     <span data-ttu-id="09e2f-165">Bu kayıtları `CreationEndpointCollection` , yapılandırabilmek için sınıf bir `CreationEndpoint` web.config dosyasında.</span><span class="sxs-lookup"><span data-stu-id="09e2f-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
+     <span data-ttu-id="d5684-165">Bu kayıtları `CreationEndpointCollection` , yapılandırabilmek için sınıf bir `CreationEndpoint` web.config dosyasında.</span><span class="sxs-lookup"><span data-stu-id="d5684-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
   
-6.  <span data-ttu-id="09e2f-166">Ekleme bir `<service>` öğesi (sonra \</extensions > etiketi) ile bir `CreationEndpoint` , gelen iletiler için dinleme.</span><span class="sxs-lookup"><span data-stu-id="09e2f-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
+6.  <span data-ttu-id="d5684-166">Ekleme bir `<service>` öğesi (sonra \</extensions > etiketi) ile bir `CreationEndpoint` , gelen iletiler için dinleme.</span><span class="sxs-lookup"><span data-stu-id="d5684-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
   
     ```xml  
     <services>  
@@ -317,7 +317,7 @@ ms.lasthandoff: 11/21/2017
         </services>  
     ```  
   
-7.  <span data-ttu-id="09e2f-167">Ekleme bir \<davranışları > öğesi (sonra  \< /Hizmetleri > etiketi) hizmeti meta verilerini sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="09e2f-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
+7.  <span data-ttu-id="d5684-167">Ekleme bir \<davranışları > öğesi (sonra  \< /Hizmetleri > etiketi) hizmeti meta verilerini sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="d5684-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -329,19 +329,19 @@ ms.lasthandoff: 11/21/2017
         </behaviors>  
     ```  
   
-8.  <span data-ttu-id="09e2f-168">Web.config, IIS uygulama dizinine kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-168">Copy the web.config to your IIS application directory.</span></span>  
+8.  <span data-ttu-id="d5684-168">Web.config, IIS uygulama dizinine kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="d5684-168">Copy the web.config to your IIS application directory.</span></span>  
   
-9. <span data-ttu-id="09e2f-169">Oluşturma bitiş noktası tarafından Internet Explorer'ı başlatıp http://localhost/MyCreationEndpoint/Workflow1.xamlx için gözatma çalışıp çalışmadığını test edin.</span><span class="sxs-lookup"><span data-stu-id="09e2f-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="09e2f-170">Internet Explorer, aşağıdaki ekran görüntülenmelidir:</span><span class="sxs-lookup"><span data-stu-id="09e2f-170">Internet Explorer should display the following screen:</span></span>  
+9. <span data-ttu-id="d5684-169">Oluşturma bitiş noktası tarafından Internet Explorer'ı başlatıp http://localhost/MyCreationEndpoint/Workflow1.xamlx için gözatma çalışıp çalışmadığını test edin.</span><span class="sxs-lookup"><span data-stu-id="d5684-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="d5684-170">Internet Explorer, aşağıdaki ekran görüntülenmelidir:</span><span class="sxs-lookup"><span data-stu-id="d5684-170">Internet Explorer should display the following screen:</span></span>  
   
-     <span data-ttu-id="09e2f-171">![Hizmet sınama](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="09e2f-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
+     <span data-ttu-id="d5684-171">![Hizmet sınama](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="d5684-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
   
-### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="09e2f-172">CreationEndpoint çağıracak bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="09e2f-172">Create a client that will call the CreationEndpoint.</span></span>  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="d5684-172">CreationEndpoint çağıracak bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d5684-172">Create a client that will call the CreationEndpoint.</span></span>  
   
-1.  <span data-ttu-id="09e2f-173">Yeni bir konsol uygulaması ekleyin `CreationEndpointTest` çözümü.</span><span class="sxs-lookup"><span data-stu-id="09e2f-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="d5684-173">Yeni bir konsol uygulaması ekleyin `CreationEndpointTest` çözümü.</span><span class="sxs-lookup"><span data-stu-id="d5684-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="09e2f-174">System.ServiceModel.dll, System.ServiceModel.Activities, başvurular ekleyin ve `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="09e2f-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
+2.  <span data-ttu-id="d5684-174">System.ServiceModel.dll, System.ServiceModel.Activities, başvurular ekleyin ve `Shared` projesi.</span><span class="sxs-lookup"><span data-stu-id="d5684-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="09e2f-175">İçinde `Main` create yöntemi bir <xref:System.ServiceModel.ChannelFactory%601> türü `IWorkflowCreation` ve arama <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span><span class="sxs-lookup"><span data-stu-id="09e2f-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="09e2f-176">Bu proxy döndürür.</span><span class="sxs-lookup"><span data-stu-id="09e2f-176">This will return a proxy.</span></span> <span data-ttu-id="09e2f-177">Ardından çağırabilirsiniz `Create` iş akışı örneği oluşturmak için proxy üzerinde barındırılan IIS altında:</span><span class="sxs-lookup"><span data-stu-id="09e2f-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
+3.  <span data-ttu-id="d5684-175">İçinde `Main` create yöntemi bir <xref:System.ServiceModel.ChannelFactory%601> türü `IWorkflowCreation` ve arama <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span><span class="sxs-lookup"><span data-stu-id="d5684-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="d5684-176">Bu proxy döndürür.</span><span class="sxs-lookup"><span data-stu-id="d5684-176">This will return a proxy.</span></span> <span data-ttu-id="d5684-177">Ardından çağırabilirsiniz `Create` iş akışı örneği oluşturmak için proxy üzerinde barındırılan IIS altında:</span><span class="sxs-lookup"><span data-stu-id="d5684-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
   
     ```  
     using System.Text;  
@@ -373,17 +373,17 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-4.  <span data-ttu-id="09e2f-178">CreationEndpointClient çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="09e2f-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="09e2f-179">Çıktı aşağıdaki gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="09e2f-179">The output should look like the following:</span></span>  
+4.  <span data-ttu-id="d5684-178">CreationEndpointClient çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="d5684-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="d5684-179">Çıktı aşağıdaki gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="d5684-179">The output should look like the following:</span></span>  
   
     ```Output  
     Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="09e2f-180">Konsol çıktısı olan IIS altında çalıştığı için iş akışı çıktısı görmezsiniz.</span><span class="sxs-lookup"><span data-stu-id="09e2f-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
+    >  <span data-ttu-id="d5684-180">Konsol çıktısı olan IIS altında çalıştığı için iş akışı çıktısı görmezsiniz.</span><span class="sxs-lookup"><span data-stu-id="d5684-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="09e2f-181">Örnek</span><span class="sxs-lookup"><span data-stu-id="09e2f-181">Example</span></span>  
- <span data-ttu-id="09e2f-182">Bu örnek için tam kod aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="09e2f-182">The following is the complete code for this sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="d5684-181">Örnek</span><span class="sxs-lookup"><span data-stu-id="d5684-181">Example</span></span>  
+ <span data-ttu-id="d5684-182">Bu örnek için tam kod aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d5684-182">The following is the complete code for this sample.</span></span>  
   
 ```xaml  
 <!-— workflow1.xamlx -->  
@@ -680,14 +680,14 @@ namespace CreationClient
 }  
 ```  
   
- <span data-ttu-id="09e2f-183">Hiçbir zaman uygulayan bir hizmet uyguladığınız için bu örnek karmaşık görünebilir `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="09e2f-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="09e2f-184">Bunun nedeni, `CreationEndpoint` bunu sizin için yapar.</span><span class="sxs-lookup"><span data-stu-id="09e2f-184">This is because the `CreationEndpoint` does this for you.</span></span>  
+ <span data-ttu-id="d5684-183">Hiçbir zaman uygulayan bir hizmet uyguladığınız için bu örnek karmaşık görünebilir `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="d5684-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="d5684-184">Bunun nedeni, `CreationEndpoint` bunu sizin için yapar.</span><span class="sxs-lookup"><span data-stu-id="d5684-184">This is because the `CreationEndpoint` does this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09e2f-185">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="09e2f-185">See Also</span></span>  
- [<span data-ttu-id="09e2f-186">İş akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="09e2f-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="09e2f-187">Internet Information Services'te barındırma</span><span class="sxs-lookup"><span data-stu-id="09e2f-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="09e2f-188">Internet Information Services barındırma en iyi uygulamaları</span><span class="sxs-lookup"><span data-stu-id="09e2f-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [<span data-ttu-id="09e2f-189">Internet Information Service barındırma yönergeleri</span><span class="sxs-lookup"><span data-stu-id="09e2f-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [<span data-ttu-id="09e2f-190">Windows iş akışı mimarisi</span><span class="sxs-lookup"><span data-stu-id="09e2f-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [<span data-ttu-id="09e2f-191">WorkflowHostingEndpoint Sürdür yer işareti</span><span class="sxs-lookup"><span data-stu-id="09e2f-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [<span data-ttu-id="09e2f-192">İş Akışı Tasarımcısı yeniden barındırma</span><span class="sxs-lookup"><span data-stu-id="09e2f-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="09e2f-193">Windows iş akışı genel bakış</span><span class="sxs-lookup"><span data-stu-id="09e2f-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)
+## <a name="see-also"></a><span data-ttu-id="d5684-185">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d5684-185">See Also</span></span>  
+ [<span data-ttu-id="d5684-186">İş akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="d5684-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="d5684-187">Internet Information Services'te barındırma</span><span class="sxs-lookup"><span data-stu-id="d5684-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="d5684-188">Internet Information Services barındırma en iyi uygulamaları</span><span class="sxs-lookup"><span data-stu-id="d5684-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="d5684-189">Internet Information Service barındırma yönergeleri</span><span class="sxs-lookup"><span data-stu-id="d5684-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="d5684-190">Windows iş akışı mimarisi</span><span class="sxs-lookup"><span data-stu-id="d5684-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [<span data-ttu-id="d5684-191">WorkflowHostingEndpoint Sürdür yer işareti</span><span class="sxs-lookup"><span data-stu-id="d5684-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [<span data-ttu-id="d5684-192">İş Akışı Tasarımcısı yeniden barındırma</span><span class="sxs-lookup"><span data-stu-id="d5684-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="d5684-193">Windows iş akışı genel bakış</span><span class="sxs-lookup"><span data-stu-id="d5684-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)

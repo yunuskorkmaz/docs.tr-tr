@@ -10,33 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a9797330cf983ed67d3bc07a7984d47454adcb49
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8e0ce4a171e9bc57ef28aef1fe2761907acc73c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="844a2-102">Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme</span><span class="sxs-lookup"><span data-stu-id="844a2-102">Accessing Identity Information inside a Workflow Service</span></span>
-<span data-ttu-id="844a2-103">Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi.</span><span class="sxs-lookup"><span data-stu-id="844a2-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="844a2-104">İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri.</span><span class="sxs-lookup"><span data-stu-id="844a2-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="844a2-105">Bu konuda bu özelliğe belirir özel bir aktivite yanı sıra bu yürütme özellik uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik.</span><span class="sxs-lookup"><span data-stu-id="844a2-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span>  <span data-ttu-id="844a2-106">Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve kimlik bilgileri alınır.</span><span class="sxs-lookup"><span data-stu-id="844a2-106">The custom activity will implement the same behavior as a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="2d255-102">Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme</span><span class="sxs-lookup"><span data-stu-id="2d255-102">Accessing Identity Information inside a Workflow Service</span></span>
+<span data-ttu-id="2d255-103">Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi.</span><span class="sxs-lookup"><span data-stu-id="2d255-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="2d255-104">İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri.</span><span class="sxs-lookup"><span data-stu-id="2d255-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="2d255-105">Bu konuda bu özelliğe belirir özel bir aktivite yanı sıra bu yürütme özellik uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik.</span><span class="sxs-lookup"><span data-stu-id="2d255-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span>  <span data-ttu-id="2d255-106">Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve kimlik bilgileri alınır.</span><span class="sxs-lookup"><span data-stu-id="2d255-106">The custom activity will implement the same behavior as a <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
   
-### <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="844a2-107">Uygulama IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="844a2-107">Implement IReceiveMessageCallback</span></span>  
+### <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="2d255-107">Uygulama IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="2d255-107">Implement IReceiveMessageCallback</span></span>  
   
-1.  <span data-ttu-id="844a2-108">Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözümü.</span><span class="sxs-lookup"><span data-stu-id="844a2-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
+1.  <span data-ttu-id="2d255-108">Boş bir oluşturma [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] çözümü.</span><span class="sxs-lookup"><span data-stu-id="2d255-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
   
-2.  <span data-ttu-id="844a2-109">Adlı yeni bir konsol uygulaması ekleyin `Service` çözüme.</span><span class="sxs-lookup"><span data-stu-id="844a2-109">Add a new console application called `Service` to the solution.</span></span>  
+2.  <span data-ttu-id="2d255-109">Adlı yeni bir konsol uygulaması ekleyin `Service` çözüme.</span><span class="sxs-lookup"><span data-stu-id="2d255-109">Add a new console application called `Service` to the solution.</span></span>  
   
-3.  <span data-ttu-id="844a2-110">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="844a2-110">Add references to the following assemblies:</span></span>  
+3.  <span data-ttu-id="2d255-110">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2d255-110">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="844a2-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="844a2-111">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="2d255-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="2d255-111">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="844a2-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="844a2-112">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="2d255-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="2d255-112">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="844a2-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="844a2-113">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="2d255-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="2d255-113">System.ServiceModel.Activities</span></span>  
   
-4.  <span data-ttu-id="844a2-114">Adlı yeni bir sınıf ekleyin `AccessIdentityCallback` ve uygulamanıza <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="844a2-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
+4.  <span data-ttu-id="2d255-114">Adlı yeni bir sınıf ekleyin `AccessIdentityCallback` ve uygulamanıza <xref:System.ServiceModel.Activities.IReceiveMessageCallback> aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="2d255-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class AccessIdentityCallback : IReceiveMessageCallback  
@@ -58,13 +58,13 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-     <span data-ttu-id="844a2-115">Bu kodu kullanır <xref:System.ServiceModel.OperationContext> erişim kimlik bilgileri yönteme geçirilen.</span><span class="sxs-lookup"><span data-stu-id="844a2-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
+     <span data-ttu-id="2d255-115">Bu kodu kullanır <xref:System.ServiceModel.OperationContext> erişim kimlik bilgileri yönteme geçirilen.</span><span class="sxs-lookup"><span data-stu-id="2d255-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="844a2-116">NativeActivityContext IReceiveMessageCallback uygulama eklemek için yerel bir etkinlik uygulayan</span><span class="sxs-lookup"><span data-stu-id="844a2-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="2d255-116">NativeActivityContext IReceiveMessageCallback uygulama eklemek için yerel bir etkinlik uygulayan</span><span class="sxs-lookup"><span data-stu-id="2d255-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="844a2-117">Türetilen bir yeni sınıf ekleyin <xref:System.Activities.NativeActivity> adlı `AccessIdentityScope`.</span><span class="sxs-lookup"><span data-stu-id="844a2-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
+1.  <span data-ttu-id="2d255-117">Türetilen bir yeni sınıf ekleyin <xref:System.Activities.NativeActivity> adlı `AccessIdentityScope`.</span><span class="sxs-lookup"><span data-stu-id="2d255-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
   
-2.  <span data-ttu-id="844a2-118">Alt etkinlikler, değişkenleri, geçerli etkinliği dizin izlemek için yerel değişkenler ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="844a2-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="2d255-118">Alt etkinlikler, değişkenleri, geçerli etkinliği dizin izlemek için yerel değişkenler ekleyin ve bir <xref:System.Activities.CompletionCallback> geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="2d255-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
     ```  
     public sealed class AccessIdentityScope : NativeActivity  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-3.  <span data-ttu-id="844a2-119">Uygulama Oluşturucu</span><span class="sxs-lookup"><span data-stu-id="844a2-119">Implement the constructor</span></span>  
+3.  <span data-ttu-id="2d255-119">Uygulama Oluşturucu</span><span class="sxs-lookup"><span data-stu-id="2d255-119">Implement the constructor</span></span>  
   
     ```  
     public AccessIdentityScope() : base()  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-4.  <span data-ttu-id="844a2-120">Uygulama `Activities` ve `Variables` özellikleri.</span><span class="sxs-lookup"><span data-stu-id="844a2-120">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="2d255-120">Uygulama `Activities` ve `Variables` özellikleri.</span><span class="sxs-lookup"><span data-stu-id="2d255-120">Implement the `Activities` and `Variables` properties.</span></span>  
   
     ```  
     public Collection<Activity> Activities  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-5.  <span data-ttu-id="844a2-121">Geçersiz kılma<xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="844a2-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="2d255-121">Geçersiz kılma<xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="2d255-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-6.  <span data-ttu-id="844a2-122">Geçersiz kılma<xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="844a2-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="2d255-122">Geçersiz kılma<xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="2d255-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -149,11 +149,11 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a><span data-ttu-id="844a2-123">İş akışı hizmeti uygulama</span><span class="sxs-lookup"><span data-stu-id="844a2-123">Implement the workflow service</span></span>  
+### <a name="implement-the-workflow-service"></a><span data-ttu-id="2d255-123">İş akışı hizmeti uygulama</span><span class="sxs-lookup"><span data-stu-id="2d255-123">Implement the workflow service</span></span>  
   
-1.  <span data-ttu-id="844a2-124">Varolan öğeyi `Program` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="844a2-124">Open the existing `Program` class.</span></span>  
+1.  <span data-ttu-id="2d255-124">Varolan öğeyi `Program` sınıfı.</span><span class="sxs-lookup"><span data-stu-id="2d255-124">Open the existing `Program` class.</span></span>  
   
-2.  <span data-ttu-id="844a2-125">Aşağıdaki sabit değerleri tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="844a2-125">Define the following constants:</span></span>  
+2.  <span data-ttu-id="2d255-125">Aşağıdaki sabit değerleri tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="2d255-125">Define the following constants:</span></span>  
   
     ```  
     class Program  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-3.  <span data-ttu-id="844a2-126">Adlı bir statik yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="844a2-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
+3.  <span data-ttu-id="2d255-126">Adlı bir statik yöntem ekleyin `GetWorkflowService` iş akışı hizmeti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2d255-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -202,7 +202,7 @@ ms.lasthandoff: 11/28/2017
      }  
     ```  
   
-4.  <span data-ttu-id="844a2-127">Varolan `Main` yöntemi, iş akışı hizmeti ana bilgisayar.</span><span class="sxs-lookup"><span data-stu-id="844a2-127">In the existing `Main` method, host the workflow service.</span></span>  
+4.  <span data-ttu-id="2d255-127">Varolan `Main` yöntemi, iş akışı hizmeti ana bilgisayar.</span><span class="sxs-lookup"><span data-stu-id="2d255-127">In the existing `Main` method, host the workflow service.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -223,19 +223,19 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a><span data-ttu-id="844a2-128">İş akışı istemcisini uygulama</span><span class="sxs-lookup"><span data-stu-id="844a2-128">Implement a workflow client</span></span>  
+### <a name="implement-a-workflow-client"></a><span data-ttu-id="2d255-128">İş akışı istemcisini uygulama</span><span class="sxs-lookup"><span data-stu-id="2d255-128">Implement a workflow client</span></span>  
   
-1.  <span data-ttu-id="844a2-129">Adlı yeni bir konsol uygulama projesi oluşturma `Client`.</span><span class="sxs-lookup"><span data-stu-id="844a2-129">Create a new console application project called `Client`.</span></span>  
+1.  <span data-ttu-id="2d255-129">Adlı yeni bir konsol uygulama projesi oluşturma `Client`.</span><span class="sxs-lookup"><span data-stu-id="2d255-129">Create a new console application project called `Client`.</span></span>  
   
-2.  <span data-ttu-id="844a2-130">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="844a2-130">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="2d255-130">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="2d255-130">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="844a2-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="844a2-131">System.Activities</span></span>  
+    1.  <span data-ttu-id="2d255-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="2d255-131">System.Activities</span></span>  
   
-    2.  <span data-ttu-id="844a2-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="844a2-132">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="2d255-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="2d255-132">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="844a2-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="844a2-133">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="2d255-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="2d255-133">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="844a2-134">Oluşturulan Program.cs dosyasını açın ve adlı bir statik yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="844a2-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
+3.  <span data-ttu-id="2d255-134">Oluşturulan Program.cs dosyasını açın ve adlı bir statik yöntem ekleyin `GetClientWorkflow` istemci iş akışı oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="2d255-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
   
     ```  
     static Activity GetClientWorkflow()  
@@ -289,7 +289,7 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-4.  <span data-ttu-id="844a2-135">Aşağıdaki barındırma kodu eklemek `Main()` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="844a2-135">Add the following hosting code to the `Main()` method.</span></span>  
+4.  <span data-ttu-id="2d255-135">Aşağıdaki barındırma kodu eklemek `Main()` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2d255-135">Add the following hosting code to the `Main()` method.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -302,8 +302,8 @@ ms.lasthandoff: 11/28/2017
     }  
     ```  
   
-## <a name="example"></a><span data-ttu-id="844a2-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="844a2-136">Example</span></span>  
- <span data-ttu-id="844a2-137">Kaynak tam listesi İşte bu konuda kullanılan kod.</span><span class="sxs-lookup"><span data-stu-id="844a2-137">Here is a complete listing of the source code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="2d255-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="2d255-136">Example</span></span>  
+ <span data-ttu-id="2d255-137">Kaynak tam listesi İşte bu konuda kullanılan kod.</span><span class="sxs-lookup"><span data-stu-id="2d255-137">Here is a complete listing of the source code used in this topic.</span></span>  
   
 ```  
 // AccessIdentityCallback.cs  
@@ -583,7 +583,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="844a2-138">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="844a2-138">See Also</span></span>  
- [<span data-ttu-id="844a2-139">İş akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="844a2-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="844a2-140">OperationContext erişimi</span><span class="sxs-lookup"><span data-stu-id="844a2-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [<span data-ttu-id="844a2-141">İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme</span><span class="sxs-lookup"><span data-stu-id="844a2-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="2d255-138">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2d255-138">See Also</span></span>  
+ [<span data-ttu-id="2d255-139">İş akışı Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="2d255-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="2d255-140">OperationContext erişimi</span><span class="sxs-lookup"><span data-stu-id="2d255-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [<span data-ttu-id="2d255-141">İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme</span><span class="sxs-lookup"><span data-stu-id="2d255-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

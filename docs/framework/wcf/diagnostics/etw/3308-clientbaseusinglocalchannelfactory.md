@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f1488c75-38ab-47a0-9951-852488683f2a
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0641c58a0d0bac0585ed7289617832190af1b82e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15549f36be0373c89cb23230d11899a0385b0c70
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="9c57c-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="9c57c-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
-## <a name="properties"></a><span data-ttu-id="9c57c-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="9c57c-103">Properties</span></span>  
+# <a name="3308---clientbaseusinglocalchannelfactory"></a><span data-ttu-id="85fc3-102">3308 - ClientBaseUsingLocalChannelFactory</span><span class="sxs-lookup"><span data-stu-id="85fc3-102">3308 - ClientBaseUsingLocalChannelFactory</span></span>
+## <a name="properties"></a><span data-ttu-id="85fc3-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="85fc3-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="9c57c-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="9c57c-104">ID</span></span>|<span data-ttu-id="9c57c-105">3308</span><span class="sxs-lookup"><span data-stu-id="9c57c-105">3308</span></span>|  
-|<span data-ttu-id="9c57c-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="9c57c-106">Keywords</span></span>|<span data-ttu-id="9c57c-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9c57c-107">ServiceModel</span></span>|  
-|<span data-ttu-id="9c57c-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="9c57c-108">Level</span></span>|<span data-ttu-id="9c57c-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="9c57c-109">Information</span></span>|  
-|<span data-ttu-id="9c57c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="9c57c-110">Channel</span></span>|<span data-ttu-id="9c57c-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="9c57c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="85fc3-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="85fc3-104">ID</span></span>|<span data-ttu-id="85fc3-105">3308</span><span class="sxs-lookup"><span data-stu-id="85fc3-105">3308</span></span>|  
+|<span data-ttu-id="85fc3-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="85fc3-106">Keywords</span></span>|<span data-ttu-id="85fc3-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="85fc3-107">ServiceModel</span></span>|  
+|<span data-ttu-id="85fc3-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="85fc3-108">Level</span></span>|<span data-ttu-id="85fc3-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="85fc3-109">Information</span></span>|  
+|<span data-ttu-id="85fc3-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="85fc3-110">Channel</span></span>|<span data-ttu-id="85fc3-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="85fc3-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="9c57c-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9c57c-112">Description</span></span>  
- <span data-ttu-id="9c57c-113">Bu olay, kanal fabrikası önbellekten kullanmadığınızda yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="9c57c-113">This event is emitted when not using channel factory from cache.</span></span>  
+## <a name="description"></a><span data-ttu-id="85fc3-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="85fc3-112">Description</span></span>  
+ <span data-ttu-id="85fc3-113">Bu olay, kanal fabrikası önbellekten kullanmadığınızda yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="85fc3-113">This event is emitted when not using channel factory from cache.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="9c57c-114">İleti</span><span class="sxs-lookup"><span data-stu-id="9c57c-114">Message</span></span>  
- <span data-ttu-id="9c57c-115">Kanal fabrikası önbellekten kullanmayan, yani önbelleğe alma örneği için devre dışı.</span><span class="sxs-lookup"><span data-stu-id="9c57c-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
+## <a name="message"></a><span data-ttu-id="85fc3-114">İleti</span><span class="sxs-lookup"><span data-stu-id="85fc3-114">Message</span></span>  
+ <span data-ttu-id="85fc3-115">Kanal fabrikası önbellekten kullanmayan, yani önbelleğe alma örneği için devre dışı.</span><span class="sxs-lookup"><span data-stu-id="85fc3-115">Not using channel factory from cache, i.e. caching disabled for instance.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="9c57c-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="9c57c-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="85fc3-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="85fc3-116">Details</span></span>

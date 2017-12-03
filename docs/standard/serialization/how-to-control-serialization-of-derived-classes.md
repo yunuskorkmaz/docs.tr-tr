@@ -12,21 +12,21 @@ dev_langs:
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b6ef944b9c41d26736f044fff9d40efb5e3ef32f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f97445be151afdf460da6610462930c564e42ccc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="0c51a-102">Nasıl yapılır: denetim türetilen sınıfların serileştirme</span><span class="sxs-lookup"><span data-stu-id="0c51a-102">How to: Control Serialization of Derived Classes</span></span>
-<span data-ttu-id="0c51a-103">Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için öznitelik nesne seri hale getirme özelleştirmek için tek yolu değil.</span><span class="sxs-lookup"><span data-stu-id="0c51a-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="0c51a-104">Ayrıca varolan bir sınıftan türetilen ve bilgilendirerek XML akışı özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıf serileştirmek nasıl örneği.</span><span class="sxs-lookup"><span data-stu-id="0c51a-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
+# <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="73603-102">Nasıl yapılır: denetim türetilen sınıfların serileştirme</span><span class="sxs-lookup"><span data-stu-id="73603-102">How to: Control Serialization of Derived Classes</span></span>
+<span data-ttu-id="73603-103">Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için öznitelik nesne seri hale getirme özelleştirmek için tek yolu değil.</span><span class="sxs-lookup"><span data-stu-id="73603-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="73603-104">Ayrıca varolan bir sınıftan türetilen ve bilgilendirerek XML akışı özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıf serileştirmek nasıl örneği.</span><span class="sxs-lookup"><span data-stu-id="73603-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  
   
- <span data-ttu-id="0c51a-105">Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf.</span><span class="sxs-lookup"><span data-stu-id="0c51a-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="0c51a-106">Ancak, istemeniz gerekir **XmlSerializer** türetilmiş bir tür serileştirmek veya seri durumdan çıkarmak kabul etmek için.</span><span class="sxs-lookup"><span data-stu-id="0c51a-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="0c51a-107">Bu oluşturarak yapılabilir bir <xref:System.Xml.Serialization.XmlElementAttribute> örneği ve ayar kendi **türü** türetilmiş sınıf türü için özellik.</span><span class="sxs-lookup"><span data-stu-id="0c51a-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="0c51a-108">Ekleme **XmlElementAttribute** için bir <xref:System.Xml.Serialization.XmlAttributes> örneği.</span><span class="sxs-lookup"><span data-stu-id="0c51a-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="0c51a-109">Ardından ekleyin **XmlAttributes öznitelikleri olan üyeler** için bir <xref:System.Xml.Serialization.XmlAttributeOverrides> kılınmasını türü ve türetilmiş sınıf kabul üyenin adını belirterek örneği.</span><span class="sxs-lookup"><span data-stu-id="0c51a-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="0c51a-110">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="0c51a-110">This is shown in the following example.</span></span>  
+ <span data-ttu-id="73603-105">Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf.</span><span class="sxs-lookup"><span data-stu-id="73603-105">For example, given a `Book` class, you can derive from it and create an `ExpandedBook` class that has a few more properties.</span></span> <span data-ttu-id="73603-106">Ancak, istemeniz gerekir **XmlSerializer** türetilmiş bir tür serileştirmek veya seri durumdan çıkarmak kabul etmek için.</span><span class="sxs-lookup"><span data-stu-id="73603-106">However, you must instruct the **XmlSerializer** to accept the derived type when serializing or deserializing.</span></span> <span data-ttu-id="73603-107">Bu oluşturarak yapılabilir bir <xref:System.Xml.Serialization.XmlElementAttribute> örneği ve ayar kendi **türü** türetilmiş sınıf türü için özellik.</span><span class="sxs-lookup"><span data-stu-id="73603-107">This can be done by creating a <xref:System.Xml.Serialization.XmlElementAttribute> instance and setting its **Type** property to the derived class type.</span></span> <span data-ttu-id="73603-108">Ekleme **XmlElementAttribute** için bir <xref:System.Xml.Serialization.XmlAttributes> örneği.</span><span class="sxs-lookup"><span data-stu-id="73603-108">Add the **XmlElementAttribute** to a <xref:System.Xml.Serialization.XmlAttributes> instance.</span></span> <span data-ttu-id="73603-109">Ardından ekleyin **XmlAttributes öznitelikleri olan üyeler** için bir <xref:System.Xml.Serialization.XmlAttributeOverrides> kılınmasını türü ve türetilmiş sınıf kabul üyenin adını belirterek örneği.</span><span class="sxs-lookup"><span data-stu-id="73603-109">Then add the **XmlAttributes** to a <xref:System.Xml.Serialization.XmlAttributeOverrides> instance, specifying the type being overridden and the name of the member that accepts the derived class.</span></span> <span data-ttu-id="73603-110">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="73603-110">This is shown in the following example.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0c51a-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="0c51a-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="73603-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="73603-111">Example</span></span>  
   
 ```vb  
 Public Class Orders  
@@ -241,11 +241,11 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0c51a-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0c51a-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="73603-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="73603-112">See Also</span></span>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  
  <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [<span data-ttu-id="0c51a-113">XML ve SOAP seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="0c51a-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="0c51a-114">Nasıl yapılır: bir nesneyi serileştirme</span><span class="sxs-lookup"><span data-stu-id="0c51a-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="0c51a-115">Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin</span><span class="sxs-lookup"><span data-stu-id="0c51a-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+ [<span data-ttu-id="73603-113">XML ve SOAP seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="73603-113">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="73603-114">Nasıl yapılır: bir nesneyi serileştirme</span><span class="sxs-lookup"><span data-stu-id="73603-114">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="73603-115">Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin</span><span class="sxs-lookup"><span data-stu-id="73603-115">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c96ffb5f-24e2-4c54-92ba-66277b1cea91
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0922c831fe711eccb93b39772390211f1f87a7f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3527863f22c27fda5485e0df7c1e0617e29952dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="f548e-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="f548e-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
-## <a name="properties"></a><span data-ttu-id="f548e-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f548e-103">Properties</span></span>  
+# <a name="3325---dispatchformatterserializereplystop"></a><span data-ttu-id="a964c-102">3325 - DispatchFormatterSerializeReplyStop</span><span class="sxs-lookup"><span data-stu-id="a964c-102">3325 - DispatchFormatterSerializeReplyStop</span></span>
+## <a name="properties"></a><span data-ttu-id="a964c-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="a964c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="f548e-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="f548e-104">ID</span></span>|<span data-ttu-id="f548e-105">3325</span><span class="sxs-lookup"><span data-stu-id="f548e-105">3325</span></span>|  
-|<span data-ttu-id="f548e-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="f548e-106">Keywords</span></span>|<span data-ttu-id="f548e-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f548e-107">ServiceModel</span></span>|  
-|<span data-ttu-id="f548e-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="f548e-108">Level</span></span>|<span data-ttu-id="f548e-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="f548e-109">Verbose</span></span>|  
-|<span data-ttu-id="f548e-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f548e-110">Channel</span></span>|<span data-ttu-id="f548e-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f548e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="a964c-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="a964c-104">ID</span></span>|<span data-ttu-id="a964c-105">3325</span><span class="sxs-lookup"><span data-stu-id="a964c-105">3325</span></span>|  
+|<span data-ttu-id="a964c-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="a964c-106">Keywords</span></span>|<span data-ttu-id="a964c-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a964c-107">ServiceModel</span></span>|  
+|<span data-ttu-id="a964c-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="a964c-108">Level</span></span>|<span data-ttu-id="a964c-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="a964c-109">Verbose</span></span>|  
+|<span data-ttu-id="a964c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a964c-110">Channel</span></span>|<span data-ttu-id="a964c-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="a964c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="f548e-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f548e-112">Description</span></span>  
- <span data-ttu-id="f548e-113">Dağıtıcı yanıt iletisi serileştirmek tamamlandığında bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="f548e-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
+## <a name="description"></a><span data-ttu-id="a964c-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a964c-112">Description</span></span>  
+ <span data-ttu-id="a964c-113">Dağıtıcı yanıt iletisi serileştirmek tamamlandığında bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="a964c-113">This event is emitted when the dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="f548e-114">İleti</span><span class="sxs-lookup"><span data-stu-id="f548e-114">Message</span></span>  
- <span data-ttu-id="f548e-115">Dağıtıcı yanıt iletisi serileştirmek tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="f548e-115">Dispatcher completed serialization of the reply message.</span></span>  
+## <a name="message"></a><span data-ttu-id="a964c-114">İleti</span><span class="sxs-lookup"><span data-stu-id="a964c-114">Message</span></span>  
+ <span data-ttu-id="a964c-115">Dağıtıcı yanıt iletisi serileştirmek tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="a964c-115">Dispatcher completed serialization of the reply message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="f548e-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f548e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="a964c-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="a964c-116">Details</span></span>
