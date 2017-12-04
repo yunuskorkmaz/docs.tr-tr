@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5188e6786e7fde85d0e68721af6e31a47caaa441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3467b9319a883445d95978e0c167a5552211afe
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışını çalıştırma
 Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir iş akışı ana bilgisayarı oluşturmak ve önceki tanımlanan iş akışını çalıştırmak nasıl ele [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.  
@@ -132,7 +132,7 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
      İş akışı için sonraki tahmin, bekleyen boşta her zaman bu işleyici olarak adlandırılır ve `idleAction` <xref:System.Threading.AutoResetEvent> ayarlanır. Sonraki adımda kodu kullanan `idleEvent` ve `syncEvent` iş akışı için sonraki tahmin bekliyor veya tamamlandıktan belirlemek için.  
   
     > [!NOTE]
-    >  Bu örnekte, ana bilgisayar uygulamasını otomatik sıfırlama olayları kullanan <xref:System.Activities.WorkflowApplication.Completed%2A> ve <xref:System.Activities.WorkflowApplication.Idle%2A> konak uygulama iş akışı ilerleme ile eşitlemek için işleyiciler. Bir yer imi uygulamasına geri dönmeden önce iş akışının boşta kalmasını engellemek ve beklemek gerekli değildir, ancak bu örnekte, ana bilgisayar iş akışının tamamlanmış olup olmadığını veya kullanıcı girdisini <xref:System.Activities.Bookmark>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Yer işaretleri](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
+    >  Bu örnekte, ana bilgisayar uygulamasını otomatik sıfırlama olayları kullanan <xref:System.Activities.WorkflowApplication.Completed%2A> ve <xref:System.Activities.WorkflowApplication.Idle%2A> konak uygulama iş akışı ilerleme ile eşitlemek için işleyiciler. Engelleme ve boşta durumuna yer işareti devam etmeden önce iş akışı için beklemek gerekli değildir, ancak bu örnekte, iş akışını tam olup veya kullanarakdahafazlakullanıcıgirdisiolupbekliyorkonakbilmesiiçineşitlemeolaylarıgereklidir<xref:System.Activities.Bookmark>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Yer işaretleri](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
 3.  Çağrı kaldırmak `WaitOne`ve kullanıcı ve sürdürme giriş toplamak için kod ile değiştirin <xref:System.Activities.Bookmark>.  
   
