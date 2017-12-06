@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>C# 7'deki yenilikler
 
@@ -183,7 +183,7 @@ Basit bir senaryoyla başlayalım. Desen eşleştirme ifadeleri kolay iş ile il
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-Hızlı bir şekilde dökümünü bazıları birden fazla dökme ile yapılan burada dökme toplamını yapar bulmak gerektiğini fark edebilirsiniz. Giriş dizisinin bir parçası, tek bir sayı yerine birden çok sonuç olabilir:
+Bazı dökümünü ile birden çok bölmek yapılan burada dökme dökümünü toplamını bulmanız gereken hızlı bir şekilde bulabilirsiniz (dökme çoğul bölmek'dir). Giriş dizisinin bir parçası, tek bir sayı yerine birden çok sonuç olabilir:
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -215,9 +215,9 @@ Son olarak, bir son ekleyelim `case` dökme yeni stili için. Bazı oyunlar yüz
 > [!NOTE]
 > İki 10 taraflı yüzdebirlik bölmek 0 ile 99 arasındaki tüm sayıları temsil edebilir. Bir özel etiketli kenara sahip `00`, `10`, `20`,... `90`. Diğer özel etiketli kenarlara sahip `0`, `1`, `2`,... `9`. İki dökme değerlerin birlikte ekleyin ve her sayı 0 ile 99 arasında alabilirsiniz.
 
-Bu tür bir dökme koleksiyonunuza eklemek için öncelikle yüzdelik dökme temsil etmek için bir tür tanımlayın:
+Bu tür bir dökme koleksiyonunuza eklemek için öncelikle yüzdelik bölmek temsil etmek için bir tür tanımlayın. `TensDigit` Özellik değerleri depolar `0`, `10`, `20`, en fazla `90`:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 Ardından, ekleyin bir `case` yeni türü için ifade ile eşleşen:
 

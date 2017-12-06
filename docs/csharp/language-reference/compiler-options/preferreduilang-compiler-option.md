@@ -13,11 +13,11 @@ ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ccf25e9a5d5d025f9024519b41c4afa17a5081f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a96a054b3d1f73b0fee209557388f7ea213ebbe9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (C# Derleyici Seçenekleri)
 Kullanarak `/preferreduilang` derleyici seçeneği, C# Derleyici hata iletileri gibi bir çıkış görüntüler dil belirtebilirsiniz.  
@@ -30,7 +30,7 @@ Kullanarak `/preferreduilang` derleyici seçeneği, C# Derleyici hata iletileri 
   
 ## <a name="arguments"></a>Arguments  
  `language`  
- [Dil adı](http://go.microsoft.com/fwlink/p/?LinkId=236992) derleyici çıktı için kullanılacak dili.  
+ [Dil adı](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) derleyici çıktı için kullanılacak dili.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kullanabileceğiniz `/preferreduilang` derleyici seçeneği hata iletileri ve diğer komut satırı çıktısı için kullanmak için C# Derleyici istediğiniz dili belirtin. Dili için dil paketi yüklü değilse, işletim sisteminin dil ayarından yerine kullanılır ve herhangi bir hata bildirdi.  

@@ -7,25 +7,25 @@ ms.date: 09/01/2017
 ms.topic: article
 dev_langs: vb
 ms.prod: .net-core
-ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b5078a78ea7dae3465680797531e0ff81b9b5845
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Birim testi dotnet test ve mstest'i kullanarak Visual Basic .NET Core kitaplıkları
 
-Bu öğretici birim testi kavramlarını öğrenmek için adım adım örnek çözüm oluşturma etkileşimli bir deneyim gösterir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izleyin tercih ediyorsanız [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/) başlamadan önce. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğretici birim testi kavramlarını öğrenmek için adım adım örnek çözüm oluşturma etkileşimli bir deneyim gösterir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izleyin tercih ediyorsanız [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-vb-mstest/) başlamadan önce. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Kaynak projesi oluşturma
 
-Kabuk penceresini açın. Adlı bir dizin oluşturun *birim testi-kullanma-dotnet-sınama* çözümü tutmak için.
+Kabuk penceresini açın. Adlı bir dizin oluşturun *birim testi vb mstest'i* çözümü tutmak için.
 Bu yeni dizin içinde çalıştırmak [ `dotnet new sln` ](../tools/dotnet-new.md) yeni bir çözüm oluşturmak için. Bu yöntem, sınıf kitaplığı ve birim testi projesi yönetmeyi kolaylaştırır.
 Çözüm dizini içinde oluşturmak bir *PrimeService* dizini. Aşağıdaki dizin ve dosya yapısı bugüne kadarki vardır:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
 ```
 
@@ -50,21 +50,21 @@ Dizin geri değişiklik *birim-test etme-vb-kullanma-stest* dizini. Çalıştır
 Ardından, oluşturun *PrimeService.Tests* dizini. Aşağıdaki anahat dizin yapısını gösterir:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-Olun *PrimeService.Tests* dizine geçerli ve kullanarak yeni bir proje oluşturun [ `dotnet new mstest -lang VB` ](../tools/dotnet-new.md). Bu komut xUnit test kitaplığını kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.vbproj*:
+Olun *PrimeService.Tests* dizine geçerli ve kullanarak yeni bir proje oluşturun [ `dotnet new mstest -lang VB` ](../tools/dotnet-new.md). Bu komut mstest'i test kitaplığını kullanan bir test projesi oluşturur. Test Çalıştırıcısı'nda oluşturulan şablon yapılandırır *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
-<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
-<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+  <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
 </ItemGroup>
 ```
 
@@ -74,13 +74,13 @@ Test projesi oluşturmak ve birim testleri çalıştırmak için diğer paketler
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-Tüm dosyasında görebilirsiniz [örnekleri deposu](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) github'da.
+Tüm dosyasında görebilirsiniz [örnekleri deposu](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) github'da.
 
 Aşağıdaki nihai çözüm düzeni vardır:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-vb-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
@@ -89,7 +89,7 @@ Aşağıdaki nihai çözüm düzeni vardır:
         PrimeServiceTests.vbproj
 ```
 
-Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) içinde *birim-test etme-vb-kullanma-mstest'i* dizin. 
+Yürütme [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) içinde *birim testi vb mstest'i* dizin.
 
 ## <a name="creating-the-first-test"></a>İlk testi oluşturma
 
@@ -114,7 +114,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`<TestClass>` Öznitelik testleri içeren bir sınıfı gösterir. `<TestMethod>` Özniteliği test Çalıştırıcısı tarafından çalıştırılan bir yöntemi gösterir. Gelen *birim-test etme-vb-kullanma-mstest'i*, yürütme [ `dotnet test` ](../tools/dotnet-test.md) testleri ve sınıf kitaplığı oluşturmak ve ardından testleri çalıştırın. XUnit test Çalıştırıcısı testleri çalıştırmak için program giriş noktası içerir. `dotnet test`oluşturduğunuz birim testi projesi kullanarak test Çalıştırıcısı başlatır.
+`<TestClass>` Öznitelik testleri içeren bir sınıfı gösterir. `<TestMethod>` Özniteliği test Çalıştırıcısı tarafından çalıştırılan bir yöntemi gösterir. Gelen *birim testi vb mstest'i*, yürütme [ `dotnet test` ](../tools/dotnet-test.md) testleri ve sınıf kitaplığı oluşturmak ve ardından testleri çalıştırın. Mstest'i test Çalıştırıcısı testleri çalıştırmak için program giriş noktası içerir. `dotnet test`oluşturduğunuz birim testi projesi kullanarak test Çalıştırıcısı başlatır.
 
 Testiniz başarısız olur. Uygulama henüz oluşturmadınız. Bu test basit kod yazarken yapmasına `PrimeService` çalışır sınıfı:
 
@@ -127,11 +127,11 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-İçinde *birim-test etme-vb-kullanma-mstest'i* çalışması dizini `dotnet test` yeniden. `dotnet test` Komutu çalıştıran bir yapı `PrimeService` proje ve ardından `PrimeService.Tests` projesi. Her iki proje oluşturduktan sonra bu tek bir test çalıştırılır. Bunu geçirir.
+İçinde *birim testi vb mstest'i* çalışması dizini `dotnet test` yeniden. `dotnet test` Komutu çalıştıran bir yapı `PrimeService` proje ve ardından `PrimeService.Tests` projesi. Her iki proje oluşturduktan sonra bu tek bir test çalıştırılır. Bunu geçirir.
 
 ## <a name="adding-more-features"></a>Daha fazla özellik ekleme
 
-Bir test geçirmek yapmış olduğunuz, daha fazla yazma zamanı geldi. Diğer basit bazı durumlar asal sayılar için vardır: 0, -1. Bu gibi durumlarda yeni testleriyle olarak ekleyebilirsiniz `<TestMethod>` özniteliği, ancak, hızlı hale can sıkıcı. Benzer testleri dizisi yazmak için etkinleştirmek diğer xUnit özniteliği vardır.  A `<DataTestMethod>` özniteliği, aynı kod yürütmek ancak farklı giriş bağımsız değişkeni olan testleri bir paketi temsil eder. Kullanabileceğiniz `<DataRow>` özniteliği bu girişleri için değerleri belirtin.
+Bir test geçirmek yapmış olduğunuz, daha fazla yazma zamanı geldi. Diğer basit bazı durumlar asal sayılar için vardır: 0, -1. Bu gibi durumlarda yeni testleriyle olarak ekleyebilirsiniz `<TestMethod>` özniteliği, ancak, hızlı hale can sıkıcı. Benzer testleri dizisi yazmak için etkinleştirmek diğer mstest'i özniteliği vardır.  A `<DataTestMethod>` özniteliği, aynı kod yürütmek ancak farklı giriş bağımsız değişkeni olan testleri bir paketi temsil eder. Kullanabileceğiniz `<DataRow>` özniteliği bu girişleri için değerleri belirtin.
 
 Yeni testler oluşturmak yerine, tek bir kuramsal oluşturmak için bu iki öznitelikler uygulanır. Teorik asal numarası en düşük olduğu birden fazla değer ikiden az, testleri bir yöntemi aşağıdaki gibidir:
 
@@ -143,6 +143,6 @@ Yeni testler oluşturmak yerine, tek bir kuramsal oluşturmak için bu iki özni
 if candidate < 2
 ```
 
-Daha fazla testleri, daha fazla kuramlarý ve daha fazla kod ana kitaplıkta ekleyerek yinelemek devam edin. Sahip olduğunuz [testleri tamamlanmış sürümü](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığının tam uygulama](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).
+Daha fazla testleri, daha fazla kuramlarý ve daha fazla kod ana kitaplıkta ekleyerek yinelemek devam edin. Sahip olduğunuz [testleri tamamlanmış sürümü](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığının tam uygulama](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb).
 
 Küçük bir kitaplığı ve bu kitaplık için birim testleri kümesini temel aldık. Böylece yeni paketleri ekleme çözümü yapılandırılmış ve testleri normal iş akışı bir parçasıdır. Çoğu zaman ve çaba uygulama amaçlarını çözme üzerinde yoğunlaşmıştır.

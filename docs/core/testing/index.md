@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Birim .NET Core ve .NET standart testi
 
@@ -34,15 +34,18 @@ Birim testleri yazma, altyapı bağımlılıkları yanlışlıkla tanıtmak yok 
 
 Birim testi .NET Core projelerinde hakkında daha fazla bilgi edinin:
 
-İçin desteklenen birim testi projelerini .NET Core için [C#](../../csharp/index.md), [F #](../../fsharp/index.md) ve [Visual Basic](../../visual-basic/index.md). Arasından seçim yapabilirsiniz [xUnit](http://xunit.github.io) ve [mstest'i](https://github.com/Microsoft/vstest-docs).
+İçin desteklenen birim testi projelerini .NET Core için [C#](../../csharp/index.md), [F #](../../fsharp/index.md) ve [Visual Basic](../../visual-basic/index.md). Arasından seçim yapabilirsiniz [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) ve [mstest'i](https://github.com/Microsoft/vstest-docs).
 
 Bu izlenecek yollar kurulumundaki birleşimler hakkında bilgi edinebilirsiniz:
 
 * Kullanarak birim testleri oluşturma [ *XUnit* ve *C#* .NET Core CLI ile](unit-testing-with-dotnet-test.md).
+* Kullanarak birim testleri oluşturma [ *NUnit* ve *C#* .NET Core CLI ile](unit-testing-with-nunit.md).
 * Kullanarak birim testleri oluşturma [ *mstest'i* ve *C#* .NET Core CLI ile](unit-testing-with-mstest.md).
 * Kullanarak birim testleri oluşturma [ *XUnit* ve *F #* .NET Core CLI ile](unit-testing-fsharp-with-dotnet-test.md).
+* Kullanarak birim testleri oluşturma [ *NUnit* ve *F #* .NET Core CLI ile](unit-testing-fsharp-with-nunit.md).
 * Kullanarak birim testleri oluşturma [ *mstest'i* ve *F #* .NET Core CLI ile](unit-testing-fsharp-with-mstest.md).
 * Kullanarak birim testleri oluşturma [ *XUnit* ve *Visual Basic* .NET Core CLI ile](unit-testing-visual-basic-with-dotnet-test.md).
+* Kullanarak birim testleri oluşturma [ *NUnit* ve *Visual Basic* .NET Core CLI ile](unit-testing-visual-basic-with-nunit.md).
 * Kullanarak birim testleri oluşturma [ *mstest'i* ve *Visual Basic* .NET Core CLI ile](unit-testing-visual-basic-with-mstest.md).
 
 Farklı diller için sınıf kitaplıkları seçebilir ve kitaplıkları, birim testi. Nasıl karıştırma ve eşleşen izlenecek yollar yukarıda başvurulan öğrenebilirsiniz.

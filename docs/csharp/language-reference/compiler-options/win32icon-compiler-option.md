@@ -13,11 +13,11 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (C# Derleyici Seçenekleri)
 **/Win32icon** seçeneği çıkış dosyasını ve dosya Gezgini'ndeki istenen çalışmasıdır çıktı dosyasında bir .ico dosyasını ekler.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  Çıkış dosyanızın eklemek istediğiniz .ico dosyasını.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir .ico dosyasını ile oluşturulan [kaynak derleyici](http://go.microsoft.com/fwlink/?LinkId=148370). Kaynak derleyicisi bir Visual C++ programını derleme yaparken çağrılır; .rc dosyasından bir .ico dosyası oluşturulur.  
+ Bir .ico dosyasını ile oluşturulan [kaynak derleyici](https://msdn.microsoft.com/library/aa381042.aspx). Kaynak derleyicisi bir Visual C++ programını derleme yaparken çağrılır; .rc dosyasından bir .ico dosyası oluşturulur.  
   
  Bkz: [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (için başvuru) veya [/Resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (eklemek için) bir .NET Framework kaynak dosyası. Bkz: [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) .res dosyasını içeri aktarmak için.  
   
@@ -56,4 +56,4 @@ csc /win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
