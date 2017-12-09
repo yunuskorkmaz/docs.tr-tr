@@ -23,7 +23,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-etw-events"></a><span data-ttu-id="b30a4-102">Birlikte Çalışma ETW Olayları</span><span class="sxs-lookup"><span data-stu-id="b30a4-102">Interop ETW Events</span></span>
-<span data-ttu-id="b30a4-103"><a name="top"></a>Birlikte çalışma olayları Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.</span><span class="sxs-lookup"><span data-stu-id="b30a4-103"><a name="top"></a> Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
+<a name="top"></a><span data-ttu-id="b30a4-103">Birlikte çalışma olayları Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.</span><span class="sxs-lookup"><span data-stu-id="b30a4-103">Interop events capture information about Microsoft intermediate language (MSIL) stub generation and caching.</span></span>  
   
  <span data-ttu-id="b30a4-104">Bu kategori aşağıdaki olaylar oluşur:</span><span class="sxs-lookup"><span data-stu-id="b30a4-104">This category consists of the following events:</span></span>  
   

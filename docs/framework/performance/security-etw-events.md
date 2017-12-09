@@ -23,7 +23,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-etw-events"></a><span data-ttu-id="fab78-102">Güvenlik ETW Olayları</span><span class="sxs-lookup"><span data-stu-id="fab78-102">Security ETW Events</span></span>
-<span data-ttu-id="fab78-103"><a name="top"></a>Güvenlik olayları, güçlü ad doğrulaması ve Authenticode doğrulama sırasında ortaya çıkar.</span><span class="sxs-lookup"><span data-stu-id="fab78-103"><a name="top"></a> Security events are raised during strong name verification and Authenticode verification.</span></span>  
+<a name="top"></a><span data-ttu-id="fab78-103">Güvenlik olayları, güçlü ad doğrulaması ve Authenticode doğrulama sırasında ortaya çıkar.</span><span class="sxs-lookup"><span data-stu-id="fab78-103">Security events are raised during strong name verification and Authenticode verification.</span></span>  
   
  <span data-ttu-id="fab78-104">Bu kategori aşağıdaki olaylar oluşur:</span><span class="sxs-lookup"><span data-stu-id="fab78-104">This category consists of the following events:</span></span>  
   

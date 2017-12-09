@@ -23,7 +23,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="fe6eb-102">İş Parçacığı Havuzu ETW Olayları</span><span class="sxs-lookup"><span data-stu-id="fe6eb-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="fe6eb-103"><a name="top"></a>Bu olaylar çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.</span><span class="sxs-lookup"><span data-stu-id="fe6eb-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a><span data-ttu-id="fe6eb-103">Bu olaylar çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.</span><span class="sxs-lookup"><span data-stu-id="fe6eb-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="fe6eb-104">İş parçacığı havuzu olayları iki grupları vardır:</span><span class="sxs-lookup"><span data-stu-id="fe6eb-104">There are two groups of thread pool events:</span></span>  
   
