@@ -117,7 +117,7 @@ ms.lasthandoff: 12/02/2017
     go  
     ```  
   
-##  <span data-ttu-id="04586-119"><a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] görünümü</span><span class="sxs-lookup"><span data-stu-id="04586-119"><a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
+##  <a name="InstancePromotedProperties"></a><span data-ttu-id="04586-119">[System.Activities.DurableInstancing.InstancePromotedProperties] görünümü</span><span class="sxs-lookup"><span data-stu-id="04586-119">[System.Activities.DurableInstancing.InstancePromotedProperties] view</span></span>  
   
 |<span data-ttu-id="04586-120">Sütun adı</span><span class="sxs-lookup"><span data-stu-id="04586-120">Column Name</span></span>|<span data-ttu-id="04586-121">Sütun türü</span><span class="sxs-lookup"><span data-stu-id="04586-121">Column Type</span></span>|<span data-ttu-id="04586-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="04586-122">Description</span></span>|  
 |-----------------|-----------------|-----------------|  

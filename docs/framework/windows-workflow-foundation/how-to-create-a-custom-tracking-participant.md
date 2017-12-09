@@ -37,7 +37,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="87978-116">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="87978-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <span data-ttu-id="87978-117"><a name="BKMK_CustomTrackingParticipant"></a>Özel İzleme katılımcı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="87978-117"><a name="BKMK_CustomTrackingParticipant"></a> To create the custom tracking participant</span></span>  
+###  <a name="BKMK_CustomTrackingParticipant"></a><span data-ttu-id="87978-117">Özel İzleme katılımcı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="87978-117">To create the custom tracking participant</span></span>  
   
 1.  <span data-ttu-id="87978-118">Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**.</span><span class="sxs-lookup"><span data-stu-id="87978-118">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="87978-119">Tür `StatusTrackingParticipant` içine **adı** ve'ı tıklatın **Ekle**.</span><span class="sxs-lookup"><span data-stu-id="87978-119">Type `StatusTrackingParticipant` into the **Name** box, and click **Add**.</span></span>  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="87978-127">İzleme profili belirtildiğinde, varsayılan profili izleme kullanılır.</span><span class="sxs-lookup"><span data-stu-id="87978-127">When no tracking profile is specified, the default tracking profile is used.</span></span> <span data-ttu-id="87978-128">Varsayılan profil izleme kullanıldığında, izleme kayıtları tüm gösterilen `ActivityStates`.</span><span class="sxs-lookup"><span data-stu-id="87978-128">When the default tracking profile is used, tracking records are emitted for all `ActivityStates`.</span></span> <span data-ttu-id="87978-129">Yalnızca bir kez yaşam döngüsü sırasında metni yakalamak ihtiyacımız çünkü `WriteLine` etkinlik, biz yalnızca Ayıkla metinden `ActivityStates.Executing` durumu.</span><span class="sxs-lookup"><span data-stu-id="87978-129">Because we only need to capture the text one time during the lifecycle of the `WriteLine` activity, we only extract the text from the `ActivityStates.Executing` state.</span></span> <span data-ttu-id="87978-130">İçinde [izleme profili oluşturma ve izleme katılımcı kaydetme](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), yalnızca belirten bir izleme profili oluşturulur `WriteLine` `ActivityStates.Executing` izleme kayıtları yayılan.</span><span class="sxs-lookup"><span data-stu-id="87978-130">In [To create the tracking profile and register the tracking participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), a tracking profile is created that specifies that only `WriteLine` `ActivityStates.Executing` tracking records are emitted.</span></span>  
   
-###  <span data-ttu-id="87978-131"><a name="BKMK_TrackingProfile"></a>İzleme profili oluşturma ve izleme katılımcı kaydetme</span><span class="sxs-lookup"><span data-stu-id="87978-131"><a name="BKMK_TrackingProfile"></a> To create the tracking profile and register the tracking participant</span></span>  
+###  <a name="BKMK_TrackingProfile"></a><span data-ttu-id="87978-131">İzleme profili oluşturma ve izleme katılımcı kaydetme</span><span class="sxs-lookup"><span data-stu-id="87978-131">To create the tracking profile and register the tracking participant</span></span>  
   
 1.  <span data-ttu-id="87978-132">Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **görünümü kodu**.</span><span class="sxs-lookup"><span data-stu-id="87978-132">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 12/02/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <span data-ttu-id="87978-137"><a name="BKMK_DisplayTracking"></a>İzleme bilgilerini görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="87978-137"><a name="BKMK_DisplayTracking"></a> To display the tracking information</span></span>  
+###  <a name="BKMK_DisplayTracking"></a><span data-ttu-id="87978-137">İzleme bilgilerini görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="87978-137">To display the tracking information</span></span>  
   
 1.  <span data-ttu-id="87978-138">Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **görünümü kodu**.</span><span class="sxs-lookup"><span data-stu-id="87978-138">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
@@ -329,7 +329,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="87978-142"><a name="BKMK_BuildAndRun"></a>Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="87978-142"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="87978-142">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="87978-142">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="87978-143">Uygulamanızı oluşturmak için Ctrl + Shift + B tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="87978-143">Press Ctrl+Shift+B to build the application.</span></span>  
   

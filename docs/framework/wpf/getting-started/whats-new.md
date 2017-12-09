@@ -23,7 +23,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/11/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a><span data-ttu-id="3d57a-102">&#39; teki WPF sürüm 4. 5'deki yenilikler</span><span class="sxs-lookup"><span data-stu-id="3d57a-102">What&#39;s New in WPF Version 4.5</span></span>
-<span data-ttu-id="3d57a-103"><a name="introduction"></a>Bu konu, yeni ve geliştirilmiş özellikler hakkında bilgi içerir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.</span><span class="sxs-lookup"><span data-stu-id="3d57a-103"><a name="introduction"></a> This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
+<a name="introduction"></a><span data-ttu-id="3d57a-103">Bu konu, yeni ve geliştirilmiş özellikler hakkında bilgi içerir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.</span><span class="sxs-lookup"><span data-stu-id="3d57a-103">This topic contains information about new and enhanced features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5.</span></span>  
   
  <span data-ttu-id="3d57a-104">Bu konu aşağıdaki bölümleri içermektedir:</span><span class="sxs-lookup"><span data-stu-id="3d57a-104">This topic contains the following sections:</span></span>  
   

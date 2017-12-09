@@ -49,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [<span data-ttu-id="7b04b-117">İş akışları önceki sürümlerini başlangıç etkinleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <span data-ttu-id="7b04b-118"><a name="BKMK_CreateProject"></a>CreateUpdateMaps projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-118"><a name="BKMK_CreateProject"></a> To create the CreateUpdateMaps project</span></span>  
+###  <a name="BKMK_CreateProject"></a><span data-ttu-id="7b04b-118">CreateUpdateMaps projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-118">To create the CreateUpdateMaps project</span></span>  
   
 1.  <span data-ttu-id="7b04b-119">Sağ **WF45GettingStartedTutorial** içinde **Çözüm Gezgini** ve **Ekle**, **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="7b04b-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -233,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="7b04b-143"><a name="BKMK_StateMachine"></a>StateMachineNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-143"><a name="BKMK_StateMachine"></a> To update StateMachineNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_StateMachine"></a><span data-ttu-id="7b04b-143">StateMachineNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-143">To update StateMachineNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="7b04b-144">Ekleme bir `CreateStateMachineUpdateMap` için `Program` sınıfı (veya `Module1`).</span><span class="sxs-lookup"><span data-stu-id="7b04b-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>  
   
@@ -426,7 +426,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="7b04b-151"><a name="BKMK_Flowchart"></a>FlowchartNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-151"><a name="BKMK_Flowchart"></a> To update FlowchartNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Flowchart"></a><span data-ttu-id="7b04b-151">FlowchartNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-151">To update FlowchartNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="7b04b-152">Aşağıdakileri ekleyin `CreateFlowchartUpdateMethod` için `Program` sınıfı (veya `Module1`).</span><span class="sxs-lookup"><span data-stu-id="7b04b-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="7b04b-153">Bu yöntem benzer `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="7b04b-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="7b04b-154">Çağrı ile başlayan `StartUpdate`akış iş akışı tanımı güncelleştirir ve güncelleştirme eşlemesi ve güncelleştirilmiş iş akışı tanımı kaydederek tamamlanır.</span><span class="sxs-lookup"><span data-stu-id="7b04b-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -540,7 +540,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="7b04b-155"><a name="BKMK_Sequential"></a>SequentialNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-155"><a name="BKMK_Sequential"></a> To update SequentialNumberGuessWorkflow</span></span>  
+###  <a name="BKMK_Sequential"></a><span data-ttu-id="7b04b-155">SequentialNumberGuessWorkflow güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-155">To update SequentialNumberGuessWorkflow</span></span>  
   
 1.  <span data-ttu-id="7b04b-156">Aşağıdakileri ekleyin `CreateSequentialUpdateMethod` için `Program` sınıfı (veya `Module1`).</span><span class="sxs-lookup"><span data-stu-id="7b04b-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="7b04b-157">Bu yöntem, diğer iki yöntemlere benzer.</span><span class="sxs-lookup"><span data-stu-id="7b04b-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="7b04b-158">Çağrı ile başlayan `StartUpdate`sıralı iş akışı tanımı güncelleştirir ve güncelleştirme eşlemesi ve güncelleştirilmiş iş akışı tanımı kaydederek tamamlanır.</span><span class="sxs-lookup"><span data-stu-id="7b04b-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>  
   
@@ -620,7 +620,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="7b04b-159"><a name="BKMK_CreateUpdateMaps"></a>Derleme ve CreateUpdateMaps uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-159"><a name="BKMK_CreateUpdateMaps"></a> To build and run the CreateUpdateMaps application</span></span>  
+###  <a name="BKMK_CreateUpdateMaps"></a><span data-ttu-id="7b04b-159">Derleme ve CreateUpdateMaps uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-159">To build and run the CreateUpdateMaps application</span></span>  
   
 1.  <span data-ttu-id="7b04b-160">Güncelleştirme `Main` yöntemi ve aşağıdaki üç yöntem çağrıları ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7b04b-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="7b04b-161">Bu yöntemler aşağıdaki bölümlerde eklenir.</span><span class="sxs-lookup"><span data-stu-id="7b04b-161">These methods are added in the following sections.</span></span> <span data-ttu-id="7b04b-162">Her yöntem karşılık gelen sayı tahmin iş akışı güncelleştirir ve oluşturur bir `DynamicUpdateMap` güncelleştirmeleri açıklanır.</span><span class="sxs-lookup"><span data-stu-id="7b04b-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>  
   
@@ -654,7 +654,7 @@ ms.lasthandoff: 12/02/2017
   
      <span data-ttu-id="7b04b-166">Sonra güncelleştirme eşlemeleri oluşturulur ve güncelleştirilmiş iş akışı tanımları, sonraki adıma güncelleştirilmiş tanımları içeren bir güncelleştirilmiş iş akışı derleme oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="7b04b-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>  
   
-###  <span data-ttu-id="7b04b-167"><a name="BKMK_BuildAssembly"></a>Güncelleştirilmiş iş akışı derlemesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-167"><a name="BKMK_BuildAssembly"></a> To build the updated workflow assembly</span></span>  
+###  <a name="BKMK_BuildAssembly"></a><span data-ttu-id="7b04b-167">Güncelleştirilmiş iş akışı derlemesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-167">To build the updated workflow assembly</span></span>  
   
 1.  <span data-ttu-id="7b04b-168">İkinci bir örneğini açmak [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b04b-168">Open a second instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -685,7 +685,7 @@ ms.lasthandoff: 12/02/2017
   
 12. <span data-ttu-id="7b04b-185">Yeniden Adlandır **NumberGuessWorkflowActivities.dll** için **NumberGuessWorkflowActivities_v15.dll**ve kopyalayın **PreviousVersions** içindeoluşturduğunuzklasör[Nasıl yapılır: bir iş akışı yan yana birden fazla sürümünü konak](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="7b04b-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-###  <span data-ttu-id="7b04b-186"><a name="BKMK_UpdateWorkflowVersionMap"></a>Yeni sürümlerle WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-186"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap with the new versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="7b04b-186">Yeni sürümlerle WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-186">To update WorkflowVersionMap with the new versions</span></span>  
   
 1.  <span data-ttu-id="7b04b-187">Geçiş ilk örneğine [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b04b-187">Switch back to the initial instance of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
@@ -1072,7 +1072,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  <span data-ttu-id="7b04b-195">Projeyi oluşturmak için CTRL+SHIFT+B tuşlarına basın.</span><span class="sxs-lookup"><span data-stu-id="7b04b-195">Press CTRL+SHIFT+B to build the project.</span></span>  
   
-###  <span data-ttu-id="7b04b-196"><a name="BKMK_ApplyUpdate"></a>Dinamik güncelleştirmeleri uygulamak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-196"><a name="BKMK_ApplyUpdate"></a> To apply the dynamic updates</span></span>  
+###  <a name="BKMK_ApplyUpdate"></a><span data-ttu-id="7b04b-196">Dinamik güncelleştirmeleri uygulamak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-196">To apply the dynamic updates</span></span>  
   
 1.  <span data-ttu-id="7b04b-197">Sağ **WF45GettingStartedTutorial** içinde **Çözüm Gezgini** ve **Ekle**, **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="7b04b-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
@@ -1447,7 +1447,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="7b04b-261">**İnceleme: SequentialNumberGuessWorkflow; Sürüm 2.0.0.0 =** </span><span class="sxs-lookup"><span data-stu-id="7b04b-261">**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0** </span></span>  
 <span data-ttu-id="7b04b-262">**Devam etmek için herhangi bir tuşa basın...**</span><span class="sxs-lookup"><span data-stu-id="7b04b-262">**Press any key to continue . . .**</span></span>  
   
-###  <span data-ttu-id="7b04b-263"><a name="BKMK_BuildAndRun"></a>Güncelleştirilmiş iş akışlarıyla uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-263"><a name="BKMK_BuildAndRun"></a> To run the application with the updated workflows</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="7b04b-263">Güncelleştirilmiş iş akışlarıyla uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="7b04b-263">To run the application with the updated workflows</span></span>  
   
 1.  <span data-ttu-id="7b04b-264">Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **başlangıç projesi olarak ayarla**.</span><span class="sxs-lookup"><span data-stu-id="7b04b-264">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>  
   
@@ -1482,7 +1482,7 @@ ms.lasthandoff: 12/02/2017
 <span data-ttu-id="7b04b-291">**Lütfen 1 ile 10 arasında bir sayı girin** </span><span class="sxs-lookup"><span data-stu-id="7b04b-291">**Please enter a number between 1 and 10** </span></span>  
 <span data-ttu-id="7b04b-292">**6 doğrudur. Bu 4 kapatır tahmin.**</span><span class="sxs-lookup"><span data-stu-id="7b04b-292">**6 is correct. You guessed it in 4 turns.**</span></span>  
   
-###  <span data-ttu-id="7b04b-293"><a name="BKMK_StartPreviousVersions"></a>İş akışları önceki sürümlerini başlangıç etkinleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-293"><a name="BKMK_StartPreviousVersions"></a> To enable starting previous versions of the workflows</span></span>  
+###  <a name="BKMK_StartPreviousVersions"></a><span data-ttu-id="7b04b-293">İş akışları önceki sürümlerini başlangıç etkinleştirmek için</span><span class="sxs-lookup"><span data-stu-id="7b04b-293">To enable starting previous versions of the workflows</span></span>  
  <span data-ttu-id="7b04b-294">Güncelleştirme için iş akışlarını dışında çalıştırırsanız, değiştirebileceğiniz `NumberGuessWorkflowHost` uygulama iş akışlarını önceki sürümlerini başlayarak etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="7b04b-294">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>  
   
 1.  <span data-ttu-id="7b04b-295">Çift **WorkflowHostForm** içinde **Çözüm Gezgini**seçip **WorkflowType** birleşik giriş kutusu.</span><span class="sxs-lookup"><span data-stu-id="7b04b-295">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>  

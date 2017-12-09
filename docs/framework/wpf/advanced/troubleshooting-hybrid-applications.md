@@ -27,7 +27,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="troubleshooting-hybrid-applications"></a><span data-ttu-id="2c40a-102">Karma Uygulama Sorunlarını Giderme</span><span class="sxs-lookup"><span data-stu-id="2c40a-102">Troubleshooting Hybrid Applications</span></span>
-<span data-ttu-id="2c40a-103"><a name="introduction"></a>Bu konuda, hem kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.</span><span class="sxs-lookup"><span data-stu-id="2c40a-103"><a name="introduction"></a> This topic lists some common problems that can occur when authoring hybrid applications, which use both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologies.</span></span>  
+<a name="introduction"></a><span data-ttu-id="2c40a-103">Bu konuda, hem kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.</span><span class="sxs-lookup"><span data-stu-id="2c40a-103">This topic lists some common problems that can occur when authoring hybrid applications, which use both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologies.</span></span>  
   
 
   

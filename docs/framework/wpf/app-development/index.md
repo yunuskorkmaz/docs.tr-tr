@@ -23,9 +23,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a><span data-ttu-id="dac8d-102">Uygulama Geliştirme</span><span class="sxs-lookup"><span data-stu-id="dac8d-102">Application Development</span></span>
-<span data-ttu-id="dac8d-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Aşağıdaki uygulama türlerini geliştirmek için kullanılan bir sunu çerçevesidir:</span><span class="sxs-lookup"><span data-stu-id="dac8d-103"><a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
+<a name="introduction"></a>
+<span data-ttu-id="dac8d-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Aşağıdaki uygulama türlerini geliştirmek için kullanılan bir sunu çerçevesidir:</span><span class="sxs-lookup"><span data-stu-id="dac8d-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is a presentation framework that can be used to develop the following types of applications:</span></span>  
   
 -   <span data-ttu-id="dac8d-104">Tek başına uygulamaları (Geleneksel stili [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yükleneceğini ve istemci bilgisayardan çalıştırılan yürütülebilir derlemeleri olarak oluşturulan uygulamalar).</span><span class="sxs-lookup"><span data-stu-id="dac8d-104">Standalone Applications (traditional style [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] applications built as executable assemblies that are installed to and run from the client computer).</span></span>  
   

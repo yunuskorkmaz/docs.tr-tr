@@ -29,7 +29,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="aec2e-102">Performansı İyileştirme: Diğer Öneriler</span><span class="sxs-lookup"><span data-stu-id="aec2e-102">Optimizing Performance: Other Recommendations</span></span>
-<span data-ttu-id="aec2e-103"><a name="introduction"></a>Bu konu, konular tarafından kapsanan olanları yanı sıra performans önerileri sağlar [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) bölümü.</span><span class="sxs-lookup"><span data-stu-id="aec2e-103"><a name="introduction"></a> This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
+<a name="introduction"></a><span data-ttu-id="aec2e-103">Bu konu, konular tarafından kapsanan olanları yanı sıra performans önerileri sağlar [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) bölümü.</span><span class="sxs-lookup"><span data-stu-id="aec2e-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
   
  <span data-ttu-id="aec2e-104">Bu konu aşağıdaki bölümleri içermektedir:</span><span class="sxs-lookup"><span data-stu-id="aec2e-104">This topic contains the following sections:</span></span>  
   

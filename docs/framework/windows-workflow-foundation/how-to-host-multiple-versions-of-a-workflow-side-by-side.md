@@ -50,7 +50,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  <span data-ttu-id="46460-119">Başlarken Öğreticisi her adımı için önceki adımları değişir.</span><span class="sxs-lookup"><span data-stu-id="46460-119">Each step in the Getting Started tutorial depends on the previous steps.</span></span> <span data-ttu-id="46460-120">Önceki adımları tamamlanmadıysa tamamen tamamlanmış bir sürümünü yükleyebilirsiniz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="46460-120">If you did not complete the previous steps you can download a completed version of the tutorial from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-###  <span data-ttu-id="46460-121"><a name="BKMK_BackupCopy"></a>NumberGuessWorkflowActivities proje bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="46460-121"><a name="BKMK_BackupCopy"></a> To make a copy of the NumberGuessWorkflowActivities project</span></span>  
+###  <a name="BKMK_BackupCopy"></a><span data-ttu-id="46460-121">NumberGuessWorkflowActivities proje bir kopyasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="46460-121">To make a copy of the NumberGuessWorkflowActivities project</span></span>  
   
 1.  <span data-ttu-id="46460-122">Açık **WF45GettingStartedTutorial** çözümde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] açık değilse.</span><span class="sxs-lookup"><span data-stu-id="46460-122">Open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] if it is not open.</span></span>  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
 9. <span data-ttu-id="46460-135">Yeniden açın **WF45GettingStartedTutorial** çözümde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="46460-135">Re-open the **WF45GettingStartedTutorial** solution in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span>  
   
-###  <span data-ttu-id="46460-136"><a name="BKMK_UpdateWorkflows"></a>İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-136"><a name="BKMK_UpdateWorkflows"></a> To update the workflows</span></span>  
+###  <a name="BKMK_UpdateWorkflows"></a><span data-ttu-id="46460-136">İş akışları güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-136">To update the workflows</span></span>  
  <span data-ttu-id="46460-137">Bu bölümde, iş akışı tanımları güncelleştirilir.</span><span class="sxs-lookup"><span data-stu-id="46460-137">In this section, the workflow definitions are updated.</span></span> <span data-ttu-id="46460-138">İki `WriteLine` kullanıcının tahmin üzerinde görüş etkinlikleri güncelleştirilmiş ve yeni bir `WriteLine` etkinlik sayısını tahmin sonra oyun hakkında ek bilgi sağlayan eklenir.</span><span class="sxs-lookup"><span data-stu-id="46460-138">The two `WriteLine` activities that give feedback on the user's guess are updated, and a new `WriteLine` activity is added that provides additional information about the game once the number is guessed.</span></span>  
   
-####  <span data-ttu-id="46460-139"><a name="BKMK_UpdateStateMachine"></a>Durum makinesi iş akışını güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-139"><a name="BKMK_UpdateStateMachine"></a> To update the StateMachine workflow</span></span>  
+####  <a name="BKMK_UpdateStateMachine"></a><span data-ttu-id="46460-139">Durum makinesi iş akışını güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-139">To update the StateMachine workflow</span></span>  
   
 1.  <span data-ttu-id="46460-140">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** projesi, çift **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="46460-140">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **StateMachineNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="46460-148"><a name="BKMK_UpdateFlowchart"></a>Akış iş akışı güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-148"><a name="BKMK_UpdateFlowchart"></a> To update the Flowchart workflow</span></span>  
+####  <a name="BKMK_UpdateFlowchart"></a><span data-ttu-id="46460-148">Akış iş akışı güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-148">To update the Flowchart workflow</span></span>  
   
 1.  <span data-ttu-id="46460-149">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** projesi, çift **FlowchartNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="46460-149">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **FlowchartNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <span data-ttu-id="46460-155"><a name="BKMK_UpdateSequential"></a>Sıralı iş akışı güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-155"><a name="BKMK_UpdateSequential"></a> To update the Sequential workflow</span></span>  
+####  <a name="BKMK_UpdateSequential"></a><span data-ttu-id="46460-155">Sıralı iş akışı güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-155">To update the Sequential workflow</span></span>  
   
 1.  <span data-ttu-id="46460-156">İçinde **Çözüm Gezgini**altında **NumberGuessWorkflowActivities** projesi, çift **SequentialNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="46460-156">In **Solution Explorer**, under the **NumberGuessWorkflowActivities** project, double-click **SequentialNumberGuessWorkflow.xaml**.</span></span>  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/02/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <span data-ttu-id="46460-161"><a name="BKMK_UpdateWorkflowVersionMap"></a>İş akışı önceki içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-161"><a name="BKMK_UpdateWorkflowVersionMap"></a> To update WorkflowVersionMap to include the previous workflow versions</span></span>  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a><span data-ttu-id="46460-161">İş akışı önceki içerecek şekilde WorkflowVersionMap güncelleştirmek için</span><span class="sxs-lookup"><span data-stu-id="46460-161">To update WorkflowVersionMap to include the previous workflow versions</span></span>  
   
 1.  <span data-ttu-id="46460-162">Çift **WorkflowVersionMap.cs** (veya **WorkflowVersionMap.vb**) altında **NumberGuessWorkflowHost** projeyi açın.</span><span class="sxs-lookup"><span data-stu-id="46460-162">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>  
   
@@ -558,7 +558,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-###  <span data-ttu-id="46460-172"><a name="BKMK_BuildAndRun"></a>Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="46460-172"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
+###  <a name="BKMK_BuildAndRun"></a><span data-ttu-id="46460-172">Derleme ve uygulamayı çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="46460-172">To build and run the application</span></span>  
   
 1.  <span data-ttu-id="46460-173">Uygulamanızı oluşturmak için CTRL + SHIFT + B ve başlatmak için CTRL + F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="46460-173">Press CTRL+SHIFT+B to build the application, and then CTRL+F5 to start.</span></span>  
   
