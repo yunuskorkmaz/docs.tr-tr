@@ -20,7 +20,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/23/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="3632f-102">.NET Framework'teki yenilikler</span><span class="sxs-lookup"><span data-stu-id="3632f-102">What's new in the .NET Framework</span></span>
-<span data-ttu-id="3632f-103"><a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:</span><span class="sxs-lookup"><span data-stu-id="3632f-103"><a name="introduction"></a>This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  
+<a name="introduction"></a><span data-ttu-id="3632f-103">Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:</span><span class="sxs-lookup"><span data-stu-id="3632f-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  
  
 <span data-ttu-id="3632f-104">[.NET framework 4.7.1](#v471)  </span><span class="sxs-lookup"><span data-stu-id="3632f-104">[.NET Framework 4.7.1](#v471)  </span></span>  
 <span data-ttu-id="3632f-105">[.NET framework 4.7](#v47) </span><span class="sxs-lookup"><span data-stu-id="3632f-105">[.NET Framework 4.7](#v47) </span></span>  
