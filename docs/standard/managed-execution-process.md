@@ -27,7 +27,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="b138e-102">Yönetilen Yürütme İşlemi</span><span class="sxs-lookup"><span data-stu-id="b138e-102">Managed Execution Process</span></span>
-<span data-ttu-id="b138e-103"><a name="introduction"></a>Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınmıştır aşağıdaki adımları içerir:</span><span class="sxs-lookup"><span data-stu-id="b138e-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a><span data-ttu-id="b138e-103">Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınmıştır aşağıdaki adımları içerir:</span><span class="sxs-lookup"><span data-stu-id="b138e-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="b138e-104">[Derleyici seçme](#choosing_a_compiler).</span><span class="sxs-lookup"><span data-stu-id="b138e-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   

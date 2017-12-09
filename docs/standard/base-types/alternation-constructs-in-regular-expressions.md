@@ -31,7 +31,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="cc0d5-102">Normal İfadelerdeki Değişim Yapıları</span><span class="sxs-lookup"><span data-stu-id="cc0d5-102">Alternation Constructs in Regular Expressions</span></span>
-<span data-ttu-id="cc0d5-103"><a name="top"></a>Değişim yapıları değiştirin ya da etkinleştirmek için normal bir ifade / veya veya koşullu eşleştirme.</span><span class="sxs-lookup"><span data-stu-id="cc0d5-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="cc0d5-104">.NET üç değişim yapıları destekler:</span><span class="sxs-lookup"><span data-stu-id="cc0d5-104">.NET supports three alternation constructs:</span></span>  
+<a name="top"></a><span data-ttu-id="cc0d5-103">Değişim yapıları değiştirin ya da etkinleştirmek için normal bir ifade / veya veya koşullu eşleştirme.</span><span class="sxs-lookup"><span data-stu-id="cc0d5-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="cc0d5-104">.NET üç değişim yapıları destekler:</span><span class="sxs-lookup"><span data-stu-id="cc0d5-104">.NET supports three alternation constructs:</span></span>  
   
 -   [<span data-ttu-id="cc0d5-105">Deseni ile eşleşen &#124;</span><span class="sxs-lookup"><span data-stu-id="cc0d5-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   

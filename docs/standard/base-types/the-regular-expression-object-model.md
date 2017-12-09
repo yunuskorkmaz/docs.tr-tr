@@ -52,7 +52,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="the-regular-expression-object-model"></a><span data-ttu-id="9660a-102">Normal İfade Nesnesi Modeli</span><span class="sxs-lookup"><span data-stu-id="9660a-102">The Regular Expression Object Model</span></span>
-<span data-ttu-id="9660a-103"><a name="introduction"></a>Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar.</span><span class="sxs-lookup"><span data-stu-id="9660a-103"><a name="introduction"></a> This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="9660a-104">Aşağıdaki bölümleri içerir:</span><span class="sxs-lookup"><span data-stu-id="9660a-104">It contains the following sections:</span></span>  
+<a name="introduction"></a><span data-ttu-id="9660a-103">Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar.</span><span class="sxs-lookup"><span data-stu-id="9660a-103">This topic describes the object model used in working with .NET regular expressions.</span></span> <span data-ttu-id="9660a-104">Aşağıdaki bölümleri içerir:</span><span class="sxs-lookup"><span data-stu-id="9660a-104">It contains the following sections:</span></span>  
   
 -   [<span data-ttu-id="9660a-105">Normal ifade altyapısı</span><span class="sxs-lookup"><span data-stu-id="9660a-105">The Regular Expression Engine</span></span>](#Engine)  
   

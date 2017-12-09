@@ -26,7 +26,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="path-animations-overview"></a><span data-ttu-id="995fe-102">Yol Animasyonlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="995fe-102">Path Animations Overview</span></span>
-<span data-ttu-id="995fe-103"><a name="introduction"></a>Bu konu, çıkış değerlerini oluşturmak için geometrik yol kullanmanıza olanak yol animasyonları tanıtır.</span><span class="sxs-lookup"><span data-stu-id="995fe-103"><a name="introduction"></a> This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="995fe-104">Yol animasyonları karmaşık yollarda nesneleri döndürme ve taşıma için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="995fe-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
+<a name="introduction"></a><span data-ttu-id="995fe-103">Bu konu, çıkış değerlerini oluşturmak için geometrik yol kullanmanıza olanak yol animasyonları tanıtır.</span><span class="sxs-lookup"><span data-stu-id="995fe-103">This topic introduces path animations, which enable you to use a geometric path to generate output values.</span></span> <span data-ttu-id="995fe-104">Yol animasyonları karmaşık yollarda nesneleri döndürme ve taşıma için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="995fe-104">Path animations are useful for moving and rotating objects along complex paths.</span></span>  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a><span data-ttu-id="995fe-105">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="995fe-105">Prerequisites</span></span>  

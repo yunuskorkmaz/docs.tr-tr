@@ -27,7 +27,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="88fc8-102">Çöp Toplamanın Temelleri</span><span class="sxs-lookup"><span data-stu-id="88fc8-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="88fc8-103"><a name="top"></a>Ortak dil çalışma zamanı (CLR), atık toplayıcı otomatik bellek yöneticisi olarak görev yapar.</span><span class="sxs-lookup"><span data-stu-id="88fc8-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="88fc8-104">Aşağıdaki avantajları sağlar:</span><span class="sxs-lookup"><span data-stu-id="88fc8-104">It provides the following benefits:</span></span>  
+<a name="top"></a><span data-ttu-id="88fc8-103">Ortak dil çalışma zamanı (CLR), atık toplayıcı otomatik bellek yöneticisi olarak görev yapar.</span><span class="sxs-lookup"><span data-stu-id="88fc8-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="88fc8-104">Aşağıdaki avantajları sağlar:</span><span class="sxs-lookup"><span data-stu-id="88fc8-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="88fc8-105">Belleği serbest bırakmak zorunda kalmadan uygulamanızı geliştirmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="88fc8-105">Enables you to develop your application without having to free memory.</span></span>  
   
