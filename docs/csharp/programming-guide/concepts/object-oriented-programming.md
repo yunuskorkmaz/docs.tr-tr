@@ -59,7 +59,7 @@ ms.lasthandoff: 11/08/2017
   
 -   [<span data-ttu-id="a7c1c-124">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-124">Delegates</span></span>](#Delegates)  
   
-##  <span data-ttu-id="a7c1c-125"><a name="Classes"></a>Sınıflar ve nesneler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-125"><a name="Classes"></a> Classes and Objects</span></span>  
+##  <a name="Classes"></a><span data-ttu-id="a7c1c-125">Sınıflar ve nesneler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-125">Classes and Objects</span></span>  
  <span data-ttu-id="a7c1c-126">Koşulları *sınıfı* ve *nesne* bazen birbirinin yerine, ancak aslında, sınıfları açıklar kullanılan *türü* nesnelerin nesneleri kullanılabilir durumdayken  *örnekleri* sınıfların.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-126">The terms *class* and *object* are sometimes used interchangeably, but in fact, classes describe the *type* of objects, while objects are usable *instances* of classes.</span></span> <span data-ttu-id="a7c1c-127">Bu nedenle, bir nesne oluşturma işlemi adlı *örneklemesi*.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-127">So, the act of creating an object is called *instantiation*.</span></span> <span data-ttu-id="a7c1c-128">Şeması benzerleme kullanarak şeması sınıftır ve o şeması yapılan bir yapı bir nesnedir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-128">Using the blueprint analogy, a class is a blueprint, and an object is a building made from that blueprint.</span></span>  
   
  <span data-ttu-id="a7c1c-129">Bir sınıf tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-129">To define a class:</span></span>  
@@ -86,10 +86,10 @@ struct SampleStruct
   
 -   [<span data-ttu-id="a7c1c-134">yapısı</span><span class="sxs-lookup"><span data-stu-id="a7c1c-134">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <span data-ttu-id="a7c1c-135"><a name="Members"></a>Sınıf üyeleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-135"><a name="Members"></a> Class Members</span></span>  
+###  <a name="Members"></a><span data-ttu-id="a7c1c-135">Sınıf üyeleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-135">Class Members</span></span>  
  <span data-ttu-id="a7c1c-136">Her sınıf farklı olabilir *sınıfı üyeleri* sınıfı verileri, sınıf davranışını tanımlayan yöntemleri ve farklı sınıflar ve nesneler arasındaki iletişimi sağlamak olayları tanımlayan özelliği içerir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-136">Each class can have different *class members* that include properties that describe class data, methods that define class behavior, and events that provide communication between different classes and objects.</span></span>  
   
-####  <span data-ttu-id="a7c1c-137"><a name="Properties"></a>Özellikleri ve alanları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-137"><a name="Properties"></a> Properties and Fields</span></span>  
+####  <a name="Properties"></a><span data-ttu-id="a7c1c-137">Özellikleri ve alanları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-137">Properties and Fields</span></span>  
  <span data-ttu-id="a7c1c-138">Alanları ve özellikleri bir nesne içeren bilgileri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-138">Fields and properties represent information that an object contains.</span></span> <span data-ttu-id="a7c1c-139">Bunlar okunabilir veya doğrudan ayarlamak için alanları gibi değişkenlerdir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-139">Fields are like variables because they can be read or set directly.</span></span>  
   
  <span data-ttu-id="a7c1c-140">Bir alan tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-140">To define a field:</span></span>  
@@ -138,7 +138,7 @@ class SampleClass
   
 -   [<span data-ttu-id="a7c1c-151">ayarlama</span><span class="sxs-lookup"><span data-stu-id="a7c1c-151">set</span></span>](../../../csharp/language-reference/keywords/set.md)  
   
-####  <span data-ttu-id="a7c1c-152"><a name="Methods"></a>Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-152"><a name="Methods"></a> Methods</span></span>  
+####  <a name="Methods"></a><span data-ttu-id="a7c1c-152">Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-152">Methods</span></span>  
  <span data-ttu-id="a7c1c-153">A *yöntemi* bir nesne gerçekleştirebileceğiniz bir eylemdir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-153">A *method* is an action that an object can perform.</span></span>  
   
  <span data-ttu-id="a7c1c-154">Bir sınıfın bir yöntemi tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-154">To define a method of a class:</span></span>  
@@ -170,7 +170,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [<span data-ttu-id="a7c1c-161">Genişletme yöntemleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-161">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <span data-ttu-id="a7c1c-162"><a name="Constructors"></a>Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="a7c1c-162"><a name="Constructors"></a> Constructors</span></span>  
+####  <a name="Constructors"></a><span data-ttu-id="a7c1c-162">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="a7c1c-162">Constructors</span></span>  
  <span data-ttu-id="a7c1c-163">Oluşturucular belirli bir türde bir nesne oluşturulduğunda, otomatik olarak yürütülen sınıfı yöntemleridir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-163">Constructors are class methods that are executed automatically when an object of a given type is created.</span></span> <span data-ttu-id="a7c1c-164">Oluşturucular genellikle yeni nesnenin veri üyeleri başlatır.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-164">Constructors usually initialize the data members of the new object.</span></span> <span data-ttu-id="a7c1c-165">Yalnızca bir sınıf oluşturulduğunda sonra bir oluşturucu çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-165">A constructor can run only once when a class is created.</span></span> <span data-ttu-id="a7c1c-166">Ayrıca, Oluşturucusu kodda, başka bir kod sınıfında önce her zaman çalışır.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-166">Furthermore, the code in the constructor always runs before any other code in a class.</span></span> <span data-ttu-id="a7c1c-167">Ancak, başka bir yöntem için olduğu gibi aynı şekilde, birden çok Oluşturucusu aşırı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-167">However, you can create multiple constructor overloads in the same way as for any other method.</span></span>  
   
  <span data-ttu-id="a7c1c-168">Bir sınıf için bir oluşturucu tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-168">To define a constructor for a class:</span></span>  
@@ -189,12 +189,12 @@ public class SampleClass
   
  <span data-ttu-id="a7c1c-170">[Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-170">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span>  
   
-####  <span data-ttu-id="a7c1c-171"><a name="Finalizers"></a>Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="a7c1c-171"><a name="Finalizers"></a> Finalizers</span></span>  
+####  <a name="Finalizers"></a><span data-ttu-id="a7c1c-171">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="a7c1c-171">Finalizers</span></span>  
  <span data-ttu-id="a7c1c-172">Sonlandırıcılar sınıfların örneklerini destruct için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-172">Finalizers are used to destruct instances of classes.</span></span> <span data-ttu-id="a7c1c-173">.NET Framework Atık toplayıcısının ayırma ve uygulamanızda yönetilen nesneler için bellek sürümü otomatik olarak yönetir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-173">In the .NET Framework, the garbage collector automatically manages the allocation and release of memory for the managed objects in your application.</span></span> <span data-ttu-id="a7c1c-174">Ancak, uygulamanızın oluşturduğu herhangi yönetilmeyen kaynakları temizlemek için sonlandırıcılar hala gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-174">However, you may still need finalizers to clean up any unmanaged resources that your application creates.</span></span> <span data-ttu-id="a7c1c-175">Yalnızca bir olabilir sonlandırıcılar bir sınıf için.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-175">There can be only one finalizers for a class.</span></span>  
   
  <span data-ttu-id="a7c1c-176">Sonlandırıcılar ve .NET Framework atık toplama hakkında daha fazla bilgi için bkz: [çöp toplama](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-176">For more information about finalizers and garbage collection in the .NET Framework, see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
-####  <span data-ttu-id="a7c1c-177"><a name="Events"></a>Olayları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-177"><a name="Events"></a> Events</span></span>  
+####  <a name="Events"></a><span data-ttu-id="a7c1c-177">Olayları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-177">Events</span></span>  
  <span data-ttu-id="a7c1c-178">Bir sınıf olayları etkinleştirin veya diğer sınıflar bildirmek için nesne veya nesnelerin çeken bir şey olduğunda oluşur.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-178">Events enable a class or object to notify other classes or objects when something of interest occurs.</span></span> <span data-ttu-id="a7c1c-179">Olay gönderir (veya oluşturur) sınıf adlı *yayımcı* ve olay alın (veya ele) sınıfları adlı *aboneleri*.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-179">The class that sends (or raises) the event is called the *publisher* and the classes that receive (or handle) the event are called *subscribers*.</span></span> <span data-ttu-id="a7c1c-180">Olaylar hakkında daha fazla bilgi için nasıl oluşturulur ve işlenmiş, bkz: [olayları](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-180">For more information about events, how they are raised and handled, see [Events](../../../standard/events/index.md).</span></span>  
   
 -   <span data-ttu-id="a7c1c-181">Bir sınıftaki bir olay bildirmek için kullanın [olay](../../../csharp/language-reference/keywords/event.md) anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-181">To declare an event in a class, use the [event](../../../csharp/language-reference/keywords/event.md) keyword.</span></span>  
@@ -203,7 +203,7 @@ public class SampleClass
   
 -   <span data-ttu-id="a7c1c-183">Bir olaya abone olmak için kullanmak `+=` bir olayından aboneliği kullanmak için işleci; `-=` işleci.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-183">To subscribe to an event, use the `+=` operator; to unsubscribe from an event, use the `-=` operator.</span></span>  
   
-####  <span data-ttu-id="a7c1c-184"><a name="NestedClasses"></a>İç içe geçmiş sınıflar</span><span class="sxs-lookup"><span data-stu-id="a7c1c-184"><a name="NestedClasses"></a> Nested Classes</span></span>  
+####  <a name="NestedClasses"></a><span data-ttu-id="a7c1c-184">İç içe geçmiş sınıflar</span><span class="sxs-lookup"><span data-stu-id="a7c1c-184">Nested Classes</span></span>  
  <span data-ttu-id="a7c1c-185">Başka bir sınıfın içinde tanımlanmış bir sınıf olarak adlandırılan *iç içe geçmiş*.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-185">A class defined within another class is called *nested*.</span></span> <span data-ttu-id="a7c1c-186">Varsayılan olarak, iç içe geçmiş sınıf özeldir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-186">By default, the nested class is private.</span></span>  
   
 ```csharp  
@@ -222,7 +222,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <span data-ttu-id="a7c1c-188"><a name="AccessModifiers"></a>Erişim değiştiricileri ve erişim düzeyleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-188"><a name="AccessModifiers"></a> Access Modifiers and Access Levels</span></span>  
+###  <a name="AccessModifiers"></a><span data-ttu-id="a7c1c-188">Erişim değiştiricileri ve erişim düzeyleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-188">Access Modifiers and Access Levels</span></span>  
  <span data-ttu-id="a7c1c-189">Tüm sınıflar ve sınıf üyeleri sağladıkları diğer sınıflara kullanarak hangi erişim düzeyi belirtebilirsiniz *erişim değiştiricileri*.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-189">All classes and class members can specify what access level they provide to other classes by using *access modifiers*.</span></span>  
   
  <span data-ttu-id="a7c1c-190">Aşağıdaki erişim değiştiricileri kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-190">The following access modifiers are available:</span></span>  
@@ -238,7 +238,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  <span data-ttu-id="a7c1c-205">Daha fazla bilgi için bkz: [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-205">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-###  <span data-ttu-id="a7c1c-206"><a name="InstantiatingClasses"></a>Örnek oluşturma sınıfları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-206"><a name="InstantiatingClasses"></a> Instantiating Classes</span></span>  
+###  <a name="InstantiatingClasses"></a><span data-ttu-id="a7c1c-206">Örnek oluşturma sınıfları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-206">Instantiating Classes</span></span>  
  <span data-ttu-id="a7c1c-207">Nesne oluşturmak için bir sınıf örneği veya bir sınıf örneği oluşturmak gerekir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-207">To create an object, you need to instantiate a class, or create a class instance.</span></span>  
   
 ```csharp  
@@ -268,7 +268,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [<span data-ttu-id="a7c1c-212">Nesne ve koleksiyon başlatıcıları</span><span class="sxs-lookup"><span data-stu-id="a7c1c-212">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <span data-ttu-id="a7c1c-213"><a name="Static"></a>Statik sınıflar ve üyeleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-213"><a name="Static"></a> Static Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="a7c1c-213">Statik sınıflar ve üyeleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-213">Static Classes and Members</span></span>  
  <span data-ttu-id="a7c1c-214">Bir statik sınıf özelliği, yordam veya bir sınıfın tüm örnekleri tarafından paylaşılan alan üyesidir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-214">A static member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="a7c1c-215">Statik bir üyenin tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-215">To define a static member:</span></span>  
@@ -290,7 +290,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  <span data-ttu-id="a7c1c-219">Daha fazla bilgi için bkz: [statik](../../../csharp/language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-219">For more information, see: [static](../../../csharp/language-reference/keywords/static.md).</span></span>  
   
-###  <span data-ttu-id="a7c1c-220"><a name="AnonymousTypes"></a>Anonim türler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-220"><a name="AnonymousTypes"></a> Anonymous Types</span></span>  
+###  <a name="AnonymousTypes"></a><span data-ttu-id="a7c1c-220">Anonim türler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-220">Anonymous Types</span></span>  
  <span data-ttu-id="a7c1c-221">Anonim türler veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmak etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-221">Anonymous types enable you to create objects without writing a class definition for the data type.</span></span> <span data-ttu-id="a7c1c-222">Bunun yerine, derleyici bir sınıf sizin için oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-222">Instead, the compiler generates a class for you.</span></span> <span data-ttu-id="a7c1c-223">Sınıf kullanılabilir adı yok ve nesne bildirme belirttiğiniz özellikler içerir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-223">The class has no usable name and contains the properties you specify in declaring the object.</span></span>  
   
  <span data-ttu-id="a7c1c-224">Anonim bir türün bir örneğini oluşturmak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-224">To create an instance of an anonymous type:</span></span>  
@@ -303,7 +303,7 @@ var sampleObject =
   
  <span data-ttu-id="a7c1c-225">Daha fazla bilgi için bkz: [anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-225">For more information, see: [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-##  <span data-ttu-id="a7c1c-226"><a name="Inheritance"></a>Devralma</span><span class="sxs-lookup"><span data-stu-id="a7c1c-226"><a name="Inheritance"></a> Inheritance</span></span>  
+##  <a name="Inheritance"></a><span data-ttu-id="a7c1c-226">Devralma</span><span class="sxs-lookup"><span data-stu-id="a7c1c-226">Inheritance</span></span>  
  <span data-ttu-id="a7c1c-227">Devralma yeniden kullanır, genişletir ve başka bir sınıf içinde tanımlanan davranışını değiştiren yeni bir sınıf oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-227">Inheritance enables you to create a new class that reuses, extends, and modifies the behavior that is defined in another class.</span></span> <span data-ttu-id="a7c1c-228">Üyeleri devralındığı sınıfı adlı *temel sınıfı*, bu üyeler devralan sınıf adı verilen ve *türetilmiş sınıf*.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-228">The class whose members are inherited is called the *base class*, and the class that inherits those members is called the *derived class*.</span></span> <span data-ttu-id="a7c1c-229">Ancak, C# tüm sınıflar örtük olarak devralınmalıdır <xref:System.Object> .NET sınıf hiyerarşisi destekleyen ve tüm sınıfları için alt düzey hizmetleri sağlayan sınıf.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-229">However, all classes in C# implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.</span></span>  
   
 > [!NOTE]
@@ -335,7 +335,7 @@ public abstract class B { }
   
 -   [<span data-ttu-id="a7c1c-239">Özet</span><span class="sxs-lookup"><span data-stu-id="a7c1c-239">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <span data-ttu-id="a7c1c-240"><a name="Overriding"></a>Üyeleri geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="a7c1c-240"><a name="Overriding"></a> Overriding Members</span></span>  
+###  <a name="Overriding"></a><span data-ttu-id="a7c1c-240">Üyeleri geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="a7c1c-240">Overriding Members</span></span>  
  <span data-ttu-id="a7c1c-241">Varsayılan olarak, türetilmiş bir sınıf tüm üyelerin kendi taban sınıfından devralıyor.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-241">By default, a derived class inherits all members from its base class.</span></span> <span data-ttu-id="a7c1c-242">Devralınan üye davranışını değiştirmek istiyorsanız, bunu geçersiz kılmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-242">If you want to change the behavior of the inherited member, you need to override it.</span></span> <span data-ttu-id="a7c1c-243">Diğer bir deyişle, yeni bir uygulama yöntemi, özelliği veya olay türetilen sınıfta tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-243">That is, you can define a new implementation of the method, property or event in the derived class.</span></span>  
   
  <span data-ttu-id="a7c1c-244">Aşağıdaki değiştiricileri özellikleri ve yöntemleri nasıl geçersiz kılınır denetlemek için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-244">The following modifiers are used to control how properties and methods are overridden:</span></span>  
@@ -347,7 +347,7 @@ public abstract class B { }
 |[<span data-ttu-id="a7c1c-251">Özet</span><span class="sxs-lookup"><span data-stu-id="a7c1c-251">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="a7c1c-252">Gerektiren türetilen bir sınıfta geçersiz kılınmak üzere bir sınıf üyesi.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-252">Requires that a class member to be overridden in the derived class.</span></span>|  
 |[<span data-ttu-id="a7c1c-253">New değiştiricisi</span><span class="sxs-lookup"><span data-stu-id="a7c1c-253">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)|<span data-ttu-id="a7c1c-254">Bir taban sınıftan devralınan üye gizler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-254">Hides a member inherited from a base class</span></span>|  
   
-##  <span data-ttu-id="a7c1c-255"><a name="Interfaces"></a>Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-255"><a name="Interfaces"></a> Interfaces</span></span>  
+##  <a name="Interfaces"></a><span data-ttu-id="a7c1c-255">Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a7c1c-255">Interfaces</span></span>  
  <span data-ttu-id="a7c1c-256">Sınıfları gibi arabirimler özellikleri, yöntemleri ve olayları kümesini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-256">Interfaces, like classes, define a set of properties, methods, and events.</span></span> <span data-ttu-id="a7c1c-257">Ancak sınıflarından farklı olarak, uygulama arabirimleri sağlamaz.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-257">But unlike classes, interfaces do not provide implementation.</span></span> <span data-ttu-id="a7c1c-258">Bunlar sınıfları tarafından uygulanan ve sınıflardan ayrı varlıklar olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-258">They are implemented by classes, and defined as separate entities from classes.</span></span> <span data-ttu-id="a7c1c-259">Tam olarak tanımlandığı şekilde bir arabirimini uygulayan bir sınıf her açıdan bu arabirimi uygulamalıdır içeren bir sözleşme bir arabirimi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-259">An interface represents a contract, in that a class that implements an interface must implement every aspect of that interface exactly as it is defined.</span></span>  
   
  <span data-ttu-id="a7c1c-260">Bir arabirim tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-260">To define an interface:</span></span>  
@@ -377,7 +377,7 @@ class SampleClass : ISampleInterface
   
  [<span data-ttu-id="a7c1c-264">arabirimi</span><span class="sxs-lookup"><span data-stu-id="a7c1c-264">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <span data-ttu-id="a7c1c-265"><a name="Generics"></a>Genel türler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-265"><a name="Generics"></a> Generics</span></span>  
+##  <a name="Generics"></a><span data-ttu-id="a7c1c-265">Genel türler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-265">Generics</span></span>  
  <span data-ttu-id="a7c1c-266">Sınıflar, yapılar, arabirimler ve .NET Framework yöntemlerini içerebilir *tür parametrelerindeki* kullanan depolamak veya nesne türlerini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-266">Classes, structures, interfaces and methods in the .NET Framework can include *type parameters* that define types of objects that they can store or use.</span></span> <span data-ttu-id="a7c1c-267">Genel türler en yaygın örneği, bir koleksiyonda depolanan nesnelerin türü belirtebileceğiniz koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-267">The most common example of generics is a collection, where you can specify the type of objects to be stored in a collection.</span></span>  
   
  <span data-ttu-id="a7c1c-268">Genel bir sınıf tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="a7c1c-268">To define a generic class:</span></span>  
@@ -402,7 +402,7 @@ sampleObject.Field = "Sample string";
   
 -   [<span data-ttu-id="a7c1c-272">Genel türler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-272">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)  
   
-##  <span data-ttu-id="a7c1c-273"><a name="Delegates"></a>Temsilciler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-273"><a name="Delegates"></a> Delegates</span></span>  
+##  <a name="Delegates"></a><span data-ttu-id="a7c1c-273">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="a7c1c-273">Delegates</span></span>  
  <span data-ttu-id="a7c1c-274">A *temsilci* yöntem imzası tanımlar türüdür ve herhangi bir yöntem başvuru ile uyumlu bir imzası sağlayabilir.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-274">A *delegate* is a type that defines a method signature, and can provide a reference to any method with a compatible signature.</span></span> <span data-ttu-id="a7c1c-275">Çağırma (çağrı yöntemi temsilci aracılığıyla veya).</span><span class="sxs-lookup"><span data-stu-id="a7c1c-275">You can invoke (or call) the method through the delegate.</span></span> <span data-ttu-id="a7c1c-276">Temsilciler, yöntemleri bağımsız değişkenler olarak diğer yöntemlere geçirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a7c1c-276">Delegates are used to pass methods as arguments to other methods.</span></span>  
   
 > [!NOTE]

@@ -29,7 +29,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="1797e-111">.NET Framework 4 veya sonraki sürümünü ve Excel farklı bir sürümü yüklü ikinci bir bilgisayar.</span><span class="sxs-lookup"><span data-stu-id="1797e-111">A second computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-##  <span data-ttu-id="1797e-112"><a name="BKMK_createapp"></a>Microsoft Office birden çok sürümü ile çalışan bir uygulama oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="1797e-112"><a name="BKMK_createapp"></a> To create an application that works with multiple versions of Microsoft Office</span></span>  
+##  <a name="BKMK_createapp"></a><span data-ttu-id="1797e-112">Microsoft Office birden çok sürümü ile çalışan bir uygulama oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="1797e-112">To create an application that works with multiple versions of Microsoft Office</span></span>  
   
 1.  <span data-ttu-id="1797e-113">Excel yüklü olmadığı bir bilgisayara Visual Studio'yu başlatın.</span><span class="sxs-lookup"><span data-stu-id="1797e-113">Start Visual Studio on a computer on which Excel is installed.</span></span>  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/21/2017
   
 9. <span data-ttu-id="1797e-130">Projesini derlemeyi ve çalıştırmayı için CTRL + F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="1797e-130">Press CTRL+F5 to build and run the project.</span></span> <span data-ttu-id="1797e-131">Bir Excel çalışma kitabı örnek kodda belirtilen konumda oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.</span><span class="sxs-lookup"><span data-stu-id="1797e-131">Verify that an Excel workbook has been created at the location specified in the example code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-##  <span data-ttu-id="1797e-132"><a name="BKMK_publishapp"></a>Microsoft Office'in farklı bir sürümü yüklü olduğu bir bilgisayar için uygulama yayımlamak için</span><span class="sxs-lookup"><span data-stu-id="1797e-132"><a name="BKMK_publishapp"></a> To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
+##  <a name="BKMK_publishapp"></a><span data-ttu-id="1797e-132">Microsoft Office'in farklı bir sürümü yüklü olduğu bir bilgisayar için uygulama yayımlamak için</span><span class="sxs-lookup"><span data-stu-id="1797e-132">To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
   
 1.  <span data-ttu-id="1797e-133">Bu kılavuzda Visual Studio tarafından oluşturulan projeyi açın.</span><span class="sxs-lookup"><span data-stu-id="1797e-133">Open the project created by this walkthrough in Visual Studio.</span></span>  
   

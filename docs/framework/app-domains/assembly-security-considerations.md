@@ -33,7 +33,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="8f63c-102">Derleme Güvenliği Konuları</span><span class="sxs-lookup"><span data-stu-id="8f63c-102">Assembly Security Considerations</span></span>
-<span data-ttu-id="8f63c-103"><a name="top"></a>Bir derlemeyi derlerken, derleme çalıştırılması için gerekli izinleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8f63c-103"><a name="top"></a> When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="8f63c-104">Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="8f63c-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
+<a name="top"></a><span data-ttu-id="8f63c-103">Bir derlemeyi derlerken, derleme çalıştırılması için gerekli izinleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8f63c-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="8f63c-104">Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="8f63c-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  
   
  <span data-ttu-id="8f63c-105">Kanıtın kullanıldığı iki farklı yol vardır:</span><span class="sxs-lookup"><span data-stu-id="8f63c-105">There are two distinct ways evidence is used:</span></span>  
   

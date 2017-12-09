@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="prerequisites"></a><span data-ttu-id="f7d11-122">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="f7d11-122">Prerequisites</span></span>  
  <span data-ttu-id="f7d11-123">Visual Studio 2012 veya sonraki sürümünü bilgisayarınızda yüklü olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f7d11-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="f7d11-124">Daha fazla bilgi için bkz: [Microsoft Web sitesi](http://go.microsoft.com/fwlink/?LinkId=235233).</span><span class="sxs-lookup"><span data-stu-id="f7d11-124">For more information, see the [Microsoft website](http://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <span data-ttu-id="f7d11-125"><a name="CreateWPFApp"></a>Bir WPF uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-125"><a name="CreateWPFApp"></a> To create a WPF application</span></span>  
+###  <a name="CreateWPFApp"></a><span data-ttu-id="f7d11-125">Bir WPF uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-125">To create a WPF application</span></span>  
   
 1.  <span data-ttu-id="f7d11-126">Visual Studio'yu başlatın.</span><span class="sxs-lookup"><span data-stu-id="f7d11-126">Start Visual Studio.</span></span>  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-131">Yeni Proje görünür **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="f7d11-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <span data-ttu-id="f7d11-132"><a name="MainWindow"></a>Basit bir WPF MainWindow tasarlamak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-132"><a name="MainWindow"></a> To design a simple WPF MainWindow</span></span>  
+###  <a name="MainWindow"></a><span data-ttu-id="f7d11-132">Basit bir WPF MainWindow tasarlamak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-132">To design a simple WPF MainWindow</span></span>  
   
 1.  <span data-ttu-id="f7d11-133">Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-145">WPF XAML Tasarımcısı hakkında daha fazla bilgi için bkz: [XAML Tasarımcısını kullanarak bir kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="f7d11-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <span data-ttu-id="f7d11-146"><a name="AddRef"></a>Bir başvuru eklemek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-146"><a name="AddRef"></a> To add a reference</span></span>  
+###  <a name="AddRef"></a><span data-ttu-id="f7d11-146">Bir başvuru eklemek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-146">To add a reference</span></span>  
   
 1.  <span data-ttu-id="f7d11-147">İçinde **Çözüm Gezgini**, projenizin adını vurgulayın.</span><span class="sxs-lookup"><span data-stu-id="f7d11-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
 6.  <span data-ttu-id="f7d11-153">Seçin **Tamam** düğmesi iletişim kutusunu kapatın.</span><span class="sxs-lookup"><span data-stu-id="f7d11-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <span data-ttu-id="f7d11-154"><a name="usingDir"></a>Eklemek için gerekli yönergeleri kullanma</span><span class="sxs-lookup"><span data-stu-id="f7d11-154"><a name="usingDir"></a> To add necessary using directives</span></span>  
+###  <a name="usingDir"></a><span data-ttu-id="f7d11-154">Eklemek için gerekli yönergeleri kullanma</span><span class="sxs-lookup"><span data-stu-id="f7d11-154">To add necessary using directives</span></span>  
   
 1.  <span data-ttu-id="f7d11-155">İçinde **Çözüm Gezgini**MainWindow.xaml.cs için kısayol menüsünü açın ve ardından **görünümü kodu**.</span><span class="sxs-lookup"><span data-stu-id="f7d11-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <span data-ttu-id="f7d11-157"><a name="synchronous"></a>Zaman uyumlu bir uygulama oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-157"><a name="synchronous"></a> To create a synchronous application</span></span>  
+###  <a name="synchronous"></a><span data-ttu-id="f7d11-157">Zaman uyumlu bir uygulama oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="f7d11-157">To create a synchronous application</span></span>  
   
 1.  <span data-ttu-id="f7d11-158">Tasarım penceresinde MainWindow.xaml, çift **Başlat** oluşturmak için düğmesini `startButton_Click` MainWindow.xaml.cs olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.cs.</span></span>  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <span data-ttu-id="f7d11-167"><a name="testSynch"></a>Zaman uyumlu çözümü test etmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-167"><a name="testSynch"></a> To test the synchronous solution</span></span>  
+###  <a name="testSynch"></a><span data-ttu-id="f7d11-167">Zaman uyumlu çözümü test etmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-167">To test the synchronous solution</span></span>  
   
 1.  <span data-ttu-id="f7d11-168">Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-170">Sayıları görüntülemek için birkaç saniye sürer dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="f7d11-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="f7d11-171">İstenen kaynaklar indirmek beklerken bu süre içinde kullanıcı Arabirimi iş parçacığı engellendi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="f7d11-172">Sonuç olarak, taşıyamazsınız, en üst düzeye çıkarmak, simge durumuna küçült veya seçtiğiniz sonra bile görüntü penceresini kapatın **Başlat** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="f7d11-173">Görüntülenecek bayt sayıları başlatana kadar bu çaba başarısız.</span><span class="sxs-lookup"><span data-stu-id="f7d11-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="f7d11-174">Bir Web sitesi yanıt vermiyor gösterge olmadan başarısız hangi sitenin varsa.</span><span class="sxs-lookup"><span data-stu-id="f7d11-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="f7d11-175">Hatta bekleme durdurmak ve program kapatmak zordur.</span><span class="sxs-lookup"><span data-stu-id="f7d11-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <span data-ttu-id="f7d11-176"><a name="GetURLContents"></a>Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-176"><a name="GetURLContents"></a> To convert GetURLContents to an asynchronous method</span></span>  
+###  <a name="GetURLContents"></a><span data-ttu-id="f7d11-176">Zaman uyumsuz bir yöntem GetURLContents dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-176">To convert GetURLContents to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="f7d11-177">Zaman uyumsuz bir çözüme zaman uyumlu çözüm dönüştürmek için başlatmak için en iyi yerdir bulunduğu `GetURLContents` çünkü çağrıları <xref:System.Net.HttpWebRequest> yöntemi <xref:System.Net.HttpWebRequest.GetResponse%2A> ve <xref:System.IO.Stream> yöntemi <xref:System.IO.Stream.CopyTo%2A> burada web uygulama erişen olan .</span><span class="sxs-lookup"><span data-stu-id="f7d11-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="f7d11-178">.NET Framework dönüştürme her iki yöntem zaman uyumsuz sürümlerini sağlayarak kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="f7d11-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
@@ -342,7 +342,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-220">Dönüştürme işlemi birkaç bu değişikliklerle `GetURLContents` zaman uyumsuz bir yöntem tamamlandığında.</span><span class="sxs-lookup"><span data-stu-id="f7d11-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <span data-ttu-id="f7d11-221"><a name="SumPageSizes"></a>Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-221"><a name="SumPageSizes"></a> To convert SumPageSizes to an asynchronous method</span></span>  
+###  <a name="SumPageSizes"></a><span data-ttu-id="f7d11-221">Zaman uyumsuz bir yöntem SumPageSizes dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-221">To convert SumPageSizes to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="f7d11-222">İçin önceki yordamdaki adımları yineleyin `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="f7d11-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="f7d11-223">İlk olarak, araması olarak değiştirmelerine `GetURLContents` zaman uyumsuz bir çağrı için.</span><span class="sxs-lookup"><span data-stu-id="f7d11-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
@@ -382,7 +382,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-234">Dönüştürülmesi `SumPageSizes` için `SumPageSizesAsync` tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="f7d11-234">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <span data-ttu-id="f7d11-235"><a name="startButton"></a>Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-235"><a name="startButton"></a> To convert startButton_Click to an asynchronous method</span></span>  
+###  <a name="startButton"></a><span data-ttu-id="f7d11-235">Zaman uyumsuz bir yöntem startButton_Click dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-235">To convert startButton_Click to an asynchronous method</span></span>  
   
 1.  <span data-ttu-id="f7d11-236">Olay işleyicisinin çağrılan yöntemin adını değiştirmek `SumPageSizes` için `SumPageSizesAsync`, zaten yapmadıysanız.</span><span class="sxs-lookup"><span data-stu-id="f7d11-236">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
@@ -428,7 +428,7 @@ ms.lasthandoff: 11/21/2017
      <span data-ttu-id="f7d11-248">Proje dönüştürme için zaman uyumsuz zaman uyumlu işleme işlemi tamamlanır.</span><span class="sxs-lookup"><span data-stu-id="f7d11-248">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <span data-ttu-id="f7d11-249"><a name="testAsynch"></a>Zaman uyumsuz çözümü test etmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-249"><a name="testAsynch"></a> To test the asynchronous solution</span></span>  
+###  <a name="testAsynch"></a><span data-ttu-id="f7d11-249">Zaman uyumsuz çözümü test etmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-249">To test the asynchronous solution</span></span>  
   
 1.  <span data-ttu-id="f7d11-250">Programını çalıştırın ve ardından için F5 tuşuna seçin **Başlat** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-250">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
@@ -439,7 +439,7 @@ ms.lasthandoff: 11/21/2017
     -   <span data-ttu-id="f7d11-258">En önemlisi, kullanıcı Arabirimi iş parçacığı yüklemeleri sırasında engellenmiş değil.</span><span class="sxs-lookup"><span data-stu-id="f7d11-258">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="f7d11-259">Taşıma veya web kaynakları karşıdan yüklenirken pencereyi yeniden boyutlandırmak sayılan ve görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="f7d11-259">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="f7d11-260">Web sitelerinden birini yavaş veya yanıt vermiyor işlemi seçerek iptal edebilir **Kapat** düğmesi (sağ üst köşesinde kırmızı alanında x).</span><span class="sxs-lookup"><span data-stu-id="f7d11-260">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <span data-ttu-id="f7d11-261"><a name="GetURLContentsAsync"></a>.NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-261"><a name="GetURLContentsAsync"></a> To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
+###  <a name="GetURLContentsAsync"></a><span data-ttu-id="f7d11-261">.NET Framework yöntemiyle yöntemi GetURLContentsAsync değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="f7d11-261">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
 1.  <span data-ttu-id="f7d11-262">.NET Framework 4.5 kullanabileceğiniz birçok zaman uyumsuz yöntemleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="f7d11-262">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="f7d11-263">Bunlardan biri <xref:System.Net.Http.HttpClient> yöntemi <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, bu kılavuz için gerekenler yalnızca yapar.</span><span class="sxs-lookup"><span data-stu-id="f7d11-263">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="f7d11-264">Bunun yerine kullanabileceğiniz `GetURLContentsAsync` bir önceki yordamda oluşturduğunuz yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-264">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
@@ -464,7 +464,7 @@ ms.lasthandoff: 11/21/2017
   
      <span data-ttu-id="f7d11-270">Bu projenin sürümü davranışını "zaman uyumsuz çözümü test etmek için" yordamı açıklanan davranışı eşleşen ancak sizden daha az çaba ile bile gerekir.</span><span class="sxs-lookup"><span data-stu-id="f7d11-270">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <span data-ttu-id="f7d11-271"><a name="BKMK_CompleteCodeExamples"></a>Örnek</span><span class="sxs-lookup"><span data-stu-id="f7d11-271"><a name="BKMK_CompleteCodeExamples"></a> Example</span></span>  
+##  <a name="BKMK_CompleteCodeExamples"></a><span data-ttu-id="f7d11-271">Örnek</span><span class="sxs-lookup"><span data-stu-id="f7d11-271">Example</span></span>  
  <span data-ttu-id="f7d11-272">Aşağıdaki kod dönüştürme eş zamanlı işlemini zaman uyumsuz bir çözüm için tam örnek içeriyor zaman uyumsuz kullanarak `GetURLContentsAsync` yazdığınız yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f7d11-272">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="f7d11-273">Bunu kesinlikle özgün, zaman uyumlu çözüm benzer dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="f7d11-273">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```csharp  

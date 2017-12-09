@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <span data-ttu-id="e41ef-125">Dizin oluşturucular birden fazla biçimsel parametresi, örneğin, iki boyutlu bir dizi erişirken olabilir.</span><span class="sxs-lookup"><span data-stu-id="e41ef-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-##  <span data-ttu-id="e41ef-126"><a name="BKMK_RelatedSections"></a>İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="e41ef-126"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="e41ef-126">İlgili bölümler</span><span class="sxs-lookup"><span data-stu-id="e41ef-126">Related Sections</span></span>  
   
 -   [<span data-ttu-id="e41ef-127">Dizin oluşturucular kullanma</span><span class="sxs-lookup"><span data-stu-id="e41ef-127">Using Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
