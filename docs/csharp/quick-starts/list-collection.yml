@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# koleksiyonları"
 metadata:
@@ -8,14 +9,14 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Bu hızlı başlangıç C# etkileşimli olarak C# kod yazmak ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi oluşturmak, değiştirmek ve Koleksiyonlar ve diziler keşfedin dersleri içerir.\n"
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "Bu hızlı başlangıç C# etkileşimli olarak C# kod yazmak ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi oluşturmak, değiştirmek ve Koleksiyonlar ve diziler keşfedin dersleri içerir.\n"
 - title: "Listeleri oluşturma"
   durationInMinutes: 2
   content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın (Değiştir \"<name>\" adıyla) tıklatıp **çalıştırmak** düğmesi:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nYalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü içinde daha önce hızlı başlatır, öğrendiğinize kavramları kullanıyorsunuz.\n\nAdlarını görüntülemek için kod kullanır **Ara değerli dizeler**.  Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.\n\nŞimdi keşfetme tutun.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"

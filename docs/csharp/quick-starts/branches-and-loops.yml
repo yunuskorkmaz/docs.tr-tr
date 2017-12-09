@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "Dal ve döngüler"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection
   nextTutorialTitle: "C# koleksiyonları"
-items:
-- durationInMinutes: 1
-  content: "Bu hızlı başlangıç değişkenlerini inceler ve bu değişkenleri esas alarak yürütme yolu değiştirir kodunun nasıl yazılacağını öğretir. C# etkileşimli olarak yazma ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanacaksınız. Bu hızlı başlangıç dallanma ve döngü yapıları C# keşfedin dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
   ms.openlocfilehash: 93183a172fb5a94751c99c0f59f59af0b045ac09
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "Bu hızlı başlangıç değişkenlerini inceler ve bu değişkenleri esas alarak yürütme yolu değiştirir kodunun nasıl yazılacağını öğretir. C# etkileşimli olarak yazma ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanacaksınız. Bu hızlı başlangıç dallanma ve döngü yapıları C# keşfedin dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
 - title: "Eğer kullanarak kararlar deyimi"
   durationInMinutes: 4
   content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın ve tıklatın **çalıştırmak** düğmesi:\n\n```csharp\nint a = 5;\nint b = 6;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10.\");\n```\n\nBildirimi değiştirme `b` toplam 10'dan az olmasını sağlayın: \n\n```csharp\nint b = 3;\n```\n\nTıklatın **çalıştırmak** yeniden düğmesine tıklayın. Yanıt 10'dan az olduğundan, hiçbir şey yazdırılır. **Koşulu** olduğunuz test değer false. Olası dallarını birini yalnızca yazdıktan çünkü yürütmek için herhangi bir kod olmayan bir `if` deyimi: true dal.\n\n> [!TIP]\n> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. **Derleyici** bu hatalarını bulmak ve bunları sizin için rapor. Çıktı, hata iletileri içerdiğinde, örnek kod ve düzeltmek görmek için etkileşimli penceresinde kod yakından bakın.\n> Bu alıştırmada, C# kod yapısını öğrenmenize yardımcı olur.     \n\nBu ilk örnek gücünü gösterir `if` ve boolean türleri. A *boolean* iki değerlerden birine sahip bir değişken: `true` veya `false`. C# özel türünü tanımlayan `bool` boolean değişkenleri için. `if` Deyimi denetler değerini bir `bool`. Değer olduğunda `true`, aşağıdaki deyim `if` yürütür. Aksi takdirde atlanır. \n\nBu işlem koşullar denetleniyor ve bu koşullara göre deyimleri yürütme çok güçlü bir özelliktir. Daha fazla inceleyelim.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"

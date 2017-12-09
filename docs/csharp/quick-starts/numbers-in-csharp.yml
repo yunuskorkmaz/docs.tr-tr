@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "C# numaraları"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: "Dal ve C# döngüler"
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "Bu hızlı başlangıç C# sayı türleri hakkında etkileşimli olarak yazma C# ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi numaraları ve C# matematik işlemleri keşfedin dersleri içerir. Bu derslerin C# dil temelleri öğretir.\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "Bu hızlı başlangıç C# sayı türleri hakkında etkileşimli olarak yazma C# ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi numaraları ve C# matematik işlemleri keşfedin dersleri içerir. Bu derslerin C# dil temelleri öğretir.\n"
 - title: "Tamsayı matematik keşfedin"
   durationInMinutes: 4
   content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın ve tıklatın **çalıştırmak** düğmesi:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nTemel matematik işlemlerden tamsayılı yalnızca gördünüz. `int` Yazın gösteren bir **tamsayı**, pozitif veya negatif bir tam sayı. Kullandığınız `+` toplama simgesi. Diğer yaygın matematiksel işlemler tamsayılar şunlardır:\n\n- `-`için çıkarma\n- `*`çarpma için\n- `/`bölme için\n\n> [!TIP]\n> Bu Hızlı Başlangıç, kendi etkileşimli pencerede yazdığınız kodu değiştirerek keşfedebilirsiniz. Bu hızlı başlangıç her adımda deneyebilirsiniz örnekler verilmektedir.\n\nBu farklı işlemler inceleyerek başlayın. Bu işlemlerin her biri denemek için üçüncü satır değiştirin. Her düzenlemeden sonra tıklatın **çalıştırmak** düğmesi.\n\nÇıkarma:\n\n```csharp\nint c = a - b;\n```\n\nÇarpma:\n\n```csharp\nint c = a * b;\n```\n\nBölme: \n\n```csharp\nint c = a / b;\n```\n\nİsterseniz aynı satırda, birden çok matematik işlemleri gerçekleştirerek de deneyebilirsiniz.\n\n> [!TIP]\n> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. **Derleyici** bu hatalarını bulmak ve bunları sizin için rapor. Çıktı, hata iletileri içerdiğinde, örnek kod ve düzeltmek görmek için etkileşimli penceresinde kod yakından bakın.\n> Bu alıştırmada, C# kod yapısını öğrenmenize yardımcı olur.     \n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"

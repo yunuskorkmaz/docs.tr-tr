@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: Merhaba C#
 metadata:
@@ -10,14 +11,14 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-items:
-- durationInMinutes: 1
-  content: "Bu hızlı başlangıç C# etkileşimli olarak yazma C# ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. \"Hello World\" programla başlamak dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
   ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "Bu hızlı başlangıç C# etkileşimli olarak yazma C# ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. \"Hello World\" programla başlamak dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
 - title: "İlk C# programınızı çalıştırma"
   durationInMinutes: 2
   content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın ve tıklatın **çalıştırmak** düğmesi:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nTebrikler! İlk C# programınız çalıştırdıysanız. \"Hello World!\" iletisi yazdırır basit bir programdır. Kullanıldığını <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ileti yazdırmak için yöntem. `Console`Konsol penceresinde temsil eden bir tür değil. `WriteLine`bir yöntemi `Console` bu metin konsola metin satırının yazdırır türü.\n\nŞimdi geçmek ve daha fazlasını keşfedin. Bu ders geri kalanı ile çalışma araştırır `string` C# metin temsil eden tür. Gibi `Console` türü, `string` türüne sahip yöntemleri. `string` Yöntemler metni ile çalışır. \n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
