@@ -26,7 +26,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <span data-ttu-id="b469d-106">Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 olmalıdır veya daha yeni bilgisayarınızda yüklü.</span><span class="sxs-lookup"><span data-stu-id="b469d-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <span data-ttu-id="b469d-107"><a name="BKMK_CancelaTask"></a>Bir görevi iptal etme</span><span class="sxs-lookup"><span data-stu-id="b469d-107"><a name="BKMK_CancelaTask"></a> Cancel a Task</span></span>  
+##  <a name="BKMK_CancelaTask"></a><span data-ttu-id="b469d-107">Bir görevi iptal etme</span><span class="sxs-lookup"><span data-stu-id="b469d-107">Cancel a Task</span></span>  
  <span data-ttu-id="b469d-108">İlk örnek ilişkilendirir **iptal** tek indirme görev düğme.</span><span class="sxs-lookup"><span data-stu-id="b469d-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="b469d-109">Uygulama içeriği indirirken düğmesini seçerseniz, indirme iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="b469d-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="b469d-110">Örnek indirme</span><span class="sxs-lookup"><span data-stu-id="b469d-110">Downloading the Example</span></span>  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/21/2017
     Download canceled.  
     ```  
   
-##  <span data-ttu-id="b469d-140"><a name="BKMK_CancelaListofTasks"></a>Görev listesini iptal etme</span><span class="sxs-lookup"><span data-stu-id="b469d-140"><a name="BKMK_CancelaListofTasks"></a> Cancel a List of Tasks</span></span>  
+##  <a name="BKMK_CancelaListofTasks"></a><span data-ttu-id="b469d-140">Görev listesini iptal etme</span><span class="sxs-lookup"><span data-stu-id="b469d-140">Cancel a List of Tasks</span></span>  
  <span data-ttu-id="b469d-141">Aynı ilişkilendirerek birçok görevleri iptal etmek için önceki örnekte genişletebilirsiniz `CancellationTokenSource` her görev örneği.</span><span class="sxs-lookup"><span data-stu-id="b469d-141">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="b469d-142">Seçerseniz **iptal** düğmesi, henüz tam olmayan tüm görevler iptal.</span><span class="sxs-lookup"><span data-stu-id="b469d-142">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>  
   
 ### <a name="downloading-the-example"></a><span data-ttu-id="b469d-143">Örnek indirme</span><span class="sxs-lookup"><span data-stu-id="b469d-143">Downloading the Example</span></span>  
@@ -256,7 +256,7 @@ ms.lasthandoff: 11/21/2017
     Downloads canceled.  
     ```  
   
-##  <span data-ttu-id="b469d-164"><a name="BKMK_CompleteExamples"></a>Tam örnekleri</span><span class="sxs-lookup"><span data-stu-id="b469d-164"><a name="BKMK_CompleteExamples"></a> Complete Examples</span></span>  
+##  <a name="BKMK_CompleteExamples"></a><span data-ttu-id="b469d-164">Tam örnekleri</span><span class="sxs-lookup"><span data-stu-id="b469d-164">Complete Examples</span></span>  
  <span data-ttu-id="b469d-165">Aşağıdaki bölümler her önceki örnekler için kod içerir.</span><span class="sxs-lookup"><span data-stu-id="b469d-165">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="b469d-166">İçin bir başvuru eklemeniz gerekir fark <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="b469d-166">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
  <span data-ttu-id="b469d-167">Projelerden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046).</span><span class="sxs-lookup"><span data-stu-id="b469d-167">You can download the projects from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  

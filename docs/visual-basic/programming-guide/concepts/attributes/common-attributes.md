@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [<span data-ttu-id="643b7-108">Visual Basic öznitelikleri</span><span class="sxs-lookup"><span data-stu-id="643b7-108">Visual Basic Attributes</span></span>](#VB)  
   
-##  <span data-ttu-id="643b7-109"><a name="Global"></a>Genel Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="643b7-109"><a name="Global"></a> Global Attributes</span></span>  
+##  <a name="Global"></a><span data-ttu-id="643b7-109">Genel Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="643b7-109">Global Attributes</span></span>  
  <span data-ttu-id="643b7-110">Çoğu öznitelik sınıfları veya yöntemleri gibi belirli bir dil öğeleri uygulanır; Ancak, bazı öznitelikler genel — tüm derleme veya modülü için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="643b7-110">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="643b7-111">Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği, böyle bir bütünleştirilmiş sürüm bilgilerini eklemek için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="643b7-111">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```vb  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="643b7-153">Bir derleme yapılandırmasını (örneğin, tekil veya hata ayıklama) belirten özel bir öznitelik için bir derleme bildirimi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="643b7-153">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="643b7-154">Derleme bildirimi için bir kolay varsayılan diğer adı tanımlar</span><span class="sxs-lookup"><span data-stu-id="643b7-154">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <span data-ttu-id="643b7-155"><a name="Obsolete"></a>Artık kullanılmayan özniteliği</span><span class="sxs-lookup"><span data-stu-id="643b7-155"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+##  <a name="Obsolete"></a><span data-ttu-id="643b7-155">Artık kullanılmayan özniteliği</span><span class="sxs-lookup"><span data-stu-id="643b7-155">Obsolete Attribute</span></span>  
  <span data-ttu-id="643b7-156">`Obsolete` Özniteliği bir program varlık artık kullanım için önerilen biri olarak işaretler.</span><span class="sxs-lookup"><span data-stu-id="643b7-156">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="643b7-157">Artık kullanılmayan olarak işaretlenmiş bir varlığın her kullanın, daha sonra bir uyarı veya öznitelik nasıl yapılandırıldığına bağlı olarak bir hata oluşturur.</span><span class="sxs-lookup"><span data-stu-id="643b7-157">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="643b7-158">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="643b7-158">For example:</span></span>  
   
 ```vb  
@@ -125,7 +125,7 @@ b.NewMethod()
   
  <span data-ttu-id="643b7-166">`Obsolete` Özniteliği bir tek kullanımlık özniteliği ve öznitelikleri veren herhangi bir varlık için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="643b7-166">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="643b7-167">`Obsolete`bir diğer adı için <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="643b7-167">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <span data-ttu-id="643b7-168"><a name="Conditional"></a>Koşul özniteliği</span><span class="sxs-lookup"><span data-stu-id="643b7-168"><a name="Conditional"></a> Conditional Attribute</span></span>  
+##  <a name="Conditional"></a><span data-ttu-id="643b7-168">Koşul özniteliği</span><span class="sxs-lookup"><span data-stu-id="643b7-168">Conditional Attribute</span></span>  
  <span data-ttu-id="643b7-169">`Conditional` Özniteliği bir yönteminin yürütülmesi üzerinde önişlem tanımlayıcısını bağımlı yapar.</span><span class="sxs-lookup"><span data-stu-id="643b7-169">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="643b7-170">`Conditional` Özniteliktir için diğer ad <xref:System.Diagnostics.ConditionalAttribute>ve bir yöntem veya öznitelik sınıfı için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="643b7-170">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
  <span data-ttu-id="643b7-171">Bu örnekte, `Conditional` etkinleştirmek veya programa özgü tanı bilgilerini görüntülemeyi devre dışı bırakmak için bir yönteme uygulanır:</span><span class="sxs-lookup"><span data-stu-id="643b7-171">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
@@ -218,7 +218,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <span data-ttu-id="643b7-186"><a name="CallerInfo"></a>Arayan bilgileri öznitelikleri</span><span class="sxs-lookup"><span data-stu-id="643b7-186"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+##  <a name="CallerInfo"></a><span data-ttu-id="643b7-186">Arayan bilgileri öznitelikleri</span><span class="sxs-lookup"><span data-stu-id="643b7-186">Caller Info Attributes</span></span>  
  <span data-ttu-id="643b7-187">Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="643b7-187">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="643b7-188">Kaynak kodu dosya yolu, kaynak kodu ve arayan üye adı satır numarasını edinebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="643b7-188">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
  <span data-ttu-id="643b7-189">Üye arayan bilgileri almak için isteğe bağlı parametreler uygulanan öznitelikleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="643b7-189">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="643b7-190">Her isteğe bağlı bir parametre varsayılan bir değer belirtir.</span><span class="sxs-lookup"><span data-stu-id="643b7-190">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="643b7-191">Aşağıdaki tabloda tanımlanan arayan bilgileri öznitelikleri listeler <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı:</span><span class="sxs-lookup"><span data-stu-id="643b7-191">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
@@ -231,7 +231,7 @@ End Class
   
  <span data-ttu-id="643b7-200">Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz: [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="643b7-200">For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span></span>  
   
-##  <span data-ttu-id="643b7-201"><a name="VB"></a>Visual Basic öznitelikleri</span><span class="sxs-lookup"><span data-stu-id="643b7-201"><a name="VB"></a> Visual Basic Attributes</span></span>  
+##  <a name="VB"></a><span data-ttu-id="643b7-201">Visual Basic öznitelikleri</span><span class="sxs-lookup"><span data-stu-id="643b7-201">Visual Basic Attributes</span></span>  
  <span data-ttu-id="643b7-202">Aşağıdaki tabloda Visual Basic'e özel öznitelikleri listeler.</span><span class="sxs-lookup"><span data-stu-id="643b7-202">The following table lists the attributes that are specific to Visual Basic.</span></span>  
   
 |<span data-ttu-id="643b7-203">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="643b7-203">Attribute</span></span>|<span data-ttu-id="643b7-204">Amaç</span><span class="sxs-lookup"><span data-stu-id="643b7-204">Purpose</span></span>|  

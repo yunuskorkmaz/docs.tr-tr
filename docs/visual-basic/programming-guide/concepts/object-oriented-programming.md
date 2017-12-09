@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="6df6c-215">Nesne başlatıcıları: Adlandırılmış ve anonim türler</span><span class="sxs-lookup"><span data-stu-id="6df6c-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="6df6c-216"><a name="Static"></a>Paylaşılan sınıflar ve üyeleri</span><span class="sxs-lookup"><span data-stu-id="6df6c-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="6df6c-216">Paylaşılan sınıflar ve üyeleri</span><span class="sxs-lookup"><span data-stu-id="6df6c-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="6df6c-217">Bir paylaşılan sınıfı bir özellik, yordam veya bir sınıfın tüm örnekleri tarafından paylaşılan alan üyesidir.</span><span class="sxs-lookup"><span data-stu-id="6df6c-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="6df6c-218">Paylaşılan bir üyeye tanımlamak için:</span><span class="sxs-lookup"><span data-stu-id="6df6c-218">To define a shared member:</span></span>  
