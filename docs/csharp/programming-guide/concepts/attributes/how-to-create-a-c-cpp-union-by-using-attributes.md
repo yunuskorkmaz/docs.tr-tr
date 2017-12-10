@@ -11,11 +11,11 @@ ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 450fb922079ca6737b8db7754f25435b9c3b884b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Nasıl yapılır: öznitelikleri (C#) kullanarak C/C++ birleşimi oluşturma
 Öznitelikleri kullanarak yapılar bellekte nasıl düzenlenmiştir özelleştirebilirsiniz. Örneğin, kullanarak C/c++ birleşimi olarak Bilineni oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` öznitelikleri.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Öznitelikleri](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Öznitelikleri](../../../../../docs/standard/attributes/index.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Öznitelikler (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

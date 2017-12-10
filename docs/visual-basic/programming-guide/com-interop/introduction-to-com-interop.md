@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 81a9d0fc7036ff1b821c46687541311f26113212
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevselliğini kullanıma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel olsa da, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamaları birçok avantaj sunar.  
@@ -62,7 +62,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevsel
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
  [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Yönetilmeyen kod ile birlikte çalışma](https://msdn.microsoft.com/library/sd10k43k)  
+ [Yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md)  
  [Birlikte çalışabilirlik sorunlarını giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  

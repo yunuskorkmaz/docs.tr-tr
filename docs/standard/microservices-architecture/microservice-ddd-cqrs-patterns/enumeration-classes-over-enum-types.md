@@ -8,15 +8,15 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1745198720fd12a9d26aab2d2afb2c5dd6b6b49d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 88decdc2f2ea945dc04cdb66402b12bd972414ce
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
 
-[Numaralandırmalar](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx) (*numaralandırmaları* kısaca) bir tam sayı türü çevresinde bir ince dil sarmalayıcı şunlardır. Kapalı bir değerler kümesinden bir değer depolarken kullanımları sınırlamak isteyebilirsiniz. Cinsiyeti (örneğin, erkek, kadın, bilinmeyen) veya boyutları (S, M, L, XL) temel alan sınıflandırma iyi örnekler verilmiştir. Denetim akışı veya daha sağlam soyutlamalar numaralandırmaları kullanmak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür kullanımı kırılacak kodu Enum değerleri denetleme birçok denetim akışı deyimleri ile götürür.
+[Numaralandırmalar](../../../../docs/csharp/language-reference/keywords/enum.md) (*numaralandırmaları* kısaca) bir tam sayı türü çevresinde bir ince dil sarmalayıcı şunlardır. Kapalı bir değerler kümesinden bir değer depolarken kullanımları sınırlamak isteyebilirsiniz. Cinsiyeti (örneğin, erkek, kadın, bilinmeyen) veya boyutları (S, M, L, XL) temel alan sınıflandırma iyi örnekler verilmiştir. Denetim akışı veya daha sağlam soyutlamalar numaralandırmaları kullanmak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür kullanımı kırılacak kodu Enum değerleri denetleme birçok denetim akışı deyimleri ile götürür.
 
 Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştirmek numaralandırması sınıfları oluşturabilirsiniz. Ancak, bu kritik bir sorun değildir ve tercihinizi ise, çoğu durumda, kolaylık sağlamak için normal numaralandırmaları kullanmaya devam edebilirsiniz.
 

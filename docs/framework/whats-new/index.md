@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -674,7 +674,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [Profil oluşturma](#Profile461)
+- [Profil Oluşturma](#Profile461)
 
 - [NGen](#NGEN461)
 
@@ -777,7 +777,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 ### <a name="native-image-generator-ngen-pdbs"></a>Yerel Görüntü Oluşturucu (NGEN) PDB'leri
  Bir program bir makinede profil müşterilere makineler arası olay izleme sağlar ve profil oluşturma verileri .NET Framework, kullanıcı önceki sürümlerinde B. makine kullanarak kaynak satırı eşleme ile göz tüm modüller ve yerel görüntüler profili kopyalayın Analiz makine, kaynak yerel eşlemesi oluşturmak için IL PDB içeren makineye. İyi dosyaları phone uygulamaları için görece küçük, gibi olduğunda bu işlem çalışabilir olsa da, dosyaları masaüstü sistemlerine çok büyük ve kopyalamak için önemli zaman gerektirir.
 
- Ngen pdb ile NGen IL PDB bağımlılığını olmadan IL yerel eşleme içeren bir PDB oluşturabilirsiniz. Makineler arası olay izleme Senaryomuzda gereken tek şey yerel görüntü makine A makine b tarafından oluşturulan PDB kopyalayın ve kullanmak için [hata ayıklama arabirimi erişim API'leri](https://msdn.microsoft.com/library/ee8x173s.aspx) IL PDB'ın kaynak IL eşleme ve yerel okumak için PDB'ın IL yerel eşleme görüntü. Her iki eşlemeleri birleştiren bir kaynak yerel eşleme sağlar. Yerel görüntü PDB tüm modülleri ve yerel görüntüler çok daha küçük olduğundan makine A'dan makine B'ye kopyalama işlemi daha hızlıdır.
+ Ngen pdb ile NGen IL PDB bağımlılığını olmadan IL yerel eşleme içeren bir PDB oluşturabilirsiniz. Makineler arası olay izleme Senaryomuzda gereken tek şey yerel görüntü makine A makine b tarafından oluşturulan PDB kopyalayın ve kullanmak için [hata ayıklama arabirimi erişim API'leri](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) IL PDB'ın kaynak IL eşleme ve yerel okumak için PDB'ın IL yerel eşleme görüntü. Her iki eşlemeleri birleştiren bir kaynak yerel eşleme sağlar. Yerel görüntü PDB tüm modülleri ve yerel görüntüler çok daha küçük olduğundan makine A'dan makine B'ye kopyalama işlemi daha hızlıdır.
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015'te yenilikler nelerdir?

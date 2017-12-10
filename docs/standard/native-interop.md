@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: a4819c2174485411a83e1baa1a0da6c759ba04f8
-ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
+ms.openlocfilehash: c6e8b378c093ffd58678e331f0ad02fb27991ecf
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="native-interoperability"></a>Yerel birlikte çalışabilirliği
 
@@ -263,7 +263,7 @@ Yönetilen türler olarak verilen her iki durumda da, parametre ve Yukarıdaki �
 
 **Dizimi** yönetilen sınır yerel ve tersi yönde çapraz gerektiğinde türleri dönüştürme işlemidir.
 
-Neden dizimi gereklidir yönetilen ve yönetilmeyen kodu türlerinde farklı olmasıdır. Yönetilen kodda, örneğin, elinizde bir `String`, yönetilmeyen dünyada Unicode ("geniş"), Unicode olmayan, boş sonlandırılmış ASCII, dizeleri olabileceği vs. Varsayılan olarak, P/Invoke alt sağ üzerinde görebileceğiniz varsayılan davranışa göre şeyler dener [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Ancak, burada gereksinim duyduğunuz ek denetimi bu durumlar için uygulayabileceğiniz `MarshalAs` özniteliği yönetilmeyen tarafında beklenen tür belirtin. Null ile sonlandırılmış ANSI dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
+Neden dizimi gereklidir yönetilen ve yönetilmeyen kodu türlerinde farklı olmasıdır. Yönetilen kodda, örneğin, elinizde bir `String`, yönetilmeyen dünyada Unicode ("geniş"), Unicode olmayan, boş sonlandırılmış ASCII, dizeleri olabileceği vs. Varsayılan olarak, P/Invoke alt sağ üzerinde görebileceğiniz varsayılan davranışa göre şeyler dener [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Ancak, burada gereksinim duyduğunuz ek denetimi bu durumlar için uygulayabileceğiniz `MarshalAs` özniteliği yönetilmeyen tarafında beklenen tür belirtin. Null ile sonlandırılmış ANSI dize olarak gönderilecek dize istiyoruz, örneğin, onu şöyle yapabileceğimiz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

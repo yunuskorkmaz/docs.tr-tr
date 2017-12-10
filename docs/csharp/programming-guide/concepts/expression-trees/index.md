@@ -11,18 +11,18 @@ ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 250da307d024b1011e1fb04cd84eb25e41af3fa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f141c414ef56c591baa882d9495e591e6b08bc8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="expression-trees-c"></a>İfade ağaçları (C#)
 İfade ağaçları her düğüm olduğu bir ifade, örneğin bir ağaç benzeri veri yapısı, bir yöntem çağrısı veya bir ikili işlem kodu gibi temsil eden `x < y`.  
   
  Derleme ve ifade ağaçları tarafından temsil edilen kodu çalıştırın. Bu, dinamik yürütülebilir kodunun değiştirilmesini LINQ yürütülmesi çeşitli veritabanları ve dinamik sorgular oluşturulmasını sorgular sağlar. İfade ağaçları LINQ hakkında daha fazla bilgi için bkz: [nasıl yapılır: dinamik sorgular (C#) oluşturmak için ifade ağaçları kullanma](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
- İfade ağaçları, aynı zamanda dinamik diller ve .NET Framework birlikte çalışabilirliği sağlamak için ve Microsoft Ara dili (MSIL) yerine ifade ağaçları yaymak üzere derleyici yazıcılarının etkinleştirmek için dinamik dil çalışma zamanı (DLR) kullanılır. DLR hakkında daha fazla bilgi için bkz: [dinamik dil çalışma zamanına genel bakış](https://msdn.microsoft.com/library/dd233052).  
+ İfade ağaçları, aynı zamanda dinamik diller ve .NET Framework birlikte çalışabilirliği sağlamak için ve Microsoft Ara dili (MSIL) yerine ifade ağaçları yaymak üzere derleyici yazıcılarının etkinleştirmek için dinamik dil çalışma zamanı (DLR) kullanılır. DLR hakkında daha fazla bilgi için bkz: [dinamik dil çalışma zamanına genel bakış](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
  Bir ifade ağacına oluşturduğunuz bir anonim lambda ifadesi temelinde veya kullanarak ifade ağaçları el ile oluşturabilirsiniz için C# veya Visual Basic derleyici olabilir <xref:System.Linq.Expressions> ad alanı.  
   
@@ -160,5 +160,5 @@ Console.WriteLine(expr.Compile()(4));
  [Nasıl yapılır: ifade ağaçlarını (C#) yürütme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [Nasıl yapılır: ifade ağaçlarını (C#) değiştirme](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
  [Lambda ifadeleri](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Dinamik dil çalışma zamanına genel bakış](https://msdn.microsoft.com/library/dd233052)  
+ [Dinamik dil çalışma zamanına genel bakış](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
  [Programlama Kavramları (C#)](../../../../csharp/programming-guide/concepts/index.md)

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ae0fb23c3edb6488fd0c281b1b94548e1cb2d3bd
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -80,7 +80,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Bu görevi gerçekleştirmek için XML belgesi el ile geçiş için kod yazma, çok daha zor olurdu.
 
-XML ile etkileşim LINQ sağlayıcıları ile yapabileceğiniz tek şey değil. [LINQ-SQL](https://msdn.microsoft.com/library/bb386976.aspx) bir oldukça tam kemikler nesne ilişkisel Eşleyici (ORM) bir MSSQL sunucu için veritabanıdır. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplığı LINQ aracılığıyla verimli JSON belgesi geçişi sağlar. Gerekenler yapan bir kitaplık yoksa, ayrıca, şunları da yapabilirsiniz [kendi LINQ sağlayıcı yazma](https://msdn.microsoft.com/library/Bb546158.aspx)!
+XML ile etkileşim LINQ sağlayıcıları ile yapabileceğiniz tek şey değil. [LINQ-SQL](../../docs/framework/data/adonet/sql/linq/index.md) bir oldukça tam kemikler nesne ilişkisel Eşleyici (ORM) bir MSSQL sunucu için veritabanıdır. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) kitaplığı LINQ aracılığıyla verimli JSON belgesi geçişi sağlar. Gerekenler yapan bir kitaplık yoksa, ayrıca, şunları da yapabilirsiniz [kendi LINQ sağlayıcı yazma](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Sorgu sözdizimi neden kullanılır?
 
@@ -254,7 +254,7 @@ Diyagram formunda:
 
 ![PLINQ diyagramı](./media/using-linq/plinq-diagram.png)
 
-LINQ kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı işleri (diğer bir deyişle, saf işlevleri ve hiçbir yan etkisi) PLINQ harika aday olan. İşler, _yapmak_ bir yan etkisi, kullanmayı [görev paralel Kitaplığı](https://msdn.microsoft.com/library/dd460717.aspx).
+LINQ kolayca ifade edilebilir paralelleştirilebilir CPU bağımlı işleri (diğer bir deyişle, saf işlevleri ve hiçbir yan etkisi) PLINQ harika aday olan. İşler, _yapmak_ bir yan etkisi, kullanmayı [görev paralel Kitaplığı](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Ek kaynaklar:
 

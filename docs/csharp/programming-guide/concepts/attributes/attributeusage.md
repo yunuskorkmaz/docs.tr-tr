@@ -11,11 +11,11 @@ ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage`Yeni öznitelik nasıl uygulanabilir denetlemek için özel öznitelik tanımlarını uygulanabilir bir özniteliktir. Varsayılan ayarları açıkça uygulandığında şöyle:  
@@ -148,7 +148,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Öznitelikleri](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Öznitelikleri](../../../../../docs/standard/attributes/index.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [Öznitelikleri](../../../../csharp/programming-guide/concepts/attributes/index.md)  
  [Özel öznitelikler (C#) oluşturma](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  

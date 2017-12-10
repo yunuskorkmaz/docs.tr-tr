@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="delaysign"></a>/delaysign
 Derlemenin tamamen veya kısmen imzalanacağını belirtir.  
@@ -40,7 +40,7 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
  Kullanarak örneğin, `/delaysign+`, bir kuruluştaki bir geliştirici sınayıcılar genel derleme önbelleği ile kaydetmek ve kullanabilecek bir derlemeyi imzasız test sürümlerini dağıtabilirsiniz. Derleme üzerinde iş tamamlandığında, kuruluşunuzun özel anahtarı sorumlu kişi derleme tam olarak oturum açabilir. Bu compartmentalization tüm geliştiricilerin derlemelerini sağlarken kuruluşunuzun özel anahtarı ifşaatına karşı korur.  
   
- Bkz: [bkz](https://msdn.microsoft.com/library/xwb8f617) derleme imzalama hakkında daha fazla bilgi için.  
+ Bkz: [bkz](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Tümleşik geliştirme ortamı/delaysign Visual Studio'da ayarlamak için  
   

@@ -12,11 +12,11 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f714bded446e62ac6165d691d2404249275178e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya diğer bildirmek için nesne sınıfları nesneleri çeken bir şey olduğunda. Gönderir sınıfı (veya *başlatır*) olay çağrılır *yayımcı* ve alma sınıfları (veya *işlemek*) olay çağrılır *aboneleri* .  
@@ -34,7 +34,7 @@ Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywor
   
 -   Olaylar, genellikle kullanıcı eylemlerini düğme tıklamaları veya menü seçimleri grafik kullanıcı arabirimleri gibi göstermek için kullanılır.  
   
--   Bir olay birden çok abone olduğunda, bir olay oluşturulduğunda olay işleyicileri zaman uyumlu olarak çağrılır. Olaylar zaman uyumsuz olarak çağırmak için bkz: [çağırma zaman uyumlu yöntemleri zaman uyumsuz olarak](https://msdn.microsoft.com/library/2e08f6yc).  
+-   Bir olay birden çok abone olduğunda, bir olay oluşturulduğunda olay işleyicileri zaman uyumlu olarak çağrılır. Olaylar zaman uyumsuz olarak çağırmak için bkz: [çağırma zaman uyumlu yöntemleri zaman uyumsuz olarak](../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
 -   İçinde [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıf kitaplığı olayları temel <xref:System.EventHandler> temsilci ve <xref:System.EventArgs> temel sınıfı.  
   
@@ -67,5 +67,5 @@ Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywor
  <xref:System.EventHandler>  
  [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Windows Forms'ta olay işleyicileri oluşturma](https://msdn.microsoft.com/library/dacysss4.aspx)  
- [Olay tabanlı zaman uyumsuz desen ile birden çok iş parçacıklı programlama](https://msdn.microsoft.com/library/hkasytyf)
+ [Windows Forms'ta olay işleyicileri oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Olay tabanlı zaman uyumsuz desen ile birden çok iş parçacıklı programlama](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)

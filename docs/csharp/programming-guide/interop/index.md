@@ -13,11 +13,11 @@ ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>Birlikte Çalışabilirlik (C# Programlama Kılavuzu)
 Birlikte çalışabilirlik korumak ve yönetilmeyen kodunda Yatırımlar yararlanmak sağlar. Ortak dil çalışma zamanı (CLR) denetimi altında çalışan bir kod çağrılır *yönetilen kod*, ve CLR dışında çalışan kod çağrılır *yönetilmeyen kod*. COM, COM +, C++ bileşenleri, ActiveX bileşenlerini ve Microsoft Win32 API yönetilmeyen kod gösterilebilir.  
@@ -49,5 +49,5 @@ Birlikte çalışabilirlik korumak ve yönetilmeyen kodunda Yatırımlar yararla
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
  [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Yönetilmeyen kod ile birlikte çalışma](https://msdn.microsoft.com/library/sd10k43k)  
+ [Yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md)  
  [İzlenecek yol: Office programlama](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

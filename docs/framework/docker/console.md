@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcılarında çalışan konsol uygulamaları
 
@@ -59,7 +59,7 @@ Docker için Windows, sürüm 1.12 desteklemek için Beta 26 ya da daha yüksek 
 ## <a name="building-the-application"></a>Uygulama oluşturma
 Yükleyici, FTP veya dosya paylaşımı konsol uygulamaları genellikle dağıtılmış dağıtım. Bir kapsayıcıya dağıtırken varlıklar derlenir ve Docker görüntü oluşturulduğunda, kullanılabilir bir konuma hazırlanan gerekir.
 
-İçinde *build.ps1*, komut dosyası kullanan [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) varlıkları oluşturma görevini tamamlamak için uygulamayı derlemek için. Gerekli varlıklar sonlandırmaya MSBuild için geçirilen birkaç parametre vardır. Proje dosyası veya derlenecek çözüm, konum adı çıkış ve son olarak yapılandırma (sürüm ya da hata ayıklama).
+İçinde *build.ps1*, komut dosyası kullanan [MSBuild](/visualstudio/msbuild/msbuild) varlıkları oluşturma görevini tamamlamak için uygulamayı derlemek için. Gerekli varlıklar sonlandırmaya MSBuild için geçirilen birkaç parametre vardır. Proje dosyası veya derlenecek çözüm, konum adı çıkış ve son olarak yapılandırma (sürüm ya da hata ayıklama).
 
 Çağrısında `Invoke-MSBuild` `OutputPath` ayarlanır **yayımlama** ve `Configuration` kümesine **sürüm**. 
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Visual F # geliştirme ortamı özellikleri
 
@@ -50,7 +50,7 @@ F #'de desteklenen ve desteklenmeyen proje özellikleri özellikler aşağıdaki
 |Güvenlik (güven düzeylerini değiştirme)|Hayır||
 
 ## <a name="code-and-text-editor-features"></a>Kod ve metin düzenleyici özellikleri
-F #'de Visual Studiocode ve metin düzenleyicileri, aşağıdaki özellikleri desteklenir. Visual Studio ve metin düzenleyici özelliklerini kod düzenleme hakkında genel bilgi için bkz: [kod ve Metin Düzenleyici'de kod yazma](https://msdn.microsoft.com/library/efc4xwkb.aspx).
+F #'de Visual Studiocode ve metin düzenleyicileri, aşağıdaki özellikleri desteklenir. Visual Studio ve metin düzenleyici özelliklerini kod düzenleme hakkında genel bilgi için bkz: [kod ve Metin Düzenleyici'de kod yazma](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
 |Özellik|Açıklama|F #'de destekleniyor mu?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ F #'de Visual Studiocode ve metin düzenleyicileri, aşağıdaki özellikleri de
 |Otomatik biçimlendirme|Kodu standart girintileme ve stil ile yeniden biçimlendirir.|Hayır|
 |Yer işaretleri|Düzenleyicide yerler kaydetmenizi sağlar.|Evet|
 |Girinti değiştirme|Girintileri veya seçili satırları girintileri geri alır.|Evet|
-|[Metin bulma ve değiştirme](https://msdn.microsoft.com/library/139eef4h.aspx)|Dosya, proje veya çözüm arayın ve potansiyel olarak metin değiştirmenizi sağlar.|Evet|
+|[Metin Bulma ve Değiştirme](/visualstudio/ide/finding-and-replacing-text)|Dosya, proje veya çözüm arayın ve potansiyel olarak metin değiştirmenizi sağlar.|Evet|
 |.NET Framework API tanımı gidin|İmleç bir .NET Framework API üzerinde konumlandırıldığında .NET Framework meta verilerinden oluşturulan kodu gösterir.|Hayır|
 |Kullanıcı tanımlı API için Tanıma Git|İmleç imleci kodunuzda varlık tanımlandığı konuma taşır, tanımlı bir program varlığı üzerinde olduğunda.|Evet|
 |Satıra Gitme|Satır numarası ile bir dosyada belirli bir satıra Git olanak tanır.|Evet|
 |Dosyanın üst kısmındaki gezinti çubukları|Kodda, konumları, örneğin, işlev adı atlamak etkinleştirir.|Evet|
-|Anahat oluşturma. Bkz: [anahat oluşturma](https://msdn.microsoft.com/library/td6a5x4s.aspx).|Daha kısa bir görünüm oluşturmak için kodun bölümlerini daraltma olanak tanır.|Evet|
+|Anahat oluşturma. Bkz: [anahat oluşturma](/visualstudio/ide/outlining).|Daha kısa bir görünüm oluşturmak için kodun bölümlerini daraltma olanak tanır.|Evet|
 |Sekmelere ayırma|Boşluk, sekme dönüştürür.|Evet|
 |Tür renklendirme|Özel bir renk ile tanımlanmış tür adları gösterir.|Evet|
 |Hızlı bulun. Hızlı bulma, bulma ve değiştirme penceresi bakın.|Bir dosya veya proje aramanıza olanak tanır.|Evet|
 
 ## <a name="intellisense-features"></a>IntelliSense özellikleri
-F #'de desteklenen ve desteklenmeyen IntelliSense özellikler aşağıdaki tabloda özetlenmiştir. IntelliSense hakkında genel bilgi için bkz: [kullanarak IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+F #'de desteklenen ve desteklenmeyen IntelliSense özellikler aşağıdaki tabloda özetlenmiştir. IntelliSense hakkında genel bilgi için bkz: [kullanarak IntelliSense](/visualstudio/ide/using-intellisense).
 
 |Özellik|Açıklama|F #'de destekleniyor mu?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ F # için destek Visual Studio Araçları'nda aşağıdaki tabloda özetlenmişt
 |Çağrı Hiyerarşisi|Görüntüler, kodunuzda iç içe geçmiş yapısını işlevi çağırır.|Hayır|
 |Kod ölçümleri|Satır sayısı gibi kodu hakkında bilgi toplar.|Hayır|
 |Sınıf Görünümü|Bir proje kodda tür tabanlı bir görünümünü sağlar.|Hayır|
-|[Hata Listesi penceresi](https://msdn.microsoft.com/library/33df3b7a.aspx)|Hataların listesini kodu gösterir.|Evet|
+|[Hata Listesi Penceresi](/visualstudio/ide/reference/error-list-window)|Hataların listesini kodu gösterir.|Evet|
 |[F # Etkileşimli](../tutorials/fsharp-interactive/index.md)|Yazın (veya kopyalayıp yapıştırmak için) F # kod ve projenizin yapı bağımsız olarak hemen çalıştırmak sağlar. F # Etkileşimli penceredir oku, değerlendir, yazdırma döngü (Çoğaltma).|Evet|
 |Nesne Tarayıcısı|Bir derlemede türleri görüntülemenize olanak tanır.|Derlenmiş derlemelerde göründükleri gibi tam olarak yazar olarak F # türleri görünmez. F # türleri derlenmiş gösterimi göz atabilirsiniz ancak F # göründükleri gibi türleri görüntüleyemezsiniz.|
-|[Çıktı penceresi](https://msdn.microsoft.com/library/3hk6fby3.aspx)|Oluşum çıktısını görüntüler.|Evet|
+|[Çıktı Penceresi](/visualstudio/ide/reference/output-window)|Oluşum çıktısını görüntüler.|Evet|
 |Performans Analizi|Kodunuzu performansını ölçmek için araçlar sağlar.|Evet|
 |Özellikler Penceresi|Görüntüler ve odaklanmış geliştirme ortamında nesnenin özelliklerini düzenlemeyi sağlar.|Evet|
 |[Sunucu Gezgini](https://msdn.microsoft.com/library/x603htbk.aspx)|Çeşitli sunucu kaynakları ile etkileşim kurmak için yöntemler sağlar.|Evet|

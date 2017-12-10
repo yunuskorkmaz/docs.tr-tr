@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
 Kısmi yöntemler koda Özel mantık ekleme geliştiricilerin. Genellikle, bir tasarımcı tarafından oluşturulan sınıfın parçası kodudur. Kısmi yöntemler Kod Oluşturucu tarafından oluşturulan bir parçalı sınıf tanımlanır ve bunlar genellikle bir şey değiştirildiğini bildirim sağlamak için kullanılır. Bunlar değişikliğe yanıt özel davranış belirlemek Geliştirici etkinleştirin.  
@@ -83,5 +83,5 @@ End Sub
  [Alt yordamlar](./sub-procedures.md)  
  [İsteğe bağlı parametreler](./optional-parameters.md)  
  [Kısmi](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ-SQL kod oluşturma](https://msdn.microsoft.com/library/bb399400)  
- [Kısmi yöntemler kullanarak iş mantığı ekleme](https://msdn.microsoft.com/library/bb546176)
+ [LINQ-SQL kod oluşturma](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Kısmi yöntemler kullanarak iş mantığı ekleme](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

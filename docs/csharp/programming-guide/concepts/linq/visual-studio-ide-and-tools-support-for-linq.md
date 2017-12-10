@@ -11,17 +11,17 @@ ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 42d38e34c1b6474a3892fd091c9f344234f7ca68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Visual Studio IDE ve LINQ (C#) için Araçlar desteği
 Visual Studio tümleşik geliştirme ortamı (IDE) LINQ uygulama geliştirme desteği aşağıdaki özellikleri sağlar:  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Nesne İlişkisel Tasarımcısı kullanabileceğiniz bir görsel tasarım araçtır [LINQ-SQL](https://msdn.microsoft.com/library/bb386976) temel veritabanındaki bir ilişkisel veri temsil eden sınıfları C# ' ta oluşturmak için uygulamalar. Daha fazla bilgi için bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Nesne İlişkisel Tasarımcısı kullanabileceğiniz bir görsel tasarım araçtır [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) temel veritabanındaki bir ilişkisel veri temsil eden sınıfları C# ' ta oluşturmak için uygulamalar. Daha fazla bilgi için bkz: [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal komut satırı aracı  
  SQLMetal derleme işlemlerde sınıfları LINQ kullanmak için var olan veritabanlarını SQL uygulamaları oluşturmak için kullanılabilecek bir komut satırı aracıdır. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  

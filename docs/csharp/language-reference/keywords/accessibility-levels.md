@@ -1,6 +1,6 @@
 ---
 title: "Erişilebilirlik Düzeyleri (C# Başvurusu)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
+
 Erişim değiştiricileri kullanmak [ortak](../../../csharp/language-reference/keywords/public.md), [korumalı](../../../csharp/language-reference/keywords/protected.md), [iç](../../../csharp/language-reference/keywords/internal.md), veya [özel](../../../csharp/language-reference/keywords/private.md)bildirilen aşağıdakilerden birini belirtmek için Erişilebilirlik düzeyleri üyeleri için.  
   
 |Bildirilen erişilebilirlik|Açıklama|  
@@ -27,7 +27,7 @@ Erişim değiştiricileri kullanmak [ortak](../../../csharp/language-reference/k
 |`internal`|Erişim geçerli derlemeye sınırlıdır.|  
 |`protected internal`|Geçerli derleme veya içeren sınıfından türetilen türler için erişim sınırlıdır.|  
 |`private`|Erişim içeren türü ile sınırlıdır.|  
-|`private protected`|Erişim sınıfı veya geçerli derlemedeki içeren sınıfından türetilmiş türler içeren sınırlıdır.|  
+|`private protected`|Erişim sınıfı veya geçerli derlemedeki içeren sınıfından türetilmiş türler içeren sınırlıdır. C# 7.2 itibaren kullanılabilir. |  
   
  Yalnızca bir erişim değiştiricisi izin verilen bir üye veya türü için dışında kullandığınızda `protected internal` veya `private protected` birleşimleri.  
   

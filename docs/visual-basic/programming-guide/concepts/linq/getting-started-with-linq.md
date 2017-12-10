@@ -18,11 +18,11 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02672e88709dbe01aedcc31c76819728ca30dfb9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic'te LINQ'e Başlarken
 Bu bölümde, genel bakışlar, örnekler ve anlamak ve Visual Basic ve dil ile tümleşik sorgu (LINQ) kullanmanıza yardımcı olacak bilgiler içerir.  
@@ -53,7 +53,7 @@ Bu bölümde, genel bakışlar, örnekler ve anlamak ve Visual Basic ve dil ile 
  [LINQ-DataSet genel bakış](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  Veri kümesi için LINQ kavramsal genel bakış sağlar.  
   
- [LINQ-SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  LINQ SQL teknolojisi açıklar ve LINQ-SQL yardımcı konulara bağlantılar kullanmak sağlar.  
   
  [Visual Studio IDE ve LINQ (Visual Basic) için Araçlar desteği](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

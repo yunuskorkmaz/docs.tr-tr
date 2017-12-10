@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: acd6f1cc3a6200140f25fc31e4f6fb0f8da5a6e3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="generic-types-generics-overview"></a>Genel türleri (genel türler) genel bakış
 
@@ -22,7 +22,7 @@ Genel türler her zaman C# ' ta örtük veya açık olarak olup olmadığını k
 
 .NET Framework 2.0, C# dili ve ortak dil çalışma zamanı (CLR) söz konusu değişiklikler genel türler için ilk kez kullanıma sunuldu. **Genel türler** aslında bir "kod şablonu" olan tanımlamak geliştiricilere sağlayan [tür kullanımı uyumlu](https://msdn.microsoft.com/library/hbzz1a9a.aspx) gerçek veri türü için yürüten olmadan veri yapılarını. Örneğin, `List<T>` olan bir [genel koleksiyon](xref:System.Collections.Generic) , kullanılabilir bildirilen ve herhangi bir türü ile kullanılan: `List<int>`, `List<string>`, `List<Person>`vb.
 
-Bu nedenle, noktası nedir? Genel türler neden yararlıdır? Bu anlamak için kimliğinizi önce ve genel türler ekledikten sonra belirli bir sınıf göz atın gerekiyor. Bakalım `ArrayList`. C# 1.0, `ArrayList` öğe türü olan `object`. Bu eklenmiş olan herhangi bir öğe içine sessizce dönüştürüldü geliyordu bir `object`; aynı şey öğeleri listeden okuma (Bu işlem olarak bilinir [kutulama](https://msdn.microsoft.com/library/yz2be5wk.aspx) ve sırasıyla kutudan çıkarma). Kutulama ve kutudan çıkarma performansını etkiler. Birden fazla ancak gerçek tür listesinde veri nedir derleme zamanında bildirmek için yolu yoktur. Bu, bazı kırılacak kodunu hale getirir. Genel türler listesinin her örneğin içereceği veri türünü ek bilgileri sağlayarak bu sorunu çözün. Basitçe, tamsayılara yalnızca ekleyebilirsiniz `List<int>` ve yalnızca kişilere Ekle `List<Person>`, vb.
+Bu nedenle, noktası nedir? Genel türler neden yararlıdır? Bu anlamak için kimliğinizi önce ve genel türler ekledikten sonra belirli bir sınıf göz atın gerekiyor. Bakalım `ArrayList`. C# 1.0, `ArrayList` öğe türü olan `object`. Bu eklenmiş olan herhangi bir öğe içine sessizce dönüştürüldü geliyordu bir `object`; aynı şey öğeleri listeden okuma (Bu işlem olarak bilinir [kutulama](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) ve sırasıyla kutudan çıkarma). Kutulama ve kutudan çıkarma performansını etkiler. Birden fazla ancak gerçek tür listesinde veri nedir derleme zamanında bildirmek için yolu yoktur. Bu, bazı kırılacak kodunu hale getirir. Genel türler listesinin her örneğin içereceği veri türünü ek bilgileri sağlayarak bu sorunu çözün. Basitçe, tamsayılara yalnızca ekleyebilirsiniz `List<int>` ve yalnızca kişilere Ekle `List<Person>`, vb.
 
 Genel türler kullanılabilir ayrıca çalışma zamanında veya **reified**. Başka bir deyişle, çalışma zamanı ne tür bir veri yapısı, kullanmakta olduğunuz ve bellekte daha verimli bir şekilde depolayabilir bilir.
 
@@ -72,4 +72,4 @@ Son yararlı, genel türde bilerek çalışma zamanı hakkında daha iyi hata ay
 ## <a name="further-reading-and-resources"></a>Daha fazla bilgi ve kaynaklar
 
 *   [C# genel türlere giriş](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C# programlama kılavuzu - genel türler](https://msdn.microsoft.com/library/512aeb7t.aspx)
+*   [C# programlama kılavuzu - genel türler](../../docs/csharp/programming-guide/generics/index.md)

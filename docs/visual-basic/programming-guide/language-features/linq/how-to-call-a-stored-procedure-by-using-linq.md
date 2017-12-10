@@ -16,18 +16,18 @@ ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fb2d119d56cb643ebc1b43894952a6323e5e06e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 943bf4c80d88633cad857896381efcbef69683cc
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Nasıl yapılır: Bir Saklı Yordamı LINQ Kullanarak Çağırma (Visual Basic)
 Dil ile tümleşik sorgu (LINQ) veritabanı gibi depolanan nesneler yordamlarını içeren veritabanı bilgileri erişimi kolay hale getirir.  
   
  Aşağıdaki örnek bir SQL Server veritabanı içinde saklı yordamı çağıran bir uygulamasının nasıl oluşturulacağını gösterir. Örnek veritabanında iki farklı saklı yordam çağrısı gösterilmektedir. Her bir yordam bir sorgunun sonuçlarını döndürür. Bir yordam giriş parametreleri alır ve diğer yordamı parametre almaz.  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](https://msdn.microsoft.com/library/bb399411).  
+ Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -79,6 +79,6 @@ Dil ile tümleşik sorgu (LINQ) veritabanı gibi depolanan nesneler yordamların
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ-SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [Nasıl yapılır: güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atayın](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

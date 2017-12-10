@@ -35,11 +35,11 @@ ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7cc2563f193fba9f9e30fcdfd5ea2766be16ba63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c81d1f795b0c27f2eaf07832f2c1276b626f5ce1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama (Visual Basic)
 Bir sınıf tanımlama öğesinden farklı veri türlerinde aynı işlevselliği sağlayan nesneleri oluşturabilirsiniz. Bunu yapmak için bir veya daha fazla belirttiğiniz *tür parametrelerindeki* tanımında. Sınıf çeşitli veri türlerini kullanan nesneler için bir şablon olarak hizmet verebilir. Bu şekilde tanımlanmış bir sınıf olarak adlandırılan bir *genel bir sınıf*.  
@@ -83,9 +83,9 @@ Bir sınıf tanımlama öğesinden farklı veri türlerinde aynı işlevselliği
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/12a7a7h3)  
+ [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [,](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Tür listesi](../../../../visual-basic/language-reference/statements/type-list.md)  
  [Nasıl yapılır: genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  

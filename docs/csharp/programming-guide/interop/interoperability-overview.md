@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: de7ff105de85392fd4b8b342f26e67e89d0d9b96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -66,6 +66,6 @@ Konu C# yönetilen kodu ve yönetilmeyen kod birlikte çalışabilirliği sağla
  [Birlikte çalışma performansını iyileştirme](http://go.microsoft.com/fwlink/?LinkId=99564)  
  [COM birlikte çalışma giriş](http://go.microsoft.com/fwlink/?LinkId=112406)  
  [Yönetilen ve yönetilmeyen kod arasında hazırlama](http://go.microsoft.com/fwlink/?LinkId=112398)  
- [Yönetilmeyen kod ile birlikte çalışma](https://msdn.microsoft.com/library/sd10k43k)  
+ [Yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md)  
  [Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)

@@ -30,11 +30,11 @@ ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b32707456c9e59d5a81d76c73d867b33554bdbcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76383ae886a5e965c0daefc281c4842a4e563ec7
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Nasıl yapılır: Genel Bir Sınıf Kullanma (Visual Basic)
 Alan bir sınıf *tür parametrelerindeki* çağrılır bir *genel bir sınıf*. Genel bir sınıf kullanıyorsanız, oluşturabileceğiniz bir *oluşturulan sınıf* dışarı sağlayarak bir *tür bağımsız değişkeni* bu parametrelerin her biri için. Oluşturulan sınıf türü bir değişken sonra bildirebilir ve oluşturulan sınıfının bir örneği oluşturun ve bu değişkenine atayın.  
@@ -54,9 +54,9 @@ Alan bir sınıf *tür parametrelerindeki* çağrılır bir *genel bir sınıf*.
      [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/12a7a7h3)  
+ [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
  [,](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Nasıl yapılır: farklı veri türlerinde aynı işlevselliği sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  

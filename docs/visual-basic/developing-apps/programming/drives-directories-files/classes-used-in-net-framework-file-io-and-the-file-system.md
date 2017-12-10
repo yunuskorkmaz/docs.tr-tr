@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 Aşağıdaki tablolarda, .NET Framework dosyası g/ç, dosya g/ç sınıfları, akışları oluşturmak için kullanılan sınıfları ve okuma ve akışlara yazmak için kullanılan sınıfları içine kategorilere için yaygın olarak kullanılan sınıflar listelenir.  
   
- Girmek için [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] belgelere ve Bul daha kapsamlı bir liste bakın [sınıf kitaplığına genel bakış](https://msdn.microsoft.com/library/hfa3fa08).  
+ Girmek için [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] belgelere ve Bul daha kapsamlı bir liste bakın [sınıf kitaplığına genel bakış](../../../../../docs/standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Dosyalar, sürücüler ve dizinler için temel g/ç sınıfları  
  Aşağıdaki tabloda listelenmekte ve dosya g/ç için kullanılan ana sınıflar açıklanmaktadır.  
@@ -64,7 +64,7 @@ Aşağıdaki tablolarda, .NET Framework dosyası g/ç, dosya g/ç sınıfları, 
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Karakter Yazar bir `String`. Çıktı kodlamada herhangi bir ya da akış olabilir veya bir `String`.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Akışlar oluşturma](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Akışlar oluşturma](../../../../../docs/standard/io/composing-streams.md)  
  [Dosya ve akış g/ç](https://msdn.microsoft.com/library/k3352a4t)  
  [Zaman uyumsuz dosya g/ç](https://msdn.microsoft.com/library/kztecsys)  
  [.NET Framework dosyası g/ç ve dosya sistemi (Visual Basic) Temelleri](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

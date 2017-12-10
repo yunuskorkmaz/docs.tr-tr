@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: d2a92f725c40443c8dc6af593d28deccd3ee88de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Visual Studio projeleri yapılandırma
 
@@ -31,8 +31,8 @@ Bu konu nasıl kullanılacağı hakkında bilgi içerir **Proje Tasarımcısı**
 |`Application`|[Uygulama sayfası, Proje Tasarımcısı &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Uygulama düzeyi ayarlarını ve bir kitaplık veya yürütülebilir bir dosyanın, .NET Framework'ün hangi sürümünün uygulama hedefleme ve burada kaynak dosyaları hakkında bilgi oluşturmakta olduğunuz gibi özelliklerini belirtmenize olanak tanıyan uygulama kullandığı depolanır.|
 |`Build`|[Derleme sayfası, Proje Tasarımcısı &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Kodun nasıl derlendiğini denetlemenizi sağlar.|
 |`Build Events`|[Derleme olayları sayfası, Proje Tasarımcısı &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Önce veya sonra bir derleme çalıştırılacak komutları belirtmenizi sağlar.|
-|`Debug`|[Hata ayıklama sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Uygulama hata ayıklama sırasında nasıl çalışacağını denetlemenizi sağlar. Bu içerdikleri komut satırını kullanacağınızı ve uygulamanızın başlangıç dizini nedir ve herhangi bir özel hata ayıklama modunu yerel kod ve SQL gibi etkinleştirmek istediğiniz.|
-|`Reference Paths`|[Bir projedeki başvuruları yönetme](https://msdn.microsoft.com/library/ez524kew.aspx)|Kodu bağımlı derlemeler için arama yeri belirtmenizi sağlar.|
+|`Debug`|[Hata Ayıklama Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Uygulama hata ayıklama sırasında nasıl çalışacağını denetlemenizi sağlar. Bu içerdikleri komut satırını kullanacağınızı ve uygulamanızın başlangıç dizini nedir ve herhangi bir özel hata ayıklama modunu yerel kod ve SQL gibi etkinleştirmek istediğiniz.|
+|`Reference Paths`|[Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)|Kodu bağımlı derlemeler için arama yeri belirtmenizi sağlar.|
 
 ## <a name="f-specific-settings"></a>F #-belirli ayarları
 F # için belirli ayarları aşağıdaki tabloda özetlenmiştir:

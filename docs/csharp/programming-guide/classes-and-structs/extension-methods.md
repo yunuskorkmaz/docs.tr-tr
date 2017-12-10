@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. C#, F # ve Visual Basic'te yazılmış istemci kodu için bir genişletme yöntemi ve gerçekte bir türde tanımlanan yöntemler çağırma arasında görünen fark yoktur.  
@@ -84,7 +84,7 @@ using System.Linq;
   
 -   Uzantı yöntemleri ad alanı seviyesinde kapsama alınır. Örneğin, adlı tek bir ad alanı uzantı yöntemleri içeren birden çok statik sınıflar varsa `Extensions`, bunlar tüm kapsam tarafından içine gidersiniz `using Extensions;` yönergesi.  
   
- Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için bkz: [derleme sürümü oluşturma](https://msdn.microsoft.com/library/51ket42z).  
+ Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için bkz: [derleme sürümü oluşturma](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  

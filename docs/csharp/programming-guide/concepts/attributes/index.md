@@ -11,11 +11,11 @@ ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2993ef3f424aa6487681e194f21e0f82193342ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f9fc23cf7afbd28f0c9ae438cbce298cbf362fbd
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 Öznitelikler meta verileri veya tanımlayıcı bilgileri (derleme, türleri, yöntemler, özellikler ve benzeri) kodu ile ilişkilendirme için güçlü bir yöntem sağlar. Öznitelik bir program varlıkla ilişkilendirilen sonra öznitelik çalışma zamanında adlı bir yöntemi kullanarak sorgulanabilir *yansıma*. Daha fazla bilgi için bkz: [yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
@@ -182,4 +182,4 @@ int Method3() { return 0; }
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
  [Yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Öznitelikleri](https://msdn.microsoft.com/library/5x6cd29c)
+ [Öznitelikleri](../../../../../docs/standard/attributes/index.md)

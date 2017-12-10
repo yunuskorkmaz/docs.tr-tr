@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dd4062905b38f4dff99c03c9bb3849ac3b552e5d
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tour-of-net"></a>.NET turu
 
@@ -124,7 +124,7 @@ Daha fazla bilgi edinmek ve bazı örnekler görmek için bkz: [LINQ (dil ile t�
 
 Her işletim sistemi sistem hizmetleri sağlayan bir uygulama programlama arabirimi (API) içerir. .NET bu API'leri çağırmak için çeşitli yöntemler sağlar.
 
-Yerel birlikte çalışabilirliği yapmak için ana "platform çağırma" ya da P/Invoke ile Linux ve Windows platformlarında desteklenen kısaca yoludur. Yerel birlikte çalışabilirliği yapılması, yalnızca Windows yolu "çalışmak için kullanılan COM birlikte çalışma," olarak bilinen [COM bileşenlerini](https://msdn.microsoft.com/library/bwa2bx93.aspx) yönetilen kod. P/Invoke altyapısının üzerinde oluşturulmuştur, ancak dilden çok az farklı şekilde çalışır.
+Yerel birlikte çalışabilirliği yapmak için ana "platform çağırma" ya da P/Invoke ile Linux ve Windows platformlarında desteklenen kısaca yoludur. Yerel birlikte çalışabilirliği yapılması, yalnızca Windows yolu "çalışmak için kullanılan COM birlikte çalışma," olarak bilinen [COM bileşenlerini](/cpp/atl/introduction-to-com) yönetilen kod. P/Invoke altyapısının üzerinde oluşturulmuştur, ancak dilden çok az farklı şekilde çalışır.
 
 Java ve Objective-C Mono'nın (ve dolayısıyla Xamarin'ın) birlikte çalışabilirlik desteği çoğunu benzer şekilde oluşturulur, diğer bir deyişle, bunlar aynı ilkeleri kullanın.
 

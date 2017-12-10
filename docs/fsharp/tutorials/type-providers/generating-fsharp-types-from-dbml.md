@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>İzlenecek yol: DBML Dosyasından F# Türleri Oluşturma
 
@@ -24,7 +24,7 @@ Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.
 > [!NOTE]
 API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
 
-Bu kılavuz F # 3.0 için şema bilgileri .dbml dosyasında kodlanmış varsa, bir veritabanından veri türlerinde oluşturun açıklar. LINQ-SQL veritabanı şemasını temsil etmek için bu dosya biçimini kullanır. Visual Studio'da (O/R) Nesne İlişkisel Tasarımcısı'nı kullanarak, bir LINQ to SQL şema dosyası oluşturabilirsiniz. Daha fazla bilgi için bkz: [O/R Tasarımcısı genel bakış](https://msdn.microsoft.com/library/bb384511.aspx) ve [LINQ-SQL kod oluşturma](https://msdn.microsoft.com/library/bb386976).
+Bu kılavuz F # 3.0 için şema bilgileri .dbml dosyasında kodlanmış varsa, bir veritabanından veri türlerinde oluşturun açıklar. LINQ-SQL veritabanı şemasını temsil etmek için bu dosya biçimini kullanır. Visual Studio'da (O/R) Nesne İlişkisel Tasarımcısı'nı kullanarak, bir LINQ to SQL şema dosyası oluşturabilirsiniz. Daha fazla bilgi için bkz: [O/R Tasarımcısı genel bakış](https://msdn.microsoft.com/library/bb384511.aspx) ve [LINQ-SQL kod oluşturma](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 Veritabanı işaretleme dili (DBML) türü sağlayıcısı, derleme zamanında statik bağlantı dizesini belirtmek gerek kalmadan veritabanı şemasını temel alan türlerini kullanan kod yazmanıza olanak sağlar. Son uygulama farklı bir veritabanı, farklı kimlik bilgileri veya farklı bağlantı dizesi birden uygulama geliştirmek için kullandığınız kullanacağını olasılığı için izin vermeniz gerekiyorsa, yararlı olabilir. Derleme zamanında kullanabileceğiniz doğrudan veritabanı bağlantısı varsa ve aynı veritabanı ve yerleşik uygulamanızda sonunda kullanacağı kimlik bilgilerini budur SQLDataConnection türü sağlayıcısı de kullanabilirsiniz. Daha fazla bilgi için bkz: [izlenecek yol: tür sağlayıcılarını kullanarak tarafından SQL veritabanına erişme](accessing-a-sql-database.md).
 
