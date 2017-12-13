@@ -9,11 +9,11 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
-  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+  ms.openlocfilehash: 764caf36026fb96ecfdd002c6df5294f8282a4c3
+  ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/07/2017
+  ms.lasthandoff: 12/12/2017
 items:
 - durationInMinutes: 1
   content: "Bu hızlı başlangıç C# etkileşimli olarak C# kod yazmak ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi oluşturmak, değiştirmek ve Koleksiyonlar ve diziler keşfedin dersleri içerir.\n"
@@ -31,8 +31,8 @@ items:
   content: "Kullanmakta olduğunuz `string` kadarki listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> farklı türü kullanıyor. Şimdi bir sayı kümesi oluşturun. Şu ana kadar yazdığınız kodun silin ve bu ile değiştirin:\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\nTamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, sayılardan oluşan bir dizi. Sonraki her Fibonacci numarası, önceki iki sayı toplamı gerçekleştirerek bulunur. Bu kodu ekleyin:\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nTuşuna **çalıştırmak** ; sonuçları görmek için\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
 - title: "sınama"
   durationInMinutes: 10
-  content: "Birlikte koyabilirsiniz, bkz: Bu ve önceki sürümleri dersleri bazıları dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve ilk 20 numaralarını sırayla oluşturması için kod yazın.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "Birlikte koyabilirsiniz varsa bkz bazı kavramlar bu ve önceki sürümleri dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve ilk 20 numaralarını sırayla oluşturması için kod yazın. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
 - title: "Tam sınama"
   durationInMinutes: 3
   content: "Aşağıdakine benzer ile gündeme?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nHer döngü tekrarında ile son iki tamsayı listesinde, bunları birleşimi ve bu değer listesine ekleyerek yönlendiriyoruz. Listeye 20 öğeleri ekleyene kadar döngü tekrarlar.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
-- content: "Liste Hızlı Başlangıç tamamladınız. Bu hızlı başlangıç son etkileşimli Hızlı Başlangıç ' dir. Bu hızlı başlangıç ipuçları kendi geliştirme ortamı devam edebilirsiniz. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Bunu yaptıktan sonra devam [sınıfları giriş](introduction-to-classes.md) yerel ortamınızdaki.\n\nİle çalışma hakkında daha fazla bilgiyi `List` yazın [.NET Kılavuzu](../../standard/index.md) konuyla ilgili [koleksiyonları](../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.\0"
+- content: "Liste Hızlı Başlangıç tamamladınız. Bu hızlı başlangıç son etkileşimli Hızlı Başlangıç ' dir. Bu hızlı başlangıçlar kendi geliştirme ortamında devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve Hızlı Başlangıç'ı seçin. Bu aynı alıştırma deneyin, doğrudan bir sonraki hızlı başlangıç taşımak veya yeniden ile başlangıç [C# numaraları](numbers-in-csharp-local.md) hızlı başlangıç.\n\nİle çalışma hakkında daha fazla bilgiyi `List` yazın [.NET Kılavuzu](../../standard/index.md) konuyla ilgili [koleksiyonları](../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.\0"

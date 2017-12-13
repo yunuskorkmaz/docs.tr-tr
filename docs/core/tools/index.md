@@ -7,11 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçları
 
@@ -41,7 +41,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [çalıştırma](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
-* [Paketi](dotnet-pack.md)
+* [pack](dotnet-pack.md)
 * [geçirme](dotnet-migrate.md)
 * [Temizleme](dotnet-clean.md)
 * [sln](dotnet-sln.md)
@@ -75,7 +75,7 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [çalıştırma](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
-* [Paketi](dotnet-pack.md)
+* [pack](dotnet-pack.md)
 * [geçirme](dotnet-migrate.md)
 * [Temizleme](dotnet-clean.md)
 * [sln](dotnet-sln.md)
@@ -146,7 +146,7 @@ Komut satırında geçirdiğiniz çağrılan komut seçenekleri seçeneklerdir. 
 
 ## <a name="migration-from-projectjson"></a>Project.json geçiş
 
-Önizleme üretmek için tooling 2 kullandıysanız *project.json*-tabanlı projeler başvurun [dotnet geçirmek](dotnet-migrate.md) projeniz için MSBuild geçirme hakkında bilgi için konu /*.csproj*yayın araçları ile kullanım için. Önizleme 2 araç sürümünden önce oluşturulan .NET Core projeler için ya da el ile güncelleştirmeniz yer alan yönergeleri izleyerek proje [.NET Core CLI (project.json) DNX geçiş](../migration/from-dnx.md) ve sonra da `dotnet migrate` veya doğrudan projelerinizi yükseltin.
+Önizleme üretmek için tooling 2 kullandıysanız *project.json*-tabanlı projeler başvurun [dotnet geçirmek](dotnet-migrate.md) projeniz için MSBuild geçirme hakkında bilgi için konu /*.csproj*yayın araçları ile kullanım için. .NET Core Preview 2 araç sürümünden önce ya da el ile oluşturulan projeleri yer alan yönergeleri izleyerek proje güncelleştirme [.NET Core CLI (project.json) DNX geçiş](../migration/from-dnx.md) ve sonra da `dotnet migrate` veya doğrudan yükseltme projelerinizi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

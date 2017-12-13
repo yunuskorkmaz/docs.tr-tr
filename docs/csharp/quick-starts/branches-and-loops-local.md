@@ -1,5 +1,5 @@
 ---
-title: "Hızlı Başlat - dalları ve lops - C# Kılavuzu"
+title: "Hızlı Başlangıç - dallar ve döngüler - C# Kılavuzu"
 description: "Bu hızlı başlangıç bölümünde dallar ve döngüler hakkında koşullu dal ve art arda deyimlerini yürütmek için döngüler destekler dili sözdizimi keşfetmek için C# kod yazın."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4b077a29cf42072a93b054f50a13a4580ad54304
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="branches-and-loops"></a>Dal ve döngüler
 
 Bu hızlı başlangıç değişkenlerini inceler ve bu değişkenleri esas alarak yürütme yolu değiştirir kodunun nasıl yazılacağını öğretir. C# kod yazma ve derleme ve onu çalıştırma sonuçları görüntüleyin. Hızlı Başlangıç dallanma ve döngü yapıları C# keşfedin dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Kullanarak kararlar `if` deyimi
 
@@ -45,7 +45,7 @@ int b = 3;
 Tür `dotnet run` yeniden. Yanıt 10'dan az olduğundan, hiçbir şey yazdırılır. **Koşulu** olduğunuz test değer false. Olası dallarını birini yalnızca yazdıktan çünkü yürütmek için herhangi bir kod olmayan bir `if` deyimi: true dal.
 
 > [!TIP]
-> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Arayın yakından hata çıkış ve hata kodu. Compler hata genellikle sorun bulmanıza yardımcı olabilir. 
+> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Yakından hata çıkış ve hata oluşturulan kod bakın. Compler hata genellikle sorun bulmanıza yardımcı olabilir. 
 
 Bu ilk örnek gücünü gösterir `if` ve Boolean türleri. A *Boolean* iki değerlerden birine sahip bir değişken: `true` veya `false`. C# özel türünü tanımlayan `bool` Boolean değişkenleri için. `if` Deyimi denetler değerini bir `bool`. Değer olduğunda `true`, aşağıdaki deyim `if` yürütür. Aksi takdirde atlanır. 
 
@@ -250,7 +250,7 @@ Gördüğünüz göre `if` deyimi ve C# dil döngü yapıları bkz tüm tamsayı
 - `if` Deyimi, bir sayı toplamı parçası olup olmayacağını görmek için koşul verir.
 - `for` Döngü, 20'den sayılar 1 için bir dizi adımı yineleyin yardımcı olabilir.
 
-Kendiniz deneyin. Ardından nasıl yaptığınız denetleyin. Tarafından bir olası yanıt görebilirsiniz [tamamlanan kodu Github'da görüntüleme](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Kendiniz deneyin. Ardından nasıl yaptığınız denetleyin. 63 için bir yanıt almanız gerekir. Tarafından bir olası yanıt görebilirsiniz [tamamlanan kodu Github'da görüntüleme](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
 "Dallandırır ve döngü" Hızlı Başlangıç tamamladınız.
 

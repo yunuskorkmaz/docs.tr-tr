@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C# hızlı başlangıç: koleksiyonları #
 
 Bu hızlı başlangıç C# dili ve temel bilgileri tanıtılmaktadır <xref:System.Collections.Generic.List%601> sınıfı.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="a-basic-list-example"></a>Basit liste örnek.
 
@@ -210,7 +210,7 @@ Dosyayı kaydedip türü `dotnet run` sonuçları görüntüleyin.
 > Bu bölüm yalnızca yoğunlaşmak için çağıran kodu yorum yapabileceği `WorkingWithStrings();`. Yalnızca iki put `/` bu gibi karakterler çağrı önünde: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>sınama
-Birlikte koyabilirsiniz, bkz: Bu ve önceki sürümleri dersleri bazıları dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve ilk 20 numaralarını sırayla oluşturması için kod yazın.
+Birlikte koyabilirsiniz varsa bkz bazı kavramlar bu ve önceki sürümleri dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. İlk 20 sayıları sırayla oluşturmak için kod yazmayı deneyin. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)
 
 ## <a name="complete-challenge"></a>Tam sınama
 

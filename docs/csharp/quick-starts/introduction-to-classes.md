@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: b7598309f48cbccf2d270be53a4b40dae11e8df8
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-classes"></a>Giriş sınıfları
 
-Bu ders, yüklediğiniz varsayılır [.NET Core SDK](http://dot.net/core)ve tercih ettiğiniz bir düzenleyicide. Yoksa, deneyin [Visual Studio Code](https://code.visualstudio.com/), veya [Visual Studio](https://www.visualstudio.com/) Mac veya Windows.
+Bu Hızlı Başlangıç, geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="create-your-application"></a>Uygulamanızı oluşturun
 

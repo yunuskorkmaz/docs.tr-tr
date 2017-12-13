@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET devralma
 
@@ -179,7 +179,7 @@ Tasarlama, bizim `Publication` sınıfı, ihtiyacımız birkaç tasarım kararla
 
 - Bizim Bankası'ndaki eklenecek üyeleri `Publication` sınıfı olup `Publication` üyeleri yöntem uygulamalarını sağlayın veya `Publication` türetilmiş sınıflarının için bir şablon olarak hizmet veren bir Özet temel sınıf.
 
-  Bu durumda, `Publication` sınıfı, yöntem uygulamalarını sağlayacaktır. [Tasarlama soyut taban sınıfları amd kendi türetilen sınıflar](#abstract) bölüm içeren bir Özet kullanan bir örnek türetilmiş sınıfları yöntemlerini tanımlamak için temel sınıf geçersiz kılması gerekir. Türetilen sınıflar türetilen tür uygun herhangi bir uygulama sağlamak boş.
+  Bu durumda, `Publication` sınıfı, yöntem uygulamalarını sağlayacaktır. [Soyut taban sınıfları ve bunların türetilmiş sınıfları tasarlama](#abstract) bölüm içeren bir Özet kullanan bir örnek türetilmiş sınıfları yöntemlerini tanımlamak için temel sınıf geçersiz kılması gerekir. Türetilen sınıflar türetilen tür uygun herhangi bir uygulama sağlamak boş.
 
   Kodunu (bildirim ve uygulamasını taban yöntemleri sınıfı ve bunları geçersiz kılma gerekmez diğer bir deyişle, birden çok türetilen sınıflar paylaşım) yeniden Özet olmayan taban sınıflar avantajı yeteneğidir. Bu nedenle, biz üyelerine eklemelisiniz `Publication` kendi kodu bazı tarafından paylaşılabilir veya özelleştirilmiş en büyük olasılıkla ise `Publication` türleri. Biz bunu verimli bir şekilde yapmak başarısız olursa, biz büyük ölçüde aynı üye türetilmiş sınıflarda temel sınıf yerine tek bir uygulama uygulamalarını gerek kalmadan elde edersiniz. Birden fazla konumda yinelenen kodunu korumak için gereken, hataların olası bir kaynaktır.
 

@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: 1c9ce7a008c86d1c245ce8b7d616e05fcb3d4bbc
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: 0164c36dcfb8a851dcb40d82265390795dc3d16c
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
@@ -169,7 +169,7 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 #### <a name="microsoft-azure-command-line-interface-cli"></a>Microsoft Azure komut satırı arabirimi (CLI)
 
-* [DockerHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](Docker image for Microsoft Azure Command Line Interface) 
+* [DockerHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://hub.docker.com/r/microsoft/azure-cli/) 
 
 * [GitHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://github.com/Microsoft/OMS-docker)
 

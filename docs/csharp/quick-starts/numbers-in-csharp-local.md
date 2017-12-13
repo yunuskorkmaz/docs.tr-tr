@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 821cca4ea6d6148410e9b179f05d5b74c4844628
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: f275f157d9a9e41407be0beac83c337c7706a95d
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="numbers-in-c-quick-start"></a>C# hızlı başlangıç numaraları #
 
 Bu hızlı başlangıç C# sayı türleri hakkında etkileşimli olarak öğretilmektedir. Küçük miktarda kod yazacaksınız sonra derlemek ve bu kodu çalıştırmak. Hızlı Başlangıç bir dizi numaraları ve C# matematik işlemleri keşfedin dersleri içerir. Bu derslerin C# dil temelleri öğretir.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="explore-integer-math"></a>Tamsayı matematik keşfedin
 
@@ -312,8 +312,9 @@ Decimal türü kullanarak matematik ondalık konumun sağında daha fazla basama
 
 ***Sınama***
 
-Farklı sayısal türler gördüğünüze göre 2.50 inç, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: C# PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
+Farklı sayısal türler gördüğünüze göre 2.50 inç, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
 
+19 ve 20 arasında bir yanıt almanız gerekir.
 Yanıtınız tarafından kontrol edebilirsiniz [Github'da tamamlanmış örnek kodu incelemeden](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 İsterseniz başka bir formüller deneyin. 
