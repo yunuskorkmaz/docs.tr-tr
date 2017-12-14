@@ -17,11 +17,11 @@ caps.latest.revision: "30"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1c7a9226a710fef5ecd0b027bee129271654e01d
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamamlandığında, bir zaman uyumsuz işlemi çok yaygın bir sorundur. Geleneksel olarak, bu geri çağırma yöntemlerini kullanarak gerçekleştirilmedi. Görev paralel kitaplığı aynı işlevselliği tarafından sağlanan *devamlılık görevlerini*. (Yalnızca devamlılığı olarak da bilinir) bir devamlılık görevi olarak bilinen başka bir görev tarafından çağrılan bir zaman uyumsuz bir görevdir *antecedent*, antecedent sona erdiğinde.  
@@ -124,7 +124,7 @@ Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamam
 ## <a name="associating-state-with-continuations"></a>Durum devamlılıklar ile ilişkilendirme  
  Rastgele durumu görev devamlılığı ile ilişkilendirebilirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Yöntemi sağlar aşırı yüklenmiş sürümleri, her Al bir <xref:System.Object> devamlılık durumunu gösteren bir değer. Bu durum nesnesi kullanarak daha sonra erişebileceğiniz <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği. Bu durum nesne `null` bir değer belirtmezseniz.  
   
- Devamlılık durumunda yararlı kullanan var olan kodu dönüştürürken [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanılacak. APM, genellikle nesne durumda sağladığınız  **başlamak*yöntemi*** yöntemi ve kullanarak durum sonraki erişim <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, korumak bu durum TPL kullanmak için APM kullanan kodu dönüştürürken.  
+ Devamlılık durumunda yararlı kullanan var olan kodu dönüştürürken [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanılacak. APM, genellikle nesne durumda sağladığınız **başlamak***yöntemi* yöntemi ve kullanarak durum sonraki erişim <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, korumak bu durum TPL kullanmak için APM kullanan kodu dönüştürürken.  
   
  Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> nesnelerini [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görev için durum nesnenin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde bkz [görevleri penceresini kullanma](/visualstudio/debugger/using-the-tasks-window).  
   

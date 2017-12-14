@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: Merhaba C#
 metadata:
   title: "Merhaba C#. C# dili, ilk giriş."
@@ -7,34 +6,100 @@ metadata:
   audience: Developer
   level: Beginner
   nextTutorialHref: numbers-in-csharp
-  nextTutorialTitle: "C# numaraları"
+  nextTutorialTitle: Numbers in C#
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 1b35fb91f19bb5b2a032f2c1f36479e0b42f158c
-  ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+  ms.openlocfilehash: e0ba04029605db719a06babedb989b189a478f54
+  ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/12/2017
+  ms.lasthandoff: 12/13/2017
 items:
 - durationInMinutes: 1
-  content: "Bu hızlı başlangıç C# etkileşimli olarak yazma C# ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. \"Hello World\" programla başlamak dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
+  content: >
+    This quick start teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code. It contains a series of lessons that begin with a "Hello World" program. These lessons teach you the fundamentals of the C# language.
 - title: "İlk C# programınızı çalıştırma"
   durationInMinutes: 2
-  content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın ve tıklatın **çalıştırmak** düğmesi:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nTebrikler! İlk C# programınız çalıştırdıysanız. \"Hello World!\" iletisi yazdırır basit bir programdır. Kullanıldığını <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ileti yazdırmak için yöntem. `Console`Konsol penceresinde temsil eden bir tür değil. `WriteLine`bir yöntemi `Console` bu metin konsola metin satırının yazdırır türü.\n\nŞimdi geçmek ve daha fazlasını keşfedin. Bu ders geri kalanı ile çalışma araştırır `string` C# metin temsil eden tür. Gibi `Console` türü, `string` türüne sahip yöntemleri. `string` Yöntemler metni ile çalışır. \n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "Run the following code in the interactive window. To do that, type the following code block in the interactive window and click the **Run** button:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nCongratulations! You've run your first C# program. It's a simple program that prints the message \"Hello World!\". It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message. `Console` is a type that represents the console window. `WriteLine` is a method of the `Console` type that prints a line of text to that text console.\n\nLet's move on and explore more. The rest of this lesson explores working with the `string` type, which represents text in C#. Like the `Console` type, the `string` type has methods. The `string` methods work with text. \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: "Bildirme ve değişkenleri kullanma"
   durationInMinutes: 3
-  content: "İlk programınızı yazdırılan `string` \"Hello World!\" ekranda. \n\n> [!TIP]\n> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. **Derleyici** bu hatalarını bulmak ve bunları sizin için rapor. Çıktı, hata iletileri içerdiğinde, örnek kod ve düzeltmek görmek için etkileşimli penceresinde kod yakından bakın.\n> Bu alıştırmada, C# kod yapısını öğrenmenize yardımcı olur. \n\nİlk Programınızı bir ileti yazdırmaya sınırlıdır. Kullanarak daha kullanışlı programlar yazabilirsiniz **değişkenleri**. A **değişkeni** farklı değerlerle aynı kodu çalıştırmak için kullanabileceğiniz bir simge. Şimdi deneyin! Aşağıdaki kod ile etkileşimli penceresinde yazdığınız kodu değiştirin:\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\nİlk satır bir değişken bildiren `aFriend` ve bir değer, \"Fatura\" atar. İkinci satır adı yazdırır.\n\nBildirdiğiniz herhangi bir değişken için farklı değerler atayabilirsiniz. Arkadaşlarınıza birine adını değiştirebilirsiniz. Bu iki satır zaten eklediğiniz koddan etkileşimli penceresinde ekleyin:\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\nKod aynı satır içinde depolanan değer bağlı olarak iki farklı iletileri yazdırır fark `aFriend` değişkeni.\n\nAynı zamanda \"Hello\" word son iki iletilerinde eksik olduğunu fark etmiş olabilirsiniz. Şimdi, şimdi düzeltin.  Aşağıdaki iletiye yazdırma satırları değiştirin:\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nTıklatın **çalıştırmak** yeniden sonuçları görüntüleyin.\n\nBiz ilerledikçe kullanarak yazdırma dizeler oluşturma `+` kullanışsız hale gelir. Dize ilişkilendirme olanak tanır birlikte dizeleri daha kısa ve okunabilir bir biçimde parçası.\n\nEklerseniz bir `$` dizesinin açılış tırnak önce dize ifadeler gibi sonra içeren `aFriend` değişken dizesi süslü ayraç içinde içinde.\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nTıklatın **çalıştırmak** yeniden sonuçları görüntüleyin.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "Your first program printed the `string` \"Hello World!\" on\nthe screen. \n\n> [!TIP]\n> As you explore C# (or any programming language), you'll\n> make mistakes when you write code. The **compiler** will\n> find those errors and report them to you. When the output\n> contains error messages, look closely at the example code,\n> and the code in the interactive window to see what to fix.\n> That exercise will help you learn the structure of C# code. \n\nYour first program is limited to printing one message. You can write more\nuseful programs by using **variables**. A **variable** is a symbol you can\nuse to run the same code with different values. Let's try it! Replace the\ncode you've written in the interactive window with the following code:\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\nThe first line declares a variable, `aFriend` and assigns it a value, \"Bill\". The second line\nprints out the name.\n\nYou can assign different values to any variable you declare. You can change\nthe name to one of your friends. Add these two lines in the interactive window\nfollowing the code you've already added:\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\nNotice that the same line of code prints two different messages, based on\nthe value stored in the `aFriend` variable.\n\nYou may have also noticed that the word \"Hello\" was missing in the last two messages. Let's fix\nthat now.  Modify the lines that print the message to the following:\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nClick **Run** again to see the results.\n\nAs we progress, creating strings to print using `+` becomes cumbersome. String interpolation lets you piece together strings in a more concise and readable way.\n\nIf you add a `$` before the opening quotes of the string, you can then include string expressions, like the `aFriend` variable, inside the string in curly brackets.\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nClick **Run** again to see the results.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: "Dizeleri ile çalışma"
   durationInMinutes: 5
-  content: "Son düzenlemeniz dizelerle neler yapabileceğiniz bizim ilk bakış oluştu. Daha fazla inceleyelim.\n\n`+` Bir işleç C# ' de denir. Dizelere uygulandığında ister `firstString + secondString`, yeni bir dize ikinci metinden arkasından ilk metinden oluşturulur. Bu olarak adlandırılır *dizelerle*. Dize, dize değişkenleri de dahil olmak üzere herhangi bir sayıda birleştirebilirsiniz.  Şunu deneyin:\n\n```csharp\nstring firstFriend = \"Maria\";\nstring secondFriend = \"Sage\";\nConsole.WriteLine($\"My friends are {firstFriend} and {secondFriend}\");\n```\n\nDizelerle daha keşfetmenizde kullanarak bir dize uzunluğu bulabilirsiniz `Length`. `Length`olan bir **özelliği** dize ve onu o dizesindeki karakterlerin sayısını döndürür. Etkileşimli penceresinin alt kısmında aşağıdaki kodu ekleyin:\n\n```csharp\nConsole.WriteLine($\"The name {firstFriend} has {firstFriend.Length} letters.\");\nConsole.WriteLine($\"The name {secondFriend} has {secondFriend.Length} letters.\");\n```\n\n> [!TIP]\n> Bu, kendi kendinize araştırmak için iyi bir zamandır. Öğrendiğinize `Console.WriteLine()` metin ekrana yazar. Değişkenleri bildirme ve birlikte dizeyi birleştirmek nasıl öğrendiniz. Etkileşimli pencerede deneyin. Bazı daha fazla ileti kendiniz yazın. Kullanarak dizeleri yapı `+` işleci.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Your last edit was our first look at what you can do with strings. Let's explore more.
+
+
+    The `+` is called an operator in C#. When applied to strings like `firstString + secondString`, a new string is created with the text from the first followed by the text from the second. This is referred to as *string concatenation*. You can combine any number of strings, including string variables.  Try this:
+
+
+    ```csharp
+
+    string firstFriend = "Maria";
+
+    string secondFriend = "Sage";
+
+    Console.WriteLine($"My friends are {firstFriend} and {secondFriend}");
+
+    ```
+
+
+    As you explore more with strings, you can find the length of a string using `Length`. `Length` is a **property** of a string and it returns the number of characters in that string. Add the following code at the bottom of the interactive window:
+
+
+    ```csharp
+
+    Console.WriteLine($"The name {firstFriend} has {firstFriend.Length} letters.");
+
+    Console.WriteLine($"The name {secondFriend} has {secondFriend.Length} letters.");
+
+    ```
+
+
+    > [!TIP]
+
+    > This is a good time to explore on your own. You've learned that `Console.WriteLine()`
+
+    > writes text to the screen. You've learned how to declare variables and
+
+    > concatenate strings together. Experiment in the interactive window. Write
+
+    > some more messages yourself. Build strings using the `+` operator.
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: Dizeleri bitirdiniz
   durationInMinutes: 5
-  content: "Kullanmakta olduğunuz bir **yöntemi**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, iletileri yazdırmak için. A **yöntemi** bazı eylemleri uygulayan kod bloğu. Bunu erişebilmesi için bir adı vardır. \n\n`string` Türüne sahip çok sayıda kullanışlı yöntemler. İnceleyelim <xref:System.String.Trim%2A> yöntemi ve ilgili yöntemleri <xref:System.String.TrimStart%2A> ve <xref:System.String.TrimEnd%2A>. Bu yöntemler öndeki ve sondaki boşlukları kaldırın:\n\n```csharp\nstring message = \"      Hello World!       \";\nConsole.WriteLine($\"[{message}]\");\n\nstring trimmedMessage = message.TrimStart();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.TrimEnd();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.Trim();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n```\n\nBu örnek birkaç Dizelerle çalışmaya yönelik önemli kavramları eklenir. Dizeleri işlemek yöntemleri yerinde değişiklikler yapmak yerine yeni string nesneleri döndürür. Görebilirsiniz herhangi biri her çağrı `Trim` yöntemleri yeni bir dize verir, ancak özgün ileti değiştirmez.\n\nBir dizeyle çalışabilecek diğer yöntemler vardır. Örneğin, büyük olasılıkla bir arama kullanmış olduğunuz ve bir düzenleyici veya sözcük işlemci komutu değiştirin. <xref:System.String.Replace%2A> Yöntemi benzer bir şey olmadığından bir `string`. Bir alt dizeyi arar ve farklı bir metinle değiştirir. <xref:System.String.Replace%2A> Yöntemi iki alan **parametreleri**. Bunlar parantez dizelerdir. Birinci aramak için metin dizesidir. İkinci ile değiştirmek için metin dizesidir. Kendiniz için deneyin. Bu kodu ekleyin:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nmessage = message.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(message);\n```\n\nDiğer kullanışlı yöntemler iki dize tüm büyük harf ya da tüm küçük olun. Aşağıdaki kod deneyin:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nConsole.WriteLine(message.ToUpper());\nConsole.WriteLine(message.ToLower());\n```\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages. A **method** is a block of code that implements some action. It has a name, so you can access it. \n\nThe `string` type has many useful methods. Let's explore the <xref:System.String.Trim%2A> method, and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A>. These methods remove leading and trailing spaces:\n\n```csharp\nstring message = \"      Hello World!       \";\nConsole.WriteLine($\"[{message}]\");\n\nstring trimmedMessage = message.TrimStart();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.TrimEnd();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n\ntrimmedMessage = message.Trim();\nConsole.WriteLine($\"[{trimmedMessage}]\");\n```\n\nThis sample reinforces a couple of important concepts for working with strings. The methods that manipulate strings return new string objects rather than making modifications in place. You can see that each call to any of the `Trim` methods returns a new string, but does not change the original message.\n\nThere are other methods available to work with a string. For example, you've probably used a search and replace command in an editor or word processor. The <xref:System.String.Replace%2A> method does something similar in a `string`. It searches for a substring, and replaces it with different text. The <xref:System.String.Replace%2A> method takes two **parameters**. These are the strings between the parentheses. The first string is the text to search for. The second string is the text to replace it with. Try it for yourself. Add this code:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nmessage = message.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(message);\n```\n\nTwo other useful methods make a string ALL CAPS or all lower case. Try the following code:\n\n```csharp\nstring message = \"Hello World!\";\nConsole.WriteLine(message);\nConsole.WriteLine(message.ToUpper());\nConsole.WriteLine(message.ToLower());\n```\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: Arama dizelerini
   durationInMinutes: 10
-  content: "Diğer parçası bir *arama ve değiştirme* işlemdir metin dizesi içinde bulunamıyor. Kullanabileceğiniz <xref:System.String.Contains%2A> arama yöntemi. Bir dize içindeki bir alt dizeyi içerip içermediğini belirtir. Keşfetmek için aşağıdaki kodu deneyin <xref:System.String.Contains%2A>:\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.Contains(\"goodbye\"));\nConsole.WriteLine(message.Contains(\"greetings\"));\n```\n\n<xref:System.String.Contains%2A> Yöntemi döndürür bir **boolean** arama için dize bulundu belirten değer. A **boolean** ya da depolayan bir `true` veya `false` değeri. Daha fazla hakkında bilgi edineceksiniz **boolean** sonraki Ders değerleri.\n\n***Sınama***\n\nBenzer iki yöntem vardır <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> de arayan bir dizedeki alt dizeleri. Bunlar, başında veya dizenin sonunda bir alt dizeyi bulur. Kullanmak için önceki örnek değiştirmeye çalışmadan <xref:System.String.StartsWith%2A> ve <xref:System.String.EndsWith%2A> yerine <xref:System.String.Contains%2A>. \"Siz\" veya bir dizenin başında \"goodbye\" için arama yapın. \"Hello\" veya bir dizenin sonunda \"goodbye\" için arama yapın.\n\n> [!Note]\n> Metin dizesinin sonunda için test ettiğinizde, noktalama izleyin. Dize bir nokta ile sona ererse, bir nokta ile biten bir dize işaretlemeniz gerekir.\n\nAlması gereken `true` \",\" ile başlayan ve \"hello\" ve \"goodbye\" ile biten veya başlayarak yanlış biter. \n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "The other part of a *search and replace* operation is to find text in a\nstring. You can use the  <xref:System.String.Contains%2A> method for searching. It\ntells you if a string contains a substring inside it. Try the following\ncode to explore <xref:System.String.Contains%2A>:\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.Contains(\"goodbye\"));\nConsole.WriteLine(message.Contains(\"greetings\"));\n```\n\nThe <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the\nstring you were searching for was found. A **boolean** stores either a `true` or a\n`false` value. You'll learn more about **boolean** values\nin a later lesson.\n\n***Challenge***\n\nThere are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string. These find a substring at the beginning or the\nend of the string. Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and\n<xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>. Search for \"You\" or \"goodbye\" at the beginning of a string. Search for \"hello\" or \"goodbye\" at the end of a string.\n\n> [!Note]\n> Watch your punctuation when you test for the text at the end of the string. If the string\n> ends with a period, you must check for a string that ends with a period.\n\nYou should get `true` for starting with \"You\" and ending with \"hello\" and false for starting with or ending with \"goodbye\". \n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
 - title: "Tam sınama"
   durationInMinutes: 3
-  content: "Aşağıdakine benzer ile gündeme?\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
-- content: "\"Hello C#\" Hızlı Başlangıç tamamladınız.\n\nİle çalışma hakkında daha fazla bilgiyi `string` yazın [C# programlama kılavuzu](../programming-guide/index.md) konuyla ilgili [dizeleri](../programming-guide/strings/index.md).\0"
+  content: >
+    Did you come up with something like this?
+
+
+    ```csharp
+
+    string message = "You say goodbye, and I say hello";
+
+    Console.WriteLine(message.StartsWith("You"));
+
+    Console.WriteLine(message.StartsWith("goodbye"));
+
+
+    Console.WriteLine(message.EndsWith("hello"));
+
+    Console.WriteLine(message.EndsWith("goodbye"));
+
+    ```
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
+- content: "You've completed the \"Hello C#\" quick start.\n\nYou can learn more about working with the `string` type in the\n[C# Programming Guide](../programming-guide/index.md) topic on [strings](../programming-guide/strings/index.md).\0"

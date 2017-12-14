@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak için bu kılavuzun amacı olan bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama. Bu kılavuz, kodu yeniden kullanma ve düğme mantığının ayrılması düğme bildiriminden izin veren bir özelleştirilmiş düğme kaynak oluşturmak için stilleri ve bir şablonu kullanır. Bu kılavuzda tamamen yazılmış [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak iç
     </Application>  
     ```  
   
-     Kaynak kapsamı kaynak tanımladığınız tarafından belirlenir. Kaynakları tanımlama `Application.Resoureses` app.xaml dosyası gelen herhangi bir uygulamada kullanılmak üzere kaynak sağlar. Kaynaklarınızın kapsamını tanımlama hakkında daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Kaynak kapsamı kaynak tanımladığınız tarafından belirlenir. Kaynakları tanımlama `Application.Resources` app.xaml dosyası gelen herhangi bir uygulamada kullanılmak üzere kaynak sağlar. Kaynaklarınızın kapsamını tanımlama hakkında daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Stil oluşturma ve onunla temel özellik değerlerini tanımlayabileceğiniz:** aşağıdaki biçimlendirmeleri eklemek `Application.Resources` bloğu. Bu biçimlendirme oluşturur bir <xref:System.Windows.Style> uygulama ayarı, tüm düğmeleri uygulanan <xref:System.Windows.FrameworkElement.Width%2A> 90 düğmelerin ve <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
   
@@ -328,7 +328,7 @@ Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak iç
   
      Uygulamayı çalıştırın ve düğmeleri birini tıklatın için F5 tuşuna basın. Odağı hala içerdiğinden tıklattıktan sonra düğmesi vurgulanan kalır dikkat edin. Başka bir düğmesine tıklarsanız, sonuncu onu kaybederse ederken yeni düğme odağı kazanır.  
   
-4.  **İçin animasyon ekleme** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** bazı animasyonları tetikleyicilere sonraki ekleriz.   Herhangi bir yere içinde aşağıdaki biçimlendirmeleri eklemek `ControlTemplate.Triggers` bloğu.  
+4.  **İçin animasyon ekleme** <xref:System.Windows.UIElement.MouseEnter> **ve** <xref:System.Windows.UIElement.MouseLeave> **:** bazı animasyonları tetikleyicilere sonraki ekleriz. Herhangi bir yere içinde aşağıdaki biçimlendirmeleri eklemek `ControlTemplate.Triggers` bloğu.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

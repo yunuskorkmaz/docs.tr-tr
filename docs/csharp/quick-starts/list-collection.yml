@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: "C# koleksiyonları"
 metadata:
   title: "C# koleksiyonları. Dizileri ve koleksiyonları C# ' ta kullanmayı öğrenin."
@@ -9,30 +8,194 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 764caf36026fb96ecfdd002c6df5294f8282a4c3
-  ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+  ms.openlocfilehash: 666f7a966dbe7307a1ced303ad6117bbb8370bcb
+  ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/12/2017
+  ms.lasthandoff: 12/13/2017
 items:
 - durationInMinutes: 1
-  content: "Bu hızlı başlangıç C# etkileşimli olarak C# kod yazmak ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi oluşturmak, değiştirmek ve Koleksiyonlar ve diziler keşfedin dersleri içerir.\n"
+  content: >
+    This quick start teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code. It contains a series of lessons that create, modify and explore collections and arrays.
 - title: "Listeleri oluşturma"
   durationInMinutes: 2
-  content: "Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın (Değiştir \"<name>\" adıyla) tıklatıp **çalıştırmak** düğmesi:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nYalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü içinde daha önce hızlı başlatır, öğrendiğinize kavramları kullanıyorsunuz.\n\nAdlarını görüntülemek için kod kullanır **Ara değerli dizeler**.  Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.\n\nŞimdi keşfetme tutun.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Run the following code in the interactive window. To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    You've just created a list of strings, added three names to that list, and printed out the names in all CAPS. You're using concepts
+
+    that you've learned in earlier quick starts to loop through the list.
+
+
+    The code to display names makes use of **interpolated strings**.  When you precede a `string` with the `$` character, you can embed C# code in the string declaration. The actual string replaces that C# code with the value it generates. In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.
+
+
+    Let's keep exploring.
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "Liste içeriklerini değiştirme"
   durationInMinutes: 3
-  content: "Kullandığı oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçları arasında öğelerin türü belirtin.\n\nBu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür onu büyütür veya böylelikle küçültür, ekleme veya öğeleri kaldırma olanak sağlar. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:\n\n```csharp\nConsole.WriteLine();\nnames.Add(\"Maria\");\nnames.Add(\"Bill\");\nnames.Remove(\"Ana\");\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nİki daha fazla ad listesinin sonuna ekledik. Ayrıca bir de kaldırdınız.\n\n<xref:System.Collections.Generic.List%601> Tarafından ayrı öğeleri başvuru sağlar **dizin** de. Öğelerini kullanarak erişim `[` ve `]` belirteçleri. Neleri zaten yazdıktan ve deneyin altına aşağıdaki kodu ekleyin:\n\n```csharp\nConsole.WriteLine($\"My name is {names[0]}.\");\nConsole.WriteLine($\"I've added {names[2]} and {names[3]} to the list.\");\n```\n\nListenin sonunun erişim izin verilmez. Ne kadar süreyle listeyi kullanarak denetleyebilirsiniz <xref:System.Collections.Generic.List%601.Count%2A> özelliği. Denemek için aşağıdaki kodu ekleyin:\n\n```csharp\nConsole.WriteLine($\"The list has {names.Count} people in it\");\n```\n\nTıklatın **çalıştırmak** yeniden sonuçları görüntüleyin. Bu nedenle en büyük geçerli dizin biridir C# ' ta dizinlerini 0'da, Başlat listedeki öğeleri sayısından küçük.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    The collection you created uses the <xref:System.Collections.Generic.List%601> type. This type stores sequences of elements. You specify the type of the elements between the angle brackets.
+
+
+    One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements. Add the following code below the code you've already written:
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    You've added two more names to the end of the list. You've also removed one as well.
+
+
+    The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well. You access items using the `[` and `]` tokens. Add the following code below what you've already written and try it:
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    You're not allowed to access past the end of the list. You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property. Add the following code to try it:
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    Click **Run** again to see the results. In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "Arama ve sıralama listeler"
   durationInMinutes: 5
-  content: "Bizim örneklerimizi görece küçük listeleri kullanın, ancak uygulamalarınızı genellikle bazen binlerce numaralandırma pek çok daha fazla öğe ile listeleri oluşturabilirsiniz. Bu büyük koleksiyonlarda öğeleri bulmak için farklı öğeleri listede arama gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi için bir öğe arar ve öğenin dizinini döndürür. Bunu nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınızı altına aşağıdaki kodu ekleyin:\n\n```csharp\nvar index = names.IndexOf(\"Felipe\");\nif (index != -1)\n  Console.WriteLine($\"The name {names[index]} is at index {index}\");\n\nvar notFound = names.IndexOf(\"Not Found\");\n  Console.WriteLine($\"When an item is not found, IndexOf returns {notFound}\");\n```\n\nHer zaman tarafından döndürülen dizin denetlemeniz gerekir böylece öğeyi listede olup olmadığını bilemeyebilirsiniz <xref:System.Collections.Generic.List%601.IndexOf%2A>. -1 olması durumunda öğe bulunamadı.\n\nListenizdeki öğeleri de sıralanabilir. <xref:System.Collections.Generic.List%601.Sort%2A> Yöntemi (alfabetik olarak söz konusu olduğunda dizeleri) normal sıralarına listesindeki tüm öğeleri sıralar. Bu kodu ekleyin ve yeniden çalıştırın:\n\n```csharp\nnames.Sort();\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands. To find elements in these larger collections, you need to search the list for different items. The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item. Try this to see how it works.  Add the following code below what you've written so far:
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>. If it is -1, the item was not found.
+
+
+    The items in your list can be sorted as well. The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings). Add this code and run again:
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "Diğer türleri listesi"
   durationInMinutes: 5
-  content: "Kullanmakta olduğunuz `string` kadarki listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> farklı türü kullanıyor. Şimdi bir sayı kümesi oluşturun. Şu ana kadar yazdığınız kodun silin ve bu ile değiştirin:\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\nTamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, sayılardan oluşan bir dizi. Sonraki her Fibonacci numarası, önceki iki sayı toplamı gerçekleştirerek bulunur. Bu kodu ekleyin:\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nTuşuna **çalıştırmak** ; sonuçları görmek için\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    You've been using the `string` type in lists so far. Let's make a <xref:System.Collections.Generic.List%601> using a different type. Let's build a set of numbers. Delete the code you wrote so far, and replace it with this:
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    That creates a list of integers, and sets the first two integers to the value 1. These are the first two values of a *Fibonacci Sequence*, a sequence of numbers. Each next Fibonacci number is found by taking the sum of the previous two numbers. Add this code:
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    Press **Run** to see the results;
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "sınama"
   durationInMinutes: 10
-  content: "Birlikte koyabilirsiniz varsa bkz bazı kavramlar bu ve önceki sürümleri dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve ilk 20 numaralarını sırayla oluşturması için kod yazın. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: >
+    See if you can put together some of the concepts from this and earlier lessons. Expand on what you've built so far with Fibonacci Numbers. Try and write the code to generate the first 20 numbers in the sequence. (As a hint, the 20th Fibonacci number is 6765.)
+
+
+    > [!NOTE]
+
+    > This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).
 - title: "Tam sınama"
   durationInMinutes: 3
-  content: "Aşağıdakine benzer ile gündeme?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nHer döngü tekrarında ile son iki tamsayı listesinde, bunları birleşimi ve bu değer listesine ekleyerek yönlendiriyoruz. Listeye 20 öğeleri ekleyene kadar döngü tekrarlar.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
-- content: "Liste Hızlı Başlangıç tamamladınız. Bu hızlı başlangıç son etkileşimli Hızlı Başlangıç ' dir. Bu hızlı başlangıçlar kendi geliştirme ortamında devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve Hızlı Başlangıç'ı seçin. Bu aynı alıştırma deneyin, doğrudan bir sonraki hızlı başlangıç taşımak veya yeniden ile başlangıç [C# numaraları](numbers-in-csharp-local.md) hızlı başlangıç.\n\nİle çalışma hakkında daha fazla bilgiyi `List` yazın [.NET Kılavuzu](../../standard/index.md) konuyla ilgili [koleksiyonları](../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.\0"
+  content: "Did you come up with something like this?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nWith each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list. The loop repeats until you've added 20 items to the list.\n\n> [!NOTE]\n> This online coding experience is in preview mode. If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).\n"
+- content: "You've completed the list quick start. This quick start is the final interactive quick start. You can continue these quick starts on your own development environment. Learn the basics of [local development](local-environment.md) and then pick a quick start. You can try this same exercise, move directly to the next quick start, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.\n\nYou can learn more about working with the `List` type in the\n[.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md). You'll also learn about many other collection types.\0"
