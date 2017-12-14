@@ -1,0 +1,6 @@
+# [Hızlı Başlangıçlar](index.md)
+## [Merhaba dünya](hello-world.yml)
+## [C# numaraları](numbers-in-csharp.yml)
+## [Dal ve döngüler](branches-and-loops.yml)
+## [Liste koleksiyonları](list-collection.yml)
+## [Sınıflara giriş](introduction-to-classes.md)

@@ -1,0 +1,7 @@
+# [Kovaryans ve Kontravaryans](index.md)
+## [Genel Arabirimlerde Varyans](variance-in-generic-interfaces.md)
+### [Değişken Genel Arabirimler Oluşturma](creating-variant-generic-interfaces.md)
+### [Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma](using-variance-in-interfaces-for-generic-collections.md)
+## [Temsilcilerde Varyans](variance-in-delegates.md)
+### [Temsilcilerde Varyans Kullanma](using-variance-in-delegates.md)
+### [İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma](using-variance-for-func-and-action-generic-delegates.md)

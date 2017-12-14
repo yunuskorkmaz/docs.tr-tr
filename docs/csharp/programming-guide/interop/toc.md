@@ -1,0 +1,7 @@
+# [Birlikte çalışabilirlik](index.md)
+## [Birlikte Çalışabilirliğe Genel Bakış](interoperability-overview.md)
+## [Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim](how-to-access-office-onterop-objects.md)
+## [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+## [Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma](how-to-use-platform-invoke-to-play-a-wave-file.md)
+## [İzlenecek yol: Office Programlama (C# ve Visual Basic)](walkthrough-office-programming.md)
+## [Örnek COM Sınıfı](example-com-class.md)

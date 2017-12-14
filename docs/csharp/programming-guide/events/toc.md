@@ -1,0 +1,7 @@
+# [Olaylar](index.md)
+## [Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma](how-to-subscribe-to-and-unsubscribe-from-events.md)
+## [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+## [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](how-to-raise-base-class-events-in-derived-classes.md)
+## [Nasıl yapılır: Arabirim Olaylarını Uygulama](how-to-implement-interface-events.md)
+## [Nasıl yapılır: Olay Örneklerini Depolamak için Sözlük Kullanma](how-to-use-a-dictionary-to-store-event-instances.md)
+## [Nasıl yapılır: Özel Olay Erişimcilerini Uygulama](how-to-implement-custom-event-accessors.md)

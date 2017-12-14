@@ -1,0 +1,5 @@
+# [Temsilciler](index.md)
+## [Temsilcileri Kullanma](using-delegates.md)
+## [Temsilcilerin Adlandırılmış ve Anonim Yöntemlerde Karşılaştırılması](delegates-with-named-vs-anonymous-methods.md)
+## [Nasıl yapılır: Temsilcileri Birleştirme (Çok Noktaya Yayın Temsilcileri)(C# Programlama Kılavuzu)](how-to-combine-delegates-multicast-delegates.md)
+## [Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma](how-to-declare-instantiate-and-use-a-delegate.md)

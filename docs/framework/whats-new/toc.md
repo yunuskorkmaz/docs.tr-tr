@@ -1,0 +1,5 @@
+# [Yenilikler](index.md)
+## [Erişilebilirlik Yenilikleri](whats-new-in-accessibility.md) 
+## [Sınıf Kitaplığında Artık Kullanılmayanlar](whats-obsolete.md)
+### [Eski Türler](obsolete-types.md)
+### [Eski Üyeler](obsolete-members.md)
