@@ -1,0 +1,5 @@
+# [Başlarken](index.md)
+## [Genel bakış](overview.md)
+## [.NET Framework ve Bant Dışı Yayınlar](the-net-framework-and-out-of-band-releases.md)
+## [.NET Core ve Açık Kaynak](net-core-and-open-source.md)
+## [Sistem Gereksinimleri](system-requirements.md)

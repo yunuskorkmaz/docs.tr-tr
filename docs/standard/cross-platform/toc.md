@@ -1,0 +1,7 @@
+# [Çoklu Platformlar için Geliştirme](index.md)
+## [Taşınabilir Sınıf Kitaplığı](cross-platform-development-with-the-portable-class-library.md)
+## [MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma](using-portable-class-library-with-model-view-view-model.md)
+## [Çoklu Platformları Hedefleyen Kitaplıklar için Uygulama Kaynakları](app-resources-for-libraries-that-target-multiple-platforms.md)
+## [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](support-for-windows-store-apps-and-windows-runtime.md)
+## [URI'yı Windows Çalışma Zamanı'na Geçirme](passing-a-uri-to-the-windows-runtime.md)
+## [WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi](windowsruntimestreamextensions-asrandomaccessstream-method.md)

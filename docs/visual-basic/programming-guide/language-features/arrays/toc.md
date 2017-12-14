@@ -1,0 +1,6 @@
+# [Visual Basic'te Diziler](index.md)
+## [Dizi Boyutları](array-dimensions.md)
+## [Nasıl yapılır: Dizi Değişkeni Başlatma](how-to-initialize-an-array-variable.md)
+## [Nasıl yapılır: Dizi Sıralama](how-to-sort-an-array.md)
+## [Nasıl yapılır: Bir Diziyi Başka Diziye Atama](how-to-assign-one-array-to-another-array.md)
+## [Dizilerle İlgili Sorun Giderme](troubleshooting-arrays.md)

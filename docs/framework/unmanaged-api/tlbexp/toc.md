@@ -1,0 +1,5 @@
+# [Tlbexp Yardımcı İşlevleri](index.md)
+## [GetTypeLibInfo İşlevi](gettypelibinfo-function.md)
+## [LoadTypeLibWithResolver İşlevi](loadtypelibwithresolver-function.md)
+## [ITypeLibResolver Arabirimi](itypelibresolver-interface.md)
+### [ResolveTypeLib Yöntemi](resolvetypelib-method.md)
