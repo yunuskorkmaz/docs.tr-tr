@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına eklenen dinleyici nesne birlikte yok edilmeyecek olduğunu mümkündür. Bu durum bellek sızıntıları yol açabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]belirli olaylar için ayrılmış yönetici sınıfı sağlayarak ve bu olay için dinleyiciler üzerinde arabirimi uygulama bu sorunu gidermek için kullanılan bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -45,7 +45,7 @@ Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına ek
 |--------------|-----------------------|  
 |Varolan bir zayıf olay Yöneticisi sınıfı kullanın|Abone olmak istediğiniz olayı karşılık gelen varsa <xref:System.Windows.WeakEventManager>, varolan zayıf olay Yöneticisi'ni kullanın. WPF ile birlikte zayıf olay yöneticileri bir listesi için bkz: devralma hiyerarşisinde <xref:System.Windows.WeakEventManager> sınıfı. Ancak, büyük olasılıkla diğer yaklaşımlardan birini seçmeniz gerekir, böylece WPF ile birlikte nispeten az zayıf olay yöneticileri olduğunu unutmayın.|  
 |Bir genel zayıf olay Yöneticisi sınıf kullanma|Genel kullanmak <xref:System.Windows.WeakEventManager%602> var olan <xref:System.Windows.WeakEventManager> verimliliği hakkında kullanılabilir değil, uygulama için kolay bir yol istediğiniz ve değildir ilgilidir. Genel <xref:System.Windows.WeakEventManager%602> bir mevcut veya özel zayıf olay Yöneticisi daha az verimlidir. Örneğin, genel bir sınıf olayın adı verilen olay bulmak için daha fazla yansıma yapar. Ayrıca, olay genel kullanarak kaydetmek için kod <xref:System.Windows.WeakEventManager%602> daha ayrıntılı varolan kullanmaktan veya özel <xref:System.Windows.WeakEventManager>.|  
-|Özel zayıf olay Yöneticisi sınıf oluşturma|Bir özel Oluştur <xref:System.Windows.WeakEventManager> olduğunda, var olan <xref:System.Windows.WeakEventManager> kullanılabilir değil ve en iyi verim istiyor. Özel bir kullanarak <xref:System.Windows.WeakEventManager> abone olmak için bir olay daha verimli olacaktır, ancak başına daha fazla kod yazmaya maliyet doğurur.|  
+|Özel zayıf olay Yöneticisi sınıf oluşturma|Bir özel Oluştur <xref:System.Windows.WeakEventManager> var olan <xref:System.Windows.WeakEventManager> kullanılabilir değil ve en iyi verim istiyor. Özel bir kullanarak <xref:System.Windows.WeakEventManager> abone olmak için bir olay daha verimli olacaktır, ancak başına daha fazla kod yazmaya maliyet doğurur.|  
   
  Aşağıdaki bölümlerde zayıf olay deseni uygulayan açıklar.  Bu tartışma amaçları doğrultusunda, Abone olunacak olay aşağıdaki özelliklere sahiptir.  
   
@@ -142,5 +142,5 @@ Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına ek
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)

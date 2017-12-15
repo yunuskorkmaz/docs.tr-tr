@@ -24,11 +24,11 @@ caps.latest.revision: "79"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11fdbcd65c4f5588d9f32357dcf344f5f8544614
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> bir biçimlendirme işleminin sonuçları değeri. Ayrıca, dizeyi tarih ve saate başarılı bir şekilde dönüştürmek için bir ayrıştırma işleminde gerekli olan tarih ve saat değerinin bildirimini tanımlayabilir. Özel biçim dizesi, bir veya daha fazla özel tarih ve saat biçimi belirleyicisinden oluşur. Değil herhangi bir dize bir [standart tarih ve saat biçim dizesi](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) özel tarih ve saat biçim dizesi yorumlanır.  
@@ -691,7 +691,7 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 ### <a name="control-panel-settings"></a>Denetim Masası Ayarları  
  **Bölge ve Dil Seçenekleri** ayarlarını Denetim Masası'nda özel tarih ve saat biçim belirticileri çoğunu içeren biçimlendirme bir işlem tarafından üretilen Sonuç dizesini etkiler. Bu ayarları başlatmak için kullanılan <xref:System.Globalization.DateTimeFormatInfo> biçimlendirme yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürünü ile ilişkili nesne. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.  
   
- Kullanırsanız, ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> yeni bir örneğini oluşturmak için Oluşturucusu <xref:System.Globalization.CultureInfo> aynı kültür geçerli sistem kültürü tarafından oluşturulan tüm özelleştirmeler olarak temsil eden nesnesi **bölge ve Dil Seçenekleri** Denetim Masası uygulanacak yeni <xref:System.Globalization.CultureInfo> nesnesi. Kullanabileceğiniz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructo oluşturmak için bir <xref:System.Globalization.CultureInfo> sistemin özelleştirmeleri yansıtmaz nesnesi.  
+ Kullanırsanız, ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> yeni bir örneğini oluşturmak için Oluşturucusu <xref:System.Globalization.CultureInfo> aynı kültür geçerli sistem kültürü tarafından oluşturulan tüm özelleştirmeler olarak temsil eden nesnesi **bölge ve Dil Seçenekleri** Denetim Masası uygulanacak yeni <xref:System.Globalization.CultureInfo> nesnesi. Kullanabileceğiniz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu oluşturmak için bir <xref:System.Globalization.CultureInfo> sistemin özelleştirmeleri yansıtmaz nesnesi.  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo özellikleri  
  Biçimlendirme geçerli özellikleri tarafından Etkileyenler <xref:System.Globalization.DateTimeFormatInfo> örtük olarak geçerli iş parçacığı kültürünü veya açıkça tarafından sağlanan nesne <xref:System.IFormatProvider> biçimlendirme çağıran yönteminin parametresi. İçin <xref:System.IFormatProvider> parametresini belirtmeniz gerekir bir <xref:System.Globalization.CultureInfo> bir kültür temsil eder, nesne veya <xref:System.Globalization.DateTimeFormatInfo> nesnesi.  
@@ -701,6 +701,6 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -3,15 +3,15 @@ title: DotNet paketi command - .NET Core CLI
 description: "Dotnet paketi komut .NET Core projeniz için NuGet paketleri oluşturur."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -45,7 +45,7 @@ Paketlenmiş projenizin NuGet bağımlılıkları eklenir *.nuspec* düzgün bul
 
 Varsayılan olarak, `dotnet pack` projeyi ilk oluşturur. Bu davranışı önlemek isterseniz, geçirmek `--no-build` seçeneği. Bu genellikle burada kodu daha önce oluşturulmuş bildiğiniz sürekli tümleştirme (CI) yapı senaryolarda kullanışlıdır.
 
-MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işleminin komutu. Daha fazla bilgi için bkz: [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).
+MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işleminin komutu. Daha fazla bilgi için bkz: [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm nasıl MSBuild /p anahtarını birkaç farklı senaryo için kullanılacağını gösterir.
 
 ## <a name="arguments"></a>Arguments
 
@@ -172,3 +172,7 @@ Proje ile Sürüm soneki olarak yapılandırılmış `<VersionSuffix>$(VersionSu
 Paket sürümü kümesine `2.1.0` ile `PackageVersion` MSBuild özelliği:
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+Belirli bir projenin paketi [hedef framework](../../standard/frameworks.md):
+
+`dotnet pack /p:TargetFrameworks=net45`

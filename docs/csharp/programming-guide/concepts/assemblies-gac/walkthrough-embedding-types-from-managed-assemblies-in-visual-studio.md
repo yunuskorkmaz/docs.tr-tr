@@ -11,11 +11,11 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b07b940d6287de0caf41c7d15f3036ad4041ad0
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da (C#) yönetilen derlemelerden türler katıştırma
 Tanımlayıcı adlı Yönetilen derleme tür bilgilerini katıştırma, geniş sürüm bağımsızlığı elde etmek için bir uygulamada türü eşleştiği. Diğer bir deyişle, her sürüm için derlenmesi gerek kalmadan yönetilen kitaplık birden fazla sürümünü türlerinden kullanmak için program yazılabilir.  
@@ -242,6 +242,6 @@ Tanımlayıcı adlı Yönetilen derleme tür bilgilerini katıştırma, geniş s
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [/ Link (C# Derleyici Seçenekleri)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)  
- [Derlemelerle programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Derlemeler ve Genel Derleme Önbelleği (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

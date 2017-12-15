@@ -16,11 +16,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b82b409f27b14109c8e13fc8909235befc7a8d1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ-DataSet) oluşturma
 Oluşturmanın iki yolu vardır bir <xref:System.Data.DataView> içinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden sorgu bir <xref:System.Data.DataTable>, veya bir yazılı veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> doğrudan oluşturulabilir değil [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı.  
@@ -60,7 +60,7 @@ Oluşturmanın iki yolu vardır bir <xref:System.Data.DataView> içinde [!INCLUD
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- De kullanabilirsiniz dize tabanlı <xref:System.Data.DataView.RowFilter%2A> ve <xref:System.Data.DataView.Sort%2A> özellikleri filtrelemek ve sıralamak için bir <xref:System.Data.DataView> sorgudan oluşturulduktan sonra. Bu sıralama temizleyecek ve sorgudan devralınan filtre bilgilerini not edin. Aşağıdaki örnekte bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ile başlayan adların tarafından filtreler sorgu 'S'. Dize tabanlı <xref:System.Data.DataView.Sort%2A> özelliği ayarlanmış sırasını ve adlarını azalan düzende artan soyadları sıralamak için:  
+ Dize tabanlı de kullanabilirsiniz <xref:System.Data.DataView.RowFilter%2A> ve <xref:System.Data.DataView.Sort%2A> özellikleri filtrelemek ve sıralamak için bir <xref:System.Data.DataView> sorgudan oluşturulduktan sonra. Bu sıralama temizleyecek ve sorgudan devralınan filtre bilgilerini not edin. Aşağıdaki örnekte bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ile başlayan adların tarafından filtreler sorgu 'S'. Dize tabanlı <xref:System.Data.DataView.Sort%2A> özelliği ayarlanmış sırasını ve adlarını azalan düzende artan soyadları sıralamak için:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
@@ -81,6 +81,6 @@ Oluşturmanın iki yolu vardır bir <xref:System.Data.DataView> içinde [!INCLUD
  Ancak, ayarı ile birlikte gelen bir performans kaybı yoktur <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> sonra özelliği <xref:System.Data.DataView> bir sorgudan oluşturuldu <xref:System.Data.DataView> filtreleme ve sıralama işlemleri desteklemek için bir dizin oluşturur. Ayarı <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> özelliği veri yükü uygulamanıza ekleme ve performans azaltmak için dizini yeniden oluşturur. Mümkün olduğunda, ilk oluşturduğunuzda bilgi sıralama ve filtreleme belirtmek daha iyi <xref:System.Data.DataView> ve daha sonra değiştirme kaçının.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama ve LINQ-DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+ [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework SqlClient bilinen sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Veritabanı uyumluluk düzeyi belirli veritabanı davranışları bağlıdır. Varsa, `ProviderManifestToken` özniteliğini 2005'e ayarlayın ve 2005, SQL Server sürümüdür, ancak bir veritabanı uyumluluk düzeyi "80" (SQL Server 2000) oluşturulan ayarlamak [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SQL Server 2005 hedefleme ancak nedeniyle beklendiği gibi yürütebilir değil uyumluluk düzeyi ayarı. Örneğin, bir sütun adı ORDER BY listesinde Seçici içinde bir sütun adı eşleşirse, sipariş bilgilerini kaybedebilirsiniz.  
   
 ## <a name="nested-queries-in-projection"></a>İç içe yerleştirilmiş sorguda projeksiyon  
- Projeksiyon yan tümcesi iç içe geçmiş sorguları Kartezyen ürün sorguları sunucuda içine çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucularda, bu TempDB tabloya oldukça büyük almak için neden olabilir. Bu sunucu performansını düşürebilir.  
+ Projeksiyon yan tümcesi iç içe geçmiş sorguları Kartezyen ürün sorguları sunucuda içine çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucularda, bu oldukça büyük almak TempDB tablo neden olabilir. Bu sunucu performansını düşürebilir.  
   
  İç içe bir sorgu projeksiyon yan tümcesindeki bir örneği verilmiştir:  
   
@@ -70,5 +70,5 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen sunucu tarafından üretilen GUID türü kimlik değerleri, ancak sağlayıcı desteklemelidir bir satır girildikten sonra sunucu tarafından üretilen kimlik değeri döndürüyor. İle başlayarak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, sunucu tarafından üretilen GUID türünde döndürebilir bir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] aracılığıyla veritabanı [OUTPUT yan tümcesi](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [Bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+ [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

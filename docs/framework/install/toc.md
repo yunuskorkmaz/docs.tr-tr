@@ -9,5 +9,4 @@
 ## [.NET Framework’ü Onarma](repair.md)
 ## [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
 ## [Windows 10, Windows 8.1 ve Windows 8’de .NET Framework 3.5 Yükleme](dotnet-35-windows-10.md)
-### [.NET Framework 3.5 yükleme sorunlarını giderme](net-framework-3-5-on-windows-8-plus.md)
 ## [Windows 8, Windows 8.1 veya Windows 10’da .NET Framework 1.1 uygulamalarını çalıştırma](run-net-framework-1-1-apps.md)

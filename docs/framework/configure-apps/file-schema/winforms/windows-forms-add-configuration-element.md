@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -113,7 +113,7 @@ Windows Forms uygulamalarında yüksek DPI desteği alma Avantajı hakkında dah
 
 ### <a name="single-pass-scaling"></a>Tek geçişi ölçeklendirme
 
-Ölçek tek veya çok geçişi etkiler kullanıcı arabiriminin algılanan yanıtlama ve bunlar ölçeklenir gibi görünümünü kullanıcı arabirim öğeleri. .NET Framework 4.7 ile başlayarak, Windows Forms tek geçişi ölçeklendirme kullanır. .NET Framework önceki sürümlerde ölçeklendirme hangi ölçeklendirilmesi için bazı denetimler neden birden çok gerekli birden çok geçer gerçekleştirildi. Uygulamanızı eski davranışı bağımlıysa tek geçişi ölçeklendirme yalnızca devre dışı gerekir.  
+Bunlar ölçeklenir gibi tek veya çok geçişi ölçeklendirme kullanıcı arabiriminin algılanan yanıtlama ve kullanıcı arabirimi öğeleri görsel görünümünü etkiler. .NET Framework 4.7 ile başlayarak, Windows Forms tek geçişi ölçeklendirme kullanır. .NET Framework önceki sürümlerde ölçeklendirme hangi ölçeklendirilmesi için bazı denetimler neden birden çok gerekli birden çok geçer gerçekleştirildi. Uygulamanızı eski davranışı bağımlıysa tek geçişi ölçeklendirme yalnızca devre dışı gerekir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
  

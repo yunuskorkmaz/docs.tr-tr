@@ -36,11 +36,11 @@ ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
 caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02ba9a999db20abce2106269522c9a3221a00cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sub-statement-visual-basic"></a>Sub Deyimi (Visual Basic)
 Ad, parametreleri ve tanımlama kodu bildiren bir `Sub` yordamı.  
@@ -70,13 +70,13 @@ End Sub
   
      İsteğe bağlı. Aşağıdakilerden biri olabilir:  
   
-    -   [Ortak](../modifiers/public.md)  
+    -   [Public](../modifiers/public.md)  
   
-    -   [Korumalı](../modifiers/protected.md)  
+    -   [Protected](../modifiers/protected.md)  
   
-    -   [Arkadaş](../modifiers/friend.md)  
+    -   [Friend](../modifiers/friend.md)  
   
-    -   [Özel](../modifiers/private.md)  
+    -   [Private](../modifiers/private.md)  
   
     -   `Protected Friend`  
   
@@ -86,11 +86,11 @@ End Sub
   
      İsteğe bağlı. Aşağıdakilerden biri olabilir:  
   
-    -   [Aşırı yüklemeler](../modifiers/overloads.md)  
+    -   [Overloads](../modifiers/overloads.md)  
   
-    -   [Geçersiz kılmaları](../modifiers/overrides.md)  
+    -   [Overrides](../modifiers/overrides.md)  
   
-    -   [Geçersiz kılınabilir](../modifiers/overridable.md)  
+    -   [Overridable](../modifiers/overridable.md)  
   
     -   [NotOverridable](../modifiers/notoverridable.md)  
   
@@ -224,20 +224,20 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `DelayAsync` olan bir bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync`sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle, işlevi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.  
+ Aşağıdaki örnekte, `DelayAsync` olan bir `Async``Function` dönüş türüne sahip <xref:System.Threading.Tasks.Task%601>. `DelayAsync`sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle, işlevi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Yordamdır örneği bir `Async Sub` yordamı. Çünkü `DoSomethingAsync` olan bir `Async` işlevi, görev çağrısı için `DoSomethingAsync` , aşağıdaki deyimi gösterildiği beklemenin gerekir: `Await DoSomethingAsync()`. `startButton_Click``Sub` Yordamı tanımlı, ile `Async` değiştiricisi içerdiğinden bir `Await` ifade.  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Implements deyimi](implements-statement.md)  
- [Function deyimi](function-statement.md)  
- [Parametre listesi](parameter-list.md)  
- [Dim deyimi](dim-statement.md)  
- [Call deyimi](call-statement.md)  
+ [Implements Deyimi](implements-statement.md)  
+ [Function Deyimi](function-statement.md)  
+ [Parametre Listesi](parameter-list.md)  
+ [Dim Deyimi](dim-statement.md)  
+ [Call Deyimi](call-statement.md)  
  [,](of-clause.md)  
- [Parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Nasıl yapılır: genel bir sınıf kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Sorun giderme yordamları](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Kısmi yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+ [Parametre Dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
+ [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Yordam Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
+ [Kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

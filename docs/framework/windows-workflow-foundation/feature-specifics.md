@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özelliğini özellikleri
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]bir dizi özellik Windows Workflow Foundation ekler. Bu belge yeni özelliklerini açıklar ve içinde bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Grup iletiler birlikte kullanılan bağıntı iletileri gruplandıran bir istek-yanıt bağıntısı örnektir.  
   
-    -   Üzerinde bir <xref:System.ServiceModel.Activities.Receive> etkinliği tıklatın <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> özelliği ve ekleme bir bir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> CorrelationHandle kullanarak Yukarıdaki ilk adımda oluşturduğunuz.  
+    -   Üzerinde bir <xref:System.ServiceModel.Activities.Receive> etkinliği tıklatın <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> özelliği ve ekleme bir <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> CorrelationHandle kullanarak Yukarıdaki ilk adımda oluşturduğunuz.  
   
     -   Create bir <xref:System.ServiceModel.Activities.SendReply> sağ tıklayarak etkinliği <xref:System.ServiceModel.Activities.Receive> "SendReply oluşturma" ye tıklayın. Sonra iş akışınızı yapıştırın <xref:System.ServiceModel.Activities.Receive> etkinlik.  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [WCF 4.0 için bir Geliştirici Kılavuzu](http://go.microsoft.com/fwlink/?LinkId=204940)  
   
--   [Yapılandırma kanal fabrikası](http://go.microsoft.com/fwlink/?LinkId=204941)  
+-   [Yapılandırma Kanal Fabrikası](http://go.microsoft.com/fwlink/?LinkId=204941)  
   
 -   [Standart uç nokta öğesi](http://go.microsoft.com/fwlink/?LinkId=204942)  
   
@@ -180,15 +180,15 @@ ms.lasthandoff: 12/02/2017
   
 -   Örnekler:  
   
-    -   [TryCatch kullanarak akış etkinliğinde işleme hatası](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    -   [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [Durum makinesi Akış Çizelgesi ve çekme birleşimini kullanarak senaryosu](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [FlowChart ve Pick Birleşimini Kullanan StateMachine Senaryosu](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
-    -   [İşe alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+    -   [İşe Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
 -   Tasarımcı belgeleri:  
   
-    -   [Akış Çizelgesi etkinlik tasarımcıları](/visualstudio/workflow-designer/flowchart-activity-designers)  
+    -   [Akış Çizelgesi Etkinlik Tasarımcıları](/visualstudio/workflow-designer/flowchart-activity-designers)  
   
 ### <a name="flowchart-scenarios"></a>Akış Çizelgesi senaryoları  
  Bir akış etkinliği tahmin eden oyun uygulamak için kullanılabilir. Tahmin eden oyun çok basittir: rastgele bir sayı bilgisayarı seçer ve bu sayıyı tahmin etmeye player sahiptir. Player her tahmin gönderdiğinde, bilgisayarın ona (yani "daha düşük bir sayı deneyin") ipucu gösterir. Player değerinden 7 girişimlerinde numarasını bulursa, kendisinin bilgisayardan özel congratulation alır. Aşağıdaki yordam etkinliklerin birlikte bu oyun uygulanabilir:  
@@ -214,13 +214,13 @@ ms.lasthandoff: 12/02/2017
   
 -   Örnekler:  
   
-    -   [İşe alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+    -   [İşe Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
-    -   [Şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
+    -   [Şirket Satın Alma İşlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
   
 -   Tasarımcı belgeleri:  
   
-    -   [Paralel etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallel-activity-designer)  
+    -   [Parallel Etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallel-activity-designer)  
   
     -   [ParallelForEach\<T > etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
   
@@ -258,9 +258,9 @@ ms.lasthandoff: 12/02/2017
   
 -   Örnekler:  
   
-    1.  [TryCatch kullanarak akış etkinliğinde işleme hatası](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    1.  [TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [Yordam etkinlikleri kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+    2.  [Yordam Etkinlikleri Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
 -   Tasarımcı belgelerine: [hata işleme etkinlik tasarımcıları](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
