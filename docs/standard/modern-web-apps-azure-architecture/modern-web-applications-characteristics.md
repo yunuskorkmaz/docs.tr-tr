@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 00140e0dfd88481b90d5c310db060c5888205c62
+ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
@@ -39,9 +39,9 @@ Bu kılavuz bir başvuru uygulaması içeren *eShopOnWeb*, bazı prensipler ve �
 
 Düşük bellek ve yüksek verimlilik olduğundan ASP.NET Core (genel bulut, özel bulut, tüm bulut) bulut için optimize edilmiştir. ASP.NET Core uygulamaları daha küçük ayak izini daha fazlası aynı donanımda barındırabilir ve ödeme-olarak-kullandığınız olduğunuzda, bulut barındırma hizmetleri için daha az kaynak ödeme anlamına gelir. Daha yüksek-verimlilik aynı donanım, verilen bir uygulama daha fazla müşterilerden başka sunucular ve barındırma altyapı yatırım gereksinimini azaltır kullanılabileceği anlamına gelir.
 
-## <a name="cross-platform"></a>Platformlar arası
+## <a name="cross-platform"></a>Çoklu Platform
 
-ASP.NET Core platformlar arası ve Linux ve MacOS aynı zamanda Windows çalıştırabilirsiniz. Bu geliştirme ve ASP.NET Core ile oluşturulan uygulamaların dağıtılması için birçok yeni seçenek açar. Genellikle Linux bugün çalıştırmak, docker kapsayıcıları avantajlarından yararlanmak vermeden ASP.NET Core uygulamaları barındırabilir [kapsayıcıları ve mikro](../microservices-architecture).
+ASP.NET Core platformlar arası ve Linux ve MacOS aynı zamanda Windows çalıştırabilirsiniz. Bu geliştirme ve ASP.NET Core ile oluşturulan uygulamaların dağıtılması için birçok yeni seçenek açar. Genellikle Linux bugün çalıştırmak, docker kapsayıcıları avantajlarından yararlanmak vermeden ASP.NET Core uygulamaları barındırabilir [kapsayıcıları ve mikro](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modüler ve geniş bağlı
 

@@ -12,31 +12,31 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: 0164c36dcfb8a851dcb40d82265390795dc3d16c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
+ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
- Bu makalede, bir giriş ve Docker .NET ile çalışmaya kavramsal arka plan sağlar. 
+Bu makalede, bir giriş ve Docker .NET ile çalışmaya kavramsal arka plan sağlar.
 
 ## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: dağıtmak ve her yerden çalıştırmak için uygulamalarınızı paketleme
 
-[Docker](https://docs.microsoft.com/dotnet/standard/microservices-architecture/container-docker-introduction/docker-defined) geliştiricilerinin ve yöneticilerinin oluşturmak bir açık Platform [görüntüleri](https://docs.docker.com/glossary/?term=image)sevk ve dağıtılmış uygulamaları adlı geniş yalıtılmış bir ortamda çalıştırmak bir [kapsayıcı](https://www.docker.com/what-container). Bu yaklaşım, geliştirme, QA ve üretim ortamlarını arasında verimli uygulama yaşam döngüsü yönetimi sağlar.
+[Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) geliştiricilerinin ve yöneticilerinin oluşturmak bir açık Platform [görüntüleri](https://docs.docker.com/glossary/?term=image)sevk ve dağıtılmış uygulamaları adlı geniş yalıtılmış bir ortamda çalıştırmak bir [kapsayıcı](https://www.docker.com/what-container). Bu yaklaşım, geliştirme, QA ve üretim ortamlarını arasında verimli uygulama yaşam döngüsü yönetimi sağlar.
  
 [Docker platform](https://docs.docker.com/engine/docker-overview/#the-docker-platform) kullanan [Docker altyapısına](https://docs.docker.com/engine/docker-overview/#docker-engine) hızlı bir şekilde oluşturmak ve uygulamaları olarak paketlemek için [Docker görüntüleri](https://docs.docker.com/glossary/?term=image) yazılan dosyaları kullanılarak oluşturulan [Dockerfile ](https://docs.docker.com/glossary/?term=Dockerfile) sonra dağıtılır ve Çalıştır biçimde bir [kapsayıcı katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
 Oluşturabilir ya da kendi [görüntüleri katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers) dockerfiles veya var olanları gelen kullanım olarak bir [kayıt defteri](https://docs.docker.com/glossary/?term=registry)gibi [Docker hub'a](https://docs.docker.com/glossary/?term=Docker%20Hub).
 
-[Docker kapsayıcıları, görüntüler ve kayıt defterleri arasındaki ilişkiyi](https://docs.microsoft.com/dotnet/standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries) önemli bir kavramdır zaman [mimarisi oluşturma ve derleme kapsayıcılı uygulamalar veya mikro](https://docs.microsoft.com/dotnet/standard/microservices-architecture/architect-microservice-container-applications/). Bu yaklaşım, geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
+[Docker kapsayıcıları, görüntüler ve kayıt defterleri arasındaki ilişkiyi](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md) önemli bir kavramdır zaman [mimarisi oluşturma ve derleme kapsayıcılı uygulamalar veya mikro](../../standard/microservices-architecture/architect-microservice-container-applications/index.md). Bu yaklaşım, geliştirme ve dağıtım arasındaki süreyi büyük ölçüde kısaltır.
 
 ### <a name="further-reading-and-watching"></a>Daha fazla bilgi (ve izleyen)
 
 * [Windows tabanlı kapsayıcıları: Kurumsal düzeyde denetim ile Modern uygulama geliştirme.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Docker genel bakış](https://docs.docker.com/engine/docker-overview/)
-* [Windows kapsayıcılarında Dockerfile](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
+* [Windows kapsayıcılarında Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
 * [Dockerfiles yazmak için en iyi uygulamalar](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
 * [.NET Core uygulamaları için yapı Docker görüntüleri](../docker/building-net-docker-images.md)
 
@@ -65,7 +65,7 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 * **Tüm ortamlar dağıtımda** — bir görüntü tüm ortamlarınızın dağıtabilirsiniz. Bu yaklaşım, genellikle dış yapılandırması (örneğin, eklenen ortam değişkenleri) aracılığıyla görüntü davranışı değiştirme yapılandırma farklılıkları nedeniyle hataları azaltır.
 
-[Genel rehberlik](https://docs.microsoft.com/dotnet/standard/microservices-architecture/net-core-net-framework-containers/general-guidance) .NET Core ve .NET Framework arasında Docker kapsayıcısı geliştirme için karar verme.
+[Genel rehberlik](../../standard/microservices-architecture/net-core-net-framework-containers/general-guidance.md) .NET Core ve .NET Framework arasında Docker kapsayıcısı geliştirme için karar verme.
 
 ### <a name="common-docker-development-scenarios"></a>Docker geliştirme senaryoları
 
@@ -85,7 +85,7 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 * Bu .NET Core Docker örneği için en iyi yöntem deseni gösterir [üretim için .NET Core uygulamaları için Docker görüntülerinizi oluşturmak.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod) Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
 
-* Bu [.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained) için Docker görüntülerinizi oluşturmak için en iyi yöntem desen gösteren [müstakil .NET Core uygulamaları](https://docs.microsoft.com/dotnet/core/deploying/). Bir avantajı olmadan küçük üretim kapsayıcısı için kullanılan [kapsayıcılar arasındaki temel görüntüleri paylaşımı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/). Ancak, daha düşük Docker Katmanlar paylaşılan.
+* Bu [.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained) için Docker görüntülerinizi oluşturmak için en iyi yöntem desen gösteren [müstakil .NET Core uygulamaları](../deploying/index.md). Bir avantajı olmadan küçük üretim kapsayıcısı için kullanılan [kapsayıcılar arasındaki temel görüntüleri paylaşımı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/). Ancak, daha düşük Docker Katmanlar paylaşılan.
 
 #### <a name="arm32--raspberry-pi"></a>ARM32 / Raspberry Pi
 
@@ -97,15 +97,17 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 #### <a name="net-framework"></a>.NET Framework
 
-* [.NET framework DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/dotnet-framework/) bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnekleri içerir. Bu görüntüler, kendi Docker görüntülerinizi temel olarak kullanabilirsiniz.
+* [.NET framework DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/dotnet-framework/)
+
+Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnekleri içerir. Bu görüntüler, kendi Docker görüntülerinizi temel olarak kullanabilirsiniz.
 
 **.NET framework 4.7**
 
-[ [Dotnet-framework: 4.7 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) temel "hello world" kullanımını gösteren [.NET Framework 4.7](https://docs.microsoft.com/dotnet/framework/whats-new/index#introducing-the-net-framework-47). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.7 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+[ [Dotnet-framework: 4.7 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) temel "hello world" kullanımını gösteren [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.7 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
 **.NET framework 4.6.2**
 
-[Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "hello world" kullanımını gösteren [.NET Framework 4.6.2](https://docs.microsoft.com/dotnet/framework/whats-new/index#whats-new-in-the-net-framework-462). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
+[Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "hello world" kullanımını gösteren [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
 
 **.NET framework 3.5**
 
@@ -119,7 +121,7 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 * [Github'da ASP.NET Core görüntüleri](https://github.com/aspnet/aspnet-docker)
 
-#### <a name="aspnet-framework"></a>ASP.NET Framework 
+#### <a name="aspnet-framework"></a>ASP.NET Framework
 
 * [DockerHub ASP.NET Framework görüntülerde](https://hub.docker.com/r/microsoft/aspnet/)
 
@@ -163,7 +165,7 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 * [Operations Management Suite (OMS) Linux Aracısı genel bakış](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
 
-* [Operations Management Suite (OMS) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/vsts-agent/) 
+* [Operations Management Suite (OMS) DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 * [Operations Management Suite (OMS) görüntüleri github'da](https://github.com/Microsoft/OMS-docker)
 
@@ -173,33 +175,33 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 * [GitHub görüntülerinde Microsoft Azure komut satırı arabirimi (CLI)](https://github.com/Microsoft/OMS-docker)
 
-> [!Note]
+> [!NOTE]
 > Bir Azure aboneliğiniz yoksa [bugün kaydolun](https://azure.microsoft.com/free/?b=16.48) Ücretsiz 30 günlük hesabı ve Azure Hizmetleri herhangi bir bileşimini denemek için Azure KREDİLERİ 200 ABD Doları alın.
->
 
 #### <a name="microsoft-azure-cosmos-db-emulator-windows-containers-only"></a>Microsoft Azure Cosmos DB öykünücü (yalnızca Windows kapsayıcıları)
 
 * [Microsoft Azure Cosmos DB öykünücüsü DockerHub görüntülerinde](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
 
-* [Yerel geliştirme ve sınama için Azure Cosmos DB öykünücüsünü kullanma](https://docs.microsoft.com/azure/cosmos-db/local-emulator#developing-with-the-emulator)
+* [Yerel geliştirme ve sınama için Azure Cosmos DB öykünücüsünü kullanma](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
 
 ## <a name="exploring-the-rich-docker-development-ecosystem"></a>Zengin Docker geliştirme ekosistemi keşfetme
 
 Farklı Docker görüntüler ve Docker platform hakkında öğrendiniz, zengin Docker ekosistemi keşfetmek için sonraki adım olacaktır. Aşağıdaki bağlantılar nasıl Microsoft araçları kapsayıcı geliştirme tamamlayan gösterir.
 
-* [.NET ve Docker birlikte kullanma](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) 
-* [Tasarlama ve birden çok kapsayıcı ve mikro hizmet tabanlı .NET uygulamaları geliştirme](../standard/microservices-architecture/multi-container-microservice-net-applications)
-* [Visual Studio kod Docker uzantısı](https://code.visualstudio.com/docs/languages/dockerfile) 
-* [Azure Service Fabric kullanmayı öğrenin](https://docs.microsoft.com/azure/service-fabric/) 
+* [.NET ve Docker birlikte kullanma](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
+* [Tasarlama ve birden çok kapsayıcı ve mikro hizmet tabanlı .NET uygulamaları geliştirme](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
+* [Visual Studio kod Docker uzantısı](https://code.visualstudio.com/docs/languages/dockerfile)
+* [Azure Service Fabric kullanmayı öğrenin](/azure/service-fabric/index.md)
 * [Örnek Service Fabric alma başlatıldı](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)
-* [Windows kapsayıcıları yararları](https://docs.microsoft.com/virtualization/windowscontainers/about/index#video-overview)
-* [Visual Studio Docker araçları ile çalışma](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+* [Windows kapsayıcıları yararları](/virtualization/windowscontainers/about/index.md#video-overview)
+* [Visual Studio Docker araçları ile çalışma](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md)
 * [Azure kapsayıcı örneklerine Azure kapsayıcı kayıt defterinden Docker görüntüleri dağıtma](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
-* [Visual Studio Code ile hata ayıklama](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
+* [Visual Studio Code ile hata ayıklama](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)
 * [Ellere Visual Studio ile Mac, kapsayıcıları ve sunucusuz kodu bulutta hakkında alma](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Mac Laboratuvar için Docker ve Visual Studio ile çalışmaya başlama](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-* [.NET Core ile Docker temellerini öğrenin](../docker/docker-basics-dotnet-core.md)
-* [.NET Core Docker görüntülerinizi oluşturmak](../docker/building-net-docker-images)
+* [.NET Core ile Docker Temellerini Öğrenme](docker-basics-dotnet-core.md)
+* [.NET Core Docker görüntülerinizi oluşturmak](building-net-docker-images.md)
+\
