@@ -8,13 +8,13 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.openlocfilehash: 34a56b4a2d67bc808bac27863323da4d95d0cf3f
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 7661919fa50eb9b08cead2c8a04a1a8af5fbf3d2
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/17/2017
 ---
-# <a name="installation-guide"></a>Yükleme Kılavuzu
+# <a name="installation-guide"></a>Yükleme kılavuzu
 
 .NET Framework çeşitli Windows sürümlerinde yükleyebilirsiniz.
 
@@ -34,4 +34,5 @@ ms.lasthandoff: 11/27/2017
 
 [.NET Framework indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
 [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)  
-[Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)
+[Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)  
+[Geliştiriciler için .NET Framework dağıtma](../deployment/deployment-guide-for-developers.md)  

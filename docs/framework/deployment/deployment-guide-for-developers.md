@@ -1,7 +1,7 @@
 ---
 title: "Geliştiriciler için .NET framework Dağıtım Kılavuzu"
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 12/14/2017
 ms.prod: .net-framework
 ms.technology: dotnet-clr
 ms.topic: article
@@ -12,14 +12,14 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 287005af09f3f022c368d3c8fab12ad02b30e944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08716b0988e8c76144d8e0a3871c7c91f7419306
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
-Bu konu yüklemek isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, veya .NET Framework 4.7 veya 4.7.1 uygulamalarını ile.
+Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarını ile.
 
 Yükleme bağlantıları için bakın [yeniden dağıtılabilir paketleri](#redistributable-packages). Ayrıca bu Microsoft Download Center sayfalarından yeniden dağıtılabilir paketleri ve dil paketlerini yükleyebilirsiniz:
 
@@ -44,9 +44,9 @@ Yükleme bağlantıları için bakın [yeniden dağıtılabilir paketleri](#redi
 > [!NOTE]
 > Tümcecik " [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve kendi noktası yayımları" başvurduğu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve tüm sonraki sürümler.
 
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 ve 4.7.1 olan yerinde güncelleştirmeleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], başka bir deyişle, aynı çalışma zamanı sürümü kullanır, ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir.
+- .NET Framework'teki sürümlerini [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] aracılığıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] yerinde güncelleştirmelerin [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], başka bir deyişle, aynı çalışma zamanı sürümü kullanır, ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Ve kendi noktası sürümleri üzerinde artımlı olarak yerleşik [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Yüklediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 veya 4.7.1 sahip bir sistemde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] yüklü sürüm 4 derlemeleri daha yeni sürümleri ile değiştirilir.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Ve kendi noktası sürümleri üzerinde artımlı olarak yerleşik [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Yüklediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya kendi noktası bulunan bir sistemde serbest [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] yüklü sürüm 4 derlemeleri daha yeni sürümleri ile değiştirilir.
 
 - Bir Microsoft başvurduğunuzdan varsa [bant dışı paket](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) uygulamanızda, uygulama paketi derleme eklenecektir.
 
@@ -342,7 +342,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 - [Windows Update Aracısı sonuç kodları](http://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework kaldırma
- İle başlayarak [!INCLUDE[win8](../../../includes/win8-md.md)], kaldırabilmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 veya kullanarak 4.7.1 **Windows özelliklerini açma ve kapatma** Denetim Masası'nda. Windows'un eski sürümlerinde kaldırmanız [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 veya kullanarak 4.7.1 **Program Ekle veya Kaldır** Denetim Masası'nda.
+ İle başlayarak [!INCLUDE[win8](../../../includes/win8-md.md)], kaldırabilmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya bir noktasının serbest kullanarak **Windows özelliklerini açma ve kapatma** Denetim Masası'nda. Windows'un eski sürümlerinde kaldırmanız [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya bir noktasının serbest kullanarak **Program Ekle veya Kaldır** Denetim Masası'nda.
 
 > [!IMPORTANT]
 > Windows 7 ve önceki işletim sistemlerinde, kaldırma için [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 veya 4.7.1 değil geri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] dosyaları ve kaldırma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] geri değil [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] dosyaları. Daha eski bir sürümüne geri dönmek istiyorsanız, bunu ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir.
@@ -404,5 +404,5 @@ Aşağıdaki tabloda kullanılabilir .NET Framework dil paketlerini listeler [!I
  [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)  
  [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
  [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [Sistem .NET Framework 4.5 yüklemeleri sırasında yeniden başlatmalarını azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+ [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

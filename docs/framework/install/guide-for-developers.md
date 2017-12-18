@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
 .NET Windows üzerinde çalışan birçok uygulama ayrılmaz bir parçasıdır ve bu uygulamaların çalışması ortak işlevsellik sağlar. Geliştiriciler, uygulamaları oluşturmak için tutarlı programlama modeline sahip kullanıcı deneyimleri ve sorunsuz ve güvenli iletişim şaşırtıcı ve kapsamlı bir .NET Framework sağlar.  
 
-Bu makalede, .NET Framework'ün tüm sürümleri için .NET Framework 4.5 yükleme için bağlantılar sağlar [!INCLUDE[net_current](../../../includes/net-current-version.md)] bilgisayarınızda. Bir geliştirici değilseniz, bu bağlantıları indirmek ve .NET Framework uygulamalarınızı ile yeniden dağıtmak için de kullanabilirsiniz.
+Bu makalede, .NET Framework'ün tüm sürümleri için .NET Framework 4.5 yükleme için bağlantılar sağlar [!INCLUDE[net_current](../../../includes/net-current-version.md)] bilgisayarınızda. Bir geliştirici değilseniz, bu bağlantıları indirmek ve .NET Framework uygulamalarınızı ile yeniden dağıtmak için de kullanabilirsiniz. Uygulamanız ile .NET Framework sürümü dağıtma hakkında daha fazla bilgi için bkz: [geliştiriciler için .NET Framework Dağıtım Kılavuzu](../deployment/deployment-guide-for-developers.md).
 
 > [!NOTE]
 > Bu konu, ya da kendi sistemde .NET Framework'ü yüklemek isteyen veya bunların uygulamalarla kurmak isteyen geliştiriciler için tasarlanmıştır. .NET Framework yükleme kullanıcıları görmek için .NET Framework gibi belirli işletim sistemlerine yükleyerek ele konularıyla [Windows 10 ve Windows Server 2016 .NET Framework'ü yüklemek](on-windows-10.md).  
