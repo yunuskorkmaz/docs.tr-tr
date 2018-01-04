@@ -21,37 +21,38 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: efd08eedf6812a46a46135eaa6f0089257f0a209
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 957b5a89dbb3e780b0e5512afe405e669fdbecce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="7c8bb-102">ICorProfilerCallback::FunctionUnloadStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7c8bb-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="7c8bb-103">Profil oluşturucu işlevi kaldırmak çalışma zamanı başlatıldı bildirir.</span><span class="sxs-lookup"><span data-stu-id="7c8bb-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="ee7b0-102">ICorProfilerCallback::FunctionUnloadStarted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ee7b0-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="ee7b0-103">Profil oluşturucu işlevi kaldırmak çalışma zamanı başlatıldı bildirir.</span><span class="sxs-lookup"><span data-stu-id="ee7b0-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c8bb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7c8bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ee7b0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ee7b0-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7c8bb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7c8bb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ee7b0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ee7b0-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="7c8bb-106">[in] Boşaltılıyor işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="7c8bb-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="ee7b0-106">[in] Boşaltılıyor işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="ee7b0-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7c8bb-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7c8bb-107">Remarks</span></span>  
- <span data-ttu-id="7c8bb-108">Değeri `functionId` parametresi geçerli artık bu metodu çağıran döndükten sonra.</span><span class="sxs-lookup"><span data-stu-id="7c8bb-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ee7b0-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ee7b0-107">Remarks</span></span>  
+ <span data-ttu-id="ee7b0-108">Değeri `functionId` parametresi geçerli artık bu metodu çağıran döndükten sonra.</span><span class="sxs-lookup"><span data-stu-id="ee7b0-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c8bb-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7c8bb-109">Requirements</span></span>  
- <span data-ttu-id="7c8bb-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c8bb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ee7b0-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ee7b0-109">Requirements</span></span>  
+ <span data-ttu-id="ee7b0-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee7b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c8bb-111">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7c8bb-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ee7b0-111">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ee7b0-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7c8bb-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c8bb-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ee7b0-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ee7b0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7c8bb-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c8bb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ee7b0-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee7b0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c8bb-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7c8bb-114">See Also</span></span>  
- [<span data-ttu-id="7c8bb-115">Icorprofilercallback arabirimi</span><span class="sxs-lookup"><span data-stu-id="7c8bb-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ee7b0-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ee7b0-114">See Also</span></span>  
+ [<span data-ttu-id="ee7b0-115">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee7b0-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
