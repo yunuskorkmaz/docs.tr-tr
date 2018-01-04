@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>DOM genişletme
 Microsoft .NET Framework uygulaması XML belge nesne modeli (DOM) sağlayan bir temel sınıfları içerir. <xref:System.Xml.XmlNode>Ve kendi türetilmiş sınıfları, yöntemleri ve gidin olanak tanıyan özellikler sorgulamak ve içeriği ve bir XML belgesi yapısını değiştirmek sağlar.  
@@ -256,4 +259,4 @@ Number of elements in book.xml: 3
  Kılıyorsa <xref:System.Xml.XmlDocument.CreateElement%2A> türetilmiş bir sınıf, varsayılan belge düzenlerken yeni öğeler oluştururken, öznitelikler eklenip eklenmeyeceği yöntemi. Bu yalnızca bir düzenlenirken bir sorundur. Çünkü <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemdir varsayılan öznitelikler eklemek için sorumlu bir <xref:System.Xml.XmlDocument>, bu işlev kod <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi. Yüklüyorsanız, size bir <xref:System.Xml.XmlDocument> varsayılan öznitelikleri içeren, düzgün işlenecek. Varsayılan öznitelikleri hakkında daha fazla bilgi için bkz: [DOM öğeleri için yeni öznitelikler oluşturma](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

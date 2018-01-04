@@ -17,11 +17,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 819f564b93d54c41b879fbfcb20997a8abdebc6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5407beba999ede6131adbc17f56d139396429597
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler işbirlikçi iptali için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilen işlemleri, bir veya daha fazla örneğin çağırır nesnesi belirteç her işleme iletir. Tek tek işlemleri, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonra belirteç oluşturulan nesne bu işlemleri ne yaptıklarını durdurmanızı için kullanabilirsiniz. Yalnızca isteyen nesnesi iptal isteğini verebilir ve her dinleyicisi istek haberiniz bile ve uygun ve güncel bir şekilde yanıt sorumludur.  
@@ -155,4 +158,4 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> bu yönergeleri aşağıdaki sınıflar olarak gösterilebilir. Daha fazla bilgi için bkz: [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)ve [nasıl yapılır: PLINQ sorgusunu iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacığı oluşturma temelleri](../../../docs/standard/threading/managed-threading-basics.md)
+ [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)

@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e4d6d2f5a68ce5cef9937edc136e52efcd5366df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 95df2f2888899093943feda35768694bf414de84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="node-sets-in-transformations"></a>Düğüm dönüşümler ayarlar
 Düğüm kümeleri gelen XML Path dili (XPath) ifadeleri döndürülen dört temel veri türlerini biridir. Belge sırada oluşturulan yinelemeleri olmadan düğümler sırasız bir koleksiyonudur, stil sayfası bir değişkende atanmış bir düğüm kümesi.  
@@ -83,5 +86,5 @@ History of Trenton Vol 3
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.XPath.XPathNodeIterator>  
- [Çok sınıfı ile XSLT dönüştürmeler](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı ile XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

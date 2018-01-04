@@ -19,17 +19,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c730f4ea5a83efcfad15d181ac182fbd232690cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar ve VScrollBar Denetimleri (Windows Forms)
 Windows Forms kaydırma çubuğu denetimleri kaydırarak ya da yatay veya dikey olarak bir uygulama veya denetim içinde uzun bir listesi ile kolay gezinme öğeleri veya büyük miktarda bilgi sağlamak için kullanılır. Kaydırma çubukları, Windows arabiriminin ortak bir öğesidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [HScrollBar ve VScrollBar denetimlerine genel bakış](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
+ [HScrollBar ve VScrollBar Denetimlerine Genel Bakış](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  Genel kavramlarını tanıtır <xref:System.Windows.Forms.HScrollBar> ve <xref:System.Windows.Forms.VScrollBar> büyük miktarda bilgi yatay ve dikey olarak kaydırmak kullanıcıların kontrol eder.  
   
 ## <a name="reference"></a>Başvuru  
@@ -40,5 +41,5 @@ Windows Forms kaydırma çubuğu denetimleri kaydırarak ya da yatay veya dikey 
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

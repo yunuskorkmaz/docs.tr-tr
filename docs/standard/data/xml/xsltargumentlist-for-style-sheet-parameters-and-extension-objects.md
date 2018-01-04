@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil sayfası parametreleri ve uzantı nesneleri için XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> Sınıfı Dönüşümleri (XSLT) parametreleri ve XSLT uzantısı nesneleri için Genişletilebilir Stil sayfası dili içerir. İçine geçirildiğinde <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, bu parametreler ve uzantı nesneleri stil sayfalarını çağrılan.  
@@ -372,4 +375,4 @@ public class Sample
  `</circles>`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

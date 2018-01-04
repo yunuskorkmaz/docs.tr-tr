@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5d54a608ae87a1b453b4fa2b4b351ac5fc9f068
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fcede920b0e57dee0449d8ff6d7c935b177dcbcd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Karma Kodlarla Veri Bütünlüğünü Sağlama
 Bir karma değer veri benzersiz olarak tanımlayan sabit uzunlukta sayısal bir değerdir. Dijital imzalarla kullanıldıkları şekilde karma değerleri büyük miktarlarda verinin çok daha küçük sayısal değerler olarak temsil eder. Bir karma değer daha büyük bir değer imzalama değerinden daha verimli bir şekilde oturum açabilir. Karma değerler, güvenli kanal gönderilen verilerin bütünlüğünü doğrulamak için yararlıdır. Veri değiştirilmiş olup olmadığını belirlemek için gönderildiği gibi alınan verilerin karma değerini verilerin karma değerini karşılaştırılabilir.  

@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
 Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmiştir.  
@@ -171,5 +172,5 @@ Bu konu, kalıcı yapılan önce uygulama ayarlarını doğrulama gösterilmişt
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta olay işleyicileri oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Nasıl yapılır: uygulama ayarları oluştur](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+ [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Nasıl yapılır: Uygulama Ayarları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

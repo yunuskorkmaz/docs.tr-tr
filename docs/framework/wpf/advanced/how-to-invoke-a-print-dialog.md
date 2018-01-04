@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ba541b367e56a809fa444528dccd69860c4de46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Nasıl yapılır: Yazdır İletişim Kutusu Çağırma
 Uygulamanızdan yazdırma olanağı sağlamak için yalnızca oluşturma açın ve bir <xref:System.Windows.Controls.PrintDialog> nesnesi.  
@@ -43,6 +44,6 @@ Uygulamanızdan yazdırma olanağı sağlamak için yalnızca oluşturma açın 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.PrintDialog>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Microsoft XPS Belge Yazıcısı](http://go.microsoft.com/fwlink/?LinkId=147319)

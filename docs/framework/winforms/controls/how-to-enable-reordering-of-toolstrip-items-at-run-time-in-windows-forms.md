@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73ea6d3615780c8def31b7dbdcf870020a106e80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e295e761f9ac0ec090bf950a67008d19cb350d75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çalışma Zamanında ToolStrip Öğelerinin Yeniden Sıralanmasını Etkinleştirme
 Yeniden düzenlemek kullanıcı etkinleştirebilirsiniz <xref:System.Windows.Forms.ToolStripItem> denetimlerini <xref:System.Windows.Forms.ToolStrip>.  
@@ -47,6 +48,6 @@ Yeniden düzenlemek kullanıcı etkinleştirebilirsiniz <xref:System.Windows.For
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>  
- [ToolStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip denetim mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip Teknoloiji özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

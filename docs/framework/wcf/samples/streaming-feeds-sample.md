@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f2789c6756d8e22dae9eb3189dfb616d162ad906
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
 Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek gösterilmiştir. Sunucu üzerinde örnek tek tek oluşturulması gecikme gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri hemen kadar akış içinde öğe ağ akışa yazılmadan önce.  
@@ -129,4 +130,4 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımsız tanılama akışı](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+ [Bağımsız Tanılama Akışı](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

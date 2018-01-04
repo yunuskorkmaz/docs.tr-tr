@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c0bcb27ed9c8981665a50c129dfbd824c9612f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c545f9ebc924c0a12ee2e76fdb6c725c25e2353
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
 Olay bekleme tanıtıcıları etkinlikleri birbirine sinyal ve birbirlerinin sinyalleri bekleyen eşitlemek için iş parçacığı izin verir. Bu eşitleme olaylar üzerinde Win32 bekleme tanıtıcıları tabanlı ve iki türlerine ayrılabilir: da otomatik olarak işaret sıfırlanır ve da el ile sıfırlayın.  
@@ -50,5 +53,5 @@ Olay bekleme tanıtıcıları etkinlikleri birbirine sinyal ve birbirlerinin sin
  <xref:System.Threading.WaitHandle>  
  <xref:System.Threading.AutoResetEvent>  
  <xref:System.Threading.ManualResetEvent>  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Yönetilen iş parçacığı oluşturma temelleri](../../../docs/standard/threading/managed-threading-basics.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)

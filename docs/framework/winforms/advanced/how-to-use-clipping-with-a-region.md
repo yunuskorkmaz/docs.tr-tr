@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 281ae701bc3e5cee38952a05474360019f76a665
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma
 Özelliklerinden birini <xref:System.Drawing.Graphics> kırpma bölgesinin bir sınıftır. Gerçekleştirilen tüm çizim bir verilen <xref:System.Drawing.Graphics> nesnedir, kırpma bölgesi kısıtlı <xref:System.Drawing.Graphics> nesnesi. Kırpma bölgesinin çağırarak ayarlayabileceğiniz <xref:System.Drawing.Graphics.SetClip%2A> yöntemi.  
@@ -42,5 +43,5 @@ ms.lasthandoff: 11/21/2017
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [GDI +'daki bölgeler](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- [Bölgeleri kullanma](../../../../docs/framework/winforms/advanced/using-regions.md)
+ [GDI+'daki Bölgeler](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ [Bölgeleri Kullanma](../../../../docs/framework/winforms/advanced/using-regions.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d18b69c2d5baeac77cbdf45bebd6f0c9d5c94d9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conversion-of-xml-data-types"></a>XML veri türlerini dönüştürme
 Yöntemleri çoğunluğu bulunan bir **XmlConvert** sınıfı, dizeleri ve kesin türü belirtilmiş biçimleri arasında veri dönüştürmek için kullanılır. Yerel ayar bağımsız yöntemleridir. Bu, bunlar herhangi bir yerel ayarı dönüştürme yapılırken dikkate değil, anlamına gelir.  
@@ -74,5 +77,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework veri türleri için dizeleri dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
- [.NET Framework türleri dizeleri dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+ [.NET Framework Veri Türleri için Dizeleri Dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+ [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

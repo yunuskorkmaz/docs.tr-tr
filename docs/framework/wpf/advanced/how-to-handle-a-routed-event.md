@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f59f2df9311f30995b18529a733a5569c85ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c491ff4e231d932b3714d2d059b52bad2502368c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-a-routed-event"></a>Nasıl yapılır: Gönderilmiş bir Olayı İşleme
 Bu örnek nasıl kabarcıklanma olayları iş ve nasıl yönlendirilmiş olay verileri işlemek bir işleyici yazılacağını gösterir.  
@@ -46,7 +47,7 @@ Bu örnek nasıl kabarcıklanma olayları iş ve nasıl yönlendirilmiş olay ve
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.RoutedEvent>  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
- [Ayrıntılı XAML sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+ [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

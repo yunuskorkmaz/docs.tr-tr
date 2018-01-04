@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 73664df9c072189f11d451da46bc3019c8593ec9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-race-conditions"></a>Güvenlik ve Yarış Durumları
 Başka bir sorun olası güvenlik açıklarını yarış durumları tarafından yararlanan alanıdır. Bu durum oluşabilir birkaç yolu vardır. İzleyin konuları Geliştirici kaçınmalısınız ana Tuzaklar bazıları verilmiştir.  
@@ -112,4 +115,4 @@ void DoOtherWork()
  Yarış durumları sonra onun sonlandırıcıyı boşaltır statik veya yönetilmeyen bir kaynağa başvuran bir nesnedeki da oluşabilir. Birden çok nesne sınıf sonlandırıcıyı yönetilebilir bir kaynak paylaşıyorsanız, nesneleri bu kaynağa hiçbir erişim eşitlemeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

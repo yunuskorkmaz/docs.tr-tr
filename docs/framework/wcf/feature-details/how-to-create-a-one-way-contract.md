@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f93247a96501359bcda8d2956308e6570c597f93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma
 Bu konuda, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel adımlar gösterilmektedir. Üzerinde operations tür yöntem çağırma bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bir istemciden ancak bir yanıt bekliyorsunuz değil. Bu tür bir sözleşme, örneğin, birçok abonelere bildirimleri yayımlamak için kullanılabilir. Tek yönlü sözleşmeler, istemcilerin ve sunucuların ya da diğer çağrıları başlatmak için birbiriyle bağımsız olarak iletişim kurması verir çift yönlü bir (iki yönlü) sözleşme oluştururken de kullanabilirsiniz. Bu, özellikle, sunucunun istemci olayları olarak davranabilirsiniz istemci tek yönlü çağrı yapmak izin verebilirsiniz. Tek yönlü yöntemleri belirtme hakkında ayrıntılı bilgi için bkz: <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliği ve <xref:System.ServiceModel.OperationContractAttribute> sınıfı.  
@@ -44,7 +45,7 @@ Bu konuda, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel a
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Oturumu](../../../../docs/framework/wcf/samples/session.md)  
- [Nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+ [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Oturum](../../../../docs/framework/wcf/samples/session.md)  
+ [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

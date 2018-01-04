@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="secure-coding-guidelines"></a>Güvenli Kodlama Yönergeleri
 Kanıt tabanlı güvenlik ve kod erişim güvenliği güvenlik uygulamak çok güçlü, açık mekanizmaları sağlar. Çoğu uygulama kodu yalnızca .NET Framework tarafından uygulanan altyapısını kullanabilir. Bazı durumlarda, ek uygulamaya özgü güvenlik güvenlik sistemini genişletme veya yeni geçici yöntemleri kullanarak yerleşik gereklidir.  
@@ -83,8 +86,8 @@ Kanıt tabanlı güvenlik ve kod erişim güvenliği güvenlik uygulamak çok g�
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Durum verilerinin güvenliğini sağlama](../../../docs/standard/security/securing-state-data.md)|Özel üyelerin korumak açıklar.|  
-|[Güvenlik ve kullanıcı girişi](../../../docs/standard/security/security-and-user-input.md)|Bu kullanıcı girişi kabul eden uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|  
-|[Güvenlik ve yarış durumları](../../../docs/standard/security/security-and-race-conditions.md)|Yarış durumları kodunuzda önlemek açıklar.|  
-|[Güvenlik ve üzerinde-çalışma sırasında kod oluşturma](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|Dinamik kodu oluşturmak uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|  
-|[Rol tabanlı güvenlik](../../../docs/standard/security/role-based-security.md)|.NET Framework rol tabanlı güvenlik ayrıntılı açıklar ve kodunuzda kullanma yönergeleri sağlar.|
+|[Durum Verilerinin Güvenliğini Sağlama](../../../docs/standard/security/securing-state-data.md)|Özel üyelerin korumak açıklar.|  
+|[Güvenlik ve Kullanıcı Girdisi](../../../docs/standard/security/security-and-user-input.md)|Bu kullanıcı girişi kabul eden uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|  
+|[Güvenlik ve Yarış Durumları](../../../docs/standard/security/security-and-race-conditions.md)|Yarış durumları kodunuzda önlemek açıklar.|  
+|[Güvenlik ve Çalışma Sırasında Kod Oluşturma](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|Dinamik kodu oluşturmak uygulamalar ile ilgili güvenlik konuları açıklanmaktadır.|  
+|[Rol Tabanlı Güvenlik](../../../docs/standard/security/role-based-security.md)|.NET Framework rol tabanlı güvenlik ayrıntılı açıklar ve kodunuzda kullanma yönergeleri sağlar.|

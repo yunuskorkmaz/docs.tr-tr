@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be7615441f29046fc1a469e3cace86267fc6c031
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57c4c720e910762a303fc4987166f22960c2f03b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-collection-activities"></a>Koleksiyon etkinlikleri kullanma
 Bu örnek, koleksiyon etkinlikleri kullanılacak gösterilmiştir (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, ve <xref:System.Activities.Statements.RemoveFromCollection%601>) uygulayan bir sınıf ile <xref:System.Collections.ICollection> arabirimi ve bir koleksiyon üzerinden yineleme özel bir etkinlik oluşturma koleksiyondaki her öğe içeriklerinin yazdırmak. Adlı özel etkinlik `PrintCollection`, adlı bir koleksiyon öğesi üyeleri konsola yazdırır `Numbers`.  

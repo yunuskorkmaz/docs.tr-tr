@@ -28,11 +28,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc8914f4bc891aefa191ba5cf2b659afda0f905b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Sırada [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] çeşitli sağlar güvenlik hizmetleri, bu da işletim sistemi içeren bir temel platform güvenlik özelliklerini yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu Katmanlar birleştirilmiştir [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası, önlemek için aşağıdaki resimde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -225,5 +226,5 @@ Sırada [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] çeşit
  [Windows Vista Güvenlik Kılavuzu](http://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
  [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)  
  [Güvenlik](../../../docs/framework/wpf/security-wpf.md)  
- [WPF kısmi güven güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF Güvenlik Stratejisi - Güvenlik mühendislik](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+ [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

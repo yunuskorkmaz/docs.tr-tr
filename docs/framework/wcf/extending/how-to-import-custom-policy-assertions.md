@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3cc7eecbef66c3e4a80759912260b973d441a8a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını İçe Aktarma
 İlke onaylamalarını hizmet uç noktası gereksinimlerini ve özelliklerini açıklar.  İstemci uygulamaları ilke onaylamalarını hizmeti meta verilerde bağlama istemcisini yapılandırmak için veya bir hizmet uç noktası için hizmet sözleşmesini özelleştirmek için kullanabilirsiniz.  
@@ -77,4 +78,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [Meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+ [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

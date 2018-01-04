@@ -22,11 +22,14 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bdb0a6be309f27348ba13bf93fd5aedd3c66a792
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0fec2ed34968bfa8c296f08739dec28e6a6eab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Nasıl yapılır: Bir Windows Formları Uygulamasında Olayları Kullanma
 Bir Web sayfası denetimleri ile doldurun ve ardından, kullanıcı Denetim göre belirli bir eylemi gerçekleştirmek için ASP.NET Web Forms uygulamalarında yaygın bir senaryo değil. Örneğin, bir <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> denetim isteğe bağlı olarak kullanıcı Web sayfasında, bir olay başlatır. Olay işleyerek uygulamanız için bu düğmeyi tıklatın uygun uygulama mantığını gerçekleştirebilirsiniz.  
@@ -59,4 +62,4 @@ Bir Web sayfası denetimleri ile doldurun ve ardından, kullanıcı Denetim gör
 3.  Olay, 2. adımda tanımladığınız işleyici yöntemi olay gerçekleştiğinde, gerekli olan herhangi bir eylem gerçekleştirmek için kod ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../docs/standard/events/index.md)
+ [Olaylar](../../../docs/standard/events/index.md)

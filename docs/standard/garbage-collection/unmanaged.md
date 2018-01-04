@@ -22,11 +22,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen Kaynakları Temizleme
 Uygulamanızın oluşturduğu nesneler çoğunluğu için üzerinde güvenebilirsiniz. Bellek yönetimi işlemek için NET'in atık toplayıcı. Ancak, yönetilmeyen kaynaklar içeren nesneler oluşturduğunuzda, uygulamanızda kullanmayı bitirdiğinizde, bu kaynakları açıkça serbest bırakmanız gerekir. En sık karşılaşılan yönetilmeyen kaynak türleri, dosyalar, pencereler, ağ bağlantıları veya veritabanı bağlantıları gibi işletim sistemi kaynaklarını saran nesnelerdir. Çöp toplayıcı yönetilmeyen bir kaynağı kapsülleyen bir nesnenin kullanım ömrünü izleyebilir olsa da, yönetilmeyen kaynağı nasıl serbest bırakacağını ve temizleyeceğini bilmez.  
@@ -46,10 +49,10 @@ Uygulamanızın oluşturduğu nesneler çoğunluğu için üzerinde güvenebilir
  Tüketiciler türünüze sonra çağırabilir, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> doğrudan yönetilmeyen kaynaklar tarafından kullanılan belleği boşaltmak için uygulama. Ne zaman düzgün uygulamanız bir <xref:System.IDisposable.Dispose%2A> yöntemi, ya da güvenli tanıtıcının <xref:System.Object.Finalize%2A> yöntemini veya kendi geçersiz kılma <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi kaynakları temizlemek için koruyucu olur durumunda <xref:System.IDisposable.Dispose%2A> yöntemi çağrılmaz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Dispose yöntemi uygulama](../../../docs/standard/garbage-collection/implementing-dispose.md)  
+ [Dispose Yöntemi Uygulama](../../../docs/standard/garbage-collection/implementing-dispose.md)  
  Nasıl uygulandığı açıklanır [düzeni dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) yönetilmeyen kaynakları serbest bırakmak için.  
   
- [IDisposable uygulayan nesneler kullanma](../../../docs/standard/garbage-collection/using-objects.md)  
+ [IDisposable Uygulayan Nesneler Kullanma](../../../docs/standard/garbage-collection/using-objects.md)  
  Nasıl bir türde tüketicileri emin açıklar kendi <xref:System.IDisposable.Dispose%2A> uygulaması çağrılır. C# kullanarak öneririz `using` deyimi veya Visual Basic `Using` Bunu yapmak için deyimi.  
   
 ## <a name="reference"></a>Başvuru  

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cc3dab3acafdb151cf14f81145ef47e5a6ff689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c8de64ac28fe57e3c448c671859053fad4aae3b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme
 Windows Forms zaman <xref:System.Windows.Forms.TextBox> denetim odağı ilk alır, varolan herhangi bir metni sola metin kutusu içinde varsayılan ekleme. Kullanıcı klavye veya fare ekleme noktasını taşıyabilirsiniz. Metin kutusu kaybeder ve odak yeniden kazanabilmesi ekleme noktasını yerlerde kullanıcı son onu yerleştirilen olacaktır.  
@@ -73,10 +74,10 @@ Windows Forms zaman <xref:System.Windows.Forms.TextBox> denetim odağı ilk alı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.TextBox>  
- [TextBox denetimine genel bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Nasıl yapılır: salt okunur metin kutusu oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Nasıl yapılır: dizeye tırnak işaretleri koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Nasıl yapılır: metni seçme Windows Forms TextBox denetiminde](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Nasıl yapılır: birden çok satır Windows Forms TextBox denetiminde görünümü](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+ [TextBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Nasıl yapılır: Dizeye Tırnak İşaretleri Koyma](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

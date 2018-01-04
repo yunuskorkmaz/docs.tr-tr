@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 36cf338a15ad3f7d234f902c50a2dbb1b2e95847
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 397de114a3d8c3cbcfbc8ab55e4dbaf45ca9b652
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl Yapılır: Birden Çok İptal İsteğini Dinleme
 Bu örnek, ya da belirteci isterse bir işlem iptal edebilirsiniz iki iptal belirteçlerini aynı anda dinlenecek gösterilmiştir.  
@@ -42,4 +45,4 @@ Bu örnek, ya da belirteci isterse bir işlem iptal edebilirsiniz iki iptal beli
  Bu örnekte, <xref:System.AggregateException> hiçbir zaman oluşturulması, ancak çünkü burada yakaladığı gerçek dünya senaryolarında yanı sıra diğer tüm özel durumlar <xref:System.OperationCanceledException> görev temsilciden oluşturulan içinde kaydırılan bir <xref:System.OperationCanceledException>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

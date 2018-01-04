@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına eklenen dinleyici nesne birlikte yok edilmeyecek olduğunu mümkündür. Bu durum bellek sızıntıları yol açabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]belirli olaylar için ayrılmış yönetici sınıfı sağlayarak ve bu olay için dinleyiciler üzerinde arabirimi uygulama bu sorunu gidermek için kullanılan bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  

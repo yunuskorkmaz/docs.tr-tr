@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73d12bb38e4929582a8317d8ab3d7b23a7d1f603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme
 Varsayılan olarak, araç ipuçları değerlerini görüntülemek için kullanılan <xref:System.Windows.Forms.DataGridView> tüm içerikleri göstermek için çok küçük olan hücre. Ancak, tek tek hücreler için araç ipucu metni değerlerini ayarlamak için bu davranış kılabilirsiniz. Bu, kullanıcıların bir hücre hakkında ek bilgi görüntülemek için veya alternatif bir açıklama hücre içeriğinin kullanıcılara sağlamak için kullanışlıdır. Örneğin, durum simgelerini görüntüleyen bir satır varsa, araç ipuçları kullanma metin açıklamaları sağlamak isteyebilirsiniz.  
@@ -57,4 +58,4 @@ Varsayılan olarak, araç ipuçları değerlerini görüntülemek için kullanı
  <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewCell>  
  <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>  
- [Hücrelerini, satırları ve sütunları Windows Forms DataGridView denetiminde ile programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+ [Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)

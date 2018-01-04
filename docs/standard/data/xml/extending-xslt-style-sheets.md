@@ -13,24 +13,27 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ccd1a95586bc92bcc712639eded135a69da1a36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aea28532dd81745b8d018cbeed454bbd008c8ed7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-xslt-style-sheets"></a>XSLT stil sayfaları genişletme
 Bu bölümde XSLT işlevselliği genişletmek için farklı yöntemler açıklanmaktadır. Uzantı nesneleri veya kullanarak parametreler ekleyebilirsiniz <xref:System.Xml.Xsl.XsltArgumentList> sınıfı. Uzantı nesneleri veya parametreleri stil sayfası içinden çağrılamaz. Ayrıca, aynı zamanda komut dosyası blokları stil sayfasına kullanarak eklenebilir `msxsl:script` öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XSLT uzantısı nesneleri](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
+ [XSLT Genişletme Nesneleri](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
  Kullanarak anlatılmaktadır <xref:System.Xml.Xsl.XsltArgumentList> işlem XSLT uzantısı nesnelere sınıfı.  
   
- [XSLT parametreleri](../../../../docs/standard/data/xml/xslt-parameters.md)  
+ [XSLT Parametreleri](../../../../docs/standard/data/xml/xslt-parameters.md)  
  Kullanarak anlatılmaktadır <xref:System.Xml.Xsl.XsltArgumentList> işlem XSLT parametreleri sınıfı.  
   
- [Komut dosyası blokları kullanarak msxsl: Script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
+ [msxsl:script Kullanan Betik Blokları](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
  Kullanarak anlatılmaktadır `msxsl:script` öğesi.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

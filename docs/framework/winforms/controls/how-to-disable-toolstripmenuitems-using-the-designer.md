@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4958f315ff0415c3964d22dffff2553c0901eb91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6f60976ffd42c63307a0fe476cb3dc36a7c657e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Nasıl yapılır: Tasarımcıyı Kullanarak ToolStripMenuItems Öğelerini Devre Dışı Bırakma
 Sınırlandırmak veya bir kullanıcı tarafından etkinleştirme ve kullanıcı etkinlikleri yanıtta menü öğelerini devre dışı bırakma hale getirebilir komutları genişletebilir. Menü öğeleri, varsayılan olarak etkinleştirilir, oluşturuldukları, ancak bu aracılığıyla ayarlanabilir <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> özelliği. Tasarım zamanında bu özellik işleyebilir **özellikleri** penceresi veya programlı olarak ayarlayarak bu kodu. Daha fazla bilgi için bkz: [nasıl yapılır: Toolstripmenuıtems devre dışı](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  
@@ -40,5 +41,5 @@ Sınırlandırmak veya bir kullanıcı tarafından etkinleştirme ve kullanıcı
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Nasıl yapılır: Toolstripmenuıtems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
- [MenuStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+ [Nasıl yapılır: ToolStripMenuItems Gizleme](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

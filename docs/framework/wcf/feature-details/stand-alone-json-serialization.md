@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Bağımsız JSON Seri Hale Getirme
 JSON (JavaScript nesne gösterimi) özellikle Web sayfalarında tarayıcı içinde çalışan JavaScript kodu tarafından kullanılmak üzere tasarlanmış bir veri biçimidir. Oluşturulan ASP.NET AJAX Hizmetleri tarafından kullanılan varsayılan veri biçimi olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Geçerli XML adları seri hale getirici XML kodlar anahtar adları. Örneğin, bir veri üyesi "123" adı ile kodlanmış bir adı gibi gerekir "_x0031\__x0032\__x0033\_" "123" geçersiz bir XML öğesi adı (bir rakam ile başlayan) olduğundan. XML adlarında geçerli olmayan bazı uluslararası karakter kümeleri ile benzer bir durum ortaya çıkabilir. Bu JSON işleme XML etkisini açıklaması için bkz: [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [JSON ve diğer veri aktarma biçimleri için destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [JSON ve Diğer Veri Aktarma Biçimleri için Destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

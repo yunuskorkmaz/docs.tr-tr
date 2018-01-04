@@ -6,11 +6,14 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -107,8 +110,8 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core desteklemez. Örne
 
 ## <a name="see-also"></a>Ayrıca bkz.
  [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)  
- [.NET core Kılavuzu](../core/index.md)  
+ [.NET Core Kılavuzu](../core/index.md)  
  [.NET Core için .NET Framework'bağlantı noktası oluşturma](../core/porting/index.md)  
- [.NET framework üzerine Docker Kılavuzu](../framework/docker/index.md)  
+ [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
  [.NET bileşenleri'ne genel bakış](components.md)  
  [.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)

@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f457cc91e6fbfc118e5363d1b0a8e8c2ad800748
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0679e09a52fab68d8da83863afde1568794ba561
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma
 Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Adlandırılmış kanallardan daha az işlevsellik sağlarlar, ancak daha az yük gerektirirler. Yerel bir bilgisayarda işlemler arası iletişimi kolaylaştırmak için anonim kanalları kullanabilirsiniz. Bir ağ üzerinden iletişim için anonim kanalları kullanamazsınız.  
@@ -54,4 +57,4 @@ Anonim kanallar, yerel bir bilgisayarda işlemler arası iletişim sağlar. Adla
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kanallar](../../../docs/standard/io/pipe-operations.md)  
- [Nasıl yapılır: ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+ [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

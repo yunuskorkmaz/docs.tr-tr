@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7b91c11482a1314bc86b464715dcba68f2a67724
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 023965489530e70deb7dc9460418ef0d56654081
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount Metodu
 Sabit listede öğe sayısını alır.  
@@ -52,4 +53,4 @@ HRESULT GetCount (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icorpublishenum arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+ [ICorPublishEnum Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

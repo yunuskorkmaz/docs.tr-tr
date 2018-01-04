@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64661bbdcb267e2f2ce33b8a8db2ab2aac9a86f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Nasıl yapılır: Ana Eğriler Çizme
 Kardinal eğri sorunsuz verilen kümesini noktaları geçirir bir eğri ' dir. Kardinal eğri çizmek için oluşturma bir <xref:System.Drawing.Graphics> nesne ve bir dizi noktalarına adresini geçirin <xref:System.Drawing.Graphics.DrawCurve%2A> yöntemi.  
@@ -60,5 +61,5 @@ Kardinal eğri sorunsuz verilen kümesini noktaları geçirir bir eğri ' dir. K
  Önceki örneklerde Windows Forms ile kullanılmak üzere tasarlanmıştır ve ihtiyaç <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Eğriler oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Eğriler Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

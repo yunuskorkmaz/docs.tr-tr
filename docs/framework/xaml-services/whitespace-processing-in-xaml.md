@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 80b75897f54136849aa4b356c414145510d9cd3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML'de Boşluk İşleme
 Bu önemli boşluk işlenen, tarafından XAML dil kuralları durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulama. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -85,6 +86,6 @@ Bu önemli boşluk işlenen, tarafından XAML dil kuralları durum bir [!INCLUDE
  Ayrıca, bir akış belge modeldeki linebreak connote belirli satır içi öğeleri bile koleksiyonundaki bir boşluk önemli bir boşluk eklemeniz gerekir kasıtlı olarak değil. Örneğin, <xref:System.Windows.Documents.LineBreak> öğeye sahip aynı amaca \<BR / > içinde etiketi [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]ve biçimlendirme içinde okunabilirlik için genellikle bir <xref:System.Windows.Documents.LineBreak> sonraki tüm metinden tarafından yazılan bir satır besleme ayrılır. Bu satır besleme sonraki satırın başında boşluk olmasını normalleştirilmiş değil. Sınıf tanımı bu davranışı etkinleştirmek için <xref:System.Windows.Documents.LineBreak> öğesine uygular <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, hangi sonra yorumlanır tarafından [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] bu boşluk çevresindeki ortalama İşlemci <xref:System.Windows.Documents.LineBreak> her zaman kırpılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML karakter varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: Space XAML'de işleme](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+ [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [XML Karakter Varlıkları ve XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
+ [XAML'de xml:space İşleme](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

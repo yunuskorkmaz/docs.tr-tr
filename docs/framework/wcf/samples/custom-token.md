@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f7a425853c2416f390d28ca31dae3f415e23c54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek özel bir belirteç uygulamasına eklemek nasıl gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama. Örnek kullanan bir `CreditCardToken` hizmete istemci kredi kartı bilgilerini güvenli bir şekilde geçirilecek. Belirteç WS güvenliği ileti üstbilgisinde geçirilir ve imzalanır ve ileti gövdesi ve diğer ileti üstbilgilerini yanı sıra simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, burada yerleşik belirteçleri yetersiz olduğu durumlarda yararlıdır. Bu örnek, bir özel güvenlik belirteci yerleşik belirteçleri birini kullanmak yerine bir hizmet sağlamak üzere gösterilmiştir. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

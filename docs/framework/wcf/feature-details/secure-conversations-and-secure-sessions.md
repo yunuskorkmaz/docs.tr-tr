@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 6647ef8124279e9fc0b3049beb5c87f887125dfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d519640c40daf248a01a19f0450f3aea8de6cc04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Güvenli İletişimler ve Güvenli Oturumlar
 Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] birbirinin kimliğini doğrular ve bir şifreleme ve dijital imza işlemi sırasında kabul iki uç noktalar arasında güvenli oturumları yeteneğidir. Örneğin, hizmet uç noktası kimlik doğrulaması için bir X.509 sertifikası bağlı bir güvenlik belirteci göndermek için bir istemci uç noktası gerektirebilir. İstemci kimlik doğrulaması gerçekleştikten sonra hizmet uç noktası bir güvenlik bağlamı belirteci (SCT) sonra oturum içinde tüm sonraki iletileri güvenli hale getirmek için kullanılan istemciye geri döndürür. Bu güvenli oturum oluşturma, bir simetrik anahtar SCT sahip olduğundan daha verimli olmasını iki uç noktaları arasında alınıp verilen iletileri kümesi sağlar. Asimetrik anahtarlar, hangi X.509 sertifikaları dayalı olarak, simetrik ne zaman anahtarları daha önemli ölçüde daha fazla hesaplama gücüne gerektiren bir dijital imza oluşturulurken veya veri kümesi şifreleme.  
@@ -27,5 +28,5 @@ Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] birbir
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oturumları, bkz: [kullanarak oturumları](../../../../docs/framework/wcf/using-sessions.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oturumlar, örnek oluşturma ve eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- [Nasıl yapılır: oturum gerektiren bir hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+ [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

@@ -14,11 +14,11 @@ ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9cdbd8edaefba4554e8de92cb600f045dc39f780
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d361759471a8edfa97437bd2503cfaa661fb9678
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; CLS uyumlu değil çünkü &lt;proceduresignature2&gt; farklı ondan yalnızca dizi parametre türleri dizisi veya dizi parametre türleri derecesini tarafından
 Bir yordam veya özellik olarak işaretlenmiş `<CLSCompliant(True)>` zaman başka bir yordam veya özelliğini geçersiz kılar ve bunların parametre listeleri arasındaki tek fark basit bir dizi iç içe geçirme düzeyi veya bir dizi derecesini.  
@@ -31,7 +31,7 @@ Bir yordam veya özellik olarak işaretlenmiş `<CLSCompliant(True)>` zaman baş
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- İkinci bildirim özgün tek boyutlu parametresi değişiklikleri `arrayParam` oluşan bir dizi için. Üçüncü bildirimi değişiklikleri `arrayParam` iki boyutlu bir diziye (derece 2). Visual Basic bu değişiklikler yalnızca biri tarafından farklı aşırı sağlar, ancak bu tür aşırı yüklemesi ile uyumlu değil [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS).  
+ İkinci bildirim özgün tek boyutlu parametresi değişiklikleri `arrayParam` oluşan bir dizi için. Üçüncü bildirimi değişiklikleri `arrayParam` iki boyutlu bir diziye (derece 2). Visual Basic bu değişiklikler yalnızca biri tarafından farklı aşırı sağlar, ancak bu tür aşırı yüklemesi ile uyumlu değil [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Uyguladığınızda <xref:System.CLSCompliantAttribute> bir programlama öğesi için ayarladığınız özniteliğin `isCompliant` ya da parametre `True` veya `False` uyumluluğu veya uyumsuzluğu belirtmek için. Bu parametre için varsayılan yok ve bir değer sağlamanız gerekir.  
   
@@ -48,6 +48,6 @@ Bir yordam veya özellik olarak işaretlenmiş `<CLSCompliant(True)>` zaman baş
 -   Aşırı farklı olduğunu gerekiyorsa yalnızca bu Yardım Alıntı yapılan değişikliklerden sayfasında, kaldırma <xref:System.CLSCompliantAttribute> tanımlarını gelen veya bunları olarak işaretlemek `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<PAVE üzerinden > CLS uyumlu kod yazma](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)  
- [Yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md)
+   
+ [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+ [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)

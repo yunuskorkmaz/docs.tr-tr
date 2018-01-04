@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9530fecb4f2ca6f59d165e49c282320966fd2fa8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 985425ad44003f5971b21f107fad322f2123f6ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Kullanım Dışı CLR Barındırma İşlevleri
 Bu bölümde barındırma API önceki sürümlerinde kullanılan yönetilmeyen genel statik işlevler açıklanmaktadır.  
@@ -30,141 +31,141 @@ Bu bölümde barındırma API önceki sürümlerinde kullanılan yönetilmeyen g
  Altyapı işlevleri (`_Cor*` işlevler), yalnızca .NET Framework tarafından kullanılır, bu işlevler de kullanım dışı bırakıldı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="activation-functions"></a>Etkinleştirme işlevleri  
- [Clrcreatemanagedınstance işlevi](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
+ [ClrCreateManagedInstance İşlevi](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
  Kullanım dışı. Belirtilen yönetilen türü örneğini oluşturur.  
   
- [Coınitializecor işlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
+ [CoInitializeCor İşlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
  Kullanımdan kalktı. Ortak dil çalışma zamanı (CLR) başlatmak için kullanın ya da [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
- [Coınitializeee işlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
+ [CoInitializeEE İşlevi](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
  Kullanım dışı. CLR yürütme altyapısı bir işlemine yüklendi sağlar. Kullanım [Iclrruntimehost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemi yerine.  
   
- [CorBindToCurrentRuntime işlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
+ [CorBindToCurrentRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
  Kullanım dışı. Ortak dil çalışma zamanı (CLR), bir XML dosyasında depolanan sürüm bilgileri kullanarak bir sürecine yükler.  
   
- [CorBindToRuntime işlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
+ [CorBindToRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
  Kullanım dışı. CLR süreç içine yüklemek için yönetilmeyen konakları etkinleştirir.  
   
- [CorBindToRuntimeByCfg işlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
+ [CorBindToRuntimeByCfg İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
  Kullanım dışı. CLR bir XML dosyasından okuma sürüm bilgilerini kullanarak bir sürecine yükler.  
   
- [CorBindToRuntimeEx işlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
+ [CorBindToRuntimeEx İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
  Kullanım dışı. CLR süreç içine yüklemek yönetilmeyen ana bilgisayarları etkinleştirir ve CLR davranışını belirtmek için bayrakları ayarlamanıza olanak tanır.  
   
- [CorBindToRuntimeHost işlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
+ [CorBindToRuntimeHost İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
  Kullanım dışı. Süreç içine CLR belirtilen bir sürümünü yüklemek ana bilgisayarları sağlar.  
   
- [GetCORRequiredVersion işlevi](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
+ [GetCORRequiredVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
  Kullanım dışı. Gerekli CLR sürüm numarasını alır.  
   
- [GetCORSystemDirectory işlevi](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)  
+ [GetCORSystemDirectory İşlevi](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)  
  Kullanım dışı. İşlem içine yüklenmiş CLR yükleme dizinini döndürür.  
   
- [GetRealProcAddress işlevi](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)  
+ [GetRealProcAddress İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)  
  Kullanım dışı. Son yüklenen sürümünden CLR dışarı belirtilen işlev adresi alır.  
   
- [Getrequestedruntimeınfo işlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+ [GetRequestedRuntimeInfo İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  Kullanım dışı. Bir uygulama tarafından istenen CLR sürümü ve dizin bilgilerini alır.  
   
 ## <a name="clr-version-functions"></a>CLR sürüm işlevleri  
  Bu bölümdeki işlevler CLR sürümü döndürür; CLR etkinleştirmeyin.  
   
- [GetCORVersion işlevi](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
+ [GetCORVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
  Kullanım dışı. Geçerli işlemde çalışan CLR sürüm numarasını döndürür.  
   
- [GetFileVersion işlevi](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)  
+ [GetFileVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)  
  Kullanım dışı. Belirtilen arabellek kullanarak dosyanın belirtilen CLR sürüm bilgilerini alır.  
   
- [GetRequestedRuntimeVersion işlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+ [GetRequestedRuntimeVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
  Kullanım dışı. Belirtilen uygulama tarafından istenen CLR sürüm numarasını alır. Bu sürümü yüklü değilse, önce istenen sürümü yüklü en son sürümünü alır.  
   
- [Getrequestedruntimeversionforclsıd işlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
+ [GetRequestedRuntimeVersionForCLSID İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
  Kullanım dışı. Belirtilen CLSID sınıfı için uygun CLR sürüm bilgilerini alır.  
   
- [GetVersionFromProcess işlevi](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
+ [GetVersionFromProcess İşlevi](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  Kullanım dışı. Belirtilen işlem tanıtıcı ile ilişkili CLR sürüm numarasını alır.  
   
- [LockClrVersion işlevi](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  
+ [LockClrVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  
  Kullanım dışı. CLR açıkça başlatmadan önce işlemi içinde CLR hangi sürümünün kullanılacağını belirlemek için ana sağlar.  
   
 ## <a name="hosting-functions"></a>Barındırma işlevleri  
- [CallFunctionShim işlevi](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
+ [CallFunctionShim İşlevi](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
  Kullanım dışı. Belirtilen ada ve parametreleri belirtilen Kitaplığı'nda sahip işlevine bir çağrı yapar.  
   
- [CoEEShutDownCOM işlevi](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
+ [CoEEShutDownCOM İşlevi](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
  Kullanım dışı. Bir COM derlemesine işleminden kaldırır.  
   
- [CorExitProcess işlevi](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)  
+ [CorExitProcess İşlevi](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)  
  Kullanım dışı. Geçerli yönetilmeyen işlemi kapatır.  
   
- [CorLaunchApplication işlevi](../../../../docs/framework/unmanaged-api/hosting/corlaunchapplication-function.md)  
+ [CorLaunchApplication İşlevi](../../../../docs/framework/unmanaged-api/hosting/corlaunchapplication-function.md)  
  Kullanım dışı. Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolundaki uygulamayı başlatır.  
   
- [Cormarkthreadınthreadpool işlevi](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
+ [CorMarkThreadInThreadPool İşlevi](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
  Kullanım dışı. Yönetilen kod yürütülmesi için şu anda yürütülen iş parçacığı havuzu iş parçacığı işaretler. .NET Framework sürüm 2.0 ile başlayarak, bu işlev hiçbir etkisi olmaz. Gerekli değildir ve kodunuzdan kaldırılabilir.  
   
- [CoUninitializeCor işlevi](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
+ [CoUninitializeCor İşlevi](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
  Kullanımdan kalktı. CLR bir işlemden kaldırılamıyor.  
   
- [CoUninitializeEE işlevi](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)  
+ [CoUninitializeEE İşlevi](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)  
  Kullanımdan kalktı.  
   
- [Createdebuggingınterfacefromversion işlevi](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
+ [CreateDebuggingInterfaceFromVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
  Kullanım dışı. Oluşturur bir [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) nesne tabanlı belirtilen sürüm bilgileri.  
   
- [Createıceefilegen işlevi](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
+ [CreateICeeFileGen İşlevi](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
  Kullanım dışı. Oluşturur bir [Iceefilegen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) nesnesi.  
   
- [Destroyıceefilegen işlevi](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
+ [DestroyICeeFileGen İşlevi](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Kullanım dışı. Bozar bir [Iceefilegen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) nesnesi.  
   
- [Fexecuteınappdomaincallback işlev işaretçisi](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
+ [FExecuteInAppDomainCallback İşlev İşaretçisi](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Kullanım dışı. Yönetilen kod yürütmek için CLR çağıran bir işlev noktalarına.  
   
- [FLockClrVersionCallback işlev işaretçisi](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
+ [FLockClrVersionCallback İşlev İşaretçisi](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
  Kullanım dışı. Konak bildirmek için CLR çağıran bir işlev noktalarına başlatmanın başlatılan tamamlandı ya da.  
   
- [Getclrıdentitymanager işlevi](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
+ [GetCLRIdentityManager İşlevi](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
  Kullanım dışı. Bir işaretçi kimlikleri yönetmek CLR sağlayan bir arabirim alır.  
   
- [LoadLibraryShim işlevi](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
+ [LoadLibraryShim İşlevi](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
  Kullanım dışı. .NET Framework DLL belirtilen sürümünü yükler.  
   
- [LoadStringRC işlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+ [LoadStringRC İşlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
  Kullanım dışı. Bir HRESULT değeri, geçerli iş parçacığının varsayılan kültürü kullanarak hata iletisine çevirir.  
   
- [LoadStringRCEx işlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+ [LoadStringRCEx İşlevi](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
  Kullanım dışı. Uygun bir hata iletisi belirtilen kültür için HRESULT değerine dönüşür.  
   
- [Lpoverlapped_completıon_routıne işlev işaretçisi](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
+ [LPOVERLAPPED_COMPLETION_ROUTINE İşlev İşaretçisi](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
  Kullanım dışı. İşaret eden bir çakışan olduğunda ana bilgisayar bildiren bir işlev (diğer bir deyişle, zaman uyumsuz) bir aygıt g/ç işlemi tamamlandı.  
   
- [Lpthread_start_routıne işlev işaretçisi](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
+ [LPTHREAD_START_ROUTINE İşlev İşaretçisi](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Kullanım dışı. Bir iş parçacığını yürütmek için başlatıldı konak bildiren bir işlev noktalarına.  
   
- [RunDll32ShimW işlevi](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
+ [RunDll32ShimW İşlevi](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
  Kullanım dışı. Belirtilen komut yürütür.  
   
- [WAITORTIMERCALLBACK işlev işaretçisi](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
+ [WAITORTIMERCALLBACK İşlev İşaretçisi](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
  Kullanım dışı. Ana bilgisayar bekleme tanıtıcısı da işaret veya bırakıldığı zaman aşımına uğradı olduğunu bildiren bir işlev noktalarına.  
   
 ## <a name="infrastructure-functions"></a>Altyapı işlevleri  
  Bu bölümde yalnızca .NET Framework tarafından kullanılmak üzere işlevlerdir.  
   
- [_CorDllMain işlevi](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ [_CorDllMain İşlevi](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
  CLR başlatır, DLL derlemenin CLR üstbilgisinde yönetilen giriş noktasını bulur ve yürütmeye başlar.  
   
- [_CorExeMain işlevi](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
+ [_CorExeMain İşlevi](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
  CLR başlatır, yürütülebilir derlemenin CLR üstbilgisinde yönetilen giriş noktasını bulur ve yürütmeye başlar.  
   
- [_CorExeMain2 işlevi](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
+ [_CorExeMain2 İşlevi](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
  Giriş noktası belirtilen bellekle eşlenen kodu yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.  
   
- [_Corımageunloading işlevi](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
+ [_CorImageUnloading İşlevi](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
  Yönetilen modül görüntüleri kaldırılır, yükleyici size bildirir.  
   
- [_Corvalidateımage işlevi](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
+ [_CorValidateImage İşlevi](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
  Yönetilen modül görüntüleri doğrular ve bunlar yüklendikten sonra işletim sistemi yükleyicisi bildirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET framework 4 barındırma genel statik işlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+ [.NET Framework 4 Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 

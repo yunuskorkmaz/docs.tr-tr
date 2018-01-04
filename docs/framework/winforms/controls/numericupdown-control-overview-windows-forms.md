@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 067a8862ee991213e584819e1cf99eddde06e2bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown Denetimine Genel Bakış (Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> Denetimi kullanıcının bir değer ayarlamak için tıklatabileceği okları çifti ve bir metin kutusu birleşimini gibi görünüyor. Denetim görüntüler ve sabit sayısal değer seçenekler listesinden tek bir sayısal değer ayarlar. Kullanıcı artırmak ve kaç yukarı tıklayarak ve oklar, aşağı yukarı ve aşağı ok tuşlarına basarak veya bir sayı denetim metin kutusu parçası yazarak azaltın. Yukarı Ok tuşuna tıklayarak sayı en doğru taşır; AŞAĞI ok tuşunu tıklatıldığında, en düşük doğru numarası taşınır.  
@@ -34,6 +35,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.NumericUpDown>  
- [NumericUpDown denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms NumericUpDown denetiminin biçimini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
- [TextBox denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+ [NumericUpDown Denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms NumericUpDown Denetiminin Biçimini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [TextBox Denetimi](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

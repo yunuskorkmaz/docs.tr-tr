@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3016fb9a1b1d8466137bcaddb0b885c02c399baf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma
 <xref:System.Drawing.Text.PrivateFontCollection> Sınıfının devraldığı <xref:System.Drawing.Text.FontCollection> soyut taban sınıfı. Kullanabileceğiniz bir <xref:System.Drawing.Text.PrivateFontCollection> uygulamanız için özellikle yazı tipleri kümesini korumak için nesne. Özel yazı tipi koleksiyonu yüklü yazı tipleri ve bunun yanı sıra bilgisayarda yüklü değil yazı tipleri içerebilir. Özel yazı tipi koleksiyonu için bir yazı tipi dosyası eklemek için arama <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> yöntemi bir <xref:System.Drawing.Text.PrivateFontCollection> nesnesi.  
@@ -63,4 +64,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Text.PrivateFontCollection>  
- [Yazı tipleri ve metin kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+ [Yazı Tipleri ve Metin Kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

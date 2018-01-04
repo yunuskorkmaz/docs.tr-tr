@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b58456fe99331a47871fbf4b1ad86cd43c53c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-architecture"></a>Windows iş akışı mimarisi
 [!INCLUDE[wf](../../../includes/wf-md.md)]Etkileşimli uzun süre çalışan uygulamalar geliştirmek için özet düzeyi başlatır. İş birimleri etkinlikler olarak kapsüllenir. Olanakları sağlar akış denetimi, özel durum işleme, arıza yayma, yüklenmesi ve devam eden iş akışlarının bellek, izleme ve işlem akışı kaldırılması durumu verilerinin kalıcılığı için bir ortamda etkinlikleri çalıştırın.  

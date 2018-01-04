@@ -27,11 +27,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f174ef3ada619e20d375035bee82b0ed9bbc145
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b3846e1c932ed23c61d3102d19ed3a039284aa4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML serileştirme
 XML serileştirme olduğu tarafından gerçekleştirilen XML Web Hizmetleri mimarisi kullanılan temelindeki iletim mekanizması <xref:System.Xml.Serialization.XmlSerializer> sınıfı. XML Web hizmeti tarafından oluşturulan XML denetlemek için ikisi de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıfları, dönüş değerleri, parametreler ve XML Web Hizmetleri (.asmx) oluşturmak için kullanılan bir dosya alanları. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz: [yapı XML Web Hizmetleri kullanarak ASP.NET](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
@@ -267,10 +270,10 @@ public class Order{
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Kodlanmış SOAP serileştirme denetim öznitelikleri](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [Nasıl yapılır: bir SOAP kodlanmış XML akışı olarak bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
- [Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+ [Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

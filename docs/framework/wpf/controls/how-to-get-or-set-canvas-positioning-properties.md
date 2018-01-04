@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Nasıl yapılır: Tuval Konumlandırma Özelliklerini Alma veya Ayarlama
 Bu örnek konumlandırma yöntemlerini kullanmayı gösterir <xref:System.Windows.Controls.Canvas> alt konumlandırmak için öğesi. Bu örnek içeriği kullanan bir <xref:System.Windows.Controls.ListBoxItem> temsil etmek için konumlandırma değerler ve değerlerin örneğine dönüştürür <xref:System.Double>, konumlandırma için gerekli bir bağımsız değişken olduğu. Değerler sonra dizelere geri dönüştürülür ve metin olarak görüntülenen bir <xref:System.Windows.Controls.TextBlock> kullanarak öğesi <xref:System.Windows.Controls.Canvas.GetLeft%2A> yöntemi.  
@@ -42,4 +43,4 @@ Bu örnek konumlandırma yöntemlerini kullanmayı gösterir <xref:System.Window
  <xref:System.Windows.Controls.Canvas>  
  <xref:System.Windows.Controls.ListBoxItem>  
  <xref:System.Windows.LengthConverter>  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)

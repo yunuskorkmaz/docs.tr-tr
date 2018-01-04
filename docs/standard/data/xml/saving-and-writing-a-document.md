@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Kaydetme ve bir belgeyi yazma
 Ne zaman yükle ve Kaydet bir <xref:System.Xml.XmlDocument>, aşağıdaki yollarla kaydedilmiş belge orijinal olandan farklı olabilir:  
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Buna karşılık, kullanabileceğiniz <xref:System.Xml.XmlNode.InnerText%2A> alt düğümleri içeriğini istiyorsanız özelliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

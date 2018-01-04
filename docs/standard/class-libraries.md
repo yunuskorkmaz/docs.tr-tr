@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: cc55f1a919303abe81735da5ad9347115c827d2a
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
@@ -53,7 +56,7 @@ Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklar�
 .NET standart kitaplıkları aşağıdaki platformları destekler:
 
 *   .NET Core
-*   ASP.NET Çekirdeği
+*   ASP.NET Core
 *   .NET framework 4.5 +
 *   Windows Mağazası Uygulamaları
 *   Windows Phone 8+

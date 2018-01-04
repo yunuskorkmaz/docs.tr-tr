@@ -23,11 +23,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 92e28e3b303a7523b9da69b7eb283e0261fc681c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c93f1cda765b5f25fccddcfc27442b857262605f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
 Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, kullanıcılar sayısal verisine girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> biçimlerinin neredeyse sınırsız sayıda denetiminde. Sonuç olarak, yerel ayar ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayarı ve kültür tarafından tanımlanan biçimlendirme kuralları uygulayabilirsiniz.  
@@ -79,5 +82,5 @@ Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, kullanı
  Bir kullanıcının HTML akışa betik injecting önlemek için kullanıcı girişi hiçbir zaman doğrudan sunucu yanıtta yansıtılması gerekir. Bunun yerine, bunu kullanarak kodlanması gereken <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Sayısal dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-numeric.md)
+ [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [Sayısal Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-numeric.md)

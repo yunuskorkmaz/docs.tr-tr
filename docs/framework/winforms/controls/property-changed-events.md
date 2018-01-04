@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7685891e99f1dcb2ca9e515c7dc6d7730ff0b2e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad22d77043f00ab0caaa6d8b08b6b0a9eef1fed5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-changed-events"></a>Özellik Değişti Olayları
 Adlı bir özellik olduğunda bildirim göndermek için denetiminizi istiyorsanız *PropertyName* değişiklikleri tanımlamak adlı bir olay *PropertyName* `Changed` ve adlı bir yöntem `On` *PropertyName* `Changed` olayını başlatır. Windows Forms'ta adlandırma kuralı word eklenecek olan *değiştirilen* özelliğinin adı. Özellik değişti olayları için ilişkili olay temsilci türüdür <xref:System.EventHandler>, ve olay veri türü <xref:System.EventArgs>. Taban sınıfı <xref:System.Windows.Forms.Control> gibi pek çok özellik değişti olayları tanımlayan <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>ve diğerleri. Olaylar hakkında bilgi için bkz: [olayları](../../../../docs/standard/events/index.md) ve [Windows Forms denetimlerindeki olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).  
@@ -36,6 +37,6 @@ Adlı bir özellik olduğunda bildirim göndermek için denetiminizi istiyorsan�
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../../docs/standard/events/index.md)  
- [Windows Forms denetimlerindeki olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- [Windows Forms denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+ [Olaylar](../../../../docs/standard/events/index.md)  
+ [Windows Forms Denetimlerindeki Olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

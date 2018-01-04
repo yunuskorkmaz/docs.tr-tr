@@ -18,27 +18,28 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8425084b2124fc6082331c9bb87c1f1f2ad9031e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 136c7b13cf5f0e824985398564fc8f17476d64f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography"></a>Tipografi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Zengin metin içeriği sunumu için destek içerir. Metin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılarak oluşturulması [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], metnin okunabilirliğini ve netlik geliştirir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Ayrıca destekler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından tanımlanan ötesinde ek özellikler sağlamak yazı tipleri [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] biçimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [ClearType genel bakış](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType kayıt defteri ayarları](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [Biçimli metin çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [Gelişmiş metin biçimlendirme](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [Yazı tipleri](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [Karakterleri](../../../../docs/framework/wpf/advanced/glyphs.md)  
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [ClearType Genel Bakışı](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ [ClearType Kayıt Defteri Ayarları](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
+ [Biçimlendirilmiş Metin Çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
+ [Gelişmiş Metin Biçimlendirme](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
+ [Yazı Tipleri](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
+ [Karakterler](../../../../docs/framework/wpf/advanced/glyphs.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Documents.Typography>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType yazıtipi özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

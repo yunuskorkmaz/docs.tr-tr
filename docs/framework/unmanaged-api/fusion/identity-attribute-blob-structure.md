@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b6d732f94eaa1e6988273d947ec924acf7b2521
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05f8f44579b8169a4a8a13ae527adcf0c2a2839a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
 Tek bir özniteliği derlemedeki hakkında bilgi içerir ve üç oluşur `DWORD`s. Her `DWORD` tarafından üretilen karakter arabellek içine bir uzaklık `CurrentIntoBuffer` yöntemi [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) arabirimi  
@@ -244,7 +245,7 @@ Exit:
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ireferenceıdentity arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [Ienumıdentıty_attrıbute arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [Identıty_attrıbute yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Fusion yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+ [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
+ [IEnumIDENTITY_ATTRIBUTE Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
+ [IDENTITY_ATTRIBUTE Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
+ [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

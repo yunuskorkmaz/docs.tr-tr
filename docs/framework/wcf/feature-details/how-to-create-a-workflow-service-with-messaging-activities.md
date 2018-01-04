@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57139fdf2a07f2d37bc337a041704eee174328e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 Bu konu, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturmayı açıklar. Bu konu, burada yalnızca Mesajlaşma etkinlikleri servis oluşur bir iş akışı hizmeti oluşturma mekanizması odaklanır. Gerçek dünya hizmetinde, iş akışı diğer birçok etkinlik içerir. Hizmet bir dize alır ve çağırana dize verir Yankı adlı bir işlemi uygular. İlk iki Konular'a dizi konudur. Sonraki konuyu [nasıl yapılır: bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu konuda oluşturulan hizmet çağırabilirsiniz bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  
@@ -100,6 +101,6 @@ Bu konu, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti olu�
 4.  Oturum devam [nasıl yapılır: bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu hizmeti çağıran bir iş akışı istemcisi oluşturmak için konu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [İş akışı hizmetlerini barındırma genel bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

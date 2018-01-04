@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27def01a4747521bef29b47a2a458e2ed24190b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: deff4cd29e2a7a0ab2f50dcaf30c787a5856a8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="failfastexception"></a>FailFastException
 Kimliği: 103  
@@ -30,5 +31,5 @@ Kimliği: 103
  İşlem hızla başarısız sırasında özel durum oluştu. Özel durum, işlem adı ve işlem kimliği olay listeler  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik genel başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

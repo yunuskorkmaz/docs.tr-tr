@@ -21,11 +21,14 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
 Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dillere yerelleştirilmiş bir uygulama da dahil olmak üzere, üç adımdan oluşur: yerelleştirilebilirlik gözden geçirin Genelleştirme ve Yerelleştirme.  
@@ -33,7 +36,7 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Bu adım kültür ve dil açısından nötr olan ve tüm kullanıcılar için yerelleştirilmiş kullanıcı arabirimleri ve bölgesel verileri destekleyen bir uygulamanın tasarlanması ve kodlanmasını içerir. Tasarım yapma ve kültüre özgü varsayımlara dayalı olmayan kararları programlama ile ilgilidir. Global uygulamalar yerelleştirilmez, ancak daha sonra bir veya birden çok dile görece kolay yerelleştirilebilecek şekilde tasarlanır ve yazılırlar.  
   
- [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
  Bu adım, bir uygulamanın kod ve tasarımının, kolayca yerelleştirilebilir olmasını sağlamak ve yerelleştirme için olası engelleri tanımlamak üzere gözden geçirilmesi ve uygulamanın yürütülebilir kodunun kaynaklarından ayrı olduğunun doğrulanması ile ilgilidir. Genelleştirme aşaması etkili olduysa, yerelleştirme incelemesi, genelleştirme sırasında yapılan tasarım ve kodlama seçimlerini onaylar. Yerelleştirilebilirlik aşaması, bir uygulamanın kaynak kodunu yerelleştirme aşamasında değiştirmek zorunda kalmamanızı sağlayacak şekilde geri kalan sorunları tanımlayabilir.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
@@ -53,16 +56,16 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Nötr kültüre ve nötr dile sahip bir uygulama tasarlamayı ve kodlamayı da içeren, dünya çapında kullanılmaya hazır uygulama bir oluşturmanın ilk aşamasını açıklar.  
   
- [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
  Yerelleştirmede potansiyel bariyerler tanımlamayı da içeren yerelleştirilmiş uygulama oluşturmanın ikinci aşamasını açıklar.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
  Özel bölgeler ve kültürler için bir uygulamanın kullanıcı arabirimini özelleştirmeyi içeren yerelleştirilmiş bir uygulama oluşturmanın son adımını açıklar.  
   
- [Kültüre duyarsız dize işlemleri](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ [Kültüre Duyarsız Dize İşlemleri](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Kültür duyarlı olmayan sonuçlar elde etmek için varsayılan olarak kültüre duyarlı olan .NET Framework yöntemlerinin ve sınıflarının nasıl kullanılacağını açıklar.  
   
- [Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi uygulamalar](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Dünya Çapında Kullanılmaya Hazır Uygulamalar Geliştirmek için En İyi Yöntemler](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET uygulamaları geliştirmek için izlenebilecek en iyi uygulamaları açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -75,7 +78,7 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
  <xref:System.Text>ad alanı  
  ASCII, ANSI, Unicode ve diğer karakter kodlamalarını temsil eden sınıfları içerir.  
   
- [Resgen.exe (kaynak dosya oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ [Resgen.exe (Kaynak Dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  .txt dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını ortak dil çalışma zamanı ikili .resources dosyalarına dönüştürmek için Resgen.exe öğesinin nasıl kullanılacağını açıklar.  
   
  [Winres.exe (Windows Forms Kaynak Düzenleyici)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  

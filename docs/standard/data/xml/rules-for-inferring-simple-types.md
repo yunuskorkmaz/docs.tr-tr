@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit türler çıkarımını yapma için kurallar
 Açıklar nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü oluşturur.  
@@ -83,6 +86,6 @@ Açıklar nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı özniteli
 |`xsi:noNamespaceSchemaLocation`|Varsa `xsi:noNamespaceSchemaLocation` olan karşılaştı, dikkate alınmaz.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [XML belgelerden şemaları çıkarımını yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Şema düğüm türleri ve yapısı çıkarımını yapma için kurallar](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+ [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

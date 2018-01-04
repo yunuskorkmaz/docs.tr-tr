@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f2cb7fd41e3f5b192974d61ddd9cf2b5845690ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1bebd39fce4f6aa6f570b3af348332bf7bcc87ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor Arabirimi
 Bir uygulama etki alanının bellek ve CPU kullanımını denetleme yöntemleri sağlar.  
@@ -32,9 +33,9 @@ Bir uygulama etki alanının bellek ve CPU kullanımını denetleme yöntemleri 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCurrentAllocated yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|Atık olarak toplanmış bellek çıkarılmasıyla olmadan oluşturulduktan sonra uygulama etki alanı tarafından yapılan tüm bellek ayırmaları bayt cinsinden toplam boyutunu alır.|  
-|[GetCurrentSurvived yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|Çöp toplama engelleme son tam, derdi bitti ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.|  
-|[GetCurrentCpuTime yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Uygulama etki alanı oluşturulduktan sonra geçerli uygulama etki alanında yürütülürken tüm iş parçacıkları tarafından kullanılmış olan toplam işlemci zamanı alır.|  
+|[GetCurrentAllocated Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|Atık olarak toplanmış bellek çıkarılmasıyla olmadan oluşturulduktan sonra uygulama etki alanı tarafından yapılan tüm bellek ayırmaları bayt cinsinden toplam boyutunu alır.|  
+|[GetCurrentSurvived Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|Çöp toplama engelleme son tam, derdi bitti ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.|  
+|[GetCurrentCpuTime Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Uygulama etki alanı oluşturulduktan sonra geçerli uygulama etki alanında yürütülürken tüm iş parçacıkları tarafından kullanılmış olan toplam işlemci zamanı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICLRAppDomainResourceMonitor` Arabirimi aşağıdaki yönetilen özelliklerine benzer işlevsellik sağlar:  
@@ -60,6 +61,6 @@ Bir uygulama etki alanının bellek ve CPU kullanımını denetleme yöntemleri 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [\<appDomainResourceMonitoring > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [Uygulama etki alanı kaynak izleme](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Uygulama Etki Alanı Kaynak İzleme](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

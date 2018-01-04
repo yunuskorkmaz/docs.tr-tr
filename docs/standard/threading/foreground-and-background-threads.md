@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 42ad427fc2c1175c0d9b333aa418aea039f11a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 83022bd27379e1ee34197af4897a5c809f495f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="foreground-and-background-threads"></a>Ön Plan ve Arka Plan İş Parçacıklarını Seçme
 Yönetilen iş parçacığı, arka plan iş parçacığı ya da bir ön plan iş parçacığı değil. Arka plan iş parçacıkları bir özel durumla ön plan iş parçacıkları aynı: arka plan iş parçacığı çalıştıran yönetilen yürütme ortamını korumaz. Tüm ön plan iş parçacıkları (.exe dosyası bir yönetilen derlemesi olduğu) yönetilen bir işlemde durdurulan sonra sistem tüm arka plan iş parçacıkları durdurur ve kapanır.  

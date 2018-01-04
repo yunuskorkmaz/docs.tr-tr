@@ -11,14 +11,14 @@ ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8c2ae87eae971129059a7e84b36971c13a5fe71b
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ca22705a0eee6749ff7121d63d9b505b153e45d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflection-visual-basic"></a>Yansıma (Visual Basic)
-Yansıma nesneleri sağlar (tür <xref:System.Type>) derlemeler, modüller ve türleri açıklanmaktadır. Yansıma dinamik olarak bir türünün bir örneği oluşturmak, var olan bir nesne için bağ türü veya varolan bir nesneden türünü almak ve onun yöntemleri çağırma veya özellikleri ve alanları erişim için kullanabilirsiniz. Kodunuzda öznitelikleri kullanıyorsanız, yansıma erişmesine olanak sağlar. Daha fazla bilgi için bkz: [öznitelikleri](../../../../docs/standard/attributes/index.md).  
+Yansıma nesneleri sağlar (tür <xref:System.Type>) derlemeler, modüller ve türleri açıklanmaktadır. Yansıma dinamik olarak bir türünün bir örneği oluşturmak, var olan bir nesne için bağ türü veya varolan bir nesneden türünü almak ve onun yöntemleri çağırma veya özellikleri ve alanları erişim için kullanabilirsiniz. Kodunuzda öznitelikleri kullanıyorsanız, yansıma erişmesine olanak sağlar. Daha fazla bilgi için bkz: [öznitelikleri](../../../standard/attributes/index.md).  
   
  Yansıma statik yöntemini kullanarak basit bir örneği burada verilmiştir `GetType` - tüm türlerinden tarafından devralınan `Object` temel sınıfı - değişken türünü almak için:  
   
@@ -61,14 +61,14 @@ System.Console.WriteLine(info)
   
 -   [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Tür bilgilerini görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+-   [Tür Bilgilerini Görüntüleme](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Yansıma ve genel türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+-   [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
 -   <xref:System.Reflection.Emit>  
   
--   [Özniteliklerde depolanan bilgileri alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+-   [Özniteliklerde Depolanan Bilgileri Alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)  
- [Ortak dil çalışma zamanı derlemeleri](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

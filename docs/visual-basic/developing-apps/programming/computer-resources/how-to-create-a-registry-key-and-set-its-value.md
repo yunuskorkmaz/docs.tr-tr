@@ -20,11 +20,11 @@ ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5f60dd4723e254b0af59a7794e251a082c9a40c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama
 `CreateSubKey` Yöntemi `My.Computer.Registry` nesnesi, bir kayıt defteri anahtarı oluşturmak için kullanılabilir.  
@@ -76,11 +76,11 @@ ms.lasthandoff: 11/21/2017
 -   Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu işlem çalıştırmak için derleme ayrıcalık düzeyi verilen tarafından gerektiriyor <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Benzer şekilde, kullanıcının oluşturulması veya ayarları için doğru ACL olmalıdır. Örneğin, kod erişimi güvenlik izni olan yerel bir uygulama işletim sistemi izni olmayabilir. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](https://msdn.microsoft.com/library/33tceax8).  
+ Bu işlem çalıştırmak için derleme ayrıcalık düzeyi verilen tarafından gerektiriyor <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Benzer şekilde, kullanıcının oluşturulması veya ayarları için doğru ACL olmalıdır. Örneğin, kod erişimi güvenlik izni olan yerel bir uygulama işletim sistemi izni olmayabilir. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
- [Okuma ve kayıt defterine yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Kod erişim güvenliği temelleri](https://msdn.microsoft.com/library/33tceax8)
+ [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+ [Kod erişim güvenliği temelleri](../../../../framework/misc/code-access-security-basics.md)

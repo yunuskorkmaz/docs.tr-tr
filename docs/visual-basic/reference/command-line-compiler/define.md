@@ -17,11 +17,11 @@ ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8bc3056c3e2d7a4aad469d3bf2c404f5f5248384
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="define-visual-basic"></a>/define (Visual Basic)
 Koşullu derleme sabitleri tanımlar.  
@@ -52,7 +52,7 @@ Koşullu derleme sabitleri tanımlar.
   
 |Ayarlamak için Visual Studio tümleşik geliştirme ortamında tanımlayın|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **derleme** sekmesi.<br />3.  **Gelişmiş**'e tıklayın.<br />4.  Değer değiştirme **özel sabitleri** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **derleme** sekmesi.<br />3.  **Gelişmiş**'e tıklayın.<br />4.  Değer değiştirme **özel sabitleri** kutusu.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod tanımlar ve iki koşullu derleyici sabitleri kullanır.  
@@ -61,6 +61,6 @@ Koşullu derleme sabitleri tanımlar.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [#If... Then... #Else yönergeleri](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [#Const yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

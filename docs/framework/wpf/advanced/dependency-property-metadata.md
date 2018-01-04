@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Özellik sistemi ne bildirilen bir özellik yansıma aracılığıyla hakkında veya genel olabilir ötesine gider sistem raporlama meta verileri içeren [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Meta veri bağımlılık özelliği bir bağımlılık özelliği tanımlayan bir sınıf tarafından da bir benzersiz olarak atanabilir için bağımlılık özelliği için farklı bir sınıf eklendiğinde değiştirilebilir ve özellikle devralan tüm türetilmiş sınıfları tarafından geçersiz kılınabilir bağımlılık özelliği tanımlayıcı temel sınıfından.  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Çerçeve özellik meta verileri](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Çerçeve Özelliği Meta Verileri](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)

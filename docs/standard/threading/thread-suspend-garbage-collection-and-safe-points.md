@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e47674ef8d1b1a7487e42765bcbce4b33cf98769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdd56763712dee9c6fa1f292eb3bbb2f0ccbf505
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend Çöp Toplama ve Güvenli Noktalar
 Çağırdığınızda <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> bir iş parçacığında, bir iş parçacığı askıya istendi ve güvenli bir noktası iş parçacığı gerçekten askıya almadan önce ulaştı kadar yürütmek iş parçacığı verir sistem notlar. Bir güvenli iş parçacığı yürütmesi sırasında hangi atık toplama gerçekleştirilebilir noktasında noktasıdır.  
@@ -37,4 +40,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.Thread>  
  <xref:System.GC>  
  [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [Otomatik bellek yönetimi](../../../docs/standard/automatic-memory-management.md)
+ [Otomatik Bellek Yönetimi](../../../docs/standard/automatic-memory-management.md)

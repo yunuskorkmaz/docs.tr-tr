@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
 Belirleyen bir işlevi veya `Get` erişimci yineleyici olduğu.  
@@ -33,16 +33,14 @@ Belirleyen bir işlevi veya `Get` erişimci yineleyici olduğu.
   
  Yineleyici bir olay, örnek oluşturucusu, statik Oluşturucusu veya statik yıkıcı gerçekleşemez.  
   
- Yineleyici adsız bir işlev olabilir. Daha fazla bilgi için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
-  
- Yineleyiciler hakkında daha fazla bilgi için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Yineleyici adsız bir işlev olabilir. Daha fazla bilgi için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Kullanım  
  `Iterator` Değiştiricisi bu bağlamlarında kullanılabilir:  
   
--   [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir yineleyici işlevi gösterir. Yineleyici işlevinin bir `Yield` içinde deyimi bir [için... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. Her yinelemesinden [her](../../../visual-basic/language-reference/statements/for-each-next-statement.md) deyiminin gövdesinde `Main` yapılan bir çağrı oluşturur `Power` yineleyici işlevi. Yineleyici işlevi her çağrısı devam eder, sonraki yürütülmesi `Yield` sonraki yinelemesini sırasında oluşur deyimi `For…Next` döngü.  
@@ -54,9 +52,9 @@ Belirleyen bir işlevi veya `Get` erişimci yineleyici olduğu.
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- Ek örnekler için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Ek örnekler için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [Yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
- [Yield deyimi](../../../visual-basic/language-reference/statements/yield-statement.md)
+ [Yineleyiciler](../../programming-guide/concepts/iterators.md)  
+ [Yield Deyimi](../../../visual-basic/language-reference/statements/yield-statement.md)

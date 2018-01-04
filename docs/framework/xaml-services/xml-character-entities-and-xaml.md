@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5973c67b26e07bba69383cc625ff34493d825a41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b325c931579606f6d1d90eb821766a4110acfd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML Karakter Varlıkları ve XAML
 XAML için özel karakterler XML dosyasında tanımlanan karakter varlıkları kullanır. Bu konuda, bazı belirli karakter varlıkları ve XAML diğer XML kavramlarına genel konular açıklanmaktadır.  
@@ -56,11 +57,11 @@ XAML için özel karakterler XML dosyasında tanımlanan karakter varlıkları k
   
 |Karakter|Varlık|Notlar|  
 |---------------|------------|-----------|  
-|& (ve işareti)|&amp;|Öznitelik değeri hem bir öğenin içeriğini kullanılması gerekir.|  
-|> (büyük-karakter daha)|&gt;|Bir öznitelik değeri için kullanılması gereken ancak > sürece bir öğenin içeriğini olarak kabul edilebilir < önce gelmez.|  
-|< (daha az-karakter daha)|&lt;|Bir öznitelik değeri için kullanılması gereken ancak \< sürece bir öğenin içeriğini olarak kabul edilebilir > bunu izlemez.|  
-|"(düz tırnak işareti)|&quot;|Bir öznitelik değeri için kullanılması gereken ancak düz tırnak işareti (") öğenin içerik kabul edilebilir. Öznitelik değerleri düz tek tırnak işareti (') veya ("); düz tırnak işareti içine olduğunu unutmayın hangi karakter ilk olarak görünür öznitelik değeri muhafaza tanımlar ve alternatif teklif ardından değeri içinde bir hazır değer olarak kullanılabilir.|  
-|' (düz tek tırnak işareti)|&apos;|Bir öznitelik değeri için kullanılması gereken ancak düz tek tırnak işareti (') öğenin içerik kabul edilebilir. Öznitelik değerleri düz tek tırnak işareti (') veya ("); düz tırnak işareti içine olduğunu unutmayın hangi karakter ilk olarak görünür öznitelik değeri muhafaza tanımlar ve alternatif teklif ardından değeri içinde bir hazır değer olarak kullanılabilir.|  
+|& (ve işareti)|\&amp;|Öznitelik değeri hem bir öğenin içeriğini kullanılması gerekir.|  
+|> (büyük-karakter daha)|\&gt;|Bir öznitelik değeri için kullanılması gereken ancak > sürece bir öğenin içeriğini olarak kabul edilebilir < önce gelmez.|  
+|< (daha az-karakter daha)|\&lt;|Bir öznitelik değeri için kullanılması gereken ancak \< sürece bir öğenin içeriğini olarak kabul edilebilir > bunu izlemez.|  
+|"(düz tırnak işareti)|\&quot;|Bir öznitelik değeri için kullanılması gereken ancak düz tırnak işareti (") öğenin içerik kabul edilebilir. Öznitelik değerleri düz tek tırnak işareti (') veya ("); düz tırnak işareti içine olduğunu unutmayın hangi karakter ilk olarak görünür öznitelik değeri muhafaza tanımlar ve alternatif teklif ardından değeri içinde bir hazır değer olarak kullanılabilir.|  
+|' (düz tek tırnak işareti)|\&apos;|Bir öznitelik değeri için kullanılması gereken ancak düz tek tırnak işareti (') öğenin içerik kabul edilebilir. Öznitelik değerleri düz tek tırnak işareti (') veya ("); düz tırnak işareti içine olduğunu unutmayın hangi karakter ilk olarak görünür öznitelik değeri muhafaza tanımlar ve alternatif teklif ardından değeri içinde bir hazır değer olarak kullanılabilir.|  
 |(sayısal karakter eşlemeleri)|&#*[tamsayı]* ; veya & #x*[onaltılık]*;|XAML etkin olan kodlama içine sayısal karakter eşlemeleri destekler.|  
 |(bölünemez boşluk)|&\#160; (UTF-8 kodlaması varsayılarak)|Akış belge öğeleri ya da metin WPF gibi ele öğeleri için <xref:System.Windows.Controls.TextBox>, bölünemez boşluklar Normalleştirilmemiş biçimlendirme dışında için bile `xml:space="default"`. (Daha fazla bilgi için bkz: [XAML'de boşluk işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
@@ -73,7 +74,7 @@ XAML için özel karakterler XML dosyasında tanımlanan karakter varlıkları k
  XAML XML işleme yönergelerini yönergeleri aracılığıyla geçirilmelidir state XML belirtimlerine uygun işler. .NET Framework XAML hizmetlerinde işleme XAML işleme yönergeleri kullanmaz. XAML kullanmak varolan diğer çerçeveler XAML işleme yönergeleri de kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName dilbilgisi](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [XAML'de boşluk işleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+ [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [XamlName Dilbilgisi](../../../docs/framework/xaml-services/xamlname-grammar.md)  
+ [XAML'de Boşluk İşleme](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

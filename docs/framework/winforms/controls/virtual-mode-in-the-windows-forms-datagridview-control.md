@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sanal Mod
 Sanal mod ile arasındaki etkileşimi yönetebilirsiniz <xref:System.Windows.Forms.DataGridView> denetimi ve bir özel veri önbelleği. Sanal mod uygulamak için ayarlanmış <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğine `true` ve bir veya daha fazla bu konuda açıklanan olayları işlemek. Genellikle işleyecek en az `CellValueNeeded` değerleri veri önbelleğindeki denetim Ara sağlayan olay.  
@@ -74,7 +75,7 @@ Sanal mod ile arasındaki etkileşimi yönetebilirsiniz <xref:System.Windows.For
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
- [Performans ayarlama Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetimini ölçeklendirme için en iyi uygulamalar](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
- [Tam zamanında veri Windows Forms DataGridView denetiminde yükleme ile sanal modu uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+ [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Çalıştırma](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

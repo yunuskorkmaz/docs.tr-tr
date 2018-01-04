@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
 Bir iş akışı hizmeti, gelen iletilere yanıt vermesi için barındırılması gerekir. İş akışı hizmetleri kullanım [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı ve bu nedenle Mesajlaşma barındırılan benzer şekilde. Gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, iş akışı hizmetleri yönetilen bir uygulamada, Internet Information Services (IIS) altında ya da Windows İşlem Etkinleştirme Hizmetleri (WAS) altında barındırılması. Ayrıca iş akışı Hizmetleri Windows Server App Fabric altında barındırılabilir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric bakın [Windows Server App Fabric belgelerine](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=196494), ve [AppFabric barındırma kavramları](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ana bilgisayar için çeşitli şekillerde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri bakın [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
@@ -64,5 +65,5 @@ Bir iş akışı hizmeti, gelen iletilere yanıt vermesi için barındırılmas�
  Web dağıtım aracı, dağıtım işlemini kolaylaştırmak için oluşturuldu. Aracı, IIS 6.0 ve IIS 7.0 arasında uygulamaları geçirmek, sunucu grupları, eşitleme ve paketleme, arşivleme ve Web uygulamalarını dağıtmasına olanak sağlar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][MS dağıtım aracı](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı hizmeti konağı dahili bileşenleri](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
- [WorkflowServiceHost yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)
+ [İş Akışı Hizmeti Konağı Dahili Bileşenleri](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
+ [WorkflowServiceHost Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)

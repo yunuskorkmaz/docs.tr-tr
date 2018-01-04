@@ -26,11 +26,11 @@ ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00753eddb641c07ef9c6e6282fe00c5e8d00547a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
 Dize verilerini karşılaştırılırken kullanılacak varsayılan karşılaştırma yöntemi bildirir.  
@@ -72,7 +72,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE içinde ayarlama seçeneği karşılaştırmak için  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [NIB: Proje özellikleriyle yönetme Proje Tasarımcısı](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
   
 2.  Tıklatın **derleme** sekmesi.  
   
@@ -100,10 +100,10 @@ Option Compare { Binary | Text }
  <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
  <xref:Microsoft.VisualBasic.Strings.Split%2A>  
  <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [/ optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [Karşılaştırma işleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)  
  [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Like işleci](../../../visual-basic/language-reference/operators/like-operator.md)  
- [Dize işlevleri](../../../visual-basic/language-reference/functions/string-functions.md)  
- [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [Dize İşlevleri](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)

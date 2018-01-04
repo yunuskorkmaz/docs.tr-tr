@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 2912568e967c8c6096842b1b4f24eac88318dffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-service-applications"></a>Windows Hizmet Uygulamaları Geliştirme
 Microsoft kullanılarak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, kolayca oluşturabileceğiniz Hizmetleri hizmeti olarak yüklenen bir uygulama oluşturarak. Bu tür bir uygulama bir Windows hizmeti adı verilir. Framework özelliklerle hizmetleri oluşturmak, bunları yüklemeniz ve Başlat, durdurabilir ve davranışlarını denetleyebilirsiniz.  
@@ -34,16 +35,16 @@ Microsoft kullanılarak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya 
 >  Windows hizmet şablonu C++ için Visual Studio 2010'da dahil edilmedi. Bir Windows hizmeti oluşturmak için Visual C# veya Visual Basic, gerekirse mevcut C++ kodu ile birlikte çalışmak, yönetilen kodda bir hizmeti oluşturabilir veya kullanarak bir Windows hizmeti yerel C++'da oluşturabilirsiniz [ATL Proje Sihirbazı](/cpp/atl/reference/atl-project-wizard).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  Bir hizmet ve hizmet uygulamalarının diğer ortak proje türlerinden farklılıklar ömrü Windows hizmet uygulamaları, genel bir bakış sağlar.  
   
- [İzlenecek yol: Bileşen tasarımcısında Windows hizmet uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
  Hizmet oluşturma örneğidir [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve Visual C#.  
   
- [Hizmet uygulaması programlama mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Hizmet programlamada kullanılan dil öğeleri açıklanır.  
   
- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  Oluşturma ve Windows hizmeti proje şablonunu kullanarak Windows Hizmetleri yapılandırma sürecini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

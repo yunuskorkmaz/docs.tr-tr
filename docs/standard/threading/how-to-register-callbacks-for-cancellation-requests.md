@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 85b15ed610d80958ac9d7e3762ac8ea7b781b8d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b71ebee3a28fb6a829edf657f56e54799097f351
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Nasıl Yapılır: İptal İstekleri için Geri Çağırmaları Kaydetme
 Aşağıdaki örnek olacak temsilci kaydedileceği gösterilmektedir olduğunda çağrılan bir <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özellik için bir çağrı nedeniyle true olur <xref:System.Threading.CancellationTokenSource.Cancel%2A> belirteç oluşturulan nesne üzerinde. Bu teknik birleşik iptal framework yerel olarak desteklemeyen zaman uyumsuz işlemleri iptal ediliyor ve tamamlamak için zaman uyumsuz bir işlemi bekliyor olabilir engellemesini kaldırma yöntemleri için kullanın.  
@@ -38,4 +41,4 @@ Aşağıdaki örnek olacak temsilci kaydedileceği gösterilmektedir olduğunda 
  Geri çağırma kaydedildikten sonra zaten iptal istendi, geri çağırma çağrılacak hala garanti edilmez. Bu örnekte, <xref:System.Net.WebClient.CancelAsync%2A> yöntemi yaparsanız hiçbir şey her zaman yöntemi çağırmak güvenli olması için hiçbir zaman uyumsuz işlemi devam ediyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

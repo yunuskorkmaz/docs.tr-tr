@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 Özelliklerini belirtir bir <xref:System.Windows.Data.RelativeSource> içinde kullanılacak bağlama kaynağı, bir [bağlama biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), veya ayarlarken <xref:System.Windows.Data.Binding.RelativeSource%2A> özelliği bir <xref:System.Windows.Data.Binding> XAML'de kurulan öğesi.  
@@ -114,9 +115,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.Binding>  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama bildirimleri genel bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

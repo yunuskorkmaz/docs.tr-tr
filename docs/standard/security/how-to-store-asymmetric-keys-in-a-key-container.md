@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8fb1a3f752114d72f7a89b641dcaf69bd61c3264
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama
 Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz: [anlama makine düzeyinde ve kullanıcı düzeyinde RSA anahtar kapsayıcıları](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
@@ -231,7 +234,7 @@ Key deleted.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme ve şifre çözme için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Veri şifreleme](../../../docs/standard/security/encrypting-data.md)  
- [Verilerin şifresini çözme](../../../docs/standard/security/decrypting-data.md)  
+ [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
+ [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

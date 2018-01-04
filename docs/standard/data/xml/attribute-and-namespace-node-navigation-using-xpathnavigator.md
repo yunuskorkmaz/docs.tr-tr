@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme
 <xref:System.Xml.XPath.XPathNavigator> İlk kümesi bulundu sınıfı iki Gezinti yöntemler kümesi sağlar, [düğüm kümesi Gezinti kullanarak XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) konu gezinmek için kullanılan *düğüm kümeleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi. Bu konuda açıklanan ikinci küme gitmek için kullanılan *özniteliği ve ad alanı düğümleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Düğüm kümesi Gezinti XPathNavigator kullanma](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [XPathNavigator kullanarak XML veri ayıklamak](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [XML verilerini XPathNavigator kullanarak yazılan kesinlikle erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathNavigator Kullanarak Düğüm Kümesinde Gezinme](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Ayıklama](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

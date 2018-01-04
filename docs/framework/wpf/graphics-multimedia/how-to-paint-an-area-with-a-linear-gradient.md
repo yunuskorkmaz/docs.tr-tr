@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcc37651d6f1f304f15d3244c2504517a2a9fb76
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: eec4ec2fc7ba99081eaafa6803d20c99bebc6c2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan ile bir Alanı Boyama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.LinearGradientBrush> doğrusal gradyan ile bir alanı boyamak için sınıf. Aşağıdaki örnekte, <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Rectangle> yeşile mavi ve kırmızı sarı geçiş çapraz bir doğrusal gradyan ile boyanır.  

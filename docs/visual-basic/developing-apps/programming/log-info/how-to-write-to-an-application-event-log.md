@@ -16,18 +16,18 @@ ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 018aff8dc130bfe7217c861a7d7bc8ae275ccc66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8225deaac92b4f375f57501875e13216b35a120d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma (Visual Basic)
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` , uygulamanızda gerçekleşen olaylar hakkında bilgi yazılacak nesne. Bu örnekte bir olay günlüğü dinleyicisi yapılandırmak bunu gösterilmiştir `My.Application.Log` izleme bilgilerini uygulama olay günlüğüne yazar.  
   
  Güvenlik günlüğüne yazamaz. Sistem günlüğüne yazmak için LocalSystem veya yönetici hesabının bir üyesi olması gerekir.  
   
- Olay günlüğünü görüntülemek için kullanabileceğiniz **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi'ni**. Daha fazla bilgi için bkz: [.NET Framework'te ETW olayları](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+ Olay günlüğünü görüntülemek için kullanabileceğiniz **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi'ni**. Daha fazla bilgi için bkz: [.NET Framework'te ETW olayları](../../../../framework/performance/etw-events.md).  
   
 > [!NOTE]
 >  Olay günlükleri, Windows 95, Windows 98 veya Windows Millennium Edition desteklenmez.  
@@ -81,6 +81,6 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` , uygulamanızda gerçekle�
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
- [Uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Nasıl yapılır: günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [İzlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+ [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

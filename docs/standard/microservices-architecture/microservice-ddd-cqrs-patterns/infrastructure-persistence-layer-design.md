@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Alty
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9fd09ad4e9ff36e8ab2478ff3e1d5226974a4d17
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Altyapı saklama katmanını tasarlama
 
@@ -36,7 +39,7 @@ CQS/CQRS tasarım örüntüsü kullanıyorsanız, daha önce belirtildiği gibi 
 
 Kullanıcı değişiklikler yaparsa, güncelleştirilmesi için verileri (örneğin, bir Web API hizmeti) uygulama katmanına istemci uygulaması ya da sunu katmanı gelecektir. Komut işleyicisinde bir komutla (veri) aldığınızda, veritabanından güncelleştirmek istediğiniz veri almak için depoları kullanın. Bellekte komutlarıyla geçirilen bilgileriyle güncelleştirmeniz ve ardından ekleyin veya bir işlem aracılığıyla veritabanındaki verileri (etki alanı varlıklar) güncelleştirin.
 
-Biz yeniden, vurgulamak gerekir yalnızca bir depo Şekil 9-17'de gösterildiği gibi her toplama kökü için tanımlanmalıdır. Toplama içindeki tüm nesneler arasında işlemsel tutarlılık sağlamak için birleşik kök hedefe ulaşmak için hiçbir zaman veritabanında her tablo için depo oluşturmanız gerekir.
+Bu yalnızca bir depo her toplama kökü için tanımlanmalıdır, Şekil 9-17'de gösterildiği gibi unutmayın. Toplama içindeki tüm nesneler arasında işlemsel tutarlılık sağlamak için birleşik kök hedefe ulaşmak için hiçbir zaman veritabanında her tablo için depo oluşturmanız gerekir.
 
 ![](./media/image18.png)
 
@@ -83,13 +86,13 @@ Birim testleri endişelerini ayrılması açısından, etki alanı varlıkları 
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Depo düzeni ve eski veri erişimi sınıfı (DAL sınıfı) düzeni arasındaki fark
 
-Veri erişim nesnesi doğrudan depolama karşı veri erişimi ve sürdürme işlemleri gerçekleştirir. İş nesnesi (EF) DbContext kullanırken olduğu gibi ancak bu güncelleştirmeler birimi bellekte gerçekleştirmek istediğiniz işlem verilerle hemen yapılmayacak deposu işaretler.
+Veri erişim nesnesi doğrudan depolama karşı veri erişimi ve sürdürme işlemleri gerçekleştirir. İş nesnesi (EF) DbContext kullanırken olduğu gibi ancak bu güncelleştirmeler birimi bellekte gerçekleştirmek istediğiniz işlem verilerle hemen gerçekleştirilen olmayan depo işaretler.
 
 Bir iş birimine birden çok Ekle içeren tek bir işlem olarak güncelleştirme veya silme işlemleri için denir. Basitçe, belirli bir kullanıcı eylemi (örneğin, bir Web sitesinde kayıt), tüm INSERT, update ve delete işlemleri tek bir işlemde işlenme anlamına gelir. Bu, birden çok veritabanı işlemleri chattier şekilde işleme değerinden daha verimli olur.
 
-Bu uygulama katmanı kodunuzdan komutlarını çalıştırırken birden çok Kalıcılık işlemlerini daha sonra tek bir eylemle gerçekleştirilir. Asıl veritabanını depolama birimine bellek içi değişiklikleri uygulamadan hakkında karar genellikle dayanır [iş birimi düzeni](http://martinfowler.com/eaaCatalog/unitOfWork.html). EF içinde iş birimi düzeni DBContext uygulanır.
+Bu uygulama katmanı kodunuzdan komutlarını çalıştırırken bu birden çok Kalıcılık işlemleri daha sonra tek bir eylemle gerçekleştirilir. Asıl veritabanını depolama birimine bellek içi değişiklikleri uygulamadan hakkında karar genellikle dayanır [iş birimi düzeni](http://martinfowler.com/eaaCatalog/unitOfWork.html). EF içinde iş birimi düzeni DBContext uygulanır.
 
-Çoğu durumda bu deseni veya depolama karşı işlemleri uygulamanın yolu uygulama performansını artırmak ve tutarsızlıklar olasılığını azaltmak. Ayrıca, tüm hedeflenen işlemleri bir işlemin bir parçası olarak kaydedilmiş olduğundan veritabanı tablolarında engelleme işlem azaltır. Bu veritabanında çok sayıda yalıtılmış işlemleri yürütülürken kıyasla daha verimli olur. Bu nedenle, seçili ORM çok sayıda küçük ve ayrı işlem yürütmeleri aksine aynı işlem içindeki birkaç güncelleştirme eylemleri gruplandırarak veritabanında yürütme iyileştirebilir olacaktır.
+Çoğu durumda bu deseni veya depolama karşı işlemleri uygulamanın yolu uygulama performansını artırmak ve tutarsızlıklar olasılığını azaltmak. Ayrıca, tüm hedeflenen işlemleri bir işlemin bir parçası olarak kaydedilmiş olduğundan veritabanı tablolarında engelleme işlem azaltır. Bu veritabanında çok sayıda yalıtılmış işlemleri yürütülürken kıyasla daha verimli olur. Bu nedenle, seçili ORM çok sayıda küçük ve ayrı işlem yürütmeleri aksine aynı işlem içindeki birkaç güncelleştirme eylemleri gruplandırarak veritabanında yürütme iyileştirebilir.
 
 ### <a name="repositories-should-not-be-mandatory"></a>Depoları zorunlu olmamalıdır
 
@@ -101,9 +104,39 @@ Bu büyük olasılıkla büyük bildirimimle olması. Çoğunlukla bunlar temel 
 
 Biz depoları kullanışlı ancak toplama düzeni ve zengin etki alanı modeli şekilde, DDD kritik olmadıklarını bildiremedi. Bu nedenle, havuz deseni kullanıp, gördüğünüz gibi sığmayacak.
 
-#### <a name="additional-resources"></a>Ek kaynaklar
+## <a name="the-specification-pattern"></a>Belirtimi düzeni
 
-##### <a name="the-repository-pattern"></a>Depo düzeni
+(Tam adını sorgu belirtimi düzeni olur) belirtimi Düzen burada bir sorgu tanımını sıralama ve mantıksal disk belleği isteğe bağlı koyabilirsiniz yer olarak tasarlanmış bir Domain-Driven tasarım deseni yöneliktir.
+
+Belirtimi düzeni sorguda bir nesne tanımlar. Örneğin, bazı ürünler için arayan bir disk belleğine alınan sorgu kapsüllemek için gerekli giriş parametreleri (pageNumber, pageSize, filtre, vb.) alır PagedProduct belirtimi oluşturabilirsiniz. Sonra tüm depo yöntemi (genellikle bir List() aşırı) içinde bir ISpecification kabul ve o belirtimine göre beklenen sorgusunu çalıştırın.
+
+Bu yaklaşımın birkaç avantaj vardır:
+
+* Belirtimi hakkında tartışın bir ad (aksine, sadece bir grup LINQ ifadeleri) içeriyor.
+
+* Belirtimi doğru olduğundan emin olmak için birim yalıtım modunda test olabilir. Benzer davranış ihtiyacınız varsa onu da kolayca yeniden kullanılabilir. Örneğin bir MVC görünümü eylem ve bir Web API eylemi yanı sıra çeşitli Hizmetleri'nde.
+
+* Bir belirtimi döndürülecek veri şekli tanımlamak için de kullanılabilir, yalnızca verileri sorgular dönebilmek bunlar gerekli. Bu web uygulamaları (Bu, genellikle iyi bir fikir değil) geç yükleme gereksinimini ortadan kaldırır ve bu ayrıntılarla kalabalık haline gelen deposu uygulamaları tutar.
+
+Bir genel belirtimi arabirimi, aşağıdaki kod örneğidir [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb ).
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle uygulanacağını ve herhangi bir havuz sınıfın kullanma anlatılmıştır.
+
+**Önemli Not:** belirtimi desen aşağıdaki ek kaynaklara olduğu gibi birçok farklı şekillerde uygulanabilir eski bir düzeni olduğunu. Bir desen/fikir eski yaklaşımlar iyi biliyorum, ancak LINQ ve ifadeler gibi modern dil özelliklerinden olmuyor eski uygulamalarının kaybolacağını unutmayın.
+
+## <a name="additional-resources"></a>Ek kaynaklar
+
+### <a name="the-repository-pattern"></a>Depo düzeni
 
 -   **Edward Hieatt ve Ramiz bana. Depo düzeni. ** 
      [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
@@ -116,7 +149,7 @@ Biz depoları kullanışlı ancak toplama düzeni ve zengin etki alanı modeli �
 
 -   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; havuz deseni tartışması içerir) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>Çalışma deseni birimi
+### <a name="unit-of-work-pattern"></a>Çalışma deseni birimi
 
 -   **Martin Fowler. Çalışma deseni birimidir. ** 
      [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
@@ -126,6 +159,15 @@ Biz depoları kullanışlı ancak toplama düzeni ve zengin etki alanı modeli �
 -   **Bir ASP.NET MVC uygulamasındaki depo ve iş desenleri ölçü uygulama**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>Belirtimi düzeni
+
+-   **Belirtimi deseni. ** 
+     [ *http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Evans, Eric (2004). Tasarım güdümlü bir etki alanı. Addison-Wesley. p. 224.**
+
+-   **Belirtimleri. Martin Fowler**
+    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
 [Önceki] (etki alanı-olayları-design-implementation.md) [sonraki] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b20c526b27eb185bf79eaf0ace47e5a9fded42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4645e502544072cbc6268ae07e054ea5450d9c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetiminde Kaydırma Çubukları Görüntüleme
 Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi gerektiği gibi yatay ve dikey kaydırma çubukları görüntüler. Yedi olası değerler için <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliği <xref:System.Windows.Forms.RichTextBox> aşağıdaki tabloda açıklanan denetim.  
@@ -52,5 +53,5 @@ Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.RichTextBox> deneti
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.RichTextBoxScrollBars>  
  <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

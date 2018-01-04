@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -324,6 +325,6 @@ MVC için kullanılabilir tüm şablonları listeler:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Yeni dotnet için özel şablonlar](custom-templates.md)  
-[Dotnet için özel bir şablon yeni oluştur](~/docs/core/tutorials/create-custom-template.md)  
+[Dotnet new için özel şablon oluşturma](~/docs/core/tutorials/create-custom-template.md)  
 [DotNet/dotnet-şablonu-samples GitHub depo](https://github.com/dotnet/dotnet-template-samples)  
 [Yeni dotnet için kullanılabilir şablonlar](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

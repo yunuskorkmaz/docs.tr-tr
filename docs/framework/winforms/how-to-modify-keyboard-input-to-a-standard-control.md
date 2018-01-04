@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c95ba3ef1c590f5c7e5d5e89ed05cf28c7829d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d9ff0689671d7d6ff73d158533091330c4fd598
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Nasıl yapılır: Standart bir Denetimde Klavye Girdisini Değiştirme
 Windows Forms kullanabilir ve klavye girişini değiştirme olanağı sağlar. Bir anahtarı kullanan diğer yöntemleri ve daha fazla ileti sırası aşağı olayları anahtar değeri almazsınız böylece anahtarı yöntemi veya olay işleyicisi içinde işlemeye başvuruyor. Bir anahtar değiştirme yöntemleri ve olay işleyicileri daha fazla ileti sırası aşağı farklı bir anahtar değer alması için bunları bir anahtarın değerini değiştirmek için ifade eder. Bu konu, bu görevlerin nasıl gerçekleştirileceğini gösterir.  
@@ -78,6 +79,6 @@ Windows Forms kullanabilir ve klavye girişini değiştirme olanağı sağlar. B
  Bu örnek için komut satırından oluşturma hakkında bilgi için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı derleme ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek ayrıca oluşturmak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] yeni bir proje kodunu yapıştırma tarafından.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Forms bir Windows uygulamasında klavye girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Forms bir Windows uygulamasında kullanıcı girdisi](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
- [Klavye girdisi nasıl çalışır](../../../docs/framework/winforms/how-keyboard-input-works.md)
+ [Bir Windows Forms Uygulamasında Klavye Girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Bir Windows Forms Uygulamasında Kullanıcı Girdisi](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
+ [Klavye Girdisi Nasıl Çalışır](../../../docs/framework/winforms/how-keyboard-input-works.md)

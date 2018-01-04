@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 029d5ed424061807cf04446cbb10424ae20afba2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 81f89ee41eb9f8b492ab12e30ae4580cdffbd8f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-print-support"></a>Windows Forms Yazdırma Desteği
 Windows Forms'ta baskı oluşur öncelikle kullanarak [PrintDocument bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) yazdırmak, kullanıcının etkinleştirmek için bileşen ve [PrintPreviewDialog denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) denetimi [PrintDialog Bileşen](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) ve [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) bileşenleri Windows işletim sistemine alışmanızı kullanıcılar için tanıdık bir grafik arabirim sağlar.  
@@ -33,38 +34,38 @@ Windows Forms'ta baskı oluşur öncelikle kullanarak [PrintDocument bileşeni](
  Windows tabanlı bir uygulama yazıcıdan süresince <xref:System.Drawing.Printing.PrintDocument> bileşeni iptal edilmesi uyarı kullanıcıların yazdırma oluştuğunu olgu ve yazdırma işinin izin vermek için bir iptal Yazdır iletişim kutusu gösterilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: standart Windows Forms yazdırma işleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ [Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
  Nasıl kullanılacağı açıklanmaktadır <xref:System.Drawing.Printing.PrintDocument> bir Windows formundan yazdırmak için bileşen.  
   
- [Nasıl yapılır: çalışma zamanında bir printdialog'dan kullanıcı girişi yakalama](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ [Nasıl yapılır: Bir PrintDialog'dan Çalışma Zamanında Kullanıcı Girdisi Yakalama](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
  Program aracılığıyla kullanarak seçilen yazdırma seçeneklerinin nasıl değiştirileceği açıklanmaktadır <xref:System.Windows.Forms.PrintDialog> bileşeni.  
   
- [Nasıl yapılır: Windows Forms'ta bir kullanıcının bilgisayarına bağlanan yazıcıları seçme](../../../../docs/framework/winforms/advanced/how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms'ta Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme](../../../../docs/framework/winforms/advanced/how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
  Kullanarak yazdırmak için yazıcı değiştirme açıklar <xref:System.Windows.Forms.PrintDialog> çalışma zamanında bileşen.  
   
- [Nasıl yapılır: Windows Forms'ta grafik yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
  Yazıcı gönderen grafik açıklar.  
   
- [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
  Gönderen metin yazıcı açıklar.  
   
- [Nasıl yapılır: tam Windows Forms yazdırma işleri](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
+ [Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
  Yazdırma işi tamamlandığında kullanıcılara uyarı açıklanmaktadır.  
   
- [Nasıl yapılır: bir Windows formunu yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows Formunu Yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
  Geçerli formun bir kopyasını yazdırmak gösterilmiştir.  
   
- [Nasıl yapılır: Windows Forms'ta baskı önizlemeyi kullanarak yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)  
+ [Nasıl yapılır: Windows Forms'ta Baskı Önizlemeyi Kullanarak Yazdırma](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)  
  Nasıl kullanılacağını gösteren bir <xref:System.Windows.Forms.PrintPreviewDialog> belge yazdırma için.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [PrintDocument bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [PrintDocument Bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
  Kullanımını açıklar <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
   
- [PrintDialog bileşeni](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ [PrintDialog Bileşeni](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
  Kullanımını açıklar <xref:System.Windows.Forms.PrintDialog> bileşeni.  
   
- [PrintPreviewDialog denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [PrintPreviewDialog Denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
  Kullanımını açıklar <xref:System.Windows.Forms.PrintPreviewDialog> denetim.  
   
  [PageSetupDialog bileşeni](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  

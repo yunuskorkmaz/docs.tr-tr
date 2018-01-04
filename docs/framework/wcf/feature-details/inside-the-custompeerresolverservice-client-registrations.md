@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService İçinde: İstemci Kayıtları
 Uç nokta bilgileri kafes içindeki her bir düğümün Çözümleyici hizmeti aracılığıyla yayımlar `Register` işlevi. Çözümleyici hizmeti bu bilgileri bir kayıt depolar. Bu kayıt, benzersiz bir tanımlayıcı (RegistrationId) ve düğüm için uç nokta bilgileri (PeerNodeAddress) içerir.  
@@ -44,4 +45,4 @@ Uç nokta bilgileri kafes içindeki her bir düğümün Çözümleyici hizmeti a
  Bir düğüm çözümleyicisini ile kaydolduğunda, aldığı bir <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> hizmetinden nesnesi. Bu nesneye sahip bir `RegistrationLifetime` ne kadar zaman önce kayıt var. süresi dolar ve Çözümleyici hizmeti tarafından kaldırılır düğüme belirten özellik. Örneğin, eğer `RegistrationLifetime` 2 dakika, düğüm çağırmayı gerektiren `Refresh` kaydı yeni kalır ve silinmez emin olmak için altında 2 dakika içinde. Ne zaman çözümleyicisini alır bir `Refresh` istek, kaydı arar ve bitiş zamanını sıfırlar. Döndürür Yenile bir <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> nesnesi ile bir `RegistrationLifetime` özelliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş çözücüler](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+ [Eş Çözücüler](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

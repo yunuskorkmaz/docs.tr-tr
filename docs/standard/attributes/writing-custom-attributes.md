@@ -26,11 +26,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelikler tasarlamak için birçok yeni kavram ana gerekmez. Nesne odaklı programlama ile bilgi sahibiyseniz ve sınıflar tasarlamak nasıl biliyorsanız gerekli bilgi çoğunu zaten sahip. Özel öznitelikler sınıflardır doğrudan veya dolaylı olarak türetilen temelde geleneksel <xref:System.Attribute?displayProperty=nameWithType>. Yalnızca geleneksel sınıfları gibi özel öznitelikler veri depolanıp yöntemleri içerir.  
@@ -166,4 +169,4 @@ Kendi özel öznitelikler tasarlamak için birçok yeni kavram ana gerekmez. Nes
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Attribute?displayProperty=nameWithType>  
  <xref:System.AttributeUsageAttribute>  
- [Öznitelikleri](../../../docs/standard/attributes/index.md)
+ [Öznitelikler](../../../docs/standard/attributes/index.md)

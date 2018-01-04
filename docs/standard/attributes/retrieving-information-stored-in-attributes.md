@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d3fd9a5a49d65b37d2cdb5107e9c516a6df5847
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 146572fb060d1bd37d6eee5b5dce3c255b28f8b2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Özniteliklerde Depolanan Bilgileri Alma
 Özel bir öznitelik alma basit bir işlemdir. Öncelikle, almak istediğiniz öznitelik örneği bildirin. Ardından, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> yöntemi almak istediğiniz özniteliğinin değeri için yeni öznitelik başlatılamadı. Yeni öznitelik başlatıldıktan sonra yalnızca özelliklerini değerleri almak için kullanın.  
@@ -95,4 +98,4 @@ The attribute was not found.
  <xref:System.Type?displayProperty=nameWithType>  
  <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Öznitelikleri](../../../docs/standard/attributes/index.md)
+ [Öznitelikler](../../../docs/standard/attributes/index.md)

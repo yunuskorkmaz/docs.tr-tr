@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-and-performance"></a>Özel durumları ve performans
 Özel durumlar için ilgili bir ortak özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performansını büyüklük yavaş olabilir. Ancak, kesinlikle hata kodlarını kullanarak izin vermeyecek özel durum yönergelerine uymak sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki desenleri Bunu yapmak için yöntemler önerir.  
@@ -81,5 +84,5 @@ public struct DateTime {
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Özel durumlar için tasarım yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)

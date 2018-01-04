@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 55cb1d9eac13fc2d6d788eff039c4528e627ff12
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 23dbfe2468088da5e02fb7156606af5f3fa51044
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps Metodu
 İle ilişkili meta verileri alır <xref:System.Type> belirtilen TypeRef belirteç tarafından başvurulan.  
@@ -68,5 +69,5 @@ HRESULT GetTypeRefProps (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Imetadataımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Imetadataımport2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+ [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

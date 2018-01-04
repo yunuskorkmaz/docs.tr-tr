@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d8031758462df45c030b8b75a3507f1bfb44bfd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ed3d38cdfd70e7588ba0c4d94816c7105c7cf3e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
 Aşağıdaki örnekler bir PLINQ sorgusunu iptal etmek için iki yol gösterir. İlk örnek çoğunlukla veri geçişi oluşan bir sorguyu iptal gösterilmektedir. İkinci örnek pkı'ya pahalıdır kullanıcı işlevi içeren bir sorguyu iptal etme gösterir.  
@@ -60,4 +63,4 @@ Aşağıdaki örnekler bir PLINQ sorgusunu iptal etmek için iki yol gösterir. 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq.ParallelEnumerable>  
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

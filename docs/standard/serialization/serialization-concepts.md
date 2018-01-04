@@ -8,11 +8,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f442f450aea5833fd21e57980c842cc1559ccc1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76946ed1b714ba0bd01c79bb772524c84cf8b2ca
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-concepts"></a>Seri hale getirme kavramları
 Neden serileştirme kullanmak istiyor? İki en önemli bir tam kopya daha sonraki bir aşamada yeniden oluşturulabilir için bir depolama ortamına bir nesne durumunu sürdürülmesi için ve nesne değerine göre bir uygulama etki alanından diğerine gönderilecek nedenleridir. Örneğin, serileştirme ASP.NET oturum durumu Kaydet ve Pano'ya Windows Forms nesneleri kopyalamak için kullanılır. Bu aynı zamanda nesneleri değerine göre bir uygulama etki alanından diğerine geçmesine uzaktan iletişim tarafından kullanılır.
@@ -32,11 +35,11 @@ Nesneleri oluşturulan burada yalnızca uygulama etki alanında geçerli değil.
 Bir nesneyi zaman türetilen `MarshalByRefObject`, bir nesne başvurusu nesne yerine başka bir uygulama etki alanına geçirilir. Türetilen bir nesne de işaretleyebilirsiniz `MarshalByRefObject` olarak `Serializable`. Remoting, bir yedek Seçici ile önceden yapılandırılmış serileştirme sorumlu biçimlendirici ile birlikte bu nesne kullanıldığında (`SurrogateSelector`), seri hale getirme işlemi denetimini alır ve türetilen tüm nesneleri değiştirir `MarshalByRefObject` ile bir proxy. Olmadan `SurrogateSelector` yerinde serileştirme mimarisi açıklanan standart seri hale getirme kurallara [seri hale getirme işleminde adımları](steps-in-the-serialization-process.md).  
 
 ## <a name="related-sections"></a>İlgili bölümler  
- [İkili seri hale getirme](../../../docs/standard/serialization/binary-serialization.md)  
+ [İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği ikili serileştirme mekanizması açıklanmaktadır.  
   
  [Uzak nesneleri](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
  Çeşitli iletişimleri .NET Framework için kullanılabilecek yöntemleri Uzaktan iletişimler açıklar.  
   
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği XML ve SOAP serileştirme mekanizması açıklanmaktadır.

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
 Özel bir taşıma yazma ilk adımı, karar vermektir *ileti exchange desenleri* (veya MEPs) geliştirme kanalı gereklidir. Bu konuda seçenekleri açıklar ve çeşitli gereksinimleri açıklanır. Bu ilk bölümünde açıklanan kanal geliştirme görev listesindeki bir görevdir [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -103,4 +104,4 @@ ms.lasthandoff: 12/02/2017
 -   Zaman <xref:System.ServiceModel.ICommunicationObject.Abort%2A> olduğundan, kanalda çağrıldı, oturumu aniden g/ç yapmadan sona erdirmek. Yeniden, hiçbir şey yapılması olduğu anlamına gelebilir veya bir ağ bağlantısı veya başka bir kaynağa durduruluyor gerektirebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+ [Kanal Modeline Genel Bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)

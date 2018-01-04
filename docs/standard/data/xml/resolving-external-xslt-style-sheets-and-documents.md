@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5e84935f9fff1f993a677d408287cd775269f03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 85176c45b768d1e8fe9efc408fd644bf33aa8c05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Dış XSLT stil sayfaları ve belgeleri çözümleme
 Alırken birkaç kez dönüştürme sırasında dış kaynaklara çözmeniz gerekebilir.  
@@ -51,15 +54,15 @@ Alırken birkaç kez dönüştürme sırasında dış kaynaklara çözmeniz gere
  Zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çağrıldığında, izinleri yükleme sırasında sağlanan bulgu göre hesaplanır ve izin kümesi için tüm dönüştürme süreci atanmış. Varsa `document()` işlevi izinleri bulunamadı kümesinde bir özel durum gerektiren bir eylem başlatmak dener.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok sınıfı ile XSLT dönüştürmeler](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Bir çok çıkışlarından](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
- [Mağazaya üzerinden XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
- [Stil sayfası parametreleri ve uzantı nesneleri için XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
+ [XslTransform Sınıfı ile XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [XslTransform Çıkışları](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+ [Farklı Mağazalarda XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
+ [Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
  [Komut dosyası stil XSLT kullanarak \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
- [Msxsl: node-set() işlevi için destek](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
- [Dönüşümleri XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [Dönüşümleri XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Çok XPathDocument giriş](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Çok XmlDataDocument giriş](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Çok XmlDocument giriş](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [msxsl:node-set() İşlevi Desteği](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
+ [Dönüşümlerde XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [Dönüşümlerde XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [XslTransform’a XPathDocument Girişi](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform’a XmlDataDocument Girişi](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform’a XmlDocument Girişi](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 229601515442b5e84f6c4278b17db7ae25945a42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a75a5e6c6e6f627606ef5883655b6780e7519bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları
 Tür dönüştürücü ve biçimlendirme uzantısı kullanımları destekleyen türler yazarları genellikle bir kullanım biçimlendirme veya Nesne grafiği yapısını çevreleyen bulunduğu hakkında bağlamsal bilgilerine sahip olması gerekir. Bilgi sağlanan nesne doğru örneği veya varolan nesneleri nesneyi grafikte nesne başvuruları yapılabilir böylece gerekli. .NET Framework XAML hizmetlerinde kullanırken gerekli olabilecek bağlamı Hizmet Arabirimleri bir dizi olarak sunulur. Türü dönüştürücü veya işaretleme uzantısı destek kodu, bir hizmet için kullanılabilir ve gelen aracılığıyla geçirilen bir hizmet sağlayıcısı bağlamı kullanarak sorgulayabilir <xref:System.Xaml.XamlObjectWriter> veya ilgili türleri. XAML şema içeriği böyle bir hizmeti üzerinden doğrudan kullanılabilir. Bu konu hizmet bağlamları bir değer dönüştürücüsü uygulamasından erişmek açıklar ve genellikle kullanılabilir hizmetleri ve kendi rolleri listeler.  
@@ -99,7 +100,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
  **Başvuru belgelerini**:<xref:System.Windows.Markup.IXamlTypeResolver>  
   
- **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme  
   
  **İlgili:** yükleme yolu senaryolarını ve XAML şema içeriği ile etkileşim  
   
@@ -110,7 +111,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iuricontext"></a>IUriContext  
  **Başvuru belgelerini**:<xref:System.Windows.Markup.IUriContext>  
   
- **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme  
   
  **İlgili:** yükleme yolunu ve yol işleme URI'ler üye değerleri kaydedin veya `x:Uri` değerleri.  
   
@@ -121,18 +122,18 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iambientprovider"></a>IAmbientProvider  
  **Başvuru belgelerini**:<xref:System.Xaml.IAmbientProvider>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** yolu işleme ve türü arama deferrals veya en iyi duruma getirme yükleme.  
   
- **Hizmet API'leri:**<xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, diğerleri 3.    
+ **Hizmet API'leri:**<xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, diğerleri 3.  
   
  XAML'de çevre kavram, belirli bir tür ortam olarak üyesi işaretlemek için kullanılan bir tekniktir. Alternatif olarak, böylece türünün bir örneğini barındıran tüm özellik değerlerini ortam özelliklerine gerekenlerin bir türü ortam olabilir. Biçimlendirme uzantıları veya XAML düğümü akışı başka ve nesne grafikte alt öğeleri olan tür dönüştürücüleri ortam özelliği veya türü örneği yükleme zamanında erişebilir; veya zaman kazandırır ortam yapısı bilgisi kullanabilirsiniz. Bu diğer hizmetler için türleri gibi çözmek için gerekli nitelik derecesini etkileyebilir <xref:System.Windows.Markup.IXamlTypeResolver> veya `x:Type`. Ayrıca bkz. <xref:System.Xaml.AmbientPropertyValue>.  
   
 ### <a name="ixamlschemacontextprovider"></a>IXamlSchemaContextProvider  
  **Başvuru belgelerini**:<xref:System.Xaml.IXamlSchemaContextProvider>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** yükleme yolunu ve XAML türü için bir yedekleme türü çözülmelidir herhangi bir işlem.  
   
@@ -143,7 +144,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Başvuru belgelerini**:<xref:System.Xaml.IRootObjectProvider>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** yükleme yolu.  
   
@@ -154,7 +155,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnamespaceresolver"></a>IXamlNamespaceResolver  
  **Başvuru belgelerini**:<xref:System.Xaml.IXamlNamespaceResolver>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** kaydetme yolu yükleme yolu.  
   
@@ -165,29 +166,29 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Başvuru belgelerini**:<xref:System.Windows.Markup.IProvideValueTarget>  
   
- **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Windows.Markup> ad alanı, System.Xaml derleme  
   
  **İlgili:** yükleme yolunu ve yol kaydedin.  
   
- **Hizmet API'leri:**<xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.    
+ **Hizmet API'leri:**<xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
  <xref:System.Windows.Markup.IProvideValueTarget>Yükleme zamanında davrandığı hakkında bağlamı elde etmek bir türü dönüştürücü veya işaretleme uzantısı sağlar. Uygulamaları bu bağlamda bir kullanımı geçersiz kılmak için kullanabilirsiniz. Örneğin, WPF içinde bazı biçimlendirme uzantıları mantığı gibi varsa <xref:System.Windows.DynamicResourceExtension>. Mantık denetimlerini <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> uzantısı bağımlılık özellikleri (veya diğer bağımlılık olmayan özellikleri kısa bir listesi) ayarlamak için yalnızca kullanıldığından emin olmak için.  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Başvuru belgelerini**:<xref:System.Xaml.IXamlNameResolver>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** tarafından tanımlanan nesneler çözme yükleme yolu nesne grafik tanımı, `x:Name`, `x:Reference`, veya çerçeveye özel teknikleri.  
   
- **Hizmet API'leri:**<xref:System.Xaml.IXamlNameResolver.Resolve%2A>; İleri başvuruları yapılacağı gibi daha Gelişmiş senaryolar için diğer API'leri.    
+ **Hizmet API'leri:**<xref:System.Xaml.IXamlNameResolver.Resolve%2A>; İleri başvuruları yapılacağı gibi daha Gelişmiş senaryolar için diğer API'leri.  
   
  .NET Framework XAML hizmetlerinde uyarlamasını `x:Reference` işleme bu hizmete dayanır. Belirli çerçeveleri veya çerçevesini destekleyen araçlarını kullanmanız bu hizmet için `x:Name` işleme veya eşdeğer bir gruba (<xref:System.Windows.Markup.RuntimeNamePropertyAttribute> öznitelikli) özelliği işleme.  
   
 ### <a name="idestinationtypeprovider"></a>IDestinationTypeProvider  
  **Başvuru belgelerini**:<xref:System.Xaml.IDestinationTypeProvider>  
   
- **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme    
+ **Tanımlanır:** <xref:System.Xaml> ad alanı, System.Xaml derleme  
   
  **İlgili:** yük dolaylı CLR türü bilgileri yolu çözünürlüğü.  
   
@@ -198,5 +199,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
- [Biçimlendirme XAML uzantılarına genel bakış](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+ [XAML İşaretleme Uzantılarına Genel Bakış](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
+ [XAML Tür Dönüştürücülerine Genel Bakış](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)

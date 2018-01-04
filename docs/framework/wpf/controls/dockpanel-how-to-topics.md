@@ -17,19 +17,20 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11ea55c807bdf939d2cca6fb90591f814361ce96
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a1236755a3df5074387652049847e979653eefcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.DockPanel> öğesinin alt öğeleri düzen kapsayıcı kenarı boyunca konumlandırmak için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Alın veya yerleştirme değerini ayarlayın](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
+ [Yerleştirme Değerini Alma veya Ayarlama](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
  [DockPanel Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [DockPanel öğesi kullanarak bölüm alanı](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [DockPanel Öğesini Kullanarak Boşluğu Bölümleme](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -49,6 +50,6 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer'a Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

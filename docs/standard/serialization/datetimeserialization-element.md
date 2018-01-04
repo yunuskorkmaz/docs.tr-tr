@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd6dda1f26e44c4864d5afea1427b2580ac1ed10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 492a3652ca7cd304b953006bb1b18a1edb3dcf51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltdatetimeserializationgt-element"></a>&lt;dateTimeSerialization&gt; öğesi
 Serileştirme modu belirler <xref:System.DateTime> nesneleri.  
@@ -63,7 +66,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
  <xref:System.DateTime>  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
  [\<Ekle > öğesi için \<xmlSchemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
  [\<dizileştirme mekanizmasını System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)

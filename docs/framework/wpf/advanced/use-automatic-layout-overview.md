@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 Bu konu yazma konusunda geliştiricilere yönelik yönergeleri tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, yerelleştirme bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uzun süren bir işlem. Her dil, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] piksel piksel ayarlama gerekli uyarlanmıştır. Bugün doğru tasarım ve doğru kodlama standartları ile [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] çevirmenler küçük yapmak için yeniden konumlandırma ve yeniden boyutlandırma böylece oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzeni olarak adlandırılır ve kullanarak elde edilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı.  
@@ -86,6 +87,6 @@ Kılavuz
  **Not** tam kod örneği için bkz: [arasındaki paylaşım boyutlandırma özellikleri kılavuzları](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Bir düğme oluşturmak için otomatik düzenini kullanın](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Bir kılavuz için otomatik düzenini kullanın](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+ [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [Düğme Oluşturmak için Otomatik Düzeni Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [Otomatik Düzen için Kılavuz Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

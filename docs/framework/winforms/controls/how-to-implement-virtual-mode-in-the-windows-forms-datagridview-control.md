@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 986001f5bb725fa02d2b8b700224ca6016cec9f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f0f084593b0c38a8ce220f0e6616f345ebb11fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sanal Modu Çalıştırma
 Aşağıdaki kod örneğinde veri kullanımının büyük kümelerini yönetme yapmayı gösteren bir <xref:System.Windows.Forms.DataGridView> ile denetim kendi <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true`.  
@@ -55,6 +56,6 @@ Aşağıdaki kod örneğinde veri kullanımının büyük kümelerini yönetme y
  <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>  
  <xref:System.Windows.Forms.DataGridView.CancelRowEdit>  
  <xref:System.Windows.Forms.DataGridView.UserDeletingRow>  
- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
- [Performans ayarlama Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- [Sanal mod Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
+ [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Çalıştırma](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Sanal Mod](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)

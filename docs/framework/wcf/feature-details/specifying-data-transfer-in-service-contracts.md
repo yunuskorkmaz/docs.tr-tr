@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be6262714ad2753d3a6f62a2956a31529641a246
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , Bir Mesajlaşma altyapısı düşünülebilir. Hizmet işlemleri iletilerini işlemek ve iletileri göndermek. İletileri işlemi sözleşmeleri kullanma açıklanmaktadır. Örneğin, aşağıdaki sözleşme göz önünde bulundurun.  
@@ -584,6 +585,6 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]seri hale getirme kavramları gelişmiş, bkz: [seri hale getirme ve seri durumdan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- [Nasıl yapılır: akışı etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
- [Nasıl yapılır: bir sınıf veya yapı için bir temel veri sözleşmesi oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [XmlSerializer Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
+ [Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Anlaşması Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

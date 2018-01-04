@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 43c3d8e2c6e99d88f461b3c45f6839ddf738ae6a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-language-runtime-clr"></a>Ortak Dil Çalışma Zamanı (CLR)
 .NET Framework kod çalışır ve geliştirme sürecini kolaylaştırmak hizmetleri sağlayan ortak dil çalışma adlı bir çalışma zamanı ortamı sağlar.  
@@ -82,10 +85,10 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Yönetilen yürütme işlemi](../../docs/standard/managed-execution-process.md)|Ortak dil çalışma zamanı yararlanmak için gereken adımları açıklar.|  
-|[Otomatik bellek yönetimi](../../docs/standard/automatic-memory-management.md)|Çöp toplayıcı'nın ayırır ve belleği serbest bırakır nasıl açıklanmaktadır.|  
+|[Yönetilen Yürütme İşlemi](../../docs/standard/managed-execution-process.md)|Ortak dil çalışma zamanı yararlanmak için gereken adımları açıklar.|  
+|[Otomatik Bellek Yönetimi](../../docs/standard/automatic-memory-management.md)|Çöp toplayıcı'nın ayırır ve belleği serbest bırakır nasıl açıklanmaktadır.|  
 |[NIB: .NET Framework'ün genel bakış](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Ortak tür sistemi, diller arası birlikte çalışabilirlik, yönetilen yürütme, uygulama etki alanları ve derlemeler gibi anahtar .NET Framework kavramlarını açıklar.|  
-|[Ortak tür sistemi](../../docs/standard/base-types/common-type-system.md)|Nasıl türleri bildirilen kullanılan ve çalışma zamanında diller arası tümleştirme desteklemek yönetilen açıklar.|  
+|[Ortak Tür Sistemi](../../docs/standard/base-types/common-type-system.md)|Nasıl türleri bildirilen kullanılan ve çalışma zamanında diller arası tümleştirme desteklemek yönetilen açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sürümleri ve bağımlılıkları](../../docs/framework/migration-guide/versions-and-dependencies.md)
+ [Sürümler ve Bağımlılıklar](../../docs/framework/migration-guide/versions-and-dependencies.md)

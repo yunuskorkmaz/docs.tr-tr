@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de5bcaeffb77f52b80c229cf0402c2c090e40d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Fırça tarafından boyandığında çünkü ekranda görünen her şeyi görünür olur. Örneğin, bir fırça bir düğme, metin ön ve şeklin dolgu arka plan açıklamak için kullanılır. Bu konu ile Boyama kavramlarını tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyamak etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] nesneler herhangi bir şeyin desenleri ve görüntüleri karmaşık kümesi için basit, düz renk ile.  
@@ -172,11 +173,11 @@ Dikdörtgene VisualBrush kullanılarak boyanır
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Brushes>  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Fırçalar örnek](http://go.microsoft.com/fwlink/?LinkID=159973)  
  [ImageBrush Örneği](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush örneği](http://go.microsoft.com/fwlink/?LinkID=160049)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Diğer performans önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+ [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

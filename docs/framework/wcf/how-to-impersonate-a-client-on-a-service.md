@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c868e2b31fa15d0f0c9228828beba03666d5591
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme
 Üzerinde bir istemci kimliğine bürünme bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti, istemci adına eylemleri gerçekleştirmek hizmet sağlar. Eylemler tabi erişim denetim listesi (ACL), dizinleri ve dosyaları bir makinede erişim veya bir SQL Server veritabanına erişimi gibi ACL onay istemci kullanıcı hesabıdır karşı denetler. Bu konu, bir istemcinin kimliğe bürünme düzeyi ayarlamak bir istemci bir Windows etki alanında etkinleştirmek için gereken temel adımlarda gösterir. Bu çalışma örnek için bkz: [istemci kimliğine bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]İstemcinin kimliğe bürünme bkz [temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -58,5 +59,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.OperationBehaviorAttribute>  
  <xref:System.Security.Principal.TokenImpersonationLevel>  
- [İstemci kimliğine bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [Temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+ [İstemci Kimliğine Bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Temsilcilik ve Kimliğe Bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c00c66be812f2a1cdfdf761f681d2a0561a284bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c6bb895979fb44616349505a07591f9ced9fedac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Güvenlik ve Çalışma Sırasında Kod Oluşturma
 Kod oluşturma ve çağıran için başka bir işlem gerçekleştirmek için çalıştırarak bazı kitaplıklar çalışır. Temel sorun güven küçük koda adına kod oluşturma ve yüksek güven çalıştıran. Yalnızca güvenli göz önünde bulundurun kod üretilir emin olmalısınız şekilde çağrıyı yapan kod oluşturma etkileyebilir olduğunda sorun worsens.  
@@ -34,4 +37,4 @@ Kod oluşturma ve çağıran için başka bir işlem gerçekleştirmek için ça
  Kodu derlemek zaman amaçlı bir program bu değiştirebileceği herhangi bir şekilde olup olmadığını göz önünde bulundurun. Küçük bir pencere sırasında kötü amaçlı kod kaynak kodu diskteki Derleyici bunu okuyan önce ya da kodunuzu .dll dosyasını yüklemeden önce değiştirebileceğiniz zaman var mı? Öyleyse, uygun olarak dosya sistemindeki erişim denetim listesi kullanarak bu dosyaları içeren dizini korumanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

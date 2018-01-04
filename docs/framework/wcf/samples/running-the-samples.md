@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a37c7b01d4ef40727c02e0782422776086b5297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri tek makineli veya makine bazındaki bir yapılandırmada çalıştırılabilir. Sağlanan gibi örnekleri tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek ait yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda bir örneği aynı makineye ve çapraz makine yapılandırmalarını çalıştırma açıklanmaktadır. Internet Information Services (IIS) ve kendi kendini barındıran örnekleri barındırılan hizmetler için adımları Çeşitlemeler olduğuna dikkat edin. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -90,6 +91,6 @@ ms.lasthandoff: 12/02/2017
 -   Hizmet güvenlik nedenleriyle IIS'de barındırılıyorsa, sanal dizin tanımı ve örnekleri ile işiniz bittiğinde Kurulum adımlarında'ı izinler kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [Bir çalışma grubunda ve makinelerde örneklerini çalıştırma](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
  [Sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

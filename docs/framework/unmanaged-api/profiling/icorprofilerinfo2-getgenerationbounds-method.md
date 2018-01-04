@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 33f1e130d214e28b8153b1aaf722c3df97edef37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c84be5d7e78c348c0368e9639a470a8fc60e2ca7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds Metodu
 Heap öğesinin çeşitli atık toplama nesli yapmak kesimlerin bellek bölümlerinin alır.  
@@ -68,7 +69,7 @@ HRESULT GetGenerationBounds(
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icorprofilerınfo arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Icorprofilerınfo2 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+ [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

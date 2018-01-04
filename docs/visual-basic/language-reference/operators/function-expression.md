@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
 Parametreleri ve işlev lambda ifadesi tanımlamak kod bildirir.  
@@ -92,14 +92,14 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Sorgu yöntemleri hakkında daha fazla bilgi için bkz: [sorguları](../../../visual-basic/language-reference/queries/queries.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Sorgu yöntemleri hakkında daha fazla bilgi için bkz: [sorguları](../../../visual-basic/language-reference/queries/queries.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [İşleçler ve ifadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Deyimleri](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Değer karşılaştırmaları](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Boole ifadeleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [Varsa işleci](../../../visual-basic/language-reference/operators/if-operator.md)  
- [Gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+ [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Değer Karşılaştırmaları](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [Boole İfadeleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [If İşleci](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

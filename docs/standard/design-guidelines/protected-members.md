@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c3aacd0f08641c01200f0b1791a78413a306590
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 03d9eac41e693568da2d057bc1394c426df4c736
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="protected-members"></a>Korumalı üyeleri
 Korumalı üyeleri kendileri tarafından hiçbir genişletilebilirlik sağlamaz, ancak bunlar genişletilebilirlik sınıflara aracılığıyla daha güçlü yapabilirsiniz. Gelişmiş özelleştirme seçenekleri gereksiz yere ana ortak arabirimi karmaşıklaştırarak olmadan kullanıma sunmak için kullanılabilir.  
@@ -42,5 +45,5 @@ Korumalı üyeleri kendileri tarafından hiçbir genişletilebilirlik sağlamaz,
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Genişletilebilirlik için tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

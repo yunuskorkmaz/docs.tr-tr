@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a5dc55a9538798b81dce9db02583c271b9f2ed54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f6b1ad18809b46b7a2b38137231028f696d51b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo İşlevi
 Belirtilen tür kitaplığı hakkında bilgi inceleyerek döndürür, [TLIBATTR](https://msdn.microsoft.com/library/ms221376\(v=vs.85\).aspx) yapısı.  
@@ -75,5 +76,5 @@ HRESULT GetTypeLibInfo(
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tlbexp yardımcı işlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx işlevi](https://msdn.microsoft.com/library/ms221249\(v=vs.85\).aspx)

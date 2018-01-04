@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0229aa5a80100d9793459473794d341e7d548ca2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41e9b9de120154fe90eb3e73ada2ced4fa3e4544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes Yöntemi
 Geçerli bir içeren bir numaralandırmayı döndüren [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) her bir bilgisayarda yüklü olan ortak dil çalışma zamanı (CLR) sürümü için arabirim.  
@@ -59,5 +60,5 @@ HRESULT EnumerateInstalledRuntimes (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iclrmetahost arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
+ [ICLRMetaHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

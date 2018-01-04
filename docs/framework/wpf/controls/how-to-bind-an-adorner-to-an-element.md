@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b1da3216ce6d3507c304ff957728d33ba1b9bd9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Nasıl yapılır: Öğeye bir Donatıcı Bağlama
 Bu örnek bir donatıcıyı programlı olarak belirtilen bir bağlamak nasıl gösterir <xref:System.Windows.UIElement>.  
@@ -44,4 +45,4 @@ Bu örnek bir donatıcıyı programlı olarak belirtilen bir bağlamak nasıl g�
 >  Kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] donatıcı başka bir öğeye bağlamak için şu anda desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Donatıcılar genel bakış](../../../../docs/framework/wpf/controls/adorners-overview.md)
+ [Donatıcılara Genel Bakış](../../../../docs/framework/wpf/controls/adorners-overview.md)

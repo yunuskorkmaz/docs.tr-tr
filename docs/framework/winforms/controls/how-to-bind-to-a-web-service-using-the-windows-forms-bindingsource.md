@@ -23,11 +23,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5024ad9000811aa438183de240c91b659644a7a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a647f688f0ae8566a7129982e78e3d9503bee6af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Nasıl yapılır: Windows Forms BindingSource ile Bir Web Hizmetine Bağlama
 XML Web hizmeti çağırma sonucu elde edilen sonuçlar Windows Form denetimi bağlamak istiyorsanız, kullanabileceğiniz bir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu yordam bağlama benzer bir <xref:System.Windows.Forms.BindingSource> türü için bileşen. Web hizmeti tarafından sunulan türleri ve yöntemleri içeren bir istemci-tarafı proxy oluşturmanız gerekir. Bir istemci-tarafı proxy Web hizmetinden (.asmx) kendisi ya da Web Hizmetleri Açıklama Dili (WSDL) dosyası oluşturun. Ayrıca, istemci-tarafı proxy, ortak özellik olarak Web hizmeti tarafından kullanılan karmaşık türler alanları açığa gerekir. Ardından bağlamak <xref:System.Windows.Forms.BindingSource> Web üzerinde açığa türlerinden birini proxy hizmet.  
@@ -83,5 +84,5 @@ XML Web hizmeti çağırma sonucu elde edilen sonuçlar Windows Form denetimi ba
  Bu örnek için komut satırından oluşturma hakkında bilgi için [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı derleme ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek ayrıca oluşturmak [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] yeni bir proje kodunu yapıştırma tarafından.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

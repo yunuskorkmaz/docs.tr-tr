@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>İç içe Geçmiş Türler
 İç içe geçmiş tür, kendilerini kapsayan türle adlı başka bir tür kapsam içinde tanımlanan bir türüdür. İç içe geçmiş tür kapsayan türü tüm üyeleri erişebilir. Örneğin, kendilerini kapsayan türle ve korumalı alanlarına kendilerini kapsayan türle tüm üst öğelerinden içinde tanımlanan tanımlı özel alanlara erişimi vardır.  
@@ -54,5 +57,5 @@ ms.lasthandoff: 11/21/2017
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

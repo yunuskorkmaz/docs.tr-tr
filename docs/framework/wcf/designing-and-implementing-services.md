@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3429a9145695a957089941d8c814d441da498c93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sözleşmeleri. Bir hizmet sözleşmesini ne bir uç nokta için dış dünya iletişim kurar belirtir. Daha somut bir düzeyde, bu temel ileti exchange desenleri (MEPs) düzenlenmiştir belirli iletileri kümesi hakkında istek/yanıt gibi tek yönlü ve çift yönlü açıklamadır. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi, bir hizmet işlemi tek bir ileti exchange ise. Örneğin, bir `Hello` işlemi (arayan Tebrik Duyurusu şekilde) açıkça bir ileti kabul etmeniz gerekir ve olabilir veya (işlemi geçici kullanım bağlı olarak) bir ileti döndürmeyebilir.  
@@ -76,5 +77,5 @@ Bu bölümde tanımlamak ve uygulamak gösterilmiştir [!INCLUDE[indigo2](../../
  Bu ek gereksinim işlem tasarlama, uygulama, yapılandırma ve barındırma çalışırken göz önünde bulundurmanız önemlidir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet uygulaması. Örneğin, sözleşmenin bir oturum desteklemek gerektiğini belirtebilirsiniz. Bu durumda, bağlama sözleşme bu gereksinimi desteklemek için yapılandırmanız gerekir ya da hizmet uygulaması çalışmaz. Veya hizmet Windows tümleşik kimlik doğrulaması gerektiriyorsa ve Internet Information Services (IIS) barındırılan hizmetin bulunduğu Web uygulaması Windows tümleşik kimlik açık ve kapalı anonim destek olması gerekir. Farklı hizmet ana uygulama türleri etkisini ve özellikler hakkında daha fazla bilgi için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+ [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
+ [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)

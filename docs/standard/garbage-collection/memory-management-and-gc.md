@@ -17,20 +17,23 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2b9d0f8d4b09e4f95fe33134e900612c59534fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a9d1f2a7ad3432667cdb5ed9223cbabf4089597
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>Bellek yönetimi ve .NET çöp toplama
 Bu bölümde belgelerin .NET bellekte yönetme hakkında bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yönetilmeyen kaynakları temizleme](../../../docs/standard/garbage-collection/unmanaged.md)  
+ [Yönetilmeyen Kaynakları Temizleme](../../../docs/standard/garbage-collection/unmanaged.md)  
  Düzgün bir şekilde yönetmek ve yönetilmeyen kaynakları temizlemek açıklar...  
   
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)  
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)  
  .NET Atık toplayıcısının hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

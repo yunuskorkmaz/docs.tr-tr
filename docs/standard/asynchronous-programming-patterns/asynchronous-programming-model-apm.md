@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 94e47b7bd907a2bc883a4725c2b27c51a22c5dad
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66553d18d46d94fb0febfff8460ac7764e9b62bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
 Kullanan zaman uyumsuz bir işlem <xref:System.IAsyncResult> tasarım deseni adlı iki yöntem uygulanan **başlamak***OperationName* ve **son**  *OperationName* başlar ve zaman uyumsuz işlemi sona *OperationName* sırasıyla. Örneğin, <xref:System.IO.FileStream> SAX <xref:System.IO.FileStream.BeginRead%2A> ve <xref:System.IO.FileStream.EndRead%2A> bayt bir dosyadan zaman uyumsuz olarak okumak için yöntemleri. Bu yöntemlerin zaman uyumsuz sürümü uygulamak <xref:System.IO.FileStream.Read%2A> yöntemi.  

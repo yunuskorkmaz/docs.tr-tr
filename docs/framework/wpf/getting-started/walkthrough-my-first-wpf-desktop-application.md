@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 Bu kılavuzda geliştirilmesini tanıtılmaktadır bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] en yaygın olan öğeleri içeren uygulama [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] biçimlendirme, arka plan kodu, uygulama tanımları, denetimleri, düzeni veri bağlama ve stiller. 
@@ -441,28 +442,28 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
  WPF mimarisi ve programlama modelleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+-   [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   
--   [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+-   [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
   
--   [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+-   [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
   
 -   [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
  Uygulamaları oluşturma hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Uygulama geliştirme](../../../../docs/framework/wpf/app-development/index.md)  
+-   [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)  
   
--   [Denetimleri](../../../../docs/framework/wpf/controls/index.md)  
+-   [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
   
--   [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+-   [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
   
--   [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+-   [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
--   [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+-   [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Stilleri ve şablonları](../../../../docs/framework/wpf/controls/styles-and-templates.md)
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Stiller ve Şablonlar](../../../../docs/framework/wpf/controls/styles-and-templates.md)

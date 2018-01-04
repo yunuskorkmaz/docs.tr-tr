@@ -17,23 +17,24 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bea43192d7f9a5bd875914633118dd6609c7804b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="audio-and-video-how-to-topics"></a>Ses ve Video ile İlgili Nasıl yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> ses ve video içeriğine uygulamalarınıza tümleştirmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: dinamik olarak bir öğe ekleme](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [(Play, duraklatma, durdurma, birim ve hız) MediaElement'i denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [Film şeridi kullanarak MediaElement'i denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [Bir kullanıcı olayı ile ortam çalma tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [Medya yürütmesini yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [Animasyon ortamla Yürüt](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [MediaElement üzerinde dönüşümler kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [Görsel Taslak Kullanarak MediaElement'i Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [Kullanıcı Olayı ile Medya Yürütme Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [Medya Yürütmesini Yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [Animasyonlarla Medya Yürütme](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [MediaElement Üzerinde Dönüşümler Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.MediaElement>  
@@ -43,4 +44,4 @@ Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.C
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

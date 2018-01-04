@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 .NET Framework bağımsız dilidir. Bir geliştirici olarak size .NET Framework, C#, C + gibi hedef birçok dilde birinde geliştirebilirsiniz, yani +/ CLI, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türleri ve sınıf kitaplıkları için .NET Framework, bunlar ilk olarak yazılmış içinde dili bilmenize gerek kalmadan ve özgün dil kuralları birini izleyin gerek kalmadan geliştirilen üyeleri erişebilir. Bileşen geliştiriciyseniz bileşeniniz dili bağımsız olarak herhangi bir .NET Framework uygulama tarafından erişilebilir.  
@@ -51,9 +54,9 @@ ms.lasthandoff: 10/20/2017
   
     -   [Diziler](#arrays)  
   
-    -   [Arabirimleri](#Interfaces)  
+    -   [Arabirimler](#Interfaces)  
   
-    -   [Numaralandırmalar](#enums)  
+    -   [Sabit Listeleri](#enums)  
   
     -   [Genel üyeleri yazın](#members)  
   
@@ -63,15 +66,15 @@ ms.lasthandoff: 10/20/2017
   
     -   [Oluşturucular](#ctors)  
   
-    -   [Özellikleri](#properties)  
+    -   [Özellikler](#properties)  
   
-    -   [Olayları](#events)  
+    -   [Olaylar](#events)  
   
-    -   [Aşırı yüklemeler](#overloads)  
+    -   [Overloads](#overloads)  
   
-    -   [Özel durumlar](#exceptions)  
+    -   [Özel Durumlar](#exceptions)  
   
-    -   [Öznitelikleri](#attributes)  
+    -   [Öznitelikler](#attributes)  
   
 -   [CLSCompliantAttribute özniteliği](#CLSAttribute)  
   
@@ -114,20 +117,20 @@ ms.lasthandoff: 10/20/2017
 |Erişilebilirlik|[Üye erişilebilirlik](#MemberAccess)|Erişilebilirlik değil değiştirilmesi geçersiz kılma ne zaman bir yöntemini geçersiz kılma farklı bir derlemeden erişilebilirliği devralınan dışında yöntemleri, devralınan zaman `family-or-assembly`. Bu durumda, geçersiz kılma erişilebilirlik sahip `family`.|10|  
 |Erişilebilirlik|[Üye erişilebilirlik](#MemberAccess)|Üye görünür ve erişilebilir olduğunda imza türlerinde herhangi bir üyenin görünür ve erişilebilir olacaktır, görünürlük ve erişilebilirlik türleri ve üyeleri olacaktır. Örneğin, kendi derlemenin dışından görülebilir genel bir yöntem türü yalnızca derlemede görünür olan bir bağımsız değişken sahip. Üye görünür ve erişilebilir olduğunda görünürlük ve herhangi bir üyenin imzada kullanılan bir oluşturulmuş genel tür oluşturma türlerinin erişilebilirlik görünür ve erişilebilir olacaktır. Örneğin, bir oluşturulmuş genel tür imzada mevcut kendi derlemenin dışından görünür bir üyenin türü yalnızca derlemede görünür olan genel bir bağımsız değişken sahip.|12|  
 |Diziler|[Diziler](#arrays)|Diziler CLS uyumlu bir türü olan öğeleri sahip ve tüm boyutlar dizinin alt sınırlarını sıfır sahip. Yalnızca bir dizi ve dizi öğesi türü bir öğedir olgu aşırı arasında ayrım yapmak için gerekli. Ne zaman aşırı yüklemesi iki dayalı olan veya daha fazla dizi öğesi türleri türleri adlı.|16|  
-|Öznitelikler|[Öznitelikleri](#attributes)|Öznitelik türü olacaktır <xref:System.Attribute?displayProperty=nameWithType>, veya ondan devralan bir tür.|41|  
-|Öznitelikler|[Öznitelikleri](#attributes)|CLS yalnızca bir alt kümesini özel özniteliklerin Kodlamalar izin verir. (Bölüm IV bakın) bu Kodlamalar görünür yalnızca türleri şunlardır: <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , ve herhangi bir numaralandırma türü CLS uyumlu bir temel tamsayı türünde dayanır.|34|  
-|Öznitelikler|[Öznitelikleri](#attributes)|CLS herkese görünür gerekli değiştiricileri izin verme (`modreq`, Bölüm II bakın), isteğe bağlı değiştiricileri izin vermez ancak (`modopt`, Bölüm II bakın) anlamadığı.|35|  
+|Öznitelikler|[Öznitelikler](#attributes)|Öznitelik türü olacaktır <xref:System.Attribute?displayProperty=nameWithType>, veya ondan devralan bir tür.|41|  
+|Öznitelikler|[Öznitelikler](#attributes)|CLS yalnızca bir alt kümesini özel özniteliklerin Kodlamalar izin verir. (Bölüm IV bakın) bu Kodlamalar görünür yalnızca türleri şunlardır: <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , ve herhangi bir numaralandırma türü CLS uyumlu bir temel tamsayı türünde dayanır.|34|  
+|Öznitelikler|[Öznitelikler](#attributes)|CLS herkese görünür gerekli değiştiricileri izin verme (`modreq`, Bölüm II bakın), isteğe bağlı değiştiricileri izin vermez ancak (`modopt`, Bölüm II bakın) anlamadığı.|35|  
 |Oluşturucular|[Oluşturucular](#ctors)|Devralınan örnek veriler için herhangi bir erişim oluşmadan önce bir nesne oluşturucusu bazı örnek oluşturucusu olduğu temel sınıfın çağrısı. (Bu oluşturucular olmak zorunda değildir değer türleri için geçerli değildir.)|21|  
 |Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu dışındaki bir nesnenin oluşturmanın bir parçası çağrılması değil ve bir nesne iki kez başlatılmamış.|22|  
-|Numaralandırmalar|[Numaralandırmalar](#enums)|Enum temel türü bir yerleşik CLS tamsayı türü olacaktır, alanın adını "value__" olacaktır ve bu alan işaretli `RTSpecialName`.|7|  
-|Numaralandırmalar|[Numaralandırmalar](#enums)|Varlığı veya yokluğuna göre tarafından gösterilen Numaralandırmaların iki farklı tür vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz. Bölüm IV kitaplık) özel bir öznitelik. Bir adlandırılmış tamsayı değerlerini temsil eder; diğer temsil adsız bir değer üretmek için birleştirilmiş bir bit bayrakları adlı. Değeri bir `enum` belirtilen değerlere sınırlı değildir.|8|  
-|Numaralandırmalar|[Numaralandırmalar](#enums)|Bir numaralandırma sabit değeri statik alanları ve enum türüne sahip.|9|  
-|Olaylar|[Olayları](#events)|Bir olay uygulamak yöntemleri olarak işaretlenmiş `SpecialName` themetadata içinde.|29|  
-|Olaylar|[Olayları](#events)|Bir olay ve onun erişimciler erişilebilirlik aynı olacaktır.|30|  
-|Olaylar|[Olayları](#events)|`add` Ve `remove` yöntemleri bir olay ya da her ikisini de gelecektir için mevcut olmalı veya belirtilmemelidir.|31|  
-|Olaylar|[Olayları](#events)|`add` Ve `remove` yöntemleri bir olay her bir parametre türü alan için olay türünü tanımlar ve bu türetilen <xref:System.Delegate?displayProperty=nameWithType>.|32|  
-|Olaylar|[Olayları](#events)|Olaylar, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 29 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına.|33|  
-|Özel Durumlar|[Özel durumlar](#exceptions)|Oluşturulan nesnelerin türü olacaktır <xref:System.Exception?displayProperty=nameWithType> veya ondan devralan bir tür. Öte yandan, CLS uyumlu yöntemlerini diğer tür özel durumlar yayılmasını engellemek için gerekli değildir.|40|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Enum temel türü bir yerleşik CLS tamsayı türü olacaktır, alanın adını "value__" olacaktır ve bu alan işaretli `RTSpecialName`.|7|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Varlığı veya yokluğuna göre tarafından gösterilen Numaralandırmaların iki farklı tür vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz. Bölüm IV kitaplık) özel bir öznitelik. Bir adlandırılmış tamsayı değerlerini temsil eder; diğer temsil adsız bir değer üretmek için birleştirilmiş bir bit bayrakları adlı. Değeri bir `enum` belirtilen değerlere sınırlı değildir.|8|  
+|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir numaralandırma sabit değeri statik alanları ve enum türüne sahip.|9|  
+|Olaylar|[Olaylar](#events)|Bir olay uygulamak yöntemleri olarak işaretlenmiş `SpecialName` themetadata içinde.|29|  
+|Olaylar|[Olaylar](#events)|Bir olay ve onun erişimciler erişilebilirlik aynı olacaktır.|30|  
+|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri bir olay ya da her ikisini de gelecektir için mevcut olmalı veya belirtilmemelidir.|31|  
+|Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri bir olay her bir parametre türü alan için olay türünü tanımlar ve bu türetilen <xref:System.Delegate?displayProperty=nameWithType>.|32|  
+|Olaylar|[Olaylar](#events)|Olaylar, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 29 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına.|33|  
+|Özel Durumlar|[Özel Durumlar](#exceptions)|Oluşturulan nesnelerin türü olacaktır <xref:System.Exception?displayProperty=nameWithType> veya ondan devralan bir tür. Öte yandan, CLS uyumlu yöntemlerini diğer tür özel durumlar yayılmasını engellemek için gerekli değildir.|40|  
 |Genel|[CLS uyumluluğu: kuralları](#Rules)|CLS kuralları erişilebilir veya görünür outsideof tanımlama derleme olan yalnızca parçaları türü için geçerlidir.|1.|  
 |Genel|[CLS uyumluluğu: kuralları](#Rules)|CLS dışı uyumlu türleri üyeleri CLS uyumlu olarak işaretlenmemiş.|2|  
 |Genel Türler|[Genel türler ve üyeleri](#Generics)|İç içe geçmiş türler en az sayıda genel parametreler kendilerini kapsayan türle sahip. Genel bir iç içe geçmiş tür parametrelerinde kapsayan türü genel parametreler konuma göre karşılık gelir.|42|  
@@ -136,22 +139,22 @@ ms.lasthandoff: 10/20/2017
 |Genel Türler|[Genel türler ve üyeleri](#Generics)|Genel parametreler üzerinde kısıtlamalar olarak kullanılan türleri kendilerini CLS uyumlu olacaktır.|45|  
 |Genel Türler|[Genel türler ve üyeleri](#Generics)|Görünürlük ve bir oluşturulmuş genel tür üyeleri (iç içe geçmiş türler dahil) erişilebilirliğini bir bütün olarak genel tür bildirimi yerine belirli örneklemesi Kapsamınızın dikkate. Bu varsayıldığında, CLS kuralının 12 görünürlük ve erişilebilirlik kuralları hala geçerlidir.|46|  
 |Genel Türler|[Genel türler ve üyeleri](#Generics)|Her soyut veya sanal genel yöntemi için bir varsayılan somut (soyut) uygulaması olacaktır.|47|  
-|Arabirimler|[Arabirimleri](#Interfaces)|Bunları uygulamak için CLS uyumlu arabirimleri CLS olmayan compliantmethods tanımını gerektirmeyecek.|18|  
-|Arabirimler|[Arabirimleri](#Interfaces)|CLS uyumlu arabirimlerde statik yöntemler tanımlamak değil ya da alanları tanımla.|19|  
+|Arabirimler|[Arabirimler](#Interfaces)|Bunları uygulamak için CLS uyumlu arabirimleri CLS olmayan compliantmethods tanımını gerektirmeyecek.|18|  
+|Arabirimler|[Arabirimler](#Interfaces)|CLS uyumlu arabirimlerde statik yöntemler tanımlamak değil ya da alanları tanımla.|19|  
 |Üyeler|[Genel üyeleri yazın](#members)|Genel statik alanları ve yöntemleri CLS uyumlu değildir.|36|  
 |Üyeler|--|Değişmez değer statik değerini alan başlatma meta veri kullanımı ile belirtilir. CLS uyumlu bir sabit değişmez değeri olarak tam olarak aynı türde alan başlatma meta verilerinde belirtilmiş bir değere sahip olmalıdır (veya bu değişmez değeri ise, temel türde bir `enum`).|13|  
 |Üyeler|[Genel üyeleri yazın](#members)|Vararg kısıtlaması CLS parçası değildir ve yalnızca çağırma kuralı CLS tarafından desteklenen standart çağırma yönetiliyor.|15|  
 |Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri eki 7, teknik rapor 15 başlatmak ve tanımlayıcıları, kullanılabilir onlineat http://www.unicode.org/unicode/reports/tr15/tr15-18.html dahil edilmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan thecanonical biçiminde olacaktır CLS amacıyla iki tanımlayıcılara aynı küçük eşlemelerini (Unicode yerel ayar-küçük harfe duyarlı bir toonelowercase eşlemeleri tarafından belirtildiği şekilde) aynı olması durumunda. Diğer bir deyişle, differentunder CLS ele alınması için iki tanımlayıcı bunların birden fazla yalnızca kendi durumda farklı. Ancak, aninherited tanımı geçersiz kılmak için CLI özgün bildirimi kesin kodlama kullanılabilir gerektirir.|4|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|Tüm adları CLS uyumlu bir kapsamda tanıtılan aynı ve aşırı yükleme aracılığıyla çözülmüş olduğu dışında ayrı bağımsız ofkind olacaktır. Diğer bir deyişle, bir yöntem ve bir alan için aynı adı kullanmak için tek bir türü CTSallows sırasında CLS desteklemez.|5|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|Alanlar ve iç içe geçmiş türler tarafından tanımlayıcı karşılaştırma tek başına farklı olacaktır, ayırt edici olarak ayrı imzaları eventhough CTS sağlar. Yöntemler, özellikler ve olayları sahip aynı adda (tanımlayıcı karşılaştırma) dönüş türüne göre çok daha fazlası farklı dışındaki CLS kural 39 belirtildiği gibi.|6|  
-|Aşırı Yükleme|[Aşırı yüklemeler](#overloads)|Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş.|37|  
-|Aşırı Yükleme|[Aşırı yüklemeler](#overloads)|Özellikleri ve yöntemleri aşırı yüklenebilir yalnızca sayısı ve türleri adlı dönüşüm işleçleri dışında kendi parametreleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
+|Aşırı Yükleme|[Overloads](#overloads)|Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş.|37|  
+|Aşırı Yükleme|[Overloads](#overloads)|Özellikleri ve yöntemleri aşırı yüklenebilir yalnızca sayısı ve türleri adlı dönüşüm işleçleri dışında kendi parametreleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
 |Aşırı Yükleme|--|Tür tarafından bildirilen iki veya daha fazla CLS uyumlu yöntemler türü örneklemesi, belirli bir dizi için aynı sistemine varsa aynı parametre ve dönüş türleri, thenall bu yöntemler bu tür örneklemesi anlam olarak eşdeğer olacaktır.|48|  
 |Türler|[Ve üye imzaları yazın.](#Types)|<xref:System.Object?displayProperty=nameWithType>CLS uyumlu değil. CLS uyumlu herhangi bir sınıf CLS uyumlu bir sınıftan devralınan.|23|  
-|Özellikler|[Özellikleri](#properties)|Bir özellik shallbe'Set ' yordamı yöntemleri uygulamak yöntemleri işaretlenmiş `SpecialName` meta veriler.|24|  
-|Özellikler|[Özellikleri](#properties)|Bir özelliğin erişimciler tüm statik olacaktır, tüm sanal veya tüm örneği olmalıdır.|26|  
-|Özellikler|[Özellikleri](#properties)|Bir özelliğin türünü alıcı dönüş türü ve kurucu son bağımsız değişkeni tür olacaktır. Özelliğin parametre türlerini alıcı ve tüm türleri parametreleri ancak kurucu son parametre türleri olacaktır. Tüm bu tür CLS uyumlu olacaktır ve yönetilen işaretçileri tutulamaz (yani, başvuruya göre geçirilmesi değil).|27|  
-|Özellikler|[Özellikleri](#properties)|Özellikler, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 24 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına. Özellik alıcısı yöntemi, ayarlayıcı yöntemi veya ikisine birden sahip.|28|  
+|Özellikler|[Özellikler](#properties)|Bir özellik shallbe'Set ' yordamı yöntemleri uygulamak yöntemleri işaretlenmiş `SpecialName` meta veriler.|24|  
+|Özellikler|[Özellikler](#properties)|Bir özelliğin erişimciler tüm statik olacaktır, tüm sanal veya tüm örneği olmalıdır.|26|  
+|Özellikler|[Özellikler](#properties)|Bir özelliğin türünü alıcı dönüş türü ve kurucu son bağımsız değişkeni tür olacaktır. Özelliğin parametre türlerini alıcı ve tüm türleri parametreleri ancak kurucu son parametre türleri olacaktır. Tüm bu tür CLS uyumlu olacaktır ve yönetilen işaretçileri tutulamaz (yani, başvuruya göre geçirilmesi değil).|27|  
+|Özellikler|[Özellikler](#properties)|Özellikler, belirli bir adlandırma deseni uyması. `SpecialName` CLS kural 24 başvuruda bulunulan öznitelik uygun adı karşılaştırmaları göz ardı ve tanımlayıcı kurallarına. Özellik alıcısı yöntemi, ayarlayıcı yöntemi veya ikisine birden sahip.|28|  
 |Tür dönüştürmeleri|[Tür dönüştürmeleri](#conversion)|Her iki `op_Implicit` veya `op_Explicit` zorlama sağlama alternatif bir yol sağlanan sağlanır.|39|  
 |Türler|[Ve üye imzaları yazın.](#Types)|Paketlenmiş değer türleri CLS uyumlu değildir.|3|  
 |Türler|[Ve üye imzaları yazın.](#Types)|İmza görünen tüm türleri CLS uyumlu olacaktır. Bir oluşturulmuş genel tür oluşturma tüm türleri CLS uyumlu olacaktır.|11|  

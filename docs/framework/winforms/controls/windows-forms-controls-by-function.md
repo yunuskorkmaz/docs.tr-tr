@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>İşlevlere Göre Windows Forms Denetimleri
 Windows Forms denetimleri ve işlevleri gerçekleştirmek bileşenleri sunar. Aşağıdaki tabloda Windows Forms denetimleri ve bileşenleri genel işlevi göre listelenmektedir. Ayrıca, aynı işleve hizmet eden birden çok denetim mevcut olduğunda, önerilen denetim yenisiyle denetim ilgili not ile listelenir. Ayrı bir sonraki tabloda değiştirilen denetimleri ile önerilen kendi değişikliklerini listelenir.  
@@ -95,5 +96,5 @@ Windows Forms denetimleri ve işlevleri gerçekleştirmek bileşenleri sunar. A�
 |Form düzeni|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Özel Windows Forms denetimleri .NET Framework ile geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

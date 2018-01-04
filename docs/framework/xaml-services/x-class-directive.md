@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class Yönergesi
 XAML biçimlendirme derleme biçimlendirmesi ve arka plan kodu arasında kısmi sınıflar katılmak için yapılandırır. Kod kısmi sınıfı ayrı kod dosyasında tanımlanan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] dil biçimlendirme parçalı sınıf genellikle XAML derleme sırasında kod oluşturma tarafından oluşturulur ancak.  
@@ -71,7 +72,7 @@ XAML biçimlendirme derleme biçimlendirmesi ve arka plan kodu arasında kısmi 
  `x:Class`Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için bkz: [XAML Namespace (x:) Dil özellikleri (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [x: Subclass yönergesi](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [XAML ve WPF için özel sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [WPF'den System.xaml'e geçirilen türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+ [x:Subclass Yönergesi](../../../docs/framework/xaml-services/x-subclass-directive.md)  
+ [WPF için XAML ve Özel Sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [x:ClassModifier Yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
+ [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

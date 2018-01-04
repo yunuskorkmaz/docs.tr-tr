@@ -26,11 +26,14 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8d733efc3d70070dd12f55c651033e97d1792c38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cfb1500150d2dfb500a698713c0de6b8e5518010
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma
 Okuma veya, bir yalıtılmış depolama dosyasında yazmak için kullanın bir <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> bir akış okuyucusunu nesnesiyle (<xref:System.IO.StreamReader> nesnesi) veya akış yazıcı (<xref:System.IO.StreamWriter> nesnesi).  

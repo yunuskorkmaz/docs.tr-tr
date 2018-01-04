@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bc3e01bc8ca463460ede9544d1d5c095c39a59d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e894d07e77b929b1ea22df2d34e542544ec3b1f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-com-interop-exceptions"></a>COM Birlikte Çalışması Özel Durumlarını İşleme
 Yönetilen ve yönetilmeyen kod birlikte özel durumları işleme çalışabilirsiniz. Bir yöntem yönetilen kodda bir özel durum oluşturursa, ortak dil çalışma zamanı için bir COM nesnesi HRESULT geçirebilirsiniz. HRESULT hata döndürerek yönetilmeyen kodunda bir yöntem başarısız olursa, çalışma zamanı tarafından yönetilen kod görevinde bir özel durum oluşturur.  
@@ -38,4 +41,4 @@ Yönetilen ve yönetilmeyen kod birlikte özel durumları işleme çalışabilir
  Yönetilmeyen kod içinde bir yöntem başarısız olursa, bir özel durum bir yönetilen kod kesimi geçirilebilir. Konu [HRESULTS ve özel durumları](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) nasıl HRESULTS çalışma zamanı özel durum nesnelere eşleme gösteren bir tablo içeriyor.  
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Özel durumlar](index.md) 
+[Özel Durumlar](index.md) 

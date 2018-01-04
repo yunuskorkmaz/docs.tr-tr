@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff98eb39113a2fa8117d091645ac04526e2983c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e04b99c9d85ae92ad4d013abc01c5b16914fe1c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-control-overview-windows-forms"></a>Düğme Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Button> denetimi sağlar kullanıcıya bir eylemi gerçekleştirmek için tıklatın. Düğme tıklatıldığında, düğmeye gibi durur ve yayımlandı. Kullanıcı bir düğmesine tıkladığında <xref:System.Windows.Forms.Control.Click> olay işleyicisi çağrılır. Kodda yerleştirin <xref:System.Windows.Forms.Control.Click> seçtiğiniz herhangi bir eylemi gerçekleştirmek için olay işleyicisi.  
@@ -32,8 +33,8 @@ Windows Forms <xref:System.Windows.Forms.Button> denetimi sağlar kullanıcıya 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Button>  
- [Nasıl yapılır: Windows Forms düğme tıklamalarına yanıt verme](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Windows Forms düğme denetimi seçmenin yolları](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Nasıl yapılır: Tasarımcı kullanarak kabul düğmesi olarak bir Windows Formları düğmesi atama](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- [Nasıl yapılır: Tasarımcı kullanarak iptal düğmesi olarak bir Windows Formları düğmesi atama](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- [Düğme denetimi](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+ [Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Windows Forms Düğme Kontrolü Seçme Yolları](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Bir Windows Forms Düğmesini Kabul Et Düğmesi Olarak Belirtme](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Bir Windows Forms Düğmesini İptal Düğmesi Olarak Belirtme](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ [Düğme Kontrolü](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

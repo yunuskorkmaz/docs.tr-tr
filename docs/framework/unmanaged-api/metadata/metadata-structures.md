@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 555f9a216c8e28f7f4fcd79babce77f929ecc072
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 18a5257dbc0272aedb8fe5c7ddec601b999c609b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-structures"></a>Meta Veri Yapıları
 Bu bölümde API meta veri kullanan yönetilmeyen yapılar açıklanmaktadır.  
@@ -30,23 +31,23 @@ Bu bölümde API meta veri kullanan yönetilmeyen yapılar açıklanmaktadır.
  ASSEMBLYMETADATA  
  Derleme meta verilerini daha sonra kullanmak için depolar.  
   
- [Cor_fıeld_offset yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
+ [COR_FIELD_OFFSET Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
  Belirtilen alanın bir sınıf içinde uzaklık depolar.  
   
- [Cor_natıve_lınk yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
+ [COR_NATIVE_LINK Yapısı](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
  Yerel kod bağlamak için kullanılan bilgileri içerir.  
   
- [CVStruct yapısı](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
+ [CVStruct Yapısı](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
  Bir modül veya bileşik görüntü yüklenirken kullanılan bilgileri içerir.  
   
- [OSINFO yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
+ [OSINFO Yapısı](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
  İşletim sistemi hakkında bilgiler içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [Meta veri genel statik işlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [Meta veri numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [Meta veri Birleşmeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+ [Meta Veri Birleşimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

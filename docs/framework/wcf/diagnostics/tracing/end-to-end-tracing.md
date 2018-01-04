@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>Uçtan Uca İzleme
 Uçtan uca kodun yürütülmesini izlemek geliştiricilere (e2e) izleme sağlar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] bir kod yolu neden başarısız oldu araştırmak veya kapasite planlama ve performans analizi için ayrıntılı izleme sağlamak için altyapı. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]bir hatanın nedenini tanılamaya yardımcı olmak için üç bağıntı mekanizmalar sağlar: etkinlikleri, aktarımları ve yayma.  
@@ -31,12 +32,12 @@ Uçtan uca kodun yürütülmesini izlemek geliştiricilere (e2e) izleme sağlar 
   
  [Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): Etkinlik yayma açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modeli izleme ve yayma uç noktalar arasında etkinliklerini ilişkilendirmek için kullanma.  
   
- [İzleme türü özeti](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
+ [İzleme Türü Özeti](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   
  İzleme türleri tüm etkinliklerin bir özetini sunar  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [İzlemeleri görüntüleme bağıntılı için hizmet izleme görüntüleyicisini kullanma ve sorun giderme](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+ [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

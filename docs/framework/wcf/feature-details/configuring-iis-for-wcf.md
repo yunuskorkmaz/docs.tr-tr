@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 511f5177e1b9d2660daf887cc13728aed2c9de0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 Internet Information Services (IIS) 7.0 gerekli bileşenleri seçerek yüklemenize olanak tanıyan bir modüler tasarımı vardır. Bu tasarım, içinde sunulan yeni bildirim temelli temsilinde teknolojisini temel [!INCLUDE[wv](../../../../includes/wv-md.md)]. 40'tan fazla tek başına özelliği bileşenleri vardır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] , yüklenebilir bağımsız olarak. Bu, BT uzmanları kolayca yüklemesini gerektiği gibi özelleştirin sağlar. Bu konuda nasıl yapılandırılacağı açıklanır [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ile kullanılmak üzere [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve hangi bileşenler gereklidir belirleyin.  
@@ -80,7 +81,7 @@ Internet Information Services (IIS) 7.0 gerekli bileşenleri seçerek yüklemeni
  `</system.webServer>`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WAS etkinleştirme mimarisi](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
- [WCF ile kullanmak için WAS yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Nasıl yapılır: yükleme ve WCF etkinleştirme bileşenlerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [WAS Etkinleştirme Mimarisi](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+ [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

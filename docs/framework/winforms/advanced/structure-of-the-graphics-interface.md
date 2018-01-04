@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43bd899a1dd53dc8cdae4f81e90b1aa74c29cb67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structure-of-the-graphics-interface"></a>Grafik Arabiriminin Yapısı
 Yönetilen sınıf arabirimi [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 60 sınıfları, 50 numaralandırmalar ve 8 yapılar içerir. <xref:System.Drawing.Graphics> Sınıftır çekirdeği, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] işlevselliği; gerçekten çizgiler, eğriler, rakamları, görüntüler ve metin çizer sınıftır.  
@@ -33,6 +34,6 @@ Yönetilen sınıf arabirimi [!INCLUDE[ndptecgdiplus](../../../../includes/ndpte
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]ilgili sabitleri koleksiyonlarıdır birkaç numaralandırmaları tanımlar. Örneğin, <xref:System.Drawing.Drawing2D.LineJoin> numaralandırma öğeleri içeren <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, ve <xref:System.Drawing.Drawing2D.LineJoin.Round>, iki satır katılmak için kullanılan stiller belirtin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafiklere genel bakış](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- [GDI + yönetilen kodu hakkında](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- [Yönetilen grafik sınıflarını kullanma](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+ [Grafiklere Genel Bakış](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [GDI+ Yönetilen Kodu Hakkında](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [Yönetilen Grafik Sınıflarını Kullanma](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

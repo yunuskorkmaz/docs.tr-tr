@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a2c8cf23e1f00d6deac52f3c4bee8932b7c487a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c45ffbffd5eae812dbd9703ffde4423c94581234
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama
 Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> XML verileri doğrulamak için ad alanı bir dijital imza ile imzalanmış.  XML dijital imzaları (XMLDSIG) imzalandığından sonra veri değiştirildiği değil olduğunu doğrulamanızı sağlar.  World Wide Web Konsorsiyumu (W3C) belirtimi http://www.w3.org/TR/xmldsig-core/, standart XMLDSIG hakkında daha fazla bilgi için bkz.  
@@ -93,4 +96,4 @@ Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> XML veril
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Cryptography.Xml>  
- [Nasıl yapılır: XML belgelerini dijital imzalarla imzalama](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+ [Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

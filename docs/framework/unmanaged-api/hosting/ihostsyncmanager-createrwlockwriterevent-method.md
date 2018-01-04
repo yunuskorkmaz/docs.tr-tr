@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c89dec681102f96f96f1d7f3e802ded0a2df7b4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb38cd76a051b1a4459dff4f8164a6405f5fb32d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a>IHostSyncManager::CreateRWLockWriterEvent Yöntemi
 Bir yazıcı kilidi uygulama için bir otomatik sıfırlama olay nesnesi oluşturur.  
@@ -71,7 +72,7 @@ HRESULT CreateRWLockWriterEvent (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iclrsyncmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [Ihostautoevent arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [Ihostmanualevent arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [Ihostsyncmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+ [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
+ [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
+ [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
+ [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

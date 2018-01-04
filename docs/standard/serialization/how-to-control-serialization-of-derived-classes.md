@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f97445be151afdf460da6610462930c564e42ccc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: denetim türetilen sınıfların serileştirme
 Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için öznitelik nesne seri hale getirme özelleştirmek için tek yolu değil. Ayrıca varolan bir sınıftan türetilen ve bilgilendirerek XML akışı özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıf serileştirmek nasıl örneği.  
@@ -246,6 +249,6 @@ public class Run
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  
  <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

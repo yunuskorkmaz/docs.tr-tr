@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a0d88e521d953e57ce729e3365e78f274a0283a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eed39a0a0388d1d091a167addb8f81f25c8c04b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Nasıl yapılır: Görüntüyü Gri Tona Dönüştürme
 Bu örnek bir görüntüyü gri tonlamalı kullanmaya dönüştürme gösterilmektedir <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  
@@ -36,6 +37,6 @@ Bu örnek bir görüntüyü gri tonlamalı kullanmaya dönüştürme gösterilme
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resim öğesi kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
- [Görüntü kırpma](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
- [Görüntüyü Döndür](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
+ [Görüntü Öğesi Kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+ [Görüntü Kırpma](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+ [Görüntü Döndürme](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)

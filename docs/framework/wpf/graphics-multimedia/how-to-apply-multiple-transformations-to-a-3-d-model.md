@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77e9f664ababa32cf0629f513f81b1e24030eac1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26832827b0e92813802073adcb4c2db99dff0807
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Nasıl yapılır: 3B Modeline Birden Çok Dönüşüm Uygulama
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Media3D.RotateTransform3D> ve <xref:System.Windows.Media.Media3D.ScaleTransform3D> döndürmek ve 3B modelin ölçeğini değiştirmek için. Aşağıdaki kod bu dönüşümlerin uygulamak gösterilmiştir <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> özelliği bir <xref:System.Windows.Media.Media3D.GeometryModel3D> XAML'de.  
@@ -45,4 +46,4 @@ Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Me
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir 3B modelin ölçeğini dönüştürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)
+ [3B Model Ölçeğinin Dönüşümü](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)

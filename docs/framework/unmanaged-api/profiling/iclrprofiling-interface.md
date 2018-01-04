@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0eec8d5cfb09df66b6ba739c7cd5087434986fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0692e0b952a031c628d8aa4ff8730a96e358cfca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling Arabirimi
 Sağlar [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) çalışan bir işlemi eklemek bir profil oluşturucu etkinleştirir yöntemi.  
@@ -32,7 +33,7 @@ Sağlar [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AttachProfiler yöntemi](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Belirtilen profil oluşturucu için belirtilen işlem ekler.|  
+|[AttachProfiler Yöntemi](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Belirtilen profil oluşturucu için belirtilen işlem ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -46,5 +47,5 @@ Sağlar [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Icorprofilerınfo arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Derleme sonrası şema bilgi
 [World Wide Web Konsorsiyumu (W3C) XML Şeması öneri](http://go.microsoft.com/fwlink/?linkid=45242) öncesi şema doğrulaması ve sonrası şema derleme için sunulmalıdır bilgisi kümesi (bilgi) açıklanır. XML şema nesne modeli (SOM) önce ve sonra bu Etkilenme görünümleri <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> olarak adlandırılır.  
@@ -48,4 +51,4 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+ [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

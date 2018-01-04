@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d143798c4344b385d954cc64bd63c8f81eb48750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2319ab244b2c2a296966692342df1f4967b85729
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Microsoft yayma için üç yol dili (MSIL), her biri kendi güvenlik sorunları Ara sağlar:  
@@ -162,5 +163,5 @@ ms.lasthandoff: 11/21/2017
  İle başlayarak [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], ortak olmayan türleri ve üyeleri hakkında bilgi edinmek için hiçbir izinleri gereklidir. Yansıma dinamik yöntemleri yayma için gereken bilgileri elde etmek için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneleri yöntem çağrılarını yaymak üzere kullanılır. ' In önceki sürümlerini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gerektiren <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı. Daha fazla bilgi için bkz: [yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
- [Dinamik yöntemleri ve derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+ [Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
+ [Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

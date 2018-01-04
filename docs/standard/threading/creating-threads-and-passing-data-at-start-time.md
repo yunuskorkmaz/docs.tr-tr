@@ -21,11 +21,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 61808dc804cc627ab368a5250414dfcc5f54c87e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme
 Bir işletim sistemi işlem oluşturulduğunda, işletim sistemi herhangi bir özgün uygulama etki alanı dahil olmak üzere bu işlemde kod yürütmek için bir iş parçacığı yerleştirir. Bu noktadan itibaren uygulama etki alanları oluşturulur ve mutlaka oluşturulma veya yok tüm işletim sistemi iş parçacıkları yok. Yürütülen kod yönetiliyorsa kod, sonra bir <xref:System.Threading.Thread> geçerli uygulama etki alanında iş parçacığının statik alarak elde edilebilir için nesne <xref:System.Threading.Thread.CurrentThread%2A> türündeki özelliği <xref:System.Threading.Thread>. Bu konu, iş parçacığı oluşturma açıklar ve iş parçacığı yordamı veri geçirme için seçenekleri açıklar.  
@@ -68,4 +71,4 @@ Bir işletim sistemi işlem oluşturulduğunda, işletim sistemi herhangi bir ö
  <xref:System.Threading.ParameterizedThreadStart>  
  <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
  [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [İş parçacığı kullanma ve iş parçacığı oluşturma](../../../docs/standard/threading/using-threads-and-threading.md)
+ [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)

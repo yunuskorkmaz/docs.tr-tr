@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL ve İlke
 Bu konuda ele alınmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, uygulama ayrıntılarını, WS-Policy ve WS-PolicyAttachment yanı sıra ek WS-Policy onaylar ve WSDL 1.1 uzantıları tarafından sunulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -83,6 +84,6 @@ Bu konuda ele alınmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.
 |mssp:RequireClientCertificate|İç içe geçmiş|Bu isteğe bağlı öğe TLSNEGO protokolünün bir parçası sağlanacak bir istemci sertifikası gereksinimi belirtir. Bu onaylama işlemi varsa, bir istemci sertifikası sağlanmalıdır. Bu onay mevcut değilse, sonra bir istemci sertifikası sağlanmalıdır değil. Bu onay mssp:SslContextToken dışında kullanılmamalıdır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel WSDL yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Nasıl yapılır: özel WSDL dışarı aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Nasıl yapılır: özel WSDL içe aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Özel WSDL Yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ [Nasıl yapılır: Özel WSDL Dışarı Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Nasıl yapılır: Özel WSDL İçe Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

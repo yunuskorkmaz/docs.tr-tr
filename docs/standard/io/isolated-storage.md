@@ -28,11 +28,14 @@ caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4279e7933a88a060de52199d9ea0e9f54863fb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 286261e9b40e65450113128c51c7c9b384380878
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a>İçin [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamalar, yalıtılmış depolama mekanizmasıdır kodu kaydedilmiş verilerle ilişkilendirme standartlaştırılmış yöntemler tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.  
@@ -165,15 +168,15 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Yalıtım türleri](../../../docs/standard/io/types-of-isolation.md)|Farklı yalıtım türlerini açıklar.|  
-|[Nasıl yapılır: yalıtılmış depolama için depoları alın](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Kullanarak bir örnek sağlar <xref:System.IO.IsolatedStorage.IsolatedStorageFile> kullanıcı ve derlemeye göre yalıtılmış bir deposu elde sınıfı.|  
-|[Nasıl yapılır: yalıtılmış depolama için depoları listeleme](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Nasıl kullanılacağını gösterir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> kullanıcı için tüm yalıtılmış depolama boyutunu hesaplamak için yöntem.|  
-|[Nasıl yapılır: yalıtılmış depolamadaki depoları silme](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Nasıl kullanılacağını gösterir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> yöntemi iki farklı yolla yalıtılmış depolarını silemedi.|  
-|[Nasıl yapılır: yalıtılmış depolama ile alan çıkış koşulları düşündüğünüz](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Bir yalıtılmış depodaki kalan alanın nasıl ölçüldüğünü gösterir.|  
-|[Nasıl yapılır: yalıtılmış depolamada dosyalar ve dizinler oluşturma](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Bir yalıtılmış depoda dosyalar ve dizinler oluşturma ile ilgili bazı örnekler sağlar.|  
-|[Nasıl yapılır: yalıtılmış depolamada mevcut dosya ve dizinleri bulma](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolamada dizin yapısının ve dosyaların nasıl okunduğunu gösterir.|  
-|[Nasıl yapılır: yalıtılmış depolamadaki dosyaları yönelik Okuma ve yazma](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Bir yalıtılmış depolama dosyasına dize yazmak ve ardından geri okumak ile ilgili bir örnek sağlar.|  
-|[Nasıl yapılır: dosya ve dizinleri yalıtılmış depolamada silme](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolama dosyalarının ve dizinlerinin nasıl silindiğini gösterir.|  
+|[Yalıtım Türleri](../../../docs/standard/io/types-of-isolation.md)|Farklı yalıtım türlerini açıklar.|  
+|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Kullanarak bir örnek sağlar <xref:System.IO.IsolatedStorage.IsolatedStorageFile> kullanıcı ve derlemeye göre yalıtılmış bir deposu elde sınıfı.|  
+|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Nasıl kullanılacağını gösterir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> kullanıcı için tüm yalıtılmış depolama boyutunu hesaplamak için yöntem.|  
+|[Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Nasıl kullanılacağını gösterir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> yöntemi iki farklı yolla yalıtılmış depolarını silemedi.|  
+|[Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Bir yalıtılmış depodaki kalan alanın nasıl ölçüldüğünü gösterir.|  
+|[Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Bir yalıtılmış depoda dosyalar ve dizinler oluşturma ile ilgili bazı örnekler sağlar.|  
+|[Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolamada dizin yapısının ve dosyaların nasıl okunduğunu gösterir.|  
+|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Bir yalıtılmış depolama dosyasına dize yazmak ve ardından geri okumak ile ilgili bir örnek sağlar.|  
+|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Yalıtılmış depolama dosyalarının ve dizinlerinin nasıl silindiğini gösterir.|  
 |[Dosya ve akış t-O](../../../docs/standard/io/index.md)|Zaman uyumlu ve zaman uyumsuz dosya ve veri akışı erişimini nasıl gerçekleştireceğinizi açıklar.|  
   
 <a name="reference"></a>   

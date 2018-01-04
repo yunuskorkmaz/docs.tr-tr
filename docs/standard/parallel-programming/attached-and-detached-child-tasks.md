@@ -17,11 +17,14 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c1a0c664dffc2986d4d6985fd2b71cd8055bf2c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 A *alt görev* (veya *iç içe geçmiş görev*) olan bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> kullanıcı temsilci olarak bilinen başka bir görev oluşturulan örnek *üst görev*. Bir alt görev ya da iliştirilemez ya da. A *ayrılmış alt görev* üst bağımsız olarak yürüten bir görevdir. Bir *alt görev bağlı* ile oluşturulan iç içe geçmiş bir görevi <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> , üst değil açıkça veya varsayılan olarak engelliyor, bağlı olmak seçeneği. Bir görev herhangi bir sayıda eklenen ve ayrılan alt görevler, yalnızca sistem kaynaklarının yetersizliği sınırlı oluşturabilir.  

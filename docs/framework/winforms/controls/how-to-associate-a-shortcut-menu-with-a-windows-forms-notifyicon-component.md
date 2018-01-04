@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 985aa58056f4c4ec8f3042c682291508f1434ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5a594888351710639f7ebc07eb99a425df2ea80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme
 > [!NOTE]
@@ -139,6 +140,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.NotifyIcon>  
  <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Nasıl yapılır: Windows taskbar'na uygulama simgeleri Forms Notifyıcon bileşeniyle ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- [Notifyıcon bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [Notifyıcon bileşenine genel bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+ [Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'a Uygulama Simgeleri Ekleme](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ [NotifyIcon Bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ [NotifyIcon Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

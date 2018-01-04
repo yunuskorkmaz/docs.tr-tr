@@ -21,11 +21,14 @@ caps.latest.revision: "58"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f488990232448e69ba2fa0d7c7a730df57d170fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a>Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
@@ -599,5 +602,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Char.GetUnicodeCategory%2A>  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)

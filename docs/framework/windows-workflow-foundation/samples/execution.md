@@ -12,30 +12,31 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0849f1e086a99539978e2c3c978807d2f83ae7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution"></a>Yürütme
 Bu bölümde yürütülen iş akışlarında gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İş akışı Yönetimi uç nokta örnek](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+ [İş Akışı Yönetimi Uç Nokta Örneği](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
  Bir iş akışı denetim uç noktası oluşturmak ve iş akışları hem yerel hem de uzaktan çalıştırmak için nasıl kullanılabileceğini gösterir.  
   
- [WorkflowInvoker sınıfını kullanma](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
+ [WorkflowInvoker Sınıfını Kullanma](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
  Nasıl kullanılacağı ortaya <xref:System.Activities.WorkflowInvoker> bir yöntem değilmiş gibi bir etkinlik çağrılacak sınıfı.  
   
- [WorkflowApplication ReadLine ana bilgisayar](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
+ [WorkflowApplication ReadLine Konağı](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
  Bir genel ReadLine konak oluşturulacağını gösterir.  
   
- [Oluşturma ve bir iş akışı örneği çalıştırma](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
+ [İş Akışı Örneği Oluşturma ve Çalıştırma](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
  Bir iş akışı örneği çalıştırmak gösterilmiştir. Zaman uyumlu ve zaman uyumsuz olarak yürütülecek nasıl gösterir.  
   
- [WorkflowHostingEndpoint Sürdür yer işareti](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [WorkflowHostingEndpoint Sürdürme Yer İşareti](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
  Gösteren nasıl <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ile kullanılan <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı örnekleri oluşturmak için.  
   
- [WorkflowHostingEndpoint için bir çözümleyici yer işareti](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
+ [WorkflowHostingEndpoint için Yer İşareti Çözümleyici](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
  Gösteren nasıl <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ile kullanılan <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı örneği özel yer işaretleri sürdürmek için.

@@ -20,11 +20,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab596fd10de81e60e6396268cbd5c5b31aa13078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 869d35a15a028e6df09dea281ac653ab8b9a28d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek Yol: Şifreleme Uygulaması Oluşturma
 Bu kılavuz, şifrelemek ve içeriğin şifresini gösterilmiştir. Kod örnekleri, bir Windows Forms uygulaması için tasarlanmıştır. Bu uygulamayı gerçek dünya senaryoları, akıllı kart kullanma gibi gösterilmemiştir. Bunun yerine, şifreleme ve şifre çözme temelleri gösterilmektedir.  

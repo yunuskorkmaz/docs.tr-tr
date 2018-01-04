@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 66e31911289d1ef8b590a0b7e7896adfa4998adc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a3598af7dcdfa106b50e884c0f9d3752a595da89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum Arabirimi
 Öğesinin bir alt [Icorpublishenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) koleksiyonu geçiş için yöntemler sağlar arabirimi [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) nesneleri.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|Belirtilen sayıda alır `ICorPublishProcess` geçerli konumdan başlayarak koleksiyondan örnekleri.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|Belirtilen sayıda alır `ICorPublishProcess` geçerli konumdan başlayarak koleksiyondan örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorPublishProcessEnum` Arabirimini uygulayan soyut arabiriminin yöntemlerini [Icorpublishenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).  
@@ -49,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Corpubpublish ortak sınıfı](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

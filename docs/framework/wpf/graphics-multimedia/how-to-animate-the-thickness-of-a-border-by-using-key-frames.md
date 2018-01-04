@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08950b2b92bfcbd28472327f12a2ee49abfd9fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f255ff38ec7ee79f02a0cd40a3f0143c36e1c58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme
 Bu örnek animasyon gösterilmektedir <xref:System.Windows.Controls.Control.BorderThickness%2A> özelliği bir <xref:System.Windows.Controls.Border>.  
@@ -43,6 +44,6 @@ Bu örnek animasyon gösterilmektedir <xref:System.Windows.Controls.Control.Bord
  <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar çerçeve nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [BorderThickness değerini animasyon ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
+ [BorderThickness Değerine Animasyon Ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)

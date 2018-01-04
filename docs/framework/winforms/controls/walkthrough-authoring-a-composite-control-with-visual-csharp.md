@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d96705ed3f18c76a64c344ddec7a1cd4315e2e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 725dc47ce1bda753717c1aac813b8a692ce58001
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>İzlenecek yol: Visual C# İle Bileşik Denetim Yazma #
 Bileşik denetimler olarak özel grafik arabirimler oluşturulabilir yeniden ve bir yol sağlar. Bileşik Denetim aslında bir görsel gösterimi ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirme veya yazar tarafından gerekli diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimler aynı şekilde Windows Forms'ta yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci bölümünde, işlevselliğini genişletmek `ctlClock` devralma yoluyla.  
@@ -415,8 +416,8 @@ Bileşik denetimler olarak özel grafik arabirimler oluşturulabilir yeniden ve 
      Bu kılavuz temel kavramları sayısı ele. Bileşik Denetim kapsayıcıya denetimleri ve bileşenleri birleştiren bileşik denetim oluşturmak öğrendiniz. Denetiminize özellikleri ekleyin ve özel işlevsellik uygulamak için kod yazma öğrendiniz. Son bölümünde devralma yoluyla belirli bir bileşik denetim işlevselliğini genişletmek ve bu yöntemi geçersiz kılarak konak yöntemleri işlevselliğini alter öğrendiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [Bileşenleri ile programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
  [Bileşen geliştirme izlenecek yollar](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [Nasıl yapılır: bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [İzlenecek yol: Visual C# ile bir Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+ [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

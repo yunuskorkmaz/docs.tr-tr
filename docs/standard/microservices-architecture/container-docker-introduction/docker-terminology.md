@@ -8,15 +8,18 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 885b1fbd3369dec54ebde21a5378630c764f852d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 342b4443470053d81534d4de1d56d2797798c746
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-terminology"></a>Docker terminolojisi
 
-Bu bölümde, terimleri ve tanımları, Docker daha derin almadan önce aşina olmalısınız listelenir. Daha fazla tanımları için kapsamlı bakın [sözlüğü](https://docs.docker.com/v1.11/engine/reference/glossary/) Docker tarafından sağlanan.
+Bu bölümde, terimleri ve tanımları, Docker daha derin almadan önce aşina olmalısınız listelenir. Daha fazla tanımları için kapsamlı bakın [sözlüğü](https://docs.docker.com/glossary/) Docker tarafından sağlanan.
 
 **Kapsayıcı görüntü**: tüm bağımlılıkları ve bir kapsayıcı oluşturmak için gereken bilgileri olan bir paket. Görüntü kapsayıcısı çalışma zamanı tarafından kullanılacak dağıtım ve yürütme yapılandırması artı (örneğin, çerçeveler) tüm bağımlılıkları içerir. Genellikle, bir görüntü birbirlerine üstünde kapsayıcının filesystem form Yığılmış katmanlardır birden fazla temel görüntü türetir. Oluşturulduktan sonra görüntüyü sabittir.
 

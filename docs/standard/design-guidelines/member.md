@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5df4ad5f6c947d8b3bf62c3bf7eb8426419e5f3f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae69b77098c7f2e1de83eedd40cf0f0da9473326
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-design-guidelines"></a>Üye tasarım yönergeleri
 Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üye olarak adlandırılır. Sonuçta framework işlevselliği bir çerçeve son kullanıcılara sunulur anlamına gelir üyeleridir.  
@@ -32,17 +35,17 @@ Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üye
  Bu bölüm üyeleri herhangi bir türde tasarlarken izlenmesi gereken temel yönergeler sunmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Üye aşırı yüklemesi](../../../docs/standard/design-guidelines/member-overloading.md)  
- [Özellik Tasarım](../../../docs/standard/design-guidelines/property.md)  
- [Oluşturucu tasarım](../../../docs/standard/design-guidelines/constructor.md)  
- [Olay tasarım](../../../docs/standard/design-guidelines/event.md)  
- [Alan tasarım](../../../docs/standard/design-guidelines/field.md)  
- [Genişletme yöntemleri](../../../docs/standard/design-guidelines/extension-methods.md)  
- [İşleç aşırı yüklemeleri](../../../docs/standard/design-guidelines/operator-overloads.md)  
- [Parametre tasarım](../../../docs/standard/design-guidelines/parameter-design.md)  
+ [Üye Aşırı Yüklemesi](../../../docs/standard/design-guidelines/member-overloading.md)  
+ [Özellik Tasarımı](../../../docs/standard/design-guidelines/property.md)  
+ [Oluşturucu Tasarımı](../../../docs/standard/design-guidelines/constructor.md)  
+ [Olay Tasarımı](../../../docs/standard/design-guidelines/event.md)  
+ [Alan Tasarımı](../../../docs/standard/design-guidelines/field.md)  
+ [Genişletme Yöntemleri](../../../docs/standard/design-guidelines/extension-methods.md)  
+ [İşleç Aşırı Yüklemeleri](../../../docs/standard/design-guidelines/operator-overloads.md)  
+ [Parametre Tasarımı](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

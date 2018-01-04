@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0b40e09a9a2c534d3376fa6930d8166591873a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333e99997bad3852ae34753165aa736ef32ac004
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
 Anahtarları oluşturmak ve yönetmek, şifreleme işleminin önemli bir parçasıdır. Simetrik algoritmalar, bir anahtarın ve başlangıç vektörünün (IV) oluşturulmasını gerektirir. Anahtar, verinizin şifresini çözmemesi gereken herkesten gizli tutulmalıdır. IV'nin gizli olması gerekmez ancak her oturum için değiştirilmesi gerekir. Asimetrik algoritmalar bir ortak anahtarın, bir de özel anahtarın oluşturulmasını gerektirir. Ortak anahtar herhangi birine verilebilirken, özel anahtar yalnızca ortak anahtar ile şifrelenen verilerin şifresini çözecek tarafça bilinmelidir. Bu bölümde, hem simetrik, hem de asimetrik algoritmalar için anahtarların nasıl oluşturulacağı ve yönetileceği açıklanmaktadır.  
@@ -96,7 +99,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri şifreleme](../../../docs/standard/security/encrypting-data.md)  
- [Verilerin şifresini çözme](../../../docs/standard/security/decrypting-data.md)  
+ [Veri Şifreleme](../../../docs/standard/security/encrypting-data.md)  
+ [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)  
- [Nasıl yapılır: bir anahtar kapsayıcısında asimetrik anahtarlar depolama](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+ [Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

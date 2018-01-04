@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 910730f67024fbe0d292b4a329a36fb3ea8254b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66db5f6ff7b964162f77317f17a9e3a8d3ed22b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Nasıl yapılır: Windows Forms DataGridView Satırlarına Bağlı Nesnelere Erişme
 Bazen bir iş nesnesi bir koleksiyonda depolanan bilgileri tablosunu görüntülemek yararlıdır. Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> bu tür bir koleksiyon, her bir genel özelliğinin denetimine özelliği ile gözatılamaz dışı olarak işaretlenmiş sürece kendi sütununda görüntülenen bir <xref:System.ComponentModel.BrowsableAttribute>. Örneğin, bir koleksiyonu `Customer` nesneleri sahip olabilir sütunlar gibi **adı** ve **adresi**.  
@@ -55,5 +56,5 @@ Bazen bir iş nesnesi bir koleksiyonda depolanan bilgileri tablosunu görüntül
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewRow>  
  <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>  
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetimlerine nesne bağlama](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimlerine Nesne Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)

@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasını çalıştırıp belirtir.  
@@ -71,13 +71,11 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
   
 -   İle derlenmiş yürütülebilir dosyalar `/platform:anycpu32bitpreferred` 32-bit CLR üzerinde yürütülür.  
   
- Bir Windows 64-bit sürümü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz: [64-bit uygulamalar](../../../../docs/framework/64-bit-apps.md).  
+ Bir Windows 64-bit sürümü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz: [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Visual Studio IDE içinde/Platform ayarlamak için  
   
 1.  İçinde **Çözüm Gezgini**, proje seçme açmak **proje** menüsüne ve ardından **özellikleri**.  
-  
-     Daha fazla bilgi için bkz: [NIB: Proje özellikleriyle yönetme Proje Tasarımcısı](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
 2.  Üzerinde **derleme** sekmesini seçin veya temizleyin **tercih 32-bit** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.  
   
@@ -93,4 +91,4 @@ vbc /platform:x86 myFile.vb
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [/ target (Visual Basic)](target.md)  
  [Visual Basic komut satırı derleyicisi](index.md)  
- [Örnek derleme komut satırları](sample-compilation-command-lines.md)
+ [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

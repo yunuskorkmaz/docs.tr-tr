@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML türü destek uygulama notları
 Bu konuda farkında olmasını istediğiniz bazı uygulama ayrıntıları açıklanmaktadır.  
@@ -55,4 +58,4 @@ Bu konuda farkında olmasını istediğiniz bazı uygulama ayrıntıları açık
  Bir örneği olduğunda `xs:anyURI` temsil için göreli URI eşlenen bir <xref:System.Uri>, <xref:System.Uri> nesnesinin bir taban URI yok.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [System.Xml sınıflardaki türü desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+ [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

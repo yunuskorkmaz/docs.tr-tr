@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: caa97d0dbd4c847892e164ecb168349c38f7f271
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a333fd6c1906eaea2c8eaf2c3b07502b5a9c4d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Nasıl yapılır: StreamGeometry Kullanarak Şekil Oluşturma
 <xref:System.Windows.Media.StreamGeometry>için hafif alternatif <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde ancak veri bağlama, animasyon veya değişimi destekleme ek yükünü istemiyorsanız. Örneğin, verimlilik nedeniyle <xref:System.Windows.Media.StreamGeometry> sınıftır donarıcıları açıklamak için iyi bir seçimdir.  
@@ -51,5 +52,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.StreamGeometryContext>  
- [Bir şekli PathGeometry kullanarak oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+ [PathGeometry Kullanarak Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0296b207af0ed439c90374eb6db21fe11e00dd42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7b1e335f03c5558d7680567fe19f3de2f3f8d78
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>&lt;schemaImporterExtensions&gt; öğesi
 Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz: [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -62,7 +65,7 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)  
  [\<Ekle > öğesi için \<xmlSchemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
  [\<dizileştirme mekanizmasını System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfefd41a4773c81757f73e725095057f988cef2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler
 <xref:System.Windows.Forms.DataGridView> Denetimi en fazla ölçeklenebilirlik sağlamak için tasarlanmıştır. Büyük miktarda veri görüntülemek gerekiyorsa, büyük miktarlarda bellek tüketerek veya kullanıcı arabirimi (UI) yanıtlama düşürmesini önlemek için bu konuda açıklanan yönergeleri izlemelisiniz. Bu konuda aşağıdaki konular açıklanmaktadır:  
@@ -147,9 +148,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
- [Performans ayarlama Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- [Sanal mod Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetiminde veri görüntüleme modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetimindeki hücre stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Sanal Mod](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimindeki Hücre Stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stillerini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a05ba891e734fbf5a94b2a1f91e29d484e1c788b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6e950847764e695f705aeded0e3804db4b872827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebuginternalframe-interface1"></a>Icordebugınternalframe Interface1
 Çalışma zamanı iç çerçeve yığında temsil eder. Bu arabirim Icordebugframe arabirimi sınıfıdır.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetFrameType yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Bu dahili çerçeve türünü alır.|  
+|[GetFrameType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Bu dahili çerçeve türünü alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,4 +50,4 @@ ms.lasthandoff: 10/18/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir varolan genişletmek için daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Yaygın bir senaryo, bir eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] uygulama. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz: [denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -334,5 +335,5 @@ Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
- [İzlenecek yol: bir Windows Forms Bileşik Denetimi WPF barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [İzlenecek yol: Windows Forms'ta 3-b WPF bileşik denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+ [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

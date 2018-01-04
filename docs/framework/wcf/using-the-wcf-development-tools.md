@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF Geliştirme Araçlarını Kullanma
 Bu bölümde açıklanmıştır [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] geliştirmeye yardımcı olabilecek geliştirme araçları, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]hizmeti.  
@@ -25,11 +26,11 @@ Bu bölümde açıklanmıştır [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md
  Kullanabilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hızlı bir şekilde kendi hizmet oluşturmak için bir temel olarak şablonları kullanın. ardından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci hata ayıklama ve hizmetinizi test etmek için Test. Bu araçları birlikte hızlı ve sorunsuz hata ayıklama ve test döngüsü sağlar ve barındırma modeli için erken bir aşamada yürütmek için gereken engellemek.  
   
 ## <a name="the-wcf-developer-tools"></a>WCF geliştirici araçları  
- [WCF Visual Studio şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
  Kullanabileceğiniz önceden tanımlanmış [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] proje ve öğe şablonlarını [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hızlı bir şekilde oluşturmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetler ve çevresindeki uygulamalar.  
   
- [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmeti otomatik ana bilgisayarı (WcfSvcHost.exe) başlatmak verir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı otomatik olarak ana bilgisayar ve uygulanan bir hizmeti test (F5). Hizmetini kullanarak sınayabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (wcfTestClient.exe) veya kendi istemci bulmak ve olası hataları düzeltmek için.  
   
@@ -37,7 +38,7 @@ Bu bölümde açıklanmıştır [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Test İstemcisi (WcfTestClient.exe) giriş parametreleri rastgele türler, hizmet ve hizmet yanıtı geri gönderir görünümü için giriş göndermek izin veren bir GUI aracıdır. İle birleştirildiğinde deneyimi sınama sorunsuz bir hizmet sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı.  
   
- [XML'den veri türü sınıfları oluşturma](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [XML'den Veri Türü Sınıfları Oluşturma](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  XML verileri Pano'ya depolanan bir kod sayfasına yapıştırılabilmesi için. Verilerde tanımlanan sınıflar kod türlerine dönüştürülür.  
   
@@ -53,6 +54,6 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Netsh.exe, bkz: [Netsh.exe aracı ve komut satırı anahtarları kullanmayı](http://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Visual Studio şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
- [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
  [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

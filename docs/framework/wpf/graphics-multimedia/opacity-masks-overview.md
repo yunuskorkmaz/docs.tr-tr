@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cd077d1e24fa50dc42a2169b45fe38930cc76c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2f34fbf48328ea24815615345e855144b8b42d2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Geçirgenlik maskeleri bölümleri bir öğe veya görselin saydam veya kısmen saydam yapmanızı sağlar. Geçirgenlik maskesi oluşturmak için uygulamanız bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği, bir öğenin veya <xref:System.Windows.Media.Visual>.  Öğe veya görsel fırça eşlenen ve her fırça piksel geçirgenlik değeri karşılık gelen her piksel öğe veya görselin sonuç geçirgenliğini belirlemek için kullanılır.  
@@ -126,5 +127,5 @@ DrawingBrush geçirgenlik maskeleme örneği
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e127fb02725d11e62c45157b4e45327fc9f1ace
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="script-blocks-using-msxslscript"></a>Komut dosyası blokları kullanarak msxsl: Script
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış komut dosyalarını destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, tanımlı hiçbir işlev Microsoft Ara dili (MSIL) kod belge nesne modeli (CodeDOM) tarafından derlenir ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme için stil sayfası oluşturulan derleme daha ayrıdır.  
@@ -156,5 +159,5 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Dinamik kaynak kodu oluşturma ve derleme](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [Dinamik Kaynak Kodu Oluşturma ve Derleme](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

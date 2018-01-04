@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ccb89b67b222c11695131a1aa8423b89df1c9a70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranışı nasıl türü eşlemesi çözümler, derlemeler nasıl yüklenir, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, yazma nesnesi ile nasıl etkileşim kurduğu niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konu, .NET Framework XAML hizmetlerinde ve CLR türü sistemi temelinde ilişkili varsayılan XAML şema içeriği özelliklerini açıklar. Bu konu ayrıca WPF için kullanılan XAML şema içeriği açıklar.  
@@ -99,4 +100,4 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranış�
     -   Çağırmak için kısa ad + ortak anahtar belirteci kullanın <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML düğüm akış yapılarını ve kavramlarını anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+ [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

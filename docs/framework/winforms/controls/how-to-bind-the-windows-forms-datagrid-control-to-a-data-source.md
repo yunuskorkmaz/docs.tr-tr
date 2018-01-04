@@ -25,11 +25,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 185c094b32f0de7a1a26da144601961d92a625b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c136aca0eda9ea906ad8bf6853a263adf6130609
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 3.  (İsteğe bağlı) Sütun stilleri ve uygun tablo stilleri kılavuzuna ekleyin. Hiçbir tablo stilleri varsa Tablo görürsünüz, ancak en az biçimlendirme ile tüm sütunları görünür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid denetimine genel bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [Nasıl yapılır: tabloları ekleyebilir ve sütunları Windows Forms DataGrid denetimi](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [DataGrid denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [DataGrid Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)

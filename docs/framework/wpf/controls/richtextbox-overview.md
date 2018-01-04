@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-overview"></a>RichTextBox Genel Bakışı
 <xref:System.Windows.Controls.RichTextBox> Denetimi görüntülemek veya paragraflar, görüntüler, tablolar ve benzeri bir akış içeriğini düzenlemenize olanak sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -106,4 +107,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)

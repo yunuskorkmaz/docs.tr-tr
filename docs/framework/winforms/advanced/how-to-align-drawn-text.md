@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2f2f6bd088ad58277839cf7e32a98d67ca3bd15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6be28641073bf430b1dc51c428228d0fb114d4cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-align-drawn-text"></a>Nasıl yapılır: Çizilmiş Metni Hizalama
 Özel çizim gerçekleştirdiğinizde, genellikle bir form veya denetim çizilmiş metni ortalamak isteyebilirsiniz. Kolayca ile çizilmiş metni hizalama <xref:System.Drawing.Graphics.DrawString%2A> veya <xref:System.Windows.Forms.TextRenderer.DrawText%2A> doğru biçimlendirme nesnesi oluşturma ve uygun biçimde bayrakları ayarlayarak yöntemleri.  
@@ -46,6 +47,6 @@ ms.lasthandoff: 11/21/2017
  Önceki kod örnekleri Windows Forms ile kullanılmak üzere tasarlanmıştır ve ihtiyaç <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: GDI ile metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
- [Yazı tipleri ve metin kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- [Nasıl yapılır: yazı tipi aileleri ve yazı tipleri](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)
+ [Nasıl yapılır: GDI ile Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Yazı Tipleri ve Metin Kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)

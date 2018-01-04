@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak bazı özellikler kısmen güvenilen kod özel izinleri gerektirir. Ayrıca, yansıma yayma ile kısmi güven ve güvenlik saydam derlemeleri tarafından kullanılmak üzere tasarlanmış bir özelliği anonim barındırılan dinamik yöntemler vardır.  
@@ -220,5 +221,5 @@ Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak baz
 -   Bu kod örneği yapı [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], kendisine geçirdiğinizde ad alanı içerecek şekilde sınıfın adını değiştirmeli <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı, projeye adıdır. Örneğin, "PartialTrust" projesiyse sınıf adı "PartialTrust.Worker" olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik sorunları yansıma yayma](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  [Nasıl yapılır: korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

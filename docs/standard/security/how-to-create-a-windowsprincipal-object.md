@@ -21,11 +21,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f35c7382138c92a5f6618e388b070251516b7b0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c4eb890696162af61f1355bfca50ce5dd2a615ad
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma
 Oluşturmanın iki yolu vardır bir <xref:System.Security.Principal.WindowsPrincipal> nesnesi, olup kod sürekli bağlı olarak rol tabanlı doğrulama gerçekleştirmelisiniz veya yalnızca bir kez gerçekleştirmeniz gerekir.  
@@ -85,4 +88,4 @@ Oluşturmanın iki yolu vardır bir <xref:System.Security.Principal.WindowsPrinc
 3.  Asıl nesne oluşturduğunuzda doğrulamak için birkaç yöntemden birini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Asıl ve kimlik nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)
+ [Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)

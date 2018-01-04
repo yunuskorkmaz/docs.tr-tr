@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30c8b2544fc4a7b5e93fa1e00bfed5fe3bbe9908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d52c0a2305a3f38cf9a228f211021006ee8b131
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-modelitem-editing-context"></a>Bağlam düzenleme ModelItem kullanma
 <xref:System.Activities.Presentation.Model.ModelItem> Bağlam düzenleme nesnedir, konak uygulama Tasarımcısı ile iletişim kurmak için kullanır. <xref:System.Activities.Presentation.EditingContext>iki yöntem sunar <xref:System.Activities.Presentation.EditingContext.Items%2A> ve <xref:System.Activities.Presentation.EditingContext.Services%2A>, kullanılabilir  

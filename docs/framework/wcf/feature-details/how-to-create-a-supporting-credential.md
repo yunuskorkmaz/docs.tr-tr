@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a460a3fdd48813801b18af5a896252134687816d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmet istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlar bir kimlik bilgisi 18 yaş olan. İkinci kimlik bilgisinin bir *kimlik bilgisi destekleyen*. Bu konuda, bu tür kimlik bilgilerini uygulamak açıklanmaktadır bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci.  
@@ -91,4 +92,4 @@ Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümk
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+ [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

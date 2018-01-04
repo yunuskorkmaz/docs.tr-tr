@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>Yerelleştirme
 Yerelleştirme uygulama destekleyecek her kültür için yerelleştirilmiş sürümleri içine uygulamanın kaynaklarını çevirme işlemidir. Yalnızca tamamladıktan sonra yerelleştirme adıma devam etmemelisiniz [Yerelleştirilebilirlik gözden geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md) globalized uygulama yerelleştirme için hazır olduğunu doğrulamak için adım.  
@@ -40,7 +43,7 @@ Yerelleştirme uygulama destekleyecek her kültür için yerelleştirilmiş sür
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe), hızlı bir şekilde Windows Forms için hedef kültürlere yerelleştirme sayesinde sağlar. Bu aracı kullanmayla ilgili daha fazla bilgi için bkz: [Winres.exe (Windows Forms Kaynak Düzenleyici)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
- [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+ [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

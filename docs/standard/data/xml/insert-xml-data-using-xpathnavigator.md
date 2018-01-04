@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34151590a14c48c0a84677f2d7cae662291edf40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33a1bf08d7a66dd970a3a7207293277021ed46b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XML XPathNavigator kullanarak verileri ekleme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı XML belgesinde eş, alt ve öznitelik düğümleri eklemek için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesnesi olmalıdır düzenlenebilir, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> olmalıdır `true`.  
@@ -341,6 +344,6 @@ document.Save("book.xml");
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XML XPathNavigator kullanarak verileri değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- [XML XPathNavigator kullanarak verileri Kaldır](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathNavigator Kullanarak XML Verilerini Değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Kaldırma](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

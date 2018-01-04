@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-design"></a>Olay tasarım
 Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin yapıları) en yaygın kullanılan biçimidir. Diğer geri çağırma düzenekler Temsilciler, sanal üyeleri ve arabirim tabanlı eklentiler alma üyeleri içerir. Kullanılabilirlik incelemeleri verilerden geliştiriciler çoğunluğu için bir geri çağırma mekanizmaları kullanan çok olayları kullanarak daha rahat olduğunu gösterir. Olayları sorunsuz şekilde Visual Studio ve birçok dilde ile tümleşiktir.  
@@ -79,5 +82,5 @@ Olayları geri aramalar (Framework'te kullanıcı kodu içine çağırmak izin y
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

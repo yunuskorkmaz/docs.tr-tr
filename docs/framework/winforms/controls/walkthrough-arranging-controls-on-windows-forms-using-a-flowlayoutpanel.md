@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84b909f0c638bf0fb7c19ecc3a86c7c32bab2adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8727bc4447955b079c8cd8d3949144e904b0148e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'ta Denetimleri Düzenleme
 Bazı uygulamalar kendisini formun boyutlandırıldığında veya içeriği boyutunu değiştirmek gibi uygun şekilde düzenler bir düzen formla gerektirir. Ne zaman dinamik düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, bir düzen panel kullanmayı düşünün.  
@@ -200,10 +201,10 @@ Bazı uygulamalar kendisini formun boyutlandırıldığında veya içeriği boyu
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
- [İzlenecek yol: Bir TableLayoutPanel kullanarak Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricilerin ve tasarımcıların resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [Nasıl yapılır: Windows Forms denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [Nasıl yapılır: Windows formlarında denetimleri sabitleme](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+ [AutoSize Özelliğine Genel Bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Nasıl yapılır: Windows Forms’a Denetimleri Yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’da Denetimleri Bağlama](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

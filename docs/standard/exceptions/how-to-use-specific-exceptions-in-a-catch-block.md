@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94e5840ca4bb5f871a0ae91f53404de6a60d749d
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ebc59035140ff0464cd959129fdf48a4e9a269f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Catch bloğunda belirli özel durumların kullanma
 
@@ -40,4 +43,4 @@ Aşağıdaki kod örneğinde bir `try` / `catch` catch bloğu bir <xref:System.I
 [!code-vb[CatchException#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception1.vb#2)] 
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel durumlar](index.md)
+[Özel Durumlar](index.md)

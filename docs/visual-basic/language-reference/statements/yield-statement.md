@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Yield Deyimi (Visual Basic)
 Bir koleksiyona sonraki öğeye gönderir bir `For Each...Next` deyimi.  
@@ -47,7 +47,7 @@ Yield expression
   
  "Verim" ayrılmış bir sözcük değildir ve yalnızca içinde kullanıldığında, özel bir anlamı olan bir `Iterator` işlevi veya `Get` erişimcisi.  
   
- Yineleyici işlevleri hakkında daha fazla bilgi için ve `Get` erişimciler, bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Yineleyici işlevleri hakkında daha fazla bilgi için ve `Get` erişimciler, bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Yineleyici işlevleri ve Get erişimcisi  
  Yineleyici işlevin bildirimi veya `Get` erişimci aşağıdaki gereksinimleri karşılaması gerekir:  
@@ -60,7 +60,7 @@ Yield expression
   
  Yineleyici işlevi, bir olay, örnek oluşturucusu, statik Oluşturucusu veya statik yıkıcı gerçekleşemez.  
   
- Yineleyici işlevi adsız bir işlev olabilir. Daha fazla bilgi için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Yineleyici işlevi adsız bir işlev olabilir. Daha fazla bilgi için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
  A `Yield` deyimi içinde bulunabilir bir `Try` , engelleme bir [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` sahip blok bir `Yield` deyimi olabilir `Catch` engeller ve olabilir bir `Finally` bloğu.  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Ek örnekler için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Ek örnekler için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
- [Deyimleri](../../../visual-basic/language-reference/statements/index.md)
+ [Deyimler](../../../visual-basic/language-reference/statements/index.md)

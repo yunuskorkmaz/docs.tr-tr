@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffd472a7c410bd541ea0382f05f7ed92acb0e688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1d17aa00ce551d951b0e178304632572abf592b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="operator-overloads"></a>İşleç aşırı yüklemeleri
 İşleç aşırı yüklemeleri yerleşik dil temelleri oldukları gibi görünmesi framework türü izin verir.  
@@ -121,5 +124,5 @@ ms.lasthandoff: 11/21/2017
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

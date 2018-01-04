@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 198ec8b8cb0b27e009f01f8e60a47e8086a7dbc7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="easing-functions"></a>Kolaylaştırıcı İşlevler
 Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak sağlar. Örneğin, bir nesnenin gerçekçi Sıçrama veya dizinindeymiş gibi yay üzerinde davranır isteyebilirsiniz. Bu etkilerle yaklaşık için anahtar çerçeve veya From/To/By bile animasyonları kullanabilirsiniz, ancak iş önemli miktarda götürecek ve animasyon matematiksel formül kullanmaktan daha az doğru olacaktır.  

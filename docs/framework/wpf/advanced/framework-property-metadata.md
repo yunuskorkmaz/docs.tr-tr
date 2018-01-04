@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b516a3b979570c5b3cb3f6fd1edaa038167f1a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul nesne öğelerin özellikleri için bildirilen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi bu özellikleri WPF çerçeve düzeyi ataması kapsar ve özellik sistem iyileştirmelerini tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir. Çerçeve özellik meta verileri, belirli öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
@@ -84,6 +85,6 @@ Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul ne
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
- [Bağımlılık özelliği meta verileri](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

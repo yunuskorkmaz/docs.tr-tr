@@ -21,11 +21,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 659c30105be7826aba4bbad49d68bdb94ddb0efc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]çok çeşitli daha kolay erişilebilen ve okunan önceki nesil içinde olacak şekilde tasarlanmıştır yüksek kaliteli içerik oluşturulmasını sağlamak belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtılmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
@@ -153,6 +154,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.IO.Packaging.PackageRelationship>  
  <xref:System.Windows.Controls.DocumentViewer>  
  [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Belgeyi seri hale getirme ve depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)

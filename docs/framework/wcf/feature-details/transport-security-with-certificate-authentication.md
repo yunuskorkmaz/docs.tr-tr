@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 632d4cc19c19342363228a1e86b1ba6445d14ac9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 Bu konu, taşıma güvenliği kullanırken X.509 sertifikalarını server ve istemci kimlik doğrulaması kullanarak açıklar. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Sertifika bir üçüncü taraf veren sertifikalarının görülür bir sertifika yetkilisi tarafından verilmelidir. Bir Windows Server etki alanı Active Directory Sertifika Hizmetleri, istemci bilgisayarlar etki alanı için sertifikalar vermek üzere kullanılabilir. Daha fazla bilgi için bkz: [Windows 2008 R2 Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Bu senaryoda, hizmetin altında Internet Information Services (Güvenli Yuva Katmanı (SSL) ile yapılandırılmış olan IIS) barındırılıyor. Hizmet, istemcilerin sunucunun kimliğini doğrulamak bir SSL (X.509) sertifikası ile yapılandırılır. İstemci aynı zamanda istemci kimliğini doğrulamak hizmet veren bir X.509 sertifikası ile yapılandırılır. İstemci tarafından sunucunun sertifikası güvenilir olması gerekir ve istemcinin sertifika sunucusu tarafından güvenilir olması gerekir. Gerçek mekanizması nasıl hizmeti istemci doğrular ve birbirlerinin kimliğini, bu konu kapsamında değildir. Daha fazla bilgi için bkz: [wikipedia'da dijital imza](http://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -147,5 +148,5 @@ cc.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

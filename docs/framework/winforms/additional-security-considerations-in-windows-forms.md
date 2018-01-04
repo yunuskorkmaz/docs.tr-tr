@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8b693f7faf9abb71d214ca755fc9587a1dcc0ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]güvenlik ayarları uygulamanız farklı bir kısmi güven ortamında yerel bilgisayarınızda çalışmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve başka şeylerin yönetilmeyen API'ler kritik gibi yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları Microsoft Win32 API veya diğer güvenlik sistemi tarafından doğrulanıp doğrulanamadığını API'larını çağırma yeteneği etkiler. Güvenlik, dosya ve veri erişim dahil olmak üzere ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişim hakkında daha fazla bilgi için bkz: [daha fazla güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz: [daha fazla Güvenli Yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -99,8 +100,8 @@ ms.lasthandoff: 11/21/2017
  Yönetilmeyen kodu çağırma izni en herhangi bir şey gerçekleştirmek bir uygulama sağlar. Bu nedenle, yönetilmeyen kodu çağırma izni yalnızca güvenilen bir kaynaktan geliyor uygulamalar için verilmiş olmalıdır. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yaparsa uygulama işlevselliği parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinleri hakkında daha fazla bilgi için bkz: [NIB: Genel Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Daha güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- [Windows Forms'ta daha güvenli yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Windows Forms'a genel bakış güvenliği](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Windows Forms güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
- [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications)
+ [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
+ [ClickOnce Uygulamalarının Güvenliğini Sağlama](/visualstudio/deployment/securing-clickonce-applications)

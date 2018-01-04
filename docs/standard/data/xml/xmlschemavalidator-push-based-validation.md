@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a78321b289dd19c5086223856fd3142f1aef75c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator gönderim tabanlı doğrulama
 <xref:System.Xml.Schema.XmlSchemaValidator> Sınıfı bir gönderim tabanlı şekilde XML şemaları karşı XML verileri doğrulamak için verimli, yüksek performanslı bir mekanizma sağlar. Örneğin, <xref:System.Xml.Schema.XmlSchemaValidator> sınıfı bir XML belgesi olarak serileştirir ve bir doğrulama XML okuyucusu kullanarak belgeyi yeniden ayrıştırma zorunda kalmadan bir XML bilgi yerinde doğrulamanıza olanak verir.  

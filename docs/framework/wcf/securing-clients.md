@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], istemciler için güvenlik gereksinimlerini hizmet belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. güvenli bir hizmet oluşturma [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
@@ -168,9 +169,9 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
  [\<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md)  
- [Bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: istemci kimlik bilgileri türünü belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+ [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
+ [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

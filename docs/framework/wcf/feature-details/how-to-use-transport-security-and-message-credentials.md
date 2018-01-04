@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e29ae3a0374f6ee027180835629eacceaa928d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
 Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullanan taşıma ve ileti güvenlik modlarında iyi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: güvenlik modunu ayarlama, [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -170,6 +171,6 @@ Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme kullan
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Hizmetleri güvenli hale getirme](../../../../docs/framework/wcf/securing-services.md)  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

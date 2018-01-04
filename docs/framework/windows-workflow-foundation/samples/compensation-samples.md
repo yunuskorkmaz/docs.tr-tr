@@ -12,24 +12,25 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669e94dbc7434074d705fd05de0ece6729c31c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b32ab84a3585fc7c1a4638851f5f78eebd41358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation-samples"></a>Maaş (örnekler)
 Bu bölümde maaş ilgili örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Compensable etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
+ [Compensable Etkinliği](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
  Nasıl kullanılacağı ortaya <xref:System.Activities.Statements.CompensableActivity> normal yürütme sırasında belirli bir eylem için yapılacak işleri ve o eylemi dengelemek için daha sonra gerekirse yapılması gerekli olan iş tanımlamak için etkinlik.  
   
- [Özel maaş](../../../../docs/framework/windows-workflow-foundation/samples/custom-compensation-sample.md)  
+ [Özel Dengeleme](../../../../docs/framework/windows-workflow-foundation/samples/custom-compensation-sample.md)  
  Nasıl kullanılacağı ortaya <xref:System.Activities.Statements.CompensableActivity> ve özel maaş mantığını tanımlamak üzere kendi maaş işleyicisi.  
   
- [Onaylama](../../../../docs/framework/windows-workflow-foundation/samples/confirmation.md)  
+ [Onay](../../../../docs/framework/windows-workflow-foundation/samples/confirmation.md)  
  Kullanımını çevreleyen dört yaygın senaryolar gösterilmektedir <xref:System.Activities.Statements.CompensableActivity> ve onay.  
   
- [İptal işleyicisi Compensable etkinlik](../../../../docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md)  
+ [Compensable Etkinliğinde İptal İşleyicisi](../../../../docs/framework/windows-workflow-foundation/samples/cancellation-handler-on-compensable-activity.md)  
  Üzerinde bir iptal işleyici kullanımını gösteren bir <xref:System.Activities.Statements.CompensableActivity>.

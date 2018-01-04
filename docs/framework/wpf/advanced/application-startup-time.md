@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1e39bf6db28290b7cba600ea1d2012c58633587
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-startup-time"></a>Uygulama Başlangıç Zamanı
 Bir WPF uygulaması başlatmak gerekli süreyi büyük ölçüde farklılık gösterebilir. Bu konuda, bir Windows Presentation Foundation (WPF) uygulaması için algılanan ve fiili başlangıç zamanını azaltmak için çeşitli teknikleri açıklar.  
@@ -137,6 +138,6 @@ Bir WPF uygulaması başlatmak gerekli süreyi büyük ölçüde farklılık gö
  <xref:System.AppDomain>  
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
  <xref:System.Resources.ResourceManager>  
- [WPF uygulaması için bir giriş ekranı ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [WPF Uygulamasına Giriş Ekranı Ekleme](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
+ [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [\<generatePublisherEvidence > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

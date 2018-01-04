@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21e2026e7ce0f2dcf1ffc9a328b1bb9630cd8fbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b9e60f3e941dd1d7d89675f4483ae940b039ba10
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dependency-properties"></a>Bağımlılık özellikleri
 Bağımlılık özelliği (DP) yerine bir türü değişkeni (alanı), örneğin bir özellik deposu değerini depolar normal bir özelliktir.  
@@ -106,5 +109,5 @@ public class Grid {
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Ortak tasarım desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Ortak Tasarım Desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f545cf4689a2c8058e77f4b4721788ffb0e7247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme
 Daha gelişmiş çift arabelleğe alma senaryoları için kullandığınız [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kendi çift arabelleğe alma mantığını uygulamak için sınıflar. Ayırma ve tek tek grafik arabellekleri yönetme sorumlu sınıfı <xref:System.Drawing.BufferedGraphicsContext> sınıfı. Her uygulamanın kendi varsayılan var. <xref:System.Drawing.BufferedGraphicsContext> , yöneten tüm bu uygulama için arabelleğe alma çift varsayılan. Çağırarak bu örneğine başvuru alabilir <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
@@ -49,5 +50,5 @@ Daha gelişmiş çift arabelleğe alma senaryoları için kullandığınız [!IN
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.BufferedGraphicsContext>  
- [Çift arabelleğe alınan grafikleri](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Nasıl yapılır: arabelleğe alınan grafikleri elle işleme](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)
+ [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)

@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c5cfcc9f35e4a07e9426a4dd24c1e2f04985f16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Bir belge içine katıştırılmış stil sayfası yönergeleri
 Bazen, stil sayfası yönergesinde varolan XML içeriyor `<?xml:stylesheet?>`. Microsoft Internet Explorer alternatif olarak bu kabul `<?xml-stylesheet?>` sözdizimi. XML veri içerdiğinde bir `<?xml:stylesheet?>` yönerge, aşağıdaki veri gösterildiği gibi bu verileri XML belge nesne modeli (DOM) içine yüklemeyi denerken bir özel durum oluşturur.  
@@ -44,4 +47,4 @@ Bazen, stil sayfası yönergesinde varolan XML içeriyor `<?xml:stylesheet?>`. M
  World Wide Web Konsorsiyumu (W3C) ilişkilendirme stil sayfaları www.w3.org/TR/xml-stylesheet bulunan XML belgeleri sürüm 1.0 öneri ile göre XSLTstilsayfasınıbirXMLbelgesiileilişkilendirmekiçinişlemyönergesiolup`<?xml-stylesheet?>`, iki nokta üst üste değiştirerek bir tire ile.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

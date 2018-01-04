@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa388328b1fee73aef829a512dcbcadbd3889781
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Zaman uyumsuz etkinlikleri WF içinde oluşturma
 <xref:System.Activities.AsyncCodeActivity>Etkinlik yazarlar etkinleştirir ve zaman uyumsuz yürütme mantığını uygulamak için etkinlikler türetilmiş kullanmak için bir temel sınıf sağlar. Bu, zaman uyumsuz iş akışı Zamanlayıcı iş parçacığı tutan ve paralel olarak çalıştırılabilmesi için hiç etkinlik engelleme olmadan gerçekleştirmelisiniz özel etkinlikler için kullanışlıdır. Bu konu kullanarak zaman uyumsuz özel etkinlikler oluşturmak nasıl bir bakış sunar <xref:System.Activities.AsyncCodeActivity>.  
@@ -58,4 +59,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Action>  
  <xref:System.Func%602>  
- [AsyncOperationContext bir etkinlikte kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+ [Bir Etkinlikte AsyncOperationContext Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)

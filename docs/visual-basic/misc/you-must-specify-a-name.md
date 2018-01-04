@@ -8,11 +8,11 @@ ms.assetid: 9056bc12-951c-4b86-a44a-473d7c8d5f75
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dbf77f953911cf51d3d2e539213c8d02b7c79f5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b7c57f55b589a265a0c8b905262de2fffddbd0c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="you-must-specify-a-name"></a>Bir ad belirtmelisiniz
 Bir dosyayı yeniden adlandırma gibi dosya işlemleri gerçekleştirirken adı belirtmeniz gerekir.  
@@ -22,5 +22,5 @@ Bir dosyayı yeniden adlandırma gibi dosya işlemleri gerçekleştirirken adı 
 -   Adı belirtin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata türleri](../../visual-basic/programming-guide/language-features/error-types.md)  
- [My.Computer.FileSystem nesnesi](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+ [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

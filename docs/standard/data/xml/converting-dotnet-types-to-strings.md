@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c3abe140e62f112a15a1ad1b1b2a79c14364b26d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6ca134e13593fdacd759b0000e0e159f76ea067f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-net-framework-types-to-strings"></a>.NET Framework türleri dizeleri dönüştürme
 .NET Framework türü bir dizeye dönüştürmek istediğiniz kullanırsanız **ToString** yöntemi. **ToString** yöntemi geçirilen tür bir dize gösterimini döndürür. Aşağıdaki tabloda XML Şeması (XSD) belirtimleri eşleyen biçiminde bir dize döndürecek .NET Framework türleri listelenmektedir.  
@@ -33,5 +36,5 @@ ms.lasthandoff: 11/21/2017
 |TimeSpan|Biçimidir PnYnMnTnHnMnS, örneğin, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10hours süresi 30 dakika ve 20 saniyedir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML veri türlerini dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [.NET Framework veri türleri için dizeleri dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+ [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [.NET Framework Veri Türleri için Dizeleri Dönüştürme](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

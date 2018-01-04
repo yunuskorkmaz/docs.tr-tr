@@ -13,57 +13,58 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be20fa22484cb002792a5bc714f2009fb342f644
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-reference"></a>Özel Durum Başvurusu
 Bu bölümde aşağıdaki alanlarda tarafından oluşturulan tüm özel durumlar listelenir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
   
  [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
- [COM + tümleştirme](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [COM+ Tümleştirme](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
   
  [Yapılandırma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Temel iletişimler: Kanal çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Temel İletişimler: Kanal Çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Temel iletişimler: Bağlantı çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Temel İletişimler: Bağlantı Çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
  Çekirdek İletişimler: HTTP/HTTPS Taşıma Kanalları  
   
- [Temel iletişimler: Dahili çift yönlü taşıma kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Temel İletişimler: Dahili Çift Yönlü Taşıma Kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Temel iletişimler: Adlandırılmış kanal taşıma kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Temel İletişimler: Adlandırılmış Kanal Taşıma Kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Temel iletişimler: TCP taşıma kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Temel İletişimler: TCP Taşıma Kanalları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Temel iletişimler: Taşıma çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Temel İletişimler: Taşıma Çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
- [Temel iletişimler: yardımcı programlar](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
+ [Temel İletişimler: Yardımcı Programlar](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Temel iletişimler: Web barındırma desteği](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Temel İletişimler: Web Barındırma Desteği](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
  [İşlem](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
  [Barındırma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/hosting-exceptions.md)  
   
- [Eş kanal](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
+ [Eş Kanal](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/peer-channel.md)  
   
- [MSMQ tümleştirme taşıma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
+ [MSMQ Tümleştirme Taşıma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
- [MSMQ taşıma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [MSMQ Taşıma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   
  [Güvenilir Mesajlaşma](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
   
- [Güvenlik özel durumları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/security-exceptions.md)  
+ [Güvenlik Özel Durumları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/security-exceptions.md)  
   
- [Hizmet çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework.md)  
+ [Hizmet Çerçevesi](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework.md)  
   
- [Hizmet çerçevesi verileri](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework-data.md)  
+ [Hizmet Çerçevesi Verileri](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/service-framework-data.md)  
   
- [İşlem biçimlendirici](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
+ [İşlem Biçimlendirici](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-formatter.md)  
   
- [Araçları](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)
+ [Araçlar](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/tools.md)

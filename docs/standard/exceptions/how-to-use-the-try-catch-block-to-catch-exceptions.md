@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a72a21085c37bed4d84518810f69a013d515189
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 192f762872b112ea261d22251175db6867229437
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Özel durumları yakalamak için try/catch bloğu kullanma
 
@@ -44,4 +47,4 @@ Ortak dil çalışma zamanı catch bloğu tarafından yakalandı özel durumlar�
 > Neredeyse her kod satırının bir özel durum, özellikle ortak dil çalışma zamanı tarafından kendisine gibi oluşturulan özel durumlara neden olabilir <xref:System.OutOfMemoryException>. Uygulamaların çoğu bu durumlarla başa gerekmez, ancak, başkaları tarafından kullanılacak kitaplıkları yazılırken bu olasılığını dikkat etmeniz gerekir. Öneriler zaman ayarlamak bir Try bloğunda kod için bkz: [özel durumlar için en iyi uygulamaları](best-practices-for-exceptions.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel durumlar](index.md)
+[Özel Durumlar](index.md)

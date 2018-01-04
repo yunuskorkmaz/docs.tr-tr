@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33387a9b155a471209039e5977bc7134b1439ff3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3bfa798bf2f2c758905512df32e03214634b6c2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
 Bir Windows İşlem Etkinleştirme barındırılan Hizmetleri'nı (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda bu konuda özetlenir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. EDİLDİ Genelleştirme HTTP olmayan aktarım protokolleri ile iş Internet Information Services (IIS) özellikleri olan yeni işlem Etkinleştirme hizmeti. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Dinleyici Bağdaştırıcısı arabirimi tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullandığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve Message Queuing gibi.  
@@ -109,5 +110,5 @@ Bir Windows İşlem Etkinleştirme barındırılan Hizmetleri'nı (WAS olarak da
 6.  Derleme ve istemci çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

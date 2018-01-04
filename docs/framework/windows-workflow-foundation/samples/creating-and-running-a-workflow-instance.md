@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b25acebfaf6df68ac3163a5ef4bcb235077139cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d6dd2f27a6db9770231a5c947c98614d4f6f175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Oluşturma ve bir iş akışı örneği çalıştırma
 Bu örnek, bir iş akışı örneği çalıştırmak gösterilmiştir. Zaman uyumlu ve zaman uyumsuz olarak yürütülecek nasıl gösterir.  
@@ -39,4 +40,4 @@ Bu örnek, bir iş akışı örneği çalıştırmak gösterilmiştir. Zaman uyu
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WorkflowInvoker ve WorkflowApplication kullanma](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+ [WorkflowInvoker ve WorkflowApplication Kullanma](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)

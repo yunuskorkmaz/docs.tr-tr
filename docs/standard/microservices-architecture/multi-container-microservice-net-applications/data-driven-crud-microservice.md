@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir 
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: b814d344f2c78e7cf57f9e2896cf1d6b52db38d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fa9f3ad2e08b68fcdc60375ab164cb87a3eeb91
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -48,7 +51,7 @@ Son olarak, Dockerfile ve docker-compose.yml meta veri dosyaları düzenleyerek,
 
 **Şekil 8-6**. Visual Studio'da ASP.NET çekirdek Web API projesi oluşturma
 
-Projesi oluşturduktan sonra Entity Framework API veya diğer API kullanarak tüm diğer Web API projesinde, olduğu gibi MVC denetleyicileri uygulayabilirsiniz. EShopOnContainers.Catalog.API projesinde, o mikro hizmet ana bağımlılıkları yalnızca ASP.NET Core kendisi, Entity Framework ve Swashbuckle, olduğunu Şekil 8-7'de gösterildiği gibi görebilirsiniz.
+Projesi oluşturduktan sonra Entity Framework API veya diğer API kullanarak tüm diğer Web API projesinde, olduğu gibi MVC denetleyicileri uygulayabilirsiniz. Yeni bir Web API projesinde, mikro hizmet ASP.NET Core üzerinde kendisini bakımından, yalnızca bağımlılık, olduğunu görebilirsiniz. Dahili olarak, içinde `Microsoft.AspNetCore.All` bağımlılık, onu başvurduğu Entity Framework ve diğer birçok .NET Core Nuget paketleri, Şekil 8-7'de gösterildiği gibi.
 
 ![](./media/image8.PNG)
 
@@ -60,13 +63,6 @@ Hafif, Genişletilebilir, Entity Framework (EF) çekirdeği olur ve platformlar 
 
 Veritabanını bir kapsayıcıda Linux Docker görüntüsü için SQL Server ile çalıştığı için katalog mikro hizmet EF ve SQL Server sağlayıcısı kullanır. Ancak, veritabanı içine Windows Şirket içi veya Azure SQL DB gibi herhangi bir SQL sunucusuna dağıtılabilir. Değiştirmek için gereken tek şey, ASP.NET Web API mikro hizmet bağlantı dizesinde.
 
-#### <a name="add-entity-framework-core-to-your-dependencies"></a>Entity Framework Çekirdek, bağımlılıkları için ekleyin.
-
-Bu durumda SQL Server ' dan Visual Studio IDE içinde veya NuGet konsolu ile kullanmak istediğiniz veritabanı sağlayıcısı için NuGet paketini yükleyebilirsiniz. Aşağıdaki komutu kullanın:
-
-```
-  Install-Package Microsoft.EntityFrameworkCore.SqlServer
-```
 
 #### <a name="the-data-model"></a>Veri modeli
 
@@ -79,12 +75,20 @@ public class CatalogItem
     public string Name { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }
+    public string PictureFileName { get; set; }
     public string PictureUri { get; set; }
     public int CatalogTypeId { get; set; }
     public CatalogType CatalogType { get; set; }
     public int CatalogBrandId { get; set; }
     public CatalogBrand CatalogBrand { get; set; }
+    public int AvailableStock { get; set; }
+    public int RestockThreshold { get; set; }
+    public int MaxStockThreshold { get; set; }
+
+    public bool OnReorder { get; set; }
     public CatalogItem() { }
+
+    // Additional code ...
 }
 ```
 
@@ -96,7 +100,6 @@ public class CatalogContext : DbContext
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
     {
     }
-
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
@@ -106,9 +109,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext uygulamasında ek kod olabilir. Örneğin, örnek uygulamasında OnModelCreating metodunun örnek verileri veritabanına erişmeye çalıştığında ilk kez otomatik olarak doldurur CatalogContext sınıfında sahibiz. Bu yöntem, tanıtım veriler için kullanışlıdır. Diğer birçok nesne/veritabanı varlık eşlemeleri özelleştirmek için OnModelCreating metodunun kullanabilirsiniz [EF genişletilebilirlik noktaları](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
-
-Daha fazla OnModelCreating içinde ayrıntılarını görebilirsiniz [Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama](#implementing_infrastructure_persistence) bölümde daha sonra bu kitap.
+Ek olabilir `DbContext` uygulamaları. Örneğin, örnek Catalog.API mikro yoktur saniyenin `DbContext` adlı `CatalogContextSeed` burada bunu otomatik olarak doldurur örnek verileri çalışır veritabanına erişmek için ilk kez. Bu yöntem, demo verileri ve otomatikleştirilmiş test senaryoları için de kullanışlıdır. İçinde `DbContext`, kullandığınız `OnModelCreating` nesne/veritabanı varlık eşlemeleri ile ve diğer özelleştirmek için yöntemi [EF genişletilebilirlik noktaları](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web API denetleyicilerinin verileri Sorgulama
 
@@ -122,13 +123,13 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-        IOptionsSnapshot<CatalogSettings> settings,
-        ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(CatalogContext context, 
+                             IOptionsSnapshot<CatalogSettings> settings,
+                             ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ??
-           throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+
         _settings = settings.Value;
         ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
@@ -136,22 +137,27 @@ public class CatalogController : ControllerBase
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
     [Route("[action]")]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-    [FromQuery]int pageIndex = 0)
+    [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+                                           [FromQuery]int pageIndex = 0)
+
     {
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
+
         var itemsOnPage = await _catalogContext.CatalogItems
             .OrderBy(c => c.Name)
             .Skip(pageSize * pageIndex)
             .Take(pageSize)
             .ToListAsync();
+
         itemsOnPage = ChangeUriPlaceholder(itemsOnPage);
+
         var model = new PaginatedItemsViewModel<CatalogItem>(
             pageIndex, pageSize, totalItems, itemsOnPage);
+
         return Ok(model);
     } 
-
     //...
 }
 ```
@@ -162,20 +168,22 @@ Veri oluşturulur, silinmiş ve varlık sınıfların örneklerini kullanarak ve
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
-   Name="Roslyn T-Shirt", Price = 12};
+                                     Name="Roslyn T-Shirt", Price = 12};
 _context.Catalog.Add(catalogItem);
 _context.SaveChanges();
 ```
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>ASP.NET Core ve Web API denetleyicilerinin bağımlılık ekleme
 
-ASP.NET Core kutu dışı bağımlılık ekleme (dı) kullanabilirsiniz. İsterseniz, tercih edilen IOC kapsayıcı ASP.NET Core altyapısını ekleyebilirsiniz ancak bir üçüncü taraf denetimi tersine çevirme (IOC) kapsayıcı ayarlamak gerekmez. Bu durumda, doğrudan gerekli EF DBContext veya denetleyicisi Oluşturucusu aracılığıyla ek depoları ekleyemezsiniz, anlamına gelir. Örnekte CatalogController sınıfının, biz CatalogContext türünde bir nesne ve diğer nesneleri CatalogController Oluşturucusu aracılığıyla injecting.
+ASP.NET Core kutu dışı bağımlılık ekleme (dı) kullanabilirsiniz. İsterseniz, tercih edilen IOC kapsayıcı ASP.NET Core altyapısını ekleyebilirsiniz ancak bir üçüncü taraf denetimi tersine çevirme (IOC) kapsayıcı ayarlamak gerekmez. Bu durumda, doğrudan gerekli EF DBContext veya denetleyicisi Oluşturucusu aracılığıyla ek depoları ekleyemezsiniz, anlamına gelir. Örnekte `CatalogController` sınıfı, biz injecting bir nesnenin `CatalogContext` yazın diğer nesneler arasında artı `CatalogController()` Oluşturucusu.
 
-DbContext sınıf kaydı hizmetin IOC kapsayıcı içine Web API projesinde ayarlamak için önemli bir yapılandırmadır. Genellikle başlangıç sınıfında Hizmetleri çağırarak bunu. Aşağıdaki örnekte gösterildiği gibi ConfigureServices yöntemi içinde AddDbContext yöntemi:
+DbContext sınıf kaydı hizmetin IOC kapsayıcı içine Web API projesinde ayarlamak için önemli bir yapılandırmadır. Bu nedenle, genellikle yaptığınız `Startup` çağırarak sınıfı `services.AddDbContext<DbContext>()` yönteminin içinde `ConfigureServices()` yöntemi, aşağıdaki örnekte gösterildiği gibi:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    // Additional code...
+
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -183,10 +191,10 @@ public void ConfigureServices(IServiceCollection services)
         {
            sqlOptions.
                MigrationsAssembly(
-               typeof(Startup).
-               GetTypeInfo().
-               Assembly.
-               GetName().Name);
+                   typeof(Startup).
+                    GetTypeInfo().
+                     Assembly.
+                      GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -234,9 +242,9 @@ ASP.NET Core ayarları kullanmak ve ConnectionString özelliğini settings.json 
 }
 ```
 
-Settings.json dosyası ConnectionString özelliği için veya başka bir özellik için varsayılan değerleri olabilir. Ancak, bu özellikleri docker compose.override.yml dosyasında belirttiğiniz ortam değişkenlerinin değerlerini tarafından geçersiz kılınır.
+Settings.json dosyası ConnectionString özelliği için veya başka bir özellik için varsayılan değerleri olabilir. Ancak, bu özellikleri Docker kullanırken, docker compose.override.yml dosyasında belirlediğiniz ortam değişkenleri değerlerle geçersiz kılınır.
 
-Bu Docker bunları işletim sistemi ortam değişkenleri olarak sizin için ayarlamanız şekilde, docker-compose.yml veya docker compose.override.yml dosyalarından, bu ortam değişkenleri aşağıdaki docker compose.override.yml dosyasında (bağlantı gösterildiği gibi başlatabilir Bu örnekte, dize ve diğer satırlar sarmalama, ancak bunu kendi dosyasında kaydırılacak).
+Bu Docker bunları işletim sistemi ortam değişkenleri olarak sizin için ayarlamanız şekilde, docker-compose.yml veya docker compose.override.yml dosyalarından, bu ortam değişkenleri aşağıdaki docker compose.override.yml dosyasında (bağlantı gösterildiği gibi başlatabilir Bu örnekte, dize ve diğer satırlar sarmalama, ancak bunu kendi kod dosyasında kaydırılacak).
 
 ```yml
 # docker-compose.override.yml
@@ -245,14 +253,12 @@ Bu Docker bunları işletim sistemi ortam değişkenleri olarak sizin için ayar
 catalog.api:
   environment:
     - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
-    - ExternalCatalogBaseUrl=http://10.0.75.1:5101
-    #- ExternalCatalogBaseUrl=http://dockerhoststaging.westus.cloudapp.azure.com:5101
-  
+    # Additional environment variables for this service
   ports:
-    - "5101:5101"
+    - "5101:80"
 ```
 
-Çözüm düzeyinde docker-compose.yml dosyaları yalnızca proje veya mikro hizmet düzeyinde yapılandırma dosyalarını daha esnek değildir, ancak aynı zamanda daha güvenli. Göz önünde bulundurun mikro hizmet yapı Docker görüntüleri docker-compose.yml içermeyen dosyaları, yalnızca ikili dosyaları ve yapılandırma dosyalarını Dockerfile dahil olmak üzere her mikro hizmet için. Ancak docker-compose.yml dosyası uygulamanız ile birlikte dağıtılmış durumda değil; Yalnızca dağıtım sırasında kullanılır. Bu nedenle, ortam değişkenleri değerlerini (hatta değerleri şifrelemeden) bu docker-compose.yml dosyalarını yerleştirme kodunuzu ile dağıtılan normal .NET yapılandırma dosyalarında bu değerleri yerleştirme değerinden daha güvenlidir.
+Çözüm düzeyinde docker-compose.yml dosyaları yalnızca proje veya mikro hizmet düzeyi, ancak daha da yapılandırma dosyaları ancak docker-compose dosyalarıyla adresindeki bildirilen ortam değişkenleri geçersiz kılarsanız daha da güvenli çok daha esnektir değil değerleri, dağıtım araçlarından VSTS Docker dağıtım görevleri gibi ayarlayın. 
 
 Son olarak, bu değeri kodunuzdan yapılandırmayı kullanarak alabileceğiniz\["ConnectionString"\]ConfigureServices yöntemi bir önceki kod örneğinde gösterildiği gibi.
 
@@ -291,8 +297,7 @@ Bu sürüm oluşturma mekanizması basittir ve uygun uç noktasına istek yönle
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 -   **Sürüm oluşturma bir RESTful web API'si**
-
-    [*https://docs.microsoft.com/Azure/Architecture/Best-Practices/api-Design#Versioning-a-RESTful-Web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Roy Fielding. Sürüm oluşturma, iletilir ve REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
@@ -343,9 +348,7 @@ Başka bir deyişle, API'nizi iyi bulma API'nizi kullanmak için geliştiriciler
 
 API explorer en önemli şey burada değil. Kendisini Swagger meta verilerde açıklayan bir Web API oluşturduktan sonra API birçok platformda hedefleyebilirsiniz istemci proxy sınıfı kod oluşturucuları dahil olmak üzere Swagger tabanlı Araçları'ndan, sorunsuz bir şekilde kullanılabilir. Örneğin, söz edildiği gibi [AutoRest](https://github.com/Azure/AutoRest) otomatik olarak .NET istemci sınıfları oluşturur. Ancak ek araçlar [swagger codegen](https://github.com/swagger-api/swagger-codegen) kod oluşturma API İstemci kitaplıkları, sunucu saplamalar ve belgeleri otomatik olarak izin veren öğeler de kullanılabilir.
 
-Şu anda iki NuGet paketlerini Swashbuckle oluşur: Swashbuckle.SwaggerGen ve Swashbuckle.SwaggerUi. Eski doğrudan API uygulamasından bir veya daha fazla Swagger belgeleri oluşturmak ve bunları JSON uç noktalar olarak kullanıma sunmak için işlevsellik sağlar. İkinci bir katıştırılmış aracın sürümü, uygulamanız tarafından sunulan ve API'nizi açıklamak için tarafından oluşturulan Swagger belge gücü swagger kullanıcı arabirimi sağlar. Ancak, en son sürümlerini Swashbuckle Swashbuckle.AspNetCore metapackage bunlarla sarılır.
-
-Kullanmanıza gerek .NET Core Web API projeleri için Not [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/1.0.0) sürümü 1.0.0 veya sonraki bir sürümü.
+Şu anda Swashbuckle iki üst düzey meta paket altındaki çeşitli iç NuGet paketlerini oluşur [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) sürümü 1.0.0 veya ASP.NET Core uygulamaları daha yeni.
 
 Web API projesinde bu NuGet paketleri yükledikten sonra aşağıdaki kodu olduğu gibi başlangıç sınıftaki Swagger yapılandırmanız gerekir:
 
@@ -358,18 +361,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Other ConfigureServices() code...
-        services.AddSwaggerGen();
-        services.ConfigureSwaggerGen(options =>
+
+        // Add framework services.
+        services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info()
+            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API",
-                TermsOfService = "eShopOnContainers terms of service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
+                TermsOfService = "Terms Of Service"
             });
         });
+
         // Other ConfigureServices() code...
     }
 
@@ -380,7 +385,10 @@ public class Startup
         // Other Configure() code...
         // ...
         app.UseSwagger()
-            .UseSwaggerUi();
+            .UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
     }
 }
 ```
@@ -390,7 +398,7 @@ Bunu yaptıktan sonra uygulamanızı başlatın ve bu benzer URL'ler kullanarak 
 ```json
   http://<your-root-url>/swagger/v1/swagger.json
   
-  http://<your-root-url>/swagger/ui
+  http://<your-root-url>/swagger/
 ```
 
 Daha önce oluşturulan kullanıcı arabirimini http:// URL için Swashbuckle tarafından oluşturulan gördüğünüz&lt;kök URL'si bilgisayarınızı &gt; /swagger/kullanıcı arabirimi. Şekil 8-9'da herhangi bir API yöntemi test nasıl de görebilirsiniz.

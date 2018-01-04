@@ -22,11 +22,14 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ff8ae4475bde934258e4d3f97451e598a53fb6c5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Koleksiyon, karma tabloları, kuyrukları, yığınları, paketler, sözlükler ve listeler gibi veri koleksiyonları ortak varyasyonları türleridir.  
@@ -43,10 +46,10 @@ Koleksiyon, karma tabloları, kuyrukları, yığınları, paketler, sözlükler 
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Koleksiyonlar ve veri yapıları](../../../docs/standard/collections/index.md)|Kullanılabilen çeşitli koleksiyon türleri açıklanmaktadır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]yığınları, kuyruklar, listeler, dizileri ve sözlükleri dahil olmak üzere.|  
-|[Karma tablo ve sözlük koleksiyon türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve nongeneric karma tabanlı sözlük türleri özelliklerini açıklar.|  
-|[Sıralanmış koleksiyon türleri](../../../docs/standard/collections/sorted-collection-types.md)|Listeler ve ayarlar için sıralama işlevselliği sağlayan sınıflar açıklanmaktadır.|  
-|[Genel türler](../../../docs/standard/generics/index.md)|Genel koleksiyonlar, temsilciler ve tarafından sağlanan arabirimler de dahil olmak üzere genel türler özelliği açıklanmakta [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. C#, Visual Basic ve Visual C++ özellik belgelerine ve yansıma gibi teknolojileri destekleyen için bağlantılar sağlar.|  
+|[Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)|Kullanılabilen çeşitli koleksiyon türleri açıklanmaktadır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]yığınları, kuyruklar, listeler, dizileri ve sözlükleri dahil olmak üzere.|  
+|[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve nongeneric karma tabanlı sözlük türleri özelliklerini açıklar.|  
+|[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Listeler ve ayarlar için sıralama işlevselliği sağlayan sınıflar açıklanmaktadır.|  
+|[Genel Türler](../../../docs/standard/generics/index.md)|Genel koleksiyonlar, temsilciler ve tarafından sağlanan arabirimler de dahil olmak üzere genel türler özelliği açıklanmakta [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. C#, Visual Basic ve Visual C++ özellik belgelerine ve yansıma gibi teknolojileri destekleyen için bağlantılar sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Collections?displayProperty=nameWithType>  

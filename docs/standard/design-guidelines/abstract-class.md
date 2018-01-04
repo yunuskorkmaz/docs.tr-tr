@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d7b680c3377cbfa40734a57f9408d9487dbf3769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 739f86acd534549bc997dc7a939cf43a0c6fc3cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="abstract-class-design"></a>Soyut sınıf tasarımı
 **X yok** soyut türlerinde genel ya da korumalı iç oluşturucuları tanımlama.  
@@ -46,5 +49,5 @@ ms.lasthandoff: 11/21/2017
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a46bf111b76ef6d07fa99cc3b19684a0726b7062
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66a297ed035f5afde06913b89f1f92dee5745f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="constructor-design"></a>Oluşturucu tasarım
 Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazın.  
@@ -87,5 +90,5 @@ Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazı
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

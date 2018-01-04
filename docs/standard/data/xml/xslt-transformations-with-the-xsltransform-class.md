@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 619e37ab63735ea77d3afb0d94f284b2f310efc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5795824a00b6949d5637ca3c75bd311d522c15f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Çok sınıfı ile XSLT dönüştürmeler
 > [!NOTE]
@@ -102,10 +105,10 @@ public class Sample
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Xsl.XslTransform>  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [İsteğe bağlı davranışları çok sınıfında uygulaması](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
- [Dönüşümleri XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [Dönüşümleri XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Çok XPathDocument giriş](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Çok XmlDataDocument giriş](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Çok XmlDocument giriş](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+ [Dönüşümlerde XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [Dönüşümlerde XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [XslTransform’a XPathDocument Girişi](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform’a XmlDataDocument Girişi](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform’a XmlDocument Girişi](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

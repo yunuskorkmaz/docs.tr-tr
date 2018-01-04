@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 492fd5e95e316d053fc36b9bb5cf521b879d7d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls"></a>Denetimler
 <a name="introduction"></a>
@@ -109,12 +110,12 @@ ms.lasthandoff: 11/21/2017
  Temel sınıflar hakkında daha fazla bilgi için bkz: [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Kategoriye göre denetimler](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Kategoriye Göre Denetimler](../../../../docs/framework/wpf/controls/controls-by-category.md)  
  [Denetim Kitaplığı](../../../../docs/framework/wpf/controls/control-library.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [Bir komut etkinleştir](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [İzlenecek yollar: özel bir animasyonlu düğme oluşturma](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+ [Komutu Etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
+ [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)

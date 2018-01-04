@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9946b29019474ad147b08a373d93b5bfe647648a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 177eb6298b45f074833fe0b3c7f45ceaba25a5e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolinitializationfailure"></a>ProtocolInitializationFailure
 Kimliği: 142  
@@ -30,5 +31,5 @@ Kimliği: 142
  Bu olay, WS-Atomic işlem Protokolü hizmetini başlatmak başarısız olduğunu gösterir. Sonuç olarak, WS-Atomic işlem işlevselliği devre dışı bırakıldı. Olay protokol kimliği, protokol adı, özel durum, işlem adı ve işlem kimliği listeler biçimindeki telefon numarasıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik genel başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49fbb0c71b13ee7d7ca04e0d40c1f9e32230d805
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Görsel Katmanda Tıklama Testi
 Bu konu görsel katman tarafından sağlanan isabet sınama işlevselliğine genel bir bakış sağlar. İsabet testi desteği sağlar, geometri veya nokta değerinin işlenmiş içeriği içinde olup olmadığını belirlemek bir <xref:System.Windows.Media.Visual>, birden çok nesne seçmek için seçim dikdörtgeninin gibi kullanıcı arabirimi davranışı uygulamak olanak sağlar.  
@@ -156,5 +157,5 @@ Görsel ağacı temizleme
  <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
  [İsabet sınaması örnek kullanan isabet testi](http://go.microsoft.com/fwlink/?LinkID=159994)  
  [İsabet testi Win32 birlikte çalışabilirlik örneği ile](http://go.microsoft.com/fwlink/?LinkID=159995)  
- [Test geometri görselde ulaştı.](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Win32 Konak Kapsayıcısı kullanan isabet testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+ [Görselde Tıklama Testi Geometrisi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

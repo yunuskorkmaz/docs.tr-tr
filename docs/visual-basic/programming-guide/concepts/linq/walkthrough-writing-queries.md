@@ -17,11 +17,11 @@ ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d30ad7f0db2760427493610c630f3fff8dcfac31
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
 Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadeleri. İzlenecek yol Öğrenci nesnelerin bir listesini sorgu oluşturma, sorguları çalıştırmak nasıl ve bunları değiştirme gösterilir. Sorguları nesne başlatıcılar, yerel türü çıkarımı ve anonim türler de dahil olmak üzere çeşitli özellikler dahil.  
@@ -143,20 +143,20 @@ Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceği
 ## <a name="additional-information"></a>Ek Bilgiler  
  Sorguları ile çalışmanın temel kavramları hakkında bilgi sahibi olduktan sonra belgeler ve örnekler için belirli türünü okumak hazır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı:  
   
- [Nesnelere LINQ](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
+ [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
- [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
+ [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
- [LINQ-DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)

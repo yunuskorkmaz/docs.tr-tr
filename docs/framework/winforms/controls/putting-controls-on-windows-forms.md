@@ -15,37 +15,38 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eccefd35e34ec2909cee81561576f8792e50e4e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a78c7a76c907e4b6d49963c76cfe98c099a391d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="putting-controls-on-windows-forms"></a>Windows Formlarına Denetimler Koyma
 Çok çeşitli Windows formlarında, uygulamanızın gereksinimlerine bağlı olarak koyabilirsiniz denetimleri vardır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows formlarına denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  Formunuza denetimler ekleme için yönergeler sağlar.  
   
- [Nasıl yapılır: Windows formlarına kullanıcı arabirimi olmadan denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
  Uygulamanız için kullanıcı arabirimi olmadan denetimler ekleme için yönergeler sağlar.  
   
- [Nasıl yapılır: ekleme veya çalışma zamanında bir denetimler koleksiyonuna kaldırın](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ [Nasıl yapılır: Çalışma Zamanında Denetimler Koleksiyonuna Ekleme veya Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
  Bir panel denetimleri çalışma zamanında ekleyip açıklanmaktadır.  
   
- [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  Otomatik olarak görünür özel bir bileşen nasıl yapabileceğiniz gösteren **araç** bileşen oluşturulduktan sonra.  
   
- [Nasıl yapılır: Windows formlarına ActiveX denetimleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  Eski ActiveX denetimleriyle çalışma için yönergeler sağlar.  
   
- [Bir Windows formunda bir ActiveX denetimi Barındırmayla ilgili konular](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+ [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
  ActiveX denetimleri kullanan bir uygulamayı planlarken göz önünde bulundurmanız gerekenler açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
  Denetimleri ve bunlarla yapabileceklerinizi giriş konulara bağlantılar sağlar.  
   
- [Windows Forms'ta kullanıcı girdisi doğrulama](../../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  Windows Forms denetimleri içeriğini doğrulama arkasında teorik ve temelleri açıklanır.

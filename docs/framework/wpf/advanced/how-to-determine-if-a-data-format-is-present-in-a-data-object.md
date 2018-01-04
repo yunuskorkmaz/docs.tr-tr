@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e5eaad64e18ff955340a8e91bfe8bd0e09dd8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: fb7b7bb0436ad00982f48a00b079e1f867922db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Nasıl yapılır: Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme
 Aşağıdaki örnekler çeşitli kullanmayı <xref:System.Windows.DataObject.GetDataPresent%2A> yöntemi aşırı yüklemeleri için sorgu belirli veri biçimi veri nesnesinde var olup olmadığını.  

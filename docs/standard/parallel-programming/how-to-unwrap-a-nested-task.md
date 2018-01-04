@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2da3de912abb693c4342e1ede02f273348e4b571
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06d54efe5c8bac58746a1e01a194af55fde901b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma
 Bir yöntemi, bir görev döndürür ve ardından beklemesi veya bu görevi, aşağıdaki örnekte gösterildiği gibi devam edebilirsiniz:  
@@ -51,4 +54,4 @@ Bir yöntemi, bir görev döndürür ve ardından beklemesi veya bu görevi, aş
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
- [Görev tabanlı zaman uyumsuz programlama](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+ [Görev Tabanlı Zaman Uyumsuz Desen](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

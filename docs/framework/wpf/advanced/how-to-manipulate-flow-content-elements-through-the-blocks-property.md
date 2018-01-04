@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d995e9a3a50e733a87a203f94b97a937560a0141
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Nasıl yapılır: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme
 Bu örneklerin üzerinden akış içerik öğelerinde gerçekleştirilen daha yaygın işlemlerin bazılarını göstermek **blokları** özelliği. Bu özellik eklemek ve öğeleri kaldırmak için kullanılan <xref:System.Windows.Documents.BlockCollection>. Akış içerik öğeleri bu özellik bir **blokları** özellik içerir:  
@@ -76,7 +77,7 @@ Bu örneklerin üzerinden akış içerik öğelerinde gerçekleştirilen daha ya
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Tablonun satır grupları RowGroups özelliği aracılığıyla denetlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Bir tablonun sütunlar sütunlar özelliği aracılığıyla yönetmek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Tablonun satır grupları RowGroups özelliği aracılığıyla denetlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

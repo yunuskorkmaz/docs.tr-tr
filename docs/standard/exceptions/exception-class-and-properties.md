@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Özel durum sınıfı ve özellikleri
 
@@ -49,4 +52,4 @@ Devralınan sınıfların çoğu <xref:System.Exception> etmeyin ek üyeleri uyg
 Throw ve catch öğesinden türetilen nesneler öneririz <xref:System.Exception>, ancak türetilen herhangi bir nesne throw <xref:System.Object> sınıfı bir özel durum. Tüm diller oluşturma ve yakalama öğesinden türetilen olmayan nesneler desteklediğini unutmayın <xref:System.Exception>.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel durumlar](index.md)
+[Özel Durumlar](index.md)

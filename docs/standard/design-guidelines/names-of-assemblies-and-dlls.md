@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Derlemeler ve DLL adları
 Derleme dağıtımı ve yönetilen kod programlar kimliğini birimidir. Genellikle bir veya daha çok dosya derlemeleri yayılabilir karşın, bir derlemeyi bire bir DLL ile eşler. Bu nedenle, bu bölümde daha sonra derleme adlandırma kurallarına eşlenen yalnızca DLL adlandırma kuralları, açıklanmaktadır.  
@@ -44,5 +47,5 @@ Derleme dağıtımı ve yönetilen kod programlar kimliğini birimidir. Genellik
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

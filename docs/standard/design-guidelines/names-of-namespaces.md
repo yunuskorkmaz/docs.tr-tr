@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4fc0cb9183fde33887a3e84bb30cc3f79892586e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc298ad41884bfda84771a729990ebb4e6f776b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-namespaces"></a>Ad alanı adları
 Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef yeterli netlik hemen ad içeriği büyük olasılıkla ne olduğunu bilmeniz framework kullanarak programcı için oluşturuyor. Aşağıdaki şablonu ad alanları adlandırma genel kural belirtir:  
@@ -94,5 +97,5 @@ Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef y
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

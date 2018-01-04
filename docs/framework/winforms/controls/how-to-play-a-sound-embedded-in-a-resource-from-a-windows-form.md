@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82e143a6c405d4f3065c18a1a118891e0e692b93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90b0c2748960443c0d63d22b33566ebcb2b4545b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formundan Kaynağa Yerleştirilmiş Sesi Çalma
 Kullanabileceğiniz <xref:System.Media.SoundPlayer> katıştırılmış bir kaynaktan ses çalınmaya sınıfı.  
@@ -45,5 +46,5 @@ Kullanabileceğiniz <xref:System.Media.SoundPlayer> katıştırılmış bir kayn
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Media.SoundPlayer>  
- [Nasıl yapılır: bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [Nasıl yapılır: bir Windows formunda çalma sesi döngü](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)
+ [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)

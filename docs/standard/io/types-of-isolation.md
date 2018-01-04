@@ -28,11 +28,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6b07c090a381925f5330a820214126a121d3790b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 173d7974d9cad24aff7c4da8f38f22b150ea8a0c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi her zaman oluşturan kullanıcıya sınırlıdır. Bu tür bir yalıtım uygulamak için depolama açıldığında kodu çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı işletim sistemini algılar, kullanıcı kimliği aynı kavramı kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  

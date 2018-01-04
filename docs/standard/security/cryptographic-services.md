@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 <a name="top"></a>Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  
@@ -317,6 +320,6 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Şifreleme modeli](../../../docs/standard/security/cryptography-model.md)|Şifreleme temel sınıf kitaplığı'nda nasıl uygulandığı açıklanmaktadır.|  
-|[İzlenecek yol: şifreleme uygulaması oluşturma](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Temel şifreleme ve şifre çözme görevleri gösterir.|  
-|[Şifreleme sınıflarını yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Algoritma adlarını şifreleme sınıflarıyla eşleme ve bir şifreleme algoritması nesne tanımlayıcılarını eşleme açıklar.|
+|[Şifreleme Modeli](../../../docs/standard/security/cryptography-model.md)|Şifreleme temel sınıf kitaplığı'nda nasıl uygulandığı açıklanmaktadır.|  
+|[İzlenecek Yol: Şifreleme Uygulaması Oluşturma](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Temel şifreleme ve şifre çözme görevleri gösterir.|  
+|[Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Algoritma adlarını şifreleme sınıflarıyla eşleme ve bir şifreleme algoritması nesne tanımlayıcılarını eşleme açıklar.|

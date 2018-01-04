@@ -17,18 +17,19 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>WPF Uygulamalarında Pencereler
 Kullanıcıların uygulamaları windows ile etkileşimde. Ana bilgisayar ve içeriği görüntülemek için bir pencere temel amacı budur. Pencerenin barındırdığı bağlı olduğunu veri türüne bir uygulama üzerinden, aşağıdakileri içeren medya, Genişletilebilir uygulama biçimlendirme dili (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kaydeder ve sistem bilgilerini çalıştığını içerik türü.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Windows genel bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [İletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [İletişim Kutularına Genel Bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -37,7 +38,7 @@ Kullanıcıların uygulamaları windows ile etkileşimde. Ana bilgisayar ve içe
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   [Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [Derleme ve dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+  [Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

@@ -22,11 +22,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1650365946797e4c352421d0196b3b0e17913456
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 Gözlemci tasarım deseni ile kaydetmek ve bir sağlayıcıdan bildirimleri almak abone sağlar. Gönderim tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcı* (olarak da bilinen bir *konu* veya bir *observable*) ve sıfır, bir veya daha fazla *gözlemcilerin*. Sağlayıcının gözlemcilerin kaydı ve önceden tanımlı bir koşul olduğunda, olay veya durum değişikliği, sağlayıcı, tüm gözlemcilerin otomatik olarak kendi yöntemlerini çağıran biri tarafından size bildirir. oluşur. Bu yöntem çağrısı sağlayıcı gözlemcilerin için geçerli durum bilgisini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi, bildirimi bilgi sağlayan türünü temsil eder.  
@@ -99,6 +102,6 @@ Gözlemci tasarım deseni ile kaydetmek ve bir sağlayıcıdan bildirimleri alma
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Gözlemci tasarım deseni en iyi yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Gözlemci tasarım deseni uygulamak uygulamaları geliştirirken benimsemek için en iyi uygulamaları açıklar.|  
-|[Nasıl yapılır: sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)|Uygulama izleme sıcaklık için bir sağlayıcının adım adım bir uygulama sağlar.|  
-|[Nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)|Bir adım adım uygulamasını bir gözlemci uygulama izleme sıcaklık için sağlar.|
+|[Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Gözlemci tasarım deseni uygulamak uygulamaları geliştirirken benimsemek için en iyi uygulamaları açıklar.|  
+|[Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)|Uygulama izleme sıcaklık için bir sağlayıcının adım adım bir uygulama sağlar.|  
+|[Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)|Bir adım adım uygulamasını bir gözlemci uygulama izleme sıcaklık için sağlar.|

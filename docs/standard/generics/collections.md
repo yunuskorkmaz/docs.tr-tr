@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94da20072f793e137b0b7545c1a658ed20537a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-collections-in-the-net-framework"></a>.NET Framework'teki Genel Koleksiyonlar
 Bu konu genel koleksiyon sınıfları ve diğer genel türleri .NET Framework'teki genel bakış sağlar.  
@@ -61,6 +64,6 @@ Bu konu genel koleksiyon sınıfları ve diğer genel türleri .NET Framework'te
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
  <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Genel türler](../../../docs/standard/generics/index.md)  
- [Dizi ve listeleri düzenlemek için genel temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Genel arabirimler](../../../docs/standard/generics/interfaces.md)
+ [Genel Türler](../../../docs/standard/generics/index.md)  
+ [Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+ [Genel Arabirimler](../../../docs/standard/generics/interfaces.md)

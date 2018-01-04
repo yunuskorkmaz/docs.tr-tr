@@ -13,24 +13,25 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02c0d41ccb21cb68c5cae3459a2d7518e98cda20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 42843e4be907c7361f55a95abb4d91b4426a9f6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-unmanaged-api-reference"></a>WPF yönetilmeyen API Başvurusu
 Windows Presentation Foundation (WPF) kitaplıkları yalnızca iç kullanım için tasarlanmıştır yönetilmeyen işlevleri kullanıma sunar. Bunlar kullanıcı kodundan çağrılmamalıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İşlev etkinleştir](../../../../docs/framework/wpf/advanced/activate-function-wpf-unmanaged-api-reference.md)  
- [CreateIDispatchSTAForwarder işlevi](../../../../docs/framework/wpf/advanced/createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
- [İşlevi devre dışı bırakın](../../../../docs/framework/wpf/advanced/deactivate-function-wpf-unmanaged-api-reference.md)  
- [ForwardTranslateAccelerator işlevi](../../../../docs/framework/wpf/advanced/forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md)  
- [LoadFromHistory işlevi](../../../../docs/framework/wpf/advanced/loadfromhistory-function-wpf-unmanaged-api-reference.md)  
- [ProcessUnhandledException işlevi](../../../../docs/framework/wpf/advanced/processunhandledexception-function-wpf-unmanaged-api-reference.md)  
- [SaveToHistory işlevi](../../../../docs/framework/wpf/advanced/savetohistory-function-wpf-unmanaged-api-reference.md)  
- [SetFakeActiveWindow işlevi](../../../../docs/framework/wpf/advanced/setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
+ [Activate İşlevi](../../../../docs/framework/wpf/advanced/activate-function-wpf-unmanaged-api-reference.md)  
+ [CreateIDispatchSTAForwarder İşlevi](../../../../docs/framework/wpf/advanced/createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
+ [Deactivate İşlevi](../../../../docs/framework/wpf/advanced/deactivate-function-wpf-unmanaged-api-reference.md)  
+ [ForwardTranslateAccelerator İşlevi](../../../../docs/framework/wpf/advanced/forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md)  
+ [LoadFromHistory İşlevi](../../../../docs/framework/wpf/advanced/loadfromhistory-function-wpf-unmanaged-api-reference.md)  
+ [ProcessUnhandledException İşlevi](../../../../docs/framework/wpf/advanced/processunhandledexception-function-wpf-unmanaged-api-reference.md)  
+ [SaveToHistory İşlevi](../../../../docs/framework/wpf/advanced/savetohistory-function-wpf-unmanaged-api-reference.md)  
+ [SetFakeActiveWindow İşlevi](../../../../docs/framework/wpf/advanced/setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Gelişmiş](../../../../docs/framework/wpf/advanced/index.md)

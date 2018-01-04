@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 70a7c389ac44e8a513ec8a764d19c9a316ca7c08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e7a427396158fda7d387eecbeff58e6c1ef591dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>ICorThreadpool::CorCreateTimer Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -53,4 +54,4 @@ HRESULT CorCreateTimer (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icorthreadpool arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+ [ICorThreadpool Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

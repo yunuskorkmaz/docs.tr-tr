@@ -24,11 +24,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dde3adbb7640978829dea4b977ed14eec38a9077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="general-naming-conventions"></a>Genel adlandırma kuralları
 Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler dile özel adlar kullanmaktan kaçının nasıl kullanma hakkında yönergeler açıklanmaktadır.  
@@ -69,19 +72,19 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
 |**sbyte**|**SByte**|**char**|**SByte**|  
-|**bayt**|**Bayt**|**İmzasız char**|**Bayt**|  
-|**kısa**|**Kısa**|**kısa**|**Int16**|  
+|**byte**|**Bayt**|**İmzasız char**|**Bayt**|  
+|**short**|**Kısa**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**İmzasız short**|**UInt16**|  
 |**int**|**Tamsayı**|**int**|**Int32**|  
 |**uint**|**UInt32**|**İmzasız int**|**UInt32**|  
-|**uzun**|**Uzun**|**__int64**|**Int64**|  
+|**long**|**Uzun**|**__int64**|**Int64**|  
 |**ulong**|**UInt64**|**İmzasız __int64**|**UInt64**|  
-|**kayan nokta**|**Tek**|**kayan nokta**|**Tek**|  
-|**çift**|**Çift**|**çift**|**Çift**|  
+|**float**|**Tek**|**float**|**Tek**|  
+|**double**|**Çift**|**double**|**Çift**|  
 |**bool**|**Boole değeri**|**bool**|**Boole değeri**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
-|**dize**|**Dize**|**Dize**|**Dize**|  
-|**Nesne**|**Nesne**|**Nesne**|**Nesne**|  
+|**string**|**Dize**|**Dize**|**Dize**|  
+|**object**|**Nesne**|**Nesne**|**Nesne**|  
   
  **✓ YAPMAK** gibi ortak bir ad kullanın `value` veya `item`, tür adı bir tanımlayıcı bir anlam anlamı yoktur ve parametresinin türü önemli olmadığında nadir durumlarda yinelenen yerine.  
   
@@ -107,5 +110,5 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

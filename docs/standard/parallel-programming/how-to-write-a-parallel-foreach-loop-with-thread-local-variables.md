@@ -17,11 +17,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma
 Aşağıdaki örnekte nasıl yazılacağını gösterir bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> iş parçacığı yerel değişkenleri kullanan yöntemi. Zaman bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütür, kendi kaynak koleksiyonu birden çok bölümlere ayırır. Her bölüm "iş parçacığı-yerel" değişkeni kopyasını alır. (Bazı durumlarda iki bölüm aynı iş parçacığı üzerinde çalışabilir "iş parçacığı-yerel" terimi burada biraz yanlış çünkü.)  
@@ -56,5 +59,5 @@ Aşağıdaki örnekte nasıl yazılacağını gösterir bir <xref:System.Threadi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
- [PLINQ ve TPL'deki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+ [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

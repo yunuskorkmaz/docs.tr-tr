@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca2bac983e25ab7453230a6718fe7eaa98e82275
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcf06f4dc0d8c70ae85d5add5a2fee078238d5e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms Denetimi Geliştirmenin Esasları
 Bir Windows Forms denetimi doğrudan veya dolaylı olarak türeyen bir sınıf olan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Aşağıdaki listede Windows Forms denetimleri geliştirme için genel senaryolar açıklanmaktadır:  
@@ -41,7 +42,7 @@ Bir Windows Forms denetimi doğrudan veya dolaylı olarak türeyen bir sınıf o
  Windows Forms denetimleri için temel sınıf <xref:System.Windows.Forms.Control>, istemci-tarafı Windows tabanlı uygulamalarda görsel görüntü için gerekli tesisat sağlar. <xref:System.Windows.Forms.Control>bir pencere tanıtıcının sağlayan, ileti yönlendirme işler ve fare ve klavye olaylarının yanı sıra diğer birçok kullanıcı arabirimi olayları sağlar. Gelişmiş Düzen sağlar ve görsel görüntü için belirli özellikler gibi sahip <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>ve diğer birçok. Ayrıca, güvenlik, iş parçacığı destek ve ActiveX denetimleri ile birlikte çalışabilirlik sağlar. Çok altyapısının temel sınıfı tarafından sağlandığından, kendi Windows Forms denetimleri geliştirme oldukça kolaydır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: basit bir Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Bileşik Windows Forms denetimi geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [Nasıl yapılır: ilerleme durumunu gösteren bir Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [Bileşik Windows Forms Denetimi Geliştirme](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

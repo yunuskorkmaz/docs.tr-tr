@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma
 Varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uç noktalar yalnızca SOAP istemciler için kullanılabilir hale getirir. İçinde [nasıl yapılır: temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir. Aynı sözleşme çift yönlü bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir. Bu konu bunun nasıl yapılacağı örneği gösterir.  
@@ -116,4 +117,4 @@ Varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uç 
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.ChannelFactory>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

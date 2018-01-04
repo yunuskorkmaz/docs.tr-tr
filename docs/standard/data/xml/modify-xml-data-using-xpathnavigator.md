@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XML XPathNavigator kullanarak verileri değiştirme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümleri ve bir XML belgesi değerleri değiştirmek için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesnesi olmalıdır düzenlenebilir, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> olmalıdır `true`.  
@@ -259,6 +262,6 @@ Console.WriteLine(navigator.OuterXml);
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XML XPathNavigator kullanarak verileri ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- [XML XPathNavigator kullanarak verileri Kaldır](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Kaldırma](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

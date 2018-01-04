@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanan, yerine akan belgeler dinamik olarak ayarlayın ve çalışma zamanı değişkenleri pencere boyutu, aygıt çözünürlüğü ve isteğe bağlı kullanıcı tercihleri gibi temel içeriklerini yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
@@ -68,7 +69,7 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
 ## <a name="flow-document-types"></a>Akış belge türleri  
  Belge içerik akışı ve görünme görüntüsünü hangi nesne akış içeriğini barındırmak için kullanılan üzerine bağlıdır. Akış içeriğinin görüntülenmesi destekleyen dört denetimleri vardır: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Bu denetimler, aşağıda kısaca açıklanmıştır.  
   
- **Not:** <xref:System.Windows.Documents.FlowDocument> görüntüleme denetimleri bunların tümü tüketen doğrudan akış içeriği barındırmak için gerekli olduğundan, bir <xref:System.Windows.Documents.FlowDocument> akış içerik barındırma etkinleştirmek için.  
+ **Not:** <xref:System.Windows.Documents.FlowDocument> görüntüleme denetimleri bunların tümü tüketen doğrudan akış içeriği barındırmak için gerekli olduğundan, bir <xref:System.Windows.Documents.FlowDocument> akış içerik barındırma etkinleştirmek için.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>kullanıcının bir tek sayfalı (sayfa--bir zamanda) görüntüleme modu, bir iki-sayfası--a-modu ve sürekli bir kayan (sınırsız) görüntüleme modu zamanda (defter okuma biçimi) dahil olmak üzere çeşitli görüntüleme modları arasında dinamik olarak seçmesini sağlayan özellikler içerir. Bu görüntüleme modları hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Farklı görüntüleme modları arasında dinamik geçiş özelliği gerekmiyorsa <xref:System.Windows.Controls.FlowDocumentPageViewer> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer> hafifletilmiş akış belirli görüntüleme modunda sabit içerik görüntüleyicileri sağlar.  
@@ -360,10 +361,10 @@ Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarla
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [TextElement içerik modeli genel bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [TextElement İçerik Modeline Genel Bakış](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Tablo genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Ek açıklamalar genel bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [Ek Açıklamalara Genel Bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd6956f1934f8594a941b57066cc2d4d6214a9a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 361983c4e2b392cdf8410fdb1193a56f6d26d067
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Nasıl yapılır: UI Döndüren Eklenti Oluşturma
 Bu örnek döndüren bir eklenti oluşturmak nasıl gösterir bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bir ana bilgisayara [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulama.  
@@ -100,5 +101,5 @@ Bu örnek döndüren bir eklenti oluşturmak nasıl gösterir bir [!INCLUDE[TLA#
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
- [WPF eklentilere genel bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+ [Eklentiler ve Genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
+ [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

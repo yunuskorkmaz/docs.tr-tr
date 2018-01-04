@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>&#39; teki Windows Communication Foundation 4.5'deki yenilikler
 Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -78,7 +79,7 @@ Bu konuda yeni özellikler ele alınmıştır [!INCLUDE[indigo1](../../../includ
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * taşıma için İşlemci sayısı<br /><br /> 4 \* SMSvcHost.exe için İşlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Net.TCP bağlantı noktası hizmetini yapılandırma](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 saniye|[Net.TCP bağlantı noktası hizmetini yapılandırma](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30 saniye|[Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>XML Düzenleyicisi araç ipuçları  
  Hizmetlerini yapılandırmak için yeni ve mevcut WCF Hizmeti geliştiricilere yardımcı olmak için Visual Studio XML düzenleyicisini şimdi araç ipuçları her yapılandırma öğesi ve hizmet yapılandırma dosyasının bir parçası olan özellikleri sağlar.  

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d3a554d075adb56294e4693b234ce22735fb982
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 907ba524164b1e0d167f7a88250c7d32910504f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthread2-interface1"></a>Icordebugthread2 Interface1
 Icordebugthread arabirimi için mantıksal bir uzantısı olarak görev yapar.  
@@ -32,11 +33,11 @@ Icordebugthread arabirimi için mantıksal bir uzantısı olarak görev yapar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetActiveFunctions yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|Bir iş parçacığının çerçeveleri etkin işlevlerde ilgili verileri içeren cor_actıve_functıon örnekleri dizisi alır.|  
-|[Getconnectionıd yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Bunun için bir bağlantı tanımlayıcı alır `ICorDebugThread2`.|  
-|[Gettaskıd yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Bunun için bir görev tanımlayıcısı alır `ICorDebugThread2`.|  
-|[Getvolatileosthreadıd yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Bu işletim sistemi iş parçacığı tanımlayıcısını alır `ICorDebugThread2`.|  
-|[Interceptcurrentexception yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|Bir hata ayıklayıcısı geçerli özel durumun bir iş parçacığında izlemesine izin verir.|  
+|[GetActiveFunctions Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|Bir iş parçacığının çerçeveleri etkin işlevlerde ilgili verileri içeren cor_actıve_functıon örnekleri dizisi alır.|  
+|[GetConnectionID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Bunun için bir bağlantı tanımlayıcı alır `ICorDebugThread2`.|  
+|[GetTaskID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Bunun için bir görev tanımlayıcısı alır `ICorDebugThread2`.|  
+|[GetVolatileOSThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Bu işletim sistemi iş parçacığı tanımlayıcısını alır `ICorDebugThread2`.|  
+|[InterceptCurrentException Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|Bir hata ayıklayıcısı geçerli özel durumun bir iş parçacığında izlemesine izin verir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -53,4 +54,4 @@ Icordebugthread arabirimi için mantıksal bir uzantısı olarak görev yapar.
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

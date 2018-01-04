@@ -17,11 +17,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e521f07048e37533e052dc8a43fb2c522750f92a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 658c5aca3dc8d70400cdd26d9e0af1e253e175c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types"></a>UI Otomasyon Denetim Türleri
 **Not** bu belgeleri yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
@@ -29,48 +30,48 @@ ms.lasthandoff: 10/18/2017
  Bu bölümde denetim türü için desteği hakkında bilgi içeren [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyon denetim türlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Düğme denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Takvim denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [CheckBox denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [ComboBox denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [DataGrid denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [DataItem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Belge Denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Düzenleme denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Grup denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Başlık denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [Headerıtem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Köprü denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [Görüntü Denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [Liste Denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [ListItem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Menü denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [MenuBar denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [MenuItem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Bölme denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [ProgressBar denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [RadioButton denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [ScrollBar denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Ayırıcı denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Kaydırıcı denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Değer değiştirici denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [Bölünmüş düğme denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [StatusBar denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Sekme denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [TabItem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Tablo denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Metin denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Parmak denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [TitleBar denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [Araç çubuğu denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [ToolTip denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [Ağaç denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [Treeıtem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Pencere denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Button Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
+ [Calendar Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [CheckBox Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [ComboBox Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [DataGrid Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [DataItem Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
+ [Document Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Edit Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Group Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Header Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [HeaderItem Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
+ [Hyperlink Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Image Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
+ [List Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [ListItem Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
+ [Menu Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [MenuBar Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [MenuItem Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
+ [Pane Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [ProgressBar Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
+ [RadioButton Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [ScrollBar Denetim Türü için UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
+ [Separator Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Slider Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Spinner Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [SplitButton Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [StatusBar Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
+ [Tab Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [TabItem Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
+ [Table Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Text Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Thumb Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [TitleBar Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [ToolBar Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [ToolTip Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Tree Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
+ [TreeItem Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
+ [Window Denetim Türü İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Automation.ControlType>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+ [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)

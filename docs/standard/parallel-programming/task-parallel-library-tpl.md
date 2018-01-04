@@ -17,11 +17,14 @@ caps.latest.revision: "37"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e1dcb10189405c368b3739020a7bfa875792184
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2a124d355b4480aebff3c40e2ccece618e1979f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="task-parallel-library-tpl"></a>Görev Paralel Kitaplığı (TPL)
 Görev paralel kitaplığı (TPL) genel türler ve API'leri kümesidir <xref:System.Threading?displayProperty=nameWithType> ve <xref:System.Threading.Tasks?displayProperty=nameWithType> ad alanları. TPL'nin amacı, uygulamalara paralellik ve eşzamanlılık ekleme işlemini kolaylaştırarak geliştiricilerin daha üretken olmasını sağlamaktır. TPL, kullanılabilen tüm işlemcilerin en verimli şekilde kullanılması için eşzamanlılık derecesini dinamik olarak ölçeklendirir. Ayrıca, TPL üzerinde iş parçacıklarının zamanlama çalışmanın Bölümlendirmeyi işleyen <xref:System.Threading.ThreadPool>, iptal desteği, durum yönetimi ve diğer alt düzey ayrıntıları. TPL'yi kullanarak, bir yandan programınızın gerçekleştirmek üzere tasarlandığı çalışmaya odaklanırken, diğer yandan kodunuzun performansını en üst düzeye çıkarabilirsiniz.  
@@ -33,10 +36,10 @@ Görev paralel kitaplığı (TPL) genel türler ve API'leri kümesidir <xref:Sys
 |Başlık|Açıklama|  
 |-|-|  
 |[Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Paralel oluşturmayı açıklar `for` ve `foreach` döngüleri (`For` ve `For Each` Visual Basic'te).|  
-|[Görev tabanlı zaman uyumsuz programlama](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Oluşturma ve örtük olarak kullanarak çalışan görevler açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> veya kullanarak açıkça <xref:System.Threading.Tasks.Task> nesnelerini doğrudan.|  
+|[Görev Tabanlı Zaman Uyumsuz Desen](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Oluşturma ve örtük olarak kullanarak çalışan görevler açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> veya kullanarak açıkça <xref:System.Threading.Tasks.Task> nesnelerini doğrudan.|  
 |[Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|TPL Veri Akışı Kitaplığındaki veri akışı bileşenlerinin, birbirleriyle iletişim kurması gereken birden çok işlemi çalıştırmak veya kullanılabilir olduğunda verileri işlemek için nasıl kullanılacağını açıklar.|  
-|[Diğer zaman uyumsuz desenlerle TPL kullanma](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|.NET'te diğer zaman uyumsuz düzenlerle TPL'nin nasıl kullanılacağını açıklar|  
-|[Veri ve görev Paralelliğinde olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|Bazı yaygın görülen tehlikeleri ve bunların nasıl önleneceğini açıklar.|  
+|[Diğer Zaman Uyumsuz Desenlerle TPL Kullanma](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|.NET'te diğer zaman uyumsuz düzenlerle TPL'nin nasıl kullanılacağını açıklar|  
+|[Veri ve Görev Paralelliğinde Olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|Bazı yaygın görülen tehlikeleri ve bunların nasıl önleneceğini açıklar.|  
 |[Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|LINQ sorguları ile veri paralelliğinin nasıl elde edileceğini açıklar.|  
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET paralel programlama için üst düzey düğüm.|  
   

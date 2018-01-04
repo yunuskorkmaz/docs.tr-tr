@@ -19,11 +19,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8ee68c53173f0919a9200ed5ac82fed3e27affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:  
@@ -158,4 +161,4 @@ ms.lasthandoff: 10/18/2017
 |[Windows mağazası uygulamaları geliştirme (VB / C# / C++ ve XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Bir çok Hızlı Başlangıç konuları, kılavuzlar ve en iyi yöntemleri dahil olmak üzere C# veya Visual Basic kullanarak [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları geliştirmeye başlamanıza yardımcı olan anahtar kaynaklar sağlar. (Windows Geliştirme Merkezi'nde.)|  
 |[C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](http://go.microsoft.com/fwlink/p/?LinkId=238313)|.NET Framework kullanarak bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeninin nasıl oluşturulacağını anlatır, JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasının parçası olarak bu bileşenin nasıl kullanılacağını açıklar ve Visual Studio ile kombinasyonda nasıl hata ayıklama yapılacağını anlatır. (Windows Geliştirme Merkezi'nde.)|  
 |[Windows Çalışma Zamanı Modülü başvurusu](http://go.microsoft.com/fwlink/?LinkId=238319)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]'e ait başvuru belgeleri. (Windows Geliştirme Merkezi'nde.)|  
-|[Windows çalışma zamanı için bir URI geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan gelen bir URI'yi [!INCLUDE[wrt](../../../includes/wrt-md.md)]'e gönderdiğinizde oluşabilecek bir sorunu ve bunun nasıl önleneceğini açıklar.|
+|[URI'yı Windows Çalışma Zamanı'na Geçirme](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan gelen bir URI'yi [!INCLUDE[wrt](../../../includes/wrt-md.md)]'e gönderdiğinizde oluşabilecek bir sorunu ve bunun nasıl önleneceğini açıklar.|

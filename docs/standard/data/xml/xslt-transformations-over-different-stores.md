@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b909b754c1d0d3007e06cd04376413d02cbc2f76
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b642a1f2c29c6b4143b3f520a3df47328fcb41d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Mağazaya üzerinden XSLT dönüştürmeleri
 > [!NOTE]
@@ -28,4 +31,4 @@ ms.lasthandoff: 10/18/2017
  XML DOM XML belgelerini ve okuma, yazma ve XML belgelerini gezinmek için ek sınıfları veri erişimi sağlar. Bu sınıfların desteklenen <xref:System.Xml> de ADO.NET tarafından sağlanan veri erişim Hizmetleri ile XML DOM birleştiren ad alanı. <xref:System.Xml.XmlDataDocument> İlişkisel verilere erişim sağlar. <xref:System.Xml.XmlDataDocument> Bir ADO.NET ilişkisel verileri XML eşlemeleri <xref:System.Data.DataSet>. Tüm [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-tabanlı uygulama sınıflarda kullanabileceğiniz <xref:System.Xml> erişmek ve XML belgelerini ve ilişkisel verileri işlemek için ad alanı <xref:System.Xml.XmlDataDocument>. Bu uygulama, toplama ve veri dağıtmak için n katmanlı mimariyi destekler. Daha fazla bilgi için bkz: [ilişkisel veri ve ADO.NET XML tümleştirme](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

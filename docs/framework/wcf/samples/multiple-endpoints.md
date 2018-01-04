@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87846ca624b557f39bcb61d467a270779f399f6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints"></a>Birden Fazla Uç Noktası
 Birden çok uç nokta örnek bir hizmette birden çok uç nokta yapılandırma ve istemciden gelen her bir uç noktası ile iletişim kurmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırması destekleyen iki uç noktalarını tanımlamak için değiştirilmiş `ICalculator` sözleşme, ancak her biri farklı bir bağlama kullanarak farklı bir adres. İstemci yapılandırma ve kodun hem hizmet uç noktaları ile iletişim kurmak için değiştirilmiş.  

@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d21667ada5592c62824a97b4a8a9b8127abab75a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework veri türleri için dizeleri dönüştürme
 Bir dizeyi bir .NET Framework veri türüne dönüştürmek istiyorsanız, kullanmak **XmlConvert** uygulama gereksinimlerine uygun yöntemi. Kullanılabilir tüm dönüştürme yöntemleri listesi **XmlConvert** sınıfı için bkz: <xref:System.Xml.XmlConvert>.  
@@ -56,7 +59,7 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Çıktı**  
+ **Output**  
   
  `<Date>2001-08-04T00:00:00</Date>`.  
   
@@ -74,7 +77,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Çıktı**  
+ **Output**  
   
  `<Number>200</Number>`  
   
@@ -141,5 +144,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML veri türlerini dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [.NET Framework türleri dizeleri dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+ [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

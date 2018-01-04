@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d25d62dd42e3e93124c9a3bd8945be265f192663
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e4d4c83b754945c126913a9d96db47966959fed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedscope-interface"></a>ISymUnmanagedScope Arabirimi
 Bir yöntem sözcük kapsamında temsil eder.  
@@ -32,18 +33,18 @@ Bir yöntem sözcük kapsamında temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetChildren yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|Bu kapsamın alt öğelerini alır.|  
-|[GetEndOffset yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|Bitiş uzaklığı için bu kapsamı alır.|  
-|[GetLocalCount yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|Bu kapsam içinde tanımlanan yerel değişkenler sayısını alır.|  
-|[GetLocals yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|Bu kapsam içinde tanımlanan yerel değişkenleri alır.|  
-|[GetMethod yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|Bu kapsam içeren yöntemi alır.|  
-|[GetNamespaces yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|Bu kapsam içinde kullanılan ad alanlarını alır.|  
-|[GetParent yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|Bu kapsam üst kapsamı alır.|  
-|[GetStartOffset yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|Bu kapsam için başlangıç uzaklığı alır.|  
+|[GetChildren Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)|Bu kapsamın alt öğelerini alır.|  
+|[GetEndOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)|Bitiş uzaklığı için bu kapsamı alır.|  
+|[GetLocalCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocalcount-method.md)|Bu kapsam içinde tanımlanan yerel değişkenler sayısını alır.|  
+|[GetLocals Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getlocals-method.md)|Bu kapsam içinde tanımlanan yerel değişkenleri alır.|  
+|[GetMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getmethod-method.md)|Bu kapsam içeren yöntemi alır.|  
+|[GetNamespaces Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getnamespaces-method.md)|Bu kapsam içinde kullanılan ad alanlarını alır.|  
+|[GetParent Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)|Bu kapsam üst kapsamı alır.|  
+|[GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)|Bu kapsam için başlangıç uzaklığı alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama sembol deposu arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [Isymunmanagedscope2 arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+ [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [ISymUnmanagedScope2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

@@ -14,26 +14,26 @@ ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16c12ee6c4f6efa20b9bab5ccf10077496b931ac
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 36a49ccf7d2185c26ef8d23eebea216cc193d951
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>Tür &lt;typename&gt; CLS uyumlu değil
 Değişken, özellik veya işlev dönüş CLS ile uyumlu olmayan bir veri türüyle bildirildi.  
   
- Bir uygulama ile uyumlu olması için [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), onu yalnızca CLS uyumlu türleri kullanmalıdır.  
+ Bir uygulama ile uyumlu olması için [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), onu yalnızca CLS uyumlu türleri kullanmalıdır.  
   
  Aşağıdaki [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] veri türleri, CLS uyumlu değildir:  
   
--   [SByte veri türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Uınteger veri türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong veri türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort veri türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  **Hata Kimliği:** BC40041  
   
@@ -41,7 +41,4 @@ Değişken, özellik veya işlev dönüş CLS ile uyumlu olmayan bir veri türü
   
 -   Uygulamanızı CLS ile uyumlu olması gerekiyorsa, bu öğenin veri türü için en yakın CLS uyumlu türünü değiştirin. Örneğin, içinde yerine, `UInteger` kullanmak olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa değiştirebilirsiniz `UInteger` ile `Long`.  
   
--   Uygulamanızı CLS ile uyumlu olması gerekmez, değişikliği gerekmez. Ancak kendi uyumsuzluğunu, farkında olmanız gerekir.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [\<PAVE üzerinden > CLS uyumlu kod yazma](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+-   Uygulamanızı CLS ile uyumlu olması gerekmez, değişikliği gerekmez. Ancak kendi uyumsuzluğunu, farkında olmanız gerekir.

@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="role-based-security"></a>Rol Tabanlı Güvenlik
 Roller, genellikle ilkeyi uygulamak için finans veya iş uygulamalarında kullanılır. Örneğin, bir uygulama, istekte bulunan kullanıcının belirtilen bir rol üyesi olup bağlı olarak işlenmekte olan işlem boyutu sınırları zorunlu tuttukları. Belirtilen eşikten daha az işlem işlemler için yetkilendirme elemanı olabilir, daha yüksek bir sınır denetçiler olabilir ve yardımcısının Yardımcıları hala daha yüksek bir sınır (veya hiç sınır) olabilir. Bir uygulama bir eylemi tamamlamak için birden çok onayları gerektirdiğinde rol tabanlı güvenlik de kullanılabilir. Böyle bir durumda çalışan bir satın alma isteği üretebilir bir satın alma sistemi olabilir, ancak yalnızca bir satın alma Aracısı bu isteği bir tedarikçiye gönderilebilecek bir satın alma siparişi dönüştürebilirsiniz.  
@@ -42,8 +45,8 @@ Roller, genellikle ilkeyi uygulamak için finans veya iş uygulamalarında kulla
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Asıl ve kimlik nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)|Windows ve genel kimlikleri ve ilkeleri ayarlamanıza açıklanmaktadır.|  
-|[Temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md)|.NET Framework güvenliği kullanmadan önce anlamanız gereken temel kavramlar tanıtılmaktadır.|  
+|[Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)|Windows ve genel kimlikleri ve ilkeleri ayarlamanıza açıklanmaktadır.|  
+|[Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)|.NET Framework güvenliği kullanmadan önce anlamanız gereken temel kavramlar tanıtılmaktadır.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

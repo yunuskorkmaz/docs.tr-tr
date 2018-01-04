@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e94b9022e6da29f0aa8deb5534fec6e89d40152a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 048bcc587915467f644a2cce695cec352147223a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Nasıl yapılır: XML öğesi ve XML öznitelik adları nitelemek
 [Kod örneği](#cpconworkingwithxmlnamespacesanchor1)  
@@ -180,10 +183,10 @@ public class Book
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [XML şema tanımı aracı ve XML serileştirme](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XML Şema Tanımı Aracı ve XML Serileştirme](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [XmlSerializer sınıfı](xref:System.Xml.Serialization.XmlSerializer)  
- [XML serileştirme denetim öznitelikleri](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [XML Serileştirmeyi Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

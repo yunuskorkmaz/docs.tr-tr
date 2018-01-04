@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07a39983d0e561fdad4c09e641912b0d15aa4033
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ceeb7406fdae9b4044053e12bec2aad926f26e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Özel Etkinlik özelliğinin bir tasarımcı denetimine bağlama
 Bir etkinlik bağımsız bir metin kutusu Tasarımcı denetimi bağlama oldukça basittir; bir etkinlik bağımsız değişkeni (örneğin, bir birleşik giriş kutusu) karmaşık bir Tasarımcı denetim bağlamayı, ancak zorluklara. Bu konu nasıl etkinlik bağımsız değişken özel etkinlik Tasarımcısı birleşik giriş kutusu denetiminde bağlanacağını açıklar.  

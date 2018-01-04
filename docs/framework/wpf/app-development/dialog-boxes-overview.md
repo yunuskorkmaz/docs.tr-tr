@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14d3bb167fc3e027371c28147720cf2a098c136
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunan bir ana penceresi sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubukları ve durum çubukları gibi. Önemsiz olmayan bir uygulama Ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
@@ -355,6 +356,6 @@ Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uyg
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Açılan genel bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
  [İletişim kutusu örneği](http://go.microsoft.com/fwlink/?LinkID=159984)  
  [ColorPicker özel denetim örneği](http://go.microsoft.com/fwlink/?LinkID=159977)

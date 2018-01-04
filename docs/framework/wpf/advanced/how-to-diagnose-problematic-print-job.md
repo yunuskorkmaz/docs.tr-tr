@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acc757d899da3ff737b2884131b77135265fd197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle değil veya yavaş yazdırma yazdırma işleri hakkında kullanıcılardan şikayetlerinden alan. Yazdırma işi özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] , [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yazdırma işlerinin hızlı uzaktan tanılamasını gerçekleştirmek için bir yol sağlar.  
@@ -97,5 +98,5 @@ Ağ yöneticileri genellikle değil veya yavaş yazdırma yazdırma işleri hakk
  <xref:System.FlagsAttribute>  
  <xref:System.Printing.PrintQueue>  
  [& İşleci (C# Başvurusu)](~/docs/csharp/language-reference/operators/and-operator.md)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

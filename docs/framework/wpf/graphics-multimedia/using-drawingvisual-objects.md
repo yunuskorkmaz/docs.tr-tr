@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee46c41d6f0f42bbb9f50bd5862f6eb076b34bb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a33e56b69a357694a1d1a23d5cd3c887c88cea37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual Nesnelerini Kullanma
 Bu konu nasıl kullanılacağını bir bakış sunar <xref:System.Windows.Media.DrawingVisual> nesnelerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katmanı.  
@@ -82,5 +83,5 @@ Bu konu nasıl kullanılacağını bir bakış sunar <xref:System.Windows.Media.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.DrawingVisual>  
  <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Görsel katmanda isabet sınaması](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

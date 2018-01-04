@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d213d70d6f12cb8b574f07457c1b20317670d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>İzlenecek yol: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma
 Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Windows.Forms.DataGridView> denetimi *ana/ayrıntı* form, iki veritabanı tabloları arasında bir üst/alt ilişkisi görüntülenir. Ana tablodaki satırları seçmek ayrıntı tablosunda karşılık gelen alt verilerle güncelleştirmeye neden olur.  
@@ -88,6 +89,6 @@ Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Window
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: iki Windows Forms DataGridView denetimi kullanarak ana/ayrıntı formu oluşturma](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl Yapılır: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)

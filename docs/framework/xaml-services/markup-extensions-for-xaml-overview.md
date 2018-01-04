@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML İşaretleme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları türünün bir temel veya de belirli XAML türü olan bir değer almak için bir XAML teknik yer almaktadır. Öznitelik kullanımı için bir parantezinden bilinen karakter dizisi biçimlendirme uzantıları kullanmak `{` biçimlendirme uzantısı kapsamı ve kapanış kuşak girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken, önceden tanımlanmış XAML dil biçimlendirme uzantıları System.Xaml derlemesinden bazıları kullanabilirsiniz. Gelen bir alt kullanabileceğiniz <xref:System.Windows.Markup.MarkupExtension> sınıfı, System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantıları tanımlayın. Veya zaten bu framework başvurduğunuzdan, belirli bir çerçevesi tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  
@@ -166,5 +167,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Markup.MarkupExtension>  
- [XAML için tür dönüştürücüleri ve İşaretleme uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

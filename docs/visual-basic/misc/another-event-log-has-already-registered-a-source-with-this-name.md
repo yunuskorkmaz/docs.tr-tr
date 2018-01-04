@@ -8,11 +8,11 @@ ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8beea344d233794ddc36d7fc53db1c01be84399f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f04afd5d061a44f572d95abfb0173ad6fa2ac27
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Başka bir olay günlüğü bu ada sahip bir kaynak zaten kaydettirildi
 Bir olay günlüğüne bir giriş yazmak için belirtilen kaynak ile başka bir olay günlüğü, kayıtlı çalışıldı.  
@@ -26,6 +26,5 @@ Bir olay günlüğüne bir giriş yazmak için belirtilen kaynak ile başka bir 
 2.  Kaynak ile yeni bir günlük kaydedin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Application.Log nesnesi](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [Nasıl yapılır: bir olay kaynağı Kaldır](http://msdn.microsoft.com/en-us/bc66c900-4b8a-426a-b8e2-17031a20167e)  
- [Nasıl yapılır: olay günlüğü girişleri kaynağı olarak, uygulamanızın ekleyin](http://msdn.microsoft.com/en-us/948ff920-a739-4e66-a191-ee951512d42c)
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+

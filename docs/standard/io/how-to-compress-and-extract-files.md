@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22a95ce18b602d4e329499c5d36557213e08a8b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33c9249692998aea8c22ddbf75a5a9b7bdf28708
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-compress-and-extract-files"></a>Nasıl Yapılır: Dosya Sıkıştırma ve Çıkarma
 <xref:System.IO.Compression> Ad alanı, sıkıştırma ve açma dosyalar ve akışlar için aşağıdaki türleri içerir. Bu tür, okumak ve sıkıştırılmış bir dosya içeriğini değiştirmek için de kullanabilirsiniz:  

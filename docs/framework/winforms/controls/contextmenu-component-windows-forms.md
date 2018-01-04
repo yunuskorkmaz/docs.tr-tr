@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c3c0122eceab8b59bed15391e076863c5a2f144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu Bileşeni (Windows Forms)
 > [!NOTE]
@@ -34,10 +35,10 @@ ms.lasthandoff: 11/21/2017
  Windows Forms `ContextMenu` bileşen kolayca erişilebilir kısayol menüsü seçili nesne ile ilişkili sık kullanılan komutlar, kullanıcılara sağlamak için kullanılır. Bir kısayol menüsü öğelerini sık başka bir uygulamada görünmesini ana menü öğelerinden bir alt kümesidir. Kısayol menüleri fareyi sağ tıklayarak genellikle kullanılabilir. Windows Forms'ta bunlar diğer denetimleri ile ilişkilendirilmiş.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ContextMenu bileşenine genel bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
  Genel kavramlarını tanıtır `ContextMenu` kullanıcıların seçilen bir nesneyle ilişkili sık kullanılan komutlar menülerini oluşturmasını sağlayan bileşen.  
   
- [Nasıl yapılır: Ekle ve Kaldır menü öğeleri Windows Forms ContextMenu bileşeni](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
  Başvuru bilgileri sağlar <xref:System.Windows.Forms.ContextMenu> sınıfı ve üyeleri.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

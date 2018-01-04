@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b7e1686dca2b96e339917b6dd4861f0f43d20d66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enum-design"></a>Enum tasarım
 Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki tür vardır: Basit numaralandırmaları ve bayrağı numaralandırmaları.  
@@ -105,5 +108,5 @@ Numaralandırmalar özel türde bir değer türü var. Numaralandırmalar iki t�
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

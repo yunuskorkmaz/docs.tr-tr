@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f7cb18157122d8bc053f34b21f623f3ab1e14305
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66cde52d7453e149510d0c2e1d63f9e9182e3e99
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Nasıl yapılır: ConcurrentBag Kullanarak Nesne Havuzu Oluşturma
 Bu örnek bir eş zamanlı paketi nesne havuzu uygulamak için nasıl kullanılacağını gösterir. Nesne havuzları bir sınıfın birden çok örneği gerektirir ve sınıfı oluşturmak veya silmek pahalıdır durumlarda uygulama performansını iyileştirebilir. Bir istemci programı yeni bir nesne istediğinde, nesne havuzu ilk zaten oluşturulduğundan ve havuza geri döner bir sağlamaya çalışır. Ancak bundan sonra yeni bir nesne yoksa, oluşturulur.  
@@ -33,4 +36,4 @@ Bu örnek bir eş zamanlı paketi nesne havuzu uygulamak için nasıl kullanıla
  [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş parçacığı koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+ [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

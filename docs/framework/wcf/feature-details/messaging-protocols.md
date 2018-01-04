@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  

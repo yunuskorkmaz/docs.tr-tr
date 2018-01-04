@@ -31,11 +31,11 @@ ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 Bir grup ifadeleri, belirtilen sayıda yineler.  
@@ -181,9 +181,9 @@ Next [ counter ]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic.List%601>  
- [Döngü yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [While... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Yapın... Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [İç içe geçmiş denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Koleksiyonları](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+ [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [While...End While Deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Koleksiyonlar](../../programming-guide/concepts/collections.md)

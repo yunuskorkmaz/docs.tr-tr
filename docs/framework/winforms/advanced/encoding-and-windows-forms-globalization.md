@@ -30,11 +30,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbac07e92d892913f2d2a342b2fa5b3d5fe2f40c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f25f4f7206b68e961f3c09a488af643ad5d0a4fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Kodlama ve Windows Forms Genelleştirme
 Windows Forms uygulamaları tamamen Unicode her karakter hangi platformu, program veya dil olsun benzersiz bir numara tarafından temsil edilen anlamına gelir, etkinleştirilmiştir. Unicode hakkında daha fazla bilgi için bkz: [Unicode Web sitesine](http://www.unicode.org).  
@@ -47,4 +48,4 @@ Windows Forms uygulamaları tamamen Unicode her karakter hangi platformu, progra
  Unicode uyumlu alternatifleri için <xref:System.Windows.Forms.ToolBar> ve <xref:System.Windows.Forms.StatusBar> denetimleri kullanın <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.StatusStrip> bu eski denetimleri Değiştir kontrol eder. Benzer bir görünüm ve kullanımında uygulamanızda görsel öğeleri arasında korumak için kullanmak <xref:System.Windows.Forms.MenuStrip> denetim işleme menüleri yerine için <xref:System.Windows.Forms.MainMenu>. Gibi <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.StatusStrip>, <xref:System.Windows.Forms.MenuStrip> ayrıca işlemek ve Unicode karakterler görüntüleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+ [Windows Forms’u Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

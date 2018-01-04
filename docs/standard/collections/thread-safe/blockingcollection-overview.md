@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection Genel Bakışı
 <xref:System.Collections.Concurrent.BlockingCollection%601>Aşağıdaki özellikleri sağlayan bir iş parçacığı koleksiyonunun sınıfı şöyledir:  
@@ -88,5 +91,5 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Koleksiyonlar ve veri yapıları](../../../../docs/standard/collections/index.md)  
- [İş parçacığı koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+ [Koleksiyonlar ve Veri Yapıları](../../../../docs/standard/collections/index.md)  
+ [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

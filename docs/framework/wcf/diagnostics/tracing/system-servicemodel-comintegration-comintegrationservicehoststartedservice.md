@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97a33a475c10eaf0ee21099974c71e9652e4eb3a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7e95cf4c9555533dc2a3c8697c26ce239eb24f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservice"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService  
@@ -27,5 +28,5 @@ System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

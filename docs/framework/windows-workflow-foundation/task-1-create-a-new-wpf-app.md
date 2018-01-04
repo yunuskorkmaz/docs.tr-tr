@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89c929e71a2d64673f158f81c85d04c3443800ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma
 Bu görevde, boş bir oluşturacak [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] WPF uygulaması Visual Studio şablonunu kullanarak uygulama ve uygun başvurular ekleyin [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı derlemeler.  
@@ -52,5 +53,5 @@ Bu görevde, boş bir oluşturacak [!INCLUDE[avalon1](../../../includes/avalon1-
 11. Bkz: [görev 2: İş Akışı Tasarımcısı konak](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) iş akışı Tasarımcısı tasarım tuvale barındırmak hakkında bilgi edinmek için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Tasarımcısı yeniden barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Görev 2: ana bilgisayar iş akışı Tasarımcısı](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+ [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Görev 2: İş Akışı Tasarımcısını Barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

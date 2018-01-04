@@ -17,11 +17,11 @@ ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f88401f6daa7a2108522496c845521474c22cc30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4aa939d7b2d89bd878705ac67f2b6f37838f6ea2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarından Değer Okuma
 `GetValue` Yöntemi `My.Computer.Registry` nesnesi, Windows kayıt defteri değerlerini okumak için kullanılabilir.  
@@ -58,9 +58,9 @@ ms.lasthandoff: 11/21/2017
 -   Anahtar adı 255 karakter sınırını aşıyor (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu işlem çalıştırmak için derleme ayrıcalık düzeyi verilen tarafından gerektiriyor <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Benzer şekilde, kullanıcının oluşturulması veya ayarları için doğru ACL olmalıdır. Örneğin, kod erişimi güvenlik izni olan yerel bir uygulama işletim sistemi izni olmayabilir. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](https://msdn.microsoft.com/library/33tceax8).  
+ Bu işlem çalıştırmak için derleme ayrıcalık düzeyi verilen tarafından gerektiriyor <xref:System.Security.Permissions.RegistryPermission> sınıfı. Kısmi güven bağlamda çalıştırıyorsanız, işlem nedeniyle yeterli ayrıcalığa sahip bir özel durum. Benzer şekilde, kullanıcının oluşturulması veya ayarları için doğru ACL olmalıdır. Örneğin, kod erişimi güvenlik izni olan yerel bir uygulama işletim sistemi izni olmayabilir. Daha fazla bilgi için bkz: [kod erişim güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  <xref:Microsoft.Win32.RegistryHive>  
- [Okuma ve kayıt defterine yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+ [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

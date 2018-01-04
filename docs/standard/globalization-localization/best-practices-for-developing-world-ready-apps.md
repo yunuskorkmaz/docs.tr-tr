@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 367da11fd0af9673a60d9acff20aef5969c98aae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Dünyaya Hazır Uygulamalar Geliştirmek için En İyi Yöntemler
 Bu bölümde, dünya çapında kullanılmaya hazır uygulamalar geliştirirken izlemek için en iyi uygulamaları açıklar.  
@@ -108,5 +111,5 @@ Bu bölümde, dünya çapında kullanılmaya hazır uygulamalar geliştirirken i
 5.  Tarayıcıya UICulture değer ayarlanabilir Not dil kabul edin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma
 ASP.NET bugün kullanıyorsanız ve kullanarak düşündüğünüz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelecekte bu konuda yeni ASP.NET Web hizmetleri de ile birlikte çalışacağından emin olmak için yönergeler sağlanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar.  
@@ -54,4 +55,4 @@ public interface IEcho
  Internet Information Services (IIS) tarafından sağlanan kimlik doğrulama seçenekleri kullanmaktan kaçının. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]istemcileri onları desteklemez. Bir hizmeti güvenli hale gerekiyorsa tarafından sağlanan seçenekleri kullanın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], çünkü bu seçenekler daha zengin ve standart protokollerine dayalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation'ı benimsemeyi bekleme: gelecekteki taşınmayı kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

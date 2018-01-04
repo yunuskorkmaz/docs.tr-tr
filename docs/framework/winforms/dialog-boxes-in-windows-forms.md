@@ -17,17 +17,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1660bf08f10a7d4e0db4b7ae8d58fd631986974c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows Forms'ta İletişim Kutuları
 İletişim kutuları, kullanıcıyla etkileşim ve bilgi almak için kullanılır. Basitçe bir formla iletişim kutusudur kendi <xref:System.Windows.Forms.FormBorderStyle> ayarlanan numaralandırma özelliği `FixedDialog`. Windows Forms Tasarımcısı'nda kullanarak kendi özel iletişim kutuları oluşturabileceğiniz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Denetimleri gibi ekleme `Label`, `Textbox`, ve `Button` iletişim kutuları, özel gereksinimlerinizi karşılamak için özelleştirmek için. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] De önceden tanımlanmış iletişim kutuları gibi içerir **Dosya Aç** ve kendi uygulamalarınıza uyarlayabilirsiniz ileti kutuları. Daha fazla bilgi için bkz: [iletişim kutusu denetimleri ve bileşenleri](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms için iletişim kutularını görüntüleme](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
  İletişim kutuları gösteren için yönergeler sağlar.  
   
 -   [Nasıl yapılır: Al iletişim kutusu bilgileri seçmeli olarak birden çok özelliklerini kullanma](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
@@ -47,11 +48,11 @@ ms.lasthandoff: 10/22/2017
 -   [Nasıl yapılır: ileti kutusu görüntüleme](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İletişim kutusu denetimleri ve bileşenleri](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [İletişim Kutusu Denetimleri ve Bileşenleri](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Önceden tanımlanmış iletişim kutusu denetimleri listeler.  
   
- [Windows formlarının görünüşünü değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Windows Forms’un Görünüşünü Değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
  Windows Forms uygulamalarının görünümünü değiştirmek nasıl açıklayan konulara bağlantılar içerir.  
   
- [TabControl denetimine genel bakış](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl Denetimine Genel Bakış](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  Sekme denetimi nasıl iletişim kutusuna dahil açıklanmaktadır.

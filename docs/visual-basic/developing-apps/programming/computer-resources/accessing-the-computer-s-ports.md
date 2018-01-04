@@ -14,36 +14,36 @@ ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e50a1e1e849052dbc5da62f434539fab478bd26d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Bilgisayar &#39; erişme (Visual Basic) s bağlantı noktaları
 `My.Computer.Ports` Nesnesi, bir özellik ve bilgisayar seri bağlantı noktalarına erişmek için bir yöntem sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Kullanılabilir seri bağlantı noktalarını göstermek gösterilmiştir.  
   
- [Nasıl yapılır: seri bağlantı noktalarına ekli modemleri çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
  Bir bilgisayarın seri bağlantı noktasına bağlı bir modem çevrilecek gösterilmiştir.  
   
- [Nasıl yapılır: seri bağlantı noktalarına dizeler gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
  Bir dizeyi bir bilgisayarın seri bağlantı noktasına gönderilecek gösterilmiştir.  
   
- [Nasıl yapılır: seri bağlantı noktalarından dize alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ [Nasıl Yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  Bir dizeyi bir bilgisayarın seri bağlantı noktasından almak üzere gösterilmiştir.  
   
- [.NET Framework'te bağlantı noktası işlemleri](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
+ [.NET Framework'te Bağlantı Noktası İşlemleri](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  Nasıl kullanılacağını açıklar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] bağlantı noktası işlemleri gerçekleştirirken.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  Açıklar `My.Computer.Ports` nesne ve üyeleri.  
   
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
+ <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
  Açıklar `SerialPortNames` özelliği bilgisayardaki seri bağlantı noktalarına adları koleksiyonunu alır.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  

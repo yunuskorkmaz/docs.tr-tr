@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ce7c8ff2154b8503b0ef73954464f380f520c3f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 29296261deb2cd94db339595464e3dcdf245fc82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="character-encoding-in-net"></a>Karakter .NET kodlama
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
@@ -273,4 +276,4 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
  <xref:System.Text.DecoderFallback>  
  <xref:System.Text.Encoding>  
  <xref:System.Text.EncoderFallback>  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)

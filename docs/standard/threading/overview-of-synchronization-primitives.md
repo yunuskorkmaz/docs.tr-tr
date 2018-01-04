@@ -17,11 +17,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme Temellerine Genel Bakış
 <a name="top"></a>.NET Framework eşitleme temelleri çeşitli iş parçacığı etkileşimlerinin denetleme ve yarış durumları önleme sağlar. Bunlar kabaca üç kategoriye ayrılabilir: kilitleme, sinyal ve ınterlocked işlemleri.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [SpinWait](#spinwait)  
   
--   [Birbirine kenetlenmiş işlemler](#interlocked_operations)  
+-   [Birbirine Kenetlenmiş İşlemler](#interlocked_operations)  
   
 <a name="locking"></a>   
 ## <a name="locking"></a>Kilitleme  
@@ -173,14 +176,14 @@ ms.lasthandoff: 11/21/2017
  Kavramsal genel bakış için bkz: [Interlocked Operations](../../../docs/standard/threading/interlocked-operations.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İçin Veri Eşitleme çoklu iş parçacığı kullanımı](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  [İzleyicileri](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Zaman uyumu sağlayıcılar](../../../docs/standard/threading/mutexes.md)  
- [Semafor ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+ [Karşılıklı dışlamalar](../../../docs/standard/threading/mutexes.md)  
+ [Semaphore ve SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
  [Bekleme tanıtıcıları](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [Birbirine kenetlenmiş işlemler](../../../docs/standard/threading/interlocked-operations.md)  
- [Okuyucu-Yazıcı kilitleri](../../../docs/standard/threading/reader-writer-locks.md)  
- [Engelle](../../../docs/standard/threading/barrier.md)  
+ [Birbirine Kenetlenmiş İşlemler](../../../docs/standard/threading/interlocked-operations.md)  
+ [Okuyucu-Yazıcı Kilitleri](../../../docs/standard/threading/reader-writer-locks.md)  
+ [Engel](../../../docs/standard/threading/barrier.md)  
  [SpinWait](../../../docs/standard/threading/spinwait.md)  
  [SpinLock](../../../docs/standard/threading/spinlock.md)

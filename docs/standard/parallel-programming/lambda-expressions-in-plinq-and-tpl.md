@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 79ab0f4427e0f37259f88cd3ec0762d1582481f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 364d23db41aac4733226189f7c8ae85d281b9887
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ ve TPL'deki Lambda İfadeleri
 Görev paralel kitaplığı (TPL) birini birçok yöntem içerir <xref:System.Func%601?displayProperty=nameWithType> veya <xref:System.Action?displayProperty=nameWithType> giriş parametresi olarak temsilciler ailesi. Bu temsilci paralel döngü, görev veya sorgu için özel bir program mantığınızı geçirmek için kullanın. Kod örnekleri PLINQ yanı sıra TPL için lambda ifadeleri Bu temsilci satır içi kod blokları olarak örneklerini oluşturmak için kullanın. Bu konu, işlev ve eylem kısa bir giriş sağlar ve görev paralel kitaplığı ve PLINQ'da lambda ifadeleri kullanmayı gösterir.  

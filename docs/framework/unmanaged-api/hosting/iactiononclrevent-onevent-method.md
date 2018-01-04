@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b2f609969ccf67f07701d20578225f1618293968
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bfba70cb1e0daf230abd16af6e24b4671334f20d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent Yöntemi
 Geri aramalar için bir çağrı kullanılarak kaydedilmiş olayları gerçekleştirir [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) yöntemi.  
@@ -72,9 +73,9 @@ HRESULT OnEvent (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [EClrEvent numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- [Iactiononclrevent arabirimi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- [Iclrcontrol arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [Iclroneventmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- [Mdaınfo yapısı](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)
+ [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [EClrEvent Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
+ [IActionOnCLREvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
+ [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [ICLROnEventManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
+ [MDAInfo Yapısı](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)

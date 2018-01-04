@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 26e1289aa22cda2ab744f1a2715259abbcafc59b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9705e4449da3b485bef7e7250ca08473d51387b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start Yöntemi
 Ortak dil çalışma zamanı (CLR) süreç içine başlatır.  
@@ -61,4 +62,4 @@ HRESULT Start();
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.AppDomain>  
- [Iclrruntimehost arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+ [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

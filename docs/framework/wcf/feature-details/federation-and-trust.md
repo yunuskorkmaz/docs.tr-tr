@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-trust"></a>Federasyon ve Güven
 Bu konu, Federasyon uygulamalarına, güven sınırları ve yapılandırmasıyla ilgili çeşitli yönlerini kapsar ve kullanımını verilen belirteçleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -48,6 +49,6 @@ Bu konu, Federasyon uygulamalarına, güven sınırları ve yapılandırmasıyla
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>  
- [Nasıl yapılır: federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

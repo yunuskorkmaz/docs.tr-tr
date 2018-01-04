@@ -22,11 +22,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 .NET Framework kullanabilirsiniz [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türü sınıf kitaplıkları kaynaklarında birden çok platformlarından erişilebildiğinden emin olun. Bu proje türü kullanılabilir [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] ve .NET Framework sınıf kitaplığı taşınabilir alt hedefler. Kullanarak bir [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] kitaplığınızın erişilip erişilemediğini Masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları sağlar ve [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
@@ -111,5 +114,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Resources.ResourceManager>  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)  
- [Paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
+ [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

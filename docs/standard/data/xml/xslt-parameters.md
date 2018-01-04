@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>XSLT parametreleri
 XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi. Bir tam adı ve ad alanı URI'si o anda parametre nesnesi ile ilişkilendirilmiş.  
@@ -76,4 +79,4 @@ XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xr
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

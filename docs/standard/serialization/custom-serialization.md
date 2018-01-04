@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization"></a>Özel seri hale getirme
 Özel serileştirme seri hale getirme ve seri durumdan çıkarma türü denetleme işlemidir. Seri hale getirme denetleyerek, seri hale getirmek ve seri durumdan türü çekirdek işlevselliğini çiğnemekten olmadan bir türü sürümleri arasında özelliği seri hale getirme uyumluluğundan emin olmak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümlerde serileştirme denetleme açıklanmaktadır.
@@ -190,6 +193,6 @@ End Class
  Nesneleri, içinden yeniden; ve çağrılan yöntemler çağrıyı yapan zaman serisi değil nesne başvuruları başvurmak çünkü seri durumdan çıkarma sırasında çağıran yöntemleri istenmeyen yan etkileri olabilir. Sınıf olan Implements çıkarıldıysa <xref:System.Runtime.Serialization.IDeserializationCallback>, <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*> yöntemi tüm nesne grafiğinin seri durumdan olduğunda otomatik olarak çağrılır. Bu noktada, başvurulan tüm alt nesneleri tam olarak geri yüklendi. Karma tablo olay dinleyicisi kullanmadan seri durumdan zor bir sınıfı tipik bir örneğidir. Seri durumdan çıkarma sırasında anahtar ve değer çiftleri almak kolaydır, ancak bu nesneleri geri karma tablosu için sorunlara neden olabilir karma tablosundan türetilmiş bu sınıfları garanti olduğundan ekleme seri durumdan. Bu aşamada karma tablo üzerinde yöntemleri çağırmak bu nedenle önerilir değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [İkili seri hale getirme](binary-serialization.md)  
- [XML ve SOAP seri hale getirme](xml-and-soap-serialization.md)  
+ [İkili Serileştirme](binary-serialization.md)  
+ [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
  [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

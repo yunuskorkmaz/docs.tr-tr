@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView Denetimi Teknoloji Özeti (Windows Forms)
 Bu konu hakkında bilgileri özetler `DataGridView` denetimi ve kullanımını destekleyen sınıflar.  
@@ -71,6 +72,6 @@ Bu konu hakkında bilgileri özetler `DataGridView` denetimi ve kullanımını d
  <xref:System.Windows.Forms.DataGridView> Denetim Kapat birlikte çalışabilir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu bileşen, birincil veri kaynağını bir biçimde olacak şekilde tasarlanmıştır. Arasındaki etkileşimi yönetebilirsiniz bir <xref:System.Windows.Forms.DataGridView> kaynak denetim ve veri bağımsız olarak kendi veri kaynağı türü.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGridView denetimine genel bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- [DataGridView denetimi mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+ [DataGridView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [DataGridView Denetimi Mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)

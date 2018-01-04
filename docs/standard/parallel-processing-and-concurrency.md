@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 589bb8fc36d95a48930e4b51a096e7db18905397
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ab15fd38a467eec398f8383e40067d2135c042b5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-processing-and-concurrency-in-the-net-framework"></a>.NET Framework'te Paralel İşleme ve Eşzamanlılık
 .NET Framework kullanıcınızın bilgisayarın performansını en üst düzeye uygulamanızı kullanıcınız için esnek tutmak için birden çok iş parçacığı yürütme kullanabilmeniz için çeşitli yöntemler sağlar.  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/18/2017
  [İş parçacığı oluşturma](../../docs/standard/threading/index.md)  
  .NET Framework tarafından sağlanan temel eşzamanlılık ve eşitleme mekanizmaları açıklar.  
   
- [Zaman uyumsuz programlama desenleri](../../docs/standard/asynchronous-programming-patterns/index.md)  
+ [Zaman Uyumsuz Programlama Desenleri](../../docs/standard/asynchronous-programming-patterns/index.md)  
  .NET Framework desteklenen üç zaman uyumsuz programlama desenleri kısa bir genel bakış sağlar:  
   
 -   [Zaman uyumsuz programlama modeli (APM)](../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  

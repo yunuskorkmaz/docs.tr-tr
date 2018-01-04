@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da varolan bağlam menüsü önceliğini görüntülemek veya ayarlayarak görüntülenen menüsünü bastırmak için ayarlamak için bir uygulamada işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğine `true` olay verisi içinde. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay verileri menü tamamen yeni bir ile değiştirmektir <xref:System.Windows.Controls.ContextMenu> nesnesi, bazen işlemi iptal ediliyor ve yeni bir açık başlatma gerektirir. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olayı olmanız gerekir arasında zamanlama sorunların farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve denetimlerin bağlam menülerini genel konumlandırma sorumlu hizmet. Bu konu, çeşitli bağlam menüsü açma senaryolarının kod tekniklerini bazıları gösterir ve zamanlama sorunu oyuna nereden geldiğini durumunu gösterir.  
@@ -67,5 +68,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.ContextMenu>  
  <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
- [Temel öğeler genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [ContextMenu genel bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+ [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

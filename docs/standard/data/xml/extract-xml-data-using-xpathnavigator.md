@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c42539db3750ebc2a4220ef776b89bbabe6aaca3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f80c21e7809e5b088582a51d9085a187bccae444
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML veri ayıklamak
 Microsoft .NET Framework XML belgesinde temsil etmek için birkaç farklı yolu vardır. Bu kullanmayı da içeren bir <xref:System.String>, veya kullanarak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XPath.XPathDocument> sınıfları. Bu bir XML belgesi farklı sunumu arasında taşıma kolaylaştırmak için <xref:System.Xml.XPath.XPathNavigator> sınıfı XML olarak ayıklanması için bir dizi yöntem ve özellikleri sağlar bir <xref:System.String>, <xref:System.Xml.XmlReader> nesne veya <xref:System.Xml.XmlWriter> nesnesi.  
@@ -173,7 +176,7 @@ book.Close();
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Düğüm kümesi Gezinti XPathNavigator kullanma](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- [XML verilerini XPathNavigator kullanarak yazılan kesinlikle erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathNavigator Kullanarak Düğüm Kümesinde Gezinme](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

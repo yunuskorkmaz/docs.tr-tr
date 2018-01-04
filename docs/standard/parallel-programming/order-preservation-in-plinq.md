@@ -17,11 +17,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 060459cf8f408e40ddc394fbcda6a022ec6379de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 PLINQ'te, doğruluk koruyarak performansını en üst düzeye çıkarmak için belirtilir. Bir sorgu çalıştırmak mümkün olduğunca hızlı ancak hala doğru sonuçlar gerekir. Bazı durumlarda, doğruluk korunması için kaynak sıradaki sırasını gerektirir; Ancak, sıralama hesaplama açısından pahalı olabilir. Bu nedenle, varsayılan olarak, kaynak sıradaki sırasını PLINQ korumaz. Bu bağlamda PLINQ benzer [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], hangi sıralama korumak LINQ, nesnelere değil.  

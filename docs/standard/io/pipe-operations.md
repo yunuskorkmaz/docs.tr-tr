@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68c1ad34952ee4d20dbf56aa8ca437a3f99db751
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework'te Kanal İşlemleri
 Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür vardır:  
@@ -45,5 +48,5 @@ Kanallar, işlemler arası iletişim için bir yol sağlar. Kanallar iki tür va
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dosya ve akış t-O](../../../docs/standard/io/index.md)  
- [Nasıl yapılır: yerel işlemler arası iletişim için anonim kanallar kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [Nasıl yapılır: ağ işlemler arası iletişimi için adlandırılmış kanallar kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+ [Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+ [Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

@@ -45,11 +45,14 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a>Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar. Aşağıdaki bölümleri içerir:  
@@ -361,4 +364,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Text.RegularExpressions>  
  [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

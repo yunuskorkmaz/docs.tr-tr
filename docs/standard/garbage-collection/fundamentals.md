@@ -20,11 +20,14 @@ caps.latest.revision: "51"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3fe36e93cdea1315ee92f2dfdf76953511309a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp Toplamanın Temelleri
 <a name="top"></a>Ortak dil çalışma zamanı (CLR), atık toplayıcı otomatik bellek yöneticisi olarak görev yapar. Aşağıdaki avantajları sağlar:  
@@ -304,4 +307,4 @@ Arka plan iş istasyonu çöp toplama
 Arka plan sunucu çöp toplama  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

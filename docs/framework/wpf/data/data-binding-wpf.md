@@ -17,20 +17,21 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-wpf"></a>Veri Bağlama (WPF)
 Windows Presentation Foundation (WPF) veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Öğeleri veri kaynakları ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde çeşitli veriye bağlı olabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Bağlama bildirimleri genel bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Bağlama Kaynaklarına Genel Bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Bağlama Bildirimlerine Genel Bakış](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -43,8 +44,8 @@ Windows Presentation Foundation (WPF) veri bağlama sunmak ve veri ile etkileşi
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Sürükleme ve bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Sürükleme ve Bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
- [İzlenecek yol: Bir WPF uygulamasında uygulama verileri önbelleğe alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

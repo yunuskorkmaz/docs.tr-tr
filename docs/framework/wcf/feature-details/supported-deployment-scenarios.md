@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen Dağıtım Senaryoları
 Alt kümesini [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen güvenilir uygulamalar kullanımda kullanmak için ancak bazı değil tüm senaryoların gereksinimleri karşılamak üzere tasarlanmıştır için desteklenen özellikler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sunucusunda, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] karşılıyor Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları çalıştırmak barındırma hizmeti sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Orta güven izni güvenlik nedenleriyle ayarlandı. İstemci üzerindeki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak üzere tasarlanmıştır [ClickOnce dağıtımı](http://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s sorunsuz izin XAML tarayıcısı uygulaması teknoloji ve Masaüstü uygulamaları güvenilmeyen sitelerden güvenli dağıtımı.  
@@ -52,5 +53,5 @@ Alt kümesini [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kısmen g�
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kod erişimi güvenliği](http://go.microsoft.com/fwlink/?LinkId=83717)  
  [Windows Presentation Foundation tarayıcıda barındırılan uygulamalar genel bakış](http://go.microsoft.com/fwlink/?LinkId=98397)  
- [Kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
  [ASP.Net Orta güven](http://go.microsoft.com/fwlink/?LinkId=69328)

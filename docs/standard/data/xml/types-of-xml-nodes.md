@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3914a2c5c06a2cc73f14bc473984094b474d537e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0fd196f4aed5d4faa3e703f639b927f001b50174
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="types-of-xml-nodes"></a>XML düğüm türleri
 Bir XML belgesi düğümlerinin ağaç olarak belleğe okurken düğüm türleri düğümleri için düğümleri oluşturulduğunda vermiştir. XML belge nesne modeli (DOM) düğüm türleri, World Wide Web Konsorsiyumu (W3C) tarafından belirlenen çeşitli türlerde sahiptir ve DOM yapısı modeli 1.1.1 bölümünde listelenir. Aşağıdaki tabloda, bu düğüm türü ve her kısa bir açıklaması için atanmış nesnesini düğüm türleri listelenmektedir.  
@@ -54,4 +57,4 @@ Bir XML belgesi düğümlerinin ağaç olarak belleğe okurken düğüm türleri
  Düğüm türlerini ve bunların eşdeğer nesne adı, nesne hiyerarşisini üzerinde daha fazla bilgi için bkz: [XML belge nesne modeli (DOM) hiyerarşisi](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Düğüm ağaçta oluşturulan nesneler hakkında daha fazla bilgi için bkz: [nesne hiyerarşisi XML verileri eşleştirmesi](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

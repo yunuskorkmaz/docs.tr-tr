@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 819b624e2abac09aea804311d661f78e2a1f5a7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62addf82929174d887160dadc4504cec19d9e3ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Formları Tasarımcısında Tasarım Zamanı Hataları
 Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı başarısız olduğunda görüntülenen tasarım zamanı hata listesi kullanımını ve anlamı açıklanmaktadır. Bu hata listesi görünüyorsa, bunu Tasarımcısı'nda bir hata, ancak kodunuzdaki hataları düzeltmek için yardımcı yorumlar değil.  
@@ -64,6 +65,6 @@ Bu konuda, Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı ba�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tasarım zamanı geliştirme sorunlarını giderme](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Denetim ve bileşen yazmada sorun giderme](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- [Windows Forms denetimleri geliştirme tasarım zamanında](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [Denetim ve Bileşen Yazmada Sorun Giderme](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  [Windows Form Tasarımcısı hata iletileri](http://msdn.microsoft.com/en-us/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

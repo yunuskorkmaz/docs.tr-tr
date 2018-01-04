@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de1b43b62a8c16fd4b000093977805680ba0b38d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e93912fc221d5c76dd5a462e6141fae2d0f4ca16
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML serileştirme denetim öznitelikleri
 Aşağıdaki tablodaki öznitelikleri sınıflar için geçerlidir ve sınıf üyeleri şekilde denetlemek için <xref:System.Xml.Serialization.XmlSerializer> serileştiren veya sınıfının bir örneği seri durumdan çıkarır. Bu öznitelikler XML serileştirme nasıl kontrol anlamak için bkz: [XML serileştirme kullanarak özniteliklerini denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
@@ -53,9 +56,9 @@ Aşağıdaki tablodaki öznitelikleri sınıflar için geçerlidir ve sınıf ü
  Kodlanmış SOAP XML serileştirme denetlemek için bkz: [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [XML serileştirme özniteliklerini kullanarak denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

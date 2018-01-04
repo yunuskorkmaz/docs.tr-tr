@@ -17,28 +17,29 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98b0d38ab78bb36337461495cc6e8e782160617a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1f937232119281f4e94dcee9013546a56a67265
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-how-to-topics"></a>ListView Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.ListView> veri öğeleri kümesini görüntülemek için denetimi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Üstbilgi Tıklatıldığında GridView sütununu sıralama](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [ListView için özel görünüm modu oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [GridView kullanan ListView stilini belirlemek için şablonlarını kullanma](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [Sürüklenen GridView sütun başlığı için stil oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [GridView kullanarak ListView içeriklerini görüntüleme](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [Seçili öğeleri ListView içinde stili için Tetikleyicileri kullanma](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [CheckBox ile ListViewItems oluşturma](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [GridViewRowPresenter kullanarak verileri görüntüle](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [GridView Uygulayan ListView öğeleri gruplandırma](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [GridView Uygulayan ListView içinde bir satır stili](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [ListView sütununda yatay hizalamasını değiştirme](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [ListView her öğe için MouseDoubleClick olayını işle](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [Üst Bilgiye Tıklandığında GridView Sütununu Sıralama](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [ListView için Özel Görünüm Modu Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [GridView Kullanan ListView'da Stil Oluşturmak için Şablonları Kullanma](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [Sürüklenen GridView Sütun Başlığı için Stil Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [GridView Kullanarak ListView İçeriklerini Görüntüleme](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
+ [ListView İçindeki Seçili Öğelere Stil Eklemek için Tetikleyicileri Kullanma](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [CheckBox ile ListViewItems Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
+ [GridViewRowPresenter Kullanarak Veri Görüntüleme](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [GridView Uygulayan ListView İçinde Öğeleri Gruplandırma](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [GridView Uygulayan ListView İçinde bir Satıra Stil Ekleme](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ListView>  

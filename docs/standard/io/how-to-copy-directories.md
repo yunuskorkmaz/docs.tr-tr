@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5602a4e227f3cd17e4a7c9a086bee69d3e3e506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 43e9027c1dbfc831f598991374c22434e01fe7ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-copy-directories"></a>Nasıl yapılır: Dizinleri Kopyalama
 Bu örnekte, bir dizinin içeriklerini eşzamanlı olarak başka bir konuma kopyalamak için G/Ç sınıflarının nasıl kullanılacağı gösterilir. Bu örnekte, kullanıcı alt dizinlerin de kopyalanıp kopyalanmayacağını belirtebilir. Eğer alt dizinler kopyalanırsa bu örnekteki yöntem, başka bir kopyası kalmayana kadar sonraki her bir alt dizinde kendisini çağırarak yinelemeli olarak bu alt dizinleri kopyalar.  
@@ -41,6 +44,6 @@ Bu örnekte, bir dizinin içeriklerini eşzamanlı olarak başka bir konuma kopy
  <xref:System.IO.FileInfo>  
  <xref:System.IO.DirectoryInfo>  
  <xref:System.IO.FileStream>  
- [Dosya ve akış g/ç](../../../docs/standard/io/index.md)  
- [Ortak g/ç görevleri](../../../docs/standard/io/common-i-o-tasks.md)  
- [Zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md)
+ [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)  
+ [Ortak G/Ç Görevleri](../../../docs/standard/io/common-i-o-tasks.md)  
+ [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)

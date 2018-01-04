@@ -25,11 +25,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, Ve <xref:System.Char.ToLower%2A?displayProperty=nameWithType> herhangi bir parametre kabul ediyor musunuz aşırı yöntemleri sağlar. Varsayılan olarak, bu aşırı parametresiz değerine göre durum değişiklikleri gerçekleştirmek <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Kültür göre değişebilir büyük küçük harfe duyarlı sonuçlar üretir. Clear kültüre duyarlı veya kültüre duyarsız büyük/küçük değişikliklerini istediğinizi yapmak için açıkça belirtmek ihtiyaç duyduğunuz bu yöntemlerin aşırı kullanmalısınız bir `culture` parametresi. Kültüre duyarlı durum değişiklikleri belirtin `CultureInfo.CurrentCulture` için `culture` parametresi. Kültüre duyarsız büyük/küçük değişikliklerini belirtin `CultureInfo.InvariantCulture` için `culture` parametresi.  
@@ -79,4 +82,4 @@ static object LookupKey(string key)
  <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [Kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

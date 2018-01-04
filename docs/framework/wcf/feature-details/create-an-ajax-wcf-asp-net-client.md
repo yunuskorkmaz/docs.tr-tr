@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b136565730c1b3175abff8b057a69acc6609a44d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma
 Bu konuda AJAX etkinleştirilmiş oluşturmak için Visual Studio 2008 kullanmayı gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ve hizmete erişen bir ASP.NET istemcisi. İstemci ve hizmet için kod bunları oluşturma adımlarını yordamları bölümünde açıklanan sonra örnek bölümünde sağlanır.  

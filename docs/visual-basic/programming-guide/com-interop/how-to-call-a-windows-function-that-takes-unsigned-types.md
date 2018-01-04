@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma (Visual Basic)
 Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kullanıyorsa, bu üyelerle erişebilirsiniz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -77,7 +77,7 @@ Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kulla
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri olmayan parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir component kullanamayacaklarını şekilde, bunları kullanır.  
+    >  `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri olmayan parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir component kullanamayacaklarını şekilde, bunları kullanır.  
   
     > [!IMPORTANT]
     >  Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod aradığı kodunuzu olası güvenlik risklerini kullanıma sunar.  
@@ -87,7 +87,7 @@ Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kulla
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Integer veri türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Uınteger veri türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [İzlenecek yol: Windows API'larını çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+ [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+ [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

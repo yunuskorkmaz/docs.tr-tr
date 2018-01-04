@@ -32,11 +32,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d813522d0aeb9bf37582c167760d44268df27039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme
 Yalıtılmış depolama kullanan kodu kısıtlı tarafından bir [kota](../../../docs/standard/io/isolated-storage.md#quotas) , veri bölme yalıtılmış depolama dosyaları ve dizinleri mevcut en büyük boyutunu belirtir. Kota güvenlik ilkesi tarafından tanımlanır ve yöneticiler tarafından yapılandırılabilir. Veri yazma çalıştığınızda boyutu aşıldı izin verilen en fazla ise bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşur ve işlem başarısız olur. Bu veri depolama alanı dolu olduğundan isteği reddedecek şekilde uygulama neden olabilecek kötü amaçlı hizmet reddi saldırılarını önlemeye yardımcı olur.  
@@ -55,4 +58,4 @@ Yalıtılmış depolama kullanan kodu kısıtlı tarafından bir [kota](../../..
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
  [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)  
- [Nasıl yapılır: yalıtılmış depolama için depoları alın](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+ [Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

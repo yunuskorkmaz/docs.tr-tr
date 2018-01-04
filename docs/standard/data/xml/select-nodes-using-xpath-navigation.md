@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 836702a3200a21c6a9830bdcd1f74a78129b5a6c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath Gezinti kullanarak düğümleri seçin
 XML belge nesne modeli (DOM) sorgu bilgileri XML Path dili (XPath) gezinme DOM kullanmanıza olanak sağlayan yöntemler içerir XPath tek, belirli bir düğümü bulunamadı veya bazı ölçütlere uyan tüm düğümleri bulmak için kullanabilirsiniz.  
@@ -170,4 +173,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

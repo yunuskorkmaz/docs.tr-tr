@@ -22,11 +22,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek Yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim eklemek için sağlar. Bu kılavuzda temel form oluşturma ve bir sınıf kitaplığı'na derleyin. Bu sınıf kitaplığı başka bir projeye almak ve temel formundan devralan yeni bir form oluşturun. Bu gözden geçirme sırasında öğreneceksiniz nasıl yapılır:  
@@ -174,6 +175,6 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim 
  Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekle. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı proje açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim eklemeyi deneyin (aracılığıyla **yeni öğeler eklemek** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi ekleme ve değiştirme `Inherits` (`:` içinde [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) ifadesi. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms devral](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows formlarını devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Windows Forms görsel devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [Nasıl yapılır: Windows Forms’u Devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

@@ -21,11 +21,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework'te sayısal türler
 Standart sayısal Entegral ve kayan nokta temelleri, .NET Framework destekler yanı <xref:System.Numerics.BigInteger>, bir tam sayı türü hiçbir teorik üst veya alt sınırı ile <xref:System.Numerics.Complex>, bir karmaşık numaralar temsil eden tür ve bir SIMD etkin kümesi vektör türlerinde <xref:System.Numerics> ad alanı.  
@@ -85,4 +88,4 @@ Standart sayısal Entegral ve kayan nokta temelleri, .NET Framework destekler ya
  SIMD ayrıca indirilebilir olarak bir [NuGet paketi](http://www.nuget.org/packages/System.Numerics.Vectors).  NuGET paketini de genel içerir <xref:System.Numerics.Vector%601> herhangi bir ilkel sayısal türde bir vektör oluşturmanıza olanak tanıyan yapısı. (İçindeki tüm sayısal türler basit sayısal türler dahil <xref:System> ad alanı dışında <xref:System.Decimal>.) Ayrıca, <xref:System.Numerics.Vector%601> yapısı bir kitaplık vektörlerinin ile çalışırken çağırabilirsiniz kullanışlı yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama temelleri](../../docs/standard/application-essentials.md)
+ [Uygulama Temelleri](../../docs/standard/application-essentials.md)

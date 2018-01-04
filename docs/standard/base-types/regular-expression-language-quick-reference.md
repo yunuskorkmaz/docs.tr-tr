@@ -23,11 +23,14 @@ caps.latest.revision: "56"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 <a name="top"></a>Normal bir ifade normal ifade altyapısı giriş metni eşleştirmeyi dener bir desen ' dir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/21/2017
   
  [Karakter çıkışları](#character_escapes)  
  [Karakter sınıfları](#character_classes)  
- [Tutturucular](#atomic_zerowidth_assertions)  
+ [Yer İşaretleri](#atomic_zerowidth_assertions)  
  [Gruplandırma yapıları](#grouping_constructs)  
- [Miktar belirleyiciler](#quantifiers)  
+ [Belirleyiciler](#quantifiers)  
  [Yeniden başvuru yapıları](#backreference_constructs)  
  [Değişim yapıları](#alternation_constructs)  
  [Değişimler](#substitutions)  
@@ -227,6 +230,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Text.RegularExpressions.Regex>  
  [Normal ifadeler](regular-expressions.md)  
  [Normal ifade sınıfları](the-regular-expression-object-model.md)  
- [Normal ifade örnekleri](regular-expression-examples.md)  
+ [Normal İfade Örnekleri](regular-expression-examples.md)  
  [Normal ifadeler - hızlı başvuru (Word biçiminde de indirilebilir)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Normal ifadeler - hızlı başvuru (PDF biçimli indirme)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

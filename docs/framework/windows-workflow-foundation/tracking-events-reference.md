@@ -12,11 +12,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9eaf7f8bd4d477b08cda16ca544f240a417f6b21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-events-reference"></a>İzleme olayları başvurusu
 İş akışında bir yürütme sırasında [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ömrü çeşitli aşamaları hareket ederken olayları izleme başlatır. Konak, bu olaylara abone olma ve yaşam süresi boyunca iş akışı ilerleme durumunu güncelleştirilmiş tutun. Başlatılan izleme olayları, bu bölümde ele alınmıştır.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
 |[104 - ActivityScheduledRecord](../../../docs/framework/windows-workflow-foundation/104-activityscheduledrecord.md)|Bilgiler|TrackRecord ActivityScheduledRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, etkinlik kimliği = %5, ActivityInstanceId = %6, ActivityTypeName = % 7 ' ye ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = % 10 ChildActivityTypeName % 11, ek açıklamaları = % 12, ProfileName = % 13 =|Sorun giderme, ögesi, WFTracking EndToEndMonitoring|  
 |[105 - FaultPropagationRecord](../../../docs/framework/windows-workflow-foundation/105-faultpropagationrecord.md)|Uyarı|TrackRecord FaultPropagationRecord, örnek kimliği = %1, kayıt numarası = %2, EventTime = = %3, FaultSourceActivityName = %4, FaultSourceActivityId = %5, FaultSourceActivityInstanceId = %6, FaultSourceActivityTypeName = % 7 ' ye FaultHandlerActivityName = %8, FaultHandlerActivityId %9, FaultHandlerActivityInstanceId = % 10, FaultHandlerActivityTypeName = % 11, hata = % 12, IsFaultSource = % 13, ek açıklamaları = % 14 ProfileName = = % 15|Sorun giderme, ögesi, WFTracking EndToEndMonitoring|  
 |[106 - CancelRequestRecord](../../../docs/framework/windows-workflow-foundation/106-cancelrequestrecord.md)|Bilgiler|TrackRecord CancelRequestedRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, etkinlik kimliği = %5, ActivityInstanceId = %6, ActivityTypeName = % 7 ' ye ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = % 10 ChildActivityTypeName % 11, ek açıklamaları = % 12, ProfileName = % 13 =|Sorun giderme, ögesi, WFTracking EndToEndMonitoring|  
-|[107--BookmarkResumptionRecord](../../../docs/framework/windows-workflow-foundation/107-bookmarkresumptionrecord.md)|Bilgiler|TrackRecord BookmarkResumptionRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, SubInstanceID = %5, OwnerActivityName = %6, OwnerActivityId = % 7 ' ye OwnerActivityInstanceId = %8, OwnerActivityTypeName = %9, ek açıklamaları = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking EndToEndMonitoring|  
+|[107 -- BookmarkResumptionRecord](../../../docs/framework/windows-workflow-foundation/107-bookmarkresumptionrecord.md)|Bilgiler|TrackRecord BookmarkResumptionRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, SubInstanceID = %5, OwnerActivityName = %6, OwnerActivityId = % 7 ' ye OwnerActivityInstanceId = %8, OwnerActivityTypeName = %9, ek açıklamaları = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking EndToEndMonitoring|  
 |[108 - CustomTrackingRecordInfo](../../../docs/framework/windows-workflow-foundation/108-customtrackingrecordinfo.md)|Bilgiler|TrackRecord CustomTrackingRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, ActivityName = %5, etkinlik kimliği = %6, ActivityInstanceId = % 7 ' ye ActivityTypeName = %8, veri = %9, ek açıklamaları = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking UserEvents, EndToEndMonitoring,|  
 |[110 - CustomTrackingRecordWarning](../../../docs/framework/windows-workflow-foundation/110-customtrackingrecordwarning.md)|Uyarı|TrackRecord CustomTrackingRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, ActivityName = %5, etkinlik kimliği = %6, ActivityInstanceId = % 7 ' ye ActivityTypeName = %8, veri = %9, ek açıklamaları = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking UserEvents, EndToEndMonitoring,|  
 |[111 - CustomTrackingRecordError](../../../docs/framework/windows-workflow-foundation/111-customtrackingrecorderror.md)|Hata|TrackRecord CustomTrackingRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ad = %4, ActivityName = %5, etkinlik kimliği = %6, ActivityInstanceId = % 7 ' ye ActivityTypeName = %8, veri = %9, ek açıklamaları = % 10, ProfileName = % 11|Sorun giderme, ögesi, WFTracking UserEvents, EndToEndMonitoring,|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
 |[119 - WorkflowInstanceUpdatedRecord](../../../docs/framework/windows-workflow-foundation/119-workflowinstanceupdatedrecord.md)|Bilgiler|TrackRecord WorkflowInstanceUpdatedRecord, örnek kimliği = %1, kayıt numarası = = %2, EventTime = %3, ActivityDefinitionId = %4, durum = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = % 7 ' ye ek açıklamaları = %8, ProfileName %9 =|Ögesi, WFTracking|  
 |[225 - TraceCorrelationKeys](../../../docs/framework/windows-workflow-foundation/225-tracecorrelationkeys.md)|Bilgiler|Bağıntı anahtar '%1' '%3' üst kapsamda değerleri '%2' kullanılarak hesaplanır.|Sorun giderme WFServices|  
 |[440 - StartSignpostEvent1](../../../docs/framework/windows-workflow-foundation/440-startsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme WFServices|  
-|[441 - StopSignpostEvent1](../../../docs/framework/windows-workflow-foundation/441-stopsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme WFServices|  
+|[441- StopSignpostEvent1](../../../docs/framework/windows-workflow-foundation/441-stopsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme WFServices|  
 |[1001 - WorkflowApplicationCompleted](../../../docs/framework/windows-workflow-foundation/1001-workflowapplicationcompleted.md)|Bilgiler|İş akışı örneği kimliği: '%1' kapalı durumda tamamlandı.|WFRuntime|  
 |[1002 - WorkflowApplicationTerminated](../../../docs/framework/windows-workflow-foundation/1002-workflowapplicationterminated.md)|Bilgiler|WorkflowApplication kimliği: '%1' sonlandırıldı. Faulted durumunda bir özel durum ile tamamlandı.|WFRuntime|  
 |[1003 - WorkflowInstanceCanceled](../../../docs/framework/windows-workflow-foundation/1003-workflowinstancecanceled.md)|Bilgiler|İş akışı örneği kimliği: '%1' iptal edilmiş durumda tamamlandı.|WFRuntime|  

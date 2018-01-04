@@ -20,11 +20,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 702ed3e73117fe01769ec9d7bf939ae8df523793
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a>Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınmıştır aşağıdaki adımları içerir:  
@@ -116,11 +119,11 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Genel bakış](../../docs/framework/get-started/overview.md)  
- [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)  
- [Meta veriler ve kendiliğinden açıklayıcı bileşenler](../../docs/standard/metadata-and-self-describing-components.md)  
- [Ilasm.exe (IL derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)  
+ [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)  
+ [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
  [Güvenlik](../../docs/standard/security/index.md)  
- [Yönetilmeyen kod ile birlikte çalışma](../../docs/framework/interop/index.md)  
+ [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)  
  [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)  
- [Ortak dil çalışma zamanı derlemeleri](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Uygulama etki alanları](../../docs/framework/app-domains/application-domains.md)
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Uygulama Etki Alanları](../../docs/framework/app-domains/application-domains.md)

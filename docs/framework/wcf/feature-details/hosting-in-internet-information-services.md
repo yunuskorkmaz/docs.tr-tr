@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
 Barındırma için bir seçenek [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri olan bir Internet Information Services (IIS) uygulama içinde. Bu barındırma modeli tarafından kullanılan model benzer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri.  
@@ -66,9 +67,9 @@ Barındırma için bir seçenek [!INCLUDE[indigo1](../../../../includes/indigo1-
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri olabilir ya da yan yana ile barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk Hizmetleri tarafından sağlanan özelliklerinden alabilir modu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması platformu. Bu özelliklerin tartışma için bkz [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceHostFactory kullanarak barındırmayı genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [Bir Internet Information Services tarafından barındırılan bir WCF Hizmeti dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
- [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Internet Information Services barındırma en iyi uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Windows Communication Foundation için Internet Information Services 7.0 yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
+ [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
+ [Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
+ [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

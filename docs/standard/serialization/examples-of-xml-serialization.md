@@ -23,11 +23,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550b1e8bf04bf7e2cec52ce26d647022688c4004
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ee2baef3ddcaebb494f1eae2813e861f93e489dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="examples-of-xml-serialization"></a>XML serileştirme örnekleri
 XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, gösterildiği gibi genel alanlar ve özellikler, yalnızca oluşan bir sınıf serileştirebilen [Tanıtımı XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md). Aşağıdaki kod örnekleri XML serileştirme için belirli bir XML Şeması (XSD) belge uyan bir XML akışı oluşturmak için nasıl kullanılacağı dahil olmak üzere çeşitli Gelişmiş senaryoları adres.  
@@ -772,9 +775,9 @@ public class Test
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [XML serileştirme özniteliklerini kullanarak denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [XML serileştirme denetim öznitelikleri](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [XML Serileştirmeyi Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
  [XmlSerializer sınıfı](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

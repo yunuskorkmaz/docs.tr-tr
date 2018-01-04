@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 Zaman uyumsuz işlemleri ile çalışmak için görev tabanlı zaman uyumsuz desen (TAP) kullandığınızda, bekleme engellenmeden elde etmek için geri aramalar kullanabilirsiniz.  Görevler için bu yöntemlerle gibi sağlanır <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Normal denetim akışı içinde beklemenin zaman uyumsuz işlemleri sağlayarak geri aramalar dil tabanlı zaman uyumsuz destek gizler ve derleyici tarafından üretilen kod aynı bu API düzeyinde destek sağlar.  
@@ -842,6 +845,6 @@ private static void Produce(int data)
 >  <xref:System.Threading.Tasks.Dataflow> Ad alanı bulunan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aracılığıyla **NuGet**. İçeren derlemenin yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi açın [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], seçin **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi Microsoft.Tpl.Dataflow paketi için arama.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [Görev tabanlı zaman uyumsuz deseni uygulama](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
- [Diğer zaman uyumsuz desen ve türlerle birlikte çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+ [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Görev Tabanlı Zaman Uyumsuz Deseni Uygulama](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+ [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

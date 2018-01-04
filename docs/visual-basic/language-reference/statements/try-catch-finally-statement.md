@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally Deyimi (Visual Basic)
 Belirli bir kod bloğu içinde hala kod çalıştırılırken ortaya çıkabilecek bazı veya tüm olası hataları işlemek için bir yol sağlar.  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>Yineleyiciler  
  Yineleyici işlevi veya `Get` erişimci gerçekleştiren özel bir yineleme içinde bir koleksiyon. Yineleyici kullanan bir [verim](../../../visual-basic/language-reference/statements/yield-statement.md) deyimi her birer birer koleksiyonun bir öğesi döndürür. Kullanarak bir yineleyici işlevi çağırmak bir [For Each... Sonraki deyim](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- A `Yield` deyimi içinde bulunabilir bir `Try` bloğu. A `Try` içeren blok bir `Yield` deyimi olabilir `Catch` engeller ve olabilir bir `Finally` bloğu. "Deneyin blokları Visual Basic" bölümüne bakın [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) bir örnek.  
+ A `Yield` deyimi içinde bulunabilir bir `Try` bloğu. A `Try` içeren blok bir `Yield` deyimi olabilir `Catch` engeller ve olabilir bir `Finally` bloğu. "Deneyin blokları Visual Basic" bölümüne bakın [yineleyiciler](../../programming-guide/concepts/iterators.md) bir örnek.  
   
  A `Yield` deyimi içinde olamaz bir `Catch` blok veya `Finally` bloğu.  
   
@@ -191,8 +191,8 @@ End Try
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:System.Exception>  
- [Exit deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [On Error deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [On Error Deyimi](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Kod Parçacıkları İçin En İyi Uygulamalar](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Özel durum işleme](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
- [Throw deyimi](../../../visual-basic/language-reference/statements/throw-statement.md)
+ [Özel Durum İşleme](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [Throw Deyimi](../../../visual-basic/language-reference/statements/throw-statement.md)

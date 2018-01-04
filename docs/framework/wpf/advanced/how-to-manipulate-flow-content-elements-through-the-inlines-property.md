@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77b6d75b48fd137092600a7e2316cbcf7099de76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5d90756ee200ba091f2f9e15e9e7d5632984ba9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Nasıl yapılır: Akış İçeriği Öğelerini Satır İçlerinin Özelliği ile Düzenleme
 Bu örnekler satır içi akış içeriği öğeleri üzerinde gerçekleştirilen daha yaygın işlemlerin bazılarını gösterir (ve bu öğelerin kapsayıcıları gibi <xref:System.Windows.Controls.TextBlock>) aracılığıyla **Inlines** özelliği. Bu özellik eklemek ve öğeleri kaldırmak için kullanılan <xref:System.Windows.Documents.InlineCollection>. Akış içerik öğeleri bu özellik bir **Inlines** özellik içerir:  
@@ -78,7 +79,7 @@ Bu örnekler satır içi akış içeriği öğeleri üzerinde gerçekleştirilen
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Blokların özelliği aracılığıyla FlowDocument işlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Bir tablonun sütunlar sütunlar özelliği aracılığıyla yönetmek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Tablonun satır grupları RowGroups özelliği aracılığıyla denetlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

@@ -14,11 +14,11 @@ ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a30e5d5aca09e7b74e16dd05cdc0c5c361c1657d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fcbcc48928b1b03487f31930e3d14051ddd990a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;İleti&gt; bu hata, ayrıca bir proje başvurusu derleme &#39; dosya başvurusuyla karıştırılması nedeniyle olabilir&lt; AssemblyName&gt;&#39;
 \<İleti > Bu hata, ayrıca bir proje başvurusu derleme dosyası başvurusuyla karıştırılması nedeniyle olabilir '\<assemblyname >. Bu durumda, dosya başvurusunu değiştirmeyi deneyin '\<assemblyfilename >' projesindeki '\<projectname1 >' proje başvuru '\<projectname2 >'.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)  
- [Bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB nasıl yapılır: başvuru ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [Bozuk başvurularda sorun giderme](/visualstudio/ide/troubleshooting-broken-references)
+ [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+   
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Bozuk Başvurularda Sorun Giderme](/visualstudio/ide/troubleshooting-broken-references)

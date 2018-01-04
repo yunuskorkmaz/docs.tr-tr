@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>XML şemaları düzenleme
 Bir XML şeması düzenleme şema nesne modeli (SOM) en önemli özelliklerinden biridir. Tüm SOM öncesi schema derleme özelliklerinin bir XML şeması var olan değerleri değiştirmek için kullanılabilir. XML şema değişiklikleri yansıtacak şekilde sonra derlenebileceğini.  
@@ -143,10 +146,10 @@ Bir XML şeması düzenleme şema nesne modeli (SOM) en önemli özelliklerinden
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeline genel bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Okuma ve yazma XML şemaları](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Yapı XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML şemaları çapraz geçiş yapma](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Dahil olmak üzere veya XML şemalarını içeri aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Derleme sonrası şema bilgi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [XML Şemaları Okuma ve Yazma](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

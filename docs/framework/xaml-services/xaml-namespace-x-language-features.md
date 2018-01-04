@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespace-x-language-features"></a>XAML Ad Uzayı (x:) Dil Özellikleri
 ## <a name="in-this-section"></a>Bu Bölümde  
- [x: Array işaretleme uzantısı](x-array-markup-extension.md)  
- [x: Class yönergesi](x-class-directive.md)  
- [x: ClassModifier yönergesi](x-classmodifier-directive.md)  
- [x: Code iç XAML türü](x-code-intrinsic-xaml-type.md)  
- [x: FieldModifier yönergesi](x-fieldmodifier-directive.md)  
- [x: Key yönergesi](x-key-directive.md)  
- [x: Member yönergesi](x-member-directive.md)  
- [x: Members yönergesi](x-members-directive.md)  
- [x: Name yönergesi](x-name-directive.md)  
- [x: Null işaretleme uzantısı](x-null-markup-extension.md)  
- [x: Shared özniteliği](x-shared-attribute.md)  
- [x: Property yönergesi](x-property-directive.md)  
- [x: Static işaretleme uzantısı](x-static-markup-extension.md)  
- [x: Subclass yönergesi](x-subclass-directive.md)  
- [x: Type işaretleme uzantısı](x-type-markup-extension.md)  
- [x: TypeArguments yönergesi](x-typearguments-directive.md)  
- [x: Uid yönergesi](x-uid-directive.md)  
- [x: XData iç XAML türü](x-xdata-intrinsic-xaml-type.md)  
- [XamlName dilbilgisi](xamlname-grammar.md)  
+ [x:Array İşaretleme Uzantısı](x-array-markup-extension.md)  
+ [x:Class Yönergesi](x-class-directive.md)  
+ [x:ClassModifier Yönergesi](x-classmodifier-directive.md)  
+ [x:Code İç XAML Türü](x-code-intrinsic-xaml-type.md)  
+ [x:FieldModifier Yönergesi](x-fieldmodifier-directive.md)  
+ [x:Key Yönergesi](x-key-directive.md)  
+ [x:Member Yönergesi](x-member-directive.md)  
+ [x:Members Yönergesi](x-members-directive.md)  
+ [x:Name Yönergesi](x-name-directive.md)  
+ [x:Null İşaretleme Uzantısı](x-null-markup-extension.md)  
+ [x:Shared Özniteliği](x-shared-attribute.md)  
+ [x:Property Yönergesi](x-property-directive.md)  
+ [x:Static İşaretleme Uzantısı](x-static-markup-extension.md)  
+ [x:Subclass Yönergesi](x-subclass-directive.md)  
+ [x:Type İşaretleme Uzantısı](x-type-markup-extension.md)  
+ [x:TypeArguments Yönergesi](x-typearguments-directive.md)  
+ [x:Uid Yönergesi](x-uid-directive.md)  
+ [x:XData İç XAML Türü](x-xdata-intrinsic-xaml-type.md)  
+ [XamlName Dilbilgisi](xamlname-grammar.md)  
  [{} Kaçış sırası - biçimlendirme uzantısı](escape-sequence-markup-extension.md)  
- [XML: lang XAML'de işleme](xml-lang-handling-in-xaml.md)  
- [XML: Space XAML'de işleme](xml-space-handling-in-xaml.md)
+ [XAML'de xml:lang İşleme](xml-lang-handling-in-xaml.md)  
+ [XAML'de xml:space İşleme](xml-space-handling-in-xaml.md)

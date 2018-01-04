@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 *Kimliğe bürünme* bir sunucu uygulaması istemci kimliği üzerinde gerçekleştirilecek özelliğidir. Kimliğe bürünme kaynaklarına erişimi doğrularken kullanmak üzere hizmetlerin yaygındır. Bir hizmet hesabı kullanarak sunucu uygulaması çalışır, ancak server istemci bağlantısı kabul ettiğinde, böylece erişim denetimlerini istemcinin kimlik bilgileri kullanılarak gerçekleştirilir, istemci temsil eder. Taşıma güvenliği bir hem de bu kimlik bilgilerini kullanarak güvenli hale getirmek ve kimlik bilgilerini geçirme mekanizmadır. Bu konu, taşıma güveliği kullanarak açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kimliğe bürünme özelliği ile. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ileti güvenliği kullanarak kimliğe bürünme bkz [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP taşıma bkz [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Nasıl yapılır: bir hizmette istemci kimliğine bürün](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [HTTP kimlik doğrulamasını anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+ [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

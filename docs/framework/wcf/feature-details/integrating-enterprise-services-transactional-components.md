@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Kurumsal Hizmetler ile tümleştirmek için otomatik bir mekanizma sağlar (bkz [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Ancak, dahili Kurumsal Hizmetler içinde barındırılan işlemsel bileşenlerini kullanan hizmetler geliştirmek için esneklik isteyebilirsiniz. Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlemleri özelliği üzerinde oluşturulan <xref:System.Transactions> altyapısı, Kuruluş Hizmetleri ile tümleştirme için işlem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arasında birlikte çalışabilirlik belirtmek için aynı olan <xref:System.Transactions> ve Enterprise Kısmında özetlendiği gibi hizmetleri [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](http://go.microsoft.com/fwlink/?LinkId=94949).  
@@ -103,5 +104,5 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [COM uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+ [COM+ Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [COM Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

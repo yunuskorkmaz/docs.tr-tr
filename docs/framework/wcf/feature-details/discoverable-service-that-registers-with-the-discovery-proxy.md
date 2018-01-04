@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffe4a94328d2728ca936425a58d4d641922356a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Önceki konusunda [nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanmadı. Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] duyuru iletileri gönderir hizmet (`Hello` ve `Bye`) Keşif proxy'si için kaydolun ve kendisini keşif proxy'sine kaydı için neden olur.  
@@ -295,6 +296,6 @@ namespace Microsoft.Samples.Discovery
 ```  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF keşfetme](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Nasıl yapılır: hizmet bulmak için keşif proxy'si kullanan bir istemci uygulaması kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

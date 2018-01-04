@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b303582a62f211091b1ebee0e88cf380da8b03d9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 325be4836d661369326fbe3ea1f8b252bf251f3c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-finally-blocks"></a>Finally bloklarını kullanma
 
@@ -40,4 +43,4 @@ Aşağıdaki kod örneğinde bir `try` / `catch` catch bloğu bir <xref:System.A
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
-[Özel durumlar](index.md)   
+[Özel Durumlar](index.md)   

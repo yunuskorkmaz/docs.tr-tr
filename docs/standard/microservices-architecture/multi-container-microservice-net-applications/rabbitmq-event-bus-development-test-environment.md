@@ -4,21 +4,26 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir 
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Bir olay için veri yolu RabbitMQ ile geliştirme veya test ortamına uygulama
 
 Bir kapsayıcıda çalışan RabbitMQ eShopOnContainers uygulamalarında olduğu gibi temel, özel olay bus oluşturursanız, yalnızca geliştirme ve test ortamları için kullanılması gerektiğini söyleyen başlamanız gerekir. Üretime hazır hizmet veri yolu bir parçası olarak oluşturmakta olduğunuz sürece, üretim ortamınız için bunu kullanmamanız gerekir. Basit özel olay bus ticari hizmet veri yolu olan birçok üretime hazır önemli özellikleri eksik olabilir.
 
-EShopOnContainers özel bir olay veri yoluna temelde RabbitMQ API kullanarak bir kitaplığı uygulamasıdır. Uygulama, Şekil 8-21'de gösterildiği gibi olaylarına abone olma, olayları yayımlama ve olayları almak mikro olanak sağlar.
+EShopOnContainers olay bus özel uygulamasında temelde RabbitMQ (Azure hizmet veri yoluna bağlı başka bir uygulama yoktur) API kullanarak bir kitaplığı biridir. 
+
+Olay veri yolu uygulaması RabbitMQ ile olaylarına abone olma, olayları yayımlama ve olayları almak mikro Şekil 8-21'de gösterildiği gibi olanak sağlar.
 
 ![](./media/image22.png)
 
@@ -37,7 +42,7 @@ RabbitMQ örnek geliştirme ve test olay bus Demirbaş kod uygulamasıdır. Rabb
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Basit bir uygulama yayımlama RabbitMQ ile yöntemi
 
-Aşağıdaki kod RabbitMQ, eShopOnContainers olay veri yolu uygulamasını parçası kitabıdır genellikle geliştirmeler yapıyoruz sürece kod gerekmez. Kod bir bağlantı ve RabbitMQ kanala alır, bir ileti oluşturur ve ardından sıraya ileti yayımlar.
+Aşağıdaki kod parçasıdır içinde geliştirilmiş RabbitMQ, Basitleştirilmiş olay veri yolu uygulaması içindir [gerçek bir kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) eShopOnContainers biri. Genellikle geliştirmeler yapıyoruz sürece kod gerekmez. Kod bir bağlantı ve RabbitMQ kanala alır, bir ileti oluşturur ve ardından sıraya ileti yayımlar.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -78,24 +83,30 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```

@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1a0613ecc6693b12dc76b77d6a634aafa599d5ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -68,5 +69,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
- [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Özellik koşulunu temel alan UI Otomasyon öğesi bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+ [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

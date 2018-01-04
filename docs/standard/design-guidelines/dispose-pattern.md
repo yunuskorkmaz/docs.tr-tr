@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97f0c63857b7af408613e1ffdfecb157d1e2c704
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dispose-pattern"></a>Desen dispose
 Tüm Programlar bir veya daha fazla sistem kaynakları, bellek, sistem tanıtıcıları veya veritabanı bağlantıları gibi kendi yürütme sürecinde alın. Geliştiriciler alınan ve kullanılan sonra bunlar serbest gerekir çünkü bu tür sistem kaynaklarını kullanırken dikkatli olmanız gerekir.  
@@ -289,6 +292,6 @@ public class ComplexResourceHolder : IDisposable {
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  
  <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Ortak tasarım desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Ortak Tasarım Desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

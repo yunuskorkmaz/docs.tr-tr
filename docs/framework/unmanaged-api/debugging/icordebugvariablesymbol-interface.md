@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 89bae73e9dfb729e26f54dc7874418163870dc27
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a09fab1468435212c4437c58c113691e049b1ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol arabirimi
 Bir değişken için hata ayıklama sembol bilgileri alır.  
@@ -26,11 +27,11 @@ Bir değişken için hata ayıklama sembol bilgileri alır.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetName yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getname-method.md)|Bir değişkenin adını alır.|  
-|[GetSize yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|Bir değişken boyutunu bayt cinsinden alır.|  
-|[GetSlotIndex yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|Yerel bir değişken yönetilen yuvası dizinini alır.|  
-|[GetValue yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|Bir değişkenin değerini bir bayt dizisi olarak alır.|  
-|[SetValue yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|Bir bayt dizisi değeri bir değişkene atar.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getname-method.md)|Bir değişkenin adını alır.|  
+|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|Bir değişken boyutunu bayt cinsinden alır.|  
+|[GetSlotIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|Yerel bir değişken yönetilen yuvası dizinini alır.|  
+|[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|Bir değişkenin değerini bir bayt dizisi olarak alır.|  
+|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|Bir bayt dizisi değeri bir değişkene atar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -47,5 +48,5 @@ Bir değişken için hata ayıklama sembol bilgileri alır.
  **.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

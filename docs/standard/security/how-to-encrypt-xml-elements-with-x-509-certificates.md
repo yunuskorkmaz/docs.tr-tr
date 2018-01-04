@@ -24,11 +24,14 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6690c87bb7a632a783fc89341d405bf81166470c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 108a07a818adaec6734637da2c95aed42e837847
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme
 Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi içindeki bir öğe şifrelemek için ad alanı.  XML şifrelemesi, exchange veya kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  XML şifrelemesi için World Wide Web Konsorsiyumu (W3C) belirtimi http://www.w3.org/TR/xmldsig-core/ bulunan standart XML şifreleme hakkında daha fazla bilgi için bkz.  
@@ -125,4 +128,4 @@ Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML b
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Cryptography.Xml>  
- [Nasıl yapılır: X.509 sertifikalarıyla XML öğelerinin şifresini çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+ [Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

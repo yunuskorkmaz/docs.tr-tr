@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50521591af6f77b98e52aa4a847216f63186d78b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya başka bir nesneye devralmak için en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümleri önceden oluşturduğunuz kod veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirler.  
@@ -67,7 +68,7 @@ Bir form veya başka bir nesneye devralmak için en kolay yolu kullanmaktır **d
     >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimleri ve bileşenleri birleştirdiğinizde z-sıralamasını çakışıyor karşılaşabilirsiniz. Z-sırasını tıklayarak yapılır değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Geri Gönder**. Denetimleri z düzenini hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms katman nesnelerde](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Inherits deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [kullanma](~/docs/csharp/language-reference/keywords/using.md)  
- [Taban formun görünüşünü değiştirmenin etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Windows Forms görsel devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+ [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
+ [using](~/docs/csharp/language-reference/keywords/using.md)  
+ [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
+ [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

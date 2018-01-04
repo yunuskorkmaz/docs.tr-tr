@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 378f1d80392ae7b2058d5c3b2d987e4810cbd07b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e0bde96442e09ee33a63cecd56a4cd6e2cf19a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
@@ -79,8 +80,8 @@ ms.lasthandoff: 11/21/2017
 3.  Veri kümesini doldurmak için kod yazma.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGrid denetimine genel bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [Nasıl yapılır: tabloları ekleyebilir ve sütunları Windows Forms DataGrid denetimi](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [DataGrid denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Visual Studio'da veri erişimi](/visualstudio/data-tools/accessing-data-in-visual-studio)
+ [DataGrid Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)

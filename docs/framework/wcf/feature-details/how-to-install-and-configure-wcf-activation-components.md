@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
 Bu konu Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ayarlamak için gereken adımları açıklar [!INCLUDE[wv](../../../../includes/wv-md.md)] ana bilgisayara [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ağ protokolleri HTTP üzerinden iletişim kurmazlar Hizmetleri. Aşağıdaki bölümlerde bu yapılandırma için adımlar verilmiştir:  
@@ -110,7 +111,7 @@ Bu konu Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) ayarlamak
     >  Bu komut, metnin tek bir satırdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [NamedPipe etkinleştirme](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
+ [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [MSMQ Etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [NamedPipe Etkinleştirme](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8caa253a3f17c58f542317de579c4f7832c4efac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39bb29d36b6d81464b1213ebc0bf7aee6ceb5713
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sealing"></a>Mühürleme
 Nesne odaklı çerçeveleri özelliklerini geliştiriciler genişletmek ve framework tasarımcıların beklenmedik şekilde özelleştirin biridir. Güç ve Genişletilebilir tasarımının tehlike budur. Framework'ünüzün tasarlarken, bu nedenle, olduğu, istendiğinde Genişletilebilirliğe dikkatle tasarlamak için ve genişletilebilirlik tehlikeli olduğunda sınırlamak için çok önemlidir.  
@@ -56,6 +59,6 @@ Nesne odaklı çerçeveleri özelliklerini geliştiriciler genişletmek ve frame
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Genişletilebilirlik için tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Korumasız sınıfları](../../../docs/standard/design-guidelines/unsealed-classes.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Mühürsüz Sınıflar](../../../docs/standard/design-guidelines/unsealed-classes.md)

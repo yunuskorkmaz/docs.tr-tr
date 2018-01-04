@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61fb11b79459da14384af974dbc403024faa377f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Nasıl yapılır: Windows Forms TabControl'nin Görünüşünü Değiştirme
 Özelliklerini kullanarak Windows Forms'ta sekmeler görünümünü değiştirebilirsiniz <xref:System.Windows.Forms.TabControl> ve <xref:System.Windows.Forms.TabPage> denetimi tek tek sekmelerinde oluşturan nesneleri. Bu özellikleri ayarlayarak, görüntüleri sekmelerde görüntüleme, dikey yerine yatay sekmelerini görüntülemek, sekme, birden çok satır görüntüleme ve etkinleştirebilir veya sekmeleri program aracılığıyla devre dışı bırakın.  
@@ -76,8 +77,8 @@ ms.lasthandoff: 11/21/2017
 -   Ayarlama <xref:System.Windows.Forms.TabControl.Appearance%2A> özelliği <xref:System.Windows.Forms.TabControl> için <xref:System.Windows.Forms.TabAppearance.Buttons> veya <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TabControl denetimi](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
- [TabControl denetimine genel bakış](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [Nasıl yapılır: sekme sayfasına denetim ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [Nasıl yapılır: sekme sayfalarını devre dışı bırak](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleme ve kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+ [TabControl Denetimi](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [TabControl Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Sekme Sayfasına Denetim Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

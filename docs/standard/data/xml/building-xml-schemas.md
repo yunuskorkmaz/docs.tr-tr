@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e49c2130702fc7df223f2eab0ea0500b1c27b660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72e3d707caf9c5e64c9860a8e79b5e151ce68852
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-xml-schemas"></a>Yapı XML şemaları
 Sınıflarda <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı World Wide Web Konsorsiyumu (W3C) XML Şeması öneri tanımlanan yapıları eşlemeniz ve XML şemaları bellek içi oluşturmak için kullanılabilir.  
@@ -96,10 +99,10 @@ Sınıflarda <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı Wor
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeline genel bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Okuma ve yazma XML şemaları](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [XML şemaları çapraz geçiş yapma](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [XML şemaları düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Dahil olmak üzere veya XML şemalarını içeri aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Derleme sonrası şema bilgi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [XML Şemaları Okuma ve Yazma](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [XML Şemalarını Düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

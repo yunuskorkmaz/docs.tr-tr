@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71cc1410a13fc73cce931a063a929ba94aab91be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0735718db6317716055b9ee59cf90e869f2015c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-interfaces"></a>Genel Arabirimler
 Bu konu genel türler aileleri arasında ortak işlevsellik sağlayan genel arabirimler genel bir bakış sağlar.  
@@ -52,7 +55,7 @@ Bu konu genel türler aileleri arasında ortak işlevsellik sağlayan genel arab
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
  <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Genel türler](../../../docs/standard/generics/index.md)  
- [.NET Framework'teki genel koleksiyonlar](../../../docs/standard/generics/collections.md)  
- [Dizi ve listeleri düzenlemek için genel temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)
+ [Genel Türler](../../../docs/standard/generics/index.md)  
+ [.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)  
+ [Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+ [Kovaryans ve Kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)

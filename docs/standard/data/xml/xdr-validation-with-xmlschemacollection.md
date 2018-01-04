@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR doğrulama
 Karşı doğrulama XML verileri azaltılmış (XDR) şema depolanıyorsa **XmlSchemaCollection**, ad alanı URI belirtildi şema koleksiyonuna zaman eklendi ile ilişkilidir. **XmlValidatingReader** XML belgesi ad alanı URI'si bu URI koleksiyondaki karşılık gelen şema eşler.  
@@ -167,4 +170,4 @@ namespace ValidationSample
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
  <!--zz <xref:System.Xml.XmlValidatingReader.Settings%2A>-->  `System.Xml.XmlValidatingReader.Settings`  
- [XmlSchemaCollection şema derleme](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+ [XmlSchemaCollection Şema Derlemesi](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

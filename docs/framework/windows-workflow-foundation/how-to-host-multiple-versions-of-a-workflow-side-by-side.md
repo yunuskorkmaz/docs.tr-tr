@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f6fa267e6400672328714f016a5823d8f1311aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Nasıl yapılır: bir iş akışı yan yana birden fazla sürümünü ana bilgisayar
 `WorkflowIdentity`bir adı ve sürümü bir iş akışı tanımı ile ilişkilendirmek iş akışı uygulama geliştiricilerinin ve kalıcı iş akışı örneği ile ilişkili olması için bu bilgileri için bir yol sağlar. Bu kimlik bilgileri, iş akışı uygulama geliştiriciler tarafından birden çok iş akışı tanımı sürümlerinin yan yana yürütme gibi senaryoları etkinleştirmek için kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için dönüm sağlar. Bu adım öğreticide nasıl kullanılacağını göstermektedir `WorkflowIdentity` aynı anda birden çok iş akışı sürümü barındırmak için.  

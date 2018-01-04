@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb45a08e9f21578b69dedbe504cfb8bbd21193bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd1874004af1ebbde69c622853d5fdcd982005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pooling"></a>Biriktirme
 Bu örnek nasıl genişletileceğini gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nesne havuzu desteklemek için. Örnek sözdizimsel olarak ve anlam olarak benzer bir öznitelik oluşturmak nasıl gösterir `ObjectPoolingAttribute` Kurumsal Hizmetler işlevselliğini özniteliği. Nesne havuzu çarpıcı artırma uygulamanın performans sağlayabilir. Ancak, doğru kullanılmıyorsa ters etkisi olabilir. Nesne havuzu kapsamlı başlatma gerektiren sık kullanılan nesnelerini yeniden yükünü azaltmanıza yardımcı olur. Havuza alınmış bir nesne üzerinde bir yöntem çağrısı bir önemli tamamlamak için gereken süre, en büyük havuz boyutu sınırına hemen sonra ancak, nesne havuzu ek istekler kuyruğa atılıyor. Bu nedenle bir zaman aşımı özel durum atma tarafından bazı nesne oluşturma isteklere hizmet başarısız olabilir.  

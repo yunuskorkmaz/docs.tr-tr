@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 97d636583393ab856a9c17af4c974c53fbde5767
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform sınıfı girişleri
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Yöntemi kabul türleri kaynak belge için üç giriş: uygulayan bir nesne <xref:System.Xml.XPath.IXPathNavigable> arabirimi, bir <xref:System.Xml.XmlReader> kaynak belge ya da bir dize URI okur nesnesi.  
@@ -62,4 +65,4 @@ ms.lasthandoff: 10/18/2017
  Daha fazla bilgi için bkz: [çözme dış kaynaklara sırasında XSLT işleme](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

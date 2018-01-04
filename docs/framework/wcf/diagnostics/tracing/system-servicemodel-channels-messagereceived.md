@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6932d67a372595d77f8fe821edd4788d950e4d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d23623be9a8c360a84094e874eed93a5f8a25552
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmessagereceived"></a>System.ServiceModel.Channels.MessageReceived
 System.ServiceModel.Channels.MessageReceived  
@@ -29,5 +30,5 @@ System.ServiceModel.Channels.MessageReceived
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

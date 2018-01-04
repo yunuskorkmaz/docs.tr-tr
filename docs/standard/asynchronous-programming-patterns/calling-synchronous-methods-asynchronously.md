@@ -30,11 +30,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma
 .NET Framework, herhangi bir yöntemini zaman uyumsuz çağırma olanak sağlar. Bunu yapmak için aramak istediğiniz yöntemi olarak bir temsilci aynı imzayla tanımlayın; Ortak dil çalışma zamanı otomatik olarak tanımlayan `BeginInvoke` ve `EndInvoke` uygun imzaları ile bu temsilci için yöntemleri.  
@@ -119,4 +122,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Delegate>  
- [Olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+ [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

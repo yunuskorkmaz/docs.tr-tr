@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 84744474b9eca96cae5e96b8c4eadc4109f85f82
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 75bbaf5fdf41a55719965203c50ddd0f5d48263a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 Arabirimi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
@@ -32,8 +33,8 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetEventMask2 yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)|Profil Oluşturucu CLR bildirimlerini almak istediği geçerli olay kategorileri alır.|  
-|[SetEventMask2 yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)|Profil Oluşturucu CLR olay bildirimlerini almak istediği olay türlerini belirten bir değer ayarlar.|  
+|[GetEventMask2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)|Profil Oluşturucu CLR bildirimlerini almak istediği geçerli olay kategorileri alır.|  
+|[SetEventMask2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)|Profil Oluşturucu CLR olay bildirimlerini almak istediği olay türlerini belirten bir değer ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirimde yöntemleri değiştirmek için tasarlanmıştır [Icorprofilerınfo::geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) ve [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) yöntemleri.  
@@ -46,4 +47,4 @@ ms.lasthandoff: 10/18/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

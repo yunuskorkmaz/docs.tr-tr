@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ea2e260c5ca2622d650542d0cd18baca1a49288
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 39bc221528b238af058e25bacfb4c570956be009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Nasıl yapılır: BindingSource ve ResetItem Metodunu Kullanarak Değişiklik Bildirimleri Verme
 Öğeler değişti, eklendiğinde veya bazı veri kaynakları, denetimleri için değişiklik bildirimleri yükseltmeyin. İle <xref:System.Windows.Forms.BindingSource> bileşeni, bu tür veri kaynaklarına bağlayın ve kodunuzdan bir değişiklik bildirimi oluştur.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

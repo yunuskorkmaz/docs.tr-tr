@@ -17,11 +17,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d38d8beedf342720d4dc68026297edb457f5ed35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a2e068b38c12d37755bee4c7da8c1ca8e5036c74
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma
 Zaman bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngü sahip küçük bir gövde, eşdeğer sıralı döngü daha yavaş onu gibi gerçekleştirebileceğiniz [için](~/docs/csharp/language-reference/keywords/for.md) döngü C# ve [için](http://msdn.microsoft.com/en-us/c470a263-9b49-4308-8fd6-8592b84a7980) Visual Basic'te döngü. Performans verileri ve temsilci her döngü tekrarında üzerinde çağırma maliyet bölümlendirme söz konusu yükünü kaynaklanır. Bu tür senaryosu için <xref:System.Collections.Concurrent.Partitioner> sınıfı sağlar <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> temsilci gövdesi için sıralı döngü vermenizi sağlar ve böylece temsilci yineleme başına bir kez yerine bölüm başına yalnızca bir kez çağrılır yöntemi. Daha fazla bilgi için bkz: [PLINQ ve TPL için özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
@@ -34,6 +37,6 @@ Zaman bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithT
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [PLINQ ve TPL için özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
+ [PLINQ ve TPL için Özel Bölümleyiciler](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
  [Yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
- [PLINQ ve TPL'deki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

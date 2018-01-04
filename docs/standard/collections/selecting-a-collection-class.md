@@ -20,11 +20,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 64b50839a5500b671a4bd5dd92eec2f0db9787a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfı dikkatli seçtiğinizden emin olun. Yanlış türde kullanarak koleksiyon kullanımınız kısıtlayabilirsiniz. Genel olarak, türlerinde kullanmaktan kaçının <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Koleksiyonları genel ve eşzamanlı sürümleri kendi büyük tür güvenliği ve diğer geliştirmeler nedeniyle tercih edilen olacak.  
@@ -90,4 +93,4 @@ Koleksiyon sınıfı dikkatli seçtiğinizden emin olun. Yanlış türde kullana
  <xref:System.Collections>  
  <xref:System.Collections.Specialized>  
  <xref:System.Collections.Generic>  
- [İş parçacığı koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)
+ [İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)

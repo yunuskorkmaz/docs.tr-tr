@@ -9,11 +9,11 @@ ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dba7ebe86d3c34198171556b3895cb6925b5f876
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d002c820dab758a7592bb6de438c112af1ad94b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Bağımsız değişken &lt;argumentname&gt; değerinden büyük veya sıfıra eşit olmalıdır
 Bir bağımsız değişken değeri sıfırdan küçük. Bağımsız değişken değeri sıfırdan büyük veya sıfıra eşit olmalıdır.  
@@ -25,5 +25,5 @@ Bir bağımsız değişken değeri sıfırdan küçük. Bağımsız değişken d
 2.  Bağımsız değişkeni bir hesaplama sağlanırsa, hesaplama tarafından işlenmekte olan değerlerini denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Parametre Visual Basic 6.0 kullanıcıları için mekanizma geçirme](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+

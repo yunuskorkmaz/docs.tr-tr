@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 28fe3756a2881e8f746616f8275b505b1a01eada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c36bf5790d033eddb6bb7e0d910482143a9bcac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="static-class-design"></a>Statik sınıf tasarımı
 Statik sınıf yalnızca statik üyeleri içeren bir sınıf olarak tanımlanır (elbette devralınan örnek üyelerin yanı sıra <xref:System.Object?displayProperty=nameWithType> ve büyük olasılıkla özel Oluşturucu). Bazı diller statik sınıflar için yerleşik destek sağlar. C# 2.0 ve daha sonra bir sınıf statik olarak bildirilmişse, korumalı, soyut ve hiçbir örnek üyesinin geçersiz ya bildirilir.  
@@ -46,5 +49,5 @@ Statik sınıf yalnızca statik üyeleri içeren bir sınıf olarak tanımlanır
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

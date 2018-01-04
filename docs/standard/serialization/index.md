@@ -1,5 +1,5 @@
 ---
-title: ".NET içinde seri hale getirme"
+title: ".NET içinde serileştirme"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -18,13 +18,16 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8f86b66e92ea250fbe20e8bcb27e6706302db4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="serialization-in-net"></a>.NET içinde seri hale getirme
+# <a name="serialization-in-net"></a>.NET içinde serileştirme
 Seri hale getirme kalıcı veya taşınan bir forma bir nesnenin durumu dönüştürme işlemidir. Seri hale getirme tamamlama bir akış bir nesnesine dönüştürür seri kaldırma ' dir. Birlikte, bu işlemlerin kolayca depolanan ve aktarılan veri izin verin.  
   
 .NET iki serileştirme teknolojileri özellikleri:  
@@ -34,19 +37,19 @@ Seri hale getirme kalıcı veya taşınan bir forma bir nesnenin durumu dönüş
 -   XML serileştirme yalnızca ortak özellikler ve alanları serileştirir ve türü kalitesini korumak değil. Sağlayın veya veriyi kullanan uygulamayı kısıtlamadan veri tüketmek istediğinizde kullanışlıdır. XML açık bir standart olduğundan, Web üzerinden veri paylaşımı için çekici bir seçimdir. SOAP benzer şekilde yayınlayabilirsiniz kolaylaştırır açık bir standart olan.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
-[Serileştirme Nasıl Yapılır Konuları](../../../docs/standard/serialization/serialization-how-to-topics.md)  
+[Serileştirme ile İlgili Nasıl Yapılır Konuları](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 Bu bölümde bulunan nasıl yapılır konulara bağlantılar listeler.
   
-[İkili seri hale getirme](../../../docs/standard/serialization/binary-serialization.md)  
+[İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
 Ortak dil çalışma zamanı ile içerdiği ikili serileştirme mekanizması açıklanmaktadır.
 
-[XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+[XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 Ortak dil çalışma zamanı ile içerdiği XML ve SOAP serileştirme mekanizması açıklanmaktadır.
 
-[Seri hale getirme araçları](../../../docs/standard/serialization/serialization-tools.md)  
+[Serileştirme Araçları](../../../docs/standard/serialization/serialization-tools.md)  
 Bu araçlar serileştirme kod geliştirmelerine yardımcı olur.
 
-[Seri hale getirme örnekleri](../../../docs/standard/serialization/serialization-samples.md)  
+[Serileştirme Örnekleri](../../../docs/standard/serialization/serialization-samples.md)  
 Örnekler serileştirme nasıl ekleyebileceğiniz gösterilmektedir.
 
 ## <a name="reference"></a>Başvuru

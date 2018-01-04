@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef105626d2427f0ea6dd49f696b78ffac4834f92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisi nasıl gönderebilirsiniz gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
@@ -323,5 +324,5 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968)

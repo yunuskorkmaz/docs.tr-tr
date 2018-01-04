@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61444afd5afe52cbcb0f64074ec4479bd6252358
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Desteklemek için özellikle tasarlanmış beş yeni koleksiyon türleri tanıtır çok iş parçacıklı ekleme ve kaldırma işlemleri. İş parçacığı güvenliği elde etmek için bu yeni tür verimli kilitleme ve kilidi serbest eşitleme mekanizmaları çeşitli kullanın. Eşitleme için bir işlem yükü ekler. Ek yük miktarı kullanılan eşitleme türü, gerçekleştirilen işlemleri türünü ve koleksiyon eşzamanlı olarak erişmeye çalıştığınız iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  
@@ -70,5 +73,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [İş parçacığı koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)  
+ [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)  
  [Paralel Programlama](../../../../docs/standard/parallel-programming/index.md)

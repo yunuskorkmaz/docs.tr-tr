@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı değil. *Örnek oluşturma* kullanıcı tanımlı bir hizmet nesneleri ve bunların ilgili ömrü denetlenmesi için başvuruyor <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* olan içinde çalışan iş parçacıklarının sayısını denetlemek için belirtilen terimin bir <xref:System.ServiceModel.InstanceContext> aynı anda.  
@@ -118,9 +119,9 @@ public class CalculatorService : ICalculatorConcurrency
 |Tek|-Süre sonuyla kanal davranışa: bir oturum ve bir <xref:System.ServiceModel.InstanceContext> tüm çağrıları için.<br />-Oturumsuz kanal davranışa: özel durum oluşur.|-Süre sonuyla kanal davranışa: bir oturum ve <xref:System.ServiceModel.InstanceContext> oluşturulan ya da kullanıcı tarafından belirtilen tekli için.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> oluşturulan ya da kullanıcı tarafından belirtilen tekli için.|-Süre sonuyla kanal davranışa: özel durum oluşur.<br />-Oturumsuz kanal davranışa: bir <xref:System.ServiceModel.InstanceContext> oluşturulan her singleton veya kullanıcı tarafından belirtilen tekli için.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oturumları kullanma](../../../../docs/framework/wcf/using-sessions.md)  
- [Nasıl yapılır: oturum gerektiren bir hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [Nasıl yapılır: Hizmet örneği oluşturmayı denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [Oturumları Kullanma](../../../../docs/framework/wcf/using-sessions.md)  
+ [Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md)  
- [Örnek oluşturma](../../../../docs/framework/wcf/samples/instancing.md)  
- [Oturumu](../../../../docs/framework/wcf/samples/session.md)
+ [Örnek Oluşturma](../../../../docs/framework/wcf/samples/instancing.md)  
+ [Oturum](../../../../docs/framework/wcf/samples/session.md)

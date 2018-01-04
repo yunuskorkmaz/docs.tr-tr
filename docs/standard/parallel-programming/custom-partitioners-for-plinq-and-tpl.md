@@ -17,11 +17,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 12d234b86b0067178d54d2fdcb5d37ceaee6109d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ ve TPL için Özel Bölümleyiciler
 Bir veri kaynağı üzerinde bir işlemi paralel hale için gerekli adımları için biri *bölüm* birden çok iş parçacığı tarafından eşzamanlı olarak erişilebilir birden çok bölümlere kaynak. PLINQ ve görev paralel kitaplığı (TPL) saydam bir paralel sorgu yazma ne zaman çalışması varsayılan bölümleyiciler sağlayın veya <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü. Daha Gelişmiş senaryolar için kendi bölümleyici ekleyebilirsiniz.  
@@ -128,5 +131,5 @@ Bir veri kaynağı üzerinde bir işlemi paralel hale için gerekli adımları i
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [Nasıl yapılır: dinamik bölümleri uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
- [Nasıl yapılır: statik bölümleme için bir Bölümleyici uygulama](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+ [Nasıl yapılır: Dinamik Bölümleri Uygulama](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+ [Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

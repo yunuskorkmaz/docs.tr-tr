@@ -14,11 +14,11 @@ ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8da27ea2f9f0a4d370928d70cda1a796b822d97c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1eafe8d7ccd6f2c71b754dadc343518948e7146
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nowarn"></a>/nowarn
 Derleyicinin uyarıları oluşturma yeteneği gizler.  
@@ -44,7 +44,7 @@ Derleyicinin uyarıları oluşturma yeteneği gizler.
   
 |Tümleşik geliştirme ortamı/nowarn Visual Studio'da ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **derleme** sekmesi.<br />3.  Seçin **tüm uyarıları devre dışı bırakmak** tüm uyarıları devre dışı bırakmak için onay kutusunu.<br />     - veya -<br />     Belirli bir uyarı devre dışı bırakmak için **hiçbiri** uyarı bitişik aşağı açılan listeden.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **derleme** sekmesi.<br />3.  Seçin **tüm uyarıları devre dışı bırakmak** tüm uyarıları devre dışı bırakmak için onay kutusunu.<br />     - veya -<br />     Belirli bir uyarı devre dışı bırakmak için **hiçbiri** uyarı bitişik aşağı açılan listeden.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlerken `T2.vb` ve tüm uyarılar görüntülemez.  
@@ -62,5 +62,5 @@ vbc /nowarn:42024 t2.vb
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Visual Basic'te uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [Visual Basic'teki Uyarıları Yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic)

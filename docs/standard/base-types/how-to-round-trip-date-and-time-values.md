@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 515a29e279cfa8fc100e0612fc19df7abc6a3b36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68667369e1c7541313a166a1066e1ad9d69b6b71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
 Birçok uygulamada, tarih ve saat değeri tek bir nokta zaman içinde kesin bir şekilde tanımlamak için tasarlanmıştır. Bu konuda kaydetme ve geri yükleme gösterilmektedir bir <xref:System.DateTime> değeri, bir <xref:System.DateTimeOffset> değer ve zaman içeren bir tarih ve saat değeri böylece aynı anda kaydedilen değer olarak geri yüklenen değer tanımlayan bilgileri bölge.  
@@ -107,6 +110,6 @@ Birçok uygulamada, tarih ve saat değeri tek bir nokta zaman içinde kesin bir 
 -   Her örnek, dışındaki kod `DateInTimeZone` sınıfı, bir sınıf veya Visual Basic modülü dahil, yöntemleri Sarmalanan ve çağrılır `Main` yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
  [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçme](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+ [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

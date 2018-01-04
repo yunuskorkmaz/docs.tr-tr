@@ -17,11 +17,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu"></a>Menü
 A <xref:System.Windows.Controls.Menu> komutlar veya olay işleyicileri ile ilişkili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir. Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder. Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağrılacak bir `Click` olay işleyicisi. A <xref:System.Windows.Controls.MenuItem> birden çok da sahip olabilirsiniz <xref:System.Windows.Controls.MenuItem> öğeler bir alt oluşturan alt olarak.  
@@ -32,7 +33,7 @@ A <xref:System.Windows.Controls.Menu> komutlar veya olay işleyicileri ile iliş
 Farklı durumlardaki menüler  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Menü genel bakış](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Menüye Genel Bakış](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Menu>  

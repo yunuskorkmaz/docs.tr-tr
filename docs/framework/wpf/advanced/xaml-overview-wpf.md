@@ -30,11 +30,12 @@ caps.latest.revision: "57"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a03ec6feef26c8c3666ba5e4ff946ba237c177f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-overview-wpf"></a>XAML'ye Genel Bakış (WPF)
 Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konuda özellikle tarafından uygulanan XAML açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olduğu daha büyük bir dil kavram [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -338,9 +339,9 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
  [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) özelliklerinde yönlülük hakkında daha fazla bilgi veren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ve bağımlılık özellikleri kavramını sunmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ayrıntılı XAML sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML ve WPF için özel sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Temel öğeler genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [WPF ağaçlarında](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+ [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
+ [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [XAML Ad Alanı (x:) Dil Özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML Uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
+ [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [WPF İçinde Ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

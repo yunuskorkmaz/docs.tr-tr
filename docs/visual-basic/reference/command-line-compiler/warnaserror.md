@@ -14,11 +14,11 @@ ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04b79b3d14a9c4a9f9721860cd1ed44032dfa5d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="warnaserror-visual-basic"></a>/warnaserror (Visual Basic)
 Derleyicinin birinci bir uyarı hata olarak ele almasını neden olur.  
@@ -48,7 +48,7 @@ Derleyicinin birinci bir uyarı hata olarak ele almasını neden olur.
   
 |Tüm uyarıları Visual Studio IDE içinde hata olarak ele almasını/warnaserror ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **derleme** sekmesi.<br />3.  Emin olun **tüm uyarıları devre dışı bırakmak** onay kutusunu olarak işaretli.<br />4.  Denetleme **tüm uyarıları hata ele** onay kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **derleme** sekmesi.<br />3.  Emin olun **tüm uyarıları devre dışı bırakmak** onay kutusunu olarak işaretli.<br />4.  Denetleme **tüm uyarıları hata ele** onay kutusu.|  
   
 |/ Warnaserror belirli uyarıları Visual Studio IDE içinde hata olarak ele almasını ayarlamak için|  
 |---|  
@@ -70,5 +70,5 @@ vbc /warnaserror:42024 t2.vb
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Visual Basic'te uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [Visual Basic'teki Uyarıları Yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic)

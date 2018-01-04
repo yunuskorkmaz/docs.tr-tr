@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload: dotnet
+ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>&#39; teki WPF sürüm 4. 5'deki yenilikler
 <a name="introduction"></a>Bu konu, yeni ve geliştirilmiş özellikler hakkında bilgi içerir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  

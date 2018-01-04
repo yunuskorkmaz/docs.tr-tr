@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 069d3b94a0269917400e75fdbe975ec39dcfdb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 00b997865c614756ea5fd9567ded3baa469f4c62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Genişletilmiş ve korunmaz varlık başvuruları olan
 Varlık başvurusu genişletilmiş ve temsil ettiği, metnin tarafından yerine **XmlEntityReference** düğümü oluşturulmadı. Bunun yerine, varlık bildirimi ayrıştırılır ve bildiriminde içerikten oluşturulan düğümler yerine, kopyaladığınız **XmlEntityReference**. Bu nedenle, içinde `&publisher;` örnek, `&publisher;` , ancak bunun yerine, kaydedilmez bir **XmlText** düğüm oluşturulur.  
@@ -48,4 +51,4 @@ Genişletilmiş varlık başvuruları için ağaç yapısı
  Varlıkları çözümlenemiyor bir okuyucu kullanıyorsanız **yük** yöntemi, bir varlık başvurusunun karşılaştığında bir özel durum oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

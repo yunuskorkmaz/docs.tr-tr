@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1eaa84d924fde63e94c36fab50a809c7c03f075
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0998703ef5b27b4de725a2c2adcfc3d9a2135b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Nasıl Yapılır: Bekleme Tanıtıcıları İçeren İptal İsteklerini Dinleme
 Bir olay bildirilmesini bekleyen sırada bir yöntem engellenirse, bu iptal belirteci değerini denetleyin ve zamanında yanıt. İlk örnek gibi olaylar ile çalışırken bu sorunu çözmek gösterilmiştir <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> yerel olarak desteklemeyen birleşik iptal framework. İkinci örnek kullanır daha kolay bir yaklaşım gösterir <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, iptal birleşik hangi desteklemiyor.  
@@ -42,4 +45,4 @@ Bir olay bildirilmesini bekleyen sırada bir yöntem engellenirse, bu iptal beli
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

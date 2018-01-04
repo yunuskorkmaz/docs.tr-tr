@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>Gözlemci Tasarım Deseni En İyi Yöntemleri
 .NET Framework'teki gözlemci tasarım deseni arabirimleri kümesi uygulanır. <xref:System.IObservable%601?displayProperty=nameWithType> Arabirimi temsil eder, aynı zamanda sağlamaktan sorumludur veri sağlayıcısı bir <xref:System.IDisposable> bildirim aboneliği gözlemcilerin sağlayan uygulama. <xref:System.IObserver%601?displayProperty=nameWithType> Arabirimi gözlemci temsil eder. Bu konu, geliştiriciler bu arabirimleri kullanarak gözlemci tasarım deseni uygularken izlemeniz gereken en iyi uygulamaları açıklar.  
@@ -61,6 +64,6 @@ ms.lasthandoff: 11/21/2017
  Bir gözlemci birden çok sağlayıcı eklemek mümkün olsa da, önerilen desenini eklemektir bir <xref:System.IObserver%601> yalnızca bir örneğine <xref:System.IObservable%601> örneği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gözlemci tasarım deseni](../../../docs/standard/events/observer-design-pattern.md)  
- [Nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Nasıl yapılır: sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)
+ [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
+ [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
+ [Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804c4ffd54a0f8cc94e8849a223b1af8b27a58b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Nasıl yapılır: Komut Desteği Olmadan Denetime Komut Bağlama
 Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> değil sahip derlendiği komutu için destek.  Birden çok kaynak komutları tam bir örnek için bkz: [özel bağlayan örneği oluşturma](http://go.microsoft.com/fwlink/?LinkID=159980) örnek.  
@@ -57,5 +58,5 @@ Aşağıdaki örnek e nasıl bağlanacağını gösterir bir <xref:System.Window
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Komut desteği ile denetlemek için komut](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Komut Destekli Denetime Komut Bağlama](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

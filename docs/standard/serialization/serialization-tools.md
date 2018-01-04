@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ea06f1ce1d49b731a37d28a43626b05380a3718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-tools"></a>Seri hale getirme araçları
 Bu bölüm serileştirme araçları hakkında ayrıntılı bilgi içerir. Tüm araçlar komut satırından çalıştırabilirsiniz.  
@@ -28,8 +31,8 @@ Bu bölüm serileştirme araçları hakkında ayrıntılı bilgi içerir. Tüm a
   
 |Aracı|Açıklama|  
 |----------|-----------------|  
-|[XML seri hale getirici Oluşturma Aracı (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Çalışma zamanı performansını artırmak için bir XML seri hale getirme derlemesi türleri için belirtilen derlemesinde oluşturur <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[XML şema tanımı aracını (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|World Wide Web Konsorsiyumu (W3C) tarafından önerilen XSD dil izleyin XML şemaları oluşturur. Bu aracı ortak dil çalışma zamanı sınıflar oluşturur ve <xref:System.Data.DataSet> bir XSD şema dosyasından sınıfları.|  
+|[XML Serileştiricisi Oluşturma Aracı (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Çalışma zamanı performansını artırmak için bir XML seri hale getirme derlemesi türleri için belirtilen derlemesinde oluşturur <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[XML Şema Tanımı Aracı (XSD.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|World Wide Web Konsorsiyumu (W3C) tarafından önerilen XSD dil izleyin XML şemaları oluşturur. Bu aracı ortak dil çalışma zamanı sınıflar oluşturur ve <xref:System.Data.DataSet> bir XSD şema dosyasından sınıfları.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)
+ [Araçlar](../../../docs/framework/tools/index.md)

@@ -22,11 +22,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="culture-insensitive-string-operations"></a>Kültüre Duyarsız Dize İşlemleri
 Kültüre özel dize işlemleri, kullanıcılara sonuçları kültüre göre görüntülemek üzere tasarlanmış uygulamalar oluşturuyorsanız bir avantaj olabilir. Varsayılan olarak, aşağıdakiler arasından kullanılacak kültürü kültüre duyarlı yöntemleri elde <xref:System.Globalization.CultureInfo.CurrentCulture%2A> özelliği için geçerli iş parçacığının.  
@@ -40,4 +43,4 @@ Kültüre özel dize işlemleri, kullanıcılara sonuçları kültüre göre gö
  Yerelleştirme ve genelleştirme sorunlarını işlemek için kod içeren bir uygulama geliştiriyor olsanız da olmasanız da, varsayılan olarak kültüre duyarlı sonuçlar getiren .NET Framework yöntemlerinden haberdar olmanız gerekir. Bu konunun amacı kültüre duyarlı olmayan sonuçlar elde etmek üzere uygulamalarınızın bu yöntemleri kullanmasının doğru yolunu göstermektir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)

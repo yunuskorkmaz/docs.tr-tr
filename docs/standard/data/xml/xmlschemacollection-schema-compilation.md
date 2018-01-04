@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 901c3fdc8fdc80cc7c3bf13170646de857a5e009
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c891736534741d1d3d3edb93d75d9f191c2dd573
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection şema derleme
 **XmlSchemaCollection** bir önbellek ya da nerede XML verileri azaltılmış (XDR) ve XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış kitaplığı. **XmlSchemaCollection** şemaları bir dosyaya veya URL'ye erişmesini yerine bellekte önbelleğe alarak performansı artırır.  
@@ -65,5 +68,5 @@ vr.Schemas.Add(xsc);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XmlSchemaCollection ile XDR doğrulama](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
- [XML Şeması (XSD) doğrulama XmlSchemaCollection ile](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+ [XmlSchemaCollection ile XDR Doğrulaması](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+ [XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bd248133bd95ff05246eb36a8e250247fd7ed61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Sınıfı, sinyal ve sinyalleri için bekleyen birbirleri ile iletişim kurmak için iş parçacığı olanak tanır. Olay bekleme tanıtıcıları (sadece olayları olarak da bilinir) bir veya daha fazla bekleyen iş parçacıklarının yayın için sinyal bekleme tanıtıcılarıdır. İşareti verilen sonra bir olay bekleme tanıtıcısı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı ya da bir yerel olay bekleme tanıtıcısı (yerel olay) temsil eden veya bir adlandırılmış sistem olayı (olayı veya sistem olayı, tüm işlemler görünür olarak adlandırılır) tanıtıcısı bekleyin.  

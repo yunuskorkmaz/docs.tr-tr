@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2f942771e01c2b7fae989f73779672edb8ba2f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 591053d479b7d26757eb071f08ed4216fc0d57fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-repeat-an-animation"></a>Nasıl yapılır: Animasyonu Yineleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliği bir <xref:System.Windows.Media.Animation.Timeline> animasyonun yineleme davranışını denetlemek için.  
@@ -39,9 +40,9 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
  Tam bir örnek için bkz: [animasyon zamanlama davranışı örneği](http://go.microsoft.com/fwlink/?LinkID=159970).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yineleme döngüsü sırasında animasyon değerlerini accumulate](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Bir zaman çizelgesi otomatik olarak ters çevrilip çevrilmeyeceğini belirleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Yineleme Döngüsü Sırasında Animasyon Değerlerini Biriktirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Zaman Çizelgesinin Otomatik Olarak Ters Çevrilip Çevrilmeyeceğini Belirtme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [Animasyon ve zamanlama](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Animasyon zamanlama davranışı örneği](http://go.microsoft.com/fwlink/?LinkID=159970)

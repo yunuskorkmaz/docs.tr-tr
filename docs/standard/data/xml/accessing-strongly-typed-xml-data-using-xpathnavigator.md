@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61c78adff541ac2ba261d31776478a0468e21d4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XML verilerini XPathNavigator kullanarak yazılan kesinlikle erişme
 XPath 2.0 veri modeli örneği olarak <xref:System.Xml.XPath.XPathNavigator> sınıfı, ortak dil çalışma zamanı (CLR) türleri ile eşleştirir kesin türü belirtilmiş veri içerebilir. XPath 2.0 veri modeline göre yalnızca öğeleri ve özniteliklerinin kesin türü belirtilmiş veri içerebilir. <xref:System.Xml.XPath.XPathNavigator> Sınıfı içindeki verilere erişilirken mekanizmalar sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne bir veri türünden diğerine dönüştürme mekanizmalar yanı sıra kesin türü belirtilmiş veri olarak.  
@@ -196,8 +199,8 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [System.Xml sınıflardaki türü desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Düğüm kümesi Gezinti XPathNavigator kullanma](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- [XPathNavigator kullanarak XML veri ayıklamak](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+ [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathNavigator Kullanarak Düğüm Kümesinde Gezinme](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Ayıklama](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

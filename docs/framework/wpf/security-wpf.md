@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a>Geliştirirken [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tek başına ve tarayıcıda barındırılan uygulamalar, güvenlik modeli bulundurmalısınız. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]tek başına uygulamalarını yürütmek Kısıtlanmamış izinlerle ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy, kullanılarak dağıtılan olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, tek başına WPF uygulamaları ClickOnce ile dağıtma desteklenmiyor. Ancak, bir tam güven ana bilgisayar uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> kullanarak .NET Framework eklenti modeli. Daha fazla bilgi için bkz: [WPF eklentileri genel bakış](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Yüklemeleri  
   
--   Komut dosyası oluşturma  
+-   Betik Oluşturma  
   
 -   Kullanıcı kimlik doğrulaması  
   
@@ -278,14 +279,14 @@ ms.lasthandoff: 11/21/2017
 |----------|--------------|  
 |Yönetilen kod|[Desenleri ve uygulamalar için yöntemler Güvenlik Kılavuzu](http://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF kısmi güven güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF kısmi güven güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF Güvenlik Stratejisi - Güvenlik mühendislik](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
+ [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
  [Desenleri ve uygulamalar için yöntemler Güvenlik Kılavuzu](http://go.microsoft.com/fwlink/?LinkId=117426)  
  [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)  
- [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

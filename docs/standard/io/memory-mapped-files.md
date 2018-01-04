@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2602d431aada7b3e0ee226eed319903492022ae9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
 Bellek eşlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu eşleme dosyası ve bellek alanı arasında okuyarak ve belleğe doğrudan yazma dosyasını değiştirmek birden çok işlemler de dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod açıklandığı gibi bellek eşlemeli dosyalar access bellek eşlemeli dosyalar, yerel Windows işlevlerine aynı şekilde erişmek için kullanabileceğiniz [Win32 Managing Memory-Mapped dosyalarında](http://go.microsoft.com/fwlink/?linkid=180801).  

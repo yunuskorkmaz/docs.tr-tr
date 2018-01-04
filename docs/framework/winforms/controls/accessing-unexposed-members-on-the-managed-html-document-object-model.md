@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97a795930eb6965bd0ed15254969a72f45700306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak, yönetilen arabirimi değil doğrudan kullanıma üyelere erişmek gerekecektir. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişme için iki yolla inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve bir Web sayfası içinde tanımlanan VBScript işlevleri.  
@@ -82,4 +83,4 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
  Tanımladığınız kullanılarak bir HTML sayfasında herhangi bir komut dosyası işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi bir HTML öğesi döndürürse, bu dönüş sonucu dönüştürmek için bir cast kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntılar ve kod örneği için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen HTML belgesi nesne modelini kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+ [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

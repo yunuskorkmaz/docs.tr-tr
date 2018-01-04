@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümleri XPathNodeIterator
 <xref:System.Xml.XPath.XPathNodeIterator> Küme düğümlerinin bir XML Path dili (XPath) sorgusu veya bir düğüme dönüştürülen sonuç ağacı parçası sonucu olarak oluşturulan üzerinde yinelemek için yöntemler kümesi düğüm kümesi yöntemi kullanarak sağlar. <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümler üzerinden yineleme olanak tanır. Bir düğüm kümesi alındıktan sonra <xref:System.Xml.XPath.XPathNodeIterator> sınıfı düğümleri seçilen kümesi için salt okunur, yalnızca ileri yönlü bir imleç sağlar. Bu yöntemin çağrılması belge sırayla bir sonraki düğüme taşınmasını düğüm kümesi belge sırayla oluşturulur. <xref:System.Xml.XPath.XPathNodeIterator>Kümedeki tüm düğümler düğüm ağacının oluşmuyor. Bunun yerine, ağacında hareket etme gibi işaret temel düğüm gösterme veri, bir tek düğümlü pencere sağlar. Kullanılabilir özellikler ve yöntemler <xref:System.Xml.XPath.XPathNodeIterator> sınıfı, geçerli düğümden bilgi almak etkinleştirin. Kullanılabilir yöntemleri ve özellikleri listesi için bkz: <xref:System.Windows.Forms.ToolBar>.  
@@ -166,4 +169,4 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

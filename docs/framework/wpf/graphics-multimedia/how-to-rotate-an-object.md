@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b9b6212ed6c50faf73a6d3531f001a1b7e72d33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b356ef1782ec5bba4f7288644a0802f029456bbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-object"></a>Nasıl yapılır: Nesne Döndürme
 Bu örnek bir nesnenin nasıl döndürüleceğini gösterir. Örnek ilk oluşturur bir <xref:System.Windows.Media.RotateTransform> ve ardından belirtir, <xref:System.Windows.Media.RotateTransform.Angle%2A> derece cinsinden.  
@@ -56,5 +57,5 @@ Dönme 45 derece farklı döndürmek iki nesne merkezleri
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Transform>  
- [Dönüşümler genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

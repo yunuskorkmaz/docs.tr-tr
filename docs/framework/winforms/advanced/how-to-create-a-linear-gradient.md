@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbf3b1657a5a6b91ba88a0968b6b92d4e4bdbf0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, doğrusal gradyan rengi aynı şekilde değiştirir. Bununla birlikte, böylece Tekdüzen olmayan biçimde rengi değişir doğrusal gradyan özelleştirebilirsiniz.  
@@ -88,5 +89,5 @@ ms.lasthandoff: 11/21/2017
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri doldurmak için gradyan fırçası kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

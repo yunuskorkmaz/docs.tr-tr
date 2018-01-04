@@ -36,11 +36,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generics-in-the-net-framework"></a>.NET Framework'te Genel Türler
 <a name="top"></a>Genel türler yöntemi, sınıf, yapı veya arabirimi temel aldığı kesin veri türüne uyarlamak olanak tanır. Örneğin kullanmak yerine <xref:System.Collections.Hashtable> sınıf sağlayan anahtarlarını ve değerlerini herhangi bir türde olması için kullanabilirsiniz <xref:System.Collections.Generic.Dictionary%602> genel sınıf ve anahtar için izin verilen türü ve izin verilen değer türü belirtin. Genel türlerin yararları arasında artan kod yeniden kullanılırlığı ve tür güvenliği ' dir.  
@@ -169,16 +172,16 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET Framework'teki genel koleksiyonlar](../../../docs/standard/generics/collections.md)|Genel koleksiyon sınıfları ve .NET Framework'teki diğer genel türleri açıklanmaktadır.|  
-|[Dizi ve listeleri düzenlemek için genel temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek genel temsilciler dönüşümleri, arama koşulları ve eylemleri açıklar.|  
-|[Genel arabirimler](../../../docs/standard/generics/interfaces.md)|Genel türler aileleri arasında ortak işlevsellik sağlayan genel arabirimler açıklanmaktadır.|  
-|[Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)|Kovaryans ve kontravaryans genel tür parametreleri açıklar.|  
-|[Çok kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|.NET Framework'teki genel türleri dahil olmak üzere, koleksiyon türleri kullanım senaryoları ve özellikleri hakkındaki özet bilgileri sağlar.|  
-|[Genel koleksiyonları ne zaman kullanılacağı](../../../docs/standard/collections/when-to-use-generic-collections.md)|Ne zaman genel koleksiyon türleri kullanılacağını belirlemek için genel kurallar açıklanmaktadır.|  
-|[Nasıl yapılır: yansıma ile genel tür tanımlama yayma](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Genel türler ve yöntemleri dahil dinamik derlemeleri oluşturma açıklanmaktadır.|  
+|[.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)|Genel koleksiyon sınıfları ve .NET Framework'teki diğer genel türleri açıklanmaktadır.|  
+|[Dizi ve Listeleri Düzenlemek için Genel Temsilciler](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek genel temsilciler dönüşümleri, arama koşulları ve eylemleri açıklar.|  
+|[Genel Arabirimler](../../../docs/standard/generics/interfaces.md)|Genel türler aileleri arasında ortak işlevsellik sağlayan genel arabirimler açıklanmaktadır.|  
+|[Kovaryans ve Kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)|Kovaryans ve kontravaryans genel tür parametreleri açıklar.|  
+|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|.NET Framework'teki genel türleri dahil olmak üzere, koleksiyon türleri kullanım senaryoları ve özellikleri hakkındaki özet bilgileri sağlar.|  
+|[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Ne zaman genel koleksiyon türleri kullanılacağını belirlemek için genel kurallar açıklanmaktadır.|  
+|[Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Genel türler ve yöntemleri dahil dinamik derlemeleri oluşturma açıklanmaktadır.|  
 |[Visual Basic'de genel türler](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Visual Basic kullanıcıları, kullanma ve genel türleri tanımlama için nasıl yapılır konuları dahil olmak üzere genel türler özelliğini açıklar.|  
-|[Genel türlere giriş](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Tanımlama ve C# kullanıcılar için genel türler kullanma genel bir bakış sağlar.|  
-|[Visual C++'de genel türlere genel bakış](/cpp/windows/overview-of-generics-in-visual-cpp)|Genel türler ve temsilciler arasındaki farklar dahil olmak üzere, C++ kullanıcılar için genel türler özelliğini açıklar.|  
+|[Genel Türlere Giriş](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Tanımlama ve C# kullanıcılar için genel türler kullanma genel bir bakış sağlar.|  
+|[Visual C++'de Genel Türlere Genel Bakış](/cpp/windows/overview-of-generics-in-visual-cpp)|Genel türler ve temsilciler arasındaki farklar dahil olmak üzere, C++ kullanıcılar için genel türler özelliğini açıklar.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Başvuru  

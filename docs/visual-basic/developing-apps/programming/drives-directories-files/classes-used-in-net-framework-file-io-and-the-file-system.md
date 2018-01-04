@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 Aşağıdaki tablolarda, .NET Framework dosyası g/ç, dosya g/ç sınıfları, akışları oluşturmak için kullanılan sınıfları ve okuma ve akışlara yazmak için kullanılan sınıfları içine kategorilere için yaygın olarak kullanılan sınıflar listelenir.  
   
- Girmek için [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] belgelere ve Bul daha kapsamlı bir liste bakın [sınıf kitaplığına genel bakış](../../../../../docs/standard/class-library-overview.md).  
+ Girmek için [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] belgelere ve Bul daha kapsamlı bir liste bakın [sınıf kitaplığına genel bakış](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Dosyalar, sürücüler ve dizinler için temel g/ç sınıfları  
  Aşağıdaki tabloda listelenmekte ve dosya g/ç için kullanılan ana sınıflar açıklanmaktadır.  
@@ -64,7 +64,7 @@ Aşağıdaki tablolarda, .NET Framework dosyası g/ç, dosya g/ç sınıfları, 
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Karakter Yazar bir `String`. Çıktı kodlamada herhangi bir ya da akış olabilir veya bir `String`.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Akışlar oluşturma](../../../../../docs/standard/io/composing-streams.md)  
- [Dosya ve akış g/ç](https://msdn.microsoft.com/library/k3352a4t)  
- [Zaman uyumsuz dosya g/ç](https://msdn.microsoft.com/library/kztecsys)  
+ [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)  
+ [Dosya ve Akış G/Ç'si](../../../../standard/io/index.md)  
+ [Zaman Uyumsuz Dosya G/Ç](../../../../standard/io/asynchronous-file-i-o.md)  
  [.NET Framework dosyası g/ç ve dosya sistemi (Visual Basic) Temelleri](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

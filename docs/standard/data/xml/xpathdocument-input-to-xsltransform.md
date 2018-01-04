@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80708dfa60636bbb038c3a86e336709339d2ac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22adc805a1174b566d3febf8c6182527df59b32c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Çok XPathDocument giriş
 <xref:System.Xml.XPath.XPathDocument> Belgelerle işlemek için salt okunur önbellek <xref:System.Xml.Xsl.XslTransform>. XML belge nesne modeli (DOM) yapısal olarak benzerdir, ancak bu yüksek oranda Genişletilebilir Stil sayfası dili için Dönüşümleri (XSLT) işleme ve üzerinde XPathiyileştirmeişlevlerkullanılarakXMLPathdili(XPath)verimodeliiçinoptimizeedilmiştir<xref:System.Xml.XPath.XPathNavigator>.  
@@ -47,4 +50,4 @@ Xslt.Transform(doc, null, fs, null);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

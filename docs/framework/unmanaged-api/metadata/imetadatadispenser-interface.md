@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c5a0464f2fb7b81d98fcbb4b04bc465cf57b1b0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 678796357b36beb26ebbf34edc713ff6f15a7c40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser Arabirimi
 Yeni bir meta veri kapsamı oluşturmak veya mevcut bir açmak için yöntemleri sağlar.  
@@ -32,9 +33,9 @@ Yeni bir meta veri kapsamı oluşturmak veya mevcut bir açmak için yöntemleri
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[DefineScope yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|Yeni bir alan yeni meta oluşturabileceğiniz bellekte oluşturur.|  
-|[OpenScope yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|Var olan, disk üzerindeki bir dosyayı açar ve belleğe meta verilerini eşler.|  
-|[OpenScopeOnMemory yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|Var olan meta veriler içeren bellek alanı açılır. Diğer bir deyişle, bu yöntem belirtilen alan var olan verileri meta verileri kabul edilir bellek açar.|  
+|[DefineScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-definescope-method.md)|Yeni bir alan yeni meta oluşturabileceğiniz bellekte oluşturur.|  
+|[OpenScope Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)|Var olan, disk üzerindeki bir dosyayı açar ve belleğe meta verilerini eşler.|  
+|[OpenScopeOnMemory Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)|Var olan meta veriler içeren bellek alanı açılır. Diğer bir deyişle, bu yöntem belirtilen alan var olan verileri meta verileri kabul edilir bellek açar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,5 +47,5 @@ Yeni bir meta veri kapsamı oluşturmak veya mevcut bir açmak için yöntemleri
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Imetadatadispenserex arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [Meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+ [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
+ [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

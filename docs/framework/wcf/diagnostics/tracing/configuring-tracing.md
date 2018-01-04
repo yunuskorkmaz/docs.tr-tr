@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -191,6 +192,6 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Nasıl yapılır: oluşturma ve başlatma izleme dinleyicileri](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Nasıl yapılır: İzleme Dinleyicileri Oluşturma ve Başlatma](http://go.microsoft.com/fwlink/?LinkId=94648)  
  [Özel TraceListener oluşturma](http://go.microsoft.com/fwlink/?LinkId=96239)

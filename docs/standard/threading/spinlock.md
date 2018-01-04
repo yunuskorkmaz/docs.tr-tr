@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: efe9b3126b3c952ab156f9ca40752ad8d3fddcd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> Bir kilidi beklerken dönerek bir alt düzey, karşılıklı dışlama eşitleme ilkel yapısıdır. Bekleme süresini kısa ve çakışma en az olduğunda olması beklenen zaman çok çekirdekli bilgisayarlarda <xref:System.Threading.SpinLock> kilitleri diğer tür daha iyi gerçekleştirebilirsiniz. Ancak, kullanmanızı öneririz <xref:System.Threading.SpinLock> yalnızca zaman, profil oluşturma saptamanıza <xref:System.Threading.Monitor?displayProperty=nameWithType> yöntemi veya <xref:System.Threading.Interlocked> yöntemleri önemli ölçüde performans programınızın yavaşlamasının.  
@@ -32,4 +35,4 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Threading.SpinLock>destekleyen bir *iş parçacığı*-*izleme* geliştirme aşaması boyunca belirli bir zamanda kilit iş parçacığı izlemenize yardımcı olması için kullanabileceğiniz modu. İş parçacığı izleme modunu hata ayıklama için faydalıdır, ancak performans azaltabileceğinden, programınızın yayın sürümünü kapatmak olmasını öneririz. Daha fazla bilgi için bkz: [nasıl yapılır: spinlock'ta etkinleştirmek iş parçacığı izleme modunu](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

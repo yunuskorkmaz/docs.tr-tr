@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, Windows Communication Foundation (WCF) kullanmak için .NET uzaktan iletişim kullanan bir uygulamayı geçirmek üzere açıklar. Bu ürünler arasında benzer kavram karşılaştırır ve WCF birkaç ortak Remoting senaryolarda yüklemenin nasıl yapılacağını açıklar.  
@@ -112,11 +113,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Yapılandırmak için birçok yolu vardır ve WCF hizmetlerini barındırmak için. Bu "kendi kendini barındıran" bilinen yalnızca bir örnektir. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: bir hizmet sözleşmesini tanımlama](how-to-define-a-wcf-service-contract.md)  
+-   [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](how-to-define-a-wcf-service-contract.md)  
   
--   [Yapılandırma dosyalarını kullanarak hizmetleri yapılandırma](configuring-services-using-configuration-files.md)  
+-   [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](configuring-services-using-configuration-files.md)  
   
--   [Barındırma hizmetleri](hosting-services.md)  
+-   [Barındırma Hizmetleri](hosting-services.md)  
   
 ### <a name="client-implementation-comparison"></a>İstemci uygulaması karşılaştırma  
   
@@ -155,7 +156,7 @@ Console.WriteLine(String.Format("  Customer {0} {1} received.",
   
  Bu örnek en Remoting örnektekine benzer olduğundan kanal düzeyinde programlama gösterir. Ayrıca kullanılabilir **hizmet Başvurusu Ekle** yaklaşım Visual Studio'da, programlama istemci basitleştirmek için kod oluşturur. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [İstemci kanal düzeyi programlama](./extending/client-channel-level-programming.md)  
+-   [İstemci Kanal Düzeyi Programlama](./extending/client-channel-level-programming.md)  
   
 -   [Nasıl yapılır: ekleme, güncelleştirme veya hizmet başvurusunu kaldırma](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
@@ -222,7 +223,7 @@ public class WCFCustomer
   
  WCF katmanları arasında bir nesne gönderdiğinde, yalnızca değerleri serileştirir ve diğer katmanında nesnesinin yeni bir örneğini oluşturur. Nesnenin değerleriyle herhangi bir etkileşimi yalnızca yerel olarak – ortaya bunlar şekilde .NET uzaktan iletişim başvuru tarafından Nesneleri'ne diğer katmanı ile iletişim kurmazlar. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Seri hale getirme ve seri durumdan çıkarma](./feature-details/serialization-and-deserialization.md)  
+-   [Serileştirme ve Seri Durumdan Çıkarma](./feature-details/serialization-and-deserialization.md)  
   
 -   [Windows Communication Foundation'da seri hale getirme](http://msdn.microsoft.com/magazine/cc163569.aspx)  
   

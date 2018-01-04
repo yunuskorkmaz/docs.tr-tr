@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87a03883622ba63a8d999907305356905b36bf1c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Ad alanları ve DOM DTD'leri
 Belge türü tanımları (DTD) complicate ad alanı desteği. Örneğin, aşağıdaki XML adlarında iki nokta üst üste içeren varsayılan öznitelikleri içerir.  
@@ -41,4 +44,4 @@ Belge türü tanımları (DTD) complicate ad alanı desteği. Örneğin, aşağ�
  Microsoft .NET Framework XML'de maksimum W3C uyumluluk için ikinci seçeneği uygular.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

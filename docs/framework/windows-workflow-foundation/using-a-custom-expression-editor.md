@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a809c1d0eeb8f45d55f4e1f436b70ceb01b4a2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-custom-expression-editor"></a>Bir özel ifade Düzenleyicisi'ni kullanarak
 Özel ifade Düzenleyicisi düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade Düzenleyicisi kullanmak isteyebilirsiniz birkaç senaryo vardır:  
@@ -290,4 +291,4 @@ namespace WpfApplication1
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Presentation.View.IExpressionEditorService>  
  <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
- [Özel Etkinlik Tasarımcısı'nda ExpressionTextBox kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

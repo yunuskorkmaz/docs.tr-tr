@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d6a8d156e6e9a8c5331bd3db1c8e584be5ac154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32555097c25a23ca1de6e20308a420d3ec70caf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Tarih Aralığı Seçme
 Windows Forms, önemli özelliklerinden <xref:System.Windows.Forms.MonthCalendar> denetimidir kullanıcı tarih aralığını seçebilirsiniz. Bu özellik bir geliştirme Tarih Seçimi özelliğidir <xref:System.Windows.Forms.DateTimePicker> yalnızca bir tek tarih/saat değeri seçmek kullanıcının sağlayan denetim. Bir tarih aralığı ayarlamak veya özelliklerini kullanarak kullanıcı tarafından ayarlanan bir seçim aralığı alma <xref:System.Windows.Forms.MonthCalendar> denetim. Aşağıdaki kod örneğinde, seçim aralığı ayarlamak gösterilmiştir.  
@@ -85,7 +86,7 @@ Windows Forms, önemli özelliklerinden <xref:System.Windows.Forms.MonthCalendar
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [MonthCalendar denetimi](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms MonthCalendar denetiminin görünüşünü değiştirme](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- [Nasıl yapılır: belirli günleri kalın olarak görüntüleme Windows Forms MonthCalendar denetimi](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde birden fazla ay görüntüleme](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+ [MonthCalendar Denetimi](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetiminin Görünüşünü Değiştirme](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Birden Fazla Ay Görüntüleme](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

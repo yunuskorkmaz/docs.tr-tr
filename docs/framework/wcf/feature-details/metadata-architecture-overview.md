@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için zengin bir altyapı sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmetleri, böylece Svcutil.exe gibi araçları hizmete erişim için istemci kodu otomatik olarak oluşturabilir hizmetin uç ile etkileşim kurmak nasıl açıklamak için meta verileri kullanın.  
@@ -98,10 +99,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description>  
- [Meta veri biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [Meta veri alma ve verme](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Meta veri alma](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Meta verilerini kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+ [Meta Veri Biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
+ [Meta Verileri Dışarı ve İçeri Aktarma](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [Meta Verileri Alma](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

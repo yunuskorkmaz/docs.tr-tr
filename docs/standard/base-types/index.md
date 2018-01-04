@@ -1,5 +1,5 @@
 ---
-title: ".NET temel türlerle çalışma"
+title: ".NET içinde Temel Türlerle Çalışma"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,30 +17,33 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7746d53748260610a7f0e33611dd672fd644d269
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="working-with-base-types-in-net"></a>.NET temel türlerle çalışma
+# <a name="working-with-base-types-in-net"></a>.NET içinde Temel Türlerle Çalışma
 Bu bölümde biçimlendirme, dönüştürme ve ortak işlemleri dahil olmak üzere, .NET temel türü işlemleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [.NET Framework'te tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
  Bir türden diğerine dönüştürün açıklar.  
   
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  Biçim dizesi biçim belirticilerini kullanma dizeleri açıklar.  
   
- [Dizeleri düzenleme](../../../docs/standard/base-types/manipulating-strings.md)  
+ [Dizeleri Düzenleme](../../../docs/standard/base-types/manipulating-strings.md)  
  Yönlendirme ve biçim dizeleri açıklar.  
   
- [Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
+ [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
  Dizeleri .NET Framework türlerine dönüştürmek açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Ortak tür sistemi](../../../docs/standard/base-types/common-type-system.md)  
+ [Ortak Tür Sistemi](../../../docs/standard/base-types/common-type-system.md)  
  .NET Framework tarafından kullanılan türleri açıklanmaktadır.  
   
  [Tarih, saat ve saat dilimleri](../../../docs/standard/datetime/index.md)  

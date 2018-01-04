@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8932e295aa1a6c6cf961e7b3a218e76984da02cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 00f4aa4e87c0deb4b1326cb8bf4256a9307b3393
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 Ortak dil çalışma zamanı belirtir <xref:System.Type>, bir tür değiştiricisi ya da bir meta veri türü imzada türü hakkında bilgi.  
@@ -148,4 +149,4 @@ typedef enum CorElementType {
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veri numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+ [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

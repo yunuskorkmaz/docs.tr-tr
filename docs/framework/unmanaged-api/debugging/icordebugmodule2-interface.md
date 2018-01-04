@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97259783d34babe3f0f229f5d62b3e945c0ac624
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a3d62619fd83264bdc774cc1f09f4d98492d0a57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodule2-interface1"></a>Icordebugmodule2 Interface1
 Icordebugmodule arabirimi için mantıksal bir uzantısı olarak görev yapar.  
@@ -32,11 +33,11 @@ Icordebugmodule arabirimi için mantıksal bir uzantısı olarak görev yapar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ApplyChanges yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Meta veri değişiklikleri ve Microsoft Ara dili (MSIL) kod değişiklikleri çalışan işlemi için geçerlidir.|  
-|[Getjıtcompilerflags yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Tam zamanında (JIT) derleme için bu denetim bayrakları alır `ICorDebugModule2`.|  
-|[ResolveAssembly yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Belirtilen meta veri simgesi tarafından başvurulan derleme çözümler.|  
-|[Setjıtcompilerflags yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|JIT derleme için bu denetim bayrakları ayarlar `ICorDebugModule2`.|  
-|[SetJMCStatus yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Tüm sınıfların tüm yöntemleri yalnızca My kod (JMC) durumunu bu ayarlar `ICorDebugModule2` hariç belirtilen değerle `pTokens` ters değerine ayarlar dizi.|  
+|[ApplyChanges Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Meta veri değişiklikleri ve Microsoft Ara dili (MSIL) kod değişiklikleri çalışan işlemi için geçerlidir.|  
+|[GetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Tam zamanında (JIT) derleme için bu denetim bayrakları alır `ICorDebugModule2`.|  
+|[ResolveAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Belirtilen meta veri simgesi tarafından başvurulan derleme çözümler.|  
+|[SetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|JIT derleme için bu denetim bayrakları ayarlar `ICorDebugModule2`.|  
+|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Tüm sınıfların tüm yöntemleri yalnızca My kod (JMC) durumunu bu ayarlar `ICorDebugModule2` hariç belirtilen değerle `pTokens` ters değerine ayarlar dizi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -53,4 +54,4 @@ Icordebugmodule arabirimi için mantıksal bir uzantısı olarak görev yapar.
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

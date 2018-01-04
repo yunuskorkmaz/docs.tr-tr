@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2ad869e8127bcaf513bee82e3175b35349d922
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-and-reliable-sessions"></a>Kuyruklar ve Güvenilir Oturumlar
 Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenilir Mesajlaşma uygulamak özellikleri. Bu bölümde yer alan konuları ele [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenilir Mesajlaşma özellikleri.  
@@ -49,7 +50,7 @@ Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../../includes/indigo
  Kuyruklar arasında güvenilir ileti aktarımı ile bağlı ayırma, güvenilir bir şekilde iletişim kurmak için birbirine sıkı şekilde bağlı uygulamaları etkinleştirir. Güvenilir oturumlar farklı olarak, kaynak ve hedef aynı anda çalışıyor olması gerekmez. Bu örtülü olarak kaynağı tarafından ileti üretim oranını ve hedef ileti tüketimi oranını arasında bir uyumsuzluk olduğunda sıraları yürürlükte, Yük Dengeleme mekanizması olarak kullanıldığı senaryolara olanak sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kuyruklar, bkz: [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
- [Güvenilir oturumlar genel bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+ [WCF'de Kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
+ [Güvenilir Oturumlara Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e62498376d321d8ff22a53315b9d5f18a8865056
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-handling-task-parallel-library"></a>Özel Durum İşleme (Görev Paralel Kitaplığı)
 İçinde bir görevin çalıştığı kullanıcı kodu tarafından oluşturulan işlenmemiş özel durumlardan geri çağırma akışa dışında bu konunun ilerleyen bölümlerinde açıklanan belirli senaryolarda yayılır. Özel durumlar statik birini kullandığınızda yayılır veya örnek <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> veya <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` yöntemleri ve işlemek bunları çağrısında kapsayan tarafından bir `try` / `catch` deyimi. Ekli alt görevler üst bir görevdir ya da birden çok görevlerde bekleyen varsa, birden çok özel durum.  
@@ -98,4 +101,4 @@ ms.lasthandoff: 10/18/2017
  Güvenilmeyen eklentileri barındırmak gibi bazı senaryolarda, zararsız özel durumlar sık gerçekleşebilir ve hepsini el ile gözlemek çok zor olabilir. Bu durumlarda, <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType> olayını işleyebilirsiniz. İşleyicinize geçirilen <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> örneği, gözlemlenmemiş özel durumun birleşen iş parçacığına geri yayılmasını önlemek için kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

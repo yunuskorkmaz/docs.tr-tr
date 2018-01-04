@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Genelleştirme
 Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelleştirilmiş arabirimleri ve bölgesel veri destekleyen bir dünya çapında kullanılmaya hazır uygulaması geliştirme içerir. Tasarım aşaması başlamadan önce uygulamanızı destekleyecek hangi kültürler belirlemeniz gerekir. Bir uygulama bir tek kültür veya bölge varsayılan olarak hedefler rağmen tasarlayın ve böylece diğer kültürler veya bölgelerdeki kullanıcılar için kolayca genişletilebilir yazma.  
@@ -377,5 +380,5 @@ Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelle�
 -   Kullanıcı kültüre özgü ayarları kullanarak özelleştirebileceğiniz **bölge ve dil** Denetim Masası'ndaki uygulama. Ne zaman örneği bir <xref:System.Globalization.CultureInfo> nesne çağırarak, bu kullanıcı özelleştirmeleri yansıtır olup olmadığını belirleyebilir <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu. Böylece kullanıcı çözemiyorsa beklediği biçiminde verilerle sunulan genellikle son kullanıcı uygulamaları için kullanıcı tercihlerini dikkate.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
- [Dizeleri kullanmak için en iyi uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+ [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -163,11 +166,11 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
 ## <a name="related-topics"></a>İlgili Konular  
   
--   [Ortak g/ç görevleri](../../../docs/standard/io/common-i-o-tasks.md)  
+-   [Ortak G/Ç Görevleri](../../../docs/standard/io/common-i-o-tasks.md)  
   
  Dosyalar, dizinler, akışları ve ilgili içerik ile her görevin örneği ile ilişkili g/ç görevlerinin bir listesini sağlar.  
   
--   [Zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
+-   [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
   
  Zaman uyumsuz I/O'nun performans avantajlarını ve temek işleyişini açıklar.  
   
@@ -179,6 +182,6 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  .NET Framework içindeki anonim ve adlandırılmış yöneltme işlemlerini açıklar.  
   
--   [Bellek eşlemeli dosyalar](../../../docs/standard/io/memory-mapped-files.md)  
+-   [Bellek Eşlemeli Dosyalar](../../../docs/standard/io/memory-mapped-files.md)  
   
  Sanal bellek içindeki disk üzerinde bulunan dosyaların içeriğini içeren bellek eşlemeli dosyaları açıklar. Büyük dosyaları düzenlemek ve işlemler arası iletişim için olan paylaşılan belleği oluşturmak için bellek eşlemeli dosyaları kullanabilirsiniz.

@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM öğeleri için yeni öznitelikler oluşturma
 Yeni öznitelikler oluşturulması öznitelikleri düğümleri, ancak bir öğe düğümü özelliklerinin ve içerdiği diğer düğüm türleri oluşturmaktan daha farklı bir **XmlAttributeCollection** öğeyle ilişkili. Bir öznitelik oluşturun ve bir öğe olarak eklemek için birden çok yolu vardır:  
@@ -111,7 +114,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);  
 ```  
   
- **Çıktı**  
+ **Output**  
   
 ```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
@@ -132,4 +135,4 @@ doc.DocumentElement.SetAttributeNode(attr);
  Öznitelik düğümü değeri, alt düğümleri olur. Geçerli alt düğümleri yalnızca iki tür vardır: **XmlText** düğümleri ve **XmlEntityReference** düğümleri. Bu yöntemleri gibi herkese açık alt düğümleri bunlar **işlevi FirstChild** ve **LastChild** alt düğümleri olarak işlem. Bu ayrım alt düğümleri sahip bir öznitelik, öznitelikler veya öznitelik alt düğümleri kaldırmak çalışırken önemlidir. Daha fazla bilgi için bkz: [DOM öğesi düğümünde kaldırma özniteliklerden](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

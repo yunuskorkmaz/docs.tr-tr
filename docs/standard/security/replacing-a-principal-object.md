@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 066176d39f04165d7882a3c295387847a46c8e6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c53064ae12889df09b5259fbb7c8159cfdcd07aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="replacing-a-principal-object"></a>Asıl Nesneyi Değiştirme
 Kimlik doğrulama hizmetleri sağlayan uygulamalar sağlayabilmelidir değiştirmek **asıl** nesne (<xref:System.Security.Principal.IPrincipal>) belirli bir iş parçacığı için. Ayrıca, güvenlik sistemi değiştirme olanağı korunmasına yardımcı olmak gerekir **asıl** çünkü nesneleri bir kötü amaçlı olarak ekli, yanlış **asıl** , uygulamanız tarafından güvenliği tehlikeye atar bir doğru kimlik veya rol beyanda bulunma. Bu nedenle, uygulamaları gerektiren değiştirme olanağı **asıl** nesneleri verilmelidir <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> asıl denetimi için nesnesi. (Bu izni rol tabanlı güvenlik denetimleri yapmak için veya oluşturmak için gerekli olmadığını unutmayın **asıl** nesneleri.)  
@@ -43,4 +46,4 @@ Kimlik doğrulama hizmetleri sağlayan uygulamalar sağlayabilmelidir değiştir
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
- [Asıl ve kimlik nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)
+ [Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)

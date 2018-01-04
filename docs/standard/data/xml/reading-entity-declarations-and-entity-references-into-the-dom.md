@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6370db06cbe7ff8d46258b0315059f5c37587fea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33b3b0589fb9d3cdf550b8d56d82a2bd999a59f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Varlık bildirimleri ve varlık başvuruları DOM okuma
 Bir varlık XML içeriği veya işaretleme yerine kullanılacak bir ad bildiren bir bildirimidir. Varlıkları iki bölümü vardır. İlk olarak, bir varlık bildirimi kullanarak değiştirme içerik için bir ad tie gerekir. Bir varlık bildirimi kullanılarak oluşturulan `<!ENTITY name "value">` bir belge türü tanımı (DTD) veya XML Şeması sözdiziminde. İkincisi, varlık bildiriminde tanımlanan adını sonradan XML'de kullanılır. XML'de kullanıldığında, bir varlık başvurusunun adı verilir. Örneğin, bir varlığın adı aşağıdaki varlık bildirimi bildirir `publisher` "Microsoft Press" içerikle ilişkili olan.  
@@ -42,7 +45,7 @@ Bir varlık XML içeriği veya işaretleme yerine kullanılacak bir ad bildiren 
   
  Varlık başvurusu genişletme ve değiştirme `&publisher;` ile Microsoft Press aşağıdaki genişletilmiş XML içeriği sağlar.  
   
- **Çıktı**  
+ **Output**  
   
 ```xml  
 <author>Fred</author>  
@@ -62,4 +65,4 @@ Bir varlık XML içeriği veya işaretleme yerine kullanılacak bir ad bildiren 
  Farkları varlık başvuruları genişletildiğinde ve olmadıkları zaman hangi düğümleri DOM ağaçta bellek oluşturulan içinde bir fark yapar. Oluşturulan düğümler arasındaki fark konularında açıklanan [varlık başvuruları korunur](../../../../docs/standard/data/xml/entity-references-are-preserved.md) ve [varlık başvuruları: genişletilmiş ve korunmaz](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

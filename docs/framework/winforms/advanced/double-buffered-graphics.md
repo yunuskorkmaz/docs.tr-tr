@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7e4445b0a729eb1f826d17340db02f0c56149b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="double-buffered-graphics"></a>İki Kez Arabelleğe Alınan Grafikler
 Grafik programlama olduğunda, titreşimi yaygın sorun kullanır. Birden çok karmaşık Boyama işlemleri gerektiren grafik işlemleri Titreşim veya aksi halde kabul edilebilir bir görünüme sahip görünecek şekilde işlenmiş görüntüleri neden olabilir. Bu sorunları gidermek için .NET Framework iki kez arabelleğe alma erişim sağlar.  
@@ -46,7 +47,7 @@ Grafik programlama olduğunda, titreşimi yaygın sorun kullanır. Birden çok k
  <xref:System.Drawing.BufferedGraphics>  
  <xref:System.Drawing.BufferedGraphicsContext>  
  <xref:System.Drawing.BufferedGraphicsManager>  
- [Nasıl yapılır: arabelleğe alınan grafikleri elle işleme](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- [Nasıl yapılır: formlar ve denetimler için çift arabelleğe alma ile grafik titreşimini azaltma](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- [Nasıl yapılır: arabelleğe alınan grafikleri elle yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

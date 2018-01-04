@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. Fırçalar ve stiller kaynakları örneklerindendir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kodu arasında kaynaklarına erişim ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için bkz: [kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -165,10 +166,10 @@ Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. Fı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.ResourceDictionary>  
- [Uygulama kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Bir kaynağa başvurması ve tanımlayın](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource Biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+ [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Kaynaklar ve Kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [Kaynağı Tanımlama ve Kaynağa Başvurma](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

@@ -23,11 +23,14 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 37428cf96bbe36a55e88edeb5ec56e09895be994
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Aşağıdakileri yapmak için gruplandırma yapıları kullanabilirsiniz:  
@@ -478,5 +481,5 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
  İlk yakalama grubunu her sözcüğün tümcenin eşleşir. İkinci yakalama grubunu noktalama işaretleri ve word izleyin boşluk birlikte her sözcüğün eşleşir. <xref:System.Text.RegularExpressions.Group> Dizinini 2 olan nesne ikinci yakalama grubu tarafından eşleşen metni hakkında bilgi sağlar. Yakalama grubu tarafından yakalanan sözcükler tamamını web'da <xref:System.Text.RegularExpressions.CaptureCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Geri dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

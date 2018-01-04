@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 773323d5e4b92ad5fef63072e1e7405882e0f26c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2176682a5e3f396cc9d9fc60baf409fd1e9ba807
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-rectangle"></a>Nasıl yapılır: Bir Dikdörtgene Animasyon Ekleme
 Bu örnek boyutunu ve konumunu dikdörtgenin değişiklikleri animasyon gösterilmektedir.  
@@ -38,8 +39,8 @@ Bu örnek boyutunu ve konumunu dikdörtgenin değişiklikleri animasyon gösteri
  <xref:System.Windows.Media.Animation.RectAnimation>  
  <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
  <xref:System.Windows.Media.RectangleGeometry>  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
  [Animasyon ve zamanlama](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

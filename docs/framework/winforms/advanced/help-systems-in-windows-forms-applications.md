@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45d3385d008f823050f213252fdc2e1851cf422b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b2f5d067d487bbd5b91576927aee21a9a44fde0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms Uygulamalarındaki Yardım Sistemleri
 Aşağıdakilerden en önemli courtesies, uygulamaların, geliştirici furnish Kullanıcılarınızla aynıdır yetkin Yardım sistemi. Disoriented kafası veya hale burada bunlar dönüşecektir budur. Windows tabanlı bir uygulama Yardım sisteminde sağlama kolayca yapılır kullanarak [HelpProvider bileşeni](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  
@@ -34,8 +35,8 @@ Aşağıdakilerden en önemli courtesies, uygulamaların, geliştirici furnish K
  HTML Yardımı 1.x HTML Yardım Atölyesi dosyalarıyla oluşturabilir. HTML Yardımı hakkında daha fazla bilgi için "HTML Yardım Atölyesi" veya MSDN'deki diğer "HTML Yardım" konularına bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta kullanıcı Yardımı tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [HelpProvider bileşeni](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- [ToolTip bileşeni](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- [Windows Forms'a genel bakış](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [HelpProvider Bileşeni](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ [ToolTip Bileşeni](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [Windows Forms'a Genel Bakış](../../../../docs/framework/winforms/windows-forms-overview.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

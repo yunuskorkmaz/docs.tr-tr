@@ -25,11 +25,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 988d07fe08a6a78ae295d13f694c55a3b8f9d2e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 33e5a03f29f521a2ba7f93bdd084655e8fc7de8d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 Ne zaman, çalışmanız COM ile yönetilen kod arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki ortak sorunları karşılaşabilirsiniz.  
@@ -136,9 +136,9 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
- [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [Genel Derleme Önbelleği](../../../framework/app-domains/gac.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c67aa303f375734408201ce15d1c3db3dc32c8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8253d1d04d2bf2a70076ffb003eb27be2eb47d46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme
 > [!IMPORTANT]
@@ -97,6 +98,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Nasıl yapılır: bir StatusBar denetimine panel ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar denetimine genel bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+ [Nasıl yapılır: Bir StatusBar Denetimine Panel Ekleme](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
+ [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [StatusBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a4918e23a915ee07eace388ea2cea512c2e479d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier Yönergesi
 XAML derleme davranışını değiştiren zaman `x:Class` de sağlanır. Özellikle, kısmi oluşturmak yerine `class` olan bir `Public` erişim düzeyine (varsayılan), sağlanan `x:Class` ile oluşturulan bir `NotPublic` erişim düzeyi. Bu davranış oluşturulmuş derlemeler sınıfında erişim düzeyini etkiler.  
@@ -64,8 +65,8 @@ XAML derleme davranışını değiştiren zaman `x:Class` de sağlanır. Özelli
  Bildirilen gibi erişim düzeyini `x:ClassModifier` belirli çerçeveler ve yeteneklerini tarafından tercüme hala tabidir. WPF yüklemek ve türleri örneği için özellikleri içerir nerede `x:ClassModifier` olan `internal`, o sınıfın bir paketi URI başvuru aracılığıyla bir WPF kaynaktan başvuruluyor. Bu durumda ve diğerleri gibi bu diğer çerçeveler tarafından uygulanan gruplarındaki sonucu olarak, özel olarak üzerinde güvenmeyin `x:ClassModifier` olası tüm örneklemesi engelleyecek şekilde çalışır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Arka plan kod ve WPF XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x: FieldModifier yönergesi](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
+ [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [Arka Plan Kod ve WPF İçindeki XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [x:FieldModifier Yönergesi](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
  [Güvenlik (WPF)](../../../docs/framework/wpf/security-wpf.md)  
- [WPF'den System.xaml'e geçirilen türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+ [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

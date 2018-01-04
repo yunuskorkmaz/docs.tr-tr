@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d737959ee0ecab4c611cebf996741516fc7be031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablo verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dize dizisi içeriğini göster isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve yüksek oranda özelleştirilebilir bir yol sağlar. Bu anlatımda doldurmak nasıl gösterilir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modunda satırların silinmesi yönetin. Varsayılan olarak, kullanıcı yeni satırlar ekleyebilirsiniz. Satır ekleme engelleyecek şekilde ayarlanmışsa <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  
@@ -104,6 +105,6 @@ Sık veritabanından kaynaklanmayan tablo verileri görüntülemek isteyebilirsi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: bağlantısız bir Windows Forms DataGridView denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetiminde veri görüntüleme modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

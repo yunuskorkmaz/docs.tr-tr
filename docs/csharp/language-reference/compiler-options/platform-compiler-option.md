@@ -13,14 +13,14 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (C# Derleyici Seçenekleri)
-Ortak dil çalışma zamanı (CLR) hangi sürümünün derlemeyi çalıştırabileceğini belirtir.  
+Ortak dil çalışma zamanı (CLR), hangi sürümünün derlemeyi çalıştırabileceğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,11 +40,11 @@ Ortak dil çalışma zamanı (CLR) hangi sürümünün derlemeyi çalıştırabi
   
 -   **ARM** derlemenizi Gelişmiş RISC makinesi (ARM) işlemciye sahip bir bilgisayarda çalıştırmak için.  
   
--   **x64** derlemenizi AMD64 veya EM64T yönerge kümesi destekleyen bir bilgisayarda 64-bit ortak dil çalışma zamanı tarafından çalıştırılacak.  
+-   **x64** derlemenizi AMD64 veya EM64T yönerge kümesi destekleyen bir bilgisayarda 64-bit CLR tarafından çalıştırılacak.  
   
--   **x86** derlemenizi 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak.  
+-   **x86** derlemenizi 32-bit, x86 uyumlu CLR tarafından çalıştırılacak.  
   
--   **Itanium** derlemenizi 64-bit ortak dil çalışma zamanı tarafından Itanium işlemcili bir bilgisayarda çalıştırılması için.  
+-   **Itanium** derlemenizi 64-bit CLR tarafından Itanium işlemcili bir bilgisayarda çalıştırılması için.  
   
  Bir 64-bit Windows işletim sisteminde:  
   
@@ -81,4 +81,4 @@ csc /platform:anycpu filename.cs
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

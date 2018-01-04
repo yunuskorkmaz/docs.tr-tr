@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Geliştiricilerin eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceği bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirilebilen ve uygulama işlevselliğini genişleten eklentiler oluşturulmasına izin verir. Bazı senaryolarda uygulamalar da görüntülemeniz [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentileri tarafından sağlanır. Bu konuda gösterilmektedir nasıl [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] güçlendirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bu senaryolar, arkasındaki mimariyi, faydalarını ve kısıtlamalarını sağlamak için eklenti modeli.  
@@ -294,8 +295,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.LoaderOptimizationAttribute>  
- [Eklentiler ve genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
- [Uygulama etki alanları](../../../../docs/framework/app-domains/application-domains.md)  
+ [Eklentiler ve Genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
+ [Uygulama Etki Alanları](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework Remoting genel bakış](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Nesneleri Uzaktan erişilebilir hale getirme](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/how-to-topics.md)

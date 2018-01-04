@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b804064a2b7a7bb0f587ae1dc2014769ca6e058
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde geri bir kullanıcı tanımlı tür seri durumdan serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemci kullanılabilir olması gerekir. Genellikle Bunu başarmak için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tanımlı türler uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu düzenek de JavaScript nesne gösterimi (JSON) nesneleriyle çalışırken konu başlığı altında açıklandığı gibi geçerlidir [nasıl yapılır: seri hale getirmek ve seri durumdan JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

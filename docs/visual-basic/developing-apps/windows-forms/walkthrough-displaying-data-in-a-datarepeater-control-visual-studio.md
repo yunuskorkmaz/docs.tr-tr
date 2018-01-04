@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>İzlenecek Yol: DataRepeater Denetimindeki Verileri Görüntüleme (Visual Studio)
 Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bitiş senaryo sağlar bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
@@ -25,7 +25,7 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
 ## <a name="prerequisite"></a>Önkoşul  
  Bu kılavuz, Northwind örnek veritabanı gerektirir.  
   
- Bu veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Yönergeler için bkz: [örnek veritabanları yükleme](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Yönergeler için bkz: [örnek veritabanları yükleme](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuzun ilk bölümü dört ana görevden oluşur:  
@@ -93,7 +93,7 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
   
          veya  
   
-    -   Tıklatın **yeni bağlantı** yeni bir veri bağlantısı yapılandırmak için. Daha fazla bilgi için bkz: [nasıl yapılır: SQL Server veritabanları için bağlantıları oluşturma](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
+    -   Tıklatın **yeni bağlantı** yeni bir veri bağlantısı yapılandırmak için. Daha fazla bilgi için bkz: [yeni bağlantılar eklemek](/visualstudio/data-tools/add-new-connections).  
   
 5.  Veritabanı parola gerektiriyorsa, hassas bilgileri Ekle ve ardından seçeneğini **sonraki**.  
   
@@ -237,13 +237,13 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
 7.  Uygulamayı çalıştırmak için F5 tuşuna basın. Her bir müşteri ilk seçtiğinizde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetlemek, siparişler o müşteri görüntülenir için ikinci <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataRepeater denetimine giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: DataRepeater denetiminde veri bağlı](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: ilişkisiz denetimleri DataRepeater denetiminde görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: DataRepeater denetimi düzenini değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: DataRepeater denetiminde öğe üstbilgilerini görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: DataRepeater denetiminde veri arama](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [DataRepeater Denetimine Giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Denetiminde Bağlı Verileri Görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Denetimindeki İlişkisiz Denetimleri Görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Denetimi Düzenini Değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Denetiminde Öğe Üst Bilgilerini Görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Denetiminde Veri Arama](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
  [Nasıl yapılır: iki DataRepeater denetimi (Visual Studio) kullanarak ana/ayrıntı formu oluşturma](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [Nasıl yapılır: DataRepeater denetiminin görünümünü değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Nasıl yapılır: DataRepeater öğelerini eklemeyi ve silmeyi devre dışı bırak](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
- [DataRepeater denetiminde sorun giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+ [Nasıl Yapılır: DataRepeater Denetiminin Görünümünü Değiştirme](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Nasıl Yapılır: DataRepeater Öğelerini Eklemeyi ve Silmeyi Devre Dışı Bırakma](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ [DataRepeater Denetiminde Sorun Giderme](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ed50dd2aff1702543789f06939f7c2bc4b3dd83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier Yönergesi
 Böylece adlandırılmış nesne başvuruları için alanları ile tanımlanmış XAML derleme davranışını değiştiren <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> yerine erişim <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varsayılan davranışı.  
@@ -36,7 +37,7 @@ Böylece adlandırılmış nesne başvuruları için alanları ile tanımlanmı�
   
 |||  
 |-|-|  
-|*Ortak*|Geçirdiğiniz belirtmek için tam dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullanılan arka plan kodu programlama dili bağlı olarak değişir. Açıklamalar bakın.|  
+|*Public*|Geçirdiğiniz belirtmek için tam dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullanılan arka plan kodu programlama dili bağlı olarak değişir. Açıklamalar bakın.|  
   
 ## <a name="dependencies"></a>Bağımlılıklar  
  XAML üretim kullanıyorsa `x:FieldModifier` herhangi bir yere, o XAML üretim kök öğesinin bildirmelidir bir [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md).  
@@ -61,8 +62,8 @@ Böylece adlandırılmış nesne başvuruları için alanları ile tanımlanmı�
  Varsayılan olarak, kök öğe için parçalı sınıf ortak; Ancak, bunu kullanarak ortak olmayan bir duruma getirebilirsiniz [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md). [X: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md) kök öğe sınıfı örneğini erişim düzeyini de etkiler. Her ikisi de koyabilirsiniz `x:Name` ve `x:FieldModifier` kök öğesi, ancak bu yalnızca yapar tarafından denetlenen bir ortak alan kopyasını kök öğe, doğru kök öğe sınıfı erişim düzeyi hala [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML ve WPF için özel sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Arka plan kod ve WPF XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x: Name yönergesi](../../../docs/framework/xaml-services/x-name-directive.md)  
+ [WPF için XAML ve Özel Sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Arka Plan Kod ve WPF İçindeki XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [x:Name Yönergesi](../../../docs/framework/xaml-services/x-name-directive.md)  
  [WPF uygulaması (WPF) oluşturma](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [x: ClassModifier yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+ [x:ClassModifier Yönergesi](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

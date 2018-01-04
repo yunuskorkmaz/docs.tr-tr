@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a3dcb45e6aeecb9e54ad48db4130689ac0fdd358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7cd79acbdef09acb0a05c818d8358cd612c3bcdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Msxsl: node-set() işlevi için destek
 `msxsl:node-set` İşlevi bir düğüm kümesine sonuç ağacı parçası dönüştürmenize olanak sağlar. Her zaman ortaya çıkan düğümü tek bir düğüm içerir ve ağacı kök düğümü olur.  
@@ -61,4 +64,4 @@ ms.lasthandoff: 10/18/2017
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

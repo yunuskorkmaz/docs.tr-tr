@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e1327ac2a3df7a84c157e4bf60d2ad63d69b1677
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6870861541a063c56f83dcb286d21a5a970d1b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="user-defined-functions-and-variables"></a>Kullanıcı tanımlı işlevler ve değişkenler
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı ile etkileşim kurmak için kullanılan yöntemler kümesi sağlar <xref:System.Xml.XPath.XPathDocument> veri. XPath sorgusu ifadeleri tarafından uzantısı işlevleri ve değişkenler kullanmak için uygulayarak standart XPath işlevleri destekleyebilirsiniz. <xref:System.Xml.XPath.XPathExpression.SetContext%2A> Yöntemi türetilmiş bir kullanıcı tanımlı içerik kabul edebileceği <xref:System.Xml.Xsl.XsltContext>. Kullanıcı tanımlı işlevler özel bağlam tarafından çözümlenir.  

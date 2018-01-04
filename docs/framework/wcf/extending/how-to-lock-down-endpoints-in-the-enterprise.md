@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c580316415a1186bbdee518e201fb4c88419a72
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b6fa36a269dec4a191417813ec9c4ee26b699ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir. Aşağıdaki konu geliştirmek ve tüm doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklemek nasıl ele [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci uygulamaları bilgisayarlarda yüklü.  

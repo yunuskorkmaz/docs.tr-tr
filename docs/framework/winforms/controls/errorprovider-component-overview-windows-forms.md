@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider Bileşenine Genel Bakış (Windows Forms)
 Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) bileşen bir form veya denetim kullanıcı girdisi doğrulamak için kullanılır. Genellikle, bir form üzerinde kullanıcı girişini doğrulama veya dataset içindeki hataları görüntüleme ile birlikte kullanılır. Bir ileti kutusu kapatıldıktan sonra hata iletisi artık görünür olmadığı için bir hata sağlayıcısı bir hata iletisi bir ileti kutusu görüntüleme daha daha iyi bir seçenektir. <xref:System.Windows.Forms.ErrorProvider> Bileşen bir hata simgesi görüntüler (![ErrorProvider simgesi](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) kullanıcı üzerinden fare işaretçisini getirdiğinde metin kutusu gibi; ilgili denetim yanındaki hata simgesi, araç ipucu, hata iletisi dizesi gösteren görüntülenir.  
@@ -37,5 +38,5 @@ Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/error
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ErrorProvider>  
- [Nasıl yapılır: Windows ile DataSet içindeki hataları görüntüleme Forms ErrorProvider bileşeni](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- [Nasıl yapılır: Forms ErrorProvider bileşeni Windows ile Form doğrulama için hata simgeleri görüntüleme](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+ [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile Form Doğrulama için Hata Simgeleri Görüntüleme](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

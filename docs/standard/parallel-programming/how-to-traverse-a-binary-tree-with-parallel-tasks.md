@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c029a763faaa0b4d6ea5612efe079e47415b6fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0196d82dd46a105f7cf1db0f9333a5d28afe559b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme
 Aşağıdaki örnek Paralel Görevler bir ağaç veri yapısı geçiş yapmak için kullanılabilecek iki yolunu gösterir. Ağaç oluşturulmasını bir alıştırma olarak kalır.  
@@ -33,4 +36,4 @@ Aşağıdaki örnek Paralel Görevler bir ağaç veri yapısı geçiş yapmak i�
  Gösterilen iki yöntem işlevsel olarak eşdeğerdir. Kullanarak <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> yöntemi oluşturmak ve görevleri çalıştırmak için bir tanıtıcı görevlerde bekleyin ve özel durumları işlemek için kullanılan görevler geri alın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d75bb34b6258819290a5d2dd8c33b37945cce5c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
 W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı davranış olduğu kabul edilir. Örneğin, Bölüm 7.3 oluşturma işleme yönergelerde XSLT 1.0 öneri, bir hata içeriğinin başlatmasını varsa bildiren `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur. Hatadan kurtarmak işlemci karar verirse ne karar öneri gösterir XSLT 1.0 bazı sorunlar için yapılması gerekir. 7.3 bölümünde verilen sorun için uygulama bu hatadan düğümleri ve bunların içeriği yoksayılıyor kurtarabilirsiniz W3C söyler.  
@@ -62,4 +65,4 @@ W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir d
  <sup>*</sup>Bu davranış farklı <xref:System.Xml.Xsl.XslTransform> sınıfı. Daha fazla bilgi için bkz: [uygulama, isteğe bağlı davranışları çok sınıfında](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

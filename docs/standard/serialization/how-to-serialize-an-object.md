@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92f7d19d84f8146a5c7933119874f4223dc20b6b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1ce7baf12c1826ddd14edad5e7dec328278c40e3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-serialize-an-object"></a>Nasıl yapılır: bir nesneyi serileştirme
 Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve alanları ayarlamak için olan nesne oluşturun. Bunu yapmak için XML akışı bir akış veya bir dosya olarak depolanmasını aktarım biçimi belirlemeniz gerekir. Örneğin, XML Akışı kalıcı bir biçimde kaydedilmelidir varsa, oluşturun bir <xref:System.IO.FileStream> nesnesi.  
@@ -60,5 +63,5 @@ Bir nesneyi serileştirmek için önce sıralanabilir ve ortak özelliklerini ve
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -18,21 +18,22 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ba1092b9fd4a39a3e497ec31b9fd6bb1227f827
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 42ef2d29f7364d09c35dec27e0aa6f775dbc2982
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-extensions"></a>WPF XAML Uzantıları
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağlama biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [ColorConvertedBitmap biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [ComponentResourceKey Biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [DynamicResource Biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [TemplateBinding biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [ThemeDictionary biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [PropertyPath XAML sözdizimi](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [PresentationOptions: Freeze özniteliği](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [İşaretleme Uzantısı Bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
+  [ColorConvertedBitmap İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
+  [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+  [RelativeSource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
+  [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+  [TemplateBinding İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+  [ThemeDictionary İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
+  [PropertyPath XAML Söz Dizimi](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze Özniteliği](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

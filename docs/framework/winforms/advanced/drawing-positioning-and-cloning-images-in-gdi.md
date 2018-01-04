@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbff4023a51687539472ac3e040b125f2f92fc28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>GDI+'da Görüntü Çizme, Konumlandırma ve Kopyalama
 Kullanabileceğiniz <xref:System.Drawing.Bitmap> sınıfı yüklemek ve ızgara görüntüleri ve görüntülemek için kullanabileceğiniz <xref:System.Drawing.Imaging.Metafile> yüklemek ve vektör görüntüleri göstermek için sınıf. <xref:System.Drawing.Bitmap> Ve <xref:System.Drawing.Imaging.Metafile> sınıfları <xref:System.Drawing.Image> sınıfı. Vektör resim görüntülemek için örneği gerekir <xref:System.Drawing.Graphics> sınıfı ve bir <xref:System.Drawing.Imaging.Metafile>. Izgara resim görüntülemek için örneği gerekir <xref:System.Drawing.Graphics> sınıfı ve bir <xref:System.Drawing.Bitmap>. Örneğinin <xref:System.Drawing.Graphics> SAX <xref:System.Drawing.Graphics.DrawImage%2A> alır yöntemi <xref:System.Drawing.Imaging.Metafile> veya <xref:System.Drawing.Bitmap> bağımsız değişken olarak.  
@@ -62,6 +63,6 @@ Kullanabileceğiniz <xref:System.Drawing.Bitmap> sınıfı yüklemek ve ızgara 
  ![Kırpma](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Resimler, bit eşlemler, simgeler ve meta dosyaları ile çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

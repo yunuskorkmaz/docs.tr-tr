@@ -12,11 +12,11 @@ ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa30bc7cbe96b49c5d3f5703001e6a3ac379027f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: de34f27bc520c4e814738e0ba22620ed80f7f23e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Lınq'ye giriş (Visual Basic)
 Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bu köprüleri world nesneleri ve veri world arasındaki boşluk sunulan ' dir.  
@@ -34,7 +34,7 @@ Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bu köpr
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Başlarken bölümündeki bazı temel kavramları hakkında bilgi sahibi olma LINQ hakkında daha fazla ayrıntı öğrenmek için başlangıç [Visual Basic'te LINQ ile çalışmaya başlama](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), ve hangi olduğunuz LINQ teknolojisi belgelerini okuyun ilginizi çekiyor:  
   
--   SQL Server veritabanlarını: [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+-   SQL Server veritabanlarını: [LINQ-SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
 -   XML belgeleri: [LINQ-XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   

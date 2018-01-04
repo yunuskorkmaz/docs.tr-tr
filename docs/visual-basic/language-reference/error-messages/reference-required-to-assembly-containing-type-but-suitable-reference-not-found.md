@@ -14,11 +14,11 @@ ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Derleme &#39;için gereken başvuru; &lt;assemblyIdentity&gt;&#39; içeren türü &#39;&lt; TypeName&gt;&#39; ancak uygun bir başvuru projeleri &#39; arasındaki belirsizlik nedeniyle bulunamadı&lt; projectname1&gt;&#39; ve &#39;&lt; projectname2&gt;&#39;
 Sınıfı, yapısı, arabirim, numaralandırma veya projenizin dışında tanımlı temsilci, gibi bir tür bir ifade kullanır. Ancak, birden fazla derleme bu türünü tanımlamak için proje başvuruları sahip.  
@@ -37,7 +37,7 @@ Sınıfı, yapısı, arabirim, numaralandırma veya projenizin dışında tanım
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)  
- [Bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB nasıl yapılır: başvuru ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [Bozuk başvurularda sorun giderme](/visualstudio/ide/troubleshooting-broken-references)
+ [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+   
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Bozuk Başvurularda Sorun Giderme](/visualstudio/ide/troubleshooting-broken-references)

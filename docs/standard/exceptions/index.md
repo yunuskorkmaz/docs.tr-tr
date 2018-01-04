@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>İşleme ve .NET özel durumları atma
 
@@ -67,14 +70,14 @@ Aşağıdaki tabloda ortak bazı özel durumlar ne bunlara neden olabilecek örn
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-* [Özel durum sınıfı ve özellikleri](exception-class-and-properties.md)
-* [Nasıl yapılır: özel durumları yakalamak için Try-Catch bloğu kullanın](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Nasıl yapılır: bir Catch bloğunda belirli özel durumların kullanın](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Nasıl yapılır: açıkça özel durumlar oluşturma](how-to-explicitly-throw-exceptions.md)
-* [Nasıl yapılır: kullanıcı tanımlı özel durumlar oluşturma](how-to-create-user-defined-exceptions.md)
-* [Kullanıcı tarafından filtrelenmiş özel durum işleyicilerini kullanma](using-user-filtered-exception-handlers.md)
-* [Nasıl yapılır: Finally bloklarını kullanma](how-to-use-finally-blocks.md)
-* [COM birlikte çalışma özel durumları işleme](handling-com-interop-exceptions.md)
-* [Özel durumlar için en iyi yöntemler](best-practices-for-exceptions.md)
+* [Özel Durum Sınıfı ve Özellikleri](exception-class-and-properties.md)
+* [Nasıl yapılır: Özel Durumları Yakalamak için Try-Catch Bloğu Kullanma](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [Nasıl yapılır: Bir Catch Bloğunda Belirli Özel Durumları Kullanma](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [Nasıl yapılır: Açıkça Özel Durumlar Oluşturma](how-to-explicitly-throw-exceptions.md)
+* [Nasıl yapılır: Kullanıcı Tanımlı Özel Durumlar Oluşturma](how-to-create-user-defined-exceptions.md)
+* [Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma](using-user-filtered-exception-handlers.md)
+* [Nasıl yapılır: Finally Bloklarını Kullanma](how-to-use-finally-blocks.md)
+* [COM Birlikte Çalışma Özel Durumlarını İşleme](handling-com-interop-exceptions.md)
+* [Özel Durumlar için En İyi Yöntemler](best-practices-for-exceptions.md)
 
 Özel durumları .NET içinde nasıl çalıştığı hakkında daha fazla bilgi için bkz: [ne her geliştirme gereken bilmeniz hakkında özel durumlara çalışma zamanında](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).

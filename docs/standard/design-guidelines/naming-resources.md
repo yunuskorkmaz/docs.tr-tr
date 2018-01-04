@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 89782b00799bfaac97780b0ffdee62c89fdfbe49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0387d820cc660bdf6cbafb9d76bbf0184c111881
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-resources"></a>Adlandırma kaynakları
 Yerelleştirilebilir kaynaklar özellikleri değilmiş gibi belirli nesneleri başvurulabilir olduğundan kaynaklar için adlandırma kuralları özellik Kılavuzu benzerdir.  
@@ -49,5 +52,5 @@ Yerelleştirilebilir kaynaklar özellikleri değilmiş gibi belirli nesneleri ba
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

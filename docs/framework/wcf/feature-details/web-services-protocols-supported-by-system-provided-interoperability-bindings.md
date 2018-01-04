@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Web hizmetleri belirtimleri bilinen belirtim kümesi desteği Web Hizmetleri ile birlikte çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi yöntemler, hizmet yapılandırmasını basitleştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üç birlikte çalışabilir sistem tarafından sağlanan bağlamalar sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Terfi, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş ile birlikte çalışabilirlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir birlikte çalışabilen sistem tarafından sağlanan bir bağlamayı içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki birlikte çalışabilir sistem tarafından sağlanan bağlamaları içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamalar destek özellikleri listeler.  
@@ -119,7 +120,7 @@ ms.lasthandoff: 12/02/2017
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
  [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  

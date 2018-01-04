@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d1952632b29450a441d3cf0c7d66bffc000ea5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6cec2356159b59e58ac6785a2988df7b2fac0e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-paths"></a>Yollar Oluşturma ve Çizme
 Bir yolu, yönetilebilir ve tek bir birim olarak çizilen grafik temelleri (çizgiler, dikdörtgenler, eğriler, metin ve benzeri) dizisidir. Bir yol bölünebilir *rakamları* açık veya kapalı. Bir şekil birkaç temelleri içerebilir.  
@@ -31,13 +32,13 @@ Bir yolu, yönetilebilir ve tek bir birim olarak çizilen grafik temelleri (çiz
  Çağırarak bir yol çizebilirsiniz <xref:System.Drawing.Graphics.DrawPath%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı ve doldurabilirsiniz bir yolu çağırarak <xref:System.Drawing.Graphics.FillPath%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: çizgiler, eğriler ve şekiller şekiller oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Çizgiler, Eğriler ve Şekillerden Şekiller Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-figures-from-lines-curves-and-shapes.md)  
  Nasıl kullanılacağını gösteren bir <xref:System.Drawing.Drawing2D.GraphicsPath> rakamları oluşturmak için.  
   
- [Nasıl yapılır: açık şekilleri doldurma](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
+ [Nasıl Yapılır: Açık Şekilleri Doldurma](../../../../docs/framework/winforms/advanced/how-to-fill-open-figures.md)  
  Doldurmak açıklanmaktadır bir <xref:System.Drawing.Drawing2D.GraphicsPath>.  
   
- [Nasıl yapılır: eğik bir yolu düzleştirerek çizgiye dönüştürme](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
+ [Nasıl yapılır: Eğik bir Yolu Düzleştirerek Çizgiye Dönüştürme](../../../../docs/framework/winforms/advanced/how-to-flatten-a-curved-path-into-a-line.md)  
  Düzleştirmek gösterilmektedir bir <xref:System.Drawing.Drawing2D.GraphicsPath>.  
   
 ## <a name="reference"></a>Başvuru  

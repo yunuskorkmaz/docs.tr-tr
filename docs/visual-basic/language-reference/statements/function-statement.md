@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function Deyimi (Visual Basic)
 Ad, parametreleri ve tanımlama kodu bildiren bir `Function` yordamı.  
@@ -65,13 +65,13 @@ End Function
   
      İsteğe bağlı. Aşağıdakilerden biri olabilir:  
   
-    -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
-    -   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)  
+    -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Özel](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
@@ -81,11 +81,11 @@ End Function
   
      İsteğe bağlı. Aşağıdakilerden biri olabilir:  
   
-    -   [Aşırı yüklemeler](../../../visual-basic/language-reference/modifiers/overloads.md)  
+    -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
-    -   [Geçersiz kılmaları](../../../visual-basic/language-reference/modifiers/overrides.md)  
+    -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
-    -   [Geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md)  
+    -   [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
     -   [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
@@ -239,7 +239,7 @@ End Function
   
  Bir yineleyici işlevinin dönüş türü olabilir <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Daha fazla bilgi için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Daha fazla bilgi için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek kullanır `Function` ad, parametreleri ve gövdesini kodu bildirmek için deyimi bir `Function` yordamı. `ParamArray` Değiştiricisi değişken sayıda bağımsız değişken kabul etmek işlevi sağlar.  
@@ -259,14 +259,14 @@ End Function
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sub deyimi](sub-statement.md)  
- [İşlev yordamları](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Parametre listesi](parameter-list.md)  
- [Dim deyimi](dim-statement.md)  
- [Call deyimi](call-statement.md)  
+ [Sub Deyimi](sub-statement.md)  
+ [İşlev Yordamları](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
+ [Parametre Listesi](parameter-list.md)  
+ [Dim Deyimi](dim-statement.md)  
+ [Call Deyimi](call-statement.md)  
  [,](of-clause.md)  
- [Parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Nasıl yapılır: genel bir sınıf kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Sorun giderme yordamları](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [İşlev ifadesi](../../../visual-basic/language-reference/operators/function-expression.md)
+ [Parametre Dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
+ [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Yordam Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
+ [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [İşlev İfadesi](../../../visual-basic/language-reference/operators/function-expression.md)

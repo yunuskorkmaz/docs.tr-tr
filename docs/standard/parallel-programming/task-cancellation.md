@@ -19,11 +19,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 106c89ca9fcfb8bbab23b982cdc524ff78d21d15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 46e202d4f5cafdef44f908d44f9362127bc6eb1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="task-cancellation"></a>Görev iptali
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> sınıfları, .NET Framework'teki iptal belirteçlerini kullanımı ile iptal destekler. Daha fazla bilgi için bkz: [yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Görev sınıflarında iptal etme, iptal edilebilir bir işlemi temsil eden kullanıcı temsilcisiyle iptal etmeyi isteyen kod arasında yapılan bir işbirliğini içerir.  İstekte bulunan kod arama başarılı iptal içerir <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi ve kullanıcı temsilci zamanında işlemi sonlandırılıyor. Aşağıdaki seçeneklerden birini kullanarak işlemi sonlandırabilirsiniz:  
@@ -48,5 +51,5 @@ ms.lasthandoff: 11/21/2017
  İptal işlemi istendikten sonra görev bazı öğeleri işlemeye devam edebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+ [Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

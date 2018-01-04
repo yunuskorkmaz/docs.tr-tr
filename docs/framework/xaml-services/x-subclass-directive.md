@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass Yönergesi
 XAML biçimlendirme derleme davranışını değiştiren zaman `x:Class` de sağlanır. Temel alan bir parçalı sınıf oluşturmak yerine `x:Class`, sağlanan `x:Class` Ara bir sınıf olarak oluşturulur ve ardından, sağlanan türetilmiş sınıf temel beklenen `x:Class`.  
@@ -67,5 +68,5 @@ XAML biçimlendirme derleme davranışını değiştiren zaman `x:Class` de sağ
  Tanımladığınızda her ikisi de `x:Class` ve `x:Subclass`, herhangi bir uygulama tarafından başvurulan sınıfı için sağlamak zorunda değildir `x:Class`. Aracılığıyla bir ad vermek yeterlidir `x:Class` derleyici (derleyici ı varsayılan adı bu durumda) Ara dosyalarında oluşturur sınıfı için bazı yönergeler sahip olması özniteliği. Verebilirsiniz `x:Class` uygulaması sınıf; ancak, bu her ikisi de kullanmak için tipik senaryo değil `x:Class` ve `x:Subclass`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
- [XAML ve WPF için özel sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [WPF için XAML ve Özel Sınıflar](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

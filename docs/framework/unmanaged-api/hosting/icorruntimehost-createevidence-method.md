@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c050d8d610b32d2e8421a5d61e36cee151085e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 754b254fb9a41ab8bb900fdb5d0c10a126b804c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence Yöntemi
 Arabirim işaretçisi türü alır <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, geçirilecek güvenlik bulgu oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) yöntemi.  
@@ -66,4 +67,4 @@ HRESULT CreateEvidence (
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System._AppDomain>  
  <xref:System.AppDomain>  
- [Icorruntimehost arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+ [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

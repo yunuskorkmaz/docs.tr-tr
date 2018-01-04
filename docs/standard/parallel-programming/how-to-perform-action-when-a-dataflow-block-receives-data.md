@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58adf778986883b5aac823fc5e69d0a2308304dc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
 *Yürütme veri akışı bloğunda* türleri veri aldıklarında bir kullanıcı tarafından sağlanan temsilci çağırma. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sınıflardır yürütme veri akışı blok türü. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, veya bir çalışma işlevi bir yürütme veri akışı bloğuna sağladığınızda lambda ifadesi. Bu belge nasıl kullanılacağını açıklar <xref:System.Func%602> ve yürütme bloklarında eylemi gerçekleştirmek için lambda ifadesi.  

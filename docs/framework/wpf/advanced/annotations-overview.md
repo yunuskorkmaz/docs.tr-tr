@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc4ef4473a200a424134a16d64655a5acf1488b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe3f0caa8f23a3b68f1017254a770af766f83f81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik değil. Bu notlar veya yorumlar "açıklamalardır" bilgilere bayrak ya da daha sonra başvurmak için ilgi vurgulamak için bir belgeye ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgelere kişisel açıklamalar ekleme yeteneği genellikle hiç varsa çok sınırlıdır.  
@@ -82,7 +83,7 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
  <xref:System.Windows.Controls.FlowDocumentReader>  
  <xref:System.Windows.Annotations.IAnchorInfo>  
  [Ek Açıklamalar Şeması](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
- [ContextMenu genel bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [Nasıl yapılır: bir MenuItem komut ekleme](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)

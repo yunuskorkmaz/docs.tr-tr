@@ -26,11 +26,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89a352baed4d07c3c935643e9962131a20af2802
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c12892c4761f0158153c87464066dd727c83bfc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Tamamlanması uzun zaman yapacağı bir işlem varsa ve kullanıcı arabirimi (UI) yanıt vermemesine istediğiniz değil veya "askıda" kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  
@@ -175,9 +176,9 @@ Tamamlanması uzun zaman yapacağı bir işlem varsa ve kullanıcı arabirimi (U
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.BackgroundWorker>  
- [Yönetilen iş parçacığı oluşturma en iyi uygulamalar](../../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Bileşenleri çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [IN derleme değil: Visual Basic'te çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [İzlenecek yol: bir işlemi arka planda çalışan](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [BackgroundWorker bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+ [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [İzlenecek yol: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
+ [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

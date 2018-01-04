@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2567a564b5769abd91d34696c1a94c21ad2913ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme
 Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> denetim yazdırılması için önce bir belgeyi genellikle görüntüleme olanağı verir.  
@@ -92,7 +93,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> denetim yazd�
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [PrintDocument bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- [PrintPreviewDialog denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [Windows Forms yazdırma desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [PrintDocument Bileşeni](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [PrintPreviewDialog Denetimi](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

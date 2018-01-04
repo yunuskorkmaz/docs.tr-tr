@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a41dce5db707d0be49c283256de665d316e1a1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3bdacb1cc54e3b67a1b4cef4f9fd274e65037faa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="destroying-threads"></a>İş Parçacıklarını Yok Etme
 <xref:System.Threading.Thread.Abort%2A> Yöntemi yönetilen iş parçacığı kalıcı olarak durdurmak için kullanılır. Çağırdığınızda <xref:System.Threading.Thread.Abort%2A>, ortak dil çalışma zamanı oluşturur bir <xref:System.Threading.ThreadAbortException> hedef iş parçacığı yakalayabilir hedef iş parçacığında. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
@@ -76,4 +79,4 @@ catch (ThreadAbortException ex)
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.ThreadAbortException>  
  <xref:System.Threading.Thread>  
- [İş parçacığı kullanma ve iş parçacığı oluşturma](../../../docs/standard/threading/using-threads-and-threading.md)
+ [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)

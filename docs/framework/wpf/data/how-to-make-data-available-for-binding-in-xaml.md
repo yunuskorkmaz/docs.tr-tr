@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d734a7f17f8843ff284ac0854ac41d4a5b9f5584
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Nasıl yapılır: XAML'de Bağlama için Veriyi Kullanılabilir Yapma
 Bu konuda yapabilirsiniz verileri için kullanılabilir bağlama farklı yolları açıklanmaktadır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], uygulamanızın gereksinimlerine bağlı olarak.  
@@ -58,5 +59,5 @@ Bu konuda yapabilirsiniz verileri için kullanılabilir bağlama farklı yollar�
  Veri bağlama için farklı yollar hakkında bilgi için bkz [bağlama kaynak](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Hangi veri türlerini bağlayabileceğiniz veya kendi uygulama hakkında bilgi için [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri bağlama için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

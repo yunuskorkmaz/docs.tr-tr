@@ -19,11 +19,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16d8cd3c3c01c2f9d83786e78f0eb1c45a38a49b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bb628c0de1f0e4452ae13b5f5ee392084118bea5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> veri paralelliği herhangi etkinleştirmek için döngü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> veri kaynağı.  

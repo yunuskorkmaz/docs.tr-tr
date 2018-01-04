@@ -19,11 +19,11 @@ ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d39b3d7cf5096e3b263938d32e017eae5708e042
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3d4c9cd3310e0ec3943c4e2b5e28be5b9a393db
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit Deyimi (Visual Basic)
 Bir dosyadaki tüm değişkenlerin açıkça bildirilmesini zorlar veya değişkenlerin örtük bildirimleri sağlar.  
@@ -54,7 +54,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Option Explicit IDE'de ayarlamak için  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
   
 2.  Tıklatın **derleme** sekmesi.  
   
@@ -74,11 +74,11 @@ Option Explicit { On | Off }
  [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [ReDim deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [Option Compare deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [/ optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [/ optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [/ optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [ReDim Deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
+ [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
  [Visual Basic Varsayılanları, projeler, Seçenekler iletişim kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

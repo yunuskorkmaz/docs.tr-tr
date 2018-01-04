@@ -15,11 +15,11 @@ ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6939dee58051e9a97fa704f063f35ff0ac440036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a58ce248404bfe4d6c55bba741b332acd7fcbf5c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Seri Bağlantı Noktalarından Dize Alma
 Bu konuda nasıl kullanılacağını açıklar `My.Computer.Ports` içinde bilgisayarın seri bağlantı noktalarından dize alma için [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -42,11 +42,11 @@ Bu konuda nasıl kullanılacağını açıklar `My.Computer.Ports` içinde bilgi
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Kullanım <xref:System.IO.Ports.SerialPort.ReadLine%2A> metnin kullanılabilen bir sonraki satıra seri bağlantı noktasından okumak için yöntem.  
+5.  Kullanım <xref:System.IO.Ports.SerialPort.ReadLine> metnin kullanılabilen bir sonraki satıra seri bağlantı noktasından okumak için yöntem.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  Kullanım bir `If` belirlemek için deyimi <xref:System.IO.Ports.SerialPort.ReadLine%2A> yöntemi döndürür `Nothing` (daha fazla metin başka bir deyişle, kullanılabilir). Bunu döndürürse `Nothing`, çıkış `Do` döngü.  
+6.  Kullanım bir `If` belirlemek için deyimi <xref:System.IO.Ports.SerialPort.ReadLine> yöntemi döndürür `Nothing` (daha fazla metin başka bir deyişle, kullanılabilir). Bunu döndürürse `Nothing`, çıkış `Do` döngü.  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   
@@ -74,6 +74,6 @@ Bu konuda nasıl kullanılacağını açıklar `My.Computer.Ports` içinde bilgi
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Nasıl yapılır: seri bağlantı noktalarına ekli modemleri çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Nasıl yapılır: seri bağlantı noktalarına dizeler gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+ [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

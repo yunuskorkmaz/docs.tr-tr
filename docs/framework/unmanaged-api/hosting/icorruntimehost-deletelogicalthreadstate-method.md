@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c8e4e6642b2df1b40782889799428c1b572da3d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c6b1722c35158c0446f604833ad2151260f8b266
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehostdeletelogicalthreadstate-method"></a>ICorRuntimeHost::DeleteLogicalThreadState Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -46,4 +47,4 @@ HRESULT DeleteLogicalThreadState ( );
  **.NET framework sürümleri:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icorruntimehost arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+ [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

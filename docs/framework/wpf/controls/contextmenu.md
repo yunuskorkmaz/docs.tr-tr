@@ -18,11 +18,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5098672b52f54ac618731a7007758a5dd516379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a917a74650893aa7e8a4a10758aab48e164b822
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimi bağlamına özgü. Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] farenin sağ düğmesiyle veya klavyenin menü düğmesi aracılığıyla.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
 Farklı Durumlardaki ContextMenu  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ContextMenu genel bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.ContextMenu>  

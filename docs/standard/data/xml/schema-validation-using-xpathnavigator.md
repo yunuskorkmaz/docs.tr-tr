@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 91ad5c2e6f8af7f2c3709b9dff65bd728de08e5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06b82998deba05abe0fca1d4e93cd5c5ea319eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator kullanarak şema doğrulaması
 Kullanarak <xref:System.Xml.XmlDocument> sınıfı, bulunan XML içeriği doğrulamak bir <xref:System.Xml.XmlDocument> iki yolla nesnesi. Bir doğrulama kullanarak XML içeriği doğrulamak için ilk yoludur <xref:System.Xml.XmlReader> nesne ve ikinci yol kullanmaktır <xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. XML kullanarak içeriğin salt okunur doğrulama de gerçekleştirebilirsiniz <xref:System.Xml.XPath.XPathDocument> sınıfı.  
@@ -370,8 +373,8 @@ class ValidatingReaderExample
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XPathDocument ve XmlDocument kullanarak XML verilerini okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- [Seçildiğinde, Evaluating ve XML XPathNavigator kullanarak veri eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- [XML XPathNavigator kullanarak verilerine erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [XML XPathNavigator kullanarak verileri düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)

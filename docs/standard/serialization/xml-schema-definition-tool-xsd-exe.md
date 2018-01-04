@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bb350d454d2fcb0f38d092240c98c1b87966be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.  
@@ -66,7 +69,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/f**[**lanları**]|Alanları özellikleri yerine oluşturur. Varsayılan olarak, özellikleri üretilir.|  
 |**/l**[**dil**]**:***dili*|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**]**:***ad alanı*|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
-|**/ nologo**|Başlık göstermez.|  
+|**/nologo**|Başlık göstermez.|  
 |**/ORDER**|Tüm parçacık üyeleri açık sipariş tanımlayıcılarını oluşturur.|  
 |**/o [ut]:** *directoryName*|Dosyalarında yerleştirmek için çıktı dizini belirtir. Geçerli dizin varsayılandır.|  
 |**/u**[**RI**]**:***URI*|Öğeler için URI için kod oluşturmak için şema belirtir. Bu URI varsa, ile belirtilen tüm öğelere uygulanır `/element` seçeneği.|  
@@ -234,7 +237,7 @@ xsd myAssembly.dll
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [Araçları](../../../docs/framework/tools/index.md)      
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [LINQ-DataSet genel bakış](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Yazılan veri kümeleri sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet Genel Bakış](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [Türü Belirtilmiş DataSet’leri Sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

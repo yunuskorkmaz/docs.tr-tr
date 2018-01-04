@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b10029c8b290ffaaa4a858fe3e5a6315031f1bab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma
 Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı ile birlikte <xref:System.Security.Principal.GenericPrincipal> mevcut bir Yetkilendirme düzeni bir Windows etki alanının bağımsız oluşturmasını sağlar.  
@@ -151,5 +154,5 @@ Is this a Manager? True
  <xref:System.Security.Principal.GenericIdentity>  
  <xref:System.Security.Principal.GenericPrincipal>  
  <xref:System.Security.Permissions.PrincipalPermission>  
- [Asıl nesneyi değiştirme](../../../docs/standard/security/replacing-a-principal-object.md)  
- [Asıl ve kimlik nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)
+ [Sorumlu Nesnesini Değiştirme](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)

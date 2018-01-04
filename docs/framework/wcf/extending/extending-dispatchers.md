@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a79a9c3362bd2a186d09f7337c0f742b91871c9e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem çağrılarına uygulama kodundaki içine çevirme ve sonuçları çağırana geri göndermek için dağıtıcıları sorumludur. Dağıtıcı uzantıları bu işleme değiştirmenize izin verin.  İnceleme veya iletileri veya parametreleri içeriğini değiştirme ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlamak şekilde değiştirebilirsiniz.  
@@ -139,6 +140,6 @@ Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem ça
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime>  
  <xref:System.ServiceModel.Dispatcher.DispatchOperation>  
- [Nasıl yapılır: inceleyin ve hizmette iletileri değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
- [Nasıl yapılır: parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
- [Nasıl yapılır: Enterprise uç noktalarını kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+ [Nasıl yapılır: Hizmette İletileri Denetleme ve Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
+ [Nasıl yapılır: Parametreleri İnceleme veya Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
+ [Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

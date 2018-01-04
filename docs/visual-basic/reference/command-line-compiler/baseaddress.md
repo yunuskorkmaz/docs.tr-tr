@@ -17,11 +17,11 @@ ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8be88bf4834ca58b1fe708eb1ef7188c583fef0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1ad39acdec92667fbb0848a1c64c567b504dcb67
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="baseaddress"></a>/baseaddress
 DLL oluştururken, varsayılan taban adresi belirtir.  
@@ -49,10 +49,10 @@ DLL oluştururken, varsayılan taban adresi belirtir.
   
 |/ BaseAddress Visual Studio IDE'de ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **derleme** sekmesi.<br />3.  **Gelişmiş**'e tıklayın.<br />4.  Değer değiştirme **DLL temel adresi:** kutusu. **Not:** **DLL temel adresi:** kutusudur salt okunur hedef DLL değilse.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **derleme** sekmesi.<br />3.  **Gelişmiş**'e tıklayın.<br />4.  Değer değiştirme **DLL temel adresi:** kutusu. **Not:** **DLL temel adresi:** kutusudur salt okunur hedef DLL değilse.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))

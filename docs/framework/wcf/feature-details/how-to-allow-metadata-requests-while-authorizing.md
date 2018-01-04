@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b388a7517dbab8d30df51bfffac0058ded04bda
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7661cf3c0f13ebf2f077318e022e8f5fd115e2a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme
 Özel yetkilendirme sırasında işlenmesi için meta veriler için bir istek izin vermek gerekli olabilir. Aşağıdaki konu böyle bir istek doğrulamak için adımlarda size yol gösterir.  
@@ -47,4 +48,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

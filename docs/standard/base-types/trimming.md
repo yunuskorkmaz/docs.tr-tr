@@ -25,11 +25,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Karakterleri kırpma ve .NET dizelerden kaldırma
 Tek tek sözcüklere bir cümle ayrıştırma varsa, ya da sözcüğün sonuna boşluk (boşluk olarak da bilinir) sahip sözcükler şunun. Bu durumda, kırpma yöntemlerden birini kullanabilirsiniz **System.String** dizedeki belirtilen alanları veya diğer karakterler herhangi bir sayıda kaldırmak için sınıf. Aşağıdaki tabloda kullanılabilir kırpma yöntemleri açıklar.  
@@ -98,4 +101,4 @@ Tek tek sözcüklere bir cümle ayrıştırma varsa, ya da sözcüğün sonuna b
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)

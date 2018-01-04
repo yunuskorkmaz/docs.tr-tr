@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 503683de875b8853e219139800eef2a5417a1574
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Nasıl yapılır: Sürüklenen GridView Sütun Başlığı için Stil Oluşturma
 Bu örnek sürüklenen görünüşünü değiştirme gösterilmektedir <xref:System.Windows.Controls.GridViewColumnHeader> kullanıcı bir sütunun konumunu değiştiğinde.  
@@ -46,4 +47,4 @@ Bu örnek sürüklenen görünüşünü değiştirme gösterilmektedir <xref:Sys
  <xref:System.Windows.Controls.GridView>  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

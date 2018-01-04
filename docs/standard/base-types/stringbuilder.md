@@ -26,11 +26,14 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3a6c8f6dee9f2a1da6ed4a8219c1b4832464d9aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf8755ae6530c22bac88d8d8c5a6e92d86432994
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET StringBuilder sınıfını kullanma
 <xref:System.String> Nesnesidir değişmez. Yöntemlerden birini her kullanışınızda <xref:System.String?displayProperty=nameWithType> sınıfı, oluşturduğunuz yeni bir dize nesnesi bellekte bu yeni nesne için yeni bir ayırma alanı gerektirir. Burada bir dize yinelenen değişiklikleri gerçekleştirmeniz gerekir durumlarda yükü ilişkili yeni bir oluşturma ile <xref:System.String> nesne maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Sınıfı, yeni bir nesne oluşturmadan bir dize değiştirmek istediğinizde kullanılabilir. Örneğin, kullanarak <xref:System.Text.StringBuilder> sınıfı Döngüdeki birlikte birçok dizeleri birleştirme, performansı artırmak.  
@@ -120,5 +123,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

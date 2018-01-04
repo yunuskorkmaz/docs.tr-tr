@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 852d689ff3159818fb25ecfd9b6e5df6df84470c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Uygulama modeli herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
@@ -63,4 +64,4 @@ ms.lasthandoff: 12/02/2017
  Barındırma uygulama etki alanı ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][ServiceHostFactory kullanarak barındırmayı genişletme](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'yi genişletme](../../../docs/framework/wcf/extending/extending-wcf.md)
+ [WCF'yi Genişletme](../../../docs/framework/wcf/extending/extending-wcf.md)

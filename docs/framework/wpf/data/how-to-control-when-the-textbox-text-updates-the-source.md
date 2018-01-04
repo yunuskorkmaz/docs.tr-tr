@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c923a24f5abfdb059a436206a15181a67d03068f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9c503eb3300aba4a44c5a013c62942e7a171ae96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Nasıl yapılır: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynak güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> denetim bir örnek olarak.  

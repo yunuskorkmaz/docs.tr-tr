@@ -23,11 +23,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa689a685a58868ccd34b8bcbc4a779b9f826473
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Kültüre Duyarsız Dize Karşılaştırmalarını Gerçekleştirme
 Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi kültüre duyarlı ve büyük küçük harfe duyarlı karşılaştırmaları gerçekleştirir. Bu yöntem de sağlayan birçok aşırı yüklemeye içeren bir `culture` kullanmak için kültür belirtmenize olanak sağlar. parametre ve bir `comparisonType` kullanmak için karşılaştırma kuralları belirtmenize olanak sağlar. parametre. Varsayılan tekrar yükleme yerine bu yöntemleri çağırmak, belirli bir yöntem çağrısında kullanılan kurallarla ilgili tüm belirsizlikleri kaldırır ve belirli bir karşılaştırmanın kültüre duyarlı veya kültüre duyarsız olduğunu netleştirir.  
@@ -49,5 +52,5 @@ Varsayılan olarak, <xref:System.String.Compare%2A?displayProperty=nameWithType>
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.String.Compare%2A?displayProperty=nameWithType>  
  <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
- [Kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- [Dizeleri kullanmak için en iyi uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)
+ [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+ [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)

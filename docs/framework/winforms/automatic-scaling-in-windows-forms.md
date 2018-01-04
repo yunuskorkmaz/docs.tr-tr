@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4eefab1dccc295557d95485d6f38add41e634fa4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 Otomatik ölçeklendirme etkinleştirir bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede başka bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi ile uygun şekilde görüntülenmesi için tasarlanmış. Formun sağlar ve denetimlerinden akıllıca yerel windows ve diğer uygulamaların hem kullanıcıların hem de diğer geliştiricilerinin makinelerde ile tutarlı olacak şekilde yeniden boyutlandırılır. Desteği [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlayan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı yerel Windows uygulamaları her bir kullanıcının makineye karşılaştırıldığında görünüm korumak için uygulamalar.
@@ -112,5 +113,5 @@ Windows Forms aşağıdaki mantık formlar ve içeriklerini otomatik ölçeklend
  <xref:System.Windows.Forms.Control.Scale%2A>  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
  <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>  
- [Denetimleri görsel stilde işleme](./controls/rendering-controls-with-visual-styles.md)  
- [Nasıl yapılır: otomatik ölçeklendirmeyi önleyerek performansı](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+ [Denetimleri Görsel Stilde İşleme](./controls/rendering-controls-with-visual-styles.md)  
+ [Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

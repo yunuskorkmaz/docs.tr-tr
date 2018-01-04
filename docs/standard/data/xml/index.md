@@ -1,5 +1,5 @@
 ---
-title: XML belgeleri ve verileri
+title: XML Belgeleri ve Verileri
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -13,13 +13,16 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="xml-documents-and-data"></a>XML belgeleri ve verileri
+# <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 .NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıflar kapsamlı ve tümleşik bir dizi sağlar. Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verileri düzenleme yazmayı destekler.  
   
 -   <xref:System.Xml>  
@@ -65,25 +68,25 @@ ms.lasthandoff: 10/18/2017
 -   **ADO.NET ile tümleştirme.** XML sınıfları ve [ADO.NET](../../../../docs/framework/data/adonet/index.md) ilişkisel veri ve XML araya getirmek için sıkı bir şekilde tümleştirilmiştir. <xref:System.Data.DataSet> Sınıfı, bir bellek içi önbellek bir veritabanından alınan veri. <xref:System.Data.DataSet> Sınıfına sahip okuma ve XML kullanarak yazma yeteneği <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları, iç ilişkisel şema yapısını XML şemaları (XSD) kalır ve bir XML belgesi şema yapısını anlamak için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XML işleme seçenekleri](../../../../docs/standard/data/xml/xml-processing-options.md)  
+ [XML İşleme Seçenekleri](../../../../docs/standard/data/xml/xml-processing-options.md)  
  XML verilerini işlemek için seçenekleri açıklar.  
   
- [XML verilerini işlemek bellek içi](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
+ [XML Verilerini Bellek İçinde İşleme](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
  XML veri bellek içi işleme için üç modeli açıklanır. [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> (W3C belge nesne modeli üzerinde tabanlı), sınıf ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modeline bağlı).  
   
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
  XSLT işlemci kullanımını açıklar.  
   
- [XML şema nesne modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  Derleme ve sağlayarak XML şemaları (XSD) işlemek için kullanılan sınıflar açıklanmaktadır bir <xref:System.Xml.Schema.XmlSchema> yüklemek ve bir şema düzenlemek için sınıf.  
   
- [İlişkisel veri ve ADO.NET XML tümleştirme](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
+ [İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
  .NET Framework verilerine ilişkisel ve hiyerarşik gösterimlerini gerçek zamanlı, zaman uyumlu erişim nasıl sağladığını açıklar <xref:System.Data.DataSet> nesne ve <xref:System.Xml.XmlDataDocument> nesne.  
   
- [Bir XML belgesi ad alanlarını yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
+ [XML Belgesinde Ad Alanlarını Yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
  Açıklar nasıl <xref:System.Xml.XmlNamespaceManager> sınıfı depolamak ve ad alanı bilgilerini korumak için kullanılır.  
   
- [System.Xml sınıflardaki türü desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
  Nasıl XML veri türü eşlemesi için CLR türleri, XML veri türleri ve diğer tür destek özellikleri dönüştürme açıklar <xref:System.Xml> sınıfları.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

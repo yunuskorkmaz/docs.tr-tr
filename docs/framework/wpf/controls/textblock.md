@@ -17,22 +17,23 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f7b95489259a914eec14c79b8e391f2a3795b2b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2d903eb1a7c47902aeda522264037384bd1f56d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textblock"></a>TextBlock
 <xref:System.Windows.Controls.TextBlock> Denetimi için esnek metin desteği sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Öğe öncelikle basic doğru hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryoları.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TextBlock genel bakış](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [TextBlock Genel Bakış](../../../../docs/framework/wpf/controls/textblock-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

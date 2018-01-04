@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92a993a5d34f72c3c52b29eaa2c17395a2e276ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c8ce0a339c7653f79da664867dc65290ce7a19c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Nasıl yapılır: Windows Forms DataGridView Denetimlerine Nesne Bağlama
 Aşağıdaki kod örneği, nesne koleksiyonu bağlamak gösterilmiştir bir <xref:System.Windows.Forms.DataGridView> denetim böylece her nesneyi ayrı bir satır olarak görüntüler. Bu örnek ayrıca bir numaralandırma türü ile bir özelliği görüntülemek nasıl gösterilmektedir bir <xref:System.Windows.Forms.DataGridViewComboBoxColumn> böylece birleşik giriş kutusu açılan listenin numaralandırma değerlerini içerir.  
@@ -42,5 +43,5 @@ Aşağıdaki kod örneği, nesne koleksiyonu bağlamak gösterilmiştir bir <xre
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: bağlı Windows Forms DataGridView satırlarına nesnelere erişme](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Satırlarına Bağlı Nesnelere Erişme](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

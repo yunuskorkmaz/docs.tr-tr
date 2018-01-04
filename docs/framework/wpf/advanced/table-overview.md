@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="table-overview"></a>Tabloya Genel Bakış
 <xref:System.Windows.Documents.Table>Kılavuz tabanlı sunu akan belgenin içerik destekleyen bir blok düzeyinde öğedir. Bu öğenin esnekliğini çok kullanışlı hale getirir, ancak aynı zamanda anlamak ve doğru bir şekilde kullanmak için daha karmaşık kolaylaştırır.  
@@ -186,7 +187,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [XAML içeren bir tablo tanımlayın](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Akış içeriği öğeleri kullanma](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [XAML ile Tablo Tanımlama](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Akış İçeriği Öğelerini Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d5e1c362c02d2d1d9e1840ea2a55df6875a80ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32be79811de4b8056449c2c6d6c53eca8cc063f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>Nasıl yapılır: Metin Seçimi Alma
 Bu örnek kullanmanın tek yolu gösterir <xref:System.Windows.Controls.TextBox.SelectedText%2A> özelliği kullanıcının seçtiği metni almak için bir <xref:System.Windows.Controls.TextBox> denetim.  
@@ -43,5 +44,5 @@ Bu örnek kullanmanın tek yolu gösterir <xref:System.Windows.Controls.TextBox.
  [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

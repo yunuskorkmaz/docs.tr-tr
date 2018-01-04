@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3d2c8db03d494be13a93df06a359e4e4294c22a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9992efa209773a6e9f74050183260346f7f1f0ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath veri modelini kullanarak işlem XML verileri
 <xref:System.Xml?displayProperty=nameWithType> Ad alanı sağlar XML belgeleri, parçaları, düğüm veya düğüm kümeleri bellek içi, programlı bir gösterimini kullanarak <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları.  
@@ -27,23 +30,23 @@ ms.lasthandoff: 11/21/2017
  Aşağıdaki bölümlerde işlevselliğini <xref:System.Xml.XPath.XPathNavigator> sınıf tabanlı döndürdüğü sınıf.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XPathDocument ve XmlDocument kullanarak XML verilerini okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Salt okunur oluşturmayı açıklar <xref:System.Xml.XPath.XPathDocument> bir XML belgesi ve bir düzenlenebilir oluşturma okumak için sınıf nesnesi <xref:System.Xml.XmlDocument> okuyun ve bir XML belgesi düzenlemek için sınıf nesnesi. Bu konu ayrıca açıklar nasıl dönüş bir <xref:System.Xml.XPath.XPathNavigator> gidin ve bir XML belgesi düzenlemek için her sınıftan nesne.  
   
- [Seçildiğinde, Evaluating ve XML XPathNavigator kullanarak veri eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
  Yöntemleri açıklar <xref:System.Xml.XPath.XPathNavigator> düğümler seçmek için kullanılan sınıf bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath sorgusu kullanılarak nesne, değerlendirmek ve bir XPath ifadesi sonuçlarını inceleyin ve bir XML belgesi düğümünde verilen XPath eşleşip eşleşmediğini belirlemek ifade.  
   
- [XML XPathNavigator kullanarak verilerine erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
  Yöntemleri açıklar <xref:System.Xml.XPath.XPathNavigator> düğümleri gidin, XML verileri ayıklamak ve kesin türü belirtilmiş XML verilerine erişmek için kullanılan sınıf bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.  
   
- [XML XPathNavigator kullanarak verileri düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verilerini Düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
  Yöntemleri açıklar <xref:System.Xml.XPath.XPathNavigator> eklemek, değiştirmek ve içinde yer alan bir XML belgesi düğümleri ve değerleri kaldırmak için kullanılan sınıf bir <xref:System.Xml.XmlDocument> nesnesi.  
   
- [XPathNavigator kullanarak şema doğrulaması](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak Şema Doğrulama](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  Bulunan XML içeriği doğrulamak yolları açıklanmaktadır bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [DOM modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+ [DOM Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

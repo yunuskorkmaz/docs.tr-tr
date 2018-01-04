@@ -14,11 +14,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Kullanma
 Son altı görevlerin bir temel oluşturmak için gereken budur [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -148,11 +149,11 @@ Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divi
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci oluşturma](../../../docs/framework/wcf/building-clients.md)  
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Nasıl yapılır: çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Kendini barındırma](../../../docs/framework/wcf/samples/self-host.md)
+ [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)

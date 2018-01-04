@@ -18,18 +18,19 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062794a12bb4a072a47705c96c7823e65e1a605b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa11b5fd05ac388ca7055d7712c5fa6687082c15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data"></a>Veri
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Ayrıca sürükle ve bırak işlemleri üzerinden veri aktarımı için bir mekanizma sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri bağlama](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Sürükleme ve bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [Sürükleme ve Bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Data>  
@@ -41,12 +42,12 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetimleri](../../../../docs/framework/wpf/controls/index.md)  
+ [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
   
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [İzlenecek yol: Bir WPF uygulamasında uygulama verileri önbelleğe alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

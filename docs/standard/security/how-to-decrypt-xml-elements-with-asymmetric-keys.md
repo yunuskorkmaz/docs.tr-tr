@@ -22,11 +22,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af0159f20ed8a8b4c174ab07ebccfedd5a8e7f8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 099937fe113c39c717b4c9fcba2042115b9105e6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Nasıl yapılır: XML Öğelerinin Şifresini Asimetrik Anahtarlarla Çözme
 Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelemek ve şifresini çözmek bir XML belgesi içindeki bir öğe için ad alanı.  XML şifrelemesi, exchange veya kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  World Wide Web Konsorsiyumu (W3C) öneri XML şifreleme standardı hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](http://go.microsoft.com/fwlink/?LinkID=136777).  
@@ -90,4 +93,4 @@ Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelem
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Cryptography.Xml>  
- [Nasıl yapılır: XML öğelerini asimetrik anahtarlarla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+ [Nasıl yapılır: XML Öğelerini Asimetrik Anahtarlarla Şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri XML'e dönüştürecek ve XML verilerine geri dönüştürmek için kendi varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmek için tasarlanmış *veri sözleşmesi* türleri. Ancak, bir örtük veri sözleşmesi sahip olarak düşünülebilir birçok diğer türleri, destekler. Seri hale getirilebilir türlerinin tam bir listesi verilmiştir:  
@@ -77,8 +78,8 @@ ms.lasthandoff: 12/02/2017
 -   <xref:System.DBNull> Türü, özel bir yolla değerlendirilir. Bir singleton türü ise ve seri durumdan çıkarma sırasında seri durumdan çıkarıcının singleton kısıtlamayla uyar ve tüm işaret `DBNull` singleton örneğine başvuru. Çünkü `DBNull` , talep serializable bir tür olduğundan <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> izni.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ve ADO.NET türleri veri sözleşmelerinde](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Seri hale getirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [Veri sözleşmelerinde koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
- [Veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+ [Veri Anlaşmalarında XML ve ADO.NET Türleri](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Seri Hale Getirilebilir Türler](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
+ [Veri Anlaşmalarında Koleksiyon Türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
+ [Veri Anlaşmalarında Sabit Listesi Türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

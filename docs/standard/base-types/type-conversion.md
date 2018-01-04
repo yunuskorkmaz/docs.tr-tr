@@ -34,11 +34,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
 <a name="top"></a>Değerine sahip olabilir, olası değerleri aralığı ayrılmış alanı miktarı gibi öznitelikleri tanımlar bir ilişkili türü, her bir değeri yok ve üyeleri olan kullanılabilir hale getirir. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
@@ -216,4 +219,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Convert?displayProperty=nameWithType>  
  <xref:System.IConvertible>  
- [Tür dönüştürme tabloları](../../../docs/standard/base-types/conversion-tables.md)
+ [Tür Dönüştürme Tabloları](../../../docs/standard/base-types/conversion-tables.md)

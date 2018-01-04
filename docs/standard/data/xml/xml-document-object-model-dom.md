@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ff91e929876ceec8512e962b88795b6a8a29f3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: af9473af6a315feb6b1f0a741525cbf42dd32d1d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM program aracılığıyla okuyun, yönetmek ve bir XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış salt iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğenin veya ekleyin ve düğümleri kaldırma yeteneği içeriğini düzenlemek için özelliği yoktur anlamına gelir **XmlReader**. DOM birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış şekilde XML verileri bellekte temsil edilen adıdır. XML verilerini verilmiştir.  
@@ -84,5 +87,5 @@ XML belge yapısı
  DOM yapısını değiştirmek, ekleme veya düğümleri kaldırma veya bir öğenin bulunan metin olduğu gibi bir düğüm tarafından tutulan verileri değiştirmek için belleğe XML verileri okumak için kullanışlıdır. Bununla birlikte, diğer sınıflar kullanılabilir olan diğer senaryolarda DOM hızlıdır. XML için hızlı, önbelleğe alınmamış, yalnızca ileri akış erişimi için kullandığınız **XmlReader** ve **XmlWriter**. İmleç modeliyle rastgele erişmesi gerekiyorsa ve **XPath**, kullanın **XPathNavigator** sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML düğüm türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [XML verilerine nesne hiyerarşisi eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+ [XML Düğüm Türleri](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+ [XML Verilerine Nesne Hiyerarşisi Eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7215ce1423e8541b23daae7b9e051ade6e25f1b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cc6c84d57e4114a28a8b363b99b98f3c4d21410
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager Arabirimi
 Ortak dil çalışma zamanı 's çöp toplama sistemi ile etkileşim kurmak bir konak izin yöntemleri sağlar.  
@@ -35,9 +36,9 @@ Ortak dil çalışma zamanı 's çöp toplama sistemi ile etkileşim kurmak bir 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Collect yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|Çöp toplama belirtilen oluşturma için zorlar.|  
-|[GetStats yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|Çöp toplama sistemi hakkında geçerli istatistiklerini kümesini alır.|  
-|[SetGCStartupLimits yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Çöp toplama kesim boyutunu ve en büyük boyutu 0 atık toplama sistemin nesil ayarlar.|  
+|[Collect Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|Çöp toplama belirtilen oluşturma için zorlar.|  
+|[GetStats Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|Çöp toplama sistemi hakkında geçerli istatistiklerini kümesini alır.|  
+|[SetGCStartupLimits Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Çöp toplama kesim boyutunu ve en büyük boyutu 0 atık toplama sistemin nesil ayarlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Ortak dil çalışma zamanı (CLR), atık toplama mekanizmasıyla yönetilen uygulayan <xref:System.GC> türü. Çöp toplama sistemi hakkında daha fazla bilgi için bkz: [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
@@ -52,9 +53,9 @@ Ortak dil çalışma zamanı 's çöp toplama sistemi ile etkileşim kurmak bir 
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Otomatik bellek yönetimi](../../../../docs/standard/automatic-memory-management.md)  
- [COR_GC_STATS yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- [Iclrcontrol arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [CLR barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)  
+ [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
+ [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

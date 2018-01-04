@@ -25,11 +25,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1ee7c7b4e21d147bad1cd8e4b854c0ff4fe13aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri ve bileşen yazarlar özel bağımlılık özelliği oluşturmak isteyebilirsiniz ve performansı iyileştirmek bazı uygulama seçenekleri yanı sıra uygulama adımlarını açıklar Kullanılabilirlik veya çok yönlülük özelliğinin.  
@@ -168,10 +169,10 @@ Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../..
  Oluşturucular sınıfı (genellikle FxCop gibi kod çözümleme araçları tarafından zorunlu tutulur) yönetilen kod programlama genel bir ilkesi çağrılmayan sanal yöntemler vardır. Bu temel bir türetilmiş sınıf oluşturucu başlatma oluşturucular çağrılabilir ve Oluşturucusu üzerinden sanal yöntemi girme yapılandırılan bir nesne örneğinin tamamlanmamış başlatma durumu sırasında oluşabilecek kaynaklanır. Zaten türetilen herhangi bir sınıftan türetilen zaman <xref:System.Windows.DependencyObject>, özellik sistemi çağırır ve sanal yöntemler dahili kullanıma sunan bilincinde olmanız gerekir. Bu sanal yöntemler parçası olan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği Sistem Hizmetleri. Yöntemleri geçersiz kılma değeri belirleme katılmak türetilen sınıflar sağlar. Belirli Oluşturucusu desenler izleyen sürece çalışma zamanı başlatma olası sorunları önlemek için bağımlılık özellik değerleri, sınıfların oluşturuculardan ayarlamanız gerekir değil. Ayrıntılar için bkz [DependencyObjects için güvenli oluşturucu desenler](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Bağımlılık özelliği meta verileri](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Denetim genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Koleksiyon türü bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [Bağımlılık özelliği güvenlik](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [XAML yükleme ve bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [DependencyObjects için güvenli oluşturucu desenler](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Koleksiyon Türü Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
+ [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
+ [DependencyObjects için Güvenli Oluşturucu Desenleri](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

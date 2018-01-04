@@ -13,20 +13,21 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>Temel Bağlama
 Bu bölüm bir uç nokta öğenin bağlama özniteliğini kullanarak gösteren temel örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İleti güvenliği örneği](../../../../docs/framework/wcf/samples/message-security-sample.md)  
+ [İleti Güvenliği Örneği](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  Kullanan bir uygulamayı uygulamak gösterilmiştir `basicHttpBinding` ve güvenlik iletisi.  
   
- [Taşıma güvenliği taşıma güvenliği ile BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ [Aktarım Güvenliği ile BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  Temel bağlama ile SSL taşıma güvenliği kullanımını gösterir.  
   
  [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  

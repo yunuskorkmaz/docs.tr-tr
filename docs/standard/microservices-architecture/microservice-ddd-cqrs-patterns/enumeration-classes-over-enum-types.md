@@ -4,23 +4,28 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Numa
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 88decdc2f2ea945dc04cdb66402b12bd972414ce
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
 
-[Numaralandırmalar](../../../../docs/csharp/language-reference/keywords/enum.md) (*numaralandırmaları* kısaca) bir tam sayı türü çevresinde bir ince dil sarmalayıcı şunlardır. Kapalı bir değerler kümesinden bir değer depolarken kullanımları sınırlamak isteyebilirsiniz. Cinsiyeti (örneğin, erkek, kadın, bilinmeyen) veya boyutları (S, M, L, XL) temel alan sınıflandırma iyi örnekler verilmiştir. Denetim akışı veya daha sağlam soyutlamalar numaralandırmaları kullanmak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür kullanımı kırılacak kodu Enum değerleri denetleme birçok denetim akışı deyimleri ile götürür.
+[Numaralandırmalar](../../../../docs/csharp/language-reference/keywords/enum.md) (veya *enum türleri* kısaca) bir tam sayı türü çevresinde bir ince dil sarmalayıcı şunlardır. Kapalı bir değerler kümesinden bir değer depolarken kullanımları sınırlamak isteyebilirsiniz. Cinsiyeti (örneğin, erkek, kadın, bilinmeyen) veya boyutları (küçük, Orta, büyük) temel alan sınıflandırma iyi örnekler verilmiştir. Denetim akışı veya daha sağlam soyutlamalar numaralandırmaları kullanmak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür kullanımı kırılacak kodu Enum değerleri denetleme birçok denetim akışı deyimleri ile yol açar.
 
-Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştirmek numaralandırması sınıfları oluşturabilirsiniz. Ancak, bu kritik bir sorun değildir ve tercihinizi ise, çoğu durumda, kolaylık sağlamak için normal numaralandırmaları kullanmaya devam edebilirsiniz.
+Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştirmek numaralandırması sınıfları oluşturabilirsiniz.
 
-## <a name="implementing-enumeration-classes"></a>Numaralandırma sınıflarını uygulama
+Ancak, bu önemli bir konu değildir ve çoğu durumda, kolaylık sağlamak için normal kullanmaya devam edebilirsiniz [enum türleri](../../../../docs/csharp/language-reference/keywords/enum.md) tercihinizi olması durumunda.
+
+## <a name="implementing-an-enumeration-base-class"></a>Bir numaralandırma taban sınıfı uygulama
 
 Sıralama mikro hizmet eShopOnContainers içinde aşağıdaki örnekte gösterildiği gibi bir örnek numaralandırması temel sınıf uygulamasını sağlar:
 
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Bu sınıf, aşağıdaki CardType numaralandırma sınıfı için olduğu gibi tüm varlık veya değer nesnesindeki türü olarak kullanabilirsiniz.
+Bu sınıf, aşağıdaki CardType numaralandırma sınıfı için olduğu gibi tüm varlık veya değer nesnesindeki türü olarak kullanabilirsiniz:
 
 ```csharp
 public class CardType : Enumeration
@@ -98,7 +103,6 @@ public class CardType : Enumeration
         : base(id, name)
     {
     }
-
 
     public static IEnumerable<CardType> List()
     {

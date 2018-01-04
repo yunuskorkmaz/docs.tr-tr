@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 <a name="top"></a>Bağlayıcılarını veya atomik Sıfır Genişlik onayları bir eşleşme gerçekleştiği gerekir bir dizedeki belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda .NET normal ifadelerde tarafından desteklenen bağlayıcıları listeler.  
@@ -182,5 +185,5 @@ ms.lasthandoff: 11/21/2017
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [Normal İfade Seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)

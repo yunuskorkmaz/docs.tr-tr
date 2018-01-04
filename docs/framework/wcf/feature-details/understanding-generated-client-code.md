@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 935f3fe168ebafd7a62c54d2aec1c8336a31a54a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c57469b61a12ff5043632cf2b6f4fe3a8a53d56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
 [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci uygulamaları oluşturmak istemci kodu ve kullanmak için bir istemci uygulama yapılandırma dosyası oluşturur. Bu konu, standart hizmet sözleşmesi senaryoları için oluşturulan kod örnekleri turu sağlar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oluşturulan kod kullanarak bir istemci uygulaması oluşturma bkz [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -91,4 +92,4 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md)
+ [WCF İstemcisine Genel Bakış](../../../../docs/framework/wcf/wcf-client-overview.md)

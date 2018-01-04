@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b4d29f99d0c375eebee0f477720cb9a22172dddb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delaysign"></a>/delaysign
 Derlemenin tamamen veya kısmen imzalanacağını belirtir.  
@@ -40,11 +40,11 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
  Kullanarak örneğin, `/delaysign+`, bir kuruluştaki bir geliştirici sınayıcılar genel derleme önbelleği ile kaydetmek ve kullanabilecek bir derlemeyi imzasız test sürümlerini dağıtabilirsiniz. Derleme üzerinde iş tamamlandığında, kuruluşunuzun özel anahtarı sorumlu kişi derleme tam olarak oturum açabilir. Bu compartmentalization tüm geliştiricilerin derlemelerini sağlarken kuruluşunuzun özel anahtarı ifşaatına karşı korur.  
   
- Bkz: [bkz](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
+ Bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Tümleşik geliştirme ortamı/delaysign Visual Studio'da ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**.   
   
 2.  Tıklatın **imzalama** sekmesi.  
   
@@ -52,6 +52,6 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [/ keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8ae76c100cdf448bd0e9625e6b3378b6b9e25324
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="binary-serialization"></a>İkili seri hale getirme
 
@@ -339,25 +342,25 @@ Seri hale getirme mekanizmasını nesne yönelimli bir ortamda uygularken, kulla
 
 ## <a name="in-this-section"></a>Bu bölümde
 
- [Seri hale getirme kavramları](../../../docs/standard/serialization/serialization-concepts.md)  
+ [Serileştirme Kavramları](../../../docs/standard/serialization/serialization-concepts.md)  
  Serileştirme olduğu yararlı iki kullanıldığı senaryoları tartışır: zaman kalıcı veri depolama ve geçerken nesneleri uygulama etki alanlarında.  
   
- [Temel seri hale getirme](../../../docs/standard/serialization/basic-serialization.md)  
+ [Temel Serileştirme](../../../docs/standard/serialization/basic-serialization.md)  
  İkili kullanın ve nesneleri serileştirmek için biçimlendiricileri SOAP açıklar.  
   
- [Seçmeli seri hale getirme](../../../docs/standard/serialization/selective-serialization.md)  
+ [Seçmeli Serileştirme](../../../docs/standard/serialization/selective-serialization.md)  
  Serileştirilmiş öğesinden bir sınıf bazı üyeler önlemek nasıl açıklar.  
   
- [Özel seri hale getirme](../../../docs/standard/serialization/custom-serialization.md)  
+ [Özel Serileştirme](../../../docs/standard/serialization/custom-serialization.md)  
  Kullanarak bir sınıf için serileştirme özelleştirmeyi açıklar <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
- [Seri hale getirme işlemi adımları](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
+ [Serileştirme İşlemi Adımları](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
  Kurs açıklayan eylemi serileştirme ne zaman alan <xref:System.Runtime.Serialization.Formatter.Serialize%2A> yöntemi, bir biçimlendirici üzerinde çağrılır.  
   
- [Sürüm dayanıklı seri hale getirme](../../../docs/standard/serialization/version-tolerant-serialization.md)  
+ [Sürüme Dayanıklı Serileştirme](../../../docs/standard/serialization/version-tolerant-serialization.md)  
  Özel durumlar oluşturan uygulamaların neden olmadan zaman içinde değiştirilebilir serializable türler nasıl oluşturulacağını açıklar.  
   
- [Seri hale getirme yönergeleri](../../../docs/standard/serialization/serialization-guidelines.md)  
+ [Serileştirme Yönergeleri](../../../docs/standard/serialization/serialization-guidelines.md)  
  Bir nesneyi serileştirmek ne zaman karar için bazı genel yönergeleri sağlar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -365,7 +368,7 @@ Seri hale getirme mekanizmasını nesne yönelimli bir ortamda uygularken, kulla
  Serileştirme ve seri kaldırma nesneler için kullanılan sınıfları içerir.  
   
 ## <a name="related-sections"></a>İlgili bölümler  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği XML serileştirme mekanizması açıklanmaktadır.  
   
  [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)  

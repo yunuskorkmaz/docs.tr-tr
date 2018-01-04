@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21493e0e0c9e42cf5efc42d86c8f126fbae9b392
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, ayrıştırma ve tarih ve saat değerlerini biçimlendirmek işlemleri (genellikle Web sunucusunun yerel kültür biçimi) bir varsayılan biçimi üzerinde güvenmemelisiniz kullanıcıyla kullanılırken. Bunun yerine, işleyen tarih ve saat dizeleri giriş kullanıcı tarafından Web forms kullanıcının tercih edilen kültürü kullanarak dizeleri ayrıştırma. Benzer şekilde, tarih ve saat verilerini kullanıcıya kullanıcının kültürü için uyumlu bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
@@ -116,7 +119,7 @@ Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, ayrışt
  Bir kullanıcının HTML akışa betik injecting önlemek için kullanıcı girişi hiçbir zaman doğrudan sunucu yanıtta yansıtılması gerekir. Bunun yerine, bunu kullanarak kodlanması gereken <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Tarih ve saat dizelerini ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)
+ [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)  
+ [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Tarih ve Saat Dizelerini Ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)

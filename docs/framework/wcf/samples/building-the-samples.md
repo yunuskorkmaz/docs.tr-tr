@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26a47e6ea0d93d81275d7b3b87c88d0d3ab595df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Derleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri, Visual Studio 2010 veya kullanarak oluşturulabilen **msbuild** komut satırından komutu. Bu konuda iki yordam açıklanmaktadır.  
@@ -91,5 +92,5 @@ ms.lasthandoff: 12/02/2017
     >  Atlamak için istemci yapılandırması nesil eklemek **/noconfig** seçeneği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+ [Windows Communication Foundation Örneklerini Çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

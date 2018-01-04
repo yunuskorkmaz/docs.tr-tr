@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0e0542e46a17cffef629bc9b916d7b5929e878
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c36bfdd69cb4a3e7827302a7bde5139675a30429
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetiminde Sütunların Sırasını Değiştirme
 Windows Forms bağladığınızda <xref:System.Windows.Forms.DataGridView> denetimi otomatik olarak oluşturulmuş sütunların görüntü sırasını bir veri kaynağına veri kaynağı tarafından belirler. Bu sipariş değil ne tercih ettiğiniz ise Tasarımcısı'nı kullanarak sütunların sırasını değiştirebilirsiniz. Denetimine bağlantısız sütun ekleme ve görüntüleme sıralamalarını değiştirmek isteyebilirsiniz. Sütun sırasını program aracılığıyla nasıl değiştirileceği hakkında daha fazla bilgi için bkz [nasıl yapılır: Windows Forms DataGridView denetiminde sipariş, sütunları değiştirmek](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
@@ -42,6 +43,6 @@ Windows Forms bağladığınızda <xref:System.Windows.Forms.DataGridView> denet
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
- [Nasıl yapılır: ekleme ve kaldırma sütunları Windows Forms DataGridView denetiminde Tasarımcısı'nı kullanarak](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimine Sütunlar Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  [Nasıl yapılır: bir Windows uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Nasıl yapılır: Windows formlarına denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

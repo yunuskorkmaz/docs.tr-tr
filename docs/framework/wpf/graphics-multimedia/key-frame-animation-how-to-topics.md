@@ -17,27 +17,28 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, anahtar çerçeve animasyonları iki özellik değerlerini ve denetim ilişkilendirme birden fazla hareketli hale getirmeyi için nasıl kullanılacağını göstermektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir nesnenin anahtar çerçeveler kullanarak animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [Bir mantıksal anahtar çerçeveler kullanarak animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [Bir çift anahtar çerçeveler kullanarak animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak bir matris animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak bir noktası animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak bir dikdörtgen geometri animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak bir dize animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak renk animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak boyutu değişiklikleri animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [Anahtar çerçeveler kullanarak kalınlığını animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [Denetim anahtar çerçeve animasyon zamanlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+ [Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak bir Boole Değerine Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak Dikdörtgen Geometriye Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak bir Dizeye Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak Renge Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak Boyut Değişikliklerine Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
@@ -47,6 +48,6 @@ Bu bölümdeki konular, anahtar çerçeve animasyonları iki özellik değerleri
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

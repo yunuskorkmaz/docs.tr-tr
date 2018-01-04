@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4714183eb79a25639dae6824a1d27eb1ca6bb009
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Kullanım Dışı CLR Barındırma Arabirimleri ve Coclass’ları
 Bu bölümde yönetilmeyen arabirimler açıklanmaktadır konakları ortak dil çalışma zamanı (CLR) tümleştirmek için kullanabileceğiniz .NET Framework sürüm 1.0 ve 1.1 uygulamalarına. Bu arabirimleri yapılandırmak ve süreç içine çalışma zamanı yükleme bir konak için yöntemleri sağlar.  
@@ -31,12 +32,12 @@ Bu bölümde yönetilmeyen arabirimler açıklanmaktadır konakları ortak dil �
  Iappdomainsetup  
  Yapılandırmak ana bilgisayar için yöntemler sağlar bir <xref:System.AppDomain>.  
   
- [Iceefilegen sınıfı](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
+ [ICeeFileGen Sınıfı](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
  (Kullanım dışı) Bir yerel taşınabilir yürütülebilir (PE) dosyasını oluşturmak için işlevsellik sağlar.  
   
- [Icorruntimehost arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  CLR ayarlarını yapılandırmak ana bilgisayar için yöntemleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [CLR barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
+ [CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  .NET Framework sürüm 2.0 ve sonraki sürümleri ile birlikte sağlanan barındırma arabirimleri açıklayan konuları içerir.

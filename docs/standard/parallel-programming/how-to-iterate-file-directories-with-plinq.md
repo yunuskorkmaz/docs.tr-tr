@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40fd9f64b5702f5205b7817f3de1e0a8709c5a63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ddd3b509b7c0c35f1c4edea99cb5a4ec6c1ac18e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 Bu örnek, dosya dizinleri işlemleri paralel hale iki basit yol gösterir. İlk sorguyu kullanan <xref:System.IO.Directory.GetFiles%2A> bir dizinde ve tüm alt dizinler dosya adlarının dizisini doldurmak için yöntem. Bu yöntem, tüm diziyi doldurulur ve bu nedenle işlemin başında gecikme getirebilir kadar döndürmez. Dizi doldurulduktan sonra ancak PLINQ, paralel olarak çok hızlı bir şekilde işleyebilir.  

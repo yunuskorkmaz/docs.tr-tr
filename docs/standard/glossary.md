@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 112be2518ddfb396fce8a14c5056c16cce9f376d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
@@ -33,7 +36,7 @@ Bazen ASP.NET ASP.NET Core dahil olmak üzere iki ASP.NET uygulamaları başvura
 
 Bkz: [ASP.NET belgelerine](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 Bir platformlar arası, yüksek performanslı, açık kaynak uygulaması, ASP .NET Core üzerinde oluşturulmuştur.
 
@@ -272,7 +275,7 @@ Windows uygulamaları ve yazılım modern, Dokunmatik özellikli nesnelerin inte
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [.NET Kılavuzu](index.md)  
-[.NET framework Kılavuzu](../framework/index.md)  
+[.NET Framework Kılavuzu](../framework/index.md)  
 [.NET Core](../core/index.md)  
 [ASP.NET genel bakış](/aspnet/index#pivot=aspnet)  
 [ASP.NET çekirdeği genel bakış](/aspnet/index#pivot=core)  

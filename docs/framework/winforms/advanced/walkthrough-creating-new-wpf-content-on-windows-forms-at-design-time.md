@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfbe9957fa8d18f839ae656ca721c4ee88475a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7731456cfcf35cd16b1df304fee4f4c138db84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma
 Bu konu, Windows Forms tabanlı uygulamalarda kullanım için bir Windows Presentation Foundation (WPF) denetimini oluşturulacağını gösterir.  
@@ -122,6 +123,6 @@ Bu konu, Windows Forms tabanlı uygulamalarda kullanım için bir Windows Presen
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Geçiş ve birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF denetimlerini kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
  [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

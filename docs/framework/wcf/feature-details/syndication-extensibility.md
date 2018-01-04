@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87121270d45637834b9499228075f49710073d21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility"></a>Dağıtım Genişletilebilirliği
 Dağıtım API, çeşitli biçimlerde hat yazılması dağıtılmış içerik sağlayan bir biçim Tarafsız programlama modeli sağlamak için tasarlanmıştır. Soyut veri modeli şu sınıflardan oluşur:  
@@ -55,5 +56,5 @@ Dağıtım API, çeşitli biçimlerde hat yazılması dağıtılmış içerik sa
 -   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> MyExtensionItem varsayılan yerine örneği oluşturmak için MyExtensionFeed sınıfında <xref:System.ServiceModel.Syndication.SyndicationItem>. Bir dizi yöntem tanımlanmış <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> , oluşturabilirsiniz <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationPerson> nesneleri (örneğin, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Her biri özel bir türetilmiş sınıf oluşturmak için geçersiz kılınabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Dağıtım mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+ [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

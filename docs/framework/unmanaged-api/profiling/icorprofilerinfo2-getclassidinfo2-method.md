@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8bfa970acd21a518112dd6ee9228b621758e49f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0348462cdbff14486b31e1878f06b7565b47182
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Metodu
 Meta verileri ve üst modül için belirtilen sınıfın açık genel tanımını belirtecini alır `ClassID` kendi üst sınıfın ve `ClassID` sınıfının varsa, her türü değişkeni.  
@@ -84,7 +85,7 @@ HRESULT GetClassIDInfo2(
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icorprofilerınfo arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Icorprofilerınfo2 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profil oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+ [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

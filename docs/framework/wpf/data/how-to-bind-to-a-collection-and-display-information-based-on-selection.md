@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92621e7e62750ae5ad73158232ccdabfb22287a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a751025470b566ef1e735e4ddd192cfd8fc354ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Nasıl yapılır: Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme
 Verilere bağlı olan bir basit ana-ayrıntı senaryosunda <xref:System.Windows.Controls.ItemsControl> gibi bir <xref:System.Windows.Controls.ListBox>. Kullanıcı seçimi temel alınarak, seçili öğe hakkında daha fazla bilgi görüntüleyin. Bu örnek, bu senaryonun nasıl uygulanacağını gösterir.  
@@ -56,8 +57,8 @@ Verilere bağlı olan bir basit ana-ayrıntı senaryosunda <xref:System.Windows.
  [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hiyerarşik veriler ile ana-ayrıntı desenini kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [Hiyerarşik XML veriler ile ana-ayrıntı desenini kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

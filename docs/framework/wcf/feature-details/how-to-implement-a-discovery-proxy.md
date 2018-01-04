@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90713d1779566448547265d6487c113abdc84e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 Bu konuda, bir keşif proxy'si uygulama açıklanmaktadır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bulma özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], bkz: [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları mevcuttur. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
@@ -988,7 +989,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Nasıl yapılır: keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [Nasıl yapılır: hizmet bulmak için keşif proxy'si kullanan bir istemci uygulaması kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [Nasıl yapılır: keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+ [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Nasıl yapılır: Keşif Proxy'sini Test Etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

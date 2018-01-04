@@ -23,11 +23,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 <a name="Top"></a>Değişimler yalnızca değiştirme desenleri içinde tanınan dil öğelerdir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sahip yöntemi bir `replacement` parametre ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan düzeni eşleşen düzeni yerine `replacement` parametresi.  
@@ -227,4 +230,4 @@ ms.lasthandoff: 10/18/2017
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

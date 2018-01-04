@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türeyen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı destek üzerinde denetim sağlar. bir nesne bir bileşendir.  
@@ -32,8 +32,6 @@ A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displa
 -   Bileşeniniz değerine göre sıralanmış gerekiyorsa, türetilen <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 -   Tek devralma nedeniyle temel uygulamaları birinden bileşeniniz türetilemez, uygulama <xref:System.ComponentModel.IComponent>.  
-  
- Tasarım zamanı desteği hakkında daha fazla bilgi için bkz: [bileşenleri için tasarım zamanı öznitelikleri](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) ve [tasarım zamanı destekleyen genişletme](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Bileşen Sınıfları  
  <xref:System.ComponentModel> Ad alanı, bileşenleri ve denetimleri çalıştırma ve tasarım zamanı davranışını uygulamak için kullanılan sınıfları sağlar. Bu ad alanı taban sınıfları ve öznitelikleri ve tür dönüştürücüleri uygulama, veri kaynakları bağlama ve bileşenleri lisans arabirimleri içerir.  
@@ -65,22 +63,9 @@ A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displa
 -   <xref:System.ComponentModel.PropertyDescriptor>. Bir özellik hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Sınıf vs. Bileşen vs. Denetimi](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- Tanımlar *bileşen* ve *denetim*, sınıfları ve bunları arasındaki farklar açıklanmaktadır.  
-  
- [Bileşen yazma](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- Bileşenleri ile çalışmaya başlama için yol haritası.  
-  
- [Bileşen geliştirme izlenecek yollar](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- Bileşen programlama için adım adım yönerge sağlamanız konulara bağlantılar.  
-  
- [Bileşen sınıfları](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- Bir bileşen yolu bileşenlerine erişimi denetleme ve bileşen örnekleri nasıl oluşturulduğunu denetleme bileşen işlevselliği kullanıma sunmak için bir sınıf kılan açıklar.  
-  
- [Denetim ve bileşen yazmada sorun giderme](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [Denetim ve Bileşen Yazmada Sorun Giderme](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Sık karşılaşılan sorunları düzeltmek açıklanmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows Forms'ta tasarım zamanı desteği erişim](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [Nasıl yapılır: görünümü ve davranışı denetimlerinin Tasarım modunda genişletme](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [Nasıl yapılır: Tasarım modunda denetimler için özel başlatma gerçekleştirir](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+ [Nasıl yapılır: Windows Forms'ta tasarım zamanı desteği erişim](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

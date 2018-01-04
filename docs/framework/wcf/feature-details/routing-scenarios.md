@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, verimli yönlendirme mantığı yeni bir yapılandırma sıfırdan oluştururken tasarlamak için bir sınama olabilir.  Ancak, çoğu yönlendirme hizmeti yapılandırması izleyin birçok yaygın senaryolar vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli olmayabilir, ancak bu senaryoları işlemek için yönlendirme hizmeti nasıl yapılandırılabilir anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  
@@ -77,13 +78,13 @@ Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, verimli yönle
  Hata işleme yapılandırmak için kullanılan adımlar için bkz: [nasıl yapılır: hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Hata işleme uygulama örneği için bkz: [köprü oluşturma ve hata işleme](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) ve [Gelişmiş hata işleme](../../../../docs/framework/wcf/samples/advanced-error-handling.md) örnekleri.  
   
 ### <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Hizmet sürümü oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Nasıl yapılır: Hizmet Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Nasıl yapılır: Hizmet verilerini bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Nasıl yapılır: Hizmet Verilerini Bölümlendirme](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Nasıl yapılır: Dinamik güncelleştirme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Nasıl yapılır: Dinamik Güncelleme](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Nasıl yapılır: Hata işleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Nasıl yapılır: Hata İşleme](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

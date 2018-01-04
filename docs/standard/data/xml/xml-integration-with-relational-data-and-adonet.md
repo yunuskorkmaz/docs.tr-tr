@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d03a0ca7518b06c08d98967d7c5ae864f1c04ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0728ff5d695ccc5fc5912631d29c89b7cc36ca5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel veri ve ADO.NET XML tümleştirme
 **XmlDataDocument** sınıftır türetilen bir sınıftan **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veri arasında bir köprü sağlamasıdır. Bu bir **XmlDocument** için bağlanabilir bir **DataSet** ve her iki sınıfları iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** için bağlı bir **DataSet** ilişkisel veri ile tümleştirmek XML sağlar ve her iki XML olarak veya ilişkisel bir biçimde gösterilen verilerinizi gerekmez. Her ikisini birden yapın ve verileri tek bir gösterimini kısıtlanacak değil.  
@@ -55,4 +58,4 @@ ms.lasthandoff: 10/18/2017
  Yükleme, **DataSet** gelen bir **XmlDataDocument** gereksinimlerinizi adresleri bkz [Datasetwith bir XML belgesi eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kümesini XML kullanma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+ [DataSet içinde XML kullanma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

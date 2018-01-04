@@ -17,11 +17,14 @@ caps.latest.revision: "51"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5b672335c237fb4e07332d0d39975aaedb375306
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz işlemi temsil eder. Bazı yönlerden bir görev bir iş parçacığı benzer veya <xref:System.Threading.ThreadPool> öğesi, ancak daha yüksek bir soyutlama düzeyinde çalışır. Terim *görev paralelliği* eşzamanlı olarak çalışan bir veya daha fazla bağımsız görevlere başvuruyor. Görevler iki adet birincil avantaj sağlar:  
@@ -260,16 +263,16 @@ Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz i
   
 |Başlık|Açıklama|  
 |-|-|  
-|[Devamlılık görevlerini kullanarak görevleri birbirine bağlama](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Devamlılıkların nasıl çalıştığını açıklar.|  
-|[Eklenen ve ayrılan alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Ekli ve ayrılmış alt görevler arasındaki farkı açıklar.|  
-|[Görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)|İçinde yerleşik iptal desteğini açıklar <xref:System.Threading.Tasks.Task> nesnesi.|  
-|[Özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Eşzamanlı iş parçacıklarındaki özel durumların nasıl işlendiğini açıklar.|  
-|[Nasıl yapılır: paralel işlemleri yürütmek için Parallel.Invoke kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
-|[Nasıl yapılır: bir görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|  
-|[Nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|  
-|[Nasıl yapılır: önceden hesaplanan görevler oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> önbellekte tutulur zaman uyumsuz indirme işlemlerinin sonuçlarını alma yöntemi.|  
-|[Nasıl yapılır: paralel görevler içeren bir ikili ağacı gezme](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|İkili ağacı geçirmek için görevlerin nasıl kullanılacağını açıklar.|  
-|[Nasıl yapılır: iç içe geçmiş bir görevi sarmalamadan çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Nasıl kullanılacağı ortaya <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemi.|  
+|[Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Devamlılıkların nasıl çalıştığını açıklar.|  
+|[Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Ekli ve ayrılmış alt görevler arasındaki farkı açıklar.|  
+|[Görev İptali](../../../docs/standard/parallel-programming/task-cancellation.md)|İçinde yerleşik iptal desteğini açıklar <xref:System.Threading.Tasks.Task> nesnesi.|  
+|[Özel Durum İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Eşzamanlı iş parçacıklarındaki özel durumların nasıl işlendiğini açıklar.|  
+|[Nasıl yapılır: Paralel İşlemleri Yürütmek için Parallel.Invoke Kullanma](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
+|[Nasıl yapılır: Bir Görevden Değer Döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|  
+|[Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|  
+|[Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> önbellekte tutulur zaman uyumsuz indirme işlemlerinin sonuçlarını alma yöntemi.|  
+|[Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|İkili ağacı geçirmek için görevlerin nasıl kullanılacağını açıklar.|  
+|[Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Nasıl kullanılacağı ortaya <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> genişletme yöntemi.|  
 |[Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.For%2A> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A> verileri üzerinde paralel döngüler oluşturmak için.|  
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET Framework paralel programlama için üst düzey düğüm.|  
   

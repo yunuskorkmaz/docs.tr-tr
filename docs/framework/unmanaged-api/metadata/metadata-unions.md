@@ -17,24 +17,25 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b47ed129b1d4859b744c32fe4cea763ea27e66a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dd26760d105b1bf11ee411464fd0507ce8a6b480
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-unions"></a>Meta Veri Birleşmeleri
 Bu bölümde API meta veri kullanan yönetilmeyen birleşimler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CeeSectionRelocExtra birleşimi](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
+ [CeeSectionRelocExtra Birleşimi](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
  Tarafından kullanılan bir adres farkı temsil eden [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölüm taşıyabilir arabirimi  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [Meta veri genel statik işlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [Meta veri numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [Meta veri yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+ [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

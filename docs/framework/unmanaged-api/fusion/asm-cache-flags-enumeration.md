@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 767cae15c37b8c62d47085533ea9fa3ce4957963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87dce9a2daf7067409d78a9f389695b6b01f23c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
 Tarafından temsil edilen bir derleme kaynağını gösterir [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) genel derleme önbelleğinde.  
@@ -60,6 +61,6 @@ typedef enum {
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [GetCachePath işlevi](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- [Iassemblycacheıtem arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- [Fusion numaralandırmaları](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [GetCachePath İşlevi](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
+ [IAssemblyCacheItem Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
+ [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

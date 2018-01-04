@@ -18,24 +18,25 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>Olaylar (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]bir uygulamanın öğe ağacındaki çeşitli dinleyiciler üzerinde mevcut işleyicileri çağırabileceği yönlendirilmiş olaylar tanıtır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Ekli olaylar genel bakış](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Nesne ömrü olayları](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [İşaretleme yönlendirilmiş olarak işlenen ve sınıf işlemesi olaylar](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Önizleme olayları](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Özellik değiştirme olayları](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic ve WPF olay işleme](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Zayıf olay desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [İliştirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
+ [Nesne Yaşam Süresi Olayları](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
+ [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Önizleme Olayları](../../../../docs/framework/wpf/advanced/preview-events.md)  
+ [Özellik Değiştirme Olayları](../../../../docs/framework/wpf/advanced/property-change-events.md)  
+ [Visual Basic ve WPF Olay İşleme](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
+ [Zayıf Olay Desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -46,13 +47,13 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Temel öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Öğe ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Özellikleri](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
+  [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynakları](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [İş parçacığı modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 92918e347b10dfcf3a0d6e2c08cec8c7a6963f5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c3093a14fe5186df086cb5b63d20a7eb309c7ba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
 Çoğu durumda, atık toplayıcı bir koleksiyon gerçekleştirmek için en iyi zaman belirleyebilir ve bağımsız olarak çalışmasına izin vermemelisiniz. Bazı nadir durumlarda zorlanmış koleksiyonu uygulamanızın performansını iyileştirebilir. Bu durumlarda, atık toplama kullanarak anlamına <xref:System.GC.Collect%2A?displayProperty=nameWithType> çöp toplama zorlamak için yöntem.  
@@ -43,5 +46,5 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.GCCollectionMode.Optimized>|Çöp toplayıcı durumuna bağlı olarak bir engelleme koleksiyonu gerçekleştirilebilir ve `generation` parametresi. En iyi performansı sağlamak atık toplayıcı çalışır.|Çöp toplayıcı durumuna bağlı olarak bir koleksiyon gerçekleştirilebilir. <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> Yöntemi isteklerini bir arka plan koleksiyon, ancak bu garanti edilmez; koşullara bağlı olarak bir engelleme koleksiyonu hala gerçekleştirilebilir. En iyi performansı sağlamak atık toplayıcı çalışır. Arka plan koleksiyonu zaten devam ediyor durumunda, bu yöntem hemen döndürür.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gecikme modları](../../../docs/standard/garbage-collection/latency.md)  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Gecikme Modları](../../../docs/standard/garbage-collection/latency.md)  
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d1b81949d6d91420c828564debd311af47dfdfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Nasıl yapılır: Web Hizmetine Bağlama
 Bu örnek nasıl Web hizmeti yöntem çağrıları tarafından döndürülen nesne bağlanacağını gösterir.  
@@ -56,6 +57,6 @@ Bu örnek nasıl Web hizmeti yöntem çağrıları tarafından döndürülen nes
  Yapısı hakkında bilgi için **getContentResponse**, bkz: [içerik hizmeti belgeleri](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Verileri XAML'de bağlama için kullanılabilir yap](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Bağlama Kaynaklarına Genel Bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

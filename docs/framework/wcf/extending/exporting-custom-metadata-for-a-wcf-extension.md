@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], meta veri dışarı aktarma, sistemi, hizmet uç noktaları açıklayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Özel meta verileri, sistem tarafından sağlanan meta verileri vericiler veremiyor XML öğelerden oluşur. Genellikle, bu kullanıcı tarafından tanımlanan davranışları ve bağlama öğeleri ve özellikleri ve bağlamalar ve sözleşmeler gereksinimleriyle ilgili ilke onaylamalarını özel WSDL öğeleri içerir.  
@@ -52,6 +53,6 @@ ms.lasthandoff: 12/02/2017
  Daha fazla bilgi için bkz: [nasıl yapılır: özel ilke onaylamalarını dışa](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: özel WSDL dışarı aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Nasıl yapılır: özel ilke onaylamalarını dışa aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
- [WCF uzantısı için özel meta verileri alma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+ [Nasıl yapılır: Özel WSDL Dışarı Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Nasıl yapılır: Özel İlke Onaylamalarını Dışa Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [WCF Uzantısı için Özel Meta Verileri İçe Aktarma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

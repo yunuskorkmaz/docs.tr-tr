@@ -8,11 +8,14 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1e1dc919c7e35580576c86b4cf9872b4f8cea2c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ba7f09e189cd6d58ba9e84c4b668b871eb25dcb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -58,7 +61,7 @@ Uygulama dağıtım mimarisi ne olmalı? Bu iş mikro ve kapsayıcıları, biçi
 
 Bu yaklaşımda, her hizmetin (kapsayıcı) bağlı ve dar ilgili işlevler kümesi uygular. Örneğin, bir uygulama, hizmet, sepet hizmeti, kullanıcı profili hizmeti, vb. sıralama katalog hizmeti gibi hizmetlerin oluşabilir.
 
-Mikro iletişim kullanarak protokolleri gibi HTTP (REST), ancak ayrıca zaman uyumsuz olarak (yani AMQP) mümkün olduğunda, özellikle zaman yayılıyor güncelleştirmeleri tümleştirme olaylarla.
+Mikro iletişim protokolleri tür olarak HTTP (REST), ancak ayrıca zaman uyumsuz olarak kullanarak (örneğin, AMQP kullanarak) mümkün olduğunda, özellikle zaman yayılıyor güncelleştirmeleri tümleştirme olaylarla.
 
 Mikro geliştirilen ve kapsayıcı birbirinden bağımsız olarak dağıtılabilir. Bu geliştirme ekibi kullanılabilir geliştirme ve diğer alt sistemleri etkilemeden bir belirli mikro hizmet dağıtma olduğunu anlamına gelir.
 
@@ -188,7 +191,7 @@ En önemli nokta belirli mimarisi düzeni veya stili ya da belirli bir teknoloji
 
 **Şekil 8-3**. Birden çok mimari desenleri ve polyglot mikro world
 
-Gösterildiği gibi Şekil 8-3, uygulamalarda birçok mikro (ilişkisindeki her mikro hizmet farklı bir şekilde uygulayabilir bağlamlarda etki alanı Odaklı Tasarım terminolojisi ya da yalnızca "alt" otonom mikro olarak) oluşur. Her farklı mimari düzeni sahip ve farklı diller ve veritabanları uygulamanın yapısı, iş gereksinimlerini ve öncelikler bağlı olarak kullanabilirsiniz. Bazı durumlarda mikro benzer olabilir. Ancak, her alt sisteminin bağlam sınır ve gereksinimleri genellikle farklı olduğundan, genellikle, geçerli değildir.
+Gösterildiği gibi Şekil 8-3, uygulamalarda birçok mikro (ilişkisindeki her mikro hizmet farklı bir şekilde uygulayabilir bağlamlarda etki alanı Odaklı Tasarım terminolojisi ya da yalnızca "alt" otonom mikro olarak) oluşur. Her farklı mimari düzeni sahip ve farklı diller ve veritabanları uygulamanın yapısı, iş gereksinimlerini ve öncelikler bağlı olarak kullanabilirsiniz. Bazı durumlarda, mikro benzer olabilir. Ancak, her alt sisteminin bağlam sınır ve gereksinimleri genellikle farklı olduğundan, genellikle, geçerli değildir.
 
 Örneği için bir basit CRUD bakım uygulama için bunu DDD desenleri tasarlayıp için anlamlı olmayabilir. Ancak çekirdek etki alanı veya çekirdek iş için iş karmaşıklık sürekli değişen iş kuralları ile üstesinden gelmek için daha gelişmiş desenleri uygulamanız gerekebilir.
 

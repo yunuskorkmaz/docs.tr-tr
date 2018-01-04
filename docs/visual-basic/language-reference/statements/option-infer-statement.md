@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 Değişkenleri bildirme içinde yerel türü çıkarımı kullanımını etkinleştirir.  
@@ -68,7 +68,7 @@ Option Infer kapalı olduğunda IntelliSense
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Option Infer IDE'de ayarlamak için  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [NIB: Proje özellikleriyle yönetme Proje Tasarımcısı](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
   
 2.  Tıklatın **derleme** sekmesi.  
   
@@ -101,11 +101,11 @@ Option Infer kapalı olduğunda IntelliSense
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Compare deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [Visual Basic Varsayılanları, projeler, Seçenekler iletişim kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
- [/ optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+ [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14226a549aaef8ea4c5a98fa6bc6249db824b35a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f084819c3a5c39ea9d94a5741f8fb4a005d6040c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Nasıl yapılır: bir tablo &#39; işlemek RowGroups özelliği aracılığıyla s satır grupları
 Bu örnek bir tablonun satır grupları üzerinde gerçekleştirilen daha yaygın işlemlerin bazılarını göstermektedir <xref:System.Windows.Documents.Table.RowGroups%2A> özelliği.  
@@ -95,5 +96,5 @@ Bu örnek bir tablonun satır grupları üzerinde gerçekleştirilen daha yaygı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Akış içeriği öğeleri Inlines özelliği aracılığıyla düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Blokların özelliği aracılığıyla FlowDocument işlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Bir tablonun sütunlar sütunlar özelliği aracılığıyla yönetmek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+ [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)

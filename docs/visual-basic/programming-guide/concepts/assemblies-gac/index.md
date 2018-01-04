@@ -12,22 +12,22 @@ ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ef4306da5c093b8302e377cc3b68d5700b8dfa8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 893d869b1abaf9caa6f4705f40750912081d7df2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Derlemeler ve Genel Derleme Önbelleği (Visual Basic)
 Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleştirme kapsamı ve güvenlik izinleri olan bir. NET tabanlı bir uygulama. Derlemeler bir yürütülebilir dosya (.exe) veya dinamik bağlantı kitaplığı (.dll) dosyası şeklinde ve .NET Framework'ün yapı taşlarıdır. Ortak dil çalışma zamanı tür uygulamaları haberdar olmanız gereken bilgilerle sağlarlar. Derleme türleri ve işlevlerin bir mantıksal birim oluşturur ve birlikte çalışacak biçimde oluşturulmuş kaynak koleksiyonu olarak düşünebilirsiniz.  
   
- Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeler birkaç her bir geliştirici ayrı modülleri, birlikte tek bir derleme oluşturmak için tüm gelecek iş şekilde planlanan. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: bir Multifile derleme](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeler birkaç her bir geliştirici ayrı modülleri, birlikte tek bir derleme oluşturmak için tüm gelecek iş şekilde planlanan. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: bir Multifile derleme](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Derlemeler, aşağıdaki özelliklere sahiptir:  
   
 -   Derlemeleri .exe veya .dll dosyaları olarak uygulanır.  
   
--   Bir derlemeyi genel derleme önbelleğinde koyarak uygulamalar arasında paylaşabilirsiniz. Derlemeleri güçlü-genel derleme önbelleğinde dahil önce adlandırılması gerekir. Daha fazla bilgi için bkz: [Strong-Named derlemeler](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
+-   Bir derlemeyi genel derleme önbelleğinde koyarak uygulamalar arasında paylaşabilirsiniz. Derlemeleri güçlü-genel derleme önbelleğinde dahil önce adlandırılması gerekir. Daha fazla bilgi için bkz: [Strong-Named derlemeler](../../../../framework/app-domains/strong-named-assemblies.md).  
   
 -   Derlemeler, yalnızca gerekli olduğunda belleğe yüklenir. Bunlar kullanılmazsa, bunlar yüklü değildir. Başka bir deyişle, derlemeler daha büyük projeler alanındaki kaynakları yönetmek için etkili bir yol olabilir.  
   
@@ -46,7 +46,7 @@ Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleşti
   
  Derlemeleri içerik, sürüm ve bağımlılıklar hakkındaki bilgileri içerdiğinden, Visual Basic ile oluşturduğunuz uygulamaların düzgün çalışması için Windows kayıt defteri değerlerini kullanmayın. Derlemeler .dll çakışmaları azaltmak ve uygulamalarınızı daha güvenilir ve kolay dağıtmak yapın. Çoğu durumda, yüklediğiniz bir. Yalnızca kopyalayarak dosyalarından hedef bilgisayara NET tabanlı uygulama.  
   
- Daha fazla bilgi için bkz: [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  
+ Daha fazla bilgi için bkz: [derleme bildirimi](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Bir derleme başvurusu ekleme  
  Bir derlemeyi kullanmak için bir başvuru eklemeniz gerekir. Ardından, kullandığınız [Imports deyimi](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ad alanını kullanmak istediğiniz öğeleri seçin. Bir derlemeyi başvurulan ve içe sonra erişilebilir tüm sınıfları, özellikleri, yöntemleri ve diğer üyelerin kendi ad alanları, kendi kodlarını kaynak dosyanızın parçası değilmiş gibi uygulamanız için kullanılabilir.  
@@ -58,7 +58,7 @@ Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleşti
 >  Visual Studio'da bir derleme üzerinde oluşturmak için **yapı** menüsünü seçin **yapı**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak dil çalışma zamanı derlemeleri](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Arkadaş derlemeler (Visual Basic)](friend-assemblies.md)  
  [Nasıl yapılır: bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma](how-to-share-an-assembly-with-other-applications.md)  
  [Nasıl yapılır: yükleme ve kaldırma derlemeler (Visual Basic)](how-to-load-and-unload-assemblies.md)  

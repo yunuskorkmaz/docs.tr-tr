@@ -18,17 +18,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bb7a1e74f1687a1549ab0780e2e2e773382f193
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13dcd324772393e3746a6ea5c5cadca02d9a1bab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar Denetimi
 <xref:System.Windows.Forms.ToolStripProgressBar> Birleştirir <xref:System.Windows.Forms.ToolStrip> işleme ve özellikleri ile normal işlem izleme işlevselliği radye.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ToolStripProgressBar denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ [ToolStripProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
  Amacı ve Windows Forms ana kavramlarını açıklayan konulara sağlar <xref:System.Windows.Forms.ToolStripProgressBar> denetim.  
   
 ## <a name="reference"></a>Başvuru  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/22/2017
  Başvuru belgelerine sağlar <xref:System.Windows.Forms.ToolStripProgressBar> denetim.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

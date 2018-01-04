@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5730b930a4f863ad01fcb6153d9bfd8f700fdb92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7956ab70dc30c7d090b9616cc603df2dc0b4e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Özelliği bir <xref:System.Windows.Media.GeometryGroup> veya <xref:System.Windows.Media.PathGeometry>, "bileşik şeklin verilen bir noktaya geometrinin parçası olup olmadığını belirlemek için kullandığı bir kuralı" belirtir. İki olası değerler için <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde bu iki kuralın nasıl kullanılacağı açıklanmıştır.  
@@ -72,5 +73,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>Örnek  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bileşik şekil oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+ [Bileşik Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

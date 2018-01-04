@@ -26,11 +26,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80661b24c35742b57a98b51fe055b0df05b34cad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 16837a310eabf881da8c88c9192264b918592929
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a>Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür bir eşleşme kendi arayın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [Gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [Belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+ [Değişim Yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+ [Gruplama Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d10c11cfcacb435438695b0e76ee8982ba9ef24a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]istemciler inceleyin ya da platformlar ve altyapıları çeşitli kullanıcı arabirimleri çalışmasına kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]Kalite güvence (test) kod ve kullanıcı arabirimi öğeleri inceleyin ve diğer kodundan kullanıcı etkileşimi onlarla benzetimini yapmak ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] tüm platformlarda erişilebilirlik bakın.  
@@ -165,6 +166,6 @@ End Class
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon genel bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
+ [UI Otomasyonuna Genel Bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
  [Tema ve UI Otomasyon desteği örnek ile NumericUpDown özel denetimi](http://go.microsoft.com/fwlink/?LinkID=160025)  
- [Sunucu tarafı UI Otomasyon sağlayıcıyı uygulama](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+ [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

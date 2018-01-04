@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma
 Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlar açıklanmıştır. Visual Studio'da bu yordamları için kapsamlı destek yoktur.  Ayrıca bkz. [izlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -120,6 +121,6 @@ Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uyg
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Control>  
- [Windows formlarının görünüşünü değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Windows Forms uygulamalarını geliştirme](../../../docs/framework/winforms/advanced/index.md)  
+ [Windows Forms’un Görünüşünü Değiştirme](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Windows Forms Uygulamalarını Geliştirme](../../../docs/framework/winforms/advanced/index.md)  
  [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

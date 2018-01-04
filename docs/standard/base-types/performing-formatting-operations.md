@@ -20,30 +20,33 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f09232080bb5c9aae4902dfc33b638bde82474c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a78c1caac318a19028472a2e4f6e8964f99abfba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-formatting-operations"></a>Biçimlendirme İşlemlerini Gerçekleştirme
 Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.  
   
--   [Nasıl yapılır: sayıyı baştaki sıfırlarla doldurur](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+-   [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
--   [Nasıl yapılır: Özel sayısal biçim sağlayıcıları kullanır ve tanımlayın](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+-   [Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
--   [Nasıl yapılır: Web denetimlerindeki sayısal kullanıcı girişini sayıya dönüştürme](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+-   [Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
 -   [Nasıl yapılır: belirli bir tarihten itibaren haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
--   [Nasıl yapılır: gidiş dönüş tarih ve saat değerleri](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+-   [Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
--   [Nasıl yapılır: görüntü tarih ve saat bilgilerini Web kullanıcılarına yerelleştirilmiş](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+-   [Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
--   [Nasıl yapılır: tarih ve saat değerlerinde Milisaniyeleri görüntüleme](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+-   [Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   
--   [Nasıl yapılır: Miladi olmayan takvimlerde tarihleri görüntüleme](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+-   [Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

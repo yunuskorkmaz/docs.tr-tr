@@ -16,11 +16,14 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Gecikme Modları
 Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı bir uygulamada durdurmanız gerekir. Uygulama verileri alır veya içeriği, görüntüler gibi bazı durumlarda, tam atık toplama kritik bir zamanda meydana ve performansı olumsuz yönde. Ayarlayarak Atık toplayıcısının zorla girme ayarlayabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini birine <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerleri.  
@@ -63,5 +66,5 @@ Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.GC?displayProperty=nameWithType>  
- [Uyarılmış koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Uyarılmış Koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)  
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

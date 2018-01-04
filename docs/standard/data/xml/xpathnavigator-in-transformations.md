@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümleri XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı verilerine salt okunur rastgele erişim sağlar ve Genişletilebilir Stil sayfası dili için bir giriş olarak kullanmak için Dönüşümleri (XSLT) için tasarlanmıştır. Üzerinde uygulanan <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, ve <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> XML Path dili (XPath) öneri 5 bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modeline dayanır.  
@@ -124,4 +127,4 @@ public class sample
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT işlemci çok sınıfı uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

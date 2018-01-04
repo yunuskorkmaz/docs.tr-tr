@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01bac8fc020955e78e7648db72492014acc19944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70301cd3d357ab90ac6e7ed6d76a902107ef5e4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşeni, dosya sistemi göz atın ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu, kullanıcı iletişim kutusundaki seçilmiş dosyanın adını ve yolunu döndürür. Ancak, aslında dosyaları diske yazmak için kod yazmanız gerekir.  
@@ -189,4 +190,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SaveFileDialog>  
- [SaveFileDialog bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+ [SaveFileDialog Bileşeni](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

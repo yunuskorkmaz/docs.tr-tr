@@ -19,20 +19,21 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4e1beb6311604de5d0c59a29de2d1b6c50c2993
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox Denetimi (Windows Forms)
 Bu konu hakkında başkalarına bağlantılar `MaskedTextBox` denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İzlenecek yol: MaskedTextBox denetimiyle çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
+ [İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
  Anahtar özelliklerini gösteren `MaskedTextBox` denetim.  
   
- [Nasıl yapılır: MaskedTextBox denetimine veri bağlama](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
+ [Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
  Veritabanındaki verileri maskesi tanımı tarafından beklenen biçimde eşleşmediğinde verileri yeniden biçimlendirmek gösterilmiştir.  
   
 ## <a name="reference"></a>Başvuru  
@@ -40,5 +41,5 @@ Bu konu hakkında başkalarına bağlantılar `MaskedTextBox` denetim.
  Maskelenmiş metin kutusu denetimi uyarlamasını birincil sınıf.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

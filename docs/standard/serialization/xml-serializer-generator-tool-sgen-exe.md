@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41f71519ee8945ae93b85e7f6ac2725bf50d4913
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML seri hale getirici Oluşturma Aracı (Sgen.exe)
 XML seri hale getirici oluşturucunun bir XML serileştirme derleme türleri için başlangıç performansını artırmak için belirtilen derlemesinde oluşturur bir <xref:System.Xml.Serialization.XmlSerializer> zaman serileştiren veya belirtilen türden nesneler seri durumdan çıkarır.  
@@ -65,6 +68,6 @@ sgen Data.dll
  Seri hale getirmek ve Data.dll türlerinde seri durumdan çıkarılacağı kodundan Data.XmlSerializers.dll derleme başvurulabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
+ [Araçlar](../../../docs/framework/tools/index.md)  
  [XML Web Hizmetleri genel bakış](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma
 Öğeleri bir Windows Forms birleşik giriş kutusu liste kutusu eklenebilir veya bu denetimleri çeşitli veri kaynakları için bağlı olabilir çünkü çeşitli yollarla, liste kutusunda seçili. Ancak, bu konuda en basit yöntemi gösterir ve hiçbir veri bağlama gerektirir. Görüntülenen öğelerin genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Nesne tarafından döndürülen değer denetiminde gösterilen metni, `ToString` yöntemi.  
@@ -150,6 +151,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  
- [Nasıl yapılır: bir Windows içeriğini sıralama Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [Windows Forms ComboBox, ListBox yerine kullanmak ne zaman](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

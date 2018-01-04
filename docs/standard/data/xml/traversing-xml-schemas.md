@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="traversing-xml-schemas"></a>XML şemaları çapraz geçiş yapma
 Şema nesne modeli (SOM) API kullanarak bir XML Şeması geçiş öğeleri, öznitelikleri ve SOM. depolanan türleri erişim sağlar Bir XML çapraz geçiş yapan SOM yüklenen şema ayrıca SOM API kullanarak bir XML şeması düzenleme ilk adımdır.  
@@ -75,10 +78,10 @@ ms.lasthandoff: 11/21/2017
  Aşağıdaki kod örneğinde [yapı XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md) kullanılan konu <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> öznitelik eklemek için koleksiyon `CustomerId` için `Customer` öğesi. Bu bir öncesi schema derleme özelliğidir. Karşılık gelen sonrası-Schema-derleme-bilgi özelliği <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> karmaşık türde türü türetme devralınan olanlar da dahil olmak üzere tüm öznitelikleri tutan koleksiyonu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeline genel bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Okuma ve yazma XML şemaları](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Yapı XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML şemaları düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Dahil olmak üzere veya XML şemalarını içeri aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Derleme sonrası şema bilgi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [XML Şemaları Okuma ve Yazma](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [XML Şemalarını Düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

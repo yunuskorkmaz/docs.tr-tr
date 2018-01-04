@@ -14,11 +14,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88ad38a6a93a897e2362d61c1166b87813ab7859
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0baf0a188ccb67f50a57ea0a56bb16dc40c53bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex"></a>Çift Yönlü
 Çift yönlü örnek tanımlamak ve çift yönlü sözleşme uygulamak gösterir. Çift yönlü iletişimi bir istemci bir hizmet ile oturum kurar ve hizmet üzerinde hizmet istemciye iletiler gönderebilir bir kanal sağlar oluşur. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Çift yönlü sözleşme arabirimleri çifti tanımlanan — birincil arabirim istemci hizmeti ve istemcisine hizmetinden bir geri çağırma arabirimi. Bu örnekte `ICalculatorDuplex` arabirimi sonucu oturumu üzerinden hesaplama matematik işlemleri gerçekleştirmek istemci izin verir. Sonuçları döndürür hizmet `ICalculatorDuplexCallback` arabirimi. İstemci ile hizmet arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlam kurulmalıdır için çift yönlü sözleşme bir oturum gerektirir.  

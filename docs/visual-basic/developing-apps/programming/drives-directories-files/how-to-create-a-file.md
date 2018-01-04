@@ -14,11 +14,11 @@ ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 96e6785086f8c97f983c6dcd6fd713c01e34e258
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1ce74601136c870097d6d558e1f3ff12ba1c212
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Oluşturma
 Bu örnek, belirtilen yolu kullanarak boş bir metin dosyası oluşturur <xref:System.IO.File.Create%2A> yönteminde <xref:System.IO.File> sınıfı.  
@@ -57,4 +57,4 @@ Bu örnek, belirtilen yolu kullanarak boş bir metin dosyası oluşturur <xref:S
  <xref:System.IO>  
  <xref:System.IO.File.Create%2A>  
  [Kısmen güvenilen koddan kitaplıkları kullanma](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [Kod erişim güvenliği temelleri](https://msdn.microsoft.com/library/33tceax8)
+ [Kod erişim güvenliği temelleri](../../../../framework/misc/code-access-security-basics.md)

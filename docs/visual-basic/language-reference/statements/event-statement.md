@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -122,17 +122,17 @@ End Event
  Önceki örneği çalıştırmak ve etiketli düğmesini için F5 tuşuna basın **Başlat**. Saniye sayısı ilk metin kutusunu başlatır. Tam zamanlı (10 saniye) geçtiğinde "Tamamlandı" ilk metin kutusunu görüntüler.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Yöntemi form yaptığı biçimde olayları işlemez. Olayları doğrudan işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için bkz: [parçacıkları](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  `My.Application.DoEvents` Yöntemi form yaptığı biçimde olayları işlemez. Olayları doğrudan işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için bkz: [parçacıkları](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [RaiseEvent deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
- [Olayları](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [AddHandler Deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
  [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Nasıl yapılır: bellekten kazanacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Nasıl yapılır: engellemekten Kaçınacak şekilde özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
- [Paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md)
+ [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

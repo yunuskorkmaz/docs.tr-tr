@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08b5359446a80da257f5afec07cc70e3d4aad46b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b6fa31b89b8fbe50077933cf04aa3c17db86438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Windows Forms Düğme Denetimi Seçmenin Yolları
 Bir Windows Forms düğme, aşağıdaki yollarla seçilebilir:  
@@ -38,6 +39,6 @@ Bir Windows Forms düğme, aşağıdaki yollarla seçilebilir:
 -   Çağrı <xref:System.Windows.Forms.Button.PerformClick%2A> yöntemi program aracılığıyla düğmesini seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Düğme denetimine genel bakış](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Nasıl yapılır: Windows Forms düğme tıklamalarına yanıt verme](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Düğme denetimi](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+ [Düğme Kontrolüne Genel Bakış](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Düğme Kontrolü](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

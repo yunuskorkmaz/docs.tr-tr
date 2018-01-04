@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16e278fd0eb227ddd382157d38c7370e604c35d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 42f70cd34f65d5393d79b8ace4f9eb704f309d0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu meta veri yayımlama için gösteren iki nasıl yapılır konuları biridir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. Bir hizmeti bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri, nasıl yayınlamalıdır belirtmek için iki yolu vardır. Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
@@ -273,8 +274,8 @@ namespace Metadata.Samples
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Nasıl yapılır: yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
- [Kendini barındırma](../../../../docs/framework/wcf/samples/self-host.md)  
- [Meta veri mimarisi genel bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Meta verilerini kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Nasıl yapılır: kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [Kendini Barındırma](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

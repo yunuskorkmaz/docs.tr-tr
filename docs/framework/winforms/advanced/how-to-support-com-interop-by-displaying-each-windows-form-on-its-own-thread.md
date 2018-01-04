@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c772f547dc87af6618b92603ed1e709efc511b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60e52bc1486f74bdce44062a4ac861032b7b660c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme
 Üzerinde formunu görüntüleyerek COM birlikte çalışma sorunları çözebilirsiniz bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kullanarak oluşturabilirsiniz ileti döngüsü <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
@@ -55,8 +56,8 @@ ms.lasthandoff: 11/21/2017
 -   Derleme `COMForm`, `Form1`, ve `FormManager` bir bütünleştirilmiş türleri olarak da adlandırılır `COMWinform.dll`. COM birlikte çalışma için derleme açıklanan yöntemlerden birini kullanarak kaydedin [COM için derlemeyi paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md). Artık derleme ve yönetilmeyen uygulamalar karşılık gelen alt türü kitaplığı (.tlb) dosyasında da kullanabilirsiniz. Örneğin, tür kitaplığı Visual Basic 6.0 yürütülebilir bir proje başvuru olarak kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [COM için derlemeyi paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
- [Derlemeleri COM ile kaydetme](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışmasını destekleme](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
- [Windows Forms ve yönetilmeyen uygulamalara genel bakış](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [COM için Bütünleştirilmiş Kod Paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
+ [Bütünleştirilmiş Kodları COM ile Kaydetme](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Nasıl yapılır: ShowDialog Yöntemi ile bir Windows Formunu Görüntüleyerek COM Birlikte Çalışmasını Destekleme](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)

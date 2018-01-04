@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81b022011bd5613b8e956aa83482d2836508a4f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-colors"></a>Nasıl yapılır: Renkleri Döndürme
 Four-dimensional renk alanını dönüş görselleştirmek zordur. Biz, sabit renk bileşenlerden biri tutmak kabul ettiğinizi belirten tarafından döndürme görselleştirmek kolaylaştırabilir. 1'den sabit alfa bileşeni (tamamıyla opak) tutmak kabul varsayalım. Sonra şu üç boyutlu renk alanını kırmızı, yeşil ve mavi eksenli aşağıdaki çizimde gösterildiği gibi görselleştirebilirsiniz.  
@@ -60,5 +61,5 @@ Four-dimensional renk alanını dönüş görselleştirmek zordur. Biz, sabit re
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  <xref:System.Drawing.Imaging.ImageAttributes>  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Görüntüleri yeniden renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)

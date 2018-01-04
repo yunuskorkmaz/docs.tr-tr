@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2619842bedef2c28e792969dfbd5c724375122bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-processing-options"></a>XML işleme seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir listesi için aşağıdaki tablolara bakın.  
@@ -26,7 +29,7 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir l
   
 |**Seçeneği**|**İşleme türü**|**Açıklama**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-İnituive belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
+|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-İnituive belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Akış tabanlı|-XML verilerine erişmek için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlReaderSettings> sınıfı.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Akış tabanlı|-XML verileri oluşturmak için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlWriterSettings> sınıfı.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|-Uygulayan [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM Düzey 2 Çekirdek](http://www.w3.org/TR/DOM-Level-2-Core/) öneriler.<br />-Oluşturabilir, Ekle, Kaldır ve düğümler yöntemleri ve tanıdık DOM modelini temel alan özelliklerini kullanarak değiştirebilirsiniz.<br />-Bu seçenek W3C DOM kullanan var olan kodu değiştiriyorsanız kullanın|  
@@ -41,6 +44,6 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir l
 |[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|-Windows işletim sisteminde bulunan XML işlemek için COM tabanlı teknolojidir.<br />-DOM yerel bir uygulama XPath ve XSLT için destek sağlar.<br />-Olay tabanlı SAX2 ayrıştırıcısını içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DOM modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [XSLT derleyici (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+ [DOM Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

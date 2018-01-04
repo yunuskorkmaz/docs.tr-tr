@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5bcab65eb98684820a84968f15ba80de3c5b60de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5b0fe57bb6a4604c86e63a154e3af5542672912
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-error-handling"></a>Nasıl yapılır: Hata İşleme
 Bu konuda hata işleme kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar verilmiştir. Bu örnekte, iletilerin hedef uç noktasına yönlendirilir. Bir ağ veya iletişimleri ilgili bir hata nedeniyle ileti teslim edilmemesi durumunda (<xref:System.ServiceModel.CommunicationException>), iletinin diğer uç noktasına gönderilir.  

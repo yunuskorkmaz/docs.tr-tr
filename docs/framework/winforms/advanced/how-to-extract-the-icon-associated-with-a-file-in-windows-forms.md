@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Bir Dosyayla İlişkili Simgeyi Çıkarma
 Çok sayıda dosya ilişkili dosya türü için görsel bir sunumdur sağlamak simgeler katıştırılmış. Örneğin, Microsoft Word belgelerini Word belgeleri olarak belirten bir simge içerir. Dosyaları bir liste denetimini veya tablo denetim görüntülerken, her dosya adının yanındaki dosya türünü temsil eden simgeyi görüntülemek isteyebilirsiniz. Kolayca kullanarak bunu yapabilirsiniz <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> yöntemi.  
@@ -43,5 +44,5 @@ ms.lasthandoff: 11/21/2017
      Formunuz alındığından emin olmak gerekir <xref:System.IO> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [ListView denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

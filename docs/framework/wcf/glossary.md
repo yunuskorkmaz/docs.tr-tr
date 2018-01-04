@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 için Windows Communication Foundation Sözlüğü
 Aşağıdaki terimler Windows Communication Foundation belgelerine tanımlanır.  
@@ -49,7 +50,7 @@ Aşağıdaki terimler Windows Communication Foundation belgelerine tanımlanır.
 |işlemi başlatılıyor|Yeni bir oturum ilk işlem olarak adlı bir işlem. Olmayan başlatma işlemlerini en az bir başlatma işlemi yalnızca çağrıldıktan sonra çağrılabilir.|  
 |Model örnek oluşturma|Bir hizmet bir örneklemesini modeli vardır. Üç örneklemesini modeli vardır: &quot;tek&quot; tek bir CLR nesnesi tüm istemciler için; Hizmetleri &quot;çağrı başına&quot; içinde her istemci çağrısını; işlemek için yeni bir CLR nesnesi oluşturulur ve &quot;oturumu başına&quot; CLR kümesi oluşturulur, ayrı her oturum için bir tane nesneleri içinde. Uygulama gereksinimleri ve beklediğiniz kullanım modelini hizmetinin örneklemesini model seçimi bağlıdır.|  
 |iletisi|İleti gövde ve üstbilgileri dahil çeşitli bölümlerini oluşabilir veri kendi içinde bulunan bir birimdir.|  
-|ileti sözleşmesi|Bir ileti kişi bir ileti biçimi açıklar. Örneğin, ileti öğeleri gövdesi karşı üstbilgilerindeki gitmesi gereken olup olmadığını hangi güvenlik düzeyini ileti ve benzeri hangi öğelerine uygulanan bildirir.|  
+|ileti sözleşmesi|İleti sözleşmesi bir ileti biçimi açıklar. Örneğin, ileti öğeleri gövdesi karşı üstbilgilerindeki gitmesi gereken olup olmadığını hangi güvenlik düzeyini ileti ve benzeri hangi öğelerine uygulanan bildirir.|  
 |ileti güvenlik modu|Bir veya daha fazla güvenlik belirtimleri uygulayarak, güvenlik sağladığınız ileti güvenlik modunu belirtir. Her ileti, aktarım sırasında güvenliği sağlamak için ve izinsiz algılamak ve iletilerin şifresini çözmek için alıcıları etkinleştirmek için gerekli mekanizmalar içerir. Bu anlamda güvenlik birden çok atlama arasında uçtan uca güvenlik sağlayan her ileti içinde kapsüllenir. Güvenlik bilgileri iletinin bir parçası haline gelir olduğundan, ayrıca kimlik bilgileri (bunlar talepler olarak adlandırılır) ve ileti birden çok türde dahil etmek mümkündür. Bu yaklaşım, ayrıca kaynak ve hedef arasındaki birden çok aktarımı dahil olmak üzere herhangi bir aktarım üzerinden güvenli bir şekilde hareket etmek ileti etkinleştirme avantajına sahiptir. Bu yaklaşımın bir dezavantajı performans etkileri kaynaklanan işe, şifreleme mekanizmaları karmaşıklığını ' dir.|  
 |meta veriler|Bir hizmeti meta verilerini bir dış varlık hizmetiyle iletişim kurmak için anlamanız gereken hizmet özelliklerini açıklar. Meta veri ServiceModel meta veri yardımcı Programracı (Svcutil.exe bir WCF istemcisi ve bir istemci uygulaması hizmetiyle etkileşim kurmak için kullanabileceğiniz eşlik eden yapılandırma oluşturmak için) tarafından kullanılabilecek.  Hizmet tarafından kullanıma sunulan meta veri hizmetinin veri sözleşmesi tanımlayın, XML Şeması belgeleri ve hizmet yöntemleri açıklayan WSDL belgelerini içerir.  Etkinleştirildiğinde, hizmet için meta verileri otomatik olarak WCF tarafından hizmet ve kendi uç noktaları inceleyerek oluşturulur. Bir hizmeti meta verilerini yayımlamak için meta veri davranışı açıkça etkinleştirmelisiniz.|  
 |işlem Sözleşmesi|Bir işlem sözleşmesi parametreler ve dönüş türü bir işlemi tanımlar. Hizmet sözleşmesini tanımlayan bir arabirim oluştururken, bir işlem sözleşmesi sözleşmesinin bir parçası olan her yöntem tanımını T:System.ServiceModel.OperationContractAttribute özniteliği uygulayarak türünü belirtir. İşlemler, tek bir ileti alma ve tek bir ileti döndürerek veya türleri kümesi alma ve bir tür döndüren olarak modellenebilir. İkinci durumda, sistem, bu işlem için alınıp verilen iletileri biçimini belirler.|  

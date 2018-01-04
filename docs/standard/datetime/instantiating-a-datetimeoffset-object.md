@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f072aecf45aaaf9bd4aec845a698d6f12916fedb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 39095d3534de746008fd4710ffdb69db64c8cc86
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Bir DateTimeOffset nesnesinin örneğini oluşturma
 
@@ -103,4 +106,4 @@ Aşağıdaki örnek, bu dört dize dönüştürme yöntemlerin her biri için ç
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Tarih, saat ve saat dilimleri](../../../docs/standard/datetime/index.md)
+[Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)

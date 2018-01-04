@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: dc3683cfe27bfed0f89cba4e0df0b0515fc6f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b85bcbf537f5306b0b4c30630523eaf511dd3d9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: bir düğümü parça dönüştürme
 Dönüştürme zaman bulunan verileri bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> XSLT dönüştürmeleri bir bütün olarak belgeye nesne. Belge kök düğümü dışında bir düğümünde geçirirseniz, diğer bir deyişle, bu dönüştürme süreci yüklenen belgedeki tüm düğümleri erişmesini engellemez. Bir düğüm parça dönüştürmek için yalnızca düğüm parça içeren ayrı bir nesne oluşturmak ve gerekir, nesneyi geçirmek <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
@@ -55,4 +58,4 @@ Dönüştürme zaman bulunan verileri bir <xref:System.Xml.XmlDocument> veya <xr
  GÜVENİRLİK Man'ye kitap başlığı olduğu  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+ [XslCompiledTransform Sınıfını Kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

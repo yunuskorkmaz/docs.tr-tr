@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a65d9abbd13c811c8796c2e5f57ed5d259ef57ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 358b5ed2ad201b2dfb0fef7bb960a88234939bf1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi bir görünümünü ve davranışını özellikleri, olayları kullanarak özelleştirebileceğiniz ve sınıfları Yahoo! companion için çeşitli yöntemler sağlar. Bazen, bu özellikler sağlamak ötesine gidin, hücreler için gereksinimleri olabilir. Kendi özel Oluştur <xref:System.Windows.Forms.DataGridViewCell> genişletilmiş işlevselliği sağlamak için sınıf.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCell>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
- [Windows Forms DataGridView denetimini özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- [DataGridView denetimi mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
- [Windows Forms DataGridView denetiminde sütun türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetimini ölçeklendirme için en iyi uygulamalar](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [DataGridView Denetimi Mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [Windows Forms DataGridView Denetiminde Sütun Türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)

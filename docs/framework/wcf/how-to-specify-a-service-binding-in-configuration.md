@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0220dffd07f41210051953130cf99ebbfd4f0173
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea54b2f84c9de233ff2560795dc97f79c15aa0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme
 Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanımlanan, hizmet içinde uygulanan `CalculatorService` sınıfı ve kendi uç noktası burada belirtilen hizmet kullandığını Web.config dosyasında yapılandırılmış <xref:System.ServiceModel.BasicHttpBinding> . Kod yerine bir yapılandırmayla bu hizmetinin nasıl yapılandırılacağı açıklaması için bkz: [nasıl yapılır: kodda hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -103,5 +104,5 @@ Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanım
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Uç Nokta Adresi Belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

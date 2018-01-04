@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge üst düzey bir görünümünü sağlar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] mimarisi. Temel kavramları ve onların birlikte nasıl uyduğunu açıklamak üzere tasarlanmıştır. En basit sürümü oluşturma bir öğretici için bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci, bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). Bilgi edinmek için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programlama, bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -163,6 +164,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS güvenliği, WS-ReliableMessaging ve içinde uygulanan vb. gibi Web hizmeti (WS) belirtim büyüyen kümesi için kestirme [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation nedir](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation mimarisi](../../../docs/framework/wcf/architecture.md)  
+ [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  
+ [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  
  [Güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

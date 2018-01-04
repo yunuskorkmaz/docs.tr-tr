@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb8454d3e1e679154bc016e37b83c3ac4ff6768
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>SendMail özel etkinlik
 Bu örnek, türetilen özel bir etkinlik oluşturmak gösterilmiştir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulama içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta göndermek için ve kimlik doğrulaması ile posta göndermek için. Bırakma yolu test ve test modu, belirteç değiştirme, dosya şablonları gibi bazı son kullanıcı özellikler de sağlar.  
@@ -45,7 +46,7 @@ Bu örnek, türetilen özel bir etkinlik oluşturmak gösterilmiştir <xref:Syst
 ## <a name="solution-contents"></a>Çözüm içeriği  
  Çözüm iki proje içerir.  
   
-|Project|Açıklama|Önemli dosyaları|  
+|Proje|Açıklama|Önemli dosyaları|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail etkinliği|1.  SendMail.cs: ana etkinlik uygulama<br />2.  SendMailDesigner.xaml ve SendMailDesigner.xaml.cs: SendMail etkinliğinin Tasarımcısı<br />3.  MailTemplateBody.htm: gönderilecek e-posta şablonu.|  
 |SendMailTestClient|Test SendMail etkinliği istemci.  Bu proje SendMail etkinlik çağırma iki yolla gösterir: bildirimli olarak ve program aracılığıyla.|1.  Sequence1.XAML: SendMail etkinlik çağıran iş akışı.<br />2.  Program.cs: Sıra1 çağırır ve program aracılığıyla SendMail kullanan bir iş akışı da oluşturur.|  

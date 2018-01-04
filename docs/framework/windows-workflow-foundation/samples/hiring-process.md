@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b82fabec32a256e0ba1aad4ab28896782cef0c04
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hiring-process"></a>İşe alma işlemi
 Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir. Bu iş akışları Contoso Ltd. adlı kurgusal bir şirkette BT altyapısının bir parçasıdır  
@@ -104,7 +105,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
 ## <a name="projects-in-the-sample"></a>Örnek Proje  
  Aşağıdaki tabloda örnek çözümde projeleri gösterir.  
   
-|Project|Açıklama|  
+|Proje|Açıklama|  
 |-------------|-----------------|  
 |ContosoHR|Veri sözleşmeleri, iş nesneleri ve depo sınıflarını içerir.|  
 |HiringRequestService|İşe alma isteği işlemi iş akışı tanımını içerir.<br /><br /> Bu proje iş akışı (xaml dosyası) bir hizmet olarak kendi kendini barındıran bir konsol uygulaması olarak uygulanır.|  
@@ -117,7 +118,7 @@ Bu örnek, Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındır
 ## <a name="feature-summary"></a>Özellik Özeti  
  Aşağıdaki tabloda, bu örnekte her bir özelliğin nasıl kullanıldığı açıklanmaktadır.  
   
-|Özellik|Açıklama|Project|  
+|Özellik|Açıklama|Proje|  
 |-------------|-----------------|-------------|  
 |Akış Çizelgesi|İş sürecini bir akış temsil edilir. Bu akış çizelgesi açıklama içinde bir iş, Beyaz Tahta üzerinde çizilen aynı şekilde işlem temsil eder.|HiringRequestService|  
 |İş akışı Hizmetleri|Akış işlemi tanımıyla birlikte bir hizmette barındırılıyorsa (Bu örnekte, bir konsol uygulamasında hizmet barındırılıyor).|HiringRequestService|  

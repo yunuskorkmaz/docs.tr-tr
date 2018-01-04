@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fc23e33abf47d19792c25d36a62bf95a098ee7a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 250d78dd9983b75fa7e1b3cfd99215160fbc2b1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT Yapısı
 Bir nesnenin bellekte Düzen hakkında bilgi sağlar.  
@@ -63,5 +64,5 @@ typedef struct COR_TYPE_LAYOUT {
  **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

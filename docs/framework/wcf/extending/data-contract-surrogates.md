@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8d353b50cf9439a9741199a52ca650e02e4d49f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir türü seri durumdan çıkarılmış veya meta veri içine tahmini serileştirilir değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Burada bir yedek kullanılabilir bazı senaryolar türü, alanları ve özellikleri ile işaretlenmemiş için bir veri sözleşmesi belirtilmemiş olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği ya da kullanıcılar şema Çeşitlemeler dinamik olarak oluşturmak istediğiniz.  
@@ -206,4 +207,4 @@ Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir öze
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
  <xref:System.Runtime.Serialization.ImportOptions>  
  <xref:System.Runtime.Serialization.ExportOptions>  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

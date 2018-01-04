@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a695e10ae9b074f0f9dc913d2f687c82e00475dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-guidelines"></a>Seri hale getirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -144,10 +147,10 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Veri sözleşmelerini kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri sözleşmesi seri hale getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [Veri sözleşmesi seri hale getirici tarafından desteklenen türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [İkili seri hale getirme](binary-serialization.md)  
+ [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşması Seri Hale Getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+ [İkili Serileştirme](binary-serialization.md)  
  [Uzak nesneleri](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [XML ve SOAP seri hale getirme](xml-and-soap-serialization.md)  
+ [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)  
  [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

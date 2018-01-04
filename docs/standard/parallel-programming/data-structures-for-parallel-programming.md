@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f35c5382455021f0a001604367e59204ce4ad93c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 25abf45cd0c78b8872da3c953f29843ef0b67cda
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama, bir dizi eşzamanlı koleksiyon sınıfları, basit eşitleme temelleri ve türleri geç başlatma için de dahil olmak üzere kullanışlı olan birkaç yeni türleri tanıtır. Görev paralel kitaplığı ve PLINQ'da dahil olmak üzere tüm birden çok iş parçacıklı ile uygulama kodu, bu tür kullanabilirsiniz.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  Daha fazla bilgi için bkz.:  
   
--   [Nasıl yapılır: düşük düzeyli eşitleme için SpinLock kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [Nasıl yapılır: Düşük Düzeyli Eşitleme için SpinLock Kullanma](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
 -   [Nasıl yapılır: eş zamanlı görevleri bir engelle eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   

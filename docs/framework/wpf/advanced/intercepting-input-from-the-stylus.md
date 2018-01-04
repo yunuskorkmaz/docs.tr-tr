@@ -21,18 +21,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimarisi üzerinde alt düzey denetim uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranışı uygulamak ve en iyi performans için Kalem aygıtından gelen veri akışı için bir mekanizma sağlar.  
   
  Bu konu, aşağıdaki alt bölümleri içerir:  
   
--   [Mimarisi](#Architecture)  
+-   [Mimari](#Architecture)  
   
 -   [Kalem eklentileri uygulama](#ImplementingStylusPlugins)  
   
@@ -81,5 +82,5 @@ ms.lasthandoff: 11/21/2017
  Kendi türetme tarafından <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve bunların içine ekleme <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> koleksiyonlar, dijital mürekkep davranışını önemli ölçüde artırabilir. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak oluşturulur, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> verileri, uygulamanız için mürekkep koleksiyonu ve en iyi performans işlemeyle uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş mürekkep işleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [Verilere erişme ve kalem giriş düzenleme](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

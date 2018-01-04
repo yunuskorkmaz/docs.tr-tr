@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 Bir anahtar ya da bir derleme tanımlayıcı bir ad vermek için anahtar çiftini içeren dosyayı belirtir.  
@@ -34,7 +34,7 @@ Bir anahtar ya da bir derleme tanımlayıcı bir ad vermek için anahtar çiftin
  Gerekli. Anahtarı içeren dosya. Dosya adı boşluk içeriyorsa adı tırnak işaretleri içine alın ("").  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici derleme bildirimine ortak anahtar ekler ve ardından son derlemeyi özel anahtarıyla imzalar. Bir anahtar dosyası oluşturmak için şunu yazın `sn -k file` komut satırında. Daha fazla bilgi için bkz: [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23).  
+ Derleyici derleme bildirimine ortak anahtar ekler ve ardından son derlemeyi özel anahtarıyla imzalar. Bir anahtar dosyası oluşturmak için şunu yazın `sn -k file` komut satırında. Daha fazla bilgi için bkz: [Sn.exe (tanımlayıcı ad aracı)][Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  İle derleme yaparsanız `/target:module`, anahtar dosyasının adı modülde tutulur ve bir derleme derlediğinizde oluşturduğunuz derlemesini birleştirilmiş [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -46,7 +46,7 @@ Bir anahtar ya da bir derleme tanımlayıcı bir ad vermek için anahtar çiftin
   
  Bir anahtar dosyası yalnızca ortak anahtar içerebileceğini unutmayın.  
   
- Bkz: [bkz](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
+ Bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) derleme imzalama hakkında daha fazla bilgi için.  
   
 > [!NOTE]
 >  `/keyfile` Seçeneği içinde kullanılabilir değil [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] geliştirme ortamı; yalnızca komut satırından derlerken kullanılabilir.  
@@ -62,4 +62,4 @@ vbc /keyfile:myfile.sn input.vb
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

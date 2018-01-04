@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d122512a16a0959d60bfa658d96aa87a52e40299
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef5059a886012c00d3d33327baeaae49a9d5b54c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP ve HTTP Uç Noktaları
 Bu örnek, RPC tabanlı bir hizmete uygulamak ve SOAP biçiminde kullanıma sunmak gösterilmiştir ve "düz eski XML" (POX) biçimlendirme kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web programlama modeli. Bkz: [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) hizmeti için HTTP bağlama hakkında daha fazla ayrıntı için örnek. Bu örnek SOAP ve farklı bağlamalar kullanılarak HTTP üzerinden aynı hizmeti gösterme ilgilidir ayrıntıları odaklanır.  

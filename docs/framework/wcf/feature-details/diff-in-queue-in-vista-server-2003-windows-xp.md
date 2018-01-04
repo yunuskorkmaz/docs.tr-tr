@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar
 Bu konu farkları özetler [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sıraları özellik arasında [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -45,5 +46,5 @@ Bu konu farkları özetler [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
  MSMQ üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] uzak işlem okuma destekler. Bu sıranın barındırılan bilgisayardan farklı bir bilgisayar üzerinde barındırılması için bir sıra okunurken bir uygulama sağlar. Bu sistemin genel üretilen işi artıran bir merkezi sıradan okuma hizmetlerinin bir gruba sahip olma yeteneği sağlar. Ayrıca, okuma ve ileti işlenirken bir hata oluşur, işlem geri alınır ve daha sonra işlenmek sırasındaki ileti kalır sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İleti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+ [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir 
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/30/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7e5f33c4e7edf9d0d4551c5125976fcb8fda392f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
@@ -25,16 +28,17 @@ EShopOnContainers içinde tanımlanan sql.data adlı bir kapsayıcı olduğundan
 Örnek uygulama kapsayıcısında aşağıdaki YAML kod çalıştırdığınızda yürütülür docker-compose.yml dosyası ile yapılandırılmış SQL Server docker-kuruluşu ayarlama Yapılandırma bilgilerini genel docker-compose.yml dosyası ve docker compose.override.yml dosyasındaki YAML kod birleştirilmiş unutmayın. (Genellikle SQL Server görüntüsünü ilgili temel veya statik bilgiler ortam ayarlarından ayıracaktır.)
 
 ```yml
-sql.data:
-  image: microsoft/mssql-server-linux
-  environment:
-    - SA_PASSWORD=your@password
-    - ACCEPT_EULA=Y
-  ports:
-    - "5434:1433"
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - "5434:1433"
 ```
 
-Komutu çalıştırın aşağıdaki docker bu kapsayıcı çalıştırabilirsiniz:
+Benzer bir şekilde kullanmak yerine, `docker-compose`, aşağıdaki `docker run` komutu, bu kapsayıcı çalıştırabilirsiniz:
 
 ```
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux

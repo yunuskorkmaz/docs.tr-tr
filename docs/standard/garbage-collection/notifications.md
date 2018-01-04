@@ -18,11 +18,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
 Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) ortak dil çalışma zamanı tarafından performansını olumsuz etkileyebilir. Bu, özellikle büyük miktarda istekleri işlemek sunucuları ile ilgili bir sorun olabilir; Bu durumda, uzun çöp toplama istek zaman aşımı neden olabilir. Tam bir koleksiyon kritik bir dönem boyunca oluşmasını önlemek için tam atık toplama yaklaştığını ve iş yükünü başka bir sunucu örneğine yönlendirmek için önlem bildirilebilir. Geçerli sunucu örneğini istekleri işleyen gerekmez koşuluyla, ayrıca bir koleksiyon kendiniz anlamına.  
@@ -129,4 +132,4 @@ Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) orta
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

@@ -13,23 +13,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03e1bf9562b53ed4b43655848a4469ab8d7626d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abdbe581f53931d72a8d60f6b1767c03d5205c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract"></a>Daralma
 Bu bölümde sözleşmelerinde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri sözleşmeleri](../../../../docs/framework/wcf/samples/data-contracts.md)  
+ [Veri Anlaşmaları](../../../../docs/framework/wcf/samples/data-contracts.md)  
  Veri sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [İleti sözleşmeleri](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [İleti Anlaşmaları](../../../../docs/framework/wcf/samples/message-contracts.md)  
  İleti sözleşmeleri gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Hizmet sözleşmeleri](../../../../docs/framework/wcf/samples/service-contracts.md)  
+ [Hizmet Sözleşmeleri](../../../../docs/framework/wcf/samples/service-contracts.md)  
  Hizmet sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
@@ -38,5 +39,5 @@ Bu bölümde sözleşmelerinde gösteren örnekleri içeren [!INCLUDE[indigo1](.
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
  Dinamik olarak bilinen türler seri hale getirme ve seri durumdan çıkarma sırasında nasıl ekleneceği gösterilmektedir.  
   
- [Netdatacontractserializer işlevselliğini sağlamak için DataContractSerializer ve DataContractResolver kullanma](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
+ [NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
  Nasıl kullanılacağı ortaya <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sunar <xref:System.Runtime.Serialization.NetDataContractSerializer>.

@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Türü tasarım yönergeleri
 CLR açısından türleri yalnızca iki kategorisi vardır: başvuru türleri ve değer türleri — ancak framework tasarımı ile ilgili bir tartışma amacıyla biz türleri her kendi özel tasarım kurallarla daha fazla mantıksal gruplar halinde bölün.  
@@ -42,16 +45,16 @@ CLR açısından türleri yalnızca iki kategorisi vardır: başvuru türleri ve
  **✓ YAPMAK** her tür iyi tanımlanmış bir grup yalnızca rastgele koleksiyonunu ilgisiz işlevselliği ilgili üyesi olduğundan emin olun.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sınıf ve yapı arasında seçim yapma](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [Soyut sınıf tasarımı](../../../docs/standard/design-guidelines/abstract-class.md)  
- [Statik sınıf tasarımı](../../../docs/standard/design-guidelines/static-class.md)  
- [Arabirimi](../../../docs/standard/design-guidelines/interface.md)  
- [Yapı tasarım](../../../docs/standard/design-guidelines/struct.md)  
- [Enum tasarım](../../../docs/standard/design-guidelines/enum.md)  
- [İç içe geçmiş türler](../../../docs/standard/design-guidelines/nested-types.md)  
+ [Sınıf ile Yapı Arasında Seçim Yapma](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [Soyut Sınıf Tasarımı](../../../docs/standard/design-guidelines/abstract-class.md)  
+ [Statik Sınıf Tasarımı](../../../docs/standard/design-guidelines/static-class.md)  
+ [Arabirim Tasarımı](../../../docs/standard/design-guidelines/interface.md)  
+ [Yapı Tasarımı](../../../docs/standard/design-guidelines/struct.md)  
+ [Sabit Listesi Tasarımı](../../../docs/standard/design-guidelines/enum.md)  
+ [İç içe Geçmiş Türler](../../../docs/standard/design-guidelines/nested-types.md)  
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

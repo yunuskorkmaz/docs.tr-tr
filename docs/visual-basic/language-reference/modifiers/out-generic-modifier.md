@@ -12,11 +12,11 @@ ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 94d18200e6d7ce0ad63a229223ae77d99302e0e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e54504cd65b78846af41692f39899140a6d99b5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Genel Değiştirici) (Visual Basic)
 Genel tür parametreleri için `Out` anahtar sözcük türü eşdeğişken olduğunu belirtir.  
@@ -34,7 +34,7 @@ Genel tür parametreleri için `Out` anahtar sözcük türü eşdeğişken oldu�
 -   Tür parametresi yalnızca bir dönüş türü arabirim yöntemleri olarak kullanılan ve yöntem bağımsız değişkenleri bir tür olarak kullanılmaz.  
   
     > [!NOTE]
-    >  Bu kural için bir istisna vardır. Eşdeğişken arabiriminde karşıtı Genel temsilci bir yöntem parametresi olarak varsa, bu temsilci için genel tür parametresi olarak eşdeğişken türü kullanabilirsiniz. Eşdeğişken hakkında daha fazla bilgi ve karşıtı genel temsilciler [Temsilcilerde varyans](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) ve [işlev ve eylem genel temsilcileri için varyans kullanma](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).  
+    >  Bu kural için bir istisna vardır. Eşdeğişken arabiriminde karşıtı Genel temsilci bir yöntem parametresi olarak varsa, bu temsilci için genel tür parametresi olarak eşdeğişken türü kullanabilirsiniz. Eşdeğişken hakkında daha fazla bilgi ve karşıtı genel temsilciler [Temsilcilerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [işlev ve eylem genel temsilcileri için varyans kullanma](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 -   Tür parametresi, arabirim yöntemleri için genel bir kısıtlama olarak kullanılmaz.  
   
@@ -60,5 +60,5 @@ Genel tür parametreleri için `Out` anahtar sözcük türü eşdeğişken oldu�
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel arabirimlerde varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

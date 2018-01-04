@@ -17,17 +17,18 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b514cab277ca167046ace6defa3440d276e35b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 841327a7ac39d0af3924ff83e563f4fafa311332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider Bileşeni (Windows Forms)
 Windows Forms `HelpProvider` bileşen bir HTML Yardımı 1.x Yardım dosyası (HTML Yardım Atölyesi ile üretilen bir .chm dosyasını veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [HelpProvider bileşenine genel bakış](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ [HelpProvider Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
  Genel kavramlarını tanıtır `HelpProvider` bileşeni Windows tabanlı bir uygulama ile bir HTML Yardım dosyası ilişkilendirmenizi sağlar.  
   
  Bkz: [yardım sistemleri Windows Forms uygulamalarında](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).  
@@ -40,7 +41,7 @@ Windows Forms `HelpProvider` bileşen bir HTML Yardımı 1.x Yardım dosyası (H
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
   
  Ayrıca bkz. [Windows Forms uygulamalarındaki yardım sistemleri](http://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).

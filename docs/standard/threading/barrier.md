@@ -17,11 +17,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a8111cc9f2798ff96be8b128f22a75d21b441178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 392e975f6bf566c2ba36290940eb0daee03f004f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="barrier-net-framework"></a>Engel (.NET Framework)
 A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tarafından tanımlanan eşitleme ilkel (olarak bilinen *katılımcıları*) aynı anda üzerinde bir algoritma aşamada çalışması için. Kodda engel noktası ulaşana kadar her katılımcı yürütür. Engeli iş bir aşamada sonunu temsil eder. Katılımcı engel ulaşırsa, tüm katılımcılar aynı engel ulaştınız kadar engeller. Tüm katılımcılar engel ulaştınız sonra sonrası aşaması eylem isteğe bağlı olarak çağırabilirsiniz. Diğer tüm iş parçacıklarının hala engellenirken sonrası Bu aşama eylemi eylemleri gerçekleştirmek için tek bir iş parçacığı tarafından kullanılabilir. Eylem yürütüldükten sonra katılımcıları tüm engellenmemiş.  
@@ -56,5 +59,5 @@ A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tarafından ta
  Daha fazla bilgi için bkz: [zincirleme görevleri devamlılık görevlerini kullanarak tarafından](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Nasıl yapılır: eş zamanlı görevleri bir engelle eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

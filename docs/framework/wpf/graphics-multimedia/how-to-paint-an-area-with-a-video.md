@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362231bbd1f4e95c260370a99233b7e8c2617ca1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a72843547d934aeaeec062eec1241e402baf56bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Nasıl yapılır: Video ile bir Alanı Boyama
 Bu örnek, bir alanı ortam ile boyamak gösterilmektedir. Bir alanı ortam ile boyamak için bir yoldur kullanmak için bir <xref:System.Windows.Controls.MediaElement> ile birlikte bir <xref:System.Windows.Media.VisualBrush>. Kullanmak <xref:System.Windows.Controls.MediaElement> yüklemek ve medya yürütme ve ayarlamak için kullanmak için <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği <xref:System.Windows.Media.VisualBrush>. Daha sonra <xref:System.Windows.Media.VisualBrush> bir alanı yüklü ortam ile boyamak için.  
@@ -49,6 +50,6 @@ Bu örnek, bir alanı ortam ile boyamak gösterilmektedir. Bir alanı ortam ile 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.VisualBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush genel bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Multimedya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [TileBrush’a Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [Multimedyaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md)

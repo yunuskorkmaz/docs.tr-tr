@@ -27,11 +27,14 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b4df5e4df914d932c7413e9330e8663753456c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 77156eb1ceeb549ce5fe09532e05096376b4569b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsanız uygulayarak zaman uyumsuz işlevselliği vermiş göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -258,9 +261,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  
- [Nasıl yapılır: olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [Nasıl yapılır: bir işlemi arka planda çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Olay tabanlı zaman uyumsuz desen uygulamak karar verme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- [Olay tabanlı zaman uyumsuz desen ile birden çok iş parçacıklı programlama](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
- [Olay tabanlı zaman uyumsuz desen uygulamak için en iyi uygulamalar](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+ [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)

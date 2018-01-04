@@ -14,11 +14,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4decb820f012d3f4b2a9855cd08701f14dcc5431
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti bir yapılandırma dosyası ile tasarım zamanında yerine dağıtım noktasında uç noktası ve hizmet davranışı verileri sağlayan esnekliği sağlar. Bu konu, birincil teknikleri özetler.  
@@ -272,7 +273,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
  Bir alt davranışı koleksiyon üst davranışı koleksiyonda zaten bir davranış içeriyorsa, alt davranışı üst geçersiz kılar. Bir üst davranışı koleksiyon sahipse, bu nedenle `<serviceMetadata httpGetEnabled="False" />` ve alt davranışı koleksiyonunu `<serviceMetadata httpGetEnabled="True" />`, alt davranışı davranışı koleksiyonundaki üst davranışı geçersiz kılarsınız ve de "true" olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
+ [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
  [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<bağlama >](../../../docs/framework/misc/binding.md)

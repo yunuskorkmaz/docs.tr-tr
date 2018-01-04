@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8bc4e68e705691db0c6fcd0e8be0447af73ec42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 408801e28fec71f133c2dddd3f30b2509ab5896c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-services"></a>Güvenilir Hizmetler
 Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] güvenilir Mesajlaşma uygulamak özellikleri. Bu konuda, güvenilir Mesajlaşma özellikleri açıklanmıştır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -55,5 +56,5 @@ Kuyruklar ve güvenilir oturumlar [!INCLUDE[indigo1](../../../includes/indigo1-m
  Kuyruklar arasında güvenilir ileti aktarımı ile bağlı ayırma, güvenilir bir şekilde iletişim kurmak için birbirine sıkı şekilde bağlı uygulamaları etkinleştirir. Güvenilir oturumlar farklı olarak, kaynak ve hedef aynı anda çalışıyor olması gerekmez. Bu örtülü olarak ileti üretim kaynağının oranını ve ileti tüketim hedef oranını eşleşmiyor burada sıraları yürürlükte, Yük Dengeleme mekanizması olarak kullanılan senaryolara olanak sağlar. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Kuyruklar, bkz: [wcf'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenilir oturumlar genel bakış](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  
- [WCF'de kuyruğa alma](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+ [Güvenilir Oturumlara Genel Bakış](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  
+ [WCF'de Kuyruğa Alma](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

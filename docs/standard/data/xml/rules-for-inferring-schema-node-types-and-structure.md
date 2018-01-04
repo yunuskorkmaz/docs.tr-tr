@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c28c0f21b03fe7db014f118251363230a6ffc591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a50fcd3e3ee56ded97edef08c2ee08f4a7233
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema düğüm türleri ve yapısı çıkarımını yapma için kurallar
 Bu konu, nasıl bir XML Şeması Tanım Dili (XSD) yapısı için bir XML belgesi düğüm türleri şema çıkarım işlemi çevirir açıklar.  
@@ -155,7 +158,7 @@ Bu konu, nasıl bir XML Şeması Tanım Dili (XSD) yapısı için bir XML belges
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Schema.XmlSchemaInference>  
- [XML şema nesne modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Bir XML Şeması çıkarımını yapma](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [XML belgelerden şemaları çıkarımını yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Basit türler çıkarımını yapma için kurallar](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+ [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [XML Şemasından Çıkarım Yapma](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+ [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [Basit Türlerin Çıkarımını Yapma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedefle oluşturulan yeni bildirimleri [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim veya varolan bildirimlerini yeniden imzalama derlemeleri kaldırma MageUI.exe bildirim hedefe güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için bkz: [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -129,7 +130,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Doldurma**|Uygulama bildirimine uygulama dizini ve alt dizinleri tüm dosyaları ekler. MageUI.exe dizinde tek bir yürütülebilir dosya bulursa, onu otomatik olarak bu istemcide ClickOnce uygulaması başlatıldığında ilk yürütülebilir dosya giriş noktası olarak işaretler.|  
 |**Uygulama dosyaları**|Tüm uygulama dosyalarını listeler. Her dosyanın aşağıda açıklanan üç düzenlenebilir özniteliği vardır.|  
 |**Dosya türü**|Dosya türü dört değerlerden biri olabilir:<br /><br /> -Yok.<br />-Giriş noktası. Uygulamanın birincil yürütülebilir. Yalnızca bir yürütülebilir dosya giriş noktası olarak işaretlenebilir.<br />-Veri dosyası. Uygulama veri sağlayan bir XML dosyası gibi bir dosya.<br />-Simge dosyası. Bir uygulama simgesi, masaüstünde veya bir uygulamanın penceresinde köşesindeki gibi görünür.|  
-|**İsteğe bağlı**|İsteğe bağlı olarak işaretlenmiş dosyaları ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment'a isteğe bağlı API kullanarak çalışma zamanında indirilebilir. Daha fazla bilgi için bkz: [izlenecek yol: ClickOnce dağıtım API'sini kullanarak Tasarımcısı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Optional**|İsteğe bağlı olarak işaretlenmiş dosyaları ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment'a isteğe bağlı API kullanarak çalışma zamanında indirilebilir. Daha fazla bilgi için bkz: [izlenecek yol: ClickOnce dağıtım API'sini kullanarak Tasarımcısı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grup**|İsteğe bağlı dosyalar kümesi için bir etiket. Grup etiketi bir dosya kümesine uygulamak ve bir toplu tek bir API çağrısı ile dosyaları indirmek için isteğe bağlı API kullanın.|  
   
 ### <a name="permissions-required-tab"></a>İzinler gerekli sekmesi  
@@ -200,6 +201,6 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Bildirim seçin**|Uygulama bildirimini seçmenize olanak sağlar. Bir uygulama bildirimi seçtiğinizde, bu sayfada diğer alanların tümünü doldurur.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+ [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

@@ -12,23 +12,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acd8d5925e1aea82f53d222daf9ccc8063ae7841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activities"></a>Özel etkinlikler
 Bu bölümde özel etkinlikleri oluşturma gösteren örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kod Bodied](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
+ [Kod Gövdeli](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  Bildirimli olarak kod içinde oluşturulan özel etkinlik örnekleri içerir.  
   
  [Bileşik](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
  Özel Etkinlik örnekleri diğer etkinliklerini oluşan içerir.  
   
- [Özel Etkinlik tasarımcıları](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
+ [Özel Etkinlik Tasarımcıları](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
  İş Akışı Tasarımcısı'nda görünen özel tasarımcıları kullanılmaya etkinlik örnekleri içerir.  
   
  [Doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  

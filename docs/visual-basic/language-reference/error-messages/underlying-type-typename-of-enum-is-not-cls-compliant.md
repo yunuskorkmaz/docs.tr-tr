@@ -14,24 +14,24 @@ ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6a301c06cb86a4681709fbf67d3f731e2e6a9eb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e054f8d992154f66ab1d48a477a7e04900aa5b4d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Temel alınan tür &lt;typename&gt; Enum CLS uyumlu değil
-Bu numaralandırma değil için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS). Bu, bileşen içinde bir hata olmadığından [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ve [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bu veri türünü destekler. Ancak, başka bir bileşen kesinlikle CLS uyumlu kod içinde yazılmış bu veri türünü desteklemiyor olabilir. Bu tür bir bileşeni başarıyla bileşeni ile etkileşim mümkün olmayabilir.  
+Bu numaralandırma değil için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu, bileşen içinde bir hata olmadığından [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ve [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bu veri türünü destekler. Ancak, başka bir bileşen kesinlikle CLS uyumlu kod içinde yazılmış bu veri türünü desteklemiyor olabilir. Bu tür bir bileşeni başarıyla bileşeni ile etkileşim mümkün olmayabilir.  
   
  Aşağıdaki [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] veri türleri, CLS uyumlu değildir:  
   
--   [SByte veri türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Uınteger veri türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong veri türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort veri türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak davranma daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -48,6 +48,6 @@ Bu numaralandırma değil için belirtilen veri türü parçası [dil bağımsı
 -   Otomasyon veya COM nesnesi ile arabirim, bazı türleri farklı veri genişliği biçimde olduğunu aklınızda bulundurun [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Örneğin, `uint` diğer ortamlarda 16 bit görülür. Bir 16 bit bağımsız değişkeni tür bileşen geçirilirse, olarak bildirme `UShort` yerine `UInteger` , yönetilen içinde [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yansıma](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
+ [Yansıma (Visual Basic)](../../programming-guide/concepts/reflection.md)  
  [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE üzerinden > CLS uyumlu kod yazma](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

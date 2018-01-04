@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0089d08604f5d738e04461f4ed5f8efcb1140420
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96a8b8321239e3f01b30bcbe0400930a292a8f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
 İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ikinci ana sürümüne yönelik Microsoft serbest bırakma [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)]içinde yayımlanan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; şimdi WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yanı sıra yeni iş akışı teknolojisi vardır (System.Activities. türlerinde\* ad alanları; için WF4 adlandırılır). WF4 benimsemek ne zaman değerlendirirken zamanlamasını denetlemek ilk bilmek önemlidir.  

@@ -22,11 +22,14 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 260d202eb0a218a6657bc719e36da6f39138e54e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 552c28420e9a04483b164cfe7e13d942230ec5e0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  
@@ -63,4 +66,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.DateTimeFormatInfo>  
- [Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+ [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

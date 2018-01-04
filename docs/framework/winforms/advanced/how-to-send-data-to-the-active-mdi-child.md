@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7f505d68bfd6d8c65104244f9583fd3cf975dd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9268e10b42653dbe0628b3e37e0fad71b35409cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme
 Genellikle, bağlamında [Çoklu belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), ne zaman kullanıcı bir MDI uygulamaya Pano'dan veri gönderebilir gibi etkin alt pencere veri göndermek gerekir.  
@@ -102,8 +103,8 @@ Genellikle, bağlamında [Çoklu belge arabirimi (MDI) uygulamaları](../../../.
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birden çok belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Nasıl yapılır: MDI alt formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Nasıl yapılır: etkin MDI alt öğesini belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Nasıl yapılır: MDI alt formlarını düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+ [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [Nasıl yapılır: MDI Üst Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Nasıl yapılır: MDI Alt Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [Nasıl yapılır: MDI Alt Formlarını Düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

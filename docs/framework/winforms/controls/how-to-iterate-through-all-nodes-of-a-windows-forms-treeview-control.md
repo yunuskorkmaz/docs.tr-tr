@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02dfe1cb494df91a2a3ef3a6bba533306d61edef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Nasıl yapılır: Bir Windows Forms TreeView Denetiminin Tüm Düğümlerinde Yineleme
 Windows Forms kümedeki her düğüm incelemek bazen yararlıdır <xref:System.Windows.Forms.TreeView> bazı hesaplama düğümü değerlerine gerçekleştirmek için denetim. Bu işlem yapılabilir her düğümün her koleksiyonundaki ağacının dolaşır özyinelemeli yordamı (C# ve C++ yöntemi özyinelemeli) kullanarak.  
@@ -134,5 +135,5 @@ Windows Forms kümedeki her düğüm incelemek bazen yararlıdır <xref:System.W
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TreeView denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Özyinelemeli yordamlar](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+ [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [Özyinelemeli Yordamlar](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

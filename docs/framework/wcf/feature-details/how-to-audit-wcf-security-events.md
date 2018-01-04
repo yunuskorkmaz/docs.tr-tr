@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 67fca1af6a9e1fdd35051e8b289679677a0abd6b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3456eb374add7768fa6f2d01bc1b7b610c9577e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation Güvenlik Olaylarını Denetleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]güvenlik olaylarını Windows olay Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilen, günlüğüne olanak sağlar. Bu konuda, güvenlik olayları günlüğe kaydeder, böylece uygulama ayarlama açıklanmaktadır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] denetleme, bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -100,4 +101,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
- [Denetleme](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+ [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

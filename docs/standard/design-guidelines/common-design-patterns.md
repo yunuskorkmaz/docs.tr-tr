@@ -16,21 +16,24 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd2d78e675ebc67cc2e49f5bc7141558d462a3e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5b2c25728903e4a193a15e6586fffe528ecb7c7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-design-patterns"></a>Ortak tasarım desenleri
 Çok sayıda books yazılım modelleri, düzeni diller ve desenler çok geniş konusunu adres antipatterns vardır. Bu nedenle, bu bölümde, kılavuzları ve .NET Framework API'ları tasarımında sık kullanılan desenleri çok sınırlı sayıda ilgili tartışma sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağımlılık özellikleri](../../../docs/standard/design-guidelines/dependency-properties.md)  
- [Desen dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)  
+ [Bağımlılık Özellikleri](../../../docs/standard/design-guidelines/dependency-properties.md)  
+ [Dispose Deseni](../../../docs/standard/design-guidelines/dispose-pattern.md)  
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

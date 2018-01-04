@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ff2c57be82166ecf5eb8a012491044eb2cb79d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc3d490284e371aefb2de712cb5721b0246caa6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -104,4 +105,4 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Bu teknik de profili her bir CLR işleme yol açar. Profil Oluşturucu mantığı eklemeniz gerekir, [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geçerli işlem ilgi olup olmadığını saptamak için geri çağırma. Değilse, profil oluşturucu başlatma yapmadan geri arama başarısız olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil oluşturmaya genel bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+ [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

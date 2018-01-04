@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ecc9ce3c5ae46026be9f6355c8330b4455f45d91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf7a621a7aa457b2993c761caa2ad576d216638b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-compare-claims"></a>Nasıl yapılır: Beyanları Karşılaştırma
 Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, bir ortak istenen eylemi gerçekleştirmek ya da istenen kaynağa erişmek için gerekli talep için talep yetkilendirme bağlamında karşılaştırmak için bir görevdir. Bu konu, yerleşik ve özel talep türleri dahil olmak üzere, talep Karşılaştırılacak açıklar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Kimlik modeli altyapı bkz [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -81,5 +82,5 @@ Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Nasıl yapılır: özel beyan oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0692677b8ef596bb31b1869480603573a9ec98d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5a86dc6c56c3afff8d8a3a4ca2c5d5efa8eac1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetimidir aslında bir metin kutusu bileşimini ve listesini yukarı veya aşağı taşıma için düğmeler çifti. Denetim görüntüler ve seçenekler listesinden bir metin dizesini ayarlar. Kullanıcı düğmeleri listesini taşımak için yukarı ve aşağı tıklatarak yukarı ve aşağı ok tuşlarına basarak veya listeden bir öğe eşleşen bir dize yazarak dize seçebilirsiniz. Öğe adları alfabetik olarak sıralanan bir listesinden seçmek için bu denetim için bir olası kullanımı içindir.  
@@ -38,4 +39,4 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> denetimidir aslında bir 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DomainUpDown>  
- [DomainUpDown denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+ [DomainUpDown Denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)

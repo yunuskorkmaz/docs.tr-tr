@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81f95ea4582230fe66c59655ab9b98a405c1e173
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, hangi nesnelerin/öğelerin bazılarında bulunabilir açıklar. Bu genel bakışta türetilen nesneler için kullanılan içerik modelini özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için bkz: [akış belge genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -112,8 +113,8 @@ Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <x
  Bkz: [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Blokların özelliği aracılığıyla FlowDocument işlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Akış içeriği öğeleri blokların özelliği aracılığıyla düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Blokların özelliği aracılığıyla FlowDocument işlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Bir tablonun sütunlar sütunlar özelliği aracılığıyla yönetmek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Tablonun satır grupları RowGroups özelliği aracılığıyla denetlemek](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [FlowDocument'ı Blokların Özelliği ile Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Sütunlar Özelliği Aracılığıyla bir Tablonun Sütunlarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups Özelliği Aracılığıyla bir Tablonun Satır Gruplarını Düzenleme](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

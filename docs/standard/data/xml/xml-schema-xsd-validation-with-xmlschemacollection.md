@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7af29acd33ff3909f0d82e3ef7f7027dc5e44aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XML Şeması (XSD) doğrulama XmlSchemaCollection ile
 Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> XML Şeması Tanım Dili (XSD) Şemalara karşı bir XML belgesi doğrulanacak. <xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama oluşur belleğe yüklenmiş olmayan şekilde şemaları koleksiyonda depolayarak performansını artırır. Şema şema koleksiyonu varsa `schemaLocation` özniteliği şema koleksiyonundaki bakmak için kullanılır.  
@@ -219,4 +222,4 @@ while(vr.Read()) {
  <xref:System.Xml.XmlParserContext>  
  <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
  <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [XmlSchemaCollection şema derleme](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+ [XmlSchemaCollection Şema Derlemesi](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>WPF Topluluğu Geri Bildirimi
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]Topluluk kaynakları hakkında bilgi edinin, ele ve geri bildirim sağlamak için çeşitli sunan [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], bloglar dahil olmak üzere üretilen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] takım üyeleri ve topluluk kılavuzları, forumlar ve [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] ürün Geribildirim Merkezi. Her bir topluluk kaynak avantajları farklı bir kümesi sunar. Avantajlar her en iyi yanıtı büyük topluluktan emin olmak için kullanmak için en iyi yöntemler kümesi olarak burada açıklanan ve [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] özellikle.  

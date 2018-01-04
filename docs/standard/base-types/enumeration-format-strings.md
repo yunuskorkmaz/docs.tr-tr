@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58004fa19f2ec3b1ca7570d6ca75702510148002
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enumeration-format-strings"></a>Numaralandırma Biçimi Dizeleri
 Kullanabileceğiniz <xref:System.Enum.ToString%2A?displayProperty=nameWithType> sayısal, onaltılık veya bir numaralandırma üyesine dize değerini temsil eden yeni bir dize nesnesi oluşturmak için yöntemi. Bu yöntem biçimlendirme döndürmesini istediğiniz değeri belirtmek için dizeleri numaralandırması birini alır.  
@@ -55,4 +58,4 @@ Kullanabileceğiniz <xref:System.Enum.ToString%2A?displayProperty=nameWithType> 
  [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama
 Bir hizmet, hizmet denetimi Yöneticisi'ni yerine içinden bağlamında çalıştırılmak gerekir Visual Studio. Bir hizmet hata ayıklama özelliği bu nedenle, diğer Visual Studio uygulama türleri hata ayıklama olarak kadar basit değildir. Bir hizmette hata ayıklamak için hizmeti başlatın ve sonra onu çalıştığı işlem bir hata ayıklayıcısı eklemeniz gerekir. Sonra tüm standart hata ayıklama işlevselliğini Visual Studio kullanarak uygulamanızı ayıklayabilirsiniz.  
@@ -122,7 +123,7 @@ Bir hizmet, hizmet denetimi Yöneticisi'ni yerine içinden bağlamında çalış
  Yalnızca sistem başlangıçta oluşan bir sorun hata ayıklamak istediğiniz zaman gibi bazı durumlarda, Windows hata ayıklayıcı kullanmak zorunda. Yükleme [Windows için hata ayıklama araçları](http://msdn.microsoft.com/windows/hardware/hh852365) ve [Windows Hizmetleri hata ayıklamak nasıl](http://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Nasıl yapılır: Hizmetleri başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Nasıl Yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
  [Bir hizmet hata ayıklama](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)

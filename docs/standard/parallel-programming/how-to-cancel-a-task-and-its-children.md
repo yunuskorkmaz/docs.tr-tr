@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 374068694a3aa9724905964717dc5e77c09fc0ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecccd5ddd3ff662b03ae7078aabaf58e397f7003
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:  
@@ -49,6 +52,6 @@ Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:
  <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
  <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [Görev tabanlı zaman uyumsuz programlama](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
- [Eklenen ve ayrılan alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
- [PLINQ ve TPL'deki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [Görev Tabanlı Zaman Uyumsuz Desen](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
+ [Eklenen ve Ayrılan Alt Görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+ [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

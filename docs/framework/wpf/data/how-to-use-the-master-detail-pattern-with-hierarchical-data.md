@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb546a3429012a49ee7652a3470460935fc76d70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e392b47682d1bf53dc31073920bdf212fb7d997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Nasıl yapılır: Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma
 Bu örnek ana-ayrıntı senaryosunun nasıl uygulanacağını gösterir.  
@@ -45,7 +46,7 @@ Bu örnek ana-ayrıntı senaryosunun nasıl uygulanacağını gösterir.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.HierarchicalDataTemplate>  
- [Seçim temelinde bilgi görüntüleme ve koleksiyonuna bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

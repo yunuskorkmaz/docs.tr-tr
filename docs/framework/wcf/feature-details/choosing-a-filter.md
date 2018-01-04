@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları aldığınız iletileri karşı tam eşleşme yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtre kendi eşleşmeleri aşırı geniş kapsamlı veya yanlış yapılandırılmış iletiler yanlış yönlendirilir. Filtreler çok kısıtlayıcı olması durumunda, kullanılabilir tüm geçerli yollar bazı iletilerinizin olmayabilir.  
@@ -146,5 +147,5 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]XPath sorguları tasarlama, bkz: [XPath sözdizimi](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İleti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Nasıl yapılır: Filtreleri kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [Nasıl yapılır: Filtreleri Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

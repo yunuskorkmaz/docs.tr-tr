@@ -18,11 +18,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a1d69c1b943d15b9ad8c80b4d7dbafebc54990ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2804d0c60657623b558d86386c5e1043422b648c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim sağlamak için nesne. <xref:System.Threading.Mutex> Sınıfını kullanır daha fazla sistem kaynağı <xref:System.Threading.Monitor> sınıfı, ancak uygulama etki alanı sınırlarında sıralanmış, birden çok bekler ile kullanılabilir ve farklı işlemler iş parçacığı eşitleme için kullanılabilir. Yönetilen eşitleme mekanizmaları karşılaştırması için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -62,6 +65,6 @@ Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim
  <xref:System.Security.AccessControl.MutexSecurity>  
  <xref:System.Security.AccessControl.MutexAccessRule>  
  [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
  [İzleyicileri](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [İş parçacıkları ve iş parçacığı oluşturma](../../../docs/standard/threading/threads-and-threading.md)
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c581bb167c020e9e4f0de26b0e17e7a1d70704e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3dcbf4715c80f72178295c0b6abdc1272a055a8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama
 Bu örnek, döşeme içinde içeriğin yatay ve dikey hizalamasını denetlemek gösterilmiştir. Yatay ve dikey hizalamasını denetlemek için bir <xref:System.Windows.Media.TileBrush>, kullanma, <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özellikleri.  
@@ -86,4 +87,4 @@ Döşeme deseni içeriği hizalanan taban döşemesinin sağ alt
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.VisualBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

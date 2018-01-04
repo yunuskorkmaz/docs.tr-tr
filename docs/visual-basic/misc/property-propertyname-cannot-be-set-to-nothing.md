@@ -9,11 +9,11 @@ ms.assetid: 074014b4-5070-4c2f-9496-cbbbe9393dd6
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41c01549b4109df82cc2160be514b557f8533f20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3808fc25055496fcc98d74f70835f653016fc18
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-nothing"></a>Özellik &lt;propertyname&gt; bir şey yok olarak ayarlanamaz
 Özellik dışında bir değer gerektiren `Nothing`. Bu değeri yanlış hesaplıyor bir sonucu olabilir.  
@@ -23,6 +23,6 @@ ms.lasthandoff: 11/21/2017
 -   Geçerli bir değer sağlayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata türleri](../../visual-basic/programming-guide/language-features/error-types.md)  
- [Hiçbir şey](../../visual-basic/language-reference/nothing.md)  
- [Özel durum sorunlarını giderme: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+ [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Nothing](../../visual-basic/language-reference/nothing.md)  
+ <xref:System.NullReferenceException>

@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d052c865a554977ce5c8b0a347337d9d9b92fc57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8efdef82cf98f4f1758cb941dc4610ebf575490c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-raise-and-consume-events"></a>Nasıl yapılır: Olaylar Oluşturma ve Kullanma
 Bu konudaki örnekler olayları ile çalışmak nasıl gösterir. Örnek olarak verilebilir <xref:System.EventHandler> temsilci, <xref:System.EventHandler%601> temsilci ve olayları ile ve veri olmadan göstermek için özel bir temsilci.  
@@ -52,4 +55,4 @@ Bu konudaki örnekler olayları ile çalışmak nasıl gösterir. Örnek olarak 
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../docs/standard/events/index.md)
+ [Olaylar](../../../docs/standard/events/index.md)

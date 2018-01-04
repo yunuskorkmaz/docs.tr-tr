@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70f913acb2620b5c01e1aec1f1eb98b041b82a59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec3ce7d2d933226162664826764c818eacf97afc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-list-installed-encoders"></a>Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme
 Uygulamanızı bir belirli görüntü dosyası biçimi kaydedin olup olmadığını belirlemek için görüntü Kodlayıcıları bir bilgisayarda kullanılabilir listelemek istediğiniz. <xref:System.Drawing.Imaging.ImageCodecInfo> SAX <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statik yöntemler hangi görüntü Kodlayıcıları kullanılabilir belirleyebilmesi. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A>bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.  
@@ -42,5 +43,5 @@ Uygulamanızı bir belirli görüntü dosyası biçimi kaydedin olup olmadığı
 -   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: yüklenen kod çözücüleri listeleme](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
- [Yönetilen GDI +'GÖRÜNTÜ Kodlayıcıları ve kod çözücüleri kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+ [Nasıl yapılır: Yüklenen Kod Çözücüleri Listeleme](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
+ [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

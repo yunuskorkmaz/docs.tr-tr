@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b9d8f96de8cb3d13568e755f1d5e885e0474d891
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0f99a611de4bc344a0fd35130a59d496126e3af5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı Uygulama
 Gözlemci tasarım deseni, verileri izler ve bildirimleri gönderen bir sağlayıcısı ve bildirimleri (geri aramalar) sağlayıcıdan almak, bir veya daha fazla gözlemcilerin arasında bölme gerektirir. Bu konuda bir sağlayıcı oluşturma açıklanmaktadır. İlgili konu [nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md), bir gözlemci oluşturulacağını anlatır.  
@@ -69,6 +72,6 @@ Gözlemci tasarım deseni, verileri izler ve bildirimleri gönderen bir sağlay�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IObservable%601>  
- [Gözlemci tasarım deseni](../../../docs/standard/events/observer-design-pattern.md)  
- [Nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Gözlemci tasarım deseni en iyi yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+ [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)  
+ [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)  
+ [Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)

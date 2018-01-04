@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e4c1616c056aa4b6804db4f5471d44f198ebca4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bd5ac21112c49c245fdb4a8c4bddf770a4ab3101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolstopped"></a>ProtocolStopped
 Kimliği: 151  
@@ -30,5 +31,5 @@ Kimliği: 151
  Bu olay, WS-Atomic işlem protokolü hizmetinin durdurulduğunu gösterir. Olay protokol kimliği, protokol adı, işlem adı ve işlem kimliği listeler biçimindeki telefon numarasıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik genel başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

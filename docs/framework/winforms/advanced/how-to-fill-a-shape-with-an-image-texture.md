@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20562cade6917a3426fe04861a05c4b6b0bd543
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7b5ef87762b08daa973237e7b3da1068640e08bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Nasıl yapılır: Bir Şekli Görüntü Dokusuyla Doldurma
 Kullanarak bir dokuyla kapalı bir şekil doldurabilirsiniz <xref:System.Drawing.Image> sınıfı ve <xref:System.Drawing.TextureBrush> sınıfı.  
@@ -44,4 +45,4 @@ Kullanarak bir dokuyla kapalı bir şekil doldurabilirsiniz <xref:System.Drawing
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri doldurmak için fırça kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+ [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

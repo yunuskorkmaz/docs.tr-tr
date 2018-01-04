@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmet bilinen adı verir çağırmak COM uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Çağrılırken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gelen hizmet bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bu kimlik bilgileri yönetilen kod veya uygulama yapılandırma dosyası belirtebilirsiniz. Çağrılırken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti bir COM uygulamasından kullandığınız <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli şekillerde gösterecektir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [İleti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+ [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

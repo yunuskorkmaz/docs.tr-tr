@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirme
 
@@ -278,11 +281,11 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 Daha fazla bilgiyi filtreleri uygulama ve çalışma örnek MSDN makalesinden indirme hakkında [gerçek dünya ASP.NET Core MVC filtreleri](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Başvuruları – uygulamaları yapılandırma
-> - **Alanları**  
+> - **Alanlar**  
 > <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/areas>
 > - **MSDN – ASP.NET Core MVC özelliği dilimleri**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **Filtreleri**  
+> - **Filtreler**  
 > <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
 > - **MSDN – gerçek dünya ASP.NET Core MVC filtreleri**  
 > <https://msdn.microsoft.com/Magazine/mt767699.aspx>
@@ -388,7 +391,7 @@ Bu ilke ile sonra kullanılabilir \[Authorize\] herhangi bir denetleyici ve/veya
 > https://docs.microsoft.com/ASPNET/Core/Security/
 > - **Bir ASP.NET Core uygulamasında SSL zorlama**  
 > <https://docs.microsoft.com/ASPNET/Core/Security/enforcing-SSL>
-> - **Kimlik giriş**  
+> - **Kimliğe giriş**  
 > <https://docs.microsoft.com/ASPNET/Core/Security/Authentication/identity>
 > - **Yetkilendirme giriş**  
 > <https://docs.microsoft.com/ASPNET/Core/Security/Authorization/introduction>

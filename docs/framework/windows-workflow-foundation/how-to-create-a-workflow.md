@@ -12,11 +12,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b20ca4258204f938d611f431abc5668b88f167b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e619fa7fa6437b60b1d3cd6b50a2a68229899f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow"></a>Nasıl yapılır: bir iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konular hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma aracılığıyla bu bölümde adımda <xref:System.Activities.Statements.Flowchart> etkinliği ve önceki özel etkinlikler [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. Sayı tahmin eden oyun iş akışını modeller. Bu bölümdeki konular, yalnızca biri, öğreticiyi tamamlamak için gereklidir; ilginizi çeken stil seçin ve bu adımı izleyin. Ancak, isterseniz tüm konuları tamamlanabilir.  
@@ -28,14 +29,14 @@ ms.lasthandoff: 12/02/2017
 >  Öğreticinin tamamlanmış bir sürümünü indirmek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Sıralı iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
+ [Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
  Kullanarak bir sıralı iş akışı oluşturmayı açıklar <xref:System.Activities.Statements.Sequence> etkinlik.  
   
- [Nasıl yapılır: bir akış iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
+ [Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
  Kullanarak bir akış iş akışı oluşturmayı açıklar <xref:System.Activities.Statements.Flowchart> etkinlik.  
   
- [Nasıl yapılır: Durum makinesi iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  Durumu kullanarak bir makine iş akışı oluşturmayı açıklar <xref:System.Activities.Statements.StateMachine> etkinlik.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Workflow Foundation programlama](../../../docs/framework/windows-workflow-foundation/programming.md)
+ [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)

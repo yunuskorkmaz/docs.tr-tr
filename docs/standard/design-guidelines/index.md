@@ -1,5 +1,5 @@
 ---
-title: "Framework tasarım yönergeleri"
+title: "Çerçeve Tasarım Yönergeleri"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,13 +17,16 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a812207fb58e6c87c263966081060d02f8038963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="framework-design-guidelines"></a>Framework tasarım yönergeleri
+# <a name="framework-design-guidelines"></a>Çerçeve Tasarım Yönergeleri
 Bu bölüm, genişletme ve .NET Framework ile etkileşim kitaplıkları tasarlamak için yönergeler sağlar. Hedef kitaplığı tasarımcıları geliştirme için kullanılan programlama dili bağımsızdır birleşik bir programlama modeli sağlayarak API tutarlılık ve kullanım kolaylığı olun yardımcı olmaktır. Sınıfları ve .NET Framework genişleten bileşenleri geliştirirken, aşağıdaki tasarım yönergelere uymanızı öneririz. Tutarsız kitaplık tasarımı olumsuz Geliştirici üretkenliği etkiler ve benimseme zorlaştırır.  
   
  Yönergeler koşulları önekli basit öneriler olarak düzenlenir `Do`, `Consider`, `Avoid`, ve `Do not`. Bu yönergeleri sınıf kitaplığı tasarımcıları dengelemeler farklı çözümler arasında anlamanıza yardımcı olmak üzere tasarlanmıştır. Bu tasarım yönergeleri ihlal iyi kitaplık tasarımı burada gerektirir durumlar olabilir. Bu gibi durumlarda seyrek olmalıdır ve kararınızı NET ve ilgi çekici bir nedeni olması önemlidir.  
@@ -31,25 +34,25 @@ Bu bölüm, genişletme ve .NET Framework ile etkileşim kitaplıkları tasarlam
  Bu yönergeleri Defteri'nden adlı çalışmasından *Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri*, Krzysztof Cwalina ve Brad Abrams göre.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)  
  Derlemeler, ad alanlarını, türleri ve sınıf kitaplıkları üyelerinde adlandırmak için yönergeler sağlar.  
   
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
  Statik ve soyut sınıflar, arabirimler, numaralandırmalar, yapılar ve diğer türleri kullanma yönergeleri sağlar.  
   
- [Üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
  Tasarlama ve özellikleri, yöntemleri, Oluşturucular, alanlar, olaylar, işleçler ve parametreleri kullanma için yönergeler sağlar.  
   
- [Genişletilebilirlik için tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
  Olaylar, sanal üyeleri ve geri çağırmalar kullanarak sınıflara gibi genişletilebilirlik mekanizmaları açıklanır ve framework'ün gereksinimlerini en iyi karşılayan mekanizmaları seçin açıklanmaktadır.  
   
- [Özel durumlar için tasarım yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)  
+ [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)  
  Tasarlama, atma ve çalýþýrçalýþma yakalama özel durumlar için tasarım yönergeleri açıklar.  
   
- [Kullanım yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)  
+ [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)  
  Diziler, öznitelikleri ve koleksiyonları gibi ortak türlerini kullanarak, serileştirme destekleme ve eşitlik işleçleri aşırı yükleme yönergelerini açıklar.  
   
- [Ortak tasarım desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Ortak Tasarım Desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  Seçme ve bağımlılık özellikleri ve dispose desen uygulamak için kılavuz bilgiler verilmektedir.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  

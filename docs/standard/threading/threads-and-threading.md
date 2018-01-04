@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 91db5cf75053f7a9b343036345a97d8084ae38fb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturma
 İşletim sistemleri işlemleri yürütülmekte olduğunu farklı uygulamaları ayırmak için kullanır. İş parçacığı bir işletim sistemi işlemci zamanı tarafından ayrılan temel birimi olan ve birden çok iş parçacığı işlem içinde kod yürütme. Her iş parçacığı, özel durum işleyicileri, bir zamanlama önceliği ve sistem zamanlandığı süreye kadar iş parçacığı içeriği kaydetmek için kullandığı yapıları kümesi tutar. İş parçacığı bağlamını sorunsuz bir şekilde yürütme iş parçacığının ana bilgisayar işlemi adres alanında CPU kaydeder ve yığını, iş parçacığının kümesi de dahil olmak üzere, devam etmek için iş parçacığı gereken tüm bilgileri içerir.  
@@ -99,5 +102,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.ThreadPool>  
  <xref:System.ComponentModel.BackgroundWorker>  
- [İçin Veri Eşitleme çoklu iş parçacığı kullanımı](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Yönetilen iş parçacığı havuzu](../../../docs/standard/threading/the-managed-thread-pool.md)
+ [Çoklu İş Parçacığı Kullanımı için Veri Eşitleme](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [Yönetilen İş Parçacığı Havuzu](../../../docs/standard/threading/the-managed-thread-pool.md)

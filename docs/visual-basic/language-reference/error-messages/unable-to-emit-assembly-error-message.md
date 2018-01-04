@@ -14,11 +14,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9dcf3d4bec379faa5783ca17847b91f9739df598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b19b6439d85822c69adac0b3e0e04b2f31299836
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Derleme oluşturulamıyor: &lt;hata iletisi&gt;
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Derleyici derleme oluşturma çıkması aşamasında hata raporlama bağlayıcı ile derleme bağlayıcı (bir derleme bir bildirim oluşturmak için Al.exe, Alink olarak da bilinir) çağırır.  
@@ -27,15 +27,15 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Tırnak işaretli hata iletisini inceleyin ve konu bakın [Al.exe aracı hataları ve Uyarıları](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b) daha ayrıntılı bir açıklama ve öneriler için.  
+1.  Tırnak işaretli hata iletisini inceleyin ve konu bakın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Daha fazla açıklama ve öneriler için.  
   
-2.  Derleme kullanarak el ile oturum açmayı deneyin [Al.exe (derleme bağlayıcı)](https://msdn.microsoft.com/library/c405shex) veya [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Derleme kullanarak el ile oturum açmayı deneyin [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
 3.  Sorun devam ederse, koşullar hakkında bilgi toplayın ve Microsoft Ürün Destek Hizmetleri'ne bildirin.  
   
 ### <a name="to-sign-the-assembly-manually"></a>Derleme el ile imzalamak için  
   
-1.  Kullanım [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23) ortak/özel anahtar çifti dosya oluşturulamadı.  
+1.  [Sn.exe (tanımlayıcı ad aracı)] kullanın[Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)) ortak/özel anahtar çifti dosya oluşturulamadı.  
   
      Bu dosya .snk uzantısına sahiptir.  
   
@@ -62,8 +62,8 @@ ms.lasthandoff: 11/21/2017
 6.  İçinde [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], yeni oluşturduğunuz dosyayı bir .NET derlemesi başvuru ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Al.exe (derleme bağlayıcı)](https://msdn.microsoft.com/library/c405shex)  
- [Al.exe aracı hataları ve Uyarıları](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)  
- [Sn.exe (tanımlayıcı ad aracı)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Nasıl yapılır: bir genel-özel anahtar çifti oluşturma](http://msdn.microsoft.com/library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)  
- [Bizimle iletişime geçin](/visualstudio/ide/talk-to-us)
+ 
+ [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+ [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))  
+ [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

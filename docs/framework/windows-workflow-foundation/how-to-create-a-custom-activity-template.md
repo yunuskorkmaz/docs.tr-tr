@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ae81b96a348712af58c5e8527f0f04a59689368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Nasıl yapılır: Özel Etkinlik şablonu oluşturma
 Özel Etkinlik şablonları etkinlikleri, böylece kullanıcılar her etkinlik tek tek oluşturabilirsiniz ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz özel bileşik etkinlikler dahil olmak üzere yapılandırma özelleştirmek için kullanılan el ile. Bu özel şablonları içinde kullanılabilir hale getirilebilir **araç** üzerinde [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] veya hangi kullanıcıların sürükleyebilirsiniz bunları önceden yapılandırılmış tasarım yüzeyine bir rehosted Tasarımcısından. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]Bu tür şablonlar iyi örnekleri ile birlikte gelir: [SendAndReceiveReply şablonu Tasarımcısı](/visualstudio/workflow-designer/sendandreceivereply-template-designer) ve [ReceiveAndSendReply şablonu Tasarımcısı](/visualstudio/workflow-designer/receiveandsendreply-template-designer) içinde [Mesajlaşma etkinlik tasarımcıları](/visualstudio/workflow-designer/messaging-activity-designers) kategorisi.  
@@ -134,4 +135,4 @@ namespace DelayActivityTemplate
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Presentation.IActivityTemplateFactory>  
- [İş akışı tasarım deneyimini özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+ [İş Akışı Tasarım Deneyimini Özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

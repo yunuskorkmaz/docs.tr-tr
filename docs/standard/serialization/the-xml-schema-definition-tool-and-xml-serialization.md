@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bd462714ada242062c9e2e23f924868f5870ef8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67451a30e5681718e5b9cdd07468ac5bf20322bc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML şema tanımı aracı ve XML serileştirme
 XML şema tanımı Aracı'nı ([XML şema tanımı aracını (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) yanı sıra .NET Framework Araçları Windows® Yazılım Geliştirme Seti (SDK), bir parçası olarak yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
@@ -34,10 +37,10 @@ XML şema tanımı Aracı'nı ([XML şema tanımı aracını (XSD.exe'nin)](../.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataSet>  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [XML şema tanımı aracını (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XML Şema Tanımı Aracı (XSD.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [Nasıl yapılır: sınıfları ve XML Şeması belgeleri oluşturmak üzere XML şema tanımı aracını kullanın](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
  [.NET Framework Destek bağlama XML Şeması](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

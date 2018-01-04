@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f84bff892a35288a75738d9cfa326ffc4119b433
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 140793e41be012a777dbfa4bf66528612ab33da7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-auditing-behavior"></a>Hizmet Denetleme Davranışı
 Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hizmet işlemleri sırasında güvenlik olaylarının denetimini etkinleştirmek için. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İstemci ve hizmet kullanılarak yapılandırılmış [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ayarlandığından `Message` ve `clientCredentialType` ayarlandığından `Windows`. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
@@ -61,5 +62,5 @@ Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Description.S
 3.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetleme](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Nasıl yapılır: güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+ [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

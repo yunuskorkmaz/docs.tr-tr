@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f8a9e287e611e1cb1731c267702504637b23081b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9bfef535ecfae48ce09ef0eaca3f11de0a8d6667
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Nasıl yapılır: çok kodunuzu geçirme
 Yeni XSLT sınıfları varolan sınıfları çok benzer şekilde tasarlanmıştır. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıf değiştirir <xref:System.Xml.Xsl.XslTransform> sınıfı. Stil sayfaları, kullanarak derlenen <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Dönüşümler kullanarak yürütülme <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi. Aşağıdaki yordamlar ortak XSLT görevleri göster ve kod kullanarak karşılaştırın <xref:System.Xml.Xsl.XslTransform> karşı sınıfı <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
@@ -101,5 +104,5 @@ Yeni XSLT sınıfları varolan sınıfları çok benzer şekilde tasarlanmışt�
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok sınıftan geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
- [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+ [XslTransform Sınıfından Geçirme](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
+ [XslCompiledTransform Sınıfını Kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

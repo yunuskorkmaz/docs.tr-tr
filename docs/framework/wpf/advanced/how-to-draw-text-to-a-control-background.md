@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0c98422e337678e68a8e4b72979635e8c867b4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 091be80e055279685c9dba33dd6b6635e64eaff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-to-a-control39s-background"></a>Nasıl yapılır: çizim metin Denetim &#39; s arka plan
 Bir metin dizesi dönüştürerek doğrudan bir denetim arka plan için metin çizebilirsiniz bir <xref:System.Windows.Media.FormattedText> nesnesini genişletin ve ardından denetimin çizim nesnesi <xref:System.Windows.Media.DrawingContext>. Arka plan nesnelerin çizime türetilmiş için de bu tekniği kullanabilirsiniz <xref:System.Windows.Controls.Panel>, gibi <xref:System.Windows.Controls.Canvas> ve <xref:System.Windows.Controls.StackPanel>.  
@@ -40,4 +41,4 @@ Bir metin dizesi dönüştürerek doğrudan bir denetim arka plan için metin ç
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.FormattedText>  
- [Biçimli metin çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+ [Biçimlendirilmiş Metin Çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

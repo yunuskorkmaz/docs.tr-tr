@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f0fa86a9786e5440db9fec0cee76c5ed28363b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31417a3eeee2c1e61674c43558c2799705797c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Nasıl yapılır: GeometryDrawing Oluşturma
 Bu örnek oluşturmak ve görüntülemek nasıl gösterir bir <xref:System.Windows.Media.GeometryDrawing>. A <xref:System.Windows.Media.GeometryDrawing> şekil dolgu ve anahat ile ilişkilendirerek oluşturmanızı sağlayan bir <xref:System.Windows.Media.Pen> ve <xref:System.Windows.Media.Brush> ile bir <xref:System.Windows.Media.Geometry>. <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> Şeklin yapısını açıklar <xref:System.Windows.Media.GeometryDrawing.Brush%2A> şeklin dolgu açıklar ve <xref:System.Windows.Media.GeometryDrawing.Pen%2A> şeklin anahat açıklar.  
@@ -41,6 +42,6 @@ Bu örnek oluşturmak ve görüntülemek nasıl gösterir bir <xref:System.Windo
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.DrawingGroup>  
- [Çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Bileşik çizim oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)
+ [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Bileşik Çizim Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)

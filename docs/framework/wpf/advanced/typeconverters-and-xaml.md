@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 073730382f98a6c3d61ebdadf4f1f74411ba4e63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, bir genel XAML dil özellik olarak dizesinden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değerleri kullanılabilmesi için sınıf örneklerinin istiyorsanız uygulamak gerekebilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı ya da her ikisini de.  
@@ -125,6 +126,6 @@ Bu konu, bir genel XAML dil özellik olarak dizesinden tür dönüştürme amac�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.TypeConverter>  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Ayrıntılı XAML sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

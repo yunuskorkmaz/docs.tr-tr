@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d2bbca799e1eda1abae3d199dd71e004b17c4c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-markup-extension"></a>Biçimlendirme Uzantısı Bağlama
 Bir ara ifade nesnesi oluşturma ve öğesi ve kendi bağlama çalışma zamanında uygulanır veri bağlamı yorumlama verilere bağlı değeri, özellik değeri erteler.  
@@ -133,6 +134,6 @@ Bir ara ifade nesnesi oluşturma ve öğesi ve kendi bağlama çalışma zamanı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.Binding>  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

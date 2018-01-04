@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ac462f3b49788fd909f9d9f4fc785db74704ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0a7c9920b321f15f3f01a64fbfc80693042a025
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-application-resources"></a>Performansı İyileştirme: Uygulama Kaynakları
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Böylece yazılan benzer öğeler arasında tutarlı bir görünüm veya davranışı destekleyebilir uygulama kaynaklarını paylaşmanıza olanak sağlar. Bu konu, bu alandaki yardımcı olabilecek birkaç öneri uygulamalarınızın performansını sağlar.  
@@ -53,12 +54,12 @@ ms.lasthandoff: 11/21/2017
  [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Uygulama performansını planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Donanım yararlanarak](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Düzen ve tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Nesne davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [Metin](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Diğer performans önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

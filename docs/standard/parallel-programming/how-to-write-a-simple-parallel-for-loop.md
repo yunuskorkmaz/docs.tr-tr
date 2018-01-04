@@ -20,11 +20,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma
 Bu konu, gösteren iki örnek içerir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. İlk kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve ikinci kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemesi, iki basit aşırı <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. Bu iki aşırı kullanabilirsiniz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngüsünü iptal etmek gerekmediğinde yöntemi bölün döngüsü yinelemeleri dışında ya da herhangi bir iş parçacığı yerel durumu korumak.  

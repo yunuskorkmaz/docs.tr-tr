@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d63fb872382bfc0a3ba3b8637c7357ab65c58fbf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6cc65464248ec27c4bda4934408a9bafc823a80c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
 Kullanabilirsiniz ancak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemleri kaynak blokları, ileti blokları forma bağlanabilir bir *veri akışı ardışık düzenleri*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı blokları*, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her bir veri akışı ardışık düzen veri akışı bloğunda çalışma gerçekleştirir. Benzetme bu otomobil üretim için bir derleme satırdır. Her araç derleme satırın geçerken bir istasyon çerçeve derler, bir sonraki altyapısı vb. yükler. Bir derleme satırı aynı anda birleştirilen birden çok taşıtlardan sağladığından, aynı anda tam taşıtlardan bir birleştirme daha iyi verimlilik sağlar.  

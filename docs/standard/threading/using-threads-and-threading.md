@@ -16,26 +16,29 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80eb4c3bb98acdd1f83dbf5bcf57b2f7b295742b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma
 Bu bölümdeki konular, oluşturulmasını ve yönetimini yönetilen iş parçacığı, yönetilen iş parçacığı veri geçirmek ve geri sonuçlar almak nasıl ve iş parçacıklarını yok ve işlemek nasıl ele bir <xref:System.Threading.ThreadAbortException>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İş parçacığı oluşturma ve başlangıç zamanında veri geçirme](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
+ [Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
  Açıklanır ve nasıl yeni iş parçacıklarına veri geçirme ve veri geri alma dahil olmak üzere yönetilen iş parçacığı oluşturmayı gösterir.  
   
- [Duraklatma ve iş parçacıklarını sürdürme](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
+ [İş Parçacıklarını Duraklatma ve Sürdürme](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
  Duraklatma ve sürdürme yönetilen iş parçacığı ayrımlar açıklanır.  
   
- [İş parçacıklarını yok etme](../../../docs/standard/threading/destroying-threads.md)  
+ [İş Parçacıklarını Yok Etme](../../../docs/standard/threading/destroying-threads.md)  
  Yönetilen iş parçacığı ve nasıl ele alınacağını yok etme, ayrımlar anlatılmaktadır bir <xref:System.Threading.ThreadAbortException>.  
   
- [İş parçacıklarını zamanlama](../../../docs/standard/threading/scheduling-threads.md)  
+ [İş Parçacıklarını Zamanlama](../../../docs/standard/threading/scheduling-threads.md)  
  İş parçacığı öncelikleri ve iş parçacığı planlama nasıl etkilediklerini anlatılmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -49,5 +52,5 @@ Bu bölümdeki konular, oluşturulmasını ve yönetimini yönetilen iş parçac
  Güçlü yazarak rağmen olmadan iş parçacığı yordamı için veri iletmek için kolay bir yol sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İş parçacıkları ve iş parçacığı oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
  Yönetilen iş parçacığı oluşturma giriş bilgileri sağlar.

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f42ee49a4690c23a563740993e721207d5dedea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e37714f2c317456935f7b8694a083468dfa43a72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Formları için Denetimler Yazma
 Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlayın veya verileri işlemek, kullanıcı girişi kabul, olaylara yanıt veya herhangi bir sayıda kullanıcı ve uygulama bağlanan diğer işlevleri gerçekleştirmek. Bir denetim bir bileşen aslında bir grafik arabirimle olduğundan, bir bileşen yapar, yanı sıra kullanıcı etkileşimi sağlayan herhangi bir işlev görebilir. Denetimleri belirli amaçlara hizmet için oluşturulan ve denetimleri yazma başka bir programlama bir görevdir. Aklınızda aşağıdaki adımları işlem yazma denetimine genel bakış temsil eder. Bağlantılar tek tek adımları ek bilgi sağlar.  
@@ -62,10 +63,10 @@ Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil ed
 10. Paket ve denetiminizin dağıtın. Ayrıntılar için bkz [dağıtma uygulamaları, hizmetleri ve bileşenleri](https://msdn.microsoft.com/library/wtzawcsz).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Nasıl yapılır: UserControl sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Nasıl yapılır: denetim sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Nasıl yapılır: mevcut Windows Formları denetimlerinden devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- [Nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [Nasıl yapılır: UserControl Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [Nasıl yapılır: Denetim Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

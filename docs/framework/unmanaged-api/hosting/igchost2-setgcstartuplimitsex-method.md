@@ -21,11 +21,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ae924447e38dfec8d365fe6cdc85e5dccb028714
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f8ed2b2aa43fcf925b6202ab339209904e7c53af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx Yöntemi
 Kesim boyutu ve en büyük boyutu 0 oluşturma için ayarlar.  
@@ -59,4 +60,4 @@ HRESULT SetGCStartupLimitsEx (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Igchost2 arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+ [IGCHost2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

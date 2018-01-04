@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fca27cf5261e253c2bb3d3a10fa3db31f28a2415
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="timers"></a>Süreölçerler
 Zamanlayıcılar belirli bir zamanda çağrılan bir temsilciyi belirtmenize olanak sağlayan hafif nesnelerdir. İş parçacığı havuzundaki iş parçacığı bekleme işlemi gerçekleştirir.  
@@ -42,4 +45,4 @@ Zamanlayıcılar belirli bir zamanda çağrılan bir temsilciyi belirtmenize ola
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.Timer>  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

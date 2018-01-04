@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 804b91cdda1316bc0a3081c8353493faf8869b4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 157e20a80f0a76e157fad091bec6bfe635a9ccb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-user-input"></a>Güvenlik ve Kullanıcı Girdisi
 Herhangi türde bir giriş (bir Web isteği veya URL, bir Microsoft Windows Forms uygulaması ve benzeri denetimleri için giriş verileri), genellikle bu verilere doğrudan parametre olarak başka bir kod çağırmak için kullanıldığından kod olumsuz yönde etkileyebilir kullanıcı verileri. Bu durum kötü amaçlı kod kodunuzu garip parametrelerle çağırma paraleldir ve aynı önlemler yapılması gerekir. Kullanıcı girişi gerçekten zor olduğu için büyük olasılıkla güvenilmeyen veri izlemek için hiçbir yığın çerçevesi güvenli olmasını sağlamaktır.  
@@ -66,4 +69,4 @@ Herhangi türde bir giriş (bir Web isteği veya URL, bir Microsoft Windows Form
 -   Birden fazla kurallı biçimi olabilecek kullanıcı adlarını dikkatli olun. Örneğin, genellikle ya da MYDOMAIN kullanabilirsiniz\\*kullanıcıadı* form veya *kullanıcıadı* @mydomain.example.com formu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

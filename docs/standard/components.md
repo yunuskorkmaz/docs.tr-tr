@@ -7,11 +7,14 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architectural-components"></a>.NET Mimari Bileşenleri
 
@@ -87,10 +90,10 @@ Kapsamlı birtakım Araçlar ve .NET her bir uygulama ile iş altyapı bileşenl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma](choosing-core-framework-server.md)   
-[.NET standart](net-standard.md)  
-[.NET core Kılavuzu](../core/index.md)  
-[.NET framework Kılavuzu](../framework/index.md)  
+[.NET Standard](net-standard.md)  
+[.NET Core Kılavuzu](../core/index.md)  
+[.NET Framework Kılavuzu](../framework/index.md)  
 [C# Kılavuzu](../csharp/index.md)  
-[F # Kılavuzu](../fsharp/index.md)  
+[F# Kılavuzu](../fsharp/index.md)  
 [VB.NET Kılavuzu](../visual-basic/index.md)  
 

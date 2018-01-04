@@ -17,11 +17,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e0b3e28c95d9ccfb0ecd1954e16960576d8f115
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
 Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp iş parçacığı yerel değişkenleri kullanmayı gösterir bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü. İş parçacığı yerel verileri kullanarak, çok sayıda paylaşılan durum erişimin eşitleme yükünü önleyebilirsiniz. Paylaşılan kaynağa her yinelemesinde yazmak, yerine işlem ve görev için tüm yinelemeleri tamamlanana kadar değeri saklayın. Sonra nihai sonucu kez paylaşılan kaynağa yazma veya başka bir yönteme geçirin.  
@@ -53,5 +56,5 @@ Function() new MyClass()
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [PLINQ ve TPL'deki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

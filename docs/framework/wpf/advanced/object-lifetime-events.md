@@ -35,11 +35,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e31997cfc1ff7500317bdfc59ac6ad12d3d27a23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81bd06811e428645a9a3103be457d30266a353c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları
 Bu konuda, belirli açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşamaları bir nesne oluşturma, kullanma ve yok etme ömründeki olaylar.  
@@ -85,5 +86,5 @@ Bu konuda, belirli açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../
 -   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımlılık özelliği değeri önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+ [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

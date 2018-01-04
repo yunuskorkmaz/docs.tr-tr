@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 706cea8ed07fae680987e58b118b0a87951a059b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2835b77c1844c74e04c9ccf7ddaaa4f9fb60dba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="json-serialization"></a>JSON Seri Hale Getirme
 Bu örnek nasıl kullanılacağı ortaya <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> seri hale getirmek ve JavaScript nesne gösterimi (JSON) biçimindeki verileri seri durumdan için. Bu seri hale getirme altyapısı JSON verilerini örneğine dönüştürür [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri ve tekrar JSON verilerini içine. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>aynı türlerini destekleyen <xref:System.Runtime.Serialization.DataContractSerializer>. Zaman uyumsuz JavaScript ve XML (AJAX) yazılırken JSON veri biçimi özellikle yararlı olur-Web uygulamaları stili. AJAX Destek [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ScriptManager denetimi ile ASP.NET AJAX ile kullanım için optimize edilmiştir. Kullanımıyla ilgili örnekler için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET AJAX ile bkz [AJAX örnekleri](http://msdn.microsoft.com/en-us/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  

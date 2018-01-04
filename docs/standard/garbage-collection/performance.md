@@ -16,11 +16,14 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0bceefc7ec2c6bc1aebaa0403bdfea6138125624
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 <a name="top"></a>Bu konu, atık toplama ve bellek kullanımı ile ilgili sorunları açıklar. Yönetilen yığınla ilgili sorunları ele alır ve çöp toplamanın uygulamalarınız üzerindeki etkisinin nasıl en aza indirgenebileceğini açıklar. Her başlıkta, problemleri araştırmak için kullanabileceğiniz prosedürlerin bağlantıları yer alır.  
@@ -786,4 +789,4 @@ ms.lasthandoff: 10/18/2017
      `% Time in GC` değeri işlem süresiyle aynı anda artıyorsa, yüksek CPU kullanımına çöp toplama işlemi neden oluyor demektir. Böyle olmuyorsa, yüksek kullanımın nerede meydana geldiğini bulmak için uygulamayı profilleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

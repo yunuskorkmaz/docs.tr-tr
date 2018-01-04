@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057d8af46325321360039af000ad8ce68bde39d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe94566f666d3936dc4d1a39017b1628c0e7e37a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi grafik bitmap, GIF, JPEG, meta dosyası veya simgesi biçimde görüntülemek için kullanılır.  
@@ -32,7 +33,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi grafik bitmap, GIF
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.PictureBox>  
- [Nasıl yapılır: tasarımcıyı kullanarak resim yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [Nasıl yapılır: çalışma zamanında boyutunu veya resim konumunu değiştirme](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [Nasıl yapılır: çalışma zamanında resimleri ayarlama](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox denetimi](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+ [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [PictureBox Denetimi](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

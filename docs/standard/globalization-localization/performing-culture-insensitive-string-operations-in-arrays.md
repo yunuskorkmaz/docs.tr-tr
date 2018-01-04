@@ -17,11 +17,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Overloads <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemleri kullanarak varsayılan kültüre duyarlı sıralar gerçekleştirmek <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bu yöntemler tarafından döndürülen kültüre duyarlı sonuçları sıralamalar farklılıkları nedeniyle kültür göre farklılık gösterebilir. Kültüre duyarlı davranışı ortadan kaldırmak için kabul bu yöntem aşırı birini kullanın bir `comparer` parametresi. `comparer` Parametresi belirtir <xref:System.Collections.IComparer> dizideki öğeler karşılaştırılırken kullanmak için uygulama. Kullanan bir özel değişmez karşılaştırıcı sınıfı parametresi için belirlediğiniz <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Özel sabit karşılaştırıcı sınıf örneği "SortedList sınıfı kullanarak" konu sağlanan [koleksiyonlarda kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konu.  
@@ -32,4 +35,4 @@ Overloads <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:Syst
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
  <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
  <xref:System.Collections.IComparer>  
- [Kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

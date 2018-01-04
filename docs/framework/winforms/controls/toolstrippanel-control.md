@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aee4c6b99572ca5fa82036ed817c95c02d447a11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel Denetimi
 `ToolStripPanel`yatay veya dikey boşluk yerleştirildiğinde aracı alanda paylaşımı ve, düzenleme denetimi etkinleştirir <xref:System.Windows.Forms.ToolStrip> dört paneller ve merkezi panelini gerektiğinde değil denetleyen bir <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -31,13 +32,13 @@ ms.lasthandoff: 10/18/2017
  Bu bölümdeki konular, kavramlar ve oluşturmak için kullanabileceğiniz teknikleri açıklar `ToolStripPanel` , uygulamalara özellikleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ToolStripPanel denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
+ [ToolStripPanel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
  Amacı ve Windows Forms ana kavramlarını açıklayan konulara sağlar <xref:System.Windows.Forms.ToolStripContainer> denetim.  
   
- [Nasıl yapılır: Toolstrippanels'ni](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
+ [Nasıl yapılır: ToolStripPanels'i Birleştirme](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
  Ekleme gösteren <xref:System.Windows.Forms.ToolStrip> için denetimler bir `ToolStripPanel`.  
   
- [Nasıl yapılır: MDI için ToolStripPanels kullanma](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ [Nasıl yapılır: MDI için ToolStripPanels Kullanma](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
  Tarafından karşılanan esneklik gösteren `ToolStripPanel` birden çok belge arabirimi uygulama denetimlerinde.  
   
 ## <a name="reference"></a>Başvuru  
@@ -45,4 +46,4 @@ ms.lasthandoff: 10/18/2017
  Başvuru belgelerine sağlar <xref:System.Windows.Forms.ToolStripPanel> denetim.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

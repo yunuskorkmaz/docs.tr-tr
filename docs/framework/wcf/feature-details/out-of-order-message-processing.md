@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f70283e15bbfaf111c8e677641682538a2361942
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 19ab5afbc1eb13a3126e94a040d51204fea131a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="out-of-order-message-processing"></a>Düzen Dışı İleti İşleme
 İş akışı hizmetleri belirli bir sırada gönderilen iletiler bağlı. Bir veya daha fazla iş akışı hizmeti içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve her <xref:System.ServiceModel.Activities.Receive> etkinlik belirli bir ileti bekleniyor. Belirli aktarım teslim, istemciler tarafından gönderilen iletileri Gecikmeli ve bu nedenle iş akışı hizmeti beklenmedik bir sırayla teslim. İletileri gerektirmeyen bir iş akışı hizmeti uygulama özel gönderilmesini sipariş normal olarak yapılan bir paralel etkinlik kullanarak. Daha karmaşık bir uygulama protokolü için iş akışı çok hızlı bir şekilde çok karmaşık hale.  Düzen dışı ileti işleme özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gibi bir iş akışı tüm iç içe geçmiş paralel etkinliklerin karmaşıklık olmadan oluşturmanıza olanak sağlar. Düzen dışı ileti işleme destekleyen kanalları yalnızca desteklenen <xref:System.ServiceModel.Channels.ReceiveContext> gibi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ bağlar.  
@@ -46,5 +47,5 @@ WorkflowService service = new WorkflowService
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.ReceiveContext>  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Kuyruklar ve güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Kuyruklar ve Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

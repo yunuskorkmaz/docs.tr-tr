@@ -20,11 +20,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
 .NET Framework'teki olayları temsilci model üzerinde temel alır. Temsilci modeli kaydetme ve bir sağlayıcıdan bildirimleri almak abone etkinleştirir gözlemci tasarım deseni izler. Bir olay gönderen bir olay oluştu ve olay alıcı bu bildirimi alır ve bir yanıta tanımlayan bir bildirim gönderir. Bu makalede, temsilci modeli ana bileşenlerini, olayları uygulamalarında kullanma ve nasıl kodunuzda olayları uygulanacağı açıklanmaktadır.  
@@ -89,10 +92,10 @@ ms.lasthandoff: 11/21/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: olaylar oluşturma ve kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Oluşturma ve olayları kullanma örnekleri içerir.|  
-|[Nasıl yapılır: olay özelliklerini kullanarak birden çok olayı işleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işleme için nasıl kullanılacağını gösterir.|  
-|[Gözlemci tasarım deseni](../../../docs/standard/events/observer-design-pattern.md)|Kaydetme ve bir sağlayıcıdan bildirimleri almak abone sağlayan tasarım deseni açıklar.|  
-|[Nasıl yapılır: bir Web formları uygulamasında olayları kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web formları denetimi tarafından gerçekleştirilen bir olay nasıl ele alınacağını gösterir.|  
+|[Nasıl yapılır: Olaylar Oluşturma ve Kullanma](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Oluşturma ve olayları kullanma örnekleri içerir.|  
+|[Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işleme için nasıl kullanılacağını gösterir.|  
+|[Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)|Kaydetme ve bir sağlayıcıdan bildirimleri almak abone sağlayan tasarım deseni açıklar.|  
+|[Nasıl yapılır: Bir Windows Forms Uygulamasında Olayları Kullanma](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Web formları denetimi tarafından gerçekleştirilen bir olay nasıl ele alınacağını gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.EventHandler>  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>WMI Sınıfı Başvurusu
 Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI sağlayıcısı.  
@@ -56,13 +57,13 @@ Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1]
   
  [ConnectionOrientedTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/connectionorientedtransportbindingelement.md)  
   
- [Sözleşme](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
+ [Anlaşma](../../../../../docs/framework/wcf/diagnostics/wmi/contract.md)  
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
  [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [Uç noktası](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [Uç nokta](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
@@ -78,7 +79,7 @@ Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1]
   
  [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   
- [Hem MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
+ [MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
   
  [MtomMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
   
@@ -100,7 +101,7 @@ Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1]
   
  [PeerSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
   
- [Duyduğunuz arabirimi belirtin](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
+ [PeerTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
   
  [PeerTransportSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
   
@@ -112,7 +113,7 @@ Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1]
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [Hizmeti](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Hizmet](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
@@ -128,7 +129,7 @@ Bu bölüm tarafından sunulan tüm WMI sınıfları listeler [!INCLUDE[indigo1]
   
  [ServiceSecurityAuditBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicesecurityauditbehavior.md)  
   
- [ServiceThrottlingBehavior'dan](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
+ [ServiceThrottlingBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicethrottlingbehavior.md)  
   
  [ServiceTimeoutsBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/servicetimeoutsbehavior.md)  
   

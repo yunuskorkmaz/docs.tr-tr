@@ -18,11 +18,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e50c6abac6e949245c89b8f25a093ba72a3eb530
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a473b9972cd300dc45212e47292b73c3ca2c2221
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel"></a>StackPanel
 <xref:System.Windows.Controls.StackPanel> Öğe, alt öğelerini yatay veya dikey olarak yığmak için kullanılır.  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer'a Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -22,11 +22,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Yönetilen İş Parçacığı Havuzu
 <xref:System.Threading.ThreadPool> Sınıfı yerine uygulama görevlerde yoğunlaşabilirsiniz yönetim iş parçacığı sağlayan sistem tarafından yönetilen çalışan iş parçacığı havuzu ile uygulamanızı sağlar. Arka plan işlemleri gerektiren kısa görevleri varsa, yönetilen iş parçacığı havuzu birden çok iş parçacığı yararlanmak için kolay bir yoludur. Örneğin, başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oluşturabileceğiniz <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> iş parçacığı havuzu iş parçacıkları üzerinden zaman uyumsuz görevleri nesneleri.  
@@ -149,10 +152,10 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.ThreadPool>  
  <xref:System.Threading.Tasks.Task>  
  <xref:System.Threading.Tasks.Task%601>  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Nasıl yapılır: bir görevden değer döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
- [İş parçacıkları ve iş parçacığı oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
- [Zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [Zamanlayıcılar](../../../docs/standard/threading/timers.md)
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [Nasıl yapılır: Bir Görevden Değer Döndürme](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
+ [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Süreölçerler](../../../docs/standard/threading/timers.md)

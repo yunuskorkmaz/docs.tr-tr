@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cb2191482771647bcc2cd1003229e445c320e1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Nasıl yapılır: bir çalışan iş akışı örneği tanım güncelleştirme
 Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için uygulama geliştiricileri iş akışı için bir mekanizma sağlar. Gerekli değişiklik yeni gereksinimleri, bir hata düzeltme uygulamak için veya beklenmeyen değişiklikleri uyum sağlayacak şekilde olabilir. Bu adım öğreticide kalıcı örnekleri değiştirmek için dinamik güncelleştirme kullanımı gösterilmiştir `v1` içinde çıkan yeni işlevsellik eşleşecek şekilde numarası iş akışı tahmin [nasıl yapılır: bir iş akışı yan yana birden fazla sürümünü ana bilgisayar ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

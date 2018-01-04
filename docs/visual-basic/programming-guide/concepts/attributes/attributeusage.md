@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5f358068d00c042a979216cdda51dcc7e07abbc5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage`Yeni öznitelik nasıl uygulanabilir denetlemek için özel öznitelik tanımlarını uygulanabilir bir özniteliktir. Varsayılan ayarları açıkça uygulandığında şöyle:  
@@ -174,7 +174,7 @@ A2
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)  
- [Öznitelikleri](../../../../../docs/standard/attributes/index.md)  
+ [Öznitelikler](../../../../standard/attributes/index.md)  
  [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Özel öznitelikler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

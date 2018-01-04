@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]otomatik olarak, hangi performans azalır çizerken görüntü ölçeklendirme. Alternatif olarak, hedef dikdörtgenin boyutlarını geçirerek görüntüsü ölçeklendirme denetleyebilirsiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi.  
@@ -51,5 +52,5 @@ ms.lasthandoff: 11/21/2017
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Texture.jpg bir görüntü adı ve, sisteminizde geçerli yolu değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Resimler, bit eşlemler, simgeler ve meta dosyaları ile çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

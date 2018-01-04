@@ -9,11 +9,11 @@ ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c42c33bdbf06d3e0348ab0c430628c5d7f793660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 63130405550684a6e5d8c9c7bfcd1aa971045f2b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>Bağımsız değişken &#39; Yaşam &#39; sıfır olamaz
 Bir bağımsız değişken `Life`, hangi olmalıdır bir `Double` , varlığın kullanım ömrü uzunluğunu belirtir, geçerli değil.  
@@ -25,7 +25,4 @@ Bir bağımsız değişken `Life`, hangi olmalıdır bir `Double` , varlığın 
 -   Özellikle yordama diğer yordamlardan bağımsız değişken olarak geçirilen değişkenleri ifadesinde önceki işlemleri denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IN derleme değil: Çiftazalanbakiye işlevi](http://msdn.microsoft.com/en-us/c7cf8929-d158-4399-b3cb-31d897d12556)  
- [IN derleme değil: YAT işlevi](http://msdn.microsoft.com/en-us/23c25672-f5dd-49ac-9893-4faa82634181)  
- [IN derleme değil: Da işlevi](http://msdn.microsoft.com/en-us/8e06130a-056e-4266-a8a9-1592b86f58d2)  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+  [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

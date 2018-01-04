@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Veri sözleşmeleri bkz konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -110,8 +111,8 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- [Veri sözleşmelerini kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [Sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+ [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşması Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [Veri Anlaşması Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [İleri Uyumlu Veri Anlaşmaları](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

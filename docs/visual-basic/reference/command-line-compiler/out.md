@@ -14,11 +14,11 @@ ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d98a9f3cadc42021c302915cfc5b058b41e11ec6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53b77dec53be1d97c5f2526cb117933a2b8fe046
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-visual-basic"></a>/out (Visual Basic)
 Çıktı dosyası adını belirtir.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 |Visual Studio tümleşik geliştirme ortamında out ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **derleme adı** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **derleme adı** kutusu.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlerken `T2.vb` ve çıktı dosyası oluşturur `T2.exe`.  
@@ -54,4 +54,4 @@ vbc t2.vb /out:t3.exe
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

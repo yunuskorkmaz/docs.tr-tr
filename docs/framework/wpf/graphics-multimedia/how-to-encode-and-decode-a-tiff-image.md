@@ -24,11 +24,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c839f449a0b19f2aa3bbe26a393bdfd2226fa9f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ee934158e1a3c72e728ce9cd87b0307deea8638a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-encode-and-decode-a-tiff-image"></a>Nasıl yapılır: Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme
 Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> ve <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> nesneleri.  
@@ -48,4 +49,4 @@ Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_tiff](..
  [!code-vb[TiffBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

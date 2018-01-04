@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19997c206e118353c4b712ac8c5650cd71ed3a58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Yeniden Boyutlandırma
 Tek denetimleri yeniden boyutlandırma ve aynı veya farklı türdeki birden çok denetim gibi boyutlandırabilirsiniz <xref:System.Windows.Forms.Button> ve <xref:System.Windows.Forms.GroupBox> kontrol eder.  
@@ -43,9 +44,9 @@ Tek denetimleri yeniden boyutlandırma ve aynı veya farklı türdeki birden ço
 2.  Üzerinde **biçimi** menüsünde seçin **olun aynı boyutta**ve dört seçenekten birini belirleyin. İlk üç komutları denetimi ilk seçili eşleşecek şekilde denetimleri boyutlarını değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Ayrı Windows Forms denetimlerini etiketleme ve kısayollarını sunma](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Windows Forms denetimleri işlevi](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
  [Nasıl yapılır: Tasarımcı kullanarak Windows Formları yeniden boyutlandırma](http://msdn.microsoft.com/en-us/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0ec4f05fd68c523bcffcb9173de7e66d0dcc9a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e9d5ed7a1bb55803cd1df8c6c6c740e8facb306e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web Hizmetleri genel türler seri hale getirme teknolojisi örneği
 [Örnek indirme](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -76,5 +79,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
- [Seri hale getirme](../../../docs/standard/serialization/index.md)  
+ [Serileştirme](../../../docs/standard/serialization/index.md)  
  [ASP.NET ve XML Web hizmeti istemcileri kullanılarak oluşturulan XML Web Hizmetleri](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)

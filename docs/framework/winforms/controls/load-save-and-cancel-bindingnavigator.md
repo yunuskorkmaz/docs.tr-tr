@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Formları BindingNavigator Denetimine Yükleme, Kaydetme ve İptal Düğmeleri Ekleme
 <xref:System.Windows.Forms.BindingNavigator> Denetimidir özel amaçlı <xref:System.Windows.Forms.ToolStrip> gezinme ve verilere bağlı denetimler formunuzda düzenleme yöneliktir denetim.  
@@ -123,5 +124,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [BindingSource bileşenine genel bakış](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+ [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [BindingSource Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

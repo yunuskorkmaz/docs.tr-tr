@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c735d363af49688530e318680cbb4132fc747be7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
 Bu konu, bileşenleri ve denetimleri geliştirirken ortaya aşağıdaki ortak sorunları listeler. Daha fazla bilgi için bkz: [bileşenlerle programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
@@ -118,10 +119,10 @@ Bu konu, bileşenleri ve denetimleri geliştirirken ortaya aşağıdaki ortak so
  Kullandığınızda <xref:System.Drawing.ToolboxBitmapAttribute> özel bileşeni ile bir simge ilişkilendirmek için bit eşlem araç kutusunu otomatik olarak oluşturulur bileşenleri için görünmez. Bit eşlem görmek için denetimi kullanarak yeniden **araç kutusu öğelerini Seç** iletişim kutusu. Daha fazla bilgi için bkz: [nasıl yapılır: bir denetim için araç kutusu bit eşlemi sağlamak](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimleri geliştirme tasarım zamanında](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Nasıl yapılır: bir UserControl denetiminin çalışma zamanı davranışını sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [İzlenecek yol: Özel Windows hata ayıklama tasarım zamanında Forms denetimleri](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  [Bileşen yazma](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
  [Tasarım zamanı geliştirme sorunlarını giderme](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Bileşenleri ile programlama](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

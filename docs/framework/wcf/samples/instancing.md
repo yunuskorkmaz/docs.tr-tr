@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef9a87d8cfbf4070fd0b5108e093c6b9a4e9daa5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed514f06d7aa275122c37fd34e1f138af0f5705f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instancing"></a>Örnek Oluşturma
 Instancing örnek istemci isteklerine yanıt olarak bir hizmet sınıfın örnekleri nasıl oluşturulduğunu denetimleri örneklemesini davranışı ayarını gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnek yeni bir sözleşme tanımlar `ICalculatorInstance`, devralan `ICalculator`. Tarafından belirtilen sözleşme `ICalculatorInstance` hizmet örneği durumunu incelemek için üç ek işlemler sağlar. Örneklemesini ayarı değiştirerek istemci çalıştırarak davranışında değişiklik görebilirsiniz.  

@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 560a0866a526caf4c8fe129209d0077374306a9f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 545fd05888a556e21cea795953ba94b94f7f2e45
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-security-considerations"></a>XSLT güvenlik konuları
 XSLT dili gücü ve esnekliği büyük bir bölümünü size özellikleri zengin bir dizi var. Dış kaynak tarafından kullanışlı olsa da yararlanılabilir, birçok özellik içerir. XSLT güvenli bir şekilde kullanmak için XSLT kullanırken çıkabilecek güvenlik sorunlarını ve bu riskleri azaltmak için uygulayabileceğiniz temel stratejileri türlerini anlamanız gerekir.  
@@ -64,6 +67,6 @@ XSLT dili gücü ve esnekliği büyük bir bölümünü size özellikleri zengin
 -   Dış kaynak erişilen sağlamak istiyorsanız, belirtebilirsiniz `null` için <xref:System.Xml.XmlResolver> bağımsız değişkeni.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Dış kaynaklara XSLT işleme sırasında çözme](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [XSLT İşleme Sırasında Dış Kaynakları Çözümleme](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
  [Kod erişimi güvenliği](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)

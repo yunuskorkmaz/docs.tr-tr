@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54c1ffcef9946d2be174f92545cdba3181b0d8ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Nasıl yapılır: Başka Bir İş Akışı Hizmetine Çağrı Yapan Bir İş Akışı Hizmeti Oluşturma
 Başka bir iş akışı hizmetinden bilgi almak bir iş akışı hizmeti için bazen gereklidir.  Bu konuda, bir iş akışı hizmeti başka bir çağrı gösterilmektedir. Bu konuda, iki iş akışı hizmetleri oluşturacağız; bir giriş dizesi ilk hizmetin kullandığı dizesini ters kaydedildikten sonra büyük harfe dönüştürür giriş dizesi ve başka bir tersine çevirir bir yöntemi vardır.  

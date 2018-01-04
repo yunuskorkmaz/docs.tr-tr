@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b241e9a2dbe84833f43dadb2e979e5ee079706a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşur [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gittiğinizde. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topoloji olarak bilinir. Bu tür bir topoloji çeşitli uygulama türleri, özellikle, belgeler içinde gezinmek uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa ilgili diğer herhangi bir şey bilmenize gerek olmadan gidebilirsiniz.  
@@ -181,4 +182,4 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
- [Gezinti topolojilerine genel bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+ [Gezinti Topolojilerine Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

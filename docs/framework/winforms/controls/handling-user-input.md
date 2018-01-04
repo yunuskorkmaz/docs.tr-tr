@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c3da2c4661acdb358c38fb871de70fd470f7991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0102bab4fad3b224100ae054f572d9b07102fc15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-user-input"></a>Kullanıcı Girişini İşleme
 Bu konu, tarafından sağlanan ana klavye ve fare olaylarını açıklar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Bir olay işlenirken denetim yazarları korumalı kılmalıdır `On` *EventName* olaya bir temsilci ekleme yerine yöntemi. Olayları gözden geçirmek için bkz: [oluşturma olayları bir bileşenin](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
@@ -74,7 +75,7 @@ Bu konu, tarafından sağlanan ana klavye ve fare olaylarını açıklar <xref:S
  İçin tam kaynak kodu `FlashTrackBar` örnek için bkz: [nasıl yapılır: Windows Forms denetimi olduğunu gösteren ilerlemesi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimlerindeki olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- [Olay tanımlama](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
- [Olayları](../../../../docs/standard/events/index.md)  
- [Windows Forms uygulamasında kullanıcı girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)
+ [Windows Forms Denetimlerindeki Olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Olay Tanımlama](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
+ [Olaylar](../../../../docs/standard/events/index.md)  
+ [Windows Forms'ta Kullanıcı Girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)

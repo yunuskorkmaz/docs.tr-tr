@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b717fc5c09d625982a1b573c6c777b7fbdccc2b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8185adbf7d8979f03b3d0428fcc2ec0941c7999f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Nasıl Yapılır: Bir Uygulama için ToolStrip Oluşturucusunu Ayarlama
 Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> tek tek denetimleri veya tüm <xref:System.Windows.Forms.ToolStrip> uygulamanızda denetimleri.  
@@ -59,4 +60,4 @@ Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> t
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- [ToolStrip denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

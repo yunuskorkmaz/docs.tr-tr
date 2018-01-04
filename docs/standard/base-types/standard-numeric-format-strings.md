@@ -21,11 +21,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart sayısal biçim dizesi biçimi alır `Axx`, burada:  
@@ -353,8 +356,8 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.NumberFormatInfo>  
- [Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Nasıl yapılır: sayıyı baştaki sıfırlarla doldurur](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
- [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)
+ [Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)

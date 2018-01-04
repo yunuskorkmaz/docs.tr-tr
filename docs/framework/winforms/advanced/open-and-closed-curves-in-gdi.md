@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14da32848978299a0d0651596bbfbfe17c2e0d53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cde1aae6196ef8b773b8c072a42c700924f9c8cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+'da Açık ve Kapalı Eğriler
 İki eğri aşağıda gösterilmiştir: bir açık ve bir kapalı.  
@@ -62,6 +63,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Point?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Yollar oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Yollar Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

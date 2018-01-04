@@ -8,11 +8,11 @@ ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c9b527fafde8e221750fcda046bd7d17f251197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b81c9a96ff90d429e5457283bbafb4ec3e021473
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;Adres&gt; geçerli uzak dosya adresi değil.
 \<Adres > geçerli bir uzak dosya adresi değil. Geçerli bir adresi, protokol, yol ve dosya adını içermelidir.  
@@ -24,8 +24,7 @@ ms.lasthandoff: 11/21/2017
 -   Nerede başarısız olduğunu belirlemek için belirtilen adresi denetleyin ve gerekli bilgileri sağlayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [My.Computer.Network.UploadFile yöntemi](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [My.Computer.Network.DownloadFile yöntemi](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
- [Nasıl yapılır: bir dosyayı karşıya yüklemek](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [Nasıl yapılır: dosya indirme](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Visual Basic ile .NET Framework'te ağ işlemleri](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
+ [Nasıl Yapılır: Dosya İndirme](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+

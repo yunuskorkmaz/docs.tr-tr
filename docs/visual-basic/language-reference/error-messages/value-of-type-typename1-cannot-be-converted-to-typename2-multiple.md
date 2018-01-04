@@ -14,11 +14,11 @@ ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cc6138c7a7ca7d50a56fdd1f536e8d2dc3462a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f22516a5ca9626f43cb89745e67c66619cf9461f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Değer türü &#39; &lt;typename1&gt;&#39; dönüştürülemiyor &#39;&lt; TypeName2&gt;&#39; (Birden çok dosya başvurusu)
 Türündeki değeri '\<typename1 >' şekilde dönüştürülemeyen '\<typename2 >'. Tür uyuşmazlığı dosya başvurusu karıştırma nedeniyle olabilir '\<filepath1 >' projesindeki '\<projectname1 >' dosya başvuru '\<filepath2 >' projesindeki '\<projectname2 >'. Her iki derlemeleri özdeş ise, her iki başvuruları aynı konumdan; bu nedenle bu başvuruları değiştirmeyi deneyin.  
@@ -40,4 +40,4 @@ Türündeki değeri '\<typename1 >' şekilde dönüştürülemeyen '\<typename2 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)  
- [NIB nasıl yapılır: başvuru ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

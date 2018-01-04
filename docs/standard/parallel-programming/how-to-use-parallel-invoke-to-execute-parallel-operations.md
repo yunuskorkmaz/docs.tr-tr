@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a51f180a394c1baa2ecb0620279ea15c62e1edc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 942ba120fa5273f84ac3d0a51e276223de5f5484
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Nasıl yapılır: Paralel İşlemleri Yürütmek için Parallel.Invoke Kullanma
 Bu örnek kullanarak işlemleri paralel hale gösterilmiştir <xref:System.Threading.Tasks.Parallel.Invoke%2A> görev paralel Kitaplığı'nda. Üç işlemleri bir paylaşılan veri kaynağı üzerinde gerçekleştirilir. İşlemlerin hiçbiri kaynak değiştirdiğinden, bunlar kolay bir şekilde paralel olarak çalıştırılabilir.  
@@ -45,5 +48,5 @@ Bu örnek kullanarak işlemleri paralel hale gösterilmiştir <xref:System.Threa
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
- [Nasıl yapılır: bir görevi ve alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
+ [Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)  
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma
 Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan, isteğe bağlı olarak özel yetkilendirme ilkesi tarafından işlenen ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext> , sonra incelenmesi yetkilendirme kararları vermek için. Özel bir ilke, uygulama tarafından beklenen talep gelen belirteçleri talepleri dönüştürmek için kullanılabilir. Bu şekilde, uygulama katmanı tarafından sunulan farklı taleplerdeki ayrıntıları yalıtılmış farklı belirteç türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler. Bu konu, özel yetkilendirme ilkesi uygulama ve hizmet tarafından kullanılan ilkeleri koleksiyonunu o ilke eklemek nasıl gösterir.  
@@ -87,6 +88,6 @@ Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Nasıl yapılır: Beyanları](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Nasıl yapılır: bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Nasıl yapılır: Talepleri Karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)

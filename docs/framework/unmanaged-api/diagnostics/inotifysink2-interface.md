@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e73daf26a6d3620cde75a24d44c75b0f09d4d8cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0462d92d29328330422cd7e81b26f9e6d069df01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 Arabirimi
 Havuz bildirim için yöntemleri bildirir.  
@@ -32,15 +33,15 @@ Havuz bildirim için yöntemleri bildirir.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnSyncCallEnter yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Bir çağrı girerken çağrılır.|  
-|[OnSyncCallExit yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Bir çağrı çıkarken çağrılır.|  
-|[OnSyncCallOut yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Bir çağrı çıkışı olduğunda çağrılır.|  
-|[OnSyncCallReturn yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Bir çağrısı döndürüldüğünde çağrılan.|  
+|[OnSyncCallEnter Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|Bir çağrı girerken çağrılır.|  
+|[OnSyncCallExit Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|Bir çağrı çıkarken çağrılır.|  
+|[OnSyncCallOut Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|Bir çağrı çıkışı olduğunda çağrılır.|  
+|[OnSyncCallReturn Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|Bir çağrısı döndürüldüğünde çağrılan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Başlık:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Inotifyconnection2 arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [Inotifysource2 arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Tanılama sembol deposu arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+ [INotifyConnection2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
+ [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
+ [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve geçersiz bir değer girdiğinizde kullanıcıyı bilgilendirmek üzere görsel geribildirim sağlamak için bir stil tetikleyici dayalı özel bir doğrulama kuralı üzerinde.  
@@ -48,5 +49,5 @@ Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls
  Özel bir sağlamazsanız unutmayın <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bir doğrulama hatası olduğunda kullanıcıya görsel geribildirim sağlamak için varsayılan hata şablonu görüntülenir. "Veri doğrulama" bölümüne bakın [veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md) daha fazla bilgi için. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynak özelliği güncelleştirme sırasında oluşturulan özel durumları yakalar yerleşik doğrulama kuralı sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

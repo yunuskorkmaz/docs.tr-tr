@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd3e7e1d9efc5f96ffa044275fb1d76c490be0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77e0e5b162be875a7d37d32e4b5a08b19315b9ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Nasıl yapılır: ToolStripControlHost ile Bir Windows Forms Denetimini Kaydırma
 <xref:System.Windows.Forms.ToolStripControlHost>rastgele Windows Forms denetimlerini kullanarak barındırma sağlamak üzere tasarlanmış <xref:System.Windows.Forms.ToolStripControlHost> Oluşturucusu veya genişletme <xref:System.Windows.Forms.ToolStripControlHost> kendisi. Denetimi genişleterek sarmalamak daha kolay <xref:System.Windows.Forms.ToolStripControlHost> ve özellikleri ve sık kullanıma yöntemleri uygulama özellikleri ve yöntemleri denetiminin kullanılır. Denetim olaylarını da getirebilir <xref:System.Windows.Forms.ToolStripControlHost> düzeyi.  
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ToolStripControlHost>  
- [ToolStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip denetim mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip Teknoloiji özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

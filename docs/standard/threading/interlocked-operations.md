@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 122058b7e826e27fe6c60c5b07610f7c63e64f78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10c1188820b7a270baa0c51696974f93a8a2990
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interlocked-operations"></a>Birbirine Kenetlenmiş İşlemler
 <xref:System.Threading.Interlocked> Sınıfı birden çok iş parçacığı tarafından paylaşılan bir değişken erişimi eşitlemek yöntemler sağlar. Değişken paylaşılan bellekte ise iş parçacıkları farklı işlemler, bu mekanizma kullanabilirsiniz. Birbirine kenetlenmiş işlemler atomik — diğer bir deyişle, tüm işlem aynı değişkeni ınterlocked başka bir işlem tarafından kesilemez bir birimdir. Bu, bir iş parçacığı bir bellek adresi, ancak önce alter ve depolamak için Fırsat sahip bir değer yüklendikten sonra askıya alınabilir işletim sistemlerinde PreEmptive tarafından ile çoklu iş parçacığı kullanımı, önemlidir.  
@@ -68,4 +71,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.Interlocked>  
  <xref:System.Threading.Monitor>  
  [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

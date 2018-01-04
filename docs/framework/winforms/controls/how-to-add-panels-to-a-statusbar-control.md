@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b44b98aab49208bc53bbd48bca88ee72e9a5270d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 96fbfc86183afef047d210fbc13a0944f2b209b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Nasıl yapılır: Bir StatusBar Denetimine Panel Ekleme
 > [!IMPORTANT]
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  [Koleksiyon Düzenleyicisi iletişim kutusu](http://msdn.microsoft.com/en-us/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
- [Nasıl yapılır: durum çubuğu panellerinin boyutunu ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar denetimine genel bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+ [Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ [İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [StatusBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

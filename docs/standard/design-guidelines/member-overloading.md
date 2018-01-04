@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b54a99ab88e4cfa0569b2095a0be3750c91f244
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c84d70fb8c05dc295fc807c9a59085c47d0f455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="member-overloading"></a>Üye aşırı yüklemesi
 Üye aşırı yüklemesi, iki veya daha fazla üye, yalnızca sayısını veya parametre türünü farklılık gösterir ancak aynı ada sahip aynı türde oluşturmak anlamına gelir. Örneğin, aşağıdakileri de `WriteLine` yöntemi aşırı yüklenmiş:  
@@ -66,5 +69,5 @@ public static class Console {
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+ [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)

@@ -17,21 +17,22 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>Giriş (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Giriş çeşitli türleri için destek içerir. Bu giriş, metin, dokunma, fare, komutları, odak, dokunma, sürükle ve bırak ve dijital mürekkep içerir. Bu bölümde, WPF içinde girmek için ilgili konular açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Odağı genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Denetimleri ve FocusVisualStyle odakta için stil oluşturma](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [İzlenecek yol: İlk Touch uygulamanızı oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
  [Dijital Mürekkep](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetimleri](../../../../docs/framework/wpf/controls/index.md)  
-  [Olayları](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
+  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)

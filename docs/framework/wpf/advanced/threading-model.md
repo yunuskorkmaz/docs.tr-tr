@@ -29,11 +29,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0badceeb9ce085dc68fce2c59ec6c42877f2622
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Geliştiriciler iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden çok iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Birden çok iş parçacıklı programlar karmaşık ve hata ayıklama zor olduğundan, bunlar tek iş parçacıklı çözümleri bulunduğunda kaçınılmalıdır.  

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 468d0ca5f4afa4e84b69f58887672ffcf1a14fa6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 externalized ilke etkinlik
 Bu örnek varolan yürütme ExternalizedPolicy4 etkinlik nasıl sağladığını gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerini [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan. Bu etkinlik kullanarak açın ve varolan tüm WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 kural Windows Workflow Foundation, bir parçası olarak dahil edilen altyapısı okuyun [Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkId=166079). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]taşıma kuralları [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lütfen adresindeki Geçiş Kılavuzu okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

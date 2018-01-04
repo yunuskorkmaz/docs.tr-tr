@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b4ca08d8080c2116ce05634a544c91780869b165
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 967344db880347bde94330912bc5689c57b29921
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM öğesi düğümünde öznitelikleri kaldırılıyor
 Öznitelikleri kaldırmak için birçok yolu vardır. Bir öznitelik Koleksiyondan kaldırılacak tekniktir. Bunu yapmak için aşağıdaki adımlar gerçekleştirilir:  
@@ -47,4 +50,4 @@ ms.lasthandoff: 10/18/2017
  İle çağrıldığında bir <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> yöntemi bir özniteliği olmayan bir değer bulunduğundan bu özniteliğin değeri String.Empty için ayarlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

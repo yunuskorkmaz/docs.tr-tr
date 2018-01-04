@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f463c15855e267a4c246625a8d06e627852f48a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>Nasıl yapılır: Önbelleğe Alınan Öğeyi Fırça Olarak Kullanma
 Kullanım <xref:System.Windows.Media.BitmapCacheBrush> önbelleğe alınan öğeyi verimli bir şekilde yeniden sınıfı. Bir öğenin önbelleğe almak için yeni bir örneğini oluşturmak <xref:System.Windows.Media.BitmapCache> sınıfı ve öğenin atayın <xref:System.Windows.UIElement.CacheMode%2A> özelliği.  
@@ -36,4 +37,4 @@ Kullanım <xref:System.Windows.Media.BitmapCacheBrush> önbelleğe alınan öğe
  <xref:System.Windows.Media.BitmapCache>  
  <xref:System.Windows.Media.BitmapCacheBrush>  
  <xref:System.Windows.UIElement.CacheMode%2A>  
- [Nasıl yapılır: performans öğenin önbelleğe alarak işleme geliştirmek](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+ [Nasıl yapılır: Öğeyi Önbelleğe Alarak İşleme Performansını Artırma](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

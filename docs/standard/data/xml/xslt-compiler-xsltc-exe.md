@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b4ede7bdb8dad65e9cd959dfaa2f8956a877762
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT derleyici (xsltc.exe)
 XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur. Derlenmiş stil sayfası ardından doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
@@ -91,5 +94,5 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Nasıl yapılır: bir derlemeyi kullanarak XSLT dönüşümü gerçekleştirin](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+ [Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef9839029e1c60cbc0d713e8982baa5708a281f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0c4f894c3d9178f1dc32f7c99481a7daf565511
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modelinde HTML Kaynağına Erişme
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> Ve <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özellikleri <xref:System.Windows.Forms.WebBrowser> denetimi döndürmek geçerli belgenin HTML ilk görüntülendiği zaman var gibi. Ancak, yöntem ve özellik çağrılarını kullanarak sayfa değiştirirseniz <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> ve <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, bu değişiklikleri çağırdığınızda görünmez <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> ve <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. DOM için en güncel HTML kaynağını almak için çağırmalısınız <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> HTML öğesi özelliği.  
@@ -56,5 +57,5 @@ ms.lasthandoff: 11/21/2017
  Her zaman değerini test <xref:System.Windows.Forms.WebBrowser.Document%2A> bunu almak denemeden önce. Geçerli sayfa tamamlanmazsa yüklenirken, <xref:System.Windows.Forms.WebBrowser.Document%2A> veya bir veya daha fazla alt nesneleri başlatılmamış olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen HTML belgesi nesne modelini kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
- [WebBrowser denetimine genel bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
+ [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [WebBrowser Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb3e160392a903083386d9942f8e2cfe31ee89a4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f016404feeac47c5f77527b8baa68d70742d4763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma
 Bir şekli düz renk ile doldurma için oluşturun bir <xref:System.Drawing.SolidBrush> nesne ve daha sonra geçirin <xref:System.Drawing.SolidBrush> nesnesi dolgu yöntemlerinden birini bağımsız değişken olarak <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki örnek, bir elips dolgu rengi kırmızı ile gösterilmiştir.  
@@ -40,4 +41,4 @@ Bir şekli düz renk ile doldurma için oluşturun bir <xref:System.Drawing.Soli
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri doldurmak için fırça kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+ [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

@@ -17,33 +17,34 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30310b08f33d0f8c4b854635ba41565bce439c05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d3bd20a35f5d4b28f0ab4aaba02fdd19a3ee9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imaging-how-to-topics"></a>Görüntüleme ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] görüntülemek veya bit eşlem resimlerini değiştirmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XAML'de BitmapImage kullanın](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [Görüntüyü bir küçük resim olarak yükleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [Bir bit eşlem görüntüye bir dönüştürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Bir bit eşlem oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [Görsel bir görüntü dosyasına kodlayın](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [Yeni bir BitmapSource oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [BitmapSource nesneleri zincir](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [BitmapSource'u farklı PikselFormat'a dönüştürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [BitmapSource'u dizinli piksel biçimine Dönüştür](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [Kodlama ve kod çözme JPEG Resim](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [Kodlama ve BMP resmini kod çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [Kodlama ve kod çözme bir PNG resim](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [Kodlama ve kod çözme WDP görüntü](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [Kodlama ve kod çözme GIF resim](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [Kodlama ve kod çözme TIFF resim](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [Bir bit eşlem meta veri yazma](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [Bir bit eşlem meta verilerini okuma](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [XAML'de BitmapImage Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
+ [Bir Görüntüyü Küçük Resim Olarak Yükleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
+ [Bit Eşlem Görüntüsüne Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [Bir Görselden Bit Eşlem Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
+ [Görüntü Dosyası İçine Bir Görseli Kodlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
+ [Yeni bir BitmapSource Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
+ [BitmapSource Nesnelerini Birbirlerine Bağlayarak Zincir Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
+ [BitmapSource'u Farklı bir PixelFormat'a Dönüştürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [BitmapSource'u Dizinli Piksel Biçimine Dönüştürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [Bir JPEG Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
+ [Bir BMP Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
+ [Bir PNG Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
+ [Bir WDP Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
+ [Bir GIF Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
+ [Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
+ [Bit Eşleme Meta Veri Yazma](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
+ [Bit Eşlemden Meta Veriler Okuma](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Image>  
@@ -53,4 +54,4 @@ Bu bölümdeki konular, nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_w
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

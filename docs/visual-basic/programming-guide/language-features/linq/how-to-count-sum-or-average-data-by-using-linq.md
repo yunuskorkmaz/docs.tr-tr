@@ -24,18 +24,18 @@ ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a8c77804a9813d6127edcf4bd8371e0de2b36074
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbdc074bef64413b8b25709e48bba49f296ecb95
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Count, Sum veya Average Verisi (Visual Basic)
 Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları yürütün daha kolay hale getirir.  
   
  Aşağıdaki örnek, bir SQL Server veritabanı sorguları gerçekleştirir yeni bir uygulama oluşturmak gösterilmiştir. Örnek sayıları toplar ve sonuçları kullanarak ortalama `Aggregate` ve `Group By` yan tümceleri. Daha fazla bilgi için bkz: [Aggregate tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ve [Grup By yan tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -87,8 +87,8 @@ Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları y
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [AGGREGATE tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group By tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+ [Aggregate Yan Tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Group By Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)

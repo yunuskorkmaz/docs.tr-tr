@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a8c196ea15617b13abe8311f8501ab32fd320c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 132d41346e1c6dcec6ed39b3a9485f04fe8f845c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-animation-techniques-overview"></a>Özellik Animasyon Tekniklerine Genel Bakış
 Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, yerel animasyonları, saatler ve çerçeve başına animasyonları.  
@@ -66,10 +67,10 @@ Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, ye
   
 |Şeridi başlatılır kullanarak...|Örnek başına|Stil|Denetim şablonu|Veri şablonu|Örnek|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir<xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Film şeridi kullanarak bir özelliği animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir özelliği<xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Bir özellik değeri değiştiğinde animasyon tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir<xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>ve bir özelliği<xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard>ve<xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: veriler değiştiğinde animasyon tetikleme](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>yöntemi|Evet|Hayır|Hayır|Hayır|[Film şeridi kullanarak bir özelliği animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Hakkında daha fazla bilgi için <xref:System.Windows.Media.Animation.Storyboard> nesneleri bkz [film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
@@ -132,7 +133,7 @@ Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, ye
  Daha fazla bilgi için bkz: <xref:System.Windows.Media.CompositionTarget.Rendering> sayfası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Animasyon ve zamanlama sistemi özeti](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 558f4717e4046259ddb1596beef340ee89661911
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fa87d213bb37a43b04d13635e91c5056f54ece5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforautocomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 Belirtilen işlem için belirtilen işlem nedeniyle tamamlandı `OperationBehaviorAttribute.TransactionAutoComplete` ayarlamak üye `true`.  
@@ -27,5 +28,5 @@ Belirtilen işlem için belirtilen işlem nedeniyle tamamlandı `OperationBehavi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -17,17 +17,18 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41dd8700f6e6ad3ecf7343e9b1804fe5bba8e0b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 59df0c1f3ac82f4e353fe185319f5d4c00a29ff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox"></a>TextBox
 <xref:System.Windows.Controls.TextBox> Denetimi WPF uygulamalarında temel metin girişi için destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -41,4 +42,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF denetimleri galeri örneği](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [Metin kutusu stilleri ve şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+ [TextBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

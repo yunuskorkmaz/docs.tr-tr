@@ -14,11 +14,11 @@ ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2697b837a536b1b879196bd10843a2b76314747a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5bb11bc62e951339113f4b48e98e05362490ca1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main"></a>/main
 Sınıf veya içeren modülünü belirtir `Sub Main` yordamı.  
@@ -46,7 +46,7 @@ Sınıf veya içeren modülünü belirtir `Sub Main` yordamı.
   
 1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
   
-     Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+       
   
 2.  Tıklatın **uygulama** sekmesi.  
   
@@ -64,6 +64,5 @@ vbc t2.vb t3.vb /main:Test2
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [NIB: Visual Basic Hello, World sürümü](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

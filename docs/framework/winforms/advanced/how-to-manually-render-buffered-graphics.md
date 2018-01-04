@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fd742e7fa2b7870b8988e889a0df2b18a240bd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3a5d06da3a398782b0285fb55807df5832cf771
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme
 Kendi arabelleğe alınan grafikleri yönetiyorsanız, oluşturma ve grafik arabellekleri işlemek olması gerekir. Örneklerini oluşturabilirsiniz <xref:System.Drawing.BufferedGraphics> yüzeyleri ekranınızda çizim çağırarak ilişkili sınıfı <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> yöntemi. Bu yöntem oluşturur bir <xref:System.Drawing.BufferedGraphics> bir form veya denetim gibi belirli işleme yüzeyine ile ilişkili olan örneği. Oluşturduktan sonra bir <xref:System.Drawing.BufferedGraphics> örneği çizim grafik temsil eden aracılığıyla arabelleğine <xref:System.Drawing.BufferedGraphics.Graphics%2A> özelliği. Tüm grafik işlemleri gerçekleştirdikten sonra arabellek içeriğini ekrana çağırarak kopyalayabilirsiniz <xref:System.Drawing.BufferedGraphics.Render%2A> yöntemi.  
@@ -58,5 +59,5 @@ Kendi arabelleğe alınan grafikleri yönetiyorsanız, oluşturma ve grafik arab
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.BufferedGraphicsContext>  
  <xref:System.Drawing.BufferedGraphics>  
- [Çift arabelleğe alınan grafikleri](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Nasıl yapılır: arabelleğe alınan grafikleri elle yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)
+ [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)

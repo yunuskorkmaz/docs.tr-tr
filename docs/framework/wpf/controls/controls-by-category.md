@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26cd5c40a68b42b16fd2b7aacfcd84fdce483ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-by-category"></a>Kategoriye Göre Denetimler
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]denetimleri mantıksal olarak birkaç kategoride gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım desenlerine veya işlevselliğine sahip görmenize yardımcı olarak senaryonuz için uygun denetimi seçmek için kullanılabilir.  

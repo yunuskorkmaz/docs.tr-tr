@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>Kuyruklar Genel Bakış
 Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim. Sonraki bölümlerde Git nasıl, burada açıklanan queuing kavramları bildirilmiş hakkında ayrıntılar içine [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -83,13 +84,13 @@ Bu bölümde genel tanıtır ve temel kavramları kuyruğa alınmış iletişim.
  İsteğe bağlı olarak bir ileti hedef sıra yaptıktan sonra hizmet iletiyi işlemek sürekli olarak başarısız olabilir. Örneğin, bir uygulama geçici olarak bağlantısı kesilmiş veritabanı sıra bir işlem altında bir ileti okuma ve bir veritabanını güncelleştirme bulabilirsiniz. Bu durumda, işlem geri alındı, yeni bir işlem oluşturulur ve iletiyi sıradan yeniden okuyun. İkinci deneme başarılı veya başarısız. Hatanın nedenini bağlı olarak bazı durumlarda, ileti art arda uygulamaya teslim başarısız olabilir. Bu durumda, ileti "poison" kabul edilir Bu türden iletilere poison işleme uygulama tarafından okunabilir zararlı bir sıra taşınır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Teslim edilemeyen iletiler sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Geçici kuyruğa alınmış iletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Message Queuing (MSMQ) yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Teslim Edilemeyen İletiler Sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [Geçici Kuyruğa Alınmış İletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+ [Windows Communication Foundation'dan Message Queuing’e](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Message Queuing (MSMQ) Yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Message Queuing tümleştirme bağlama örnekleri](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Windows Communication Foundation'a ileti kuyruğa alma](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [İleti kuyruğa alma ile ileti güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Message Queuing’den Windows Communication Foundation'a](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

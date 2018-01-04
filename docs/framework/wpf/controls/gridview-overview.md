@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
 <xref:System.Windows.Controls.GridView>Görünüm modu için görüntüleme modlarından biridir bir <xref:System.Windows.Controls.ListView> denetim. <xref:System.Windows.Controls.GridView> Sınıfı ve bunun destekleyici sınıfları siz ve kullanıcılarınız öğesi, genellikle düğmeleri etkileşimli sütun üst bilgileri olarak kullanan bir tabloda koleksiyonları görüntülemek etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını özetler.  
@@ -147,5 +148,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
  <xref:System.Windows.Controls.ViewBase>  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Üstbilgi Tıklatıldığında GridView sütununu sıralama](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [Üst Bilgiye Tıklandığında GridView Sütununu Sıralama](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a17eba2f930fda06d643d78c73c117e89ae86928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4e1e123b8c8440b766e5b8903170c8cb392f154a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrıları yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi halde bir iş parçacığı başka bir iş parçacığı yaptıklarını yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Üyeleri böyle kesintilerden korunan bir sınıf, iş parçacığı denir.  
@@ -76,7 +79,7 @@ Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağ
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [İş parçacıkları ve iş parçacığı oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
- [Eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [SyncLock deyimi](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [lock deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md)
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
+ [Eşitleme Temellerine Genel Bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [SyncLock Deyimi](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+ [lock Deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md)

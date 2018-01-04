@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae36d1897b452767fae5f48bd6501c18f9405801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c6b31aacfb95452cc86b5359cbec4946e85eac4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
 Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uygulamalarla birlikte çalışabilirler. Aşağıdaki bölümlerde Windows Forms uygulamaları ve denetimleri destekleyen ve değil destekleyen senaryoları ve yapılandırmaları açıklanmaktadır.  
@@ -66,13 +67,13 @@ Windows Forms uygulamaları ve denetimleri bazı uyarılar ile yönetilmeyen uyg
 -   Her Windows formunu yeni bir iş parçacığı üzerinde görüntüleyin. Daha fazla bilgi için bkz: [nasıl yapılır: Destek COM birlikte çalışma görüntüleme her Windows formunda ITS kendi iş parçacığı tarafından](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms ve yönetilmeyen uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [.NET Framework uygulamalarında COM birlikte çalışabilirliği](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
  [COM birlikte çalışabilirliği örnekleri](http://msdn.microsoft.com/en-us/09c38567-6380-4d70-848a-e896a4ca05f4)  
- [Aximp.exe (Windows Forms ActiveX denetim içeri Aktarıcı)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
- [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [COM için derlemeyi paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
- [Derlemeleri COM ile kaydetme](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Nasıl yapılır: ShowDialog yöntemi ile bir Windows formunu görüntüleyerek COM birlikte çalışmasını destekleme](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
- [Nasıl yapılır: her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışmasını destekleme](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+ [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [COM için Bütünleştirilmiş Kod Paketleme](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
+ [Bütünleştirilmiş Kodları COM ile Kaydetme](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Nasıl yapılır: ShowDialog Yöntemi ile bir Windows Formunu Görüntüleyerek COM Birlikte Çalışmasını Destekleme](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

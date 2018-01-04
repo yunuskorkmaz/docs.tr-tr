@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f5eba773a290f1100fcea411919c5c16558e01ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c4c2c3b9cabb630b5762fdc49f6cb62eef28f71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fromtoby-animations-overview"></a>Gelen/İçin/Göre Animasyonlarına Genel Bakış
 Bu konuda From/To/By animasyonları bağımlılık özellikleri animasyon için nasıl kullanılacağını açıklar. From/To/By animasyon iki değer arasında bir geçiş oluşturur.  
@@ -153,9 +154,9 @@ Bu konuda From/To/By animasyonları bağımlılık özellikleri animasyon için 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Animation.Timeline>  
  <xref:System.Windows.Media.Animation.Storyboard>  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Yol animasyonlarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Özel Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Yol Animasyonlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [Özel Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)  
  [Öğesinden, için ve animasyon hedef değerleri örneği](http://go.microsoft.com/fwlink/?LinkID=159988)

@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97e853bc74babca5b5400953b63714a13419fcaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d689a664f5bad19a70a8d635beb1f25f33da6ff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager Yöntemi
 Ana uygulama etki alanı oluşturulduğunu size bildirir.  
@@ -74,4 +75,4 @@ HRESULT SetAppDomainManager (
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.AppDomain>  
  <xref:System.AppDomainManager>  
- [Ihostcontrol arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+ [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

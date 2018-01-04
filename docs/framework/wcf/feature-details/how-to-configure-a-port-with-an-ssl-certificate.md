@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc4d6e3bb20cbe005ad7ce21ed37fe57c5d3466b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Kendini barındıran oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti ile <xref:System.ServiceModel.WSHttpBinding> bu kullanımları taşıma güvenliği sınıfı, bir bağlantı noktası bir X.509 sertifikası ile yapılandırmanız da gerekir. Kendini barındıran hizmet oluşturuyorsanız değil, hizmetiniz Internet Information Services (IIS) üzerinde barındırabilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -140,4 +141,4 @@ Kendini barındıran oluştururken [!INCLUDE[indigo1](../../../../includes/indig
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+ [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

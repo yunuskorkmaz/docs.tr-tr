@@ -4,11 +4,14 @@ description: "Kaldırın ve kapsayıcılar ve Azure cloud mevcut uygulamalarına
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: b7ef8c0e68eee3b2b4247454929e92fb175cae0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e1a04a0d8ed151337e00c8147756644dfc9075a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Azure Bulut ve Windows kapsayıcıları (v1.0) ile varolan .NET uygulamaları modernize  
 
@@ -197,4 +200,4 @@ Her iki örnek uygulamaları modernized koduyla ikinci bir sürüme sahip ve han
 Geliştirme ve varolan .NET web uygulamaları modernizing seçeneklerinizi anlamanıza yardımcı olması için bu kılavuzu yazdığımız. Kılavuzu ve ilgili örnek uygulamalar artmaktadır. Geri bildirimlerinizden memnuniyet duyacağız! Bu kılavuzda nasıl daha yararlı olabileceği hakkında yorumlar varsa, lütfen göndermenize [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
-[Sonraki](lift-and-shift-existing-apps-azure-iaas.md)
+[Next](lift-and-shift-existing-apps-azure-iaas.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56237bccb2bf61994c6114fa01d15c254267ca20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73c34f8edfa735e361bf294f08cefd285be3e898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojilerindeki, öğeleri ve bileşenleri, burada geliştiriciler işleme veya uygulamanın davranışını etkilemek için ağacında nesne düğümleri doğrudan düzenlersiniz ağaç yapısında düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Ayrıca birkaç ağaç yapısı metaphors program öğeleri arasında ilişki tanımlamak için kullanır. Çoğunlukla WPF geliştiriciler uygulama kodu oluşturma veya nesne ağaç benzetimini kavramsal olarak düşünmek sırasında XAML'de uygulama bölümlerini tanımladığınız ancak olur belirli API'yi çağıran veya bunu yerine bazı genel yapmak için belirli biçimlendirme kullanma XML DOM nesnesi ağaç işleme API, gibi kullanabilir WPF kullanıma sunan bir ağaç benzetimini görünümü sağlayan iki yardımcı sınıfları <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>. Bu aynı ağaçları belirli anahtar WPF özellikleri davranışını anlamak için yararlıdır çünkü koşulları görsel ağaç ve mantıksal ağacının WPF belgelerinde de kullanılır. Bu konu ne görsel ağaç ve mantıksal ağacının temsil eden tanımlar, ne tür ağaçları bir genel nesne ağaç kavram ilişkili açıklar ve tanıtır <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -97,8 +98,8 @@ Birçok teknolojilerindeki, öğeleri ve bileşenleri, burada geliştiriciler i�
  Bununla birlikte, kaynak arama hemen mantıksal ağacının genişletebilirsiniz. Uygulama biçimlendirme için kaynak arama sonra ileriye doğru uygulama düzeyi kaynak sözlükleri ve ardından statik özellikler veya anahtarları başvurulan tema destek ve sistem değerleri devam edebilirsiniz. Kaynak başvuruları dinamik ise Temalar kendileri de tema mantıksal ağacının dışında sistem değerler başvuruda bulunabilir. Kaynak sözlüklerindeki ve arama mantığı hakkında daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Bir nesne ağacındaki nesne öğelerinin başlatılması](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Nesne Ağacında Olmayan Nesne Öğelerini Başlatma](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

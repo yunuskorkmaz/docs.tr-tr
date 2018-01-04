@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15de43cc83e92b781e44da703353bec98dbc2c6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
 Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  
@@ -92,14 +93,14 @@ Bu konu içinde kuyruğa alınan iletişim için önerilen yöntemler sağlar [!
 -   XML serileştirilmesi ile bilinen türü kullanılarak belirtebilirsiniz `KnownTypes` özniteliği [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) sonra XML iletisini seri durumdan nasıl belirlemek için kullanılan öğesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Nasıl yapılır: WCF uç noktaları iletileri kuyruğa alınan](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Nasıl yapılır: WCF uç noktaları iletileri Exchange ve Message Queuing uygulamaları](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Kuyruğa alınmış iletileri bir oturumda gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [Bir işlemde toplu ileti işleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [İleti aktarımı hatalarını işlemek için teslim edilemeyen iletiler sırası kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Windows Vista, Windows Server 2003 ve Windows XP'de kuyruğa alma özelliği farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Taşıma Güveliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [İleti Güveliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
- [Kuyruğa Alınan iletilerde sorun giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Oturumda Kuyruğa Alınmış İletileri Gruplandırma](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Bir İşlemde Toplu İleti İşleme](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [Kuyruğa Alınan İletilerde Sorun Giderme](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

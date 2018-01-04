@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c76bd11ff89349d5e6e3360be86d299c66723d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 97f347708a66db9a3d1d90dae8414a83b54bd75f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicechannellifetime"></a>System.ServiceModel.ServiceChannelLifetime
 System.ServiceModel.ServiceChannelLifetime  
@@ -27,5 +28,5 @@ System.ServiceModel.ServiceChannelLifetime
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

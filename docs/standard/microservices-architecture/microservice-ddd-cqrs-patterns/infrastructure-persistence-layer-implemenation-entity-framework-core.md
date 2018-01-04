@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Enti
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 508d60d73eb7c0f0cc2cc909613cc4f8712b4aba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama
 
@@ -46,11 +49,11 @@ Bir DDD açısından bakıldığında, önemli bir özelliği EF, POCO olarak EF
 
 DDD desenleri etki alanı davranışını ve varlık sınıfı kendisini içinde kurallar, invariants, doğrulama ve kurallardan herhangi bir koleksiyonu erişirken denetleyebilirsiniz şekilde kapsülleyen. Bu nedenle, bu varlık veya değer nesnelerini alt koleksiyonlar genel erişime izin vermek için DDD iyi bir uygulama değil. Bunun yerine, bu durum oluştuğunda nasıl ve ne zaman alanları ve özellik koleksiyonları güncelleştirilebilir, denetleme yöntemleri ve hangi davranışı ve Eylemler gerçekleşeceğini kullanıma sunmak istediğiniz.
 
-EF çekirdek 1.1 Bu DDD gereksinimleri karşılamak için düz alanları varlıklarınızı ortak ve özel ayarlayıcılar özelliklerle yerine de olabilir. Bir varlık alanı dışarıdan erişilebilir olmasını istemiyorsanız, yalnızca özellik veya alan bir özellik yerine oluşturabilirsiniz. Temizleyici bu yaklaşımı tercih ederseniz, özel ayarlayıcılar kullanmaya gerek yoktur.
+EF çekirdek 1.1 itibaren bu DDD gereksinimleri karşılamak için düz alanları varlıklarınızı ortak özellikleri yerine de olabilir. Bir varlık alanı dışarıdan erişilebilir olmasını istemiyorsanız, yalnızca özellik veya alan bir özellik yerine oluşturabilirsiniz. Özel özellik ayarlayıcıları de kullanabilirsiniz.
 
-Benzer şekilde, şimdi salt okunur koleksiyonlara IEnumerable yazılan ortak bir özelliğini kullanarak erişebilirsiniz&lt;T&gt;, koleksiyon için bir özel alan üye tarafından desteklenen (ister listesini&lt;&gt;) içinde EF üzerinde kalıcılığını dayanır varlık. Entity Framework'ün önceki sürümlerini gerekli ICollection desteklemek için koleksiyon özelliklerini&lt;T&gt;, üst varlık sınıfı kullanarak herhangi bir geliştirici ekleme veya onun özellik koleksiyonları öğeleri kaldırmak istediğinizi. Bu olasılığı DDD önerilen düzenleri karşı olacaktır.
+Benzer şekilde, şimdi salt okunur koleksiyonlara olarak yazılan ortak bir özelliğini kullanarak erişebilirsiniz `IReadOnlyCollection<T>`, koleksiyon için bir özel alan üye tarafından desteklenen (gibi bir `List<T>`) varlığınızdaki üzerinde EF kalıcılığını kullanır. Entity Framework'ün önceki sürümlerini koleksiyon özellikleri desteklemek için gereken `ICollection<T>`, üst varlık sınıfı kullanarak herhangi bir geliştirici ekleme veya onun özellik koleksiyonları aracılığıyla öğeleri kaldırmak istediğinizi. Bu olasılığı DDD önerilen düzenleri karşı olacaktır.
 
-Aşağıdaki kod örneğinde gösterildiği gibi bir salt okunur IEnumerable nesnesi gösterme sırasında özel bir koleksiyon kullanabilirsiniz:
+Salt okunur gösterme sırasında özel bir koleksiyonunu kullanabilirsiniz `IReadOnlyCollection<T>` nesnesi, aşağıdaki kod örneğinde gösterildiği gibi:
 
 ```csharp
 public class Order : Entity
@@ -58,9 +61,9 @@ public class Order : Entity
     // Using private fields, allowed since EF Core 1.1
     private DateTime _orderDate;
     // Other fields ...
-    private readonly List<OrderItem> _orderItems;
 
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
+    private readonly List<OrderItem> _orderItems; 
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
 
@@ -70,40 +73,52 @@ public class Order : Entity
     }
 
     public void AddOrderItem(int productId, string productName,
-        decimal unitPrice, decimal discount,
-        string pictureUrl, int units = 1)
+                             decimal unitPrice, decimal discount,
+                             string pictureUrl, int units = 1)
     {
         // Validation logic...
-        var orderItem = new OrderItem(productId, productName, unitPrice, discount,
-            pictureUrl, units);
+
+        var orderItem = new OrderItem(productId, productName, 
+                                      unitPrice, discount,
+                                      pictureUrl, units);
         _orderItems.Add(orderItem);
     }
 }
 ```
 
-OrderItems özelliği yalnızca salt okunur olarak listesini kullanarak erişilebilir olduğunu unutmayın&lt;&gt;. AsReadOnly(). Bu yöntemi özel listenin etrafında salt okunur bir sarmalayıcı oluşturur, böylece dış güncelleştirmeleri karşı korunur. Yeni bir koleksiyondaki tüm öğeleri kopyalamak olmadığından ToList yöntemi kullanmaktan daha ucuz; Bunun yerine, sarmalayıcı örneği için tek bir yığın ayırma işlemi gerçekleştirir.
+Unutmayın `OrderItems` özelliği yalnızca erişilebilir salt okunur kullanarak olarak `IReadOnlyCollection<OrderItem>`. Normal dış güncelleştirmeleri karşı korumalı şekilde bu tür salt okunurdur. 
 
-EF çekirdek etki alanı modeli contaminating olmadan fiziksel veritabanı etki alanı modeline eşlemek için bir yol sağlar. Eşleme eylem Kalıcılık katmanında uygulanır saf .NET POCO kod, demektir. Bu eşleme eylemde alanları veritabanı eşleme yapılandırmanız gerekir. Bir OnModelCreating metodunun aşağıdaki örnekte vurgulanmış kodu EF OrderItems özelliği aracılığıyla kendi alana erişmek için çekirdek söyler.
+EF çekirdek "etki alanı modeli contaminating olmadan" fiziksel veritabanı etki alanı modeline eşlemek için bir yol sağlar. Eşleme eylem Kalıcılık katmanında uygulanır saf .NET POCO kod, demektir. Bu eşleme eylemde alanları veritabanı eşleme yapılandırmanız gerekir. Bir OnModelCreating metodunun aşağıdaki örnekte vurgulanmış kodu EF OrderItems özelliği aracılığıyla kendi alana erişmek için çekirdek söyler.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    // ...
-    modelBuilder.Entity<Order>(ConfigureOrder);
-    // Other entities ...
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    // Other configuration ...
-    var navigation = orderConfiguration.Metadata.
-    FindNavigation(nameof(Order.OrderItems));
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
-    // Other configuration ...
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        // Other configuration
+
+        var navigation = 
+              orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        //EF access the OrderItem collection property through its backing field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        // Other configuration
+    }
 }
 ```
 
-Alanları yerine özellikleri kullandığınızda, yalnızca, bir liste sahipmiş ÖgeSipariş varlık kalıcı&lt;ÖgeSipariş&gt; özelliği. Ancak, sıralı olarak yeni öğeler eklemek için tek bir erişimci (AddOrderItem yöntemi) gösterir. Sonuç olarak, davranışı ve veri birbirine bağlıdır ve etki alanı modeli kullanan herhangi bir uygulama kodu tutarlı olur.
+Alanları yerine özellikleri kullandığınızda, yalnızca, bir liste sahipmiş ÖgeSipariş varlık kalıcı&lt;ÖgeSipariş&gt; özelliği. Ancak, tek bir erişimci sunan `AddOrderItem` siparişe yeni öğeler eklemek için yöntem. Sonuç olarak, davranışı ve veri birbirine bağlıdır ve etki alanı modeli kullanan herhangi bir uygulama kodu tutarlı olur.
 
 ## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Entity Framework Çekirdek ile özel depoları uygulama
 
@@ -116,7 +131,6 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     public class BuyerRepository : IBuyerRepository
     {
         private readonly OrderingContext _context;
-
         public IUnitOfWork UnitOfWork
         {
             get
@@ -124,34 +138,31 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
                 return _context;
             }
         }
-    }
 
-    public BuyerRepository(OrderingContext context)
-    {
-        if (context == null)
+        public BuyerRepository(OrderingContext context)
         {
-            throw new ArgumentNullException(
-                nameof(context));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        _context = context;
-    }
 
-    public Buyer Add(Buyer buyer)
-    {
-        return _context.Buyers.Add(buyer).Entity;
-    }
+        public Buyer Add(Buyer buyer)
+        {
+            return _context.Buyers.Add(buyer).Entity; 
+        }
 
-    public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
-    {
-        var buyer = await _context.Buyers.Include(b => b.Payments)
-            .Where(b => b.FullName == BuyerIdentityGuid)
-            .SingleOrDefaultAsync();
-        return buyer;
+        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        {
+            var buyer = await _context.Buyers
+                .Include(b => b.Payments)
+                .Where(b => b.FullName == BuyerIdentityGuid)
+                .SingleOrDefaultAsync();
+
+            return buyer;
+        }
     }
 }
 ```
 
-IBuyerRepository arabirimi etki alanı modeli katmandan geldiğini unutmayın. Ancak, depo uygulaması Kalıcılık ve altyapı katman yapılır.
+IBuyerRepository arabirimi bir sözleşme olarak etki alanı modeli katmandan geldiğini unutmayın. Ancak, depo uygulaması Kalıcılık ve altyapı katman yapılır.
 
 Oluşturucu bağımlılık ekleme kullanılarak aracılığıyla EF DbContext gelir. Varsayılan ömrü (ServiceLifetime.Scoped) (aynı zamanda açıkça hizmetleriyle ayarlanabilir. IOC container sayesinde aynı HTTP istek kapsamı içinde birden çok depoları arasında paylaşılan AddDbContext&lt;&gt;).
 
@@ -185,7 +196,7 @@ DbContext doğrudan kullanıyorsanız, olurdu tek seçim için birim testleri ta
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>IOC kapsayıcısında EF DbContext ve IUnitOfWork örneği ömrü
 
-(Bir IUnitOfWork nesne olarak gösterilen) DbContext nesnesi aynı HTTP istek kapsamı içinde birden çok depoları arasında paylaşılan gerekebilir. Yürütülen işlem birden çok toplamalar veya yalnızca gerekir dağıttığınızda Örneğin, bu durum geçerlidir birden çok havuz örnekleri kullandığından. IUnitOfWork arabirimi EF türü etki alanının parçası olduğunu belirttiğinizden önemlidir.
+(Bir IUnitOfWork nesne olarak gösterilen) DbContext nesnesi aynı HTTP istek kapsamı içinde birden çok depoları arasında paylaşılan gerekebilir. Yürütülen işlem birden çok toplamalar veya yalnızca gerekir dağıttığınızda Örneğin, bu durum geçerlidir birden çok havuz örnekleri kullandığından. IUnitOfWork arabirimi EF çekirdek türü, etki alanı katmanının bir parçası olduğunu belirttiğinizden önemlidir.
 
 Bunu yapmak için DbContext nesnesinin örneği hizmet yaşam süresi ayarlamak için ServiceLifetime.Scoped sahip olması gerekir. Ne zaman bir DbContext ile kayıt hizmetleri varsayılan yaşam süresi budur. AddDbContext, IOC kapsayıcısında ASP.NET çekirdek Web API projenizdeki haline dosyasının ConfigureServices yönteminden. Aşağıdaki kod bunu göstermektedir.
 
@@ -199,16 +210,16 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     }).AddControllersAsServices();
 
     services.AddEntityFrameworkSqlServer()
-    .AddDbContext<OrderingContext>(options =>
-    {
-        options.UseSqlServer(Configuration["ConnectionString"],
-        sqlop => sqlop.MigrationsAssembly(typeof(Startup).GetTypeInfo().
-        Assembly.GetName().Name));
-    },
-    ServiceLifetime.Scoped // Note that Scoped is the default choice
-    // in AddDbContext. It is shown here only for
-    // pedagogic purposes.
-    );
+      .AddDbContext<OrderingContext>(options =>
+      {
+          options.UseSqlServer(Configuration["ConnectionString"],
+                               sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+                                                                                    Assembly.GetName().Name));
+      },
+      ServiceLifetime.Scoped // Note that Scoped is the default choice
+                             // in AddDbContext. It is shown here only for
+                             // pedagogic purposes.
+      );
 }
 ```
 
@@ -252,54 +263,70 @@ Veri ek açıklamaları açısından bir DDD daha kullanışsız bir yol olduğu
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent API ve OnModelCreating yöntemi
 
-Kuralları ve eşlemelerini değiştirmek için belirtildiği gibi DbContext sınıfında OnModelCreating metodunun kullanabilirsiniz. Aşağıdaki örnek, biz eShopOnContainers içinde sıralama mikro hizmet olarak bunu nasıl gösterir.
+Kuralları ve eşlemelerini değiştirmek için belirtildiği gibi DbContext sınıfında OnModelCreating metodunun kullanabilirsiniz. 
+
+Sıralama mikro hizmet eShopOnContainers içinde açık eşleme ve yapılandırma, gerekli olduğunda, aşağıdaki kodda gösterildiği gibi uygular.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    //Other entities
-    modelBuilder.Entity<OrderStatus>(ConfigureOrderStatus);
-    //Other entities
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    orderConfiguration.ToTable("orders", DEFAULT_SCHEMA);
-    orderConfiguration.HasKey(o => o.Id);
-    orderConfiguration.Property(o => o.Id).ForSqlServerUseSequenceHiLo("orderseq", DEFAULT_SCHEMA);
-    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    orderConfiguration.Property<string>("Street").IsRequired();
-    orderConfiguration.Property<string>("State").IsRequired();
-    orderConfiguration.Property<string>("City").IsRequired();
-    orderConfiguration.Property<string>("ZipCode").IsRequired();
-    orderConfiguration.Property<string>("Country").IsRequired();
-    orderConfiguration.Property<int>("BuyerId").IsRequired();
-    orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-    orderConfiguration.Property<int>("PaymentMethodId").IsRequired();
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-    var navigation =
-    orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-    // DDD Patterns comment:
-    // Set as Field (new since EF 1.1) to access
-    // the OrderItem collection property as a field
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+            orderConfiguration.HasKey(o => o.Id);
 
-    orderConfiguration.HasOne(o => o.PaymentMethod)
-        .WithMany()
-        .HasForeignKey("PaymentMethodId")
-        .OnDelete(DeleteBehavior.Restrict);
-        orderConfiguration.HasOne(o => o.Buyer)
-        .WithMany()
-        .HasForeignKey("BuyerId");
-        orderConfiguration.HasOne(o => o.OrderStatus)
-        .WithMany()
-        .HasForeignKey("OrderStatusId");
+            orderConfiguration.Ignore(b => b.DomainEvents);
+
+            orderConfiguration.Property(o => o.Id)
+                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+            //Address Value Object persisted as owned entity type supported since EF Core 2.0
+            orderConfiguration.OwnsOne(o => o.Address);
+
+            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
+            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
+            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
+            orderConfiguration.Property<string>("Description").IsRequired(false);
+
+            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+            
+            // DDD Patterns comment:
+            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+            orderConfiguration.HasOne<PaymentMethod>()
+                .WithMany()
+                .HasForeignKey("PaymentMethodId")
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            orderConfiguration.HasOne<Buyer>()
+                .WithMany()
+                .IsRequired(false)
+                .HasForeignKey("BuyerId");
+
+            orderConfiguration.HasOne(o => o.OrderStatus)
+                .WithMany()
+                .HasForeignKey("OrderStatusId");
+    }
 }
 ```
 
-Aynı OnModelCreating metodunun içinde tüm Fluent API eşlemelerini ayarlayabilir, ancak bu örnekte gösterildiği gibi bu kodu bölüm ve varlık başına birden çok submethods olması önerilir. Özellikle büyük modelleri için bu bile farklı varlık türlerinin yapılandırılması için ayrı bir kaynak dosyaları (statik sınıflar) sağlamak için önerilir olabilir.
+Aynı OnModelCreating metodunun içinde tüm Fluent API eşlemelerini ayarlayabilir, ancak bu örnekte gösterildiği gibi bu kodu bölüm ve birden çok yapılandırma sınıfları, varlık, her bir sahip önerilir. Özellikle özellikle büyük modelleri için farklı varlık türlerinin yapılandırılması için ayrı yapılandırma sınıfları olması önerilir.
 
-Açık örnekte kodudur. Ancak, aynısını elde etmek yazmak için gereken gerçek bir kod çok daha küçük olacak şekilde EF çekirdek kuralları otomatik olarak bu çoğunu yapın.
+Örnek kodda birkaç açık bildirimler ve eşleme gösterir. Sizin durumunuzda gereken gerçek bir kod küçük olabilir ancak EF çekirdek kuralları bu eşlemeleri çoğunu otomatik olarak, bunun.
+
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF çekirdek Hi/Lo algoritması
 
@@ -319,46 +346,114 @@ EF çekirdek destekleyen [HiLo](http://stackoverflow.com/questions/282099/whats-
 
 ### <a name="mapping-fields-instead-of-properties"></a>Özellikleri yerine alanlarını eşleme
 
-Sütunları alanlarına eşlemeleri EF çekirdek 1.1 özelliğiyle varlık sınıfında herhangi bir özelliği kullanmamayı ve yalnızca bir tablodaki sütunları alanlarla eşlemek için mümkündür. Yaygın kullanımı söz konusu varlığı erişilecek gerekmez özel alanlar herhangi bir iç durumu için olacaktır.
+Bu özellik ile EF çekirdek 1.1 sürümünden itibaren kullanılabilir, doğrudan sütunları alanlarına eşleyebilirsiniz. Varlık sınıfı özellikleri kullanmamayı ve yalnızca bir tablodaki sütunları alanlarla eşlemek için mümkündür. Yaygın kullanımı söz konusu varlığı erişilecek gerekmez özel alanlar herhangi bir iç durumu için olacaktır. 
 
-EF 1.1 ilgili bir özellik olmayan bir alan veritabanında bir sütunun eşlemek için bir yol destekler. Tek alanlarla veya bir listesi gibi koleksiyonlar ile de bunu yapabilirsiniz&lt; &gt; alan. Bu noktaya belirtildiği daha önce etki alanı modeli sınıflarını modelleme ele, ancak bu eşlemenin önceki kodda vurgulanan PropertyAccessMode.Field yapılandırmasıyla nasıl gerçekleştirildiğini burada görebilirsiniz.
+Bu tek alanları veya Ayrıca koleksiyonları ile gibi yapabileceğiniz bir `List<>` alan. Bu noktaya daha önce etki alanı modeli sınıflarını modelleme ele, ancak bu eşlemenin ile nasıl gerçekleştirildiğini burada görebilirsiniz değinilen `PropertyAccessMode.Field` önceki kodda vurgulanan yapılandırma.
 
-### <a name="using-shadow-properties-in-value-objects-for-hidden-ids-at-the-infrastructure-level"></a>Altyapı düzeyinde gizli kimlikleri için değer nesnelerini gölge özelliklerini kullanma
+### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>EF çekirdek Gölge Özellikleri'ni kullanarak altyapı düzeyinde gizli
 
 EF çekirdek gölge özelliklerinde varlık sınıfı modelinizde var olmayan özelliklerdir. Bu özelliklerin durumları ve değerlerini tamamen içinde tutulur [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) altyapı düzeyinde sınıfı.
 
-Bir DDD açısından bakıldığında, gölge gölge özelliği birincil anahtarı olarak kimliği gizleme tarafından değeri nesneleri uygulamak için kolay bir yol özelliklerdir. Bir değer nesnesi kimliği olmaması gereken bu önemlidir, çünkü (en azından, kimliği etki alanı modeli katmanında değer nesnelerini şekillendirme zaman sahip olmamalıdır). Burada EF çekirdek geçerli sürümü itibariyle EF Çekirdek değer nesneler olarak uygulamak için bir yol yok noktasıdır [karmaşık türler](https://msdn.microsoft.com/library/jj680147(v=vs.113).aspx), içinde EF mümkün 6.x. Şu anda bir değer nesnesi bir gölge özelliği ayarlamak, gizli bir kimliği (birincil anahtar) sahip bir varlık olarak uygulamak gereken nedeni budur.
 
-İçinde gördüğünüz [adresi değer nesnesi](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs) eShopOnContainers içinde adresi modelinde, bir kimlik görmezsiniz:
+## <a name="implementing-the-specification-pattern"></a>Belirtimi düzeni uygulama
+
+Önceki tasarım bölümünde sunulan gibi burada bir sorgu tanımını sıralama ve mantıksal disk belleği isteğe bağlı koyabilirsiniz yer olarak tasarlanmış bir Domain-Driven tasarım deseni (tam adını sorgu belirtimi düzeni olur) belirtimi düzeni gereklidir. Belirtimi düzeni sorguda bir nesne tanımlar. Örneğin, bazı ürünler için arayan bir disk belleğine alınan sorgu kapsüllemek için gerekli giriş parametreleri (pageNumber, pageSize, filtre, vb.) alır PagedProduct belirtimi oluşturabilirsiniz. Sonra tüm deponun yöntemi (genellikle bir List() aşırı), bir ISpecification kabul ve bu belirtimine dayalı beklenen sorgusunu çalıştırın.
+
+Bir genel belirtimi arabirimi, aşağıdaki kod örneğidir [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb). 
 
 ```csharp
-public class Address : ValueObject
+// GENERIC SPECIFICATION INTERFACE
+// https://github.com/dotnet-architecture/eShopOnWeb 
+
+public interface ISpecification<T>
 {
-    public String Street { get; private set; }
-    public String City { get; private set; }
-    public String State { get; private set; }
-    public String Country { get; private set; }
-    public String ZipCode { get; private set; }
-    //Constructor initializing, etc
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
 }
 ```
 
-Ancak perde arkasında biz böylece EF çekirdek bu veriler veritabanı tablolarındaki kalıcı bir kimliği sağlamanız gerekir. ConfigureAddress yönteminde bunu [OrderingContext.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Infrastructure/OrderingContext.cs) biz EF altyapı kodu ile etki alanı modeli pollute olmayan şekilde altyapı düzeyinde sınıfı.
+Ardından, bir genel belirtimi temel sınıfın aşağıdaki uygulamasıdır.
 
 ```csharp
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
+// https://github.com/dotnet-architecture/eShopOnWeb
+ 
+public abstract class BaseSpecification<T> : ISpecification<T>
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    // DDD pattern comment:
-    // Implementing the Address ID as a shadow property, because the
-    // address is a value object and an identity is not required for a
-    // value object
-    // EF Core just needs the ID so it can store it in a database table
-    // See: https://docs.microsoft.com/ef/core/modeling/shadow-properties
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    public BaseSpecification(Expression<Func<T, bool>> criteria)
+    {
+        Criteria = criteria;
+    }
+    public Expression<Func<T, bool>> Criteria { get; }
+
+    public List<Expression<Func<T, object>>> Includes { get; } = 
+                                           new List<Expression<Func<T, object>>>();
+
+    public List<string> IncludeStrings { get; } = new List<string>();
+ 
+    protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
+    {
+        Includes.Add(includeExpression);
+    }
+    
+    // string-based includes allow for including children of children
+    // e.g. Basket.Items.Product
+    protected virtual void AddInclude(string includeString)
+    {
+        IncludeStrings.Add(includeString);
+    }
 }
 ```
+
+Şu belirtime Sepet'ın kimliği veya Kime Sepeti ait alıcı Kimliğini verilen tek sepet varlık yükler. İçinde [istekli yük](https://docs.microsoft.com/en-us/ef/core/querying/related-data) Sepet'ın öğeleri koleksiyonu.
+
+```csharp
+// SAMPLE QUERY SPECIFICATION IMPLEMENTATION
+
+public class BasketWithItemsSpecification : BaseSpecification<Basket>
+{
+    public BasketWithItemsSpecification(int basketId)
+        : base(b => b.Id == basketId)
+    {
+        AddInclude(b => b.Items);
+    }
+    public BasketWithItemsSpecification(string buyerId)
+        : base(b => b.BuyerId == buyerId)
+    {
+        AddInclude(b => b.Items);
+    }
+}
+```
+
+Son olarak, belirtilen varlık türünü T. ilgili filtre ve eager yük verileri bir tür belirtimine genel EF depo nasıl kullanabileceğinizi aşağıda görebilirsiniz
+
+```csharp
+// GENERIC EF REPOSITORY WITH SPECIFICATION
+// https://github.com/dotnet-architecture/eShopOnWeb
+
+public IEnumerable<T> List(ISpecification<T> spec)
+{
+    // fetch a Queryable that includes all expression-based includes
+    var queryableResultWithIncludes = spec.Includes
+        .Aggregate(_dbContext.Set<T>().AsQueryable(),
+            (current, include) => current.Include(include));
+ 
+    // modify the IQueryable to include any string-based include statements
+    var secondaryResult = spec.IncludeStrings
+        .Aggregate(queryableResultWithIncludes,
+            (current, include) => current.Include(include));
+ 
+    // return the result of the query using the specification's criteria expression
+    return secondaryResult
+                    .Where(spec.Criteria)
+                    .AsEnumerable();
+}
+```
+Filtreleme mantığını Kapsüllenen yanı sıra belirtimi doldurmak için hangi özelliklerin de dahil olmak üzere döndürülecek, veri şekli belirtebilirsiniz. 
+
+Biz Iqueryable bir depodan dönmek için önerilen yoktur ancak bunları deposu içinde bir dizi sonucu oluşturmak için kullanılacak mükemmel daha uygundur. Bu yaklaşım, sorgunun listesini oluşturmak için Ara Iqueryable ifadeler kullanan bir yöntem yukarıdaki son satırında belirtimi 's ölçütlerle sorguyu çalıştırmadan önce içerir listesinde kullanılan görebilirsiniz.
+
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -377,6 +472,9 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 -   **Gölge Özellikleri**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
+-   **Belirtimi düzeni**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    
 
 >[!div class="step-by-step"]
 [Önceki] (altyapı-Kalıcılık-katman-design.md) [sonraki] (nosql-veritabanı-Kalıcılık-infrastructure.md)

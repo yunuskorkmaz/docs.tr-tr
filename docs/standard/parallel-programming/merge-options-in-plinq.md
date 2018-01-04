@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e9bf586c1805fc5b5f1cc5f96f4e6b08d80c199a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4758046fef55af86754ecb38aa50c4ff832f54db
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
 Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle ayrı iş parçacıklarına çalışabilmeniz için ne zaman bir sorgu paralel PLINQ bölümleri kaynak sıradaki yürütülüyor. Sonuçları bir iş parçacığı üzerinde tüketilmesi varsa örneğin, bir `foreach` (`For Each` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) döngü her iş parçacığı sonuçlarından bir sıralı geri birleştirilmelidir sonra. Sorguda mevcut işleçleri PLINQ gerçekleştirir birleştirme türünü bağlıdır. Örneğin, yeni bir sipariş sonuçlarını zorunlu tuttukları işleçleri tüm iş parçacıklarının tüm öğeleri arabellek gerekir. (Aynı zamanda olan, uygulama kullanıcısı) Süren iş parçacığı açısından bir belirgin süre ilk sonucu üreten önce tamamen arabelleğe alınan bir sorgu çalıştırabilirsiniz. Diğer işleçler varsayılan olarak, kısmen arabelleğe; Bunlar kendi yığınlardaki sonuçlar. Bir işleç <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe değil. Bunu tüm öğeleri tüm iş parçacıklarından hemen verir.  
@@ -73,4 +76,4 @@ Birden çok iş parçacığı farklı bölümleri eşzamanlı olarak, genellikle
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Nasıl yapılır: PLINQ'te birleştirme seçeneklerini belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+ [Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

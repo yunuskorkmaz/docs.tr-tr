@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c163897af27c9b34c8cd87a3b197047f86d21ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f29783e48aa7173010ffec6a65f9ac1d8a2b62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-rectangle"></a>Nasıl yapılır: Dikdörtgen Çizme
 Bu örnek kullanarak dikdörtgen çizmek nasıl gösterir <xref:System.Windows.Shapes.Rectangle> öğesi.  
@@ -42,5 +43,5 @@ Bu örnek kullanarak dikdörtgen çizmek nasıl gösterir <xref:System.Windows.S
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Shapes.Rectangle>  
  [Şekil öğeleri örneği](http://go.microsoft.com/fwlink/?LinkID=160037)  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Tablo genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md)
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)

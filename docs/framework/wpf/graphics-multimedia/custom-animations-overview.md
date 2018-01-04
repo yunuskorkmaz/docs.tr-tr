@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8dcce1d72991a803d8a068f29cd0fe3430fdfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-animations-overview"></a>Özel Animasyonlara Genel Bakış
 Bu konuda nasıl ve ne zaman açıklanmaktadır genişletmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistemi özel anahtar çerçeveler, animasyon sınıfları oluşturarak veya onu atlamak için çerçeve başına geri çağırma kullanarak.  
@@ -137,9 +138,9 @@ Bu konuda nasıl ve ne zaman açıklanmaktadır genişletmek için [!INCLUDE[TLA
  <xref:System.Windows.Media.Animation.AnimationTimeline>  
  <xref:System.Windows.Media.Animation.IKeyFrame>  
  [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Yol animasyonlarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animasyon ve zamanlama sistemi özeti](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Yol Animasyonlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [Özel animasyon örneği](http://go.microsoft.com/fwlink/?LinkID=159981)

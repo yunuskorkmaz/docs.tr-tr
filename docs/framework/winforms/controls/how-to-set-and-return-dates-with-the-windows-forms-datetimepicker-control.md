@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4df12d196c02b1d868d395a10ca17abafaa0fb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83a95d2c1aa9f1704f143ae9095cb38596d2c1a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme
 Şu anda seçili tarih veya saat Windows Forms'ta <xref:System.Windows.Forms.DateTimePicker> denetim belirlenir <xref:System.Windows.Forms.DateTimePicker.Value%2A> özelliği. Ayarlayabileceğiniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> denetimi görüntülenmeden önce özelliği (örneğin, tasarım zamanında veya formun <xref:System.Windows.Forms.Form.Load> olay) hangi tarih başlangıçta denetiminde seçilir belirlemek için. Varsayılan olarak, Denetim 's <xref:System.Windows.Forms.DateTimePicker.Value%2A> geçerli tarih olarak ayarlanır. Denetimin değiştirirseniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> kodda denetimi yeni ayar yansıtmak için form üzerinde otomatik olarak güncelleştirilir.  
@@ -83,5 +84,5 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DateTimePicker denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms DateTimePicker denetimi ile özel biçimde tarih görüntüleme](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+ [DateTimePicker Denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

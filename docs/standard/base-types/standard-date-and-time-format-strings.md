@@ -24,11 +24,14 @@ caps.latest.revision: "92"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz alan dahil, birden fazla karakteri içeren tüm tarih ve saat biçim dizesi, özel bir tarih ve saat biçim dizesi yorumlanır; Daha fazla bilgi için bkz: [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:  
@@ -421,6 +424,6 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
  [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

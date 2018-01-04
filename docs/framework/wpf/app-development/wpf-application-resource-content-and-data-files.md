@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19fd82daabd5ed12776b2deee6bc850529a6ef23
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]uygulamalar genellikle gibi yürütülebilir olmayan veri içeren dosyaları bağımlı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], resim, video ve ses. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]yapılandırma, tanımlayan ve bu tür bir uygulama verileri dosyaları adı verilen veri dosyalarını kullanmak için özel destek sağlar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
@@ -249,4 +250,4 @@ ms.lasthandoff: 10/22/2017
  Uygulama veri dosyası derleme türünü değiştirdikten sonra bu değişikliklerin uygulandığından emin olmak için tüm uygulamayı yeniden yapılandırmanız gerekir. Yalnızca uygulamayı yapılandırdıysanız, değişiklikleri uygulanmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

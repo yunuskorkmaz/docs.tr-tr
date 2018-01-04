@@ -5,11 +5,14 @@ keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b6a625cdf7a27748c4278c1b3f04db33a390712e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8539e8c0a6d0c6c9d558b91e062184e7ef135856
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulama DevOps iş akışı
 

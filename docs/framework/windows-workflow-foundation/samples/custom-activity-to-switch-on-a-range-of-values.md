@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4dcaf023960aab1989493475fe4e5306623adf8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13c409865846acdf7b557c20330f9a2fd62d47d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Özel Etkinlik bir aralık değerleri anahtara
 Bu örnek kullanımını genişleten bir özel etkinlik oluşturmak nasıl gösteren bir <xref:System.Activities.Statements.Switch%601>. Geleneksel <xref:System.Activities.Statements.Switch%601> deyimi sağlar geçiş dayalı tek bir değer. Ancak, bir etkinlik burada geçmelidir senaryolarını değerleri aralığı alarak iş vardır. Örneğin, bir etkinlik bağlı anahtarlı değeri 1 ile 5 arasında olduğunda bir eylem, değer 6 ile 10 arasında olduğunda başka bir eylem ve diğer tüm değerler için varsayılan eylem yürütebilir. Bu özel etkinlik tam olarak bu senaryo sağlar.  

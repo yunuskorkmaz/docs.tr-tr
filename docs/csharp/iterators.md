@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="iterators"></a>Yineleyiciler
 
@@ -171,7 +171,7 @@ Yöntemleri yukarıdaki arayın. İlk standardını kullanır `return` boş bir 
 
 ## <a name="deeper-dive-into-foreach"></a>Derin Dalış içine`foreach`
 
-`foreach` Deyimi genişletir kullanan standart bir deyim `IEnumable<T>` ve `IEnumerator<T>` bir koleksiyonun tüm öğeler arasında yinelemek için arabirim. Ayrıca düzgün kaynakları yöneterek geliştiriciler olun hatalar en aza indirir. 
+`foreach` Deyimi genişletir kullanan standart bir deyim `IEnumerable<T>` ve `IEnumerator<T>` bir koleksiyonun tüm öğeler arasında yinelemek için arabirim. Ayrıca düzgün kaynakları yöneterek geliştiriciler olun hatalar en aza indirir. 
 
 Derleyici çevirir `foreach` bu yapıyı benzer bir şey içine ilk örnekte gösterilen döngü:
 

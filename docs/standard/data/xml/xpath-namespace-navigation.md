@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: beb6265e8b245893cd7fa5edca28ba1b081481ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Namespace gezinme
 XPath sorguları XML belgeleri ile kullanmak için doğru adres XML ad alanları ve ad alanları tarafından bulunan öğeleri olması. Ad alanları adları birden fazla bağlamında kullanıldığında oluşabilecek belirsizlikleri önleyebilir. Örneğin, adı `ID` farklı bir XML belgesi öğelerle ilişkili birden fazla tanımlayıcısına başvurabilir. Namespace sözdizimi URI, adları ve bir XML belgesi öğelerini ayırt öneklerini belirtir.  
@@ -78,5 +81,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
  Tam ad alanları ve adları uygun duyarlık kolaylık sağlamak amacıyla büyük. Küçük bir deneme belge tanımı ve önceki örnek kodda Gezinti tam öğe adları olmadan özel durumları oluşturur doğrular. Örneğin, öğe tanımında: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`ve sorgu: dize `xpath = "/s:Envelope/s:Body/Search";` ad alanı öneki olmadan `Search` öğesi döndürür `null` yerine `Search` öğesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML XPathNavigator kullanarak verilerine erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Seçildiğinde, Evaluating ve XML XPathNavigator kullanarak veri eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+ [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

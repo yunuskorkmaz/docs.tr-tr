@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f953f6477abf1f4e0d6aaf79e67005172ff1144
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 144bcde6c4c8fb227773fe613da8445f100ce66d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>belirli bir kaç kez eşitleme ilkel edildikten sonra bekleyen parçacıklarını engelini kaldırır işaret olur. <xref:System.Threading.CountdownEvent>Aksi takdirde sahip olduğunuz kullanılacak senaryoları için tasarlanan bir <xref:System.Threading.ManualResetEvent> veya <xref:System.Threading.ManualResetEventSlim> ve olay sinyal önce el ile bir değişken azaltma. Örneğin, bir çatalı/JOIN senaryosunda, yalnızca oluşturabileceğiniz bir <xref:System.Threading.CountdownEvent> 5 sinyal sayısını sahip ve ardından Başlat beş iş öğeleri iş parçacığı üzerinde havuz ve her iş öğesi çağrısı <xref:System.Threading.CountdownEvent.Signal%2A> tamamlandığında. Her çağrı <xref:System.Threading.CountdownEvent.Signal%2A> sinyal sayısı 1 ile azaltır. Çağrı ana iş parçacığı üzerinde <xref:System.Threading.CountdownEvent.Wait%2A> sinyal sayısı sıfır olana kadar engeller.  

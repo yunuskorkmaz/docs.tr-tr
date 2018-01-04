@@ -12,11 +12,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e209cc0b016fe3bf0668463d9ccd3ee06784a25
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae5969060938763fee63c514de0a87eadbe6537a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>XmlSerializer siparişle özel seri hale getirme
 [Örnek indirme](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -42,9 +45,9 @@ ms.lasthandoff: 12/02/2017
 4.  Uygulama örneği varsayılan \bin veya \bin\debug'dır alt üzerine inşa edilmiştir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel seri hale getirme](../../../docs/standard/serialization/basic-serialization.md)  
- [İkili seri hale getirme](../../../docs/standard/serialization/binary-serialization.md)  
- [XML serileştirme özniteliklerini kullanarak denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Seri hale getirme](../../../docs/standard/serialization/index.md)  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+ [Temel Serileştirme](../../../docs/standard/serialization/basic-serialization.md)  
+ [İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
+ [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Serileştirme](../../../docs/standard/serialization/index.md)  
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)

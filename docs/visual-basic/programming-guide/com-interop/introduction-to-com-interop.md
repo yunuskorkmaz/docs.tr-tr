@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevselliğini kullanıma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel olsa da, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamaları birçok avantaj sunar.  
@@ -51,7 +51,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevsel
 ### <a name="importing-and-exporting-type-libraries"></a>İçeri ve dışarı aktarma tür kitaplıkları  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]bir yardımcı programı, bilgilerini tür kitaplığından içeri olanak sağlayan Tlbimp içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıklarının oluşturabilir.  
   
- Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
  Birlikte çalışma derlemeleri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] köprüsü arasında yönetilen ve yönetilmeyen derlemeleri kod, eşleme COM Nesne üyeleri eşdeğerine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yönetilen üyeler. Visual Basic .NET tarafından oluşturulan birlikte çalışma derlemeleri birçok birlikte çalışabilirlik hazırlama gibi COM nesneleri ile çalışma ayrıntılarını işler.  
@@ -60,12 +60,12 @@ Bileşen Nesne Modeli (COM) diğer bileşenler ve konak uygulamaların işlevsel
  Tüm [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları kullanılan programlama diline bakılmaksızın nesneleri birlikte çalışabilirliği sağlamak genel türleri kümesini paylaşır. Parametreler ve dönüş değerleri COM nesnelerinin bazen yönetilen kodda kullanılanlardan farklı veri türlerini kullanın. *Birlikte çalışabilirlik hazırlama* COM nesneleri gelen ve giden taşırken paketleme parametreler ve dönüş değerleri eşdeğer veri türlerine işlemidir. Daha fazla bilgi için bkz: [birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
- [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md)  
- [Birlikte çalışabilirlik sorunlarını giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)  
+ [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
- [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Birlikte çalışma hazırlama](../../../framework/interop/interop-marshaling.md)  
- [Kayıtsız COM birlikte çalışma](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Birlikte Çalışma için Hazırlama](../../../framework/interop/interop-marshaling.md)  
+ [Kayıtsız COM Birlikte Çalışma](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

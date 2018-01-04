@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be7f348237fdcf0a136d34ce3b6b8548c16d5547
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5da021bce46df02789547eb7ee50133b6f4d4af6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint Yöntemi
 Bu modül için giriş noktası kullanıcı tanımlı yöntemini belirtir. Örneğin, bu giriş noktasını derleyicinin ürettiği saplamalar ana önce yerine kullanıcının ana yöntemi olabilir.  
@@ -48,4 +49,4 @@ HRESULT SetUserEntryPoint(
  **Başlık:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Isymunmanagedwriter arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+ [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

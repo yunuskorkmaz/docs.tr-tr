@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate>ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
@@ -343,8 +344,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 >  Karakter á ve Á bir URI yolu bir parçası olarak görüntülendiğinde farklı karakter olduğu kabul edilir veya <xref:System.UriTemplate> yol kesimi değişmez değer (ancak karakterler a ve A aynı olduğu varsayılır). Karakter á ve Á bir parçası olarak görüntülendiğinde aynı karakterler olduğu kabul edilir <xref:System.UriTemplate> {variableName} veya bir sorgu dizesi (ve a ve bir de değerlendirilir aynı karakter olmalı).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP programlama modeli genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate tablosu](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate tablosu dağıtıcısı](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+ [UriTemplate Tablosu](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [UriTemplate Tablosu Dağıtıcısı](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

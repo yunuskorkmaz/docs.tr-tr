@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42409a333623bd4d691084a0bdd2e57f2c3db4f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3665ce281fd6426e235aef58448b2cfe46299bd7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="encrypting-data"></a>Veri Şifreleme
 Simetrik şifreleme ve asimetrik şifreleme farklı işlemler kullanılarak gerçekleştirilir. Simetrik şifreleme akışların gerçekleştirilir ve bu nedenle büyük miktarlarda verinin şifrelemek kullanışlıdır. Asimetrik şifreleme küçük bir bayt sayısı üzerinde gerçekleştirilir ve bu nedenle yalnızca küçük miktardaki veriler için kullanışlıdır.  
@@ -270,6 +273,6 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme ve şifre çözme için anahtarlar oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Verilerin şifresini çözme](../../../docs/standard/security/decrypting-data.md)  
+ [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [Verilerin Şifresini Çözme](../../../docs/standard/security/decrypting-data.md)  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

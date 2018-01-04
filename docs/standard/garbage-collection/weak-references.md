@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
 Uygulamanın kodu söz konusu nesne ulaşabilir sırada atık toplayıcı bir uygulama tarafından kullanılan bir nesne toplayamazsınız. Uygulama nesnesi için güçlü bir başvuru barındırıyor olarak sınıflandırılır.  
@@ -60,4 +63,4 @@ Uygulamanın kodu söz konusu nesne ulaşabilir sırada atık toplayıcı bir uy
  Bellek yönetimi sorunları için otomatik bir çözüm olarak zayıf başvurular kullanmaktan kaçının. Bunun yerine, uygulamanızın nesneleri işlemek için etkili bir önbellek İlkesi geliştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)
+ [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

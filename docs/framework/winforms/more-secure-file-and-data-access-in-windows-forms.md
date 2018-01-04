@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  
@@ -369,9 +370,9 @@ public void Write()
  Kısmi güven altında kayıt defterine erişemediği için diğer yöntemleri, veri depolamanın bulmak gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama kayıt defteri yerine kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyalarını depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya siteyle kaynak, genel uygulama bilgilerini de depolayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta daha güvenli yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Windows Forms'ta ek güvenlik konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Windows Forms'a genel bakış güvenliği](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Windows Forms güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+ [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Windows Forms'ta Ek Güvenlik Konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

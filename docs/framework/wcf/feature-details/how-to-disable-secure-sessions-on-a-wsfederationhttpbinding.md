@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bb2970209814fbbee9f71f0263a4d3d4f02f3e20
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5fc5ddd1b84bf723901e449bf1bfda6a31ad1cea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma
 Bazı hizmetler federe kimlik bilgileri gerektiren ancak güvenli oturumlar desteklemiyor. Bu durumda, güvenli oturum özelliği devre dışı bırakmalısınız. Aksine <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı güvenli oturumlar devre dışı bırakmak için bir yol sağlamaz hizmeti ile iletişim kurarken. Bunun yerine, bir önyükleme ile güvenli oturum ayarlarını değiştiren özel bağlama oluşturmanız gerekir.  
@@ -53,4 +54,4 @@ Bazı hizmetler federe kimlik bilgileri gerektiren ancak güvenli oturumlar dest
 -   Kod örneği derlemek için System.ServiceModel.dll derlemeye başvuran bir proje oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+ [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

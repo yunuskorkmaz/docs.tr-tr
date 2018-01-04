@@ -30,11 +30,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cb612d524f32eb4a97ac358d6deb8d2889ee5391
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b9922576e4ef942e896f365c44cebec717abe3b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
 Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadelerin kapsamlı desen eşleştirme gösterimi; belirli karakter desenlerini bulmak için büyük miktarlarda metini hızlıca ayrıştırmanızı; önceden tanımlı bir desenle (örneğin bir e-posta adresi) eşleştiğinden emin olmak için metni doğrulamanızı; metin alt dizeleri ayıklamanızı, düzenlemenizi, değiştirmenizi veya silmenizi; ve bir rapor oluşturmak için ayıklanan dizeleri bir koleksiyona eklemenizi sağlar. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
@@ -120,10 +123,10 @@ Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem suna
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Normal ifadeler tanımlamak için kullanabileceğiniz karakterler, operatörler ve yapılar kümesi hakkında bilgi sağlar.|  
-|[Normal ifade nesnesi modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgileri ve kod örneklerini sağlar.|  
-|[Normal ifade davranışının ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET normal ifadeler davranışını ve özellikleri hakkında bilgi sağlar.|  
-|[Normal ifade örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Normal ifadelerin genel kullanımlarını gösteren kod örnekleri sağlar.|  
+|[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Normal ifadeler tanımlamak için kullanabileceğiniz karakterler, operatörler ve yapılar kümesi hakkında bilgi sağlar.|  
+|[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgileri ve kod örneklerini sağlar.|  
+|[Normal İfade Davranışının Ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET normal ifadeler davranışını ve özellikleri hakkında bilgi sağlar.|  
+|[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Normal ifadelerin genel kullanımlarını gösteren kod örnekleri sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  

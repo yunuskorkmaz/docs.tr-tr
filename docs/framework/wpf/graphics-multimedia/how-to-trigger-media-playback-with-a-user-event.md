@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d50fc23be4a5cdf4df90cd6fa96466acc738aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa93b757f0af38bc6b08d87ac5485e2bf0f45a1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Nasıl yapılır: Kullanıcı Olayı ile Medya Yürütme Tetikleme
 Bu örnek, bir olay medya kayıttan yürütme eşitlemek gösterilmiştir.  
@@ -38,4 +39,4 @@ Bu örnek, bir olay medya kayıttan yürütme eşitlemek gösterilmiştir.
  <xref:System.Windows.EventTrigger.RoutedEvent%2A>  
  <xref:System.Windows.Media.Animation.Storyboard>  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

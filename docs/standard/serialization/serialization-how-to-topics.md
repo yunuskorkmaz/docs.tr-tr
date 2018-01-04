@@ -13,32 +13,35 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75915c92390be1698f5a972901c1defc8003e096
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 462812070446e9013c2cf2c4d3e2f15831e84e70
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-how-to-topics"></a>Serileştirme Nasıl Yapılır Konuları
 Aşağıdaki liste kavramsal belgelerinde Serileştirmenin bulundu nasıl yapılır konulara bağlantılar içerir.  
   
--   [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+-   [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
   
--   [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+-   [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
   
--   [Nasıl yapılır: sınıfları ve XML Şeması belgeleri oluşturmak üzere XML şema tanımı aracını kullanın](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+-   [Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
   
--   [Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+-   [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
   
--   [Nasıl yapılır: denetim türetilen sınıfların serileştirme](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
+-   [Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
   
--   [Nasıl yapılır: XML öğesi ve XML öznitelik adları nitelemek](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
+-   [Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
   
--   [Nasıl yapılır: bir SOAP kodlanmış XML akışı olarak bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+-   [Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
   
--   [Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+-   [Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
   
--   [Nasıl yapılır: Öbek seri verileri](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
+-   [Nasıl yapılır: Öbek Halinde Serileştirilmiş Veriler](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Seri hale getirme](../../../docs/standard/serialization/index.md)
+ [Serileştirme](../../../docs/standard/serialization/index.md)

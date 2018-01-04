@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a433ec5f83a50aa4fe4b2017a0dac3d2a5e5710c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM özniteliklere erişme
 Öğenin özelliklerini öğesinin alt öğeleri öznitelikleridir. Bu ayrım eşdüzey, üst ve alt düğümleri XML belge nesne modeli (DOM) gitmek için kullanılan yöntemleri nedeniyle önemlidir. Örneğin, **PreviousSibling** ve **NextSibling** yöntemleri bir öğeyi bir öznitelik veya öznitelikler arasında gezinmek için kullanılmaz. Bunun yerine, bir öznitelik, bir öğenin bir özelliktir ve sahibi bir öğe, sahip bir **OwnerElement** özelliği ve bir **parentNode** özelliği ve gezinti farklı yöntemleri vardır.  
@@ -123,7 +126,7 @@ public class Sample
   
  Bu örnekte aşağıdaki çıkış görüntüler:  
   
- **Çıktı**  
+ **Output**  
   
  Tüm öznitelikleri koleksiyonda görüntüler.  
   
@@ -268,4 +271,4 @@ XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

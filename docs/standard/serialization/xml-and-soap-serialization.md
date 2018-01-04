@@ -19,11 +19,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d5b89392801e7cf85fcda121a86d0bda4e7ac18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-and-soap-serialization"></a>XML ve SOAP seri hale getirme
 XML serileştirme dönüştürür (serileştiren) genel alanlar ve bir nesne veya özelliklerini parametreler ve dönüş değerleri için belirli bir XML Şeması Tanım Dili (XSD) belge uyan bir XML akışı içine yöntemlerin. XML serileştirme kesin türü belirtilmiş sınıfları genel özellikleri ve bir seri biçiminde (Bu durumda, XML) depolama veya taşıma için dönüştürülür alanları ile sonuçlanır.  
@@ -35,46 +38,46 @@ XML serileştirme dönüştürür (serileştiren) genel alanlar ve bir nesne vey
  Serileştirmek veya seri durumdan nesneleri için kullanmak <xref:System.Xml.Serialization.XmlSerializer> sınıfı. Serileştirilecek sınıflar oluşturmak için XML şema tanımı aracını kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Giriş XML serileştirme](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  Genel bir tanımı serileştirme, özellikle XML serileştirme için sağlar.  
   
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  Nesneyi serileştirmek için adım adım yönergeler sağlar.  
   
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  Bir nesne seri durumdan çıkarmak için adım adım yönergeler sağlar.  
   
- [XML serileştirme örnekleri](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [XML Serileştirme Örnekleri](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
  XML serileştirme temelleri gösteren örnekleri sağlar.  
   
- [XML şema tanımı aracı ve XML serileştirme](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
+ [XML Şema Tanımı Aracı ve XML Serileştirme](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
  XML şema tanımı araç, belirli bir XML şeması tanım dili (XSD) şeması uyması sınıflar oluşturmak için veya bir .dll dosyasından bir XML şeması oluşturmak için nasıl kullanılacağını açıklar.  
   
- [XML serileştirme özniteliklerini kullanarak denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
  Serileştirme özniteliklerini kullanarak denetlemek açıklar.  
   
- [XML serileştirme denetim öznitelikleri](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [XML Serileştirmeyi Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
  XML serileştirme denetlemek için kullanılan öznitelikleri listeler.  
   
- [Nasıl yapılır: bir XML akışı için bir diğer öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
  Seri hale getirme geçersiz kılarak birden çok XML akışı oluşturmak nasıl gösteren Gelişmiş bir senaryo gösterir.  
   
- [Nasıl yapılır: denetim türetilen sınıfların serileştirme](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
+ [Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
  Türetilen sınıflar serileştirmek denetlemek nasıl bir örnek sağlar.  
   
- [Nasıl yapılır: XML öğesi ve XML öznitelik adları nitelemek](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
+ [Nasıl yapılır: XML Öğesini ve XML Öznitelik Adlarını Niteleme](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
  Tanımlamak ve XML akışında kullanılan hangi XML ad alanları şeklini denetlemek açıklar.  
   
- [XML Web Hizmetleri ile XML serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [XML Web Hizmetleri ile XML Serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
  XML serileştirme XML Web hizmetleri nasıl kullanıldığı açıklanmaktadır.  
   
- [Nasıl yapılır: bir SOAP kodlanmış XML akışı olarak bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+ [Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
  Nasıl kullanılacağını açıklar <xref:System.Xml.Serialization.XmlSerializer> "Basit Nesne Erişim Protokolü (SOAP) 1.1." başlıklı bölüme World Wide Web Konsorsiyumu (www.w3.org) belgenin 5 uygun kodlanmış SOAP XML akışlar oluşturmak üzere sınıfı  
   
- [Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+ [Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
  Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemini açıklar.  
   
- [Kodlanmış SOAP serileştirme denetim öznitelikleri](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  SOAP kodlanmış serileştirme denetlemek için kullanılan öznitelikleri listeler.  
   
  [\<dizileştirme mekanizmasını System.xml.Serialization > öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)  
@@ -97,4 +100,4 @@ XML serileştirme dönüştürür (serileştiren) genel alanlar ve bir nesne vey
  Açıklayan ve ASP.NET kullanarak XML Web Hizmetleri program açıklayan konuları sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İkili seri hale getirme](../../../docs/standard/serialization/binary-serialization.md)
+ [İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)

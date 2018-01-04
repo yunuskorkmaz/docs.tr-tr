@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bf123f734f73ecfe726a80099de6ec06b0ced06b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 939c7997849adfed090ead3b197c690e0202f37c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags Numaralandırması
 Çağrı tanımlanan dosya türü açıklamak değerleri içeren [Imetadataassemblyemit::definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
@@ -54,4 +55,4 @@ typedef enum CorFileFlags {
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veri numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+ [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

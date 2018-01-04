@@ -26,11 +26,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik Gözden Geçirmesi
 Yerelleştirilebilirlik gözden geçirme, dünya çapında kullanılmaya hazır uygulama geliştirmede Ara bir adımdır. Globalized uygulama yerelleştirme için hazır ve herhangi bir kod veya özel işlem gerektiren tüm yönlerini kullanıcı arabirimini tanımlar doğrular. Bu adım ayrıca yerelleştirme işlemi işlev bozuklukları uygulamanıza tanıtılacaktır değil, sağlamaya yardımcı olur. Yerelleştirilebilirlik gözden geçirmesi tarafından gerçekleştirilen tüm sorunlar ele uygulamanızı yerelleştirme için hazır olur. Yerelleştirilebilirlik gözden geçirmesi kapsamlı ise, herhangi bir kaynak kod yerelleştirme işlemi sırasında değiştirmek olmamalıdır.  
@@ -81,7 +84,7 @@ Yerelleştirilebilirlik gözden geçirme, dünya çapında kullanılmaya hazır 
  Artık Uygulamanızı geliştirirken Genelleştirme önerileri ve ardından, kültüre duyarlı özellikleri, doğru ele ve tanımlanan ve test sırasında çıkan yerelleştirme sorunlar ele, sonraki adıma geçebilirsiniz [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
+ [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)  
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

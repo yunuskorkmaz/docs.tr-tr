@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 270388b8e3dda0342ba74187d8dc45616d0e769d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52f0bb90d7eb61a199097813eb8313cd9c154f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements-overview"></a>Temel Öğelere Genel Bakış
 Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sık başvurulan farklı dört sınıfından türetilen [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] temel öğe sınıfları belgelemek. Bu sınıflar <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, ve <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Sınıfı ayrıca ile ilgili, ortak bir taban sınıfı hem olduğundan <xref:System.Windows.UIElement> ve<xref:System.Windows.ContentElement>  
@@ -108,6 +109,6 @@ Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.Control>  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Denetim genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

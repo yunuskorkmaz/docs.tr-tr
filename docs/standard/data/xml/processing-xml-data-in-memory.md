@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec4ccbff095071b279e07cee6a1aab3ca830423f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9fc2f9e7a9ba232c062b12e8c1aeb72eece760e2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="processing-xml-data-in-memory"></a>XML verilerini işlemek bellek içi
 Microsoft .NET Framework XML verilerini işlemek için üç modeli içerir: <xref:System.Xml.XmlDocument> sınıfı, <xref:System.Xml.XPath.XPathDocument> sınıfı ve [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
@@ -29,14 +32,14 @@ Microsoft .NET Framework XML verilerini işlemek için üç modeli içerir: <xre
  [LINQ-XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) .NET Framework sürüm 3.5 XML verilerini işlemek için yeni modelidir. Yararlanır bir bellek içi modelini olan [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d). LINQ C# ve Visual Basic yeni sorgu özellikleri sağlamak üzere dili sözdizimi genişletir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DOM modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [DOM Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  Kullanarak anlatılmaktadır <xref:System.Xml.XmlDocument>ve ilişkili sınıfları XML verileri işleyemedi.  
   
- [XPath veri modelini kullanarak işlem XML verileri](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  Kullanarak anlatılmaktadır <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument>, ve <xref:System.Xml.XPath.XPathNavigator> sınıfları XML veri işleyecek.  
   
- [LINQ-XML kullanılarak XML verilerini işlemek](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
+ [LINQ to XML Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  XML LINQ kısa bir genel bakış sağlar ve LINQ-XML belgeleri için bağlantılar sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md)
+ [XML Belgeleri ve Verileri](../../../../docs/standard/data/xml/index.md)

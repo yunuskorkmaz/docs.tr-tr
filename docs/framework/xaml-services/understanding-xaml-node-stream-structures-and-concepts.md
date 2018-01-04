@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 XAML düğümü akışı tasarım kavramı XAML okuyucuları ve .NET Framework XAML hizmetlerinde uygulandığı şekilde XAML yazıcılarının temel alır. XAML düğümü akışı XAML düğüm kümesinin kavramsallaştırılması ' dir. Bu kavramsallaştırılması, XAML işlemci XAML düğüm ilişkilerde yapısını aynı anda anlatılmaktadır. Herhangi bir zamanda yalnızca bir geçerli kaydı veya geçerli konumu bir açık XAML düğümü akışı var ve yalnızca bilgi kullanılabilir o konumdan API pek çok görünüşünün rapor. XAML düğümü akışı geçerli düğümünde bir nesne, bir üye ya da bir değer olacak şekilde açıklanabilir. XAML düğümü akışı XAML düşünerek XAML okuyucuları XAML yazıcılarının ile iletişim kurabilmesini ve görüntülemek, etkileşimde veya bir yükleme yolu veya kaydetme sırasında XAML düğüm akış içeriğini değiştirmek bir programı etkinleştirmek XAML içerir yolu işlemi. XAML okuyucu ve yazıcı API tasarım ve XAML düğüm akış kavram önceki ilgili okuyucu ve yazıcı tasarımları ve kavramları, benzer gibi [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ve <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Bu konu, XAML düğüm akış kavramları açıklar ve XAML Beyanları XAML düğüm düzeyinde etkileşimde yordamları yazma biçimini açıklar.  
@@ -230,4 +231,4 @@ public class GameBoard {
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xaml.XamlObjectReader>  
  [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)  
- [XAML ad uzayları](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+ [XAML Ad Alanları](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

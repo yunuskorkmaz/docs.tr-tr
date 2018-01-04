@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e44d0ecf6afb81928d83ea925f836f8b6927d97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırganın yetkilendirme vermesine neden olur. Örneğin, bir saldırganın bir ayrıcalık kümesi "salt okunur" izinleri ile "okuma ve yazma" içerecek şekilde kümesi şekilde yükseltir  
@@ -93,9 +94,9 @@ ms.lasthandoff: 12/02/2017
  Başvuru X.509 Sertifika kullanarak gibi başka bir yolu, bunu azaltmak için <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin açığa çıkmasına](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Hizmet reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Yeniden yürütme saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Oynama](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+ [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

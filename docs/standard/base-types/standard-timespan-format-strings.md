@@ -27,11 +27,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
 <a name="Top"></a>Standart bir <xref:System.TimeSpan> biçim dizesi metin gösterimini tanımlamak için bir tek biçim belirticisi kullanan bir <xref:System.TimeSpan> bir biçimlendirme işleminin sonuçları değeri. Beyaz alan dahil olmak üzere birden fazla karakter içeriyor herhangi bir biçim dizesini özel olarak yorumlanır <xref:System.TimeSpan> biçim dizesi. Daha fazla bilgi için bkz: [özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -138,6 +141,6 @@ ms.lasthandoff: 11/21/2017
  [Tablo dön](#Top)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)

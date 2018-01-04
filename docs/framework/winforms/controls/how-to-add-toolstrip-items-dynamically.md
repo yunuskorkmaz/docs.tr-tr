@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7287365013ecd32d5ade6fa61d6c13364ce9b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6aa995643d4b7a00e4d7663a9ce1b8b519250074
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>Nasıl yapılır: Dinamik Olarak ToolStrip Öğeleri Ekleme
 Menü öğesi koleksiyonu dinamik olarak doldurabilirsiniz bir <xref:System.Windows.Forms.ToolStrip> menüsü açtığında denetim.  
@@ -53,4 +54,4 @@ Menü öğesi koleksiyonu dinamik olarak doldurabilirsiniz bir <xref:System.Wind
  <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.ToolStripDropDownButton>  
- [ToolStrip denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

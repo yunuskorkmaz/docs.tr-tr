@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: e09279209bf3d6925b61d55d6988b5af658f5aab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer şekilde bir XML ad alanı, XAML ad alanını kullanarak tanımlayabileceğiniz bir `xmlns` biçimlendirme özniteliği. XAML ad uzayları, XAML düğümü akışı ve diğer XAML Hizmetleri API'lerini de temsil edilir. Bu konuda XAML ad alanı kavram tanımlar ve XAML ad uzayları tanımlanabilir ve XAML şema bağlamları ve .NET Framework XAML hizmetlerinde diğer yönlerini tarafından kullanılan nasıl açıklanmaktadır.  
@@ -74,4 +75,4 @@ XAML ad uzayı bir XML ad alanı tanımını genişleten bir kavramdır. Benzer 
  XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler derlemeler için geçerlidir. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>XAML şema içeriği tarafından bir URI içeren XAML ad alanı bildiriminin yorumlamak için kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute>XAML yayma ve böylece belirli XAML ad uzayı tahmin edilebilir bir önek ile seri hale araçları tarafından kullanılır. Daha fazla bilgi için bkz: [özel türler ve Kitaplıkar için XAML-Related CLR öznitelikleri](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML düğüm akış yapılarını ve kavramlarını anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+ [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

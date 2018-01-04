@@ -17,20 +17,21 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-how-to-topics"></a>Dijital Mürekkep ile İlgili Nasıl Yapılır Konuları
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özel denetimden mürekkep seçin](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [Mürekkep verisine özel veri Ekle](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [Özel denetim üzerinde mürekkep silme](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [Tanıma uygulaması hareketleri](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [Sürükle ve Bırak Mürekkep](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [InkCanvas'a veri bağlama](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [Çözümleme ipuçları ile mürekkep çözümleme](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
+ [Özel Denetimden Mürekkep Seçme](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  [Mürekkep Verisine Özel Veri Ekleme](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
+  [Özel Denetim Üzerinde Mürekkep Silme](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
+  [Uygulama Hareketlerini Tanıma](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
+  [Sürükle ve Bırak Mürekkebi](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
+  [InkCanvas'a Veri Bağlama](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
+  [Çözümleme İpuçları ile Mürekkep Çözümleme](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
   [Mürekkep Döndürme](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [WPF uygulamaları için RealTimeStylus devre dışı bırak](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+  [WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)

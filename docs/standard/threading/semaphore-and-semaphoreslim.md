@@ -20,11 +20,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor ve SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Adlandırılmış (yükleyebilecek) veya yerel semafor sınıfı temsil eder. Win32 semafor nesne çevresinde ince bir sarmalayıcı değil. Win32 semafor, kaynak havuzu erişimi denetlemek için kullanılan semaforları sayma.  
@@ -56,4 +59,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.Semaphore>  
  <xref:System.Threading.SemaphoreSlim>  
- [İş parçacığı nesneleri ve özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)
+ [İş Parçacığı Nesneleri ve Özellikleri](../../../docs/standard/threading/threading-objects-and-features.md)

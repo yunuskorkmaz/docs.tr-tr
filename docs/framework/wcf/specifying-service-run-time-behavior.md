@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmesini uygulanan ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nerede tanımlar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya program aracılığıyla. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: hizmet uygulamanızın yapılandırma [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -132,4 +133,4 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- [Nasıl yapılır: Hizmet örneği oluşturmayı denetleme](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+ [Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

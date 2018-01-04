@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete hata koşulu bilgi hizmet birlikte çalışabilir bir şekilde aktarın. Genellikle bir hizmet özel hata içeriği tanımlar ve hangi işlemleri geri dönebilirsiniz belirtir. (Daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konuda ele alınmıştır nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu oluştu ne zaman ve bir istemci nasıl gönderebilir veya hizmet uygulaması bu hataları işleme. Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -117,5 +118,5 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [Beklenen özel durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+ [Beklenen Özel Durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [Using Deyimi Sorunlarını Önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

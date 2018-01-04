@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>Koordinat Sistemi Türleri
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]üç koordinat alanları kullanır: world, sayfa ve aygıt. Dünya koordinat belirli bir grafik world model oluşturmak için kullanılan koordinatları ve .NET Framework yöntemlere geçirmek koordinatları. Sayfa koordinat bir form veya denetim gibi bir çizim yüzeyini tarafından kullanılan koordinat sistemi bakın. Cihaz koordinat ekran veya kağıt gibi sonuna çizilen bir fiziksel aygıt tarafından kullanılan koordinatlar belirlenir. Arama yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçişi için noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünya koordinat alanındadır. Önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgi ekranda çizebilirsiniz, bir dizi dönüştürmeyi koordinatları geçirin. Dünya dönüşümü adlı bir dönüşüm world koordinatları sayfa koordinatlara dönüştürür ve sayfa dönüşümü adlı başka bir dönüşüm sayfa koordinatları aygıt koordinatlara dönüştürür.  
@@ -105,5 +106,5 @@ ms.lasthandoff: 11/21/2017
 |Cihaz|(192, 48) için (384, 144)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Dönüşümlerin matrisle temsili](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)
+ [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Dönüşümlerin Matrisle Temsili](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

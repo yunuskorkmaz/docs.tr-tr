@@ -17,27 +17,28 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a34719cc0d54d55c2331a28a6cfb9cbaf7e4891
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c30c8e0399229cd58d09295e24258eb3e2275818
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular proje dosyalarının için çeşitli nasıl oluşturulacağını gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF uygulamalarını dağıtmak için IIS 5.0 ve IIS 6.0 yapılandırma](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Bir Web hizmetini çağırmak için XAML tarayıcısı uygulaması hata ayıklamak için Visual Studio'yu yapılandırma](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [WPF yüklü sürümünü belirleme](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [.NET Framework 3.0 yüklü olup olmadığını Algıla](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [.NET Framework 3.5 yüklü olup olmadığını Algıla](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Firefox WPF eklentisinin yüklü olup olmadığını Algıla](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+ [WPF Uygulamalarını Dağıtmak için IIS 5.0 ve IIS 6.0'ı Yapılandırma](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [Yüklü WPF Sürümünü Belirleme](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
+ [.NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [.NET Framework 3.5'in Yüklü Olup Olmadığını Algılama](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Firefox WPF Eklentisinin Yüklü Olup Olmadığını Algılama](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
   
- [WPF uygulaması dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
   
  [Nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
   

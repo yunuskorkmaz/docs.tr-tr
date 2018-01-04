@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00a003ee060de59fe0eb8ce8f740a620d77a7c85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c53e03acddc5d732a684cf825bce49a65bb4c31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA Arabirimi
 Yönetilen bir hata ayıklama yardımcısı (MDA) iletisini temsil eder.  
@@ -32,11 +33,11 @@ Yönetilen bir hata ayıklama yardımcısı (MDA) iletisini temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetDescription yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Bu MDA açıklamasını içeren bir dize alır.|  
-|[GetFlags yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Bu MDA ile ilişkili bayraklar alır.|  
-|[GetName yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Bu MDA adını içeren bir dize alır.|  
-|[Getosthreadıd yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Bu MDA dosyanızın çalıştığı işletim sistemi iş parçacığı tanımlayıcısını alır.|  
-|[GetXML yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Bu MDA ile ilişkili tam XML akışı alır.|  
+|[GetDescription Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Bu MDA açıklamasını içeren bir dize alır.|  
+|[GetFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Bu MDA ile ilişkili bayraklar alır.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Bu MDA adını içeren bir dize alır.|  
+|[GetOSThreadId Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Bu MDA dosyanızın çalıştığı işletim sistemi iş parçacığı tanımlayıcısını alır.|  
+|[GetXML Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Bu MDA ile ilişkili tam XML akışı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -53,5 +54,5 @@ Yönetilen bir hata ayıklama yardımcısı (MDA) iletisini temsil eder.
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

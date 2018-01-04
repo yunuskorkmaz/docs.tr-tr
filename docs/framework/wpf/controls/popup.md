@@ -19,11 +19,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4fecc763f1bc6e701869a2b3f46d44f80cc28ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a1848a27443e7fc5ae7a9ced754cf6d691ae19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup"></a>Açılan Pencere
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntüler.  
@@ -33,8 +34,8 @@ ms.lasthandoff: 10/18/2017
  ![Açılan Kutu Çizimi](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Açılan genel bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Popup yerleştirme davranışı](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
+ [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Açılan Pencere Yerleştirme Davranışı](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  

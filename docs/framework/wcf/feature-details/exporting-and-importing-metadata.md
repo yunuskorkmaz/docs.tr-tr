@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], meta verileri dışarı aktarma işlemidir hizmet uç noktaları açıklayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma. Hizmet meta verilerini alma işlemidir oluşturmanın <xref:System.ServiceModel.Description.ServiceEndpoint> örneği veya hizmet meta verilerini parçalarını.  
@@ -57,19 +58,19 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.WsdlExporter> Türü dışa aktarma işlemi sırasında yakalanan özel durumlar yeniden oluşturur. Bu özel durumlar olarak hatalar yakalanmaz `Errors` özelliği. Bir kez <xref:System.ServiceModel.Description.WsdlExporter> özel durumu verir, hatalı bir durumda olduğundan ve yeniden kullanılamaz. <xref:System.ServiceModel.Description.WsdlExporter> Uyarıları Ekle kendi `Errors` joker eylemleri ve yinelenen bağlamayı adları zaman karşılaşılan kullandığından bir işlem verilemez zaman özelliği.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: hizmet uç noktalarına meta verileri içe aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Açıklama nesnelerine indirilen meta verileri içe aktarmayı açıklar.  
   
- [Nasıl yapılır: hizmet uç noktalarından meta verileri dışarı aktarma](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Açıklama nesneleri meta verileri dışarı aktarmak açıklar.  
   
- [ServiceDescription ve WSDL başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [ServiceDescription ve WSDL Başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  WSDL ve açıklama nesneleri arasındaki eşlemeyi açıklar.  
   
- [Nasıl yapılır: meta verileri derlenmiş hizmet kodundan dışarı aktarmak için Svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Hizmetleri, sözleşmeler ve derlenmiş derlemelerde veri türlerini meta verilerini dışa aktarmak için Svcutil.exe kullanımını açıklar.  
   
- [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  Alt, XML Şeması (tarafından kullanılan XSD) açıklar <xref:System.Runtime.Serialization.DataContractSerializer> ortak dil tanımlamak için XML serileştirmesi için çalışma zamanı (CLR) türleri.  
   
 ## <a name="reference"></a>Başvuru  
@@ -78,5 +79,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF uzantısı için özel meta verileri dışarı aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- [WCF uzantısı için özel meta verileri alma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+ [WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
+ [WCF Uzantısı için Özel Meta Verileri İçe Aktarma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f822133b44f0f32224402463b4332811f8cd52b5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms'ta Olayların Sırası
 Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların her biri sırayla işleme ile ilgili belirli ilgi sırasıdır. Bir durum olayların ne zaman formun bölümleri yeniden gibi ince işleme çağırdığında bir tanıma olaylar çalışma zamanında oluşturulur kesin siparişi gereklidir. Bu konu, uygulamalar ve denetimleri ömrü içinde birkaç önemli aşamaları sırasında olayları terabayt bazı ayrıntılar sağlar. Fare giriş olayların sırası hakkında belirli Ayrıntılar için bkz: [Windows Forms'ta fare olayları](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Windows Forms'ta olayların genel bakış için bkz: [olaylara genel bakış](../../../docs/framework/winforms/events-overview-windows-forms.md). Olay işleyicileri yapısıyla hakkında daha fazla ayrıntı için bkz: [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
@@ -91,4 +92,4 @@ Windows Forms uygulamalarında olayları ortaya geliştiricilere bu olayların h
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+ [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

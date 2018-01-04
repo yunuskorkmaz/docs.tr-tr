@@ -9,11 +9,11 @@ ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a913e3b55b38430c0908f77aac79cb342e78719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff247ce7d157d87f3776679c8d05f4cd08c45023
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>Sıfır (Visual Basic çalışma zamanı hatası) bölme
 Bölen olarak kullanılan bir ifade sıfır değerine sahip.  
@@ -25,5 +25,5 @@ Bölen olarak kullanılan bir ifade sıfır değerine sahip.
 2.  Özellikle yordama diğer yordamlardan bağımsız değişken olarak geçirilen değişkenleri ifadesinde önceki işlemleri denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımsız değişkenleri değere ve başvuruya göre geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Parametre mekanizması değişiklikler Visual Basic'te geçirme](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+ [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ 

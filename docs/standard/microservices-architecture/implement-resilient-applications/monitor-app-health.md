@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sist
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: cbbad72f06bcaa882bc50083d9103b0872f51754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -24,7 +27,7 @@ Tipik modelinde Hizmetleri durumları hakkında rapor gönderme ve sistem durumu
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Sistem durumu uygulama ASP.NET Core Hizmetleri'nde denetler
 
-Bir ASP.NET Core mikro hizmet veya web uygulama geliştirirken, ASP.NET ekibinden HealthChecks adlı bir kitaplık kullanabilirsiniz. (Mayıs 2017 itibariyle, önceki bir sürümü GitHub üzerinde kullanılabilir).
+Bir ASP.NET Core mikro hizmet veya web uygulaması geliştirilirken adlı bir kitaplık kullanabilirsiniz `HealthChecks` ASP.NET ekibinden. Önceki sürümü şu anda kullanılabilir [GitHub deposuna](https://github.com/dotnet-architecture/HealthChecks).
 
 Bu kitaplık kullanımı kolaydır ve uygulamanız (örneğin, bir SQL Server veritabanı veya Uzak API) için gerekli herhangi belirli bir dış kaynağa düzgün çalıştığını doğrulamak olanak sağlayan özellikleri sağlar. Bu kitaplık kullandığınızda, daha sonra anlatıldığı şekilde kaynağın sistem durumunun iyi olduğundan anlamını da karar verebilirsiniz.
 
@@ -34,7 +37,7 @@ Bu kitaplığı kullanmak için önce mikro kitaplıkta kullanmanız gerekebilir
 
 HealthChecks kitaplığı eShopOnContainers örnek uygulama nasıl kullanıldığını görebilirsiniz. Başlamak için her mikro hizmet durumu sağlıklı nelerin oluşturduğunu tanımlamanız gerekir. Örnek uygulama mikro API mikro HTTP ve ilgili SQL Server veritabanını da kullanılabilir olup olmadığını aracılığıyla erişilebilir olması durumunda iyi durumda.
 
-Gelecekte, bir NuGet paketi olarak HealthChecks Kitaplığı'nı yüklemek mümkün olacaktır. Ancak bu makalenin yazıldığı sırada indirmek ve çözümünüzün bir parçası olarak Kodu derlemek gerekir. Https://github.com/aspnet/HealthChecks kullanılabilir kodu kopyalayın ve aşağıdaki klasörler çözümünüze kopyalayın.
+Gelecekte, bir NuGet paketi olarak HealthChecks Kitaplığı'nı yüklemek mümkün olacaktır. Ancak bu makalenin yazıldığı sırada indirmek ve çözümünüzün bir parçası olarak Kodu derlemek gerekir. Https://github.com/dotnet-architecture/HealthChecks kullanılabilir kodu kopyalayın ve aşağıdaki klasörler çözümünüze kopyalayın:
 
   - src/ortak
   - src/Microsoft.AspNetCore.HealthChecks

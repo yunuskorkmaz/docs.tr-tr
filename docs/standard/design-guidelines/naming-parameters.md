@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b61f2b56b3b8bab67cec6db68a76916c6d7fa05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a10fa8835bfbcf826f8a3bb9318966e0dc603864
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-parameters"></a>Adlandırma parametreleri
 Okunabilirlik belirgin nedenini görsel Tasarım araçları IntelliSense ve işlevsellik gözatma sınıfı sağladığınızda parametreleri belgelerinde ve Tasarımcısı'nda görüntülendiğinden yönergelere parametre adları için önemlidir.  
@@ -45,5 +48,5 @@ Okunabilirlik belirgin nedenini görsel Tasarım araçları IntelliSense ve işl
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)

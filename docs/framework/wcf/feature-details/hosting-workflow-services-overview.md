@@ -13,35 +13,36 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0f473de9f16203d1b47ac227a1614b972b09e2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06012da95660fb4dc20d034c2d1691afad12037a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflow-services-overview"></a>İş Akışı Hizmetlerini Barındırma Genel Bakış
 İş akışı hizmetleri yürütmek için barındırılması gerekir. <xref:System.ServiceModel.WorkflowServiceHost> (İş akışları barındırılması için Mesajlaşma kullanmak için gerekli olmasa da) destekleyen birden çok örneği, yapılandırma ve WCF ileti Giden kutusu iş akışı ana bilgisayardır.  Ayrıca Kalıcılık, izleme ve bir dizi hizmet davranışları örneği denetimi ile tümleştirilir.  WCF'ın ' olduğu gibi <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> herhangi bir yönetilen .NET uygulamasında kendi kendini barındıran veya web (.xamlx dosyası olarak) IIS'de barındırılan / OLUŞTU.  Bu bölümdeki konular, bir iş akışı hizmeti barındırma açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İş akışı hizmetlerini barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
+ [İş Akışı Hizmetlerini Barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
  İş akışı hizmetlerini barındırma açıklar.  
   
- [İş akışı hizmeti konağı dahili bileşenleri](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
+ [İş Akışı Hizmeti Konağı Dahili Bileşenleri](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  
  Açıklar nasıl <xref:System.ServiceModel.WorkflowServiceHost> gelen iletileri işler.  
   
- [İş akışı hizmeti konak genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+ [İş Akışı Hizmeti Konak Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
  İş akışı hizmeti ana bilgisayarı işlevselliğini genişletmek açıklar.  
   
- [İş akışı denetim uç noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
+ [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
  İş akışı örnekleri oluşturmanıza olanak tanıyan bir uç nokta tanımlanacağını açıklar.  
   
  [Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
  Bir iş akışı hizmeti IIS olmayan bir iş akışı barındırma gösterir.  
   
- [Nasıl yapılır: Windows Server App Fabric ile iş akışı hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
+ [Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Windows Server App Fabric var olan bir iş akışı hizmetinde barındırmak gösterilmiştir.  
   
- [WorkflowServiceHost yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)  
+ [WorkflowServiceHost Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-workflowservicehost.md)  
  Kalıcılık, izleme, boşta ve işlenmeyen özel durum davranışını denetlemek açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -56,4 +57,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Activation.WorkflowServiceHostFactory>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)

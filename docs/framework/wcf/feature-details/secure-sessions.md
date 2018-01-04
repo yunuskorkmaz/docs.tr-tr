@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 724ea72c52296c448ead80a8f357235d625f5842
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 65a54c06efffb2e3167c77bd109a50a31b971add
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-sessions"></a>Güvenli Oturumlar
 Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletileri gönderildiği adres sıraya alınan garanti güvenilir oturumdur. Bu bölümdeki konular, güvenilir bir oturum oluştururken dikkate alınması gereken güvenlik uygulamalarını tartışın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]güvenilir oturumlar bkz [kullanarak oturumları](../../../../docs/framework/wcf/using-sessions.md).  
@@ -29,10 +30,10 @@ Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletil
   
 |||  
 |-|-|  
-|[Güvenli iletişimler ve güvenli oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|Güvenli görüşmeler ve güvenli oturumlar eşanlamlıdır. Bu konuda, güvenli bir konuşma çalışır, şekilde açıklanmıştır ve dosyası, ne zaman ve neden deseni kullanılacak.|  
-|[Nasıl yapılır: güvenli oturum oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|Güvenli oturum oluşturma temelleri adım adım açıklanmaktadır.|  
-|[Nasıl yapılır: bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|Durum ve oturumlar istemcilerle tutacağı bir Web grubu oluşturma adımları açıklanmaktadır.|  
-|[Güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|Güvenli oturumlar için özel hususlar açıklanmaktadır.|  
+|[Güvenli İletişimler ve Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|Güvenli görüşmeler ve güvenli oturumlar eşanlamlıdır. Bu konuda, güvenli bir konuşma çalışır, şekilde açıklanmıştır ve dosyası, ne zaman ve neden deseni kullanılacak.|  
+|[Nasıl yapılır: Güvenli Oturum Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|Güvenli oturum oluşturma temelleri adım adım açıklanmaktadır.|  
+|[Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|Durum ve oturumlar istemcilerle tutacağı bir Web grubu oluşturma adımları açıklanmaktadır.|  
+|[Güvenli Oturumlar için Güvenlikle İlgili Önemli Noktalar](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|Güvenli oturumlar için özel hususlar açıklanmaktadır.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -40,11 +41,11 @@ Bir özellik olan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] iletil
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Oturumlar, örnek oluşturma ve eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
   
- [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: ileti yeniden yürütme algılamayı etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
- [Yeniden yürütme saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Nasıl yapılır: oturum gerektiren bir hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+ [Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

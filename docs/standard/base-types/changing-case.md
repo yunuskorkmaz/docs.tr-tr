@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-case-in-net"></a>.NET durumda değiştirme
 Bir kullanıcıdan giriş kabul eden bir uygulama yazıyorsanız, hiçbir zaman çözemiyorsa veri girmek için kullanacağı hangi durumda emin olabilirsiniz. Genellikle, özellikle, bunları kullanıcı arabiriminde görüntülüyorsanız tutarlı olarak ortası dizeleri istiyor. Aşağıdaki tabloda, üç durumda değiştirme yöntemleri açıklar. İlk iki yöntem bir kültür kabul eden bir aşırı sağlar.  
@@ -78,5 +81,5 @@ Bir kullanıcıdan giriş kabul eden bir uygulama yazıyorsanız, hiçbir zaman 
  Kültüre duyarlı olmasına rağmen unutmayın <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> yöntemi incelemeye doğru büyük/küçük harf kuralları sağlamaz. Örneğin, önceki örnekte, yöntem "bir hikayesini iki şehirde" "A hikayesini, iki Şehir" için dönüştürür. Ancak, incelemeye doğru başlık büyük/küçük harf en-US kültürü için "Bir hikayesini iki şehirde." olur  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
- [Kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+ [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

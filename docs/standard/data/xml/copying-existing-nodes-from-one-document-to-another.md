@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0f20e5bd595c8eb49360e58f281a8cf6eda89acf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Varolan düğümleri bir belgeden kopyalama
 **ImportNode** yöntemi olarak bir düğüm veya tüm düğüm alt ağacı kopyalanır birinden mekanizmasıdır **XmlDocument** başka bir. Çağrısından döndürülen düğümü, öznitelik değerleri, düğüm adı, düğüm türü ve tüm ad alanı ilgili öznitelikleri öneki, yerel ad ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI) gibi dahil olmak üzere kaynak belge düğümden kopyasıdır. Kaynak belge değiştirilmez. Düğüm içe aktardıktan sonra hala düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağacına eklemeniz gerekir.  
@@ -48,4 +51,4 @@ ms.lasthandoff: 10/18/2017
 >  DocumentType düğümleri alınabilir karşın, bir belgeyi yalnızca bir DocumentType olabilir. Bu nedenle, emin olmak için sahip ağacına eklemeden önce belge türü içe aktardıktan sonra belge türü yok belgede. Düğümleri kaldırma hakkında daha fazla bilgi için bkz: [düğümleri kaldırma, içerik ve bir XML belgesi değerlerinden](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

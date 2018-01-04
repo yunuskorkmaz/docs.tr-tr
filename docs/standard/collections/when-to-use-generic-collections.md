@@ -16,11 +16,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6e6f23c413bbefe6a29746e2f6a1887a23dd3bfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fe09b2fa156575c7843f8b32bf758c44086b5ca8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
 Temel koleksiyonu türden türetilmiş ve türüne özgü üyeleri uygulamak gerek kalmadan tür güvenliği hemen avantajı elde çünkü genel koleksiyonlar kullanarak genellikle önerilir. Genel koleksiyon türleri de genellikle gerçekleştirmek nongeneric koleksiyon türleri ve karşılık gelen daha iyi (ve türlerini daha iyi, türetilen nongeneric temel koleksiyonu türlerinden) koleksiyon öğeleri olduğunda değer türleri, genel türler ile olduğundan öğeler kutu gerek yoktur.  
@@ -61,6 +64,6 @@ Temel koleksiyonu türden türetilmiş ve türüne özgü üyeleri uygulamak ger
  <xref:System.Collections.Generic.List%601> Sınıfı belirtmenize olanak verir, kendi <xref:System.Collections.Generic.IComparer%601> sıralama ve arama listesi için genel arabirim uygulamaları. <xref:System.Collections.Generic.SortedDictionary%602> Ve <xref:System.Collections.Generic.SortedList%602> sınıfları Ayrıca bu özelliği vardır. Ayrıca, bu sınıfları koleksiyonu oluşturulduğunda comparers belirtmenizi sağlar. Benzer şekilde, <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.ObjectModel.KeyedCollection%602> sınıfları kendi eşitlik comparers belirtmenize olanak tanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Koleksiyonlar ve veri yapıları](../../../docs/standard/collections/index.md)  
- [Çok kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md)  
- [Genel türler](../../../docs/standard/generics/index.md)
+ [Koleksiyonlar ve Veri Yapıları](../../../docs/standard/collections/index.md)  
+ [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)  
+ [Genel Türler](../../../docs/standard/generics/index.md)

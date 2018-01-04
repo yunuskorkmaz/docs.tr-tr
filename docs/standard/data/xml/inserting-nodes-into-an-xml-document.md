@@ -13,14 +13,17 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62b2a0a6dea7608ab1586afbb29ada36927d7e1b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 819e1d908e011be7839dceb8d15e4ade11cda002
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>Bir XML belgeye düğümleri ekleniyor
 Yeni düğüm ekleyerek belge değiştirebilirsiniz. Düğümleri yeni, aynı belgede, varolan oluşturulabilir veya başka bir belgeden alınabilir. Yeni düğümler oluşturma hakkında daha fazla bilgi için bkz: [yeni düğümler DOM oluşturma](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Varolan düğümleri kopyalama hakkında daha fazla bilgi için bkz: [kopyalama varolan düğümleri](../../../../docs/standard/data/xml/copy-existing-nodes.md), [kopyalama varolan düğümünden bir belgeyi başka bir](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md), veya [belge parçaları kopyalama](../../../../docs/standard/data/xml/copying-document-fragments.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

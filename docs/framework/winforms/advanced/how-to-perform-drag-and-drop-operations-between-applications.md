@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 513c6b2a15502625e4b42aeee4947ff36e4bfd17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 514c283575ca54e74d23ae31d3590979be2c3ef0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Nasıl yapılır: Uygulamalar Arasında Sürükle ve Bırak İşlemleri Gerçekleştirme
 Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme Bu eylem, uygulama içinde etkinleştirme daha farklı "arasında kurulan Sözleşmesi" göre katılan her iki uygulamayı davranır sürece <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> ve <xref:System.Windows.Forms.DragEventArgs.Effect%2A> Özellikler.  
@@ -48,6 +49,6 @@ Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme Bu eylem, 
      Ayrıca, yapılandırın, <xref:System.Windows.Forms.TextBox> sürüklenen ve WordPad bırakılan metin dizelerini izin vermek için denetim. Daha fazla bilgi için bkz: [izlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: panoya veri ekleme](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- [Nasıl yapılır: panodan veri alma](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- [Sürükle ve bırak işlemleri ve Pano desteği](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+ [Nasıl yapılır: Panoya Veri Ekleme](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ [Nasıl yapılır: Panodan Veri Alma](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ [Sürükle ve Bırak İşlemleri ve Pano Desteği](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)

@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f141421350b0ad7b8287e43b676a9439eae1f24c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma (Visual Basic)
 Bu kılavuz, özel günlük bir dinleyici oluşturun ve bunu çıkışına dinlemek için yapılandırmak üzere gösterilmiştir `My.Application.Log` nesnesi.  
@@ -41,11 +41,11 @@ Bu kılavuz, özel günlük bir dinleyici oluşturun ve bunu çıkışına dinle
   
  Emin olmak için `My.Application.Log` , günlük dinleyicisi kullanır, günlük dinleyicisi içeren derlemenin kesinlikle adlandırmanız gerekir.  
   
- Sonraki yordam kesin adlandırılmış günlük dinleyicisi derleme oluşturmak için bazı basit adımları sağlar. Daha fazla bilgi için bkz: [bkz](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Sonraki yordam kesin adlandırılmış günlük dinleyicisi derleme oluşturmak için bazı basit adımları sağlar. Daha fazla bilgi için bkz: [bkz](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Güçlü ad günlük dinleyicisi derlemeye  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde seçin **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde seçin **özellikleri**.   
   
 2.  Tıklatın **imzalama** sekmesi.  
   
@@ -114,7 +114,7 @@ Bu kılavuz, özel günlük bir dinleyici oluşturun ve bunu çıkışına dinle
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Nasıl yapılır: günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [Nasıl yapılır: günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [İzlenecek yol: My.Application.Log günlüğünün bilgileri yazdığı değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+ [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

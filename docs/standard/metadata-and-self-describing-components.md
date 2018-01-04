@@ -25,11 +25,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 Geçmişte, tek bir dilde yazılmış bir yazılım bileşeni (.exe veya .dll) başka bir dilde yazılmış bir yazılım bileşeni kolayca kullanılamadı. COM bu sorunun çözümüne yönelik bir adım sağlanır. .NET Framework bileşenini birlikte çalışabilirlik bile ek bildirim temelli bilgi tüm modülleri ve derlemeleri Yayma derleyicileri vererek kolaylaştırır. Meta veri olarak adlandırılan bu bilgi, sorunsuz bir şekilde etkileşim kurmak için bileşenleri yardımcı olur.  
@@ -177,4 +180,4 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Öznitelikleri](../../docs/standard/attributes/index.md)|Öznitelikleri uygulama, özel öznitelikler yazma ve özniteliklerde depolanan bilgileri almak açıklar.|
+|[Öznitelikler](../../docs/standard/attributes/index.md)|Öznitelikleri uygulama, özel öznitelikler yazma ve özniteliklerde depolanan bilgileri almak açıklar.|

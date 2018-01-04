@@ -19,11 +19,12 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4beb386528829bace92be6add471b87fb434d74
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c2776bda3cebfbe0d614666ce234c10a1ab466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitmap-effects"></a>Bit Eşlem Efektleri
 Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -32,7 +33,7 @@ Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uy
 >  İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] veya sonraki sürümlerde, <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor. Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız. Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı. Çoğu durumda, <xref:System.Windows.Media.Effects.Effect> sınıftır önemli ölçüde daha hızlıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bit eşlem efektleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Bit Eşlem Etkilerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -40,6 +41,6 @@ Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uy
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

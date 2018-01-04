@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]iki boyutlu vektör grafikleri, görüntüleme ve tipografi sağlayan Windows işletim sistemi bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümlerinde bulunan arabirimi) yeni özellikler ekleyerek ve var olan özellikleri en iyi duruma getirme.  
@@ -31,13 +32,13 @@ ms.lasthandoff: 10/22/2017
  Bu bölüm, hakkında bilgi sağlar. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API kullanarak programcıları için yönetilen kod.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  Vektör grafikleri açıklanır.  
   
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  Görüntüleri kullanılabilir türünü ve bunlarla çalışmak nasıl anlatılmaktadır.  
   
- [Koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  Grafiklerle dönüştürmek nasıl ele [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Başvuru  

@@ -20,11 +20,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ab3a6bb2128a3753cb80a60836a781d987ca253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> Sınıfı ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> Genel sınıflar uygulamak <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimi. <xref:System.Collections.Generic.Dictionary%602> Genel sınıfı ayrıca uygulayan <xref:System.Collections.Generic.IDictionary%602> genel arabirim. Bu nedenle, bu koleksiyonları her bir öğesinde bir anahtar ve değer çifti ' dir.  
@@ -50,4 +53,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Collections.Generic.Dictionary%602>  
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Çok kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md)
+ [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a10e74342141f8ef6664cc424552dc173d9b0f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekiller açıklamak için sınıflar. Bu konu ayrıca arasındaki farkları karşılaştırır <xref:System.Windows.Media.Geometry> nesneleri ve <xref:System.Windows.Shapes.Shape> öğeleri.  
@@ -126,7 +127,7 @@ Küçük resim denetimi için kullanılan EllipseGeometry
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|İki nokta arasında elips bir yay oluşturur.|[Elips yay oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md).|  
 |<xref:System.Windows.Media.BezierSegment>|Bir küp Bezier eğrisini iki nokta arasındaki oluşturur.|[Küp Bezier eğrisi oluşturmak](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
-|<xref:System.Windows.Media.LineSegment>|İki nokta arasında bir çizgi oluşturur.|[İçinde bir LineSegment oluşturulacağını](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)|  
+|<xref:System.Windows.Media.LineSegment>|İki nokta arasında bir çizgi oluşturur.|[PathGeometry İçinde LineSegment Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)|  
 |<xref:System.Windows.Media.PolyBezierSegment>|Küp Bezier eğrileri bir dizi oluşturur.|Bkz: <xref:System.Windows.Media.PolyBezierSegment> türü sayfası.|  
 |<xref:System.Windows.Media.PolyLineSegment>|Bir dizi satır oluşturur.|Bkz: <xref:System.Windows.Media.PolyLineSegment> türü sayfası.|  
 |<xref:System.Windows.Media.PolyQuadraticBezierSegment>|İkinci derece Bezier eğrileri bir dizi oluşturur.|Bkz: <xref:System.Windows.Media.PolyQuadraticBezierSegment> sayfası.|  
@@ -231,9 +232,9 @@ Birden çok şekil ile PathGeometry
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.GeometryDrawing>  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Biçimlendirme sözdizimi yolu](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

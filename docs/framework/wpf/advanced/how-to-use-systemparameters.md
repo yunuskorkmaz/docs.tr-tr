@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-systemparameters"></a>Nasıl yapılır: SystemParameters Kullanma
 Bu örnek erişmek ve özelliklerini kullanmak üzere nasıl gösterir <xref:System.Windows.SystemParameters> stil veya bir düğmeyi özelleştirmek için.  
@@ -42,7 +43,7 @@ Bu örnek erişmek ve özelliklerini kullanmak üzere nasıl gösterir <xref:Sys
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.SystemParameters>  
- [Sistem fırçası ile bir alanı boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [SystemFonts kullanma](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Sistem parametreleri tuşlarını kullanma](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Sistem Fırçası ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [SystemFonts Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [Sistem Parametreleri Tuşlarını Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

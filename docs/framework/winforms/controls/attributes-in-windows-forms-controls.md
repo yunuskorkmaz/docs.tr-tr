@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21f39aa1f85e06f1967d278e07731b73dcf7cb10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13aad22dca249147e3037bcef6da755c264021db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms Denetimlerindeki Öznitelikler
 .NET Framework öznitelikleri özel denetimleri ve bileşenleri üyelerine uygulayabilirsiniz çeşitli sağlar. Bazı bu öznitelikler bir sınıfın çalışma zamanı davranışını etkilemek ve diğer tasarım zamanı davranışını etkiler.  
@@ -72,6 +73,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Attribute>  
- [Nasıl yapılır: Windows Forms denetimlerindeki öznitelikler Uygula](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
+ [Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
  [Tasarım zamanı desteği genişletme](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Özel Windows Forms denetimleri .NET Framework ile geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+ [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

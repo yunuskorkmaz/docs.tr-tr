@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b1aa0eaccc26e1bd7cc6b78953dc0a782b2f952e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c1fc02b64a494220070a1cfed928b616e4970c0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-throwing"></a>Özel durum atma
 Bu bölümde açıklanan özel durum atma yönergeleri yürütme hatası anlamını iyi tanımının gerektirir. Yürütme hatası oluşursa üyesi ne olduğunu yapamayacağı her (ne üye adından da anlaşılacağı) yapmak için tasarlanmıştır. Örneğin, varsa `OpenFile` yöntemi bir açılan dosya tanıtıcısı çağırana döndüremiyor, bir yürütme hatası kabul edilmesi.  
@@ -73,5 +76,5 @@ Bu bölümde açıklanan özel durum atma yönergeleri yürütme hatası anlamı
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Özel durumlar için tasarım yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)

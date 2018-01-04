@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 246c144a18d7c1014096a6e37ad09b6eec5ad932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Nasıl yapılır: GridView Kullanan ListView'da Stil Oluşturmak için Şablonları Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.DataTemplate> ve <xref:System.Windows.Style> nesnelerinin görünümünü belirtmek için bir <xref:System.Windows.Controls.ListView> kullanan denetim bir <xref:System.Windows.Controls.GridView> görüntüleme modu.  
@@ -47,6 +48,6 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.DataTemplate
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)

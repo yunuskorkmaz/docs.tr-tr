@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Seed
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: d65448bbbed350eb3f75ff2a26ee9097d31eb481
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0754ba124cbc37c6c6e3aedd90dc860e16c21d73
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (yeniden kullanılabilir temel sınıflar ve arabirimler etki alanı modeliniz için)
 
@@ -28,16 +31,16 @@ ms.lasthandoff: 12/09/2017
 
 ## <a name="the-custom-entity-base-class"></a>Özel varlık taban sınıfı
 
-Aşağıdaki kod bir varlık temel sınıfı aynı şekilde varlık kimliği gibi herhangi bir etki alanı varlık tarafından kullanılan kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), vb.
+Aşağıdaki kod bir varlık temel sınıfı aynı şekilde varlık kimliği gibi herhangi bir etki alanı varlık tarafından kullanılan kod burada yerleştirebilirsiniz örneğidir [eşitlik işleçleri](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), varlık, vb. bir etki alanı olay listesi.
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
+Varlık başına etki alanı olay listesini kullanarak önceki kod, etki alanı olaylarına odaklanan olduğunda sonraki bölümlerde açıklanacaktır. 
+
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Etki alanı modeli katmanda deposu sözleşmeleri (arabirimi)
 
-Depo sözleşmeleri yalnızca her toplama için kullanılacak depoları sözleşme gereksinimlerini express .NET arabirimlerdir. EF çekirdek veya herhangi diğer altyapı bağımlılıkları ve kodunu ile depoları kendileri içinde etki alanı modeli uygulanmalı değil; depoları tanımladığınız arabirimleri yalnızca uygulamanız gerekir.
+Depo sözleşmeleri yalnızca her toplama için kullanılacak depoları sözleşme gereksinimlerini express .NET arabirimlerdir. 
+
+EF çekirdek kodu veya diğer altyapı bağımlılıkları ve kod (LINQ, SQL, vb.) ile depoları kendileri içinde etki alanı modeli uygulanmalı değil; depoları tanımladığınız arabirimleri yalnızca uygulamanız gerekir. 
 
 (Etki alanı modeli katmanda deposu arabirimleri yerleştirerek) bu uygulama için ilgili bir desen ayrılmış arabirimi düzeni ' dir. Olarak [açıklandığı](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler "bir arabirim birinde tanımlamak için kullanım ayrılmış arabirimi paketini ancak başka bir programda uygulamak. Bu şekilde arabirimi bağımlılığı gerektiren bir istemci uygulaması tamamen farkında olabilir."
 
 Ayrılmış arabirimi desen aşağıdaki uygulama katmanında (Bu durumda, Web API projesi mikro hizmet için) etki alanı modelinde tanımlanan gereksinimlerle bir bağımlılığı ancak altyapı/Kalıcılık değil doğrudan bir bağımlılığa sahip olmasını sağlar katmanı. Ayrıca, altyapısında uygulanan uygulama yalıtmak için bağımlılık ekleme kullanabilirsiniz / saklama katmanını kullanarak depoları.
 
-Örneğin, aşağıdaki örnekte IOrderRepository arabirimiyle OrderRepository sınıfın altyapı katmanında uygulamak için ihtiyaç duyacağı hangi işlemlerin tanımlar. Uygulama geçerli uygulama, kod yalnızca sorguları CQS yaklaşım ve siparişleri güncelleştirmeleri uygulanmamıştır bölünmüş aşağıdaki olduğundan sırasını veritabanına eklemesi gerekir.
+Örneğin, aşağıdaki örnekte IOrderRepository arabirimiyle OrderRepository sınıfın altyapı katmanında uygulamak için ihtiyaç duyacağı hangi işlemlerin tanımlar. Uygulama geçerli uygulama, kod eklemek veya sorguları Basitleştirilmiş CQRS yaklaşımı izleyerek bölünür beri siparişleri veritabanına güncelleştirmek yalnızca gerekir.
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }

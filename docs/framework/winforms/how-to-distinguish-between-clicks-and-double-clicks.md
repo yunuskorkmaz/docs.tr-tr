@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b407f7c00454b0a14b4c90694d015b38ffd72ef
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4da472b4a2cb2001953758acb0f28da77f08ac70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma
 Genellikle, bir tek *tıklatın* bir kullanıcı arabirimi (UI) eylemi başlatır ve *çift tıklatın* eylemi genişletir. Örneğin, tek bir tıklatmayla genellikle bir öğe seçer ve seçilen öğeyi çift tıklatma düzenler. Ancak, Windows Forms tıklama olayları bir eylem bağlı olduğundan kolayca burada bir tıklatma ve çift tıklatma gerçekleştirmek uyumsuz Eylemler, bir senaryoda çalışmak değil <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olay, eyleminden önce bağlıgerçekleştirilir<xref:System.Windows.Forms.Control.DoubleClick>veya <xref:System.Windows.Forms.Control.MouseDoubleClick> olay. Bu konuda bu sorunun iki çözümü gösterilir. Bir çözüm, çift tıklatma olayını işlemek ve eylemleri click olayını işlemede geri almaktır. Nadir durumlarda, davranış işleyerek çift tıklayın ve tıklatın benzetimini gerekebilir <xref:System.Windows.Forms.Control.MouseDown> olay ve kullanarak <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ve <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> özelliklerini <xref:System.Windows.Forms.SystemInformation> sınıfı. Tıklama ve ikinci bir tıklatma değeri önce oluşursa arasındaki süreyi ölçmek <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ulaşıldığında ve tıklatın tarafından tanımlanan bir dikdörtgen içinde <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, çift tıklatma eylemi gerçekleştirir; Aksi halde, tıklatma eylemi gerçekleştirin.  
@@ -53,4 +54,4 @@ Genellikle, bir tek *tıklatın* bir kullanıcı arabirimi (UI) eylemi başlatı
  Bu örnekler için komut satırından oluşturma hakkında bilgi için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı derleme ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnekler de derleme [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] kodu yeni projelere yapıştırma tarafından.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Forms bir Windows uygulamasında fare girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

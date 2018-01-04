@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aaf63acbb58fd86f7fa9a5dc3dce7508d90cfada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96f8cf924ffe510e1fea4d21fe86ca860fe8fab0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Okuma ve yazma XML şemaları
 Şema nesne modeli (SOM) API okumak ve XML Şeması Tanım Dili (XSD) şemaları dosyaları veya diğer kaynakları yazma ve XML şemaları sınıflarda kullanarak bellek içi oluşturmak için kullanılan <xref:System.Xml.Schema?displayProperty=nameWithType> dünyada tanımlanan yapıları Eşle ad alanı Wide Web Konsorsiyumu (W3C) XML Şeması öneri.  
@@ -55,11 +58,11 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeline genel bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Yapı XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML şemaları çapraz geçiş yapma](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [XML şemaları düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Dahil olmak üzere veya XML şemalarını içeri aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Derleme sonrası şema bilgi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
- [Bir XML belgesi ad alanlarını yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+ [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [XML Şemalarını Düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)  
+ [XML Belgesinde Ad Alanlarını Yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)

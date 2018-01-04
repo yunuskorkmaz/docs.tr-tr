@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Yalnızca genişletme dönüşümleri için örtük veri türü dönüştürmelerini sınırlar, geç bağlama izin vermez ve örtük sonuçlanan yazmaya izin vermez bir `Object` türü.  
@@ -80,7 +80,7 @@ Option Strict { On | Off }
   
 -   [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char veri türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Ne zaman, birleştirme dizeleri kullanarak [& işleci](../../../visual-basic/language-reference/operators/concatenation-operator.md), tüm dönüştürmeler dizelere genişletme olması kabul edilir. Bu dönüşümleri oluşturmaz şekilde daraltma örtük dönüştürme hatası, bile `Option Strict` açıktır.  
   
@@ -116,7 +116,7 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Option Strict IDE'de ayarlamak için  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
   
 2.  Üzerinde **derleme** sekmesinde, değer kümesinde **Option Strict** kutusu.  
   
@@ -159,14 +159,14 @@ Option Strict { On | Off }
  [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genişletme ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Derle sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
- [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Nasıl yapılır: bir nesnenin üyelerine erişme](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [XML'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Office çözümlerinde geç bağlama](https://msdn.microsoft.com/library/3xxe951d)  
- [/ optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
+ [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
+ [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [Office Çözümlerinde Geç Bağlama](https://msdn.microsoft.com/library/3xxe951d)  
+ [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
  [Visual Basic Varsayılanları, projeler, Seçenekler iletişim kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1566d2b67e1dda5b0b221a2c10affb6bdaea888
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="struct-design"></a>Yapı tasarım
 Genel amaçlı değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölüm için genel yapısı tasarım yönergeleri sağlar.  
@@ -55,6 +58,6 @@ Genel amaçlı değer türü, genellikle kendi C# anahtar sözcüğü bir yapı 
  *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türü tasarım yönergeleri](../../../docs/standard/design-guidelines/type.md)  
- [Framework tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)  
- [Sınıf ve yapı arasında seçim yapma](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+ [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
+ [Sınıf ile Yapı Arasında Seçim Yapma](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

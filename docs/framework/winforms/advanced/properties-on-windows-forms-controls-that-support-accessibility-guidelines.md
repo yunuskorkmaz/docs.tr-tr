@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 967b4a0e883338c756aceef37d11edecfb978527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Windows Forms Denetimlerinde Erişilebilirlik Yönergelerini Destekleyen Özellikler
 Windows Forms için standart araç çubuğu denetimleri klavye odağını gösterme ve ekran öğeleri gösterme dahil olmak üzere erişilebilirlik yönergelerini çoğunu destekler.  
@@ -41,4 +42,4 @@ Windows Forms için standart araç çubuğu denetimleri klavye odağını göste
 |BackgroundImage|Bu özellik metin daha okunabilir hale için boş bırakın.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: erişilebilir bir Windows tabanlı uygulama oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+ [İzlenecek Yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

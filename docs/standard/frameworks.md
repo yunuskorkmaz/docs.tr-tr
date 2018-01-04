@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -132,9 +135,9 @@ Aşağıdaki hedef çerçeveyi kullanım dışı bırakılmıştır. Bu bir hede
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Paketler, Metapackages ve çerçeveleri](~/docs/core/packages.md)  
-[Kitaplıklarla platformu araçları arası geliştirme](~/docs/core/tutorials/libraries.md)  
-[.NET standart](~/docs/standard/net-standard.md)  
+[Paketler, Meta Paketler ve Çerçeveler](~/docs/core/packages.md)  
+[Platformlar Arası Araçlarla Kitaplık Geliştirme](~/docs/core/tutorials/libraries.md)  
+[.NET Standard](~/docs/standard/net-standard.md)  
 [.NET core sürüm oluşturma](~/docs/core/versions/index.md)  
 [DotNet/standart GitHub deposunu](https://github.com/dotnet/standard)  
 [GitHub depo NuGet araçları](https://github.com/joelverhagen/NuGetTools)  

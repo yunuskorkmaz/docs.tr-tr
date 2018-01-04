@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 703284572005ab262a7e9379b601d8144d8e9af1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b312dca036b327ee86527607db8b73d4545500d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Kullanıcıların Windows Forms DataGridView Denetiminden Panoya Birden Fazla Hücre Kopyalamasına Olanak Tanıma
 Hücre kopyalama etkinleştirdiğinizde, verileri olun, <xref:System.Windows.Forms.DataGridView> denetim diğer uygulamalara kolayca erişilebilir <xref:System.Windows.Forms.Clipboard>. Seçili hücreleri değerlerini dizelere dönüştürülür ve panoya not defteri ve Excel gibi uygulamaları yapıştırma sekmeyle ayrılmış metin değerleri ve Word gibi uygulamalar yapıştırma HTML biçimli bir tablo olarak eklenir.  
@@ -58,4 +59,4 @@ Hücre kopyalama etkinleştirdiğinizde, verileri olun, <xref:System.Windows.For
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>  
  <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A>  
- [Seçim ve Pano kullanımı Windows Forms DataGridView denetimi ile](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

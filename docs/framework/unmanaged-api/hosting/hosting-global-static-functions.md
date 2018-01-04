@@ -17,25 +17,26 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 105ba4dd213542e6dd441bb774ebb76123366304
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d4955da9abe91d10af70934a24e4d2bda954b487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-global-static-functions"></a>Barındırma Genel Statik İşlevleri
 Bu bölümde .NET API'leri barındırma çerçevesi tarafından kullanılan yönetilmeyen barındırma işlevleri açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [.NET framework 4 barındırma genel statik işlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
+ [.NET Framework 4 Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
  .NET Framework 4'te tanıtılan işlevleri açıklanmaktadır.  
   
- [Kullanım dışı CLR barındırma işlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
  .NET Framework 1.1 ve de kullanım dışı 2.0 sürümünde sunulan işlevleri açıklanmaktadır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Barındırma coclass'ları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
   
- [Barındırma numaralandırmaları](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
   
- [Barındırma yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+ [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

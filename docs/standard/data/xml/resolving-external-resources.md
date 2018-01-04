@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 824a35ee5d4ecafc45167ff3f4bc89802af4ed96
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c711cbd7b563bf647d7b4fb90873a396ddfaefdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-resources"></a>Dış kaynaklara çözme
 **XmlResolver** özelliği **XmlDocument** tarafından kullanılan **XmlDocument** satır dış belge türü gibi XML verileri içinde olmayan kaynakları bulmak için sınıfı tanımları (DTD), varlıkları ve şemaları. Bu öğeler bir ağda veya yerel bir sürücüde yer alabilir ve bir Tekdüzen Kaynak Tanımlayıcısı (URI) göre tanımlanabilir. Böylece **XmlDocument** çözmek için **EntityReference** belgede mevcuttur ve dış DTD ya da şema göre belgeyi doğrulamak düğüm.  
@@ -60,4 +63,4 @@ ms.lasthandoff: 10/18/2017
  Daha fazla bilgi için Açıklamalar bölümüne bakın <xref:System.Xml.XmlResolver> başvuru sayfası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

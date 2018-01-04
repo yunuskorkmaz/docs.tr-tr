@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4e0bc3f14a3d21776506f0a269a1a8c9f970cac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8bcfa7d8a55cd2754965430db7ea6d2351892658
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework'te Konsol Uygulamaları Derleme
 .NET Framework uygulamalarında kullanma <xref:System.Console?displayProperty=nameWithType> karakterlerinden okumak ve konsola karakterleri yazmak için sınıf. Konsolundan veri standart giriş akışından okuma, verileri konsola standart çıktı akışına yazılır ve hata verileri konsola standart hata çıktı akışına yazılır. Konsol ile uygulama başlar ve bu olarak sunulduğunda bu akışları otomatik olarak ilişkilendirilir <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, ve <xref:System.Console.Error%2A> özellikleri, sırasıyla.  
@@ -41,4 +44,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Console?displayProperty=nameWithType>  
- [Biçimlendirme türleri](../../docs/standard/base-types/formatting-types.md)
+ [Biçimlendirme Türleri](../../docs/standard/base-types/formatting-types.md)

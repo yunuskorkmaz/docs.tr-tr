@@ -16,66 +16,67 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 570ddd3981593922fecd90700cdaf19bf7eff2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: efa19aa185dac2d3eb821d2d7c29b02cbb0d1a65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip Denetimi (Windows Forms)
 Bu denetim grupları uygulama komutları ve kolayca erişilebilir hale getirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [MenuStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
+ [MenuStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  Denetimi nedir ve anahtar özellikleri ve özelliklerini açıklar.  
   
- [Nasıl yapılır: Toolstripmenuıtems'ne geliştirmeler ekleme](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
+ [Nasıl yapılır: ToolStripMenuItems'a Geliştirmeler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
  Onay işaretleri, görüntüler, kısayol tuşları, erişim anahtarları ve ayırıcı çubukları menüleri ve menü komutlarını eklemeyi açıklar.  
   
- [Nasıl yapılır: MDI üst penceresine MenuStrip ekleme](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ [Nasıl yapılır: MDI Üst Penceresine MenuStrip Ekleme](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
  Birden çok belge arabirimi (MDI) alt menüsünü MDI üst menüsüne eklemek için çeşitli özelliklerin nasıl ayarlanacağını açıklar.  
   
- [Nasıl yapılır: MenuStrip ile MDI pencere listesi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [Nasıl yapılır: MenuStrip ile MDI Pencere Listesi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
  Tüm etkin alt listesini üst öğenin Pencere menüsünden formları oluşturmak gösterilmiştir.  
   
- [Nasıl yapılır: Toolstripmenuıtems'ni devre dışı bırakma](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
+ [Nasıl yapılır: ToolStripMenuItems'ı Devre Dışı Bırakma](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
  Tüm menüleri ve tek tek menü komutlarını devre dışı bırakmak açıklar.  
   
- [Nasıl yapılır: Toolstripmenuıtems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [Nasıl yapılır: ToolStripMenuItems Gizleme](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  Tüm menüleri ve tek tek menü komutlarını gizlemeyi açıklar.  
   
- [Nasıl yapılır: bir MDI açılan menüsüne MenuStrip ekleme](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ [Nasıl yapılır: Bir MDI Açılan Menüsüne MenuStrip ekleme](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  Menü öğeleri bir grup MDI alt menüsünden MDI üst menü açılan parçasına eklemek için çeşitli özelliklerin nasıl ayarlanacağını açıklar.  
   
- [Nasıl yapılır: bir MDI açılan menüsünden ToolStripMenuItem kaldırma](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ [Nasıl yapılır: Bir MDI Açılan Menüsünden ToolStripMenuItem kaldırma](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
  Menü öğesi MDI üst menü açılan bölümünden kaldırmak için çeşitli özelliklerin nasıl ayarlanacağını açıklar.  
   
- [Nasıl yapılır: MenuStrip denetim kenar boşluklarını ve görüntü kenar boşluklarını yapılandırma](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ [Nasıl yapılır: MenuStrip Denetim Kenar Boşluklarını ve Görüntü Kenar Boşluklarını Yapılandırma](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
  Nasıl özelleştirileceğini açıklar bir <xref:System.Windows.Forms.MenuStrip> çeşitli şekillerde denetim ve görüntü kenar boşluğu özellikleri ayarlayarak.  
   
- [Nasıl yapılır: bir forma standart menü öğeleri sağlayın](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
+ [Nasıl yapılır: Bir Forma Standart Menü Öğeleri Sağlama](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
  Nasıl kullanılacağını açıklar bir <xref:System.Windows.Forms.MenuStrip> bir forma standart menü ile oluşturmak için denetim.  
   
- [Nasıl yapılır: bir MenuStrip içinde seçenek düğmeleri görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ [Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
  Seçenek düğmesi (veya radyo düğmesi) davranışını uygulamak açıklar bir <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
- [Windows Forms MenuStrip denetiminde menü öğelerini birleştirme](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
+ [Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
  Genel kavramlar ve menü birleştirme yöntemleri açıklar.  
   
- [Nasıl yapılır: MDI uygulamaları için otomatik menü birleştirmeyi ayarlama](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ [Nasıl yapılır: MDI Uygulamaları için Otomatik Menü Birleştirmeyi Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Menü öğeleri çalışma zamanında otomatik olarak birleştirmek açıklar.  
   
 -   [MenuStrip öğeleri koleksiyonu Düzenleyicisi](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Nasıl yapılır: Toolstripmenuıtems kopyalama](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Nasıl yapılır: ToolStripMenuItems Kopyalama](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
   
--   [Nasıl yapılır: tasarımcıyı kullanarak toolstripmenuıtems öğelerini gizleme](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [Nasıl yapılır: Tasarımcıyı Kullanarak ToolStripMenuItems Gizleme](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
   
--   [Nasıl yapılır: tasarımcıyı kullanarak toolstripmenuıtems öğelerini devre dışı bırak](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [Nasıl yapılır: Tasarımcıyı Kullanarak ToolStripMenuItems Öğelerini Devre Dışı Bırakma](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
   
--   [Nasıl yapılır: Toolstripmenuıtems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
   
--   [İzlenecek yol: Bir forma standart menü öğeleri sağlama](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
   
 -   [MenuStrip görevler iletişim kutusu](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
@@ -90,5 +91,5 @@ Bu denetim grupları uygulama komutları ve kolayca erişilebilir hale getirir.
  Özelliklerini açıklayan <xref:System.Windows.Forms.ToolStripMenuItem> görüntülenen seçilebilir bir seçeneği temsil eden sınıf bir <xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

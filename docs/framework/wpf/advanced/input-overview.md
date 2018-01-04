@@ -35,11 +35,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c12d8655babeb45800f4a5c068cb2ab74faac3d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli aygıtlar almak için fare, klavye, dokunma ve Kalem de dahil olmak üzere. Bu konu, tarafından sağlanan hizmetlerin açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.  
@@ -404,8 +405,8 @@ Dokunma ve düzenleme olayları
  Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework öğeleri ve daha ayrıntılı olarak olay yönlendirme. Daha fazla bilgi için şu genel bakışlara bakın [kumanda genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md), [odak genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md), [temel öğeleri genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [WPFağaçlarında](../../../../docs/framework/wpf/advanced/trees-in-wpf.md), ve [olaylara genel bakış yönlendirilen](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Odağı genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Temel öğeler genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Özellikleri](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+ [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)

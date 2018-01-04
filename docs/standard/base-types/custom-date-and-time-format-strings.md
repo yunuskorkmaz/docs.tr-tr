@@ -24,11 +24,14 @@ caps.latest.revision: "79"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11fdbcd65c4f5588d9f32357dcf344f5f8544614
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> bir biçimlendirme işleminin sonuçları değeri. Ayrıca, dizeyi tarih ve saate başarılı bir şekilde dönüştürmek için bir ayrıştırma işleminde gerekli olan tarih ve saat değerinin bildirimini tanımlayabilir. Özel biçim dizesi, bir veya daha fazla özel tarih ve saat biçimi belirleyicisinden oluşur. Değil herhangi bir dize bir [standart tarih ve saat biçim dizesi](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) özel tarih ve saat biçim dizesi yorumlanır.  

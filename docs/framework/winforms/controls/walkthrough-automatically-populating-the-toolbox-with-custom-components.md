@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
 Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  
@@ -109,4 +110,4 @@ Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik
  [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Nasıl yapılır: araç kutusu sekmeleri işlemek](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
  [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [Windows formlarına denetimler koyma](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+ [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

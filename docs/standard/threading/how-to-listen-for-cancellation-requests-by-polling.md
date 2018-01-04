@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f0e05e3f66d591a28d7e84d358934959764dab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 56a927e10cb026814302728a72acb2f32223b29b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl Yapılır: Yoklama ile İptal İsteklerini Dinleme
 Aşağıdaki örnekte, kullanıcı kodu bir iptal belirteci iptal çağıran iş parçacığından istedi olup olmadığını görmek için düzenli aralıklarla yoklayabilir bir yolunu gösterir. Bu örnekte <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> türü, ancak aynı düzeni uygular zaman uyumsuz işlemleri doğrudan tarafından oluşturulan <xref:System.Threading.ThreadPool?displayProperty=nameWithType> türü veya <xref:System.Threading.Thread?displayProperty=nameWithType> türü.  
@@ -37,4 +40,4 @@ Aşağıdaki örnekte, kullanıcı kodu bir iptal belirteci iptal çağıran iş
  Aradığınız varsa <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, yalnızca açıkça denetlemek sahip <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> yanıt özel durum atma yanı sıra iptal olarak yapmak için diğer iş varsa, özelliği. Bu örnekte, kod gerçekte özelliği iki kez erişme görebilirsiniz: bir kez açık erişim ve yeniden <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> yöntemi. Ancak çünkü okuma act <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği yalnızca bir geçici erişim başına yönerge okuma içerir, çift erişim performans açısından önemli değildir. El ile throw yöntemi çağırmak yerine hala tercih edilir <xref:System.OperationCanceledException>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacıklarında iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+ [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

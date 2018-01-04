@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms Nesnesi
 Geçerli projede bildirilen her Windows formunu örneği erişmek için özellikleri sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Forms` Nesnesi, geçerli projedeki her form örneği sağlar. Özelliğin adı özelliği erişen formun adı ile aynıdır. Bir projeye form ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms projeye eklemek](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ `My.Forms` Nesnesi, geçerli projedeki her form örneği sağlar. Özelliğin adı özelliği erişen formun adı ile aynıdır.   
   
  Tarafından sağlanan formların erişebilir `My.Forms` niteliğe olmadan formun adını kullanarak nesne. Özellik adı formun tür adıyla aynı olduğundan, bu varsayılan bir örnek sahipmiş gibi bir form erişmenize olanak tanır. Örneğin, `My.Forms.Form1.Show` eşdeğerdir `Form1.Show`.  
   
@@ -53,7 +53,7 @@ Geçerli projede bildirilen her Windows formunu örneği erişmek için özellik
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- Çalışmak bu örnek için projenize adlı bir form olmalıdır `SidebarMenu`. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms projeye eklemek](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Çalışmak bu örnek için projenize adlı bir form olmalıdır `SidebarMenu`.  
   
  Bu kod, yalnızca bir Windows uygulaması proje ile çalışır.  
   
@@ -75,8 +75,7 @@ Geçerli projede bildirilen her Windows formunu örneği erişmek için özellik
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
- [Nesneleri](../../../visual-basic/language-reference/objects/index.md)  
- [Nasıl yapılır: Windows Forms için bir proje ekleyin](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
- [Is işleci](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot işleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Uygulama formlarına erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+ [Nesneler](../../../visual-basic/language-reference/objects/index.md)  
+ [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Uygulama Formlarına Erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

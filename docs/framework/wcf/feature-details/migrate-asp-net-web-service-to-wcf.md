@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d6ed443d2b645687d59a3d795c706f303616cfb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Nasıl yapılır: ASP.NET Web Hizmeti Kodunu Windows Communication Foundation'a Taşıma
 Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -224,4 +225,4 @@ Aşağıdaki yordam, ASP.NET Web hizmeti için geçirmeyi açıklar [!INCLUDE[in
 19. Tüm değişiklikleri çalıştığından emin olmak için test kümesini çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: ASP.NET Web hizmeti istemci kodunu Windows Communication Foundation'a taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Nasıl yapılır: ASP.NET Web Hizmeti İstemci Kodunu Windows Communication Foundation'a Taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

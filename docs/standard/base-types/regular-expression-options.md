@@ -22,11 +22,14 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a>Varsayılan olarak, herhangi bir normal ifade deseni değişmez değer karakter ile giriş dizesi karşılaştırması büyük küçük harfe duyarlı olduğundan, normal ifade deseni boşluk değişmez değer boşluk karakterleri ve yakalama gruplarında normal bir ifade olarak yorumlanır açıkça örtük olarak da adlandırılır. Normal ifade seçenekleri belirterek bu ve diğer birkaç varsayılan normal ifade davranışının yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen, bu seçenekleri normal ifade deseni bir parçası olarak dahil edilen satır içi olabilir ya da için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusu veya statik desen eşleştirme yöntemi olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
@@ -402,4 +405,4 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

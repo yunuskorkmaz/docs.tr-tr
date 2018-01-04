@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e5bd9abd37c7c70d03965698828e0adf64a8b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="introducing-xml-serialization"></a>Giriş XML serileştirme
 Seri hale getirme taşımalarına taşınan bir forma bir nesne dönüştürme işlemidir. Örneğin, bir nesneyi serileştirme ve bir istemci ve sunucu arasında HTTP kullanarak Internet üzerinden aktarım. Diğer tarafta akıştan nesne seri durumdan çıkarma yeniden yapılandırır.  
@@ -181,10 +184,10 @@ public string MyToken;
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.IO.FileStream>  
- [XML ve SOAP seri hale getirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [İkili seri hale getirme](../../../docs/standard/serialization/binary-serialization.md)  
- [Seri hale getirme](../../../docs/standard/serialization/index.md)  
+ [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
+ [Serileştirme](../../../docs/standard/serialization/index.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [XML serileştirme örnekleri](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
- [Nasıl yapılır: bir nesneyi serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Nasıl yapılır: bir nesne seri durumdan](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [XML Serileştirme Örnekleri](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

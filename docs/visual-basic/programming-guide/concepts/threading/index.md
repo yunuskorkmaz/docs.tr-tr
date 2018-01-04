@@ -12,11 +12,11 @@ ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: acf9e15aa03b177533f87417278842735c1d6318
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b544d63651b481ec39f7e07d4e7f549923d2a475
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threading-visual-basic"></a>İş parçacığı oluşturma (Visual Basic)
 İş parçacığı bir defada birden fazla işlem yapabilmesi için eşzamanlı işlem yapmak Visual Basic programınızı sağlar. Örneğin, kullanıcıdan girdi izlemek, arka plan görevleri ve eşzamanlı girdi akışları ile işlemek için iş parçacığı oluşturma kullanabilirsiniz.  
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/09/2017
   
 -   .NET Framework <xref:System.Threading> iş parçacığı daha kolay kullanarak ad alanı sağlar.  
   
--   İş parçacıkları uygulamanın kaynakları paylaşır. Daha fazla bilgi için bkz: [kullanarak iş parçacıkları ve parçacıkları](../../../../../docs/standard/threading/using-threads-and-threading.md).  
+-   İş parçacıkları uygulamanın kaynakları paylaşır. Daha fazla bilgi için bkz: [kullanarak iş parçacıkları ve parçacıkları](../../../../standard/threading/using-threads-and-threading.md).  
   
  Varsayılan olarak, bir Visual Basic programı bir iş parçacığı vardır. Ancak, yardımcı iş parçacığı oluşturulabilir ve birincil iş parçacığı ile paralel kod yürütmek için kullanılır. Bu iş parçacıkları adlandırılırlar *çalışan iş parçacığı*.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/09/2017
  Birden çok iş parçacığı etkinliklerini eşitlemek için bu sınıfların bazıları veya tümü kullanabilirsiniz, ancak bazı iş parçacığı oluşturma desteği Visual Basic dili tarafından desteklenir. Örneğin, [SyncLock deyimi](../../../../visual-basic/language-reference/statements/synclock-statement.md) örtülü kullanımı aracılığıyla eşitleme özellikleri sağlayan <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], birden çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), yeni eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramı dayalı yeni bir programlama modeli. Daha fazla bilgi için bkz: [paralel programlama](../../../../../docs/standard/parallel-programming/index.md).  
+>  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], birden çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), yeni eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramı dayalı yeni bir programlama modeli. Daha fazla bilgi için bkz: [paralel programlama](../../../../standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
@@ -53,4 +53,4 @@ ms.lasthandoff: 12/09/2017
 |[İş parçacığı zamanlayıcılar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|Ayrı iş parçacıklarına sabit aralıklarda yordamları çalıştırmak açıklar.|  
 |[İş parçacığı havuzu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Sistem tarafından yönetilen çalışan iş parçacığı havuzu kullanmayı açıklar.|  
 |[Nasıl yapılır: iş parçacığı havuzu (Visual Basic) kullanma](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|İş parçacığı havuzu birden çok iş parçacığı eşitlenmiş kullanımını göstermektedir.|  
-|[İş parçacığı oluşturma](../../../../../docs/standard/threading/index.md)|.NET Framework iş parçacığı oluşturma uygulamak açıklar.|
+|[İş parçacığı oluşturma](../../../../standard/threading/index.md)|.NET Framework iş parçacığı oluşturma uygulamak açıklar.|

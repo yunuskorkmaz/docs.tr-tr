@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu örnek bir bakış sunar [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılmış yazı tiplerini [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılan özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -65,5 +66,5 @@ Lindsey yazı tipi görüntüleme
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Documents.Typography>  
- [OpenType yazıtipi özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Uygulamalarla paketleme yazı tipleri](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+ [OpenType Yazı Tipi Özellikleri](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [Uygulamalarla Yazı Tiplerini Paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

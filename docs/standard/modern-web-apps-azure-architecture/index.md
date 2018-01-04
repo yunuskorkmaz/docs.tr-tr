@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 93a74bb7ba537d3c7c0291f7903112dc470133a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile Mimarı Modern Web uygulamaları
 
@@ -67,7 +70,7 @@ Bu kılavuz, modern .NET teknolojileri ve Windows Azure ile web uygulamaları ol
 Bu konuları ve fırsatlar genel olarak anlaşılmasını sağlamak için bu kılavuzu ekibinize iletmek çekinmeyin. Herkes ortak bir dizi terminolojisi çalışma ve ilkeleri temelindeki sahip mimari desenleri ve uygulamalar tutarlı uygulama sağlamaya yardımcı olur.
 
 ## <a name="references"></a>Referanslar
-- **Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma**  
+- **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
 <https://docs.microsoft.com/dotnet/articles/Standard/choosing-Core-Framework-Server>
 
 >[!div class="step-by-step"]

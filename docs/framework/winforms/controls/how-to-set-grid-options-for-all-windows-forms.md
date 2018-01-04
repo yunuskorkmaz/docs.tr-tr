@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
 Çalışma için kullanılan hale [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] geliştirme ortamı, formlar ve projeleri ile çalışmak için Tercihler Windows Forms Tasarımcısı'nda ayarlayabilirsiniz.  
@@ -40,13 +41,13 @@ ms.lasthandoff: 11/21/2017
      Sağ bölmede altında **düzeni ayarları** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, olup denetimleri için ek ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **Snaptogrıd** ve **dayama çizgileri** düzeni modları. Dayama çizgileri hakkında daha fazla bilgi için bkz: [izlenecek yol: Windows Forms kullanarak dayama çizgileri düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Nasıl yapılır: Windows formlarına denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Nasıl yapılır: Windows formlarında sekme sırasını ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- [Nasıl yapılır: tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Windows formlarına denetimler koyma](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Windows Forms denetimleri işlevi](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

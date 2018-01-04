@@ -4,15 +4,18 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | DDD 
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: df45441089fd59d5e0e52b4bcec409adcc11fb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>DDD odaklı mikro tasarlama
 
@@ -38,7 +41,7 @@ Aşağıdakine benzer [uygunsuz samimiyet duyguları kod kokusu](https://sourcem
 
 Ayrıca, her zaman geçerli varlıkları olması gerekir (bkz [etki alanı modeli katmanda doğrulamaları tasarlama](#designing-validations-in-the-domain-model-layer) bölüm) toplama kökleri (kök varlıklar) tarafından denetlenen. UI düzeyinde bazı veriler hala değil doğrulanması çünkü bu nedenle, varlıkları istemci görünümlerine bağlanmalıdır değil. ViewModel içindir budur. ViewModel, sunu katmanı ihtiyaçları için özel olarak bir veri modelidir. Etki alanı varlıkları doğrudan ViewModel ait değil. Bunun yerine, ViewModels ve etki alanı varlıklar arasındaki veya tam tersine çevirmek gerekir.
 
-Kuruluşlarda karmaşıklık tüm invariants ve kurallar için ilişkili emin olun (biz bu daha ayrıntılı olarak daha sonra Git) toplama kökleri tarafından denetlenen bir etki alanı modeline sahip önemli olduğu durumlarda varlıkları (toplama) grubu gerçekleştirilir tek bir giriş noktası veya ağ geçidi, toplama kök.
+Kuruluşlarda karmaşıklık tüm invariants ve kurallar için ilişkili emin olun toplama kökleri tarafından denetlenen bir etki alanı modeline sahip önemli olduğu durumlarda varlıkları (toplama) grubu gerçekleştirilir tek giriş noktası veya ağ geçidi, toplama kök ile.
 
 Şekil 9-5, katmanlı bir tasarım eShopOnContainers uygulamada nasıl uygulandığını gösterir.
 
@@ -46,7 +49,7 @@ Kuruluşlarda karmaşıklık tüm invariants ve kurallar için ilişkili emin ol
 
 **Şekil 9-5**. Sıralama mikro hizmet eShopOnContainers içinde DDD katmanları
 
-Her katman yalnızca belirli diğer katmanlar ile iletişim kurar sistemde tasarlamak istersiniz. Farklı sınıf kitaplıkları Katmanlar uygulanırsa, hangi bağımlılıkların kitaplıkları ayarlandığından açıkça tanımlayabilirsiniz çünkü zorlamak daha kolay olabilir. Örneğin, etki alanı modeli katmanı bağımlılık başka bir katmanında almamalıdır (etki alanı modeli sınıflarını eski düz CLR nesnelerini olmalıdır veya [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), sınıflar). Şekil 9-6'da gösterildiği gibi **Ordering.Domain** Katmanı kitaplığı, yalnızca .NET Core kitaplıkları ancak değil tüm diğer özel kitaplığı (veri kitaplığı, Kalıcılık kitaplığı, vb.), bağımlılıklar vardır.
+Her katman yalnızca belirli diğer katmanlar ile iletişim kurar sistemde tasarlamak istersiniz. Farklı sınıf kitaplıkları Katmanlar uygulanırsa, hangi bağımlılıkların kitaplıkları ayarlandığından açıkça tanımlayabilirsiniz çünkü zorlamak daha kolay olabilir. Örneğin, etki alanı modeli katmanı bağımlılık başka bir katmanında almamalıdır (etki alanı modeli sınıflarını eski düz CLR nesnelerini olmalıdır veya [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), sınıflar). Şekil 9-6'da gösterildiği gibi **Ordering.Domain** Katmanı kitaplığı, yalnızca .NET Core kitaplıkları veya NuGet paketleri, aynı olmayan tüm diğer özel kitaplığı veri kitaplığı ya da kalıcılığı kitaplığı gibi bağımlılıklar vardır.
 
 ![](./media/image7.PNG)
 

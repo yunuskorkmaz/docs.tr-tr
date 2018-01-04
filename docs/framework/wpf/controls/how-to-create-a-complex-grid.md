@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c0008a7379feefd9b3fe719f85b3205a72fb51d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9dfb913407622f3cbd9a067a94cc6400b501e2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-complex-grid"></a>Nasıl yapılır: Karmaşık Kılavuz Oluşturma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.Grid> aylık takvim gibi görünen bir düzen oluşturmak için.  
@@ -36,6 +37,6 @@ Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.Grid>  
  <xref:System.Windows.Documents.TableCell>  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tablo genel bakış](../../../../docs/framework/wpf/advanced/table-overview.md)
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Tabloya Genel Bakış](../../../../docs/framework/wpf/advanced/table-overview.md)

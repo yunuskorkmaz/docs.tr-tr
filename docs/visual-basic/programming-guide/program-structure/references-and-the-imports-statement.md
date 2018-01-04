@@ -18,11 +18,11 @@ ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 739934b65241a7846b5323d5e75446832d83e5d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60c62eae57ae127fcbb860fe72853604802cccd9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>References ve Imports Deyimi (Visual Basic)
 Dış nesneleri kullanılabilir projenize seçerek yapabileceğiniz **Başvuru Ekle** komutunu **proje** menüsü. Başvurur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tür kitaplıklarının ancak daha fazla bilgi içeriyor gibi olan derlemeler için işaret edebilir.  
@@ -59,8 +59,8 @@ Dış nesneleri kullanılabilir projenize seçerek yapabileceğiniz **Başvuru E
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.ControlChars>  
  <xref:Microsoft.VisualBasic>  
- [NIB nasıl yapılır: başvuru ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Nasıl yapılır: komut satırını kullanarak derlemeler oluşturma ve kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
- [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+ [Nasıl yapılır: Komut Satırını Kullanarak Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

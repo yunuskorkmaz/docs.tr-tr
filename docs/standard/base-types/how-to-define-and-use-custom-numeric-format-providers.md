@@ -25,11 +25,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e44a909eb92f0d9dfa21980a918a2d370dcf427
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sayısal değerleri dize gösterimini üzerinde kapsamlı denetim sağlar. Sayısal değerler biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
@@ -99,4 +102,4 @@ ms.lasthandoff: 10/18/2017
  Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] içinde derlemek için, bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+ [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)

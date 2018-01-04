@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ce70dcd749f31d77061b4669d83d2e0b83726c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 311998595cb1584c276afc28510e1750c770ae93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Nasıl yapılır: ThicknessConverter Nesnesi Kullanma
 ## <a name="example"></a>Örnek  
@@ -42,4 +43,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Border>  
  [Nasıl yapılır: kenar boşluğu özelliğini değiştirme](http://msdn.microsoft.com/en-us/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
  [Nasıl yapılır: ListBoxItem yeni bir veri türüne dönüştürün](http://msdn.microsoft.com/en-us/7a080b88-184e-4b27-bb61-d42bafba9727)  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)
