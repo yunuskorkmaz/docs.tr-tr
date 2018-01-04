@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c43ef5405ed582cc55af69d7f41887c0615965f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077dfacc62c5bb450bc656c8fc102245d581eccc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="b9e8d-102">ICorDebugMutableDataTarget::SetThreadContext yöntemi</span><span class="sxs-lookup"><span data-stu-id="b9e8d-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
-<span data-ttu-id="b9e8d-103">Bir iş parçacığı bağlamının (kayıt değerlerini) ayarlar.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-103">Sets the context (register values) for a thread.</span></span>  
+# <a name="icordebugmutabledatatargetsetthreadcontext-method"></a><span data-ttu-id="54dd4-102">ICorDebugMutableDataTarget::SetThreadContext yöntemi</span><span class="sxs-lookup"><span data-stu-id="54dd4-102">ICorDebugMutableDataTarget::SetThreadContext Method</span></span>
+<span data-ttu-id="54dd4-103">Bir iş parçacığı bağlamının (kayıt değerlerini) ayarlar.</span><span class="sxs-lookup"><span data-stu-id="54dd4-103">Sets the context (register values) for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9e8d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b9e8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54dd4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="54dd4-104">Syntax</span></span>  
   
 ```  
 HRESULT SetThreadContext(  
@@ -30,28 +31,28 @@ HRESULT SetThreadContext(
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b9e8d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b9e8d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="54dd4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="54dd4-105">Parameters</span></span>  
  `dwThreadID`  
- <span data-ttu-id="b9e8d-106">[in] İşletim sistemi tarafından tanımlanan iş parçacığı tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-106">[in] The operating system-defined thread identifier.</span></span>  
+ <span data-ttu-id="54dd4-106">[in] İşletim sistemi tarafından tanımlanan iş parçacığı tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="54dd4-106">[in] The operating system-defined thread identifier.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="b9e8d-107">[in] Boyutunu `pContext` yazılacak arabellek.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-107">[in] The size of the `pContext` buffer to be written.</span></span>  
+ <span data-ttu-id="54dd4-107">[in] Boyutunu `pContext` yazılacak arabellek.</span><span class="sxs-lookup"><span data-stu-id="54dd4-107">[in] The size of the `pContext` buffer to be written.</span></span>  
   
  `pContext`  
- <span data-ttu-id="b9e8d-108">[in] Yazılacak bayt sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-108">[in] A pointer to the bytes to be written.</span></span>  
+ <span data-ttu-id="54dd4-108">[in] Yazılacak bayt sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="54dd4-108">[in] A pointer to the bytes to be written.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b9e8d-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b9e8d-109">Remarks</span></span>  
- <span data-ttu-id="b9e8d-110">`SetThreadContext` Yöntemi güncelleştirmeleri işletim sistemi tarafından tanımlanan tarafından belirtilen iş parçacığı için geçerli bağlam `dwThreadID` bağımsız değişkeni.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="b9e8d-111">İçerik kaydı biçimi tarafından belirtilen platform tarafından belirlenen [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="b9e8d-112">Windows üzerinde bu olan bir [BAĞLAMI](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) yapısı.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-112">On Windows, this is a [CONTEXT](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="54dd4-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="54dd4-109">Remarks</span></span>  
+ <span data-ttu-id="54dd4-110">`SetThreadContext` Yöntemi güncelleştirmeleri işletim sistemi tarafından tanımlanan tarafından belirtilen iş parçacığı için geçerli bağlam `dwThreadID` bağımsız değişkeni.</span><span class="sxs-lookup"><span data-stu-id="54dd4-110">The `SetThreadContext` method updates the current context for the thread specified by the operating system-defined `dwThreadID` argument.</span></span> <span data-ttu-id="54dd4-111">İçerik kaydı biçimi tarafından belirtilen platform tarafından belirlenen [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="54dd4-111">The format of the context record is determined by the platform indicated by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span> <span data-ttu-id="54dd4-112">Windows üzerinde bu olan bir [BAĞLAMI](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) yapısı.</span><span class="sxs-lookup"><span data-stu-id="54dd4-112">On Windows, this is a [CONTEXT](http://msdn.microsoft.com/library/windows/desktop/ms679284.aspx) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9e8d-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b9e8d-113">Requirements</span></span>  
- <span data-ttu-id="b9e8d-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9e8d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54dd4-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="54dd4-113">Requirements</span></span>  
+ <span data-ttu-id="54dd4-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54dd4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9e8d-115">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b9e8d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="54dd4-115">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54dd4-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b9e8d-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b9e8d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54dd4-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54dd4-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b9e8d-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9e8d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="54dd4-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54dd4-117">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9e8d-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b9e8d-118">See Also</span></span>  
- [<span data-ttu-id="b9e8d-119">ICorDebugMutableDataTarget arabirimi</span><span class="sxs-lookup"><span data-stu-id="b9e8d-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
- [<span data-ttu-id="b9e8d-120">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b9e8d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="54dd4-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="54dd4-118">See Also</span></span>  
+ [<span data-ttu-id="54dd4-119">ICorDebugMutableDataTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="54dd4-119">ICorDebugMutableDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)  
+ [<span data-ttu-id="54dd4-120">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="54dd4-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

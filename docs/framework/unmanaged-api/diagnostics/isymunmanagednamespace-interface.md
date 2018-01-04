@@ -19,25 +19,26 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8500eb7a9f1762402567e9352a3ce84f5a672a45
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1acca300362162b94410aadb10b123b4ecacc664
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="27499-102">ISymUnmanagedNamespace Arabirimi</span><span class="sxs-lookup"><span data-stu-id="27499-102">ISymUnmanagedNamespace Interface</span></span>
-<span data-ttu-id="27499-103">Bir ad alanı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="27499-103">Represents a namespace.</span></span>  
+# <a name="isymunmanagednamespace-interface"></a><span data-ttu-id="e4673-102">ISymUnmanagedNamespace Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e4673-102">ISymUnmanagedNamespace Interface</span></span>
+<span data-ttu-id="e4673-103">Bir ad alanı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="e4673-103">Represents a namespace.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="27499-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="27499-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e4673-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="e4673-104">Methods</span></span>  
   
-|<span data-ttu-id="27499-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="27499-105">Method</span></span>|<span data-ttu-id="27499-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="27499-106">Description</span></span>|  
+|<span data-ttu-id="e4673-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="e4673-105">Method</span></span>|<span data-ttu-id="e4673-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e4673-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="27499-107">GetName yöntemi</span><span class="sxs-lookup"><span data-stu-id="27499-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="27499-108">Bu ad alanı adını alır.</span><span class="sxs-lookup"><span data-stu-id="27499-108">Gets the name of this namespace.</span></span>|  
-|[<span data-ttu-id="27499-109">GetNamespaces yöntemi</span><span class="sxs-lookup"><span data-stu-id="27499-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="27499-110">Bu ad alanı alt öğelerini alır.</span><span class="sxs-lookup"><span data-stu-id="27499-110">Gets the children of this namespace.</span></span>|  
-|[<span data-ttu-id="27499-111">GetVariables yöntemi</span><span class="sxs-lookup"><span data-stu-id="27499-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="27499-112">Bu ad alanı içindeki genel kapsamda tanımlanan tüm değişkenler döndürür.</span><span class="sxs-lookup"><span data-stu-id="27499-112">Returns all variables defined at global scope within this namespace.</span></span>|  
+|[<span data-ttu-id="e4673-107">GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4673-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getname-method.md)|<span data-ttu-id="e4673-108">Bu ad alanı adını alır.</span><span class="sxs-lookup"><span data-stu-id="e4673-108">Gets the name of this namespace.</span></span>|  
+|[<span data-ttu-id="e4673-109">GetNamespaces Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4673-109">GetNamespaces Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getnamespaces-method.md)|<span data-ttu-id="e4673-110">Bu ad alanı alt öğelerini alır.</span><span class="sxs-lookup"><span data-stu-id="e4673-110">Gets the children of this namespace.</span></span>|  
+|[<span data-ttu-id="e4673-111">GetVariables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e4673-111">GetVariables Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|<span data-ttu-id="e4673-112">Bu ad alanı içindeki genel kapsamda tanımlanan tüm değişkenler döndürür.</span><span class="sxs-lookup"><span data-stu-id="e4673-112">Returns all variables defined at global scope within this namespace.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="27499-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="27499-113">Requirements</span></span>  
- <span data-ttu-id="27499-114">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="27499-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4673-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e4673-113">Requirements</span></span>  
+ <span data-ttu-id="e4673-114">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e4673-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27499-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="27499-115">See Also</span></span>  
- [<span data-ttu-id="27499-116">Tanılama sembol deposu arabirimleri</span><span class="sxs-lookup"><span data-stu-id="27499-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e4673-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e4673-115">See Also</span></span>  
+ [<span data-ttu-id="e4673-116">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e4673-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

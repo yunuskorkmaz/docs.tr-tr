@@ -19,16 +19,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c9b6f52de1891c5b3de3887f81ede5dead5f8c57
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c9797850d607505879dfa30ef80951ccc1c0ebc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="64be5-102">EHostApplicationPolicy Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="64be5-102">EHostApplicationPolicy Enumeration</span></span>
-<span data-ttu-id="64be5-103">Nasıl değiştirileceğini belirten bir [Ihostassemblymanager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) arabirimi nesnesi.</span><span class="sxs-lookup"><span data-stu-id="64be5-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="64be5-104">Bu numaralandırma kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="64be5-104">This enumeration has been deprecated.</span></span>  
+# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="663aa-102">EHostApplicationPolicy Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="663aa-102">EHostApplicationPolicy Enumeration</span></span>
+<span data-ttu-id="663aa-103">Nasıl değiştirileceğini belirten bir [Ihostassemblymanager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) arabirimi nesnesi.</span><span class="sxs-lookup"><span data-stu-id="663aa-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="663aa-104">Bu numaralandırma kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="663aa-104">This enumeration has been deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64be5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="64be5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="663aa-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="663aa-105">Syntax</span></span>  
   
 ```  
 typedef enum _HostApplicationPolicy {  
@@ -36,14 +37,14 @@ typedef enum _HostApplicationPolicy {
 } EHostApplicationPolicy;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="64be5-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="64be5-106">Requirements</span></span>  
- <span data-ttu-id="64be5-107">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="64be5-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="663aa-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="663aa-106">Requirements</span></span>  
+ <span data-ttu-id="663aa-107">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="663aa-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="64be5-108">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="64be5-108">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="663aa-108">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="663aa-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="64be5-109">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="64be5-109">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="663aa-109">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="663aa-109">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="64be5-110">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64be5-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="663aa-110">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="663aa-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64be5-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="64be5-111">See Also</span></span>  
- [<span data-ttu-id="64be5-112">Barındırma numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="64be5-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="663aa-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="663aa-111">See Also</span></span>  
+ [<span data-ttu-id="663aa-112">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="663aa-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

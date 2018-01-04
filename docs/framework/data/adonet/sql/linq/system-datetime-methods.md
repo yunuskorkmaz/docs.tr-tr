@@ -13,19 +13,20 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e4923be2b9e083129c58d042b1ad3e21897c0346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50fe660a84dcb75c12655f2b60c7e5969a07a839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemdatetime-methods"></a><span data-ttu-id="e3bdf-102">System.DateTime yöntemleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-102">System.DateTime Methods</span></span>
-<span data-ttu-id="e3bdf-103">LINQ SQL sorguları kullanmak, aşağıdaki LINQ SQL desteklenen yöntem, işleçler ve özellikler için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="e3bdf-104">Yöntemi, işleci veya özelliği desteklenmeyen olduğunda LINQ-SQL üye SQL Server üzerinde yürütme için çeviremez.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="e3bdf-105">Kodunuzda bu üyeleri kullanabilir, sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilmesi önce ancak, bunlar değerlendirilmelidir.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
+# <a name="systemdatetime-methods"></a><span data-ttu-id="ad7ad-102">System.DateTime yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-102">System.DateTime Methods</span></span>
+<span data-ttu-id="ad7ad-103">LINQ SQL sorguları kullanmak, aşağıdaki LINQ SQL desteklenen yöntem, işleçler ve özellikler için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="ad7ad-104">Yöntemi, işleci veya özelliği desteklenmeyen olduğunda LINQ-SQL üye SQL Server üzerinde yürütme için çeviremez.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="ad7ad-105">Kodunuzda bu üyeleri kullanabilir, sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilmesi önce ancak, bunlar değerlendirilmelidir.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-## <a name="supported-systemdatetime-members"></a><span data-ttu-id="e3bdf-106">Desteklenen System.DateTime üyeleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-106">Supported System.DateTime Members</span></span>  
- <span data-ttu-id="e3bdf-107">Nesne modeli ya da dış eşleme dosyası eşlenen sonra LINQ-SQL aşağıdaki çağrı sayesinde <xref:System.DateTime?displayProperty=nameWithType> SQL sorguları LINQ içinde üyelerine.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
+## <a name="supported-systemdatetime-members"></a><span data-ttu-id="ad7ad-106">Desteklenen System.DateTime üyeleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-106">Supported System.DateTime Members</span></span>  
+ <span data-ttu-id="ad7ad-107">Nesne modeli ya da dış eşleme dosyası eşlenen sonra LINQ-SQL aşağıdaki çağrı sayesinde <xref:System.DateTime?displayProperty=nameWithType> SQL sorguları LINQ içinde üyelerine.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
   
-|<span data-ttu-id="e3bdf-108">Desteklenen <xref:System.DateTime> yöntemleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="e3bdf-109">Desteklenen <xref:System.DateTime> işleçleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="e3bdf-110">Desteklenen <xref:System.DateTime> özellikleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-110">Supported <xref:System.DateTime> Properties</span></span>|  
+|<span data-ttu-id="ad7ad-108">Desteklenen <xref:System.DateTime> yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="ad7ad-109">Desteklenen <xref:System.DateTime> işleçleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="ad7ad-110">Desteklenen <xref:System.DateTime> özellikleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-110">Supported <xref:System.DateTime> Properties</span></span>|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
@@ -41,8 +42,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="e3bdf-111">LINQ-SQL tarafından desteklenmeyen üyeleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-111">Members Not Supported by LINQ to SQL</span></span>  
- <span data-ttu-id="e3bdf-112">Aşağıdaki üyeleri içinde LINQ SQL sorguları desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
+## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="ad7ad-111">LINQ-SQL tarafından desteklenmeyen üyeleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-111">Members Not Supported by LINQ to SQL</span></span>  
+ <span data-ttu-id="ad7ad-112">Aşağıdaki üyeleri içinde LINQ SQL sorguları desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
   
 |||  
 |-|-|  
@@ -56,17 +57,17 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## <a name="method-translation-example"></a><span data-ttu-id="e3bdf-113">Yöntemi çevirisi örneği</span><span class="sxs-lookup"><span data-stu-id="e3bdf-113">Method Translation Example</span></span>  
- <span data-ttu-id="e3bdf-114">SQL Server'a gönderilmeden önce LINQ-SQL tarafından desteklenen tüm yöntemleri için Transact-SQL çevrilir.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="e3bdf-115">Örneğin, aşağıdaki düzeni göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-115">For example, consider the following pattern.</span></span>  
+## <a name="method-translation-example"></a><span data-ttu-id="ad7ad-113">Yöntemi çevirisi örneği</span><span class="sxs-lookup"><span data-stu-id="ad7ad-113">Method Translation Example</span></span>  
+ <span data-ttu-id="ad7ad-114">SQL Server'a gönderilmeden önce LINQ-SQL tarafından desteklenen tüm yöntemleri için Transact-SQL çevrilir.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="ad7ad-115">Örneğin, aşağıdaki düzeni göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-115">For example, consider the following pattern.</span></span>  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
- <span data-ttu-id="e3bdf-116">Tanınan, SQL Server doğrudan bir çağrı çevrilir `DATEDIFF` gibi işlev:</span><span class="sxs-lookup"><span data-stu-id="e3bdf-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
+ <span data-ttu-id="ad7ad-116">Tanınan, SQL Server doğrudan bir çağrı çevrilir `DATEDIFF` gibi işlev:</span><span class="sxs-lookup"><span data-stu-id="ad7ad-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="e3bdf-117">SQLMethods tarih ve saat yöntemleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-117">SQLMethods Date and Time Methods</span></span>  
- <span data-ttu-id="e3bdf-118">Tarafından sunulan yöntemleri yanı sıra <xref:System.DateTime> yapısı, LINQ-SQL, aşağıdaki tabloda listelenen yöntemleri sunar <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> tarih ve saat ile çalışmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
+## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="ad7ad-117">SQLMethods tarih ve saat yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-117">SQLMethods Date and Time Methods</span></span>  
+ <span data-ttu-id="ad7ad-118">Tarafından sunulan yöntemleri yanı sıra <xref:System.DateTime> yapısı, LINQ-SQL, aşağıdaki tabloda listelenen yöntemleri sunar <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> tarih ve saat ile çalışmak için sınıf.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
   
 ||||  
 |-|-|-|  
@@ -74,8 +75,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="e3bdf-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e3bdf-119">See Also</span></span>  
- [<span data-ttu-id="e3bdf-120">Sorgu kavramları</span><span class="sxs-lookup"><span data-stu-id="e3bdf-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="e3bdf-121">Nesne modeli oluşturma</span><span class="sxs-lookup"><span data-stu-id="e3bdf-121">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [<span data-ttu-id="e3bdf-122">SQL CLR türü eşlemesi</span><span class="sxs-lookup"><span data-stu-id="e3bdf-122">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [<span data-ttu-id="e3bdf-123">Veri türleri ve işlevleri</span><span class="sxs-lookup"><span data-stu-id="e3bdf-123">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ad7ad-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ad7ad-119">See Also</span></span>  
+ [<span data-ttu-id="ad7ad-120">Sorgu Kavramları</span><span class="sxs-lookup"><span data-stu-id="ad7ad-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="ad7ad-121">Nesne Modeli Oluşturma</span><span class="sxs-lookup"><span data-stu-id="ad7ad-121">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [<span data-ttu-id="ad7ad-122">SQL-CLR Tür Eşlemesi</span><span class="sxs-lookup"><span data-stu-id="ad7ad-122">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="ad7ad-123">Veri Türleri ve İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ad7ad-123">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

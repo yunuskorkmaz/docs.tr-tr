@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5fc9671365a866c04671bca965ed43d83533f07f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9aba987aa6f806bfe1608e081aac4cb501cd23fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="741a1-102">ICorDebugArrayValue::GetElement Metodu</span><span class="sxs-lookup"><span data-stu-id="741a1-102">ICorDebugArrayValue::GetElement Method</span></span>
-<span data-ttu-id="741a1-103">Verilen dizi öğenin değerini alır.</span><span class="sxs-lookup"><span data-stu-id="741a1-103">Gets the value of the given array element.</span></span>  
+# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="20c0f-102">ICorDebugArrayValue::GetElement Metodu</span><span class="sxs-lookup"><span data-stu-id="20c0f-102">ICorDebugArrayValue::GetElement Method</span></span>
+<span data-ttu-id="20c0f-103">Verilen dizi öğenin değerini alır.</span><span class="sxs-lookup"><span data-stu-id="20c0f-103">Gets the value of the given array element.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="741a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="741a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20c0f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="20c0f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElement (  
@@ -41,25 +42,25 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="741a1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="741a1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="20c0f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="20c0f-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="741a1-106">[in] Bu boyut sayısını `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="741a1-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="20c0f-106">[in] Bu boyut sayısını `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="20c0f-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="741a1-107">Bu değer ayrıca boyutudur `indices` boyutuna boyutlarını sayıya eşit olduğundan dizi `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="741a1-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="20c0f-107">Bu değer ayrıca boyutudur `indices` boyutuna boyutlarını sayıya eşit olduğundan dizi `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="20c0f-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indices`  
- <span data-ttu-id="741a1-108">[in] Bir dizi dizini değerleri, her biri bir boyut içindeki konumu belirtir `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="741a1-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="20c0f-108">[in] Bir dizi dizini değerleri, her biri bir boyut içindeki konumu belirtir `ICorDebugArrayValue` nesnesi.</span><span class="sxs-lookup"><span data-stu-id="20c0f-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="741a1-109">Bu değer null olmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="741a1-109">This value must not be null.</span></span>  
+ <span data-ttu-id="20c0f-109">Bu değer null olmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="20c0f-109">This value must not be null.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="741a1-110">[out] Bir işaretçi adresine Icordebugvalue nesnenin belirtilen öğenin değerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="741a1-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
+ <span data-ttu-id="20c0f-110">[out] Bir işaretçi adresine Icordebugvalue nesnenin belirtilen öğenin değerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="20c0f-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="741a1-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="741a1-111">Requirements</span></span>  
- <span data-ttu-id="741a1-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="741a1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20c0f-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="20c0f-111">Requirements</span></span>  
+ <span data-ttu-id="20c0f-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20c0f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="741a1-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="741a1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="20c0f-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="20c0f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="741a1-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="741a1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="20c0f-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20c0f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="741a1-115">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="741a1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="20c0f-115">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20c0f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

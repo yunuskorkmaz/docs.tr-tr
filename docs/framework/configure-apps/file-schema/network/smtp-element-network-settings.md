@@ -19,21 +19,22 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 17b4050c43354da7e7ba6c3ea13a0c7621faf0a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="8dbda-102">&lt;SMTP&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="8dbda-102">&lt;smtp&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="8dbda-103">Teslim biçimi, teslim yöntemini yapılandırır ve e-postalar göndermek için adresinden.</span><span class="sxs-lookup"><span data-stu-id="8dbda-103">Configures the delivery format, delivery method, and from address for sending e-mails.</span></span>  
+# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="7fe9c-102">&lt;SMTP&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="7fe9c-102">&lt;smtp&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="7fe9c-103">Teslim biçimi, teslim yöntemini yapılandırır ve e-postalar göndermek için adresinden.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-103">Configures the delivery format, delivery method, and from address for sending e-mails.</span></span>  
   
- <span data-ttu-id="8dbda-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="8dbda-104">\<configuration></span></span>  
-<span data-ttu-id="8dbda-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="8dbda-105">\<system.net></span></span>  
-<span data-ttu-id="8dbda-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="8dbda-106">\<mailSettings></span></span>  
-<span data-ttu-id="8dbda-107">\<SMTP ></span><span class="sxs-lookup"><span data-stu-id="8dbda-107">\<smtp></span></span>  
+ <span data-ttu-id="7fe9c-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="7fe9c-104">\<configuration></span></span>  
+<span data-ttu-id="7fe9c-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7fe9c-105">\<system.net></span></span>  
+<span data-ttu-id="7fe9c-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="7fe9c-106">\<mailSettings></span></span>  
+<span data-ttu-id="7fe9c-107">\<SMTP ></span><span class="sxs-lookup"><span data-stu-id="7fe9c-107">\<smtp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8dbda-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8dbda-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fe9c-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7fe9c-108">Syntax</span></span>  
   
 ```xml  
       <smtp  
@@ -45,32 +46,32 @@ ms.lasthandoff: 11/21/2017
       </smtp>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8dbda-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="8dbda-109">Attributes and Elements</span></span>  
- <span data-ttu-id="8dbda-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8dbda-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7fe9c-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="7fe9c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7fe9c-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8dbda-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8dbda-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7fe9c-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7fe9c-111">Attributes</span></span>  
   
-|<span data-ttu-id="8dbda-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="8dbda-112">Attribute</span></span>|<span data-ttu-id="8dbda-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8dbda-113">Description</span></span>|  
+|<span data-ttu-id="7fe9c-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7fe9c-112">Attribute</span></span>|<span data-ttu-id="7fe9c-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7fe9c-113">Description</span></span>|  
 |---------------|-----------------|  
-|`deliveryFormat`|<span data-ttu-id="8dbda-114">Giden e-postalar için teslim biçimi belirtir.</span><span class="sxs-lookup"><span data-stu-id="8dbda-114">Specifies the delivery format for outgoing e-mails.</span></span> <span data-ttu-id="8dbda-115">SevenBit ve uluslararası bunun kabul edilebilir değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="8dbda-115">Acceptable values are SevenBit and International.</span></span>|  
-|`deliveryMethod`|<span data-ttu-id="8dbda-116">E-postalar için teslim yöntemini belirtir.</span><span class="sxs-lookup"><span data-stu-id="8dbda-116">Specifies the delivery method for e-mails.</span></span> <span data-ttu-id="8dbda-117">Ağ, pickupDirectoryFromIis ve specifiedPickupDirectory bunun kabul edilebilir değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="8dbda-117">Acceptable values are network, pickupDirectoryFromIis, and specifiedPickupDirectory.</span></span>|  
-|`from`|<span data-ttu-id="8dbda-118">Belirtir giden e-postalar için adresinden.</span><span class="sxs-lookup"><span data-stu-id="8dbda-118">Specifies the from address for outgoing e-mails.</span></span>|  
+|`deliveryFormat`|<span data-ttu-id="7fe9c-114">Giden e-postalar için teslim biçimi belirtir.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-114">Specifies the delivery format for outgoing e-mails.</span></span> <span data-ttu-id="7fe9c-115">SevenBit ve uluslararası bunun kabul edilebilir değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-115">Acceptable values are SevenBit and International.</span></span>|  
+|`deliveryMethod`|<span data-ttu-id="7fe9c-116">E-postalar için teslim yöntemini belirtir.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-116">Specifies the delivery method for e-mails.</span></span> <span data-ttu-id="7fe9c-117">Ağ, pickupDirectoryFromIis ve specifiedPickupDirectory bunun kabul edilebilir değerlerdir.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-117">Acceptable values are network, pickupDirectoryFromIis, and specifiedPickupDirectory.</span></span>|  
+|`from`|<span data-ttu-id="7fe9c-118">Belirtir giden e-postalar için adresinden.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-118">Specifies the from address for outgoing e-mails.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8dbda-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="8dbda-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7fe9c-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="7fe9c-119">Child Elements</span></span>  
   
-|<span data-ttu-id="8dbda-120">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="8dbda-120">Attribute</span></span>|<span data-ttu-id="8dbda-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8dbda-121">Description</span></span>|  
+|<span data-ttu-id="7fe9c-120">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7fe9c-120">Attribute</span></span>|<span data-ttu-id="7fe9c-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7fe9c-121">Description</span></span>|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|<span data-ttu-id="8dbda-122">Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="8dbda-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
-|`network`|<span data-ttu-id="8dbda-123">Harici bir SMTP sunucusu için ağ seçenekleri yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="8dbda-123">Configures the network options for an external SMTP server.</span></span>|  
+|`specifiedPickupDirectory`|<span data-ttu-id="7fe9c-122">Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
+|`network`|<span data-ttu-id="7fe9c-123">Harici bir SMTP sunucusu için ağ seçenekleri yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-123">Configures the network options for an external SMTP server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8dbda-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="8dbda-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7fe9c-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="7fe9c-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="8dbda-125">**Öğesi**</span><span class="sxs-lookup"><span data-stu-id="8dbda-125">**Element**</span></span>|<span data-ttu-id="8dbda-126">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="8dbda-126">**Description**</span></span>|  
+|<span data-ttu-id="7fe9c-125">**Öğesi**</span><span class="sxs-lookup"><span data-stu-id="7fe9c-125">**Element**</span></span>|<span data-ttu-id="7fe9c-126">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="7fe9c-126">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="8dbda-127">\<mailSettings > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="8dbda-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="8dbda-128">Posta gönderme seçenekleri yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="8dbda-128">Configures mail sending options.</span></span>|  
+|[<span data-ttu-id="7fe9c-127">\<mailSettings > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="7fe9c-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="7fe9c-128">Posta gönderme seçenekleri yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-128">Configures mail sending options.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8dbda-129">Örnek</span><span class="sxs-lookup"><span data-stu-id="8dbda-129">Example</span></span>  
- <span data-ttu-id="8dbda-130">Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametreleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="8dbda-130">The following example specifies the appropriate SMTP parameters to send e-mail using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="7fe9c-129">Örnek</span><span class="sxs-lookup"><span data-stu-id="7fe9c-129">Example</span></span>  
+ <span data-ttu-id="7fe9c-130">Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametreleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-130">The following example specifies the appropriate SMTP parameters to send e-mail using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -88,9 +89,9 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8dbda-131">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8dbda-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7fe9c-131">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7fe9c-131">See Also</span></span>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpDeliveryFormat>  
  <xref:System.Net.Mail.SmtpDeliveryMethod>  
- [<span data-ttu-id="8dbda-132">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="8dbda-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="7fe9c-132">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="7fe9c-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

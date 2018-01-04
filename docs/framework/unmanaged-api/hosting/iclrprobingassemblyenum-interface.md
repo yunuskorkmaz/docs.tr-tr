@@ -19,34 +19,35 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6d810ab6e62c6df1b00305947de552ecdbe82141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31f3bfcb2b70bda952f0e4bb43dd8b0067e6ef1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrprobingassemblyenum-interface"></a><span data-ttu-id="9d132-102">ICLRProbingAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9d132-102">ICLRProbingAssemblyEnum Interface</span></span>
-<span data-ttu-id="9d132-103">Ortak dil çalışma zamanı (CLR) iç oluşturun veya kimliğe anlamak zorunda kalmadan derlemenin kimlik bilgilerini kullanarak bir derleme yoklama kimliklerini almak konak sağlayan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="9d132-103">Provides methods that enable the host to get the probing identities of an assembly by using the assembly's identity information that is internal to the common language runtime (CLR), without needing to create or understand that identity.</span></span>  
+# <a name="iclrprobingassemblyenum-interface"></a><span data-ttu-id="bad17-102">ICLRProbingAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bad17-102">ICLRProbingAssemblyEnum Interface</span></span>
+<span data-ttu-id="bad17-103">Ortak dil çalışma zamanı (CLR) iç oluşturun veya kimliğe anlamak zorunda kalmadan derlemenin kimlik bilgilerini kullanarak bir derleme yoklama kimliklerini almak konak sağlayan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="bad17-103">Provides methods that enable the host to get the probing identities of an assembly by using the assembly's identity information that is internal to the common language runtime (CLR), without needing to create or understand that identity.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9d132-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="9d132-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="bad17-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="bad17-104">Methods</span></span>  
   
-|<span data-ttu-id="9d132-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="9d132-105">Method</span></span>|<span data-ttu-id="9d132-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9d132-106">Description</span></span>|  
+|<span data-ttu-id="bad17-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="bad17-105">Method</span></span>|<span data-ttu-id="bad17-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bad17-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9d132-107">Get yöntemi</span><span class="sxs-lookup"><span data-stu-id="9d132-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|<span data-ttu-id="9d132-108">Belirtilen dizindeki derleme kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="9d132-108">Gets the assembly identity at the specified index.</span></span>|  
+|[<span data-ttu-id="bad17-107">Get Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bad17-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|<span data-ttu-id="bad17-108">Belirtilen dizindeki derleme kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="bad17-108">Gets the assembly identity at the specified index.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9d132-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9d132-109">Remarks</span></span>  
- <span data-ttu-id="9d132-110">Gibi yöntemler [Iclrassemblyıdentitymanager::getprobingassembliesfromreference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) dönüş bir `ICLRProbingAssemblyEnum` örneği.</span><span class="sxs-lookup"><span data-stu-id="9d132-110">Methods such as [ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) return an `ICLRProbingAssemblyEnum` instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bad17-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bad17-109">Remarks</span></span>  
+ <span data-ttu-id="bad17-110">Gibi yöntemler [Iclrassemblyıdentitymanager::getprobingassembliesfromreference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) dönüş bir `ICLRProbingAssemblyEnum` örneği.</span><span class="sxs-lookup"><span data-stu-id="bad17-110">Methods such as [ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) return an `ICLRProbingAssemblyEnum` instance.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d132-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9d132-111">Requirements</span></span>  
- <span data-ttu-id="9d132-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d132-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bad17-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bad17-111">Requirements</span></span>  
+ <span data-ttu-id="bad17-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bad17-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d132-113">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9d132-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bad17-113">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bad17-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9d132-114">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="9d132-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bad17-114">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="bad17-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9d132-115">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d132-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bad17-115">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bad17-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d132-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9d132-116">See Also</span></span>  
- [<span data-ttu-id="9d132-117">Iclrassemblyıdentitymanager arabirimi</span><span class="sxs-lookup"><span data-stu-id="9d132-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="9d132-118">Iclrassemblyreferencelist arabirimi</span><span class="sxs-lookup"><span data-stu-id="9d132-118">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [<span data-ttu-id="9d132-119">Barındırma arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9d132-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="bad17-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bad17-116">See Also</span></span>  
+ [<span data-ttu-id="bad17-117">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bad17-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
+ [<span data-ttu-id="bad17-118">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bad17-118">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
+ [<span data-ttu-id="bad17-119">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="bad17-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

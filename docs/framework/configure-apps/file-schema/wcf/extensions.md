@@ -13,14 +13,15 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34acc21230650fe5b8da2f81fd176c253c57f69d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13d79a52690f8262b08c8510e1f78b7efbf3adab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="7f3a9-102">&lt;Uzantıları&gt;</span><span class="sxs-lookup"><span data-stu-id="7f3a9-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="7f3a9-103">Bu yapılandırma öğesi, standart bulunabilirlik meta verilerin yanı sıra (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanması için özel meta veriler içeren XML öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="7f3a9-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="7f3a9-104">Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7f3a9-104">The following is an example of using this configuration element.</span></span>  
+# <a name="ltextensionsgt"></a><span data-ttu-id="cba72-102">&lt;Uzantıları&gt;</span><span class="sxs-lookup"><span data-stu-id="cba72-102">&lt;extensions&gt;</span></span>
+<span data-ttu-id="cba72-103">Bu yapılandırma öğesi, standart bulunabilirlik meta verilerin yanı sıra (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanması için özel meta veriler içeren XML öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="cba72-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="cba72-104">Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="cba72-104">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f3a9-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7f3a9-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cba72-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cba72-105">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

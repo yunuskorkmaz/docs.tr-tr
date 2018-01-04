@@ -21,22 +21,23 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a385401217c10a316268f48757e46e3d0cfea09c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a><span data-ttu-id="c245e-102">&lt;kaldırma&gt; öğesi olarak ayarlanıyor (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="c245e-102">&lt;remove&gt; Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="c245e-103">Bir IP adresi veya DNS adı proxy atlama listesinden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="c245e-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a><span data-ttu-id="fb483-102">&lt;kaldırma&gt; öğesi olarak ayarlanıyor (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="fb483-102">&lt;remove&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="fb483-103">Bir IP adresi veya DNS adı proxy atlama listesinden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="fb483-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>  
   
- <span data-ttu-id="c245e-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="c245e-104">\<configuration></span></span>  
-<span data-ttu-id="c245e-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="c245e-105">\<system.net></span></span>  
-<span data-ttu-id="c245e-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="c245e-106">\<defaultProxy></span></span>  
-<span data-ttu-id="c245e-107">\<olarak ayarlanıyor ></span><span class="sxs-lookup"><span data-stu-id="c245e-107">\<bypasslist></span></span>  
-<span data-ttu-id="c245e-108">\<kaldırma ></span><span class="sxs-lookup"><span data-stu-id="c245e-108">\<remove></span></span>  
+ <span data-ttu-id="fb483-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="fb483-104">\<configuration></span></span>  
+<span data-ttu-id="fb483-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="fb483-105">\<system.net></span></span>  
+<span data-ttu-id="fb483-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="fb483-106">\<defaultProxy></span></span>  
+<span data-ttu-id="fb483-107">\<olarak ayarlanıyor ></span><span class="sxs-lookup"><span data-stu-id="fb483-107">\<bypasslist></span></span>  
+<span data-ttu-id="fb483-108">\<kaldırma ></span><span class="sxs-lookup"><span data-stu-id="fb483-108">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c245e-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c245e-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb483-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fb483-109">Syntax</span></span>  
   
 ```xml  
 <remove   
@@ -44,36 +45,36 @@ ms.lasthandoff: 11/21/2017
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c245e-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c245e-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c245e-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c245e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fb483-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="fb483-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="fb483-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="fb483-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c245e-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c245e-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fb483-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="fb483-112">Attributes</span></span>  
   
-|<span data-ttu-id="c245e-113">**Özniteliği**</span><span class="sxs-lookup"><span data-stu-id="c245e-113">**Attribute**</span></span>|<span data-ttu-id="c245e-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="c245e-114">**Description**</span></span>|  
+|<span data-ttu-id="fb483-113">**Özniteliği**</span><span class="sxs-lookup"><span data-stu-id="fb483-113">**Attribute**</span></span>|<span data-ttu-id="fb483-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="fb483-114">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`address`|<span data-ttu-id="c245e-115">Bir IP adresi veya DNS adı açıklayan bir normal ifade.</span><span class="sxs-lookup"><span data-stu-id="c245e-115">A regular expression describing an IP address or DNS name.</span></span>|  
+|`address`|<span data-ttu-id="fb483-115">Bir IP adresi veya DNS adı açıklayan bir normal ifade.</span><span class="sxs-lookup"><span data-stu-id="fb483-115">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c245e-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c245e-116">Child Elements</span></span>  
- <span data-ttu-id="c245e-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="c245e-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fb483-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="fb483-116">Child Elements</span></span>  
+ <span data-ttu-id="fb483-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="fb483-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c245e-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c245e-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fb483-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="fb483-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="c245e-119">**Öğesi**</span><span class="sxs-lookup"><span data-stu-id="c245e-119">**Element**</span></span>|<span data-ttu-id="c245e-120">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="c245e-120">**Description**</span></span>|  
+|<span data-ttu-id="fb483-119">**Öğesi**</span><span class="sxs-lookup"><span data-stu-id="fb483-119">**Element**</span></span>|<span data-ttu-id="fb483-120">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="fb483-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c245e-121">olarak ayarlanıyor</span><span class="sxs-lookup"><span data-stu-id="c245e-121">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="c245e-122">Bir proxy kullanmayın adresleri açıklamak normal bir ifade kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="c245e-122">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="fb483-121">olarak ayarlanıyor</span><span class="sxs-lookup"><span data-stu-id="fb483-121">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="fb483-122">Bir proxy kullanmayın adresleri açıklamak normal bir ifade kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="fb483-122">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c245e-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c245e-123">Remarks</span></span>  
- <span data-ttu-id="c245e-124">`remove` IP adreslerini veya DNS sunucu adları bir proxy sunucuyu atla adresleri listesinden açıklayan normal ifadeler öğeyi kaldırır.</span><span class="sxs-lookup"><span data-stu-id="c245e-124">The `remove` element removes regular expressions describing IP addresses or DNS server names from the list of addresses that bypass a proxy server.</span></span> <span data-ttu-id="c245e-125">Adresleri yapılandırma dosyası veya yapılandırma hiyerarşisindeki daha yüksek düzeyde önceden tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="c245e-125">The addresses were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb483-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fb483-123">Remarks</span></span>  
+ <span data-ttu-id="fb483-124">`remove` IP adreslerini veya DNS sunucu adları bir proxy sunucuyu atla adresleri listesinden açıklayan normal ifadeler öğeyi kaldırır.</span><span class="sxs-lookup"><span data-stu-id="fb483-124">The `remove` element removes regular expressions describing IP addresses or DNS server names from the list of addresses that bypass a proxy server.</span></span> <span data-ttu-id="fb483-125">Adresleri yapılandırma dosyası veya yapılandırma hiyerarşisindeki daha yüksek düzeyde önceden tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="fb483-125">The addresses were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
- <span data-ttu-id="c245e-126">Değeri `address` özniteliği, bir IP adresi veya ana bilgisayar adlarını açıklar normal bir ifade olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="c245e-126">The value for the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
+ <span data-ttu-id="fb483-126">Değeri `address` özniteliği, bir IP adresi veya ana bilgisayar adlarını açıklar normal bir ifade olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="fb483-126">The value for the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- <span data-ttu-id="c245e-127">Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadeleri](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="c245e-127">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
+ <span data-ttu-id="fb483-127">Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadeleri](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="fb483-127">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c245e-128">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="c245e-128">Configuration Files</span></span>  
- <span data-ttu-id="c245e-129">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c245e-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="fb483-128">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="fb483-128">Configuration Files</span></span>  
+ <span data-ttu-id="fb483-129">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="fb483-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c245e-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="c245e-130">Example</span></span>  
- <span data-ttu-id="c245e-131">Aşağıdaki örnek adventure-works.com'u etki alanı için herhangi bir önceki tanımının kaldırır ve sonra contoso.com etki alanına atlama listesi ekler.</span><span class="sxs-lookup"><span data-stu-id="c245e-131">The following example removes any previous definition for the adventure-works.com domain, and then adds the contoso.com domain to the bypass list.</span></span>  
+## <a name="example"></a><span data-ttu-id="fb483-130">Örnek</span><span class="sxs-lookup"><span data-stu-id="fb483-130">Example</span></span>  
+ <span data-ttu-id="fb483-131">Aşağıdaki örnek adventure-works.com'u etki alanı için herhangi bir önceki tanımının kaldırır ve sonra contoso.com etki alanına atlama listesi ekler.</span><span class="sxs-lookup"><span data-stu-id="fb483-131">The following example removes any previous definition for the adventure-works.com domain, and then adds the contoso.com domain to the bypass list.</span></span>  
   
 ```xml  
 <configuration>  
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c245e-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c245e-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fb483-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fb483-132">See Also</span></span>  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="c245e-133">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="c245e-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="fb483-133">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="fb483-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e87d40fc77e1539bf9ef670b959eb0f9c7d7364
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6c3802cd300204ca52a261a4e88aaf0ab242a456
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="2349d-102">ICorDebugObjectValue::GetContext Metodu</span><span class="sxs-lookup"><span data-stu-id="2349d-102">ICorDebugObjectValue::GetContext Method</span></span>
-<span data-ttu-id="2349d-103">`GetContext`.NET Framework'ün bu sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="2349d-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="4c880-102">ICorDebugObjectValue::GetContext Metodu</span><span class="sxs-lookup"><span data-stu-id="4c880-102">ICorDebugObjectValue::GetContext Method</span></span>
+<span data-ttu-id="4c880-103">`GetContext`.NET Framework'ün bu sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="4c880-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2349d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2349d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c880-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c880-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
@@ -38,9 +39,9 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2349d-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2349d-105">Requirements</span></span>  
- <span data-ttu-id="2349d-106">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2349d-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c880-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4c880-105">Requirements</span></span>  
+ <span data-ttu-id="4c880-106">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4c880-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2349d-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2349d-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4c880-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4c880-107">See Also</span></span>  
     
  

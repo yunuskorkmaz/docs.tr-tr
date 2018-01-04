@@ -19,35 +19,36 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 910317bea8af3a80ee66544651de2372808734bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 019a94243773fcb1751f419d8e38a6759fa1d3bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugfunctionbreakpoint-interface1"></a><span data-ttu-id="d7fee-102">Icordebugfunctionbreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="d7fee-102">ICorDebugFunctionBreakpoint Interface1</span></span>
-<span data-ttu-id="d7fee-103">Kesme noktaları işlevler içinde desteklemek için Icordebugbreakpoint arabirimi genişletir.</span><span class="sxs-lookup"><span data-stu-id="d7fee-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
+# <a name="icordebugfunctionbreakpoint-interface1"></a><span data-ttu-id="7cb95-102">Icordebugfunctionbreakpoint Interface1</span><span class="sxs-lookup"><span data-stu-id="7cb95-102">ICorDebugFunctionBreakpoint Interface1</span></span>
+<span data-ttu-id="7cb95-103">Kesme noktaları işlevler içinde desteklemek için Icordebugbreakpoint arabirimi genişletir.</span><span class="sxs-lookup"><span data-stu-id="7cb95-103">Extends the ICorDebugBreakpoint interface to support breakpoints within functions.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d7fee-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="d7fee-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7cb95-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="7cb95-104">Methods</span></span>  
   
-|<span data-ttu-id="d7fee-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="d7fee-105">Method</span></span>|<span data-ttu-id="d7fee-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d7fee-106">Description</span></span>|  
+|<span data-ttu-id="7cb95-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="7cb95-105">Method</span></span>|<span data-ttu-id="7cb95-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7cb95-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d7fee-107">GetFunction yöntemi</span><span class="sxs-lookup"><span data-stu-id="d7fee-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="d7fee-108">Arabirim işaretçisi kesme ayarlanmış işlevi başvuruda bulunan bir ICorDebugFunction alır.</span><span class="sxs-lookup"><span data-stu-id="d7fee-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
-|[<span data-ttu-id="d7fee-109">GetOffset yöntemi</span><span class="sxs-lookup"><span data-stu-id="d7fee-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="d7fee-110">İşlevin içinden kesme uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="d7fee-110">Gets the offset of the breakpoint within the function.</span></span>|  
+|[<span data-ttu-id="7cb95-107">GetFunction Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7cb95-107">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|<span data-ttu-id="7cb95-108">Arabirim işaretçisi kesme ayarlanmış işlevi başvuruda bulunan bir ICorDebugFunction alır.</span><span class="sxs-lookup"><span data-stu-id="7cb95-108">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>|  
+|[<span data-ttu-id="7cb95-109">GetOffset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7cb95-109">GetOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|<span data-ttu-id="7cb95-110">İşlevin içinden kesme uzaklığını alır.</span><span class="sxs-lookup"><span data-stu-id="7cb95-110">Gets the offset of the breakpoint within the function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d7fee-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d7fee-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cb95-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7cb95-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d7fee-112">Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="d7fee-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="7cb95-112">Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="7cb95-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7fee-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d7fee-113">Requirements</span></span>  
- <span data-ttu-id="d7fee-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7fee-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cb95-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7cb95-113">Requirements</span></span>  
+ <span data-ttu-id="7cb95-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cb95-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7fee-115">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7fee-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7cb95-115">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cb95-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d7fee-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7fee-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7cb95-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cb95-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7fee-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7fee-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7cb95-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cb95-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7fee-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d7fee-118">See Also</span></span>  
- [<span data-ttu-id="d7fee-119">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d7fee-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7cb95-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7cb95-118">See Also</span></span>  
+ [<span data-ttu-id="7cb95-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7cb95-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

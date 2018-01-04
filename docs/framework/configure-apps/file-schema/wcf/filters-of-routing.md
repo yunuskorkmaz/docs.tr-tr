@@ -13,21 +13,22 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9dd9faf63ade725bb8bea12b40390fd30c91973
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2687101aa868ae77ce0ae818afd9df906f8525c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltfiltersgt-of-ltroutinggt"></a><span data-ttu-id="6f131-102">&lt;yönlendirme&gt; &lt;filtreleri&gt;</span><span class="sxs-lookup"><span data-stu-id="6f131-102">&lt;filters&gt; of &lt;routing&gt;</span></span>
+# <a name="ltfiltersgt-of-ltroutinggt"></a><span data-ttu-id="8bef6-102">&lt;yönlendirme&gt; &lt;filtreleri&gt;</span><span class="sxs-lookup"><span data-stu-id="8bef6-102">&lt;filters&gt; of &lt;routing&gt;</span></span>
 
-<span data-ttu-id="6f131-103">Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="6f131-103">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span>
+<span data-ttu-id="8bef6-103">Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="8bef6-103">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages.</span></span>
 
-<span data-ttu-id="6f131-104">[**\<system.serviceModel >**](system-servicemodel.md) </span><span class="sxs-lookup"><span data-stu-id="6f131-104">[**\<system.serviceModel>**](system-servicemodel.md) </span></span>  
-<span data-ttu-id="6f131-105">&nbsp;&nbsp;[**\<Yönlendirme >**](routing.md) </span><span class="sxs-lookup"><span data-stu-id="6f131-105">&nbsp;&nbsp;[**\<routing>**](routing.md) </span></span>  
-<span data-ttu-id="6f131-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filtreleri >**</span><span class="sxs-lookup"><span data-stu-id="6f131-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**</span></span>
+<span data-ttu-id="8bef6-104">[**\<system.serviceModel >**](system-servicemodel.md) </span><span class="sxs-lookup"><span data-stu-id="8bef6-104">[**\<system.serviceModel>**](system-servicemodel.md) </span></span>  
+<span data-ttu-id="8bef6-105">&nbsp;&nbsp;[**\<Yönlendirme >**](routing.md) </span><span class="sxs-lookup"><span data-stu-id="8bef6-105">&nbsp;&nbsp;[**\<routing>**](routing.md) </span></span>  
+<span data-ttu-id="8bef6-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filtreleri >**</span><span class="sxs-lookup"><span data-stu-id="8bef6-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="6f131-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f131-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8bef6-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8bef6-107">Syntax</span></span>
 
 ```xml
 <system.serviceModel>
@@ -42,26 +43,26 @@ ms.lasthandoff: 12/02/2017
 </system.serviceModel>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="6f131-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="6f131-108">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="8bef6-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="8bef6-108">Attributes and elements</span></span>
 
-<span data-ttu-id="6f131-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6f131-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="8bef6-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8bef6-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="6f131-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6f131-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="8bef6-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8bef6-110">Attributes</span></span>
 
-<span data-ttu-id="6f131-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="6f131-111">None</span></span>
+<span data-ttu-id="8bef6-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="8bef6-111">None</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="6f131-112">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="6f131-112">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="8bef6-112">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="8bef6-112">Child elements</span></span>
 
-|     | <span data-ttu-id="6f131-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6f131-113">Description</span></span> |
+|     | <span data-ttu-id="8bef6-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8bef6-113">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="6f131-114">**\<Filtre >**</span><span class="sxs-lookup"><span data-stu-id="6f131-114">**\<filter>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | <span data-ttu-id="6f131-115">Türünü belirleyen bir yönlendirme filtre içeren [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="6f131-115">Contains a routing filter that determines the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> will be used when evaluating incoming messages.</span></span> |
+| [<span data-ttu-id="8bef6-114">**\<Filtre >**</span><span class="sxs-lookup"><span data-stu-id="8bef6-114">**\<filter>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | <span data-ttu-id="8bef6-115">Türünü belirleyen bir yönlendirme filtre içeren [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> gelen iletileri hesaplanırken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8bef6-115">Contains a routing filter that determines the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> will be used when evaluating incoming messages.</span></span> |
 
-### <a name="parent-elements"></a><span data-ttu-id="6f131-116">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="6f131-116">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="8bef6-116">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="8bef6-116">Parent elements</span></span>
 
-|     | <span data-ttu-id="6f131-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6f131-117">Description</span></span> |
+|     | <span data-ttu-id="8bef6-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8bef6-117">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="6f131-118">**\<Yönlendirme >**</span><span class="sxs-lookup"><span data-stu-id="6f131-118">**\<routing>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="6f131-119">Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için ne zaman iletileri göndermek için hedef uç nokta tanımlayan tabloları yapılırken kullanılacak bir Filtre eşleşir.</span><span class="sxs-lookup"><span data-stu-id="6f131-119">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span> |
+| [<span data-ttu-id="8bef6-118">**\<Yönlendirme >**</span><span class="sxs-lookup"><span data-stu-id="8bef6-118">**\<routing>**</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | <span data-ttu-id="8bef6-119">Türünü belirleme yönlendirme bir filtre kümesi tanımlamak için yapılandırma bölümünü temsil eder [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için ne zaman iletileri göndermek için hedef uç nokta tanımlayan tabloları yapılırken kullanılacak bir Filtre eşleşir.</span><span class="sxs-lookup"><span data-stu-id="8bef6-119">Represents a configuration section for defining a set of routing filters, which determine the type of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> to be used when evaluating incoming messages, as well as routing tables that define the target endpoints to send messages to when a filter matches.</span></span> |
 
-## <a name="see-also"></a><span data-ttu-id="6f131-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f131-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bef6-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8bef6-120">See also</span></span>
 
 <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>

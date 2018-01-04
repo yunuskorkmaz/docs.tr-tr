@@ -20,16 +20,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2150e75b5b9f09424f08c29345d5d139c1673afa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e99054b32deb6b2e4b621ea4c193e416220f8f6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a><span data-ttu-id="a0505-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Metodu</span><span class="sxs-lookup"><span data-stu-id="a0505-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Method</span></span>
-<span data-ttu-id="a0505-103">Bir numaralandırıcı arabirimi türleri için geçerli nesne için cast veya bırakıldığı olarak kullanılan olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="a0505-103">Provides an enumerator for the interface types that the current object has been cast to or used as.</span></span>  
+# <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a><span data-ttu-id="9f2c6-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Metodu</span><span class="sxs-lookup"><span data-stu-id="9f2c6-102">ICorDebugComObjectValue::GetCachedInterfaceTypes Method</span></span>
+<span data-ttu-id="9f2c6-103">Bir numaralandırıcı arabirimi türleri için geçerli nesne için cast veya bırakıldığı olarak kullanılan olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="9f2c6-103">Provides an enumerator for the interface types that the current object has been cast to or used as.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0505-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a0505-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f2c6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9f2c6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedInterfaceTypes(  
@@ -37,24 +38,24 @@ HRESULT GetCachedInterfaceTypes(
     [out] ICorDebugTypeEnum **ppInterfacesEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a0505-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a0505-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9f2c6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9f2c6-105">Parameters</span></span>  
  `bIInspectableOnly`  
- <span data-ttu-id="a0505-106">[in] Bu yöntem yalnızca döndürür olup olmadığını belirten bir değer [!INCLUDE[wrt](../../../../includes/wrt-md.md)] arabirimleri (`IInspectable` arabirimleri) veya çalışma zamanı aranabilir sarmalayıcısı (RCW) önbelleğe alınan tüm COM arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="a0505-106">[in] A value that indicates whether the method returns only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces cached by the runtime callable wrapper (RCW).</span></span>  
+ <span data-ttu-id="9f2c6-106">[in] Bu yöntem yalnızca döndürür olup olmadığını belirten bir değer [!INCLUDE[wrt](../../../../includes/wrt-md.md)] arabirimleri (`IInspectable` arabirimleri) veya çalışma zamanı aranabilir sarmalayıcısı (RCW) önbelleğe alınan tüm COM arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="9f2c6-106">[in] A value that indicates whether the method returns only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces cached by the runtime callable wrapper (RCW).</span></span>  
   
  `ppInterfacesEnum`  
- <span data-ttu-id="a0505-107">[out] Bir işaretçi önbelleğe alınmış arabirim türleri temsil eden Icordebugtype nesnelere erişim sağlayan bir Icordebugtypeenum Numaralandırıcı adresine göre filtre `bIInspectableOnly`.</span><span class="sxs-lookup"><span data-stu-id="a0505-107">[out] A pointer to the address of an ICorDebugTypeEnum enumerator that provides access to ICorDebugType objects that represent cached interface types filtered according to `bIInspectableOnly`.</span></span>  
+ <span data-ttu-id="9f2c6-107">[out] Bir işaretçi önbelleğe alınmış arabirim türleri temsil eden Icordebugtype nesnelere erişim sağlayan bir Icordebugtypeenum Numaralandırıcı adresine göre filtre `bIInspectableOnly`.</span><span class="sxs-lookup"><span data-stu-id="9f2c6-107">[out] A pointer to the address of an ICorDebugTypeEnum enumerator that provides access to ICorDebugType objects that represent cached interface types filtered according to `bIInspectableOnly`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a0505-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a0505-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f2c6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9f2c6-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0505-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a0505-109">Requirements</span></span>  
- <span data-ttu-id="a0505-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0505-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f2c6-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9f2c6-109">Requirements</span></span>  
+ <span data-ttu-id="9f2c6-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f2c6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0505-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0505-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9f2c6-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f2c6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a0505-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0505-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f2c6-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f2c6-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0505-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0505-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="9f2c6-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f2c6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0505-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a0505-114">See Also</span></span>  
- [<span data-ttu-id="a0505-115">Icordebugcomobjectvalue arabirimi</span><span class="sxs-lookup"><span data-stu-id="a0505-115">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
- [<span data-ttu-id="a0505-116">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a0505-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="9f2c6-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9f2c6-114">See Also</span></span>  
+ [<span data-ttu-id="9f2c6-115">ICorDebugComObjectValue Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9f2c6-115">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
+ [<span data-ttu-id="9f2c6-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9f2c6-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

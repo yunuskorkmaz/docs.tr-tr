@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dfffea1044eb2c1e771fe86e5e9b431eb0ab9696
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4efc969395e30dcc237d2ad99c9bc67ee30f4278
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="113f2-102">CorDebugExceptionCallbackType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="113f2-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="113f2-103">Gelen yaptığınız geri çağırma türünü gösteren bir [Icordebugmanagedcallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olay.</span><span class="sxs-lookup"><span data-stu-id="113f2-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="f899b-102">CorDebugExceptionCallbackType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="f899b-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="f899b-103">Gelen yaptığınız geri çağırma türünü gösteren bir [Icordebugmanagedcallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) olay.</span><span class="sxs-lookup"><span data-stu-id="f899b-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="113f2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="113f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f899b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f899b-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -39,23 +40,23 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="113f2-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="113f2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f899b-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="f899b-105">Members</span></span>  
   
-|<span data-ttu-id="113f2-106">Üye</span><span class="sxs-lookup"><span data-stu-id="113f2-106">Member</span></span>|<span data-ttu-id="113f2-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="113f2-107">Description</span></span>|  
+|<span data-ttu-id="f899b-106">Üye</span><span class="sxs-lookup"><span data-stu-id="f899b-106">Member</span></span>|<span data-ttu-id="f899b-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f899b-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="113f2-108">Bir özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="113f2-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="113f2-109">Özel durum windup işlemi kullanıcı kodu girildi.</span><span class="sxs-lookup"><span data-stu-id="113f2-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="113f2-110">Bulunan özel durum windup işleme bir `catch` kullanıcı kodunda engelleyin.</span><span class="sxs-lookup"><span data-stu-id="113f2-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="113f2-111">Özel durum işlenmedi.</span><span class="sxs-lookup"><span data-stu-id="113f2-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="f899b-108">Bir özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="f899b-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="f899b-109">Özel durum windup işlemi kullanıcı kodu girildi.</span><span class="sxs-lookup"><span data-stu-id="f899b-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="f899b-110">Bulunan özel durum windup işleme bir `catch` kullanıcı kodunda engelleyin.</span><span class="sxs-lookup"><span data-stu-id="f899b-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="f899b-111">Özel durum işlenmedi.</span><span class="sxs-lookup"><span data-stu-id="f899b-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="113f2-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="113f2-112">Requirements</span></span>  
- <span data-ttu-id="113f2-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="113f2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f899b-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f899b-112">Requirements</span></span>  
+ <span data-ttu-id="f899b-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f899b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="113f2-114">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="113f2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f899b-114">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f899b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="113f2-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="113f2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f899b-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f899b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="113f2-116">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="113f2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f899b-116">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f899b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="113f2-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="113f2-117">See Also</span></span>  
- [<span data-ttu-id="113f2-118">Hata ayıklama numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="113f2-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f899b-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f899b-117">See Also</span></span>  
+ [<span data-ttu-id="f899b-118">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="f899b-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

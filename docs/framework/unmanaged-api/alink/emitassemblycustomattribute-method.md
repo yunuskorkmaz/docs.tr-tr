@@ -21,16 +21,17 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb21ee1396a9dd0426b9b91711c2345ef66c09f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cc7709ef060642f12a8bc7d048e520427a5c674
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="84b0a-102">EmitAssemblyCustomAttribute Yöntemi</span><span class="sxs-lookup"><span data-stu-id="84b0a-102">EmitAssemblyCustomAttribute Method</span></span>
-<span data-ttu-id="84b0a-103">Derleme düzeyi özel öznitelikleri ayarlamak için çağırın.</span><span class="sxs-lookup"><span data-stu-id="84b0a-103">Call to set assembly-level custom attributes.</span></span>  
+# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="b7a81-102">EmitAssemblyCustomAttribute Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b7a81-102">EmitAssemblyCustomAttribute Method</span></span>
+<span data-ttu-id="b7a81-103">Derleme düzeyi özel öznitelikleri ayarlamak için çağırın.</span><span class="sxs-lookup"><span data-stu-id="b7a81-103">Call to set assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84b0a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="84b0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7a81-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7a81-104">Syntax</span></span>  
   
 ```  
 HRESULT EmitAssemblyCustomAttribute(  
@@ -44,35 +45,35 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="84b0a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="84b0a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b7a81-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b7a81-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="84b0a-106">Derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="84b0a-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="b7a81-106">Derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="b7a81-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="84b0a-107">Öznitelik defiles dosyası.</span><span class="sxs-lookup"><span data-stu-id="84b0a-107">File that defiles the attribute.</span></span> <span data-ttu-id="84b0a-108">NULL olabilir `AssemblyID` ilişkisiz netmodule göstermez.</span><span class="sxs-lookup"><span data-stu-id="84b0a-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="b7a81-107">Öznitelik defiles dosyası.</span><span class="sxs-lookup"><span data-stu-id="b7a81-107">File that defiles the attribute.</span></span> <span data-ttu-id="b7a81-108">NULL olabilir `AssemblyID` ilişkisiz netmodule göstermez.</span><span class="sxs-lookup"><span data-stu-id="b7a81-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `tkType`  
- <span data-ttu-id="84b0a-109">Özel öznitelik türü.</span><span class="sxs-lookup"><span data-stu-id="84b0a-109">Type of the custom attribute.</span></span>  
+ <span data-ttu-id="b7a81-109">Özel öznitelik türü.</span><span class="sxs-lookup"><span data-stu-id="b7a81-109">Type of the custom attribute.</span></span>  
   
  `pCustomValue`  
- <span data-ttu-id="84b0a-110">Özel değer verisi.</span><span class="sxs-lookup"><span data-stu-id="84b0a-110">Custom value data.</span></span>  
+ <span data-ttu-id="b7a81-110">Özel değer verisi.</span><span class="sxs-lookup"><span data-stu-id="b7a81-110">Custom value data.</span></span>  
   
  `cbCustomValue`  
- <span data-ttu-id="84b0a-111">Özel değer verisi uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="84b0a-111">Length of custom value data.</span></span>  
+ <span data-ttu-id="b7a81-111">Özel değer verisi uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="b7a81-111">Length of custom value data.</span></span>  
   
  `bSecurity`  
- <span data-ttu-id="84b0a-112">Özel öznitelik derleme imzalama ilişkiliyse TRUE.</span><span class="sxs-lookup"><span data-stu-id="84b0a-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
+ <span data-ttu-id="b7a81-112">Özel öznitelik derleme imzalama ilişkiliyse TRUE.</span><span class="sxs-lookup"><span data-stu-id="b7a81-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
   
  `bAllowMulti`  
- <span data-ttu-id="84b0a-113">Birden çok öznitelik yayınlaması gerekiyorsa TRUE.</span><span class="sxs-lookup"><span data-stu-id="84b0a-113">TRUE if multiple attributes are to be emitted.</span></span>  
+ <span data-ttu-id="b7a81-113">Birden çok öznitelik yayınlaması gerekiyorsa TRUE.</span><span class="sxs-lookup"><span data-stu-id="b7a81-113">TRUE if multiple attributes are to be emitted.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="84b0a-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="84b0a-114">Return Value</span></span>  
- <span data-ttu-id="84b0a-115">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="84b0a-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b7a81-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b7a81-114">Return Value</span></span>  
+ <span data-ttu-id="b7a81-115">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="b7a81-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84b0a-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="84b0a-116">Requirements</span></span>  
- <span data-ttu-id="84b0a-117">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="84b0a-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7a81-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7a81-116">Requirements</span></span>  
+ <span data-ttu-id="b7a81-117">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="b7a81-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84b0a-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="84b0a-118">See Also</span></span>  
- [<span data-ttu-id="84b0a-119">Ialink arabirimi</span><span class="sxs-lookup"><span data-stu-id="84b0a-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="84b0a-120">Ialink2 arabirimi</span><span class="sxs-lookup"><span data-stu-id="84b0a-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="84b0a-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="84b0a-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="b7a81-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b7a81-118">See Also</span></span>  
+ [<span data-ttu-id="b7a81-119">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7a81-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="b7a81-120">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7a81-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="b7a81-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="b7a81-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -15,21 +15,22 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb5f7f85ac2c11dfc0569006e3fa32589a076521
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76a764018a0939edbba98d9deda541dce3c34ffb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="b8ee0-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="b8ee0-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
-<span data-ttu-id="b8ee0-103">Bu sınıf, oluşturmak ve yapılandırmak için kullanmak bir <xref:System.Activities.ActivityBuilder> için bir iş akışı etkinlik verileri sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="b8ee0-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="2830c-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="2830c-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
+<span data-ttu-id="2830c-103">Bu sınıf, oluşturmak ve yapılandırmak için kullanmak bir <xref:System.Activities.ActivityBuilder> için bir iş akışı etkinlik verileri sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="2830c-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8ee0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b8ee0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2830c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2830c-104">Syntax</span></span>  
   
 ```csharp  
 public class ClientActivityBuilder   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8ee0-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b8ee0-105">See Also</span></span>  
- [<span data-ttu-id="b8ee0-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="b8ee0-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)  
- [<span data-ttu-id="b8ee0-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder... ctor</span><span class="sxs-lookup"><span data-stu-id="b8ee0-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)
+## <a name="see-also"></a><span data-ttu-id="2830c-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2830c-105">See Also</span></span>  
+ [<span data-ttu-id="2830c-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="2830c-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)  
+ [<span data-ttu-id="2830c-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span><span class="sxs-lookup"><span data-stu-id="2830c-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)

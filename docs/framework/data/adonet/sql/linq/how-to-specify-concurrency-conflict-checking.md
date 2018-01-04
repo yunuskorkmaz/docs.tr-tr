@@ -16,21 +16,22 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e9c3839f4b70bfec759617d875095d9ce8eecf54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e69b97de78c469bd252319c49d362fe96af6833
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-specify-concurrency-conflict-checking"></a><span data-ttu-id="05d1e-102">Nasıl yapılır: eşzamanlılık çakışması denetleniyor belirtin</span><span class="sxs-lookup"><span data-stu-id="05d1e-102">How to: Specify Concurrency-Conflict Checking</span></span>
-<span data-ttu-id="05d1e-103">Veritabanını hangi sütunların çağırdığınızda eşzamanlılık çakışmalar için denetleneceğini belirtin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="05d1e-103">You can specify which columns of the database are to be checked for concurrency conflicts when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span> <span data-ttu-id="05d1e-104">Daha fazla bilgi için bkz: [nasıl yapılır: belirtin üyeler eşzamanlılık çakışmalar için test](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="05d1e-104">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
+# <a name="how-to-specify-concurrency-conflict-checking"></a><span data-ttu-id="a8220-102">Nasıl yapılır: eşzamanlılık çakışması denetleniyor belirtin</span><span class="sxs-lookup"><span data-stu-id="a8220-102">How to: Specify Concurrency-Conflict Checking</span></span>
+<span data-ttu-id="a8220-103">Veritabanını hangi sütunların çağırdığınızda eşzamanlılık çakışmalar için denetleneceğini belirtin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="a8220-103">You can specify which columns of the database are to be checked for concurrency conflicts when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span> <span data-ttu-id="a8220-104">Daha fazla bilgi için bkz: [nasıl yapılır: belirtin üyeler eşzamanlılık çakışmalar için test](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="a8220-104">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="05d1e-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="05d1e-105">Example</span></span>  
- <span data-ttu-id="05d1e-106">Aşağıdaki kod belirleyen `HomePage` üye hiçbir zaman test sırasında güncelleştirme denetler.</span><span class="sxs-lookup"><span data-stu-id="05d1e-106">The following code specifies that the `HomePage` member should never be tested during update checks.</span></span> <span data-ttu-id="05d1e-107">Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span><span class="sxs-lookup"><span data-stu-id="05d1e-107">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span></span>  
+## <a name="example"></a><span data-ttu-id="a8220-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="a8220-105">Example</span></span>  
+ <span data-ttu-id="a8220-106">Aşağıdaki kod belirleyen `HomePage` üye hiçbir zaman test sırasında güncelleştirme denetler.</span><span class="sxs-lookup"><span data-stu-id="a8220-106">The following code specifies that the `HomePage` member should never be tested during update checks.</span></span> <span data-ttu-id="a8220-107">Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span><span class="sxs-lookup"><span data-stu-id="a8220-107">For more information, see <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.</span></span>  
   
  [!code-csharp[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.mapping.updatecheck/cs/northwind.cs#1)]
  [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="05d1e-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="05d1e-108">See Also</span></span>  
- [<span data-ttu-id="05d1e-109">LINQ to SQL nesne modeli</span><span class="sxs-lookup"><span data-stu-id="05d1e-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [<span data-ttu-id="05d1e-110">Nasıl yapılır: kod düzenleyicisini kullanarak sınıflar özelleştirme</span><span class="sxs-lookup"><span data-stu-id="05d1e-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="a8220-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a8220-108">See Also</span></span>  
+ [<span data-ttu-id="a8220-109">LINQ to SQL Nesne Modeli</span><span class="sxs-lookup"><span data-stu-id="a8220-109">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [<span data-ttu-id="a8220-110">Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="a8220-110">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

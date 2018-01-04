@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 76a2aa4495a9f34a57c8a84ec40ab946abc64532
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 297b8f3572f67aa5e8b17b1b94d71f59962cfe68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="317a1-102">IMetaDataTables::GetGuidHeapSize Metodu</span><span class="sxs-lookup"><span data-stu-id="317a1-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
-<span data-ttu-id="317a1-103">GUID yığın bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="317a1-103">Gets the size, in bytes, of the GUID heap.</span></span>  
+# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="ea2ec-102">IMetaDataTables::GetGuidHeapSize Metodu</span><span class="sxs-lookup"><span data-stu-id="ea2ec-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
+<span data-ttu-id="ea2ec-103">GUID yığın bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="ea2ec-103">Gets the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="317a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="317a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea2ec-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ea2ec-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuidHeapSize (  
@@ -38,19 +39,19 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="317a1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="317a1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ea2ec-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ea2ec-105">Parameters</span></span>  
  `pcbGuids`  
- <span data-ttu-id="317a1-106">[out] Bir işaretçi GUID yığın bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="317a1-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
+ <span data-ttu-id="ea2ec-106">[out] Bir işaretçi GUID yığın bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="ea2ec-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="317a1-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="317a1-107">Requirements</span></span>  
- <span data-ttu-id="317a1-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="317a1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea2ec-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ea2ec-107">Requirements</span></span>  
+ <span data-ttu-id="ea2ec-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea2ec-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="317a1-109">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="317a1-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ea2ec-109">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ea2ec-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="317a1-110">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="317a1-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ea2ec-110">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="ea2ec-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="317a1-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="317a1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ea2ec-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea2ec-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="317a1-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="317a1-112">See Also</span></span>  
- [<span data-ttu-id="317a1-113">Imetadatatables arabirimi</span><span class="sxs-lookup"><span data-stu-id="317a1-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="317a1-114">Imetadatatables2 arabirimi</span><span class="sxs-lookup"><span data-stu-id="317a1-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ea2ec-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ea2ec-112">See Also</span></span>  
+ [<span data-ttu-id="ea2ec-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ea2ec-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="ea2ec-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ea2ec-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

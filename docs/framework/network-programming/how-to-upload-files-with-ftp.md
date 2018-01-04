@@ -12,16 +12,17 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
-ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.workload: dotnet
+ms.openlocfilehash: 0772e77d699d11e29d17770bb2c737247ed1771d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="b1d75-102">Nasıl yapılır: FTP dosyaları karşıya yükleme</span><span class="sxs-lookup"><span data-stu-id="b1d75-102">How to: Upload Files with FTP</span></span>
-<span data-ttu-id="b1d75-103">Bu örnek, bir FTP sunucusuna bir dosyayı karşıya gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b1d75-103">This sample shows how to upload a file to an FTP server.</span></span>  
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="abd66-102">Nasıl yapılır: FTP dosyaları karşıya yükleme</span><span class="sxs-lookup"><span data-stu-id="abd66-102">How to: Upload Files with FTP</span></span>
+<span data-ttu-id="abd66-103">Bu örnek, bir FTP sunucusuna bir dosyayı karşıya gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="abd66-103">This sample shows how to upload a file to an FTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b1d75-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b1d75-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="abd66-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="abd66-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -62,11 +63,11 @@ namespace Examples.System.Net
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b1d75-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="b1d75-105">Compiling the Code</span></span>  
- <span data-ttu-id="b1d75-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="b1d75-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="abd66-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="abd66-105">Compiling the Code</span></span>  
+ <span data-ttu-id="abd66-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="abd66-106">This example requires:</span></span>  
   
--   <span data-ttu-id="b1d75-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="b1d75-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="abd66-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="abd66-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="b1d75-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="b1d75-108">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="abd66-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="abd66-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="b1d75-109">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="b1d75-109">.NET Framework Security</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="abd66-109">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="abd66-109">.NET Framework Security</span></span>
