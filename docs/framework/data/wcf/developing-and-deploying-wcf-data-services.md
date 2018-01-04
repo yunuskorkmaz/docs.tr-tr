@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87a074b96583f44e8655c9efde145e28b490f6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Geliştirme ve WCF Veri Hizmetleri dağıtma
 Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Hakkında daha fazla temel bilgiler için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bkz: [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) ve [genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -130,6 +131,6 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
 -   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulaması, Windows Server'da çalışan IIS dağıtılmış bir veri hizmeti izlemek için Windows Server AppFabric kullanabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric bir veri hizmeti izlemek için bkz post [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
- [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+ [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
+ [WCF Veri Hizmetlerinin Güvenliğini Sağlama](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>DataSet ilişkileri XML Schema (XSD) oluşturma
 İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütun arasında bir ilişki oluşturur. Göstermek için üç yolu bir **DataSet** ilişkisi bir XML Şeması Tanım Dili (XSD) şeması içinde:  
@@ -91,20 +92,20 @@ msdata:childkey="" />
  Eşleme işlemini kullanan **ilişki** öğesi bir üst-alt ilişkisi oluşturmak için **OrderNumber** sütununda **sipariş** tablo ve **OrderNo** sütununda **OrderDetail** tablosundaki **DataSet**. Eşleme işlemini yalnızca ilişki belirtir; birincil anahtar/yabancı anahtar kısıtlamaları ilişkisel veritabanları gibi otomatik olarak değerlerinde kısıtlamalar bu sütunlarda belirtmiyor.  
   
 ### <a name="in-this-section"></a>Bu Bölümde  
- [İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ [İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Kısıtlamalar ve örtük olarak oluşturulmuş ilişkileri açıklar bir **DataSet** zaman iç içe öğelerin karşılaştı XML şeması.  
   
- [İç içe geçmiş öğe için belirtilen ilişkileri eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Açıkça ilişkileri nasıl ayarlanacağını açıklar bir **DataSet** XML Şeması iç içe geçmiş öğe.  
   
- [Hiçbir iç içe geçme ile öğeleri arasındaki ilişkileri belirtin](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  İlişkilerine oluşturmayı açıklar bir **DataSet** değil iç içe XML şema öğeleri arasında.  
   
 ### <a name="related-sections"></a>İlgili Bölümler  
- [Türetilen DataSet ilişkisel yapısından XML Şeması (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  İlişkisel yapısı veya şema açıklayan bir **veri kümesi** XML Şeması Tanım Dili (XSD) şemadan oluşturulur.  
   
- [Veri kümesi sınırlamaları için eşleme XML Şeması (XSD) kısıtlamaları](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Benzersiz ve yabancı anahtar kısıtlamalarını oluşturmak için kullanılan XML şema öğeleri açıklayan bir **DataSet**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

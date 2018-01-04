@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 97cf55419c6e13a497264bcbaa3a546eac37f982
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae0b5aeb658b67434cea187839833e24007ee77e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ-SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]parçası olan [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] teknoloji ailesi. Tarafından sağlanan hizmetlerin dayanır [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sağlayıcı modeli. Bu nedenle karıştırabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varolan kod [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] uygulamaları ve geçerli geçirmek [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] çözümleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aşağıdaki çizimde ilişki üst düzey bir görünümünü sağlar.  
@@ -68,5 +69,5 @@ ms.lasthandoff: 11/21/2017
 >  Parametreleri ifade edilir sorgu metni tarafından kullanılan aynı süslü gösterimini kullanarak `Console.WriteLine()` ve `String.Format()`. `String.Format()`sorgu dizesini sağlar ve oluşturulan parametre adları braced süslü parametrelerle gibi değiştirir alan `@p0`, `@p1` ... `@p(n)`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Nasıl yapılır: ADO.NET komutu ile bir DataContext arasında bir bağlantı yeniden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Nasıl yapılır: ADO.NET Komutu ile DataContext Arasında Bağlantıyı Yeniden Kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

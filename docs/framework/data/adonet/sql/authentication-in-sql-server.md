@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c462b7c2e888ed0f6394435e0de2131e26dbef08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server kimlik doğrulaması
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.  
@@ -89,8 +90,8 @@ ms.lasthandoff: 11/21/2017
 |[Asıl adlar](http://msdn.microsoft.com/library/bb543165.aspx) içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Çevrimiçi Kitapları|Oturum açma bilgileri ve diğer güvenlik sorumluları açıklar [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server'daki uygulama güvenlik senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Bir veri kaynağına bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Bağlantı dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

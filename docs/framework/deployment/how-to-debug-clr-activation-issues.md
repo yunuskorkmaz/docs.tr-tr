@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d923f97b6c3954f07467f9fbfe40913f427bb99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa8153fe680a8848ad19f32a2246d0f350c73c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama
 Ortak dil çalışma zamanı (CLR) doğru sürümü ile çalışacak şekilde uygulamanızı alınırken sorunlarla karşılaşırsanız, görüntüleyin ve hata ayıklama CLR etkinleştirme günlüklerini. Bu günlükler, uygulamanızın beklenenden farklı bir CLR sürümü yükler veya CLR hiç yüklenmiyor bir etkinleştirme sorunun kök nedenini belirlerken çok kullanışlı olabilir. [.NET Framework başlatma hataları: kullanıcı deneyimi yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bir uygulama için hiçbir CLR bulunduğunda deneyimi açıklanır.  
@@ -125,4 +126,4 @@ Ortak dil çalışma zamanı (CLR) doğru sürümü ile çalışacak şekilde uy
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dağıtım](../../../docs/framework/deployment/index.md)  
- [Nasıl yapılır: .NET Framework 4 veya 4.5 desteklemek için bir uygulamayı yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+ [Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

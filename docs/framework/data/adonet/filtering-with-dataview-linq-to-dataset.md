@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 29e2be39c32673202e93bb2f1bfdf09ec68384cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d578c36500af6f388e63ad921a4dbb8acac225f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) ile filtreleme
 Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView>verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
@@ -103,5 +104,5 @@ Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi de
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama ve LINQ-DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+ [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7ab96ad43248517dca99bff176be7edfab8d3ced
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aef29e6107a2f441d8c1a6826b16f0f0c0b56973
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt; öğesi
 Herhangi bir kaynak veya trace ögesi başvurabilir dinleyicileri içerir.  Bu dinleyicileri varsayılan olarak tüm izlemeleri almaz ve bu dinleyicileri çalışma zamanında almak mümkün değildir. Paylaşılan dinleyiciler tanımlanan dinleyicileri kaynakları veya izlemeleri adıyla eklenebilir.  
@@ -100,5 +101,5 @@ Herhangi bir kaynak veya trace ögesi başvurabilir dinleyicileri içerir.  Bu d
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.TraceListener>  
- [İzleme ve hata ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [İzleme dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

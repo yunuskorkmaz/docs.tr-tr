@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
 Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirmeniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve bunların içinde gibi tanımlanan türleri [sınıfları](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [arabirimleri](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5), ve [değer türleri](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturmak ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönlerini ilgili konular için bkz: [ilgili konular](#related_topics) bu genel bakışta, sonunda.  
@@ -81,15 +82,15 @@ Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?disp
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Tür bilgilerini görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Açıklar <xref:System.Type> sınıfı ve nasıl kullanılacağını gösteren kod örnekleri sağlar <xref:System.Type> Oluşturucular, yöntemleri, alanları, özellikleri ve olayları hakkında bilgi edinmek için birkaç yansıma sınıflarla.|  
-|[Yansıma ve genel türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Tür parametreleri ve genel türler ve genel yöntemler tür bağımsız değişkenleri yansıma nasıl işleyeceğini açıklanmaktadır.|  
-|[Yansımayla ilgili güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Ne derece yansıma türü bilgileri ve erişim türleri bulmak için kullanılabilecek belirleyen kuralları açıklar.|  
-|[Dinamik olarak yükleme ve türleri kullanma](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Geç bağlama destekleyen yansıma özel bağlama arabirimi açıklanmaktadır.|  
-|[Nasıl yapılır: salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma yükleme bağlamı açıklar. Bağlam test etme ve bir derlemede salt yansıma bağlamına uygulanan öznitelikleri incelemek nasıl bir derlemeyi yüklemeye nasıl gösterir.|  
-|[Özel özniteliklere erişme](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Yansıma sorgu özniteliği varlığı ve değerleri kullanarak gösterir.|  
-|[Tam olarak nitelenmiş tür adlarını belirtme](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Backus-Naur formu (BNF) ve özel karakterler, derleme adları, işaretçileri, başvuruları ve diziler belirtmek için gerekli sözdizimi bakımından tam olarak nitelenmiş tür adları biçimini tanımlar.|  
-|[Nasıl yapılır: yansıma kullanarak temsilci bağlama](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Bir yöntem için temsilci oluşturun ve temsilci olaya kadar kanca açıklanmaktadır. Bir olay işleme yöntemi çalıştırma kullanarak nasıl oluşturulacağını açıklar <xref:System.Reflection.Emit.DynamicMethod>.|  
-|[Dinamik yöntemleri ve derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler ve dinamik yöntemleri oluşturmak açıklanmaktadır.|  
+|[Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Açıklar <xref:System.Type> sınıfı ve nasıl kullanılacağını gösteren kod örnekleri sağlar <xref:System.Type> Oluşturucular, yöntemleri, alanları, özellikleri ve olayları hakkında bilgi edinmek için birkaç yansıma sınıflarla.|  
+|[Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Tür parametreleri ve genel türler ve genel yöntemler tür bağımsız değişkenleri yansıma nasıl işleyeceğini açıklanmaktadır.|  
+|[Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Ne derece yansıma türü bilgileri ve erişim türleri bulmak için kullanılabilecek belirleyen kuralları açıklar.|  
+|[Türleri Dinamik Olarak Yükleme ve Kullanma](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Geç bağlama destekleyen yansıma özel bağlama arabirimi açıklanmaktadır.|  
+|[Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma yükleme bağlamı açıklar. Bağlam test etme ve bir derlemede salt yansıma bağlamına uygulanan öznitelikleri incelemek nasıl bir derlemeyi yüklemeye nasıl gösterir.|  
+|[Özel Özniteliklere Erişim](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Yansıma sorgu özniteliği varlığı ve değerleri kullanarak gösterir.|  
+|[Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Backus-Naur formu (BNF) ve özel karakterler, derleme adları, işaretçileri, başvuruları ve diziler belirtmek için gerekli sözdizimi bakımından tam olarak nitelenmiş tür adları biçimini tanımlar.|  
+|[Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Bir yöntem için temsilci oluşturun ve temsilci olaya kadar kanca açıklanmaktadır. Bir olay işleme yöntemi çalıştırma kullanarak nasıl oluşturulacağını açıklar <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler ve dinamik yöntemleri oluşturmak açıklanmaktadır.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Type?displayProperty=nameWithType>  

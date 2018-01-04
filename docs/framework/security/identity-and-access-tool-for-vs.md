@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a009f37e1f16646df10e693a10827990b073c65c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 079c3798f17f4929124cd5cb027baa5d40a1167a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Kimlik ve erişim aracı Visual Studio 2012 için
 Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktadır. Bu araç aşağıdaki URL'yi indirebilirsiniz: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) veya doğrudan doğrudan uzantıları Yöneticisi'nde "kimlik" için arama tarafından Visual Studio 11 içinde.  
@@ -37,4 +38,4 @@ Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktad�
 -   Araç, kullanmak istediğiniz tüm kimlik sağlayıcıları için basit bir onay kutusu listesiyle Microsoft Azure Erişim Denetimi Hizmeti (ACS) özelliklerini kullanır: Facebook, Google, Live ID, Yahoo!, tüm OpenID sağlayıcılar ve tüm WS-Federasyon sağlayıcıları. Kimlik sağlayıcılarınızı seçin, Tamam'a tıklayın ve F5'e basın; hem uygulamanız hem de ACS otomatik olarak yapılandırılacak ve test uygulamanız ACS'yi kullanacaktır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WIF özellikleri](../../../docs/framework/security/wif-features.md)
+ [WIF Özellikleri](../../../docs/framework/security/wif-features.md)

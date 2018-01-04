@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Kaynak Yöneticisi uygulama
 Bir işlem içinde kullanılan her bir kaynağın eylemlerini bir işlem yöneticisi tarafından düzenlenir kaynak yöneticisi tarafından yönetilir. Kaynak yöneticileri uygulama kararlılık ve yalıtım garantisi ile sağlamak için işlem yöneticisi işbirliği içinde çalışır. Microsoft SQL Server, kalıcı ileti sıraları, bellek içi karma tabloları kaynak yöneticilerinin tüm örnekleri mevcuttur.  
@@ -44,22 +45,22 @@ Bir işlem içinde kullanılan her bir kaynağın eylemlerini bir işlem yöneti
 ## <a name="in-this-section"></a>Bu Bölümde  
  Genel olarak kaynak yöneticisi tarafından izlenen adımları aşağıdaki konulara özetlenmiştir.  
   
- [Bir işlemde katılımcı olarak kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Kalıcı veya geçici bir kaynak bir işlem nasıl listesine açıklar.  
   
- [İşlemi tek aşamalı ve çok aşaması Tamamlanıyor](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Tek Aşamalı ve Çok Aşamalı İşlem Gerçekleştirme](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Bildirim Kaydet ve yürütme hazırlamak için bir kaynak yöneticisi nasıl yanıt vereceğini açıklar.  
   
- [Kurtarma gerçekleştirme](../../../../docs/framework/data/transactions/performing-recovery.md)  
+ [Kurtarma Gerçekleştirme](../../../../docs/framework/data/transactions/performing-recovery.md)  
   
  Nasıl sürekli Kaynak Yöneticisi hata verdi kurtarır açıklar.  
   
- [Kaynaklara erişimde güvenlik güven düzeyleri](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [Kaynaklara Erişimde Güvenlik Güven Düzeyleri](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  Nasıl güven System.Transactions için üç düzeyde kaynakları türlerine erişimi kısıtlama açıklar, <xref:System.Transactions> kullanıma sunar.  
   
- [Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Kaynak yöneticileri uygulamalar için kullanılabilir olan en iyi hale getirme yöntemleri açıklar.

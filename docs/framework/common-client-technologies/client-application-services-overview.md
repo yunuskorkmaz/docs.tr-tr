@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>İstemci Uygulama Hizmetlerine Genel Bakış
 İstemci uygulama hizmetleri sağlamak için Basitleştirilmiş erişim [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Windows Forms ve Windows Presentation Foundation (WPF) uygulamalardan profili Hizmetleri. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX, içerdiği uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin.  
@@ -87,11 +88,11 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>|Bu sınıfın sağladığı bir <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs.UserName%2A> özelliği içinde kullanmak için bir <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> olay işleyicisi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci uygulama hizmetleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Nasıl yapılır: istemci uygulama hizmetlerini yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Nasıl yapılır: uygulama istemci uygulama hizmetleri ile kullanıcı oturum açma](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
- [İzlenecek yol: İstemci uygulama hizmetleri kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [İstemci Uygulama Servisleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Nasıl Yapılır: İstemci Uygulama Servislerini Yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Nasıl Yapılır: İstemci Uygulama Servisleri ile Kullanıcı Oturum Açma Adını Uygulama](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [İzlenecek Yol: İstemci Uygulama Servislerini Kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [Microsoft Ajax ile form kimlik doğrulaması kullanma](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
  [Microsoft Ajax ile rolleri bilgileri kullanarak](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  

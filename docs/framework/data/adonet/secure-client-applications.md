@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1218cda46a6a901c3dbf9fb11333b04d0133df42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske güvenlik açıklarından korunması gereken birçok bölümleri oluşur. Güvenli kullanıcı arabirimleri oluşturma, birçok sorunları saldırganlar veri veya sistem kaynakları erişebilmesi engelleyerek engelleyebilir.  
@@ -28,13 +29,13 @@ Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske 
 > [!IMPORTANT]
 >  Ayrıca, veri kaynağında de istemci uygulamasının olduğu gibi kullanıcı girişi doğrulamanız gerekir. Bir saldırgan, uygulamanızın atlayıp doğrudan veri kaynağına saldırı vermesini tercih edebilirsiniz.  
   
- [Güvenlik ve kullanıcı girişi](../../../../docs/standard/security/security-and-user-input.md)  
+ [Güvenlik ve Kullanıcı Girdisi](../../../../docs/standard/security/security-and-user-input.md)  
  Kullanıcı girişi içeren zarif ve potansiyel olarak tehlikeli olabilecek hataların nasıl ele alınacağını açıklar.  
   
  [ASP.NET Web sayfaları kullanıcı girişini doğrulama](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
  ASP.NET doğrulama denetimleri kullanan kullanıcı girişi doğrulama genel bakış.  
   
- [Windows Forms uygulamasında kullanıcı girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows Forms'ta Kullanıcı Girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Fare ve bir Windows Forms uygulamasında klavye doğrulama için bilgi ve bağlantılar sağlanmıştır.  
   
  [.NET framework normal ifadeleri](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -43,10 +44,10 @@ Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske 
 ## <a name="windows-applications"></a>Windows uygulamaları  
  Geçmişte, Windows uygulamaları genellikle tam izinleri olan verdi. .NET Framework kod erişim güvenliği (CAS) kullanarak bir Windows uygulaması'nda kod yürütmek kısıtlamak için altyapı sağlar. Ancak, tek başına CA'lar, uygulamanızın korumak yeterli değil.  
   
- [Windows Forms güvenliği](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms Güvenliği](../../../../docs/framework/winforms/windows-forms-security.md)  
  Windows Forms uygulamalarının güvenliğini sağlama açıklanır ve ilgili konulara bağlantılar sağlar.  
   
- [Windows Forms ve yönetilmeyen uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Bir Windows Forms uygulaması yönetilmeyen uygulamalarda etkileşimde açıklar.  
   
  [ClickOnce dağıtımı Windows Forms uygulamaları](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
@@ -76,8 +77,8 @@ Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske 
 |[Güvenlik ve uzaktan yönetim konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı aşma ile ilgili güvenlik sorunları açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Uygulamalarının güvenliğini sağlama](/visualstudio/ide/securing-applications)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d3f792af3e01d476768961928272cb6166a144f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02a19a3daf72cdfa493b09fa984fe7b50865ed30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager Arabirimi
 Kaydolun ve ortak dil çalışma zamanı (CLR) olayları için geri çağırmaları kaydı için ana izin yöntemleri sağlar.  
@@ -32,8 +33,8 @@ Kaydolun ve ortak dil çalışma zamanı (CLR) olayları için geri çağırmala
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RegisterActionOnEvent yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)|Belirtilen olay için bir geri çağırma işaretçi kaydeder.|  
-|[UnregisterActionOnEvent yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-unregisteractiononevent-method.md)|Belirtilen olay için daha önce kaydedilmiş geri işaretçi kaydını siler.|  
+|[RegisterActionOnEvent Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)|Belirtilen olay için bir geri çağırma işaretçi kaydeder.|  
+|[UnregisterActionOnEvent Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-unregisteractiononevent-method.md)|Belirtilen olay için daha önce kaydedilmiş geri işaretçi kaydını siler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Konak kaydetmek ve olay geri aramalar kaydı için bir başvuru edinir `ICLROnEventManager` çağırarak [Iclrcontrol::getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) yöntemi.  
@@ -51,7 +52,7 @@ Kaydolun ve ortak dil çalışma zamanı (CLR) olayları için geri çağırmala
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [EClrEvent numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- [Iactiononclrevent arabirimi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
- [Iclrcontrol arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [EClrEvent Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
+ [IActionOnCLREvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)  
+ [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

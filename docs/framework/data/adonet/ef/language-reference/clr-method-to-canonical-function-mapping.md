@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Kurallı işlev eşlemesi için CLR yöntemi
 Entity Framework dize düzenlemesi ve matematik işlevleri gibi birçok veritabanı sistemler arasında ortak olan işlevselliğini uygulayan kurallı işlevler kümesini sağlar. Bu, çok çeşitli veritabanı sistemleri hedeflemek geliştiricilere sağlar. LINQ to Entities, gibi bir sorgulama teknolojisi gelen bunlar kurallı çağrıldığında işlevleri için kullanılan sağlayıcısı için doğru karşılık gelen depolama işlevi çevrilir. Bu veri kaynakları arasında tutarlı bir sorgu deneyimi sağlayan ortak bir formda arasında veri kaynaklarına, ifade işlev çağrılarını sağlar. Bit düzeyinde AND, OR değil ve işlenen sayısal bir tür olduğunda XOR işleçleri kurallı işlevleri de eşleniyor. Boole işlenenler, bit düzeyinde AND, OR, NOT, için ve XOR işleçleri mantıksal AND, OR değil, işlem ve bunların işlenenler XOR işlemlerini. Daha fazla bilgi için bkz: [kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -207,4 +208,4 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |Guid.NewGuid()|NewGuid()|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-varlıklar](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+ [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

@@ -18,31 +18,32 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: db7b05c8819fea6554d23d20d88561cac1566a87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d638bd101aad1992f39e73ac6b2eb9fa53c8c7bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Tanılama Sembol Deposu Numaralandırmaları
 Bu konuda tanılama sembol deposu API kullanan yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CorSymAddrKind numaralandırması](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
+ [CorSymAddrKind Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
  Bellek adresi türünü belirtir.  
   
- [CorSymSearchPolicyAttributes numaralandırması](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
+ [CorSymSearchPolicyAttributes Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
  Bir simge Okuyucu için arama yaparken kullanılacak ilkeyi belirtir.  
   
- [CorSymVarFlag numaralandırması](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
+ [CorSymVarFlag Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
  Bir değişken derleyicinin ürettiği olup olmadığını gösterir.  
   
- [Notıfy_fılter numaralandırması](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
+ [NOTIFY_FILTER Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
  Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Tanılama sembol deposu arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [Tanılama sembol deposu yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
   
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ebf74fbe7f2e207af8bf861efece58026148e2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>System.Uri ad alanında sürümü 2.0 yapılan değişiklikler
 Birkaç değişiklik yapılan <xref:System.Uri?displayProperty=nameWithType> sınıfı. Bu değişiklikler yanlış davranışa sabit, kullanılabilirlik ve geliştirilmiş Gelişmiş Güvenlik.  

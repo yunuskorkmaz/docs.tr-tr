@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c294b888d95c4d6a77d96198f885c2363fda4e36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61586b8d556a9edccace25b75ceb2696ec675dd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: Sorgulama ilişkiler arasında (C#)
 Bu kılavuzda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri temsil etmek için.  
@@ -99,4 +100,4 @@ Bu kılavuzda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../i
  Sonraki Kılavuzu ([izlenecek yol: veri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) verileri işlemek gösterilmiştir. Bu izlenecek yol iki izlenecek yollar önceden tamamlamış bu dizide Kaydet gerektirmez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğrenme tarafından izlenecek yollar](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+ [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

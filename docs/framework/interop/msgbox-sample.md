@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0d9be3d490a687541a0b1c7af3d90c52523413a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5dcabfadae35cad980d210806c47dab3f5a0082
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msgbox-sample"></a>MsgBox Örneği
 Bu örnek parametreleri olduğu gibi değeriyle dize türleri geçirmek nasıl ve ne zaman kullanılacağı gösterilmektedir <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanları.  
@@ -53,8 +54,8 @@ Bu örnek parametreleri olduğu gibi değeriyle dize türleri geçirmek nasıl v
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizeleri hazırlama](../../../docs/framework/interop/marshaling-strings.md)  
+ [Dizeleri Hazırlama](../../../docs/framework/interop/marshaling-strings.md)  
  [Platform çağırma veri türleri](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Dizeler için varsayılan hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)  
- [Yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Karakter kümesi belirtme](../../../docs/framework/interop/specifying-a-character-set.md)
+ [Dizeler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)  
+ [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 28ecb3419bddcc8e9a192b240a7bf90474314c1f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1eee55b2036028dd491dc82f9bce7c51aca878fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
 Kayıtsız COM birlikte çalışma derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Bir bilgisayarda bir bileşen dağıtımı sırasında kayıt yerine, Win32 stil bildirim dosyaları bağlama ve etkinleştirme hakkında bilgi içeren tasarım zamanında oluşturun. Bu bildirim dosyası yerine kayıt defteri anahtarları, bir nesne etkinleştirme doğrudan.  
@@ -63,4 +64,4 @@ Kayıtsız COM birlikte çalışma derleme bilgilerini depolamak için Windows k
     >  Yan yana yürütme çalışma zamanı birden fazla sürümünü ve uygulamaları ve çalışma zamanı sürümü aynı bilgisayarda aynı anda çalıştırmak için kullandığınız bileşenleri birden fazla sürümünü sağlayan bir .NET Framework özelliğidir. Yan yana yürütme ve yan yana derlemeler yan yana işlevselliği sağlamak için farklı mekanizmalardır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: kayıtsız etkinleştirme için .NET Framework tabanlı COM bileşenlerini yapılandırma](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+ [Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

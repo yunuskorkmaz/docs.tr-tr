@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 21518cad85ebcfc4c326e99d615b4f2dfccf6a2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebae7ad633273a9c33aa7ddcad1b11ad76d9046c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (varlık SQL)
 Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneler, İşlevler ve benzeri özelliklerini temsil etmek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
@@ -131,6 +132,6 @@ SELECT 1 AS X, 2 AS X …
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Giriş karakter kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [Giriş Karakter Kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 Windows 8.1 uygulamaları ve.NET Framework belirli bir programlama dilinde yazılmıştır ve Ara dile (IL) derlenmiş hedef Windows Masaüstü uygulamaları. Çalışma zamanında bir yöntem ilk kez yalnızca yürütülmeden önce IL yerel makine için yerel koda derlemek için tam zamanında (JIT) derleyici sorumludur. Buna karşılık, .NET yerel araç zinciri, kaynak kodu için yerel kodu derleme zamanında dönüştürür. Bu konu, .NET Framework uygulamaları için kullanılabilir diğer derleme teknolojileriyle .NET yerel karşılaştırır ve ayrıca neden .NET ile kodda oluşan özel durumlar derlenip anlamanıza yardımcı olabilir yerel kod .NET Native'nasıl üreten bir pratik genel bakış sağlar Yerel JIT derlenmiş kodda gerçekleşmez.  
@@ -109,7 +110,7 @@ Windows 8.1 uygulamaları ve.NET Framework belirli bir programlama dilinde yazı
 -   NGEN görüntüleri kırılacak olma eğilimindedir. Örneğin, bir düzeltme eki veya bir bağımlılık değişiklik genellikle kullanmak derlemeler de yeniden NGENed olmasını gerektirir. Bu, özellikle sistem derlemelerin .NET Framework Sınıf Kitaplığı'nda geçerlidir. Buna karşılık, .NET yerel uygulamalarının birbirinden bağımsız olarak yük sunulması olanak sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veriler ve kendiliğinden açıklayıcı bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)  
  [İç .NET yerel (kanal 9 Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
- [Yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [.NET yerel genel sorun giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+ [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [.NET Native Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

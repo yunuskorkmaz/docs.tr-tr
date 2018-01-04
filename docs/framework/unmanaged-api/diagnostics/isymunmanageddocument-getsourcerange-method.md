@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6c47f1f491b184e9abe9d56d0729100b0d9b36a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dcddebbca74bb94bd2411038a02b900b2f64f2d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange Metodu
 Katıştırılmış kaynak belirtilen aralığını verilen arabelleğe döndürür. Arabellek kaynak tutabilecek kadar büyük olmalıdır.  
@@ -70,4 +71,4 @@ HRESULT GetSourceRange(
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Isymunmanageddocument arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+ [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

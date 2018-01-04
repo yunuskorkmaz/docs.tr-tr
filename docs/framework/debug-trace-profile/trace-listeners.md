@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 56cbde16eff89d25960e510e7eec2424f15e51b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 042b8a6f7c25c34fc06d5d0bfd4ebce6417b920f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
 Kullanırken **izleme**, **hata ayıklama** ve <xref:System.Diagnostics.TraceSource>, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri tarafından alınan *dinleyicileri*. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
@@ -89,5 +90,5 @@ System.Diagnostics.Trace.Listeners.Add(
  <xref:System.Diagnostics.EventLogTraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TraceListener>  
- [İzleme ve uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [İzleme anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
+ [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)

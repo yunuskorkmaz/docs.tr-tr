@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>Uygulama Etki Alanları
 İşletim sistemleri ve çalışma zamanı ortamları tipik olarak bazı form uygulamalar arasında yalıtım sağlar. Örneğin, Windows uygulamalarını yalıtmak için işlemleri kullanır. Bu yalıtım bir uygulamada çalışan kodu ilgisiz, diğer uygulamalar olumsuz etkileyemez sağlamak gereklidir.  

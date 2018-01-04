@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: db507bf4f90d875960408857c7e6b1e3aa145730
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebbe1addf47bc76903e362cfb353ade359a1c8ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-a-dataset-from-xml"></a>Bir veri kümesini XML dosyası şuradan yükleniyor
 Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya belge oluşturulabilir. Ayrıca, .NET Framework ile büyük esneklik hangi bilgilerin, XML'den yüklenen elinizde ve nasıl şema veya ilişkisel yapısını <xref:System.Data.DataSet> oluşturulur.  
@@ -31,7 +32,7 @@ Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya belge o
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**Otomatik**|Bu varsayılandır. XML inceler ve aşağıdaki sırayla en uygun seçeneği seçer:<br /><br /> -Bir DiffGram XML olup olmadığını **DiffGram** kullanılır.<br />-İf <xref:System.Data.DataSet> bir şema içeriyor veya bir satır içi şema XML içeriyor **ReadSchema** kullanılır.<br />-İf <xref:System.Data.DataSet> bir şema içermiyor ve XML bir satır içi şema içermediğinden **InferSchema** kullanılır.<br /><br /> Okunan XML biçimi biliyorsanız, en iyi performans için açık bir ayarlamanız önerilir **XmlReadMode**, bunun yerine kabul daha **otomatik** varsayılan.|  
+|**Auto**|Bu varsayılandır. XML inceler ve aşağıdaki sırayla en uygun seçeneği seçer:<br /><br /> -Bir DiffGram XML olup olmadığını **DiffGram** kullanılır.<br />-İf <xref:System.Data.DataSet> bir şema içeriyor veya bir satır içi şema XML içeriyor **ReadSchema** kullanılır.<br />-İf <xref:System.Data.DataSet> bir şema içermiyor ve XML bir satır içi şema içermediğinden **InferSchema** kullanılır.<br /><br /> Okunan XML biçimi biliyorsanız, en iyi performans için açık bir ayarlamanız önerilir **XmlReadMode**, bunun yerine kabul daha **otomatik** varsayılan.|  
 |**ReadSchema**|Herhangi bir satır içi şema okur ve veri ve şema yükler.<br /><br /> Varsa <xref:System.Data.DataSet> zaten varolan şemayla eklenen yeni tablolar satır içi şema bir şema içeriyor <xref:System.Data.DataSet>. Satır içi şema herhangi bir tablo zaten içinde olup olmadığını <xref:System.Data.DataSet>, bir özel durum. Kullanarak varolan bir tablo için şemayı mümkün olmaz **XmlReadMode.ReadSchema**.<br /><br /> Varsa <xref:System.Data.DataSet> bir şema içermiyor ve satır içi şema yok, hiçbir veri okuma.<br /><br /> Satır içi şema XML Şeması Tanım Dili (XSD) şeması kullanılarak tanımlanabilir. Satır içi şeması XML şeması olarak yazma hakkında daha fazla bilgi için bkz [türetme DataSet ilişkisel yapısı XML Şeması'ndan (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Herhangi bir satır içi şema yoksayar ve mevcut verileri yükler <xref:System.Data.DataSet> şema. Varolan şema eşleşmiyor herhangi bir veri göz ardı edilir. Hiçbir şema varsa <xref:System.Data.DataSet>, hiçbir veri yüklendi.<br /><br /> Verileri bir DiffGram ise **IgnoreSchema** aynı işlevselliğe sahip **DiffGram** *.*|  
 |**InferSchema**|Herhangi bir satır içi şema yoksayar, şemanın XML veri yapısı başına oluşturur ve sonra verileri yükler.<br /><br /> Varsa <xref:System.Data.DataSet> zaten bir şema içeriyor geçerli şema var olan tablolara sütunlar ekleyerek genişletilir. Değil varsa tabloları ek tablolar eklenmez. Farklı bir ad alanı ile oluşturulursa bir tablo zaten varsa veya çıkarsanan sütun varolan sütunlarla çakışırsa özel durum oluşur.<br /><br /> Hakkında ayrıntılar için **ReadXmlSchema** bir şema oluşturur bir XML belgesinden bkz [çıkarımını yapma DataSet ilişkisel yapısından XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
@@ -127,10 +128,10 @@ foreach (DataTable dataTable in dataSet.Tables)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
- [Bir veri kümesini XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [Türetilen DataSet ilişkisel yapısından XML Şeması (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [Veri kümesi ilişkisel XML yapısından çıkarımını yapma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [XML'den veri kümesi şema bilgileri yükleniyor](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

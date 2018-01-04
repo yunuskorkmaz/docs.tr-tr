@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 935708457c3ebc8257b2495da36886468be1c706
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c482c2f79c6416a4e748599c896280b426d31ce2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spatial-functions"></a>Uzamsal işlevleri
 Uzamsal türler için hiçbir değişmez değer biçimi yok. Ancak, iyi bilinen metin biçiminde dizeleriyle çağrı kurallı Entity Framework işlevlerini kullanabilirsiniz. Örneğin, aşağıdaki işlev çağrısı geometri noktası oluşturur:  

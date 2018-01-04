@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b8f8e5ef6aa90b1d31c589a82891f0ca1bfa5469
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 646c7fc6a8ebbb68f210637086db0e968e3533c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 Bileşen Nesne Modeli (COM) sarmalayıcıları kullanarak oluşturabileceğiniz [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] özellikleri veya .NET Framework Araçları Tlbimp.exe ve Regasm.exe. Her iki yöntem de iki tür COM sarmalayıcıları oluştur:  
@@ -81,5 +82,5 @@ Bileşen Nesne Modeli (COM) sarmalayıcıları kullanarak oluşturabileceğiniz 
  Herhangi bir dizinde bulunan bir derleme Regasm.exe çalışır ve ardından çalıştırın [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel derleme önbelleğine taşıyın. Derleme başka bir yerde bulunmazsa genel derleme önbelleği her zaman incelenir çünkü derleme taşıma konum kayıt defteri girdilerini geçersiz kılmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı aranabilir sarmalayıcısı](../../../docs/framework/interop/runtime-callable-wrapper.md)  
- [COM aranabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)
+ [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+ [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)

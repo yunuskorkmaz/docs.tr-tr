@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8b853eac26f41a3537438bd1f9b0263ae06b6e77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ-DataSet genel bakış
 <xref:System.Data.DataSet> Daha yaygın olarak kullanılan bileşenlerden biri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Anahtar öğesi bağlantısı kesilmiş olan programlama modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , temel alır ve bunu, farklı veri kaynaklarından açıkça Önbellek verileri olanak tanır. Sunu katmanı için <xref:System.Data.DataSet> veri bağlama için GUI denetimleri ile tümleşiktir. Orta katman için veri ilişkisel şeklini korur ve hızlı Basit Sorgu ve hiyerarşi Gezinti hizmetleri içeren bir önbellek sağlar. Bir veritabanı isteklerinde sayısını azaltmak için kullanılan ortak kullanmak için bir tekniktir <xref:System.Data.DataSet> orta katman önbelleğe alma için. Örneğin, veri güdümlü göz önünde bulundurun [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Genellikle, uygulama verilerini önemli bir kısmını sık değişmeyen ve oturumlar veya kullanıcılar arasında ortak olan. Bu veriler veritabanında istek sayısını azaltan ve kullanıcının etkileşimleri hızlandırır Web sunucusu üzerindeki bellekte tutulabilir. Başka bir yararlı yönünü <xref:System.Data.DataSet> veri alt kümesi uygulama alanına bir veya daha fazla veri kaynağından getirmek bir uygulama tanımasıdır. Uygulama, ilişkisel şeklini koruyarak veri bellek içi, ardından yönetebilirsiniz.  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  N katmanlı uygulamalarda <xref:System.Data.DataSet> genellikle önbellek bilgilere orta katman bir Web uygulaması için kullanılır. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] İşlevselliği sorgulama genişletme yöntemleri uygulanır ve mevcut ADO.NET 2.0 genişletir <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ-SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

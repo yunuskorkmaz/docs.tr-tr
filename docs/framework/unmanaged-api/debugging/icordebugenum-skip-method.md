@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d109d8e28f94edc3eeceeb22d2d0639d010b532e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0c2e0065b8dd16e32ed624dd073276e7885c1a52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip Yöntemi
 İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.  
@@ -52,4 +53,4 @@ HRESULT Skip (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icordebugenum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+ [ICorDebugEnum Arabirimi1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

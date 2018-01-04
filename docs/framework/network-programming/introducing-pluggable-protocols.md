@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 372f681fbdd4808b5f6a0012cf6ad01e278e05c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3cc7ad6b6270b74e2eb6aa4a2cc3a540175d540b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introducing-pluggable-protocols"></a>Takılabilir Protokol Tanıtımı
 Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebilir Internet Hizmetleri katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  
@@ -76,7 +77,7 @@ Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebili
  Geliştiriciler Windows Sockets arabirimi ya da programlama yuva düzeyinde tarafından sağlanan denetime ihtiyaç duyan bilmiyorsanız, bulacaksınız **System.Net.Sockets** sınıfları ihtiyaçlarını karşılamak. **System.Net.Sockets** sınıfları içindeki yerel kod için yönetilen bir geçiş noktasından olan **System.Net** sınıfları. Çoğu durumda, **System.Net.Sockets** sınıfları sıralama veri Windows 32-bit dekiler yanı sıra tüm gerekli güvenlik denetimlerini işleme.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Programlama takılabilir protokolleri](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
- [Ağ programlama örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
+ [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN kod Galerisi'nden .NET ağ örnekleri](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

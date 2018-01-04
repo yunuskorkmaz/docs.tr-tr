@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Üzerinden erişilen bir işlem framework sürüm 2.0 sunulan <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri içinde tam olarak tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]gibi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -239,5 +240,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarları almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetleri, uygulama kodunuzda açıklandığı gibi erişebilirsiniz [istemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -150,13 +151,13 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci uygulama hizmetleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [İstemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [İstemci Uygulama Servisleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [İstemci Uygulama Servislerine Genel Bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Hizmetler Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/bb398109)  
- [Hizmetleri iletişim kutusu için Gelişmiş ayarlar](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
- [Nasıl yapılır: uygulama istemci uygulama hizmetleri ile kullanıcı oturum açma](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
- [İzlenecek yol: İstemci uygulama hizmetleri kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Hizmetler İçin Gelişmiş Ayarlar İletişim Kutusu](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [Nasıl Yapılır: İstemci Uygulama Servisleri ile Kullanıcı Oturum Açma Adını Uygulama](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [İzlenecek Yol: İstemci Uygulama Servislerini Kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Üyelik sağlayıcıyı uygulama](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
  [Bir rol sağlayıcıyı uygulama](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
- [Uygulama ayarları mimarisi](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [Uygulama Ayarları Mimarisi](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [Oluşturma ve uygulama hizmetleri veritabanına SQL Server için yapılandırma](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

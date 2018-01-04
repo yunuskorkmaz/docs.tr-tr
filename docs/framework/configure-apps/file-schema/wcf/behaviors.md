@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f543742ee4d70f64d3bef64be295a7f353c680d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a41d6134f793c2d8d02fda68a8b61b180485612
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorsgt"></a>&lt;davranışları&gt;
 Bu öğe adlı iki alt koleksiyonlar tanımlar `endpointBehaviors` ve `serviceBehaviors`.  Her koleksiyon sırasıyla uç noktaları ve hizmetler tarafından tüketilen davranışı öğeleri tanımlar. Her davranış öğesi kendi benzersiz tanımlanır `name` özniteliği. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları olmayan bir adı olması için gereklidir. Varsayılan yapılandırma ve adsız bağlamalar ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -63,8 +64,8 @@ Bu öğe adlı iki alt koleksiyonlar tanımlar `endpointBehaviors` ve `serviceBe
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [Yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
- [İstemci davranışlarını yapılandırma](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
- [İstemci çalışma zamanı davranışını belirtme](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Hizmet çalışma zamanı davranışını belirtme](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
- [Güvenlik davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+ [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
+ [İstemci Davranışlarını Yapılandırma](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [İstemci Çalışma Zamanı Davranışını Belirtme](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  
+ [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

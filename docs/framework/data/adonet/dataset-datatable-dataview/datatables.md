@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3803d550fe345c6f485dd204cc119f8a927a3501
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatables"></a>DataTables
 A <xref:System.Data.DataSet> tabloları, ilişkileri ve kısıtlamalar koleksiyonu oluşur. ADO.NET, <xref:System.Data.DataTable> nesneleri tablolarda belirtmek için kullanılan bir **DataSet**. A **DataTable** bellek içi ilişkisel veri; bir tablo temsil eden veri yerel olması. Burada yer alıyor, ancak Microsoft SQL Server'ı kullanarak gibi bir veri kaynağından doldurulmuş NET tabanlı uygulama bir **DataAdapter** daha fazla bilgi için bkz: [DataAdapter kümesinden doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -31,23 +32,23 @@ A <xref:System.Data.DataSet> tabloları, ilişkileri ve kısıtlamalar koleksiyo
  Üst-alt kullanarak tablolar arasında ilişkiler oluşturun veya tablolardaki sütunların ilgili daha fazla. Arasında bir ilişki Oluştur **DataTable** kullanarak nesneleri bir <xref:System.Data.DataRelation>. **DataRelation** nesneleri sonra belirli bir satır ilgili alt veya üst satırlarını dönmek için kullanılabilir. Daha fazla bilgi için bkz: [ekleme DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataTable oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [DataTable Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Nasıl oluşturulacağını açıklar bir **DataTable** ve ekleyebilmek için bir **DataSet**.  
   
- [DataTable şema tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Oluşturma ve kullanma hakkında bilgi sağlar **DataColumn** nesneleri ve kısıtlamalar.  
   
- [Bir DataTable tablosundaki verileri düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Ekleme, değiştirme ve bir tablodaki verileri silme açıklanmaktadır. Nasıl kullanılacağı açıklanmaktadır **DataTable** tablosundaki verilerde yapılan değişiklikleri incelemek için olaylar.  
   
- [DataTable olayları işleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [DataTable Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  İle kullanmak için kullanılabilir olan olaylar hakkında bilgi sağlayan bir **DataTable**, sütun değerlerini değiştirildiğinde ve satır eklenmiş veya silinmiş olaylar dahil olmak üzere.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  ADO.NET açıklar mimarisi ve bileşenleri ve bunları mevcut veri kaynaklarına erişmek ve uygulama verilerini yönetmek için kullanma.  
   
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  ADO.NET hakkında bilgi sağlar **DataSet** tablolar arasında ilişkiler oluşturmak nasıl dahil olmak üzere.  
   
  <xref:System.Data.Constraint>  
@@ -62,7 +63,7 @@ A <xref:System.Data.DataSet> tabloları, ilişkileri ve kısıtlamalar koleksiyo
  <xref:System.Data.DataTable>  
  Hakkında başvuru bilgileri sağlar **DataTable** nesnesi.  
   
- [Sınıf kitaplığına genel bakış](../../../../../docs/standard/class-library-overview.md)  
+ [Sınıf Kitaplığına Genel Bakış](../../../../../docs/standard/class-library-overview.md)  
  .NET Framework sınıf kitaplığı genel bir bakış sağlar dahil olmak üzere **sistem** ad alanı, ikinci düzey ad alanı yanı sıra **System.Data**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
 Yansıma gibi dil derleyicileri tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve örtük geç bağlama uygulamak için JScript. Bağlama benzersiz olarak belirtilen türüne karşılık gelen bildirim (uygulama) bulma işlemidir. Bu işlem çalışma zamanında yerine derleme zamanında oluştuğunda geç bağlama adı verilir. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]örtük geç bağlama kodunuzda kullanmanıza olanak sağlar; Visual Basic derleyici yansıma nesne türü almak için kullandığı bir yardımcı yöntemini çağırır. Yardımcı yönteme geçirilen bağımsız değişkenler çalışma zamanında çağrılacak uygun yöntemi neden olur. Bu bağımsız değişkenler, yöntem, çağrılan yöntemi (dize) ve (nesnelerinin bir dizisi) çağrılan yönteme geçirilen bağımsız değişken adını çağırmak (nesne) örneği bulunur.  
@@ -110,5 +111,5 @@ End Module
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [Tür bilgilerini görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
  [.NET Framework'te tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)

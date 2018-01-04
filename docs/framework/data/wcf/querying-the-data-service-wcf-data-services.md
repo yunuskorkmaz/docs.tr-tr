@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d25f8357f5b375792e8a05833e8397085cc27b23
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) sorgulama
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak bir veri hizmeti tanıdık sorgu yürütebilir olanak tanır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere düzenleri programlama. İstemcide bir örneği olarak tanımlanan bir sorgu istemci kitaplığı çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplık yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıf tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.  
@@ -134,23 +135,23 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Varlıklar yalnızca toplam hata sayısı kümesinde alabilir ya da farklı bir <xref:System.Int32> veya as bir <xref:System.Int64> çağırarak değeri <xref:System.Linq.Enumerable.Count%2A> veya <xref:System.Linq.Enumerable.LongCount%2A> yöntemleri sırasıyla. Bu yöntem çağrıldığında, bir <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülmez; yalnızca sayısı değeri döndürülür. Daha fazla bilgi için bkz: [nasıl yapılır: sayı, varlıklar tarafından döndürülen bir sorgu belirlemek](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sorgu projeksiyonu](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
+ [Sorgu Projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
   
- [Nesne Materialization](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
+ [Nesne Gerçekleştirme](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
   
- [LINQ hakkında önemli noktalar](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
+ [LINQ Konuları](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
- [Nasıl yapılır: veri hizmeti sorgularını Yürüt](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti Sorguları Yürütme](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [Nasıl yapılır: veri hizmeti sorguya sorgu seçeneklerini ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti Sorgusuna Sorgu Seçenekleri Ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Nasıl yapılır: bir sorgu tarafından döndürülen varlık sayısını belirleme](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Nasıl yapılır: Sorgu Tarafından Döndürülen Varlık Sayısını Belirleme](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Nasıl yapılır: veri hizmet isteği için istemci kimlik bilgilerini belirtin](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Nasıl yapılır: Veri Hizmeti İsteği için İstemci Kimlik Bilgileri Belirtme](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [Nasıl yapılır: istemci istek üstbilgilerini Ayarla](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [Nasıl yapılır: İstemci İsteğinde Üst Bilgileri Ayarlama](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [Nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [Nasıl Yapılır: Sorgu Sonuçlarını Yansıtma](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

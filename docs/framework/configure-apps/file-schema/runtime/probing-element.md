@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dd829fbbfbaa6f26b59e26d5a8b1d2b36593f57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e846cb1386dc64161d91ab50b6a04e5560e9c6da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprobinggt-element"></a>&lt;yoklama&gt; öğesi
 Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için temel alt dizinleri belirtir.  
@@ -75,6 +76,6 @@ Uygulama derlemeleri yüklenirken aramak ortak dil çalışma zamanı için teme
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Derlemenin konumunu belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

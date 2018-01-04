@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ffa3cb853a02af21ca1dd528174e560b8d830a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Geç başlatma* bir nesnenin anlamına gelir oluşturulduktan ilk kullanılan kadar ertelenir. (Bu konu için koşulları *geç başlatma* ve *yavaş örneklemesi* eşanlamlıdır.) Geç Başlatma öncelikle performansı, kayıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/21/2017
  Bu örnekte, başlatma yordamı her döngü tekrarında üzerinde çağrılan dikkat edin. Çok iş parçacıklı senaryolarda başlatma yordamı çağırmak için ilk değeri tüm iş parçacıkları tarafından görülen bir iş parçacığıdır. Sonraki iş parçacığı sayısı ayrıca başlatma yordamı çağırma ancak sonuçları kullanılmaz. Bu tür bir olası yarış durumu kabul edilebilir değilse kullanın <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> Boolean bağımsız değişkeni ve eşitleme nesnesi alır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen iş parçacığı oluşturma temelleri](../../../docs/standard/threading/managed-threading-basics.md)  
- [İş parçacıkları ve iş parçacığı oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Nasıl yapılır: nesnelerin yavaş başlatılmasını gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+ [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)  
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [Nasıl yapılır: Nesnelerin Geç Başlatılmasını Gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

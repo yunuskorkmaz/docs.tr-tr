@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69cdb468098a373f17ec25f28e43b77c650cc05f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c63118db5333158feb596a534e01f922473cd7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Bir ASP.NET uygulamasında SqlDependency
 Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.SqlClient.SqlDependency> ASP.NET yararlanarak dolaylı olarak <xref:System.Web.Caching.SqlCacheDependency> nesnesi. <xref:System.Web.Caching.SqlCacheDependency> Nesne kullanan bir <xref:System.Data.SqlClient.SqlDependency> bildirimleri için dinleme ve doğru önbelleğini güncelleştirin.  
@@ -68,5 +69,5 @@ Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.Sql
  Şimdi bir Transact-SQL güncelleştirme komut kullanarak veritabanındaki verileri güncelleştirin ve sayfayı yenileyin. Görüntülenen zaman şimdi önbellek veritabanından yeni verileri yenilendiğini gösterir. Önbelleği güncelleştirilirken rağmen geri gönderme olay gerçekleşene kadar sayfada görüntülenen saati değişmez unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server'da sorgu bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fbdec484af39eb4d98418ad72ed66ef7913f2d56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 473f1ca54d54a1d852edaed424729778e5a7513d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-query-notifications"></a>Sorgu bildirimleri etkinleştirme
 Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim vardır. Veri kaynağınızı SQL sorgu bildirimleri desteklemek için doğru şekilde yapılandırılmalıdır ve kullanıcı doğru istemci ve sunucu tarafı izinlerine sahip olmalıdır.  
@@ -95,5 +96,5 @@ CREATE SERVICE ContactChangeNotifications
  Buna karşılık, <xref:System.Data.Sql.SqlNotificationRequest> tüm dinleme altyapısında kendiniz uygulamak gerektirir. Ayrıca, sıra, hizmet ve ileti sıra tarafından desteklenen türleri gibi tüm destekleyici hizmet Aracısı nesneleri tanımlanmalıdır. El ile bu yaklaşım uygulamanız özel bildirim iletilerini veya bildirim davranışları gerektiriyorsa veya uygulamanızın daha büyük bir hizmet Aracısı uygulamanın parçası ise yararlıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server'da sorgu bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

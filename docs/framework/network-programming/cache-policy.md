@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 375c3b44f505a9bf36ce721c5ccde9b888114309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bafad45e6b6b546707c4f805f857e85549f0f071
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek yerine olup olmadığını belirlemek için kullanılan kuralları tanımlar. İstemci önbellek gereksinimleri yenilik uygulamaları belirtin, ancak etkili önbellek ilkesini istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulanması gereksinimleri tarafından belirlenir. İstemci önbellek İlkesi ve sunucu gereksinimleri etkileşimini her zaman en yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak üzere en koruyucu önbellek İlkesi sonuçlanır.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [yapılandırma önbelleği ağ uygulamalarda](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ uygulamaları için önbellek yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [Konum temelli önbellek ilkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Önbellek zaman tabanlı ilkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Ağ uygulamalarında önbelleğe alma yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+ [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

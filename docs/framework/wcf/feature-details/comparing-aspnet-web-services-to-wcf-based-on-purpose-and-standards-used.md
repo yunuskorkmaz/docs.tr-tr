@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3fec18cb93486dfe9d2b09582ad263d19b00617
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b43fe9cf66fc9ccf72d12c6a617a1b4c0b44def
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
 ASP.NET Web Hizmetleri, HTTP üzerinden Basit Nesne Erişim Protokolü (SOAP) kullanarak iletileri almasına ve göndermesine uygulamaları oluşturmak için geliştirildi. İletileri yapısını bir XML Şeması kullanılarak tanımlanabilir ve bir aracı iletilerini ve .NET Framework nesneleri seri hale getirme kolaylaştırmak için sağlanmıştır. Teknoloji Web Hizmetleri Web Hizmetleri Açıklama Dili (WSDL) tanımlamak için meta verileri otomatik olarak oluşturabilir ve Web Hizmetleri için istemcileri WSDL oluşturmak için ikinci bir aracı sağlanır.  
@@ -27,4 +28,4 @@ ASP.NET Web Hizmetleri, HTTP üzerinden Basit Nesne Erişim Protokolü (SOAP) ku
  ASP.NET Web Hizmetleri tarafından desteklenen standartları belgelenmiştir [XML Web Hizmetleri oluşturulan kullanarak ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94872). Tarafından desteklenen standartları daha kapsamlı listesini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adresinde listelenmiş [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET Web hizmetlerini geliştirmeye göre WCF karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+ [ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

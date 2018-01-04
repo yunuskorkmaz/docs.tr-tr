@@ -9,11 +9,12 @@ ms.prod: .net-core
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma
 

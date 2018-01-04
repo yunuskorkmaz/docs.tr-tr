@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6d810ab6e62c6df1b00305947de552ecdbe82141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31f3bfcb2b70bda952f0e4bb43dd8b0067e6ef1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrprobingassemblyenum-interface"></a>ICLRProbingAssemblyEnum Arabirimi
 Ortak dil çalışma zamanı (CLR) iç oluşturun veya kimliğe anlamak zorunda kalmadan derlemenin kimlik bilgilerini kullanarak bir derleme yoklama kimliklerini almak konak sağlayan yöntemler sağlar.  
@@ -32,7 +33,7 @@ Ortak dil çalışma zamanı (CLR) iç oluşturun veya kimliğe anlamak zorunda 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Get yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|Belirtilen dizindeki derleme kimliğini alır.|  
+|[Get Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|Belirtilen dizindeki derleme kimliğini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Gibi yöntemler [Iclrassemblyıdentitymanager::getprobingassembliesfromreference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) dönüş bir `ICLRProbingAssemblyEnum` örneği.  
@@ -47,6 +48,6 @@ Ortak dil çalışma zamanı (CLR) iç oluşturun veya kimliğe anlamak zorunda 
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iclrassemblyıdentitymanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Iclrassemblyreferencelist arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
+ [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

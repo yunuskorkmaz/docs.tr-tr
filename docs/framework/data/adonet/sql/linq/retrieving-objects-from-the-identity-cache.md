@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik önbellekten nesneleri
 LINQ türleri tarafından yönetilen bir nesne kimliği önbellekten döndüren SQL sorguları için bu konuda açıklanmaktadır <xref:System.Data.Linq.DataContext>.  
@@ -34,9 +35,9 @@ LINQ türleri tarafından yönetilen bir nesne kimliği önbellekten döndüren 
   
  Bir sorgu, bir nesne kimliği önbelleğinden almak için aşağıdaki genel formlar birinde olmalıdır:  
   
--   <xref:System.Data.Linq.Table%601>`.Function1(``predicate``)`  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601>`.Function1(``predicate``).Function2()`  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  Bu genel formlardaki `Function1`, `Function2`, ve `predicate` şu şekilde tanımlanır.  
   
@@ -75,7 +76,7 @@ LINQ türleri tarafından yönetilen bir nesne kimliği önbellekten döndüren 
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

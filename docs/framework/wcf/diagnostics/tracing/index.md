@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>İzleme
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Uygulama izleme ve tanılama verilerini hata izleme ve çözümleme sağlar. Bir uygulamanın nasıl davrandığını veya neden hataları anlamak için izleme yerine bir hata ayıklayıcısı kullanabilirsiniz. Hataları ve işleme bir uçtan uca deneyim sağlamak üzere bileşenler genelinde ilişkilendirebilirsiniz.  
@@ -33,21 +34,21 @@ ms.lasthandoff: 12/02/2017
   
  Bu konuda, belirli gereksiniminize uygun olarak farklı düzeylerde izleme nasıl yapılandırabileceğiniz açıklanmaktadır.  
   
- [Uçtan uca izleme](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Uçtan Uca İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
  Bu bölümde, hata ayıklama yardımcı olmak üzere Etkinlik izleme ve uçtan uca bağıntı yayması nasıl kullanabileceğinizi açıklar.  
   
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  Bu bölümde, nasıl izleme uygulamanızda hata ayıklama için kullanabileceğiniz açıklanmaktadır.  
   
- [Güvenlikle ilgili noktalar ve izleme için yararlı ipuçları](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
  Bu konuda, hem de WebHost kullanırken yararlı ipuçları açıklanmasını hassas bilgileri nasıl koruyabilirim açıklanmaktadır.  
   
- [İzleme başvuruları](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [İzleme Başvuruları](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
  Bu konu tarafından oluşturulan tüm izlemeleri listeler [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+ [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

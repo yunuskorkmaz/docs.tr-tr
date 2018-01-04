@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için Eylemler kullanma
 OData eylemlerinin bir OData hizmetinden alınan bir kaynağa bağlı görevi gören bir davranış uygulamak için bir yol sağlar.  Örneğin bir kaynak olarak dijital bir filmi göz önünde bulundurun, dijital bir filmi yapabilir pek çok şey vardır: kullanıma, oranı/açıklama veya iade etme. Bunlar tüm dijital filmler yöneten bir WCF veri hizmeti tarafından uygulanan eylemler örneğidir. Eylem çağrılabilen bir kaynağı içeren bir OData yanıtında eylemler açıklanmaktadır. Bir kullanıcının dijital film temsil eden bir kaynak istediğinde WCF veri hizmetinden döndürülen yanıt bu kaynak için kullanılabilir olan eylemler hakkında bilgi içerir. Bir eylem kullanılabilirliğini veri hizmet ya da kaynak durumuna bağlı olabilir. Dijital film teslim iade edildikten sonra örnek başka bir kullanıcı tarafından kullanıma alınamıyor için. İstemciler, bir URL belirterek bir eylem çağırabilirsiniz. Örneğin http://MyServer/MovieService.svc/Movies (6) belirli bir dijital film belirleyin ve http://MyServer/MovieService.svc/Movies (6) / Checkout belirli film eylemini çağıracaktır. Eylemler izin verir, kullanıma sunmak veri modelinizi gösterme olmadan hizmet modeli. Film hizmet örnekle devam edersek, film derecelendirme, ancak bir kaynak olarak derecelendirme verileri doğrudan açığa yapmalarına izin vermek isteyebilirsiniz. Film derecelendirme ancak derecelendirme veri kaynağı olarak doğrudan erişmek kullanıcı izin vermek için bir oran eylem uygulamanız.  
@@ -91,6 +92,6 @@ MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.sv
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Geliştirme ve WCF Veri Hizmetleri dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Özel veri hizmet sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [WCF Veri Hizmetleri Geliştirme ve Dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
+ [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

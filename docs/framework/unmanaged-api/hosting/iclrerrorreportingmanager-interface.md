@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 590cd87d6a566e9c8c3819fd1b250997938e9c35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac362432a5d0c613f4ee1409ee15d92bfef3aeb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager Arabirimi
 Hata bildirimi için özel yığın dökümleri yapılandırmak konak izin yöntemleri sağlar.  
@@ -32,9 +33,9 @@ Hata bildirimi için özel yığın dökümleri yapılandırmak konak izin yönt
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[BeginCustomDump yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Hata bildirimi için özel yığın dökümleri yapılandırılmasını belirtir.|  
-|[EndCustomDump yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Önceki bir çağrı tarafından ayarlanan özel yığın dökümü yapılandırması temizler `BeginCustomDump`.|  
-|[GetBucketParametersForCurrentException yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Geçerli özel durumun çağıran iş parçacığı üzerinde Watson demet alır.|  
+|[BeginCustomDump Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Hata bildirimi için özel yığın dökümleri yapılandırılmasını belirtir.|  
+|[EndCustomDump Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Önceki bir çağrı tarafından ayarlanan özel yığın dökümü yapılandırması temizler `BeginCustomDump`.|  
+|[GetBucketParametersForCurrentException Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Geçerli özel durumun çağıran iş parçacığı üzerinde Watson demet alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `BeginCustomDump` Yöntemi özel yığın dökümü yapılandırmasını ayarlar. `EndCustomDump` Yöntemi özel yığın dökümü yapılandırması temizler ve tüm ilişkili durumu boşaltır. Özel döküm tamamlandıktan sonra çağrılmalıdır.  
@@ -52,5 +53,5 @@ Hata bildirimi için özel yığın dökümleri yapılandırmak konak izin yönt
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ecustomdumpıtemkind numaralandırması](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [ECustomDumpItemKind Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

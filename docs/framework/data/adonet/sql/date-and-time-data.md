@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2bd9fa595281f7dfda50ef22914ccce7bf814a36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a547bbb38d58d5b4c22e78bfd64fef4094865143
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="date-and-time-data"></a>Tarih ve saat verilerini
 SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır. Yeni veri türleri, tarih ve saat için ayrı türleri ve büyük aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 hizmet paketi (SP) 1, SQL Server için .NET Framework veri sağlayıcısı başlatılıyor (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) bu yeni özellikleri ile SqlClient kullanılacak.  
@@ -245,7 +246,7 @@ command.Parameters.AddWithValue( _
 |[Veri türleri (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 sistem veri türlerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Yapılandırma parametreleri ve parametre veri türleri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [SQL Server veri türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

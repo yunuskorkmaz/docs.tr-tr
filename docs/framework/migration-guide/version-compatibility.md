@@ -13,11 +13,12 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 166d61339d2b74f378b50ade4b78fd41e9692f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te Sürüm Uyumluluğu
 Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen bir uygulamayı, platform sonraki sürümlerinde çalıştırılacağı anlamına gelir. Geriye dönük uyumluluk en üst düzeye çıkarmak .NET Framework çalışır: kaynak için bir .NET Framework sürümünü, .NET Framework'ün sonraki sürümlerinde derleme ve .NET Framework bir sürümünü çalıştıran ikili dosyaları davranır aynı üzerinde yazılan kod .NET Framework'ın sonraki sürümleri.  
@@ -70,7 +71,7 @@ Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yenilikler](../../../docs/framework/whats-new/index.md)  
- [Sınıf Kitaplığı'nda artık kullanılmayan nedir](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Uygulama uyumluluğu](../../../docs/framework/migration-guide/application-compatibility.md)  
+ [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Uygulama Uyumluluğu](../../../docs/framework/migration-guide/application-compatibility.md)  
  [Microsoft .NET Framework destek yaşam döngüsü ilkesi](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

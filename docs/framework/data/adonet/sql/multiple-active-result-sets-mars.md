@@ -13,24 +13,25 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>Birden fazla etkin sonuç kümesi (MARS)
 Birden fazla etkin sonuç kümeleri (MARS) tek bir bağlantı üzerinde birden çok toplu işlem yürütme sağlayan bir özelliktir. Önceki sürümlerde, tek bir bağlantı karşı bir seferde yalnızca tek bir toplu yürütülebilir. MARS ile birden çok toplu işlem yürütülürken işlemlerinin eş zamanlı yürütme göstermez.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Birden fazla etkin sonuç kümesi etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+ [Birden Çok Etkin Sonuç Kümesini Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  SQL Server ile MARS kullanmayı açıklar.  
   
- [Verileri düzenleme](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ [Verileri Düzenleme](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
  MARS uygulamaları kodlama örnekleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Zaman uyumsuz işlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  Yeni zaman uyumsuz özellikler ADO.NET kullanmayla ilgili ayrıntıları sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

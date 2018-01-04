@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e88c6e5f03cef83e640fbca7434d10f82653f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26dd46cc8915dffdafe211a33ea80e8e46d5acf5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Hizmet meta verilerini ve ilişkili bilgileri yayımlanmasını belirtir.  
@@ -133,5 +134,5 @@ Hizmet meta verilerini ve ilişkili bilgileri yayımlanmasını belirtir.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Güvenlik davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Meta veri yayımlama davranışı](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+ [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Meta Veri Yayımlama Davranışı](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

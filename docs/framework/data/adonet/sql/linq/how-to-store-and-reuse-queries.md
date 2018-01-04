@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 321be8e2cd38ea1138e54587ee876ceb82f67440
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8170b1219bf66c1f90fb5db3143916f7a41aab94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: depolamak ve yeniden sorgular
 Birçok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, genellikle bir kez sorgu derleme ve farklı parametrelerle birkaç kez yürütme tarafından performansını artırabilirsiniz. Örneğin, burada Şehir çalışma zamanında bir form kullanıcı tarafından belirtilen belirli bir şehir bulunan tüm müşterilerin almak bir uygulama olabilir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanımını destekleyen *sorguları derlenmiş* bu amaç için.  
@@ -45,5 +46,5 @@ Birçok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.Linq.CompiledQuery>  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Veritabanı sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

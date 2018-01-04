@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a27420609a6bcb6e30a351e4b84a899da9583d5e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: af39c3c5788db95eaee248ca8454534022cab659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>My ilk talep kullanan WCF hizmeti oluşturma
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -50,4 +51,4 @@ ms.lasthandoff: 10/18/2017
  WIF kullanan, ilk talep kullanan WCF hizmeti oluşturmak için bkz: [nasıl yapılır: derleme talep kullanan WCF hizmeti kullanarak WIF](http://msdn.microsoft.com/en-us/431e6415-62ed-4a9f-af03-f14d2b4dfe6d).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WIF ile çalışmaya başlama](../../../docs/framework/security/getting-started-with-wif.md)
+ [WIF Kullanmaya Başlama](../../../docs/framework/security/getting-started-with-wif.md)

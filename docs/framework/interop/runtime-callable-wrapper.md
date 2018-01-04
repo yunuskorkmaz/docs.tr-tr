@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980ed0a10c4e8152da20846710b21c244a341271
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 722a317a01d79f56496810b8727ce041705c8f78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir proxy üzerinden COM nesneleri gösterir. RCW .NET istemcileri sıradan bir nesneye görünmesine karşın, bir .NET istemcisi ve COM nesnesi arasındaki aramaları sıralamakta kendi birincil işlevi olduğu.  
@@ -65,8 +66,8 @@ COM arabirimleri ve çalışma zamanı aranabilir sarmalayıcısı
 |**IEnumVARIANT**|Koleksiyon olarak kabul edilmesi için numaralandırmalar destekleyen COM türler sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM sarmalayıcıları](../../../docs/framework/interop/com-wrappers.md)  
+ [COM Sarmalayıcıları](../../../docs/framework/interop/com-wrappers.md)  
  [Seçili arabirimleri hazırlama](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
- [COM aranabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)  
  [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Tür kitaplığını derleme olarak içeri aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

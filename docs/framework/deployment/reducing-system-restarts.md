@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7505f44524ae8476842599b9dc4643128dea4bf2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleyici kullanan [yeniden başlatma Yöneticisi](http://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programı .NET Framework yüklerse, yeniden başlatma bu özelliğin avantajlarından yararlanmak için Yöneticisi ile arabirim oluşturabilirler. Daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework 4.5 yükleyici ilerlemesini almak](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -45,4 +46,4 @@ Kullanımda olan .NET Framework uygulamaları kapatma istemi
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dağıtım](../../../docs/framework/deployment/index.md)  
  [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+ [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fbf3f07f5669c4fcafa4d3cc4119fc715539651d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b13df0d70a36e475e87bae3152912e58a9f8443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol arabirimi
 Bir örnek alanındaki hata ayıklama sembol bilgilerini temsil eder.  
@@ -26,9 +27,9 @@ Bir örnek alanındaki hata ayıklama sembol bilgilerini temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetName yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getname-method.md)|Örnek alanın adını alır.|  
-|[GetOffset yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getoffset-method.md)|Bu örnek alanı kendi üst sınıfı'bayt uzaklığını alır.|  
-|[GetSize yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getsize-method.md)|Örnek alanı bayt cinsinden boyutu alır.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getname-method.md)|Örnek alanın adını alır.|  
+|[GetOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getoffset-method.md)|Bu örnek alanı kendi üst sınıfı'bayt uzaklığını alır.|  
+|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getsize-method.md)|Örnek alanı bayt cinsinden boyutu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugInstanceFieldSymbol` Arabirimi bir örnek alanındaki hata ayıklama sembol bilgilerini almak için kullanılır.  
@@ -46,6 +47,6 @@ Bir örnek alanındaki hata ayıklama sembol bilgilerini temsil eder.
  **.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugStaticFieldSymbol arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [ICorDebugStaticFieldSymbol Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

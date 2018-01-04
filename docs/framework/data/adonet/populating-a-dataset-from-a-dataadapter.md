@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3648340050e5ee3a761efcbedd89f649ff8d9c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter kümesinden doldurma
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının sağlayan veri bellekte gösterimidir. `DataSet` Tabloları, kısıtlamalar ve tablolar arasında ilişkiler içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağı, bağımsız bir `DataSet` verileri uygulamaya yerel ve birden çok veri kaynaklarından verileri içerebilir. Mevcut veri kaynakları ile etkileşim aracılığıyla denetlenir `DataAdapter`.  
@@ -192,8 +193,8 @@ adapter.Fill(customers, "Customers");
 |ANATR|10625|1.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Bir DbDataAdapter verilerle değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [Birden fazla etkin sonuç kümesi (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [DbDataAdapter ile Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
+ [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

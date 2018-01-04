@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe5fbb5299c8e9c130538f99fe13081f8f26a55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
@@ -106,9 +107,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oluşturma ve tanımlayıcı adlı derlemeler kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Nasıl yapılır: bir genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe (derleme bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Derleme imzalamayı geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Derleme ve bildirim imzalamayı yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [İmzalama sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/0k50fs3b)
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [Derleme ve Bildirim İmzalamayı Yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+ [İmzalama Sayfası, Proje Tasarımcısı](https://msdn.microsoft.com/library/0k50fs3b)

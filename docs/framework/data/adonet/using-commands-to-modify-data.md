@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 853f8e4e75df3fffad4a2d5ecd4f7ae21b5d674f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5c574a5e880dd838397b35df48138079cb58e2cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-commands-to-modify-data"></a>Verileri değiştirmek için komutları kullanarak
 Bir .NET Framework veri sağlayıcısı kullanarak, saklı yordamları ya da bir veritabanı veya katalog şema işleme gerçekleştirmek için veri tanımlama dili ifadelerini (örneğin, CREATE TABLE ve ALTER COLUMN) yürütebilir. Sorguda yaptığınız gibi bu komutları satır döndürmeyen böylece **komutu** nesnesi sağlar bir **ExecuteNonQuery** işlemek için.  
@@ -27,13 +28,13 @@ Bir .NET Framework veri sağlayıcısı kullanarak, saklı yordamları ya da bir
  Satır tarafından döndürülmez rağmen **ExecuteNonQuery** yöntemi, giriş ve çıkış parametreler ve dönüş değerleri kullanılabilir geçirilen ve aracılığıyla döndürülen **parametreleri** koleksiyonu **komutu**  nesnesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir veri kaynağındaki verileri güncelleştirme](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
+ [Bir Veri Kaynağındaki Verileri Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
  Komutları ya da bir veritabanındaki verileri değiştirme saklı yordamları çalıştırmak açıklar.  
   
- [Katalog işlemlerini gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
+ [Katalog İşlemleri Gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md)  
  Veritabanı şeması değiştirme komutları yürütmek açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

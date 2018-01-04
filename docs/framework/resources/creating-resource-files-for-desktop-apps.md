@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Masaüstü Uygulamaları için Kaynak Dosyalar Oluşturma
 Uygulamanızda kolayca kullanılabilir hale getirmek için dizeler, görüntüler ve nesneler verileri gibi kaynaklarını ekleyebilirsiniz. .NET Framework, kaynak dosyaları oluşturmak için beş yol sunar:  
@@ -204,5 +205,5 @@ greeting=Hello, {0}!
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Resources>  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)  
- [Paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
+ [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

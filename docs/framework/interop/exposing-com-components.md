@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 26efd43a05252e657626063d7dd04b1020dace18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9361de4726b1dc58238db5ca7b5605f2cc75485d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>COM Bileşenlerini .NET Framework'te Gösterme
 Bu bölümde, yönetilen kod için var olan bir COM bileşeni kullanıma sunmak için gereken işlem özetlenmektedir. COM sunucuları bu sıkı bir şekilde yazma hakkında ayrıntılar .NET Framework ile tümleştirmek için bkz: [birlikte çalışma için tasarım değerlendirmeleri](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689).  
@@ -47,8 +48,8 @@ Bu bölümde, yönetilen kod için var olan bir COM bileşeni kullanıma sunmak 
      Birlikte çalışma uygulamaları olarak en iyi dağıtıldığı [tanımlayıcı adlı](../../../docs/framework/app-domains/strong-named-assemblies.md), genel derleme önbelleğinde imzalanmış.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md)  
+ [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)  
  [Birlikte çalışma için tasarım konuları](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
- [COM birlikte çalışma örneği: .NET istemcisi ve COM sunucusu](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
- [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../docs/standard/language-independence-and-language-independent-components.md)  
+ [COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
+ [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

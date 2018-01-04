@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 97d6673fddb20e99454bf97c87254049b82f0000
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;dinleyicileri&gt; öğesi için &lt;izleme&gt;
 Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri uygun hedef İzleme çıkışı yönlendirir.  
@@ -95,4 +96,4 @@ Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.TraceListener>  
- [İzleme ve hata ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

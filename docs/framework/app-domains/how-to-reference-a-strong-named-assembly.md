@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b005926f99b7c151e5916a95a9852dd8b448a928
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5934f67387e29bfbd4f011ad2ba47f50d81b983
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma
 Başvuran türleri veya kesin adlandırılmış bir derleme kaynaklarında işlemi genellikle saydamdır. Başvuru (erken bağlama) derleme zamanında ya da çalışma zamanında yapabilirsiniz.  
@@ -79,4 +80,4 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn - tp \<**  *derleme***>**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oluşturma ve tanımlayıcı adlı derlemeler kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

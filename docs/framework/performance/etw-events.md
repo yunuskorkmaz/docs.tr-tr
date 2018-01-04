@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 27f3ede2967d030d0f85919e658ca6a8dd410743
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ce0b322c2601709bdb17cb6990c4b6d96480bb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-net-framework"></a>.NET Framework'te ETW Olayları
 Olay izleme için Windows (ETW), Windows işletim sistemleri tarafından sağlanan yüksek performanslı, düşük yükü, ölçeklenebilir izleme sistemidir. .NET Framework tarafından sağlanan profil oluşturma ve hata ayıklama desteği tamamlayan ve çeşitli senaryolarda gidermek için kullanılabilir.  
@@ -28,13 +29,13 @@ Olay izleme için Windows (ETW), Windows işletim sistemleri tarafından sağlan
  .NET Framework'te ETW olay izleme Ortak Dil Çalışma Zamanı Modülü (CLR), kullanılabilir [görev paralel Kitaplığı](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md), ve [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Görev paralel kitaplığı ve PLINQ'da ETW olayları](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
+ [Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
  Paralel uygulama kodu profil açıklar.  
   
- [Ortak dil çalışma zamanında ETW olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
+ [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
  CLR ETW olayları ortak dil çalışma zamanı tarafından sağlanan profil oluşturma ve hata ayıklama desteği nasıl tamamlayacak açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md)  
- [Görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)  
+ [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

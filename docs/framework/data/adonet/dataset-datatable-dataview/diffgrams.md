@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yükleme ve içeriği kalır ve içeriğini taşıma için bir ağ bağlantısı üzerinden serileştirmek için biçimini kullanır. Zaman bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru bir şekilde içeriği ancak şema değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hata bilgilerini ve satır sırası.  
@@ -93,7 +94,7 @@ Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML 
   
 |Ek Açıklama|Açıklama|  
 |----------------|-----------------|  
-|**Kimliği**|Öğeleri kullanmak üzere kullanılan  **\<diffgr: önce >** ve  **\<diffgr:errors >** öğelerine blokları  **\<**  ***DataInstance***  **>**  bloğu. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`.|  
+|**id**|Öğeleri kullanmak üzere kullanılan  **\<diffgr: önce >** ve  **\<diffgr:errors >** öğelerine blokları  **\<**  ***DataInstance***  **>**  bloğu. İle değerleri **diffgr:id** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Hangi öğeyi tanımlayan  **\<**  ***DataInstance***  **>**  bloğu, geçerli öğenin üst öğesidir. İle değerleri **diffgr:parentId** ek açıklama biçiminde olan *[TableName] [RowIdentifier]*. Örneğin: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Bir satırda tanımlayan  **\<**  ***DataInstance***  **>**  değiştirilmiş olarak engelleyin. **HasChanges** ek açıklama aşağıdaki iki değerden biri olabilir:<br /><br /> **eklenen**<br /> Tanımlayan bir **eklenen** satır.<br /><br /> **değiştiren**<br /> Tanımlayan bir **değiştirilen** içeren satır bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu. Unutmayın **silinmiş** satırları sahip olacak bir **özgün** satır sürümünde  **\<diffgr: önce >** bloğu, ancak hiçbir ek açıklama öğesi içindeolmasıoradaolacaktır **\<**  ***DataInstance***  **>**  bloğu.|  
 |**hasErrors**|Bir satırda tanımlayan  **\<**  ***DataInstance***  **>**  ile engelleme bir **RowError**. Hata yerleştirilmemiş  **\<diffgr:errors >** bloğu.|  
@@ -142,8 +143,8 @@ Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML 
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kümesini XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Bir veri kümesini XML dosyası şuradan yükleniyor](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [XML verileri olarak DataSet içeriğini yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [XML Verileri Olarak DataSet İçeriği Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

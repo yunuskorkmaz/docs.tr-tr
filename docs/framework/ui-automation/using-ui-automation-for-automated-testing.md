@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f1a56f8f9c2f7e2b817290c89ba4eaf1ae71955e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -122,4 +123,4 @@ ms.lasthandoff: 10/18/2017
  Güvenlik bilgileri için bkz: [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon temelleri](../../../docs/framework/ui-automation/index.md)
+ [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)

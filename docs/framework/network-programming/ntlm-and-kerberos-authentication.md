@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1662e5b0f8afd4ef92d2893a11c25457dbce024
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos kimlik doğrulaması
 Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulaması sunucusu ile kimlik doğrulama denemesi için çağıran uygulama ile ilişkili Microsoft Windows NT kullanıcı kimlik bilgilerini kullanın. Varsayılan olmayan NTLM kimlik doğrulaması kullanırken, uygulama kimlik doğrulama türü NTLM olarak ayarlar ve kullandığı bir <xref:System.Net.NetworkCredential> kullanıcı adı, parola ve etki alanı aşağıdaki örnekte gösterildiği gibi ana bilgisayara geçirmek için nesne.  
@@ -72,5 +73,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  NTLM kimlik doğrulaması, bir proxy sunucu üzerinden çalışmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel ve Özet kimlik doğrulaması](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [Internet kimlik doğrulama](../../../docs/framework/network-programming/internet-authentication.md)
+ [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [İnternet Kimlik Doğrulaması](../../../docs/framework/network-programming/internet-authentication.md)

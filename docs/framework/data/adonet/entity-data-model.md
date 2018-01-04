@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
 Varlık veri modeli (EDM) depolanan form bağımsız olarak verilerin yapısını açıklayan kavramları kümesidir. EDM varlık ilişkisi içinde 1976 Peter Chen tarafından açıklanan modelinden taşır, ancak ayrıca varlık ilişkisi modeline oluşturur ve geleneksel kullanımları genişletir.  
@@ -29,49 +30,49 @@ Varlık veri modeli (EDM) depolanan form bağımsız olarak verilerin yapısın�
 ## <a name="in-this-section"></a>Bu Bölümde  
  Bu bölümdeki konular, varlık veri modeli kavramlarını açıklar. EDM uygulayan DSL burada açıklanan kavramları içermelidir. Unutmayın [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) CSDL kavramsal modeller tanımlamak için kullanır. Daha fazla bilgi için bkz: [CSDL belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
- [Varlık veri modeli temel kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Varlık veri modeli: ad alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Varlık Veri Modeli: Ad Alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Varlık Veri Modeli: Basit Veri Türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Varlık veri modeli: devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Varlık Veri Modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [ilişki ucu](../../../../docs/framework/data/adonet/association-end.md)  
+ [association end](../../../../docs/framework/data/adonet/association-end.md)  
   
- [İlişki uç Çokluk](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [association end multiplicity](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [ilişkilendirme kümesi](../../../../docs/framework/data/adonet/association-set.md)  
+ [association set](../../../../docs/framework/data/adonet/association-set.md)  
   
- [İlişki sonu Ayarla](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [association set end](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [ilişki türü](../../../../docs/framework/data/adonet/association-type.md)  
+ [association type](../../../../docs/framework/data/adonet/association-type.md)  
   
- [karmaşık türü](../../../../docs/framework/data/adonet/complex-type.md)  
+ [complex type](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [Varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md)  
+ [entity container](../../../../docs/framework/data/adonet/entity-container.md)  
   
- [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md)  
+ [entity key](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [Varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md)  
+ [entity set](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [varlık türü](../../../../docs/framework/data/adonet/entity-type.md)  
+ [entity type](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [modeli](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](../../../../docs/framework/data/adonet/facet.md)  
   
- [yabancı anahtar özelliği](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [foreign key property](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [Model bildirilen işlevi](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [model-declared function](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [Model tanımlı işlevi](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [model-defined function](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [Gezinme özelliği](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [navigation property](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [özelliği](../../../../docs/framework/data/adonet/property.md)  
+ [property](../../../../docs/framework/data/adonet/property.md)  
   
- [başvuru bütünlüğü kısıtlaması](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
+ [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [CSDL belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+ [CSDL Belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

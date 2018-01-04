@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bdd8108261e1e1bc18dd636ba654f7fb6bed981
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4cadc6af85c833013ac56399ae0821731dbf2d41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Karşılaştırma GUID ve uniqueidentifier değerleri
 SQL Server'ın genel benzersiz tanıtıcısı (GUID) veri türü tarafından temsil edilen `uniqueidentifier` 16 bayt ikili değer depolayan veri türü. İkili bir sayı GUID'dir ve kendi ana birçok sitelerde çok sayıda bilgisayar olan bir ağda benzersiz bir tanımlayıcı olarak kullanılır. GUID'ler Transact-SQL NEWID işlevini çağırarak oluşturulabilir ve dünyanın her yerinde benzersiz olması garanti edilmez. Daha fazla bilgi için "Kullanma uniqueidentifier veri" SQL Server Books Online'a bakın.  
@@ -56,5 +57,5 @@ Sorted SqlGuids:
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

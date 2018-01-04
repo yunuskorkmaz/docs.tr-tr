@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
 İzleme anahtarları etkinleştir, devre dışı bırakın ve İzleme çıktısı filtrelemek etkinleştirin.  
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/21/2017
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzleme ve uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Nasıl yapılır: uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [İzleme anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [İzleme ve hata ayıklama Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [İzleme ve Hata Ayıklama Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

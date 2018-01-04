@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 082d84fe0ac4193f3da5ac9be52789432bde76aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
 İzleme anahtarları etkinleştir, devre dışı bırakın ve İzleme çıktısı filtrelemek etkinleştirin. Bunlar, kodunuzda var ve dışarıdan .config dosyası aracılığıyla yapılandırılabilir nesneleridir. .NET Framework sağlanan izleme anahtarları üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı, <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfların belirli izleme düzeyi için bir izleme anahtarı etkinleştirin izin verecek şekilde <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> bu düzeyin altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Anahtar devre dışı bırakırsanız, izleme iletileri görüntülenmez. Özet bu sınıfların türetilmesi (**MustInherit**) sınıf **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  
@@ -92,6 +93,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Sağlama yanı sıra **BooleanSwitch** ve **TraceSwitch**, devralarak kendi anahtarları tanımlayabilirsiniz **anahtar** sınıf ve taban sınıf yöntemlerini geçersiz kılma özelleştirilmiş yöntemleriyle. Geliştirici tarafından tanımlanan anahtarları oluşturma hakkında daha fazla bilgi için bkz: <xref:System.Diagnostics.Switch> sınıf .NET Framework başvurusu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzleme dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Nasıl yapılır: uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [İzleme ve uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+ [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

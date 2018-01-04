@@ -22,11 +22,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -72,12 +73,12 @@ ilasm [options] filename [[options]filename...]
 |**/msv:** `major`.`minor`|Meta veri akışı sürümü ayarlar nerede `major` ve `minor` tamsayı olduğunu.|
 |**/noautoinherit**|Devre dışı bırakır varsayılan devralmadan <xref:System.Object> hiçbir temel sınıf belirtildiğinde.|
 |**/nocorstub**|CORExeMain taslağının oluşturulmasını bastırır.|
-|**/ nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
+|**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
 |**/ Çıktı:**`file.ext`|Çıktı dosyası adını ve uzantısını belirtir. Varsayılan olarak, çıktı dosyası adı ilk kaynak dosyasının adıyla aynıdır. Varsayılan uzantısı *.exe*. Belirtirseniz **/dll** seçeneği, varsayılan uzantısıdır *.dll*. **Not:** belirtme **/çıkış**: dosyam.dll ayarlı değil **/dll** seçeneği. Belirtmezseniz, **/dll**, sonucu adlı bir yürütülebilir dosya olacaktır *dosyam.dll*.|
-|**/ optimize**|Uzun yönergeleri kısa olarak iyileştirir. Örneğin, `br` için `br.s`.|
+|**/optimize**|Uzun yönergeleri kısa olarak iyileştirir. Örneğin, `br` için `br.s`.|
 |**/pe64**|64 bitlik bir görüntü oluşturur (PE32+).<br /><br /> Hiçbir hedef işlemci belirtilmezse, varsayılan değer `/itanium`.|
 |**/ pdb**|Hata ayıklama bilgisi izlemeyi etkinleştirmeden bir PDB dosyası oluşturur.|
-|**istemci bilgisayarlara**|Sessiz modu belirtir; hiçbir derleme ilerlemesini bildirmez.|
+|**/quiet**|Sessiz modu belirtir; hiçbir derleme ilerlemesini bildirmez.|
 |**/ Resource:**`file.res`|Belirtilen kaynak dosyası içeren \*elde edilen içinde .res biçimi *.exe* veya *.dll* dosya. Yalnızca bir .res dosyası ile belirtilebilir **/Resource** seçeneği.|
 |**/ssver:** `int`.`int`|NT isteğe bağlı üst bilgisinde alt sistem sürümünü ayarlar. İçin **/appcontainer** ve **/arm** 6.02 en düşük sürüm numarasıdır.|
 |**/ stack:**`stackSize`|NT isteğe bağlı üstbilgi SizeOfStackReserve değeri ayarlar `stackSize`.|
@@ -237,7 +238,7 @@ Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Araçları](../../../docs/framework/tools/index.md)  
+[Araçlar](../../../docs/framework/tools/index.md)  
 [*Ildasm.exe* (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[Yönetilen yürütme işlemi](../../../docs/standard/managed-execution-process.md)  
-[Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+[Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
+[Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c8c4eca35c406b38da603dc10358920ee887b137
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6d9269261c6c0ce7573e0a8e298111971ae591c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Geri Çağırma Metodu Olarak Bir Temsilci Hazırlama
 Bu örnek nasıl temsilciler işlev işaretçileri bekleniyor yönetilmeyen bir işleve nasıl iletileceğini gösterir. Temsilci bir yöntem başvuru içerebilir ve bir tür kullanımı uyumlu işlev işaretçisi ya da bir geri çağırma işlevini eşdeğer olan bir sınıftır.  
@@ -63,4 +64,4 @@ Bu örnek nasıl temsilciler işlev işaretçileri bekleniyor yönetilmeyen bir 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çeşitli hazırlama örnekleri](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)  
  [Platform çağırma veri türleri](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+ [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

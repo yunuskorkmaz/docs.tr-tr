@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken, uygulamanızın yürütülmesini izlemek bir yoldur. Bunu geliştirmek ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz, .NET Framework uygulamasını izleme ve hata ayıklama araçları ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hatalar ve uygulama yürütme günlükleri, metin dosyaları veya daha sonraki analizler için diğer aygıtlar hakkındaki bilgileri kaydetmek için sınıflar.  
@@ -152,12 +153,12 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.TraceSource>  
- [Kod sözleşmeleri](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [Kod Anlaşmaları](../../../docs/framework/debug-trace-profile/code-contracts.md)  
  [C#, F # ve Visual Basic proje türleri](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
- [Nasıl yapılır: uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [Nasıl yapılır: oluşturma ve başlatma izleme anahtarları](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [Nasıl yapılır: oluşturma ve başlatma izleme kaynakları](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [Nasıl yapılır: iz dinleyicileri ile TraceSource ve filtreler kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
- [İzleme dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [İzleme anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
+ [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Nasıl yapılır: İzleme Anahtarları Oluşturma, Başlatma ve Yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Nasıl yapılır: İzleme Kaynakları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Nasıl yapılır: İzleme Dinleyicileri ile TraceSource ve Filtreler Kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 5ff3723e016e01b7c249dc7533f2657ea607cd0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b788d679d29a9af838b91c7b4468e10a1a8411e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>İstemci Tarafı UI Otomasyon Sağlayıcı Oluşturma
 > [!NOTE]
@@ -38,5 +39,5 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[UIAClientSideProvider_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/csproviderprogram.vb#101)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon sağlayıcılara genel bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [İstemci tarafı sağlayıcı derlemesini kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+ [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4adcc157f4d79898a0418219993681920eb92965
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
 > [!NOTE]
@@ -87,4 +88,4 @@ ms.lasthandoff: 10/18/2017
  Konak bir parça sağlayarak önemli bir rol oynar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Hizmetleri. Parça kök gezinme sağlar ve böylece özel sağlayıcı uygulamadan yok bazı varsayılan özellikleri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sunucu tarafı UI Otomasyon sağlayıcıyı uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+ [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

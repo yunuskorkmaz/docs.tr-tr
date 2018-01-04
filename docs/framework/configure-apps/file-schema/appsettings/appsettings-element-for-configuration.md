@@ -12,11 +12,12 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cb59120d88816ea193bd8588b152d6b848b682d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cebb9ba7ebeb483233276324289a4ddc5a0bc381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > öğesi için \<yapılandırma >
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel uygulama yapılandırma bilgilerini depolayan bir uygulama. Belirtilen anahtar/değer çiftlerinin  **\<appSettings >** öğesi kullanılarak kod erişilir <xref:System.Configuration.ConfigurationSettings> sınıfı.
+ **\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel uygulama yapılandırma bilgilerini depolayan bir uygulama. Belirtilen anahtar/değer çiftlerinin  **\<appSettings >** öğesi kullanılarak kod erişilir <xref:System.Configuration.ConfigurationSettings> sınıfı.
 
 Kullanabileceğiniz **dosya** özniteliğini  **\<appSettings >** öğesinin *Web.config* ve uygulama yapılandırma dosyaları. Bu öznitelik ek ayarlar sağlayan veya belirtilen ayarları geçersiz kılan bir yapılandırma dosyası belirtir  **\<appSettings >** öğesi. **Dosya** özniteliği, ne zaman bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak üzere bir kullanıcının istediği gibi kaynak denetim takım geliştirme senaryolarda kullanılabilir.
 

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d6dfe38f8e632a31f7a20191678f1fff7fd88ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; öğesi
 ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.  
@@ -89,8 +90,8 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
- [Şifreleme sınıflarını yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Nesne tanımlayıcılarını şifreleme algoritmalarıyla eşleştirme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+ [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4cf1d2013a51985f9d7772ac0ef86e5dbb120be9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19bcb64beb7b022d20bbde1210ae6d844690d891
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; öğesi (URI ayarları)
 Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır.  
@@ -43,9 +44,9 @@ Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır
   
 |**Öğesi**|**Açıklama**|  
 |-----------------|---------------------|  
-|[ekleme](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı ekler.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı ekler.|  
 |[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Tüm mevcut düzeni ayarlarını temizler.|  
-|[Kaldır](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı kaldırır.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzeni ayarı kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7c620c4a33032711abc0d7b82af908018bd44cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02a775be4976760b354a492e7252a67ef04eace9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS Yapısı
 Ortak dil çalışma zamanı (CLR) atık toplama mekanizmasını ilgili istatistikler sağlar.  
@@ -89,6 +90,6 @@ pCLRGCManager->GetStats(&GCStats);
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [Otomatik bellek yönetimi](../../../../docs/standard/automatic-memory-management.md)  
- [Çöp toplama](../../../../docs/standard/garbage-collection/index.md)
+ [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)  
+ [Atık Toplama](../../../../docs/standard/garbage-collection/index.md)

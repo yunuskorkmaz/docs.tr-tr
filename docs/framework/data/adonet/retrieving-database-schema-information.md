@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 71493eb91415b5f4695e771c7a549244629bb654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19fee0f90c1f460d253cfdc865035a6b8aa3db48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-database-schema-information"></a>Veritabanı şema bilgileri alınıyor
 Şema bilgileri veritabanından alma şema bulma işlemi ile gerçekleştirilir. Şema bulma sağlar yönetilen sağlayıcıları bulmak ve veritabanı şeması hakkında bilgi döndürür olarak da bilinen istemek uygulamalar *meta veri*, belirli bir veritabanı. Farklı veritabanı şema öğeleri tablolar, sütunlar ve saklı yordamlar gibi şema koleksiyonlarına sunulur. Her bir şema koleksiyonu şema bilgileri kullanılan sağlayıcıya özgü çeşitli içerir.  
@@ -29,25 +30,25 @@ ms.lasthandoff: 11/21/2017
  Ayrıca OLE DB için .NET Framework veri sağlayıcısı kullanarak şema bilgileri sunan <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A> yöntemi <xref:System.Data.OleDb.OleDbConnection> nesnesi. Bağımsız değişken **GetOleDbSchemaTable** geçen bir <xref:System.Data.OleDb.OleDbSchemaGuid> döndürmek için şema bilgileri tanımlar ve sütunları bu kısıtlamalar bir dizi döndürdü. **GetOleDbSchemaTable** döndüren bir <xref:System.Data.DataTable> istenen şema bilgileri ile doldurulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [GetSchema ve şeması koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  Açıklar **GetSchema** yöntemi ve nasıl bu almak ve şema bilgilerini veritabanından kısıtlamak için kullanılabilir.  
   
  Şema kısıtlamaları  
  İle kullanılan şema kısıtlamaları açıklar **GetSchema**.  
   
- [Ortak şema koleksiyonları](../../../../docs/framework/data/adonet/common-schema-collections.md)  
+ [Ortak Şema Koleksiyonları](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  Tüm .NET çerçevesi ile yönetilen sağlayıcılar tarafından desteklenen ortak şeması koleksiyonları tümünün açıklar.  
   
- [SQL Server şeması koleksiyonları](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
+ [SQL Server Şema Koleksiyonları](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
  SQL Server için .NET Framework sağlayıcısı tarafından desteklenen şema koleksiyonu açıklar.  
   
- [Oracle şema koleksiyonları](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
+ [Oracle Şema Koleksiyonları](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
  Oracle için .NET Framework sağlayıcısı tarafından desteklenen şema koleksiyonu açıklar.  
   
- [ODBC şeması koleksiyonları](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
+ [ODBC Şema Koleksiyonları](../../../../docs/framework/data/adonet/odbc-schema-collections.md)  
  ODBC sürücüleri için şema koleksiyonları açıklar.  
   
- [OLE DB şeması koleksiyonları](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
+ [OLE DB Şema Koleksiyonları](../../../../docs/framework/data/adonet/ole-db-schema-collections.md)  
  OLE DB sağlayıcıları için şema koleksiyonları açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -82,5 +83,5 @@ ms.lasthandoff: 11/21/2017
  Açıklar **GetSchemaTable** yöntemi <xref:System.Data.SqlClient.SqlDataReader> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

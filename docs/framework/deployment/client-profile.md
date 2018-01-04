@@ -20,11 +20,12 @@ caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0c93019b2024029fd27d78ac191f0f99bc9b0ce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f05290486b107f325e61cfffad052311258eee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
 .NET istemci profili ile birlikte sağlanan .NET Framework'ün bir alt kümesidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleri ve istemci uygulamalar için iyileştirilmiştir. .NET Framework geliştirme platformu Windows, Windows Phone ve Microsoft Azure için ve bir yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerinde sağlanan iki dağıtım seçenekleri: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET framework istemci profili (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Visual Studio çoklu sürüm desteğine genel bakış](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [.NET Framework hedefleme hatalarının sorunlarını giderme](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
- [Nasıl yapılır: .NET Framework sürümü hedef](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+ [Visual Studio Çoklu Sürüm Desteğine Genel Bakış](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
+ [Nasıl Yapılır: .NET Framework Sürümü Hedefleme](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

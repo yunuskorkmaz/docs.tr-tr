@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Sürüm 3.5 yuva performans geliştirmeleri
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Sınıfı geliştirilmiştir sürüm 3.5 kullanmak için en yüksek performans elde etmek için zaman uyumsuz ağ g/ç kullanan uygulamalar tarafından. Bir dizi yeni sınıflar, geliştirmeler kümesinin bir parçası olarak eklenmiştir <xref:System.Net.Sockets.Socket> özel yüksek performanslı yuva uygulamaları tarafından kullanılan bir alternatif zaman uyumsuz desen sağlayan sınıf. Bu geliştirmeler, yüksek performans gerektiren ağ sunucu uygulamaları için özel olarak tasarlanmıştır. Bir uygulama Gelişmiş zaman uyumsuz desen özel olarak kullanabilir veya yalnızca kendi uygulama etkin alanlarını (büyük miktarlarda verinin, örneğin alırken) hedeflenen.  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Ağ programlama örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Yuva performans teknolojisi örnek](http://go.microsoft.com/fwlink/?LinkID=179570)

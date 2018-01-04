@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a080dd13f4e9950c9e65b8031ffc77ddf18eaf9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 533786ffe1fa39928f90d94bbb0d80584bf85b8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL sorguları
 Tanımladığınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yaptığınız gibi aynı sözdizimini kullanarak sorguları [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Tek fark, sorguda başvurulan nesneler bir veritabanında öğelerine eşlenir olmasıdır. Daha fazla bilgi için bkz: [LINQ sorgularını (C#) giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -43,6 +44,6 @@ Tanımladığınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Giriş LINQ sorgularını (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- [Temel LINQ Sorgu işlemleri](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
- [LINQ Sorgu işlemlerinde tür ilişkileri](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+ [Temel LINQ Sorgu İşlemleri](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
+ [LINQ Sorgu İşlemlerinde Tür İlişkileri](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

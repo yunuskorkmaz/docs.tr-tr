@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-catalog-operations"></a>Katalog işlemlerini gerçekleştirme
 Bir veritabanı veya CREATE TABLE veya CREATE PROCEDURE deyimi gibi katalog değiştirmek için komut yürütme oluşturma bir **komutu** uygun SQL deyimlerini kullanarak nesne ve **bağlantı** nesnesi. Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.  
@@ -56,6 +57,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Verileri değiştirmek için komutları kullanarak](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Verileri Değiştirmek için Komutları Kullanma](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

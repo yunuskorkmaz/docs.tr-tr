@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
 Yönetilen uygulamalar veya yan yana yürütme için tasarlanmış bileşenleri oluşturmak için aşağıdaki genel yönergeleri izleyin:  
@@ -71,5 +72,5 @@ Yönetilen uygulamalar veya yan yana yürütme için tasarlanmış bileşenleri 
  [Genel Derleme Önbelleği Aracı (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) yalnızca dosyanın sürüm numarası daha yeni olduğunda bütünleştirilmiş değiştirmenizi sağlar. Derleme sürüm numarasını büyük olmadıkça yükleyici bütünleştirilmiş genellikle yüklemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yan yana yürütme](../../../docs/framework/deployment/side-by-side-execution.md)  
- [Nasıl yapılır: etkinleştirme ve otomatik bağlama yönlendirmesini devre dışı](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+ [Yan Yana Yürütme](../../../docs/framework/deployment/side-by-side-execution.md)  
+ [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

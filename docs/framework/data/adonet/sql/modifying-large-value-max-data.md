@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3a80f316ffc3380408802fefe1a26d71e5e76ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55403df391f6d7d44de46483d945ed32a694a63b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET büyük değer (Maks) verileri değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` değerlerin depolama 2 büyüklüğünde izin vermek için veri türleri ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtebilir `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve herhangi bir özel işleme yapılmadan hem giriş ve çıkış parametresi değerleri olarak belirtilebilir. İçin büyük `varchar` veri türleri, veri alınır ve artımlı olarak güncelleştirildi.  
@@ -260,7 +261,7 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server ikili ve değeri büyük veri](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [SQL Server veri işlemleri ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

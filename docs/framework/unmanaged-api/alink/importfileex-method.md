@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71a7bc1ba9f23f1c581ca3528752e04003d9857c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc2af9db27c5194a1bdcef875b8db8d458d0edfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
 İçeri aktarmalar derleme veya ilişkisiz modülü gösterilir.  
@@ -71,6 +72,6 @@ HRESULT ImportFileEx(
  ALink.h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ialink2 arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

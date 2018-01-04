@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 18e83e629eb9736db054f239c6ffe3f30baf5ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e67fd379e877ce25058ba3c90e3831b6361a0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server bağlantı (ADO.NET) havuzu
 Genellikle bir veritabanı sunucusuna bağlanmayı zaman birkaç adımdan oluşur. Bir yuva veya bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma olmalıdır, kurulmalıdır bağlantı dizesi bilgilerini ayrıştırılır, bağlantı sunucu tarafından doğrulanması gerekir, denetimleri içinde kaydetme için çalıştırılması gerekir Geçerli hareket ve benzeri.  
@@ -141,7 +142,7 @@ using (SqlConnection connection = new SqlConnection(
  Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmaları avantajlarından yararlanmak öneririz. Daha fazla bilgi için bkz: [SQL Server'daki uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Performans sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="development-and-deployment-considerations"></a>Geliştirme ve dağıtım konuları
 Geliştirme ve ADO.NET Entity Framework temel alınarak bir uygulama dağıtımı yaparken dikkate alınması gereken bu bölümü sorunlarını gidermek konularında.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güvenlik konuları](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Güvenlik Konuları](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [Başarım Değerlendirmeleri](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [Performans Konuları](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
- [Geçiş konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [Geçiş Konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
- [Dağıtım konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [Entity Framework’e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

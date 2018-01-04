@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b616aa284b6f7fff01b3b1fbfb15f2ceb54c9663
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1728165dbed9a011afe6e621df86be7b372a684f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme
 <xref:System.Lazy%601?displayProperty=nameWithType> Sınıfı geç başlatma ve nesne örneğini oluşturmada gerçekleştirme işlemlerini basitleştirir. Yavaş bir şekilde nesneleri başlatarak bunları hiçbir zaman gerekli ya da ilk erişim kadar kendi başlatma erteleyebilirsiniz hiç oluşturmak zorunda önleyebilirsiniz. Daha fazla bilgi için bkz: [geç başlatma](../../../docs/framework/performance/lazy-initialization.md).  
@@ -85,4 +86,4 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
- [Yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md)
+ [Geç Başlatma](../../../docs/framework/performance/lazy-initialization.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1133db68d233032b64d113a09e367781cf73321e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 876ebeb5568ffff0a10aa5a54ce96c256d237d86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-udts"></a>Büyük atama
 Kullanıcı tanımlı türler (atama) ortak dil çalışma zamanı (CLR) nesneleri bir SQL Server veritabanında depolayarak sunucunun skaler tür sistemini genişletmek Geliştirici izin verin. Atama birden çok öğe içerebilir ve tek bir SQL Server sistem veri türü oluşur geleneksel diğer veri türleri farklı davranışlar olabilir.  
@@ -34,7 +35,7 @@ Kullanıcı tanımlı türler (atama) ortak dil çalışma zamanı (CLR) nesnele
   
  **SQL Server Çevrimiçi Kitapları**  
   
-1.  [CLR kullanıcı tanımlı türler](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Kullanıcı Tanımlı CLR Türleri](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema kullanarak UDT şemaları alma  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Yöntemi <xref:System.Data.SqlClient.SqlConnection> döndürür veritabanı şema bilgileri bir <xref:System.Data.DataTable>. Daha fazla bilgi için bkz: [SQL Server şeması koleksiyonları](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
@@ -142,8 +143,8 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma parametreleri ve parametre veri türleri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Veritabanı şema bilgileri alınıyor](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [SQL Server ikili ve değeri büyük veri](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Veritabanı Şema Bilgilerini Alma](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

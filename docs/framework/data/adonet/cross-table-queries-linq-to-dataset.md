@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d0b829840257dc2b3b4bbf0b8c3a294a77060e2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 059dd39f3583c3b8fcf6736e514b9cc4870d3ad6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Geçici Tablo Sorgu (LINQ-DataSet)
 Tek bir tablo sorgulama yanı sıra, geçici tablo sorguları da gerçekleştirebilirsiniz [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu kullanılarak yapılır bir *birleştirme*. Bir birleştirme nesnelerin bir veri kaynağı bir ürün gibi başka bir veri kaynağındaki ortak bir özniteliği paylaşan veya kimliği başvurun nesnelerle ilişkidir Nesne odaklı programlama içindeki nesneleri arasındaki ilişkiler her nesneyi başka bir nesneye başvuruda bulunan bir üye içerdiğinden gitmek görece kolaydır. Dış veritabanı tablolarında ancak ilişkilerinde gezinme kadar basit değildir. Veritabanı tabloları yerleşik ilişkileri içermez. Bu durumlarda, birleştirme işlemi her kaynak öğelerinden eşleştirmek için kullanılabilir. Örneğin, ürün bilgilerini ve satış bilgilerini içeren iki tablo verildiğinde, satış bilgilerini ve ürünleri aynı sipariş için eşleştirilecek bir birleştirme işlemi kullanabilirsiniz.  
@@ -40,8 +41,8 @@ Tek bir tablo sorgulama yanı sıra, geçici tablo sorguları da gerçekleştire
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [Tek tablolu sorgular](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
- [Yazılan veri kümeleri sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Birleştirme işlemleri](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
- [LINQ-DataSet örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+ [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Tek Tablolu Sorgular](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
+ [Türü Belirtilmiş DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Birleştirme İşlemleri](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
+ [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

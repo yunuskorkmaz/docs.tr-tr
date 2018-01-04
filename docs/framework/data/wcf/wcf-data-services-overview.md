@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88d586ead18e4129707728733029c735083b477c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c98ecc987f4710d344f6eab07563a14cbf4d9962
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-overview"></a>WCF veri hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanarak oluşturma ve Veri Hizmetleri Web veya intranet tüketimini sağlayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Verilerinizi URI tarafından adreslenebilir kaynaklar olarak kullanıma sunmak etkinleştirir. Bu, erişmenize olanak tanır ve temsili durum aktarımı (REST), özellikle de, standart HTTP fiilleri semantiği kullanarak değişiklik verilerini al koy, POST ve SİLİN. Bu konu desenleri ve uygulamalar tarafından tanımlanan bir bakış sunar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve ayrıca tarafından sağlanan özellikleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yararlanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework tabanlı uygulamalarda.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)  
  [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [Veri Hizmeti (WCF Veri Hizmetleri) erişme](http://msdn.microsoft.com/en-us/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [Temsili durum aktarımı (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)

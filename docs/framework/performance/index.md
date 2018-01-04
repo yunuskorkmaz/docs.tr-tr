@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve performans için yalnızca planlamanız gerekir, uygulamanızın herhangi bir özellik tasarlarken. Size Microsoft tarafından sağlanan araçları, uygulamanızın performansını ölçmek için kullanıp, gerekirse, bellek kullanımı, kod verimlilik ve yanıt hızını iyileştirmeler sağlar. Bu konu, Microsoft sağlar ve performans için uygulama geliştirme belirli alanlarında kapak diğer konulara bağlantılar sağlanır performans çözümleme araçları listeler.  
@@ -53,7 +54,7 @@ Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve perfo
   
 |Uygulama türü|Bkz. |  
 |--------------|---------|  
-|Tüm platformlar için .NET framework uygulamaları|[Çöp toplama ve performans](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](../../../docs/framework/performance/performance-tips.md)|  
+|Tüm platformlar için .NET framework uygulamaları|[Atık Toplama ve Performans](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](../../../docs/framework/performance/performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]C++, C# ve Visual Basic içinde yazılmış uygulamalar|[C++, C# ve Visual Basic kullanarak Windows mağazası uygulamaları için performansı en iyi yöntemler](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
 |Windows Phone|[Windows Phone için uygulama başarım düşünceleri](http://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Windows Phone Uygulama analizi](http://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Windows Phone uygulamalarınızı daha hızlı Market Al](http://msdn.microsoft.com/magazine/hh781024.aspx)|  
 |Windows Presentation Foundation (WPF)|[WPF Performans paketi](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
@@ -65,7 +66,7 @@ Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve perfo
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET Framework uygulamalarında önbelleğe alma](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Uygulamanızın performansını artırmak için verileri önbelleğe alma için teknikleri açıklar.|  
-|[Yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md)|Nesneleri özellikle uygulama başlatma sırasında performansı artırmak için gerektiği başlatmak açıklar.|  
+|[.NET Framework Uygulamalarında Önbelleğe Alma](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Uygulamanızın performansını artırmak için verileri önbelleğe alma için teknikleri açıklar.|  
+|[Geç Başlatma](../../../docs/framework/performance/lazy-initialization.md)|Nesneleri özellikle uygulama başlatma sırasında performansı artırmak için gerektiği başlatmak açıklar.|  
 |[Güvenilirlik](../../../docs/framework/performance/reliability.md)|Bir sunucu ortamında zaman uyumsuz özel durumları önleme hakkında bilgi sağlar.|  
-|[Büyük, yanıt veren .NET Framework uygulamaları yazma](../../../docs/framework/performance/writing-large-responsive-apps.md)|Performans İpuçları C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma toplanır ve C# Derleyici birkaç gerçek örneklerinden içerir sağlar.|
+|[Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma](../../../docs/framework/performance/writing-large-responsive-apps.md)|Performans İpuçları C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma toplanır ve C# Derleyici birkaç gerçek örneklerinden içerir sağlar.|

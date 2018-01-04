@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7e0e13dd8a5ac35f47e258d2a49d65c32e8c91f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b172accdfe644d158e201a7ceb9689d0188a979
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstandardendpointsgt"></a>&lt;standardEndpoints&gt;
 Bu yapılandırma bölümü yeniden kullanılabilir önceden yapılandırılmış uç nokta standart uç noktaları koleksiyonu tanımlamanızı sağlar. Standart bir uç noktası bir erişebilir veya adresi, bağlama ve sözleşme öznitelikleri daha fazla sabit bir değere ayarlayın. Örneğin, bulma uç sözleşme sabittir. Standart uç noktaları, özel bağlamaları tanımlamak için benzer yeni özelliklerle Hizmeti uç noktası genişletmek için de kullanabilirsiniz.  
@@ -60,4 +61,4 @@ Bu yapılandırma bölümü yeniden kullanılabilir önceden yapılandırılmı�
 |\<Sistem. ServiceModel >|Tüm WCF yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Standart uç noktaları](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ [Standart Uç Noktalar](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

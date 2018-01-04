@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5115fce1d5060d258ae5feeefd99aaaf5123a123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba49a4394d2a52b199edab88b977d2322bff945f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ-SQL kullanma için tipik adımları
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Birçok adımı isteğe bağlı olduğunu unutmayın. Varsayılan durumundayken nesne modeli kullanabileceğiniz çok mümkündür.  
@@ -93,5 +94,5 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
- [Nesne modeli oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [Saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+ [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

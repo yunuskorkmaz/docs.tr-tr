@@ -17,11 +17,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 10af8087eb72577dfabef261544cb2363ba17a0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9960c55e5a47271c0d7091deb61a29daa9ae3433
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI Otomasyonu Denetim Düzenleri Nasıl Yapılır Konuları
 > [!NOTE]
@@ -30,8 +31,8 @@ ms.lasthandoff: 10/18/2017
  Bu bölümde denetim desenleri uygulama hakkında ayrıntılı bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonu kullanarak tablo içeriğini kullanıma sunma](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Desteklenen UI Otomasyon denetim düzenlerini alma](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [UI otomasyonunu kullanarak onay kutusunun Değiştir durumunu alma](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [UI Otomasyonu kullanarak denetim çağırma](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [UI Otomasyon öğesini taşıma](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [Desteklenen UI Otomasyonu Denetim Desenlerini Alma](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [UI Otomasyonu Kullanarak Denetim Çağırma](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [UI Otomasyonu Öğesini Taşıma](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f13b75d0558c002fd29938ce98d85f358acc9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-settings-schema"></a>Ağ Ayarları Şeması
 Ağ ayarları, .NET Framework Internet'e nasıl bağlanacağını belirtin. Aşağıdaki tabloda her bir alt yapılandırma öğesinin altında işlevi açıklanmaktadır [ \<system.Net > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -51,5 +52,5 @@ Ağ ayarları, .NET Framework Internet'e nasıl bağlanacağını belirtin. Aşa
 |[\<schemeSettings > öğesi (URI ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Belirtir nasıl bir <xref:System.Uri> için belirli düzenleri ayrıştırılır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet uygulamaları yapılandırma](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+ [İnternet Uygulamalarını Yapılandırma](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

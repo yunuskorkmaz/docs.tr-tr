@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab9002d6e86b91f0ed21dae41f82af31f04291c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30905fdcf7063f6ecdae0346c9c5ee39b450be9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
 Birçok yönetilmeyen işlevleri, işlevi parametre olarak yapıları (Visual Basic'te türleri kullanıcı tanımlı) veya yönetilen kod içinde tanımlanan sınıflar üyesi geçirmek için bekler. Yapıları geçirme veya platformu kullanılarak yönetilmeyen kod sınıflarına çağırdığınızda özgün düzeni ve hizalama korumak için ek bilgi sağlamanız gerekir. Bu konu tanıtır <xref:System.Runtime.InteropServices.StructLayoutAttribute> biçimlendirilmiş türlerini tanımlamak için kullandığınız özniteliği. Yönetilen yapılar ve sınıflar için tarafından sağlanan bazı tahmin edilebilir düzeni davranışları aralarından seçim yapabileceğiniz **LayoutKind** numaralandırması.  
@@ -183,7 +184,7 @@ public class TestPlatformInvoke
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DLL işlevini çağırma](../../../docs/framework/interop/calling-a-dll-function.md)  
+ [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)  
  <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
  <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
  <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

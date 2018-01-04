@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3cb7880621a849b7162ea5f86ee0786f6184ea58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 590df03857805c43b6e9a60c030cadcad3501d3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework SqlClient
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Microsoft SQL Server üzerinde çalışmak Entity Framework sağlayan Server (SqlClient) açıklanmaktadır.  
@@ -51,13 +52,13 @@ Bu bölümde, .NET Framework veri sağlayıcısı için SQL Microsoft SQL Server
  SqlClient sağlayıcısı için Entity Framework sağlayıcı tarafından desteklenen işlevleri listesini tanımlar. Desteklenen işlevlerin bir listesi için bkz: [SqlClient Entity Framework işlevleri için](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Entity Framework işlevleri için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+ [Entity Framework için SqlClient İşlevleri](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
   
- [Varlık FrameworkTypes SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [Entity FrameworkTypes için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
   
- [Entity Framework SqlClient bilinen sorunlar](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+ [Entity Framework için SqlClient’ta Bilinen Sorunlar](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [Entity SQL Dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
  [Dil Başvurusu](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
  [Bilinen sorunlar Entity Framework SqlClient Sağlayıcısı'nda](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

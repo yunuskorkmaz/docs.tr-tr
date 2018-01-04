@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1a2fbbdc2ad89c562ef6fd0e0174ef0b06a93408
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 09be97c0c875b7fd7427bc4327deb95be99984f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server veri türü eşlemeleri
 SQL Server ve .NET Framework farklı tür sistemlerde temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapısının 28, en fazla ölçeğini kullanırken SQL Server ondalık ve sayısal veri türleri 38 maksimum ölçeğini vardır. Veri, okuma ve yazma, veri bütünlüğünü sağlamak için <xref:System.Data.SqlClient.SqlDataReader> çıkarır SQL Server'a özel yazılan nesnelerin dönüş erişimci yöntemleri <xref:System.Data.SqlTypes> .NET Framework dönüş erişimci yöntemleri yanı sıra türleri. SQL Server türleri ve .NET Framework türleri de temsil ettiği numaralandırmalara <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıfları <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -65,8 +66,8 @@ SQL Server ve .NET Framework farklı tür sistemlerde temel alır. Örneğin, .N
  Hakkında daha fazla bilgi için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] veri türlerini görmek [veri türleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türleri ve ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [SQL Server ikili ve değeri büyük veri](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Yapılandırma parametreleri ve parametre veri türleri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [SQL Server Veri Türleri ve ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

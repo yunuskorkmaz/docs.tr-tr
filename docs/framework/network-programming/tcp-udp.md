@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f62475e8b44d9cdda13322dc223509572c4ae541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-udp"></a>TCP UDP
 Uygulamalar, İletim Denetimi Protokolü (TCP) ve kullanıcı veri birimi Protokolü (UDP) Hizmetleri ile kullanabileceğiniz <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, ve <xref:System.Net.Sockets.UdpClient> sınıfları. Bu protocol sınıflar üstünde oluşturulan <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sınıf ve veri aktarma ayrıntılarını dikkatli olun.  
@@ -42,9 +43,9 @@ Uygulamalar, İletim Denetimi Protokolü (TCP) ve kullanıcı veri birimi Protok
  **UdpClient** sınıfı UDP veri birimi tutacak bir bayt dizisi kullanır. Kullandığınız <xref:System.Net.Sockets.UdpClient.Send%2A> ağa veri göndermek için yöntem ve <xref:System.Net.Sockets.UdpClient.Receive%2A> gelen bir veri biriminde almaya yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TCP Hizmetleri kullanma](../../../docs/framework/network-programming/using-tcp-services.md)  
- [UDP Hizmetleri kullanma](../../../docs/framework/network-programming/using-udp-services.md)  
- [Ağda akışlarını kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Zaman uyumsuz Server yuva kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Zaman uyumsuz istemci yuvası kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Uygulama protokolleri kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
+ [TCP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [UDP Hizmetleri Kullanma](../../../docs/framework/network-programming/using-udp-services.md)  
+ [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)

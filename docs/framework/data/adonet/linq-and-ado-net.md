@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8b196dd7eda673d1bd5f436f708471c81a857eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9781d97a133a39a7768c853ce80f7524db87df39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve sunu katmanı için yüksek düzey bir dil (gibi [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) ve veritabanıyla etkileşim için bir sorgu dili ( gibi[!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde bilgisi olmasını gerektirir ve aynı zamanda dil uyuşmazlıkları geliştirme ortamında neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişim API'sini kullanan bir uygulamayı tırnak işaretleri kullanarak sorgu bir dize belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir durumdadır ve geçersiz sözdizimi veya olup sütunlara veya satırlara başvurduğu gerçekten var gibi hataları kontrol edilmez. Sorgu parametrelerini ve Hayır denetimi türü yok `IntelliSense` ya da destekler.  
@@ -50,8 +51,8 @@ Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri ku
  Aracılığıyla [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)], ilişkisel veri .NET ortamı nesneler olarak gösterilir. Bu katman için ideal bir hedef nesnesi haline getirir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] desteği, iş mantığı oluşturmak için kullanılan dil veritabanından sorguları formüle yayınlamasına izin verme. Bu özellik olarak bilinen [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]. Bkz: [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md) daha fazla bilgi için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
- [LINQ-SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [LINQ-varlıklar](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

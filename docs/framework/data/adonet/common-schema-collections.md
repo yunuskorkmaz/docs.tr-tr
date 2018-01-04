@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren. Bu koleksiyonları tüm gerekli sütunları açıklanmaktadır. Sağlayıcıları istediklerinde ek sütunlar eklemek boş. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyonuna ekleyin.  
@@ -105,6 +106,6 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 |ReservedWord|dize|Sağlayıcı belirli ayrılmış sözcük.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veritabanı şema bilgileri alınıyor](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema ve şeması koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
+ [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 691f29a04b1b1f997be501330ec887d6815d7531
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1a830d9df1f94bd21689cba9a9893cb9c344dfdb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-character-set-entity-sql"></a>Giriş karakter kümesi (varlık SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]UTF-16 kodlu UNICODE karakterler kabul eder.  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/18/2017
  Basit tanımlayıcıları yalnızca Latin karakterler olabilir. Özgün değerler karşılaştırıldığından bu karşılaştırma sırasında belirsizlik önler. Örneğin, ABC Japonca ve Latin kod sayfaları farklı olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

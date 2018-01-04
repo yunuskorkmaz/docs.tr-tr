@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>Hızlı Başlangıç (WCF Veri Hizmetleri)
 Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] konular, destek görevleri bir dizi [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
@@ -38,13 +39,13 @@ Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../
 -   Northwind örnek veritabanı. Bu örnek veritabanı karşıdan yüklemek için indirme sayfasına bakın [örnek veritabanları için SQL Server](http://go.microsoft.com/fwlink/?linkid=24758).  
   
 ## <a name="wcf-data-services-quickstart-tasks"></a>Hızlı Başlangıç görevleri WCF Veri Hizmetleri  
- [Veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
+ [Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
  Tanımlamak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, veri modelini tanımlar, veri hizmeti oluşturma ve kaynaklarına erişimi etkinleştirme.  
   
- [Bir Web tarayıcısından hizmetine erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Web Tarayıcısından Hizmete Erişme](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
  Hizmeti Başlat [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve HTTP GET isteklerini gösterilen akışa bir Web tarayıcısı aracılığıyla göndererek hizmet erişebilirsiniz.  
   
- [.NET Framework istemci uygulaması oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [.NET Framework İstemci Uygulaması Oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
  Oluşturma bir [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kullanmak için istemci uygulaması [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, Windows denetimlere veri bağlama, veri bağlama denetimleri değiştirin ve değişiklikleri veri hizmetine geri gönderin.  
   
 > [!NOTE]

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL CLR özel türü eşlemeleri
 SQLMetal komut satırı aracı, Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) kullandığınızda, SQL Server ve ortak dil çalışma zamanı (CLR) arasında tür eşlemesi otomatik olarak belirtilir.  
@@ -42,5 +43,5 @@ SQLMetal komut satırı aracı, Nesne İlişkisel Tasarımcısı (O/R Tasarımc�
  Ne zaman veritabanı değişikliklerinizi DBML dosyanızı konusu değişiklikleri yansıtacak şekilde güncelleştirmeniz gerekir. Yapmanın bir yolu otomatik olarak yeni bir DBML dosyası oluşturmak için budur ve tür eşlemesi özelleştirmelerinizi yeniden yapın. Alternatif olarak, yeni DBML dosyanızı ve özelleştirilmiş DBML dosyanızda arasındaki farklar karşılaştırın ve özel DBML dosyanızı el ile veritabanı değişikliği yansıtacak şekilde güncelleştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL CLR türü eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [LINQ-SQL kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+ [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

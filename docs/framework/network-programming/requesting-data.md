@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bb5c79980246a9afa5a7e5024049c26815cab49d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76ea605444b5d1776c5a85891db4f3460e9df24b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="requesting-data"></a>İstekte bulunan verileri
 Bugünün Internet dağıtılmış işletim ortamında çalışan uygulamalar geliştirme, tüm türleri kaynaklardan veri almak için verimli, kullanımı kolay bir yöntem gerektirir. Takılabilir Protokol birden çok Internet kurallarından veri almak için tek bir arabirim kullanan uygulamalar geliştirmenize olanak tanır.  
@@ -62,6 +63,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
- [Nasıl yapılır: bir Web sayfasını istemek ve sonuçları bir akış olarak alın](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
- [Nasıl yapılır: bir WebRequest eşleşen bir protokole özgü WebResponse alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
+ [Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
+ [Nasıl yapılır: WebRequest ile Eşleşen Protokole Özgü WebResponse Alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

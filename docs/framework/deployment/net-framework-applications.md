@@ -16,20 +16,21 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af9bacb4ba64fb4e51b6e05b3636226274c28703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework Uygulamalarını Dağıtma
 Bu bölümde, uygulamanızın performansını iyileştirme derlemeleri yükleme ve derleme başvurularını çözümlemek için yönergeler de dahil olmak üzere, .NET Framework uygulamaları dağıtmak için önemli bilgiler .NET Framework belgeleri Yerel görüntü oluşturma.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Ortak dil çalışma zamanı nasıl bulur açıklar ve uygulamayı oluşturan derlemelerine bağlar.  
   
- [Derleme yükleme için en iyi yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  Yol açabilir türü kimliğinin sorunları önlemek için yollarını tartışmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

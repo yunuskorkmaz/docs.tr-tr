@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>İntranet Uygulamalarını Tam Güvende Çalıştırma
 .NET Framework sürüm 3.5 ile başlayan Service Pack 1 (SP1), uygulamaları ve bunların kitaplık derlemeleri tam güven derlemeleri olarak bir ağ paylaşımından çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer>Bölge kanıt, intranet üzerindeki paylaşımdan yüklenen derlemeler otomatik olarak eklenir. Bu bulgu aynı bilgisayarda bulunabilir derlemeleri olarak (genellikle tam güven olduğu) kümesini vermek bu derlemeler sağlar. Bu işlev ClickOnce uygulamaları veya bir ana bilgisayarda çalıştırmak için tasarlanmış uygulamalar için geçerli değildir.  
@@ -43,4 +44,4 @@ ms.lasthandoff: 10/18/2017
 -   64-bit bilgisayarlarda HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında bir alt anahtar oluşturma\\. Sistem kayıt defteri anahtarında NETFramework. Anahtar adı LegacyMyComputerZone DWORD değeri 1 ile kullanın. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft altında aynı alt anahtarını oluşturmak\\. NETFramework anahtarı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+ [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

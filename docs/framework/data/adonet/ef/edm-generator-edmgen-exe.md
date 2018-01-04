@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: da99c43d9142ee754b2b48db45ca070d1ab7c4e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve dosyaları eşleme. Aşağıdakileri yapmak için EdmGen.exe Aracı'nı kullanabilirsiniz:  
@@ -75,13 +76,13 @@ EdmGen /mode:choice [options]
 |`/targetversion:`\<dize >|Oluşturulan kod derlemek için kullanılan .NET Framework sürümü. Desteklenen sürümler 4 ve 4. 5 ' dir. Varsayılan olarak 4.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları oluşturmak için kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
+ [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
   
- [Nasıl yapılır: nesne katmanı kodu oluşturmak için EdmGen.exe kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
+ [Nasıl yapılır: EdmGen.exe kullanarak Nesne Katmanı Kodu Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)  
   
- [Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları doğrulamak için kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
+ [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
- [Varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)  
- [CSDL, SSDL ve MSL belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+ [Varlık Veri Modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

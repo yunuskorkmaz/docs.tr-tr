@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanındaki Derlemeler
 .NET Framework uygulamalarının yapı taşları olan derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve güvenlik izinlerinin de temel birimlerini oluşturur. Bir derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan bir tür ve kaynakların bir derlemesidir. Bir derleme, ortak dil çalışma zamanına tür uygulamalarına dikkat etmesi için gerekli bilgileri sunar. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Derleme içerikleri](../../../docs/framework/app-domains/assembly-contents.md)|Bir derlemeyi oluşturan öğeleri açıklar.|  
-|[Derleme bildirimi](../../../docs/framework/app-domains/assembly-manifest.md)|Derleme bildirimindeki verileri ve derlemede nasıl depolandığını açıklar.|  
+|[Bütünleştirilmiş Kod İçerikleri](../../../docs/framework/app-domains/assembly-contents.md)|Bir derlemeyi oluşturan öğeleri açıklar.|  
+|[Bütünleştirilmiş Kod Bildirimi](../../../docs/framework/app-domains/assembly-manifest.md)|Derleme bildirimindeki verileri ve derlemede nasıl depolandığını açıklar.|  
 |[Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)|Genel derleme önbelleğini ve derlemelerle birlikte nasıl kullanıldığını açıklar.|  
-|[Tanımlayıcı adlı derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)|Tanımlayıcı adlı derlemelerin özelliklerini açıklar.|  
-|[Derleme güvenliği konuları](../../../docs/framework/app-domains/assembly-security-considerations.md)|Derlemelerde güvenliğin nasıl kullanıldığını açıklar.|  
-|[Derleme sürümü oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)|.NET Framework sürüm oluşturma ilkesine genel bir bakış sunar.|  
-|[Derleme yerleştirme](../../../docs/framework/app-domains/assembly-placement.md)|Derlemeleri nerede konumlandıracağınızı açıklar.|  
-|[Derlemeler ve yan yana yürütme](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Çalışma zamanının veya bir derlemenin birden çok sürümünü aynı anda kullanmaya genel bir bakış sunar.|  
-|[Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)|Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.|  
-|[Dinamik yöntemleri ve derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemelerin nasıl oluşturulduğunu açıklar.|  
-|[Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework'ün çalışma zamanında derleme başvurularını nasıl çözümlediğini açıklar.|  
+|[Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)|Tanımlayıcı adlı derlemelerin özelliklerini açıklar.|  
+|[Bütünleştirilmiş Kod Güvenliği Konuları](../../../docs/framework/app-domains/assembly-security-considerations.md)|Derlemelerde güvenliğin nasıl kullanıldığını açıklar.|  
+|[Bütünleştirilmiş Kod Sürümü Oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)|.NET Framework sürüm oluşturma ilkesine genel bir bakış sunar.|  
+|[Bütünleştirilmiş Kod Yerleştirme](../../../docs/framework/app-domains/assembly-placement.md)|Derlemeleri nerede konumlandıracağınızı açıklar.|  
+|[Bütünleştirilmiş Kodlar ve Yan Yana Yürütme](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Çalışma zamanının veya bir derlemenin birden çok sürümünü aynı anda kullanmaya genel bir bakış sunar.|  
+|[Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)|Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.|  
+|[Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemelerin nasıl oluşturulduğunu açıklar.|  
+|[Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework'ün çalışma zamanında derleme başvurularını nasıl çözümlediğini açıklar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>

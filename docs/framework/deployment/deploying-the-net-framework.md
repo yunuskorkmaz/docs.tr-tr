@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3a33b57ee7cf38e06195244023e8bb918dea02b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
 .NET Framework belgelerine'nun bu bölümünde, bunların uygulamalarla .NET Framework'ü yüklemek isteyen geliştiriciler ve .NET Framework bir ağ üzerinden dağıtmak isteyen yöneticiler için bilgi sağlar. Ayrıca etkinleştirme açıklanır ve dağıtım ve .NET Framework yüklemenin ilerleme durumunu izleme ile ilgili sorunlar yeniden başlatın.  
@@ -32,16 +33,16 @@ ms.lasthandoff: 10/18/2017
  [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)  
  Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden System Center Configuration Manager (SCCM) kullanarak dağıtabilirsiniz açıklar.  
   
- [Sistem .NET Framework 4.5 yüklemeleri sırasında yeniden başlatmalarını azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
  Yeniden başlatma Yöneticisi önleyen mümkün olduğunca yeniden başlatır ve nasıl .NET Framework'ü yüklemek uygulamalar, bu yararlanabilir açıklanmaktadır.  
   
- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+ [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Sessiz bir şekilde başlatın ve Kurulum ilerleme kendi görünüm gösterirken .NET Framework Kurulum işlemi izlemek açıklar.  
   
- [.NET framework başlatma hataları: kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  .NET Framework uygulama kullanıcının bilgisayarda yüklü değil veya geçersiz bir CLR sürümü gerektiğinde ne olacağını açıklar bu hataları gidermek nasıl ve kullanıcıya görüntülenen hata iletisini denetleme.  
   
- [Nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  Nasıl görüntülemek ve hata ayıklama, CLR doğru sürümü ile çalışacak şekilde uygulamanızı alınırken karşılaşabileceğiniz sorunları gidermek için CLR etkinleştirme günlüklerini açıklanmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

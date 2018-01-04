@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bded4fae854d10a17ddd03b8855f6096e18ab87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multifile-assemblies"></a>Birden Çok Dosya Derlemeleri
 Komut satırı derleyicileri kullanarak birden çok dosya derlemeleri oluşturabilir veya [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] Visual C++ ile. Derleme bildirimi derlemesindeki bir dosya içermelidir. Bir uygulamayı başlatır bütünleştirilmiş bir ana veya WinMain yöntemi gibi bir giriş noktası da içermelidir.  
@@ -49,5 +50,5 @@ Komut satırı derleyicileri kullanarak birden çok dosya derlemeleri oluşturab
  Derleme oluşturduktan sonra derleme bildirimi içeren dosyayı imzalayabilirsiniz (ve bu nedenle derleme), ya da dosyasını (ve derleme) güçlü bir ad verin ve genel derleme önbelleğinde yerleştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: birden fazla dosya derleme](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+ [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

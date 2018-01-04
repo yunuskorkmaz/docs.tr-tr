@@ -16,44 +16,45 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>Veri Aktarma ve Seri Hale Getirme
 Bağlı bir sistemde, hizmetler ve istemcileri herhangi bir görevi gerçekleştirmek için veri Exchange'de bağlıdır. Bir hizmet veya istemci geliştirici olarak size ayrıca anlamalısınız nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] işlediği verileri ve veri seri hale getirme, verimli ve bakımını kolay uygulamaları oluşturmak için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Hizmet sözleşmelerinde belirten veri aktarımı](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  Veri aktarımı Hizmetleri'nde temel kavramlarını açıklar.  
   
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  Hangi verilerin sözleşmeler açıklar olan ve oluşturma ve bunları kullanın.  
   
- [Veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [Veri Anlaşması Seri Hale Getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  Nasıl verilerle serileştirmek yapılacağını açıklayan <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı veya tüm uzantısını <xref:System.Runtime.Serialization.XmlObjectSerializer> sınıfı.  
   
- [XmlSerializer sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
+ [XmlSerializer Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  Neden ve nasıl açıklanmaktadır kullanmak için <xref:System.Xml.Serialization.XmlSerializer> sınıfı, bir alternatif <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı.  
   
- [İleti sözleşmeleri kullanılıyor](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
+ [İleti Anlaşmaları Kullanma](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  İleti sözleşmeleri nasıl SOAP iletilerine ince denetime izin açıklar.  
   
- [İleti sınıfını kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
+ [İleti Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
  İleti sınıfı özelliklerinin nasıl kullanılacağını açıklar.  
   
  [Filtreleme](../../../../docs/framework/wcf/feature-details/filtering.md)  
  Filtreleme, açıklar çeşitli ölçütleri temel alarak bir ileti öncesi işlenmesini sağlar.  
   
- [Büyük veri ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Büyük Veriler ve Akış Yapma](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  Bir ikili dosya gibi büyük bir veri bloğunu göndermeyi açıklar.  
   
- [Veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [Veriler için Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  Veri aktarma ve seri hale getirme programlamada dikkat edilmesi gereken öğeleri açıklar.  
   
- [Veri aktarımı mimarisi genel bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
+ [Veri Aktarımı Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
  Veri aktarımı genel tasarımını görünümünü açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="reference"></a>Başvuru  
@@ -68,8 +69,8 @@ Bağlı bir sistemde, hizmetler ve istemcileri herhangi bir görevi gerçekleşt
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Kodlayıcılar ve seri hale getiricileri genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Hizmet sürümü oluşturma](../../../../docs/framework/wcf/service-versioning.md)
+ [En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Hizmet Sürümü Oluşturma](../../../../docs/framework/wcf/service-versioning.md)

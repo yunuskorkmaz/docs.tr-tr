@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3965ced44bae21feef3d01d49149387fce4fa46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotating-typed-datasets"></a>Yazılan veri kümeleri yorumlama
 Ek açıklamalar, yazılı öğeleri adlarını değiştirmek etkinleştirme <xref:System.Data.DataSet> temel şeması değiştirmeden. Temel alınan şemanızı öğeleri adları değiştirilmesi neden yazılı **DataSet** değil veri kaynağında mevcut yanı sıra veri kaynağında mevcut nesneleri başvuru kaybetmek nesneleri başvurmak için.  
@@ -235,6 +236,6 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
- [Yazılan veri kümeleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Türü Belirtilmiş DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

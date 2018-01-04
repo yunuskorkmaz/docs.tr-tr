@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 910317bea8af3a80ee66544651de2372808734bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 019a94243773fcb1751f419d8e38a6759fa1d3bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugfunctionbreakpoint-interface1"></a>Icordebugfunctionbreakpoint Interface1
 Kesme noktaları işlevler içinde desteklemek için Icordebugbreakpoint arabirimi genişletir.  
@@ -32,8 +33,8 @@ Kesme noktaları işlevler içinde desteklemek için Icordebugbreakpoint arabiri
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetFunction yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Arabirim işaretçisi kesme ayarlanmış işlevi başvuruda bulunan bir ICorDebugFunction alır.|  
-|[GetOffset yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|İşlevin içinden kesme uzaklığını alır.|  
+|[GetFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Arabirim işaretçisi kesme ayarlanmış işlevi başvuruda bulunan bir ICorDebugFunction alır.|  
+|[GetOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|İşlevin içinden kesme uzaklığını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -50,4 +51,4 @@ Kesme noktaları işlevler içinde desteklemek için Icordebugbreakpoint arabiri
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

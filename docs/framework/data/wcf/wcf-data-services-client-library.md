@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
 Herhangi bir uygulama ile etkileşim kurabilen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti temel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış veri hizmeti döndürür. Bu birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-geniş bir aralık, Web özellikli uygulamalar Hizmetleri'nden tabanlı. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]daha zengin bir programlama deneyimi, kullandığında sağlayan istemci kitaplıklarını içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları .NET Framework veya Silverlight tabanlı uygulamalar.  
@@ -31,36 +32,36 @@ Herhangi bir uygulama ile etkileşim kurabilen bir [!INCLUDE[ssODataFull](../../
  Bu bölümde, istemci kitaplıkları erişme ve verileri bir .NET Framework istemci uygulamasından değiştirmek için nasıl kullanılacağı açıklanmaktadır. Nasıl kullanılacağı hakkında daha fazla bilgi için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Silverlight tabanlı bir uygulama ile istemci kitaplığı bkz [WCF Veri Hizmetleri (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016). Diğer istemci kitaplıkları kullanılabilir tüketen sağlayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] diğer tür uygulamaların akışı. Daha fazla bilgi için bkz: [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri Hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Bir istemci kitaplığı ve temel alan istemci veri hizmeti sınıfları oluşturmayı açıklar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
- [Veri Hizmeti sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  .NET Framework tabanlı bir uygulama veri hizmetinden istemci kitaplıkları kullanarak sorgulama açıklar.  
   
- [İçerik yükleme ertelenmiş](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Ertelenmiş İçerik Yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
  İlk sorguyu yanıta dahil edilmeyen ek içerik yüklemek açıklar.  
   
- [Veri Hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ [Veri Hizmetini Güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  Oluşturmak, değiştirmek ve istemci kitaplıkları kullanarak varlıkları ve ilişkileri silmek açıklar.  
   
- [Zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
+ [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
  Veri Hizmeti ile bir zaman uyumsuz olarak çalışmak için istemci kitaplıkları tarafından sağlanan özellikleri açıklar.  
   
- [Toplu işlem](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [Toplu İşlemler](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Birden çok istek ile tek bir toplu veri hizmeti istemci kitaplıkları kullanarak nasıl gönderileceğini açıklar.  
   
- [Denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Denetimlere bağlama açıklar bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir veri hizmeti tarafından döndürülen akış.  
   
- [Arama hizmeti işlemleri](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ [Hizmet İşlemleri Çağırma](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  İstemci Kitaplığı hizmet işlemlerini çağırma için nasıl kullanılacağını açıklar.  
   
- [Veri Hizmeti içeriği yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
+ [Veri Hizmeti Bağlamını Yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  İstemci Kitaplığı davranışını yönetmek için seçenekleri açıklar.  
   
- [İkili verileri ile çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Erişim ve bir veri akışı olarak veri hizmeti tarafından döndürülen ikili verileri değiştirmek açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

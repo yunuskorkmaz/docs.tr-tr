@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: df6efbc86ff958cb8a715c81f86ea1112629fe67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08644816d3fa11ade5a8ebee1573e8f66d526101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes Yöntemi
 Her kapsamda her türünü numaralandırır.  
@@ -61,6 +62,6 @@ HRESULT EnumImportTypes(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Ialink2 arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

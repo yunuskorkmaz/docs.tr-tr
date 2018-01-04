@@ -11,11 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
-ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: mariaw
+ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET framework 4 geçiş sorunları
 
@@ -153,8 +154,8 @@ Ad alanları: <xref:System.Data>, <xref:System.Data.Objects.DataClasses>, <xref:
 | ------- | ------------------------ |
 | **POCO senaryoları** | <xref:System.Data.Objects.DataClasses.IRelatedEnd> Arabirimi düz eski CLR nesnesi (POCO) senaryolarında kullanılabilirliğini artırmak için yeni yöntemler vardır. Bu yeni yöntemleri ele bir <xref:System.Object> yerine bir <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> bir parametre olarak varlık. |
 | **Satırları düzenleme** | <xref:System.Collections.IList.IndexOf%2A> Tarafından uygulanan yöntemi <xref:System.Data.DataView> sınıfı, artık doğru değeri, -1 döndürme yerine düzenlenmekte olan bir satır döndürür. |
-| **Olayları** | <xref:System.Data.DataRowView.PropertyChanged> Olayı bir satır değiştirilmiş durumda olduğunda şimdi oluşturulur ve <xref:System.Data.DataRow.RejectChanges%2A> yöntemi çağrılır. Bu değişiklik içeriğini kullanıma sunma UI denetimleri oluşturmak kolaylaştırır bir <xref:System.Data.DataSet> nesnesi. |
-| **Özel durumlar** | <xref:System.Data.SqlClient.SqlCommand.Prepare%2A> Yöntemi şimdi atar bir <xref:System.InvalidOperationException> bağlantı olmadığında ayarlayın veya yerine açık bir <xref:System.NullReferenceException>. |
+| **Olaylar** | <xref:System.Data.DataRowView.PropertyChanged> Olayı bir satır değiştirilmiş durumda olduğunda şimdi oluşturulur ve <xref:System.Data.DataRow.RejectChanges%2A> yöntemi çağrılır. Bu değişiklik içeriğini kullanıma sunma UI denetimleri oluşturmak kolaylaştırır bir <xref:System.Data.DataSet> nesnesi. |
+| **Özel Durumlar** | <xref:System.Data.SqlClient.SqlCommand.Prepare%2A> Yöntemi şimdi atar bir <xref:System.InvalidOperationException> bağlantı olmadığında ayarlayın veya yerine açık bir <xref:System.NullReferenceException>. |
 | **Eşleme görünümleri** | Sorgu görünümü eşleme hataları şimdi atma yerine tasarım zamanında yakalanan bir <xref:System.NullReferenceException> çalışma zamanında.<br><br>Şimdi eşleme doğrulama aynı sütuna eşlenen iki hangi ilişkilendirme kümeleri içinde kavramsal şema (CSDL) hata yakalar. |
 | **İşlemler** | (İptal edilmiş ya da toplu geri), bir işlem tamamlandıktan sonra bir bağlantıda bir deyim yürütmek bir uygulama çalışırsa, bir <xref:System.InvalidOperationException> şimdi oluşturulur. Önceki sürümler olmayan bir özel durum ve bir işlem iptal edildi olsa bile ek komutlar yürütülürken olanak verir. |
 
@@ -169,7 +170,7 @@ Ad alanları: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.Data.
 | **Varlık nesnesi** | Şimdi arasındaki eşlik olan <xref:System.Data.Objects.ObjectContext.Detach%2A> yöntemi ve varlık nesnenin durumu olduğunda <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> yöntemi çağrılır. Bu geliştirilmiş tutarlılık oluşturulan gelen beklenmeyen özel durum engeller. |
 | **Varlık SQL** | Kurallar, varlık SQL tanımlayıcısı çözümleri için geliştirilmiştir.<br><br>Varlık SQL ayrıştırıcı çok parçalı tanımlayıcılar çözmek için mantığı geliştirilmiştir. |
 | **Yapısal ek açıklamaları** | Entity Framework şimdi yapısal ek açıklamaları tanır. |
-| **Sorguları** | Aşağıdaki geliştirmeler sorgularda yapılmıştır:<br><br>* A `GroupBy` içinde boş bir koleksiyon null bir anahtar kullanarak sorgu değil döndürecektir herhangi bir satır bakılmaksızın herhangi bir ek seçer sorgusunda varsa.<br>* LINQ ve varlık SQL oluşturulan SQL şimdi kabul dizesi parametreleri Unicode olmayan değerler olarak varsayılan olarak sorgular. |
+| **Sorgular** | Aşağıdaki geliştirmeler sorgularda yapılmıştır:<br><br>* A `GroupBy` içinde boş bir koleksiyon null bir anahtar kullanarak sorgu değil döndürecektir herhangi bir satır bakılmaksızın herhangi bir ek seçer sorgusunda varsa.<br>* LINQ ve varlık SQL oluşturulan SQL şimdi kabul dizesi parametreleri Unicode olmayan değerler olarak varsayılan olarak sorgular. |
 
 ### <a name="linq-to-sql"></a>LINQ - SQL
 
@@ -179,8 +180,8 @@ Namespace: <xref:System.Data.Linq>; derleme: System.Data.Linq (içinde System.Da
 
 | Özellik | 3.5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
-| **Olayları** | A <xref:System.Data.Linq.EntitySet%601> koleksiyonu şimdi başlatır <xref:System.Data.Linq.EntitySet%601.ListChanged> olay ekleme ve kaldırma işlemleri, <xref:System.Data.Linq.EntitySet%601> , koleksiyon yüklendiğinde olayı tetiklenmeden yanı sıra, bellekten. |
-| **Sorguları** | `Skip(0)`artık LINQ SQL sorguları göz ardı edilir. Sonuç olarak, bu yöntem sorguları farklı davranabilir. Örneğin bazı durumlarda, bir `OrderBy` ile yan tümcesi gereklidir `Skip(0)`, sorgu şimdi başlatıldıysa ve bir <xref:System.NotSupportedException> özel durumu ise `OrderBy` yan tümcesi dahil edilmediğinden. |
+| **Olaylar** | A <xref:System.Data.Linq.EntitySet%601> koleksiyonu şimdi başlatır <xref:System.Data.Linq.EntitySet%601.ListChanged> olay ekleme ve kaldırma işlemleri, <xref:System.Data.Linq.EntitySet%601> , koleksiyon yüklendiğinde olayı tetiklenmeden yanı sıra, bellekten. |
+| **Sorgular** | `Skip(0)`artık LINQ SQL sorguları göz ardı edilir. Sonuç olarak, bu yöntem sorguları farklı davranabilir. Örneğin bazı durumlarda, bir `OrderBy` ile yan tümcesi gereklidir `Skip(0)`, sorgu şimdi başlatıldıysa ve bir <xref:System.NotSupportedException> özel durumu ise `OrderBy` yan tümcesi dahil edilmediğinden. |
 
 ### <a name="wcf-data-services"></a>WCF Veri Hizmetleri
 
@@ -192,7 +193,7 @@ Ad alanları: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <
 | ------- | ------------------------ |
 | **Toplu ikili içerik** | WCF Veri Hizmetleri toplu ikili içerik isteklerini ve yanıtlarını artık destekler. |
 | **Dinleyiciler değiştirme** | Değişiklik dinleyiciler için bir silme isteği şimdi yürütülür.<br><br>Bir değişiklik dinleyiciyi bir istek varlık kümesindeki bir varlığı değiştirmek için sunucu tarafından alınan her zaman çalıştırılan bir yöntemdir. Gelen istek yürütülmeden önce çalışır. Değişiklik dinleyiciyi değiştiriliyor varlık ve üzerinde gerçekleştirilen işlem erişim sağlar. |
-| **Özel durumlar** | Aşağıdaki koşulların yerine daha kullanışlı özel durumlar şimdi oluşturan bir <xref:System.NullReferenceException>:<br><br>* A <xref:System.ServiceProcess.TimeoutException> ne zaman veri hizmetine yapılan bir çağrı zaman aşımına uğruyor.<br>* A <xref:System.Data.Services.Client.DataServiceRequestException> zaman geçersiz bir istek yapıldığında bir veri hizmeti.<br><br>Uygulamalarınızda yeni özel durumları yakalamak için özel durum işleme değiştirmeniz gerekir. |
+| **Özel Durumlar** | Aşağıdaki koşulların yerine daha kullanışlı özel durumlar şimdi oluşturan bir <xref:System.NullReferenceException>:<br><br>* A <xref:System.ServiceProcess.TimeoutException> ne zaman veri hizmetine yapılan bir çağrı zaman aşımına uğruyor.<br>* A <xref:System.Data.Services.Client.DataServiceRequestException> zaman geçersiz bir istek yapıldığında bir veri hizmeti.<br><br>Uygulamalarınızda yeni özel durumları yakalamak için özel durum işleme değiştirmeniz gerekir. |
 | **Üstbilgileri** | Aşağıdaki geliştirmeler üstbilgileri yapılmıştır:<br><br>* WCF Veri Hizmetleri artık doğru reddeder bir `eTag` belirtilmeyen bir değeri var. üstbilgi.<br>* WCF veri hizmetleri şimdi hata verir ve istek bağlantı için bir silme isteği için yürütülmüyor olduğunda bir `if-*` başlığıdır istek.<br>* WCF Veri Hizmetleri artık istemcinin istemci Accept başlığında belirtilen biçimde (Atom, JSON) bir hata döndürür. |
 | **JSON okuyucusu** | Tek ters eğik çizgi okuduğunda JavaScript nesne gösterimi (JSON) okuyucu artık doğru bir hata döndürür ("\\") bir WCF veri hizmetine gönderilen JSON yükü işlerken kaçış karakteri. |
 | **Birleştirir** | Aşağıdaki geliştirmeler yapılmıştır <xref:System.Data.Services.Client.MergeOption> numaralandırma:<br><br>* <xref:System.Data.Services.Client.MergeOption> Birleştirme seçeneği artık istemcinin sonraki herhangi bir veri hizmeti yanıtından sonucunda varlıkta değiştirir.<br>* <xref:System.Data.Services.Client.MergeOption> Seçeneği dinamik SQL saklı yordamı tabanlı güncelleştirmeleri arasında tutarlı olduğundan şimdi. |

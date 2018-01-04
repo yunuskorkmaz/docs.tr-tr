@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: be5969bf8653512da27785479ac7feae1f6c09a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e848a0fac5d41628d4d39f1771019eb870e6395b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-schema-definition"></a>DataTable şema tanımı
 Sütunları ve kısıtlamalar tarafından kullanılacak şema veya bir tablonun yapısını temsil edilir. Şemasını tanımlayan bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataColumn> nesneleri yanı <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütun bir veri kaynağındaki sütunları eşlemek, ifadeler hesaplanan değerler içeren, otomatik olarak değerlerine artırın veya birincil anahtar değerlerini içeriyor.  
@@ -30,19 +31,19 @@ Sütunları ve kısıtlamalar tarafından kullanılacak şema veya bir tablonun 
 >  <xref:System.Data.DataTable.CaseSensitive%2A> Özelliği **DataTable** bu davranışını etkilemez. **CaseSensitive** özelliği, bir tablo ve kısıtlamalar ve benzeri zorlamayı sıralama, filtreleme, aramayı etkiler veriler, ancak sütun, ilişkileri ve kısıtlamaları başvuruları uygulanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataTable tablosuna sütun ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [DataTable’a Sütun Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Kullanarak bir tablo sütunları tanımlamak açıklar **DataColumn** nesneleri.  
   
- [İfade sütunları oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [İfade Sütunları Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
  Açıklar nasıl **ifade** bir sütunun özelliği, satırda başka sütunlardan değerlere göre değerleri hesaplamak için kullanılabilir.  
   
- [AutoIncrement sütunlar oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [AutoIncrement Sütunları Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
  Sayısal değerler, satır başına bir benzersiz sütun değeri sağlamak için otomatik olarak artırmak için bir sütun nasıl ayarlanabilir açıklar.  
   
- [Birincil anahtarlar tanımlama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Birincil Anahtarlar Tanımlama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Bir veya daha fazla bir tablonun birincil anahtarı belirtmek açıklar **DataColumn** nesneleri.  
   
- [DataTable kısıtlamaları](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [DataTable Kısıtlamaları](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Yabancı anahtar ve benzersiz kısıtlamalar sütunlar için bir tabloda nasıl tanımlanacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2866ef2b8f1c869da7c5989e892c1e3a5dd19fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşılık, CLS uyumlu derleyicileri derlemedeki türü meta veriler üretir. İki kaynak türü bilgilerinin oldukça farklıdır. Bu konu, bir tür kitaplığından meta veri oluşturma teknikleri açıklar. Elde edilen derlemeyi birlikte çalışma derleme adı verilir ve COM türlerini kullanmak .NET Framework uygulamaları içerdiği türü bilgileri sağlar.  
@@ -80,13 +81,13 @@ COM tür tanımları genellikle bir tür kitaplığı'nda bulunur. Buna karşıl
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
- [COM bileşenlerini .NET Framework'te gösterme](../../../docs/framework/interop/exposing-com-components.md)  
+ [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)  
  [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Standart sarmalayıcıları özelleştirme](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
  [Yönetilen kodda COM türlerini kullanma](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
- [Birlikte çalışma projesi derleme](../../../docs/framework/interop/compiling-an-interop-project.md)  
- [Birlikte çalışma uygulamasını dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)  
- [Nasıl yapılır: tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
- [Nasıl yapılır: tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
- [İzlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
+ [Birlikte Çalışma Projesi Derleme](../../../docs/framework/interop/compiling-an-interop-project.md)  
+ [Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)  
+ [Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
+ [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Bütünleştirilmiş Kodları Oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
+ [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)

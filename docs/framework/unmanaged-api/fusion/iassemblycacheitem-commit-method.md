@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a5a25f24fd1f09ebc1cda0442e41fde9eef059d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3e1907fa3be4992573f84b4810f7504f3af78397
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit Metodu
 Bellek için önbelleğe alınmış derleme başvurusu kaydeder.  
@@ -54,4 +55,4 @@ HRESULT Commit (
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iassemblycacheıtem arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+ [IAssemblyCacheItem Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

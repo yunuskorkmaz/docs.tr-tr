@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f649c45420d111a1b94374f3025ef807eb3d8efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a>Bir derlemeyi derlerken, derleme çalıştırılması için gerekli izinleri belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
@@ -67,6 +68,6 @@ ms.lasthandoff: 11/21/2017
  Güçlü adlandırma ve kullanarak imzalama çünkü [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bütünlüğünü garanti derleme kanıt, iki yöntemden birini kod erişimi güvenlik ilkesi temel alabilir. Güçlü adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) dijital imzalar ve sertifikalar ile bütünlüğü garanti. Belirtilen tüm teknolojileri — karma doğrulama, güçlü adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)— birlikte derleme herhangi bir şekilde değiştirilmediğini emin olmak için çalışır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanımlayıcı adlı derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Ortak dil çalışma zamanı derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)

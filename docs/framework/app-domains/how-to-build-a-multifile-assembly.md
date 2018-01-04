@@ -28,11 +28,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 68a2217ed05588b2ba6070850dfd0d61a7a0fde2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77922d08ce17f8b8659eac0dba5a46ca33a7502
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Birden Fazla Dosya Derleme
 Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yordamda her adım gösterilmektedir kodu sağlar.  
@@ -105,7 +106,7 @@ Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yorda
      Kullanabileceğiniz [MSIL ayrıştırıcı (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bütünleştirilmiş içeriğini incelemek veya bir dosyanın bir derlemeyi ya da bir modül olup olmadığını belirlemek için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derlemeleri oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
- [Nasıl yapılır: derleme içeriklerini görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Birden çok dosya derlemeleri](../../../docs/framework/app-domains/multifile-assemblies.md)
+ [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)

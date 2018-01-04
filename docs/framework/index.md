@@ -13,11 +13,12 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-guide"></a>.NET framework Kılavuzu
 
@@ -54,11 +55,11 @@ Kaynaklar ve uygulamanız .NET Framework'ün yeni bir sürüme geçiş, göz ön
 [Geliştirme Kılavuzu](../../docs/framework/development-guide.md)  
 Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.  
   
-[Araçları](../../docs/framework/tools/index.md)  
+[Araçlar](../../docs/framework/tools/index.md)  
 .NET Framework teknolojilerini kullanarak uygulamalar geliştirmenize, yapılandırmanıza ve dağıtmanıza yardımcı olacak araçları açıklar.  
   
 [.NET framework sınıf kitaplığı](/dotnet/api/?view=netframework-4.7.1)   
 Sözdizimi, kod örnekleri ve .NET Framework isim uzaylarında bulunan her sınıf için ilgili bilgi sağlar.  
   
-[Ek sınıf kitaplıkları ve API'leri](../../docs/framework/additional-apis/index.md)  
+[Ek sınıf kitaplıkları ve API'ler](../../docs/framework/additional-apis/index.md)  
 Belirli platformlar veya uygulamaları .NET Framework'ün hedef sınıfları yanı sıra, bant dışı (OOB) sürümlerde bulunan sınıflar için belgeler sağlar.

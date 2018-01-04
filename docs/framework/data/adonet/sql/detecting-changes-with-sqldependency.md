@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3fe5aca218da7c862be90645e6fa73bc628b2328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d3fd662ace71d77a185cd996c05960d026ef691
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency ile değişiklikleri algılama
 A <xref:System.Data.SqlClient.SqlDependency> nesne ilişkilendirilebilir bir <xref:System.Data.SqlClient.SqlCommand> sorgu sonuçları ilk başta farklı algılamak için. Ayrıca bir temsilci atayabilirsiniz `OnChange` sonuçları için ilişkili bir komut değiştirdiğinizde, ateşlenir olay. İlişkilendirmeniz gerekir <xref:System.Data.SqlClient.SqlDependency> komutu yürütmeden önce komutu. `HasChanges` Özelliği <xref:System.Data.SqlClient.SqlDependency> verileri ilk alındığından beri sorgu sonuçlarını değişip değişmediğini için de kullanılabilir.  
@@ -133,5 +134,5 @@ void Termination()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server'da sorgu bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

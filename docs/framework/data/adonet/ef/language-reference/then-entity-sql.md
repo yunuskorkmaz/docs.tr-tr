@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 99fd941c963ff87203d7b315beb606d40001224d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecf46b122ec5411913891aa1e33bee071044d032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="then-entity-sql"></a>SONRA (varlık SQL)
 Sonuç olarak değerlendirildiğinde WHEN yan tümcesinin `true`.  
@@ -50,5 +51,5 @@ WHEN when_expression THEN then_expression
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DURUMU](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+ [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

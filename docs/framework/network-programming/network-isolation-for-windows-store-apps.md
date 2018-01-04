@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7e480f50d3a339648229f17152eb28b28ec159
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows mağazası uygulamaları için ağ yalıtımı
 Sınıfları <xref:System.Net>, <xref:System.Net.Http>, ve <xref:System.Net.Http.Headers> ad alanları, Windows mağazası uygulamaları veya Masaüstü uygulamaları geliştirmek için kullanılabilir. Ağ yalıtımı, uygulama güvenlik modeli tarafından kullanılan bir parçası olarak bu ad alanındaki sınıflar, bir Windows mağazası uygulamasında kullanıldığında, etkilenen [!INCLUDE[win8](../../../includes/win8-md.md)]. Sistem ağ erişimine izin vermek için Windows mağazası uygulaması için uygulama bildiriminde uygun ağ yeteneklerini etkinleştirilmesi gerekir.  

@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d92af3e2a04588e3942dd6c8c0625c607e08f123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ccf5a4edc9404ed13d732dc8bbf0ab1bde1e5d6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma
 Aşağıdaki yordamlar nasıl oluşturulacağı ve iki alanları, üç özellik, bir yöntemi, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturur CodeDOM grafik derleme gösterilmektedir.  
@@ -127,5 +128,5 @@ The object:
 -   Bu kod örneği gerektirir `FullTrust` izni Ayarla başarıyla yürütülemedi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Codedom'yi kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
- [CodeDOM grafiğinden kaynak kodu oluşturma ve derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+ [CodeDOM'yi Kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

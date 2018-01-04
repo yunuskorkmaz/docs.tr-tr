@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6c6ce0b722d901e38b728a710e3c49848fb918a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-load-method"></a>Load yöntemi
 Kullanabileceğiniz <xref:System.Data.DataTable.Load%2A> yüklemek için yöntemi bir <xref:System.Data.DataTable> bir veri kaynağından satırlarla. Bu, en basit biçimiyle tek bir parametre kabul eder, aşırı yüklenmiş bir yöntemdir bir **DataReader**. Yalnızca bu formda yüklerken **DataTable** satırlarla. İsteğe bağlı olarak, belirtebilirsiniz **LoadOption** veriler nasıl eklenir denetlemek için parametre **DataTable**.  
@@ -78,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir DataTable tablosundaki verileri düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

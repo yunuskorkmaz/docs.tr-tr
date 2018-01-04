@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework'teki Performans Sayaçları
 Bu konu içinde bulabilirsiniz performans sayaçları listesini sağlar [Performans İzleyicisi'ni](http://technet.microsoft.com/library/cc749249.aspx).  
@@ -260,5 +261,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Toplam çalışma zamanı denetimleri**|Çalışma zamanı kodu toplam sayısı erişim güvenlik denetimleri uygulama başlatıldığından bu yana gerçekleştirilen görüntüler. Çalışma zamanı kodu erişim güvenlik çağıran belirli bir izin talep ettiğinde denetimleri yapılır. Çalışma zamanı onay her çağrıda çağıran tarafından oluşturulur ve geçerli çağıran iş parçacığı yığınını inceler. İle kullanıldığında **yığın yol derinliği** sayacı, bu sayaç, güvenlik denetimleri için ortaya çıkan yaşanan performans sorunları gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Çalışma zamanı profili oluşturma](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+ [Performans Sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+ [Çalışma Zamanı Profili Oluşturma](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

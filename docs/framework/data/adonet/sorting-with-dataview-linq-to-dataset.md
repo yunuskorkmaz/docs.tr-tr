@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ce75aba79af617b7c3b342a25f2ac8f8ab0f672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae9ee83802b71eeab63fe5305b49d79a5cfaaf39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) sıralama
 Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView>verileri sıralama ve veri satırı sıralama ölçüte göre sıralanmış dönmek için çeşitli yöntemler sağlar. Sıralama özellikleri, kendi dize tabanlı yanı sıra <xref:System.Data.DataView> kullanmanıza olanak tanır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ifadeleri sıralama ölçütleri için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri izin verir. Bu konuda kullanarak sıralama için her iki yaklaşım açıklanmaktadır <xref:System.Data.DataView>.  
@@ -92,6 +93,6 @@ Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi d
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama ve LINQ-DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Verileri sıralama](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [Verileri Sıralama](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

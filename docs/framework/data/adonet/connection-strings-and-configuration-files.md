@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fe56dc279471f77a3f9ae014f65faaa99a113624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87406da2c591f9f3a8f47adb2029bf1e239cc64e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak koda derlenmiş şifrelenmemiş bir bağlantı dizeleri kullanılarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Bağlantı dizesi hiç değişirse, ayrıca, uygulamanızı yeniden derlenmesi gerekiyor. Bu nedenlerle, bir uygulama yapılandırma dosyasında bağlantı dizeleri depolamanızı öneririz.  
@@ -180,9 +181,9 @@ Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları 
  ASP.NET uygulamalarının güvenliğini sağlama daha fazla bilgi için bkz: [NIB: ASP.NET güvenlik](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik uygulamaları bir bakışta](http://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici Merkezi'ndeki.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Yapılandırma sınıflarını kullanma](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Uygulamaları yapılandırma](../../../../docs/framework/configure-apps/index.md)  
+ [Uygulamaları Yapılandırma](../../../../docs/framework/configure-apps/index.md)  
  [ASP.NET Web sitesi yönetimi](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a71b28a1653b72d212455e99f8aa0101bb74e7a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcd149b34282ef6ae21593e4549478bab91e0189
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET veri izleme
 ADO.NET için .NET veri sağlayıcıları tarafından desteklenen yerleşik veri izleme işlevselliği özellikleri [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], Oracle, OLE DB ve ODBC yanı sıra ADO.NET <xref:System.Data.DataSet>ve [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ağ protokolleri.  
@@ -62,6 +63,6 @@ add target ring_buffer with (track_causality=on)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework'te ağ izleme](../../../../docs/framework/network-programming/network-tracing.md)  
- [İzleme ve uygulamaları](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [.NET Framework'te Ağ İzleme](../../../../docs/framework/network-programming/network-tracing.md)  
+ [İzleme ve İşaretleme Uygulamaları](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

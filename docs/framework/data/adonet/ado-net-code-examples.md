@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fcdfee8486b089456d294d983c09dc6246bd8ac2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61de1bf5f3e5eb16718f2af7fa29325dc94770d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojilerini kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -33,13 +34,13 @@ Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojilerini kullanarak bir ve
 
 - ADO.NET Entity Framework:
 
-  - [LINQ-varlıklar](#linq-to-entities)
+  - [LINQ to Entities](#linq-to-entities)
 
   - [Yazılı ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
-- [LINQ-SQL](#linq-to-sql)
+- [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET veri sağlayıcısı örnekleri
 Aşağıdaki kod listeleri ADO.NET data Provider kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir. İçinde döndürülen veriler bir `DataReader`. Daha fazla bilgi için bkz: [alma verileri kullanarak bir DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
@@ -350,8 +351,8 @@ End Class
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [ADO.NET genel bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Veri uygulamaları oluşturma](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Bir varlık veri modeli (Entity Framework görevler) sorgulama](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
  [Nasıl yapılır: Anonim türde nesne döndüren bir sorgu yürütme](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2052656a524eafd7b9a137ac7d5006aba53fc075
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express güvenliği
 Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerin çoğunu destekler. Böylece gereksiz özellikleri ve ağ bağlantısını varsayılan olarak kapalı olan tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  
@@ -45,9 +46,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Sunucusu
 |[SQL Server Express'e bağlanma](http://msdn.microsoft.com/library/ms165679.aspx) SQL Server Çevrimiçi Kitapları'nda|Bir ağ üzerinde SQL Server Express Edition kullanmayı açıklar.|  
 |[Microsoft SQL Server 2005 Express Edition Çevrimiçi Kitapları](http://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition için belgeleri tamamlayın.|  
 |[Yönetici olmayanlar için kullanıcı örnekleri](http://msdn.microsoft.com/library/ms143684.aspx) SQL Server Çevrimiçi Kitapları'nda|Kullanıcı örnekleri oluşturup açıklar.|  
-|[SQL Server Express kullanıcı örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Bir ADO.NET uygulamasında kullanıcı örneği özellikleri açıklanmaktadır. Bir kullanıcı örneği etkinleştirmek için bir kullanıcı örneği kullanarak bağlanma hakkında bilgi sağlayan bir <xref:System.Data.SqlClient.SqlConnection>, kullanıcı örneği yaşam süresi ve kullanıcı örnek senaryoları.|  
+|[SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Bir ADO.NET uygulamasında kullanıcı örneği özellikleri açıklanmaktadır. Bir kullanıcı örneği etkinleştirmek için bir kullanıcı örneği kullanarak bağlanma hakkında bilgi sağlayan bir <xref:System.Data.SqlClient.SqlConnection>, kullanıcı örneği yaşam süresi ve kullanıcı örnek senaryoları.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server güvenlik](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server Express kullanıcı örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

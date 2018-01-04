@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25c033ae46abc65040c00b6beb105c8ebb6b1d90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-client-sockets"></a>İstemci yuvaları kullanma
 Konuşma aracılığıyla başlatmadan önce bir <xref:System.Net.Sockets.Socket>, uygulamanızı ve uzak aygıt veri kanalı oluşturmanız gerekir. Diğer ağ adres ailesi ve protokolleri mevcut olmasına karşın, bu örnek uzak bir hizmet için TCP/IP'yi bağlantısının nasıl oluşturulacağını gösterir.  
@@ -87,7 +88,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumlu istemci yuvası kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Zaman uyumsuz istemci yuvası kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Nasıl yapılır: bir yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [Yuva](../../../docs/framework/network-programming/sockets.md)
+ [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Nasıl Yapılır: Yuva Oluşturma](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+ [Yuvalar](../../../docs/framework/network-programming/sockets.md)

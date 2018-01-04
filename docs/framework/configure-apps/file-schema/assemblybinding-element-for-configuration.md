@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2753e290af60d0dcf4efaa79ff3ffffbd7305c27
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d670c56a885a5fdae059a87f63fba9ab32f020c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > öğesi için \<yapılandırma >
 
@@ -61,7 +62,7 @@ Derleme bağlama ilkesi yapılandırma düzeyinde belirtir.
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) öğesi yapılandırma dosyalarında derlemeyi dahil etmek için uygulama yapılandırma dosyaları sağlayarak bileşen derlemeleri yönetimini basitleştirir iyi bilinen konumları yerine çoğaltma derleme yapılandırma ayarları.
 
 > [!NOTE]
-> **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
+>  **\<LinkedConfiguration >** öğesi Windows yan yana bildirimleri olan uygulamalar için desteklenmez.
 
 ## <a name="example"></a>Örnek
 

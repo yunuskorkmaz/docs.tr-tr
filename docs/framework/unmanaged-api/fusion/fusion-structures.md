@@ -17,31 +17,32 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eca1cba0f91805baf2277f3d3bc5e793d9e2ba1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c2d463ac5baf2067be8b5454407467c0e594e790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-structures"></a>Fusion Yapıları
 Bu bölümde API fusion kullanan yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Assembly_ınfo yapısı](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
+ [ASSEMBLY_INFO Yapısı](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
  Genel Derleme Önbelleği'nde kayıtlı bir derlemeyle ilgili bilgiler içerir.  
   
- [Fusıon_ınstall_reference yapısı](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
+ [FUSION_INSTALL_REFERENCE Yapısı](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
  Genel derleme önbelleğinde uygulamanın yüklü olduğu bir derleme bir uygulamanın yaptığı bir başvuru temsil eder.  
   
- [Identıty_attrıbute yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
+ [IDENTITY_ATTRIBUTE Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
  İlgili meta verileri öznitelik bilgileri içeren bir [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) örneği.  
   
- [Identıty_attrıbute_blob yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
+ [IDENTITY_ATTRIBUTE_BLOB Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  İlişkili bir için uzaklık bilgileri içeren [ıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) yapısı.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Fusion arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
   
- [Fusion genel statik işlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
   
- [Fusion numaralandırmaları](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

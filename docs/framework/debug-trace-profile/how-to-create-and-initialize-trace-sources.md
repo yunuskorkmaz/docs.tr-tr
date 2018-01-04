@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1fc1e843bb5841fcd5571bb1b57d6fb449336240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a790ca50522adcffd5d8cd8433f1291102672430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
 <xref:System.Diagnostics.TraceSource> Sınıfı, uygulama ile ilişkili olabilir izlemeleri üretmek için uygulamalar tarafından kullanılır. <xref:System.Diagnostics.TraceSource>kolayca izleme olayları, izleme verileri ve sorunu bilgilendirme izlemeleri için ver izleme yöntemleri sağlar. İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturuldu ve ile veya yapılandırma dosyalarının kullanılması olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında izleme kaynaklar tarafından üretilen izlemeleri yapılandırılmasına kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  
@@ -91,4 +92,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [İzleme ve uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+ [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b950e3b5bcfec220b1753313213fd8e9b71b4188
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f09a9d3870e2b975dc9ed952eca33147a21fce6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugbreakpointenum-interface1"></a>Icordebugbreakpointenum Interface1
 Icordebugenum yöntemlerini uygular ve Icordebugbreakpoint diziler numaralandırır.  
@@ -32,7 +33,7 @@ Icordebugenum yöntemlerini uygular ve Icordebugbreakpoint diziler numaralandır
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Belirtilen sayıda alır `ICorDebugBreakpoint` geçerli konumdan başlayarak numaralandırması örneklerden.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Belirtilen sayıda alır `ICorDebugBreakpoint` geçerli konumdan başlayarak numaralandırması örneklerden.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,4 +50,4 @@ Icordebugenum yöntemlerini uygular ve Icordebugbreakpoint diziler numaralandır
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

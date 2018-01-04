@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d230a122cbc02521c8d300d96cdd074bd7faa979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 379ec77c5a291ff0fcfa535b808f8976bb416d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Bir DbProviderFactory alma
 Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıcısı hakkında bilgi geçirilmesi ile ilgilidir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adına sahip bir dize. Bir aşırı yüklemesini `GetFactory` geçen bir <xref:System.Data.DataRow>. Sağlayıcı fabrikası oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Bazı yöntemlerinden birini bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -107,6 +108,6 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Bağlantı dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Yapılandırma sınıflarını kullanma](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

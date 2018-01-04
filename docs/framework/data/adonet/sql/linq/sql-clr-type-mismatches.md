@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cc1458996e70e8af05c4e2bc9e6c61a5d8a9f87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20031092f5109fef1bf7167eccab949e2e7c5b39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL CLR türüyle eşleşmiyor
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nesne modeli ve SQL Server arasında çeviri çoğunu otomatikleştirir. Bununla birlikte, bazı durumlarda tam çeviri engeller. Bu anahtar uyuşmazlıkları ortak dil çalışma zamanı (CLR) türleri ve SQL Server veritabanı türleri arasında aşağıdaki bölümlerde özetlenmiştir. Belirli tür eşlemeleri ve adresindeki işlevi çevirisi hakkında daha fazla ayrıntı bulabilirsiniz [SQL CLR türü eşleme](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) ve [veri türler ve işlevler](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -304,4 +305,4 @@ Where Col1 + Col2 > 4
  Anlam farklar ek olarak, performans etkileri CLR türü sistemleri ve SQL Server arasında çapraz yaparken göz önünde bulundurmanız önemlidir. Büyük veri kümeleri için bu tür performans sorunlarını uygulama dağıtılabilir olup olmadığını belirleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

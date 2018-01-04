@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 34e6e7c505dab135452664fdb815ee3e905a2ad0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2739cc5eaa6a1e43c06849e1b00f7ac8bd531e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Clear&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;
 Temizler `Listeners` izleme için koleksiyonu.  
@@ -91,6 +92,6 @@ Temizler `Listeners` izleme için koleksiyonu.
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.TraceSource>  
- [İzleme ve hata ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
  [\<kaldırma >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)  
- [İzleme dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

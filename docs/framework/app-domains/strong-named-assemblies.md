@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1d9fb79fa6c58ada7c342bd1d56281c3fbab900
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler
 Güçlü adlandırma bütünleştirilmiş, derleme için benzersiz bir kimliği oluşturur ve derleme çakışmaları engelleyebilirsiniz.  
@@ -52,6 +53,6 @@ Güçlü adlandırma bütünleştirilmiş, derleme için benzersiz bir kimliği 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Nasıl yapılır: bir derlemeyi tanımlayıcı adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Oluşturma ve tanımlayıcı adlı derlemeler kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+ [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

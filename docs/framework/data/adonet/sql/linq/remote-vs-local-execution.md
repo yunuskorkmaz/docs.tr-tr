@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2b04ba6dde572aa0a8edddc8a2a30a8e11a3e79c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a794c25e0dd7fd0f7169c31da18ce4d6f085503
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remote-vs-local-execution"></a>Uzak vs. Yerel çalıştırma
 Sorgularınızın ya da uzaktan yürütme karar verebilirsiniz (diğer bir deyişle, veritabanı altyapısı veritabanında sorgu yürütür) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel önbelleğe karşı sorgu yürütülür).  
@@ -58,4 +59,4 @@ Sorgularınızın ya da uzaktan yürütme karar verebilirsiniz (diğer bir deyi�
  Arabirimini uygulayan bir yerel koleksiyonu arasında önemli fark Not <xref:System.Collections.Generic.List%601> ve yürütülen uzak sorgularını sağlayan koleksiyonu *kümeleri sıralanmamış* ilişkisel bir veritabanındaki. <xref:System.Collections.Generic.List%601>Dizin değerlerini kullananlar gibi yöntemleri genellikle sırasız ayarlanmış bir uzak bir sorgu üzerinden alınamıyor listesi semantiği gerektirir. Bu nedenle, bu tür yöntemleri dolaylı olarak yük <xref:System.Data.Linq.EntitySet%601> yerel yürütülmesine izin vermek için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

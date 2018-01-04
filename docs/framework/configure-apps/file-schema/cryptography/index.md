@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c7d1e193236528c96e8253668c742883090ae188
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b6d9eeacb38531ced5768f29bf26de3c9294b71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cryptography-settings-schema"></a>Şifreleme Ayarları Şeması
 Şifreleme Ayarları Şeması şifreleme algoritmalarını uygulayan sınıflar için kolay algoritma adlarını eşleme belirtmek öğeleri içerir.  
@@ -60,5 +61,5 @@ ms.lasthandoff: 11/21/2017
 |[**\<oidMap >**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|ASN.1 OID eşlemeler sınıflar içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)

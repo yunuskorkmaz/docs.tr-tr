@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Varsayılan davranışı geçersiz kılma, geliştirici sorumlulukları
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]aşağıdaki gereksinimleri zorlamaz ancak davranışı, bu gereksinimleri olmayan sağlanırsa tanımlanmadı.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Son olarak, belirtilen işlem için geçersiz kılma yöntemi bekleniyor. Semantiği [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yüklenirken, ertelenmiş istekli yükleme gibi işlemleri ve <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) belirtilen hizmet sağlamak için geçersiz kılmalar gerektirir. Örneğin, bir yük geçersiz kılar, içeriği veritabanında olasılıkla tutarsız verilere yol denetlemeden yalnızca boş bir koleksiyon döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özelleştirme ekleme, güncelleştirme ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

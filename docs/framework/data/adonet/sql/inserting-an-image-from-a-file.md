@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a780e35d9eb5420138587102aee753e96a8eff9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb264374b3f9ff4e1f424f69565751f69ed810e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inserting-an-image-from-a-file"></a>Bir dosyadan bir resim ekleme
 İkili veya karakter veri alanına, veri kaynağı türüne bağlı olarak bir veritabanına ikili büyük nesne (BLOB) yazma. BLOB olduğu başvurduğu genel bir terim `text`, `ntext`, ve `image` genellikle belgeleri ve resimleri içeren veri türleri.  
@@ -141,8 +142,8 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Verileri değiştirmek için komutları kullanarak](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [İkili veriler alınıyor](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- [SQL Server ikili ve değeri büyük veri](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Verileri Değiştirmek için Komutları Kullanma](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [İkili Verileri Alma](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

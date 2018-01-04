@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>SQL Server güvenlik
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Güvenli veritabanı uygulamaları oluşturmak destekleyen birçok özelliğe sahiptir.  
@@ -33,13 +34,13 @@ ms.lasthandoff: 11/21/2017
  Bu bölümdeki konular, güvenlik özellikleri kısaca açıklayan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] geliştiricilere ilgili konulara bağlantılar için ilgili olan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online ve daha ayrıntılı kapsamı sağlayan diğer kaynakları.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server güvenlik genel bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  Mimari ve güvenlik özelliklerini açıklayan [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
- [SQL Server'daki uygulama güvenlik senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  ADO.NET için çeşitli güvenlik senaryolarını ele konuları içerir ve [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] uygulamalar.  
   
- [SQL Server Express güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [SQL Server Express Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  Güvenlik konuları açıklanmaktadır [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Books Online güvenlik konuları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

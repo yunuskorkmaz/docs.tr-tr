@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 39f31e27f1e62d889df5a40a9ecb554c2547db8f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnet
+ms.openlocfilehash: 7c0f0b8734de219208cba3caf0220d1e9436a3c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-generation"></a>SQL oluşturma
 Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevir gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle için gibi anlayabileceği SQL içine ağaçları komutu. Bu bölümde, için bir SQL oluşturma bileşeni (için SELECT sorgular) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi, güncelleştirme ve sorguları silmek için bkz: [değişikliği SQL üretimi](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
@@ -30,11 +31,11 @@ Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../incl
  <xref:System.Data.Common.DbProviderServices> Sınıfı komutu ağaçlara dönüştürmek için SQL nesil katman erişmek için başlangıç noktasıdır <xref:System.Data.Common.DbCommand>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Komut ağaçlarını şekli](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
+ [Komut Ağaçlarının Şekli](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
   
- [SQL komut ağaçlarını - en iyi uygulamaları oluşturma](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
   
- [Örnek Sağlayıcısı'nda SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
+ [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir Entity Framework veri sağlayıcısı yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+ [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

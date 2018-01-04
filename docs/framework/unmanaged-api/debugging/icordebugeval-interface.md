@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57b285ef5b2d3f8342b473f09650e6db7ec1693d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77e97e31a20c392eebae1b373bb1af53f87c23e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugeval-interface1"></a>Icordebugeval Interface1
 Hata ayıklayıcının, hatası ayıklanan kod bağlamında kod yürütmesine olanak tanıyan yöntemler sağlar.  
@@ -32,16 +33,16 @@ Hata ayıklayıcının, hatası ayıklanan kod bağlamında kod yürütmesine ol
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Abort yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Bu hesaplama durdurur `ICorDebugEval` nesne gerçekleştirmekte.|  
-|[CallFunction yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Belirtilen işlev çağrısı ayarlar. (.NET Framework sürüm 2.0 artık kullanılmıyor; kullanın [Icordebugeval2::callparameterizedfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) yerine.)|  
-|[CreateValue yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Bir arabirim işaretçisi ile başlangıç değeri sıfır ya da null olarak belirtilen tür için bir "ICorDebugValue" nesneyi alır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::createvaluefortype](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) yerine.)|  
-|[GetResult yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Bir arabirim işaretçisi alır bir `ICorDebugValue` değerlendirme sonuçlarını içerir.|  
-|[GetThread yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Arabirim işaretçisi "nereye bu değerlendirmeyi yürütüyor veya yürütecek Icordebugthread için" alır.|  
-|[Isactive yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Gösteren bir değer alır olup olmadığını bu `ICorDebugEval` nesne şu anda yürütülmekte.|  
-|[NewArray yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Belirtilen öğe türü ve boyutları yeni bir dizi ayırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) yerine.)|  
-|[NewObject yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Yeni bir nesne örneği ayırır ve belirtilen Oluşturucusu yöntemini çağırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedobject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) yerine.)|  
-|[NewObjectNoConstructor yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Yeni bir nesne örneği belirtilen türde bir oluşturucu yöntemi çağrı girişimi olmadan ayırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedobjectnoconstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) yerine.)|  
-|[NewString yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Yeni bir dize nesnesi belirtilen içeriğiyle ayırır.|  
+|[Abort Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Bu hesaplama durdurur `ICorDebugEval` nesne gerçekleştirmekte.|  
+|[CallFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Belirtilen işlev çağrısı ayarlar. (.NET Framework sürüm 2.0 artık kullanılmıyor; kullanın [Icordebugeval2::callparameterizedfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) yerine.)|  
+|[CreateValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Bir arabirim işaretçisi ile başlangıç değeri sıfır ya da null olarak belirtilen tür için bir "ICorDebugValue" nesneyi alır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::createvaluefortype](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) yerine.)|  
+|[GetResult Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Bir arabirim işaretçisi alır bir `ICorDebugValue` değerlendirme sonuçlarını içerir.|  
+|[GetThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Arabirim işaretçisi "nereye bu değerlendirmeyi yürütüyor veya yürütecek Icordebugthread için" alır.|  
+|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Gösteren bir değer alır olup olmadığını bu `ICorDebugEval` nesne şu anda yürütülmekte.|  
+|[NewArray Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Belirtilen öğe türü ve boyutları yeni bir dizi ayırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) yerine.)|  
+|[NewObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Yeni bir nesne örneği ayırır ve belirtilen Oluşturucusu yöntemini çağırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedobject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) yerine.)|  
+|[NewObjectNoConstructor Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Yeni bir nesne örneği belirtilen türde bir oluşturucu yöntemi çağrı girişimi olmadan ayırır. (.NET Framework 2. 0 ' artık kullanılmıyor; kullanın [Icordebugeval2::newparameterizedobjectnoconstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) yerine.)|  
+|[NewString Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Yeni bir dize nesnesi belirtilen içeriğiyle ayırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir `ICorDebugEval` nesnesi değerlendirmesini gerçekleştirmek için kullanılan belirli bir iş parçacığı bağlamında oluşturulur. Tüm nesneleri ve belirli bir hesaplanmasında kullanılan türleri aynı uygulama etki alanında bulunmalıdır. Bu uygulama etki alanı iş parçacığının geçerli uygulama etki alanıyla aynı olması gerekmez. Değerlendirmeleri iç içe.  
@@ -68,4 +69,4 @@ Hata ayıklayıcının, hatası ayıklanan kod bağlamında kod yürütmesine ol
     
     
     
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

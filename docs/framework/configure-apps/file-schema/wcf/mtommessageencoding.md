@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3dda3e6691339541019b270c6759a864726815b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc7db79f25e2ab202f79f7f4ab5cc2a0e5eb0242
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
 SOAP iletisi iletim en iyi duruma getirme mekanizmasını (temel MTOM) iletiler için kullanılan kodlama ve ileti sürüm belirtir.  
@@ -83,9 +84,9 @@ SOAP iletisi iletim en iyi duruma getirme mekanizmasını (temel MTOM) iletiler 
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
- [İleti kodlama](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [İleti Kodlayıcı seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [İleti Kodlama](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

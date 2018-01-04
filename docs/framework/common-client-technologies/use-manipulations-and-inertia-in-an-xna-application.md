@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: adf48310c1c2e0c59224ab820211e818a2401579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7452a6001742bc9e0456ccb6339f13596a2ab72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>XNA Uygulamasında Düzenlemeleri ve Eylemsizliği Kullanma
 Bu makalede, oyun parça hareketini denetlemek için düzenlemeler ve eylemsizlik Microsoft XNA uygulamasında işleme nasıl kullanabileceğinizi açıklar. Bu makalede okumadan önce aşina olmalısınız [düzenlemelere ve Eylemsizliğe genel bakış](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) konusuna ve temel XNA ile programlama kavramları hakkında bilgi sahibi olun.  
@@ -31,14 +32,14 @@ Bu makalede, oyun parça hareketini denetlemek için düzenlemeler ve eylemsizli
   
  Ayrıca, özel bir koleksiyona, birden çok oyun parça yöneten oluşturulur. XNA oyun sınıfından gereklidir işleme basitleştirir.  
   
- [GamePiece sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [GamePiece Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
   
- [GamePieceCollection sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
+ [GamePieceCollection Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
   
- [Game1 sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)  
+ [Game1 Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)  
   
- [Tam kod listeleri](../../../docs/framework/common-client-technologies/full-code-listings.md)  
+ [Tam Kod Listeleri](../../../docs/framework/common-client-technologies/full-code-listings.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Input.Manipulations>  
- [Düzenlemelere ve Eylemsizliğe genel bakış](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
+ [Düzenlemelere ve Eylemsizliğe Genel Bakış](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fa6b64d37052c40dbef83a25b622e415f6946c1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5a59b8735cf87e8b88036ffb317f7bbeb9f0885
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir <xref:System.IO.StreamWriter> için yazılmış ancak <xref:System.IO.StreamWriter.Flush%2A> veya <xref:System.IO.StreamWriter.Close%2A> yöntemi sonradan çağrılmaz örneğini önce <xref:System.IO.StreamWriter> yok. Bu MDA etkinleştirildiğinde, çalışma zamanı herhangi bir arabelleğe alınan veri hala içinde var olup olmadığının <xref:System.IO.StreamWriter>. Arabelleğe alınan verileri mevcut değilse MDA etkinleştirilir. Çağırma <xref:System.GC.Collect%2A> ve <xref:System.GC.WaitForPendingFinalizers%2A> yöntemleri çalıştırmak için sonlandırıcılar zorlayabilirsiniz. Sonlandırıcılar, aksi halde görünen rasgele zamanlarda ve büyük olasılıkla hiç işlem Çıkışta çalışacaktır. Açıkça sonlandırıcılar etkin bu MDA ile çalışan bu tür sorunlar daha güvenilir bir şekilde oluşturmaya yardımcı olur.  
@@ -114,4 +115,4 @@ static WriteToFile()
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO.StreamWriter>  
- [Yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

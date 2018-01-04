@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8828d47718e4e2bcb72c7866de9caeef91600587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c2cf6a244f38147cc450428ecdbddeeaf7c8bc90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices Arabirimi
 Hizmetleri Katalog için yöntemleri sağlar.  
@@ -34,8 +35,8 @@ Hizmetleri Katalog için yöntemleri sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Autodone yöntemi](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
-|[NotAutodone yöntemi](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
+|[Autodone Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
+|[NotAutodone Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

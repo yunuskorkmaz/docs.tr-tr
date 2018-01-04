@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fab5868556d5b7ba3a63cbc06780b0102783910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak veri erişim hakkında bilgi sağlar.  
@@ -33,13 +34,13 @@ Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML k
  [LINQ portalı](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  İlgili belgeler için dil tümleşik sorgu (LINQ) bağlantılar sağlar.  
   
- [İşlem](../../../docs/framework/data/transactions/index.md)  
+ [İşlem Gerçekleştirme](../../../docs/framework/data/transactions/index.md)  
  İşlemler için .NET Framework Destek açıklanır.  
   
  [WCF Veri Hizmetleri 4.5](../../../docs/framework/data/wcf/index.md)  
  WCF Veri Hizmetleri Web ya da intranet veri hizmetleri dağıtmak için nasıl kullanılacağı hakkında bilgi sağlar.  
   
- [XML belgeleri ve verileri](../../../docs/standard/data/xml/index.md)  
+ [XML Belgeleri ve Verileri](../../../docs/standard/data/xml/index.md)  
  .NET Framework'te XML belgeleri ve verileriyle çalışan sınıflardan oluşan kapsamlı ve tümleşik bir gruba genel bir bakış sağlar.  
   
  [XML standartları başvurusu](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  

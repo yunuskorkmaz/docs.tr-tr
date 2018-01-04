@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b3b097f9bca790d1f19da9d75f834c6277507d8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: efaa9f3e72af6f5ed948b974920564188ae42b44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Veri bağlama ve LINQ-DataSet
 *Veri bağlama* uygulama kullanıcı Arabirimi iş mantığı arasında bir bağlantı kurar işlemidir. Bağlama doğru ayarları varsa ve veri değeri değiştiğinde veri uygun bildirimleri sağlarsa, veriye bağlı öğeleri değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağını bakılmaksızın sağlayan veri bellek içi gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sağlar bir <xref:System.Data.DataTable>. Bu işlevsellik, genellikle veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>farklı sıralamalar olan bir tabloda veri getirebilir ve veri satırı durum ya da bir filtre ifadesi göre göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne için bkz: [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
@@ -27,22 +28,22 @@ ms.lasthandoff: 10/18/2017
  Unutmayın <xref:System.Data.DataView> sorgu temsil eder ve sorgu en üstünde bir görünüm değil. <xref:System.Data.DataView> Gibi UI denetimine bağlı bir <xref:System.Windows.Forms.DataGrid> veya <xref:System.Windows.Forms.DataGridView>, basit veri bağlama modelini sağlama. A <xref:System.Data.DataView> de oluşturulabilir bir <xref:System.Data.DataTable>, bu tablonun varsayılan görünüm sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataView nesnesi oluşturma](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
+ [DataView Nesnesi Oluşturma](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
  Oluşturma hakkında bilgi sağlayan bir <xref:System.Data.DataView>.  
   
- [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  Filtrele açıklar <xref:System.Data.DataView>.  
   
- [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  İle sıralama açıklar <xref:System.Data.DataView>.  
   
- [DataView DataRowView koleksiyonunda sorgulama](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ [DataView’da DataRowView Koleksiyonunu Sorgulama](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
  Sorgulama hakkında bilgi sağlayan <xref:System.Data.DataRowView> koleksiyonu kullanıma sunulan <xref:System.Data.DataView>.  
   
- [DataView performansı](../../../../docs/framework/data/adonet/dataview-performance.md)  
+ [DataView Performansı](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Hakkında bilgi sağlar <xref:System.Data.DataView> ve performans.  
   
- [Nasıl yapılır: bir DataView nesnesi bir Windows Forms DataGridView denetimine bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  ' E nasıl bağlanacağını açıklar bir <xref:System.Data.DataView> nesnesine bir <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

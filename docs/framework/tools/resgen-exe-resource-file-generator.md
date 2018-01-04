@@ -26,11 +26,12 @@ caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca54817183b5e659b62ef04b1693698bd689370b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Kaynak Dosya Oluşturucu)
 Kaynak Dosya Oluşturucu (Resgen.exe), metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemesi haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür. (Bkz [kaynak dosyalar oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -304,7 +305,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *Dil*  
  Kesin olarak belirlenmiş kaynak sınıfı için kaynak kodun üretileceği dil. Olası değerler şunlardır: `cs`, `C#`, ve `csharp` C# kodunu `vb` ve `visualbasic` Visual Basic kodu için `vbs` ve `vbscript` VBScript kodu ve `c++`, `mc`ve `cpp` C++ kodu için.  
   
- *ad alanı*  
+ *namespace*  
  Kesin olarak belirlenmiş kaynak sınıfını içeren ad alanı. .resources dosyası ve kaynak sınıfı aynı ad alanına sahip olmalıdır. Ad alanında belirtme hakkında daha fazla bilgi için `outputFilename`, bkz: [derleme kaynakları ikili dosyasına](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling). Varsa *ad alanı* olan atlandığında kaynak sınıfı bir ad alanında bulunmuyor.  
   
  *ClassName*  
@@ -338,8 +339,8 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)  
- [Kaynak dosyalar oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe (derleme bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
+ [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

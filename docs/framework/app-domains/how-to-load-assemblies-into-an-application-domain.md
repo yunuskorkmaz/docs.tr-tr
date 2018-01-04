@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90e1d16b47e1f603ac7faaa582388ec682591850
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 545ac4d3a14f083dc4513f12b018cda5c7833b21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme
 Uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Kullanmak için önerilen yoldur `static` (`Shared` Visual Basic'te) <xref:System.Reflection.Assembly.Load%2A> yöntemi <xref:System.Reflection.Assembly?displayProperty=nameWithType> sınıfı. Derlemeleri yüklenebilir diğer yolları şunlardır:  
@@ -58,6 +59,6 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Kullan
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
  [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
  [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [Uygulama etki alanlarını kullanma](../../../docs/framework/app-domains/use.md)  
- [Nasıl yapılır: salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Uygulama etki alanları ve derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)  
+ [Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+ [Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)

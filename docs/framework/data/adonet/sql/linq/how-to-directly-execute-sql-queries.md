@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ccc47a1ea740c5106517f6f53620ddc8097c531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8bbeb0d7ce040387b263486b947e793eca39d29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Nasıl yapılır: doğrudan SQL sorgularını Yürüt
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)](metin biçiminde) parametreli SQL sorguları içine yazma sorguları çevirir ve bunları SQL server için işlem gönderir.  
@@ -46,5 +47,5 @@ ms.lasthandoff: 11/21/2017
  Tarafından kullanılan aynı süslü gösterimini kullanarak sorgu metni ifade parametreleri `Console.WriteLine()` ve `String.Format()`. Aslında, `String.Format()` gerçekten sağlarsanız, süslü küme ayracı içine alınan parametrelerle değiştirerek oluşturulan parametre adları gibi sorgu dizesi olarak da adlandırılır @p0, @p1 ..., @p(n).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Veritabanı sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

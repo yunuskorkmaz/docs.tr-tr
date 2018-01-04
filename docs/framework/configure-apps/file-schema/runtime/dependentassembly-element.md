@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a968d2d1abf6e77cddd9d0a0367822ee4f9723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; öğesi
 Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `dependentAssembly` her derleme için öğesi.  
@@ -90,5 +91,5 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `d
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Derleme sürümlerini yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

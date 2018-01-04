@@ -31,11 +31,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 939a64919e9982232f6e8bd99070fe96e242b9bd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0bb3ab57d78e1a7b6d53261af50d4698ab1a4ff2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-codedom"></a>CodeDOM'yi Kullanma
 CodeDOM genel türlerde kaynak kod öğeleri temsil eden türler sağlar. Bir nesne grafiğinin derlemek için CodeDOM öğeleri kullanılarak bir kaynak kod modeli derlemeler bir program tasarlayabilirsiniz. Bu nesne grafiği, kaynak kodu CodeDOM Kod Oluşturucu için desteklenen bir programlama dili kullanılarak oluşturulabilir. CodeDOM ikili derlemeye kaynak kodu derlemek için de kullanılabilir.  

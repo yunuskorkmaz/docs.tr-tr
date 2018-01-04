@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b36f76516d4ddf94e177a5ecbb705e1d729318b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-data-using-a-datareader"></a>DataReader kullanarak veri alma
 Kullanarak verileri alınırken bir **DataReader** örneği oluşturmayı içerir **komutu** nesnesi ve ardından oluşturarak bir **DataReader** çağırarak  **Command.ExecuteReader** satır veri kaynağından veri almak için. Aşağıdaki örnek kullanarak gösterilmektedir bir **DataReader** nerede `reader` geçerli DataReader temsil eder ve `command` geçerli bir komut nesnesi temsil eder.  
@@ -260,7 +261,7 @@ adapter.Fill(ds);
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataReader ile çalışma](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Veritabanı şema bilgileri alınıyor](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

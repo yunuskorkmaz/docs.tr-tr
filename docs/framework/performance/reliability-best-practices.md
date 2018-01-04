@@ -49,11 +49,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar da herhangi bir ana bilgisayar tabanlı sunucu uygulama için geçerlidir. SQL Server gibi sunucu kaynakları sızıntısı değil ve duruma getirilmesi değil, son derece önemlidir.  Ancak, bir nesnenin durumu değiştirir her yöntemi için geri çekme kodu yazarak yapılamaz.  Hedef geri çekme kodu her konumdaki tüm hataları kurtarır yüzde 100 güvenilir yönetilen kodu değil yazmaktır.  Çok az fırsat başarı ile zorlu bir görev olabilir.  Ortak dil çalışma zamanı (CLR), yönetilen kod için yeterince güçlü garanti kusursuz kod uygun yazma yapmak için kolayca sağlayamaz.  ASP.NET farklı olarak, SQL Server veritabanı edilemeyecek uzunlukta bir süre boyunca sürüyor olmadan geri dönüştürüldüğünde olamaz yalnızca bir işlem kullandığını unutmayın.  
@@ -288,4 +289,4 @@ public static MyClass SingletonProperty
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.ConstrainedExecution>  
- [SQL Server programlama ve konak koruması öznitelikleri](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+ [SQL Server Programlama ve Konak Koruması Öznitelikleri](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

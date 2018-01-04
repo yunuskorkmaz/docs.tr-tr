@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94942360aaa91a39c8f46414807490bcb6e0b093
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 Remoting uygulama etki alanları, işlemler veya bilgisayarlar arasında çağırma saydam ayarlamanıza olanak sağlar. Bununla birlikte, kod erişim güvenliği yığın İlerlemesi (aynı işlem uygulama etki alanları arasında geçerli) işlem veya makine sınırları çapraz olamaz.  
@@ -46,4 +47,4 @@ Remoting uygulama etki alanları, işlemler veya bilgisayarlar arasında çağı
  Genellikle, varsayılan uygulama etki alanı her biri bir denetim nesnesiyle uygulama etki alanları alt oluşturur. Denetim nesnesi yeni uygulama etki alanı yönetir ve bazen siparişleri varsayılan uygulama etki alanından alır, ancak bunu gerçekten etki alanı doğrudan bağlanamazsınız. Bazen, varsayılan uygulama etki alanı kendi proxy denetim nesnesi ile çağırır. Ancak, varsayılan uygulama etki alanına geri çağırmaya denetim nesnesi için gerekli olduğu durumlar olabilir. Bu durumda, varsayılan uygulama etki alanı denetim nesnesi oluşturucuya başvuruya göre geri çağırma nesnesi geçirir. Bu proxy korumak için denetim nesnesi sorumluluğundadır. Denetim nesnesi proxy bir ortak statik ortak sınıfının alana veya aksi halde proxy genel olarak kullanıma olsaydı, bu varsayılan uygulama etki alanına geri aramayı başka bir kod tehlikeli olabilecek bir mekanizma açılacaktır. Bu nedenle, Denetim nesneler her zaman proxy gizliliğini korumak için örtük olarak güvenilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

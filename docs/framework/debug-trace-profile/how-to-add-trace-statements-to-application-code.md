@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5dd46da24c379a7900dff0dc482577195f5f4c23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 134e03a1438e4c9399962a245eb44eec9dd02924
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
 İzleme için en sık kullanılan yöntemler dinleyici çıktı yazmak için yöntemler şunlardır: **yazma**, **Writeıf**, **WriteLine**, **Writelineıf**, **Assert**, ve **başarısız**. Bu yöntemleri iki kategoriye ayrılabilir: **yazma**, **WriteLine**, ve **başarısız** tüm çıktı koşulsuz, ancak yayma **Writeıf**, **Writelineıf**, ve **Assert** Boolean koşulu test ve yazma ya da koşul değerine göre yazma. **Writeıf** ve **Writelineıf** koşul ise, çıktı yayma `true`, ve **Assert** koşul ise çıktıyı yayar `false`.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
- [İzleme ve uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Nasıl yapılır: oluşturma ve başlatma izleme anahtarları](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [İzleme anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [İzleme dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Nasıl yapılır: İzleme Anahtarları Oluşturma, Başlatma ve Yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)

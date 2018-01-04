@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8577c10dd4d3e2118a4b4dca8b22766a54fc854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 37dfeec82339ed4381d158b1bd5ac442223bfe50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ-SQL N katmanlı Web Hizmetleri
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]özellikle orta katman bir Web hizmeti gibi birbirine sıkı şekilde bağlı veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanı bir ASP.NET Web sayfasıdır sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web kullanıcı arabirimi arasında veri aktarımını yönetmek için sunucu denetimi ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta katmanda. Sunu katmanı ASP.NET sayfası değilse, seri hale getirme ve seri durumundan çıkarılması veri yönetmek için bazı ek iş Orta katmanda ve sunu katmanı yapmalısınız.  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
  Daha fazla bilgi için bkz: [veri alımı ve N katmanlı uygulamalar (LINQ-SQL) CUD işlemlerinde](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [N katmanlı ve uzak uygulamalarla LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  [NIB: LinqDataSource Web sunucusu denetimine genel bakış](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)

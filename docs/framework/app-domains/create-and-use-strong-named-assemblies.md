@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma
 <a name="top"></a>Tanımlayıcı ad derlemenin kimliğini oluşur — basit metin adı, sürüm numarasını ve (sağladıysanız) kültür bilgilerini — bir ortak anahtar ve dijital imza artı. Karşılık gelen özel anahtarı kullanarak bir derleme dosyası oluşturulur. (Derleme dosyası adları ve derlemeyi oluşturan tüm dosyaların karmaları içeren derleme bildirimi içerir.)  
@@ -82,12 +83,12 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: bir genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Bir derlemeyi imzalamak için şifreleme anahtar çiftinin oluşturmayı açıklar.|  
-|[Nasıl yapılır: bir derlemeyi tanımlayıcı adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Tanımlayıcı adlı bir derleme oluşturmayı açıklar.|  
-|[Güçlü adlandırmayı iyileştirme](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Güçlü-adlarında geliştirmeler açıklanmaktadır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|[Nasıl yapılır: tanımlayıcı adlı bir derleme başvurusu](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Türleri veya tanımlayıcı adlı bir derlemeye çalışma zamanında kaynaklarında başvuru veya çalışma zamanı açıklar.|  
-|[Nasıl yapılır: tanımlayıcı adlı atlama özelliğini devre dışı bırakma](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Tanımlayıcı adlı imza doğrulaması atlar özelliğini devre dışı bırakmak açıklar. Bu özellik tüm için veya belirli uygulamalar için devre dışı bırakılabilir.|  
-|[Derlemeleri oluşturma](../../../docs/framework/app-domains/create-assemblies.md)|Tek dosya ve birden çok dosya derlemeleri genel bir bakış sağlar.|  
+|[Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Bir derlemeyi imzalamak için şifreleme anahtar çiftinin oluşturmayı açıklar.|  
+|[Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Tanımlayıcı adlı bir derleme oluşturmayı açıklar.|  
+|[Gelişmiş Kesin Adlandırma](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Güçlü-adlarında geliştirmeler açıklanmaktadır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
+|[Nasıl yapılır: Kesin Adlandırılmış bir Bütünleştirilmiş Koda Başvurma](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Türleri veya tanımlayıcı adlı bir derlemeye çalışma zamanında kaynaklarında başvuru veya çalışma zamanı açıklar.|  
+|[Nasıl yapılır: Kesin Adlandırılmış Atlama Özelliğini Devre Dışı Bırakma](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Tanımlayıcı adlı imza doğrulaması atlar özelliğini devre dışı bırakmak açıklar. Bu özellik tüm için veya belirli uygulamalar için devre dışı bırakılabilir.|  
+|[Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)|Tek dosya ve birden çok dosya derlemeleri genel bir bakış sağlar.|  
 |[Visual Studio'da bir derlemeyi oturum gecikme nasıl](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Derleme oluşturulduktan sonra bir derlemeyi tanımlayıcı adla oturum açıklanmaktadır.|  
-|[Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Tanımlayıcı adlar ile derlemeleri oluşturmaya yardımcı olan .NET Framework dahil anlatır. Bu araç, temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.|  
-|[Al.exe (derleme bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Modülleri ya da kaynak dosyaları bildirim bütünleştirilmiş sahip bir dosya oluşturur .NET Framework'teki içerdiği aracı açıklar.|
+|[Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Tanımlayıcı adlar ile derlemeleri oluşturmaya yardımcı olan .NET Framework dahil anlatır. Bu araç, temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.|  
+|[Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Modülleri ya da kaynak dosyaları bildirim bütünleştirilmiş sahip bir dosya oluşturur .NET Framework'teki içerdiği aracı açıklar.|

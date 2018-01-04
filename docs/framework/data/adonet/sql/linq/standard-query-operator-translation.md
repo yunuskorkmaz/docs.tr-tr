@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operator-translation"></a>Standart sorgu işleci çevirisi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Standart sorgu işleçleri için SQL komutlarını çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantiği belirler.  
@@ -237,8 +238,8 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Dönüş veya bir dizi Atla öğeleri](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [İki dizileri birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [İki sıraları arasında ayarlanmış farkı döndürür](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [İki dizinin kümesi kesişimini döndürür](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [İki sıraları kümesi birleşimini döndürür](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+ [Dizideki Öğeleri Döndürme veya Atlama](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ [İki Diziyi Birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [İki Dizi Arasındaki Küme Farkını Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ [İki Dizinin Küme Kesişimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [İki Dizinin Küme Birleşimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b4cdc21b9ecfdb1bb37f26f82200b211967043c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77f115afab9c0ad4b53a38d8cdb3683616738b1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-secure-sockets-layer"></a>Kullanarak Güvenli Yuva Katmanı
 <xref:System.Net> Sınıfları birkaç protokolleri ağ için bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanın.  
@@ -72,6 +73,6 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 -   Başvurular **System.Net** ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik ağ programlama](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
- [Sertifika seçimi ve doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+ [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
+ [Sertifika Seçimi ve Doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

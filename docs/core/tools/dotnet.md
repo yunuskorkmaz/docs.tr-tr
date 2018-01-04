@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -121,35 +122,35 @@ Kullanımdaki .NET Core SDK sürümü yazdırır.
 
 | Komut                             | İşlev                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [DotNet derleme](dotnet-build.md)     | Bir .NET Core uygulaması oluşturur.                                     |
-| [DotNet Temizle](dotnet-clean.md)     | Temiz yapı çıkarır.                                              |
-| [DotNet Yardım](dotnet-help.md)       | Komutu için çevrimiçi belgeleri ayrıntılı gösterir.           |
-| [DotNet geçirme](dotnet-migrate.md) | Geçerli bir önizleme 2 projeyi .NET Core SDK 1.0 projeye geçirir.  |
-| [DotNet msbuild](dotnet-msbuild.md) | MSBuild komut satırında erişim sağlar.                        |
-| [DotNet yeni](dotnet-new.md)         | Bir C# veya belirli bir şablon için F # projesine başlatır.                |
-| [DotNet paketi](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
-| [DotNet yayımlama](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde bulunan uygulama yayımlar. |
-| [DotNet geri yükleme](dotnet-restore.md) | Belirli bir uygulamayla ilgili bağımlılıkları yükler.                  |
-| [dotnet çalıştırın](dotnet-run.md)         | Uygulama kaynağından çalışır.                                   |
-| [DotNet sln](dotnet-sln.md)         | Eklemek için seçenekler kaldırın ve bir çözüm dosyasında projelerini listeleyin.       |
-| [DotNet deposu](dotnet-store.md)     | Derlemeleri çalışma zamanı paketi deposunda saklar.                     |
-| [DotNet test](dotnet-test.md)       | Test Çalıştırıcısı kullanarak testleri çalıştırır.                                     |
+| [dotnet build](dotnet-build.md)     | Bir .NET Core uygulaması oluşturur.                                     |
+| [dotnet clean](dotnet-clean.md)     | Temiz yapı çıkarır.                                              |
+| [dotnet help](dotnet-help.md)       | Komutu için çevrimiçi belgeleri ayrıntılı gösterir.           |
+| [dotnet migrate](dotnet-migrate.md) | Geçerli bir önizleme 2 projeyi .NET Core SDK 1.0 projeye geçirir.  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild komut satırında erişim sağlar.                        |
+| [dotnet new](dotnet-new.md)         | Bir C# veya belirli bir şablon için F # projesine başlatır.                |
+| [dotnet pack](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
+| [dotnet publish](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde bulunan uygulama yayımlar. |
+| [dotnet restore](dotnet-restore.md) | Belirli bir uygulamayla ilgili bağımlılıkları yükler.                  |
+| [dotnet run](dotnet-run.md)         | Uygulama kaynağından çalışır.                                   |
+| [dotnet sln](dotnet-sln.md)         | Eklemek için seçenekler kaldırın ve bir çözüm dosyasında projelerini listeleyin.       |
+| [dotnet store](dotnet-store.md)     | Derlemeleri çalışma zamanı paketi deposunda saklar.                     |
+| [dotnet test](dotnet-test.md)       | Test Çalıştırıcısı kullanarak testleri çalıştırır.                                     |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 | Komut                             | İşlev                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [DotNet derleme](dotnet-build.md)     | Bir .NET Core uygulaması oluşturur.                                     |
-| [DotNet Temizle](dotnet-clean.md)     | Temiz yapı çıkarır.                                              |
-| [DotNet geçirme](dotnet-migrate.md) | Geçerli bir önizleme 2 projeyi .NET Core SDK 1.0 projeye geçirir.  |
-| [DotNet msbuild](dotnet-msbuild.md) | MSBuild komut satırında erişim sağlar.                        |
-| [DotNet yeni](dotnet-new.md)         | Bir C# veya belirli bir şablon için F # projesine başlatır.                |
-| [DotNet paketi](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
-| [DotNet yayımlama](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde bulunan uygulama yayımlar. |
-| [DotNet geri yükleme](dotnet-restore.md) | Belirli bir uygulamayla ilgili bağımlılıkları yükler.                  |
-| [dotnet çalıştırın](dotnet-run.md)         | Uygulama kaynağından çalışır.                                   |
-| [DotNet sln](dotnet-sln.md)         | Eklemek için seçenekler kaldırın ve bir çözüm dosyasında projelerini listeleyin.       |
-| [DotNet test](dotnet-test.md)       | Test Çalıştırıcısı kullanarak testleri çalıştırır.                                     |
+| [dotnet build](dotnet-build.md)     | Bir .NET Core uygulaması oluşturur.                                     |
+| [dotnet clean](dotnet-clean.md)     | Temiz yapı çıkarır.                                              |
+| [dotnet migrate](dotnet-migrate.md) | Geçerli bir önizleme 2 projeyi .NET Core SDK 1.0 projeye geçirir.  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild komut satırında erişim sağlar.                        |
+| [dotnet new](dotnet-new.md)         | Bir C# veya belirli bir şablon için F # projesine başlatır.                |
+| [dotnet pack](dotnet-pack.md)       | Kodunuzun bir NuGet paketi oluşturur.                               |
+| [dotnet publish](dotnet-publish.md) | .NET framework bağımlı veya kendi içinde bulunan uygulama yayımlar. |
+| [dotnet restore](dotnet-restore.md) | Belirli bir uygulamayla ilgili bağımlılıkları yükler.                  |
+| [dotnet run](dotnet-run.md)         | Uygulama kaynağından çalışır.                                   |
+| [dotnet sln](dotnet-sln.md)         | Eklemek için seçenekler kaldırın ve bir çözüm dosyasında projelerini listeleyin.       |
+| [dotnet test](dotnet-test.md)       | Test Çalıştırıcısı kullanarak testleri çalıştırır.                                     |
 
 ---
 
@@ -157,24 +158,24 @@ Kullanımdaki .NET Core SDK sürümü yazdırır.
 
 Komut | İşlev
 --- | ---
-[DotNet Başvurusu Ekle](dotnet-add-reference.md) | Proje başvurusu ekleyin.
-[DotNet listesi başvurusu](dotnet-list-reference.md) | Proje başvuruları listeleyin.
-[DotNet Kaldır başvurusu](dotnet-remove-reference.md) | Proje başvurusu kaldırın.
+[dotnet add reference](dotnet-add-reference.md) | Proje başvurusu ekleyin.
+[dotnet list reference](dotnet-list-reference.md) | Proje başvuruları listeleyin.
+[dotnet remove reference](dotnet-remove-reference.md) | Proje başvurusu kaldırın.
 
 ### <a name="nuget-packages"></a>NuGet paketleri
 
 Komut | İşlev
 --- | ---
-[DotNet paket ekleme](dotnet-add-package.md) | NuGet paketini ekleyin.
-[DotNet Kaldır paketi](dotnet-remove-package.md) | Bir NuGet paketi kaldırın.
+[dotnet add package](dotnet-add-package.md) | NuGet paketini ekleyin.
+[dotnet remove package](dotnet-remove-package.md) | Bir NuGet paketi kaldırın.
 
 ### <a name="nuget-commands"></a>NuGet komutları
 
 Komut | İşlev
 --- | ---
-[DotNet nuget Sil](dotnet-nuget-delete.md) | Sunucudan paket unlists veya siler.
-[DotNet nuget yerel öğeler](dotnet-nuget-locals.md) | Temizler veya http isteği önbelleği, geçici önbelleği veya makine genelinde genel paketler klasörü gibi yerel NuGet kaynakları listeler.
-[DotNet nuget gönderme](dotnet-nuget-push.md) | Sunucuya bir paket gönderir ve onu yayımlar.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Sunucudan paket unlists veya siler.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Temizler veya http isteği önbelleği, geçici önbelleği veya makine genelinde genel paketler klasörü gibi yerel NuGet kaynakları listeler.
+[dotnet nuget push](dotnet-nuget-push.md) | Sunucuya bir paket gönderir ve onu yayımlar.
 
 ## <a name="examples"></a>Örnekler
 

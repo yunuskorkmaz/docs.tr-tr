@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8c19c459bf3b62b7e1d7e2917e09717c246e728c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c3d952c2a9e8f1199fa8ef4b6181dabcfbcc4012
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL oluşturma
 Bu konuda SQL üretimi oluşuyor nasıl gösterilmektedir [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616). Aşağıdaki varlık SQL sorgusunu örnek sağlayıcı ile birlikte modeli kullanır:  
@@ -210,4 +211,4 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
  İkinci aşamasının sonunda, nihai SQL deyimini oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek Sağlayıcısı'nda SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+ [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5f6051c3da274c6a8579516e073c0ea91a195d59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2b31c029eb18943c926dfd5ed5b0576e866067d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-type-information"></a>Tür Bilgilerini Görüntüleme
 <xref:System.Type?displayProperty=nameWithType> Sınıfı için yansıma Merkezi. Ortak dil çalışma zamanı oluşturur **türü** yansıma istediğinde yüklenen bir türü. Kullanabileceğiniz bir **türü** nesnenin yöntemleri, alanları, özellikleri ve türü hakkında her şeyi öğrenmek için iç içe geçmiş sınıflar.  
@@ -97,4 +98,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Reflection.FieldInfo>  
  <xref:System.Reflection.EventInfo>  
  <xref:System.Reflection.ParameterInfo>  
- [Yansıma ve genel türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+ [Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

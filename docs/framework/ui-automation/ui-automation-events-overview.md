@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9634c686d23503dcb4deae171f0023055c41ce2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8b28d6aafc0e9680123859ee0e9a28dd71a2249c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
@@ -92,6 +93,6 @@ ms.lasthandoff: 11/21/2017
  Olay tanımlayıcılarının bir listesi için bkz: [istemciler için UI Otomasyon olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemciler için UI Otomasyon olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [Sunucu tarafı UI Otomasyon sağlayıcıyı uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+ [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
+ [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

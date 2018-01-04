@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f9b1280f3a05a42a2f713adf993bb439245c95a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="local-transactions"></a>Yerel işlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] iş tek bir birim olarak execute birden çok görev birbirine bağlamak istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir tablo sipariş bilgilerle güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirmeleri, öğeleri borçlandırılacağı sıralı. Her iki görev başarısız olursa, güncelleştirmelerinin her ikisini de geri alınır.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Dağıtılmış işlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- [SQL Server ile System.Transactions tümleştirme](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Dağıtılmış İşlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 227bef975a54676ceda5f922ed02f98c27fc8759
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2916321ff51f335b40a2cc4eef90cdccdfc25bda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-architecture"></a>ADO.NET mimarisi
 Veri işleme, geleneksel öncelikle tabanlı bağlantısı, iki katmanlı model üzerinde dayanıyordu. Veri işleme çok katmanlı mimarileri giderek kullanır gibi kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşım için programcıları geçiliyor.  
@@ -67,5 +68,5 @@ ADO.NET mimarisi
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] içinde yakınsama `DataSet` nesnesi. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynağı verilerle doldurulabilir. `DataSet` XML Şeması Tanım Dili (XSD) şeması, veri kaynağını bakılmaksızın olarak şemasına içeren World Wide Web Konsorsiyumu (W3C) uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir medium'dur `DataSet` remoting veri ve şema bağlamı için bir en iyi seçim XML Web hizmetleri gelen ve giden. Daha fazla bilgi için bkz: [XML belgeler ve veriler](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET genel bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

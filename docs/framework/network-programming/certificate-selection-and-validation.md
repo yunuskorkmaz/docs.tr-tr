@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db75c3288b8247f0717c4792c57bfb30bb2e4416
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54d1409b74793a8539f432ce0b43f410d578e934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
 <xref:System.Net> Sınıflarını destekleyen seçin ve doğrulamak için çeşitli yollar <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla özel özniteliklere sahip bir sunucu gerektirebilir.  
@@ -62,5 +63,5 @@ ms.lasthandoff: 11/21/2017
  Bu araçları yanı sıra <xref:System.Security.Cryptography.X509Certificates.X509Certificate> ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfları dosya sisteminden bir sertifika yüklemek için yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik ağ programlama](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)
+ [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)

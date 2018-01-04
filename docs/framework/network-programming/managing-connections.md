@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f3a8900aca9ebfa14fbf49d4d3634bc486793c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d0ca3b6aed1213405dc24f322b53a21dbd4fbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-connections"></a>Bağlantıları yönetme
 Veri kaynaklarına bağlanmak için HTTP kullanan uygulamalar, .NET Framework'ün kullanabileceğiniz <xref:System.Net.ServicePoint> ve <xref:System.Net.ServicePointManager> sınıfları internet bağlantıları yönetmek ve bunları en uygun ölçek ve performans elde etmek amacıyla.  
@@ -74,5 +75,5 @@ sp.ConnectionLimit = newLimit
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı gruplandırma](../../../docs/framework/network-programming/connection-grouping.md)  
- [Uygulama protokolleri kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
+ [Bağlantı Gruplandırma](../../../docs/framework/network-programming/connection-grouping.md)  
+ [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)

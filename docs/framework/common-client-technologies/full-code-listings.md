@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0d1588dd6c1dacc70401c5143f53e8da1784c7e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 980ab21355e9f9fb130a7d17453861ae1daf626c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="full-code-listings"></a>Tam Kod Listeleri
 Bu konu, tüm kod kullanan bir uygulama için listesini içerir [düzenlemeler ve eylemsizlik](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) işlemci.  
@@ -38,8 +39,8 @@ Bu konu, tüm kod kullanan bir uygulama için listesini içerir [düzenlemeler v
  [!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Düzenlemeler ve eylemsizlik](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
- [XNA uygulamasında düzenlemeleri ve Eylemsizliği kullanma](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
- [GamePiece sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
- [GamePieceCollection sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
- [Game1 sınıfı oluşturma](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+ [Düzenlemeler ve Eylemsizlik](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [XNA Uygulamasında Düzenlemeleri ve Eylemsizliği Kullanma](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [GamePiece Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [GamePieceCollection Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
+ [Game1 Sınıfı Oluşturma](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)

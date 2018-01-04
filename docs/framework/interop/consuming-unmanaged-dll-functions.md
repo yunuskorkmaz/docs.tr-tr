@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6276f2dc2bd57dc3eaf81eb2949e3c1ea3727e69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
 Platform çağırma etkinleştirir Win32 API de gibi dinamik bağlantı kitaplıklarını (DLL'ler), uygulanan yönetilmeyen işlevleri çağırmak için kodu yönetilen bir hizmettir. Verilen işlevi çağırır bulur ve bağımsız değişkenleri (tamsayı, dize, diziler, yapıları ve benzeri) arasında birlikte çalışabilirlik sınır gerektiği şekilde sıralar. Bu hizmet hakkında daha fazla bilgi için bkz: [A daha yakın bakabilir Platform Çağırma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
@@ -81,7 +82,7 @@ Yönetilmeyen DLL işlev çağrısı bir platform çağırma
  Platform çağırma yönetilen çağırana yönetilmeyen işlevi tarafından oluşturulan atar özel durumları.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md)  
- [Platform çağırma örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md)  
- [Yönetilmeyen DLL işlevlerini kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+ [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)  
+ [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)  
+ [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9451504b64ddaa8dc0ea6b3a0754257b2c8b3824
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
 .NET türü yazma ve bu tür yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir. Bu bölümde COM istemcileri ile birlikte çalışan yönetilen kod yazma için birkaç ipuçları açıklanmaktadır:  
@@ -59,5 +60,5 @@ ms.lasthandoff: 11/21/2017
      Tanımlayıcı adlı bir derleme genel derleme önbelleğinde yüklenebilir ve yayımcısını imzadan gerektirir. İstemci uygulama dizininde değil tanımlayıcı adlı derlemeler yüklenmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md)  
- [COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+ [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)  
+ [COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bd2356845c76e81ce2efe87bdf247de293d6115d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstartupgt-element"></a>&lt;Başlangıç&gt; öğesi
 Ortak dil çalışma zamanı başlangıç bilgileri belirtir.  
@@ -69,7 +70,7 @@ Ortak dil çalışma zamanı başlangıç bilgileri belirtir.
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- **\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır  **\<requiredRuntime >** öğesi.  
+  **\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır  **\<requiredRuntime >** öğesi.  
   
  Microsoft Internet Explorer'da barındırılan bir uygulama için başlangıç kodu yoksayar  **\<başlangıç >** öğesi ve kendi alt öğelerini.  
   
@@ -100,7 +101,7 @@ Ortak dil çalışma zamanı başlangıç bilgileri belirtir.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
  [COM birlikte çalışma için yan yana yürütme](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
- [İşlem içi yan yana yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [İşlem İçi Yan Yana Yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

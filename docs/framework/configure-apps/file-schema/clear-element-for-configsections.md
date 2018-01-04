@@ -12,11 +12,12 @@ ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 70fc73c9e97274ac1165950038ee509fa8f2f9c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e48887cf7e227f463b92edd50f69746bbd8abd0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clear-element-for-configsections"></a>\<Clear > öğesi için \<configSections >
 
@@ -50,7 +51,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<Temizleyin >** uygulamanızdan geçerli yapılandırma dosyası veya yapılandırma dosyası hiyerarşisinde daha yüksek düzeyde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.
+ **\<Temizleyin >** uygulamanızdan geçerli yapılandırma dosyası veya yapılandırma dosyası hiyerarşisinde daha yüksek düzeyde daha önce tanımlanan öğeyi kaldırır tüm bölümler ve bölüm grupları.
 
 ## <a name="example"></a>Örnek
 

@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21189ffd5fc8b113cc746fd855bd5c325aad78c6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)
 DataSvcUtil.exe tarafından sağlanan bir komut satırı aracıdır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , tüketir bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış ve veri hizmeti .NET Framework istemci uygulamasından erişmek için gerekli istemci veri hizmeti sınıfları oluşturur. Bu yardımcı programı, aşağıdaki meta veri kaynakları kullanarak veri sınıfları oluşturabilirsiniz:  
@@ -56,5 +57,5 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/version:`[1.0&#124;2.0]|En yüksek kabul edilen sürümünü belirtir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Sürüm göre belirlenir `DataServiceVersion` döndürülen veri hizmeti meta verilerde DataService öğesinin özniteliği. Daha fazla bilgi için bkz: [veri hizmeti sürüm](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md). Belirttiğinizde `/dataservicecollection` parametresini de belirtmeniz gerekir `/version:2.0` veri bağlamasını etkinleştirmek için.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- [Nasıl yapılır: bir veri hizmet Başvurusu Ekle](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+ [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti Başvurusu Ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

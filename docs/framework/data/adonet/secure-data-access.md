@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı güvenlik mekanizmaları anlamak zorunda. Diğer özellikler veya uygulamanızın içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
@@ -33,10 +34,10 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırmayı kullanarak gibi bağlantı bilgileri, koruma teknikleri açıklar.|  
+|[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırmayı kullanarak gibi bağlantı bilgileri, koruma teknikleri açıklar.|  
 |[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
-|[Bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Kullanıcı girişi bağlantı dizeleri çalışma zamanında nasıl oluşturulacağını açıklar.|  
-|[SQL Server güvenlik genel bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
+|[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Kullanıcı girişi bağlantı dizeleri çalışma zamanında nasıl oluşturulacağını açıklar.|  
+|[SQL Server Güvenliğine Genel Bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Parametreli Komutlar ve SQL ekleme  
  Parametreli komutlarını kullanarak, bir saldırganın "bir komut bir SQL deyimi yerleştirir" SQL ekleme saldırılarına karşı sunucusunda o güvenlik ihlalleri güvenliği korunmasına yardımcı olur. Parametreli Komutlar, dış bir kaynaktan alınan değerler yalnızca değerler ve Transact-SQL deyimini parçası geçirilir sağlayarak SQL ekleme saldırısına karşı koruma. Sonuç olarak, bir değer olarak eklenen Transact-SQL komutlarını veri kaynağında yürütülmedi. Bunun yerine, bunlar yalnızca bir parametre değeri olarak değerlendirilir. Güvenlik açısından faydalı yanı sıra parametreli komutlar bir Transact-SQL deyimi veya saklı yordam için geçirilen değerlerini düzenlemek için kullanışlı bir yöntem sağlar.  
@@ -45,9 +46,9 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[DataAdapter parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Parametrelerle kullanmayı açıklar bir `DataAdapter`.|  
-|[Saklı yordamlar verilerle değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Parametrelerini belirtin ve bir dönüş değeri elde açıklar.|  
-|[Saklı yordamlar SQL Server'daki izinlerle yönetme](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server saklı yordamları veri erişimi kapsüllemek için nasıl kullanılacağını açıklar.|  
+|[DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Parametrelerle kullanmayı açıklar bir `DataAdapter`.|  
+|[Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Parametrelerini belirtin ve bir dönüş değeri elde açıklar.|  
+|[SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server saklı yordamları veri erişimi kapsüllemek için nasıl kullanılacağını açıklar.|  
   
 ## <a name="script-exploits"></a>Komut dosyası açıklarından yararlanılmasını  
  Bir komut dosyası yararlanma kullanan bir Web sayfasına eklenen kötü amaçlı karakterlerin ekleme işlemi başka bir biçimidir. Tarayıcı eklenen karakterleri doğrulamaz ve sayfanın parçası olarak işleyecek.  
@@ -66,7 +67,7 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Özel durum işleme temelleri](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işleme temel formlarını açıklar.|  
-|[Özel durumlar için en iyi yöntemler](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Özel durumları işlemek için en iyi uygulamaları açıklar.|  
+|[Özel Durumlar için En İyi Yöntemler](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Özel durumları işlemek için en iyi uygulamaları açıklar.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access ve Excel veri kaynaklarını koruma  
  Güvenlik gereksinimleri en düşük veya var olmayan olduğunda Microsoft Access ve Microsoft Excel ADO.NET uygulama için bir veri deposu olarak çalışabilir. Güvenlik özelliklerine deterrence için etkili olur, ancak bağlı birden fazla uninformed kullanıcılar tarafından meddling önlemek için kullanılmamalıdır. Erişim ve Excel için fiziksel veri dosyaları dosya sisteminde var ve tüm kullanıcılara erişilebilir olması gerekir. Bu dosyaları kolayca kopyaladığınız veya değiştirilebilir beri hırsızlığı veya veri kaybına sebep saldırılara karşı savunmasız sağlar. Güçlü güvenlik gerekli olduğunda, SQL Server veya başka bir sunucu tabanlı veritabanı burada fiziksel veri dosyaları dosya sisteminden okunabilir değil kullanın.  
@@ -97,13 +98,13 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Yönetilmeyen kod ile birlikte çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te kullanıma etme ve .NET Framework bileşenlerini com kullanıma açıklayan konuları içerir|  
+|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te kullanıma etme ve .NET Framework bileşenlerini com kullanıma açıklayan konuları içerir|  
 |[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Birincil birlikte çalışma derlemeleri, iş parçacığı oluşturma ve özel hazırlama gibi gelişmiş konular içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server güvenlik](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

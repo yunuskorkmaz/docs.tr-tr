@@ -13,40 +13,41 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87d895c8d5531d091d773e9f2d51b89408169022
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3059adbc9cd2c67035d5f6579e292df80cd87ef3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-change-conflicts"></a>Nasıl yapılır: değişiklik çakışmalarını yönetin
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir koleksiyon bulabilir, değerlendirmek ve eşzamanlılık çakışmaları yardımcı olmak için API sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: algılamak ve çakışan gönderimlerini gidermek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
+ [Nasıl yapılır: Çakışan Gönderimleri Algılama ve Çözümleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)  
  Algılamak ve eşzamanlılık çakışmalarını çözmek açıklar.  
   
- [Nasıl yapılır: zaman eşzamanlılık özel durumlar belirtin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
+ [Nasıl yapılır: Eşzamanlılık Özel Durumları Oluştuğunda Belirtme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)  
  Eşzamanlılık çakışmalarına da haberdar zamanı belirtmek açıklar.  
   
- [Nasıl yapılır: hangi üyeleri eşzamanlılık çakışmalar için test edildiğini belirtin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
+ [Nasıl yapılır: Hangi Üyelerin Eşzamanlılık Çakışmaları için Test Edildiğini Belirtme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
  Eşzamanlılık çakışmalar için denetlenip denetlenmeyeceğini belirtmek için üyeleri özniteliği açıklar.  
   
- [Nasıl yapılır: Varlık çakışma bilgisi alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
+ [Nasıl yapılır: Varlık Çakışma Bilgilerini Alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md)  
  Varlık çakışmaları hakkında bilgi toplamak açıklar.  
   
- [Nasıl yapılır: üye çakışma bilgisi alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
+ [Nasıl yapılır: Üye Çakışma Bilgilerini Alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)  
  Üye çakışmaları hakkında bilgi toplamak açıklar.  
   
- [Nasıl yapılır: çakışmaları veritabanı değerlerini koruyarak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
+ [Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)  
  Geçerli değerler veritabanı değerlerle üzerine açıklar.  
   
- [Nasıl yapılır: çakışmaları veritabanı değerlerin üzerine yazar tarafından](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
+ [Nasıl yapılır: Veritabanı Değerlerinin Üzerine Yazarak Çakışmaları Çözümleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)  
  Veritabanı değerlerini yazarak geçerli değerleri korumak açıklar.  
   
- [Nasıl yapılır: çakışmaları veritabanı değerlerle birleştirerek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
+ [Nasıl yapılır: Veritabanı Değerleri ile Birleştirerek Çakışmaları Çözümleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)  
  Veritabanı ve geçerli değerleri birleştirerek bir çakışmayı açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [İyimser eşzamanlılık: genel bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [İyimser Eşzamanlılık: Genel Bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  İyimser eşzamanlılık uygulamak terimler açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

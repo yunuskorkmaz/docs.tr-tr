@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4cfa67d7fba06140838e04bdbff71102a2a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="time-based-cache-policies"></a>Önbellek zaman tabanlı ilkeleri
 Bir zamana dayalı önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak alınan saati ve geçerli saati kullanarak önbelleğe alınmış girişleri yenilik tanımlar. Önbellek zaman tabanlı ilke ayarı, kullanabilir <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı ilke veya özelleştirilmiş bir zamana dayalı ilkesi oluşturun. Varsayılan zaman tabanlı ilke için Köprü Metni Aktarım Protokolü (HTTP) kullanarak elde kaynaklar kullanırken, tam önbellek davranışını 13 ve RFC 2616 14 bölümlerinde belirtilen davranışları ve önbelleğe alınan yanıta dahil üstbilgileri tarafından belirlenir, adresinde [http://www.ietf.org](http://www.ietf.org/). HTTP kaynaklar için varsayılan zaman tabanlı ilke ayarı gösteren kod örneği için bkz: [nasıl yapılır: bir uygulama Default Time-Based önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [yapılandırma önbelleği ağ uygulamalarda](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -66,13 +67,13 @@ Bir zamana dayalı önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak
   
  Aşağıdaki konular zamana dayalı önbellek İlkesi ölçütlerini birleştirmenin etkileri hakkında bilgi sağlar:  
   
--   [Önbellek İlkesi etkileşim — en uzun geçerlilik süresi ve en fazla eskime durumu](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+-   [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Fazla Eskime](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Önbellek İlkesi etkileşim — en uzun geçerlilik süresi ve Minimum yenilik](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+-   [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ uygulamaları için önbellek yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Konum temelli önbellek ilkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Ağ uygulamalarında önbelleğe alma yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

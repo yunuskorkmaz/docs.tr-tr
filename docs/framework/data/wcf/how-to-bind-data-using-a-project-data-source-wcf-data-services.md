@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak veri bağlama
 Oluşturulan veri nesneleri temel alan veri kaynakları oluşturabileceğiniz bir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci uygulaması. Kullanarak veri hizmetine başvuru eklediğinizde **hizmet Başvurusu Ekle** iletişim kutusunda, proje veri kaynağı ile birlikte oluşturulan istemci veri sınıflarını oluşturulur. Bir veri kaynağına veri çıkarır hizmeti her varlık kümesi için oluşturulur. Bu veri kaynağı öğeleri sürükleyerek hizmetinden alınan verileri görüntüleyen formlar oluşturabilirsiniz **veri kaynakları** tasarımcıya penceresi. Bu öğeler, veri kaynağı ile ilişkili denetimleri haline gelir. Yürütme sırasında bu veri kaynağı bir örneğine bağlanır <xref:System.Data.Services.Client.DataServiceCollection%601> veri hizmetine bir sorgu tarafından döndürülen nesnelerle doldurulur sınıfı. Daha fazla bilgi için bkz: [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
@@ -128,4 +129,4 @@ Oluşturulan veri nesneleri temel alan veri kaynakları oluşturabileceğiniz bi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+ [Nasıl yapılır: Windows Presentation Foundation Öğelerine Veri Bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

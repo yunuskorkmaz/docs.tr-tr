@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79c4f7e066f4961caa66d3fd19dee9eb0f21ada4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Veri Hizmeti istemci uygulamasında (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlayarak akış. Bir kaynak adres URI sağlar ve istek iletilerini erişmek veya kaynak temsil eden temel alınan veri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu verdiğinde ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -62,5 +63,5 @@ Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../
  Programlama kitaplığı kullanmak için kullanabileceğiniz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] diğer tür istemci uygulamaların akışı. Daha fazla bilgi için bkz: [OData SDK](http://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti kaynaklara erişmeyi](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+ [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

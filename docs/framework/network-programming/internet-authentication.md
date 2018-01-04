@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbf25ae866b338d2f1ac0ea11570e0d535e9137c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-authentication"></a>Internet kimlik doğrulama
 <xref:System.Net> Sınıflarını istemci kimlik doğrulaması mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, NTLM, negotiate ve Kerberos kimlik doğrulaması, yanı sıra oluşturabileceğiniz özel yöntemler.  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  Bazı kimlik doğrulama şemasını bir kullanıcı, bir kaynak için bir istek yapmadan doğrulayabilir. Bir uygulama, böylece en az bir gidiş dönüş sunucuya ortadan kaldırılır kullanıcıyla kaynak preauthenticating tarafından zamandan tasarruf edebilirsiniz. Ya da daha sonra kullanıcıya daha iyi yanıt olması için program başlatma sırasında kimlik doğrulaması gerçekleştirebilir. Ön kimlik doğrulaması kümesi kullanan kimlik doğrulama şemasını <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğine **doğru**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel ve Özet kimlik doğrulaması](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [NTLM ve Kerberos kimlik doğrulaması](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Güvenlik ağ programlama](../../../docs/framework/network-programming/security-in-network-programming.md)
+ [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [NTLM ve Kerberos Kimlik Doğrulaması](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
+ [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

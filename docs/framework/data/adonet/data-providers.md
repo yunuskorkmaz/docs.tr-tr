@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4c11b826a51cc4f1563729728626fb8041e31ee1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırma ve sonuçları için kullanılır. Bu sonuçlar ya da doğrudan yerleştirilen işlenir bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden fazla kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa çıkarılması için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katman işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -168,6 +169,6 @@ using System.Data.OracleClient;
  EntityClient sağlayıcısı, varlık veri modeli (EDM) tabanlı verilerine erişmek için kullanılır. Diğer .NET Framework veri sağlayıcıları farklı olarak, bu veri kaynağı ile doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcı ile iletişim kurmak için varlık SQL kullanır. Daha fazla bilgi için bkz: [EntityClient ve varlık SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET genel bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e7a0af0b5fabdfacfcc825258242868b0fbb513
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d071622862a645d11ea8228574f81d5f8c3e6e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReader
 ADO.NET kullanabilirsiniz **DataReader** bir veritabanından veri salt okunur, yalnızca ileri akışı alınamadı. Sonuçları sorgu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabelleği depolanan gibi döndürülür kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir olduğunda hemen verileri alarak ve (varsayılan) uygulama performansını artırabilirsiniz sistem yükünü azaltma bellekte bir anda yalnızca bir satır depolama.  
@@ -27,36 +28,36 @@ ADO.NET kullanabilirsiniz **DataReader** bir veritabanından veri salt okunur, y
  .NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir <xref:System.Data.Common.DbDataReader> ve <xref:System.Data.Common.DbDataAdapter> nesnesi: OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbDataReader> ve bir <xref:System.Data.OleDb.OleDbDataAdapter> nesnesi, SQL için .NET Framework veri sağlayıcısı Sunucuyu içeren bir <xref:System.Data.SqlClient.SqlDataReader> ve <xref:System.Data.SqlClient.SqlDataAdapter> nesne ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcDataReader> ve bir <xref:System.Data.Odbc.OdbcDataAdapter> nesne ve Oracle için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OracleClient.OracleDataReader> ve bir <xref:System.Data.OracleClient.OracleDataAdapter> nesnesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataReader kullanarak veri alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ [DataReader Kullanarak Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  ADO.NET açıklar **DataReader** nesne ve nasıl sonuçlarının bir akış veri kaynağından döndürmek için kullanılır.  
   
- [DataAdapter kümesinden doldurma](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [DataAdapter’dan bir DataSet Doldurma](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Doldurmak nasıl açıklar bir `DataSet` tabloları, sütunları ve satırları kullanarak bir `DataAdapter`.  
   
- [DataAdapter parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  Parametreler ile komut özelliklerini kullanmayı açıklar bir `DataAdapter` bir sütunun içeriğine eşleme de dahil olmak üzere bir `DataSet` için bir komut parametresi.  
   
- [Varolan kısıtlamaları bir veri kümesine ekleme](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ [DataSet’e Var Olan Kısıtlamaları Ekleme](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Varolan kısıtlamalara eklemeyi açıklar bir `DataSet`.  
   
- [DataAdapter DataTable ve DataColumn eşlemeleri](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
+ [DataAdapter DataTable ve DataColumn Eşlemeleri](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Nasıl ayarlanacağını açıklar `DataTableMappings` ve `ColumnMappings` için bir `DataAdapter`.  
   
- [Sorgu sonucu disk belleği](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ [Sorgu Sonucunu Sayfalama](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Bir sorgunun sonuçlarını veri sayfaları olarak görüntüleme ilişkin bir örnek verilmektedir.  
   
- [Veri kaynakları ile DataAdapters güncelleştiriliyor](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Nasıl kullanılacağını açıklar bir `DataAdapter` değişiklikleri çözümlemek için bir `DataSet` veritabanına.  
   
- [Olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
+ [DataAdapter Olaylarını İşleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  Açıklar `DataAdapter` olaylar ve bunları nasıl kullanacağınızı.  
   
- [DataAdapters kullanarak toplu işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Güncelleştirmeleri uygularken SQL Server'a gidiş dönüş sayısını azaltarak geliştirerek uygulama performansı açıklar `DataSet`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kaynağına bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [İşlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

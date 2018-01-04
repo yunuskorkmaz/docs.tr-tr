@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 448e2c83f6897fd876bb79dfb781bcf4ddd2252b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 69e844532ab7b9979687e54d7ad4076cd3f51f46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; öğesi
 Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) öğesi.  
@@ -86,7 +87,7 @@ Bir kolay ad için bir eşleme olan bir şifreleme sınıfı içeren [ \<nameEnt
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)  
- [Şifreleme sınıflarını yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+ [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

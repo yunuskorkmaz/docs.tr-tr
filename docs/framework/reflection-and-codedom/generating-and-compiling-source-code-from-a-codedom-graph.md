@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
 <xref:System.CodeDom.Compiler> Ad alanı, CodeDOM nesne grafikleri gelen kaynak kodu oluşturma ve derleme desteklenen derleyicileri ile yönetme için arabirim sağlar. Kod sağlayıcının belirli bir programlama dili CodeDOM grafiğe göre kaynak kodunda üretebilir. Öğesinden türeyen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> yöntemler kodu oluşturma ve dil sağlayıcısı Desteler derleme için genellikle sağlayabilir.  
@@ -104,5 +105,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.CodeDom>  
  <xref:System.CodeDom.Compiler>  
- [Dinamik kaynak kodu oluşturma ve derleme](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [Dinamik Kaynak Kodu Oluşturma ve Derleme](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  [CodeDOM hızlı başvuru](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

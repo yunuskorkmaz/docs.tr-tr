@@ -21,11 +21,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
 Visual Studio için geliştirici komut istemi, .NET Framework araçları kolayca kullanmanıza olanak ortam değişkenlerini otomatik olarak ayarlar. Geliştirici komut istemi tam veya topluluk Visual Studio sürümleriyle yüklenir. Visual Studio Express sürümleri ile yüklenmedi.  
@@ -95,5 +96,5 @@ Visual Studio için geliştirici komut istemi, .NET Framework araçları kolayca
  Bundan sonra yeni menü öğesi eklendi ve komut isteminden erişebilirsiniz **Araçları** menüsü.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Dış araçları yönetme](/visualstudio/ide/managing-external-tools)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Dış Araçları Yönetme](/visualstudio/ide/managing-external-tools)

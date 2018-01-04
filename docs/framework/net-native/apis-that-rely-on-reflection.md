@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2f8bb112cb4277a59296cabdc495d45f40bb7e1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49ac12bcae3fd85744961a6e3b81129178c2c323
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
 Bazı durumlarda, kodda yansıma kullanımına açıktır, değil ve bu nedenle [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri çalışma zamanında gereken meta verileri korumak değil. Bu konu, bazı ortak API'ler veya, API yansıma bir parçası olarak kabul değil ancak başarıyla yürütme yansıma kullanan ortak programlama desenleri kapsar. Bunları kaynak kodunda kullanırsanız, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) Bu API çağrıları değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında diğer bazı bir özel durum.  
@@ -102,4 +103,4 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

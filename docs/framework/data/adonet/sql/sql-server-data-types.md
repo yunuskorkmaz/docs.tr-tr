@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server veri türleri ve ADO.NET
 SQL Server ve .NET Framework olası veri kaybına yol açabilir farklı tür sistemlerde temel alır. Veri bütünlüğü, SQL Server için .NET Framework veri sağlayıcısı korumak için (<xref:System.Data.SqlClient>) SQL Server verilerle çalışmak için yazılan erişimci yöntemleri sağlar. Numaralandırmalara kullanabilirsiniz <xref:System.Data.SqlDbType> belirtmek için sınıflar <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -33,22 +34,22 @@ SQL Server ve .NET Framework olası veri kaybına yol açabilir farklı tür sis
 1.  [Veri türleri (veritabanı altyapısı)](http://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SqlTypes ve veri kümesi](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlTypes ve DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  Türü desteğini açıklar `SqlTypes` içinde `DataSet`.  
   
- [Boş değerler işleme](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [Null Değerleri İşleme](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  Null değerler ve üç değerli mantığı ile nasıl çalışılacağı gösterir.  
   
- [Karşılaştırma GUID ve uniqueidentifier değerleri](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
+ [GUID ve uniqueidentifier Değerlerini Karşılaştırma](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
  SQL Server ve .NET Framework GUID ve uniqueidentifier değerlerle çalışma gösterir.  
   
- [Tarih ve saat verilerini](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
+ [Tarih ve Saat Verileri](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  SQL Server 2008'de sunulan yeni tarih ve saat veri türleri kullanmayı açıklar.  
   
- [Büyük atama](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [Büyük UDT’ler](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  SQL Server 2008'de sunulan atama büyük değerinden veri almayı gösterir.  
   
- [SQL Server'da XML verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [SQL Server'da XML Verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  SQL Server'dan alınan XML veri ile nasıl çalışılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -65,8 +66,8 @@ SQL Server ve .NET Framework olası veri kaybına yol açabilir farklı tür sis
  Açıklar `DbType` numaralandırma ve tüm üyeleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Yapılandırma parametreleri ve parametre veri türleri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Tablo değerli parametreleri](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
- [SQL Server ikili ve değeri büyük veri](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Tablo Değerli Parametreler](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

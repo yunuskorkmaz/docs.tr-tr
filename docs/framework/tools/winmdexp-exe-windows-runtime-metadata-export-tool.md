@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4571d7576bc81432c87e0371ae0b6df3261f5f08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91edc97794f66edd3a3db7892d57ef5f0c8265c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta veri verme aracı (Winmdexp.exe) içeren bir dosyayı bir .NET Framework modül dönüştüren [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçimi kullanın, .NET Framework derlemeleri olarak otomatik olarak kullanılabilir olmadığını anlamına gelir meta verileri tabloların içeriğini farklılıklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . .NET Framework modüle kapatma işlemi bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen olarak adlandırılır *dışarı aktarma*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta ortaya çıkan Windows Meta veriler (.winmd) dosya meta verileri ve uygulama içerir.  
@@ -59,7 +60,7 @@ winmdexp [options] winmdmodule
  Yazdığınız zaman bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama veya bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşeni C# veya Visual Basic ile .NET Framework ile programlama yapmak için destek sağlar [!INCLUDE[wrt](../../../includes/wrt-md.md)] daha doğal. Bu makalede açıklanan [Windows mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Bazı yaygın olarak kullanılan işleminde, [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri için .NET Framework türleri eşlendi. Winmdexp.exe bu işlem tersine çevirir ve karşılık gelen kullanan bir API yüzeyi üretir [!INCLUDE[wrt](../../../includes/wrt-md.md)] türleri. Örneğin, gelen oluşturulan türleri <xref:System.Collections.Generic.IList%601> gelen oluşturulan türleri için arabirim eşlemesi [!INCLUDE[wrt](../../../includes/wrt-md.md)] [IVector\<T >](http://go.microsoft.com/fwlink/p/?LinkId=251132)arabirimi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows mağazası uygulamaları ve Windows çalışma zamanı için .NET framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
- [Winmdexp.exe hata iletileri](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
+ [Winmdexp.exe Hata İletileri](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
  [Yapı, dağıtım ve yapılandırma araçları (.NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)

@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876635cfe0349c734a61dcc827a6f9594bb2a5d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma, tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama bir yöntemdir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak istediğiniz sistem yöneticileri için değildir.  
@@ -75,4 +76,4 @@ Profil oluşturma, tüm geliştirme ve dağıtım senaryosunda performans verile
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Hesaplama formülü belirtir `NextValue` yöntemi için bir `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)
+ [Performans Sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)

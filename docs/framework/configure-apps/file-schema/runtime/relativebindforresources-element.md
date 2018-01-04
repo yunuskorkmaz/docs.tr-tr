@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ffd5b62e0759b3a4f97e105e884912a41f0117de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8409b1fe86776397ceb3db5b338fb8aaadef9cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt; öğesi
 Araştırması için uydu derlemelerini en iyi duruma getirir.  
@@ -80,6 +81,6 @@ Araştırması için uydu derlemelerini en iyi duruma getirir.
 -   Değil Yükselt <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Paketleme ve dağıtma kaynakları](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Kaynakları Paketleme ve Dağıtma](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
 Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için bir işlem hattı oluşturma açıklar. Gerçek dünya senaryoları gösterilmemiştir; Bunun yerine, bir ardışık düzen ve nasıl bir eklenti için hizmetleri bir konak sağlayabilir temel işlevselliğini gösterir.  
@@ -327,7 +328,7 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
   
 1.  Çözümdeki her proje için kullanmak **yapı** sekmesinde **proje özelliklerini** ( **derleme** sekmesini Visual Basic'te) değerini ayarlamak için **çıkış yolu**  ( **yapı çıkış yolu** Visual Basic'te). Uygulama klasörünüzde adlandırırsanız `MyApp`, örneğin, projelerinizi aşağıdaki klasörler halinde oluşturmayı tercih:  
   
-    |Project|Yol|  
+    |Proje|Yol|  
     |-------------|----------|  
     |AddInCalcV1|MyApp\Pipeline\AddIns\CalcV1|  
     |Calc1AddInSideAdapter|MyApp\Pipeline\AddInSideAdapters|  
@@ -367,4 +368,4 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
  [İzlenecek yol: Geçirme koleksiyonları arasında konakları ve eklentiler](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [Ardışık Düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [Sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Ardışık Düzen geliştirme](../../../docs/framework/add-ins/pipeline-development.md)
+ [İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)

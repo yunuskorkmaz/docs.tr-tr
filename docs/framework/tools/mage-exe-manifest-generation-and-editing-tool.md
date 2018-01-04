@@ -16,11 +16,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 Bildirim Oluşturma ve Düzenleme Aracı (Mage.exe), uygulama ve dağıtım bildirimlerinin oluşturulmasını ve düzenlenmesini destekleyen bir komut satırı aracıdır. Bir komut satırı aracı Mage.exe hem toplu komut dosyaları hem de dahil olmak üzere diğer Windows tabanlı uygulamalar çalıştırılabilir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamalar.  
@@ -203,8 +204,8 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Güvenilir Uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
- [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
+ [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

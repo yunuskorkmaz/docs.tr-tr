@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f804843c248e0051582aca6d1dd6328871e1cc06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0682fd149134531781346d21245a0b1fd3fc4d43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
 Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir, ayrı COM temsil eden bir veya daha fazla birlikte çalışma derlemeleri tür kitaplıkları ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] almak ve birlikte çalışabilirlik bütünleştirilmiş bir tür kitaplığı dönüştürmek için Araçlar'da anlatıldığı gibi sağlamak [tür kitaplığını derleme olarak içeri aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yol vardır:  
@@ -55,7 +56,7 @@ Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir
  Birden çok uygulama tarafından paylaşılan derlemeleri genel derleme önbelleğine merkezi bir depoda yüklü olmalıdır. .NET istemcileri imzalanmış ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi'nın aynı kopyasını erişebilir. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM bileşenlerini .NET Framework'te gösterme](../../../docs/framework/interop/exposing-com-components.md)  
- [Tür kitaplığını derleme olarak içeri aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)  
+ [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
  [Yönetilen kodda COM türlerini kullanma](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
- [Birlikte çalışma projesi derleme](../../../docs/framework/interop/compiling-an-interop-project.md)
+ [Birlikte Çalışma Projesi Derleme](../../../docs/framework/interop/compiling-an-interop-project.md)

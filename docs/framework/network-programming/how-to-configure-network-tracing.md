@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ İzlemeyi Yapılandır
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [etkinleştirme ağ izleme](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -106,7 +107,7 @@ Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve
 |`Tracemode`|İsteğe bağlı <xref:System.String> özniteliği. Kümesine `includehex` Protokolü izlemeleri onaltılık ve metin biçiminde göstermek için. Kümesine `protocolonly` yalnızca metin göstermek için. Varsayılan değer `includehex` şeklindedir.<br /><br /> Bu öznitelik üzerinde ayarlamalısınız \<anahtarları > örnekte gösterildiği gibi öğesi. Bu öznitelik altında bir öğede ayarlanırsa bir özel durum \<kaynak > öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ izleme yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [.NET Framework'te ağ izleme](../../../docs/framework/network-programming/network-tracing.md)  
- [Ağ izlemeyi etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)  
+ [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [İzleme ve izleme giriş](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

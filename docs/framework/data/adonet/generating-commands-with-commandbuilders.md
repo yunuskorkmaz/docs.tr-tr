@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e945b4b6c646a0210f781d1ba43b5cd931cfef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0227da6029f1c565f44c46a08d786149d6da5086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Komutları CommandBuilders ile oluşturma
 Zaman `SelectCommand` gibi bir metinsel komutu kullanıcıdan götüren bir sorgu aracıyla, uygun belirlemek mümkün olmayabilir özelliği çalışma zamanında dinamik olarak belirtilen `InsertCommand`, `UpdateCommand`, veya `DeleteCommand` tasarım zamanında. Varsa, <xref:System.Data.DataTable> eşlendiği veya oluşturulan tek veritabanı tablosundan özelliklerden yararlanabilirsiniz <xref:System.Data.Common.DbCommandBuilder> otomatik olarak oluşturmak için nesne `DeleteCommand`, `InsertCommand`, ve `UpdateCommand` , <xref:System.Data.Common.DbDataAdapter>.  
@@ -119,7 +120,7 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Bir komutu yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

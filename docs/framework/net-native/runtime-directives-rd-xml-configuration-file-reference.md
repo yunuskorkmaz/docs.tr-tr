@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f452a32b209c30175f95aec7a8a90e0783c10086
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 Çalışma zamanı yönergeleri (. rd.xml) atanan program öğeleri yansıma için kullanılabilir olup olmadığını belirten bir XML yapılandırma dosyasını bir dosyadır. Aşağıda, bir çalışma zamanı yönergeleri dosyası örneği verilmiştir:  
@@ -468,5 +469,5 @@ ms.lasthandoff: 11/21/2017
  Daha fazla bilgi için "Serileştiricileri farklar" bölümüne bakın [geçirme Windows mağazası uygulamanızı .NET yerele](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı yönerge öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md)
+ [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

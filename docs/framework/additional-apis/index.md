@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c22de3ed401e0be10b155649395da43cedb35e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'leri
 
@@ -32,7 +33,7 @@ Ayrıca, bazı kitaplıklar belirli platformlar veya .NET Framework uygulamalar�
   
 ## <a name="oob-projects"></a>OOB projeleri
   
-| Project | Açıklama |  
+| Proje | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | İş parçacığı güvenli ve hiçbir zaman içeriklerini değiştirmek için garantili olan koleksiyonları sağlar. |
 | <xref:System.Net.Http.WinHttpHandler> | Bir ileti işleyicisi sağlar <xref:System.Net.Http.HttpClient> Windows WinHTTP arabirimi esas alan. |
@@ -41,7 +42,7 @@ Ayrıca, bazı kitaplıklar belirli platformlar veya .NET Framework uygulamalar�
 
 ## <a name="platform-specific-libraries"></a>Platforma özgü kitaplıkları
   
-| Project | Açıklama |  
+| Proje | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Genişletir <xref:System.Text.EncodingProvider> kod sayfası Kodlamalar Evrensel Windows platformu hedefleyen uygulamalar kullanılabilir hale getirmek için sınıf. |  
   
@@ -65,4 +66,4 @@ Bu API ürün altyapısını destekleyen ve amaçlanan/desteklenen doğrudan kod
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET Framework ve bant dışı yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+[.NET Framework ve Bant Dışı Yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)

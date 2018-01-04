@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfc50ab7caef79010e4e68380654c918514379b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 43c4a1d0e8805fc3692aa96668a7f3ea567718f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugboxvalue-interface1"></a>Icordebugboxvalue Interface1
 "Paketlenmiş değer sınıfı nesneyi temsil ediyor Icordebugheapvalue" sınıfıdır.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetObject yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Arabirim işaretçisi Kutulu "ICorDebugObjectValue" örneğinde alır.|  
+|[GetObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Arabirim işaretçisi Kutulu "ICorDebugObjectValue" örneğinde alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,4 +50,4 @@ ms.lasthandoff: 10/18/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

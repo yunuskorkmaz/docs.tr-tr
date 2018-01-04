@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 685651f4291a11b857da82a63068e4bd2333275c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1ef47e6b4f584e0a49482d9eb2ed7bf14602a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities Visual Basic veya Visual C# kullanarak Entity Framework kavramsal model sorguları yazmaya geliştiricilerinin dil ile tümleşik sorgu (LINQ) desteği sağlar. Entity Framework sorguları karşı nesne bağlamı yürütme komut ağacı sorgular tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. İşlem oluşturma ve bir LINQ to Entities sorgusunun yürütülmesi için aşağıdadır:  
@@ -78,28 +79,28 @@ LINQ to Entities Visual Basic veya Visual C# kullanarak Entity Framework kavrams
  Daha fazla bilgi için bkz: [sorgu sonuçları](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [LINQ to Entities sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
+ [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
   
- [LINQ to Entities sorgu ifadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
+ [LINQ to Entities Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
- [LINQ to Entities sorgularında işlevleri çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
- [Derlenmiş sorgu (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
+ [Derlenmiş Sorgular (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
- [Sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
+ [Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
- [Sorgu sonuçları](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
+ [Sorgu Sonuçları](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
- [LINQ to Entities sorgularında standart sorgu işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
+ [LINQ to Entities Sorgularında Standart Sorgu İşleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [Kurallı işlev eşlemesi için CLR yöntemi](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [CLR Yöntemini Kurallı İşlev ile Eşleme](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
- [Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
- [Bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ ve ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

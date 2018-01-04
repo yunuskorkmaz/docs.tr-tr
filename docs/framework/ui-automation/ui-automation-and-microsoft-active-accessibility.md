@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dd3adbeebc0cc2a9e201bbe6492eb311f18a711d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -260,4 +261,4 @@ ms.lasthandoff: 10/18/2017
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Modeli aracılığıyla başka bir sağlayıcı kod çağırmak sağlayıcıları gereksinimini ortadan kaldırır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Çekirdek hizmeti tüm gerekli toplama yapar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon temelleri](../../../docs/framework/ui-automation/index.md)
+ [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)

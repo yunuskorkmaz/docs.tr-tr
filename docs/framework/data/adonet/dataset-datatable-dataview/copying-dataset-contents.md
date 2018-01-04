@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69709fea628e6cb1d10a23f29b60911ab07e1111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f9eac80d7a6679e7b3717446e79caf54a5fed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-dataset-contents"></a>Veri kümesi içeriği kopyalama
 Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece iş verilerle özgün veriler etkilenmeden veya iş verilerini bir kümeyle bir **DataSet**. Kopyalama işlemi sırasında bir **DataSet**, şunları yapabilirsiniz:  
@@ -107,5 +108,5 @@ foreach (DataRow copyRow in copyRows)
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

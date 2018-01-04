@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (varlık SQL)
 Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri karşılaştırma türü örnekleri içerir:  
@@ -76,7 +77,7 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
 ## <a name="supported-combinations"></a>Desteklenen birleşimleri  
  Aşağıdaki tabloda her türde Karşılaştırma işleçleri tüm desteklenen birleşimleri gösterilmektedir:  
   
-|**Türü**|**=**<br /><br /> **!=**|**GRUPLANDIRMA ÖLÇÜTÜ**<br /><br /> **FARKLI**|**BİRLEŞİM**<br /><br /> **INTERSECT**<br /><br /> **DIŞINDA**<br /><br /> **AYARLAMA**<br /><br /> **ÇAKIŞIYOR**|**IN**|**<   <=**<br /><br /> **>   >=**|**SIRALAMA ÖLÇÜTÜ**|**NULL**<br /><br /> **NULL OLMAYAN**|  
+|**Türü**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **FARKLI**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL OLMAYAN**|  
 |-|-|-|-|-|-|-|-|  
 |Varlık türü|Ref<sup>1</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
 |karmaşık türü|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
@@ -113,4 +114,4 @@ WHERE p1 != REF(p2)
  <sup>5</sup>başvuruları tüm ayrı ayrı öğeler karşılaştırılır (Bu varlık kümesi adı ve varlık türünün tüm anahtar özellikleri içerir).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

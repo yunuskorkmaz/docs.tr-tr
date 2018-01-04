@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a347818818fe7c6e15535fd0c2c24548c52e57d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03c2da9f65964a9ed43d1e82abf779b43be733ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-across-relationships"></a>İlişkiler arasında sorgulama
 Diğer nesne veya koleksiyonlar, sınıf tanımları diğer nesnelerin başvurular doğrudan veritabanında yabancı anahtar ilişkileri karşılık gelir. İlişki özelliklerine erişmek ve başka bir nesneden gezinmek için noktalı gösterim kullanarak sorguladığınızda, bu ilişkileri kullanabilirsiniz. Daha karmaşık birleştirmeler ya da eşdeğer SQL bağlantılı sorgularda erişim işlemlerini çevir.  
@@ -63,4 +64,4 @@ WHERE  (t0.City = @p0)
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

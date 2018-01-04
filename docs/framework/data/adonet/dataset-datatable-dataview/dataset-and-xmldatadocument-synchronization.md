@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Veri kümesi ve XmlDataDocument eşitleme
 ADO.NET <xref:System.Data.DataSet> ile ilişkisel bir veri gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework kullanılabilen XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki veri sunumu ayrı olarak kullanıldı. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik gösterimlerini gerçek zamanlı, zaman uyumlu erişimini etkinleştirir **DataSet** nesne ve <xref:System.Xml.XmlDataDocument> nesnesi, sırasıyla.  
@@ -100,23 +101,23 @@ ADO.NET <xref:System.Data.DataSet> ile ilişkisel bir veri gösterimini sağlar.
  Eşitleme yaparken bir **DataSet** ile bir **XmlDataDocument**, sonuçları olup olmadığını bağlı olarak değişebilir, <xref:System.Data.DataRelation> nesneleri iç içe geçmiş. Daha fazla bilgi için bkz: [iç içe geçme DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir veri kümesi XmlDataDocument ile eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [DataSet’i bir XmlDataDocument ile Eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Kesin türü belirtilmiş eşitleme gösteren **DataSet**, en az şemasıyla ile bir **XmlDataDocument**.  
   
- [Bir veri kümesine XPath sorgusunu gerçekleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [DataSet Üzerinde XPath Sorgusu Gerçekleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  İçeriğine XPath sorgusunu gerçekleştirme gösteren bir **DataSet**.  
   
- [Bir veri kümesine bir XSLT dönüşümü uygulanarak](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [DataSet’e XSLT Dönüşümü Uygulama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  İçeriği için bir XSLT dönüşümü uygulanarak gösteren bir **DataSet**.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Bir veri kümesini XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Açıklar nasıl **DataSet** yükleme ve içeriği kalıcı yapma dahil olmak üzere bir veri kaynağı olarak XML ile etkileşime giren bir **DataSet** XML verileri olarak.  
   
- [İç içe geçme DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Önem düzeyi açıklanmaktadır iç içe geçmiş **DataRelation** nesneleri içeriğini temsil eden olduğunda bir **DataSet** XML verileri olarak ve bu ilişkileri oluşturmayı açıklar.  
   
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Açıklar **DataSet** ve uygulama verilerini yönetmek ve ilişkisel veritabanları ve XML gibi veri kaynakları ile etkileşim kurmak için kullanma.  
   
  <xref:System.Xml.XmlDataDocument>  

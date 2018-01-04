@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9110cec32075c85807d3ef1550ae1a9e63b4239f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5433ef17ec2eec7fe80145a6356d230b9d01a7d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Saklı yordamları kullanarak işlemleri özelleştirme
 Saklı yordamlar varsayılan davranışı geçersiz kılma için ortak bir yaklaşım temsil eder. Bu konuda Göster nasıl kullanacağınızı örneklerde yöntemi sarmalayıcıları saklı yordamları ve nasıl saklı yordamlar doğrudan çağırabilir miyim oluşturulur.  
@@ -58,4 +59,4 @@ Saklı yordamlar varsayılan davranışı geçersiz kılma için ortak bir yakla
  [!code-vb[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan davranışı geçersiz kılma, geliştirici sorumlulukları](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+ [Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnet
+ms.openlocfilehash: ce210e1da2002fe599a3703ec90374afba843c3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli parametreleri
 Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı sıralama için kolay bir yol sağlamak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] verileri işlemek için birden çok gidiş dönüş veya özel bir sunucu tarafı mantık gerektiren olmadan. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -281,8 +282,8 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma parametreleri ve parametre veri türleri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Komutları ve parametreleri](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [SQL Server veri işlemleri ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [Komutlar ve Parametreler](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6cbb6d4c11c06c1771cb32021c6c148564a6034a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a316ae288d677a0ad5bd602399e27389839ef092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Bir Entity Framework veri sağlayıcısı yazma
 Bu bölümde nasıl yazılacağından bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dışında bir veri kaynağı desteklemek için sağlayıcı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen bir sağlayıcı içerir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
@@ -45,11 +46,11 @@ Bu bölümde nasıl yazılacağından bir [!INCLUDE[adonet_ef](../../../../../in
  Bkz: [Entity Framework örnek sağlayıcısı](http://go.microsoft.com/fwlink/?LinkId=180616) örneği için bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dışında bir veri kaynağı destekleyen sağlayıcı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
+ [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  
   
- [Değişiklik SQL oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
+ [Değişiklik SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md)  
   
- [Sağlayıcı bildirimi belirtimi](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
+ [Sağlayıcı Bildirimi Belirtimi](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri sağlayıcıları ile çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+ [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5957dee03d7f3cd54b3fdacd0d38dead5bbc077d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre olarak XML değerleri belirtme
 Bir sorgu, değeri olan bir XML dizesi parametre gerektiriyorsa, geliştiricilerin bir örneği kullanılarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten hiçbir püf noktaları; yok XML sütunları [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] parametre diğer veri türleri tam olarak aynı şekilde değerleri kabul edin.  
@@ -171,5 +172,5 @@ class Class1
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.SqlTypes.SqlXml>  
- [SQL Server'da XML verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [SQL Server'da XML Verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

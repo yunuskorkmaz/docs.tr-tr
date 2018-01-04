@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 54e9a3b6f72eee2246d2c76b10e01fe011435b3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87f3dfbb3af6e638207d68540217f7134b95c354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için sağlayıcı istatistikleri
 .NET Framework sürüm 2.0 ile başlayarak, SQL Server için .NET Framework veri sağlayıcısı çalışma zamanı istatistikleri destekler. Ayarlayarak istatistikleri etkinleştirmelisiniz <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> nesnesine `True` oluşturulan geçerli bir bağlantı nesnesi sonra. İstatistikleri etkinleştirildikten sonra bunları "anlık görüntü olarak zaman içinde" alarak gözden geçirebilirsiniz bir <xref:System.Collections.IDictionary> aracılığıyla başvuru <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> nesnesi. Ad/değer çifti dictionary girişlerinin bir dizi listesini numaralandırır. Bu ad/değer çiftleri sırasız şunlardır. Herhangi bir zamanda çağırabilirsiniz <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> sayaçları sıfırlamak için nesne. Toplama istatistiği etkin değil, bir özel durum oluşturulmaz. Ayrıca, varsa <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> olmadan adlı <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ilk çağrılmış alınan her giriş için başlangıç değerlerini değerlerdir. İstatistikleri etkinleştirirseniz, bir süre için uygulamanızı çalıştırın ve istatistikleri devre dışı bırakmak, alınan değerleri nerede istatistikleri devre dışı bırakılan noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel bir bağlantı başına temelinde değerlerdir.  

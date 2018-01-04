@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7349864e8b191060964a7e716b34a0a7587e8f36
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55ed062ce2b4464618dfdb8184be65847195280d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Nasıl yapılır: sorgu seçeneklerini veri hizmeti sorguya (WCF Veri Hizmetleri) ekleme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Veri Hizmeti .NET Framework tabanlı istemci uygulamasından oluşturulan istemci veri hizmeti sınıflarını kullanarak sorgulama olanak tanır. İstenen sorgu seçeneklerini içeren bir dilde tümleşik sorgu (LINQ) sorgu ifadesi oluşturmak için bunu yapmanın en kolay yoludur. LINQ Sorgu yöntemleri eşdeğer bir sorgu oluşturmak için bir dizi ayrıca çağırabilirsiniz. Son olarak, kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> yöntemi sorgu seçeneklerini bir sorguya ekleyin. Her durumda, istemci tarafından oluşturulan URI uygulanan seçili sorgu seçenekleriyle istenen varlık kümesini içerir. Daha fazla bilgi için bkz: [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -56,5 +57,5 @@ ms.lasthandoff: 12/02/2017
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [Nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+ [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [Nasıl Yapılır: Sorgu Sonuçlarını Yansıtma](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

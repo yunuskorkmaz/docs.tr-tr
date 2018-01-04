@@ -15,11 +15,12 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
@@ -30,14 +31,14 @@ ms.lasthandoff: 10/18/2017
  Bu belgede açıklanmaktadır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] yönetilen kod için. İçin programlama hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] C++'da, bkz: [Win32 uygulamaları için UI Otomasyon](https://msdn.microsoft.com/library/ms726294.aspx).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [En iyi erişilebilirlik uygulamaları](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
- [UI Otomasyon temelleri](../../../docs/framework/ui-automation/index.md)  
- [Yönetilen kod için UI Otomasyon sağlayıcılar](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [Yönetilen kod için UI Otomasyon istemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
- [UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [UI Otomasyon metin düzeni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Otomasyon denetim türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
- [UI Otomasyonu belirtimi ve topluluk taahhüdü](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
+ [En İyi Erişilebilirlik Uygulamaları](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
+ [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)  
+ [Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
+ [Yönetilen Kod İçin UI Otomasyonu İstemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
+ [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [UI Otomasyonu Metin Deseni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
+ [UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [UI Otomasyonu Belirtimi ve Topluluk Taahhüdü](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Erişilebilirlik örnekleri](https://msdn.microsoft.com/library/ms771315.aspx)

@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -20,13 +21,13 @@ Yerel bağımlılıkları olan paketleri için hangi platformlarda paketi geri y
 
 RID ayarlanabilir `<RuntimeIdentifier>` proje dosyanızı öğesidir. Ayrıca aracılığıyla kullanıldıklarından `--runtime` aşağıdaki seçeneğiyle [.NET Core CLI komutları](./tools/index.md):
 
-- [DotNet derleme](./tools/dotnet-build.md)
-- [DotNet Temizle](./tools/dotnet-clean.md)
-- [DotNet paketi](./tools/dotnet-pack.md)
-- [DotNet yayımlama](./tools/dotnet-publish.md)
-- [DotNet geri yükleme](./tools/dotnet-restore.md)
-- [dotnet çalıştırın](./tools/dotnet-run.md)
-- [DotNet deposu](./tools/dotnet-store.md)
+- [dotnet build](./tools/dotnet-build.md)
+- [dotnet clean](./tools/dotnet-clean.md)
+- [dotnet pack](./tools/dotnet-pack.md)
+- [dotnet publish](./tools/dotnet-publish.md)
+- [dotnet restore](./tools/dotnet-restore.md)
+- [dotnet run](./tools/dotnet-run.md)
+- [dotnet store](./tools/dotnet-store.md)
 
 Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: `[os].[version]-[architecture]-[additional qualifiers]` burada:
 

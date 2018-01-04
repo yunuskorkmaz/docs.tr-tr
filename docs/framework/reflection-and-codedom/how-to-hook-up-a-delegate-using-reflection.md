@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72d2061d8e4432422eeb2a30c916af7e254b4f81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ff800eb78b07fc79193c2aa8cb71a461be2fc1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
 Yük ve derlemeler çalıştırmak için yansıma kullandığınızda gibi C# dil özellikleri kullanamazsınız `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olaylarını bağlanmanıza. Aşağıdaki yordamlar nasıl yansıma yoluyla tüm gerekli türlerin alarak varolan bir yöntemi bir olaya bağlanacağını gösterir ve yansıma kullanarak dinamik bir yöntemi nasıl oluşturulacağını yayma ve olaya kadar bağlayın.  
@@ -126,5 +127,5 @@ Yük ve derlemeler çalıştırmak için yansıma kullandığınızda gibi C# di
  <xref:System.Reflection.Emit.DynamicMethod>  
  <xref:System.Activator.CreateInstance%2A>  
  <xref:System.Delegate.CreateDelegate%2A>  
- [Nasıl yapılır: dinamik yöntemleri çalıştırma ve tanımlayın](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)  
+ [Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)  
  [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)

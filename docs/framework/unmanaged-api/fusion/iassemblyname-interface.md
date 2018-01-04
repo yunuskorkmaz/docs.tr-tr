@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1d11889ab9db408b6e703bbaec17fd0487f142a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 902ad9f67d06306e79666f0e10d85bdb9c65c377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName Arabirimi
 Açıklayan ve bir derlemenin benzersiz kimliği ile çalışmak için yöntemler sağlar.  
@@ -32,14 +33,14 @@ Açıklayan ve bir derlemenin benzersiz kimliği ile çalışmak için yöntemle
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyName` nesnesi.|  
-|[Finalize yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Böylece `IAssemblyName` kaynakları serbest bırakır ve onun yıkıcı çağrılmadan önce diğer temizleme işlemleri gerçekleştirmek için nesne.|  
-|[GetDisplayName yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Bu tarafından başvurulan derleme okunabilir adını alır `IAssemblyName` nesnesi.|  
-|[GetName yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Bu tarafından başvurulan derleme basit, şifrelenmemiş adını alır `IAssemblyName` nesnesi.|  
-|[GetProperty yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Belirtilen tarafından başvurulan özelliği için bir işaretçi alır `PropertyId`.|  
-|[GetVersion yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Bu tarafından başvurulan derlemenin sürüm bilgisi alır `IAssemblyName` nesnesi.|  
-|[Isequal yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Belirtilen bir olup olmadığını belirleyen `IAssemblyName` nesnesidir için eşit `IAssemblyName`, belirtilen karşılaştırma bayrakları göre.|  
-|[SetProperty yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Belirtilen tarafından başvurulan özelliğinin değeri ayarlar `PropertyId`.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyName` nesnesi.|  
+|[Finalize Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Böylece `IAssemblyName` kaynakları serbest bırakır ve onun yıkıcı çağrılmadan önce diğer temizleme işlemleri gerçekleştirmek için nesne.|  
+|[GetDisplayName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Bu tarafından başvurulan derleme okunabilir adını alır `IAssemblyName` nesnesi.|  
+|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Bu tarafından başvurulan derleme basit, şifrelenmemiş adını alır `IAssemblyName` nesnesi.|  
+|[GetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Belirtilen tarafından başvurulan özelliği için bir işaretçi alır `PropertyId`.|  
+|[GetVersion Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Bu tarafından başvurulan derlemenin sürüm bilgisi alır `IAssemblyName` nesnesi.|  
+|[IsEqual Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Belirtilen bir olup olmadığını belirleyen `IAssemblyName` nesnesidir için eşit `IAssemblyName`, belirtilen karşılaştırma bayrakları göre.|  
+|[SetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Belirtilen tarafından başvurulan özelliğinin değeri ayarlar `PropertyId`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,5 +50,5 @@ Açıklayan ve bir derlemenin benzersiz kimliği ile çalışmak için yöntemle
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Iassemblyenum arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+ [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

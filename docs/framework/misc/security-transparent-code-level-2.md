@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0bd4ee6c43b5089c45789b4f22326e17ec2218c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 <a name="top"></a>
@@ -201,4 +202,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md)
+ [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)

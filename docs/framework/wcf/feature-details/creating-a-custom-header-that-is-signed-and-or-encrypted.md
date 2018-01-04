@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d637dfaa4b3639d1e47280c423489735844a2a47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b0faa62d75c506fd93c17c6a67aaecdd22bc8c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Özel bir başlık oluşturma imzalandığından ve- veya şifrelenmiş
 WCF istemcisi kullanarak bir WCF olmayan hizmeti çağrılırken bazen özel SOAP üstbilgileri kullanmak gereklidir. İmzalanabilir ve şifrelenebilir özel üstbilgileri olmayan WCF Hizmeti ile çalışmasını engelleyen WCF Standartlaştırma hata yoktur. Sorun varsayılan XML ad alanları yanlış Standartlaştırma tarafından kaynaklanır. Bu yalnızca olmayan WCF hizmetleri ile imzalanmış ve/veya şifrelenmiş özel üstbilgileri çağrılırken sorunlu oluşturur.  Hizmeti imzalanmış ve/veya şifrelenmiş özel üstbilgi içeren ileti aldığında imzayı doğrulamak alamıyor. Bu geçici çözüm Standartlaştırma hatayı ortadan kaldırır, WCF olmayan Hizmetleri ile birlikte çalışabilirlik sağlar, ancak WCF hizmetleri ile birlikte çalışabilirlik engellemez.  
@@ -67,6 +68,6 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan ileti sözleşmesi](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [İleti sözleşmeleri](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [İleti sözleşmeleri kullanılıyor](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Varsayılan İleti Anlaşması](../../../../docs/framework/wcf/samples/default-message-contract.md)  
+ [İleti Anlaşmaları](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ [İleti Anlaşmaları Kullanma](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

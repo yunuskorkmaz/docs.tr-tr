@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>Görüntüde Hata Ayıklamayı Kolaylaştırma
 Yönetilmeyen kod derlerken ayar IDE anahtarları veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir görüntü yapılandırabilirsiniz. Örneğin, kullanabileceğiniz /**Zi** Visual c++ komut satırı seçeneği, hata ayıklama simge dosyaları (dosya uzantısı .pdb) yaymak üzere isteyebilir. Benzer şekilde, /**Od** iyileştirme devre dışı bırakmak için derleyici komut satırı seçeneği söyler. Ortaya çıkan kodu daha yavaş çalışır, ancak bu gerekli olmalıdır hata ayıklamak daha kolay olur.  
@@ -64,6 +65,6 @@ AllowOptimize=0
 >  Microsoft Visual C++ Derleyici sürümünde .NET Framework 1.0 ekler **DebuggableAttribute** zaman **/CLR** ve **/zı** derleyici seçenekleri belirtilir. Sürümünde .NET Framework 1.1, ya da eklemelisiniz **DebugabbleAttribute** el ile kod veya kullanım içinde **/ASSEMBLYDEBUG** bağlayıcı seçeneği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama, izleme ve profil oluşturma](../../../docs/framework/debug-trace-profile/index.md)  
- [JIT-ekleme hata ayıklama etkinleştirme](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
+ [Hata Ayıklama, İzleme ve Profil Oluşturma](../../../docs/framework/debug-trace-profile/index.md)  
+ [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [Profil oluşturma etkinleştirme](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)

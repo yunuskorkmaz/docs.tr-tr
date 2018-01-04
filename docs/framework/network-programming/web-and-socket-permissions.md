@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 102d7d92384d77b5fbb56cd8c3eb859ec64bcca0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b426b5e7e6a9b617311db05670f526fc415d591d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-and-socket-permissions"></a>Web ve yuva izinleri
 Internet güvenliği kullanan uygulamalar için <xref:System.Net> ad alanı tarafından sağlanan <xref:System.Net.WebPermission> ve <xref:System.Net.SocketPermission> sınıfları. **WebPermission** sınıfı, bir uygulamanın sağ istek verileri için bir URI veya Internet'e bir URI sunmak için denetler. **SocketPermission** sınıfı bir uygulamayı kullanmak doğru denetimleri bir <xref:System.Net.Sockets.Socket> yerel bağlantı noktası verileri kabul etmek veya başka bir adresinde konak, bağlantı noktası numarası, temel bir aktarım protokolünü kullanarak uzak aygıtlar iletişim kurmak için ve Soket Aktarım Protokolü.  
@@ -44,4 +45,4 @@ Internet güvenliği kullanan uygulamalar için <xref:System.Net> ad alanı tara
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik](../../../docs/standard/security/index.md)  
- [Güvenlik ağ programlama](../../../docs/framework/network-programming/security-in-network-programming.md)
+ [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

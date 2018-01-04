@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8142ef17bdfb78226e7a65376e132bad18bc258e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68ff7e03fe30ff61a35b20517ebaea73144ff621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Yönetilen Kod İçin UI Otomasyon İstemcileri
 > [!NOTE]
@@ -30,15 +31,15 @@ ms.lasthandoff: 10/18/2017
  Bu bölümde, genel bakışlar ve UI Otomasyon istemcileri geliştirmenize yardımcı olması için nasıl yapılır konuları içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI otomasyon ve ekran ölçeklendirme](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Standart denetimler için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [İstemciler için UI Otomasyon olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [UI otomasyonda önbelleğe alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [İstemciler için UI Otomasyon özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [UI Otomasyon istemcileri için Denetim düzeni eşleştirmesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [İstemciler için UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Otomasyon öğelerini alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [UI Otomasyon iş parçacığı oluşturma sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
+ [UI Otomasyonu ve Ekran Ölçeklendirme](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+ [Standart Denetimler İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
+ [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
+ [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [UI Otomasyonu İş Parçacığı Oluşturma Sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
  [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  

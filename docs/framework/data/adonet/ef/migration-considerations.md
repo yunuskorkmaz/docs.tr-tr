@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ed85fde0b7c031a95ce3fee577cb07380a05eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 038cf7ad9f6004f785fe35eccf38185272b0ed37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework var olan bir uygulamaya birkaç avantaj sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal model kullanma yeteneğini bu yararları önemlidir. Bu kolayca gelecekteki depolama modeli için veya uygulamaya karşılayan değişiklikleri yapmadan veri kaynağına kendisini değişiklik yapmanızı sağlar. Kullanmanın yararları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web uygulamaları bir Web sayfası veya bir kullanıcı oturum durumunu sık bakımını yapmanız gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği depolanan istemci görünüm durumu veya sunucu üzerinde oturum durumu ve daha sonra alınabilir ve yeni bir nesne bağlamına yeniden. Daha fazla bilgi için bkz: [Attaching ve ayırma nesneleri](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dağıtım konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Entity Framework terminolojisi](../../../../../docs/framework/data/adonet/ef/terminology.md)
+ [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Entity Framework Terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fbcf36ff7aca84299c55083b4ae135ce0a9ec4f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ac816d2b2dce6c9c76813bf4247bac7ca40da5f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugeval2-interface1"></a>Icordebugeval2 Interface1
 "ICorDebugEval" genişletir genel türleri için destek sağlamak için.  
@@ -32,13 +33,13 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CallParameterizedFunction yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|"Hangi Oluşturucusu tür parametreleri alır veya kendisi tür parametreleri sürebilir türü içinde yuvalanmış belirtilen ICorDebugFunction", çağrı ayarlar.|  
-|[CreateValueForType yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|Bir işaretçi bir yeni "Icordebugvalue için" ilk bir null ya da sıfır değeriyle belirtilen türünü alır.|  
-|[NewParameterizedArray yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|Belirtilen öğe türü ve boyutları yeni bir dizi ayırır.|  
-|[NewParameterizedObject yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|Yeni bir parametreli türü nesnesi oluşturur ve nesnenin oluşturucusu yöntemini çağırır.|  
-|[NewParameterizedObjectNoConstructor yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|Belirtilen sınıfının yeni bir parametreli türü nesnesi Oluşturucusu yöntemini çağırmak çalışırken olmadan başlatır|  
-|[NewStringWithLength yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|Belirtilen uzunlukta yeni bir dize belirtilen içerikle oluşturur.|  
-|[RudeAbort yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|Hesaplama durdurur bu `ICorDebugEval2` şu anda gerçekleştiriyor.|  
+|[CallParameterizedFunction Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|"Hangi Oluşturucusu tür parametreleri alır veya kendisi tür parametreleri sürebilir türü içinde yuvalanmış belirtilen ICorDebugFunction", çağrı ayarlar.|  
+|[CreateValueForType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|Bir işaretçi bir yeni "Icordebugvalue için" ilk bir null ya da sıfır değeriyle belirtilen türünü alır.|  
+|[NewParameterizedArray Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|Belirtilen öğe türü ve boyutları yeni bir dizi ayırır.|  
+|[NewParameterizedObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|Yeni bir parametreli türü nesnesi oluşturur ve nesnenin oluşturucusu yöntemini çağırır.|  
+|[NewParameterizedObjectNoConstructor Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|Belirtilen sınıfının yeni bir parametreli türü nesnesi Oluşturucusu yöntemini çağırmak çalışırken olmadan başlatır|  
+|[NewStringWithLength Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|Belirtilen uzunlukta yeni bir dize belirtilen içerikle oluşturur.|  
+|[RudeAbort Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|Hesaplama durdurur bu `ICorDebugEval2` şu anda gerçekleştiriyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -55,4 +56,4 @@ ms.lasthandoff: 10/18/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

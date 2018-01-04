@@ -28,11 +28,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 59cfb9160ccd84c41d71ad29b417b05fb4a17233
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
 Bu konu, yönetilmeyen işlevlere erişim açıklar ve yönetilen kod yöntemi tanımında açıklama birkaç öznitelik alanları tanıtır. Örnekler için nasıl oluşturulacağını gösterir. Platformuyla kullanılacak bildirimleri NET tabanlı çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
@@ -230,11 +231,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilmeyen DLL işlevlerini kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Giriş noktası belirtme](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Karakter kümesi belirtme](../../../docs/framework/interop/specifying-a-character-set.md)  
- [Platform çağırma örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [Giriş Noktası Belirtme](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)  
+ [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Platform çağırma güvenlik konuları](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [DLL'lerde işlevleri tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [DLL işlevleri için bir sınıf oluşturma](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [DLL işlevini çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+ [DLL'lerde İşlevleri Tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [DLL İşlevleri için bir Sınıf Oluşturma](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
+ [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

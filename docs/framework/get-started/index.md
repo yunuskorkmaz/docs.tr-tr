@@ -12,11 +12,12 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7d84b55abd6c7d72c3a74d17b4f24d00e117a0c
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload: dotnet
+ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -83,12 +84,12 @@ Bir geliştirici değilseniz, uygulamalarınızı oluşturmak için .NET Framewo
 | Başlık | Açıklama |
 | ----- |------------ |
 | [Genel bakış](../../../docs/framework/get-started/overview.md) | .NET Framework hedefleyen uygulamalar oluşturan geliştiriciler için ayrıntılı bilgiler sağlar. |
-| [Yükleme Kılavuzu](../../../docs/framework/install/index.md) | .NET Framework yükleme hakkında bilgi sağlar. |  
-| [.NET Framework ve bant dışı yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Bandı serbest bırakır ve bunları uygulamanızda nasıl kullanacağınızı dışında .NET Framework'ü açıklar. |
+| [Yükleme kılavuzu](../../../docs/framework/install/index.md) | .NET Framework yükleme hakkında bilgi sağlar. |  
+| [.NET Framework ve Bant Dışı Yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Bandı serbest bırakır ve bunları uygulamanızda nasıl kullanacağınızı dışında .NET Framework'ü açıklar. |
 | [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md) | .NET Framework çalıştırmak için gereken donanım ve yazılım gereksinimleri listelenmiştir. |
-| [.NET core ve açık kaynak](../../../docs/framework/get-started/net-core-and-open-source.md) | .NET Framework ve açık kaynaklı .NET Core projelere erişmek nasıl bağlantılı olarak .NET Core açıklar. |
+| [.NET Core ve Açık Kaynak](../../../docs/framework/get-started/net-core-and-open-source.md) | .NET Framework ve açık kaynaklı .NET Core projelere erişmek nasıl bağlantılı olarak .NET Core açıklar. |
 | [.NET core belgeleri](https://docs.microsoft.com/dotnet/) | Kavramsal sağlar ve .NET Core API başvuru belgeleri. |
-| [.NET standart](~/docs/standard/net-standard.md) | Standart .NET tutarlı bir dizi API birden çok platformda kullanılabilir olduğundan emin olmasını garanti etmek için tek tek .NET uygulamaları destekleyen bir sürüm bilgisi belirtimi açıklanır.
+| [.NET Standard](~/docs/standard/net-standard.md) | Standart .NET tutarlı bir dizi API birden çok platformda kullanılabilir olduğundan emin olmasını garanti etmek için tek tek .NET uygulamaları destekleyen bir sürüm bilgisi belirtimi açıklanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla dahil ederek uygulamalar derleme daha yeni bir sürümü kullanmalıdır durumu. Yayımcı ilkesi dosyası derleme yeniden yönlendirme ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası olarak ile aynı biçimi kullanır. Yayımcı ilkesi dosyası bütünleştirilmiş koda derlenmemiş ve genel derleme önbelleğinde yerleştirilir.  
@@ -111,10 +112,10 @@ Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla da
     >  Özgün Yayımcı ilkesi dosyası derleme aynı dizinde bulunan sürece yayımcı ilke derlemesi genel derleme önbelleğine eklenemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)  
  [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Derleme sürümlerini yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+ [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

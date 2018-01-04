@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a32b57488b49e9fd2f4e6342391690b27d7ad825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 257fff19d10c4b803ec6fc539087cc558bd07a0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan yöntemleri
 Üye desteği <xref:System.TimeSpan?displayProperty=nameWithType> büyük ölçüde .NET Framework ve kullandığınız Microsoft SQL Server sürümlerinde bağlıdır.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
  Ancak CLR <xref:System.TimeSpan?displayProperty=nameWithType> türünü destekleyen toplama ve çıkarma, SQL `TIME` türünü desteklemez. SQL eşlendiğinde toplama ve çıkarma bunlar çalışırsanız, bu nedenle, LINQ to SQL sorguları hataları oluşturacak `TIME` türü. SQL tarih ve saat türleri ile çalışmak için diğer konular bulabilirsiniz [SQL CLR türü eşleme](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Nesne modeli oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL CLR türü eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [Veri türleri ve işlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
 Internet Protokolü sürüm 6 (IPv6), standart protokol ağ katmanı Internet için yeni bir paketidir. IPv6 adresi tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri şekilde ile birçok geçerli sürümü (IPv4 olarak bilinir) Internet Protokolü paketi, sorunu çözmek için tasarlanmıştır. IPv6 yeni tür uygulamaların, eşler arası ve mobil uygulamaları dahil olmak üzere etkinleştirmek için Internet özelliklerini genişletir. Geçerli IPv4 protokolünün ana sorunları şunlardır:  
@@ -68,5 +69,5 @@ Internet Protokolü sürüm 6 (IPv6), standart protokol ağ katmanı Internet i�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IPv6 yuva örnek](http://go.microsoft.com/fwlink/?LinkID=179568)  
- [Ağ programlama örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Yuva](../../../docs/framework/network-programming/sockets.md)
+ [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Yuvalar](../../../docs/framework/network-programming/sockets.md)

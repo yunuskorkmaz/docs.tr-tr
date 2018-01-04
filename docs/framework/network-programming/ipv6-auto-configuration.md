@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b116e3aa88f919b850d6f79754d25ee10ac974f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 otomatik yapılandırma
 IPv6 için önemli bir hedef düğümü Tak ve Kullan desteklemektir. Diğer bir deyişle, bir IPv6 ağında bir düğüm takın ve insan müdahalesi otomatik olarak yapılandırılması mümkün olmalıdır.  
@@ -34,5 +35,5 @@ IPv6 için önemli bir hedef düğümü Tak ve Kullan desteklemektir. Diğer bir
  Mobil aygıtların artışı yeni gereksinimi sunulan: bir aygıtı rasgele IPv6 Internet üzerindeki konumlara değiştirmek ve hala var olan bağlantıların sürdürmek kurabilmesi gerekir. Bu işlevsellik sağlamak için mobil bir düğüme, bu her zaman ulaşılabilen ev adresi atanır. Mobil düğüm evde olduğunda giriş bağlantısı bağlanır ve ev adresini kullanır. Mobil düğüm giriş uzağa doğru olduğunda, genellikle bir yönlendirici olduğundan, bir ev Aracısı iletileri mobil düğümü ve hangi bağlanıyor düğümler arasında aktarır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Protokolü sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Yuva](../../../docs/framework/network-programming/sockets.md)
+ [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Yuvalar](../../../docs/framework/network-programming/sockets.md)

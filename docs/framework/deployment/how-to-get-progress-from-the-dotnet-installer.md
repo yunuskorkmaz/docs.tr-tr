@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir çalışma zamanı. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleştirilmiş kurulum deneyimi sunmak için sessizce başlatma isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken ilerleme durumunu izleyebilirsiniz. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (hangi izlenebilir) ayarı kurulumunuzu (İzleyici veya bağlayıcı) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokol ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçları almak, iletileri yanıtlayın ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.  

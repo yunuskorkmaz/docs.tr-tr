@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f1ee4855745573a4b73b409279d70906191bfd8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Derlemeler ve Genel Derleme Önbelleği ile Çalışma
 Eğer bir derlemeyi birden çok uygulama arasında paylaşmak istiyorsanız, bu derlemeyi genel bütünleştirilmiş kod önbelleğine yükleyebilirsiniz. Ortak dil çalışma zamanının yüklü olduğu tüm bilgisayarlar, makine düzeyindeki bu kod önbelleğine sahiptir. Genel Derleme Önbelleği özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemelerini depolar. Bir derlemenin genel bütünleştirilmiş kod önbelleğine yüklenebilmesi için tanımlayıcı ada sahip olması gerekir.  
@@ -54,30 +55,30 @@ Eğer bir derlemeyi birden çok uygulama arasında paylaşmak istiyorsanız, bu 
  Bir derlemeyi genel bütünleştirilmiş kod önbelleğine açıkça yüklemek istemeyeceğiniz senaryolar olduğuna dikkat edin. Eğer bir uygulamayı oluşturan derlemelerden birini genel bütünleştirilmiş kod önbelleğine yerleştirirseniz, uygulama dizinini kopyalamak için XCOPY'i kullanarak uygulamayı artık çoğaltamaz veya yükleyemezsiniz. Bu durumda, derlemeyi de genel bütünleştirilmiş kod önbelleğine taşımanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yükleme](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğine Yükleme](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Bir derlemeyi genel bütünleştirilmiş kod belleğine yükleme yöntemlerini açıklar.  
   
- [Nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ [Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
  Nasıl kullanılacağı açıklanmaktadır [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) genel derleme önbelleğinin içeriğini görüntülemek için.  
   
- [Nasıl yapılır: bir derlemeyi genel derleme önbelleğinden kaldırma](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğinden Kaldırma](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  Nasıl kullanılacağı açıklanmaktadır [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) bir derlemeyi Genel Derleme Önbelleği'nden kaldırmak için.  
   
- [Genel Derleme Önbelleği ile hizmet verilen bileşenleri kullanma](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
+ [Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
  Hizmet verilen bileşenlerin (yönetilen COM+ bileşenleri) neden genel bütünleştirilmiş kod önbelleğine yerleştirilmesi gerektiğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Derlemeleri oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
  Derleme oluşturmaya genel bir bakış sağlar.  
   
  [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
  Genel bütünleştirilmiş kod önbelleğini açıklar.  
   
- [Nasıl yapılır: derleme içeriklerini görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Nasıl kullanılacağı açıklanmaktadır [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir derlemede Microsoft Ara dili (MSIL) bilgilerini görüntülemek için.  
   
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Ortak dil çalışma zamanının uygulamanızı oluşturan derlemeleri nasıl konumlandırdığını ve yüklediğini açıklar.  
   
- [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Yönetilen uygulamaların yapı taşları olan derlemeleri açıklar.

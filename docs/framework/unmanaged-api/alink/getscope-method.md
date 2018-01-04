@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b3ebcb90142cc70a2d246d2e9ea6c42babe83b18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4cb51efc3f431dac4a10cc7582e2b43500ccba15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getscope-method1"></a>GetScope Method1
 Bir alma kapsamı alır.  
@@ -59,6 +60,6 @@ HRESULT GetScope(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Ialink2 arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

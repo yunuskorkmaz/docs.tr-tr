@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Eşler arası işbirliği
 Eşler arası, birden fazla yalnızca istemci tabanlı bilgi işlem görevleri için Internet kenarında mevcut oldukça güçlü bilgisayarların (kişisel bilgisayarlar) kullanımını ağdır. Modern kişisel bilgisayar (PC) çok hızlı bir işlemciye, büyük bellek ve hangi hiçbiri tam e-posta ve Web'e gözatma gibi ortak bilgi işlem görevler gerçekleştirirken göstermesi büyük sabit disk vardır. Modern PC kolayca hem istemci hem de birçok türdeki uygulamayı (bir eş) sunucusu olarak çalışabilir.  
@@ -51,4 +52,4 @@ Eşler arası, birden fazla yalnızca istemci tabanlı bilgi işlem görevleri i
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.PeerToPeer.Collaboration>  
- [System.Net.PeerToPeer.Collaboration Namespace hakkında](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+ [System.Net.PeerToPeer.Collaboration Ad Alanı Hakkında](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6b0e0eda77ebe3d980a99340db8366533e601687
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework'te Dinamik Programlama
 Bu bölümde belgelerin .NET Framework'te dinamik programlama hakkında bilgi sağlar.  
@@ -29,13 +30,13 @@ Bu bölümde belgelerin .NET Framework'te dinamik programlama hakkında bilgi sa
  [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Yansıma nesneleriyle çalışma zamanında çalışmak için nasıl kullanılacağını açıklar.  
   
- [Dinamik yöntemleri ve derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ [Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Yöntemleri ve derlemeleri çalışma zamanında Reflection.Emit kullanarak nasıl oluşturulacağını açıklar.  
   
- [Dinamik dil çalışma zamanına genel bakış](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [Dinamik Dil Çalışma Zamanına Genel Bakış](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
  Dinamik dil çalışma zamanı özelliklerini açıklar.  
   
- [Dinamik kaynak kodu oluşturma ve derleme](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [Dinamik Kaynak Kodu Oluşturma ve Derleme](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  Oluşturma ve dinamik kaynak kodu derleme açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

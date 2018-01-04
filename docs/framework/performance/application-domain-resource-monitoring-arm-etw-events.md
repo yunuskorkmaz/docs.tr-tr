@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a93e8cc1ab0b7488f920b556d2073d2813c3b7a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6384700c7039cb705f2db759ebd3d733bf8954ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Uygulama Etki Alanı Kaynak İzleme (ARM) ETW Olayları
 <a name="top"></a>Bu olaylar uygulama etki alanı durumu hakkında ayrıntılı tanılama bilgisi sağlayın. Bu olaylar kullanın ya da aynı bilgileri elde etmek için uygulama etki alanı kaynak izleme (ARM) özelliğini kullanın.  
@@ -165,4 +166,4 @@ ms.lasthandoff: 10/18/2017
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

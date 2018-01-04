@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9cba4c71d895d9398e2444885f4f26bf04433251
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfdcec277489d269b241b9909a2ae13049c00f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>İş mantığı (LINQ-SQL) uygulama
 Bu konudaki "iş mantığı" terimi herhangi bir özel kurallar veya onu takıldığında, güncelleştirilmiş veya veritabanından silinmiş önce verilere uygulamak doğrulama testleri anlamına gelir. İş mantığı da bazen "iş kurallarını" veya "etki alanı mantığı." adlandırılır Böylece sunu katmanı veya veri erişim katmanı bağımsız olarak değiştirilebilir n katmanlı uygulamalarda, genellikle bir mantıksal katman olarak tasarlanmıştır. İş mantığı, öncesinde veya sonrasında herhangi güncelleştirme, ekleme veya silme veritabanındaki verilerin, veri erişim katmanı tarafından çağrılabilir.  
@@ -194,7 +195,7 @@ partial class Customer
  [İzlenecek yol: Sınıflar için doğrulama ekleme](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kısmi sınıflar ve yöntemler](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [Kısmi yöntemler](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
+ [Parçalı Sınıflar ve Yöntemler](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
+ [Kısmi Yöntemler](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
  [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+ [SqlMetal.exe (Kod Üretme Aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Yönetilen Kod Nasıl Yapılır Konuları İçin UI Otomasyonu İstemcileri
 > [!NOTE]
@@ -30,11 +31,11 @@ ms.lasthandoff: 10/18/2017
  Bu bölümde özelliklerini uygulama hakkında ayrıntılı bilgi [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] bir istemci uygulamasında.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özellik koşulunu temel alan UI Otomasyon öğesi bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [TreeWalker ile UI Otomasyon öğeleri arasında gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Bir liste öğesi için UI Otomasyon öğesi bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [UI Otomasyon öğesi özelliklerini alma](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [UI otomasyonda önbelleğe almayı kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [İstemci tarafı sağlayıcı derlemesini kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Automationıd özelliğini kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Liste Öğesi İçin UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
+ [UI Otomasyonu Öğesi Özelliklerini Alma](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
+ [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
+ [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
+ [AutomationID Özelliğini Kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md)

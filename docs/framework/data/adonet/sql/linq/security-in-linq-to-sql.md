@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27e40221c22a91bb2a8c40ec4bcfd663eb05aaef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b3f23be3be6d0c50f015be95b10938178f198bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ-SQL güvenlik
 Güvenlik riskleri, her zaman bir veritabanına bağlandığında yok. LINQ-SQL SQL Server'daki verilerle çalışmak için bazı yeni yollarını içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
@@ -44,5 +45,5 @@ Güvenlik riskleri, her zaman bir veritabanına bağlandığında yok. LINQ-SQL 
 -   Yaşam süresi en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Sık sorulan sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

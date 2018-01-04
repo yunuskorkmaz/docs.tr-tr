@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-transactional-application"></a>İşlem uygulaması yazma
 İşlem Uygulaması Programcı olarak tarafından sağlanan iki programlama modeli özelliklerden yararlanabilirsiniz <xref:System.Transactions> bir işlem oluşturmak için ad alanı. Açık programlama modeli kullanarak kullanabilir <xref:System.Transactions.Transaction> sınıfı ya da hangi işlemleri otomatik olarak yönetilir altyapısı tarafından kullanarak örtük programlama modeli <xref:System.Transactions.TransactionScope> sınıfı. Geliştirme için örtük işlem modeli kullanmanızı öneririz. Bir işlem kapsamı içinde kullanma hakkında daha fazla bilgi bulabilirsiniz [örtük bir işlem kapsamı kullanarak işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) konu.  
@@ -28,11 +29,11 @@ ms.lasthandoff: 12/02/2017
 ### <a name="creating-a-transaction"></a>Bir işlem oluşturma  
  <xref:System.Transactions> Ad alanı, bir işlem oluşturmak için iki modeli sağlar. Bu modelleri aşağıdaki konulara değinilmektedir.  
   
- [Örtük bir işlem kapsamı kullanarak işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
  Açıklar nasıl <xref:System.Transactions> ad alanı destekleyen kullanarak örtük hareketleri oluşturma <xref:System.Transactions.TransactionScope> sınıfı.  
   
- [Açık bir CommittableTransaction kullanarak işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [CommittableTransaction Kullanarak Belirtik İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
  Açıklar nasıl <xref:System.Transactions> ad alanı destekleyen açık işlemleri kullanarak oluşturma <xref:System.Transactions.CommittableTransaction> sınıfı.  
   

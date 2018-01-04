@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7034945824e439b42134f8ea3c13bfaf73dbb649
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f09d0f80eba86d03d0db7af8fd63d2231c9a88d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum Arabirimi
 İşlemler ve uygulama etki alanları hakkında bilgi yayımlama kullanılan numaralandırmalar için Özet temel arabirim görevi görür.  
@@ -32,10 +33,10 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Bu bir kopyasını oluşturur `ICorPublishEnum` nesnesi.|  
-|[GetCount yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|Sabit listede öğe sayısını alır.|  
-|[Reset yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|İmleç numaralandırması başlangıcına taşır.|  
-|[Skip yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Bu bir kopyasını oluşturur `ICorPublishEnum` nesnesi.|  
+|[GetCount Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|Sabit listede öğe sayısını alır.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|İmleç numaralandırması başlangıcına taşır.|  
+|[Skip Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki numaralandırıcılar türetin `ICorPublishEnum`:  
@@ -54,5 +55,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Corpubpublish ortak sınıfı](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

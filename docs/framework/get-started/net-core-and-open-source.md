@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve Açık Kaynak
 Bu konuda ne .NET Core olduğu ve nasıl daha fazla bilgi bulabilirsiniz gösterir kısa bir genel bakış sağlar. .NET Core konuları tam listesi için ziyaret edin [.NET Core Kılavuzu](../../core/index.md).
@@ -51,9 +52,9 @@ Bu konuda ne .NET Core olduğu ve nasıl daha fazla bilgi bulabilirsiniz göster
   
 -   [Roslyn - .NET derleyici platformu](https://github.com/dotnet/roslyn)  
   
--   [ASP.NET Çekirdeği](https://github.com/aspnet/home)  
+-   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET core giriş sayfası](https://www.microsoft.com/net/core)  
- [.NET core Kılavuzu](../../core/index.md)  
+ [.NET Core Kılavuzu](../../core/index.md)  
  [ASP.NET Core belgeleri](/aspnet/core/)

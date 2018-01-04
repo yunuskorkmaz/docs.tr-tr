@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>İşlemler ve eşzamanlılık
 Bir işlem tek bir komutu veya bir paket olarak yürütme komut grubunu oluşur. İşlemler, iş birden çok işlem tek bir birime birleştirmenize izin verir. İşlem bir noktada bir hata oluşursa, tüm güncelleştirmeler geri ön işlem durumlarına geri alınabilir.  
@@ -32,22 +33,22 @@ Bir işlem tek bir komutu veya bir paket olarak yürütme komut grubunu oluşur.
  Bir işlem arasında gibi farklı kaynak yöneticileri içeren işlemlerin [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ve Oracle, dağıtılmış bir işlem gerektirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yerel işlemler](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [Yerel İşlemler](../../../../docs/framework/data/adonet/local-transactions.md)  
  Bir veritabanında işlemleri gerçekleştirmek üzere gösterilmiştir.  
   
- [Dağıtılmış işlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [Dağıtılmış İşlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  ADO.NET dağıtılmış işlemleri gerçekleştirmeyi açıklar.  
   
- [SQL Server ile System.Transactions tümleştirme](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  Açıklar <xref:System.Transactions> ile tümleştirme [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] dağıtılmış işlemler ile çalışmak için.  
   
- [İyimser eşzamanlılık](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [İyimser Eşzamanlılık](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  İyimser ve kötümser eşzamanlılık ve eşzamanlılık ihlali test nasıl açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlem temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Bir veri kaynağına bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

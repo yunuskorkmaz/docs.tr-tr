@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 112f544531bfeed3aa791fa9215e316f05f99169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a672125dee4203e54d68cc8e19915f70f17fe915
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ref-cursor-examples"></a>REF İMLEÇ örnekleri
 REF CURSOR örnekler REF imleçler kullanarak gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  
   
 |Örnek|Açıklama|  
 |------------|-----------------|  
-|[Bir OracleDataReader REF İMLEÇ parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|Bu örnek değeri olarak okur ve REF CURSOR parametresiyle döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.|  
-|[Bir OracleDataReader kullanarak birden çok REF imleçler veri alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Bu örnek kullanılarak değerleri okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir **OracleDataReader**.|  
-|[Kullanarak bir veri kümesi doldurma ya da daha fazla REF imleçler](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|Bu örnek doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürütür bir <xref:System.Data.DataSet> satırlarla döndürülür.|  
+|[OracleDataReader’da REF CURSOR Parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|Bu örnek değeri olarak okur ve REF CURSOR parametresiyle döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.|  
+|[OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Bu örnek kullanılarak değerleri okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir **OracleDataReader**.|  
+|[Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|Bu örnek doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürütür bir <xref:System.Data.DataSet> satırlarla döndürülür.|  
   
  Bu örnekleri kullanmak için Oracle tablolar oluşturmak gerekebilir ve PL/SQL paket ve paket gövdesi oluşturmanız gerekir.  
   
@@ -90,5 +91,5 @@ END CURSPKG;
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle REF imleçler](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

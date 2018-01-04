@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de93298062c7f99fcca3688efbd0b546d3c04c0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış işlemler
 Bir işlem (kaydetme) başarılı ya da başka şeylerin bir birim olarak (iptal için) başarısız ilgili görevleri kümesidir. A *dağıtılmış işlem* birkaç kaynakları etkileyen bir işlem. Yürütme dağıtılmış işlem için veri herhangi bir değişiklik kalıcı olacağını tüm katılımcılar güvence altına almalıdır. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Bu garantisi yapmak tek bir katılımcı başarısız olursa, tüm işlem başarısız olur ve işlem kapsamı içinde veri değişiklikler geri alınır.  
@@ -58,6 +59,6 @@ Bir işlem (kaydetme) başarılı ya da başka şeylerin bir birim olarak (iptal
  Dağıtılmış işlemler kullanmak için ağ üzerinden MS DTC etkinleştirmeniz gerekebilir. Windows varsa Güvenlik Duvarı etkinleştirildiyse, ağ kullanın veya MS DTC bağlantı noktasını açmak MS DTC hizmetinin izin vermeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [SQL Server ile System.Transactions tümleştirme](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

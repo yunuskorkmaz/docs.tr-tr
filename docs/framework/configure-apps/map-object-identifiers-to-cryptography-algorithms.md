@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bcde53450e3656ec958898864bb7d7200a4b03e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
 Dijital imzalar, başka bir programda gönderildiğinde, veri değiştirilmiş değil emin olun. Genellikle dijital imza imzalanacak veri karmasını matematiksel işlevi uygulayarak hesaplanır. İmzalanması için bir karma değer biçimlendirme sırasında bazı dijital imza algoritmaları biçimlendirme işleminin bir parçası olarak ASN.1 nesne tanımlayıcısı (OID) ekleyin. OID karma hesaplamak için kullanılan algoritmayı tanımlar. Özel algoritmaları kullanmak için şifreleme mekanizması genişletmek için nesne tanımlayıcıları algoritmaları eşleyebilirsiniz. Aşağıdaki örnek, bir nesne tanımlayıcı yeni bir karma algoritma eşleme gösterilmektedir.  
@@ -51,5 +52,5 @@ Dijital imzalar, başka bir programda gönderildiğinde, veri değiştirilmiş d
  [ \<OidEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) iki öznitelikleri içerir. **OID** nesne tanımlayıcı numarası bir özniteliktir. **Adı** özniteliktir değerini **adı** özniteliğini [ \<nameEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Basit bir ad eşlenebilir. bir nesne tanımlayıcı önce eşlemesinden bir algoritma adı için bir sınıf olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şifreleme sınıflarını yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)

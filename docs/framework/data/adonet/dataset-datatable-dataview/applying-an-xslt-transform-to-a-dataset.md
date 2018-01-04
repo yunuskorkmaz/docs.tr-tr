@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35251c5e2a713463510b3ff8b65e9096385c6bcf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Bir veri kümesine bir XSLT dönüşümü uygulanarak
 **WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **DataSet** XML verileri olarak. Bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime Dönüştür ortak bir görevdir. Ancak, eşitleme bir **DataSet** ile bir <xref:System.Xml.XmlDataDocument> XSLT stil sayfası içeriği için uygulamanızı sağlar bir **DataSet** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** XML verileri kullanarak olarak **WriteXml**.  
@@ -134,5 +135,5 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümesi ve XmlDataDocument eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

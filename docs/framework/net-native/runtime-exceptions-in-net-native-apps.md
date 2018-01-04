@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d4f5787faa2fdf5f5450d8ddce285919a658645
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cea4901eca45a4b02e3eeb9fa8a3ac2a9efa3484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET yerel uygulamalar çalışma zamanı özel durumları
 Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan, Evrensel Windows platformu uygulamanızın kendi hedef platformlarda yayın derlemeleri test etmek önemlidir. Varsayılan olarak, uygulamanızı derlemeye .NET çekirdeği çalışma zamanı hata ayıklama yapılandırmasını kullanır, ancak sürüm yapılandırmasında uygulamanızı yerel koda derlemek için .NET yerel kullanır.  

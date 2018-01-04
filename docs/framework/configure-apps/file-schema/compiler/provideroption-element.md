@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a01a64ab8828104e8404f7d4efdd7b37eea373e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; öğesi
 Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.  
@@ -101,7 +102,7 @@ Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<derleyicileri > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
- [Tam olarak nitelenmiş tür adlarını belirtme](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
+ [Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
  [compiler Ögesi (ASP.NET Ayarlar Şeması) derleyicileri](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

@@ -27,11 +27,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abb262f58d611bdb4ef27d3391a2d0d9d221f005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Zaman uyumsuz istemci yuvası kullanma
 Zaman uyumsuz istemci yuvası ağ işlemlerinin tamamlanması beklenirken uygulama askıya almaz. Bunun yerine, uygulama orijinal iş parçacığı üzerinde çalışmaya devam ederken ağ bağlantısının bir iş parçacığı üzerinde işlemek için standart .NET Framework zaman uyumsuz programlama modeli kullanır. Zaman uyumsuz yuva ağ kullanımına ağırlık olun veya ağ işlemlerinin devam etmeden önce tamamlamak Bekleyemez uygulamalar için uygundur.  
@@ -295,6 +296,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumlu istemci yuvası kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Yuva başına dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Zaman uyumsuz istemcisi yuva örneği](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+ [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [Zaman Uyumsuz İstemci Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

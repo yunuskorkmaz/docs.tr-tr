@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: adc5d50707155495c43703b6586cedf5da209b69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84a72642636be2238a81f1b9c00e3ac4e7037272
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Veri alma ve CUD işlemleri N katmanlı uygulamalarda (LINQ-SQL)
 Bir ağ üzerinden bir istemciye müşteriler veya siparişler gibi varlık nesnesi seri hale olduğunda bu varlıkların kendi veri bağlamından ayrılır. Veri bağlamı artık kendi değişiklikler veya diğer nesnelerle ilişkilendirmelerinin izler. İstemcileri yalnızca verileri okuma sürece, bir sorun değildir. Bunu ayrıca bir yeni satırları eklemek istemcileri etkinleştirmek oldukça basittir. Uygulamanızı istemcileri güncelleştirin veya verilerini silmek mümkün gerektiriyorsa, çağırmadan önce ancak, daha sonra varlıklar için yeni bir veri bağlamı eklemeniz gerekir <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Özgün değerleriyle iyimser eşzamanlılık kontrolü kullanıyorsanız, ek olarak, ardından da veritabanını orijinal varlık ve varlık değiştirilmiş olarak sağlamak için bir yol gerekir. `Attach` Yöntemleri ayrılmış eklendikten sonra yeni bir veri bağlamına varlıklar put olanak sağlanır.  
@@ -417,5 +418,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  Ne zaman attach ile birlikte bir `IEnumerable` bir nesne, bir <xref:System.Data.Linq.DuplicateKeyException> zaten mevcut bir anahtarı mevcut olduğunda oluşturulur. Kalan nesneler eklenmemiş.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [N katmanlı ve uzak uygulamalarla LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

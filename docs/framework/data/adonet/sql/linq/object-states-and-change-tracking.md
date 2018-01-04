@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Nesne durumlarını ve değişiklik izleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nesneler her zaman katılmak bazı durumlarda *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendi başınıza oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek istisnası, başarılı bir şekilde olan veritabanından silinmiş tarafından temsil edilen `Deleted` durum ve, kullanılamaz <xref:System.Data.Linq.DataContext> örneğinin.)  
@@ -73,5 +74,5 @@ ms.lasthandoff: 11/21/2017
  Gerekli referans ve ilgili yabancı anahtar güncelleştirirseniz, kullanıcının kabul etmesi olduğundan emin olmanız gerekir. Bir <xref:System.InvalidOperationException> iki çağırmanız aynı anda eşitlenmemişse özel durum <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Yabancı anahtar değerini değişiklikler temel satırın bir güncelleştirme etkileyen için yeterli olmakla birlikte, ilişkileri Nesne grafiği ve çift yönlü tutarlılığını bağlantısını korumak için başvuru değiştirmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [INSERT, Update ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [Insert, Update ve Delete İşlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

@@ -22,25 +22,26 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0908dd50c870c26284c1ef90d8433122b00e7be1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee98461fdd7a74a752d21a2f4ce5c810477cd4d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-network-programming"></a>Güvenlik ağ programlama
 .NET Framework <xref:System.Net> ad alanı sınıfları, .NET Framework kod erişim izinleri ve popüler Internet uygulama kimlik doğrulama mekanizmaları için yerleşik destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kullanarak Güvenli Yuva Katmanı](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+ [Güvenli Yuva Katmanı Kullanma](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
  Güvenli Yuva Katmanı (SSL) bağlantıları kullanmayı açıklar.  
   
- [Internet kimlik doğrulama](../../../docs/framework/network-programming/internet-authentication.md)  
+ [İnternet Kimlik Doğrulaması](../../../docs/framework/network-programming/internet-authentication.md)  
  HTTP sunucuları için kimliği doğrulanmış bağlantıları kurmak için HTTP kimlik doğrulama yöntemleri kullanmayı açıklar.  
   
- [Web ve yuva izinleri](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+ [Web ve Yuva İzinleri](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
  Internet bağlantısı kullanan uygulamalar için kod erişimi güvenliği ayarlamak açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
  Sınıflarda tanıtır <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları.

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fd1477715bafa4e3455a3e476acbae3a098dbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5067651a9cb30602a7318380d469b6f6381d8756
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-unload-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Boşaltma
 Uygulama etki alanı ile işiniz bittiğinde, kullanarak unload <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi. **Unload** yöntemi, belirtilen uygulama etki alanı düzgün biçimde kapatır. Kaldırma işlemi sırasında hiçbir yeni iş parçacıkları uygulama etki alanı erişebilir ve tüm uygulama etki alanı – özel veri yapıları serbest.  
@@ -41,5 +42,5 @@ Uygulama etki alanı ile işiniz bittiğinde, kullanarak unload <xref:System.App
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
- [Nasıl yapılır: uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- [Uygulama etki alanlarını kullanma](../../../docs/framework/app-domains/use.md)
+ [Nasıl yapılır: Uygulama Etki Alanı Oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanız başarıyla dağıtmak için ortak dil çalışma zamanı nasıl bulur ve uygulamayı oluşturan derlemeler bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı, uygulama ile oluşturulmuş bir derlemenin tam sürümü ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarları tarafından geçersiz kılınabilir.  
@@ -256,5 +257,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Örneğin, Assembly2 Assembly1 başvuruyor ve Assembly1 http://www.code.microsoft.com/utils indirilen, bu konuma Assembly2.dll nerede bulacağını hakkında ipucu olarak değerlendirilir. Çalışma zamanı sonra http://www.code.microsoft.com/utils/Assembly2.dll ve http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll derlemede araştırmaları. Çalışma zamanı Assembly2 da bu konumların bulunmazsa, Windows Installer sorgular.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derleme yükleme için en iyi yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [Dağıtım](../../../docs/framework/deployment/index.md)

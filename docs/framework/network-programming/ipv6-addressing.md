@@ -36,11 +36,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-addressing"></a>IPv6 adresi
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Tek bir tür büyük adres alanı için kullanılabilir adresler bulunan Internet'in topoloji yansıtacak Yönlendirme etki alanları bölümlere için nedenidir. Başka bir ağ bağdaştırıcısı (veya arabirimleri) cihazları ağa bağlamak adreslerini eşlemek için nedenidir. IPv6 ağ arabirimi düzeyinde ve aynı zamanda otomatik yapılandırma özellikleri içeren kendi en düşük düzeyde adresleri çözümleyecek şekilde devralınmış bir özellik sunar.  
@@ -82,5 +83,5 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Tek bir
  Genel olarak, bir düğüm her zaman bir bağlantı-yerel adresi vardır. Bir site-yerel adresi ve bir veya daha fazla genel adresleri olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Protokolü sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Yuva](../../../docs/framework/network-programming/sockets.md)
+ [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Yuvalar](../../../docs/framework/network-programming/sockets.md)

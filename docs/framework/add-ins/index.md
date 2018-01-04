@@ -23,11 +23,12 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>Eklentiler ve Genişletilebilirlik
 <a name="top"></a>Eklentiler genişletilmiş özellikler veya bir ana bilgisayar uygulaması için hizmetleri sağlar. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Geliştiriciler eklentiler geliştirmek ve bunları kendi ana bilgisayar uygulamasında etkinleştirmek için kullanabileceğiniz bir programlama modelidir. Model bu konak ve eklenti arasındaki iletişim ardışık düzeni oluşturarak elde eder. Model türler kullanılarak uygulanır <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, ve <xref:System.AddIn.Contract> ad alanları.  
@@ -113,8 +114,8 @@ Eklenti ardışık düzeni
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Ardışık Düzen geliştirme](../../../docs/framework/add-ins/pipeline-development.md)|Eklenti konak uygulamaya bölümlerinin iletişim kanalı açıklar. Kod örnekleri ardışık düzenini oluşturmak ve ardışık düzeninde kesimleri dağıtmak anlatan izlenecek konularda sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Uygulama etki alanları ve derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Güvenlik, güvenilirlik ve sürüm oluşturma için bir yalıtım sınırı sağlayan uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar.|  
+|[İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)|Eklenti konak uygulamaya bölümlerinin iletişim kanalı açıklar. Kod örnekleri ardışık düzenini oluşturmak ve ardışık düzeninde kesimleri dağıtmak anlatan izlenecek konularda sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Güvenlik, güvenilirlik ve sürüm oluşturma için bir yalıtım sınırı sağlayan uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar.|  
   
  [Başa dön](#top)  
   

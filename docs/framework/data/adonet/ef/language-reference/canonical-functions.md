@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>Kurallı işlevleri
 Bu bölümde, tüm veri sağlayıcıları tarafından desteklenir ve tüm sorgulanırken teknolojiler tarafından kullanılan kurallı işlevleri açıklanmaktadır. Kurallı işlevleri bir sağlayıcı tarafından genişletilemez.  
@@ -36,29 +37,29 @@ Bu bölümde, tüm veri sağlayıcıları tarafından desteklenir ve tüm sorgul
  Kurallı işlevi için ad alanı <xref:System.Data.Metadata.Edm>. <xref:System.Data.Metadata.Edm> Ad alanındaki tüm sorgular otomatik olarak eklenir. Ancak, başka bir ad alanı içe aktarılırsa kurallı işlevi olarak aynı ada sahip bir işlevi içeren (içinde <xref:System.Data.Metadata.Edm> ad alanı), ad alanı belirtilmelidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kurallı toplama işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [Toplu Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Toplama anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Kurallı matematik işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [Kurallı Matematik İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
  Matematik anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Dize kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ [Kurallı Dize İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
  Dize anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Tarih ve saat kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [Kurallı Tarih ve Saat İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  Tarih ve saat anlatılmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Bit düzeyinde kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Bit Düzeyinde Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  Bit düzeyinde ele [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Uzamsal işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
+ [Uzamsal İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
  Spatial ele [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.  
   
- [Kurallı diğer işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ [Diğer Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  Bit düzeyinde, tarih, dize, matematik veya toplu olarak sınıflandırılan değil işlevleri açıklanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Eşleme kavramsal Model SQL Server'a kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [Kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+ [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

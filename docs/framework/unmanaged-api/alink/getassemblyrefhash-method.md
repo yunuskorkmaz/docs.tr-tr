@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0a5987bac2a874b01a24732a7c78a926fad0e011
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99ae38025f223d669a428738783676ebc0687554
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash Metodu
 Karma blob için belirli bir derleme alır.  
@@ -55,6 +56,6 @@ HRESULT GetAssemblyRefHash(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Ialink2 arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

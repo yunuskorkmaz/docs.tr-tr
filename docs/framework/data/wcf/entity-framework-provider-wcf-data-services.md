@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c054e3cc9dbf920ab280df43d97acdb90ca055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc27663904371991855b2fe7d96b4a15827d1180
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework sağlayıcısı (WCF Veri Hizmetleri)
 Gibi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework varlık veri türü varlık ilişkisi modeli olan modelini, temel alır. Entity Framework adlandırılır varlık veri modeli uygulamaya karşı işlemleri çevirir *kavramsal model*, bir veri kaynağına karşı eşdeğer işlemlere. Bu Entity Framework ilişkisel verilere dayalı Veri Hizmetleri için ideal bir sağlayıcısı hale getirir ve Entity Framework destekleyen bir veri sağlayıcı olan herhangi bir veritabanı ile kullanılabilir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Entity Framework şu anda destekleyen veri kaynakları listesi için bkz: [üçüncü taraf sağlayıcılar için Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -30,6 +31,6 @@ Gibi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity
  Entity Framework hakkında daha fazla bilgi için bkz: [Entity Framework genel bakış](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Yansıma sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
+ [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

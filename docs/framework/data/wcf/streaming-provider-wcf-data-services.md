@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5eb97ea9db0fa7132b1ed4320bf73d124452c201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve ses akışları, görüntüler, belge dosyaları veya diğer ikili medya türleri temsil edebilir. Bir veya daha fazla ikili özelliklerinin bir varlık veri modeli içerir, bu ikili veri akışı yanıt girişi içinde base-64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme performansını etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlık bağımsız ikili veri almak için bir mekanizma tanımlar. Bu, bir veya daha fazla veri akışlara varlıktan ikili veri ayırarak gerçekleştirilir.  
@@ -53,7 +54,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Veri modelinde Media Link Entry tanımlama  
  Veri kaynağı sağlayıcısı bir varlık veri modeli medya bağlantısı girdi olarak tanımlanır şeklini belirler.  
   
- **Entity Framework sağlayıcısı**  
+ **Entity Framework Sağlayıcısı**  
  Bir varlık bir medya bağlantısı girişinin olduğunu belirtmek için ekleme `HasStream` özniteliği aşağıdaki örnekte olduğu gibi kavramsal modelde varlık türü tanımı:  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
@@ -62,7 +63,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
   
  [!INCLUDE[crexample](../../../../includes/crexample-md.md)]kullanan bir veri hizmeti [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve bir medya kaynağı ortaya çıkaran gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: bir akış sağlayıcı (Kısım 1) uygulama](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
- **Yansıma sağlayıcısı**  
+ **Yansıma Sağlayıcısı**  
  Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme <xref:System.Data.Services.Common.HasStreamAttribute> sınıfına yansıma sağlayıcısında varlık türünü tanımlar.  
   
  **Özel veri hizmet sağlayıcısı**  
@@ -140,6 +141,6 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
  Daha fazla bilgi için bkz: [veri hizmeti sürüm](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Özel veri hizmet sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [İkili verileri ile çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+ [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
+ [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

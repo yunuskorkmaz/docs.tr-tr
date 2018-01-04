@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7ce95b1c4f33ed500eabf3f9c7a7ac01a3a08e03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88792aeef4e1a18807267334b6c9ef722cb48d24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma
 CodeDOM XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod oluşturma ve XML belgeleri çıkışı oluşturur derleyici seçeneği ile oluşturulan kod derleme XML belge açıklamaları içeren CodeDOM grafik oluşturma işlemi içerir.  
@@ -88,6 +89,6 @@ CodeDOM XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod olu
 -   Bu kod örneği gerektirir `FullTrust` izni Ayarla başarıyla yürütülemedi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML ile kodunuzu belgeleme](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [XML belgeleri yorumları](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [XML belgeleri](/cpp/ide/xml-documentation-visual-cpp)
+ [XML ile Kodunuzu Belgeleme](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
+ [XML Belge Açıklamaları](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML Belgeleri](/cpp/ide/xml-documentation-visual-cpp)

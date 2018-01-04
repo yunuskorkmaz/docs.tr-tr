@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5cf7422fe1c007077e88b9171c4071168ec68fb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 040a45b5724bdc18c93a97f9fe9717be7543d641
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>İşlem ve toplu kopyalama işlemleri
 Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işlemin parçası olarak gerçekleştirilebilir. Bu ikinci seçeneği yanı sıra aynı işlem içinde birden fazla toplu kopyalama işlemi gerçekleştirmek diğer veritabanı (örneğin, ekleme, güncelleştirme ve silme) hala yürütün veya işlemin tamamını geri kullanabilmeye devam ederken işlemleri sağlar.  
@@ -70,5 +71,5 @@ Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işl
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server toplu kopyalama işlemleri](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [SQL Server’da Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

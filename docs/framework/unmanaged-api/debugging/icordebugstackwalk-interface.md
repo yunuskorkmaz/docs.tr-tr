@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c8a4421b716614081368755388bd2ab8d8fe22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 018ed69e52efd21ca25029284c70f1c8493d877f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk Arabirimi
 İş parçacığının yığınındaki yönetilen yöntemleri veya çerçeveleri almak için yöntemler sağlar.  
@@ -32,10 +33,10 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetContext yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Geçerli kare bağlamının döndürür `ICorDebugStackWalk` nesnesi.|  
-|[SetContext yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Ayarlar `ICorDebugStackWalk` nesnenin iş parçacığı için geçerli bir bağlam için geçerli bağlam.|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Taşır `ICorDebugStackWalk` sonraki çerçeveye nesne.|  
-|[GetFrame yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Geçerli çerçeve alır `ICorDebugStackWalk` nesnesi.|  
+|[GetContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Geçerli kare bağlamının döndürür `ICorDebugStackWalk` nesnesi.|  
+|[SetContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Ayarlar `ICorDebugStackWalk` nesnenin iş parçacığı için geçerli bir bağlam için geçerli bağlam.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Taşır `ICorDebugStackWalk` sonraki çerçeveye nesne.|  
+|[GetFrame Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Geçerli çerçeve alır `ICorDebugStackWalk` nesnesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -52,5 +53,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

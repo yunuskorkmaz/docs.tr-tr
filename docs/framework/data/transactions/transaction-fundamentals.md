@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f33e6ada38e3e1cb5b7b564f75ca43aa07ee1882
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-fundamentals"></a>İşlem temelleri
 İşlemleri birden çok görev birbirine bağlayın. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir veritabanında yeni bir tablo oluşturur. Ardından, Topla, biçimlendirme ve yeni tabloya veri eklemek için özel bir nesne çağırır. Yeni bir tablo ile veri doldurun sürece oluşturmamaya özen gösterin istediğiniz şekilde bu iki görevleri ilgili ve hatta bağımlı. Tek bir işlem kapsamı içinde her iki görevi yürütme aralarındaki bağlantıyı zorlar. İkinci görev başarısız olursa, yeni bir tablo oluşturulmadan önce ilk görev bir noktaya geri alınır.  
@@ -34,4 +35,4 @@ ms.lasthandoff: 12/02/2017
  ADO.NET kullanarak işlemleri oluşturabilirsiniz <xref:System.EnterpriseServices>, veya tarafından sağlanan işlem programlama modeli <xref:System.Transactions> ad alanı. [System.Transactions tarafından sağlanan özellikleri](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) konuda ele alınmıştır kullanarak bir işlemle ilgili uygulama yazmak için kullanabileceğiniz özellikler <xref:System.Transactions> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [System.Transactions tarafından sağlanan özellikleri](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+ [System.Transactions Tarafından Sağlanan Özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

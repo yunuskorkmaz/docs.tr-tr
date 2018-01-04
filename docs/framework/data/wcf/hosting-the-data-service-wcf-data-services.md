@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fa76c5672b4117c446aca145b7cf98dae7801d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8819e8127d16b83d531dc6bdcd3af88245c695e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) barındırma
 Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], olarak kullanıma sunan bir hizmet oluşturabilmeniz için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu veri hizmeti öğesinden devralınan bir sınıf olarak tanımlanır <xref:System.Data.Services.DataService%601>. Bu sınıf, istek iletilerini işlemek, veri kaynağına karşı güncelleştirmeleri gerçekleştirmek ve gerektirdiği şekilde yanıt iletileri oluşturmak için gereken işlevleri sağlar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Ancak, bir veri hizmeti bağlamak ve ağ yuvada gelen HTTP isteklerini dinlemeye. Bu gerekli işlevselliği için bir barındırma bileşenin veri hizmeti kullanır.  
@@ -83,6 +84,6 @@ Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], olarak k
 -   Sorgu dizesi parametreleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Bir hizmet olarak verilerinizi gösterme](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
- [Veri Hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [Veri Hizmeti Yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

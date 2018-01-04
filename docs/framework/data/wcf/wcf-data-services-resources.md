@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2f00d9f735583bb048669ff0ab2659db68bf1f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tanıtım konularını aşağıdaki konumlarda bulunabilir. Bu konularda çoğunu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
  [Başlarken](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Tasarım ve kullanarak veri hizmetine erişim açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tarafından gösterildiği gibi [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
- [Uygulama senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Görev tabanlı bir yaklaşım oluşturmaya sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve erişim uygulamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.  
   
  [Visual Studio ve .NET Framework Sözlüğü](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  

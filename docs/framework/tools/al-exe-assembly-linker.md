@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
@@ -72,7 +73,7 @@ Aşağıdaki belirtebilirsiniz `options`; belirtmeniz gerekir **/out**.
 |**/ keyf [ile]:**`filename`|Bir dosyayı belirtir (`filename`) derlemeyi imzalamak için bir anahtar çifti ya da yeni bir ortak anahtar içerir. Derleyici ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. Bkz: [tanımlayıcı ad Aracı (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) anahtar dosyalar oluşturma ve anahtar çiftleri anahtar kapsayıcılarına yükleme hakkında bilgi.<br /><br /> Gecikmeli imzalama kullanıyorsanız, bu dosyada genellikle ortak anahtar vardır, ancak özel anahtar bulunmaz.<br /><br /> Ortak anahtar (anahtar çiftine ait) derlemenin .publickey alanında görüntülenir.<br /><br /> Bu seçenek özel bir öznitelik belirtebilirsiniz (<xref:System.Reflection.AssemblyKeyFileAttribute>) herhangi bir MSIL modülü için kaynak kodundaki.<br /><br /> Her iki **/keyfile** ve **/keyname** (komut satırı seçeneğini veya göre özel öznitelik) aynı derlemede belirtilen *Al.exe* kapsayıcı ilk olarak deneyin Belirtilen **/keyname**. Bu başarılı olursa, derleme anahtar kapsayıcısındaki bilgilerle imzalanır. Varsa *Al.exe* anahtar kapsayıcısı bulamazsa ile belirtilen dosyayı deneyecektir **/keyfile**. Bu başarılı olursa, derleme anahtar dosyası içindeki bilgilerle imzalanır ve anahtar bilgileri anahtar kapsayıcısında yüklenecek (-i benzer seçeneğini [ *Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md)) böylece sonraki derleme, **/keyname** seçeneği geçerli olacaktır.|
 |**/keyn [ame]:**`text`|Anahtar çifti içeren bir kapsayıcıyı belirtir. Bu, derleme bildirimine ortak anahtar ekleyerek derlemeyi imzalar (ona tanımlayıcı ad verir). *Al.exe* sonra oturum son derlemeyi özel anahtarla olur.<br /><br /> Kullanım *Sn.exe* bir anahtar çifti oluşturulacak.<br /><br /> Anahtar bilgileri derlemenin .publickey alanında görüntülenir.<br /><br /> Yer `text` çift tırnak işaretleri ("") katıştırılmış bir alanı varsa.<br /><br /> Bu seçenek özel bir öznitelik belirtebilirsiniz (<xref:System.Reflection.AssemblyKeyNameAttribute>) herhangi bir MSIL modülü için kaynak kodundaki.|
 |**/ main:**`method`|Tam adı belirtir (`class`.`method`) yönteminin bir modül için yürütülebilir bir dosyanın dönüştürülürken bir giriş noktası olarak kullanmak için.|
-|**/ nologo**|Başlığı veya logosu, çağırdığınızda, komut satırında görüntülenen bastırır *Al.exe*.|
+|**/nologo**|Başlığı veya logosu, çağırdığınızda, komut satırında görüntülenen bastırır *Al.exe*.|
 |**/ out:**`filename`|Tarafından üretilen dosya adını belirtir *Al.exe*. Bu gerekli bir seçenektir.|
 |**/ Platform:**`text`|Bu kodun çalıştırılabileceği platformları sınırlar; x86, Itanium, x64, anycpu (varsayılan) veya anycpu32bitpreferredx86 olmalıdır.|
 |**/ prod [uct]:**`text`|Bir dize belirtir **ürün** derlemesindeki alan. Dize çift tırnak içine yerleştirin ("") varsa `text` boşluk içerir. Bu dize, derleme üzerinde özel bir özniteliktir ve yansıma ile görüntülemek için kullanılabilir.<br /><br /> Belirtmezseniz, **/win32res**, **/product** Win32 olarak dosya Gezgini'nde görüntülenen **ürün adı** kaynak.<br /><br /> Metin Win32 boş bir dize ise **ürün adı** kaynak tek boşluk olarak görünür.<br /><br /> Belirtirseniz **/win32res**, **/product** Win32 kaynak bilgileri etkilemez.<br /><br /> Bu seçenek özel bir öznitelik belirtebilirsiniz (<xref:System.Reflection.AssemblyProductAttribute>) herhangi bir MSIL modülü için kaynak kodundaki.|
@@ -183,8 +184,8 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 ## <a name="see-also"></a>Ayrıca bkz.
  
-[Araçları](../../../docs/framework/tools/index.md)  
+[Araçlar](../../../docs/framework/tools/index.md)  
 [*Sn.exe* (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
 [*Gacutil.exe* (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+[Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+[Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

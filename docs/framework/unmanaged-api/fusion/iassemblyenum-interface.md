@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8c7b3bd04b348912a6d45c4efb41dfb87e7b5998
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca74970ea7c2b98ad65e279fc1cc128b2e55aeb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum Arabirimi
 Bir dizi için bir numaralandırıcı temsil eden `IAssemblyName` nesneleri.  
@@ -32,9 +33,9 @@ Bir dizi için bir numaralandırıcı temsil eden `IAssemblyName` nesneleri.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyEnum` nesnesi.|  
-|[GetNextAssembly yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Bir işaretçi sonraki alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesnesi.|  
-|[Reset yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Bu sıfırlar `IAssemblyEnum` başlangıç konumuna nesne.|  
+|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyEnum` nesnesi.|  
+|[GetNextAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Bir işaretçi sonraki alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesnesi.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Bu sıfırlar `IAssemblyEnum` başlangıç konumuna nesne.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +45,5 @@ Bir dizi için bir numaralandırıcı temsil eden `IAssemblyName` nesneleri.
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Fusion arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Iassemblyname arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+ [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

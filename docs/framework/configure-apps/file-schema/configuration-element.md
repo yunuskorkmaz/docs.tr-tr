@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2241f3e835defe308b94d0cbad96020518dfd19b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3874a613879d099ede4968b5bce349aefa015a38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-element"></a>\<Yapılandırma > öğesi
 
@@ -57,7 +58,7 @@ Yok.
 | [**\<system.Net >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/network/index.md) | Ağ ayarları şemadaki tüm öğeler. |
 | [**\<cryptographySettings >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Şifreleme ayarları şemadaki tüm öğeler. |
 | [**\<Yapılandırma >** bölümleri şeması](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Yapılandırma bölümü ayarları şemadaki tüm öğeler. |
-| [İzleme ve hata ayıklama Ayarları Şeması](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | İzleme ve hata ayıklama Ayarları Şeması tüm öğeler. |
+| [İzleme ve Hata Ayıklama Ayarları Şeması](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | İzleme ve hata ayıklama Ayarları Şeması tüm öğeler. |
 | [ASP.NET yapılandırma ayarları şeması](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | ASP.NET Web siteleri ve uygulamaları yapılandırma öğeleri içeren ASP.NET yapılandırma şemadaki tüm öğeler. Kullanılan *Web.config* dosyaları. |
 | [**\<Webservices'a >** Ayarları Şeması](http://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Web Hizmetleri ayarları şemadaki tüm öğeler. |
 | [Web Ayarları Şeması](~/docs/framework/configure-apps/file-schema/web/index.md) | ASP.NET IIS gibi bir ana bilgisayar uygulaması ile nasıl çalışır yapılandırma öğeleri içeren Web ayarları şemadaki tüm öğeler. Kullanılan *aspnet.config* dosyaları. |

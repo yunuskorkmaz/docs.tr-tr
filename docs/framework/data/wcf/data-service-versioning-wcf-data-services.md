@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürüm oluşturma (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'ler kullanarak kaynakları, bir veri modeline bağlı olarak veri erişim sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Ayrıca hizmet işlemleri tanımını destekler. İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra bu veri hizmetleri için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimleri değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için gerekebilir. Varolan bir veri hizmeti bir değişiklik yaptığınızda mi verilerinizi yeni bir sürümünü tanımlamak dikkate almanız gereken service ve mevcut istemci uygulamaları üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. Ayrıca açıklanır nasıl [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir exchange istemcileri ve farklı sürümlerini destekler veri hizmetleri arasında işleme [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü.  
@@ -84,5 +85,5 @@ ms.lasthandoff: 12/02/2017
  `DataServices` Döndürülen meta veri öğesi de içerir bir `DataServiceVersion` değerin aynısıdır özniteliği olarak `DataServiceVersion` üstbilgisi yanıt iletisi. İstemci uygulamaları gibi **hizmet Başvurusu Ekle** iletişim kutusunda [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], doğru sürümü ile çalışması istemci veri hizmeti sınıfları oluşturmak için bu bilgileri kullanın [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmeti ana bilgisayar. Daha fazla bilgi için bkz: [OData: iletişim kuralı sürüm](http://go.microsoft.com/fwlink/?LinkId=186071).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+ [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
