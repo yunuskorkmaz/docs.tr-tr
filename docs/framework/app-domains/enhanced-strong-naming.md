@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429a54340cef6d608692abd71311c012afe9a3d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77eec473b95720e432c94b79778fa518f3ecf1c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhanced-strong-naming"></a>Güçlü Adlandırmayı İyileştirme
 Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework'teki mekanizmasıdır. Bu, genellikle bir gönderene (imzalayan) bir alıcı (Doğrulayıcı) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan bir ortak anahtar dijital imza olur. Bu imza, bir derleme için benzersiz bir kimliği olarak kullanılan ve derleme başvurularını belirsiz olmadığından sağlar. Derleme oluşturma işleminin bir parçası olarak imzalanır ve yüklendiğinde sonra doğrulandı.  
@@ -114,4 +115,4 @@ Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framewor
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oluşturma ve tanımlayıcı adlı derlemeler kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

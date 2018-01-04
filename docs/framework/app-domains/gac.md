@@ -21,19 +21,20 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ca51a06e6e7ec89576facf3a70c789325fd893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eedb33042bd904340cc02526c3f1cf927c09bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-assembly-cache"></a>Genel Derleme Önbelleği
-Ortak dil çalışma zamanı yüklendiği her bilgisayarda, genel derleme önbelleği olarak adlandırılan bir makineye kod önbelleği bulunur. Genel Derleme Önbelleği özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemelerini depolar.  
+Ortak dil çalışma zamanı yüklendiği her bilgisayarda, Genel Derleme Önbelleği'adında bir makine genelinde kod önbelleği bulunur. Genel Derleme Önbelleği özellikle bilgisayarda çeşitli uygulamalar tarafından paylaşılmak üzere belirtilen derlemelerini depolar.  
   
  Yalnızca, gerektiğinde bunları genel derleme önbelleğine yükleme tarafından derlemeleri paylaşması gerekir. Genel bir kılavuz olarak derleme bağımlılıkları gizliliğini korumak ve bir derlemeyi paylaşımı kesinlikle gerekli olmadığı sürece derlemeleri uygulama dizininde bulun. Buna ek olarak, COM birlikte çalışma veya yönetilmeyen kod için erişilebilir hale getirmek için genel derleme önbelleğine derlemelerini yüklemek gerekli değildir.  
   
 > [!NOTE]
->  Açıkça bir derlemeyi genel derleme önbelleğine yüklemek istediğiniz olmayan senaryolar vardır. Genel Derleme Önbelleği uygulamada oluşturan derlemeler birini yerleştirirseniz, artık çoğaltmak veya uygulamayı kullanarak yüklemek **xcopy** uygulama dizini kopyalamak için komutu. Derleme genel derleme önbelleğinde de taşımanız gerekir.  
+>  Açıkça bir derlemeyi genel derleme önbelleğine yükleme istediğiniz olmayan senaryolar vardır. Genel Derleme Önbelleği uygulamada oluşturan derlemeler birini yerleştirirseniz, artık çoğaltmak veya uygulamayı kullanarak yüklemek **xcopy** uygulama dizini kopyalamak için komutu. Derleme Genel Derleme Önbelleği'nde de taşımanız gerekir.  
   
  Bir derlemeyi genel derleme önbelleğine dağıtmanın iki yolu vardır:  
   
@@ -42,15 +43,15 @@ Ortak dil çalışma zamanı yüklendiği her bilgisayarda, genel derleme önbel
 -   Adlı bir geliştirici aracı [Genel Derleme Önbelleği Aracı (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Dağıtım senaryolarında, derlemeleri genel derleme önbelleğine yüklemek için Windows Installer 2.0'ı kullanın. Derleme başvurusu sayım ve Windows Installer kullanırken sağlanan diğer özellikleri sağlamadığından yalnızca geliştirme senaryolarda Genel Derleme Önbelleği Aracı'nı kullanın.  
+    >  Derlemeleri genel derleme önbelleğine yükleme için Windows Installer dağıtım senaryolarında kullanın. Derleme başvurusu sayım ve Windows Installer kullanırken sağlanan diğer özellikleri sağlamadığından yalnızca geliştirme senaryolarda Genel Derleme Önbelleği Aracı'nı kullanın.  
   
  .NET Framework 4 ile başlayarak, genel derleme önbelleği için varsayılan konum olan **%windir%\Microsoft.NET\assembly**. .NET Framework önceki sürümlerde varsayılan konumdur **%windir%\assembly**.  
   
  Yöneticiler genellikle yazma denetlemek ve yürütme erişimi için bir erişim denetimi listesi (ACL) kullanılarak systemroot dizini koruyun. Genel Derleme Önbelleği systemroot dizinin bir alt dizinde yüklü olduğundan, bu dizinin ACL devralır. Yalnızca yönetici ayrıcalıklarına sahip kullanıcılar, Genel Derleme Önbelleği'nden dosyalarını silmek için izin önerilir.  
   
- Derlemeleri genel derleme önbelleğinde dağıtılan güçlü bir adı olması gerekir. Bir derlemeyi genel derleme önbelleğine eklendiğinde, bütünlük denetimlerinin derlemeyi oluşturan tüm dosyalar üzerinde gerçekleştirilir. Önbellek, bir derlemeyi, örneğin, bir dosya değişti, ancak bildirim değişikliği yansıtmayan durumlarda değiştirilmemiş emin olmak için bu bütünlüğü denetler.  
+ Derlemeleri Genel Derleme Önbelleği'nde dağıtılan güçlü bir adı olması gerekir. Bir derlemeyi genel derleme önbelleği eklendiğinde, bütünlük denetimlerinin derlemeyi oluşturan tüm dosyalar üzerinde gerçekleştirilir. Önbellek, bir derlemeyi, örneğin, bir dosya değişti, ancak bildirim değişikliği yansıtmayan durumlarda değiştirilmemiş emin olmak için bu bütünlüğü denetler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ortak dil çalışma zamanı derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Derlemeler ve genel derleme önbelleği ile çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Tanımlayıcı adlı derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)
+ [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)

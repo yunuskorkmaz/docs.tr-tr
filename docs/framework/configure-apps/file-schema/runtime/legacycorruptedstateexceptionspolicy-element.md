@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e4379f6f38c886504905483cefd7c7a6bbd519ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f09d6cf256e072d01f3cfc79987aa4d240f96235
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; öğesi
 Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durumda özel durumları yakalamak yönetilen kod izin verip vermeyeceğini belirtir.  
@@ -88,4 +89,4 @@ Ortak dil çalışma zamanı erişim ihlalleri ve diğer bozuk durumda özel dur
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce40f08b8b31ae3a4647e8919b4ea862fc03506f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş, geliştiricilerin günlük olarak için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Ortak anahtar genellikle kullanılabilir, ancak özel anahtar erişimi yalnızca birkaç kişi sınırlıdır. Derlemeleri tanımlayıcı adlar ile geliştirirken, her derleme bu başvurular tanımlayıcı adlı hedef derlemeyi hedef derleme güçlü bir ad vermek için kullanılan ortak anahtar belirteci içeriyor. Bu, ortak anahtar geliştirme işlemi sırasında kullanılabilir olması gerekir.  
@@ -77,7 +78,7 @@ Bir kuruluş, geliştiricilerin günlük olarak için erişimi yoktur yakından 
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derlemeleri oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
- [Nasıl yapılır: bir genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+ [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)

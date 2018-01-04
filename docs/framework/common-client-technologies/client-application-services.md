@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services"></a>İstemci Uygulama Hizmetleri
 İstemci uygulama hizmetleri kullanan Windows tabanlı uygulamalar oluşturmanızı kolaylaştırır [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Microsoft ASP.NET 2.0 AJAX uzantılarında dahil profili uygulama hizmetleri. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin. Örneğin, aşağıdaki görevleri gerçekleştirmek için bu hizmetleri kullanabilirsiniz:  
@@ -48,16 +49,16 @@ ms.lasthandoff: 11/21/2017
  Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İstemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [İstemci Uygulama Servislerine Genel Bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  İstemci uygulama hizmet sağlayıcıları kullanılabilen özellikleri açıklar.  
   
- [Nasıl yapılır: istemci uygulama hizmetlerini yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Nasıl Yapılır: İstemci Uygulama Servislerini Yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  Nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Proje Tasarımcısı etkinleştirme ve yapılandırma uygulama hizmetleri için. Ayrıca, App.config dosyasına karşılık gelen değişiklikleri açıklar.  
   
- [Nasıl yapılır: uygulama istemci uygulama hizmetleri ile kullanıcı oturum açma](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Nasıl Yapılır: İstemci Uygulama Servisleri ile Kullanıcı Oturum Açma Adını Uygulama](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Uygulamanızı bir istemci kimlik doğrulama hizmeti sağlayıcısı kullanacak şekilde yapılandırıldığında, bir kullanıcıyı doğrulamak açıklar.  
   
- [İzlenecek yol: İstemci uygulama hizmetleri kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [İzlenecek Yol: İstemci Uygulama Servislerini Kullanma](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  Tek bir uygulama içinde tüm istemci uygulama hizmetleri özellikleri birleştirmek açıklar. Bu kılavuz, uçtan uca yönergeler sağlar. Örneğin, istemci uygulama hizmetleri test etmek için kullanabileceğiniz bir ASP.NET Web hizmeti uygulama oluşturmak yönergeler içerir.  
   
 ## <a name="reference"></a>Başvuru  
@@ -80,4 +81,4 @@ ms.lasthandoff: 11/21/2017
  [Microsoft Ajax ile profil bilgilerini kullanma](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [ASP.NET kimlik doğrulaması](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [Yetkilendirme rollerini kullanarak yönetme](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
- [Uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+ [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)
