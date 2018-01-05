@@ -15,29 +15,30 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="16457-102">Pencere Yönetimi Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="16457-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="16457-103">Aşağıdaki konular nasıl yönetileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="16457-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="ac07d-102">Pencere Yönetimi Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ac07d-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="ac07d-103">Aşağıdaki konular nasıl yönetileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="ac07d-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="16457-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="16457-104">In This Section</span></span>  
- [<span data-ttu-id="16457-105">Otomatik olarak içeriğinin sığması için bir pencere boyutu</span><span class="sxs-lookup"><span data-stu-id="16457-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="16457-106">Bir uygulamadaki tüm pencereleri Al</span><span class="sxs-lookup"><span data-stu-id="16457-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="16457-107">Alma ve ana uygulama penceresi ayarlama</span><span class="sxs-lookup"><span data-stu-id="16457-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="16457-108">İletişim kutusunu açın</span><span class="sxs-lookup"><span data-stu-id="16457-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="16457-109">Bir ileti kutusu açın</span><span class="sxs-lookup"><span data-stu-id="16457-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [<span data-ttu-id="16457-110">Bir pencere aç</span><span class="sxs-lookup"><span data-stu-id="16457-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [<span data-ttu-id="16457-111">İletişim kutusu sonucunu döndürür</span><span class="sxs-lookup"><span data-stu-id="16457-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ac07d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ac07d-104">In This Section</span></span>  
+ [<span data-ttu-id="ac07d-105">İçeriği Sığdırmak için Pencereyi Otomatik Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="ac07d-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="ac07d-106">Bir Uygulamadaki Tüm Pencereleri Alma</span><span class="sxs-lookup"><span data-stu-id="ac07d-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="ac07d-107">Ana Uygulama Penceresini Alma ve Ayarlama</span><span class="sxs-lookup"><span data-stu-id="ac07d-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="ac07d-108">İletişim Kutusu Açma</span><span class="sxs-lookup"><span data-stu-id="ac07d-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="ac07d-109">İleti Kutusu Açma</span><span class="sxs-lookup"><span data-stu-id="ac07d-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
+  [<span data-ttu-id="ac07d-110">Pencere Açma</span><span class="sxs-lookup"><span data-stu-id="ac07d-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
+  [<span data-ttu-id="ac07d-111">İletişim Kutusu Sonucu Döndürme</span><span class="sxs-lookup"><span data-stu-id="ac07d-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="16457-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="16457-112">Related Sections</span></span>  
- [<span data-ttu-id="16457-113">Uygulama yönetimine genel bakış</span><span class="sxs-lookup"><span data-stu-id="16457-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="ac07d-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ac07d-112">Related Sections</span></span>  
+ [<span data-ttu-id="ac07d-113">Uygulama Yönetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ac07d-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
   
- [<span data-ttu-id="16457-114">Gezinti genel bakış</span><span class="sxs-lookup"><span data-stu-id="16457-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="ac07d-114">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ac07d-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
- [<span data-ttu-id="16457-115">Barındırma</span><span class="sxs-lookup"><span data-stu-id="16457-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [<span data-ttu-id="ac07d-115">Barındırma</span><span class="sxs-lookup"><span data-stu-id="ac07d-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
   
- [<span data-ttu-id="16457-116">Derleme ve dağıtma</span><span class="sxs-lookup"><span data-stu-id="16457-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="ac07d-116">Derleme ve Dağıtma</span><span class="sxs-lookup"><span data-stu-id="ac07d-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

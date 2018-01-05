@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2770f1a0c965dc956e837c5c362e5767d0c9cea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5256c0ffffb219776a8705dfee0409ebde07a7ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="be33e-102">GridSplitter Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="be33e-102">GridSplitter How-to Topics</span></span>
-<span data-ttu-id="be33e-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.GridSplitter> denetim.</span><span class="sxs-lookup"><span data-stu-id="be33e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
+# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="6a086-102">GridSplitter Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6a086-102">GridSplitter How-to Topics</span></span>
+<span data-ttu-id="6a086-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.GridSplitter> denetim.</span><span class="sxs-lookup"><span data-stu-id="6a086-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="be33e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="be33e-104">In This Section</span></span>  
- [<span data-ttu-id="be33e-105">GridSplitter ile satırları yeniden boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="be33e-105">Resize Rows with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [<span data-ttu-id="be33e-106">GridSplitter ile sütunları yeniden boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="be33e-106">Resize Columns with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [<span data-ttu-id="be33e-107">GridSplitter görünür olduğundan emin olun</span><span class="sxs-lookup"><span data-stu-id="be33e-107">Make Sure That a GridSplitter Is Visible</span></span>](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6a086-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6a086-104">In This Section</span></span>  
+ [<span data-ttu-id="6a086-105">GridSplitter ile Satırları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="6a086-105">Resize Rows with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
+ [<span data-ttu-id="6a086-106">GridSplitter ile Sütunları Yeniden Boyutlandırma</span><span class="sxs-lookup"><span data-stu-id="6a086-106">Resize Columns with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
+ [<span data-ttu-id="6a086-107">Bir GridSplitter'ın Görünür Olduğundan Emin Olma</span><span class="sxs-lookup"><span data-stu-id="6a086-107">Make Sure That a GridSplitter Is Visible</span></span>](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
-## <a name="reference"></a><span data-ttu-id="be33e-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="be33e-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6a086-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6a086-108">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
  <xref:System.Windows.Controls.Grid>  
   
-## <a name="related-sections"></a><span data-ttu-id="be33e-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="be33e-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="6a086-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6a086-109">Related Sections</span></span>

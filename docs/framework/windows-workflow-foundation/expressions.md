@@ -12,22 +12,23 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d42249f19b2d9acebf547be9e590813d6bbf7a33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e17d271aff9af19875f40c82b0b43b91904c3e40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expressions"></a><span data-ttu-id="39f96-102">İfadeler</span><span class="sxs-lookup"><span data-stu-id="39f96-102">Expressions</span></span>
-<span data-ttu-id="39f96-103">A [!INCLUDE[wf](../../../includes/wf-md.md)] bir sonuç döndürür herhangi bir etkinlik ifadesidir.</span><span class="sxs-lookup"><span data-stu-id="39f96-103">A [!INCLUDE[wf](../../../includes/wf-md.md)] expression is any activity that returns a result.</span></span> <span data-ttu-id="39f96-104">Tüm ifade etkinlikleri dolaylı olarak türetilen <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak.</span><span class="sxs-lookup"><span data-stu-id="39f96-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="39f96-105">çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi tek bir iş akışı değişken karmaşık etkinliklere işleci etkinlikleri üzerinden erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Bu teklif sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin.</span><span class="sxs-lookup"><span data-stu-id="39f96-105"> ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="39f96-106">Ek ifade etkinlikleri türetme tarafından oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.</span><span class="sxs-lookup"><span data-stu-id="39f96-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>  
+# <a name="expressions"></a><span data-ttu-id="8faeb-102">İfadeler</span><span class="sxs-lookup"><span data-stu-id="8faeb-102">Expressions</span></span>
+<span data-ttu-id="8faeb-103">A [!INCLUDE[wf](../../../includes/wf-md.md)] bir sonuç döndürür herhangi bir etkinlik ifadesidir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-103">A [!INCLUDE[wf](../../../includes/wf-md.md)] expression is any activity that returns a result.</span></span> <span data-ttu-id="8faeb-104">Tüm ifade etkinlikleri dolaylı olarak türetilen <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak.</span><span class="sxs-lookup"><span data-stu-id="8faeb-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="8faeb-105">çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi tek bir iş akışı değişken karmaşık etkinliklere işleci etkinlikleri üzerinden erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Bu teklif sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin.</span><span class="sxs-lookup"><span data-stu-id="8faeb-105"> ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="8faeb-106">Ek ifade etkinlikleri türetme tarafından oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.</span><span class="sxs-lookup"><span data-stu-id="8faeb-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>  
   
-## <a name="using-expressions"></a><span data-ttu-id="39f96-107">İfadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="39f96-107">Using Expressions</span></span>  
- <span data-ttu-id="39f96-108">İş Akışı Tasarımcısı kullanır <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> tüm ifadelerde Visual Basic projeleri için ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve <xref:Microsoft.CSharp.Activities.CSharpReference%601> ifadeleri iş akışı C# projelerinde için.</span><span class="sxs-lookup"><span data-stu-id="39f96-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>  
+## <a name="using-expressions"></a><span data-ttu-id="8faeb-107">İfadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="8faeb-107">Using Expressions</span></span>  
+ <span data-ttu-id="8faeb-108">İş Akışı Tasarımcısı kullanır <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> tüm ifadelerde Visual Basic projeleri için ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve <xref:Microsoft.CSharp.Activities.CSharpReference%601> ifadeleri iş akışı C# projelerinde için.</span><span class="sxs-lookup"><span data-stu-id="8faeb-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="39f96-109">C# ifadeleri iş akışı projelerinde desteği sunulmuştur [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39f96-109">Support for C# expressions in workflow projects was introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="39f96-110">[C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="39f96-110"> [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).</span></span>  
+>  <span data-ttu-id="8faeb-109">C# ifadeleri iş akışı projelerinde desteği sunulmuştur [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8faeb-109">Support for C# expressions in workflow projects was introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="8faeb-110">[C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="8faeb-110"> [C# Expressions](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).</span></span>  
   
- <span data-ttu-id="39f96-111">Tasarımcı tarafından üretilen iş akışları ifadeleri aşağıdaki örnekteki gibi köşeli ayraçlar içinde çevrelenmiş göründüğü XAML'de kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="39f96-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>  
+ <span data-ttu-id="8faeb-111">Tasarımcı tarafından üretilen iş akışları ifadeleri aşağıdaki örnekteki gibi köşeli ayraçlar içinde çevrelenmiş göründüğü XAML'de kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>  
   
 ```xml  
 <Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
 </Sequence>  
 ```  
   
- <span data-ttu-id="39f96-112">Bir iş akışı kodda tanımlarken ifade etkinlikler kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="39f96-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="39f96-113">Aşağıdaki örnek bir birleşim işleci etkinliklerin üç sayıları kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="39f96-113">The following example shows the usage of a composition of operator activities to add three numbers.</span></span>  
+ <span data-ttu-id="8faeb-112">Bir iş akışı kodda tanımlarken ifade etkinlikler kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="8faeb-113">Aşağıdaki örnek bir birleşim işleci etkinliklerin üç sayıları kullanımını gösterir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-113">The following example shows the usage of a composition of operator activities to add three numbers.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -77,7 +78,7 @@ Sequence w = new Sequence
 };  
 ```  
   
- <span data-ttu-id="39f96-114">Aynı iş akışı C# lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi kullanarak daha sıkı şekilde ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="39f96-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example.</span></span>  
+ <span data-ttu-id="8faeb-114">Aynı iş akışı C# lambda ifadeleri, aşağıdaki örnekte gösterildiği gibi kullanarak daha sıkı şekilde ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -98,7 +99,7 @@ Sequence w = new Sequence
 };  
 ```  
   
- <span data-ttu-id="39f96-115">İş akışı de Visual Basic ifade etkinlikleri kullanarak aşağıdaki örnekte gösterildiği gibi ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="39f96-115">The workflow can also be expressed by using Visual Basic expression activities, as shown in the following example.</span></span>  
+ <span data-ttu-id="8faeb-115">İş akışı de Visual Basic ifade etkinlikleri kullanarak aşağıdaki örnekte gösterildiği gibi ifade edilebilir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-115">The workflow can also be expressed by using Visual Basic expression activities, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -119,8 +120,8 @@ Sequence w = new Sequence
 };  
 ```  
   
-## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="39f96-116">Kullanılabilir özel ifade etkinlikleri ifadelerle genişletme</span><span class="sxs-lookup"><span data-stu-id="39f96-116">Extending Available Expressions with Custom Expression Activities</span></span>  
- <span data-ttu-id="39f96-117">İfadelerde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ek ifade etkinlikleri oluşturulmasına izin vererek genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="39f96-117">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="39f96-118">Aşağıdaki örnekte, üç tamsayı değerlerin toplamını döndürür bir etkinlik gösterir.</span><span class="sxs-lookup"><span data-stu-id="39f96-118">The following example shows an activity that returns a sum of three integer values.</span></span>  
+## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="8faeb-116">Kullanılabilir özel ifade etkinlikleri ifadelerle genişletme</span><span class="sxs-lookup"><span data-stu-id="8faeb-116">Extending Available Expressions with Custom Expression Activities</span></span>  
+ <span data-ttu-id="8faeb-117">İfadelerde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ek ifade etkinlikleri oluşturulmasına izin vererek genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-117">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="8faeb-118">Aşağıdaki örnekte, üç tamsayı değerlerin toplamını döndürür bir etkinlik gösterir.</span><span class="sxs-lookup"><span data-stu-id="8faeb-118">The following example shows an activity that returns a sum of three integer values.</span></span>  
   
 ```  
 using System;  
@@ -147,7 +148,7 @@ namespace ExpressionsDemo
 }  
 ```  
   
- <span data-ttu-id="39f96-119">Bu yeni aktivitesi aşağıdaki örnekte gösterildiği gibi üç değerden eklenen önceki bir iş akışı yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="39f96-119">With this new activity you can rewrite the previous workflow that added three values as shown in the following example.</span></span>  
+ <span data-ttu-id="8faeb-119">Bu yeni aktivitesi aşağıdaki örnekte gösterildiği gibi üç değerden eklenen önceki bir iş akışı yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8faeb-119">With this new activity you can rewrite the previous workflow that added three values as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -174,4 +175,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="39f96-120">ifadeler kod içinde kullanma, bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span><span class="sxs-lookup"><span data-stu-id="39f96-120"> using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="8faeb-120">ifadeler kod içinde kullanma, bkz: [geliştirme iş akışları, etkinlikler ve ifadeler kullanarak kesinliği kod](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span><span class="sxs-lookup"><span data-stu-id="8faeb-120"> using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>

@@ -15,25 +15,26 @@ caps.latest.revision: "86"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 921a9f3abd8c4cba8cfa0f59b8321ee309642dbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f65d6c25627ba84ffe83677bbaadfc2e55e6f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="documents"></a><span data-ttu-id="2c73f-102">Belgeler</span><span class="sxs-lookup"><span data-stu-id="2c73f-102">Documents</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="2c73f-103">Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi uygulamaları oluşturmak, geliştiricilerin bileşenleri yönlü kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2c73f-103"> provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="2c73f-104">Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="2c73f-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
+# <a name="documents"></a><span data-ttu-id="fad16-102">Belgeler</span><span class="sxs-lookup"><span data-stu-id="fad16-102">Documents</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="fad16-103">Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi uygulamaları oluşturmak, geliştiricilerin bileşenleri yönlü kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="fad16-103"> provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="fad16-104">Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="fad16-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c73f-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2c73f-105">In This Section</span></span>  
- [<span data-ttu-id="2c73f-106">WPF belgeleri</span><span class="sxs-lookup"><span data-stu-id="2c73f-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="2c73f-107">Belgeyi seri hale getirme ve depolama</span><span class="sxs-lookup"><span data-stu-id="2c73f-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [<span data-ttu-id="2c73f-108">Ek Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2c73f-108">Annotations</span></span>](../../../../docs/framework/wpf/advanced/annotations.md)  
- [<span data-ttu-id="2c73f-109">İçerik akışı</span><span class="sxs-lookup"><span data-stu-id="2c73f-109">Flow Content</span></span>](../../../../docs/framework/wpf/advanced/flow-content.md)  
- [<span data-ttu-id="2c73f-110">Tipografi</span><span class="sxs-lookup"><span data-stu-id="2c73f-110">Typography</span></span>](../../../../docs/framework/wpf/advanced/typography.md)  
- [<span data-ttu-id="2c73f-111">Yazdırma ve baskı Sistem Yönetimi</span><span class="sxs-lookup"><span data-stu-id="2c73f-111">Printing and Print System Management</span></span>](../../../../docs/framework/wpf/advanced/printing-and-print-system-management.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fad16-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="fad16-105">In This Section</span></span>  
+ [<span data-ttu-id="fad16-106">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="fad16-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="fad16-107">Belge Serileştirme ve Depolama</span><span class="sxs-lookup"><span data-stu-id="fad16-107">Document Serialization and Storage</span></span>](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [<span data-ttu-id="fad16-108">Ek Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fad16-108">Annotations</span></span>](../../../../docs/framework/wpf/advanced/annotations.md)  
+ [<span data-ttu-id="fad16-109">Akış İçeriği</span><span class="sxs-lookup"><span data-stu-id="fad16-109">Flow Content</span></span>](../../../../docs/framework/wpf/advanced/flow-content.md)  
+ [<span data-ttu-id="fad16-110">Tipografi</span><span class="sxs-lookup"><span data-stu-id="fad16-110">Typography</span></span>](../../../../docs/framework/wpf/advanced/typography.md)  
+ [<span data-ttu-id="fad16-111">Yazdırma ve Yazdırma Sistemi Yönetimi</span><span class="sxs-lookup"><span data-stu-id="fad16-111">Printing and Print System Management</span></span>](../../../../docs/framework/wpf/advanced/printing-and-print-system-management.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2c73f-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2c73f-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fad16-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fad16-112">See Also</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [<span data-ttu-id="2c73f-113">isXPS.exe (isXPS uyumluluk aracı)</span><span class="sxs-lookup"><span data-stu-id="2c73f-113">isXPS.exe (isXPS Conformance Tool)</span></span>](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)
+ [<span data-ttu-id="fad16-113">isXPS.exe (isXPS uyumluluk aracı)</span><span class="sxs-lookup"><span data-stu-id="fad16-113">isXPS.exe (isXPS Conformance Tool)</span></span>](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)

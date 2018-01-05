@@ -12,31 +12,32 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d54660ed7f278b1f82fac81c31b8a30e20a2e7d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5810a30fa8b797a5a8ed533ea6baca3c85d42c0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4202---startsqlcommandexecute"></a><span data-ttu-id="29399-102">4202 - StartSqlCommandExecute</span><span class="sxs-lookup"><span data-stu-id="29399-102">4202 - StartSqlCommandExecute</span></span>
-## <a name="properties"></a><span data-ttu-id="29399-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="29399-103">Properties</span></span>  
+# <a name="4202---startsqlcommandexecute"></a><span data-ttu-id="d3366-102">4202 - StartSqlCommandExecute</span><span class="sxs-lookup"><span data-stu-id="d3366-102">4202 - StartSqlCommandExecute</span></span>
+## <a name="properties"></a><span data-ttu-id="d3366-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="d3366-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="29399-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="29399-104">ID</span></span>|<span data-ttu-id="29399-105">4202</span><span class="sxs-lookup"><span data-stu-id="29399-105">4202</span></span>|  
-|<span data-ttu-id="29399-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="29399-106">Keywords</span></span>|<span data-ttu-id="29399-107">WFInstanceStore</span><span class="sxs-lookup"><span data-stu-id="29399-107">WFInstanceStore</span></span>|  
-|<span data-ttu-id="29399-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="29399-108">Level</span></span>|<span data-ttu-id="29399-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="29399-109">Verbose</span></span>|  
-|<span data-ttu-id="29399-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="29399-110">Channel</span></span>|<span data-ttu-id="29399-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="29399-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d3366-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="d3366-104">ID</span></span>|<span data-ttu-id="d3366-105">4202</span><span class="sxs-lookup"><span data-stu-id="d3366-105">4202</span></span>|  
+|<span data-ttu-id="d3366-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="d3366-106">Keywords</span></span>|<span data-ttu-id="d3366-107">WFInstanceStore</span><span class="sxs-lookup"><span data-stu-id="d3366-107">WFInstanceStore</span></span>|  
+|<span data-ttu-id="d3366-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="d3366-108">Level</span></span>|<span data-ttu-id="d3366-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="d3366-109">Verbose</span></span>|  
+|<span data-ttu-id="d3366-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="d3366-110">Channel</span></span>|<span data-ttu-id="d3366-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="d3366-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="29399-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="29399-112">Description</span></span>  
- <span data-ttu-id="29399-113">Bir SQL komutu yürütülen gösterir.</span><span class="sxs-lookup"><span data-stu-id="29399-113">Indicates a SQL command is being executed.</span></span>  
+## <a name="description"></a><span data-ttu-id="d3366-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d3366-112">Description</span></span>  
+ <span data-ttu-id="d3366-113">Bir SQL komutu yürütülen gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3366-113">Indicates a SQL command is being executed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="29399-114">İleti</span><span class="sxs-lookup"><span data-stu-id="29399-114">Message</span></span>  
- <span data-ttu-id="29399-115">SQL komutu yürütme başlangıç: %1</span><span class="sxs-lookup"><span data-stu-id="29399-115">Starting SQL command execution: %1</span></span>  
+## <a name="message"></a><span data-ttu-id="d3366-114">İleti</span><span class="sxs-lookup"><span data-stu-id="d3366-114">Message</span></span>  
+ <span data-ttu-id="d3366-115">SQL komutu yürütme başlangıç: %1</span><span class="sxs-lookup"><span data-stu-id="d3366-115">Starting SQL command execution: %1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="29399-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="29399-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="d3366-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="d3366-116">Details</span></span>  
   
-|<span data-ttu-id="29399-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="29399-117">Data Item Name</span></span>|<span data-ttu-id="29399-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="29399-118">Data Item Type</span></span>|<span data-ttu-id="29399-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="29399-119">Description</span></span>|  
+|<span data-ttu-id="d3366-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="d3366-117">Data Item Name</span></span>|<span data-ttu-id="d3366-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="d3366-118">Data Item Type</span></span>|<span data-ttu-id="d3366-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d3366-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="29399-120">SqlCommand</span><span class="sxs-lookup"><span data-stu-id="29399-120">SqlCommand</span></span>|<span data-ttu-id="29399-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="29399-121">xs:string</span></span>|<span data-ttu-id="29399-122">Yürütülen SQL komutu.</span><span class="sxs-lookup"><span data-stu-id="29399-122">The SQL command that was executed.</span></span>|  
-|<span data-ttu-id="29399-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="29399-123">AppDomain</span></span>|<span data-ttu-id="29399-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="29399-124">xs:string</span></span>|<span data-ttu-id="29399-125">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="29399-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="d3366-120">SqlCommand</span><span class="sxs-lookup"><span data-stu-id="d3366-120">SqlCommand</span></span>|<span data-ttu-id="d3366-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="d3366-121">xs:string</span></span>|<span data-ttu-id="d3366-122">Yürütülen SQL komutu.</span><span class="sxs-lookup"><span data-stu-id="d3366-122">The SQL command that was executed.</span></span>|  
+|<span data-ttu-id="d3366-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="d3366-123">AppDomain</span></span>|<span data-ttu-id="d3366-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="d3366-124">xs:string</span></span>|<span data-ttu-id="d3366-125">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="d3366-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

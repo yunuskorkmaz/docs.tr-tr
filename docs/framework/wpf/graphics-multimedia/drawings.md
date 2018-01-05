@@ -23,22 +23,23 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e37c830e8f5290584db8320b041e05ac74839b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45207de8b2e98dd1bd13879f8bbee1fdaf80aa24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drawings"></a><span data-ttu-id="bc482-102">Çizimler</span><span class="sxs-lookup"><span data-stu-id="bc482-102">Drawings</span></span>
-<span data-ttu-id="bc482-103"><xref:System.Windows.Media.Drawing>nesneleri şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bc482-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="bc482-104">Çizimler ile Boyama yaparken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="bc482-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="f2f82-102">Çizimler</span><span class="sxs-lookup"><span data-stu-id="f2f82-102">Drawings</span></span>
+<span data-ttu-id="f2f82-103"><xref:System.Windows.Media.Drawing>nesneleri şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f2f82-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="f2f82-104">Çizimler ile Boyama yaparken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="f2f82-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bc482-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bc482-105">In This Section</span></span>  
- [<span data-ttu-id="bc482-106">Çizim nesnelerine genel bakış</span><span class="sxs-lookup"><span data-stu-id="bc482-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [<span data-ttu-id="bc482-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="bc482-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f2f82-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f2f82-105">In This Section</span></span>  
+ [<span data-ttu-id="f2f82-106">Çizim Nesnelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f2f82-106">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+  [<span data-ttu-id="f2f82-107">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f2f82-107">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bc482-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bc482-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f2f82-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f2f82-108">See Also</span></span>  
  <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="bc482-109">2B grafik ve görüntü</span><span class="sxs-lookup"><span data-stu-id="bc482-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="bc482-110">WPF Grafik işleme genel bakış</span><span class="sxs-lookup"><span data-stu-id="bc482-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="bc482-111">Şekiller ve temel çizim WPF genel bakış</span><span class="sxs-lookup"><span data-stu-id="bc482-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="bc482-112">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="bc482-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="f2f82-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="f2f82-109">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="f2f82-110">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f2f82-110">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="f2f82-111">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f2f82-111">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="f2f82-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="f2f82-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

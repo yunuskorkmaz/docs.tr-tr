@@ -17,24 +17,25 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="de9b3-102">ListView'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="de9b3-102">ListView Overviews</span></span>
-<span data-ttu-id="de9b3-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.ListView> denetim.</span><span class="sxs-lookup"><span data-stu-id="de9b3-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="33c05-102">ListView'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="33c05-102">ListView Overviews</span></span>
+<span data-ttu-id="33c05-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.ListView> denetim.</span><span class="sxs-lookup"><span data-stu-id="33c05-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="de9b3-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="de9b3-104">In This Section</span></span>  
- [<span data-ttu-id="de9b3-105">ListView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="de9b3-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [<span data-ttu-id="de9b3-106">GridView genel bakış</span><span class="sxs-lookup"><span data-stu-id="de9b3-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [<span data-ttu-id="de9b3-107">GridView sütun üstbilgi stil ve şablonlarına genel bakış</span><span class="sxs-lookup"><span data-stu-id="de9b3-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="33c05-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="33c05-104">In This Section</span></span>  
+ [<span data-ttu-id="33c05-105">ListView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="33c05-105">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="33c05-106">GridView Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="33c05-106">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="33c05-107">GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="33c05-107">GridView Column Header Styles and Templates Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="de9b3-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="de9b3-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="33c05-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="33c05-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="de9b3-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="de9b3-109">Related Sections</span></span>  
- [<span data-ttu-id="de9b3-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="de9b3-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="33c05-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="33c05-109">Related Sections</span></span>  
+ [<span data-ttu-id="33c05-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="33c05-110">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

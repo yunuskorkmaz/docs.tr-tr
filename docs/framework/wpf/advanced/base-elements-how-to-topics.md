@@ -15,28 +15,29 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d99817976d37d4da4429d79032e66fb2908b6c99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 512fdb59998961013a3412c3c85820d1cff2eab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="base-elements-how-to-topics"></a><span data-ttu-id="bd008-102">Temel Öğeler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="bd008-102">Base Elements How-to Topics</span></span>
-<span data-ttu-id="bd008-103">Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını açıklamaktadır: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.</span><span class="sxs-lookup"><span data-stu-id="bd008-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
+# <a name="base-elements-how-to-topics"></a><span data-ttu-id="0f412-102">Temel Öğeler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="0f412-102">Base Elements How-to Topics</span></span>
+<span data-ttu-id="0f412-103">Bu bölümdeki konular, dört WPF temel öğelerin nasıl kullanılacağını açıklamaktadır: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.FrameworkContentElement>.</span><span class="sxs-lookup"><span data-stu-id="0f412-103">The topics in this section describe how to use the four WPF base elements: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, and <xref:System.Windows.FrameworkContentElement>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bd008-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bd008-104">In This Section</span></span>  
- [<span data-ttu-id="bd008-105">Saydam veya Yarı Saydam UIElement olun</span><span class="sxs-lookup"><span data-stu-id="bd008-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [<span data-ttu-id="bd008-106">FrameworkElement boyutunu animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="bd008-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [<span data-ttu-id="bd008-107">Freezable dondurulmuş olup olmadığını belirleme</span><span class="sxs-lookup"><span data-stu-id="bd008-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [<span data-ttu-id="bd008-108">Yüklü bir olayı işleme</span><span class="sxs-lookup"><span data-stu-id="bd008-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [<span data-ttu-id="bd008-109">Öğeleri ve denetim kenar boşluklarını ayarlama</span><span class="sxs-lookup"><span data-stu-id="bd008-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [<span data-ttu-id="bd008-110">Salt okunur yapma Freezable</span><span class="sxs-lookup"><span data-stu-id="bd008-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [<span data-ttu-id="bd008-111">Yazılabilir bir kopyasını salt okunur Freezable alın</span><span class="sxs-lookup"><span data-stu-id="bd008-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [<span data-ttu-id="bd008-112">UIElement yatay veya Dikey çevirme</span><span class="sxs-lookup"><span data-stu-id="bd008-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [<span data-ttu-id="bd008-113">ThicknessConverter nesnesinin kullanımı</span><span class="sxs-lookup"><span data-stu-id="bd008-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [<span data-ttu-id="bd008-114">ContextMenuOpening olayını işleme</span><span class="sxs-lookup"><span data-stu-id="bd008-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0f412-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="0f412-104">In This Section</span></span>  
+ [<span data-ttu-id="0f412-105">Saydam veya Yarı Saydam UIElement Oluşturma</span><span class="sxs-lookup"><span data-stu-id="0f412-105">Make a UIElement Transparent or Semi-Transparent</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [<span data-ttu-id="0f412-106">FrameworkElement Boyutuna Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="0f412-106">Animate the Size of a FrameworkElement</span></span>](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
+ [<span data-ttu-id="0f412-107">Freezable'ın Dondurulmuş Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="0f412-107">Determine Whether a Freezable Is Frozen</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
+ [<span data-ttu-id="0f412-108">Yüklü Bir Olayı İşleme</span><span class="sxs-lookup"><span data-stu-id="0f412-108">Handle a Loaded Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
+ [<span data-ttu-id="0f412-109">Öğeler ve Denetimlerin Kenar Boşluklarını Ayarlama</span><span class="sxs-lookup"><span data-stu-id="0f412-109">Set Margins of Elements and Controls</span></span>](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
+ [<span data-ttu-id="0f412-110">Freezable'ı Salt Okunur Yapma</span><span class="sxs-lookup"><span data-stu-id="0f412-110">Make a Freezable Read-Only</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
+ [<span data-ttu-id="0f412-111">Salt Okunur Freezable'ın Yazılabilir Kopyasını Edinme</span><span class="sxs-lookup"><span data-stu-id="0f412-111">Obtain a Writable Copy of a Read-Only Freezable</span></span>](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [<span data-ttu-id="0f412-112">UIElement'i Yatay veya Dikey Olarak Çevirme</span><span class="sxs-lookup"><span data-stu-id="0f412-112">Flip a UIElement Horizontally or Vertically</span></span>](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [<span data-ttu-id="0f412-113">ThicknessConverter Nesnesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="0f412-113">Use a ThicknessConverter Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
+ [<span data-ttu-id="0f412-114">ContextMenuOpening Olayını İşleme</span><span class="sxs-lookup"><span data-stu-id="0f412-114">Handle the ContextMenuOpening Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="bd008-115">Başvuru</span><span class="sxs-lookup"><span data-stu-id="bd008-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0f412-115">Başvuru</span><span class="sxs-lookup"><span data-stu-id="0f412-115">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.ContentElement>  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="related-sections"></a><span data-ttu-id="bd008-116">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="bd008-116">Related Sections</span></span>  
- [<span data-ttu-id="bd008-117">Temel öğeler</span><span class="sxs-lookup"><span data-stu-id="bd008-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)
+## <a name="related-sections"></a><span data-ttu-id="0f412-116">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="0f412-116">Related Sections</span></span>  
+ [<span data-ttu-id="0f412-117">Temel Öğeler</span><span class="sxs-lookup"><span data-stu-id="0f412-117">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)

@@ -12,30 +12,31 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4da95a4824325bb5ddfe0454756f682888ca93d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 005b95a98b7a30283be32ad1ea0b580a57a3b771
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="2022---executeworkitemstop"></a><span data-ttu-id="4fb1b-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="4fb1b-102">2022 - ExecuteWorkItemStop</span></span>
-## <a name="properties"></a><span data-ttu-id="4fb1b-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="4fb1b-103">Properties</span></span>  
+# <a name="2022---executeworkitemstop"></a><span data-ttu-id="28173-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="28173-102">2022 - ExecuteWorkItemStop</span></span>
+## <a name="properties"></a><span data-ttu-id="28173-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="28173-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4fb1b-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="4fb1b-104">ID</span></span>|<span data-ttu-id="4fb1b-105">2022</span><span class="sxs-lookup"><span data-stu-id="4fb1b-105">2022</span></span>|  
-|<span data-ttu-id="4fb1b-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="4fb1b-106">Keywords</span></span>|<span data-ttu-id="4fb1b-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="4fb1b-107">WFRuntime</span></span>|  
-|<span data-ttu-id="4fb1b-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="4fb1b-108">Level</span></span>|<span data-ttu-id="4fb1b-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="4fb1b-109">Verbose</span></span>|  
-|<span data-ttu-id="4fb1b-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="4fb1b-110">Channel</span></span>|<span data-ttu-id="4fb1b-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="4fb1b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="28173-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="28173-104">ID</span></span>|<span data-ttu-id="28173-105">2022</span><span class="sxs-lookup"><span data-stu-id="28173-105">2022</span></span>|  
+|<span data-ttu-id="28173-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="28173-106">Keywords</span></span>|<span data-ttu-id="28173-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="28173-107">WFRuntime</span></span>|  
+|<span data-ttu-id="28173-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="28173-108">Level</span></span>|<span data-ttu-id="28173-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="28173-109">Verbose</span></span>|  
+|<span data-ttu-id="28173-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="28173-110">Channel</span></span>|<span data-ttu-id="28173-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="28173-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4fb1b-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4fb1b-112">Description</span></span>  
- <span data-ttu-id="4fb1b-113">Bir ExecuteWorkItem tamamlandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4fb1b-113">Indicates an ExecuteWorkItem has completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="28173-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="28173-112">Description</span></span>  
+ <span data-ttu-id="28173-113">Bir ExecuteWorkItem tamamlandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="28173-113">Indicates an ExecuteWorkItem has completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4fb1b-114">İleti</span><span class="sxs-lookup"><span data-stu-id="4fb1b-114">Message</span></span>  
- <span data-ttu-id="4fb1b-115">İş öğesi Dur yürütme</span><span class="sxs-lookup"><span data-stu-id="4fb1b-115">Execute work item stop</span></span>  
+## <a name="message"></a><span data-ttu-id="28173-114">İleti</span><span class="sxs-lookup"><span data-stu-id="28173-114">Message</span></span>  
+ <span data-ttu-id="28173-115">İş öğesi Dur yürütme</span><span class="sxs-lookup"><span data-stu-id="28173-115">Execute work item stop</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4fb1b-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="4fb1b-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="28173-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="28173-116">Details</span></span>  
   
-|<span data-ttu-id="4fb1b-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="4fb1b-117">Data Item Name</span></span>|<span data-ttu-id="4fb1b-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="4fb1b-118">Data Item Type</span></span>|<span data-ttu-id="4fb1b-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4fb1b-119">Description</span></span>|  
+|<span data-ttu-id="28173-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="28173-117">Data Item Name</span></span>|<span data-ttu-id="28173-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="28173-118">Data Item Type</span></span>|<span data-ttu-id="28173-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="28173-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="4fb1b-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="4fb1b-120">AppDomain</span></span>|<span data-ttu-id="4fb1b-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="4fb1b-121">xs:string</span></span>|<span data-ttu-id="4fb1b-122">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="4fb1b-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="28173-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="28173-120">AppDomain</span></span>|<span data-ttu-id="28173-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="28173-121">xs:string</span></span>|<span data-ttu-id="28173-122">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="28173-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

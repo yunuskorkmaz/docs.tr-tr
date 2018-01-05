@@ -18,20 +18,21 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa929e36128086466f9b5843b617bb2363fd7672
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2831055ea0c99aa029b8f5ce8f15460304ec3c44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="fbef6-102">Özellikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="fbef6-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="fbef6-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="fbef6-103">In This Section</span></span>  
- [<span data-ttu-id="fbef6-104">Bağımlılık özelliği uygulama</span><span class="sxs-lookup"><span data-stu-id="fbef6-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="fbef6-105">Bağımlılık özelliği için bir sahip türü ekleme</span><span class="sxs-lookup"><span data-stu-id="fbef6-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="fbef6-106">Ekli özellik kaydetme</span><span class="sxs-lookup"><span data-stu-id="fbef6-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="fbef6-107">Meta veri bağımlılık özelliği için geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="fbef6-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="f98e9-102">Özellikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f98e9-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="f98e9-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f98e9-103">In This Section</span></span>  
+ [<span data-ttu-id="f98e9-104">Bağımlılık Özelliği Uygulama</span><span class="sxs-lookup"><span data-stu-id="f98e9-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="f98e9-105">Bağımlılık Özelliği için Sahip Türü Ekleme</span><span class="sxs-lookup"><span data-stu-id="f98e9-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="f98e9-106">Ekli Özelliği Kaydetme</span><span class="sxs-lookup"><span data-stu-id="f98e9-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="f98e9-107">Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="f98e9-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="fbef6-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="fbef6-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f98e9-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f98e9-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="fbef6-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="fbef6-109">Related Sections</span></span>  
- [<span data-ttu-id="fbef6-110">Özellikleri</span><span class="sxs-lookup"><span data-stu-id="fbef6-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="f98e9-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="f98e9-109">Related Sections</span></span>  
+ [<span data-ttu-id="f98e9-110">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f98e9-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)

@@ -18,24 +18,25 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ca2931b8eff6404ab79aa525eabcb46baa7cc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d061bd77c2edc00a912f4d64bc7ef38b608f9066
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="border"></a><span data-ttu-id="d949b-102">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="d949b-102">Border</span></span>
-<span data-ttu-id="d949b-103">Aşağıdaki örnek, dinamik olarak özelliklerini değiştirmek gösterilmiştir <xref:System.Windows.Controls.Border> öğesi.</span><span class="sxs-lookup"><span data-stu-id="d949b-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="ccbf0-102">Kenarlık</span><span class="sxs-lookup"><span data-stu-id="ccbf0-102">Border</span></span>
+<span data-ttu-id="ccbf0-103">Aşağıdaki örnek, dinamik olarak özelliklerini değiştirmek gösterilmiştir <xref:System.Windows.Controls.Border> öğesi.</span><span class="sxs-lookup"><span data-stu-id="ccbf0-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d949b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d949b-104">In This Section</span></span>  
- [<span data-ttu-id="d949b-105">BorderThickness değerini animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="d949b-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ccbf0-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ccbf0-104">In This Section</span></span>  
+ [<span data-ttu-id="ccbf0-105">BorderThickness Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="ccbf0-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="d949b-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="d949b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ccbf0-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ccbf0-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="d949b-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d949b-107">Related Sections</span></span>  
- [<span data-ttu-id="d949b-108">Paneller Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d949b-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="ccbf0-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ccbf0-107">Related Sections</span></span>  
+ [<span data-ttu-id="ccbf0-108">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ccbf0-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
   
- [<span data-ttu-id="d949b-109">Hizalama, kenar boşlukları ve doldurma genel bakış</span><span class="sxs-lookup"><span data-stu-id="d949b-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="ccbf0-109">Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ccbf0-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)

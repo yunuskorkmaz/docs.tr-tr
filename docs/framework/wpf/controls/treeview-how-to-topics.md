@@ -17,25 +17,26 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3619f26e8c447340e005c0d44be9018f2746f10
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f1f042894f96cafc36944be7b18d5777e5f3c10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="treeview-how-to-topics"></a><span data-ttu-id="21865-102">TreeView Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="21865-102">TreeView How-to Topics</span></span>
-<span data-ttu-id="21865-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.TreeView> hiyerarşik yapıda bilgileri görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="21865-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
+# <a name="treeview-how-to-topics"></a><span data-ttu-id="902ef-102">TreeView Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="902ef-102">TreeView How-to Topics</span></span>
+<span data-ttu-id="902ef-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.TreeView> hiyerarşik yapıda bilgileri görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="902ef-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="21865-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="21865-104">In This Section</span></span>  
- [<span data-ttu-id="21865-105">Basit veya Karmaşık TreeViews Oluşturma</span><span class="sxs-lookup"><span data-stu-id="21865-105">Create Simple or Complex TreeViews</span></span>](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [<span data-ttu-id="21865-106">SelectedValue, SelectedValuePath ve SelectedItem kullanın</span><span class="sxs-lookup"><span data-stu-id="21865-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [<span data-ttu-id="21865-107">TreeView TreeView'a derinlik olan verilere bağlama</span><span class="sxs-lookup"><span data-stu-id="21865-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [<span data-ttu-id="21865-108">TreeView performansını artırma</span><span class="sxs-lookup"><span data-stu-id="21865-108">Improve the Performance of a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [<span data-ttu-id="21865-109">TreeView içinde TreeViewItem Bul</span><span class="sxs-lookup"><span data-stu-id="21865-109">Find a TreeViewItem in a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="902ef-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="902ef-104">In This Section</span></span>  
+ [<span data-ttu-id="902ef-105">Basit veya Karmaşık TreeViews Oluşturma</span><span class="sxs-lookup"><span data-stu-id="902ef-105">Create Simple or Complex TreeViews</span></span>](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
+  [<span data-ttu-id="902ef-106">SelectedValue, SelectedValuePath ve SelectedItem Kullanma</span><span class="sxs-lookup"><span data-stu-id="902ef-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [<span data-ttu-id="902ef-107">Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama</span><span class="sxs-lookup"><span data-stu-id="902ef-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [<span data-ttu-id="902ef-108">TreeView'ın Performansını Artırma</span><span class="sxs-lookup"><span data-stu-id="902ef-108">Improve the Performance of a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
+  [<span data-ttu-id="902ef-109">TreeView İçinde TreeViewItem Bulma</span><span class="sxs-lookup"><span data-stu-id="902ef-109">Find a TreeViewItem in a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
   
-## <a name="reference"></a><span data-ttu-id="21865-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="21865-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="902ef-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="902ef-110">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   
  <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="21865-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="21865-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="902ef-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="902ef-111">Related Sections</span></span>

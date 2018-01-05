@@ -19,21 +19,22 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7aabb01d35e02323785b6bae0764a8d8bc636e16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db3ad547072f1d9162ede5c45144aa30e809c50e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="30aee-102">Nasıl yapılır: Bir Görselden Bit Eşlem Oluşturma</span><span class="sxs-lookup"><span data-stu-id="30aee-102">How to: Create a Bitmap from a Visual</span></span>
-<span data-ttu-id="30aee-103">Bu örnek, bir bit eşlem nasıl oluşturabileceğinizi gösterir bir <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="30aee-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="30aee-104">A <xref:System.Windows.Media.DrawingVisual> ile işlenen <xref:System.Windows.Media.FormattedText>.</span><span class="sxs-lookup"><span data-stu-id="30aee-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="30aee-105"><xref:System.Windows.Media.Visual> Sonra işlenen <xref:System.Windows.Media.Imaging.RenderTargetBitmap> verilen metni bir bit eşlem oluşturma.</span><span class="sxs-lookup"><span data-stu-id="30aee-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
+# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="fb3a7-102">Nasıl yapılır: Bir Görselden Bit Eşlem Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fb3a7-102">How to: Create a Bitmap from a Visual</span></span>
+<span data-ttu-id="fb3a7-103">Bu örnek, bir bit eşlem nasıl oluşturabileceğinizi gösterir bir <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="fb3a7-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="fb3a7-104">A <xref:System.Windows.Media.DrawingVisual> ile işlenen <xref:System.Windows.Media.FormattedText>.</span><span class="sxs-lookup"><span data-stu-id="fb3a7-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="fb3a7-105"><xref:System.Windows.Media.Visual> Sonra işlenen <xref:System.Windows.Media.Imaging.RenderTargetBitmap> verilen metni bir bit eşlem oluşturma.</span><span class="sxs-lookup"><span data-stu-id="fb3a7-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30aee-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="30aee-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fb3a7-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="fb3a7-106">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#CreateRTBImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample.cs#creatertbimage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
-## <a name="see-also"></a><span data-ttu-id="30aee-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="30aee-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fb3a7-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fb3a7-107">See Also</span></span>  
  <xref:System.Windows.Media.DrawingContext>  
- [<span data-ttu-id="30aee-108">Görüntü oluşturmaya genel bakış</span><span class="sxs-lookup"><span data-stu-id="30aee-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="30aee-109">Çizim nesnelerine genel bakış</span><span class="sxs-lookup"><span data-stu-id="30aee-109">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [<span data-ttu-id="30aee-110">DrawingVisual nesnelerini kullanma</span><span class="sxs-lookup"><span data-stu-id="30aee-110">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+ [<span data-ttu-id="fb3a7-108">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="fb3a7-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="fb3a7-109">Çizim Nesnelerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="fb3a7-109">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="fb3a7-110">DrawingVisual Nesnelerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="fb3a7-110">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)

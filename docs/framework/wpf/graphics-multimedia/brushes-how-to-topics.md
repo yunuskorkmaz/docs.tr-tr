@@ -17,36 +17,37 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188c9c484d6cdb8f1175bd9ac88791e3fbdf23bc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 189cec2bec9364e4f03ec3a3e0e8c8420dbfcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="brushes-how-to-topics"></a><span data-ttu-id="72c41-102">Fırçalar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="72c41-102">Brushes How-to Topics</span></span>
-<span data-ttu-id="72c41-103">Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ekran içeriğini boyamak için Fırçalar.</span><span class="sxs-lookup"><span data-stu-id="72c41-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
+# <a name="brushes-how-to-topics"></a><span data-ttu-id="6e42e-102">Fırçalar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6e42e-102">Brushes How-to Topics</span></span>
+<span data-ttu-id="6e42e-103">Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ekran içeriğini boyamak için Fırçalar.</span><span class="sxs-lookup"><span data-stu-id="6e42e-103">The following topics demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes in order to paint content to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="72c41-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="72c41-104">In This Section</span></span>  
- [<span data-ttu-id="72c41-105">Renk veya SolidColorBrush geçirgenliğini animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="72c41-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [<span data-ttu-id="72c41-106">Konum veya renk gradyan durağının animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="72c41-106">Animate the Position or Color of a Gradient Stop</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [<span data-ttu-id="72c41-107">Bir yansıma oluşturma</span><span class="sxs-lookup"><span data-stu-id="72c41-107">Create a Reflection</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [<span data-ttu-id="72c41-108">Bir TileBrush farklı döşeme desenleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="72c41-108">Create Different Tile Patterns with a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [<span data-ttu-id="72c41-109">Kalem tanımlama</span><span class="sxs-lookup"><span data-stu-id="72c41-109">Define a Pen</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [<span data-ttu-id="72c41-110">Bir alanı çizim ile Boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-110">Paint an Area with a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [<span data-ttu-id="72c41-111">Bir alanı bir görüntü ile Boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-111">Paint an Area with an Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [<span data-ttu-id="72c41-112">Doğrusal gradyan ile bir alanı boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-112">Paint an Area with a Linear Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [<span data-ttu-id="72c41-113">Radyal gradyan ile bir alanı boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-113">Paint an Area with a Radial Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [<span data-ttu-id="72c41-114">Düz renk ile bir alanı boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-114">Paint an Area with a Solid Color</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [<span data-ttu-id="72c41-115">Sistem fırçası ile bir alanı boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-115">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [<span data-ttu-id="72c41-116">Bir Video sahip bir alan boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-116">Paint an Area with a Video</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [<span data-ttu-id="72c41-117">Görsel sahip bir alan boyama</span><span class="sxs-lookup"><span data-stu-id="72c41-117">Paint an Area with a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [<span data-ttu-id="72c41-118">En boy oranı arka plan olarak kullanılan görüntü</span><span class="sxs-lookup"><span data-stu-id="72c41-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [<span data-ttu-id="72c41-119">TileBrush Yatay ve dikey hizalamasını ayarlama</span><span class="sxs-lookup"><span data-stu-id="72c41-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [<span data-ttu-id="72c41-120">TileBrush için döşeme boyutunu ayarlama</span><span class="sxs-lookup"><span data-stu-id="72c41-120">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [<span data-ttu-id="72c41-121">Fırça dönüşümü</span><span class="sxs-lookup"><span data-stu-id="72c41-121">Transform a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [<span data-ttu-id="72c41-122">Bir gradyan kullanım sistem renkleri</span><span class="sxs-lookup"><span data-stu-id="72c41-122">Use System Colors in a Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6e42e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6e42e-104">In This Section</span></span>  
+ [<span data-ttu-id="6e42e-105">SolidColorBrush'ın Rengine veya Opaklığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="6e42e-105">Animate the Color or Opacity of a SolidColorBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [<span data-ttu-id="6e42e-106">Gradyan Duraklarının Konumuna veya Rengine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="6e42e-106">Animate the Position or Color of a Gradient Stop</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [<span data-ttu-id="6e42e-107">Yansıma Oluşturma</span><span class="sxs-lookup"><span data-stu-id="6e42e-107">Create a Reflection</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
+ [<span data-ttu-id="6e42e-108">TileBrush ile Farklı Döşeme Desenleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="6e42e-108">Create Different Tile Patterns with a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [<span data-ttu-id="6e42e-109">Kalem Tanımlama</span><span class="sxs-lookup"><span data-stu-id="6e42e-109">Define a Pen</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
+ [<span data-ttu-id="6e42e-110">Çizim ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-110">Paint an Area with a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
+ [<span data-ttu-id="6e42e-111">Görüntü ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-111">Paint an Area with an Image</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
+ [<span data-ttu-id="6e42e-112">Doğrusal Gradyan ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-112">Paint an Area with a Linear Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
+ [<span data-ttu-id="6e42e-113">Radyal Gradyan ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-113">Paint an Area with a Radial Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
+ [<span data-ttu-id="6e42e-114">Düz Renk ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-114">Paint an Area with a Solid Color</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
+ [<span data-ttu-id="6e42e-115">Sistem Fırçası ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-115">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="6e42e-116">Video ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-116">Paint an Area with a Video</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
+ [<span data-ttu-id="6e42e-117">Görsel ile bir Alanı Boyama</span><span class="sxs-lookup"><span data-stu-id="6e42e-117">Paint an Area with a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
+ [<span data-ttu-id="6e42e-118">Arka Plan Olarak Kullanılan bir Görüntünün En Boy Oranını Koruma</span><span class="sxs-lookup"><span data-stu-id="6e42e-118">Preserve the Aspect Ratio of an Image Used as a Background</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [<span data-ttu-id="6e42e-119">TileBrush Yatay ve Dikey Hizalamasını Ayarlama</span><span class="sxs-lookup"><span data-stu-id="6e42e-119">Set the Horizontal and Vertical Alignment of a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [<span data-ttu-id="6e42e-120">TileBrush için Döşeme Boyutunu Ayarlama</span><span class="sxs-lookup"><span data-stu-id="6e42e-120">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="6e42e-121">Fırça Dönüşümü</span><span class="sxs-lookup"><span data-stu-id="6e42e-121">Transform a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
+ [<span data-ttu-id="6e42e-122">Sistem Renklerinin Gradyan İçinde Kullanımı</span><span class="sxs-lookup"><span data-stu-id="6e42e-122">Use System Colors in a Gradient</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
   
-## <a name="reference"></a><span data-ttu-id="72c41-123">Başvuru</span><span class="sxs-lookup"><span data-stu-id="72c41-123">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6e42e-123">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6e42e-123">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="72c41-124">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="72c41-124">Related Sections</span></span>  
- [<span data-ttu-id="72c41-125">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="72c41-125">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="6e42e-124">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6e42e-124">Related Sections</span></span>  
+ [<span data-ttu-id="6e42e-125">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="6e42e-125">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="72c41-126">WPF Grafik işleme genel bakış</span><span class="sxs-lookup"><span data-stu-id="72c41-126">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="6e42e-126">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6e42e-126">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

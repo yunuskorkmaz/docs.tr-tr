@@ -18,16 +18,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fcef86bb9cb0ee2cb038b4737af3f54f8c505b31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e13ad75ca7c6b027ea1423e13934228a2ace4c2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wrappanel"></a><span data-ttu-id="ff15b-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="ff15b-102">WrapPanel</span></span>
-<span data-ttu-id="ff15b-103"><xref:System.Windows.Controls.WrapPanel> Öğesi alt öğelerini soldan sağa doğru içeriği kapsayan kutunun kenarında sonraki satıra bölerek sıralı konumda yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="ff15b-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="b7b0b-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="b7b0b-102">WrapPanel</span></span>
+<span data-ttu-id="b7b0b-103"><xref:System.Windows.Controls.WrapPanel> Öğesi alt öğelerini soldan sağa doğru içeriği kapsayan kutunun kenarında sonraki satıra bölerek sıralı konumda yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="b7b0b-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="ff15b-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ff15b-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b7b0b-104">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b7b0b-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -42,9 +43,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="ff15b-105">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ff15b-105">Related Sections</span></span>  
- [<span data-ttu-id="ff15b-106">Düzen</span><span class="sxs-lookup"><span data-stu-id="ff15b-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="b7b0b-105">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b7b0b-105">Related Sections</span></span>  
+ [<span data-ttu-id="b7b0b-106">Düzen</span><span class="sxs-lookup"><span data-stu-id="b7b0b-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="ff15b-107">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="ff15b-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="b7b0b-107">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="b7b0b-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="ff15b-108">ScrollViewer'a Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ff15b-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="b7b0b-108">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b7b0b-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

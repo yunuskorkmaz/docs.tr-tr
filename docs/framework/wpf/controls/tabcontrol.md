@@ -17,22 +17,23 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eed0485fd823caea1f332262edd9bcd8817bc31a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc7e81e3735baff267b09ae59b80f53f80170354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tabcontrol"></a><span data-ttu-id="8d128-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="8d128-102">TabControl</span></span>
-<span data-ttu-id="8d128-103"><xref:System.Windows.Controls.TabControl>öğeleri uygun sekmeyi seçerek erişilen kesikli sayfalar üzerindeki içeriği görüntüler. Her sekme içeren bir <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="8d128-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
+# <a name="tabcontrol"></a><span data-ttu-id="3f3b5-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="3f3b5-102">TabControl</span></span>
+<span data-ttu-id="3f3b5-103"><xref:System.Windows.Controls.TabControl>öğeleri uygun sekmeyi seçerek erişilen kesikli sayfalar üzerindeki içeriği görüntüler. Her sekme içeren bir <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="3f3b5-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
   
- <span data-ttu-id="8d128-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="8d128-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
+ <span data-ttu-id="3f3b5-104">Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="3f3b5-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
   
- <span data-ttu-id="8d128-105">![Sekme denetimi](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="8d128-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
-<span data-ttu-id="8d128-106">Tipik TabControl</span><span class="sxs-lookup"><span data-stu-id="8d128-106">Typical TabControl</span></span>  
+ <span data-ttu-id="3f3b5-105">![Sekme denetimi](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="3f3b5-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
+<span data-ttu-id="3f3b5-106">Tipik TabControl</span><span class="sxs-lookup"><span data-stu-id="3f3b5-106">Typical TabControl</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8d128-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8d128-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3f3b5-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3f3b5-107">Reference</span></span>  
  <xref:System.Windows.Controls.TabControl>  
   <xref:System.Windows.Controls.TabItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="8d128-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="8d128-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="3f3b5-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3f3b5-108">Related Sections</span></span>

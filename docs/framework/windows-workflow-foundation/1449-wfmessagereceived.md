@@ -12,30 +12,31 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30f278ff7f95d9efba083c0f040ace39a1857564
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6410e598844b1ead98e421f0cf1a99ae6ebf28ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1449---wfmessagereceived"></a><span data-ttu-id="a925c-102">1449 - WfMessageReceived</span><span class="sxs-lookup"><span data-stu-id="a925c-102">1449 - WfMessageReceived</span></span>
-## <a name="properties"></a><span data-ttu-id="a925c-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="a925c-103">Properties</span></span>  
+# <a name="1449---wfmessagereceived"></a><span data-ttu-id="f340d-102">1449 - WfMessageReceived</span><span class="sxs-lookup"><span data-stu-id="f340d-102">1449 - WfMessageReceived</span></span>
+## <a name="properties"></a><span data-ttu-id="f340d-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="f340d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a925c-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="a925c-104">ID</span></span>|<span data-ttu-id="a925c-105">1449</span><span class="sxs-lookup"><span data-stu-id="a925c-105">1449</span></span>|  
-|<span data-ttu-id="a925c-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="a925c-106">Keywords</span></span>|<span data-ttu-id="a925c-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="a925c-107">WFServices</span></span>|  
-|<span data-ttu-id="a925c-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="a925c-108">Level</span></span>|<span data-ttu-id="a925c-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="a925c-109">Information</span></span>|  
-|<span data-ttu-id="a925c-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="a925c-110">Channel</span></span>|<span data-ttu-id="a925c-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="a925c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="f340d-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="f340d-104">ID</span></span>|<span data-ttu-id="f340d-105">1449</span><span class="sxs-lookup"><span data-stu-id="f340d-105">1449</span></span>|  
+|<span data-ttu-id="f340d-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="f340d-106">Keywords</span></span>|<span data-ttu-id="f340d-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="f340d-107">WFServices</span></span>|  
+|<span data-ttu-id="f340d-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="f340d-108">Level</span></span>|<span data-ttu-id="f340d-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="f340d-109">Information</span></span>|  
+|<span data-ttu-id="f340d-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="f340d-110">Channel</span></span>|<span data-ttu-id="f340d-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f340d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a925c-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a925c-112">Description</span></span>  
- <span data-ttu-id="a925c-113">Bir iş akışı tarafından bir ileti alındı gösterir.</span><span class="sxs-lookup"><span data-stu-id="a925c-113">Indicates a message has been received by a workflow.</span></span>  
+## <a name="description"></a><span data-ttu-id="f340d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f340d-112">Description</span></span>  
+ <span data-ttu-id="f340d-113">Bir iş akışı tarafından bir ileti alındı gösterir.</span><span class="sxs-lookup"><span data-stu-id="f340d-113">Indicates a message has been received by a workflow.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a925c-114">İleti</span><span class="sxs-lookup"><span data-stu-id="a925c-114">Message</span></span>  
- <span data-ttu-id="a925c-115">İş akışı tarafından alınan ileti</span><span class="sxs-lookup"><span data-stu-id="a925c-115">Message received by workflow</span></span>  
+## <a name="message"></a><span data-ttu-id="f340d-114">İleti</span><span class="sxs-lookup"><span data-stu-id="f340d-114">Message</span></span>  
+ <span data-ttu-id="f340d-115">İş akışı tarafından alınan ileti</span><span class="sxs-lookup"><span data-stu-id="f340d-115">Message received by workflow</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a925c-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="a925c-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="f340d-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f340d-116">Details</span></span>  
   
-|<span data-ttu-id="a925c-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="a925c-117">Data Item Name</span></span>|<span data-ttu-id="a925c-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="a925c-118">Data Item Type</span></span>|<span data-ttu-id="a925c-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a925c-119">Description</span></span>|  
+|<span data-ttu-id="f340d-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="f340d-117">Data Item Name</span></span>|<span data-ttu-id="f340d-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="f340d-118">Data Item Type</span></span>|<span data-ttu-id="f340d-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f340d-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="a925c-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="a925c-120">AppDomain</span></span>|<span data-ttu-id="a925c-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="a925c-121">xs:string</span></span>|<span data-ttu-id="a925c-122">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="a925c-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="f340d-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="f340d-120">AppDomain</span></span>|<span data-ttu-id="f340d-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="f340d-121">xs:string</span></span>|<span data-ttu-id="f340d-122">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="f340d-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

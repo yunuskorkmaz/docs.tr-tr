@@ -18,24 +18,25 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8717e4e1e54e07109d2e00d9bbf13dbd9d8dde8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03caea0247c387c7787838080cd473ccf2b49b4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="50fc9-102">Grafikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="50fc9-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="50fc9-103">Aşağıdaki konular grafik özelliklerini kullanmayı gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="50fc9-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="b21a2-102">Grafikler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b21a2-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="b21a2-103">Aşağıdaki konular grafik özelliklerini kullanmayı gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b21a2-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="50fc9-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="50fc9-104">In This Section</span></span>  
- [<span data-ttu-id="50fc9-105">Dikdörtgene animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="50fc9-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="50fc9-106">Bir nesnenin konumunu PointAnimation kullanarak animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="50fc9-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="50fc9-107">Dönüşüm noktaları ve vektörleri</span><span class="sxs-lookup"><span data-stu-id="50fc9-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="50fc9-108">Bir WPF uygulamasında cam çerçeveyi genişletme</span><span class="sxs-lookup"><span data-stu-id="50fc9-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="50fc9-109">Nasıl yapılır: performans öğenin önbelleğe alarak işleme geliştirmek</span><span class="sxs-lookup"><span data-stu-id="50fc9-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="50fc9-110">Nasıl yapılır: bir önbelleğe alınan öğe fırça olarak kullan</span><span class="sxs-lookup"><span data-stu-id="50fc9-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b21a2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b21a2-104">In This Section</span></span>  
+ [<span data-ttu-id="b21a2-105">Bir Dikdörtgene Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b21a2-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="b21a2-106">PointAnimation Kullanarak bir Nesnenin Konumuna Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="b21a2-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="b21a2-107">Dönüşüm Noktaları ve Vektörleri</span><span class="sxs-lookup"><span data-stu-id="b21a2-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="b21a2-108">Cam Çerçeveyi WPF Uygulamasında Genişletme</span><span class="sxs-lookup"><span data-stu-id="b21a2-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="b21a2-109">Nasıl yapılır: Öğeyi Önbelleğe Alarak İşleme Performansını Artırma</span><span class="sxs-lookup"><span data-stu-id="b21a2-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="b21a2-110">Nasıl yapılır: Önbelleğe Alınan Öğeyi Fırça Olarak Kullanma</span><span class="sxs-lookup"><span data-stu-id="b21a2-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="50fc9-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50fc9-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b21a2-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b21a2-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="50fc9-112">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="50fc9-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="50fc9-113">WPF Grafik işleme genel bakış</span><span class="sxs-lookup"><span data-stu-id="50fc9-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="b21a2-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="b21a2-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="b21a2-113">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b21a2-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

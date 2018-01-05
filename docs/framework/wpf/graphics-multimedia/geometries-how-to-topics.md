@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="4b7f4-102">Geometriler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4b7f4-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="4b7f4-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Media.Geometry> uygulamalarınızda nesneleri.</span><span class="sxs-lookup"><span data-stu-id="4b7f4-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="58284-102">Geometriler ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="58284-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="58284-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Media.Geometry> uygulamalarınızda nesneleri.</span><span class="sxs-lookup"><span data-stu-id="58284-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4b7f4-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4b7f4-104">In This Section</span></span>  
- [<span data-ttu-id="4b7f4-105">EllipseGeometry animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="4b7f4-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="4b7f4-106">ArcSegment boyutunu animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="4b7f4-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="4b7f4-107">Bileşik şeklin dolgu denetleme</span><span class="sxs-lookup"><span data-stu-id="4b7f4-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="4b7f4-108">Birleşik Geometri oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="4b7f4-109">Bileşik şekil oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="4b7f4-110">Küp Bezier eğrisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="4b7f4-111">LineGeometry kullanarak çizgi oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="4b7f4-112">İçinde bir LineSegment oluşturulacağını</span><span class="sxs-lookup"><span data-stu-id="4b7f4-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="4b7f4-113">Bir şekli PathGeometry kullanarak oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="4b7f4-114">Bir StreamGeometry kullanarak şekil oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="4b7f4-115">İkinci dereceden Bezier eğrisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="4b7f4-116">Elips yay oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="4b7f4-117">PathGeometry içinde birden çok alt oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b7f4-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="4b7f4-118">RectangleGeometry kullanarak dikdörtgen tanımlayın</span><span class="sxs-lookup"><span data-stu-id="4b7f4-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="4b7f4-119">Yuvarlamak RectangleGeometry köşelerinde</span><span class="sxs-lookup"><span data-stu-id="4b7f4-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="58284-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="58284-104">In This Section</span></span>  
+ [<span data-ttu-id="58284-105">EllipseGeometry'ye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="58284-105">Animate an EllipseGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="58284-106">ArcSegment Boyutuna Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="58284-106">Animate the Size of an ArcSegment</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="58284-107">Bileşik Şeklin Dolgusunu Denetleme</span><span class="sxs-lookup"><span data-stu-id="58284-107">Control the Fill of a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="58284-108">Birleşik Geometri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-108">Create a Combined Geometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="58284-109">Bileşik Şekil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-109">Create a Composite Shape</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="58284-110">Üçüncü Dereceden Bezier Eğrisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-110">Create a Cubic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="58284-111">LineGeometry Kullanarak Çizgi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-111">Create a Line Using a LineGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="58284-112">PathGeometry İçinde LineSegment Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-112">Create a LineSegment in a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="58284-113">PathGeometry Kullanarak Şekil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-113">Create a Shape by Using a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="58284-114">StreamGeometry Kullanarak Şekil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-114">Create a Shape Using a StreamGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="58284-115">İkinci Dereceden Bezier Eğrisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-115">Create a Quadratic Bezier Curve</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="58284-116">Elips Yay Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-116">Create an Elliptical Arc</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="58284-117">Bir PathGeometry İçinde Birden Çok Alt Yol Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58284-117">Create Multiple Subpaths Within a PathGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="58284-118">RectangleGeometry Kullanarak Dikdörtgen Tanımlama</span><span class="sxs-lookup"><span data-stu-id="58284-118">Define a Rectangle Using a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="58284-119">RectangleGeometry'nin Köşelerini Yuvarlama</span><span class="sxs-lookup"><span data-stu-id="58284-119">Round the Corners of a RectangleGeometry</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4b7f4-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4b7f4-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="58284-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="58284-120">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [<span data-ttu-id="4b7f4-121">Şekiller ve temel çizim WPF genel bakış</span><span class="sxs-lookup"><span data-stu-id="4b7f4-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="4b7f4-122">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="4b7f4-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="58284-121">WPF’de Şekiller ve Temel Çizimlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="58284-121">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="58284-122">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="58284-122">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -19,28 +19,29 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c25f9dbc05ac9d5c14eb794236613b49f8240e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe07633e41986e383d5f40dc66c0689a91e33116
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-set-focus-in-a-textbox-control"></a><span data-ttu-id="19b47-102">Nasıl yapılır: TextBox Denetiminde Odak Ayarlama</span><span class="sxs-lookup"><span data-stu-id="19b47-102">How to: Set Focus in a TextBox Control</span></span>
-<span data-ttu-id="19b47-103">Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.UIElement.Focus%2A> odak ayarlamak için yöntemi bir <xref:System.Windows.Controls.TextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="19b47-103">This example shows how to use the <xref:System.Windows.UIElement.Focus%2A> method to set focus on a <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="how-to-set-focus-in-a-textbox-control"></a><span data-ttu-id="ab3ba-102">Nasıl yapılır: TextBox Denetiminde Odak Ayarlama</span><span class="sxs-lookup"><span data-stu-id="ab3ba-102">How to: Set Focus in a TextBox Control</span></span>
+<span data-ttu-id="ab3ba-103">Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.UIElement.Focus%2A> odak ayarlamak için yöntemi bir <xref:System.Windows.Controls.TextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="ab3ba-103">This example shows how to use the <xref:System.Windows.UIElement.Focus%2A> method to set focus on a <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="19b47-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="19b47-104">Example</span></span>  
- <span data-ttu-id="19b47-105">Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnek açıklar basit bir <xref:System.Windows.Controls.TextBox> adlı Denetim *tbFocusMe*</span><span class="sxs-lookup"><span data-stu-id="19b47-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example describes a simple <xref:System.Windows.Controls.TextBox> control named *tbFocusMe*</span></span>  
+## <a name="example"></a><span data-ttu-id="ab3ba-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ab3ba-104">Example</span></span>  
+ <span data-ttu-id="ab3ba-105">Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnek açıklar basit bir <xref:System.Windows.Controls.TextBox> adlı Denetim *tbFocusMe*</span><span class="sxs-lookup"><span data-stu-id="ab3ba-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example describes a simple <xref:System.Windows.Controls.TextBox> control named *tbFocusMe*</span></span>  
   
  [!code-xaml[TextBox_MiscCode#_TextBoxFocusXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxfocusxaml)]  
   
-## <a name="example"></a><span data-ttu-id="19b47-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="19b47-106">Example</span></span>  
- <span data-ttu-id="19b47-107">Aşağıdaki örnek çağrıları <xref:System.Windows.UIElement.Focus%2A> odak ayarlamak için yöntemi <xref:System.Windows.Controls.TextBox> adlı Denetim *tbFocusMe*.</span><span class="sxs-lookup"><span data-stu-id="19b47-107">The following example calls the <xref:System.Windows.UIElement.Focus%2A> method to set the focus on the <xref:System.Windows.Controls.TextBox> control with the Name *tbFocusMe*.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab3ba-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="ab3ba-106">Example</span></span>  
+ <span data-ttu-id="ab3ba-107">Aşağıdaki örnek çağrıları <xref:System.Windows.UIElement.Focus%2A> odak ayarlamak için yöntemi <xref:System.Windows.Controls.TextBox> adlı Denetim *tbFocusMe*.</span><span class="sxs-lookup"><span data-stu-id="ab3ba-107">The following example calls the <xref:System.Windows.UIElement.Focus%2A> method to set the focus on the <xref:System.Windows.Controls.TextBox> control with the Name *tbFocusMe*.</span></span>  
   
  [!code-csharp[TextBox_MiscCode#_FocusTextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_focustextbox)]
  [!code-vb[TextBox_MiscCode#_FocusTextBox](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_focustextbox)]  
   
-## <a name="see-also"></a><span data-ttu-id="19b47-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="19b47-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ab3ba-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ab3ba-108">See Also</span></span>  
  <xref:System.Windows.UIElement.Focusable%2A>  
  <xref:System.Windows.UIElement.IsFocused%2A>  
- [<span data-ttu-id="19b47-109">TextBox genel bakış</span><span class="sxs-lookup"><span data-stu-id="19b47-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [<span data-ttu-id="19b47-110">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="19b47-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+ [<span data-ttu-id="ab3ba-109">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ab3ba-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="ab3ba-110">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ab3ba-110">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

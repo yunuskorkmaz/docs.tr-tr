@@ -13,31 +13,32 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="aa508-102">Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma</span><span class="sxs-lookup"><span data-stu-id="aa508-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
-<span data-ttu-id="aa508-103">Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur.</span><span class="sxs-lookup"><span data-stu-id="aa508-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="aa508-104">Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), uygulanan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kendisini keşif proxy'sine kayıtlı hizmet.</span><span class="sxs-lookup"><span data-stu-id="aa508-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="aa508-105">Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bulmak için keşif proxy'si kullanan istemci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.</span><span class="sxs-lookup"><span data-stu-id="aa508-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="00707-102">Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma</span><span class="sxs-lookup"><span data-stu-id="00707-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="00707-103">Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur.</span><span class="sxs-lookup"><span data-stu-id="00707-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="00707-104">Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), uygulanan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kendisini keşif proxy'sine kayıtlı hizmet.</span><span class="sxs-lookup"><span data-stu-id="00707-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="00707-105">Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bulmak için keşif proxy'si kullanan istemci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.</span><span class="sxs-lookup"><span data-stu-id="00707-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-### <a name="implement-the-client"></a><span data-ttu-id="aa508-106">İstemcisini uygulama</span><span class="sxs-lookup"><span data-stu-id="aa508-106">Implement the client</span></span>  
+### <a name="implement-the-client"></a><span data-ttu-id="00707-106">İstemcisini uygulama</span><span class="sxs-lookup"><span data-stu-id="00707-106">Implement the client</span></span>  
   
-1.  <span data-ttu-id="aa508-107">Yeni bir konsol uygulama projesi eklemek `DiscoveryProxyExample` adlı çözüm `Client`.</span><span class="sxs-lookup"><span data-stu-id="aa508-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
+1.  <span data-ttu-id="00707-107">Yeni bir konsol uygulama projesi eklemek `DiscoveryProxyExample` adlı çözüm `Client`.</span><span class="sxs-lookup"><span data-stu-id="00707-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2.  <span data-ttu-id="aa508-108">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="aa508-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="00707-108">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="00707-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="aa508-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="aa508-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="00707-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="00707-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="aa508-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="aa508-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="00707-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="00707-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="aa508-111">Proje için bu konunun sonundaki bulunan GeneratedClient.cs ekleyin.</span><span class="sxs-lookup"><span data-stu-id="aa508-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
+3.  <span data-ttu-id="00707-111">Proje için bu konunun sonundaki bulunan GeneratedClient.cs ekleyin.</span><span class="sxs-lookup"><span data-stu-id="00707-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="aa508-112">Bu dosya, genellikle Svcutil.exe gibi bir araç kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="aa508-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="aa508-113">Görev basitleştirmek için bu konudaki sağlanır.</span><span class="sxs-lookup"><span data-stu-id="aa508-113">It is provided in this topic to simplify the task.</span></span>  
+    >  <span data-ttu-id="00707-112">Bu dosya, genellikle Svcutil.exe gibi bir araç kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="00707-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="00707-113">Görev basitleştirmek için bu konudaki sağlanır.</span><span class="sxs-lookup"><span data-stu-id="00707-113">It is provided in this topic to simplify the task.</span></span>  
   
-4.  <span data-ttu-id="aa508-114">Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="aa508-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="aa508-115">Bu yöntem bir uç nokta adresi alır ve hizmeti istemcisi (proxy) başlatmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="aa508-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
+4.  <span data-ttu-id="00707-114">Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin.</span><span class="sxs-lookup"><span data-stu-id="00707-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="00707-115">Bu yöntem bir uç nokta adresi alır ve hizmeti istemcisi (proxy) başlatmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="00707-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/02/2017
             }  
     ```  
   
-5.  <span data-ttu-id="aa508-116">Aşağıdaki kodu ekleyin `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="aa508-116">Add the following code to the `Main` method.</span></span>  
+5.  <span data-ttu-id="00707-116">Aşağıdaki kodu ekleyin `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="00707-116">Add the following code to the `Main` method.</span></span>  
   
     ```  
     public static void Main()  
@@ -111,10 +112,10 @@ ms.lasthandoff: 12/02/2017
             }  
     ```  
   
- <span data-ttu-id="aa508-117">İstemci uygulaması gerçekleştirilmesinin tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="aa508-117">You have completed implementing the client application.</span></span> <span data-ttu-id="aa508-118">Oturum devam [nasıl yapılır: keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="aa508-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="00707-117">İstemci uygulaması gerçekleştirilmesinin tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="00707-117">You have completed implementing the client application.</span></span> <span data-ttu-id="00707-118">Oturum devam [nasıl yapılır: keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="00707-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aa508-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="aa508-119">Example</span></span>  
- <span data-ttu-id="aa508-120">Bu konu için tam kod budur.</span><span class="sxs-lookup"><span data-stu-id="aa508-120">This is the full code listing for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="00707-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="00707-119">Example</span></span>  
+ <span data-ttu-id="00707-120">Bu konu için tam kod budur.</span><span class="sxs-lookup"><span data-stu-id="00707-120">This is the full code listing for this topic.</span></span>  
   
 ```  
 // GeneratedClient.cs  
@@ -291,7 +292,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aa508-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="aa508-121">See Also</span></span>  
- [<span data-ttu-id="aa508-122">WCF keşif genel bakış</span><span class="sxs-lookup"><span data-stu-id="aa508-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="aa508-123">Nasıl yapılır: keşif proxy'si uygulama</span><span class="sxs-lookup"><span data-stu-id="aa508-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="aa508-124">Nasıl yapılır: keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme</span><span class="sxs-lookup"><span data-stu-id="aa508-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="00707-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="00707-121">See Also</span></span>  
+ [<span data-ttu-id="00707-122">WCF Bulmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="00707-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="00707-123">Nasıl yapılır: Keşif Proxy'si Uygulama</span><span class="sxs-lookup"><span data-stu-id="00707-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="00707-124">Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme</span><span class="sxs-lookup"><span data-stu-id="00707-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

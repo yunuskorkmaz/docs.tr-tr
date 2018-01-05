@@ -17,24 +17,25 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8991a8f839520196addc235c4731246e448dcfa8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cd1cc6914a8bd22d1cc8787a45328716a6c4c97f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="658b6-102">ListBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="658b6-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="658b6-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.ListBox> seçilebilir öğeleri listesini görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="658b6-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="4a8cf-102">ListBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4a8cf-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="4a8cf-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.ListBox> seçilebilir öğeleri listesini görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="4a8cf-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="658b6-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="658b6-104">In This Section</span></span>  
- [<span data-ttu-id="658b6-105">ListBox verilere bağlama</span><span class="sxs-lookup"><span data-stu-id="658b6-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="658b6-106">ListBoxItem alma</span><span class="sxs-lookup"><span data-stu-id="658b6-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [<span data-ttu-id="658b6-107">Nasıl yapılır: veri ItemsContol'e ekleme</span><span class="sxs-lookup"><span data-stu-id="658b6-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
- [<span data-ttu-id="658b6-108">ListBox kaydırma performansı</span><span class="sxs-lookup"><span data-stu-id="658b6-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4a8cf-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4a8cf-104">In This Section</span></span>  
+ [<span data-ttu-id="4a8cf-105">Veriye ListBox Bağlama</span><span class="sxs-lookup"><span data-stu-id="4a8cf-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="4a8cf-106">ListBoxItem Alma</span><span class="sxs-lookup"><span data-stu-id="4a8cf-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [<span data-ttu-id="4a8cf-107">Nasıl yapılır: veri ItemsContol'e ekleme</span><span class="sxs-lookup"><span data-stu-id="4a8cf-107">How to: Add Data to an ItemsControl</span></span>](http://msdn.microsoft.com/en-us/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [<span data-ttu-id="4a8cf-108">ListBox'ın Kayma Performansını Artırma</span><span class="sxs-lookup"><span data-stu-id="4a8cf-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="658b6-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="658b6-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4a8cf-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="4a8cf-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="658b6-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="658b6-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="4a8cf-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="4a8cf-110">Related Sections</span></span>

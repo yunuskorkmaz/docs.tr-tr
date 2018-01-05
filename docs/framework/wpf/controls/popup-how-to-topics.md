@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6853b915cb133b2ea1cbc0579f3eb59e1e956f5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: dfe53e4782fda95142a9eaa8ab10227f5353612b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="11f29-102">Açılan Pencere ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="11f29-102">Popup How-to Topics</span></span>
-<span data-ttu-id="11f29-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Primitives.Popup> geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="11f29-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="6401f-102">Açılan Pencere ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6401f-102">Popup How-to Topics</span></span>
+<span data-ttu-id="6401f-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Primitives.Popup> geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için denetim.</span><span class="sxs-lookup"><span data-stu-id="6401f-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="11f29-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="11f29-104">In This Section</span></span>  
- [<span data-ttu-id="11f29-105">Açılan pencere animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="11f29-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [<span data-ttu-id="11f29-106">Özel açılan konumunu belirtin</span><span class="sxs-lookup"><span data-stu-id="11f29-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6401f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6401f-104">In This Section</span></span>  
+ [<span data-ttu-id="6401f-105">Açılan Pencereye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="6401f-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
+ [<span data-ttu-id="6401f-106">Özel Açılan Pencere Konumu Belirtme</span><span class="sxs-lookup"><span data-stu-id="6401f-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="11f29-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="11f29-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6401f-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6401f-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="11f29-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="11f29-108">Related Sections</span></span>  
- [<span data-ttu-id="11f29-109">Açılan genel bakış</span><span class="sxs-lookup"><span data-stu-id="11f29-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="6401f-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="6401f-108">Related Sections</span></span>  
+ [<span data-ttu-id="6401f-109">Açılan Pencereye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6401f-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)

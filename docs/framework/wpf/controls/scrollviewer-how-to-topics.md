@@ -17,25 +17,26 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79797aad6c26975dd2f4fa1b087d525fbaebb253
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c832a091f7c6fec185c657d104437c42a7ae4d33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="35784-102">ScrollViewer Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="35784-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="35784-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Controls.ScrollViewer> uygulamalarınızda kaydırılabilir bölgeler oluşturmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="35784-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="6db79-102">ScrollViewer Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6db79-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="6db79-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Controls.ScrollViewer> uygulamalarınızda kaydırılabilir bölgeler oluşturmak için öğesi.</span><span class="sxs-lookup"><span data-stu-id="6db79-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="35784-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="35784-104">In This Section</span></span>  
- [<span data-ttu-id="35784-105">ScrollChanged olayını işle</span><span class="sxs-lookup"><span data-stu-id="35784-105">Handle the ScrollChanged Event</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="35784-106">IScrollInfo arabirimini kullanarak içerik kaydırma</span><span class="sxs-lookup"><span data-stu-id="35784-106">Scroll Content by Using the IScrollInfo Interface</span></span>](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="35784-107">ScrollViewer içerik kaydırma yöntemlerini kullanın</span><span class="sxs-lookup"><span data-stu-id="35784-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6db79-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6db79-104">In This Section</span></span>  
+ [<span data-ttu-id="6db79-105">ScrollChanged Olayını İşleme</span><span class="sxs-lookup"><span data-stu-id="6db79-105">Handle the ScrollChanged Event</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="6db79-106">IScrollInfo Arabirimini Kullanarak İçerik Kaydırma</span><span class="sxs-lookup"><span data-stu-id="6db79-106">Scroll Content by Using the IScrollInfo Interface</span></span>](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="6db79-107">ScrollViewer'ın İçerik Kaydırma Yöntemlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="6db79-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="35784-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="35784-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6db79-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6db79-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="35784-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="35784-109">See Also</span></span>  
- [<span data-ttu-id="35784-110">Paneller Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="35784-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="35784-111">Düzen</span><span class="sxs-lookup"><span data-stu-id="35784-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="6db79-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6db79-109">See Also</span></span>  
+ [<span data-ttu-id="6db79-110">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6db79-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="6db79-111">Düzen</span><span class="sxs-lookup"><span data-stu-id="6db79-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

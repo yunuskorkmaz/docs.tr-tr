@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27a6564daa1f9343273f7cb88f53f1d98b6208ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 911aa6692e5d9c33456309c690a3277565c05aab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelwsmexnoncriticalwsdlexporterror"></a><span data-ttu-id="62a3e-102">System.ServiceModel.WsmexNonCriticalWsdlExportError</span><span class="sxs-lookup"><span data-stu-id="62a3e-102">System.ServiceModel.WsmexNonCriticalWsdlExportError</span></span>
-<span data-ttu-id="62a3e-103">System.ServiceModel.WsmexNonCriticalWsdlExportError</span><span class="sxs-lookup"><span data-stu-id="62a3e-103">System.ServiceModel.WsmexNonCriticalWsdlExportError</span></span>  
+# <a name="systemservicemodelwsmexnoncriticalwsdlexporterror"></a><span data-ttu-id="f1afe-102">System.ServiceModel.WsmexNonCriticalWsdlExportError</span><span class="sxs-lookup"><span data-stu-id="f1afe-102">System.ServiceModel.WsmexNonCriticalWsdlExportError</span></span>
+<span data-ttu-id="f1afe-103">System.ServiceModel.WsmexNonCriticalWsdlExportError</span><span class="sxs-lookup"><span data-stu-id="f1afe-103">System.ServiceModel.WsmexNonCriticalWsdlExportError</span></span>  
   
-## <a name="description"></a><span data-ttu-id="62a3e-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="62a3e-104">Description</span></span>  
- <span data-ttu-id="62a3e-105">WSDL dışa aktarma sırasında kritik olmayan hata veya uyarı oluştu.</span><span class="sxs-lookup"><span data-stu-id="62a3e-105">A non-critical error or warning occurred during WSDL export.</span></span>  
+## <a name="description"></a><span data-ttu-id="f1afe-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1afe-104">Description</span></span>  
+ <span data-ttu-id="f1afe-105">WSDL dışa aktarma sırasında kritik olmayan hata veya uyarı oluştu.</span><span class="sxs-lookup"><span data-stu-id="f1afe-105">A non-critical error or warning occurred during WSDL export.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62a3e-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="62a3e-106">See Also</span></span>  
- [<span data-ttu-id="62a3e-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="62a3e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="62a3e-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="62a3e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="62a3e-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="62a3e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f1afe-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1afe-106">See Also</span></span>  
+ [<span data-ttu-id="f1afe-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f1afe-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f1afe-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="f1afe-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f1afe-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="f1afe-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

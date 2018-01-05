@@ -17,29 +17,30 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0df1c157466fd97a66c6fda4ebbca63e5c3fd23e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ac2c3aeec1419dbedc0d5260f77c8543919f3938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="91a26-102">Genelleştirme ve Yerelleştirme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="91a26-102">Globalization and Localization How-to Topics</span></span>
-<span data-ttu-id="91a26-103">Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliştirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="91a26-103">The topics in this section describe how to develop world-ready applications.</span></span>  
+# <a name="globalization-and-localization-how-to-topics"></a><span data-ttu-id="c4963-102">Genelleştirme ve Yerelleştirme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c4963-102">Globalization and Localization How-to Topics</span></span>
+<span data-ttu-id="c4963-103">Bu bölümdeki konular, dünya çapında kullanılmaya hazır uygulamalar geliştirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="c4963-103">The topics in this section describe how to develop world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="91a26-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="91a26-104">In This Section</span></span>  
- [<span data-ttu-id="91a26-105">Bir uygulama yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="91a26-105">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [<span data-ttu-id="91a26-106">Bir düğme oluşturmak için otomatik düzenini kullanın</span><span class="sxs-lookup"><span data-stu-id="91a26-106">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [<span data-ttu-id="91a26-107">Bir kılavuz için otomatik düzenini kullanın</span><span class="sxs-lookup"><span data-stu-id="91a26-107">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [<span data-ttu-id="91a26-108">Yerelleştirilebilir Dize kaynaklarını yönetmek için ResourceDictionary Kullanma</span><span class="sxs-lookup"><span data-stu-id="91a26-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [<span data-ttu-id="91a26-109">Yerelleştirilebilir uygulamalarda kaynakları kullanın</span><span class="sxs-lookup"><span data-stu-id="91a26-109">Use Resources in Localizable Applications</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c4963-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c4963-104">In This Section</span></span>  
+ [<span data-ttu-id="c4963-105">Bir Uygulamayı Yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="c4963-105">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
+ [<span data-ttu-id="c4963-106">Düğme Oluşturmak için Otomatik Düzeni Kullanma</span><span class="sxs-lookup"><span data-stu-id="c4963-106">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="c4963-107">Otomatik Düzen için Kılavuz Kullanma</span><span class="sxs-lookup"><span data-stu-id="c4963-107">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="c4963-108">Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma</span><span class="sxs-lookup"><span data-stu-id="c4963-108">Use a ResourceDictionary to Manage Localizable String Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [<span data-ttu-id="c4963-109">Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı</span><span class="sxs-lookup"><span data-stu-id="c4963-109">Use Resources in Localizable Applications</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a><span data-ttu-id="91a26-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="91a26-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c4963-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c4963-110">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="91a26-111">XML: lang XAML'de işleme</span><span class="sxs-lookup"><span data-stu-id="91a26-111">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="c4963-111">XAML'de xml:lang İşleme</span><span class="sxs-lookup"><span data-stu-id="c4963-111">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="91a26-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="91a26-112">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c4963-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="c4963-112">Related Sections</span></span>

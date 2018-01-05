@@ -13,18 +13,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1f2fe2b7634b57e424773c16023fb657f09f23a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6879694c0c6490de5f591f9aed82075c539fbc1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="795fb-102">Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="795fb-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
-<span data-ttu-id="795fb-103">Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta verilerini almak açıklar.</span><span class="sxs-lookup"><span data-stu-id="795fb-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="795fb-104">Bu örnek kodda dayanır [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="795fb-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="11619-102">Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="11619-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
+<span data-ttu-id="11619-103">Bu konuda, bir MEX uç noktasından MEX olmayan bağlama üzerinden meta verilerini almak açıklar.</span><span class="sxs-lookup"><span data-stu-id="11619-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="11619-104">Bu örnek kodda dayanır [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="11619-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="795fb-105">MEX olmayan bağlama üzerinden meta verilerini almak için</span><span class="sxs-lookup"><span data-stu-id="795fb-105">To retrieve metadata over a non-MEX binding</span></span>  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="11619-105">MEX olmayan bağlama üzerinden meta verilerini almak için</span><span class="sxs-lookup"><span data-stu-id="11619-105">To retrieve metadata over a non-MEX binding</span></span>  
   
-1.  <span data-ttu-id="795fb-106">MEX bitiş noktası tarafından kullanılan bağlama belirler.</span><span class="sxs-lookup"><span data-stu-id="795fb-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="795fb-107">İçin [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilir.</span><span class="sxs-lookup"><span data-stu-id="795fb-107">For [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="795fb-108">Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="795fb-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
+1.  <span data-ttu-id="11619-106">MEX bitiş noktası tarafından kullanılan bağlama belirler.</span><span class="sxs-lookup"><span data-stu-id="11619-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="11619-107">İçin [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri, hizmetin yapılandırma dosyası erişerek MEX bağlama belirleyebilir.</span><span class="sxs-lookup"><span data-stu-id="11619-107">For [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="11619-108">Bu durumda, MEX bağlama aşağıdaki hizmet yapılandırmasında tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="11619-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
   
     ```xml  
     <services>  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
      </bindings>  
     ```  
   
-2.  <span data-ttu-id="795fb-109">İstemci yapılandırma dosyası, aynı özel bağlama yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="795fb-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="795fb-110">Burada istemci de tanımlayan bir `clientCredentials` meta verileri MEX uç noktasından isterken hizmete kimlik doğrulaması için kullanılacak bir sertifika sağlamak için davranış.</span><span class="sxs-lookup"><span data-stu-id="795fb-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="795fb-111">Özel bağlama üzerinden meta veri istemek için svcutil.exe kullanırken Svcutil.exe (Svcutil.exe.config) MEX uç nokta yapılandırması yapılandırma dosyasına eklemelisiniz ve uç nokta yapılandırması adresinin URI şeması adıyla aynı olmalıdır Aşağıdaki kodda gösterildiği gibi MEX endpoint.</span><span class="sxs-lookup"><span data-stu-id="795fb-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
+2.  <span data-ttu-id="11619-109">İstemci yapılandırma dosyası, aynı özel bağlama yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="11619-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="11619-110">Burada istemci de tanımlayan bir `clientCredentials` meta verileri MEX uç noktasından isterken hizmete kimlik doğrulaması için kullanılacak bir sertifika sağlamak için davranış.</span><span class="sxs-lookup"><span data-stu-id="11619-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="11619-111">Özel bağlama üzerinden meta veri istemek için svcutil.exe kullanırken Svcutil.exe (Svcutil.exe.config) MEX uç nokta yapılandırması yapılandırma dosyasına eklemelisiniz ve uç nokta yapılandırması adresinin URI şeması adıyla aynı olmalıdır Aşağıdaki kodda gösterildiği gibi MEX endpoint.</span><span class="sxs-lookup"><span data-stu-id="11619-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-3.  <span data-ttu-id="795fb-112">Oluşturma bir `MetadataExchangeClient` ve arama `GetMetadata`.</span><span class="sxs-lookup"><span data-stu-id="795fb-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="795fb-113">Bunu yapmanın iki yolu vardır: Yapılandırması'nda özel bağlama belirtin veya özel bağlama aşağıdaki örnekte gösterildiği gibi kodda belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="795fb-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
+3.  <span data-ttu-id="11619-112">Oluşturma bir `MetadataExchangeClient` ve arama `GetMetadata`.</span><span class="sxs-lookup"><span data-stu-id="11619-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="11619-113">Bunu yapmanın iki yolu vardır: Yapılandırması'nda özel bağlama belirtin veya özel bağlama aşağıdaki örnekte gösterildiği gibi kodda belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="11619-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -124,14 +125,14 @@ ms.lasthandoff: 12/02/2017
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  <span data-ttu-id="795fb-114">Oluşturma bir `WsdlImporter` ve arama `ImportAllEndpoints`aşağıdaki kodda gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="795fb-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
+4.  <span data-ttu-id="11619-114">Oluşturma bir `WsdlImporter` ve arama `ImportAllEndpoints`aşağıdaki kodda gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="11619-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  <span data-ttu-id="795fb-115">Bu noktada, hizmet uç noktaları koleksiyonu vardır.</span><span class="sxs-lookup"><span data-stu-id="795fb-115">At this point, you have a collection of service endpoints.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="795fb-116">bkz: meta verileri, içeri aktarma [nasıl yapılır: hizmet uç noktaları içine meta verileri içeri aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="795fb-116"> importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
+5.  <span data-ttu-id="11619-115">Bu noktada, hizmet uç noktaları koleksiyonu vardır.</span><span class="sxs-lookup"><span data-stu-id="11619-115">At this point, you have a collection of service endpoints.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="11619-116">bkz: meta verileri, içeri aktarma [nasıl yapılır: hizmet uç noktaları içine meta verileri içeri aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="11619-116"> importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="795fb-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="795fb-117">See Also</span></span>  
- [<span data-ttu-id="795fb-118">Meta veriler</span><span class="sxs-lookup"><span data-stu-id="795fb-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a><span data-ttu-id="11619-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="11619-117">See Also</span></span>  
+ [<span data-ttu-id="11619-118">Meta Veriler</span><span class="sxs-lookup"><span data-stu-id="11619-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -17,27 +17,28 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="graphics"></a><span data-ttu-id="3b57e-102">Grafikler</span><span class="sxs-lookup"><span data-stu-id="3b57e-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="3b57e-103">Entegre multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sunar.</span><span class="sxs-lookup"><span data-stu-id="3b57e-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="41a7b-102">Grafikler</span><span class="sxs-lookup"><span data-stu-id="41a7b-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="41a7b-103">Entegre multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sunar.</span><span class="sxs-lookup"><span data-stu-id="41a7b-103"> offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b57e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3b57e-104">In This Section</span></span>  
- [<span data-ttu-id="3b57e-105">Bit eşlem etkileri</span><span class="sxs-lookup"><span data-stu-id="3b57e-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="3b57e-106">Fırçalar</span><span class="sxs-lookup"><span data-stu-id="3b57e-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="3b57e-107">Çizimler</span><span class="sxs-lookup"><span data-stu-id="3b57e-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="3b57e-108">Geometri</span><span class="sxs-lookup"><span data-stu-id="3b57e-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="3b57e-109">Görüntüleri</span><span class="sxs-lookup"><span data-stu-id="3b57e-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="3b57e-110">Şekiller</span><span class="sxs-lookup"><span data-stu-id="3b57e-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="3b57e-111">Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="3b57e-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="3b57e-112">Grafik işleme kayıt defteri ayarları</span><span class="sxs-lookup"><span data-stu-id="3b57e-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="3b57e-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3b57e-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41a7b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="41a7b-104">In This Section</span></span>  
+ [<span data-ttu-id="41a7b-105">Bit Eşlem Etkileri</span><span class="sxs-lookup"><span data-stu-id="41a7b-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [<span data-ttu-id="41a7b-106">Fırçalar</span><span class="sxs-lookup"><span data-stu-id="41a7b-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
+ [<span data-ttu-id="41a7b-107">Çizimler</span><span class="sxs-lookup"><span data-stu-id="41a7b-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
+ [<span data-ttu-id="41a7b-108">Geometriler</span><span class="sxs-lookup"><span data-stu-id="41a7b-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [<span data-ttu-id="41a7b-109">Görüntüler</span><span class="sxs-lookup"><span data-stu-id="41a7b-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [<span data-ttu-id="41a7b-110">Şekiller</span><span class="sxs-lookup"><span data-stu-id="41a7b-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
+ [<span data-ttu-id="41a7b-111">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="41a7b-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [<span data-ttu-id="41a7b-112">Grafik İşleme Kayıt Defteri Ayarları</span><span class="sxs-lookup"><span data-stu-id="41a7b-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="41a7b-113">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="41a7b-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3b57e-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3b57e-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="41a7b-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="41a7b-114">See Also</span></span>  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [<span data-ttu-id="3b57e-115">2B grafik ve görüntü</span><span class="sxs-lookup"><span data-stu-id="3b57e-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [<span data-ttu-id="3b57e-116">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="3b57e-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="3b57e-117">WPF Grafik işleme genel bakış</span><span class="sxs-lookup"><span data-stu-id="3b57e-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="41a7b-115">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="41a7b-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="41a7b-116">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="41a7b-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="41a7b-117">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="41a7b-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

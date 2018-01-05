@@ -15,22 +15,23 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="4e9e7-102">Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4e9e7-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="4e9e7-103">Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.</span><span class="sxs-lookup"><span data-stu-id="4e9e7-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="5cd3c-102">Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5cd3c-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="5cd3c-103">Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.</span><span class="sxs-lookup"><span data-stu-id="5cd3c-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4e9e7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4e9e7-104">In This Section</span></span>  
- [<span data-ttu-id="4e9e7-105">RichTextBox denetiminde bırakılan bir dosya açın</span><span class="sxs-lookup"><span data-stu-id="4e9e7-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="4e9e7-106">Bir veri nesnesi oluşturun</span><span class="sxs-lookup"><span data-stu-id="4e9e7-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [<span data-ttu-id="4e9e7-107">Veri biçimi var olup olmadığını bir veri nesnesinde</span><span class="sxs-lookup"><span data-stu-id="4e9e7-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="4e9e7-108">Bir veri nesnesinde veri biçimlerini listeleme</span><span class="sxs-lookup"><span data-stu-id="4e9e7-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="4e9e7-109">Belirli veri biçiminde veri alma</span><span class="sxs-lookup"><span data-stu-id="4e9e7-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="4e9e7-110">Bir veri nesnesi içinde birden çok veri biçimleri depolama</span><span class="sxs-lookup"><span data-stu-id="4e9e7-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5cd3c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5cd3c-104">In This Section</span></span>  
+ [<span data-ttu-id="5cd3c-105">RichTextBox Denetimine Bırakılan bir Dosyayı Açma</span><span class="sxs-lookup"><span data-stu-id="5cd3c-105">Open a File That is Dropped on a RichTextBox Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="5cd3c-106">Veri Nesnesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5cd3c-106">Create a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
+ [<span data-ttu-id="5cd3c-107">Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme</span><span class="sxs-lookup"><span data-stu-id="5cd3c-107">Determine if a Data Format is Present in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="5cd3c-108">Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme</span><span class="sxs-lookup"><span data-stu-id="5cd3c-108">List the Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="5cd3c-109">Belirli Veri Biçiminde Veri Alma</span><span class="sxs-lookup"><span data-stu-id="5cd3c-109">Retrieve Data in a Particular Data Format</span></span>](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="5cd3c-110">Veri Nesnesinde Birden Çok Veri Biçimini Depolama</span><span class="sxs-lookup"><span data-stu-id="5cd3c-110">Store Multiple Data Formats in a Data Object</span></span>](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4e9e7-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4e9e7-111">See Also</span></span>  
- [<span data-ttu-id="4e9e7-112">Sürükle ve bırak genel bakış</span><span class="sxs-lookup"><span data-stu-id="4e9e7-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5cd3c-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5cd3c-111">See Also</span></span>  
+ [<span data-ttu-id="5cd3c-112">Sürükleme ve Bırakmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="5cd3c-112">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

@@ -15,22 +15,23 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9f75ed7436b5a4d333d6d82f35b8c1a5601f9b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cfdd416337a10797f374be566816ec61ca4ee3cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="53568-102">Gezinti ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="53568-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="53568-103">Aşağıdaki konular nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinti.</span><span class="sxs-lookup"><span data-stu-id="53568-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="d1c9f-102">Gezinti ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="d1c9f-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="d1c9f-103">Aşağıdaki konular nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinti.</span><span class="sxs-lookup"><span data-stu-id="d1c9f-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="53568-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="53568-104">In This Section</span></span>  
- [<span data-ttu-id="53568-105">Sayfa işlevi çağırma</span><span class="sxs-lookup"><span data-stu-id="53568-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [<span data-ttu-id="53568-106">Sayfa işlevinin dönüş değerini alın</span><span class="sxs-lookup"><span data-stu-id="53568-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="53568-107">İleriye doğru gidin veya gezinti geçmişinde geri</span><span class="sxs-lookup"><span data-stu-id="53568-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="53568-108">Sayfa işlevinden Döndür</span><span class="sxs-lookup"><span data-stu-id="53568-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d1c9f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d1c9f-104">In This Section</span></span>  
+ [<span data-ttu-id="d1c9f-105">Sayfa İşlevi Çağırma</span><span class="sxs-lookup"><span data-stu-id="d1c9f-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
+  [<span data-ttu-id="d1c9f-106">Sayfa İşlevinin Dönüş Değerini Alma</span><span class="sxs-lookup"><span data-stu-id="d1c9f-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="d1c9f-107">Gezinme Geçmişinde İleriye veya Geriye Doğru Gitme</span><span class="sxs-lookup"><span data-stu-id="d1c9f-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="d1c9f-108">Sayfa İşlevinden Geri Dönme</span><span class="sxs-lookup"><span data-stu-id="d1c9f-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="53568-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="53568-109">Related Sections</span></span>  
- [<span data-ttu-id="53568-110">Gezinti genel bakış</span><span class="sxs-lookup"><span data-stu-id="53568-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="d1c9f-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="d1c9f-109">Related Sections</span></span>  
+ [<span data-ttu-id="d1c9f-110">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d1c9f-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
- [<span data-ttu-id="53568-111">Yapılandırılmış Gezinti genel bakış</span><span class="sxs-lookup"><span data-stu-id="53568-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [<span data-ttu-id="d1c9f-111">Yapılandırılmış Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d1c9f-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)

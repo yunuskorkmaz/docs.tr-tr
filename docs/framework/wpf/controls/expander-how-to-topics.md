@@ -17,20 +17,21 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d926970046b96029ee253c10a5abcc8b8e0602bc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 885cd77ed3d65fdb1173b695c50b9d6d26a8acb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expander-how-to-topics"></a><span data-ttu-id="69ef9-102">Genişletici ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="69ef9-102">Expander How-to Topics</span></span>
-<span data-ttu-id="69ef9-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Expander> denetim.</span><span class="sxs-lookup"><span data-stu-id="69ef9-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
+# <a name="expander-how-to-topics"></a><span data-ttu-id="188ec-102">Genişletici ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="188ec-102">Expander How-to Topics</span></span>
+<span data-ttu-id="188ec-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Expander> denetim.</span><span class="sxs-lookup"><span data-stu-id="188ec-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Expander> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="69ef9-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="69ef9-104">In This Section</span></span>  
- [<span data-ttu-id="69ef9-105">Bir Genişletici ScrollViewer ile oluşturma</span><span class="sxs-lookup"><span data-stu-id="69ef9-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="188ec-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="188ec-104">In This Section</span></span>  
+ [<span data-ttu-id="188ec-105">ScrollViewer ile bir Genişletici Oluşturma</span><span class="sxs-lookup"><span data-stu-id="188ec-105">Create an Expander with a ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="69ef9-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="69ef9-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="188ec-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="188ec-106">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="69ef9-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="69ef9-107">Related Sections</span></span>  
- [<span data-ttu-id="69ef9-108">Genişletici genel bakış</span><span class="sxs-lookup"><span data-stu-id="69ef9-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="188ec-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="188ec-107">Related Sections</span></span>  
+ [<span data-ttu-id="188ec-108">Genişleticiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="188ec-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)

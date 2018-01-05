@@ -15,23 +15,24 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc23483ee1c2b59de8c43c2a2582225d1b2c864c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b652805c921b4c1643e2c1ffcca8a361aa65541c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="07757-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="07757-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="07757-103">metin kullanarak zengin sunumu için destek içerir [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi.</span><span class="sxs-lookup"><span data-stu-id="07757-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="07757-104">Bir örnek paketi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tiplerini birlikte [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="07757-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="5de49-102">Yazı Tipleri (WPF)</span><span class="sxs-lookup"><span data-stu-id="5de49-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="5de49-103">metin kullanarak zengin sunumu için destek içerir [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi.</span><span class="sxs-lookup"><span data-stu-id="5de49-103"> includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="5de49-104">Bir örnek paketi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tiplerini birlikte [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5de49-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="07757-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="07757-105">In This Section</span></span>  
- [<span data-ttu-id="07757-106">OpenType yazıtipi özellikleri</span><span class="sxs-lookup"><span data-stu-id="07757-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [<span data-ttu-id="07757-107">Uygulamalarla paketleme yazı tipleri</span><span class="sxs-lookup"><span data-stu-id="07757-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [<span data-ttu-id="07757-108">Örnek OpenType yazıtipi paketi</span><span class="sxs-lookup"><span data-stu-id="07757-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [<span data-ttu-id="07757-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="07757-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5de49-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="5de49-105">In This Section</span></span>  
+ [<span data-ttu-id="5de49-106">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="5de49-106">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="5de49-107">Uygulamalarla Yazı Tiplerini Paketleme</span><span class="sxs-lookup"><span data-stu-id="5de49-107">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="5de49-108">Örnek OpenType Yazı Tipi Paketi</span><span class="sxs-lookup"><span data-stu-id="5de49-108">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="5de49-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="5de49-109">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07757-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="07757-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5de49-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5de49-110">See Also</span></span>  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
- [<span data-ttu-id="07757-111">WPF belgeleri</span><span class="sxs-lookup"><span data-stu-id="07757-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="07757-112">WPF'de tipografi</span><span class="sxs-lookup"><span data-stu-id="07757-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [<span data-ttu-id="5de49-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="5de49-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="5de49-112">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="5de49-112">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
