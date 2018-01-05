@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="765c2-102">XAML Ad Uzayı (x:) Dil Özellikleri</span><span class="sxs-lookup"><span data-stu-id="765c2-102">XAML Namespace (x:) Language Features</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="765c2-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="765c2-103">In This Section</span></span>  
- [<span data-ttu-id="765c2-104">x: Array işaretleme uzantısı</span><span class="sxs-lookup"><span data-stu-id="765c2-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
- [<span data-ttu-id="765c2-105">x: Class yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-105">x:Class Directive</span></span>](x-class-directive.md)  
- [<span data-ttu-id="765c2-106">x: ClassModifier yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
- [<span data-ttu-id="765c2-107">x: Code iç XAML türü</span><span class="sxs-lookup"><span data-stu-id="765c2-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
- [<span data-ttu-id="765c2-108">x: FieldModifier yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
- [<span data-ttu-id="765c2-109">x: Key yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-109">x:Key Directive</span></span>](x-key-directive.md)  
- [<span data-ttu-id="765c2-110">x: Member yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-110">x:Member Directive</span></span>](x-member-directive.md)  
- [<span data-ttu-id="765c2-111">x: Members yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-111">x:Members Directive</span></span>](x-members-directive.md)  
- [<span data-ttu-id="765c2-112">x: Name yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-112">x:Name Directive</span></span>](x-name-directive.md)  
- [<span data-ttu-id="765c2-113">x: Null işaretleme uzantısı</span><span class="sxs-lookup"><span data-stu-id="765c2-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
- [<span data-ttu-id="765c2-114">x: Shared özniteliği</span><span class="sxs-lookup"><span data-stu-id="765c2-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
- [<span data-ttu-id="765c2-115">x: Property yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-115">x:Property Directive</span></span>](x-property-directive.md)  
- [<span data-ttu-id="765c2-116">x: Static işaretleme uzantısı</span><span class="sxs-lookup"><span data-stu-id="765c2-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
- [<span data-ttu-id="765c2-117">x: Subclass yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
- [<span data-ttu-id="765c2-118">x: Type işaretleme uzantısı</span><span class="sxs-lookup"><span data-stu-id="765c2-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
- [<span data-ttu-id="765c2-119">x: TypeArguments yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
- [<span data-ttu-id="765c2-120">x: Uid yönergesi</span><span class="sxs-lookup"><span data-stu-id="765c2-120">x:Uid Directive</span></span>](x-uid-directive.md)  
- [<span data-ttu-id="765c2-121">x: XData iç XAML türü</span><span class="sxs-lookup"><span data-stu-id="765c2-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
- [<span data-ttu-id="765c2-122">XamlName dilbilgisi</span><span class="sxs-lookup"><span data-stu-id="765c2-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
- [<span data-ttu-id="765c2-123">{} Kaçış sırası - biçimlendirme uzantısı</span><span class="sxs-lookup"><span data-stu-id="765c2-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
- [<span data-ttu-id="765c2-124">XML: lang XAML'de işleme</span><span class="sxs-lookup"><span data-stu-id="765c2-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
- [<span data-ttu-id="765c2-125">XML: Space XAML'de işleme</span><span class="sxs-lookup"><span data-stu-id="765c2-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)
+# <a name="xaml-namespace-x-language-features"></a><span data-ttu-id="166be-102">XAML Ad Uzayı (x:) Dil Özellikleri</span><span class="sxs-lookup"><span data-stu-id="166be-102">XAML Namespace (x:) Language Features</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="166be-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="166be-103">In This Section</span></span>  
+ [<span data-ttu-id="166be-104">x:Array İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="166be-104">x:Array Markup Extension</span></span>](x-array-markup-extension.md)  
+ [<span data-ttu-id="166be-105">x:Class Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-105">x:Class Directive</span></span>](x-class-directive.md)  
+ [<span data-ttu-id="166be-106">x:ClassModifier Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-106">x:ClassModifier Directive</span></span>](x-classmodifier-directive.md)  
+ [<span data-ttu-id="166be-107">x:Code İç XAML Türü</span><span class="sxs-lookup"><span data-stu-id="166be-107">x:Code Intrinsic XAML Type</span></span>](x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="166be-108">x:FieldModifier Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-108">x:FieldModifier Directive</span></span>](x-fieldmodifier-directive.md)  
+ [<span data-ttu-id="166be-109">x:Key Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-109">x:Key Directive</span></span>](x-key-directive.md)  
+ [<span data-ttu-id="166be-110">x:Member Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-110">x:Member Directive</span></span>](x-member-directive.md)  
+ [<span data-ttu-id="166be-111">x:Members Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-111">x:Members Directive</span></span>](x-members-directive.md)  
+ [<span data-ttu-id="166be-112">x:Name Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-112">x:Name Directive</span></span>](x-name-directive.md)  
+ [<span data-ttu-id="166be-113">x:Null İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="166be-113">x:Null Markup Extension</span></span>](x-null-markup-extension.md)  
+ [<span data-ttu-id="166be-114">x:Shared Özniteliği</span><span class="sxs-lookup"><span data-stu-id="166be-114">x:Shared Attribute</span></span>](x-shared-attribute.md)  
+ [<span data-ttu-id="166be-115">x:Property Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-115">x:Property Directive</span></span>](x-property-directive.md)  
+ [<span data-ttu-id="166be-116">x:Static İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="166be-116">x:Static Markup Extension</span></span>](x-static-markup-extension.md)  
+ [<span data-ttu-id="166be-117">x:Subclass Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-117">x:Subclass Directive</span></span>](x-subclass-directive.md)  
+ [<span data-ttu-id="166be-118">x:Type İşaretleme Uzantısı</span><span class="sxs-lookup"><span data-stu-id="166be-118">x:Type Markup Extension</span></span>](x-type-markup-extension.md)  
+ [<span data-ttu-id="166be-119">x:TypeArguments Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-119">x:TypeArguments Directive</span></span>](x-typearguments-directive.md)  
+ [<span data-ttu-id="166be-120">x:Uid Yönergesi</span><span class="sxs-lookup"><span data-stu-id="166be-120">x:Uid Directive</span></span>](x-uid-directive.md)  
+ [<span data-ttu-id="166be-121">x:XData İç XAML Türü</span><span class="sxs-lookup"><span data-stu-id="166be-121">x:XData Intrinsic XAML Type</span></span>](x-xdata-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="166be-122">XamlName Dilbilgisi</span><span class="sxs-lookup"><span data-stu-id="166be-122">XamlName Grammar</span></span>](xamlname-grammar.md)  
+ [<span data-ttu-id="166be-123">{} Kaçış sırası - biçimlendirme uzantısı</span><span class="sxs-lookup"><span data-stu-id="166be-123">{} Escape Sequence - Markup Extension</span></span>](escape-sequence-markup-extension.md)  
+ [<span data-ttu-id="166be-124">XAML'de xml:lang İşleme</span><span class="sxs-lookup"><span data-stu-id="166be-124">xml:lang Handling in XAML</span></span>](xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="166be-125">XAML'de xml:space İşleme</span><span class="sxs-lookup"><span data-stu-id="166be-125">xml:space Handling in XAML</span></span>](xml-space-handling-in-xaml.md)

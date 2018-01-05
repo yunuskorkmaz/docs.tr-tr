@@ -12,48 +12,51 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bde508f6fd578050501f95f2f9316c6c458017de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9517abe23dba1b1b4b198fb8375e1ae35d8a2ca4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="8d93b-102">Sürüm dayanıklı seri hale getirme teknolojisi örneği</span><span class="sxs-lookup"><span data-stu-id="8d93b-102">Version Tolerant Serialization Technology Sample</span></span>
-[<span data-ttu-id="8d93b-103">Örnek indirme</span><span class="sxs-lookup"><span data-stu-id="8d93b-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+# <a name="version-tolerant-serialization-technology-sample"></a><span data-ttu-id="8ee4e-102">Sürüm dayanıklı seri hale getirme teknolojisi örneği</span><span class="sxs-lookup"><span data-stu-id="8ee4e-102">Version Tolerant Serialization Technology Sample</span></span>
+[<span data-ttu-id="8ee4e-103">Örnek indirme</span><span class="sxs-lookup"><span data-stu-id="8ee4e-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
- <span data-ttu-id="8d93b-104">Bu örnek .NET seri hale getirme sürüm dayanıklılık özelliklerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="8d93b-104">This sample demonstrates the version tolerance features of .NET Serialization.</span></span> <span data-ttu-id="8d93b-105">Örnek farklı sürümleri kullanan uygulamalar oluşturur bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> hale getirmek ve veri serisini kaldırmak için.</span><span class="sxs-lookup"><span data-stu-id="8d93b-105">The sample builds applications that use different versions of a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> to serialize and deserialize data.</span></span> <span data-ttu-id="8d93b-106">Farklı bir türe sürümleri varlığını rağmen uygulamalar sorunsuz iletişim.</span><span class="sxs-lookup"><span data-stu-id="8d93b-106">Despite the presence of different type versions, the applications communicate seamlessly.</span></span> <span data-ttu-id="8d93b-107">Daha fazla bilgi için bkz: [sürüm dayanıklı serileştirme](../../../docs/standard/serialization/version-tolerant-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="8d93b-107">For more information, see [Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md).</span></span>  
+ <span data-ttu-id="8ee4e-104">Bu örnek .NET seri hale getirme sürüm dayanıklılık özelliklerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-104">This sample demonstrates the version tolerance features of .NET Serialization.</span></span> <span data-ttu-id="8ee4e-105">Örnek farklı sürümleri kullanan uygulamalar oluşturur bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> hale getirmek ve veri serisini kaldırmak için.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-105">The sample builds applications that use different versions of a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> to serialize and deserialize data.</span></span> <span data-ttu-id="8ee4e-106">Farklı bir türe sürümleri varlığını rağmen uygulamalar sorunsuz iletişim.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-106">Despite the presence of different type versions, the applications communicate seamlessly.</span></span> <span data-ttu-id="8ee4e-107">Daha fazla bilgi için bkz: [sürüm dayanıklı serileştirme](../../../docs/standard/serialization/version-tolerant-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="8ee4e-107">For more information, see [Version Tolerant Serialization](../../../docs/standard/serialization/version-tolerant-serialization.md).</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="8d93b-108">Komut istemi kullanarak örneği oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="8d93b-108">To build the sample using the command prompt</span></span>  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="8ee4e-108">Komut istemi kullanarak örneği oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="8ee4e-108">To build the sample using the command prompt</span></span>  
   
-1.  <span data-ttu-id="8d93b-109">Bir komut istemi penceresi açın ve örnek için dile özgü alt (altında uygulama V1 veya V2 uygulama) birine gidin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-109">Open a Command Prompt window and navigate to one of the language-specific subdirectories (under V1 Application or V2 Application) for the sample.</span></span>  
+1.  <span data-ttu-id="8ee4e-109">Bir komut istemi penceresi açın ve örnek için dile özgü alt (altında uygulama V1 veya V2 uygulama) birine gidin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-109">Open a Command Prompt window and navigate to one of the language-specific subdirectories (under V1 Application or V2 Application) for the sample.</span></span>  
   
-2.  <span data-ttu-id="8d93b-110">Tür **msbuild.exe \<ver > application.sln** komut satırında (burada \<ver > v1 veya v2).</span><span class="sxs-lookup"><span data-stu-id="8d93b-110">Type **msbuild.exe \<ver> application.sln** at the command line (where \<ver> is either v1 or v2).</span></span>  
+2.  <span data-ttu-id="8ee4e-110">Tür **msbuild.exe \<ver > application.sln** komut satırında (burada \<ver > v1 veya v2).</span><span class="sxs-lookup"><span data-stu-id="8ee4e-110">Type **msbuild.exe \<ver> application.sln** at the command line (where \<ver> is either v1 or v2).</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="8d93b-111">Visual Studio kullanarak örneği oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="8d93b-111">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="8ee4e-111">Visual Studio kullanarak örneği oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="8ee4e-111">To build the sample using Visual Studio</span></span>  
   
-1.  <span data-ttu-id="8d93b-112">Açık [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] ve örnek için dile özgü alt birine gidin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-112">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1.  <span data-ttu-id="8ee4e-112">Açık [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] ve örnek için dile özgü alt birine gidin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-112">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  <span data-ttu-id="8d93b-113">Önceki adımda seçtiğiniz dizininin V1 uygulama alt gidin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-113">Navigate to the V1 Application subdirectory of the directory you selected in the previous step.</span></span>  
+2.  <span data-ttu-id="8ee4e-113">Önceki adımda seçtiğiniz dizininin V1 uygulama alt gidin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-113">Navigate to the V1 Application subdirectory of the directory you selected in the previous step.</span></span>  
   
-3.  <span data-ttu-id="8d93b-114">Visual Studio'da dosyayı açmak V1 Application.sln simgesini çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="8d93b-114">Double-click the icon for V1 Application.sln to open the file in Visual Studio.</span></span>  
+3.  <span data-ttu-id="8ee4e-114">Visual Studio'da dosyayı açmak V1 Application.sln simgesini çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-114">Double-click the icon for V1 Application.sln to open the file in Visual Studio.</span></span>  
   
-4.  <span data-ttu-id="8d93b-115">Üzerinde **yapı** menüsünde tıklatın **yapı çözümü**.</span><span class="sxs-lookup"><span data-stu-id="8d93b-115">On the **Build** menu, click **Build Solution**.</span></span>  
+4.  <span data-ttu-id="8ee4e-115">Üzerinde **yapı** menüsünde tıklatın **yapı çözümü**.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-115">On the **Build** menu, click **Build Solution**.</span></span>  
   
-5.  <span data-ttu-id="8d93b-116">V2 uygulama alt dizinine gidin ve V2 uygulama oluşturmak için yukarıdaki iki adımı yineleyin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-116">Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.</span></span>  
+5.  <span data-ttu-id="8ee4e-116">V2 uygulama alt dizinine gidin ve V2 uygulama oluşturmak için yukarıdaki iki adımı yineleyin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-116">Navigate to the V2 Application subdirectory and repeat the two previous steps to build the V2 Application.</span></span>  
   
- <span data-ttu-id="8d93b-117">Uygulamaları varsayılan \bin veya \bin\debug'dır dizinlerde kendi ilgili proje dizinlerin oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8d93b-117">The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.</span></span>  
+ <span data-ttu-id="8ee4e-117">Uygulamaları varsayılan \bin veya \bin\debug'dır dizinlerde kendi ilgili proje dizinlerin oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-117">The applications will be built in the default \bin or \bin\Debug subdirectories of their respective project directories.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="8d93b-118">Örnek çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="8d93b-118">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="8ee4e-118">Örnek çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="8ee4e-118">To run the sample</span></span>  
   
-1.  <span data-ttu-id="8d93b-119">Komut İstemi penceresinde örnek uygulamalar yapılandırıldığında seçtiğiniz dile özgü alt dizinine gidin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-119">In the Command Prompt window, navigate to the language-specific subdirectory that you selected when you built the sample applications.</span></span>  
+1.  <span data-ttu-id="8ee4e-119">Komut İstemi penceresinde örnek uygulamalar yapılandırıldığında seçtiğiniz dile özgü alt dizinine gidin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-119">In the Command Prompt window, navigate to the language-specific subdirectory that you selected when you built the sample applications.</span></span>  
   
-2.  <span data-ttu-id="8d93b-120">Tür **runme.cmd** iki uygulamanın aynı anda çalıştırmak için komut satırında.</span><span class="sxs-lookup"><span data-stu-id="8d93b-120">Type **runme.cmd** at the command line to run both applications at once.</span></span>  
+2.  <span data-ttu-id="8ee4e-120">Tür **runme.cmd** iki uygulamanın aynı anda çalıştırmak için komut satırında.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-120">Type **runme.cmd** at the command line to run both applications at once.</span></span>  
   
- <span data-ttu-id="8d93b-121">Alternatif olarak, sıralı olarak çalıştırın ve yeni yürütülebilir dosyaları içeren dizinler gidin.</span><span class="sxs-lookup"><span data-stu-id="8d93b-121">Alternatively, navigate to the directories that contain the new executables and run them sequentially.</span></span>  
+ <span data-ttu-id="8ee4e-121">Alternatif olarak, sıralı olarak çalıştırın ve yeni yürütülebilir dosyaları içeren dizinler gidin.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-121">Alternatively, navigate to the directories that contain the new executables and run them sequentially.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8d93b-122">Örnek konsol uygulamaları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8d93b-122">The sample builds console applications.</span></span> <span data-ttu-id="8d93b-123">Başlatma ve bunları çıktılarını görüntülemek için komut istemi penceresinde Çalıştır gerekir.</span><span class="sxs-lookup"><span data-stu-id="8d93b-123">You must launch and run them in a Command Prompt window to view their output.</span></span>  
+>  <span data-ttu-id="8ee4e-122">Örnek konsol uygulamaları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-122">The sample builds console applications.</span></span> <span data-ttu-id="8ee4e-123">Başlatma ve bunları çıktılarını görüntülemek için komut istemi penceresinde Çalıştır gerekir.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-123">You must launch and run them in a Command Prompt window to view their output.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d93b-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8d93b-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8ee4e-124">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8ee4e-124">See Also</span></span>  
  <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
  <xref:System.IO.FileStream>

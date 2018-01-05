@@ -20,30 +20,33 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f09232080bb5c9aae4902dfc33b638bde82474c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a78c1caac318a19028472a2e4f6e8964f99abfba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="performing-formatting-operations"></a><span data-ttu-id="a1b31-102">Biçimlendirme İşlemlerini Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="a1b31-102">Performing Formatting Operations</span></span>
-<span data-ttu-id="a1b31-103">Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a1b31-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  
+# <a name="performing-formatting-operations"></a><span data-ttu-id="24142-102">Biçimlendirme İşlemlerini Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="24142-102">Performing Formatting Operations</span></span>
+<span data-ttu-id="24142-103">Aşağıdaki konular, belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="24142-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  
   
--   [<span data-ttu-id="a1b31-104">Nasıl yapılır: sayıyı baştaki sıfırlarla doldurur</span><span class="sxs-lookup"><span data-stu-id="a1b31-104">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+-   [<span data-ttu-id="24142-104">Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma</span><span class="sxs-lookup"><span data-stu-id="24142-104">How to: Pad a Number with Leading Zeros</span></span>](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
--   [<span data-ttu-id="a1b31-105">Nasıl yapılır: Özel sayısal biçim sağlayıcıları kullanır ve tanımlayın</span><span class="sxs-lookup"><span data-stu-id="a1b31-105">How to: Define and Use Custom Numeric Format Providers</span></span>](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+-   [<span data-ttu-id="24142-105">Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="24142-105">How to: Define and Use Custom Numeric Format Providers</span></span>](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
--   [<span data-ttu-id="a1b31-106">Nasıl yapılır: Web denetimlerindeki sayısal kullanıcı girişini sayıya dönüştürme</span><span class="sxs-lookup"><span data-stu-id="a1b31-106">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+-   [<span data-ttu-id="24142-106">Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="24142-106">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   <span data-ttu-id="a1b31-107">[Nasıl yapılır: belirli bir tarihten itibaren haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span><span class="sxs-lookup"><span data-stu-id="a1b31-107">[How to: Extract the Day of the Week from a Specific Date](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span></span>  
+-   <span data-ttu-id="24142-107">[Nasıl yapılır: belirli bir tarihten itibaren haftanın gününü ayıklama](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span><span class="sxs-lookup"><span data-stu-id="24142-107">[How to: Extract the Day of the Week from a Specific Date](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).</span></span>  
   
--   [<span data-ttu-id="a1b31-108">Nasıl yapılır: gidiş dönüş tarih ve saat değerleri</span><span class="sxs-lookup"><span data-stu-id="a1b31-108">How to: Round-trip Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+-   [<span data-ttu-id="24142-108">Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri</span><span class="sxs-lookup"><span data-stu-id="24142-108">How to: Round-trip Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
--   [<span data-ttu-id="a1b31-109">Nasıl yapılır: görüntü tarih ve saat bilgilerini Web kullanıcılarına yerelleştirilmiş</span><span class="sxs-lookup"><span data-stu-id="a1b31-109">How to: Display Localized Date and Time Information to Web Users</span></span>](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+-   [<span data-ttu-id="24142-109">Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="24142-109">How to: Display Localized Date and Time Information to Web Users</span></span>](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
--   [<span data-ttu-id="a1b31-110">Nasıl yapılır: tarih ve saat değerlerinde Milisaniyeleri görüntüleme</span><span class="sxs-lookup"><span data-stu-id="a1b31-110">How to: Display Milliseconds in Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+-   [<span data-ttu-id="24142-110">Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="24142-110">How to: Display Milliseconds in Date and Time Values</span></span>](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   
--   [<span data-ttu-id="a1b31-111">Nasıl yapılır: Miladi olmayan takvimlerde tarihleri görüntüleme</span><span class="sxs-lookup"><span data-stu-id="a1b31-111">How to: Display Dates in Non-Gregorian Calendars</span></span>](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+-   [<span data-ttu-id="24142-111">Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="24142-111">How to: Display Dates in Non-Gregorian Calendars</span></span>](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a1b31-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a1b31-112">See Also</span></span>  
- [<span data-ttu-id="a1b31-113">Biçimlendirme türleri</span><span class="sxs-lookup"><span data-stu-id="a1b31-113">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="24142-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="24142-112">See Also</span></span>  
+ [<span data-ttu-id="24142-113">Biçimlendirme Türleri</span><span class="sxs-lookup"><span data-stu-id="24142-113">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)
