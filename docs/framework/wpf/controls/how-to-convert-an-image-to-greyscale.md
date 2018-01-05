@@ -20,22 +20,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a0d88e521d953e57ce729e3365e78f274a0283a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eed39a0a0388d1d091a167addb8f81f25c8c04b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="b734f-102">Nasıl yapılır: Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="b734f-102">How to: Convert an Image to Greyscale</span></span>
-<span data-ttu-id="b734f-103">Bu örnek bir görüntüyü gri tonlamalı kullanmaya dönüştürme gösterilmektedir <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="b734f-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
+# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="4d1b8-102">Nasıl yapılır: Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="4d1b8-102">How to: Convert an Image to Greyscale</span></span>
+<span data-ttu-id="4d1b8-103">Bu örnek bir görüntüyü gri tonlamalı kullanmaya dönüştürme gösterilmektedir <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="4d1b8-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b734f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b734f-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4d1b8-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d1b8-104">Example</span></span>  
  [!code-xaml[ImagingSnippetGallery_snip#FormatConvertedBitmapXamlExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/FormatConvertedBitmapExample.xaml#formatconvertedbitmapxamlexamplewholepage)]  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample.cs#formatconvertedbitmapcodeexamplewholepage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="b734f-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b734f-105">See Also</span></span>  
- [<span data-ttu-id="b734f-106">Resim öğesi kullanma</span><span class="sxs-lookup"><span data-stu-id="b734f-106">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
- [<span data-ttu-id="b734f-107">Görüntü kırpma</span><span class="sxs-lookup"><span data-stu-id="b734f-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
- [<span data-ttu-id="b734f-108">Görüntüyü Döndür</span><span class="sxs-lookup"><span data-stu-id="b734f-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
+## <a name="see-also"></a><span data-ttu-id="4d1b8-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4d1b8-105">See Also</span></span>  
+ [<span data-ttu-id="4d1b8-106">Görüntü Öğesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="4d1b8-106">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+ [<span data-ttu-id="4d1b8-107">Görüntü Kırpma</span><span class="sxs-lookup"><span data-stu-id="4d1b8-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+ [<span data-ttu-id="4d1b8-108">Görüntü Döndürme</span><span class="sxs-lookup"><span data-stu-id="4d1b8-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)

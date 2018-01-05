@@ -21,34 +21,35 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e0fed28024ac931cdc44b1b7d6bb82fcc7f1089b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 10b579a3d0ff8cbe02a3b47231114521486d8e2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="6cba1-102">ICeeGen::GenerateCeeFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6cba1-102">ICeeGen::GenerateCeeFile Method</span></span>
-<span data-ttu-id="6cba1-103">Şu anda bu yüklenmiş kod tabanını içeren bir kod temeli dosyası oluşturur [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="6cba1-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
+# <a name="iceegengenerateceefile-method"></a><span data-ttu-id="73b16-102">ICeeGen::GenerateCeeFile Yöntemi</span><span class="sxs-lookup"><span data-stu-id="73b16-102">ICeeGen::GenerateCeeFile Method</span></span>
+<span data-ttu-id="73b16-103">Şu anda bu yüklenmiş kod tabanını içeren bir kod temeli dosyası oluşturur [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="73b16-103">Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.</span></span>  
   
- <span data-ttu-id="6cba1-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="6cba1-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="73b16-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="73b16-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6cba1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6cba1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73b16-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="73b16-105">Syntax</span></span>  
   
 ```  
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6cba1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6cba1-106">Parameters</span></span>  
- <span data-ttu-id="6cba1-107">`GenerateCeeFile`parametre almaz.</span><span class="sxs-lookup"><span data-stu-id="6cba1-107">`GenerateCeeFile` takes no parameters.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="73b16-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="73b16-106">Parameters</span></span>  
+ <span data-ttu-id="73b16-107">`GenerateCeeFile`parametre almaz.</span><span class="sxs-lookup"><span data-stu-id="73b16-107">`GenerateCeeFile` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6cba1-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6cba1-108">Requirements</span></span>  
- <span data-ttu-id="6cba1-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6cba1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73b16-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="73b16-108">Requirements</span></span>  
+ <span data-ttu-id="73b16-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73b16-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6cba1-110">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6cba1-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="73b16-110">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="73b16-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6cba1-111">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="6cba1-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="73b16-111">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="73b16-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6cba1-112">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6cba1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="73b16-112">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73b16-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6cba1-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6cba1-113">See Also</span></span>  
- [<span data-ttu-id="6cba1-114">Iceegen arabirimi</span><span class="sxs-lookup"><span data-stu-id="6cba1-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="73b16-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="73b16-113">See Also</span></span>  
+ [<span data-ttu-id="73b16-114">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73b16-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

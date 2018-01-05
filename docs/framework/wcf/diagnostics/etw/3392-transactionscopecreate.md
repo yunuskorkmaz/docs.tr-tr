@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db039f2488ece8f1a3948922b60d3513f3b3238a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c327f279c6f88c18dfc6d874d9fddd6ec7bdf2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3392---transactionscopecreate"></a><span data-ttu-id="56d07-102">3392 - TransactionScopeCreate</span><span class="sxs-lookup"><span data-stu-id="56d07-102">3392 - TransactionScopeCreate</span></span>
-## <a name="properties"></a><span data-ttu-id="56d07-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="56d07-103">Properties</span></span>  
+# <a name="3392---transactionscopecreate"></a><span data-ttu-id="82429-102">3392 - TransactionScopeCreate</span><span class="sxs-lookup"><span data-stu-id="82429-102">3392 - TransactionScopeCreate</span></span>
+## <a name="properties"></a><span data-ttu-id="82429-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="82429-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="56d07-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="56d07-104">ID</span></span>|<span data-ttu-id="56d07-105">3392</span><span class="sxs-lookup"><span data-stu-id="56d07-105">3392</span></span>|  
-|<span data-ttu-id="56d07-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="56d07-106">Keywords</span></span>|<span data-ttu-id="56d07-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="56d07-107">ServiceModel</span></span>|  
-|<span data-ttu-id="56d07-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="56d07-108">Level</span></span>|<span data-ttu-id="56d07-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="56d07-109">Information</span></span>|  
-|<span data-ttu-id="56d07-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="56d07-110">Channel</span></span>|<span data-ttu-id="56d07-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="56d07-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="82429-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="82429-104">ID</span></span>|<span data-ttu-id="82429-105">3392</span><span class="sxs-lookup"><span data-stu-id="82429-105">3392</span></span>|  
+|<span data-ttu-id="82429-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="82429-106">Keywords</span></span>|<span data-ttu-id="82429-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="82429-107">ServiceModel</span></span>|  
+|<span data-ttu-id="82429-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="82429-108">Level</span></span>|<span data-ttu-id="82429-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="82429-109">Information</span></span>|  
+|<span data-ttu-id="82429-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="82429-110">Channel</span></span>|<span data-ttu-id="82429-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="82429-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="56d07-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="56d07-112">Description</span></span>  
- <span data-ttu-id="56d07-113">TransactionScope oluşturulduğunda, bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="56d07-113">This event is emitted when the TransactionScope is being created.</span></span>  
+## <a name="description"></a><span data-ttu-id="82429-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="82429-112">Description</span></span>  
+ <span data-ttu-id="82429-113">TransactionScope oluşturulduğunda, bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="82429-113">This event is emitted when the TransactionScope is being created.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="56d07-114">İleti</span><span class="sxs-lookup"><span data-stu-id="56d07-114">Message</span></span>  
- <span data-ttu-id="56d07-115">TransactionScope ile LocalIdentifier oluşturuluyor: '%1' ve DistributedIdentifier: '%2'.</span><span class="sxs-lookup"><span data-stu-id="56d07-115">TransactionScope is being created with LocalIdentifier:'%1' and DistributedIdentifier:'%2'.</span></span>  
+## <a name="message"></a><span data-ttu-id="82429-114">İleti</span><span class="sxs-lookup"><span data-stu-id="82429-114">Message</span></span>  
+ <span data-ttu-id="82429-115">TransactionScope ile LocalIdentifier oluşturuluyor: '%1' ve DistributedIdentifier: '%2'.</span><span class="sxs-lookup"><span data-stu-id="82429-115">TransactionScope is being created with LocalIdentifier:'%1' and DistributedIdentifier:'%2'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="56d07-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="56d07-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="82429-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="82429-116">Details</span></span>

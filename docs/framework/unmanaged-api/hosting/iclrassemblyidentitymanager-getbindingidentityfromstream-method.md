@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cd16f13bd77127953bdd17b258c7be518088f899
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa487ece58f228345188338fb61f1a2a85d9e4c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="13f7d-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Metodu</span><span class="sxs-lookup"><span data-stu-id="13f7d-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
-<span data-ttu-id="13f7d-103">Belirtilen akış derlemede kurallı derleme kimlik verilerini alır.</span><span class="sxs-lookup"><span data-stu-id="13f7d-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
+# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="22c61-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Metodu</span><span class="sxs-lookup"><span data-stu-id="22c61-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
+<span data-ttu-id="22c61-103">Belirtilen akış derlemede kurallı derleme kimlik verilerini alır.</span><span class="sxs-lookup"><span data-stu-id="22c61-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13f7d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13f7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22c61-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="22c61-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBindingIdentityFromStream (  
@@ -41,41 +42,41 @@ HRESULT GetBindingIdentityFromStream (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="13f7d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13f7d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="22c61-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="22c61-105">Parameters</span></span>  
  `pStream`  
- <span data-ttu-id="13f7d-106">[in] Değerlendirilecek derleme akış.</span><span class="sxs-lookup"><span data-stu-id="13f7d-106">[in] The assembly stream to be evaluated.</span></span>  
+ <span data-ttu-id="22c61-106">[in] Değerlendirilecek derleme akış.</span><span class="sxs-lookup"><span data-stu-id="22c61-106">[in] The assembly stream to be evaluated.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="13f7d-107">[in] Gelecekteki genişletilebilirliği için sağlanır.</span><span class="sxs-lookup"><span data-stu-id="13f7d-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="13f7d-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ortak dil çalışma zamanı (CLR) geçerli sürümünü destekleyen tek değerdir.</span><span class="sxs-lookup"><span data-stu-id="13f7d-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
+ <span data-ttu-id="22c61-107">[in] Gelecekteki genişletilebilirliği için sağlanır.</span><span class="sxs-lookup"><span data-stu-id="22c61-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="22c61-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ortak dil çalışma zamanı (CLR) geçerli sürümünü destekleyen tek değerdir.</span><span class="sxs-lookup"><span data-stu-id="22c61-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="13f7d-109">[out] Katı derleme kimlik verilerini içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="13f7d-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
+ <span data-ttu-id="22c61-109">[out] Katı derleme kimlik verilerini içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="22c61-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
   
  `pcchBufferSize`  
- <span data-ttu-id="13f7d-110">[içinde out] Boyutunu `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="13f7d-110">[in, out] The size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="22c61-110">[içinde out] Boyutunu `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="22c61-110">[in, out] The size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="13f7d-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="13f7d-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="22c61-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="22c61-111">Return Value</span></span>  
   
-|<span data-ttu-id="13f7d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="13f7d-112">HRESULT</span></span>|<span data-ttu-id="13f7d-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="13f7d-113">Description</span></span>|  
+|<span data-ttu-id="22c61-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="22c61-112">HRESULT</span></span>|<span data-ttu-id="22c61-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="22c61-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="13f7d-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="13f7d-114">S_OK</span></span>|<span data-ttu-id="13f7d-115">Yöntem başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="13f7d-115">The method returned successfully.</span></span>|  
-|<span data-ttu-id="13f7d-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="13f7d-116">E_INVALIDARG</span></span>|<span data-ttu-id="13f7d-117">Sağlanan `pStream` null.</span><span class="sxs-lookup"><span data-stu-id="13f7d-117">The supplied `pStream` is null.</span></span>|  
-|<span data-ttu-id="13f7d-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="13f7d-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="13f7d-119">Boyutunu `pwzBuffer` çok küçük.</span><span class="sxs-lookup"><span data-stu-id="13f7d-119">The size of `pwzBuffer` is too small.</span></span>|  
-|<span data-ttu-id="13f7d-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="13f7d-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="13f7d-121">CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.</span><span class="sxs-lookup"><span data-stu-id="13f7d-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="13f7d-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="13f7d-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="13f7d-123">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="13f7d-123">The call timed out.</span></span>|  
-|<span data-ttu-id="13f7d-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="13f7d-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="13f7d-125">Arayan kilidi kendisine ait değil.</span><span class="sxs-lookup"><span data-stu-id="13f7d-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="13f7d-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="13f7d-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="13f7d-127">Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.</span><span class="sxs-lookup"><span data-stu-id="13f7d-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="13f7d-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="13f7d-128">E_FAIL</span></span>|<span data-ttu-id="13f7d-129">Bilinmeyen yıkıcı bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="13f7d-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="13f7d-130">Bir yöntem E_FAIL döndürürse, CLR artık işlemi içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="13f7d-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="13f7d-131">Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="13f7d-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="22c61-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="22c61-114">S_OK</span></span>|<span data-ttu-id="22c61-115">Yöntem başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="22c61-115">The method returned successfully.</span></span>|  
+|<span data-ttu-id="22c61-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="22c61-116">E_INVALIDARG</span></span>|<span data-ttu-id="22c61-117">Sağlanan `pStream` null.</span><span class="sxs-lookup"><span data-stu-id="22c61-117">The supplied `pStream` is null.</span></span>|  
+|<span data-ttu-id="22c61-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="22c61-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="22c61-119">Boyutunu `pwzBuffer` çok küçük.</span><span class="sxs-lookup"><span data-stu-id="22c61-119">The size of `pwzBuffer` is too small.</span></span>|  
+|<span data-ttu-id="22c61-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="22c61-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="22c61-121">CLR süreç içine yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı bir şekilde işlemek bir durumda.</span><span class="sxs-lookup"><span data-stu-id="22c61-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="22c61-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="22c61-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="22c61-123">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="22c61-123">The call timed out.</span></span>|  
+|<span data-ttu-id="22c61-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="22c61-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="22c61-125">Arayan kilidi kendisine ait değil.</span><span class="sxs-lookup"><span data-stu-id="22c61-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="22c61-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="22c61-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="22c61-127">Bir olay engellenmiş iş parçacığı sırasında iptal edildi veya fiber üzerinde beklediği.</span><span class="sxs-lookup"><span data-stu-id="22c61-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="22c61-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="22c61-128">E_FAIL</span></span>|<span data-ttu-id="22c61-129">Bilinmeyen yıkıcı bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="22c61-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="22c61-130">Bir yöntem E_FAIL döndürürse, CLR artık işlemi içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="22c61-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="22c61-131">Yöntemleri barındırma sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="22c61-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="13f7d-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13f7d-132">Requirements</span></span>  
- <span data-ttu-id="13f7d-133">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13f7d-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22c61-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="22c61-132">Requirements</span></span>  
+ <span data-ttu-id="22c61-133">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22c61-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13f7d-134">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="13f7d-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="22c61-134">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="22c61-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="13f7d-135">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="13f7d-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="22c61-135">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="22c61-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="13f7d-136">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13f7d-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="22c61-136">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22c61-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13f7d-137">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="13f7d-137">See Also</span></span>  
- [<span data-ttu-id="13f7d-138">Iclrassemblyıdentitymanager arabirimi</span><span class="sxs-lookup"><span data-stu-id="13f7d-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="13f7d-139">Iclrassemblyreferencelist arabirimi</span><span class="sxs-lookup"><span data-stu-id="13f7d-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+## <a name="see-also"></a><span data-ttu-id="22c61-137">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="22c61-137">See Also</span></span>  
+ [<span data-ttu-id="22c61-138">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="22c61-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
+ [<span data-ttu-id="22c61-139">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="22c61-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

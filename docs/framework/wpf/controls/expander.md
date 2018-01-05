@@ -20,25 +20,26 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809b3b22a276be985802c22ac2f71642f478dcb4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 96c65c1f2a68c9af9275e071beda3b38b8e94f59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="expander"></a><span data-ttu-id="16d51-102">Genişletici</span><span class="sxs-lookup"><span data-stu-id="16d51-102">Expander</span></span>
-<span data-ttu-id="16d51-103">Bir <xref:System.Windows.Controls.Expander> kullanıcının başlığı görüntülemesine ve diğer ayrıntıları görmek için veya bir başlık en çok bir bölümü daraltmak için bu başlığı genişletin izin verir.</span><span class="sxs-lookup"><span data-stu-id="16d51-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="c33a8-102">Genişletici</span><span class="sxs-lookup"><span data-stu-id="c33a8-102">Expander</span></span>
+<span data-ttu-id="c33a8-103">Bir <xref:System.Windows.Controls.Expander> kullanıcının başlığı görüntülemesine ve diğer ayrıntıları görmek için veya bir başlık en çok bir bölümü daraltmak için bu başlığı genişletin izin verir.</span><span class="sxs-lookup"><span data-stu-id="c33a8-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="16d51-104">Aşağıdaki çizimde bu denetimin kendi genişletilmiş konumunda bir örnek sağlar.</span><span class="sxs-lookup"><span data-stu-id="16d51-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="c33a8-104">Aşağıdaki çizimde bu denetimin kendi genişletilmiş konumunda bir örnek sağlar.</span><span class="sxs-lookup"><span data-stu-id="c33a8-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="16d51-105">![Genişletici örneği](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="16d51-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="16d51-106">Genişletici denetimi</span><span class="sxs-lookup"><span data-stu-id="16d51-106">Expander control</span></span>  
+ <span data-ttu-id="c33a8-105">![Genişletici örneği](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="c33a8-105">![Expander example](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")</span></span>  
+<span data-ttu-id="c33a8-106">Genişletici denetimi</span><span class="sxs-lookup"><span data-stu-id="c33a8-106">Expander control</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="16d51-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="16d51-107">In This Section</span></span>  
- [<span data-ttu-id="16d51-108">Genişletici genel bakış</span><span class="sxs-lookup"><span data-stu-id="16d51-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [<span data-ttu-id="16d51-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="16d51-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c33a8-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c33a8-107">In This Section</span></span>  
+ [<span data-ttu-id="c33a8-108">Genişleticiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c33a8-108">Expander Overview</span></span>](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [<span data-ttu-id="c33a8-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="c33a8-109">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="16d51-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="16d51-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c33a8-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c33a8-110">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="16d51-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="16d51-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c33a8-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="c33a8-111">Related Sections</span></span>

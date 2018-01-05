@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 691eaa2bd462af5fff0b222e991c13032ddb1af1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a2e4829083715fad8d77c1b5a2c303a07d5684ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="db39b-102">IHostTaskManager::GetStackGuarantee Metodu</span><span class="sxs-lookup"><span data-stu-id="db39b-102">IHostTaskManager::GetStackGuarantee Method</span></span>
-<span data-ttu-id="db39b-103">Yığın işlemi tamamlandıktan sonra kullanılabilir olması garanti yığın alanı, ancak bir işlemin kapanmadan önce miktarını alır.</span><span class="sxs-lookup"><span data-stu-id="db39b-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
+# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="5252d-102">IHostTaskManager::GetStackGuarantee Metodu</span><span class="sxs-lookup"><span data-stu-id="5252d-102">IHostTaskManager::GetStackGuarantee Method</span></span>
+<span data-ttu-id="5252d-103">Yığın işlemi tamamlandıktan sonra kullanılabilir olması garanti yığın alanı, ancak bir işlemin kapanmadan önce miktarını alır.</span><span class="sxs-lookup"><span data-stu-id="5252d-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db39b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="db39b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5252d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5252d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackGuarantee(  
@@ -38,18 +39,18 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db39b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="db39b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5252d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5252d-105">Parameters</span></span>  
  `pGuarantee`  
- <span data-ttu-id="db39b-106">[out] Kullanılabilir bayt sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="db39b-106">[out] A pointer to the number of bytes that are available.</span></span>  
+ <span data-ttu-id="5252d-106">[out] Kullanılabilir bayt sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5252d-106">[out] A pointer to the number of bytes that are available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db39b-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="db39b-107">Requirements</span></span>  
- <span data-ttu-id="db39b-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db39b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5252d-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5252d-107">Requirements</span></span>  
+ <span data-ttu-id="5252d-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5252d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db39b-109">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db39b-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5252d-109">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5252d-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="db39b-110">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="db39b-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5252d-110">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5252d-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="db39b-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db39b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5252d-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5252d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db39b-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="db39b-112">See Also</span></span>  
- [<span data-ttu-id="db39b-113">Ihosttaskmanager arabirimi</span><span class="sxs-lookup"><span data-stu-id="db39b-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5252d-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5252d-112">See Also</span></span>  
+ [<span data-ttu-id="5252d-113">IHostTaskManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5252d-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

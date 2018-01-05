@@ -19,17 +19,18 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4337cdf95324289ba5245812a22b444f538c2f31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: daf8875801f9b20fe214e40364e6e367b8965938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="frame"></a><span data-ttu-id="17b1e-102">Çerçeve</span><span class="sxs-lookup"><span data-stu-id="17b1e-102">Frame</span></span>
-<span data-ttu-id="17b1e-103"><xref:System.Windows.Controls.Frame> Denetimi içerisinde içerik gezinmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="17b1e-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="17b1e-104"><xref:System.Windows.Controls.Frame>gibi bir kök öğe tarafından barındırılan <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, veya bir kök öğeye ait içerik bir ağaç içindeki bir ada.</span><span class="sxs-lookup"><span data-stu-id="17b1e-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="2a10a-102">Çerçeve</span><span class="sxs-lookup"><span data-stu-id="2a10a-102">Frame</span></span>
+<span data-ttu-id="2a10a-103"><xref:System.Windows.Controls.Frame> Denetimi içerisinde içerik gezinmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="2a10a-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="2a10a-104"><xref:System.Windows.Controls.Frame>gibi bir kök öğe tarafından barındırılan <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, veya bir kök öğeye ait içerik bir ağaç içindeki bir ada.</span><span class="sxs-lookup"><span data-stu-id="2a10a-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="17b1e-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="17b1e-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2a10a-105">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2a10a-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="17b1e-106">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="17b1e-106">Related Sections</span></span>  
- [<span data-ttu-id="17b1e-107">Gezinti genel bakış</span><span class="sxs-lookup"><span data-stu-id="17b1e-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="2a10a-106">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2a10a-106">Related Sections</span></span>  
+ [<span data-ttu-id="2a10a-107">Gezintiye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2a10a-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)

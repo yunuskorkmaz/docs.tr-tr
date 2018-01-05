@@ -17,24 +17,25 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b47ed129b1d4859b744c32fe4cea763ea27e66a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: dd26760d105b1bf11ee411464fd0507ce8a6b480
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="metadata-unions"></a><span data-ttu-id="86997-102">Meta Veri Birleşmeleri</span><span class="sxs-lookup"><span data-stu-id="86997-102">Metadata Unions</span></span>
-<span data-ttu-id="86997-103">Bu bölümde API meta veri kullanan yönetilmeyen birleşimler açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="86997-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
+# <a name="metadata-unions"></a><span data-ttu-id="237f9-102">Meta Veri Birleşmeleri</span><span class="sxs-lookup"><span data-stu-id="237f9-102">Metadata Unions</span></span>
+<span data-ttu-id="237f9-103">Bu bölümde API meta veri kullanan yönetilmeyen birleşimler açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="237f9-103">This section describes the unmanaged unions that the metadata API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="86997-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="86997-104">In This Section</span></span>  
- [<span data-ttu-id="86997-105">CeeSectionRelocExtra birleşimi</span><span class="sxs-lookup"><span data-stu-id="86997-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- <span data-ttu-id="86997-106">Tarafından kullanılan bir adres farkı temsil eden [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölüm taşıyabilir arabirimi</span><span class="sxs-lookup"><span data-stu-id="86997-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="237f9-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="237f9-104">In This Section</span></span>  
+ [<span data-ttu-id="237f9-105">CeeSectionRelocExtra Birleşimi</span><span class="sxs-lookup"><span data-stu-id="237f9-105">CeeSectionRelocExtra Union</span></span>](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
+ <span data-ttu-id="237f9-106">Tarafından kullanılan bir adres farkı temsil eden [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölüm taşıyabilir arabirimi</span><span class="sxs-lookup"><span data-stu-id="237f9-106">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="86997-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="86997-107">Related Sections</span></span>  
- [<span data-ttu-id="86997-108">Meta veri arabirimleri</span><span class="sxs-lookup"><span data-stu-id="86997-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="237f9-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="237f9-107">Related Sections</span></span>  
+ [<span data-ttu-id="237f9-108">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="237f9-108">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
- [<span data-ttu-id="86997-109">Meta veri genel statik işlevleri</span><span class="sxs-lookup"><span data-stu-id="86997-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [<span data-ttu-id="237f9-109">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="237f9-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [<span data-ttu-id="86997-110">Meta veri numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="86997-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [<span data-ttu-id="237f9-110">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="237f9-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
- [<span data-ttu-id="86997-111">Meta veri yapıları</span><span class="sxs-lookup"><span data-stu-id="86997-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+ [<span data-ttu-id="237f9-111">Meta Veri Yapıları</span><span class="sxs-lookup"><span data-stu-id="237f9-111">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

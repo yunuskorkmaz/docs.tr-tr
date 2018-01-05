@@ -17,26 +17,27 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff3da19d33e747ec514de9cd24fa08ccd6ab13bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e79b1f9f00e8c76f94bf4386a284607f526624a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-bind-the-properties-of-two-controls"></a><span data-ttu-id="051d2-102">Nasıl yapılır: İki Denetimin Özelliklerini Bağlama</span><span class="sxs-lookup"><span data-stu-id="051d2-102">How to: Bind the Properties of Two Controls</span></span>
-<span data-ttu-id="051d2-103">Bu örnek bir örneklenen denetim özelliği, başka bir bağlama gösterilmektedir <xref:System.Windows.Data.Binding.ElementName%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="051d2-103">This example shows how to bind the property of one instantiated control to that of another using the <xref:System.Windows.Data.Binding.ElementName%2A> property.</span></span>  
+# <a name="how-to-bind-the-properties-of-two-controls"></a><span data-ttu-id="80fb5-102">Nasıl yapılır: İki Denetimin Özelliklerini Bağlama</span><span class="sxs-lookup"><span data-stu-id="80fb5-102">How to: Bind the Properties of Two Controls</span></span>
+<span data-ttu-id="80fb5-103">Bu örnek bir örneklenen denetim özelliği, başka bir bağlama gösterilmektedir <xref:System.Windows.Data.Binding.ElementName%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="80fb5-103">This example shows how to bind the property of one instantiated control to that of another using the <xref:System.Windows.Data.Binding.ElementName%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="051d2-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="051d2-104">Example</span></span>  
- <span data-ttu-id="051d2-105">Aşağıdaki örnekte nasıl bağlanacağını gösterir <xref:System.Windows.Controls.Panel.Background%2A> özelliği bir <xref:System.Windows.Controls.Canvas> için <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bir <xref:System.Windows.Controls.ComboBox>:</span><span class="sxs-lookup"><span data-stu-id="051d2-105">The following example shows how to bind the <xref:System.Windows.Controls.Panel.Background%2A> property of a <xref:System.Windows.Controls.Canvas> to the <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.ComboBox>:</span></span>  
+## <a name="example"></a><span data-ttu-id="80fb5-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="80fb5-104">Example</span></span>  
+ <span data-ttu-id="80fb5-105">Aşağıdaki örnekte nasıl bağlanacağını gösterir <xref:System.Windows.Controls.Panel.Background%2A> özelliği bir <xref:System.Windows.Controls.Canvas> için <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bir <xref:System.Windows.Controls.ComboBox>:</span><span class="sxs-lookup"><span data-stu-id="80fb5-105">The following example shows how to bind the <xref:System.Windows.Controls.Panel.Background%2A> property of a <xref:System.Windows.Controls.Canvas> to the <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.ComboBox>:</span></span>  
   
  [!code-xaml[BindDptoDp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindDPtoDP/CS/Window1.xaml#1)]  
   
- <span data-ttu-id="051d2-106">Bu örnek işlendiğinde aşağıdaki gibi görünür:</span><span class="sxs-lookup"><span data-stu-id="051d2-106">When this example is rendered it looks like the following:</span></span>  
+ <span data-ttu-id="80fb5-106">Bu örnek işlendiğinde aşağıdaki gibi görünür:</span><span class="sxs-lookup"><span data-stu-id="80fb5-106">When this example is rendered it looks like the following:</span></span>  
   
- <span data-ttu-id="051d2-107">![Yeşil arka plana sahip bir tuval](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")</span><span class="sxs-lookup"><span data-stu-id="051d2-107">![A canvas with a green background](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")</span></span>  
+ <span data-ttu-id="80fb5-107">![Yeşil arka plana sahip bir tuval](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")</span><span class="sxs-lookup"><span data-stu-id="80fb5-107">![A canvas with a green background](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")</span></span>  
   
- <span data-ttu-id="051d2-108">**Not** bağlama hedef özelliği (Bu örnekte, <xref:System.Windows.Controls.Panel.Background%2A> özelliği) bir bağımlılık özelliği olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="051d2-108">**Note** The binding target property (in this example, the <xref:System.Windows.Controls.Panel.Background%2A> property) must be a dependency property.</span></span> <span data-ttu-id="051d2-109">Daha fazla bilgi için bkz: [veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="051d2-109">For more information, see [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
+ <span data-ttu-id="80fb5-108">**Not** bağlama hedef özelliği (Bu örnekte, <xref:System.Windows.Controls.Panel.Background%2A> özelliği) bir bağımlılık özelliği olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="80fb5-108">**Note** The binding target property (in this example, the <xref:System.Windows.Controls.Panel.Background%2A> property) must be a dependency property.</span></span> <span data-ttu-id="80fb5-109">Daha fazla bilgi için bkz: [veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="80fb5-109">For more information, see [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="051d2-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="051d2-110">See Also</span></span>  
- [<span data-ttu-id="051d2-111">Bağlama kaynağı belirtin</span><span class="sxs-lookup"><span data-stu-id="051d2-111">Specify the Binding Source</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [<span data-ttu-id="051d2-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="051d2-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="80fb5-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="80fb5-110">See Also</span></span>  
+ [<span data-ttu-id="80fb5-111">Bağlama Kaynağı Belirtme</span><span class="sxs-lookup"><span data-stu-id="80fb5-111">Specify the Binding Source</span></span>](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
+ [<span data-ttu-id="80fb5-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="80fb5-112">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

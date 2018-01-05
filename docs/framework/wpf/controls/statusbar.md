@@ -17,23 +17,24 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ddb23b6c5ec85fd034c767684a04cc1c91620a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 051082c2ed7dd6ab664c2258c7dbbdf4f15524a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="statusbar"></a><span data-ttu-id="465f0-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="465f0-102">StatusBar</span></span>
-<span data-ttu-id="465f0-103">A <xref:System.Windows.Controls.Primitives.StatusBar> burada uygulama durum bilgilerini görüntüleyebilen pencerenin altındaki yatay bir alandır.</span><span class="sxs-lookup"><span data-stu-id="465f0-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
+# <a name="statusbar"></a><span data-ttu-id="bf585-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="bf585-102">StatusBar</span></span>
+<span data-ttu-id="bf585-103">A <xref:System.Windows.Controls.Primitives.StatusBar> burada uygulama durum bilgilerini görüntüleyebilen pencerenin altındaki yatay bir alandır.</span><span class="sxs-lookup"><span data-stu-id="bf585-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
   
- <span data-ttu-id="465f0-104">Aşağıdaki çizimde bir örneği gösterilmektedir bir <xref:System.Windows.Controls.Primitives.StatusBar>.</span><span class="sxs-lookup"><span data-stu-id="465f0-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
+ <span data-ttu-id="bf585-104">Aşağıdaki çizimde bir örneği gösterilmektedir bir <xref:System.Windows.Controls.Primitives.StatusBar>.</span><span class="sxs-lookup"><span data-stu-id="bf585-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
   
- <span data-ttu-id="465f0-105">![Durum çubuğu](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="465f0-105">![Status bar](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
+ <span data-ttu-id="bf585-105">![Durum çubuğu](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="bf585-105">![Status bar](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="465f0-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="465f0-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="bf585-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bf585-106">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="465f0-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="465f0-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bf585-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="bf585-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.StatusBar>  
   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="465f0-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="465f0-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="bf585-108">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="bf585-108">Related Sections</span></span>

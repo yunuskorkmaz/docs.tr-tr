@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: dba35669f7679b224e43d5a23eb6d6a676341b87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53b02f709bca1edbdad82e0c0efd1c1959e4ebe1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="coiniticor-enumeration"></a><span data-ttu-id="526f0-102">COINITICOR Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="526f0-102">COINITICOR Enumeration</span></span>
-<span data-ttu-id="526f0-103">Tarafından kullanılan sabitlerini belirtir [Coınitializecor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) ortak dil çalışma zamanı bu başlatır zaman.</span><span class="sxs-lookup"><span data-stu-id="526f0-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
+# <a name="coiniticor-enumeration"></a><span data-ttu-id="aa8b4-102">COINITICOR Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="aa8b4-102">COINITICOR Enumeration</span></span>
+<span data-ttu-id="aa8b4-103">Tarafından kullanılan sabitlerini belirtir [Coınitializecor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) ortak dil çalışma zamanı bu başlatır zaman.</span><span class="sxs-lookup"><span data-stu-id="aa8b4-103">Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when it initializes the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="526f0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="526f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa8b4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aa8b4-104">Syntax</span></span>  
   
 ```  
 typedef enum tagCOINITCOR  
@@ -37,20 +38,20 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="526f0-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="526f0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="aa8b4-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="aa8b4-105">Members</span></span>  
   
-|<span data-ttu-id="526f0-106">Üye</span><span class="sxs-lookup"><span data-stu-id="526f0-106">Member</span></span>|<span data-ttu-id="526f0-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="526f0-107">Description</span></span>|  
+|<span data-ttu-id="aa8b4-106">Üye</span><span class="sxs-lookup"><span data-stu-id="aa8b4-106">Member</span></span>|<span data-ttu-id="aa8b4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="aa8b4-107">Description</span></span>|  
 |------------|-----------------|  
-|`COINITCOR`|<span data-ttu-id="526f0-108">Varsayılan başlatma modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="526f0-108">Indicates the default initialization mode.</span></span>|  
+|`COINITCOR`|<span data-ttu-id="aa8b4-108">Varsayılan başlatma modunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="aa8b4-108">Indicates the default initialization mode.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="526f0-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="526f0-109">Requirements</span></span>  
- <span data-ttu-id="526f0-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="526f0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa8b4-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aa8b4-109">Requirements</span></span>  
+ <span data-ttu-id="aa8b4-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa8b4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="526f0-111">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="526f0-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="aa8b4-111">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="aa8b4-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="526f0-112">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="526f0-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="aa8b4-112">**Kitaplığı:** bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="aa8b4-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="526f0-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="526f0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="aa8b4-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa8b4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="526f0-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="526f0-114">See Also</span></span>  
- [<span data-ttu-id="526f0-115">Meta veri numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="526f0-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="aa8b4-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="aa8b4-114">See Also</span></span>  
+ [<span data-ttu-id="aa8b4-115">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="aa8b4-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

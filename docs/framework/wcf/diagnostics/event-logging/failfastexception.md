@@ -13,22 +13,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27def01a4747521bef29b47a2a458e2ed24190b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: deff4cd29e2a7a0ab2f50dcaf30c787a5856a8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="failfastexception"></a><span data-ttu-id="579e3-102">FailFastException</span><span class="sxs-lookup"><span data-stu-id="579e3-102">FailFastException</span></span>
-<span data-ttu-id="579e3-103">Kimliği: 103</span><span class="sxs-lookup"><span data-stu-id="579e3-103">Id: 103</span></span>  
+# <a name="failfastexception"></a><span data-ttu-id="92341-102">FailFastException</span><span class="sxs-lookup"><span data-stu-id="92341-102">FailFastException</span></span>
+<span data-ttu-id="92341-103">Kimliği: 103</span><span class="sxs-lookup"><span data-stu-id="92341-103">Id: 103</span></span>  
   
- <span data-ttu-id="579e3-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="579e3-104">Severity: Error</span></span>  
+ <span data-ttu-id="92341-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="92341-104">Severity: Error</span></span>  
   
- <span data-ttu-id="579e3-105">Kategori: izleme</span><span class="sxs-lookup"><span data-stu-id="579e3-105">Category: Tracing</span></span>  
+ <span data-ttu-id="92341-105">Kategori: izleme</span><span class="sxs-lookup"><span data-stu-id="92341-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="579e3-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="579e3-106">Description</span></span>  
- <span data-ttu-id="579e3-107">İşlem hızla başarısız sırasında özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="579e3-107">An exception was thrown during FailFast.</span></span> <span data-ttu-id="579e3-108">Özel durum, işlem adı ve işlem kimliği olay listeler</span><span class="sxs-lookup"><span data-stu-id="579e3-108">The event lists the exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="92341-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92341-106">Description</span></span>  
+ <span data-ttu-id="92341-107">İşlem hızla başarısız sırasında özel durum oluştu.</span><span class="sxs-lookup"><span data-stu-id="92341-107">An exception was thrown during FailFast.</span></span> <span data-ttu-id="92341-108">Özel durum, işlem adı ve işlem kimliği olay listeler</span><span class="sxs-lookup"><span data-stu-id="92341-108">The event lists the exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="579e3-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="579e3-109">See Also</span></span>  
- [<span data-ttu-id="579e3-110">Olay günlüğü</span><span class="sxs-lookup"><span data-stu-id="579e3-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="579e3-111">Etkinlik genel başvurusu</span><span class="sxs-lookup"><span data-stu-id="579e3-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="92341-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="92341-109">See Also</span></span>  
+ [<span data-ttu-id="92341-110">Günlüğe Olay Kaydetme</span><span class="sxs-lookup"><span data-stu-id="92341-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="92341-111">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="92341-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

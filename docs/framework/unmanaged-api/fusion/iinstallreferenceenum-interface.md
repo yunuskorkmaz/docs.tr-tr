@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d3847d06c77a92eb6e63542f03405ca0cb9c9560
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2f1a80d1d79fce952a7071abd5e435604824d00e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="8d763-102">IInstallReferenceEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d763-102">IInstallReferenceEnum Interface</span></span>
-<span data-ttu-id="8d763-103">Genel derleme önbelleğinde yüklü başvurulan derlemeler için bir numaralandırıcı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="8d763-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceenum-interface"></a><span data-ttu-id="29500-102">IInstallReferenceEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="29500-102">IInstallReferenceEnum Interface</span></span>
+<span data-ttu-id="29500-103">Genel derleme önbelleğinde yüklü başvurulan derlemeler için bir numaralandırıcı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="29500-103">Represents an enumerator for the referenced assemblies installed in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d763-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8d763-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29500-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="29500-104">Syntax</span></span>  
   
 ```  
 interface IInstallReferenceEnum : IUnknown {  
@@ -40,19 +41,19 @@ interface IInstallReferenceEnum : IUnknown {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="8d763-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="8d763-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="29500-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="29500-105">Methods</span></span>  
   
-|<span data-ttu-id="8d763-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="8d763-106">Method</span></span>|<span data-ttu-id="8d763-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8d763-107">Description</span></span>|  
+|<span data-ttu-id="29500-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="29500-106">Method</span></span>|<span data-ttu-id="29500-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="29500-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8d763-108">Getnextınstallreferenceıtem yöntemi</span><span class="sxs-lookup"><span data-stu-id="8d763-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="8d763-109">Bir işaretçi sonraki alır `IInstallReferenceItem` bu konuda yer alan `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="8d763-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
+|[<span data-ttu-id="29500-108">GetNextInstallReferenceItem Yöntemi</span><span class="sxs-lookup"><span data-stu-id="29500-108">GetNextInstallReferenceItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|<span data-ttu-id="29500-109">Bir işaretçi sonraki alır `IInstallReferenceItem` bu konuda yer alan `IInstallReferenceEnum`.</span><span class="sxs-lookup"><span data-stu-id="29500-109">Gets a pointer to the next `IInstallReferenceItem` contained in this `IInstallReferenceEnum`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8d763-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8d763-110">Requirements</span></span>  
- <span data-ttu-id="8d763-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d763-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29500-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="29500-110">Requirements</span></span>  
+ <span data-ttu-id="29500-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29500-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d763-112">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8d763-112">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="29500-112">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="29500-112">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8d763-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d763-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="29500-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29500-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d763-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8d763-114">See Also</span></span>  
- [<span data-ttu-id="8d763-115">Fusion arabirimleri</span><span class="sxs-lookup"><span data-stu-id="8d763-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="8d763-116">Iınstallreferenceıtem arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d763-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="29500-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="29500-114">See Also</span></span>  
+ [<span data-ttu-id="29500-115">Fusion Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="29500-115">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [<span data-ttu-id="29500-116">IInstallReferenceItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="29500-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)

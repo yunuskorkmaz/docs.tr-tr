@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8e3283b86cd3d9986632c258647e863bb758985
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95afe78288f10123bcecfcf42fe64e03f7df2bfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="69c4f-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="69c4f-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
-<span data-ttu-id="69c4f-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="69c4f-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
+# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="8ec18-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="8ec18-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
+<span data-ttu-id="8ec18-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="8ec18-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
   
-## <a name="description"></a><span data-ttu-id="69c4f-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="69c4f-104">Description</span></span>  
- <span data-ttu-id="69c4f-105">MSMQ Etkinleştirme hizmeti, uygulamayı başlattı.</span><span class="sxs-lookup"><span data-stu-id="69c4f-105">MSMQ activation service started application.</span></span>  
+## <a name="description"></a><span data-ttu-id="8ec18-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8ec18-104">Description</span></span>  
+ <span data-ttu-id="8ec18-105">MSMQ Etkinleştirme hizmeti, uygulamayı başlattı.</span><span class="sxs-lookup"><span data-stu-id="8ec18-105">MSMQ activation service started application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69c4f-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="69c4f-106">See Also</span></span>  
- [<span data-ttu-id="69c4f-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="69c4f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="69c4f-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="69c4f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="69c4f-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="69c4f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ec18-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8ec18-106">See Also</span></span>  
+ [<span data-ttu-id="8ec18-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="8ec18-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8ec18-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="8ec18-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8ec18-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="8ec18-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

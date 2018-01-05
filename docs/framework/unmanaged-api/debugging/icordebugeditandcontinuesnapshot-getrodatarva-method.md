@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 600055913465983bfc5c14fb0bd21f2985703a73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ddad5008f5e25be220456d529c04bbca018e5b54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="c9e6f-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Metodu</span><span class="sxs-lookup"><span data-stu-id="c9e6f-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="c9e6f-103">`GetRoDataRVA`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="c9e6f-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="c9e6f-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="c9e6f-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="34d08-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Metodu</span><span class="sxs-lookup"><span data-stu-id="34d08-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="34d08-103">`GetRoDataRVA`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="34d08-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="34d08-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="34d08-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9e6f-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c9e6f-105">See Also</span></span>  
- [<span data-ttu-id="c9e6f-106">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c9e6f-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="34d08-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="34d08-105">See Also</span></span>  
+ [<span data-ttu-id="34d08-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="34d08-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

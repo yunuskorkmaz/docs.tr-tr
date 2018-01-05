@@ -12,33 +12,34 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6545159012519e2943556b093a0a0bfc3e535217
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: baa644cb7693b8608f119cf211b3b08ab4b1a2b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1027---starttransactioncontextworkitem"></a><span data-ttu-id="bfc62-102">1027 - StartTransactionContextWorkItem</span><span class="sxs-lookup"><span data-stu-id="bfc62-102">1027 - StartTransactionContextWorkItem</span></span>
-## <a name="properties"></a><span data-ttu-id="bfc62-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="bfc62-103">Properties</span></span>  
+# <a name="1027---starttransactioncontextworkitem"></a><span data-ttu-id="c9a33-102">1027 - StartTransactionContextWorkItem</span><span class="sxs-lookup"><span data-stu-id="c9a33-102">1027 - StartTransactionContextWorkItem</span></span>
+## <a name="properties"></a><span data-ttu-id="c9a33-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="c9a33-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="bfc62-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="bfc62-104">ID</span></span>|<span data-ttu-id="bfc62-105">1027</span><span class="sxs-lookup"><span data-stu-id="bfc62-105">1027</span></span>|  
-|<span data-ttu-id="bfc62-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="bfc62-106">Keywords</span></span>|<span data-ttu-id="bfc62-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="bfc62-107">WFRuntime</span></span>|  
-|<span data-ttu-id="bfc62-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="bfc62-108">Level</span></span>|<span data-ttu-id="bfc62-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="bfc62-109">Verbose</span></span>|  
-|<span data-ttu-id="bfc62-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="bfc62-110">Channel</span></span>|<span data-ttu-id="bfc62-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="bfc62-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c9a33-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="c9a33-104">ID</span></span>|<span data-ttu-id="c9a33-105">1027</span><span class="sxs-lookup"><span data-stu-id="c9a33-105">1027</span></span>|  
+|<span data-ttu-id="c9a33-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="c9a33-106">Keywords</span></span>|<span data-ttu-id="c9a33-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="c9a33-107">WFRuntime</span></span>|  
+|<span data-ttu-id="c9a33-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="c9a33-108">Level</span></span>|<span data-ttu-id="c9a33-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="c9a33-109">Verbose</span></span>|  
+|<span data-ttu-id="c9a33-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="c9a33-110">Channel</span></span>|<span data-ttu-id="c9a33-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="c9a33-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="bfc62-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bfc62-112">Description</span></span>  
- <span data-ttu-id="bfc62-113">Bir TransactionContextWorkItem yürütme başlanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bfc62-113">Indicates a TransactionContextWorkItem is starting execution.</span></span>  
+## <a name="description"></a><span data-ttu-id="c9a33-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c9a33-112">Description</span></span>  
+ <span data-ttu-id="c9a33-113">Bir TransactionContextWorkItem yürütme başlanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c9a33-113">Indicates a TransactionContextWorkItem is starting execution.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="bfc62-114">İleti</span><span class="sxs-lookup"><span data-stu-id="bfc62-114">Message</span></span>  
- <span data-ttu-id="bfc62-115">'%1', DisplayName etkinliğinin TransactionContextWorkItem yürütülmesi başlatılıyor: '%2', örnek kimliği: '%3'.</span><span class="sxs-lookup"><span data-stu-id="bfc62-115">Starting execution of a TransactionContextWorkItem for Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="c9a33-114">İleti</span><span class="sxs-lookup"><span data-stu-id="c9a33-114">Message</span></span>  
+ <span data-ttu-id="c9a33-115">'%1', DisplayName etkinliğinin TransactionContextWorkItem yürütülmesi başlatılıyor: '%2', örnek kimliği: '%3'.</span><span class="sxs-lookup"><span data-stu-id="c9a33-115">Starting execution of a TransactionContextWorkItem for Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="bfc62-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="bfc62-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="c9a33-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="c9a33-116">Details</span></span>  
   
-|<span data-ttu-id="bfc62-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="bfc62-117">Data Item Name</span></span>|<span data-ttu-id="bfc62-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="bfc62-118">Data Item Type</span></span>|<span data-ttu-id="bfc62-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bfc62-119">Description</span></span>|  
+|<span data-ttu-id="c9a33-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="c9a33-117">Data Item Name</span></span>|<span data-ttu-id="c9a33-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="c9a33-118">Data Item Type</span></span>|<span data-ttu-id="c9a33-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c9a33-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="bfc62-120">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="bfc62-120">Activity</span></span>|<span data-ttu-id="bfc62-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="bfc62-121">xs:string</span></span>|<span data-ttu-id="bfc62-122">Etkinlik türü adı.</span><span class="sxs-lookup"><span data-stu-id="bfc62-122">The type name of the activity.</span></span>|  
-|<span data-ttu-id="bfc62-123">Görünen adı</span><span class="sxs-lookup"><span data-stu-id="bfc62-123">DisplayName</span></span>|<span data-ttu-id="bfc62-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="bfc62-124">xs:string</span></span>|<span data-ttu-id="bfc62-125">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="bfc62-125">The display name of the activity.</span></span>|  
-|<span data-ttu-id="bfc62-126">örnek kimliği</span><span class="sxs-lookup"><span data-stu-id="bfc62-126">InstanceId</span></span>|<span data-ttu-id="bfc62-127">xs: String</span><span class="sxs-lookup"><span data-stu-id="bfc62-127">xs:string</span></span>|<span data-ttu-id="bfc62-128">Etkinlik örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="bfc62-128">The instance id of the activity.</span></span>|  
-|<span data-ttu-id="bfc62-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="bfc62-129">AppDomain</span></span>|<span data-ttu-id="bfc62-130">xs: String</span><span class="sxs-lookup"><span data-stu-id="bfc62-130">xs:string</span></span>|<span data-ttu-id="bfc62-131">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="bfc62-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="c9a33-120">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="c9a33-120">Activity</span></span>|<span data-ttu-id="c9a33-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="c9a33-121">xs:string</span></span>|<span data-ttu-id="c9a33-122">Etkinlik türü adı.</span><span class="sxs-lookup"><span data-stu-id="c9a33-122">The type name of the activity.</span></span>|  
+|<span data-ttu-id="c9a33-123">Görünen adı</span><span class="sxs-lookup"><span data-stu-id="c9a33-123">DisplayName</span></span>|<span data-ttu-id="c9a33-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="c9a33-124">xs:string</span></span>|<span data-ttu-id="c9a33-125">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="c9a33-125">The display name of the activity.</span></span>|  
+|<span data-ttu-id="c9a33-126">örnek kimliği</span><span class="sxs-lookup"><span data-stu-id="c9a33-126">InstanceId</span></span>|<span data-ttu-id="c9a33-127">xs: String</span><span class="sxs-lookup"><span data-stu-id="c9a33-127">xs:string</span></span>|<span data-ttu-id="c9a33-128">Etkinlik örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="c9a33-128">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="c9a33-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="c9a33-129">AppDomain</span></span>|<span data-ttu-id="c9a33-130">xs: String</span><span class="sxs-lookup"><span data-stu-id="c9a33-130">xs:string</span></span>|<span data-ttu-id="c9a33-131">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="c9a33-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

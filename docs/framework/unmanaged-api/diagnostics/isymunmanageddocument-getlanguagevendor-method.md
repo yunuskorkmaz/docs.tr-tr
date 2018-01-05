@@ -21,28 +21,29 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 72fffae9995f44be9a9359c16bb876d79c9a8242
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc0d05e3d0536f596fc305e32863a39d27a77fe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="b3801-102">ISymUnmanagedDocument::GetLanguageVendor Metodu</span><span class="sxs-lookup"><span data-stu-id="b3801-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
-<span data-ttu-id="b3801-103">Bu belgenin dil satıcı alır.</span><span class="sxs-lookup"><span data-stu-id="b3801-103">Gets the language vendor of this document.</span></span>  
+# <a name="isymunmanageddocumentgetlanguagevendor-method"></a><span data-ttu-id="f1ad5-102">ISymUnmanagedDocument::GetLanguageVendor Metodu</span><span class="sxs-lookup"><span data-stu-id="f1ad5-102">ISymUnmanagedDocument::GetLanguageVendor Method</span></span>
+<span data-ttu-id="f1ad5-103">Bu belgenin dil satıcı alır.</span><span class="sxs-lookup"><span data-stu-id="f1ad5-103">Gets the language vendor of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3801-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b3801-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1ad5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1ad5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguageVendor(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b3801-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b3801-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f1ad5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f1ad5-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="b3801-106">[out] Bir işaretçi bir değişkene dil satıcı alır.</span><span class="sxs-lookup"><span data-stu-id="b3801-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
+ <span data-ttu-id="f1ad5-106">[out] Bir işaretçi bir değişkene dil satıcı alır.</span><span class="sxs-lookup"><span data-stu-id="f1ad5-106">[out] A pointer to a variable that receives the language vendor.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b3801-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b3801-107">Return Value</span></span>  
- <span data-ttu-id="b3801-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="b3801-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f1ad5-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f1ad5-107">Return Value</span></span>  
+ <span data-ttu-id="f1ad5-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="f1ad5-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3801-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b3801-109">See Also</span></span>  
- [<span data-ttu-id="b3801-110">Isymunmanageddocument arabirimi</span><span class="sxs-lookup"><span data-stu-id="b3801-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f1ad5-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1ad5-109">See Also</span></span>  
+ [<span data-ttu-id="f1ad5-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f1ad5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

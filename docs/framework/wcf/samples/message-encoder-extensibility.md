@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5333316409fb8f68b390a882a14a3660f3d2dc47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5559b36e52e8cb5b5111b9c98f9d039a67bca729
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="message-encoder-extensibility"></a><span data-ttu-id="585a5-102">İleti Kodlayıcı Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="585a5-102">Message Encoder Extensibility</span></span>
-<span data-ttu-id="585a5-103">Bu bölüm, özel ileti kodlama gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="585a5-103">This section contains samples that demonstrate custom message encoding.</span></span>  
+# <a name="message-encoder-extensibility"></a><span data-ttu-id="f7a32-102">İleti Kodlayıcı Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="f7a32-102">Message Encoder Extensibility</span></span>
+<span data-ttu-id="f7a32-103">Bu bölüm, özel ileti kodlama gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f7a32-103">This section contains samples that demonstrate custom message encoding.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="585a5-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="585a5-104">In This Section</span></span>  
- [<span data-ttu-id="585a5-105">Özel ileti Kodlayıcı: Özel metin kodlayıcı</span><span class="sxs-lookup"><span data-stu-id="585a5-105">Custom Message Encoder: Custom Text Encoder</span></span>](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)  
- <span data-ttu-id="585a5-106">Kullanarak bir özel metin ileti Kodlayıcı uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="585a5-106">Demonstrates how to implement a custom text message encoder using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f7a32-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f7a32-104">In This Section</span></span>  
+ [<span data-ttu-id="f7a32-105">Özel İleti Kodlayıcı: Özel Metin Kodlayıcı</span><span class="sxs-lookup"><span data-stu-id="f7a32-105">Custom Message Encoder: Custom Text Encoder</span></span>](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)  
+ <span data-ttu-id="f7a32-106">Kullanarak bir özel metin ileti Kodlayıcı uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f7a32-106">Demonstrates how to implement a custom text message encoder using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="585a5-107">Özel ileti Kodlayıcı: Sıkıştırma Kodlayıcısı</span><span class="sxs-lookup"><span data-stu-id="585a5-107">Custom Message Encoder: Compression Encoder</span></span>](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)  
- <span data-ttu-id="585a5-108">Kullanarak özel bir kodlayıcı uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platform.</span><span class="sxs-lookup"><span data-stu-id="585a5-108">Demonstrates how to implement a custom encoder using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platform.</span></span>
+ [<span data-ttu-id="f7a32-107">Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı</span><span class="sxs-lookup"><span data-stu-id="f7a32-107">Custom Message Encoder: Compression Encoder</span></span>](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)  
+ <span data-ttu-id="f7a32-108">Kullanarak özel bir kodlayıcı uygulamak gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platform.</span><span class="sxs-lookup"><span data-stu-id="f7a32-108">Demonstrates how to implement a custom encoder using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] platform.</span></span>

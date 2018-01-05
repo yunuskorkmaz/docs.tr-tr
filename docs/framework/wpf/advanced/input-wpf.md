@@ -17,25 +17,26 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-wpf"></a><span data-ttu-id="a0c4a-102">Giriş (WPF)</span><span class="sxs-lookup"><span data-stu-id="a0c4a-102">Input (WPF)</span></span>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="a0c4a-103">Giriş çeşitli türleri için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="a0c4a-103"> includes support for several types of input.</span></span> <span data-ttu-id="a0c4a-104">Bu giriş, metin, dokunma, fare, komutları, odak, dokunma, sürükle ve bırak ve dijital mürekkep içerir.</span><span class="sxs-lookup"><span data-stu-id="a0c4a-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="a0c4a-105">Bu bölümde, WPF içinde girmek için ilgili konular açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a0c4a-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="0d12b-102">Giriş (WPF)</span><span class="sxs-lookup"><span data-stu-id="0d12b-102">Input (WPF)</span></span>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]<span data-ttu-id="0d12b-103">Giriş çeşitli türleri için destek içerir.</span><span class="sxs-lookup"><span data-stu-id="0d12b-103"> includes support for several types of input.</span></span> <span data-ttu-id="0d12b-104">Bu giriş, metin, dokunma, fare, komutları, odak, dokunma, sürükle ve bırak ve dijital mürekkep içerir.</span><span class="sxs-lookup"><span data-stu-id="0d12b-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="0d12b-105">Bu bölümde, WPF içinde girmek için ilgili konular açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0d12b-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a0c4a-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="a0c4a-106">In This Section</span></span>  
- [<span data-ttu-id="a0c4a-107">Giriş genel bakış</span><span class="sxs-lookup"><span data-stu-id="a0c4a-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="a0c4a-108">Komut verme genel bakış</span><span class="sxs-lookup"><span data-stu-id="a0c4a-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="a0c4a-109">Odağı genel bakış</span><span class="sxs-lookup"><span data-stu-id="a0c4a-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="a0c4a-110">Denetimleri ve FocusVisualStyle odakta için stil oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0c4a-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="a0c4a-111">İzlenecek yol: İlk Touch uygulamanızı oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0c4a-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="a0c4a-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="a0c4a-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="a0c4a-113">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="a0c4a-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0d12b-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="0d12b-106">In This Section</span></span>  
+ [<span data-ttu-id="0d12b-107">Girişe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0d12b-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="0d12b-108">Komut Vermeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0d12b-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="0d12b-109">Odağa Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0d12b-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [<span data-ttu-id="0d12b-110">Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="0d12b-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="0d12b-111">İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="0d12b-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="0d12b-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="0d12b-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="0d12b-113">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="0d12b-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="a0c4a-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a0c4a-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0d12b-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="0d12b-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="a0c4a-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a0c4a-115">Related Sections</span></span>  
- [<span data-ttu-id="a0c4a-116">Denetimleri</span><span class="sxs-lookup"><span data-stu-id="a0c4a-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="a0c4a-117">Olayları</span><span class="sxs-lookup"><span data-stu-id="a0c4a-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="0d12b-115">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="0d12b-115">Related Sections</span></span>  
+ [<span data-ttu-id="0d12b-116">Denetimler</span><span class="sxs-lookup"><span data-stu-id="0d12b-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+  [<span data-ttu-id="0d12b-117">Olaylar</span><span class="sxs-lookup"><span data-stu-id="0d12b-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)

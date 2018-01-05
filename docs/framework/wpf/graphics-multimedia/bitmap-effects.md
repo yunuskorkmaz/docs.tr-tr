@@ -19,27 +19,28 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4beb386528829bace92be6add471b87fb434d74
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c2776bda3cebfbe0d614666ce234c10a1ab466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="8e27f-102">Bit Eşlem Efektleri</span><span class="sxs-lookup"><span data-stu-id="8e27f-102">Bitmap Effects</span></span>
-<span data-ttu-id="8e27f-103">Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8e27f-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="b50b6-102">Bit Eşlem Efektleri</span><span class="sxs-lookup"><span data-stu-id="b50b6-102">Bitmap Effects</span></span>
+<span data-ttu-id="b50b6-103">Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b50b6-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="8e27f-104">İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] veya sonraki sürümlerde, <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="8e27f-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="8e27f-105">Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız.</span><span class="sxs-lookup"><span data-stu-id="8e27f-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="8e27f-106">Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="8e27f-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="8e27f-107">Çoğu durumda, <xref:System.Windows.Media.Effects.Effect> sınıftır önemli ölçüde daha hızlıdır.</span><span class="sxs-lookup"><span data-stu-id="8e27f-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="b50b6-104">İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] veya sonraki sürümlerde, <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="b50b6-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="b50b6-105">Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız.</span><span class="sxs-lookup"><span data-stu-id="b50b6-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="b50b6-106">Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b50b6-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="b50b6-107">Çoğu durumda, <xref:System.Windows.Media.Effects.Effect> sınıftır önemli ölçüde daha hızlıdır.</span><span class="sxs-lookup"><span data-stu-id="b50b6-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8e27f-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8e27f-108">In This Section</span></span>  
- [<span data-ttu-id="8e27f-109">Bit eşlem efektleri genel bakış</span><span class="sxs-lookup"><span data-stu-id="8e27f-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b50b6-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b50b6-108">In This Section</span></span>  
+ [<span data-ttu-id="b50b6-109">Bit Eşlem Etkilerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b50b6-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="8e27f-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="8e27f-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b50b6-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b50b6-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="8e27f-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="8e27f-111">Related Sections</span></span>  
- [<span data-ttu-id="8e27f-112">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="8e27f-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="b50b6-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b50b6-111">Related Sections</span></span>  
+ [<span data-ttu-id="b50b6-112">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="b50b6-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="8e27f-113">Görüntü oluşturmaya genel bakış</span><span class="sxs-lookup"><span data-stu-id="8e27f-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [<span data-ttu-id="b50b6-113">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b50b6-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

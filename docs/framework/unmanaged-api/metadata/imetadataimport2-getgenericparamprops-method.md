@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af6ab8fd6e941f5219c1aad2946479dda0b64264
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70a9669e2f47c3b56f7b50dc96ed2d3ba8314c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="b1bfd-102">IMetaDataImport2::GetGenericParamProps Metodu</span><span class="sxs-lookup"><span data-stu-id="b1bfd-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
-<span data-ttu-id="b1bfd-103">Belirtilen belirteç tarafından temsil edilen genel parametresi ile ilişkili meta verileri alır.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
+# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="16281-102">IMetaDataImport2::GetGenericParamProps Metodu</span><span class="sxs-lookup"><span data-stu-id="16281-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
+<span data-ttu-id="16281-103">Belirtilen belirteç tarafından temsil edilen genel parametresi ile ilişkili meta verileri alır.</span><span class="sxs-lookup"><span data-stu-id="16281-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1bfd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b1bfd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16281-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="16281-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericParamProps (  
@@ -45,40 +46,40 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b1bfd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b1bfd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="16281-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="16281-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="b1bfd-106">[in] Meta verileri döndürmek üzere genel parametresini temsil eden belirteci.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
+ <span data-ttu-id="16281-106">[in] Meta verileri döndürmek üzere genel parametresini temsil eden belirteci.</span><span class="sxs-lookup"><span data-stu-id="16281-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
   
  `pulParamSeq`  
- <span data-ttu-id="b1bfd-107">[out] Sıralı konumunu `Type` üst Oluşturucusu veya yöntem parametresinde.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
+ <span data-ttu-id="16281-107">[out] Sıralı konumunu `Type` üst Oluşturucusu veya yöntem parametresinde.</span><span class="sxs-lookup"><span data-stu-id="16281-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
   
  `pdwParamFlags`  
- <span data-ttu-id="b1bfd-108">[out] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) açıklar numaralandırma `Type` genel parametresi için.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
+ <span data-ttu-id="16281-108">[out] Değerini [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) açıklar numaralandırma `Type` genel parametresi için.</span><span class="sxs-lookup"><span data-stu-id="16281-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
   
  `ptOwner`  
- <span data-ttu-id="b1bfd-109">[out] Parametre sahibi temsil eden bir TypeDef veya MethodDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
+ <span data-ttu-id="16281-109">[out] Parametre sahibi temsil eden bir TypeDef veya MethodDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="16281-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="b1bfd-110">[out] Gelecekteki genişletilebilirliği için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-110">[out] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="16281-110">[out] Gelecekteki genişletilebilirliği için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="16281-110">[out] Reserved for future extensibility.</span></span>  
   
  `wzName`  
- <span data-ttu-id="b1bfd-111">[out] Genel parametre adı.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-111">[out] The name of the generic parameter.</span></span>  
+ <span data-ttu-id="16281-111">[out] Genel parametre adı.</span><span class="sxs-lookup"><span data-stu-id="16281-111">[out] The name of the generic parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="b1bfd-112">[in] Boyutunu `wzName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-112">[in] The size of the `wzName` buffer.</span></span>  
+ <span data-ttu-id="16281-112">[in] Boyutunu `wzName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="16281-112">[in] The size of the `wzName` buffer.</span></span>  
   
  `pchName`  
- <span data-ttu-id="b1bfd-113">[out] Geniş karakterler adı döndürülen boyutu.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-113">[out] The returned size of the name, in wide characters.</span></span>  
+ <span data-ttu-id="16281-113">[out] Geniş karakterler adı döndürülen boyutu.</span><span class="sxs-lookup"><span data-stu-id="16281-113">[out] The returned size of the name, in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1bfd-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b1bfd-114">Requirements</span></span>  
- <span data-ttu-id="b1bfd-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1bfd-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16281-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="16281-114">Requirements</span></span>  
+ <span data-ttu-id="16281-115">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16281-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1bfd-116">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b1bfd-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="16281-116">**Başlık:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="16281-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b1bfd-117">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="b1bfd-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="16281-117">**Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="16281-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b1bfd-118">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1bfd-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="16281-118">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16281-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1bfd-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b1bfd-119">See Also</span></span>  
- [<span data-ttu-id="b1bfd-120">Imetadataımport2 arabirimi</span><span class="sxs-lookup"><span data-stu-id="b1bfd-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [<span data-ttu-id="b1bfd-121">Imetadataımport arabirimi</span><span class="sxs-lookup"><span data-stu-id="b1bfd-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="16281-119">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="16281-119">See Also</span></span>  
+ [<span data-ttu-id="16281-120">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="16281-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
+ [<span data-ttu-id="16281-121">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="16281-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

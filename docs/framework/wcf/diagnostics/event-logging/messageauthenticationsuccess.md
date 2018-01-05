@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e7fbc0d0f965ef533ca9acca23db418f6575c163
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a56e9416d3e43b6789d56eb87a0bccffbd6fcb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="messageauthenticationsuccess"></a><span data-ttu-id="c4df1-102">MessageAuthenticationSuccess</span><span class="sxs-lookup"><span data-stu-id="c4df1-102">MessageAuthenticationSuccess</span></span>
-<span data-ttu-id="c4df1-103">Kimliği: 169</span><span class="sxs-lookup"><span data-stu-id="c4df1-103">Id: 169</span></span>  
+# <a name="messageauthenticationsuccess"></a><span data-ttu-id="afe80-102">MessageAuthenticationSuccess</span><span class="sxs-lookup"><span data-stu-id="afe80-102">MessageAuthenticationSuccess</span></span>
+<span data-ttu-id="afe80-103">Kimliği: 169</span><span class="sxs-lookup"><span data-stu-id="afe80-103">Id: 169</span></span>  
   
- <span data-ttu-id="c4df1-104">Önem derecesi: bilgi</span><span class="sxs-lookup"><span data-stu-id="c4df1-104">Severity: Informational</span></span>  
+ <span data-ttu-id="afe80-104">Önem derecesi: bilgi</span><span class="sxs-lookup"><span data-stu-id="afe80-104">Severity: Informational</span></span>  
   
- <span data-ttu-id="c4df1-105">Kategori: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="c4df1-105">Category: SecurityAudit</span></span>  
+ <span data-ttu-id="afe80-105">Kategori: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="afe80-105">Category: SecurityAudit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c4df1-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c4df1-106">Description</span></span>  
- <span data-ttu-id="c4df1-107">Bu olay, ileti kimlik doğrulamasının başarılı gösterir.</span><span class="sxs-lookup"><span data-stu-id="c4df1-107">This event indicates that message authentication succeeded.</span></span> <span data-ttu-id="c4df1-108">Olay hizmeti, eylem, istemci kimliği ve etkinlik kimliğini listeler</span><span class="sxs-lookup"><span data-stu-id="c4df1-108">The event lists the service, action, client identity, and activity ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="afe80-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="afe80-106">Description</span></span>  
+ <span data-ttu-id="afe80-107">Bu olay, ileti kimlik doğrulamasının başarılı gösterir.</span><span class="sxs-lookup"><span data-stu-id="afe80-107">This event indicates that message authentication succeeded.</span></span> <span data-ttu-id="afe80-108">Olay hizmeti, eylem, istemci kimliği ve etkinlik kimliğini listeler</span><span class="sxs-lookup"><span data-stu-id="afe80-108">The event lists the service, action, client identity, and activity ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4df1-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c4df1-109">See Also</span></span>  
- [<span data-ttu-id="c4df1-110">Olay günlüğü</span><span class="sxs-lookup"><span data-stu-id="c4df1-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="c4df1-111">Etkinlik genel başvurusu</span><span class="sxs-lookup"><span data-stu-id="c4df1-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="afe80-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="afe80-109">See Also</span></span>  
+ [<span data-ttu-id="afe80-110">Günlüğe Olay Kaydetme</span><span class="sxs-lookup"><span data-stu-id="afe80-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="afe80-111">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="afe80-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

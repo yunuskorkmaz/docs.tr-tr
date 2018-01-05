@@ -17,30 +17,31 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bea43192d7f9a5bd875914633118dd6609c7804b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="62583-102">Ses ve Video ile İlgili Nasıl yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="62583-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="62583-103">Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> ses ve video içeriğine uygulamalarınıza tümleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="62583-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="3bf8f-102">Ses ve Video ile İlgili Nasıl yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3bf8f-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="3bf8f-103">Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> ses ve video içeriğine uygulamalarınıza tümleştirmek için.</span><span class="sxs-lookup"><span data-stu-id="3bf8f-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="62583-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="62583-104">In This Section</span></span>  
- [<span data-ttu-id="62583-105">Nasıl yapılır: dinamik olarak bir öğe ekleme</span><span class="sxs-lookup"><span data-stu-id="62583-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [<span data-ttu-id="62583-106">(Play, duraklatma, durdurma, birim ve hız) MediaElement'i denetleme</span><span class="sxs-lookup"><span data-stu-id="62583-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="62583-107">Film şeridi kullanarak MediaElement'i denetleme</span><span class="sxs-lookup"><span data-stu-id="62583-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="62583-108">Bir kullanıcı olayı ile ortam çalma tetikleme</span><span class="sxs-lookup"><span data-stu-id="62583-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="62583-109">Medya yürütmesini yineleme</span><span class="sxs-lookup"><span data-stu-id="62583-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [<span data-ttu-id="62583-110">Animasyon ortamla Yürüt</span><span class="sxs-lookup"><span data-stu-id="62583-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [<span data-ttu-id="62583-111">MediaElement üzerinde dönüşümler kullanma</span><span class="sxs-lookup"><span data-stu-id="62583-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3bf8f-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3bf8f-104">In This Section</span></span>  
+ [<span data-ttu-id="3bf8f-105">Nasıl yapılır: dinamik olarak bir öğe ekleme</span><span class="sxs-lookup"><span data-stu-id="3bf8f-105">How to: Add an Element Dynamically</span></span>](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [<span data-ttu-id="3bf8f-106">MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi</span><span class="sxs-lookup"><span data-stu-id="3bf8f-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="3bf8f-107">Görsel Taslak Kullanarak MediaElement'i Denetleme</span><span class="sxs-lookup"><span data-stu-id="3bf8f-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="3bf8f-108">Kullanıcı Olayı ile Medya Yürütme Tetikleme</span><span class="sxs-lookup"><span data-stu-id="3bf8f-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="3bf8f-109">Medya Yürütmesini Yineleme</span><span class="sxs-lookup"><span data-stu-id="3bf8f-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="3bf8f-110">Animasyonlarla Medya Yürütme</span><span class="sxs-lookup"><span data-stu-id="3bf8f-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="3bf8f-111">MediaElement Üzerinde Dönüşümler Kullanma</span><span class="sxs-lookup"><span data-stu-id="3bf8f-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="62583-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="62583-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3bf8f-112">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3bf8f-112">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="62583-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="62583-113">Related Sections</span></span>  
- [<span data-ttu-id="62583-114">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="62583-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="3bf8f-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3bf8f-113">Related Sections</span></span>  
+ [<span data-ttu-id="3bf8f-114">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="3bf8f-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 94c530015cc1770adf31c336dfb00eb06ffd70a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69c28cba90c8ebef1b178263c8edac2cb5914c0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="5f254-102">ICorDebugCode::GetSize Metodu</span><span class="sxs-lookup"><span data-stu-id="5f254-102">ICorDebugCode::GetSize Method</span></span>
-<span data-ttu-id="5f254-103">Bu "Icordebugcode" temsil ikili kod bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="5f254-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
+# <a name="icordebugcodegetsize-method"></a><span data-ttu-id="f7155-102">ICorDebugCode::GetSize Metodu</span><span class="sxs-lookup"><span data-stu-id="f7155-102">ICorDebugCode::GetSize Method</span></span>
+<span data-ttu-id="f7155-103">Bu "Icordebugcode" temsil ikili kod bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="f7155-103">Gets the size, in bytes, of the binary code represented by this "ICorDebugCode".</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f254-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5f254-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7155-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f7155-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize (  
@@ -38,18 +39,18 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5f254-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5f254-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f7155-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f7155-105">Parameters</span></span>  
  `pcBytes`  
- <span data-ttu-id="5f254-106">[out] İkili dosya bayt cinsinden boyutu gösteren bir işaretçi Bu kod `ICorDebugCode` nesne temsil eder.</span><span class="sxs-lookup"><span data-stu-id="5f254-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
+ <span data-ttu-id="f7155-106">[out] İkili dosya bayt cinsinden boyutu gösteren bir işaretçi Bu kod `ICorDebugCode` nesne temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f7155-106">[out] A pointer to the size, in bytes, of the binary code that this `ICorDebugCode` object represents.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f254-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5f254-107">Requirements</span></span>  
- <span data-ttu-id="5f254-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f254-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7155-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f7155-107">Requirements</span></span>  
+ <span data-ttu-id="f7155-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7155-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f254-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f254-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f7155-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f7155-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5f254-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f254-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f7155-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f7155-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f254-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f254-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f7155-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7155-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f254-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5f254-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f7155-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f7155-112">See Also</span></span>  
  

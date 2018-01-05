@@ -18,18 +18,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d0238c2c1606358a8cc2374e209a8f385c4d0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd43baee7ed7ab75a85775a4abecf38aa41faf93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="46249-102">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="46249-102">How-to Topics</span></span>
-<span data-ttu-id="46249-103">Aşağıdaki konular nasıl oluşturulacağını gösterir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] eklentileri.</span><span class="sxs-lookup"><span data-stu-id="46249-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="147b1-102">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="147b1-102">How-to Topics</span></span>
+<span data-ttu-id="147b1-103">Aşağıdaki konular nasıl oluşturulacağını gösterir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] eklentileri.</span><span class="sxs-lookup"><span data-stu-id="147b1-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="46249-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="46249-104">In This Section</span></span>  
- [<span data-ttu-id="46249-105">UI döndüren eklenti oluşturma</span><span class="sxs-lookup"><span data-stu-id="46249-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="46249-106">Bir UI eklentisi oluşturma</span><span class="sxs-lookup"><span data-stu-id="46249-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="147b1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="147b1-104">In This Section</span></span>  
+ [<span data-ttu-id="147b1-105">UI Döndüren Eklenti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="147b1-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="147b1-106">UI Olan Eklenti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="147b1-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="46249-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="46249-107">Related Sections</span></span>  
- [<span data-ttu-id="46249-108">WPF eklentilere genel bakış</span><span class="sxs-lookup"><span data-stu-id="46249-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="147b1-107">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="147b1-107">Related Sections</span></span>  
+ [<span data-ttu-id="147b1-108">WPF Eklentilerine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="147b1-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

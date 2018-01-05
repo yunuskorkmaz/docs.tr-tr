@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="3a507-102">Kaynaklar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3a507-102">Resources How-to Topics</span></span>
-<span data-ttu-id="3a507-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] kaynakları.</span><span class="sxs-lookup"><span data-stu-id="3a507-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="9e862-102">Kaynaklar ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9e862-102">Resources How-to Topics</span></span>
+<span data-ttu-id="9e862-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] kaynakları.</span><span class="sxs-lookup"><span data-stu-id="9e862-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3a507-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3a507-104">In This Section</span></span>  
- [<span data-ttu-id="3a507-105">Bir kaynağa başvurması ve tanımlayın</span><span class="sxs-lookup"><span data-stu-id="3a507-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="3a507-106">Uygulama kaynaklarını kullanma</span><span class="sxs-lookup"><span data-stu-id="3a507-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="3a507-107">SystemFonts kullanma</span><span class="sxs-lookup"><span data-stu-id="3a507-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="3a507-108">Sistem yazı tiplerini tuşlarını kullanın</span><span class="sxs-lookup"><span data-stu-id="3a507-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="3a507-109">SystemParameters kullanımı</span><span class="sxs-lookup"><span data-stu-id="3a507-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="3a507-110">Sistem parametreleri tuşlarını kullanma</span><span class="sxs-lookup"><span data-stu-id="3a507-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e862-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9e862-104">In This Section</span></span>  
+ [<span data-ttu-id="9e862-105">Kaynağı Tanımlama ve Kaynağa Başvurma</span><span class="sxs-lookup"><span data-stu-id="9e862-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="9e862-106">Uygulama Kaynaklarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="9e862-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
+ [<span data-ttu-id="9e862-107">SystemFonts Kullanma</span><span class="sxs-lookup"><span data-stu-id="9e862-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="9e862-108">Sistem Yazı Tipleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="9e862-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="9e862-109">SystemParameters Kullanma</span><span class="sxs-lookup"><span data-stu-id="9e862-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [<span data-ttu-id="9e862-110">Sistem Parametreleri Tuşlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="9e862-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="3a507-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3a507-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e862-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9e862-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="3a507-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3a507-112">Related Sections</span></span>  
- [<span data-ttu-id="3a507-113">XAML kaynakları</span><span class="sxs-lookup"><span data-stu-id="3a507-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="9e862-112">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="9e862-112">Related Sections</span></span>  
+ [<span data-ttu-id="9e862-113">XAML Kaynakları</span><span class="sxs-lookup"><span data-stu-id="9e862-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)

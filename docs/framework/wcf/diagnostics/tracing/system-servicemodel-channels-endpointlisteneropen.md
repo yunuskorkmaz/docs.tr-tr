@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efd5ea2e6803cf4b6696234c4a5a6dbdd4941a5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 220b588a15a2f7f857c7449df3f9cc958932dbc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsendpointlisteneropen"></a><span data-ttu-id="97be1-102">System.ServiceModel.Channels.EndpointListenerOpen</span><span class="sxs-lookup"><span data-stu-id="97be1-102">System.ServiceModel.Channels.EndpointListenerOpen</span></span>
-<span data-ttu-id="97be1-103">System.ServiceModel.Channels.EndpointListenerOpen</span><span class="sxs-lookup"><span data-stu-id="97be1-103">System.ServiceModel.Channels.EndpointListenerOpen</span></span>  
+# <a name="systemservicemodelchannelsendpointlisteneropen"></a><span data-ttu-id="cd2aa-102">System.ServiceModel.Channels.EndpointListenerOpen</span><span class="sxs-lookup"><span data-stu-id="cd2aa-102">System.ServiceModel.Channels.EndpointListenerOpen</span></span>
+<span data-ttu-id="cd2aa-103">System.ServiceModel.Channels.EndpointListenerOpen</span><span class="sxs-lookup"><span data-stu-id="cd2aa-103">System.ServiceModel.Channels.EndpointListenerOpen</span></span>  
   
-## <a name="description"></a><span data-ttu-id="97be1-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="97be1-104">Description</span></span>  
- <span data-ttu-id="97be1-105">Bitiş noktası dinleyicisi açıldı.</span><span class="sxs-lookup"><span data-stu-id="97be1-105">Endpoint listener opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="cd2aa-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd2aa-104">Description</span></span>  
+ <span data-ttu-id="cd2aa-105">Bitiş noktası dinleyicisi açıldı.</span><span class="sxs-lookup"><span data-stu-id="cd2aa-105">Endpoint listener opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97be1-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="97be1-106">See Also</span></span>  
- [<span data-ttu-id="97be1-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="97be1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="97be1-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="97be1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="97be1-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="97be1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="cd2aa-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cd2aa-106">See Also</span></span>  
+ [<span data-ttu-id="cd2aa-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="cd2aa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="cd2aa-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="cd2aa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="cd2aa-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="cd2aa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

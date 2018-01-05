@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c5fd66fb3ba5eba1b01451b77472a94bc16dfef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e613b9101e842a584eef4bcbac1bf3de1dba5cd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="a2b3a-102">ICorPublish::GetProcess Metodu</span><span class="sxs-lookup"><span data-stu-id="a2b3a-102">ICorPublish::GetProcess Method</span></span>
-<span data-ttu-id="a2b3a-103">Alır bir [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) belirtilen tanımlayıcı ile işlem temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="a2b3a-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
+# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="a9197-102">ICorPublish::GetProcess Metodu</span><span class="sxs-lookup"><span data-stu-id="a9197-102">ICorPublish::GetProcess Method</span></span>
+<span data-ttu-id="a9197-103">Alır bir [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) belirtilen tanımlayıcı ile işlem temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="a9197-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2b3a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a2b3a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9197-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a9197-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess(  
@@ -39,24 +40,24 @@ HRESULT GetProcess(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2b3a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a2b3a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a9197-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a9197-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="a2b3a-106">[in] İşlem tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="a2b3a-106">[in] The identifier of the process.</span></span>  
+ <span data-ttu-id="a9197-106">[in] İşlem tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="a9197-106">[in] The identifier of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="a2b3a-107">[out] Adresine bir işaretçi bir `ICorPublishProcess` işlemi temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="a2b3a-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
+ <span data-ttu-id="a9197-107">[out] Adresine bir işaretçi bir `ICorPublishProcess` işlemi temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="a9197-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2b3a-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a2b3a-108">Remarks</span></span>  
- <span data-ttu-id="a2b3a-109">`GetProcess`işlem yok veya geçerli kullanıcı tarafından hata ayıklaması yapılabilir yönetilen bir işlem değil başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="a2b3a-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9197-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a9197-108">Remarks</span></span>  
+ <span data-ttu-id="a9197-109">`GetProcess`işlem yok veya geçerli kullanıcı tarafından hata ayıklaması yapılabilir yönetilen bir işlem değil başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="a9197-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2b3a-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a2b3a-110">Requirements</span></span>  
- <span data-ttu-id="a2b3a-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2b3a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9197-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a9197-110">Requirements</span></span>  
+ <span data-ttu-id="a9197-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9197-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2b3a-112">**Başlık:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a2b3a-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="a9197-112">**Başlık:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a9197-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="a2b3a-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2b3a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9197-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9197-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a2b3a-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2b3a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a9197-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9197-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2b3a-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a2b3a-115">See Also</span></span>  
- [<span data-ttu-id="a2b3a-116">Icorpublish arabirimi</span><span class="sxs-lookup"><span data-stu-id="a2b3a-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a9197-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a9197-115">See Also</span></span>  
+ [<span data-ttu-id="a9197-116">ICorPublish Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a9197-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

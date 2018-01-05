@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2501461267ff7369cd9c48f4cef6cda42063a48b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b2041a45cb80a08b2322f23e820f89b4bb71f845
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorconfigurationadddebuggerspecialthread-method"></a><span data-ttu-id="5deb8-102">ICorConfiguration::AddDebuggerSpecialThread Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5deb8-102">ICorConfiguration::AddDebuggerSpecialThread Method</span></span>
-<span data-ttu-id="5deb8-103">Hata Ayıklama Hizmetleri belirli bir iş parçacığı hata ayıklayıcı yönetilen veya yönetilmeyen hata ayıklama senaryoları sırasında durdurulmuş bir uygulama sahipken çalıştırmaya devam etmeyi izin verilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="5deb8-103">Indicates to the debugging services that a particular thread should be allowed to continue executing while the debugger has an application stopped during managed or unmanaged debugging scenarios.</span></span>  
+# <a name="icorconfigurationadddebuggerspecialthread-method"></a><span data-ttu-id="2448a-102">ICorConfiguration::AddDebuggerSpecialThread Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2448a-102">ICorConfiguration::AddDebuggerSpecialThread Method</span></span>
+<span data-ttu-id="2448a-103">Hata Ayıklama Hizmetleri belirli bir iş parçacığı hata ayıklayıcı yönetilen veya yönetilmeyen hata ayıklama senaryoları sırasında durdurulmuş bir uygulama sahipken çalıştırmaya devam etmeyi izin verilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="2448a-103">Indicates to the debugging services that a particular thread should be allowed to continue executing while the debugger has an application stopped during managed or unmanaged debugging scenarios.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5deb8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5deb8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2448a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2448a-104">Syntax</span></span>  
   
 ```  
 HRESULT AddDebuggerSpecialThread (  
@@ -38,21 +39,21 @@ HRESULT AddDebuggerSpecialThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5deb8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5deb8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2448a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2448a-105">Parameters</span></span>  
  `dwSpecialThreadId`  
- <span data-ttu-id="5deb8-106">[in] Yürütülmeye devam izin verilmesi gereken iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="5deb8-106">[in] The ID of the thread that should be allowed to continue executing.</span></span>  
+ <span data-ttu-id="2448a-106">[in] Yürütülmeye devam izin verilmesi gereken iş parçacığı kimliği.</span><span class="sxs-lookup"><span data-stu-id="2448a-106">[in] The ID of the thread that should be allowed to continue executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5deb8-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5deb8-107">Remarks</span></span>  
- <span data-ttu-id="5deb8-108">Belirtilen iş parçacığı yönetilen kod çalıştırma veya herhangi bir şekilde çalışma zamanı girmek için izin verilmiyor.</span><span class="sxs-lookup"><span data-stu-id="5deb8-108">The specified thread will not be allowed to run managed code or enter the runtime in any way.</span></span> <span data-ttu-id="5deb8-109">Bu tür, bir iş parçacığı örneği eski komut dosyası hata ayıklayıcıları desteklemek için bir işlem iş parçacığı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="5deb8-109">An example of such a thread would be an in-process thread to support legacy script debuggers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2448a-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2448a-107">Remarks</span></span>  
+ <span data-ttu-id="2448a-108">Belirtilen iş parçacığı yönetilen kod çalıştırma veya herhangi bir şekilde çalışma zamanı girmek için izin verilmiyor.</span><span class="sxs-lookup"><span data-stu-id="2448a-108">The specified thread will not be allowed to run managed code or enter the runtime in any way.</span></span> <span data-ttu-id="2448a-109">Bu tür, bir iş parçacığı örneği eski komut dosyası hata ayıklayıcıları desteklemek için bir işlem iş parçacığı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="2448a-109">An example of such a thread would be an in-process thread to support legacy script debuggers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5deb8-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5deb8-110">Requirements</span></span>  
- <span data-ttu-id="5deb8-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5deb8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2448a-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2448a-110">Requirements</span></span>  
+ <span data-ttu-id="2448a-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2448a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5deb8-112">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5deb8-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2448a-112">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2448a-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5deb8-113">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5deb8-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2448a-113">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="2448a-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5deb8-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5deb8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2448a-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2448a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5deb8-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5deb8-115">See Also</span></span>  
- [<span data-ttu-id="5deb8-116">Icorconfiguration arabirimi</span><span class="sxs-lookup"><span data-stu-id="5deb8-116">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2448a-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2448a-115">See Also</span></span>  
+ [<span data-ttu-id="2448a-116">ICorConfiguration Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2448a-116">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

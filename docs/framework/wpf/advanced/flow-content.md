@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content"></a><span data-ttu-id="3b031-102">Akış İçeriği</span><span class="sxs-lookup"><span data-stu-id="3b031-102">Flow Content</span></span>
-<span data-ttu-id="3b031-103">Akış içeriği öğeleri akış içeriği, barındırma için uygun oluşturmak için yapı taşları sağlayan bir <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="3b031-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="ac4eb-102">Akış İçeriği</span><span class="sxs-lookup"><span data-stu-id="ac4eb-102">Flow Content</span></span>
+<span data-ttu-id="ac4eb-103">Akış içeriği öğeleri akış içeriği, barındırma için uygun oluşturmak için yapı taşları sağlayan bir <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="ac4eb-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b031-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3b031-104">In This Section</span></span>  
- [<span data-ttu-id="3b031-105">Akış belgesi genel bakış</span><span class="sxs-lookup"><span data-stu-id="3b031-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="3b031-106">TextElement içerik modeli genel bakış</span><span class="sxs-lookup"><span data-stu-id="3b031-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="3b031-107">Tablo genel bakış</span><span class="sxs-lookup"><span data-stu-id="3b031-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="3b031-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3b031-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ac4eb-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ac4eb-104">In This Section</span></span>  
+ [<span data-ttu-id="ac4eb-105">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ac4eb-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="ac4eb-106">TextElement İçerik Modeline Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ac4eb-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [<span data-ttu-id="ac4eb-107">Tabloya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ac4eb-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="ac4eb-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ac4eb-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3b031-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3b031-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ac4eb-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ac4eb-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="3b031-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3b031-110">Related Sections</span></span>  
- [<span data-ttu-id="3b031-111">WPF belgeleri</span><span class="sxs-lookup"><span data-stu-id="3b031-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="ac4eb-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ac4eb-110">Related Sections</span></span>  
+ [<span data-ttu-id="ac4eb-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="ac4eb-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

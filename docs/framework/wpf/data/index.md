@@ -18,20 +18,21 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062794a12bb4a072a47705c96c7823e65e1a605b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa11b5fd05ac388ca7055d7712c5fa6687082c15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data"></a><span data-ttu-id="08086-102">Veri</span><span class="sxs-lookup"><span data-stu-id="08086-102">Data</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="08086-103">veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="08086-103"> data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="08086-104">Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve XML.</span><span class="sxs-lookup"><span data-stu-id="08086-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="08086-105">Ayrıca sürükle ve bırak işlemleri üzerinden veri aktarımı için bir mekanizma sağlar.</span><span class="sxs-lookup"><span data-stu-id="08086-105"> also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
+# <a name="data"></a><span data-ttu-id="29425-102">Veri</span><span class="sxs-lookup"><span data-stu-id="29425-102">Data</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="29425-103">veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="29425-103"> data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="29425-104">Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve XML.</span><span class="sxs-lookup"><span data-stu-id="29425-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="29425-105">Ayrıca sürükle ve bırak işlemleri üzerinden veri aktarımı için bir mekanizma sağlar.</span><span class="sxs-lookup"><span data-stu-id="29425-105"> also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="08086-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="08086-106">In This Section</span></span>  
- [<span data-ttu-id="08086-107">Veri bağlama</span><span class="sxs-lookup"><span data-stu-id="08086-107">Data Binding</span></span>](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [<span data-ttu-id="08086-108">Sürükleme ve bırakma</span><span class="sxs-lookup"><span data-stu-id="08086-108">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+## <a name="in-this-section"></a><span data-ttu-id="29425-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="29425-106">In This Section</span></span>  
+ [<span data-ttu-id="29425-107">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="29425-107">Data Binding</span></span>](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [<span data-ttu-id="29425-108">Sürükleme ve Bırakma</span><span class="sxs-lookup"><span data-stu-id="29425-108">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
-## <a name="reference"></a><span data-ttu-id="08086-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="08086-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="29425-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="29425-109">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -40,13 +41,13 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="08086-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="08086-110">Related Sections</span></span>  
- [<span data-ttu-id="08086-111">Denetimleri</span><span class="sxs-lookup"><span data-stu-id="08086-111">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="29425-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="29425-110">Related Sections</span></span>  
+ [<span data-ttu-id="29425-111">Denetimler</span><span class="sxs-lookup"><span data-stu-id="29425-111">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
   
- [<span data-ttu-id="08086-112">Stil ve şablon oluşturma</span><span class="sxs-lookup"><span data-stu-id="08086-112">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="29425-112">Stil ve Şablon Oluşturma</span><span class="sxs-lookup"><span data-stu-id="29425-112">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   
- [<span data-ttu-id="08086-113">Veri bağlama</span><span class="sxs-lookup"><span data-stu-id="08086-113">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="29425-113">Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="29425-113">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a><span data-ttu-id="08086-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="08086-114">See Also</span></span>  
- [<span data-ttu-id="08086-115">İzlenecek yol: İlk WPF Masaüstü Uygulamam</span><span class="sxs-lookup"><span data-stu-id="08086-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [<span data-ttu-id="08086-116">İzlenecek yol: Bir WPF uygulamasında uygulama verileri önbelleğe alma</span><span class="sxs-lookup"><span data-stu-id="08086-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a><span data-ttu-id="29425-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="29425-114">See Also</span></span>  
+ [<span data-ttu-id="29425-115">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="29425-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="29425-116">İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="29425-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

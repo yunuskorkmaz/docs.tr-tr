@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48f7376a483f5fae9784d059391dbd1cfa08803e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee7e35614c98d62daf05fcba9d884c46b16f6d29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="601---cbaentryread"></a><span data-ttu-id="ef804-102">601 - CBAEntryRead</span><span class="sxs-lookup"><span data-stu-id="ef804-102">601 - CBAEntryRead</span></span>
-## <a name="properties"></a><span data-ttu-id="ef804-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="ef804-103">Properties</span></span>  
+# <a name="601---cbaentryread"></a><span data-ttu-id="c5de1-102">601 - CBAEntryRead</span><span class="sxs-lookup"><span data-stu-id="c5de1-102">601 - CBAEntryRead</span></span>
+## <a name="properties"></a><span data-ttu-id="c5de1-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="c5de1-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ef804-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="ef804-104">ID</span></span>|<span data-ttu-id="ef804-105">601</span><span class="sxs-lookup"><span data-stu-id="ef804-105">601</span></span>|  
-|<span data-ttu-id="ef804-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="ef804-106">Keywords</span></span>||  
-|<span data-ttu-id="ef804-107">Düzey</span><span class="sxs-lookup"><span data-stu-id="ef804-107">Level</span></span>|<span data-ttu-id="ef804-108">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="ef804-108">Verbose</span></span>|  
-|<span data-ttu-id="ef804-109">Kanal</span><span class="sxs-lookup"><span data-stu-id="ef804-109">Channel</span></span>|<span data-ttu-id="ef804-110">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="ef804-110">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c5de1-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="c5de1-104">ID</span></span>|<span data-ttu-id="c5de1-105">601</span><span class="sxs-lookup"><span data-stu-id="c5de1-105">601</span></span>|  
+|<span data-ttu-id="c5de1-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="c5de1-106">Keywords</span></span>||  
+|<span data-ttu-id="c5de1-107">Düzey</span><span class="sxs-lookup"><span data-stu-id="c5de1-107">Level</span></span>|<span data-ttu-id="c5de1-108">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="c5de1-108">Verbose</span></span>|  
+|<span data-ttu-id="c5de1-109">Kanal</span><span class="sxs-lookup"><span data-stu-id="c5de1-109">Channel</span></span>|<span data-ttu-id="c5de1-110">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="c5de1-110">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ef804-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ef804-111">Description</span></span>  
- <span data-ttu-id="ef804-112">Bu olay okuma CBAEntry ile yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="ef804-112">This event is emitted with CBAEntry read.</span></span>  
+## <a name="description"></a><span data-ttu-id="c5de1-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5de1-111">Description</span></span>  
+ <span data-ttu-id="c5de1-112">Bu olay okuma CBAEntry ile yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="c5de1-112">This event is emitted with CBAEntry read.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ef804-113">İleti</span><span class="sxs-lookup"><span data-stu-id="ef804-113">Message</span></span>  
- <span data-ttu-id="ef804-114">ServiceActivation öğesi göreli adresi işlenen: '%1' normalleştirilmiş göreli adresi '%2'.</span><span class="sxs-lookup"><span data-stu-id="ef804-114">Processed ServiceActivation Element Relative Address:'%1', Normalized Relative Address '%2' .</span></span>  
+## <a name="message"></a><span data-ttu-id="c5de1-113">İleti</span><span class="sxs-lookup"><span data-stu-id="c5de1-113">Message</span></span>  
+ <span data-ttu-id="c5de1-114">ServiceActivation öğesi göreli adresi işlenen: '%1' normalleştirilmiş göreli adresi '%2'.</span><span class="sxs-lookup"><span data-stu-id="c5de1-114">Processed ServiceActivation Element Relative Address:'%1', Normalized Relative Address '%2' .</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ef804-115">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="ef804-115">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c5de1-115">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="c5de1-115">Details</span></span>

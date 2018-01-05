@@ -17,20 +17,21 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1013b7567fbd80d8d1ee55ac81e00c7b29635bac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c790ec775740bf53e3c68a1c8834df9e13339c38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="f3c4b-102">Dijital Mürekkep ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f3c4b-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="f3c4b-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f3c4b-103">In This Section</span></span>  
- [<span data-ttu-id="f3c4b-104">Özel denetimden mürekkep seçin</span><span class="sxs-lookup"><span data-stu-id="f3c4b-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="f3c4b-105">Mürekkep verisine özel veri Ekle</span><span class="sxs-lookup"><span data-stu-id="f3c4b-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="f3c4b-106">Özel denetim üzerinde mürekkep silme</span><span class="sxs-lookup"><span data-stu-id="f3c4b-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="f3c4b-107">Tanıma uygulaması hareketleri</span><span class="sxs-lookup"><span data-stu-id="f3c4b-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="f3c4b-108">Sürükle ve Bırak Mürekkep</span><span class="sxs-lookup"><span data-stu-id="f3c4b-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="f3c4b-109">InkCanvas'a veri bağlama</span><span class="sxs-lookup"><span data-stu-id="f3c4b-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="f3c4b-110">Çözümleme ipuçları ile mürekkep çözümleme</span><span class="sxs-lookup"><span data-stu-id="f3c4b-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="f3c4b-111">Mürekkep Döndürme</span><span class="sxs-lookup"><span data-stu-id="f3c4b-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="f3c4b-112">WPF uygulamaları için RealTimeStylus devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="f3c4b-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="ec015-102">Dijital Mürekkep ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ec015-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="ec015-103">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ec015-103">In This Section</span></span>  
+ [<span data-ttu-id="ec015-104">Özel Denetimden Mürekkep Seçme</span><span class="sxs-lookup"><span data-stu-id="ec015-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="ec015-105">Mürekkep Verisine Özel Veri Ekleme</span><span class="sxs-lookup"><span data-stu-id="ec015-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="ec015-106">Özel Denetim Üzerinde Mürekkep Silme</span><span class="sxs-lookup"><span data-stu-id="ec015-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="ec015-107">Uygulama Hareketlerini Tanıma</span><span class="sxs-lookup"><span data-stu-id="ec015-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="ec015-108">Sürükle ve Bırak Mürekkebi</span><span class="sxs-lookup"><span data-stu-id="ec015-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="ec015-109">InkCanvas'a Veri Bağlama</span><span class="sxs-lookup"><span data-stu-id="ec015-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="ec015-110">Çözümleme İpuçları ile Mürekkep Çözümleme</span><span class="sxs-lookup"><span data-stu-id="ec015-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="ec015-111">Mürekkep Döndürme</span><span class="sxs-lookup"><span data-stu-id="ec015-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
+  [<span data-ttu-id="ec015-112">WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma</span><span class="sxs-lookup"><span data-stu-id="ec015-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)

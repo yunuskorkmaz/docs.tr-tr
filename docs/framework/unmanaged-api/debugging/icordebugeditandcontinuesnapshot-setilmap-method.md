@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1d869e56b6bfc1b09c40c1eabc5625e96a6d0a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 349fd87c75a2de175322bf114bd2ef9e160ed31b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="1962d-102">ICorDebugEditAndContinueSnapshot::SetILMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1962d-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="1962d-103">`SetILMap`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="1962d-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="1962d-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="1962d-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="fdd30-102">ICorDebugEditAndContinueSnapshot::SetILMap Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fdd30-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="fdd30-103">`SetILMap`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="fdd30-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="fdd30-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="fdd30-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1962d-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1962d-105">See Also</span></span>  
- [<span data-ttu-id="1962d-106">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="1962d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fdd30-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fdd30-105">See Also</span></span>  
+ [<span data-ttu-id="fdd30-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="fdd30-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

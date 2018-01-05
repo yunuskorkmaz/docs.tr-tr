@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c75f4519820b88c7eaa0d2e51787b9581be00b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa1129c88ae43ad4b3cc8313501def8cb9be4286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="c0355-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="c0355-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
-<span data-ttu-id="c0355-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="c0355-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
+# <a name="systemservicemodelchannelsmsmqdatagramsent"></a><span data-ttu-id="f80ea-102">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="f80ea-102">System.ServiceModel.Channels.MsmqDatagramSent</span></span>
+<span data-ttu-id="f80ea-103">System.ServiceModel.Channels.MsmqDatagramSent</span><span class="sxs-lookup"><span data-stu-id="f80ea-103">System.ServiceModel.Channels.MsmqDatagramSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c0355-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0355-104">Description</span></span>  
- <span data-ttu-id="c0355-105">MSMQ veri birimi iletisi gönderildi.</span><span class="sxs-lookup"><span data-stu-id="c0355-105">MSMQ datagram message sent.</span></span>  
+## <a name="description"></a><span data-ttu-id="f80ea-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f80ea-104">Description</span></span>  
+ <span data-ttu-id="f80ea-105">MSMQ veri birimi iletisi gönderildi.</span><span class="sxs-lookup"><span data-stu-id="f80ea-105">MSMQ datagram message sent.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0355-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c0355-106">See Also</span></span>  
- [<span data-ttu-id="c0355-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="c0355-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c0355-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="c0355-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c0355-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="c0355-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f80ea-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f80ea-106">See Also</span></span>  
+ [<span data-ttu-id="f80ea-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f80ea-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f80ea-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="f80ea-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f80ea-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="f80ea-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

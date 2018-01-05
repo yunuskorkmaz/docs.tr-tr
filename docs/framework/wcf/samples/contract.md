@@ -13,30 +13,31 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03e1bf9562b53ed4b43655848a4469ab8d7626d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abdbe581f53931d72a8d60f6b1767c03d5205c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="contract"></a><span data-ttu-id="06508-102">Daralma</span><span class="sxs-lookup"><span data-stu-id="06508-102">Contract</span></span>
-<span data-ttu-id="06508-103">Bu bölümde sözleşmelerinde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06508-103">This section contains samples that demonstrate contracts in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
+# <a name="contract"></a><span data-ttu-id="adff5-102">Daralma</span><span class="sxs-lookup"><span data-stu-id="adff5-102">Contract</span></span>
+<span data-ttu-id="adff5-103">Bu bölümde sözleşmelerinde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="adff5-103">This section contains samples that demonstrate contracts in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="06508-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="06508-104">In This Section</span></span>  
- [<span data-ttu-id="06508-105">Veri sözleşmeleri</span><span class="sxs-lookup"><span data-stu-id="06508-105">Data Contracts</span></span>](../../../../docs/framework/wcf/samples/data-contracts.md)  
- <span data-ttu-id="06508-106">Veri sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06508-106">Demonstrates data contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="adff5-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="adff5-104">In This Section</span></span>  
+ [<span data-ttu-id="adff5-105">Veri Anlaşmaları</span><span class="sxs-lookup"><span data-stu-id="adff5-105">Data Contracts</span></span>](../../../../docs/framework/wcf/samples/data-contracts.md)  
+ <span data-ttu-id="adff5-106">Veri sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="adff5-106">Demonstrates data contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="06508-107">İleti sözleşmeleri</span><span class="sxs-lookup"><span data-stu-id="06508-107">Message Contracts</span></span>](../../../../docs/framework/wcf/samples/message-contracts.md)  
- <span data-ttu-id="06508-108">İleti sözleşmeleri gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06508-108">Demonstrates message contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="adff5-107">İleti Anlaşmaları</span><span class="sxs-lookup"><span data-stu-id="adff5-107">Message Contracts</span></span>](../../../../docs/framework/wcf/samples/message-contracts.md)  
+ <span data-ttu-id="adff5-108">İleti sözleşmeleri gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="adff5-108">Demonstrates message contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="06508-109">Hizmet sözleşmeleri</span><span class="sxs-lookup"><span data-stu-id="06508-109">Service Contracts</span></span>](../../../../docs/framework/wcf/samples/service-contracts.md)  
- <span data-ttu-id="06508-110">Hizmet sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06508-110">Demonstrates service contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
+ [<span data-ttu-id="adff5-109">Hizmet Sözleşmeleri</span><span class="sxs-lookup"><span data-stu-id="adff5-109">Service Contracts</span></span>](../../../../docs/framework/wcf/samples/service-contracts.md)  
+ <span data-ttu-id="adff5-110">Hizmet sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="adff5-110">Demonstrates service contracts in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- [<span data-ttu-id="06508-111">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="06508-111">DataContractResolver</span></span>](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
- <span data-ttu-id="06508-112">Kullanarak seri hale getirme ve seri durumdan çıkarma işlemleri nasıl özelleştirilebilir gösteren <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="06508-112">Demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span>  
+ [<span data-ttu-id="adff5-111">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="adff5-111">DataContractResolver</span></span>](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
+ <span data-ttu-id="adff5-112">Kullanarak seri hale getirme ve seri durumdan çıkarma işlemleri nasıl özelleştirilebilir gösteren <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="adff5-112">Demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span>  
   
- [<span data-ttu-id="06508-113">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="06508-113">KnownAssemblyAttribute</span></span>](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
- <span data-ttu-id="06508-114">Dinamik olarak bilinen türler seri hale getirme ve seri durumdan çıkarma sırasında nasıl ekleneceği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="06508-114">Demonstrates how to dynamically add known types during serialization and deserialization.</span></span>  
+ [<span data-ttu-id="adff5-113">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="adff5-113">KnownAssemblyAttribute</span></span>](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
+ <span data-ttu-id="adff5-114">Dinamik olarak bilinen türler seri hale getirme ve seri durumdan çıkarma sırasında nasıl ekleneceği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="adff5-114">Demonstrates how to dynamically add known types during serialization and deserialization.</span></span>  
   
- [<span data-ttu-id="06508-115">Netdatacontractserializer işlevselliğini sağlamak için DataContractSerializer ve DataContractResolver kullanma</span><span class="sxs-lookup"><span data-stu-id="06508-115">Using DataContractSerializer and DataContractResolver to Provide the Functionality of NetDataContractSerializer</span></span>](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
- <span data-ttu-id="06508-116">Nasıl kullanılacağı ortaya <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sunar <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="06508-116">Demonstrates how to use <xref:System.Runtime.Serialization.DataContractSerializer> with an appropriate <xref:System.Runtime.Serialization.DataContractResolver> provides the same functionality as <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span>
+ [<span data-ttu-id="adff5-115">NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma</span><span class="sxs-lookup"><span data-stu-id="adff5-115">Using DataContractSerializer and DataContractResolver to Provide the Functionality of NetDataContractSerializer</span></span>](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
+ <span data-ttu-id="adff5-116">Nasıl kullanılacağı ortaya <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sunar <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="adff5-116">Demonstrates how to use <xref:System.Runtime.Serialization.DataContractSerializer> with an appropriate <xref:System.Runtime.Serialization.DataContractResolver> provides the same functionality as <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span>

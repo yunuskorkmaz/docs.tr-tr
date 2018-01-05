@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 07cc3c17411d0429b3976dd543465b058d07b509
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d26add8256cb3bb2d17259c57f6733e49e2799ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="f01b3-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="f01b3-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
-<span data-ttu-id="f01b3-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="f01b3-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="3e2dc-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="3e2dc-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
+<span data-ttu-id="3e2dc-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="3e2dc-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f01b3-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f01b3-104">Description</span></span>  
- <span data-ttu-id="f01b3-105">Sunucu güvenlik oturumu yakın istemcisi gönderilir.</span><span class="sxs-lookup"><span data-stu-id="f01b3-105">The server security session sent Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="3e2dc-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3e2dc-104">Description</span></span>  
+ <span data-ttu-id="3e2dc-105">Sunucu güvenlik oturumu yakın istemcisi gönderilir.</span><span class="sxs-lookup"><span data-stu-id="3e2dc-105">The server security session sent Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f01b3-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f01b3-106">See Also</span></span>  
- [<span data-ttu-id="f01b3-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f01b3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f01b3-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="f01b3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f01b3-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="f01b3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3e2dc-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3e2dc-106">See Also</span></span>  
+ [<span data-ttu-id="3e2dc-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="3e2dc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3e2dc-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="3e2dc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3e2dc-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="3e2dc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

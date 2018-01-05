@@ -17,36 +17,37 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="916ff-102">Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="916ff-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="916ff-103">Bu bölümdeki konular, anahtar çerçeve animasyonları iki özellik değerlerini ve denetim ilişkilendirme birden fazla hareketli hale getirmeyi için nasıl kullanılacağını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="916ff-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="04c3a-102">Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="04c3a-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="04c3a-103">Bu bölümdeki konular, anahtar çerçeve animasyonları iki özellik değerlerini ve denetim ilişkilendirme birden fazla hareketli hale getirmeyi için nasıl kullanılacağını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="04c3a-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="916ff-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="916ff-104">In This Section</span></span>  
- [<span data-ttu-id="916ff-105">Bir nesnenin anahtar çerçeveler kullanarak animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-106">Bir mantıksal anahtar çerçeveler kullanarak animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-107">Bir çift anahtar çerçeveler kullanarak animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-108">Anahtar çerçeveler kullanarak bir matris animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-109">Anahtar çerçeveler kullanarak bir noktası animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-110">Anahtar çerçeveler kullanarak bir dikdörtgen geometri animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-111">Anahtar çerçeveler kullanarak bir dize animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-112">Anahtar çerçeveler kullanarak renk animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-113">Anahtar çerçeveler kullanarak boyutu değişiklikleri animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-114">Anahtar çerçeveler kullanarak kalınlığını animasyon ekleme</span><span class="sxs-lookup"><span data-stu-id="916ff-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="916ff-115">Denetim anahtar çerçeve animasyon zamanlama</span><span class="sxs-lookup"><span data-stu-id="916ff-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="04c3a-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="04c3a-104">In This Section</span></span>  
+ [<span data-ttu-id="04c3a-105">Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-105">Animate an Object by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-106">Anahtar Çerçeveler Kullanarak bir Boole Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-106">Animate a Boolean by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-107">Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-107">Animate a Double by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-108">Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-108">Animate a Matrix by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-109">Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-109">Animate a Point by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-110">Anahtar Çerçeveler Kullanarak Dikdörtgen Geometriye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-111">Anahtar Çerçeveler Kullanarak bir Dizeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-111">Animate a String by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-112">Anahtar Çerçeveler Kullanarak Renge Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-112">Animate Color by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-113">Anahtar Çerçeveler Kullanarak Boyut Değişikliklerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-113">Animate Size Changes by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-114">Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-114">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="04c3a-115">Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme</span><span class="sxs-lookup"><span data-stu-id="04c3a-115">Control Key-Frame Animation Timing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="916ff-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="916ff-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="04c3a-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="04c3a-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="916ff-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="916ff-117">See Also</span></span>  
- [<span data-ttu-id="916ff-118">Grafik ve çoklu ortam</span><span class="sxs-lookup"><span data-stu-id="916ff-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="916ff-119">Animasyon genel bakış</span><span class="sxs-lookup"><span data-stu-id="916ff-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="916ff-120">Anahtar çerçeve animasyonları genel bakış</span><span class="sxs-lookup"><span data-stu-id="916ff-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="04c3a-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="04c3a-117">See Also</span></span>  
+ [<span data-ttu-id="04c3a-118">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="04c3a-118">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="04c3a-119">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="04c3a-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="04c3a-120">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="04c3a-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

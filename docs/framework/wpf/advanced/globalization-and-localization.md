@@ -21,30 +21,31 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="globalization-and-localization"></a><span data-ttu-id="ebd88-102">Genelleştirme ve Yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="ebd88-102">Globalization and Localization</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="ebd88-103">Dünya çapında kullanılmaya hazır uygulamalar geliştirme için kapsamlı destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="ebd88-103"> provides extensive support for the development of world-ready applications.</span></span>  
+# <a name="globalization-and-localization"></a><span data-ttu-id="2c17d-102">Genelleştirme ve Yerelleştirme</span><span class="sxs-lookup"><span data-stu-id="2c17d-102">Globalization and Localization</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="2c17d-103">Dünya çapında kullanılmaya hazır uygulamalar geliştirme için kapsamlı destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="2c17d-103"> provides extensive support for the development of world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ebd88-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="ebd88-104">In This Section</span></span>  
- [<span data-ttu-id="ebd88-105">WPF Genelleştirme ve yerelleştirme genel bakış</span><span class="sxs-lookup"><span data-stu-id="ebd88-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [<span data-ttu-id="ebd88-106">WPF için genelleştirme</span><span class="sxs-lookup"><span data-stu-id="ebd88-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [<span data-ttu-id="ebd88-107">Otomatik Düzen Kullanım genel bakış</span><span class="sxs-lookup"><span data-stu-id="ebd88-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [<span data-ttu-id="ebd88-108">Yerelleştirme öznitelikleri ve Yorumlar</span><span class="sxs-lookup"><span data-stu-id="ebd88-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [<span data-ttu-id="ebd88-109">Çift yönlü özellikler WPF genel bakış</span><span class="sxs-lookup"><span data-stu-id="ebd88-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [<span data-ttu-id="ebd88-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="ebd88-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2c17d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2c17d-104">In This Section</span></span>  
+ [<span data-ttu-id="2c17d-105">WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2c17d-105">WPF Globalization and Localization Overview</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
+ [<span data-ttu-id="2c17d-106">WPF için Genelleştirme</span><span class="sxs-lookup"><span data-stu-id="2c17d-106">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="2c17d-107">Otomatik Düzen Kullanımına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2c17d-107">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [<span data-ttu-id="2c17d-108">Yerelleştirme Öznitelikleri ve Yorumlar</span><span class="sxs-lookup"><span data-stu-id="2c17d-108">Localization Attributes and Comments</span></span>](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
+ [<span data-ttu-id="2c17d-109">WPF Genel Bakışında Çift Yönlü Özellikler</span><span class="sxs-lookup"><span data-stu-id="2c17d-109">Bidirectional Features in WPF Overview</span></span>](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
+ [<span data-ttu-id="2c17d-110">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2c17d-110">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="ebd88-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ebd88-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2c17d-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2c17d-111">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="ebd88-112">XML: lang XAML'de işleme</span><span class="sxs-lookup"><span data-stu-id="ebd88-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [<span data-ttu-id="2c17d-112">XAML'de xml:lang İşleme</span><span class="sxs-lookup"><span data-stu-id="2c17d-112">xml:lang Handling in XAML</span></span>](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="ebd88-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="ebd88-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2c17d-113">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2c17d-113">Related Sections</span></span>

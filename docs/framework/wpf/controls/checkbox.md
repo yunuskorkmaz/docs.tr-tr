@@ -17,24 +17,25 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3e5e732fc52ed2ea4109c75e851f278f9a15e14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d3dda23a9fd7b6c501f3f1d8222bfdea8f31fb10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="checkbox"></a><span data-ttu-id="f435c-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="f435c-102">CheckBox</span></span>
-<span data-ttu-id="f435c-103">Kullanabileceğiniz bir <xref:System.Windows.Controls.CheckBox> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] uygulamanızın bir kullanıcı seçin veya temizleyin seçenekleri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f435c-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="f435c-104">Tek bir onay kutusu kullanabilir veya iki veya daha fazla onay kutularını gruplandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f435c-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="a5470-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="a5470-102">CheckBox</span></span>
+<span data-ttu-id="a5470-103">Kullanabileceğiniz bir <xref:System.Windows.Controls.CheckBox> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] uygulamanızın bir kullanıcı seçin veya temizleyin seçenekleri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="a5470-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="a5470-104">Tek bir onay kutusu kullanabilir veya iki veya daha fazla onay kutularını gruplandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a5470-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="f435c-105">Aşağıdaki grafikte farklı durumlarını gösterir bir <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="f435c-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="a5470-105">Aşağıdaki grafikte farklı durumlarını gösterir bir <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="a5470-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="f435c-106">![CheckBox durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="f435c-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="f435c-107">Farklı durumlardaki onay kutusu denetimleri</span><span class="sxs-lookup"><span data-stu-id="f435c-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="a5470-106">![CheckBox durumları](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="a5470-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="a5470-107">Farklı durumlardaki onay kutusu denetimleri</span><span class="sxs-lookup"><span data-stu-id="a5470-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f435c-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f435c-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a5470-108">Başvuru</span><span class="sxs-lookup"><span data-stu-id="a5470-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="f435c-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="f435c-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a5470-109">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="a5470-109">Related Sections</span></span>
