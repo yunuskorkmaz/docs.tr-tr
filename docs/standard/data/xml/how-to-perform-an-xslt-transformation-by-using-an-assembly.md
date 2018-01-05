@@ -16,18 +16,21 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d14c4338290856c09ca1d23ec6acc895450f83ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="b98d6-102">Nasıl yapılır: bir derlemeyi kullanarak XSLT dönüşümü gerçekleştirin</span><span class="sxs-lookup"><span data-stu-id="b98d6-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
-<span data-ttu-id="b98d6-103">XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b98d6-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="b98d6-104">Derleme doğrudan geçirilen <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b98d6-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="41e49-102">Nasıl yapılır: bir derlemeyi kullanarak XSLT dönüşümü gerçekleştirin</span><span class="sxs-lookup"><span data-stu-id="41e49-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
+<span data-ttu-id="41e49-103">XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur.</span><span class="sxs-lookup"><span data-stu-id="41e49-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="41e49-104">Derleme doğrudan geçirilen <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="41e49-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="b98d6-105">XML ve XSLT dosyalarını yerel bilgisayarınıza kopyalamak için</span><span class="sxs-lookup"><span data-stu-id="b98d6-105">To copy the XML and XSLT files to your local computer</span></span>  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="41e49-105">XML ve XSLT dosyalarını yerel bilgisayarınıza kopyalamak için</span><span class="sxs-lookup"><span data-stu-id="41e49-105">To copy the XML and XSLT files to your local computer</span></span>  
   
--   <span data-ttu-id="b98d6-106">XSLT dosyasını yerel bilgisayarınıza kopyalayın ve Transform.xsl olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="b98d6-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
+-   <span data-ttu-id="41e49-106">XSLT dosyasını yerel bilgisayarınıza kopyalayın ve Transform.xsl olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="41e49-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -94,7 +97,7 @@ ms.lasthandoff: 11/21/2017
     </xsl:stylesheet>  
     ```  
   
--   <span data-ttu-id="b98d6-107">XML dosyasını yerel bilgisayarınıza kopyalayın ve adını `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="b98d6-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
+-   <span data-ttu-id="41e49-107">XML dosyasını yerel bilgisayarınıza kopyalayın ve adını `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="41e49-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -137,59 +140,59 @@ ms.lasthandoff: 11/21/2017
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="b98d6-108">Etkin komut dosyası ile stil sayfası derlemek için.</span><span class="sxs-lookup"><span data-stu-id="b98d6-108">To compile the style sheet with the script enabled.</span></span>  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="41e49-108">Etkin komut dosyası ile stil sayfası derlemek için.</span><span class="sxs-lookup"><span data-stu-id="41e49-108">To compile the style sheet with the script enabled.</span></span>  
   
-1.  <span data-ttu-id="b98d6-109">Komut satırından şu komutu yürütülürken oluşturur adlı iki derlemeler `Transform.dll` ve `Transform_Script1.dll` (Bu varsayılan davranıştır.</span><span class="sxs-lookup"><span data-stu-id="b98d6-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="b98d6-110">Aksi belirtilmediği sürece, sınıf ve derleme adını ana stil sayfasının adı için varsayılan olarak):</span><span class="sxs-lookup"><span data-stu-id="b98d6-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
+1.  <span data-ttu-id="41e49-109">Komut satırından şu komutu yürütülürken oluşturur adlı iki derlemeler `Transform.dll` ve `Transform_Script1.dll` (Bu varsayılan davranıştır.</span><span class="sxs-lookup"><span data-stu-id="41e49-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="41e49-110">Aksi belirtilmediği sürece, sınıf ve derleme adını ana stil sayfasının adı için varsayılan olarak):</span><span class="sxs-lookup"><span data-stu-id="41e49-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- <span data-ttu-id="b98d6-111">Aşağıdaki komut, açıkça dönüştürme için sınıf adını ayarlar:</span><span class="sxs-lookup"><span data-stu-id="b98d6-111">The following command explicitly sets the class name to Transform:</span></span>  
+ <span data-ttu-id="41e49-111">Aşağıdaki komut, açıkça dönüştürme için sınıf adını ayarlar:</span><span class="sxs-lookup"><span data-stu-id="41e49-111">The following command explicitly sets the class name to Transform:</span></span>  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="b98d6-112">Kodunuzu derlerken bir başvuru olarak derlenmiş derlemeyi dahil etmek için.</span><span class="sxs-lookup"><span data-stu-id="b98d6-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="41e49-112">Kodunuzu derlerken bir başvuru olarak derlenmiş derlemeyi dahil etmek için.</span><span class="sxs-lookup"><span data-stu-id="41e49-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
   
-1.  <span data-ttu-id="b98d6-113">Çözüm Gezgini'nde ya da komut satırından bir başvuru ekleyerek, Visual Studio'da bir derlemeyi dahil edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b98d6-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
+1.  <span data-ttu-id="41e49-113">Çözüm Gezgini'nde ya da komut satırından bir başvuru ekleyerek, Visual Studio'da bir derlemeyi dahil edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="41e49-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
   
-2.  <span data-ttu-id="b98d6-114">C# ile komut satırı için aşağıdakileri kullanın:</span><span class="sxs-lookup"><span data-stu-id="b98d6-114">For the command line with C#, use the following:</span></span>  
+2.  <span data-ttu-id="41e49-114">C# ile komut satırı için aşağıdakileri kullanın:</span><span class="sxs-lookup"><span data-stu-id="41e49-114">For the command line with C#, use the following:</span></span>  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  <span data-ttu-id="b98d6-115">Visual Basic komut satırıyla için aşağıdakileri kullanın</span><span class="sxs-lookup"><span data-stu-id="b98d6-115">For the command line with Visual Basic, use the following</span></span>  
+3.  <span data-ttu-id="41e49-115">Visual Basic komut satırıyla için aşağıdakileri kullanın</span><span class="sxs-lookup"><span data-stu-id="41e49-115">For the command line with Visual Basic, use the following</span></span>  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="b98d6-116">Derlenmiş bütünleştirilmiş kodda kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="b98d6-116">To use the compiled assembly in your code.</span></span>  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="41e49-116">Derlenmiş bütünleştirilmiş kodda kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="41e49-116">To use the compiled assembly in your code.</span></span>  
   
-1.  <span data-ttu-id="b98d6-117">Aşağıdaki örnekte nasıl derlenmiş stil sayfasını kullanarak XSLT dönüşümü çalıştırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b98d6-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
+1.  <span data-ttu-id="41e49-117">Aşağıdaki örnekte nasıl derlenmiş stil sayfasını kullanarak XSLT dönüşümü çalıştırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="41e49-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- <span data-ttu-id="b98d6-118">Dinamik olarak derlenmiş derlemeye bağlamak için Değiştir</span><span class="sxs-lookup"><span data-stu-id="b98d6-118">To dynamically link to the compiled assembly, replace</span></span>  
+ <span data-ttu-id="41e49-118">Dinamik olarak derlenmiş derlemeye bağlamak için Değiştir</span><span class="sxs-lookup"><span data-stu-id="41e49-118">To dynamically link to the compiled assembly, replace</span></span>  
   
 ```  
 xslt.Load(typeof(Transform))  
 ```  
   
- <span data-ttu-id="b98d6-119">örneklerini şununla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="b98d6-119">with</span></span>  
+ <span data-ttu-id="41e49-119">örneklerini şununla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="41e49-119">with</span></span>  
   
 ```  
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- <span data-ttu-id="b98d6-120">Yukarıdaki örnekte.</span><span class="sxs-lookup"><span data-stu-id="b98d6-120">in the example above.</span></span> <span data-ttu-id="b98d6-121">Assembly.Load yöntemi hakkında daha fazla bilgi için bkz:<xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="b98d6-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
+ <span data-ttu-id="41e49-120">Yukarıdaki örnekte.</span><span class="sxs-lookup"><span data-stu-id="41e49-120">in the example above.</span></span> <span data-ttu-id="41e49-121">Assembly.Load yöntemi hakkında daha fazla bilgi için bkz:<xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="41e49-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b98d6-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b98d6-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="41e49-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="41e49-122">See Also</span></span>  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [<span data-ttu-id="b98d6-123">XSLT derleyici (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="b98d6-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [<span data-ttu-id="b98d6-124">XSLT dönüştürmeleri</span><span class="sxs-lookup"><span data-stu-id="b98d6-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [<span data-ttu-id="b98d6-125">Komut satırı csc.exe derleme</span><span class="sxs-lookup"><span data-stu-id="b98d6-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+ [<span data-ttu-id="41e49-123">XSLT Derleyicisi (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="41e49-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [<span data-ttu-id="41e49-124">XSLT Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="41e49-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [<span data-ttu-id="41e49-125">csc.exe Kullanarak Komut Satırı Derleme</span><span class="sxs-lookup"><span data-stu-id="41e49-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

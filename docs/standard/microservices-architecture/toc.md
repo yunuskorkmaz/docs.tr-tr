@@ -41,6 +41,7 @@
 ### [Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [Olaylara abone olma](multi-container-microservice-net-applications/subscribe-events.md)
 ### [ASP.NET Core hizmetlerini ve web uygulamalarını test etme](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [IHostedService ile mikro hizmetler içindeki arka plan görevlerini uygulama](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [Bir Mikro Hizmetteki İş Karmaşıklığını DDD ve CQRS Desenleriyle Giderme](microservice-ddd-cqrs-patterns/index.md)
 ### [Bir mikro hizmete CQRS ve DDD desenlerini uygulama](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)
