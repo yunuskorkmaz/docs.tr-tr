@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb5dd9a8cd480f7a51dd2660ba7eaba4fcf873c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f166b3be31ffc1c23a51111ea12780bb721bf5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="failedtoremoveperformancecounter"></a><span data-ttu-id="0cb65-102">FailedToRemovePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="0cb65-102">FailedToRemovePerformanceCounter</span></span>
-<span data-ttu-id="0cb65-103">Kimliği: 119</span><span class="sxs-lookup"><span data-stu-id="0cb65-103">Id: 119</span></span>  
+# <a name="failedtoremoveperformancecounter"></a><span data-ttu-id="dad62-102">FailedToRemovePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="dad62-102">FailedToRemovePerformanceCounter</span></span>
+<span data-ttu-id="dad62-103">Kimliği: 119</span><span class="sxs-lookup"><span data-stu-id="dad62-103">Id: 119</span></span>  
   
- <span data-ttu-id="0cb65-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="0cb65-104">Severity: Error</span></span>  
+ <span data-ttu-id="dad62-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="dad62-104">Severity: Error</span></span>  
   
- <span data-ttu-id="0cb65-105">Kategori: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="0cb65-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="dad62-105">Kategori: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dad62-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0cb65-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0cb65-106">Description</span></span>  
- <span data-ttu-id="0cb65-107">Bu olay, bir performans sayacı kaldırılmadı gösterir.</span><span class="sxs-lookup"><span data-stu-id="0cb65-107">This event indicates that a performance counter was not removed.</span></span> <span data-ttu-id="0cb65-108">Olay kategorisi adı, sayaç adı, örnek adı, özel durum, işlem adı ve işlem kimliği listeler</span><span class="sxs-lookup"><span data-stu-id="0cb65-108">The event lists the category name, counter name, instance name, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="dad62-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dad62-106">Description</span></span>  
+ <span data-ttu-id="dad62-107">Bu olay, bir performans sayacı kaldırılmadı gösterir.</span><span class="sxs-lookup"><span data-stu-id="dad62-107">This event indicates that a performance counter was not removed.</span></span> <span data-ttu-id="dad62-108">Olay kategorisi adı, sayaç adı, örnek adı, özel durum, işlem adı ve işlem kimliği listeler</span><span class="sxs-lookup"><span data-stu-id="dad62-108">The event lists the category name, counter name, instance name, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cb65-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0cb65-109">See Also</span></span>  
- [<span data-ttu-id="0cb65-110">Olay günlüğü</span><span class="sxs-lookup"><span data-stu-id="0cb65-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="0cb65-111">Etkinlik genel başvurusu</span><span class="sxs-lookup"><span data-stu-id="0cb65-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="dad62-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dad62-109">See Also</span></span>  
+ [<span data-ttu-id="dad62-110">Günlüğe Olay Kaydetme</span><span class="sxs-lookup"><span data-stu-id="dad62-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="dad62-111">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="dad62-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

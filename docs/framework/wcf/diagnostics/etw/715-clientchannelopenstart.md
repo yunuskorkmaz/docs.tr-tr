@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1923964d7e586638c8b56bf3e6ab7a3f04fa9f5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e5316d3b579bb05a160e5928b4c17451be0ab7c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="715---clientchannelopenstart"></a><span data-ttu-id="2cb5d-102">715 - ClientChannelOpenStart</span><span class="sxs-lookup"><span data-stu-id="2cb5d-102">715 - ClientChannelOpenStart</span></span>
-## <a name="properties"></a><span data-ttu-id="2cb5d-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="2cb5d-103">Properties</span></span>  
+# <a name="715---clientchannelopenstart"></a><span data-ttu-id="c544f-102">715 - ClientChannelOpenStart</span><span class="sxs-lookup"><span data-stu-id="c544f-102">715 - ClientChannelOpenStart</span></span>
+## <a name="properties"></a><span data-ttu-id="c544f-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="c544f-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="2cb5d-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="2cb5d-104">ID</span></span>|<span data-ttu-id="2cb5d-105">715</span><span class="sxs-lookup"><span data-stu-id="2cb5d-105">715</span></span>|  
-|<span data-ttu-id="2cb5d-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="2cb5d-106">Keywords</span></span>|<span data-ttu-id="2cb5d-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="2cb5d-107">ServiceModel</span></span>|  
-|<span data-ttu-id="2cb5d-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="2cb5d-108">Level</span></span>|<span data-ttu-id="2cb5d-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="2cb5d-109">Information</span></span>|  
-|<span data-ttu-id="2cb5d-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="2cb5d-110">Channel</span></span>|<span data-ttu-id="2cb5d-111">Microsoft Windows uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="2cb5d-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="c544f-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="c544f-104">ID</span></span>|<span data-ttu-id="c544f-105">715</span><span class="sxs-lookup"><span data-stu-id="c544f-105">715</span></span>|  
+|<span data-ttu-id="c544f-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="c544f-106">Keywords</span></span>|<span data-ttu-id="c544f-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c544f-107">ServiceModel</span></span>|  
+|<span data-ttu-id="c544f-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="c544f-108">Level</span></span>|<span data-ttu-id="c544f-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="c544f-109">Information</span></span>|  
+|<span data-ttu-id="c544f-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="c544f-110">Channel</span></span>|<span data-ttu-id="c544f-111">Microsoft Windows uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="c544f-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="2cb5d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2cb5d-112">Description</span></span>  
- <span data-ttu-id="2cb5d-113">Bu olay ServiceChannel açık Başlarken yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="2cb5d-113">This event is emitted with ServiceChannel Open start.</span></span>  
+## <a name="description"></a><span data-ttu-id="c544f-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c544f-112">Description</span></span>  
+ <span data-ttu-id="c544f-113">Bu olay ServiceChannel açık Başlarken yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="c544f-113">This event is emitted with ServiceChannel Open start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="2cb5d-114">İleti</span><span class="sxs-lookup"><span data-stu-id="2cb5d-114">Message</span></span>  
- <span data-ttu-id="2cb5d-115">ServiceChannel açık başlangıcı.</span><span class="sxs-lookup"><span data-stu-id="2cb5d-115">ServiceChannel Open Start.</span></span>  
+## <a name="message"></a><span data-ttu-id="c544f-114">İleti</span><span class="sxs-lookup"><span data-stu-id="c544f-114">Message</span></span>  
+ <span data-ttu-id="c544f-115">ServiceChannel açık başlangıcı.</span><span class="sxs-lookup"><span data-stu-id="c544f-115">ServiceChannel Open Start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="2cb5d-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="2cb5d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c544f-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="c544f-116">Details</span></span>

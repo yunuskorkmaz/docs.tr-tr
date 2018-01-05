@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97b696934ee54998e27b847413211f4645a1f0ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 05d6258d4bac1cc9a40480a86bbbc4c092a42a6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqdetected"></a><span data-ttu-id="58ca6-102">System.ServiceModel.Channels.MsmqDetected</span><span class="sxs-lookup"><span data-stu-id="58ca6-102">System.ServiceModel.Channels.MsmqDetected</span></span>
-<span data-ttu-id="58ca6-103">System.ServiceModel.Channels.MsmqDetected</span><span class="sxs-lookup"><span data-stu-id="58ca6-103">System.ServiceModel.Channels.MsmqDetected</span></span>  
+# <a name="systemservicemodelchannelsmsmqdetected"></a><span data-ttu-id="41881-102">System.ServiceModel.Channels.MsmqDetected</span><span class="sxs-lookup"><span data-stu-id="41881-102">System.ServiceModel.Channels.MsmqDetected</span></span>
+<span data-ttu-id="41881-103">System.ServiceModel.Channels.MsmqDetected</span><span class="sxs-lookup"><span data-stu-id="41881-103">System.ServiceModel.Channels.MsmqDetected</span></span>  
   
-## <a name="description"></a><span data-ttu-id="58ca6-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="58ca6-104">Description</span></span>  
- <span data-ttu-id="58ca6-105">MSMQ başarıyla algılandı.</span><span class="sxs-lookup"><span data-stu-id="58ca6-105">MSMQ detected successfully.</span></span>  
+## <a name="description"></a><span data-ttu-id="41881-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="41881-104">Description</span></span>  
+ <span data-ttu-id="41881-105">MSMQ başarıyla algılandı.</span><span class="sxs-lookup"><span data-stu-id="41881-105">MSMQ detected successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58ca6-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="58ca6-106">See Also</span></span>  
- [<span data-ttu-id="58ca6-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="58ca6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="58ca6-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="58ca6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="58ca6-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="58ca6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="41881-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="41881-106">See Also</span></span>  
+ [<span data-ttu-id="41881-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="41881-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="41881-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="41881-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="41881-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="41881-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 364144dcef21e7e9c058cb0317970a273aa8ecac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad13dbe8148d4d9507c6a450d2833da049e0e13a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebuginstancefieldsymbolgetsize-method"></a><span data-ttu-id="34382-102">ICorDebugInstanceFieldSymbol::GetSize yöntemi</span><span class="sxs-lookup"><span data-stu-id="34382-102">ICorDebugInstanceFieldSymbol::GetSize Method</span></span>
-<span data-ttu-id="34382-103">Örnek alanı bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="34382-103">Gets the size in bytes of the instance field.</span></span>  
+# <a name="icordebuginstancefieldsymbolgetsize-method"></a><span data-ttu-id="b740c-102">ICorDebugInstanceFieldSymbol::GetSize yöntemi</span><span class="sxs-lookup"><span data-stu-id="b740c-102">ICorDebugInstanceFieldSymbol::GetSize Method</span></span>
+<span data-ttu-id="b740c-103">Örnek alanı bayt cinsinden boyutu alır.</span><span class="sxs-lookup"><span data-stu-id="b740c-103">Gets the size in bytes of the instance field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34382-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="34382-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b740c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b740c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize(  
@@ -30,24 +31,24 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="34382-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="34382-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b740c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b740c-105">Parameters</span></span>  
  `pcbSize`  
- <span data-ttu-id="34382-106">[out] Alanın uzunluğu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="34382-106">[out] A pointer to length of the field.</span></span>  
+ <span data-ttu-id="b740c-106">[out] Alanın uzunluğu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b740c-106">[out] A pointer to length of the field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34382-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="34382-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b740c-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b740c-107">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="34382-108">Bu yöntem yalnızca .NET yerel ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="34382-108">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="b740c-108">Bu yöntem yalnızca .NET yerel ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b740c-108">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34382-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="34382-109">Requirements</span></span>  
- <span data-ttu-id="34382-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34382-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b740c-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b740c-109">Requirements</span></span>  
+ <span data-ttu-id="b740c-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b740c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34382-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34382-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b740c-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b740c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="34382-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34382-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b740c-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b740c-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="34382-113">**.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34382-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="b740c-113">**.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b740c-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34382-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="34382-114">See Also</span></span>  
- [<span data-ttu-id="34382-115">ICorDebugInstanceFieldSymbol arabirimi</span><span class="sxs-lookup"><span data-stu-id="34382-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
- [<span data-ttu-id="34382-116">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="34382-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b740c-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b740c-114">See Also</span></span>  
+ [<span data-ttu-id="b740c-115">ICorDebugInstanceFieldSymbol Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b740c-115">ICorDebugInstanceFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
+ [<span data-ttu-id="b740c-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b740c-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

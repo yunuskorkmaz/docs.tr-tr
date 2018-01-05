@@ -16,19 +16,20 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 523a6cbd0174da4c294e5fd2ab2d0217fc63cb5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8ee5af338b0cbb979e923ba17f69bca2c6c64bc2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="c1c85-102">Nasıl yapılır: görüntü oluşturulan SQL</span><span class="sxs-lookup"><span data-stu-id="c1c85-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="c1c85-103">Sorgular ve değişikliği kullanarak işleme için oluşturulan SQL kodu görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="c1c85-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="c1c85-104">Bu yaklaşımı anlamak için kullanışlıdır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği ve belirli sorunları hata ayıklama için.</span><span class="sxs-lookup"><span data-stu-id="c1c85-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="07c2d-102">Nasıl yapılır: görüntü oluşturulan SQL</span><span class="sxs-lookup"><span data-stu-id="07c2d-102">How to: Display Generated SQL</span></span>
+<span data-ttu-id="07c2d-103">Sorgular ve değişikliği kullanarak işleme için oluşturulan SQL kodu görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="07c2d-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="07c2d-104">Bu yaklaşımı anlamak için kullanışlıdır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği ve belirli sorunları hata ayıklama için.</span><span class="sxs-lookup"><span data-stu-id="07c2d-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c1c85-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="c1c85-105">Example</span></span>  
- <span data-ttu-id="c1c85-106">Aşağıdaki örnek kullanır <xref:System.Data.Linq.DataContext.Log%2A> kod yürütülmeden önce SQL kodunu konsol penceresinde görüntülenecek özelliği.</span><span class="sxs-lookup"><span data-stu-id="c1c85-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="c1c85-107">Bu özelliği kullanmak sorgu, Ekle, Güncelleştir ve komutları silin.</span><span class="sxs-lookup"><span data-stu-id="c1c85-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="07c2d-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="07c2d-105">Example</span></span>  
+ <span data-ttu-id="07c2d-106">Aşağıdaki örnek kullanır <xref:System.Data.Linq.DataContext.Log%2A> kod yürütülmeden önce SQL kodunu konsol penceresinde görüntülenecek özelliği.</span><span class="sxs-lookup"><span data-stu-id="07c2d-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="07c2d-107">Bu özelliği kullanmak sorgu, Ekle, Güncelleştir ve komutları silin.</span><span class="sxs-lookup"><span data-stu-id="07c2d-107">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="c1c85-108">Konsol penceresinde satırlarından yürüttüğünüzde gördüğünüzü olan [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya aşağıdaki C# kodu.</span><span class="sxs-lookup"><span data-stu-id="c1c85-108">The lines from the console window are what you see when you execute the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] or C# code that follows.</span></span>  
+ <span data-ttu-id="07c2d-108">Konsol penceresinde satırlarından yürüttüğünüzde gördüğünüzü olan [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] veya aşağıdaki C# kodu.</span><span class="sxs-lookup"><span data-stu-id="07c2d-108">The lines from the console window are what you see when you execute the [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] or C# code that follows.</span></span>  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -52,5 +53,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="c1c85-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c1c85-109">See Also</span></span>  
- [<span data-ttu-id="c1c85-110">Hata ayıklama desteği</span><span class="sxs-lookup"><span data-stu-id="c1c85-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="07c2d-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="07c2d-109">See Also</span></span>  
+ [<span data-ttu-id="07c2d-110">Hata Ayıklama Desteği</span><span class="sxs-lookup"><span data-stu-id="07c2d-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

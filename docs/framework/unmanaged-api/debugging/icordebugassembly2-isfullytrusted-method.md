@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 19058308876f80afdbaec73583242aa8ad3c33cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d155a12a8b281e427f00706cbc6e10a80804c7c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugassembly2isfullytrusted-method"></a><span data-ttu-id="f430d-102">ICorDebugAssembly2::IsFullyTrusted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f430d-102">ICorDebugAssembly2::IsFullyTrusted Method</span></span>
-<span data-ttu-id="f430d-103">Derleme tam güven çalışma zamanı güvenlik sistemi tarafından verilmiş olup olmadığını belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="f430d-103">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>  
+# <a name="icordebugassembly2isfullytrusted-method"></a><span data-ttu-id="b85ef-102">ICorDebugAssembly2::IsFullyTrusted Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b85ef-102">ICorDebugAssembly2::IsFullyTrusted Method</span></span>
+<span data-ttu-id="b85ef-103">Derleme tam güven çalışma zamanı güvenlik sistemi tarafından verilmiş olup olmadığını belirten bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="b85ef-103">Gets a value that indicates whether the assembly has been granted full trust by the runtime security system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f430d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f430d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b85ef-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b85ef-104">Syntax</span></span>  
   
 ```  
 HRESULT IsFullyTrusted(  
@@ -38,18 +39,18 @@ HRESULT IsFullyTrusted(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f430d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f430d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b85ef-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b85ef-105">Parameters</span></span>  
  `pbFullyTrusted`  
- <span data-ttu-id="f430d-106">[out] `true` derleme çalışma zamanı güvenlik sistemi tarafından; tam güven verilmişse Aksi halde, `false`.</span><span class="sxs-lookup"><span data-stu-id="f430d-106">[out] `true` if the assembly has been granted full trust by the runtime security system; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b85ef-106">[out] `true` derleme çalışma zamanı güvenlik sistemi tarafından; tam güven verilmişse Aksi halde, `false`.</span><span class="sxs-lookup"><span data-stu-id="b85ef-106">[out] `true` if the assembly has been granted full trust by the runtime security system; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f430d-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f430d-107">Remarks</span></span>  
- <span data-ttu-id="f430d-108">Bu yöntem, bir HRESULT, derleme için güvenlik ilkesi henüz diğer bir deyişle, kod, derleme, çözümlenmediyse, CORDBG_E_NOTREADY henüz çalıştırılmamış döndürür.</span><span class="sxs-lookup"><span data-stu-id="f430d-108">This method returns an HRESULT of CORDBG_E_NOTREADY if the security policy for the assembly has not yet been resolved, that is, if no code in the assembly has been run yet.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b85ef-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b85ef-107">Remarks</span></span>  
+ <span data-ttu-id="b85ef-108">Bu yöntem, bir HRESULT, derleme için güvenlik ilkesi henüz diğer bir deyişle, kod, derleme, çözümlenmediyse, CORDBG_E_NOTREADY henüz çalıştırılmamış döndürür.</span><span class="sxs-lookup"><span data-stu-id="b85ef-108">This method returns an HRESULT of CORDBG_E_NOTREADY if the security policy for the assembly has not yet been resolved, that is, if no code in the assembly has been run yet.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f430d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f430d-109">Requirements</span></span>  
- <span data-ttu-id="f430d-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f430d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b85ef-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b85ef-109">Requirements</span></span>  
+ <span data-ttu-id="b85ef-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b85ef-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f430d-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f430d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b85ef-111">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b85ef-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f430d-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f430d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b85ef-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b85ef-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f430d-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f430d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b85ef-113">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b85ef-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

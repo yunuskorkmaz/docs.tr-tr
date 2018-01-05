@@ -13,14 +13,15 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415bcdd366dc0899ce50cef7cf669a3208f564b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b963ba88772f223ebdd1f4aa86832879f3010940
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="a15c4-102">Uç Noktası: Bekleyen Çağrılar</span><span class="sxs-lookup"><span data-stu-id="a15c4-102">Endpoint: Calls Outstanding</span></span>
-<span data-ttu-id="a15c4-103">Sayaç adı: Bekleyen çağrılar</span><span class="sxs-lookup"><span data-stu-id="a15c4-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="a4908-102">Uç Noktası: Bekleyen Çağrılar</span><span class="sxs-lookup"><span data-stu-id="a4908-102">Endpoint: Calls Outstanding</span></span>
+<span data-ttu-id="a4908-103">Sayaç adı: Bekleyen çağrılar</span><span class="sxs-lookup"><span data-stu-id="a4908-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a15c4-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a15c4-104">Description</span></span>  
- <span data-ttu-id="a15c4-105">Bu uç noktaya sürüyor çağrı sayısı.</span><span class="sxs-lookup"><span data-stu-id="a15c4-105">Number of in-progress calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="a4908-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a4908-104">Description</span></span>  
+ <span data-ttu-id="a4908-105">Bu uç noktaya sürüyor çağrı sayısı.</span><span class="sxs-lookup"><span data-stu-id="a4908-105">Number of in-progress calls to this endpoint.</span></span>

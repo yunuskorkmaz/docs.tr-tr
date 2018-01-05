@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2693afe21029129cbe998aad9cff2081353964d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2498a73f43b6d365df9567710fc3f52b63cbebd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfinished"></a><span data-ttu-id="2eca8-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span><span class="sxs-lookup"><span data-stu-id="2eca8-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span></span>
-<span data-ttu-id="2eca8-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span><span class="sxs-lookup"><span data-stu-id="2eca8-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfinished"></a><span data-ttu-id="9c078-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span><span class="sxs-lookup"><span data-stu-id="9c078-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span></span>
+<span data-ttu-id="9c078-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span><span class="sxs-lookup"><span data-stu-id="9c078-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2eca8-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2eca8-104">Description</span></span>  
- <span data-ttu-id="2eca8-105">Bileşen türü kitaplığı çözümlemesi tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="2eca8-105">The component type library analysis completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="9c078-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9c078-104">Description</span></span>  
+ <span data-ttu-id="9c078-105">Bileşen türü kitaplığı çözümlemesi tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="9c078-105">The component type library analysis completed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2eca8-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2eca8-106">See Also</span></span>  
- [<span data-ttu-id="2eca8-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="2eca8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2eca8-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="2eca8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2eca8-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="2eca8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9c078-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9c078-106">See Also</span></span>  
+ [<span data-ttu-id="9c078-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="9c078-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9c078-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="9c078-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9c078-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="9c078-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

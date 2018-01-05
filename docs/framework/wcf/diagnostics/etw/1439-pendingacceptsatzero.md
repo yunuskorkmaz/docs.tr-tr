@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ebc1001e15d80728f6154017952ee316cdda185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2f1cc3dc275e634ccfd1c9c9020d9fdfe039677f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="ad048-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="ad048-102">1439 - PendingAcceptsAtZero</span></span>
-## <a name="properties"></a><span data-ttu-id="ad048-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="ad048-103">Properties</span></span>  
+# <a name="1439---pendingacceptsatzero"></a><span data-ttu-id="949ac-102">1439 - PendingAcceptsAtZero</span><span class="sxs-lookup"><span data-stu-id="949ac-102">1439 - PendingAcceptsAtZero</span></span>
+## <a name="properties"></a><span data-ttu-id="949ac-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="949ac-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="ad048-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="ad048-104">ID</span></span>|<span data-ttu-id="ad048-105">1439</span><span class="sxs-lookup"><span data-stu-id="ad048-105">1439</span></span>|  
-|<span data-ttu-id="ad048-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="ad048-106">Keywords</span></span>|<span data-ttu-id="ad048-107">Kota</span><span class="sxs-lookup"><span data-stu-id="ad048-107">Quota</span></span>|  
-|<span data-ttu-id="ad048-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="ad048-108">Level</span></span>|<span data-ttu-id="ad048-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="ad048-109">Information</span></span>|  
-|<span data-ttu-id="ad048-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="ad048-110">Channel</span></span>|<span data-ttu-id="ad048-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="ad048-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="949ac-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="949ac-104">ID</span></span>|<span data-ttu-id="949ac-105">1439</span><span class="sxs-lookup"><span data-stu-id="949ac-105">1439</span></span>|  
+|<span data-ttu-id="949ac-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="949ac-106">Keywords</span></span>|<span data-ttu-id="949ac-107">Kota</span><span class="sxs-lookup"><span data-stu-id="949ac-107">Quota</span></span>|  
+|<span data-ttu-id="949ac-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="949ac-108">Level</span></span>|<span data-ttu-id="949ac-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="949ac-109">Information</span></span>|  
+|<span data-ttu-id="949ac-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="949ac-110">Channel</span></span>|<span data-ttu-id="949ac-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="949ac-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="ad048-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ad048-112">Description</span></span>  
- <span data-ttu-id="ad048-113">Bu olay yayılan ile bekleyen sıfırda kabul eder.</span><span class="sxs-lookup"><span data-stu-id="ad048-113">This event is emitted with pending accepts at zero.</span></span>  
+## <a name="description"></a><span data-ttu-id="949ac-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="949ac-112">Description</span></span>  
+ <span data-ttu-id="949ac-113">Bu olay yayılan ile bekleyen sıfırda kabul eder.</span><span class="sxs-lookup"><span data-stu-id="949ac-113">This event is emitted with pending accepts at zero.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="ad048-114">İleti</span><span class="sxs-lookup"><span data-stu-id="ad048-114">Message</span></span>  
- <span data-ttu-id="ad048-115">Bekleyen sıfır sol kabul eder</span><span class="sxs-lookup"><span data-stu-id="ad048-115">Zero pending accepts left</span></span>  
+## <a name="message"></a><span data-ttu-id="949ac-114">İleti</span><span class="sxs-lookup"><span data-stu-id="949ac-114">Message</span></span>  
+ <span data-ttu-id="949ac-115">Bekleyen sıfır sol kabul eder</span><span class="sxs-lookup"><span data-stu-id="949ac-115">Zero pending accepts left</span></span>  
   
-## <a name="details"></a><span data-ttu-id="ad048-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="ad048-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="949ac-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="949ac-116">Details</span></span>

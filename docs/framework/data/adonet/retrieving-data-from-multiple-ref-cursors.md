@@ -14,14 +14,15 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 502ddb1bd3c271c0d5dbd082eb401f18591594b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2cde3b50732a7f2ae7e1935a7805cb69e2aba25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a><span data-ttu-id="d876a-102">Bir OracleDataReader kullanarak birden çok REF imleçler veri alma</span><span class="sxs-lookup"><span data-stu-id="d876a-102">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>
-<span data-ttu-id="d876a-103">Bu Microsoft Visual Basic örnek kullanarak değerlerini okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="d876a-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a><span data-ttu-id="969e2-102">Bir OracleDataReader kullanarak birden çok REF imleçler veri alma</span><span class="sxs-lookup"><span data-stu-id="969e2-102">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>
+<span data-ttu-id="969e2-103">Bu Microsoft Visual Basic örnek kullanarak değerlerini okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="969e2-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click( _  
@@ -59,6 +60,6 @@ Private Sub Button1_Click( _
 End Sub   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d876a-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d876a-104">See Also</span></span>  
- [<span data-ttu-id="d876a-105">Oracle REF imleçler</span><span class="sxs-lookup"><span data-stu-id="d876a-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [<span data-ttu-id="d876a-106">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="d876a-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="969e2-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="969e2-104">See Also</span></span>  
+ [<span data-ttu-id="969e2-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="969e2-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="969e2-106">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="969e2-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b3cd4f3ea65102bc6068d24992171689dda48a54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78156e1c99e9772d296a486e1c5e0a6d1caf36bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionclosereceived"></a><span data-ttu-id="f8a45-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span><span class="sxs-lookup"><span data-stu-id="f8a45-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span></span>
-<span data-ttu-id="f8a45-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span><span class="sxs-lookup"><span data-stu-id="f8a45-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionclosereceived"></a><span data-ttu-id="0a0d9-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span><span class="sxs-lookup"><span data-stu-id="0a0d9-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span></span>
+<span data-ttu-id="0a0d9-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span><span class="sxs-lookup"><span data-stu-id="0a0d9-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f8a45-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f8a45-104">Description</span></span>  
- <span data-ttu-id="f8a45-105">Sunucu güvenlik oturumu istemciden Kapat yanıt iletisi aldı.</span><span class="sxs-lookup"><span data-stu-id="f8a45-105">The server security session received a Close response message from client.</span></span>  
+## <a name="description"></a><span data-ttu-id="0a0d9-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0a0d9-104">Description</span></span>  
+ <span data-ttu-id="0a0d9-105">Sunucu güvenlik oturumu istemciden Kapat yanıt iletisi aldı.</span><span class="sxs-lookup"><span data-stu-id="0a0d9-105">The server security session received a Close response message from client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8a45-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f8a45-106">See Also</span></span>  
- [<span data-ttu-id="f8a45-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f8a45-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f8a45-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="f8a45-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f8a45-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="f8a45-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0a0d9-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0a0d9-106">See Also</span></span>  
+ [<span data-ttu-id="0a0d9-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="0a0d9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0a0d9-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="0a0d9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0a0d9-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="0a0d9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

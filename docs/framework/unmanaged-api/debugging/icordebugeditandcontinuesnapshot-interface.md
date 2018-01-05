@@ -19,14 +19,15 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64e5cb3d4cc03c08e209e0c2306c8981f7769836
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1d6156963ae5b9c0b25ef9a5d7f94a08b2c52ad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="9c651-102">Icordebugeditandcontinuesnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="9c651-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
-<span data-ttu-id="9c651-103">`ICorDebugEditAndContinueSnapshot`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="9c651-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="9c651-104">Bu arayüzü kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="9c651-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="882b9-102">Icordebugeditandcontinuesnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="882b9-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
+<span data-ttu-id="882b9-103">`ICorDebugEditAndContinueSnapshot`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="882b9-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="882b9-104">Bu arayüzü kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="882b9-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c651-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9c651-105">See Also</span></span>  
- [<span data-ttu-id="9c651-106">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9c651-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="882b9-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="882b9-105">See Also</span></span>  
+ [<span data-ttu-id="882b9-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="882b9-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

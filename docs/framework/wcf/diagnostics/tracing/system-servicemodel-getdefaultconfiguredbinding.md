@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8377645d269f5f89650a339e4c02b86aed89551e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1a6d56e926f61c245bd71cb7ca10a85b43f9d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="9b848-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="9b848-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
-<span data-ttu-id="9b848-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="9b848-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetdefaultconfiguredbinding"></a><span data-ttu-id="45aa3-102">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="45aa3-102">System.ServiceModel.GetDefaultConfiguredBinding</span></span>
+<span data-ttu-id="45aa3-103">System.ServiceModel.GetDefaultConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="45aa3-103">System.ServiceModel.GetDefaultConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9b848-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b848-104">Description</span></span>  
- <span data-ttu-id="9b848-105">Varsayılan yapılandırılmış bağlamayı Al.</span><span class="sxs-lookup"><span data-stu-id="9b848-105">Get the default configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="45aa3-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="45aa3-104">Description</span></span>  
+ <span data-ttu-id="45aa3-105">Varsayılan yapılandırılmış bağlamayı Al.</span><span class="sxs-lookup"><span data-stu-id="45aa3-105">Get the default configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b848-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b848-106">See Also</span></span>  
- [<span data-ttu-id="9b848-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="9b848-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9b848-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="9b848-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9b848-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="9b848-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="45aa3-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="45aa3-106">See Also</span></span>  
+ [<span data-ttu-id="45aa3-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="45aa3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="45aa3-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="45aa3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="45aa3-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="45aa3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

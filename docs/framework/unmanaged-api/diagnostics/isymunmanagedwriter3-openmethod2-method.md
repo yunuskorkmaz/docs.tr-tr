@@ -21,16 +21,17 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1124eac951e32dbf1cedb7926f582ec6abb99007
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8da6de0271ddce5b956e667420a206c09cc291d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="9dbc7-102">ISymUnmanagedWriter3::OpenMethod2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9dbc7-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="9dbc7-103">Bir yöntem açar ve gerçek bölüm sapması görüntüdeki sağlar.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="109c9-102">ISymUnmanagedWriter3::OpenMethod2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="109c9-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="109c9-103">Bir yöntem açar ve gerçek bölüm sapması görüntüdeki sağlar.</span><span class="sxs-lookup"><span data-stu-id="109c9-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9dbc7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9dbc7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="109c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="109c9-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod2(   
@@ -39,22 +40,22 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9dbc7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9dbc7-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="109c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="109c9-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="9dbc7-106">[in] Yöntemin açılması meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="109c9-106">[in] Yöntemin açılması meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="109c9-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="9dbc7-107">[in] Görüntüde bölüm uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="109c9-107">[in] Görüntüde bölüm uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="109c9-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="9dbc7-108">[in] Görüntüde uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="109c9-108">[in] Görüntüde uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="109c9-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9dbc7-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9dbc7-109">Return Value</span></span>  
- <span data-ttu-id="9dbc7-110">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="109c9-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="109c9-109">Return Value</span></span>  
+ <span data-ttu-id="109c9-110">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="109c9-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9dbc7-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9dbc7-111">Requirements</span></span>  
- <span data-ttu-id="9dbc7-112">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9dbc7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="109c9-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="109c9-111">Requirements</span></span>  
+ <span data-ttu-id="109c9-112">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="109c9-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9dbc7-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9dbc7-113">See Also</span></span>  
- [<span data-ttu-id="9dbc7-114">Isymunmanagedwriter3 arabirimi</span><span class="sxs-lookup"><span data-stu-id="9dbc7-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
- [<span data-ttu-id="9dbc7-115">OpenMethod yöntemi</span><span class="sxs-lookup"><span data-stu-id="9dbc7-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a><span data-ttu-id="109c9-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="109c9-113">See Also</span></span>  
+ [<span data-ttu-id="109c9-114">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="109c9-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)  
+ [<span data-ttu-id="109c9-115">OpenMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="109c9-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

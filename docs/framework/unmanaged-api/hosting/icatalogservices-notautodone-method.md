@@ -21,20 +21,21 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e04adddc51f4d43d32b9a30ffcbdc7dafe213c76
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bc654c30c40def337bd23e54eccd3e29cd0f81b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="a3bbd-102">ICatalogServices::NotAutodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a3bbd-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="a3bbd-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="a3bbd-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="f7e4c-102">ICatalogServices::NotAutodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f7e4c-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="f7e4c-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="f7e4c-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3bbd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a3bbd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7e4c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f7e4c-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a3bbd-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a3bbd-105">See Also</span></span>  
- [<span data-ttu-id="a3bbd-106">Barındırma arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a3bbd-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f7e4c-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f7e4c-105">See Also</span></span>  
+ [<span data-ttu-id="f7e4c-106">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f7e4c-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

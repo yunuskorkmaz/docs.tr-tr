@@ -19,35 +19,36 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a7745808f0efae7484c35b7dfbaade6519e6ba4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 410efc0255429de3eecf599140e1df45b83525aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvalue2-interface1"></a><span data-ttu-id="dcf18-102">Icordebugobjectvalue2 Interface1</span><span class="sxs-lookup"><span data-stu-id="dcf18-102">ICorDebugObjectValue2 Interface1</span></span>
-<span data-ttu-id="dcf18-103">Devralma desteklemek için "ICorDebugObjectValue" arabirimi genişletir ve geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="dcf18-103">Extends the "ICorDebugObjectValue" interface to support inheritance and overrides.</span></span>  
+# <a name="icordebugobjectvalue2-interface1"></a><span data-ttu-id="b5df2-102">Icordebugobjectvalue2 Interface1</span><span class="sxs-lookup"><span data-stu-id="b5df2-102">ICorDebugObjectValue2 Interface1</span></span>
+<span data-ttu-id="b5df2-103">Devralma desteklemek için "ICorDebugObjectValue" arabirimi genişletir ve geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="b5df2-103">Extends the "ICorDebugObjectValue" interface to support inheritance and overrides.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="dcf18-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="dcf18-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b5df2-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b5df2-104">Methods</span></span>  
   
-|<span data-ttu-id="dcf18-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="dcf18-105">Method</span></span>|<span data-ttu-id="dcf18-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dcf18-106">Description</span></span>|  
+|<span data-ttu-id="b5df2-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="b5df2-105">Method</span></span>|<span data-ttu-id="b5df2-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b5df2-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="dcf18-107">GetVirtualMethodAndType yöntemi</span><span class="sxs-lookup"><span data-stu-id="dcf18-107">GetVirtualMethodAndType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|<span data-ttu-id="dcf18-108">`GetVirtualMethodAndType`henüz uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="dcf18-108">`GetVirtualMethodAndType` is not yet implemented.</span></span>|  
+|[<span data-ttu-id="b5df2-107">GetVirtualMethodAndType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b5df2-107">GetVirtualMethodAndType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|<span data-ttu-id="b5df2-108">`GetVirtualMethodAndType`henüz uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="b5df2-108">`GetVirtualMethodAndType` is not yet implemented.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dcf18-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dcf18-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b5df2-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b5df2-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dcf18-110">Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="dcf18-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="b5df2-110">Bu arabirim, makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.</span><span class="sxs-lookup"><span data-stu-id="b5df2-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dcf18-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dcf18-111">Requirements</span></span>  
- <span data-ttu-id="dcf18-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dcf18-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5df2-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b5df2-111">Requirements</span></span>  
+ <span data-ttu-id="b5df2-112">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5df2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dcf18-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dcf18-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b5df2-113">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5df2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dcf18-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dcf18-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b5df2-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5df2-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dcf18-115">**NET Framework sürümlerini:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcf18-115">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b5df2-115">**NET Framework sürümlerini:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5df2-115">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dcf18-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dcf18-116">See Also</span></span>  
- [<span data-ttu-id="dcf18-117">Hata ayıklama arabirimleri</span><span class="sxs-lookup"><span data-stu-id="dcf18-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+## <a name="see-also"></a><span data-ttu-id="b5df2-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b5df2-116">See Also</span></span>  
+ [<span data-ttu-id="b5df2-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b5df2-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9549579af46a7fb81f7e789d790e9f093c5fba4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bbda7929522eda2314103fc356f885561a24f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="e1791-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="e1791-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
-<span data-ttu-id="e1791-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="e1791-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="54814-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="54814-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
+<span data-ttu-id="54814-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="54814-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e1791-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e1791-104">Description</span></span>  
- <span data-ttu-id="e1791-105">İstemciye hata bir oturum gönderilen sunucu güvenlik oturumu durduruldu.</span><span class="sxs-lookup"><span data-stu-id="e1791-105">The server security session sent a session aborted fault to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="54814-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="54814-104">Description</span></span>  
+ <span data-ttu-id="54814-105">İstemciye hata bir oturum gönderilen sunucu güvenlik oturumu durduruldu.</span><span class="sxs-lookup"><span data-stu-id="54814-105">The server security session sent a session aborted fault to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1791-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e1791-106">See Also</span></span>  
- [<span data-ttu-id="e1791-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="e1791-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e1791-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="e1791-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e1791-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="e1791-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="54814-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="54814-106">See Also</span></span>  
+ [<span data-ttu-id="54814-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="54814-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="54814-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="54814-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="54814-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="54814-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fef77481db23303f91166c36adb89f6e9c19997
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9100aa0dd0d910b203718991b119925a6fc1d7cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationserviceshutdown"></a><span data-ttu-id="d194c-102">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="d194c-102">System.ServiceModel.Activation.ServiceShutdown</span></span>
-<span data-ttu-id="d194c-103">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="d194c-103">System.ServiceModel.Activation.ServiceShutdown</span></span>  
+# <a name="systemservicemodelactivationserviceshutdown"></a><span data-ttu-id="23945-102">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="23945-102">System.ServiceModel.Activation.ServiceShutdown</span></span>
+<span data-ttu-id="23945-103">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="23945-103">System.ServiceModel.Activation.ServiceShutdown</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d194c-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d194c-104">Description</span></span>  
- <span data-ttu-id="d194c-105">Bir kapatma hizmet isteği alındı.</span><span class="sxs-lookup"><span data-stu-id="d194c-105">A request to shutdown the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="23945-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="23945-104">Description</span></span>  
+ <span data-ttu-id="23945-105">Bir kapatma hizmet isteği alındı.</span><span class="sxs-lookup"><span data-stu-id="23945-105">A request to shutdown the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d194c-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d194c-106">See Also</span></span>  
- [<span data-ttu-id="d194c-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="d194c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d194c-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="d194c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d194c-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="d194c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="23945-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="23945-106">See Also</span></span>  
+ [<span data-ttu-id="23945-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="23945-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="23945-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="23945-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="23945-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="23945-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

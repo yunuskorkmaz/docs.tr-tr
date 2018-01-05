@@ -13,22 +13,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1a69842bcd0c5404e1c60951d69303dbf0bd39d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dd3cb14c77eadf00d4479dd84a8d71c3dbe7ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="failedtotraceevent"></a><span data-ttu-id="76a12-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="76a12-102">FailedToTraceEvent</span></span>
-<span data-ttu-id="76a12-103">Kimliği: 104</span><span class="sxs-lookup"><span data-stu-id="76a12-103">Id: 104</span></span>  
+# <a name="failedtotraceevent"></a><span data-ttu-id="a7522-102">FailedToTraceEvent</span><span class="sxs-lookup"><span data-stu-id="a7522-102">FailedToTraceEvent</span></span>
+<span data-ttu-id="a7522-103">Kimliği: 104</span><span class="sxs-lookup"><span data-stu-id="a7522-103">Id: 104</span></span>  
   
- <span data-ttu-id="76a12-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="76a12-104">Severity: Error</span></span>  
+ <span data-ttu-id="a7522-104">Önem derecesi: hata</span><span class="sxs-lookup"><span data-stu-id="a7522-104">Severity: Error</span></span>  
   
- <span data-ttu-id="76a12-105">Kategori: izleme</span><span class="sxs-lookup"><span data-stu-id="76a12-105">Category: Tracing</span></span>  
+ <span data-ttu-id="a7522-105">Kategori: izleme</span><span class="sxs-lookup"><span data-stu-id="a7522-105">Category: Tracing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="76a12-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76a12-106">Description</span></span>  
- <span data-ttu-id="76a12-107">Bir olay ya da olayları izlenen değil.</span><span class="sxs-lookup"><span data-stu-id="76a12-107">An event or events were not traced.</span></span> <span data-ttu-id="76a12-108">Olay özgün olay dizesi, işlem adı ve işlem kimliğini listeler</span><span class="sxs-lookup"><span data-stu-id="76a12-108">The event lists the original event string, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="a7522-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7522-106">Description</span></span>  
+ <span data-ttu-id="a7522-107">Bir olay ya da olayları izlenen değil.</span><span class="sxs-lookup"><span data-stu-id="a7522-107">An event or events were not traced.</span></span> <span data-ttu-id="a7522-108">Olay özgün olay dizesi, işlem adı ve işlem kimliğini listeler</span><span class="sxs-lookup"><span data-stu-id="a7522-108">The event lists the original event string, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76a12-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="76a12-109">See Also</span></span>  
- [<span data-ttu-id="76a12-110">Olay günlüğü</span><span class="sxs-lookup"><span data-stu-id="76a12-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="76a12-111">Etkinlik genel başvurusu</span><span class="sxs-lookup"><span data-stu-id="76a12-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="a7522-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a7522-109">See Also</span></span>  
+ [<span data-ttu-id="a7522-110">Günlüğe Olay Kaydetme</span><span class="sxs-lookup"><span data-stu-id="a7522-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="a7522-111">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="a7522-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

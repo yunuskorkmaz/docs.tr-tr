@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f25f1ca70e07fe8db50417b0d12ea6e988410706
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6a65cf1cbfffdb9abacd987a2417b000a464b527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="48e3b-102">ICorDebugObjectValue::GetManagedCopy Metodu</span><span class="sxs-lookup"><span data-stu-id="48e3b-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
-<span data-ttu-id="48e3b-103">`GetManagedCopy`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="48e3b-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="48e3b-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="48e3b-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="7c9f7-102">ICorDebugObjectValue::GetManagedCopy Metodu</span><span class="sxs-lookup"><span data-stu-id="7c9f7-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
+<span data-ttu-id="7c9f7-103">`GetManagedCopy`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="7c9f7-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="7c9f7-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="7c9f7-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48e3b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="48e3b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c9f7-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7c9f7-105">Syntax</span></span>  
   
 ```  
 HRESULT GetManagedCopy (  
@@ -38,9 +39,9 @@ HRESULT GetManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="48e3b-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="48e3b-106">Requirements</span></span>  
- <span data-ttu-id="48e3b-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="48e3b-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c9f7-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7c9f7-106">Requirements</span></span>  
+ <span data-ttu-id="7c9f7-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7c9f7-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48e3b-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="48e3b-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7c9f7-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7c9f7-108">See Also</span></span>  
     
  

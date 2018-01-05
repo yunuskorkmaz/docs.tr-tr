@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97469c66df79a49aaf09c58ac519a50fc0690e45
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc5f61f7c94f7e450381861b8acf50be2ba17355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transportauthenticationsuccess"></a><span data-ttu-id="27500-102">TransportAuthenticationSuccess</span><span class="sxs-lookup"><span data-stu-id="27500-102">TransportAuthenticationSuccess</span></span>
-<span data-ttu-id="27500-103">Kimliği: 173</span><span class="sxs-lookup"><span data-stu-id="27500-103">Id: 173</span></span>  
+# <a name="transportauthenticationsuccess"></a><span data-ttu-id="a2195-102">TransportAuthenticationSuccess</span><span class="sxs-lookup"><span data-stu-id="a2195-102">TransportAuthenticationSuccess</span></span>
+<span data-ttu-id="a2195-103">Kimliği: 173</span><span class="sxs-lookup"><span data-stu-id="a2195-103">Id: 173</span></span>  
   
- <span data-ttu-id="27500-104">Önem derecesi: bilgi</span><span class="sxs-lookup"><span data-stu-id="27500-104">Severity: Informational</span></span>  
+ <span data-ttu-id="a2195-104">Önem derecesi: bilgi</span><span class="sxs-lookup"><span data-stu-id="a2195-104">Severity: Informational</span></span>  
   
- <span data-ttu-id="27500-105">Kategori: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="27500-105">Category: SecurityAudit</span></span>  
+ <span data-ttu-id="a2195-105">Kategori: SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="a2195-105">Category: SecurityAudit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="27500-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="27500-106">Description</span></span>  
- <span data-ttu-id="27500-107">Bu olay, aktarım kimlik doğrulaması başarılı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="27500-107">This event indicates that Transport authentication succeeded.</span></span> <span data-ttu-id="27500-108">Hizmet, istemci kimliği ve etkinlik olay listeler kimliği</span><span class="sxs-lookup"><span data-stu-id="27500-108">The event lists the service, client identity and activity ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="a2195-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a2195-106">Description</span></span>  
+ <span data-ttu-id="a2195-107">Bu olay, aktarım kimlik doğrulaması başarılı olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="a2195-107">This event indicates that Transport authentication succeeded.</span></span> <span data-ttu-id="a2195-108">Hizmet, istemci kimliği ve etkinlik olay listeler kimliği</span><span class="sxs-lookup"><span data-stu-id="a2195-108">The event lists the service, client identity and activity ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27500-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="27500-109">See Also</span></span>  
- [<span data-ttu-id="27500-110">Olay günlüğü</span><span class="sxs-lookup"><span data-stu-id="27500-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="27500-111">Etkinlik genel başvurusu</span><span class="sxs-lookup"><span data-stu-id="27500-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="a2195-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a2195-109">See Also</span></span>  
+ [<span data-ttu-id="a2195-110">Günlüğe Olay Kaydetme</span><span class="sxs-lookup"><span data-stu-id="a2195-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="a2195-111">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="a2195-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

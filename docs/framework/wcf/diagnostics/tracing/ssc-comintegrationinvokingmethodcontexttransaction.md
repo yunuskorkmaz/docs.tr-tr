@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 773644df36767281d168628783fa2da7f49215f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3c7661339a7a1645de30dcd0b1f9fad54dac5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a><span data-ttu-id="7c688-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="7c688-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>
-<span data-ttu-id="7c688-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="7c688-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a><span data-ttu-id="f6878-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="f6878-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>
+<span data-ttu-id="f6878-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span><span class="sxs-lookup"><span data-stu-id="f6878-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7c688-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7c688-104">Description</span></span>  
- <span data-ttu-id="7c688-105">ComPlus: COM + kapsamında işlemle yöntemi çağırma.</span><span class="sxs-lookup"><span data-stu-id="7c688-105">Complus: Invoking method with the transaction in COM+ context.</span></span>  
+## <a name="description"></a><span data-ttu-id="f6878-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f6878-104">Description</span></span>  
+ <span data-ttu-id="f6878-105">ComPlus: COM + kapsamında işlemle yöntemi çağırma.</span><span class="sxs-lookup"><span data-stu-id="f6878-105">Complus: Invoking method with the transaction in COM+ context.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c688-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7c688-106">See Also</span></span>  
- [<span data-ttu-id="7c688-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="7c688-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7c688-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="7c688-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7c688-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="7c688-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f6878-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f6878-106">See Also</span></span>  
+ [<span data-ttu-id="f6878-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f6878-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f6878-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="f6878-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f6878-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="f6878-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

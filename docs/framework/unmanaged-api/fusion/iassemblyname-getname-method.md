@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 612efc9d5334fd34cc61f2243914de59370c45a0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 681df0b4d6b3d7206954264355afb3ef2628243d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iassemblynamegetname-method"></a><span data-ttu-id="6f3cc-102">IAssemblyName::GetName Metodu</span><span class="sxs-lookup"><span data-stu-id="6f3cc-102">IAssemblyName::GetName Method</span></span>
-<span data-ttu-id="6f3cc-103">Bu tarafından başvurulan derleme basit, şifrelenmemiş adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesnesi.</span><span class="sxs-lookup"><span data-stu-id="6f3cc-103">Gets the simple, unencrypted name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetname-method"></a><span data-ttu-id="5be70-102">IAssemblyName::GetName Metodu</span><span class="sxs-lookup"><span data-stu-id="5be70-102">IAssemblyName::GetName Method</span></span>
+<span data-ttu-id="5be70-103">Bu tarafından başvurulan derleme basit, şifrelenmemiş adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesnesi.</span><span class="sxs-lookup"><span data-stu-id="5be70-103">Gets the simple, unencrypted name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f3cc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f3cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5be70-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5be70-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -39,19 +40,19 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6f3cc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6f3cc-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5be70-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5be70-105">Parameters</span></span>  
  `lpcwBuffer`  
- <span data-ttu-id="6f3cc-106">[içinde out] Boyutunu `pwzName` null Sonlandırıcı karakteri geniş karakter dahil olmak üzere.</span><span class="sxs-lookup"><span data-stu-id="6f3cc-106">[in, out] The size of `pwzName` in wide characters, including the null terminator character.</span></span>  
+ <span data-ttu-id="5be70-106">[içinde out] Boyutunu `pwzName` null Sonlandırıcı karakteri geniş karakter dahil olmak üzere.</span><span class="sxs-lookup"><span data-stu-id="5be70-106">[in, out] The size of `pwzName` in wide characters, including the null terminator character.</span></span>  
   
  `pwzName`  
- <span data-ttu-id="6f3cc-107">[out] Başvurulan bütünleştirilmiş kodun adını tutmak için arabellek.</span><span class="sxs-lookup"><span data-stu-id="6f3cc-107">[out] A buffer to hold the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="5be70-107">[out] Başvurulan bütünleştirilmiş kodun adını tutmak için arabellek.</span><span class="sxs-lookup"><span data-stu-id="5be70-107">[out] A buffer to hold the name of the referenced assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f3cc-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6f3cc-108">Requirements</span></span>  
- <span data-ttu-id="6f3cc-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f3cc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5be70-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5be70-108">Requirements</span></span>  
+ <span data-ttu-id="5be70-109">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5be70-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f3cc-110">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="6f3cc-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5be70-110">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5be70-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="6f3cc-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f3cc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5be70-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5be70-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f3cc-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6f3cc-112">See Also</span></span>  
- [<span data-ttu-id="6f3cc-113">Iassemblyname arabirimi</span><span class="sxs-lookup"><span data-stu-id="6f3cc-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5be70-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5be70-112">See Also</span></span>  
+ [<span data-ttu-id="5be70-113">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5be70-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

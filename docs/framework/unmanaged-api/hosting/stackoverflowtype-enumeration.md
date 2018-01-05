@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64312398c95a33c2bbe136b1c4d03c06cb09aeef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a04db61a16aeae24476fb0b191a3d2dc89743dee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="1e1e8-102">StackOverflowType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="1e1e8-102">StackOverflowType Enumeration</span></span>
-<span data-ttu-id="1e1e8-103">Bir yığın taşması olayın temel nedenini gösteren değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
+# <a name="stackoverflowtype-enumeration"></a><span data-ttu-id="8567e-102">StackOverflowType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="8567e-102">StackOverflowType Enumeration</span></span>
+<span data-ttu-id="8567e-103">Bir yığın taşması olayın temel nedenini gösteren değerlerini içerir.</span><span class="sxs-lookup"><span data-stu-id="8567e-103">Contains values that indicate the underlying cause of a stack overflow event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e1e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1e1e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8567e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8567e-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,25 +39,25 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1e1e8-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="1e1e8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8567e-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="8567e-105">Members</span></span>  
   
-|<span data-ttu-id="1e1e8-106">Üye</span><span class="sxs-lookup"><span data-stu-id="1e1e8-106">Member</span></span>|<span data-ttu-id="1e1e8-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1e1e8-107">Description</span></span>|  
+|<span data-ttu-id="8567e-106">Üye</span><span class="sxs-lookup"><span data-stu-id="8567e-106">Member</span></span>|<span data-ttu-id="8567e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8567e-107">Description</span></span>|  
 |------------|-----------------|  
-|`SO_ClrEngine`|<span data-ttu-id="1e1e8-108">Yığın taşması yürütme altyapısı tarafından neden oldu.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-108">The stack overflow was caused by the execution engine.</span></span>|  
-|`SO_Managed`|<span data-ttu-id="1e1e8-109">Yığın taşması tarafından yönetilen kod neden oldu.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-109">The stack overflow was caused by managed code.</span></span>|  
-|`SO_Other`|<span data-ttu-id="1e1e8-110">Yığın taşması tarafından yönetilmeyen kod neden oldu.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-110">The stack overflow was caused by unmanaged code.</span></span>|  
+|`SO_ClrEngine`|<span data-ttu-id="8567e-108">Yığın taşması yürütme altyapısı tarafından neden oldu.</span><span class="sxs-lookup"><span data-stu-id="8567e-108">The stack overflow was caused by the execution engine.</span></span>|  
+|`SO_Managed`|<span data-ttu-id="8567e-109">Yığın taşması tarafından yönetilen kod neden oldu.</span><span class="sxs-lookup"><span data-stu-id="8567e-109">The stack overflow was caused by managed code.</span></span>|  
+|`SO_Other`|<span data-ttu-id="8567e-110">Yığın taşması tarafından yönetilmeyen kod neden oldu.</span><span class="sxs-lookup"><span data-stu-id="8567e-110">The stack overflow was caused by unmanaged code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1e1e8-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1e1e8-111">Remarks</span></span>  
- <span data-ttu-id="1e1e8-112">Bu bilgiler bir çağrı konağa geçirilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8567e-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8567e-111">Remarks</span></span>  
+ <span data-ttu-id="8567e-112">Bu bilgiler bir çağrı konağa geçirilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8567e-112">This information is passed to the host through a call to the [IActionOnCLREvent::OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e1e8-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1e1e8-113">Requirements</span></span>  
- <span data-ttu-id="1e1e8-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e1e8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8567e-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8567e-113">Requirements</span></span>  
+ <span data-ttu-id="8567e-114">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8567e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e1e8-115">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1e1e8-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8567e-115">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8567e-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1e1e8-116">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1e1e8-116">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="8567e-116">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8567e-116">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1e1e8-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e1e8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8567e-117">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8567e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e1e8-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1e1e8-118">See Also</span></span>  
- [<span data-ttu-id="1e1e8-119">Barındırma numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="1e1e8-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8567e-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8567e-118">See Also</span></span>  
+ [<span data-ttu-id="8567e-119">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="8567e-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

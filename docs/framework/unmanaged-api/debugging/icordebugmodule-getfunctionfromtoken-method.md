@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 96e458bc8fdcf37f572c1f45ba9c31d15311c8c6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c449b49333de562cd5ed07f827da6bc295e9c3c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmodulegetfunctionfromtoken-method"></a><span data-ttu-id="1611a-102">ICorDebugModule::GetFunctionFromToken Metodu</span><span class="sxs-lookup"><span data-stu-id="1611a-102">ICorDebugModule::GetFunctionFromToken Method</span></span>
-<span data-ttu-id="1611a-103">Meta veri simgesi tarafından belirtilen işlevi alır.</span><span class="sxs-lookup"><span data-stu-id="1611a-103">Gets the function that is specified by the metadata token.</span></span>  
+# <a name="icordebugmodulegetfunctionfromtoken-method"></a><span data-ttu-id="f19a6-102">ICorDebugModule::GetFunctionFromToken Metodu</span><span class="sxs-lookup"><span data-stu-id="f19a6-102">ICorDebugModule::GetFunctionFromToken Method</span></span>
+<span data-ttu-id="f19a6-103">Meta veri simgesi tarafından belirtilen işlevi alır.</span><span class="sxs-lookup"><span data-stu-id="f19a6-103">Gets the function that is specified by the metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1611a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1611a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f19a6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f19a6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromToken(  
@@ -39,21 +40,21 @@ HRESULT GetFunctionFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1611a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1611a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f19a6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f19a6-105">Parameters</span></span>  
  `methodDef`  
- <span data-ttu-id="1611a-106">[in] A `mdMethodDef` işlev meta verileri başvuran meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="1611a-106">[in] A `mdMethodDef` metadata token that references the function's metadata.</span></span>  
+ <span data-ttu-id="f19a6-106">[in] A `mdMethodDef` işlev meta verileri başvuran meta veri simgesi.</span><span class="sxs-lookup"><span data-stu-id="f19a6-106">[in] A `mdMethodDef` metadata token that references the function's metadata.</span></span>  
   
  `ppFunction`  
- <span data-ttu-id="1611a-107">[out] Bir işaretçi adresine ICorDebugFunction arabirimi nesnesinin işlevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="1611a-107">[out] A pointer to the address of a ICorDebugFunction interface object that represents the function.</span></span>  
+ <span data-ttu-id="f19a6-107">[out] Bir işaretçi adresine ICorDebugFunction arabirimi nesnesinin işlevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f19a6-107">[out] A pointer to the address of a ICorDebugFunction interface object that represents the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1611a-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1611a-108">Remarks</span></span>  
- <span data-ttu-id="1611a-109">`GetFunctionFromToken` Yöntemi hatalı döndürürse CORDBG_E_FUNCTION_NOT_IL HRESULT değeri geçirilen `methodDef` bir Microsoft Ara dili (MSIL) yönteme başvurmuyor.</span><span class="sxs-lookup"><span data-stu-id="1611a-109">The `GetFunctionFromToken` method returns a CORDBG_E_FUNCTION_NOT_IL HRESULT if the value passed in `methodDef` does not refer to a Microsoft intermediate language (MSIL) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f19a6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f19a6-108">Remarks</span></span>  
+ <span data-ttu-id="f19a6-109">`GetFunctionFromToken` Yöntemi hatalı döndürürse CORDBG_E_FUNCTION_NOT_IL HRESULT değeri geçirilen `methodDef` bir Microsoft Ara dili (MSIL) yönteme başvurmuyor.</span><span class="sxs-lookup"><span data-stu-id="f19a6-109">The `GetFunctionFromToken` method returns a CORDBG_E_FUNCTION_NOT_IL HRESULT if the value passed in `methodDef` does not refer to a Microsoft intermediate language (MSIL) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1611a-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1611a-110">Requirements</span></span>  
- <span data-ttu-id="1611a-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1611a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f19a6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f19a6-110">Requirements</span></span>  
+ <span data-ttu-id="f19a6-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f19a6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1611a-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1611a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f19a6-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f19a6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1611a-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1611a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f19a6-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f19a6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1611a-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1611a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f19a6-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f19a6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

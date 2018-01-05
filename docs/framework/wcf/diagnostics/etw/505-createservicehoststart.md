@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da643d1d35f48b907676df9ba223ec2ee6fb0658
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d031447a424aa3576bfab20bc17b1756d85b965
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="505---createservicehoststart"></a><span data-ttu-id="3e953-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="3e953-102">505 - CreateServiceHostStart</span></span>
-## <a name="properties"></a><span data-ttu-id="3e953-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="3e953-103">Properties</span></span>  
+# <a name="505---createservicehoststart"></a><span data-ttu-id="36f51-102">505 - CreateServiceHostStart</span><span class="sxs-lookup"><span data-stu-id="36f51-102">505 - CreateServiceHostStart</span></span>
+## <a name="properties"></a><span data-ttu-id="36f51-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="36f51-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3e953-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="3e953-104">ID</span></span>|<span data-ttu-id="3e953-105">505</span><span class="sxs-lookup"><span data-stu-id="3e953-105">505</span></span>|  
-|<span data-ttu-id="3e953-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="3e953-106">Keywords</span></span>|<span data-ttu-id="3e953-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="3e953-107">WebHost</span></span>|  
-|<span data-ttu-id="3e953-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="3e953-108">Level</span></span>|<span data-ttu-id="3e953-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="3e953-109">Information</span></span>|  
-|<span data-ttu-id="3e953-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="3e953-110">Channel</span></span>|<span data-ttu-id="3e953-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="3e953-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="36f51-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="36f51-104">ID</span></span>|<span data-ttu-id="36f51-105">505</span><span class="sxs-lookup"><span data-stu-id="36f51-105">505</span></span>|  
+|<span data-ttu-id="36f51-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="36f51-106">Keywords</span></span>|<span data-ttu-id="36f51-107">WebHost</span><span class="sxs-lookup"><span data-stu-id="36f51-107">WebHost</span></span>|  
+|<span data-ttu-id="36f51-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="36f51-108">Level</span></span>|<span data-ttu-id="36f51-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="36f51-109">Information</span></span>|  
+|<span data-ttu-id="36f51-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="36f51-110">Channel</span></span>|<span data-ttu-id="36f51-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="36f51-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3e953-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3e953-112">Description</span></span>  
- <span data-ttu-id="3e953-113">Bu olay CreateServiceHost başladığında yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="3e953-113">This event is emitted when CreateServiceHost begins.</span></span>  
+## <a name="description"></a><span data-ttu-id="36f51-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="36f51-112">Description</span></span>  
+ <span data-ttu-id="36f51-113">Bu olay CreateServiceHost başladığında yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="36f51-113">This event is emitted when CreateServiceHost begins.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3e953-114">İleti</span><span class="sxs-lookup"><span data-stu-id="3e953-114">Message</span></span>  
- <span data-ttu-id="3e953-115">CreateServiceHost başlayın.</span><span class="sxs-lookup"><span data-stu-id="3e953-115">Begin CreateServiceHost.</span></span>  
+## <a name="message"></a><span data-ttu-id="36f51-114">İleti</span><span class="sxs-lookup"><span data-stu-id="36f51-114">Message</span></span>  
+ <span data-ttu-id="36f51-115">CreateServiceHost başlayın.</span><span class="sxs-lookup"><span data-stu-id="36f51-115">Begin CreateServiceHost.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3e953-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="3e953-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="36f51-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="36f51-116">Details</span></span>

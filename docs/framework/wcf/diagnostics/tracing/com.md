@@ -13,13 +13,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2393b72d121f45262693494f6921a523b6b02b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d48677f476e179afe555b1396a65e29dcf9a2687
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="com"></a><span data-ttu-id="ab024-102">COM+</span><span class="sxs-lookup"><span data-stu-id="ab024-102">COM+</span></span>
-<span data-ttu-id="ab024-103">Aşağıdaki şekilde, etkinlik izleme bir COM + uygulamasını nasıl kullanabileceğiniz gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ab024-103">The following figure shows how you can use activity tracing in a COM+ application.</span></span> <span data-ttu-id="ab024-104">Sunucuda kullanıcı kodu yürütme yerine her yöntem çağrısı COM nesne modeli için bir COM + etkinlik tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ab024-104">Instead of executing user code on the server, we can define a COM+ activity for each method call to the COM+ object model.</span></span>  
+# <a name="com"></a><span data-ttu-id="33aab-102">COM+</span><span class="sxs-lookup"><span data-stu-id="33aab-102">COM+</span></span>
+<span data-ttu-id="33aab-103">Aşağıdaki şekilde, etkinlik izleme bir COM + uygulamasını nasıl kullanabileceğiniz gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="33aab-103">The following figure shows how you can use activity tracing in a COM+ application.</span></span> <span data-ttu-id="33aab-104">Sunucuda kullanıcı kodu yürütme yerine her yöntem çağrısı COM nesne modeli için bir COM + etkinlik tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="33aab-104">Instead of executing user code on the server, we can define a COM+ activity for each method call to the COM+ object model.</span></span>  
   
- <span data-ttu-id="ab024-105">![Zaman uyumlu çağrıları bir COM &#43; Uygulama](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com + izleme")</span><span class="sxs-lookup"><span data-stu-id="ab024-105">![Synchronous calls with a COM&#43; application](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com+Tracing")</span></span>
+ <span data-ttu-id="33aab-105">![Zaman uyumlu çağrıları bir COM &#43; Uygulama](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com + izleme")</span><span class="sxs-lookup"><span data-stu-id="33aab-105">![Synchronous calls with a COM&#43; application](../../../../../docs/framework/wcf/diagnostics/tracing/media/com-tracing.gif "Com+Tracing")</span></span>

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cf508246721169975d7ae0b4a540398c2b1caa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1ed77cd4c41293241f85b83bb26728f4b293d05a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="events-general-reference"></a><span data-ttu-id="b9e98-102">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="b9e98-102">Events General Reference</span></span>
-<span data-ttu-id="b9e98-103">Bu bölümde tarafından gösterilen tüm olayları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b9e98-103">This section lists all the events that are emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>
+# <a name="events-general-reference"></a><span data-ttu-id="6194d-102">Etkinlik Genel Başvurusu</span><span class="sxs-lookup"><span data-stu-id="6194d-102">Events General Reference</span></span>
+<span data-ttu-id="6194d-103">Bu bölümde tarafından gösterilen tüm olayları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6194d-103">This section lists all the events that are emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>

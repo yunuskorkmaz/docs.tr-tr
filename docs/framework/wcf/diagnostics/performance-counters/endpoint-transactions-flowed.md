@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 930e06a70bc7975b5370ab47050da929aa29e33c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3a57b3f29c1e7d187a803609c43ea48958c1850f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-transactions-flowed"></a><span data-ttu-id="a8fe4-102">Uç Noktası: Akışı Yapılan İşlemler</span><span class="sxs-lookup"><span data-stu-id="a8fe4-102">Endpoint: Transactions Flowed</span></span>
-<span data-ttu-id="a8fe4-103">Sayaç adı: Akışı yapılan işlemler.</span><span class="sxs-lookup"><span data-stu-id="a8fe4-103">Counter Name: Transactions Flowed.</span></span>  
+# <a name="endpoint-transactions-flowed"></a><span data-ttu-id="47d5f-102">Uç Noktası: Akışı Yapılan İşlemler</span><span class="sxs-lookup"><span data-stu-id="47d5f-102">Endpoint: Transactions Flowed</span></span>
+<span data-ttu-id="47d5f-103">Sayaç adı: Akışı yapılan işlemler.</span><span class="sxs-lookup"><span data-stu-id="47d5f-103">Counter Name: Transactions Flowed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a8fe4-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a8fe4-104">Description</span></span>  
- <span data-ttu-id="a8fe4-105">Bu uç noktada işlemler için işlem sayısı aktarılan.</span><span class="sxs-lookup"><span data-stu-id="a8fe4-105">Number of transactions flowed to operations at this endpoint.</span></span> <span data-ttu-id="a8fe4-106">Bu sayaç, bir işlem kimliği uç noktasına gönderilen bir ileti bulunur dilediğiniz zaman artırılır.</span><span class="sxs-lookup"><span data-stu-id="a8fe4-106">This counter is incremented any time a transaction ID is present in a message sent to the endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="47d5f-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="47d5f-104">Description</span></span>  
+ <span data-ttu-id="47d5f-105">Bu uç noktada işlemler için işlem sayısı aktarılan.</span><span class="sxs-lookup"><span data-stu-id="47d5f-105">Number of transactions flowed to operations at this endpoint.</span></span> <span data-ttu-id="47d5f-106">Bu sayaç, bir işlem kimliği uç noktasına gönderilen bir ileti bulunur dilediğiniz zaman artırılır.</span><span class="sxs-lookup"><span data-stu-id="47d5f-106">This counter is incremented any time a transaction ID is present in a message sent to the endpoint.</span></span>

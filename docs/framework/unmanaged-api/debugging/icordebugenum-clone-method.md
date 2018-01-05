@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c992410349a7bc1e16b192f564c56e0e17be4a58
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5ddd7d82b6eb2944b1d2a5d7a83f0ccc9f255e45
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugenumclone-method"></a><span data-ttu-id="f4a8c-102">ICorDebugEnum::Clone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f4a8c-102">ICorDebugEnum::Clone Method</span></span>
-<span data-ttu-id="f4a8c-103">Bu Icordebugenum nesnesinin bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f4a8c-103">Creates a copy of this ICorDebugEnum object.</span></span>  
+# <a name="icordebugenumclone-method"></a><span data-ttu-id="9055a-102">ICorDebugEnum::Clone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9055a-102">ICorDebugEnum::Clone Method</span></span>
+<span data-ttu-id="9055a-103">Bu Icordebugenum nesnesinin bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="9055a-103">Creates a copy of this ICorDebugEnum object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4a8c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f4a8c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9055a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9055a-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (  
@@ -38,15 +39,15 @@ HRESULT Clone (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f4a8c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f4a8c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9055a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9055a-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="f4a8c-106">[out] Adresine bir işaretçi bir `ICorDebugEnum` bu kopyası olan nesne `ICorDebugEnum` nesne.</span><span class="sxs-lookup"><span data-stu-id="f4a8c-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
+ <span data-ttu-id="9055a-106">[out] Adresine bir işaretçi bir `ICorDebugEnum` bu kopyası olan nesne `ICorDebugEnum` nesne.</span><span class="sxs-lookup"><span data-stu-id="9055a-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4a8c-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f4a8c-107">Requirements</span></span>  
- <span data-ttu-id="f4a8c-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4a8c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9055a-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9055a-107">Requirements</span></span>  
+ <span data-ttu-id="9055a-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9055a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4a8c-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4a8c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9055a-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9055a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f4a8c-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4a8c-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9055a-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9055a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4a8c-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4a8c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9055a-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9055a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

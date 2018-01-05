@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09b372a4e8412b7ea6608e99d69a8f9f5d94bc16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961bfc3a862a5af96264fa0b13c86e24c16f71d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="86596-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="86596-102">System.ServiceModel.GetConfiguredBinding</span></span>
-<span data-ttu-id="86596-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="86596-103">System.ServiceModel.GetConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="7fe12-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="7fe12-102">System.ServiceModel.GetConfiguredBinding</span></span>
+<span data-ttu-id="7fe12-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="7fe12-103">System.ServiceModel.GetConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="86596-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="86596-104">Description</span></span>  
- <span data-ttu-id="86596-105">Yapılandırılan bağlama alın.</span><span class="sxs-lookup"><span data-stu-id="86596-105">Get the configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="7fe12-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7fe12-104">Description</span></span>  
+ <span data-ttu-id="7fe12-105">Yapılandırılan bağlama alın.</span><span class="sxs-lookup"><span data-stu-id="7fe12-105">Get the configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86596-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="86596-106">See Also</span></span>  
- [<span data-ttu-id="86596-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="86596-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="86596-108">Uygulamanızda sorun giderme için izlemeyi kullanma</span><span class="sxs-lookup"><span data-stu-id="86596-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="86596-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="86596-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="7fe12-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7fe12-106">See Also</span></span>  
+ [<span data-ttu-id="7fe12-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="7fe12-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="7fe12-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="7fe12-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="7fe12-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="7fe12-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
