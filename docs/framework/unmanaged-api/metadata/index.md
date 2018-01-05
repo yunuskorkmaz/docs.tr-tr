@@ -17,27 +17,28 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fb9ec08840fa4156cab95752536de6129eef0e50
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 727bb5261889c2dbb5ccd182d8feb085f4e80da5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Meta Veri (Yönetilmeyen API Başvurusu)
 Ortak dil çalışma zamanı tarafından (CLR) yüklenmesini türleri olmadan bir bileşenin meta verilerine erişmek veya oluşturmak bir istemci, bir derleyici gibi API meta veri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Meta veri arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  .NET Framework türleri, yöntemleri, alanları ve benzeri tarafından kullanıma sunulan meta verilerine erişim sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
   
- [Meta veri genel statik işlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
+ [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
  API meta veri kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.  
   
- [Meta veri numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
  API meta veri kullanan yönetilmeyen numaralandırmalar açıklar.  
   
- [Meta veri yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
+ [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
  API meta veri kullanan yönetilmeyen yapılar açıklar.  
   
- [Meta veri Birleşmeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)  
+ [Meta Veri Birleşimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)  
  API meta veri kullanan yönetilmeyen birleşimler açıklar.

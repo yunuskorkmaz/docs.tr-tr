@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 415539be0dbed8e0cf3f9d6e5c79bf4cfac09fe2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b39a43874bc1808928f21e0a35638aae9a99ca8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager Arabirimi
 Standart Win32 sanal bellek işlevleri kullanmak yerine ortak dil çalışma zamanı (CLR) ana bilgisayar üzerinden sanal bellek istekler yapmasını sağlayan yöntemler sağlar.  
@@ -32,16 +33,16 @@ Standart Win32 sanal bellek işlevleri kullanmak yerine ortak dil çalışma zam
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AcquiredVirtualAddressSpace yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Ana bilgisayar işletim sisteminden belirtilen bellek ortak dil çalışma zamanı (CLR) geçirmiş bildirir.|  
-|[CreateMAlloc yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Bir arabirim işaretçisi alır bir [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) ana bilgisayar tarafından oluşturulan bir yığın bellek ayırmaları istemesini kullanılan örnek.|  
-|[GetMemoryLoad yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-getmemoryload-method.md)|Şu anda kullanılıyor, fiziksel bellek miktarı, ana bilgisayar tarafından bildirilen alır.|  
-|[NeedsVirtualAddressSpace yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-needsvirtualaddressspace-method.md)|Ana bilgisayar CLR belirtilen bellek kullanma girişimi gittiği bildirir.|  
-|[RegisterMemoryNotificationCallback yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md)|Konak bilgisayardaki geçerli bellek yükü CLR bildirmek için çağıran bir geri çağırma işlevini gösteren bir işaretçi kaydeder.|  
-|[ReleasedVirtualAddressSpace yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-releasedvirtualaddressspace-method.md)|Ana bilgisayar CLR belirtilen bellek kullanarak tamamlandığını bildirir.|  
-|[VirtualAlloc yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)|Mantıksal bir sarmalayıcı ayırır veya bir bölge çağırma işleminin sanal adres alanındaki sayfaların tamamlar karşılık gelen Win32 işlevi görür.|  
-|[VirtualFree yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualfree-method.md)|Serbest, decommits, veya serbest bırakır ve çağırma işleminin sanal adres alanı içinde sayfalar bölgesi decommits karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
-|[VirtualProtect yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualprotect-method.md)|Bir bölge koruma çağırma işleminin sanal adres alanındaki taahhüt sayfaların değişiklikleri karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
-|[VirtualQuery yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|Çağırma işleminin sanal adres alanındaki sayfaları bir dizi ilgili bilgileri alır karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
+|[AcquiredVirtualAddressSpace Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Ana bilgisayar işletim sisteminden belirtilen bellek ortak dil çalışma zamanı (CLR) geçirmiş bildirir.|  
+|[CreateMAlloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Bir arabirim işaretçisi alır bir [Ihostmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) ana bilgisayar tarafından oluşturulan bir yığın bellek ayırmaları istemesini kullanılan örnek.|  
+|[GetMemoryLoad Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-getmemoryload-method.md)|Şu anda kullanılıyor, fiziksel bellek miktarı, ana bilgisayar tarafından bildirilen alır.|  
+|[NeedsVirtualAddressSpace Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-needsvirtualaddressspace-method.md)|Ana bilgisayar CLR belirtilen bellek kullanma girişimi gittiği bildirir.|  
+|[RegisterMemoryNotificationCallback Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md)|Konak bilgisayardaki geçerli bellek yükü CLR bildirmek için çağıran bir geri çağırma işlevini gösteren bir işaretçi kaydeder.|  
+|[ReleasedVirtualAddressSpace Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-releasedvirtualaddressspace-method.md)|Ana bilgisayar CLR belirtilen bellek kullanarak tamamlandığını bildirir.|  
+|[VirtualAlloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)|Mantıksal bir sarmalayıcı ayırır veya bir bölge çağırma işleminin sanal adres alanındaki sayfaların tamamlar karşılık gelen Win32 işlevi görür.|  
+|[VirtualFree Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualfree-method.md)|Serbest, decommits, veya serbest bırakır ve çağırma işleminin sanal adres alanı içinde sayfalar bölgesi decommits karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
+|[VirtualProtect Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualprotect-method.md)|Bir bölge koruma çağırma işleminin sanal adres alanındaki taahhüt sayfaların değişiklikleri karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
+|[VirtualQuery Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|Çağırma işleminin sanal adres alanındaki sayfaları bir dizi ilgili bilgileri alır karşılık gelen Win32 işlevi için mantıksal bir kapsayıcı görevi görür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `IHostMemoryManager`Ayrıca ana bilgisayar tarafından bildirilen içinden öbek üzerinde bellek istekler yapmasını ve işleminde, bellek baskısı düzeyini almak için bir işaretçi almak CLR için yöntemleri sağlar.  
@@ -56,5 +57,5 @@ Standart Win32 sanal bellek işlevleri kullanmak yerine ortak dil çalışma zam
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ihostmalloc arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [IHostMalloc Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

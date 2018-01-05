@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17fe1a073a2c8fe6b800ce353b23ca43059d3454
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f9b1d2f957c54d1e91d7d14cd35c328d4a6666e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax"></a>AJAX
 Bu bölüm, zaman uyumsuz JavaScript ve XML işlevselliğini göstermek örnekleri içerir.  
@@ -26,20 +27,20 @@ Bu bölüm, zaman uyumsuz JavaScript ve XML işlevselliğini göstermek örnekle
  [JSONP](../../../../docs/framework/wcf/samples/jsonp.md)  
  WCF REST Hizmetleri'nde JSON ile doldurma (JSONP) desteklemek gösterilmiştir.  
   
- [JSON seri hale getirme](../../../../docs/framework/wcf/samples/json-serialization.md)  
+ [JSON Serileştirme](../../../../docs/framework/wcf/samples/json-serialization.md)  
  Nasıl kullanılacağı ortaya <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> seri hale getirmek ve JavaScript nesne gösterimi (JSON) biçimindeki verileri seri durumdan için.  
   
- [Temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)  
+ [Temel AJAX Hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturmak için.  
   
- [AJAX hizmeti kullanarak HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
+ [HTTP POST Kullanan AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oluşturmak için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] HTTP POST kullanan zaman uyumsuz JavaScript ve XML (AJAX) hizmet.  
   
- [Yapılandırma olmadan AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
+ [Yapılandırma Olmadan AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturmak için.  
   
- [Karmaşık türler kullanan AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  
+ [Karmaşık Türler Kullanan AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] karmaşık türlerin örnekleri oluşturan bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) bir hizmet oluşturmak için.  
   
- [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)  
+ [JSON ve XML ile AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JavaScript nesne gösterimi (JSON) veya XML veri döndüren bir zaman uyumsuz JavaScript ve XML (AJAX) bir hizmet oluşturmak için.

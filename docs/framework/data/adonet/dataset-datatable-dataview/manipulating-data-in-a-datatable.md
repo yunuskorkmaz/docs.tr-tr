@@ -13,35 +13,36 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 341723d44960d4eaf9d8338e3c266720816c0899
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58d04a3ba1d73d4236353ff4f08a747ac7b6f0cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri düzenleme
 Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.Data.DataSet>, bir tablo bir veritabanında kullanırken yaptığınız aynı etkinliklerini gerçekleştirebilirsiniz. Ekle, görüntülemek, düzenlemek ve tablosundaki verileri Sil; hatalar ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilir. Verilerde değişiklik yapıldığında bir **DataTable**, değişiklikler doğru olduğundan ve program aracılığıyla geçir çalıştırılmayacağını olup olmadığını da doğrulayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataTable tablosuna veri ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
+ [DataTable’a Veri Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
  Yeni satırlar oluşturabilir ve bunları bir tabloya ekleyebilirsiniz açıklanmaktadır.  
   
- [Bir DataTable tablosundaki verileri görüntüleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/viewing-data-in-a-datatable.md)  
+ [DataTable’daki Verileri Görüntüleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/viewing-data-in-a-datatable.md)  
  Veriler özgün ve geçerli sürümleri dahil olmak üzere bir satır verilere erişim açıklar.  
   
- [Load yöntemi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
+ [Load Yöntemi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
  Kullanımını açıklar **yük** doldurmak için yöntemi bir **DataTable** satırlarla.  
   
- [DataTable düzenlemeler](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
+ [DataTable Düzenlemeleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Önerilen değişiklikler doğrulandı ve kabul kadar bir satır değişiklikleri askıya alma dahil olmak üzere bir satır verilerde değişiklik açıklanmaktadır.  
   
- [Satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  Bir satır farklı durumlarını hakkında bilgi sağlar.  
   
- [DataRow silme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
+ [DataRow Silme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
  Bir tablodan satır kaldırmayı açıklar.  
   
- [Satır hata bilgileri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
+ [Satır Hatası Bilgileri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  Bir uygulamadaki verilerle sorunlarını gidermenize yardımcı satır başına hata bilgilerini eklemek açıklanmaktadır.  
   
  [AcceptChanges ve RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
@@ -49,5 +50,5 @@ Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.D
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [DataTable olayları işleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [DataTable Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

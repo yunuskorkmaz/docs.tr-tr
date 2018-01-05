@@ -13,11 +13,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f36d944814adaf4a90a04715c60f2fe732cb544a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]kısmen güvenilen bir ortamda çalışan sınırlı işlevlerinin bir alt kümesini destekler. Kısmi güvende desteklenen özellikler senaryoları belirli bir dizi açıklandığı şekilde tasarlanmış [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
@@ -174,5 +175,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Kısmi güven en iyi uygulamalar](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+ [Desteklenen Dağıtım Senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
+ [Kısmi Güven En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

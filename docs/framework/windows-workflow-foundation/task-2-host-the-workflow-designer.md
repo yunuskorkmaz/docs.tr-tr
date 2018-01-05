@@ -12,11 +12,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fffc934bbbd1fc707e0bf5c0afbf79a40fc8c633
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: ana bilgisayar iş akışı Tasarımcısı
 Bu konuda bir örneğini barındıran yordamı açıklanmaktadır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] içinde bir [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] uygulama.  
@@ -131,6 +132,6 @@ Bu konuda bir örneğini barındıran yordamı açıklanmaktadır [!INCLUDE[wfd1
 10. Bkz: [görev 3: araç kutusu oluşturup PropertyGrid bölmeleri](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) nasıl ekleneceğini öğrenmek için **araç** ve **PropertyGrid** desteklemek için rehosted iş akışı Tasarımcısı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Tasarımcısı yeniden barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Görev 3: PropertyGrid bölmeleri ve araç kutusu oluşturma](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+ [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

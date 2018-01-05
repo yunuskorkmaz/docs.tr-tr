@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>Filtreleme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Sistem filtreleme bildirim temelli filtreleri iletileri eşleşmiyor ve işletimsel kararları için kullanabilirsiniz. Yapılacaklar içeren bir ileti iletinin parçası inceleyerek belirlemek için filtreleri kullanabilirsiniz. Sıraya alma işlemi, örneğin, bir ileti sıranın önünü taşınıp taşınmayacağını belirlemek için bilinen bir üstbilgi öncelik öğesinin denetlemek için XPath 1.0 sorgusu kullanabilirsiniz.  
@@ -94,4 +95,4 @@ ms.lasthandoff: 12/02/2017
 -   Uç nokta parametrelerinde kalan `EndpointAddress` belirtilmiş <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri aktarma ve seri hale getirme](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+ [Veri Aktarma ve Seri Hale Getirme](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

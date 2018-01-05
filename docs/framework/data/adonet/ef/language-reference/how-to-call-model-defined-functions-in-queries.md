@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 179c00def6b5a810806d536a8728cbbc544b1084
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d639297764333b99675cb9e076e816314f3567c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: Model tarafından tanımlanan işlevler sorgularda çağırın
 Bu konuda içinden kavramsal modelde tanımlanan işlevleri çağırmak nasıl açıklanmaktadır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
@@ -54,6 +55,6 @@ Bu konuda içinden kavramsal modelde tanımlanan işlevleri çağırmak nasıl a
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [LINQ to Entities sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
- [LINQ to Entities sorgularında işlevleri çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
- [Nasıl yapılır: çağrı nesne yöntemleri olarak modeli tarafından tanımlanan İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)
+ [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
+ [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [Nasıl Yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

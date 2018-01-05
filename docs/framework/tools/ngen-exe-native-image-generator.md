@@ -29,11 +29,12 @@ caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 074b5aae9d92b83d310a003e85709a4ba8e40c46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -595,7 +596,7 @@ ngen executeQueuedItems
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yerel görüntü hizmeti](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
  [Yerel görüntü görevi](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Yönetilen yürütme işlemi](../../../docs/standard/managed-execution-process.md)  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

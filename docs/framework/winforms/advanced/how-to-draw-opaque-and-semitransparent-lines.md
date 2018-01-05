@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea65fd836a6e6fc00472f6139a0700ea859545cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a298458489968cf680a9d5f935d98afb470859ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Nasıl yapılır: Donuk ve Yarı Saydam Çizgiler Çizme
 Çizgi çizme zaman geçmesi gereken bir <xref:System.Drawing.Pen> nesnesini <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Parametrelerden biri <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu olan bir <xref:System.Drawing.Color> nesnesi. Opak bir çizgi çizmek için 255 rengin alfa bileşenini ayarlayın. Yarı saydam bir çizgi çizmek için 1 ile 254 arasında herhangi bir değere alfa bileşenini ayarlayın.  
@@ -46,6 +47,6 @@ ms.lasthandoff: 11/21/2017
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgi ve dolgularda alfa karıştırma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- [Nasıl yapılır: denetiminize saydam arka plan verin](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- [Nasıl yapılır: donuk ve yarı saydam fırçalarla çizme](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)
+ [Çizgi ve Dolgularda Alfa Karışım Kullanma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
+ [Nasıl yapılır: Denetiminize Saydam Arka Plan Verme](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
+ [Nasıl yapılır: Donuk ve Yarı Saydam Fırçalarla Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)

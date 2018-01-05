@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak bir uygulama oluşturduğunuzda [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], sürüm 3.0, uygulamanızın, son kullanıcılarınızın gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi gönderme olabilir. Bu teknoloji, uygulamanızda Microsoft teknolojisi katıştırılmış içerirse, gizlilik etkileyebilecek kendi davranışa sahip olabilir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Siz veya son kullanıcı seçmediğiniz sürece, bize göndermek herhangi bir bilgi uygulamanızdan Microsoft göndermez.  

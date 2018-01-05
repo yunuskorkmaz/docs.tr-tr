@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba5c8a977513ebaae902e3c3d37f950003548474
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ca19446d286395a744496fa300ad1a72e504e738
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding Kullanma
 <xref:System.ServiceModel.NetHttpBinding>HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding>İstek-yanıt sözleşmesi ya da çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve eşleşecek şekilde davranışını değiştirme - Bunu HTTP istek-yanıt sözleşmeleri ve WebSockets için çift yönlü sözleşmeler için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` ayarı:  
@@ -69,7 +70,7 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler için bağlamaları yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Bağlamaları](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Çift yönlü hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+ [Hizmetler için Bağlamaları Yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)

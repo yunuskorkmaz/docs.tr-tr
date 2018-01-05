@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
 SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bir hizmet veya çift yönlü istemci, bu hataları ve bir istemci veya hizmet uygulaması bu hataları nasıl işlediğini gönderebilirsiniz bkz [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme, genel bir bakış için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bkz [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -101,9 +102,9 @@ End Class
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Hataları gönderme ve alma](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
- [Nasıl yapılır: hizmet sözleşmelerinde hata bildirme](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
- [Koruma düzeylerini anlama](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Hizmet sözleşmelerinde belirten veri aktarımı](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [Hataları Gönderme ve Alma](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
+ [Nasıl yapılır: Hizmet Sözleşmelerinde Hata Bildirme](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
+ [Koruma Düzeylerini Anlama](../../../docs/framework/wcf/understanding-protection-level.md)  
+ [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60135c09f63bd98f753e151c515938cbf13e70ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Kullanıcı Girdisi
 Windows Forms'ta kullanıcı girdisi uygulamalar Windows iletileri biçiminde gönderilir. Geçersiz kılınabilir yöntemleri bir dizi uygulama, form, bu iletileri işlemek ve düzeyini denetleyebilirsiniz. Bu yöntemler, fare ve klavye iletileri aldığınızda, bunlar fare hakkında bilgi almak veya giriş klavye için işlenen olayların yükseltin. Çoğu durumda, Windows Forms uygulamaları bu olayları işleyerek tüm kullanıcı girişini işlemek mümkün olacaktır. Diğer durumlarda, bir uygulama uygulama, form veya denetim tarafından almadan önce belirli bir ileti müdahale için iletileri işlemek yöntemlerden birini geçersiz kılmanız gerekebilir.  
@@ -40,6 +41,6 @@ Windows Forms'ta kullanıcı girdisi uygulamalar Windows iletileri biçiminde g�
  Klavye ve fare iletileri de bu iletileri türleri için özel geçersiz kılınabilir yöntemleri ek kümesi tarafından işlenir. Daha fazla bilgi için bkz: [nasıl klavye girişi çalışır](../../../docs/framework/winforms/how-keyboard-input-works.md) ve [nasıl fare giriş çalışır Windows Forms'ta](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms uygulamasında kullanıcı girdisi](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
- [Forms bir Windows uygulamasında klavye girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Forms bir Windows uygulamasında fare girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Windows Forms'ta Kullanıcı Girdisi](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Bir Windows Forms Uygulamasında Klavye Girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

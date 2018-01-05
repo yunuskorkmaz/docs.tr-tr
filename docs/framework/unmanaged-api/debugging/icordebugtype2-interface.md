@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 658dd1541a1de852c3c001cc7fbb7954f6c7590f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d44514586a2e91dad3486b6dc04c26946148885
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 arabirimi
 Bir taban türü veya karmaşık türü (kullanıcı tanımlı) türü tanıtıcısı almak için Icordebugtype arabirimi genişletir.  
@@ -32,7 +33,7 @@ Bir taban türü veya karmaşık türü (kullanıcı tanımlı) türü tanıtıc
   
 |Yöntem||  
 |------------|-|  
-|[GetTypeId yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Alır bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu tür.|  
+|[GetTypeID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Alır bir [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu tür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim Icordebugtype arabirimi mantıksal bir uzantısıdır.  
@@ -66,4 +67,4 @@ pType2->GetTypeID(&id);
  **.NET framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

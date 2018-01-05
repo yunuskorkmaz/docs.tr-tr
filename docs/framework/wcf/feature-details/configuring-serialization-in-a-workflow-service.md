@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78f963f61c7ec67d6104a90c047ce78b0470568a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Bir İş Akışı Hizmetinde Seri Hale Getirmeyi Yapılandırma
 İş akışı Hizmetleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri ve bu nedenle olması ya da kullanma seçeneğini <xref:System.Runtime.Serialization.DataContractSerializer> (varsayılan) veya <xref:System.Xml.Serialization.XmlSerializer>. Kullanılacak serileştirici tür olmayan iş akışı yazma, hizmetleri hizmet veya işlemi sözleşmenin belirtilir. Oluştururken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yok belirttiğiniz bu iş akışı hizmetleri kod sözleşmeleri, ancak bunlar sözleşme çıkarım tarafından çalışma zamanında yerine oluşturulur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sözleşme çıkarım, bkz: [iş akışında sözleşmeleri kullanma](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Seri hale getirici kullanarak belirtilen <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> özelliği. Bu tasarımcıda aşağıdaki çizimde gösterildiği gibi ayarlanabilir.  

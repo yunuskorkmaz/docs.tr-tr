@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec334ff65095e11855d706f445fda1d4b7ea1472
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: deee6eb0bb15535425e0e90963b9bd72dc955477
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Nasıl yapılır: bir kullanıcı &#39; bağlanan yazıcıları seçme bilgisayarındaki Windows Forms'ta
 Genellikle, kullanıcıların yazdırma için varsayılan yazıcı dışında bir yazıcı seçin istersiniz. Bir yazıcı olanlar kullanarak yüklü kümelerini seçmelerini etkinleştirebilirsiniz <xref:System.Windows.Forms.PrintDialog> bileşeni. Aracılığıyla <xref:System.Windows.Forms.PrintDialog> bileşeni <xref:System.Windows.Forms.DialogResult> , <xref:System.Windows.Forms.PrintDialog> bileşeni yakalanan ve yazıcı seçmek için kullanılır.  
@@ -117,4 +118,4 @@ Genellikle, kullanıcıların yazdırma için varsayılan yazıcı dışında bi
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms yazdırma desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

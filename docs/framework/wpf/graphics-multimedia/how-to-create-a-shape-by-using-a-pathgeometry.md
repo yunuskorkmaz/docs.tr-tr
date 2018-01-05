@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31f77f0921bb018317834077f70e4623c47a4f7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 784a8df792ca4dc05e36f5b7e9ec93b02e0e639f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>Nasıl yapılır: PathGeometry Kullanarak Şekil Oluşturma
 Bu örnek kullanılarak bir şeklin oluşturulacağını gösterir <xref:System.Windows.Media.PathGeometry> sınıfı. <xref:System.Windows.Media.PathGeometry>nesnelerinden oluşan bir veya daha fazla <xref:System.Windows.Media.PathFigure> nesneleri; her <xref:System.Windows.Media.PathFigure> farklı "Şekil" veya şekli temsil eder. Her <xref:System.Windows.Media.PathFigure> kendisini bir veya daha fazla oluşur <xref:System.Windows.Media.PathSegment> , her biri bir resim veya şeklin bağlı bir bölümünü temsil eden nesneler. Segment türler <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, ve <xref:System.Windows.Media.BezierSegment>.  
@@ -42,5 +43,5 @@ PathGeometry ile oluşturulan bir üçgen
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.GeometryDrawing>  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Geometri örneği](http://go.microsoft.com/fwlink/?LinkID=159989)

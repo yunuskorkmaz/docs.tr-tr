@@ -16,11 +16,12 @@ caps.latest.revision: "37"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74a2e5c15b25dc9958b74ddeb0abf9adcad10bc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir SOAP iletisi tabanlı dağıtılmış programlama platformudur ve istemcileri ve Hizmetleri arasındaki iletileri güvenli hale getirme verilerini korumak için önemlidir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]var olan güvenlik altyapısı ve SOAP iletilerine tanınan güvenlik standartları temel güvenli ileti değiş tokuşu için çok yönlü ve birlikte çalışabilir bir platform sağlar.  
@@ -109,17 +110,17 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Hizmetleri güvenli hale getirme](../../../../docs/framework/wcf/securing-services.md)  
- [Ortak Güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Bağlamalar ve güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)  
+ [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Denetleme](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Güvenlik Kılavuzu ve en iyi yöntemler](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Yapılandırma dosyalarını kullanarak hizmetleri yapılandırma](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Uç noktası oluşturma genel bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Federasyon ve Verilen Belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

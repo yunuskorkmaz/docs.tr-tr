@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dced93ab39529ec57fb6fb99603a197fb957be8d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86cf571180b2df15077547fac3d5dd058dbee83b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent arabirimi
 Genişletir [Icordebugdebugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) modül düzeyi olaylarını desteklemek için arabirim.  
@@ -26,7 +27,7 @@ Genişletir [Icordebugdebugevent](../../../../docs/framework/unmanaged-api/debug
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetModule yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|Yalnızca yüklü veya kaldırılmış birleştirilmiş modülü alır.|  
+|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|Yalnızca yüklü veya kaldırılmış birleştirilmiş modülü alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) ve [MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) olay türleri bu arabirim uygulama.  
@@ -44,5 +45,5 @@ Genişletir [Icordebugdebugevent](../../../../docs/framework/unmanaged-api/debug
  **.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

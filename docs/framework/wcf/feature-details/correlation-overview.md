@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı hizmeti iletileri birbirleriyle veya uygulama örneği durumu ilk isteğine yanıt ya da bir sıra kimliği gibi ilgili mekanizmadır. Bu konu bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her tür için ek bilgileri sağlayın.  
@@ -36,7 +37,7 @@ Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı h
  İçeriğe dayalı bağıntı bazı bilgi parçasını iletide belirli bir örneğine ilişkilendirmek için kullanır. Protokol tabanlı bağıntı farklı olarak, içerik tabanlı bağıntı ilgili her iletide bu verileri bulunabileceği açıkça durumuna uygulama yazarı gerektirir. İçeriğe dayalı bağıntı kullanan etkinlikleri kullanarak bu ileti verileri belirtirseniz bir <xref:System.ServiceModel.MessageQuerySet>. İçeriğe dayalı bağıntı, bağlam bağlamaları gibi birini kullanmayın Hizmetleri ile iletişim kurarken yararlıdır <xref:System.ServiceModel.BasicHttpContextBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]içeriğe dayalı bağıntı bkz [içerik tabanlı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Örnek kod için bkz: [içerik tabanlı bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnekleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İçeriğe dayalı bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [Bağıntılı hesaplayıcısı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
+ [İçerik Temelli Bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [Bağıntılı Hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [Dayanıklı çift yönlü &#91; WF örnekleri &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
  [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>Bağlantı dizeleri
 Bir bağlantı dizesi, parametre olarak bir veri kaynağına veri sağlayıcıdan geçen başlatma bilgileri içerir. Sözdizimi veri sağlayıcısına bağlıdır ve bağlantı dizesini bir bağlantı açmak için girişimi sırasında ayrıştırılır. Entity Framework tarafından kullanılan bağlantı dizeleri Entity Framework destekleyen temel ADO.NET veri sağlayıcısına bağlanmak için kullanılan bilgileri içerir. Ayrıca gerekli modeli ve eşleme dosyaları hakkındaki bilgileri içerir.  
@@ -118,7 +119,7 @@ Metadata=.\
  Çözünürlüğünü `DataDirectory` değiştirme dizesi ve ~ özyinelemeli olmayan işlecidir. Örneğin, `DataDirectory` içeren `~` karakter, bir özel durum meydana gelir. Sonsuz özyineleme engeller.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri sağlayıcıları ile çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Dağıtım konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
+ [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Bağlantılarını yönetme ve işlemler](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Bağlantı dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
+ [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)

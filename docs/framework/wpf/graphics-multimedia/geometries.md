@@ -19,23 +19,24 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ace9058a7f495a9cc2cf64398fd91338b7200f3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fbe50f6a282f93ca4f0a2e2be74dbcefa604014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries"></a>Geometriler
 <xref:System.Windows.Media.Geometry>işlemek için kullanılan yönlü bir sınıftır [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafikler, nesnelere isabet sınaması ve kırpma bölgeleri tanımlayın  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Biçimlendirme sözdizimi yolu](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

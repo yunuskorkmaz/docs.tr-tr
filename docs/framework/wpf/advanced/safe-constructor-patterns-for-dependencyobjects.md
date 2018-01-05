@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43a38406a3c9cc171944448fce2fa2f70c483baa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
 Genellikle, sınıf oluşturucular oluşturucular türetilmiş bir sınıf için temel oluşturucular başlatma çağrılabilir olduğundan sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmalıdır değil. Sanal girme verilen herhangi bir nesnenin bir tamamlanmamış başlatma durumu yapılabilir. Ancak, özellik sistemi çağırır ve geri çağırmaları dahili olarak, bağımlılık özelliği sisteminin bir parçası kullanıma sunar. Bir bağımlılık özelliği değerle ayarlamakla kadar basit bir işlem <xref:System.Windows.DependencyObject.SetValue%2A> çağrısı potansiyel olarak içeren bir geri çağırma yere belirleme. Bu nedenle, bağımlılık türünüz temel sınıf olarak kullanılıyorsa, sorunlu olabilecek bir oluşturucu gövdesi içinde özellik değerlerini ayarlarken dikkatli olmanız gerekir. Uygulama için belirli bir desene yoktur <xref:System.Windows.DependencyObject> oluşturucular ve burada belgelenen bağımlılık özelliği durumlar ve devralınmış geri çağırmalar ile belirli sorunları önler.  
@@ -125,6 +126,6 @@ public MyClass : SomeBaseClass {
  Özellik ayarlama kolaylığı için sarmalayıcı sahip, ve değerlerini içeren bir özelliği ayarlıyorsanız aynı desenler uygulanır <xref:System.Windows.DependencyObject.SetValue%2A>. Aramalarınız <xref:System.Windows.DependencyObject.SetValue%2A> Oluşturucu parametreleri bu geçiş başlatma için sınıf varsayılan oluşturucusunu da çağırmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Bağımlılık özelliği güvenlik](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Bağımlılık Özelliği Güvenliği](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

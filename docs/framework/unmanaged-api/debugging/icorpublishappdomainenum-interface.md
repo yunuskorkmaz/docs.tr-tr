@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8359eda5432a9b3818fd58f6adc18570e4c5f154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f84a93053744f059eb3fdd06e2fb69e098e24ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum Arabirimi
 Öğesinin bir alt [Icorpublishenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) koleksiyonu geçiş için yöntemler sağlar arabirimi [Icorpublishappdomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) şu anda bir işlem içinde mevcut nesneleri.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-next-method.md)|Belirtilen sayıda alır `ICorPublishAppDomain` geçerli konumdan başlayarak koleksiyondan örnekleri.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-next-method.md)|Belirtilen sayıda alır `ICorPublishAppDomain` geçerli konumdan başlayarak koleksiyondan örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorPublishAppDomainEnum` Arabirimini uygulayan soyut arabiriminin yöntemlerini [Icorpublishenum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Corpubpublish ortak sınıfı](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

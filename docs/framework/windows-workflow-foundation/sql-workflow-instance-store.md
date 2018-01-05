@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 638ad75155bae30f3cd1d126d27e8e0542026ab0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4608a91c905122a1ec4698990debbf5038599801
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği deposu
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] İş akışı örneği bir SQL Server 2005 veya SQL Server 2008 veritabanı ile ilgili durum bilgisini kalıcı hale getirmek için iş akışlarını tanır SQL iş akışı örneği deposu ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türeyen sınıf <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği depolama özelliğini Kalıcılık komutları mağazaya göndermek için bir konak kullanır API Kalıcılık somut bir uygulamasıdır SQL Kalıcılık sağlayıcısı meydana gelir.  
@@ -31,19 +32,19 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [SQL iş akışı örneği deposu özellikleri](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+-   [SQL İş Akışı Örnek Deposunun Özellikleri](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Örnek etkinleştirme](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+-   [Örnek Etkinleştirme](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
--   [Sorgular için destek](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+-   [Sorgu Desteği](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
   
--   [Depolama genişletilebilirliği](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+-   [Depo Genişletilebilirliği](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
   
 -   [Güvenlik](../../../docs/framework/windows-workflow-foundation/security.md)  
   
--   [SQL Server Kalıcılık veritabanı](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+-   [SQL Server Kalıcılık Veritabanı](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kalıcılık örnekleri](http://go.microsoft.com/fwlink/?LinkID=177735)

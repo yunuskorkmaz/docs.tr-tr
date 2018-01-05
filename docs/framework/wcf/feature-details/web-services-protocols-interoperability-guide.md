@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve uygulayan kendi takdirine bağlı sol genişletilebilirlik noktaları içerir. Bu konu, bir listesini Web Hizmetleri protokolleri sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygular. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
@@ -111,12 +112,12 @@ ms.lasthandoff: 12/02/2017
 -   [Temel güvenlik profili 1.0 çalışma taslak](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sistem tarafından sağlanan birlikte kullanılabilirlik bağlamaları ile desteklenen Web hizmeti protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Mesajlaşma protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL ve ilke](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Güvenlik protokolleri](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
+ [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Mesajlaşma Protokolleri](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
+ [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [WSDL ve İlke](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [Güvenlik Protokolleri](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
  [Güvenilir Mesajlaşma Protokolü sürüm 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
  [Güvenilir Mesajlaşma Protokolü sürüm 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [İşlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Bağlam değişimi Protokolü](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+ [İşlem Protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
+ [Bağlam Değişimi Protokolü](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

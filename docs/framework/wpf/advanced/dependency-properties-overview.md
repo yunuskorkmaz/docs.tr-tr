@@ -21,11 +21,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa1ad02de74cc73ea67267de7548442078a2f5db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -91,13 +92,13 @@ Ayrıca, özellik sistemi çağırabilirsiniz [!INCLUDE[TLA2#tla_api#plural](../
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Bağımlılık özelliği tarafından sağlanan özellik işlevselliği
 Bir özelliğe karşı işlevselliğini genişleten işlevselliği bir alan tarafından yedeklenen bir bağımlılık özelliği sağlar. Genellikle, her tür işlevselliği temsil eder veya belirli bir özelliği olan bütün destekleyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikler kümesi:
 
-- [Kaynakları](#resources)
+- [Kaynaklar](#resources)
 
 - [Veri bağlama](#data-binding)
 
 - [Stilleri](#styles)
 
-- [Animasyon](#animations)
+- [Animasyonlar](#animations)
 
 - [Meta verileri geçersiz kılar](#metadata-overrides)
 
@@ -203,7 +204,7 @@ Genellikle, her zaman uygulamak ve hatta yerel olarak ayarlanmış saklamasını
 - Bağımlılık özellikleri genellikle ortak özellikler, erişilebilir olarak düşünülmelidir veya bir örneğine erişimi olan herhangi bir çağırıcı tarafından en az bulunabilir. Daha fazla bilgi için bkz: [bağımlılık özelliği güvenlik](../../../../docs/framework/wpf/advanced/dependency-property-security.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Salt okunur bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Salt Okunur Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

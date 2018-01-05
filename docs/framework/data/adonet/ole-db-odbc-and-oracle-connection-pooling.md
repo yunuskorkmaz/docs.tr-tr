@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 22ef6afa36c7fc46713ec5c0940c305fc967e91b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ee991417daa4636cd87c7a3655138d066c261f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle bağlantı havuzu
 Bağlantı havuzu önemli ölçüde performans ve ölçeklenebilirlik, uygulamanızın geliştirebilirsiniz. Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu anlatılmaktadır.  
@@ -81,6 +82,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|Zaman `true`, bağlantı uygun havuzundan çizilmiş veya gerekirse, oluşturulur ve uygun havuzuna eklenir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantı havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [Performans sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

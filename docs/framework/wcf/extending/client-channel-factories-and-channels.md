@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4a841fec01b3a0ef29cd836cccf3f337f29ddb6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82e42a3dd4fbb29970b8e1a17333b66d85d2887b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
 Bu konu, kanal fabrikaları ve kanallar oluşturulmasını açıklar.  
@@ -86,4 +87,4 @@ this.socket.SendTo(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)
+ [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)

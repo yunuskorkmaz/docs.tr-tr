@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44a51c1bc9bd17cab7e3ba59ad36aa6700f82f71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
@@ -93,6 +94,6 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.EndpointAddress>  
- [Hizmet kimliği ve kimlik doğrulaması](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [Barındırma](../../../docs/framework/wcf/feature-details/hosting.md)

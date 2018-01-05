@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-prioritybinding"></a>Nasıl yapılır: PriorityBinding Uygulama
 <xref:System.Windows.Data.PriorityBinding>içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bağlamaların listesini belirterek çalışır. Bağlama Listesi en yüksek öncelikli olandan en düşük önceliği sıralanır. Yüksek önceliği olan bağlama bir değer döndürürse başarıyla işlendiğinde yoktur hiçbir zaman listedeki diğer bağlamaları işlem gerekmez. En yüksek öncelik bağlama değerlendirilmesi uzun süren durum olabilir, bir daha yüksek bir öncelik değeri başarıyla döndürünceye kadar başarılı bir şekilde bir değer döndüren bir sonraki en yüksek öncelikli kullanılır.  
@@ -55,5 +56,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

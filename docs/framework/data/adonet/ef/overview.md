@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05b87dfbb54de87ce7591dd6363d56ab69ebb8a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET Veri odaklı yazılım uygulamaları geliştirme desteği teknolojileri kümesidir. İki çok farklı hedeflerine ulaşmasına gerek mimarları ve geliştiricileri veri odaklı uygulamalar zorlandığınız. Varlıklar, ilişkileri ve iş sorunlarını çözme mantığını model gerekir ve depolamak ve verileri almak için kullanılan veri yapısıyla de çalışması gerekir. Veriler birden çok depolama sistemleri, her biri kendi protokollerle yayılabilir; tek bir depolama sistemiyle çalışacak bile uygulamaları verimli ve sürdürülebilir uygulama kodu yazarken gereksinimleri karşı depolama sistem gereksinimlerini dengelemeniz gerekir.  
@@ -99,10 +100,10 @@ ms.lasthandoff: 10/18/2017
  [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Alma hakkında bilgi sağlar ve hızlı şekilde kullanmaya çalışıyor [Hızlı Başlangıç](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), basit bir oluşturulacağını gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
   
- [Entity Framework terminolojisi](../../../../../docs/framework/data/adonet/ef/terminology.md)  
+ [Entity Framework Terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Çoğu varlık veri modeli tarafından sunulan koşullarını tanımlar ve [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve içinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri.  
   
- [Varlık çerçevesi kaynakları](../../../../../docs/framework/data/adonet/ef/resources.md)  
+ [Entity Framework Kaynakları](../../../../../docs/framework/data/adonet/ef/resources.md)  
  Kavramsal konulara bağlantılar ve dış konulara ve kaynaklara bağlantılar için yapı sağlayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

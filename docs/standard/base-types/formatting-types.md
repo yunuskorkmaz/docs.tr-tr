@@ -35,11 +35,14 @@ caps.latest.revision: "43"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 31cb95b20369eaef85f280497acb99e294e97faa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="formatting-types-in-net"></a>.NET biçimlendirme türleri
 <a name="Introduction"></a>Biçimlendirme Sonuç dizesini kullanıcılara görüntülenen ya da özgün veri türü geri yüklemek için seri, dize gösterimi için genellikle bir sınıf, yapı veya sabit listesi değeri örneği dönüştürme işlemidir. Bu dönüştürme belirli zorluklar oluşturabilir:  
@@ -81,7 +84,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [IFormattable arabirimi](#IFormattable)  
   
--   [Bileşik biçimlendirme](#CompositeFormatting)  
+-   [Bileşik Biçimlendirme](#CompositeFormatting)  
   
 -   [Özel ICustomFormatter ile biçimlendirme](#Custom)  
   
@@ -265,13 +268,13 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Tanım|  
 |-----------|----------------|  
-|[Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerleri yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
-|[Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özgü biçimi oluşturmanıza özel biçim dizeleri açıklar.|  
-|[Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
-|[Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
-|[Standart TimeSpan biçim dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
-|[Özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimleri oluşturma özel biçim dizeleri açıklar.|  
-|[Numaralandırma biçimi dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsilini oluşturmak için kullanılan standart biçim dizeleri açıklar.|  
+|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerleri yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
+|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özgü biçimi oluşturmanıza özel biçim dizeleri açıklar.|  
+|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
+|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
+|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
+|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimleri oluşturma özel biçim dizeleri açıklar.|  
+|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsilini oluşturmak için kullanılan standart biçim dizeleri açıklar.|  
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Standart biçim dizeleri için açıklar <xref:System.Guid> değerleri.|  
   
 <a name="FormatProviders"></a>   
@@ -412,16 +415,16 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Tanım|  
 |-----------|----------------|  
-|[Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerleri yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
-|[Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özgü biçimi oluşturmanıza özel biçim dizeleri açıklar.|  
-|[Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
-|[Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
-|[Standart TimeSpan biçim dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
-|[Özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimleri oluşturma özel biçim dizeleri açıklar.|  
-|[Numaralandırma biçimi dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsilini oluşturmak için kullanılan standart biçim dizeleri açıklar.|  
-|[Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)|Bir veya daha fazla biçimlendirilmiş değer bir dize katıştırmak açıklar. Dize daha sonra konsolda görüntülenmez veya bir akışa yazılan.|  
-|[Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)|Belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar konuları listeler.|  
-|[Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)|Nesneleri bu nesnelerin dizesi ifadeleri tarafından tanımlanan değerlerle başlatmak açıklar. Ayrıştırma, biçimlendirme ters bir işlemdir.|  
+|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerleri yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
+|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özgü biçimi oluşturmanıza özel biçim dizeleri açıklar.|  
+|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
+|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
+|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
+|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimleri oluşturma özel biçim dizeleri açıklar.|  
+|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsilini oluşturmak için kullanılan standart biçim dizeleri açıklar.|  
+|[Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)|Bir veya daha fazla biçimlendirilmiş değer bir dize katıştırmak açıklar. Dize daha sonra konsolda görüntülenmez veya bir akışa yazılan.|  
+|[Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)|Belirli biçimlendirme işlemlerini gerçekleştirmek için adım adım yönergeler sağlar konuları listeler.|  
+|[Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)|Nesneleri bu nesnelerin dizesi ifadeleri tarafından tanımlanan değerlerle başlatmak açıklar. Ayrıştırma, biçimlendirme ters bir işlemdir.|  
   
  [Başa dön](#Introduction)  
   

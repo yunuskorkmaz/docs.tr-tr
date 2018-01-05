@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72775d4cb478b6d9c9d2e65119c63f8a34ae47d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
 <a name="top"></a>Windows (ETW) olayları için olay izleme, kategori ve düzey göre filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtrelemeyi sağlamak; çalışma zamanı ve özeti sağlayıcıları bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
@@ -131,6 +132,6 @@ ms.lasthandoff: 11/21/2017
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)  
- [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md)  
- [Ortak dil çalışma zamanında ETW olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+ [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)  
+ [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)  
+ [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

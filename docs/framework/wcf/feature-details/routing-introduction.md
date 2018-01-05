@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, ileti içeriğine göre yönlendirme iletilerinin özelliğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelik Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolar uygulamak olanak tanıyan karmaşık bir yönlendirme mantık oluşturabilirsiniz. Yönlendirme hizmeti, işleme hatası, birincil hedef uç noktasına gönderilirken bir hata oluşursa, iletileri gönderildiği yedekleme uç noktaları listelerini ayarlamanıza olanak tanır de sağlar.  
@@ -412,6 +413,6 @@ using (ServiceHost serviceHost =
  Windows kimlik bilgisi kimliğe bürünme yönlendirme hizmeti ile kullanmak için kimlik bilgileri ve hizmet yapılandırmanız gerekir. İstemci kimlik bilgileri nesnesini (<xref:System.ServiceModel.Security.WindowsClientCredential>, gelen accessable <xref:System.ServiceModel.ChannelFactory>) tanımlayan bir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği kimliğe bürünme izin verecek şekilde ayarlamanız gerekir. Son olarak, hizmette yapılandırmanız gereken <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ayarlamak için davranış `ImpersonateCallerForAllOperations` için `true`. Yönlendirme hizmeti ile kimliğe bürünme etkin iletilerini yönlendirmede istemcileri oluşturma karar vermek için bu bayrağı kullanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İleti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Sözleşmeleri yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Filtre seçme](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
+ [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
+ [Filtre Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

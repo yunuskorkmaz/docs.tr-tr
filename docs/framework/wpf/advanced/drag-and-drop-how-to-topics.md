@@ -15,22 +15,23 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [RichTextBox denetiminde bırakılan bir dosya açın](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [Bir veri nesnesi oluşturun](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [Veri biçimi var olup olmadığını bir veri nesnesinde](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [Bir veri nesnesinde veri biçimlerini listeleme](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [Belirli veri biçiminde veri alma](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [Bir veri nesnesi içinde birden çok veri biçimleri depolama](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [RichTextBox Denetimine Bırakılan bir Dosyayı Açma](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [Veri Nesnesi Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
+ [Veri Nesnesinde Veri Biçiminin Olup Olmadığını Belirleme](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [Belirli Veri Biçiminde Veri Alma](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [Veri Nesnesinde Birden Çok Veri Biçimini Depolama](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sürükle ve bırak genel bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+ [Sürükleme ve Bırakmaya Genel Bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ed2a28c49554c686abb5e2635ab35b746b83465
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e5858da25174c8bc1de18d534023b57b58253e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Nasıl yapılır: Kalem Genişliği ve Hizalamasını Ayarlama
 Oluştururken bir <xref:System.Drawing.Pen>, oluşturucu bağımsız değişkenlerinden biri olarak kalem genişliği sağlayabilir. Kalem genişliği ile de değiştirebilirsiniz <xref:System.Drawing.Pen.Width%2A> özelliği <xref:System.Drawing.Pen> sınıfı.  
@@ -68,5 +69,5 @@ Oluştururken bir <xref:System.Drawing.Pen>, oluşturucu bağımsız değişkenl
      ![Kalemler](../../../../docs/framework/winforms/advanced/media/pens3.gif "pens3")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler ve şekiller çizmek için kalem kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

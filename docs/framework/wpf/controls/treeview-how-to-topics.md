@@ -17,21 +17,22 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3619f26e8c447340e005c0d44be9018f2746f10
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f1f042894f96cafc36944be7b18d5777e5f3c10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-how-to-topics"></a>TreeView Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.TreeView> hiyerarşik yapıda bilgileri görüntülemek için denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Basit veya Karmaşık TreeViews Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [SelectedValue, SelectedValuePath ve SelectedItem kullanın](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [TreeView TreeView'a derinlik olan verilere bağlama](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [TreeView performansını artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [TreeView içinde TreeViewItem Bul](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+  [SelectedValue, SelectedValuePath ve SelectedItem Kullanma](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [TreeView'ın Performansını Artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
+  [TreeView İçinde TreeViewItem Bulma](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.TreeView>  

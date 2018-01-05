@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cafd84ce3acea80905d686f33f23338e3581a9c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d504ca056f35fe8716b299ec73f45648bb3d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma
 > [!NOTE]
@@ -42,5 +43,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [InvokePattern'ı ve ExpandCollapsePattern'ı menü öğesi örneği](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)  
- [UI Otomasyon öğelerini alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [Automationıd özelliğini kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [AutomationID Özelliğini Kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md)

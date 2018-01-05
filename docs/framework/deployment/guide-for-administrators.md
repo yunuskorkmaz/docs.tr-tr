@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d208867789fc78a82a2e339596a5692280d95ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açıklar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager kullanarak ağ üzerinden sistem bağımlılıklarını. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemek için yazılım ve donanım gereksinimlerinin listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -33,12 +34,12 @@ Bu adım adım makalede bir sistem yöneticisi nasıl dağıtabileceğini açık
  Bu konu aşağıdaki bölümleri içermektedir:  
   
  [Dağıtım işlemi](#the_deployment_process)  
- [.NET Framework dağıtma](#deploying_in_a_test_environment)  
+ [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)  
  [Bir koleksiyon oluşturma](#creating_a_collection)  
  [Bir paket ve program oluşturma](#creating_a_package)  
  [Bir dağıtım noktası seçin](#select_dist_point)  
  [Paketi dağıtma](#deploying_package)  
-[Kaynakları](#resources)  
+[Kaynaklar](#resources)  
 [Sorun giderme](#troubleshooting)  
   
 <a name="the_deployment_process"></a>   

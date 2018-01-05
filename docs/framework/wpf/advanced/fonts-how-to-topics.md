@@ -15,21 +15,22 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f0ff080218b459625bb98803216fae88c3aadd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e4df7bac45abe367f985167b354b515f247ae90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-how-to-topics"></a>Yazı Tipleri ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, birlikte yazı tipi özelliklerinin nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sistem yazı tiplerini numaralandırma](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
- [FontSizeConverter sınıfını kullanma](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
+ [Sistem Yazı Tiplerini Numaralandırma](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
+ [FontSizeConverter Sınıfını Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

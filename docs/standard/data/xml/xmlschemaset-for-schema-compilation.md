@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Şema derleme için XmlSchemaSet
 Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, bir önbellek burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulandı.  
@@ -267,4 +270,4 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
  [Bir şema önbelleği olarak XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [XML Şeması (XSD) doğrulama XmlSchemaSet ile](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+ [XmlSchemaSet ile XML Şeması (XSD) Doğrulaması](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

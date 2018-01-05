@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6398e4a40a1d4a83bc0ae080321112fb6d9fcd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d060e0b511f17a68edb013ae7241e1accbc7dcf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görüntü alanından daha büyüktür. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin kaydırma etkinleştirmek için kullanışlı bir yöntem sunar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve birkaç kullanım örnekleri sağlar.  
@@ -75,6 +76,6 @@ Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görün
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
  [Bir kaydırma Görüntüleyicisi oluşturma](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Kaydırma çubuğu stilleri ve şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Denetimleri](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
+ [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

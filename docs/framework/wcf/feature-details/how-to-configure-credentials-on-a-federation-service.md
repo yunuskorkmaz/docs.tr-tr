@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb5e3cc0e33947f1797e283461738f96b6d4a8b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 243dbd73d60577cbda2d8cf4fad1fd2e510d87ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], Federasyon Hizmeti oluşturma, aşağıdaki ana yordamlardan oluşur:  
@@ -83,10 +84,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Federasyon ve güven](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Nasıl yapılır: Güvenli WSFederationHttpBinding gücenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Nasıl yapılır: federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Sertifikalar ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+ [Federasyon ve Güven](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [SecurityBindingElement Kimlik Doğrulama Modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

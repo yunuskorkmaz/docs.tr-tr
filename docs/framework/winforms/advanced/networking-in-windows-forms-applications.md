@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b9c8a66d2b1d60226ad814730125754c7253ca94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows Forms Uygulamalarında Ağ İletişimi
 .NET Framework Web sayfalarını görüntüleme, Web içeriği yükleme, Dosya Aktarım Protokolü (FTP) siteleri ile etkileşim ve Web Hizmetleri, yapı ağ işlevselliği uygulamanıza kolaylaşır kullanma için sınıflar sağlar. Aşağıdaki kaynaklar, .NET Framework ve nasıl bunları Windows formlarına tümleştirebilir ağ teknolojileri anlamanıza yardımcı olur.  
@@ -39,8 +40,8 @@ ms.lasthandoff: 10/22/2017
  Yönetilen sarmalayıcı sınıfı için `WebBrowser` Windows ile birlikte gelen denetim.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [.NET Framework'te ağ programlaması](../../../../docs/framework/network-programming/index.md)  
+ [.NET Framework'te Ağ Programlaması](../../../../docs/framework/network-programming/index.md)  
  .NET Framework'te ağ giriş.  
   
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  Uygulamanızda yerel veri deposundaki veya bir ağda bulunan bir veritabanı ya da veritabanı içeriğini görüntülemek açıklar.

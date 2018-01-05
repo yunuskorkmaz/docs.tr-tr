@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8da173fb91745f83aac2b4461a917c1fff6e9cb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef354a986ee71cfa7a8e00a62905ee909d9cf30d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Nasıl yapılır: TextBox Denetiminin Metin İçeriğini Ayarlama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.TextBox.Text%2A> ilk metin içeriğini ayarlamak için özellik bir <xref:System.Windows.Controls.TextBox> denetim.  
@@ -38,5 +39,5 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.Tex
  [!code-vb[TextBox_MiscCode#_TextBoxSetText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

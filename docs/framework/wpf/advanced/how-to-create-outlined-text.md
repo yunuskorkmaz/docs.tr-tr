@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76d0dcf63f9d8a66106f4bcdc52a2bf98c75cdc4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 41254d8f93174c896923b1c070e6bf9b5b7c863c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-outlined-text"></a>Nasıl yapılır: Anahatları Belirlenmiş Metin Oluşturma
 Çoğu durumda, metin dizelerini için eklediğiniz zaman, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama, kullanmakta olduğunuz farklı karakter ya da karakterlerin koleksiyonu bakımından metin. Örneğin, doğrusal gradyan fırçası oluşturabilir ve uygulayan <xref:System.Windows.Controls.Control.Foreground%2A> özelliği bir <xref:System.Windows.Controls.TextBox> nesnesi. Görüntüleme veya düzenleme metin kutusu, doğrusal gradyan fırçası metin dizesindeki karakterlerin geçerli kümesini otomatik olarak uygulanır.  
@@ -68,4 +69,4 @@ Vuruş ve vurgulamaya uygulanan resim fırçası örneği
  [!code-vb[OutlineTextControlViewer#OnRender](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimli metin çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+ [Biçimlendirilmiş Metin Çizme](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

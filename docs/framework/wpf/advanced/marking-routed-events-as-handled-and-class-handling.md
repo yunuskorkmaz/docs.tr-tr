@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ec6bd76b6254b44dfacfd7f3d29341ece0a78f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işaretleyebilirsiniz. Olay işleme rota etkili bir şekilde kısaltacak. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. Sınıf işleyicisi sınıf düzeyinde sınıfının hiçbir örneği üzerinde herhangi bir örnek işleyicisini önce çağrılan bir işleyici ile belirli bir yönlendirilmiş olay işleme fırsatına sahip.  
@@ -110,6 +111,6 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işare
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.EventManager>  
- [Önizleme olayları](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Özel yönlendirilmiş olay oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+ [Önizleme Olayları](../../../../docs/framework/wpf/advanced/preview-events.md)  
+ [Özel Yönlendirilmiş Olay Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

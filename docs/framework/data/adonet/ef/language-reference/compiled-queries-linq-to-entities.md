@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ca9848d4640fe9d941b3bfc15a7762135871861
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş sorgu (LINQ to Entities)
 Entity Framework içinde birçok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, bir kez sorgu derleme ve farklı parametrelerle birkaç kez yürütme tarafından sık performansını artırabilirsiniz. Örneğin, belirli bir şehirde tüm müşteriler almak bir uygulama olabilir; Şehir çalışma zamanında bir form kullanıcı tarafından belirtilir. LINQ to Entities bu amaç için derlenmiş sorgularını kullanarak destekler.  
@@ -80,5 +81,5 @@ Entity Framework içinde birçok kez yapısal olarak benzer sorguları yürüten
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [LINQ-varlıklar](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [Entity Framework birleştirme seçeneklerini ve derlenmiş sorguları](http://go.microsoft.com/fwlink/?LinkId=199591)

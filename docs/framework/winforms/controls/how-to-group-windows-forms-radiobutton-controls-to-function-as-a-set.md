@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37d8571624272f62c6ce327b0ed25e082c5cf713
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c92048374941f735568bcd758ed475eba78b81e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Nasıl yapılır: Windows Forms RadioButton Denetimlerini Küme İşlevi Görecek Şekilde Gruplama
 Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri hangisinin yalnızca biri atanabilir bir yordam veya nesne, iki veya daha fazla ayarları arasından seçim kullanıcılara vermek için tasarlanmıştır. Örneğin, bir grup <xref:System.Windows.Forms.RadioButton> denetimleri, sipariş paket hizmet sağlayıcılar seçimine görüntüleyebilir, ancak yalnızca bir hizmet sağlayıcılar kullanılır. Bu nedenle yalnızca bir <xref:System.Windows.Forms.RadioButton> işlevsel grubunun bir parçası olsa bile aynı anda seçilebilir.  
@@ -37,8 +38,8 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri hangisinin yal
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.RadioButton>  
- [RadioButton denetimine genel bakış](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
- [Panel denetimine genel bakış](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [GroupBox denetimine genel bakış](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- [CheckBox denetimine genel bakış](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [RadioButton denetimi](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+ [RadioButton Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
+ [Panel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [GroupBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [CheckBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [RadioButton Denetimi](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

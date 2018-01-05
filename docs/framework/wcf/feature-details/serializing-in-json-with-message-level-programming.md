@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3967cd7002af8ff9aee4c4f25bd2422d2d0ea1ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfa8952c54f29d88cb4975c1924b9c3e94c1c226
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>İleti Düzeyi Programlama ile JSON Seri Hale Getirme
 WCF JSON biçiminde verilerin serileştirilmesi destekler. Bu konu, kullanarak türlerinizi serileştirmek için WCF bildirmek açıklar <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
@@ -42,6 +43,6 @@ WCF JSON biçiminde verilerin serileştirilmesi destekler. Bu konu, kullanarak t
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [Bağımsız JSON seri hale getirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [JSON seri hale getirme](../../../../docs/framework/wcf/samples/json-serialization.md)
+ [AJAX Tümleştirme ve JSON Desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [Bağımsız JSON Seri Hale Getirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
+ [JSON Serileştirme](../../../../docs/framework/wcf/samples/json-serialization.md)

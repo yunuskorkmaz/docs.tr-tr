@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d551a9d4ba6a66a02718f9184d962539361aa6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
 Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Windows Forms özel denetimlerinde Yardım dosyası içindeki Yardım konuları iliştirmek için bileşen. Yardım dosyası HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
@@ -66,7 +67,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Windows Forms özel
  Aynı zamanda <xref:System.Windows.Forms.HelpProvider> , onu Windows Forms denetimleri için Yardım dosyalarını görüntülemek için yapılandırılmış olsa bile açılır Yardım göstermek için bileşeni. Daha fazla bilgi için bkz: [nasıl yapılır: Görüntü açılır Yardım](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: açılır Yardımı görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- [ToolTips kullanarak denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Windows Forms'ta kullanıcı Yardımı tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [Nasıl yapılır: Açılır Yardımı Görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

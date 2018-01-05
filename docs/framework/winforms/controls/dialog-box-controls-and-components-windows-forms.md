@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3dbf95e54cbb2b6a729265ab39e99332d1cc1871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>İletişim Kutusu Denetimleri ve Bileşenleri (Windows Forms)
 Aşağıdaki Windows Forms denetimleri ve bileşenleri standart iletişim kutuları sunar. Her iletişim kutusunda işlevleri hakkında daha fazla bilgi için bağlantıları izleyin.  
@@ -50,31 +51,31 @@ Aşağıdaki Windows Forms denetimleri ve bileşenleri standart iletişim kutula
  Hakkında başvuru bilgileri sağlar <xref:System.Windows.Forms.SaveFileDialog> sınıfı ve üyeleri.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta iletişim kutuları](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Windows Forms'ta İletişim Kutuları](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Bir iletişim kutusu için bir Windows formu oluşturmayı açıklar.  
   
- [ColorDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ [ColorDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
  Renk paleti önceden yapılandırılmış iletişim kutusunda seçin ve bu paleti özel renkler eklemek için kullanıcının sağlar.  
   
- [FolderBrowserDialog bileşenine genel bakış (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  Kullanıcıların göz atın ve klasörleri seçin olanak tanır.  
   
- [FontDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ [FontDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
  Sistemde yüklü yazı tiplerini kullanıma sunar.  
   
- [OpenFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ [OpenFileDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
  Önceden yapılandırılmış iletişim kutusu üzerinden dosyaları açmasına izin verir.  
   
- [PageSetupDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
  Kümeleri önceden yapılandırılmış iletişim kutusu üzerinden yazdırma için Ayrıntılar sayfası.  
   
- [PrintDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ [PrintDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
  Bir yazıcı seçer, yazdırmak için sayfaları seçer ve diğer yazdırma ilgili ayarları belirler.  
   
- [PrintPreviewDialog denetimine genel bakış](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [PrintPreviewDialog Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
  Yazdırıldığında nasıl görüneceğini bir belgeyi görüntüler.  
   
- [SaveFileDialog bileşenine genel bakış](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ [SaveFileDialog Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  Kaydetmek için dosyaları ve bunları kaydedileceği yeri seçer.  
   
  Ayrıca bkz. [Windows Forms iletişim kutularında](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c504d86a44437c81aa7ff556947b6ddaff6f9de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="background-information"></a>Arka plan bilgileri
 Bu bölümdeki konular, kavramlar ve kullanma hakkında temel bilgileri ötesine genişletmek yordamlar ilgilidir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -31,64 +32,64 @@ Bu bölümdeki konular, kavramlar ve kullanma hakkında temel bilgileri ötesine
 -   Ayrıntılı teknik incelemesine araştırmak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi ile tam [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] ve C# kod örnekleri. Daha fazla bilgi için bkz: [LINQ-SQL: ilişkisel veri .NET Language-Integrated sorgusu](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ADO.NET ve LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
+ [ADO.NET ve LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
  Arasındaki ilişkiyi açıklar [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [LINQ-SQL kaynak kodunu analiz etme](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ [LINQ to SQL Kaynak Kodunu Analiz Etme](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Analiz edilmesi anlatılmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturma ve kaynak kodu Northwind örnek veritabanında görüntüleyerek eşleme.  
   
- [Özelleştirme ekleme, güncelleştirme ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
  Doğrulama kodu ve diğer özelleştirmelerin nasıl ekleneceğini açıklar.  
   
- [Veri bağlama](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
+ [Veri Bağlama](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
  Açıklar nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanan <xref:System.ComponentModel.IListSource> veri bağlamasını desteklemek için.  
   
- [Devralma desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
+ [Devralma Desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
  Devralma rolü açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve ilgili işleçleri sorgularınızda kullanma.  
   
- [Yerel yöntem çağrıları](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
+ [Yerel Yöntem Çağrıları](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
  Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel yöntem çağrıları için destek.  
   
- [N katmanlı ve uzak uygulamalarla LINQ-SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [LINQ to SQL ile N Katmanı ve Uzak Uygulamalar](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  Kullanan çok katmanlı uygulamalar için ayrıntılı bilgiler sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Nesne Kimliği açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve bu özellik bir veritabanında nesne kimliği nasıl farklıdır açıklar.  
   
- [LINQ to SQL nesne modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  Nesne modeli ve ilişkisel veri modeli ilişkisini açıklanır.  
   
- [Nesne durumlarını ve değişiklik izleme](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
+ [Nesne Durumları ve Değişiklik İzleme](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  Hakkında ayrıntılı bilgi sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklikleri izler.  
   
- [İyimser eşzamanlılık: genel bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [İyimser Eşzamanlılık: Genel Bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  İyimser eşzamanlılık açıklar ve terimleri tanımlar.  
   
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Sorgularda yönlerini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] farklı sorgularından [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
- [Kimlik önbellekten nesneleri](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ [Kimlik Önbelleğinden Nesne Alma](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
  Nesne Kimliği önbellekten sorgu türleri açıklanmaktadır.  
   
- [LINQ-SQL güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
+ [LINQ to SQL’de Güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
  Veritabanı Bağlantıları'deki güvenlik doğru yaklaşımı açıklanmaktadır.  
   
- [Seri hale getirme](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
+ [Serileştirme](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
  Seri hale getirme işlemini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar.  
   
- [Saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Saklı yordamlar, tasarım zamanında harita ve uygulamanızdan çağırmak açıklar.  
   
- [İşlem desteği](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
+ [İşlem Desteği](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
  İşlem üç modellerinin özetlenmektedir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.  
   
- [SQL CLR türüyle eşleşmiyor](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  Farklı türde sistemleri karıştırma sorunları açıklar.  
   
- [SQL CLR özel türü eşlemeleri](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
+ [SQL-CLR Özel Tür Eşlemeleri](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
  Türü eşlemelerini özelleştirme hakkında rehberlik sağlar.  
   
- [Kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
+ [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
  Tasarım zamanında kullanıcı tanımlı işlevler harita ve uygulamanızdan çağırmak açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

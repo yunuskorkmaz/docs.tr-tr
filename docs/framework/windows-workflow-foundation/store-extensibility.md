@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12204ebe9720fb8f894046622d6bb81b1c7d5706
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="store-extensibility"></a>Depolama genişletilebilirliği
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örneği. Bir özellik yükseltme eylemi değeri veritabanındaki özel bir görünüm içinde kullanılabilir olacak şekilde neden olur. Bu yükseltilen özelliklerini (kullanıcı sorgularda kullanılan) Int64, GUID, dize ve tarih/saat gibi basit türler veya seri hale getirilmiş ikili türde (byte[]). olabilir  

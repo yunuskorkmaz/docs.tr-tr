@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b41e47ae4067ac52cc747d675ec5231f25b1352
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
 Kimlik doğrulaması bir istemci bir kaynağa erişmek uygun olup olmadığını belirleme işlemidir. Güvenli bir kaynağa erişim anlaşmak için bir araç olarak kimlik doğrulaması HTTP protokolünü destekler.  
@@ -46,6 +47,6 @@ Kimlik doğrulaması bir istemci bir kaynağa erişmek uygun olup olmadığını
 -   Bir sunucu (WWW kimlik doğrulaması üstbilgilerinde) herhangi sunmalıdır değil değil düzeni hazırlanmış kabul etmek veya yeterli korumalı kaynağa güvenli değil. İstemciler sunucu sunar kimlik doğrulama şemasını arasında seçim boş. Bazı istemciler varsayılan zayıf bir kimlik doğrulama düzeni veya sunucunun listesindeki ilk kimlik doğrulama düzeni.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Taşıma güvenliği ile kimliğe bürünme kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [Temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+ [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

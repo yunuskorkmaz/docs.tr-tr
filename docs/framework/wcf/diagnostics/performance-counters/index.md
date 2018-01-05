@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3f9834e99fb7fa98e2f986a1ce5460aa387143f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir.  
@@ -148,4 +149,4 @@ ServiceName@ServiceBaseAddress
  Sayaçları programlı erişim hakkında daha fazla bilgi için bkz: [performans sayacı programlama mimarisi](http://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

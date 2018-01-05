@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Performansı İyileştirme: Denetimler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]çok kullanılan ortak kullanıcı arabirimi (UI) bileşenlerinin çoğu Windows uygulamalarında içerir. Bu konu, kullanıcı Arabirimi performansını iyileştirme tekniklerini içerir.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Ayarı <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> için `false`.  
   
--   Ayarı <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` için `false`.    
+-   Ayarı <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` için `false`.  
   
  Öğe kapsayıcılarını sanallaştırmanızı, önemli bir öğesiyle ait bir öğe kapsayıcı ile ilişkili ek durum bilgileri yüklü olup olmadığını konudur. Bu durumda, ek durum kaydetmeniz gerekir. Örneğin, bir öğe içinde yer alan olabilir bir <xref:System.Windows.Controls.Expander> denetim ve <xref:System.Windows.Controls.Expander.IsExpanded%2A> durum öğesi'nin kapsayıcısı ve öğesi için bağlı. Ne zaman kapsayıcı yeniden kullanılabilir, geçerli değeri gibi yeni bir öğe için <xref:System.Windows.Controls.Expander.IsExpanded%2A> yeni öğe için kullanılır. Buna ek olarak, eski öğe doğru kaybederse <xref:System.Windows.Controls.Expander.IsExpanded%2A> değeri.  
   
@@ -87,8 +88,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
- [Düzen ve tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Denetimleri](../../../../docs/framework/wpf/controls/index.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [İzlenecek yol: Bir WPF uygulamasında uygulama verileri önbelleğe alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

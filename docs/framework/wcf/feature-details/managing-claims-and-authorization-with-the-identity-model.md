@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler, çalışanlarına dosyalara erişmesine izin. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yetkilendirme işlemi gerçekleştirmek için iki mekanizma destekler. İlk mekanizma, varolan ortak dil çalışma zamanı (CLR) yapıları kullanarak yetkilendirmeyi denetlemenizi sağlar. İkinci olarak bilinen bir talep tabanlı modeldir *kimlik modeli*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]gelen iletilere talep oluşturmak üzere kimlik modelini kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini desteklemek için genişletilebilir. Bu konuda özelliğini kullanıyor en önemli sınıfları listesini yanı sıra kimliği Model özelliğinin ana programlama kavramları hakkında genel bir bakış sunulmaktadır.  
@@ -180,12 +181,12 @@ Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde 
  <xref:System.IdentityModel.Policy>  
  <xref:System.IdentityModel.Tokens>  
  <xref:System.IdentityModel.Selectors>  
- [Beyanlar ve belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Beyanlar ve kaynaklara erişimi reddetme](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [Talep oluşturma ve kaynak değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Nasıl yapılır: özel beyan oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Nasıl yapılır: Beyanları](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Nasıl yapılır: özel yetkilendirme ilkesi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Nasıl yapılır: bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Talepler ve Belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [Talepler ve Kaynaklara Erişimi Reddetme](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
+ [Talep Oluşturma ve Kaynak Değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Nasıl yapılır: Talepleri Karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

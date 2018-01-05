@@ -17,21 +17,22 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 801af10f7b9e5e7998fc061537977c5bced6bdb3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 62e9b9e0e1aa432578b7173cd58f88dd44957f84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-curves"></a>Eğriler Oluşturma ve Çizme
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Eğriler çeşitli türlerini destekler: üç nokta, yaylar, eğriler ve Bézier eğrisi. Elips kendisini çevreleyen bir dikdörtgen tarafından tanımlanan; Yayı Başlangıç açısı ve bir tarama açısı tarafından tanımlanan bir elips bölümüdür. Kardinal eğri noktası ve gerilim parametre dizisi tarafından tanımlanan — eğri her bir dizi noktası sorunsuz geçtiği ve gerilim parametre eğri bends biçimini etkiler. Bir Bézier eğrisi iki uç nokta ile eğri denetim noktaları aracılığıyla iletmez iki denetim noktaları tarafından tanımlanan, ancak denetim noktaları yönde etkileyen ve eğri bir uç noktasından diğerine geçtikçe bükme.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Eğriler çizme](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
+ [Nasıl yapılır: Ana Eğriler Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
  Ana eğriler ve çizerken açıklar.  
   
- [Nasıl yapılır: tek bir Bézier eğrisi çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-single-bezier-spline.md)  
+ [Nasıl yapılır: Tek Bir Bézier Eğrisi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-single-bezier-spline.md)  
  Bir Bézier eğrisi ve tek tek açıklar.  
   
- [Nasıl yapılır: bir sıra Bézier eğrisi çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)  
+ [Nasıl yapılır: Bir Sıra Bézier Eğrisi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)  
  Sırayla birkaç Bézier eğrisi çizme açıklanmaktadır.

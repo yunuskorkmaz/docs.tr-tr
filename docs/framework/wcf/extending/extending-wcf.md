@@ -17,32 +17,33 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-wcf"></a>WCF'yi Genişletme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]değiştirmek ve tam olarak denetlemek için çalışma zamanı bileşenleri genişletmek ve hizmet tabanlı uygulamalar genişletmek sağlar. Bu bölümdeki konular, genişletilebilirlik mimarisi hakkında ayrıntılı gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Genişletme ServiceHost ve hizmet modeli katmanını](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
+ [ServiceHost ve Hizmet Modeli Katmanını Genişletme](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
  Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem çağrılarına uygulama kodundaki içine çevirme ve sonuçları çağırana geri göndermek için hizmet modeli katmanını sorumludur.  Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve dağıtıcı işlevselliği, özel davranışları, ileti ve parametre kişiler tarafından ele ve diğer genişletilebilirlik işlevleri içeren özellikler uygular.  
   
- [Bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)  
  Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntılarını açıklayan nesneleridir. Özel bağlamalar veya bağlama uzantıları uygulama özellikleri desteklemek için gereken özel iletişim işlevselliği uygulayın.  
   
- [Kanal katmanını genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
+ [Kanal Katmanını Genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
  Kanal katmanını hizmet modeli katmanını altında bulunur ve exchange istemcileri ve Hizmetleri arasındaki iletilerinin sorumludur. Kanal uzantıları güvenlik gibi yeni protokol işlevselliği uygulayabilirsiniz. Kanal uzantıları SOAP iletilerine taşımak için yeni bir ağ aktarımı uygulama gibi işlevlerini de taşıma.  
   
- [Güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
  Güvenlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarımı güvenliğini (bütünlüğü, gizlilik ve kimlik doğrulaması) erişim denetimi (yetkilendirme) oluşur ve denetim. Bulunan sınıflar `IdentityModel` ad alanı tarafından kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erişim denetimi için. Güvenlik mimarisini anlama, özel erişim denetimi sistemlerine uyum sağlamak için özel talep türleri oluşturmanıza olanak sağlar.  
   
- [Meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
+ [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Meta veri sistemi grubudur sınıflar ve arabirimler hizmet tabanlı uygulamalar uygulamak için gereken meta verileri temsil eder. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimleri yapılandırın.  
   
- [Kodlayıcılar ve seri hale getiricileri genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Kodlayıcılar ve serileştiricileri verileri bir biçimden diğerine çevir. Bu bölümdeki konular, özel gereksinimleri karşılamak için sağlanan sınıflarını genişletmek nasıl ele almaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -61,8 +62,8 @@ ms.lasthandoff: 12/02/2017
  <xref:System.IdentityModel.Tokens>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [WCF özellik ayrıntıları](../../../../docs/framework/wcf/feature-details/index.md)  
+ [WCF Özellik Ayrıntıları](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Kılavuzları ve en iyi uygulamalar](../../../../docs/framework/wcf/guidelines-and-best-practices.md)
+ [Yönergeler ve En İyi Yöntemler](../../../../docs/framework/wcf/guidelines-and-best-practices.md)

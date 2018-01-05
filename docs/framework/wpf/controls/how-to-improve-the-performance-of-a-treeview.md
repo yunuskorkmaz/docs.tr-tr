@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 209f2c5645758aba4d1e10fc36fe773faa975e6b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c13a9c89bdcb149df61f26177ea8705e502402f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>Nasıl yapılır: TreeView'ın Performansını Artırma
 Varsa bir <xref:System.Windows.Controls.TreeView> sayıda öğe içeriyorsa kullanıcı arabiriminde geçen yüklemek için süreyi önemli gecikmeye neden olabilir. Ayarlayarak yükleme süresini artırabilir `VirtualizingStackPanel.IsVirtualizing` özelliğine bağlı `true`.  UI Ayrıca kullanıcı kaydırdığında tepki vermek yavaş olabilir <xref:System.Windows.Controls.TreeView> fare tekerleği kullanarak veya bir kaydırma çubuğu sürükleyerek. Performansını artırabilir <xref:System.Windows.Controls.TreeView> kullanıcı ne zaman kayar ayarlayarak `VirtualizingStackPanel.VirtualizationMode` özelliğine bağlı <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  
@@ -40,4 +41,4 @@ Aşağıdaki örnekte bir <xref:System.Windows.Controls.TreeView> ayarlayan `Vir
  [!code-vb[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetimleri](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+ [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

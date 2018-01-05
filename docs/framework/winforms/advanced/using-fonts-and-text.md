@@ -19,47 +19,48 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c18dde7265a07eb45e0211a882b19acc6342e924
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4febeed6aff2c18b5040020c2c1d3ee6cf59a52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-fonts-and-text"></a>Yazı Tipleri ve Metin Kullanma
 Tarafından sunulan birkaç sınıfı vardır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin Windows Forms'ta çizme. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> Sınıfına sahip birkaç <xref:System.Drawing.Graphics.DrawString%2A> metin yazı tipi ve biçimi dikdörtgen sınırlayıcı konum gibi çeşitli özelliklerini belirtmenize olanak veren yöntemler. Ayrıca, çizme ve ölçmek metinle [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] statik kullanarak <xref:System.Windows.Forms.TextRenderer.DrawText%2A> ve <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> yöntemleri tarafından sunulan `TextRenderer` sınıfı. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Yöntemleri de olanak tanır konumu, yazı tipi ve biçimini belirtin. Ya da seçebilirsiniz [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] veya [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] için metin işleme; ancak, [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] teklifleri performansı ve daha doğru metin ölçme genellikle daha iyi. Metin işlemeye katkıda bulunan diğer sınıfları içerir `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, ve `TextFormatFlags`.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: yazı tipi aileleri ve yazı tipleri](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
  Nasıl oluşturulacağını gösterir `Font` ve `FontFamily` nesneleri.  
   
- [Nasıl yapılır: belirtilen konumda metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
+ [Nasıl yapılır: Belirtilen bir Konuma Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
  Bir konumu belirli kullanarak metin çizme açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Nasıl yapılır: dikdörtgende sarmalanmış metin dikdörtgene](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
+ [Nasıl yapılır: Dikdörtgende Sarmalanmış Metin](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
  Dikdörtgen kullanarak metin çizme açıklanmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Nasıl yapılır: GDI ile metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Nasıl yapılır: GDI ile Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
  Nasıl kullanılacağı ortaya [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin çizme.  
   
- [Nasıl yapılır: çizilmiş metni hizalama](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
+ [Nasıl yapılır: Çizilmiş Metni Hizalama](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
  Nasıl biçimlendirileceğini gösterir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ve [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] metin.  
   
- [Nasıl yapılır: dikey metin oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
+ [Nasıl yapılır: Dikey Metin Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
  Dikey olarak hizalanmış metinle çizmek açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Nasıl yapılır: çizilmiş metinde sekme durakları ayarlama](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
+ [Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
  Gösterir nasıl metin ile sekme durakları ile çizme [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Nasıl yapılır: yüklü yazı tiplerini numaralandırma](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
+ [Nasıl yapılır: Yüklü Yazı Tiplerini Numaralandırma](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
  Yüklü yazı tiplerini adlarını listelemek açıklanmaktadır.  
   
- [Nasıl yapılır: özel yazı tipi koleksiyonu oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
+ [Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
  Nasıl oluşturulacağını açıklar bir <xref:System.Drawing.Text.PrivateFontCollection> nesnesi.  
   
- [Nasıl yapılır: yazı tipi ölçümleri alma](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
+ [Nasıl yapılır: Yazı Tipi Ölçümleri Alma](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
  Hücre Yokuş ve düşüşü gibi yazı tipi ölçümleri alma gösterilmektedir.  
   
- [Nasıl yapılır: metinle düzgünleştirme kullanma](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
+ [Nasıl yapılır: Metinle Düzgünleştirme Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
  Metin çizim sırasında düzgünleştirme kullanımı açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  

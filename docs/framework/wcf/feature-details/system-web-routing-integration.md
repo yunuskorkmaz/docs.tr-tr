@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f74a0f9d7a39d7d5ccb97d7f4ef022b32bbf4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Integration
 Barındırdığında bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmeti Internet Information Service (IIS) sanal dizinde .svc dosya yerleştirin. Bu .svc dosya hizmeti uygulayan sınıfa yanı sıra kullanmak için hizmet ana bilgisayar üreteci belirtir. İstekleri hizmete yaparken .svc dosyasındaki URI, örneğin belirttiğiniz: http://contoso.com/EmployeeServce.svc. Bu tür bir URI REST Hizmetleri yazma programcıları için en uygun değil. URI'ler REST Hizmetleri için belirli bir kaynak belirtin ve tüm uzantılar normalde sahip değil. <xref:System.Web.Routing> Tümleştirme özelliği barındırmanıza olanak sağlayan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzantısız URI'ler için yanıt REST hizmeti. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yönlendirme Bkz: [ASP.NET yönlendirme](http://go.microsoft.com/fwlink/?LinkId=184660) ve [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) örnek.  
@@ -80,5 +81,5 @@ Barındırdığında bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [ASP.NET yönlendirme](http://go.microsoft.com/fwlink/?LinkId=184660)

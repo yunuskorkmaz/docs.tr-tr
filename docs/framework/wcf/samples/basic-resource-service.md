@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68edbf5a2c96893bdf0e3a7a923084adea9e3c21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bfcd632846510f8f62280bfb1620ba1f8c35ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-resource-service"></a>Temel Kaynak Hizmeti
 Bu örnek, bir HTTP tabanlı hizmet kullanarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] alma destekleyen müşteriler koleksiyonu sunan REST programlama modeli ekleme, silme ve değiştirme işlemlerini. Bu örnek 2 bileşenleri - kendini barındıran oluşur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs).  
@@ -49,5 +50,5 @@ Bu örnek, bir HTTP tabanlı hizmet kullanarak uygulamak gösterilmiştir [!INCL
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [Temel HTTP Hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md)  
  [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

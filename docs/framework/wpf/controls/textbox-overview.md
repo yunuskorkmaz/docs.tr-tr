@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
 <xref:System.Windows.Controls.TextBox> Sınıfı, biçimlendirilmemiş metni görüntülemenizi ve düzenlemenizi sağlar. Yaygın kullanımı bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adını, telefon numarasını soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin giriş için denetimler. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  

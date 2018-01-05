@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d082b0e3db1e1c115d28446cf515cf6acf60a7d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama
 `ShouldSerialize`ve `Reset` özelliği yoksa, bir özellik için sağladığınız isteğe bağlı yöntemlerdir bir basit varsayılan değere sahip. Basit varsayılan bir değer özelliğine sahipse uygulamalıdır <xref:System.ComponentModel.DefaultValueAttribute> ve bunun yerine öznitelik sınıfı Oluşturucu için varsayılan değer sağlayın. Bu mekanizmaların birini Tasarımcısı'nda aşağıdaki özellikleri sağlar:  
@@ -154,6 +155,6 @@ public class MyControl : Control {
  Bu durumda, hatta özel değişkeninin değeri tarafından erişildiğinde `MyFont` özelliği `null`, özellik tarayıcısı görüntülenmez `null`; bunun yerine, gösterir <xref:System.Windows.Forms.Control.Font%2A> özellik değilse üst `null`, veya varsayılan <xref:System.Windows.Forms.Control.Font%2A> tanımlanan değer <xref:System.Windows.Forms.Control>. Bu nedenle için varsayılan değer `MyFont` yalnızca ayarlanamaz ve bir <xref:System.ComponentModel.DefaultValueAttribute> bu özelliğe uygulanamaz. Bunun yerine, `ShouldSerialize` ve `Reset` yöntem uygulanmadı, için `MyFont` özelliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Özellik tanımlama](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [Özellik değişti olayları](../../../../docs/framework/winforms/controls/property-changed-events.md)
+ [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Özellik Tanımlama](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [Özellik Değişti Olayları](../../../../docs/framework/winforms/controls/property-changed-events.md)

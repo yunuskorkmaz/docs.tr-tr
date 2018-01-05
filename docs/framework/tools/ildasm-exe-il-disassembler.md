@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9ce101a1770329ab54ec8be86ec537a77f0fc112
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f42726b24abe78b151e4174da37b7c7bfff4c8d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -194,7 +195,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Araçları](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (IL derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Yönetilen yürütme işlemi](../../../docs/standard/managed-execution-process.md)  
-[Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+[Araçlar](../../../docs/framework/tools/index.md)  
+[Ilasm.exe (IL Derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+[Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)  
+[Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

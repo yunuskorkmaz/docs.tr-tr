@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]uygulamaların Windows Mağazası'nda veya geliştiricinin bilgisayarda statik derleme sağlar. Bu Windows mağazası uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derleme farklıdır veya [yerel Görüntü Oluşturucu (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farkları rağmen [!INCLUDE[net_native](../../../includes/net-native-md.md)] ile uyumluluğu korumak çalışır [.NET için Windows mağazası uygulamaları](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows mağazası uygulamaları üzerinde çalışır şeyler de çalışmak [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Ancak, bazı durumlarda davranış değişiklikleri karşılaşabilirsiniz. Bu belge standart .NET için Windows mağazası uygulamaları arasındaki bu farklılıkları açıklar ve [!INCLUDE[net_native](../../../includes/net-native-md.md)] aşağıdaki alanlarda:  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Çok boyutlu diziler için varyansı desteklenmiyor ve neden olan bir <xref:System.InvalidCastException> çalışma zamanında özel durum.  
   
- **Genel türler**  
+ **Genel Türler**  
   
 -   Sınırsız genel tür genişletme derleyici hataya yol açar. Örneğin, bu kodu derlemek başarısız olur:  
   
@@ -143,11 +144,11 @@ ms.lasthandoff: 11/21/2017
   
 -   Yansıma almak veya bir işaretçi alanı ayarlamak için kullanamazsınız.  
   
- **Seri hale getirme**  
+ **Serileştirme**  
   
  <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> Öznitelik desteklenmez. Kullanım <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> yerine özniteliği.  
   
- **Kaynakları**  
+ **Kaynaklar**  
   
  Yerelleştirilmiş kaynaklar ile kullanımını <xref:System.Diagnostics.Tracing.EventSource> sınıfı desteklenmiyor. <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> Özellik yerelleştirilmiş kaynaklar tanımlamak değil.  
   
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
  `Delegate.BeginInvoke`ve `Delegate.EndInvoke` desteklenmez.  
   
- **Zaman uyumsuz**  
+ **Async**  
   
  Görev IAsync aşırı mantığında iş parçacığı oluşturma desteklenmiyor.  
   
@@ -684,6 +685,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [.NET için Windows mağazası uygulamalarına genel bakış](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- [Windows mağazası uygulamaları ve Windows çalışma zamanı için .NET framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+ [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

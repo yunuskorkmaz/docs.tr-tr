@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7b6574e452faf4f0396f7633ba7f21519948262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Windows Formları ve Denetimlerindeki Uluslararası Yazı Tipleri
 Uluslararası uygulamalar yazı tipleri seçme önerilen yöntem yazı tipi geri dönüşü mümkün olduğunda kullanmaktır. Ait ne karakter komut dosyası sistemini belirler yazı tipi geri dönüş anlamına gelir.  
@@ -90,5 +91,5 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
- [Yazı tipleri ve metin kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+ [Windows Forms’u Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Yazı Tipleri ve Metin Kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

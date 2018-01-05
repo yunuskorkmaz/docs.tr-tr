@@ -20,23 +20,24 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown Denetimi (Windows Forms)
 Windows Forms `NumericUpDown` denetimi kullanıcının bir değer ayarlamak için tıklatabileceği okları çifti ve bir metin kutusu birleşimini gibi görünüyor. Denetim görüntüler ve seçenekler listesinden tek bir sayısal değer ayarlar. Kullanıcı artırın ve yukarı ve aşağı düğmeleri tıklatarak yukarı ve aşağı ok tuşlarına basarak veya bir sayı yazarak sayısını azaltın. Yukarı Ok tuşuna tıklayarak, en doğru değeri taşır; Aşağı Ok tuşuna tıklayarak en düşük doğru konuma taşır. Müzik çalar üzerinde bir birim denetimi için burada bu tür bir denetim yararlı olabilecek bir örnek verilmiştir. Sayısal yukarı-aşağı denetimleri bazı Windows Denetim Masası uygulamalarda kullanılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [NumericUpDown denetimine genel bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
+ [NumericUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
  Genel kavramlarını tanıtır `NumericUpDown` göz atın ve sayısal değerleri listesinden olanak tanıyan denetim.  
   
- [Nasıl yapılır: sayısal değerleri Windows Forms NumericUpDown denetimi ayarlama ve döndürme](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
+ [Nasıl yapılır: Windows Forms NumericUpDown Denetimi ile Sayı Değerleri Ayarlama ve Döndürme](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
  Denetimin değeri test edileceğini açıklar.  
   
- [Nasıl yapılır: Windows Forms NumericUpDown denetiminin biçimini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [Nasıl yapılır: Windows Forms NumericUpDown Denetiminin Biçimini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
  Değerleri denetiminde nasıl görüntüleneceğini yapılandırılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -44,8 +45,8 @@ Windows Forms `NumericUpDown` denetimi kullanıcının bir değer ayarlamak içi
  Başvuru bilgileri sağlar <xref:System.Windows.Forms.NumericUpDown> sınıfı ve üyeleri.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
   
- [DomainUpDown denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ [DomainUpDown Denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
  Benzer şekilde bir denetim tanıtır <xref:System.Windows.Forms.NumericUpDown>dışında <xref:System.Windows.Forms.DomainUpDown> denetimi dizesi yerine sayısal değerleri görüntüler.

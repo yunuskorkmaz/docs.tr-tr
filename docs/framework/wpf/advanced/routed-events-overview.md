@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be4447570f89637910506b6257c092c86f24991b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konu yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konuda, yönlendirilmiş olaylar terimleri tanımlar, açıklar öğeleri ağacıyla yönlendirilmiş yönlendirilmiş olayları nasıl yönlendirilmiş olaylar nasıl işleneceğini özetler ve kendi özel yönlendirilmiş olaylar oluşturmak nasıl tanıtır.
@@ -258,9 +259,9 @@ Giriş olayı Tırmanmasını ve tünel oluşturma
  <xref:System.Windows.EventManager>  
  <xref:System.Windows.RoutedEvent>  
  <xref:System.Windows.RoutedEventArgs>  
- [İşaretleme yönlendirilmiş olarak işlenen ve sınıf işlemesi olaylar](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [WPF ağaçlarında](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Zayıf olay desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+ [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [WPF İçinde Ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [Zayıf Olay Desenleri](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)

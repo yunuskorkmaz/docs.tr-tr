@@ -15,29 +15,30 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="window-management-how-to-topics"></a>Pencere Yönetimi Nasıl Yapılır Konuları
 Aşağıdaki konular nasıl yönetileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Otomatik olarak içeriğinin sığması için bir pencere boyutu](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [Bir uygulamadaki tüm pencereleri Al](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [Alma ve ana uygulama penceresi ayarlama](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [İletişim kutusunu açın](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [Bir ileti kutusu açın](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [Bir pencere aç](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [İletişim kutusu sonucunu döndürür](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [İçeriği Sığdırmak için Pencereyi Otomatik Boyutlandırma](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [Bir Uygulamadaki Tüm Pencereleri Alma](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
+  [Ana Uygulama Penceresini Alma ve Ayarlama](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
+  [İletişim Kutusu Açma](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
+  [İleti Kutusu Açma](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
+  [Pencere Açma](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
+  [İletişim Kutusu Sonucu Döndürme](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
   
- [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
  [Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
   
- [Derleme ve dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

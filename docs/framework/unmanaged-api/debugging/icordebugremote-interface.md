@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6195b53d11877c6b7b2a52c3fd8d194dfb51810
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc34c3a1049a24a27fae4d13288efbd5a98a4dc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote Arabirimi
 Yönetilen bir hata ayıklayıcıyı uzak hedef işleminde başlatma veya ekleme özelliği sağlar.  
@@ -64,8 +65,8 @@ interface ICorDebugRemote : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Icordebugremote::createprocessex yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Yönetilen hata ayıklama için bir işlemi uzak makinede oluşturur.|  
-|[Icordebugremote::debugactiveprocessex yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Hata ayıklayıcı altında uzaktaki bir makinede bir işlem başlatır.|  
+|[ICorDebugRemote::CreateProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Yönetilen hata ayıklama için bir işlemi uzak makinede oluşturur.|  
+|[ICorDebugRemote::DebugActiveProcessEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Hata ayıklayıcı altında uzaktaki bir makinede bir işlem başlatır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Şu anda bu işlevsellik yalnızca bir uzak Macintosh makine üzerinde çalışan Silverlight tabanlı uygulamaya hedef hata ayıklama için desteklenir.  
@@ -80,7 +81,7 @@ interface ICorDebugRemote : IUnknown
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icordebugremotetarget arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [Icordebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+ [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
+ [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

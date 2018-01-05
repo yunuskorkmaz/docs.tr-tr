@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8004b05ea25341a142bfcfd9ae812ee3bebd6d5b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7cc62780579c852aaa637a3ccc13ce2929423868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Forms'ta Fare Yakalama
 *Fare yakalama* denetim tüm fare girişi komutu yönlendirdiğinde başvuruyor. Bir denetim fare yakalandı, işaretçi sınırlarının içinde olup olmadığını fare girdisi alır.  
@@ -31,4 +32,4 @@ ms.lasthandoff: 10/22/2017
  Yalnızca ön plan penceresi fare yakalayabilirsiniz. Bir arka plan penceresi fare yakalama girişiminde bulunduğunda, pencere iletileri için fare işaretçisini penceresinde görünen dilimini içinde olduğunda oluşan fare olayları alır. Ön plan penceresi fare yakalandı olsa bile, kullanıcı hala başka bir pencere ön plana getiren tıklatabilirsiniz. Fare yakalandığında kısayol tuşları çalışmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Forms bir Windows uygulamasında fare girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

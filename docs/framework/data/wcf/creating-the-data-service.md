@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-data-service"></a>Veri hizmeti oluşturma
 Bu görevde kullanan bir örnek veri hizmeti oluşturacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma sunmak için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind örnek veritabanı üzerinde temel akış. Görev aşağıdaki temel adımları içerir:  
@@ -110,7 +111,7 @@ Bu görevde kullanan bir örnek veri hizmeti oluşturacak [!INCLUDE[ssAstoria](.
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sunan yeni bir veri hizmeti başarıyla oluşturdunuz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind örnek veritabanı ve size göre akış akışına izinlere sahip istemciler için erişim etkinleştirdiğinizden [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Ardından, veri hizmetinden başlar [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve size erişim [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] HTTP GET isteklerini bir Web tarayıcısı aracılığıyla göndererek akış:  
   
- [Bir Web tarayıcısından hizmetine erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Web Tarayıcısından Hizmete Erişme](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

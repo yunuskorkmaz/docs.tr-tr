@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9229ce86dbe640c4eb960c455dd049ff40b38d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0beb22ba78c6fc99951bc2d780c1c5defa32e637
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-text-decoration"></a>Nasıl yapılır: Metin Süslemesi Oluşturma
 A <xref:System.Windows.TextDecoration> metne ekleyebileceğiniz görsel süslemedir nesnesidir. Metin düzenlemelerinin dört tür vardır: alt çizgi, taban çizgisi, üst çizgi ve üst çizgi. Aşağıdaki örnek metin göre metin düzenlemelerinin konumlarını gösterir.  
@@ -77,4 +78,4 @@ TextDecorations ile tanımlanan köprüler
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.TextDecoration>  
  <xref:System.Windows.Documents.Hyperlink>  
- [Olup olmadığını bir köprü altı çizili belirtin](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)
+ [Köprünün Altı Çizili Olup Olmadığını Belirtme](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)

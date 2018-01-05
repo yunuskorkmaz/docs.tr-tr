@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e457113eff471c620ccdbf78337d2013d7a62bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd760cf51aa0f3e89e49831b1aa165e62b321d20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Varolan kısıtlamaları bir veri kümesine ekleme
 **Doldurun** yöntemi **DataAdapter** doldurur bir <xref:System.Data.DataSet> yalnızca tablo sütunları ve satırları veri kaynağından; sahip ancak kısıtlamaları yaygın olarak ayarlanmış veri kaynağı tarafından **doldurun** yöntemi için bu şema bilgileri eklemez **DataSet** varsayılan olarak. Doldurmak için bir **DataSet** ya da arama yapabileceğiniz bir veri kaynağından var olan birincil anahtar kısıtlaması bilgilerle **FillSchema** yöntemi **DataAdapter**, veya ayarlayın **MissingSchemaAction** özelliği **DataAdapter** için **AddWithKey** çağırmadan önce **doldurun**. Bu birincil anahtara sağlayacak kısıtlamalar **veri kümesi** bu veri kaynağında yansıtır. Yabancı anahtar kısıtlaması bilgileri dahil değildir ve açıkça gösterildiği gibi oluşturulmalıdır [DataTable kısıtlamalarını](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
@@ -71,7 +72,7 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Varsa **FillSchema** yöntemi **OleDbDataAdapter** nesne birden çok sonuç kümesi döndüren bir komutu için çağrılır, yalnızca şema bilgileri ilk sonuç kümesinden döndürülür. Birden çok sonuç için şema bilgileri döndüren zaman ayarlar kullanarak **OleDbDataAdapter**, önerilen, belirttiğiniz bir **MissingSchemaAction** , **AddWithKey** ve çağrılırken şema bilgileri elde **doldurun** yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

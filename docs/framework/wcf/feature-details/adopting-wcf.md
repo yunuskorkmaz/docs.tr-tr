@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e27ee5f2e1b2ad042fd8c0104e89b99eb5e4bc96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 522d4d39df6df62a6bed2fdc9f6d72df1193faca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation'ı Benimseme
 Kullanmayı tercih edebileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ASP.NET kullanılarak geliştirilmiş uygulamalara sürdürmek devam ederken yeni geliştirme. Çünkü [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olan herhangi bir senaryoda .NET Framework ile oluşturulan uygulamalar ile iletişimi kolaylaştırmanın için en uygun seçenek olarak kullanılması, bu çok çeşitli şekilde yazılım iletişim sorunları çözmek için standart bir aracı olarak hizmet verebilir ASP.NET yapılamıyor.  
@@ -35,6 +36,6 @@ Kullanmayı tercih edebileceğiniz [!INCLUDE[indigo1](../../../../includes/indig
  Mevcut ASP.NET Web hizmetlerini WCF'ye taşıma konusunda tam bir çözümleme için lütfen bkz [ASP.NET Web Hizmetleri ve Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkID=71761). Bu bölümde meta verilerden uyumlu bir WCF hizmeti, ASP.NET Web hizmeti uygulama ve ASP.NET Web hizmeti ve istemci kodunu taşıma anlatılmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: meta verileri alma ve uyumlu bir hizmet ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- [Nasıl yapılır: ASP.NET Web hizmeti kodunu Windows Communication Foundation'a taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
- [Nasıl yapılır: ASP.NET Web hizmeti istemci kodunu Windows Communication Foundation'a taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+ [Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Nasıl yapılır: ASP.NET Web Hizmeti Kodunu Windows Communication Foundation'a Taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)  
+ [Nasıl yapılır: ASP.NET Web Hizmeti İstemci Kodunu Windows Communication Foundation'a Taşıma](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

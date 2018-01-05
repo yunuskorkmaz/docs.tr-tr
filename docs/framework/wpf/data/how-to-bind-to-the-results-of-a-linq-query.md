@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e77a0c698dae0330877c54422c15e14c82376891
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad4969d80f7bd801ec738fa40e8b2d4ab9deefad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Nasıl yapılır: LINQ Sorgusunun Sonuçlarına Bağlama
 Bu örnek, bir LINQ Sorgu çalıştırmak ve sonuçları bağlamak gösterilmiştir.  
@@ -39,8 +40,8 @@ Bu örnek, bir LINQ Sorgu çalıştırmak ve sonuçları bağlamak gösterilmiş
  İkinci liste kutusunu o koleksiyona bağlar çünkü kendi <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> değeri ayarı `{Binding}`. Sonuç olarak döndürülen koleksiyon gösterilir (temel `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Verileri XAML'de bağlama için kullanılabilir yap](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [Seçim temelinde bilgi görüntüleme ve koleksiyonuna bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [WPF sürüm 4.5 yenilikler nelerdir?](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
+ [Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [WPF Sürüm 4.5'teki Yenilikler](../../../../docs/framework/wpf/getting-started/whats-new.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

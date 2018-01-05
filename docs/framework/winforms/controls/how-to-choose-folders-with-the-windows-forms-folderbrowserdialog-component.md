@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0824fb70fa67628326af38ff7fb5e6c097a0378c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de41d5664c2481032dffe213a52779834338ca2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme
 Genellikle, oluşturduğunuz Windows uygulamaları içinden en sık dosyaları kümesini kaydetmek için bir klasör seçmek için kullanıcılara sor gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni, bu görevi kolayca gerçekleştirmenize olanak sağlar.  
@@ -78,5 +79,5 @@ Genellikle, oluşturduğunuz Windows uygulamaları içinden en sık dosyaları k
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
- [FolderBrowserDialog bileşenine genel bakış (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- [FolderBrowserDialog bileşeni](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+ [FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [FolderBrowserDialog Bileşeni](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

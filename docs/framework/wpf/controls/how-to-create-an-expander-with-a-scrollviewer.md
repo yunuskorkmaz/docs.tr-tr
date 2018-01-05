@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 817fb8d04e680335aff726db84cdfb9630b4cdf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2066ccce28138cfecf4e0b4574d45783a9ba4ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Nasıl yapılır: ScrollViewer ile bir Genişletici Oluşturma
 Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Controls.Expander> bir resim ve metin gibi karmaşık içerik içeren denetim. Bu örnek ayrıca içeriğini barındırır <xref:System.Windows.Controls.Expander> içinde bir <xref:System.Windows.Controls.ScrollViewer> denetim.  
@@ -38,5 +39,5 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.Expander>  
- [Genişletici genel bakış](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [Genişleticiye Genel Bakış](../../../../docs/framework/wpf/controls/expander-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

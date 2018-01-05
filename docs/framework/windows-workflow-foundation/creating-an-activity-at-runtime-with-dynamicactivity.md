@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d40fe3601cb8ad7c4f77cf50825da1deace5644e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>DynamicActivity ile çalışma zamanında bir etkinlik oluşturma
 <xref:System.Activities.DynamicActivity>somut, korumalı bir public oluşturucuya sahip sınıfıdır. <xref:System.Activities.DynamicActivity>bir etkinlik DOM kullanarak çalışma zamanında etkinlik işlevleri bir araya getirmek için kullanılabilir  
@@ -106,5 +107,5 @@ ms.lasthandoff: 12/02/2017
 8.  Workflow1.xaml dosyasında sağ **Çözüm Gezgini** seçip **görünümü kodu**. Etkinliği sınıf ile oluşturulan Not `x:Class` ve özelliği ile oluşturulan `x:Property`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [DynamicActivity oluşturma](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+ [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
+ [DynamicActivity Oluşturma](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)

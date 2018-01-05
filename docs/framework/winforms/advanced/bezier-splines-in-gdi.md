@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>B &#233; zier GDI +'daki eğrileri
 Dört noktaları tarafından belirtilen bir eğri Bézier eğrisi olduğu: iki uç noktaları (p1 ve p2) ve iki denetim noktaları (c1 ve c2). Eğri p1 başlar ve p2 sona erer. Eğri denetim noktaları aracılığıyla vermeyen, ancak denetim noktaları eğri belirli yönde çekme ve eğri bends şekilde etkileyen mıknatıs davranacak. Aşağıdaki çizimde, kendi uç noktaları ve denetim noktalarının yanı sıra Bézier eğrisi gösterir.  
@@ -50,7 +51,7 @@ Dört noktaları tarafından belirtilen bir eğri Bézier eğrisi olduğu: iki u
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Eğriler oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Nasıl yapılır: Kalem oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Eğriler Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Nasıl yapılır: Kalem Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

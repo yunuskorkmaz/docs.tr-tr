@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-workflows"></a>Durum makinesi iş akışları
 Durum makinesinin programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programları oluşturmak için kullanılabilir. Bu konu durumu makine iş akışları oluşturma genel bir bakış sağlar.  
@@ -110,8 +111,8 @@ Durum makinesinin programlar geliştirmek için iyi bilinen bir örnektir. <xref
  Durum makinesinin tamamlanmasından temsil eden bir durumda.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Durum makinesi iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
- [Durum makinesi etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer)  
- [Durum etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer)  
- [Son durum etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)  
- [Geçiş etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer)
+ [Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [StateMachine Etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer)  
+ [State Etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer)  
+ [FinalState Etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)  
+ [Transition Etkinlik Tasarımcısı](/visualstudio/workflow-designer/transition-activity-designer)

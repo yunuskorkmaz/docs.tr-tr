@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b18afdeb63badb22e1447372961d2eff7735243b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86765489f6d76fa17e6c1eeb36fa45cae67b9bfa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 Bağlam için sağlayan bir bağlama belirtme <xref:System.ServiceModel.BasicHttpBinding> exchange mekanizması olarak HTTP tanımlama bilgilerini sağlayarak değiştirilmek üzere.  
@@ -107,8 +108,8 @@ Bağlam için sağlayan bir bağlama belirtme <xref:System.ServiceModel.BasicHtt
  <xref:System.ServiceModel.BasicHttpContextBinding>  
  <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  
  <xref:System.ServiceModel.Channels.ContextBindingElement>  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
  [\<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc5f0fab7c380268dfc041d6105595858c2fed93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>İzlenecek yol: Tasarım Zamanında Özel Windows Formları Denetimleri Hatalarını Ayıklama
 Özel bir denetim oluşturduğunuzda, genellikle bu tasarım zamanı davranışını hata ayıklamak gerekli bulacaksınız. Özel denetim için özel bir tasarımcı yazıyorsanız bu özellikle doğrudur. Ayrıntılar için bkz [izlenecek yol: bir Windows Forms denetimi, geçen avantajı, Visual Studio tasarım-zamanı özellikleri oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -183,6 +184,6 @@ ms.lasthandoff: 11/21/2017
 -   Özel denetim için özel bir tasarımcı yazabilirsiniz. Bu size Visual Studio tarafından kullanıma sunulan Genişletilebilir Tasarımcı altyapısını kullanarak tasarım deneyimi üzerinde tam denetim sağlar. Ayrıntılar için bkz [izlenecek yol: bir Windows Forms denetimi, geçen avantajı, Visual Studio tasarım-zamanı özellikleri oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Visual Studio tasarım-zamanı özellikleri yararlanan bir Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ [İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [Nasıl yapılır: tasarım zamanında hizmetlere erişme](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
  [Nasıl yapılır: Windows Forms'ta tasarım zamanı desteği erişim](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5262d778151cfe0a0d7ed1750e0b71d4c9214a64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-information-etw-events"></a>Çalışma Zamanı Bilgileri ETW Olayları
 Bu ETW olayları SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde de dahil olmak üzere çalışma zamanı, GUID ile (varsa), başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri kaydeder. Bir işlemde birden çok çalışma zamanları çalıştırıldığında bu olayları (ClrInstanceID) tarafından sağlanan bilgileri çalışma zamanları belirsizliğini ortadan kaldırmak yardımcı olur.  
@@ -53,4 +54,4 @@ Bu ETW olayları SKU, sürüm numarası, hangi çalışma zamanı etkinleştiril
 |RuntimeDLLPath|Win: UnicodeString|İşlemine yüklendi CLR .dll dosyasının yolu.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

@@ -21,14 +21,15 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 705720f8e664271099a16854759e4a89f6b48cc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ad595fa4d6d2ecd3251fd0059d9419c334d867f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi
 `SetPEBytes`Kullanımdan kalktı. Bu yöntemi çağırmanız gerekmez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

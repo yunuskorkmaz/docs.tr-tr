@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c05cc5947a36bbe8573c5308cdfbbe3f6c990815
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Yapılandırma dosyalarının veya kod kullanarak hizmetleri yapılandırma yayınlamasına izin verir.  Yapılandırma dosyaları bir hizmet dağıtılan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyaları kullanırken, bir BT Uzmanı yapılandırma dosyasını güncelleştirmek yeterlidir, hiçbir yeniden derlenmek gereklidir. Yapılandırma dosyaları, ancak, karmaşık ve korumak zor olabilir. Hata ayıklama yapılandırma dosyaları için desteği yoktur ve yapılandırma öğeleri zor ve hataya yatkın yapılandırma dosyalarını geliştirme kılan adları tarafından başvurulur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Ayrıca Hizmetleri kodda yapılandırmanıza olanak sağlar. Önceki sürümlerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ve önceki) hizmetlerini kodda yapılandırma kendini barındıran senaryolarda kolay <xref:System.ServiceModel.ServiceHost> uç noktaları ve ServiceHost.Open çağırmadan önce davranışları yapılandırmak için sınıfa izin verilmiyor. Webde barındırılan senaryolarda, ancak, doğrudan erişiminiz yok <xref:System.ServiceModel.ServiceHost> sınıfı. Barındırılan hizmeti oluşturmak için gerekli bir web yapılandırmak için bir `System.ServiceModel.ServiceHostFactory` oluşturulan <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli olan herhangi bir yapılandırmaya gerçekleştirilir. .NET 4.5 ile başlayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] daha kolay bir yolu kendi kendini barındıran her ikisi de yapılandırmak ve web hizmetlerini kodda barındırılan sağlar.  
@@ -104,15 +105,15 @@ public class Service1 : IService1
 >  Unutmayın <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> yoksayar <`host`> içindeki ayarlar <`service`> etiket <`system.serviceModel`>. Kavramsal olarak, <`host`> ana bilgisayar yapılandırması, değil hizmet yapılandırmasını ve bu hakkında yapılandırma yöntemi yürütülmeden önce yüklenen alır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyalarını kullanarak hizmetleri yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [İstemci davranışlarını yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)  
- [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- [Yapılandırma temelli etkinleştirme](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
+ [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
+ [Yapılandırma Temelli Etkinleştirme](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [Yapılandırma](../../../docs/framework/wcf/samples/configuration-sample.md)  
- [IIS ve WAS'ta yapılandırma temelli etkinleştirme](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
- [Yapılandırma ve meta veri desteği](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
+ [IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [Yapılandırma ve Meta Veri Desteği](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
  [Yapılandırma](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
- [Nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Nasıl yapılır: yapılandırmada hizmet uç noktası oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [Nasıl yapılır: bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Nasıl yapılır: yapılandırmada istemci bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+ [Nasıl yapılır: Yapılandırmada Hizmet Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Nasıl yapılır: Yapılandırmada İstemci Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

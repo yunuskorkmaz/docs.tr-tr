@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46947e314394d56b5ef0439f33910bb493012db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 310f90c7b95d74f1fab8ab2e9871d6c1a0937c52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme
 Sıralama ve filtreleme özelliği, getirebilir <xref:System.Windows.Forms.BindingSource> aracılığıyla kontrol <xref:System.Windows.Forms.BindingSource.Sort%2A> ve <xref:System.Windows.Forms.BindingSource.Filter%2A> özellikleri. Temel alınan veri kaynağı olduğunda basit sıralama uygulayabilirsiniz bir <xref:System.ComponentModel.IBindingList>, ve gelişmiş veri kaynağı olduğunda sıralama ve filtreleme uygulayabilirsiniz bir <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Özelliği gerektiren standart [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sözdizimi: veri kaynağındaki veri sütununun adını temsil eden bir dize arkasından `ASC` veya `DESC` listeyi artan veya azalan sırada sıralanması olup olmadığını belirtmek için. Gelişmiş sıralama veya her bir sütunun virgülle ayırıcı ile ayırarak birden çok sütun sıralama ayarlayabilirsiniz. <xref:System.Windows.Forms.BindingSource.Filter%2A> Özelliği bir dize ifadesi alır.  
@@ -67,4 +68,4 @@ Sıralama ve filtreleme özelliği, getirebilir <xref:System.Windows.Forms.Bindi
  <xref:System.Windows.Forms.BindingSource.Sort%2A>  
  <xref:System.Windows.Forms.BindingSource.Filter%2A>  
  [Nasıl yapılır: örnek veritabanları yükleme](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)

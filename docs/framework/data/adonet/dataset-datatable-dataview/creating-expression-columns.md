@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 315944262136e5db453ea01eae64fff6cb0d534d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1b0b7be8be6bec0c5a8850029bd3336d107f0a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-expression-columns"></a>İfade sütunları oluşturma
 Bir ifadenin bir sütun için tanımlayabilirsiniz, bir değer içerecek şekilde etkinleştirme diğer sütun değerleri aynı satırda veya birden çok satır tablosundaki sütun değerlerinden hesaplanır. Değerlendirilecek ifade tanımlamak için <xref:System.Data.DataColumn.Expression%2A> ve hedef sütun kullanımı özelliği <xref:System.Data.DataColumn.ColumnName%2A> diğer sütunlara ifadede başvurmak için özellik. <xref:System.Data.DataColumn.DataType%2A> İfade için sütun için ifade döndürür değer uygun olmalıdır.  
@@ -52,6 +53,6 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  <xref:System.Data.DataColumn>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
- [DataTable şema tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

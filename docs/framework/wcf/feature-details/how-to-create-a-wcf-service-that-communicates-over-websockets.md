@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 03ee173d25600be437f322d232b791543831df80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99d091e5ef0998a3818609b7d52ecd62a609eeb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
 WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılır <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma sözleşme belirler. Bu konu, bir WCF hizmeti ve kullanan istemci uygulamak açıklar <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  
@@ -329,5 +330,5 @@ namespace Client
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumlu ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [NetHttpBinding kullanma](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+ [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
+ [NetHttpBinding Kullanma](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

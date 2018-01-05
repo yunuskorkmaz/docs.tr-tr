@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1f73901db87dfd0de05cf89d0a27f63bb8564856
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı veya belirli bir XPath ifadesi gibi bir ileti belirli bölümlerine incelemek uygulamaları. İleti filtreleri hiçbiri ile sağladıysanız [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, yeni bir uygulama taban oluşturarak özel filtre oluşturabilirsiniz <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  

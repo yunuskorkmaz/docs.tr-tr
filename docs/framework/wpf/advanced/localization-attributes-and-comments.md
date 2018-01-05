@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Yerelleştirme açıklamalarını özelliklerdir, içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kod yerelleştirme için kurallar ve ipuçları sağlamak için geliştiriciler tarafından sağlanan,. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Yerelleştirme açıklamalarını içeren iki bilgi kümesi: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme açıklamalarını. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli açıklamalar dahil etmek için uygulama yazarı istediği herhangi bilgilerdir.  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
  Localization.Comments hedeflenen değeri ile ilgili serbest biçimli dizeleri içerir. Uygulama geliştiricilerinin çevirmenler vermek için bilgi ekleyebileceğiniz uygulama metninin nasıl çevrilen hakkında ipuçları. Açıklamaları biçimi çevrelenen "(") tarafından herhangi bir dize olabilir. Kullanım '\\' kaçış karakterleri için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Bir düğme oluşturmak için otomatik düzenini kullanın](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Bir kılavuz için otomatik düzenini kullanın](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Bir uygulama yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+ [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [Düğme Oluşturmak için Otomatik Düzeni Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [Otomatik Düzen için Kılavuz Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [Bir Uygulamayı Yerelleştirme](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

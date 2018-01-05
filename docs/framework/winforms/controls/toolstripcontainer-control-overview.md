@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4abc783961177a55cdb81cefd21ed2d7aefb0620
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a1a4c9c77e1f347f95c0a5e17ab0d37e0013d6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer Denetimine Genel Bakış
 A <xref:System.Windows.Forms.ToolStripContainer> sol, sağ, üst ve alt kenarı konumlandırma ve radye panoları sahip <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.StatusStrip> kontrol eder. Birden çok <xref:System.Windows.Forms.ToolStrip> denetimleri yığın dikey bunları sola veya sağa moduna geçirirseniz <xref:System.Windows.Forms.ToolStripContainer>. Bunları üstüne veya altına yerleştirin varsa bunlar yatay yığın <xref:System.Windows.Forms.ToolStripContainer>. Orta kullanabilirsiniz <xref:System.Windows.Forms.ToolStripContentPanel> , <xref:System.Windows.Forms.ToolStripContainer> geleneksel denetimleri form üzerinde konumlandırmak için.  

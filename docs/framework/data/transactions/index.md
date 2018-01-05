@@ -1,5 +1,5 @@
 ---
-title: "İşlem"
+title: "İşlem Gerçekleştirme"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -12,13 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a6dcd11d34f0b81d6d3982ef1c6ab211d94818b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c66e982715d0f7f97e7a4faa92c2de57f3b1471
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transaction-processing"></a>İşlem
+# <a name="transaction-processing"></a>İşlem Gerçekleştirme
 Bir çevrimiçi bir kitaplığı defterinden satın aldığınızda, bir kitap (kredi biçiminde) karşılığında exchange. Kredi iyi ise, bir dizi ilgili operations defteri alma ve kitaplığı, para alır sağlar. Ancak, tek bir işlemde serisinde exchange sırasında başarısız olursa, tüm exchange başarısız olur. Kitap alma ve kitaplığı, para almaz.  
   
  Exchange Dengeli ve öngörülebilir yapmaktan sorumlu teknolojisi, işlem adı verilir. İşlemler işlem birimindeki tüm işlemleri başarıyla tamamlamak sürece veri yönelimli kaynakları kalıcı olarak güncelleştirilmez emin olun. Tamamen başarılı ya da tamamen başarısız bir birim ilgili işlemlere kümesini birleştirerek hata kurtarma basitleştirmek ve uygulamanızı daha güvenilir hale getirebilirsiniz.  
@@ -28,10 +29,10 @@ Bir çevrimiçi bir kitaplığı defterinden satın aldığınızda, bir kitap (
  Bu bölüm hem işlem hakkında genel bilgiler ve işlemsel uygulamaları ve Microsoft .NET Framework kullanarak kaynak yöneticileri yazma konusunda belirli bilgiler sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İşlem temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  Temel işlem terimleri ve kavramları işleme tanıtır.  
   
- [System.Transactions tarafından sağlanan özellikleri](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ [System.Transactions Tarafından Sağlanan Özellikler](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
  Özellikleri System.Transactions işlem uygulamanızı yazmak için nasıl kullanabileceğinizi açıklar.  
   
 ## <a name="reference"></a>Başvuru  

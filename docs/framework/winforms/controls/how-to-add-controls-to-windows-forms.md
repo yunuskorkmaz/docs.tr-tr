@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Formlarına Denetimler Ekleme
 Çoğu form formun yüzeye denetimler ekleyerek, bir kullanıcı arabirimi (UI) tanımlamak için tasarlanmıştır. A *denetim* bilgilerini görüntülemek veya kullanıcı girişi kabul etmek için kullanılan bir form üzerinde bir bileşenidir. Denetimleri hakkında daha fazla bilgi için bkz: [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md).  
@@ -100,8 +101,8 @@ ms.lasthandoff: 11/21/2017
     >  Yerel bir güvenlik riski ağ üzerinden bilgisayarınıza bir kötü amaçlı başvurarak doğurabilir `UserControl`. Bu, yalnızca, yanlışlıkla projenize ekleme ve ardından zararlı olabilecek özel bir denetim oluşturma kötü niyetli bir kişi olması durumunda ilgili bir sorun olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Nasıl yapılır: Windows Forms denetimleri yeniden boyutlandırma](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [Nasıl yapılır: tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Platform Çağırma ile Veri Hazırlama
 Yönetilmeyen Kitaplığı'ndan dışarı aktarılan işlevleri çağırmak için bir işlev prototipi yönetilmeyen işlevi temsil eden yönetilen kodda .NET Framework uygulamasını gerektirir. Platform sağlayan prototip oluşturmak için veri doğru sıralamakta çağırma, aşağıdakileri yapmanız gerekir:  
@@ -42,12 +43,12 @@ Yönetilmeyen Kitaplığı'ndan dışarı aktarılan işlevleri çağırmak içi
 |--------------------------------|-------------------------------|------------------------|-----------------|  
 |**İŞLEME**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bit 32-bit Windows işletim sistemlerinde, 64-bit Windows işletim sistemlerinde 64 bit.|  
 |**BAYT**|**İmzasız char**|<xref:System.Byte?displayProperty=nameWithType>|8 bit|  
-|**KISA**|**kısa**|<xref:System.Int16?displayProperty=nameWithType>|16 bit|  
+|**KISA**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bit|  
 |**WORD**|**İmzasız short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bit|  
 |**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32 bit|  
 |**UINT**|**İmzasız int**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
-|**UZUN**|**uzun**|<xref:System.Int32?displayProperty=nameWithType>|32 bit|  
-|**BOOL**|**uzun**|<xref:System.Byte>|32 bit|  
+|**UZUN**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32 bit|  
+|**BOOL**|**long**|<xref:System.Byte>|32 bit|  
 |**DWORD**|**İmzasız long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
 |**ULONG**|**İmzasız long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|ANSI ile işaretleme.|  

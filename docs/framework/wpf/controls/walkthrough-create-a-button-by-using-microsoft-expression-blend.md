@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 Bu kılavuzda oluşturma işleminde size adımlar bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend kullanarak özelleştirilmiş düğmesi.  
@@ -258,8 +259,8 @@ Bu kılavuzda oluşturma işleminde size adımlar bir [!INCLUDE[TLA2#tla_wpf](..
 -   Gradyan, çeşitli: oluşturmak BitmapEffects ekleyin, Dönüşümlerin kullanın ve nesnelerin temel özelliklerini ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML kullanarak bir düğme oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Bit eşlem efektleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+ [XAML Kullanarak bir Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Bit Eşlem Etkilerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

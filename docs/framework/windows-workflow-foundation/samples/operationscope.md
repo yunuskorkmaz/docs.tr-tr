@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 242a9e32063deda0593552b70bf91dec3af7c346
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationscope"></a>OperationScope
 Bu örnek gösterilmektedir nasıl Mesajlaşma etkinlikleri, <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> var olan bir özel etkinlik bir iş akışı hizmetinde bir işlem olarak kullanıma sunmak için kullanılabilir. Bu örnek olarak adlandırılan yeni bir özel etkinlik içeren bir `OperationScope`. Kullanıcıların kendi işlemleri ayrı olarak özel etkinlikler olarak gövdesi Yazar izin vermek ve ardından bunları kullanarak hizmet işlemleri kolayca gösterme tarafından bir iş akışı hizmeti geliştirmeyi kolaylaştırmak için tasarlanmıştır `OperationScope` etkinlik. Örneğin, bir özel `Add` iki alan etkinlik `in` bağımsız değişkenleri ve döndürür bir `out` bağımsız değişkeni ortaya olarak bir `Add` içine bırakmadan tarafından iş akışı hizmeti işlemi bir `OperationScope`.  

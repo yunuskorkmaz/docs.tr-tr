@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5c46b8c64a26d83ba6d8f018b9a1f8ca8250a57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9da10e4eb6cf045c6c4936b76f847f21ea1495e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-skew-an-element"></a>Nasıl yapılır: Bir Öğeyi Eğme
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.SkewTransform> bir öğeyi eğme için. Olarak da bilinen bükme olduğundan, bir eğme koordinat Tekdüzen olmayan bir biçimde uzatan bir dönüşümü gerçekleşir. Tipik bir kullanımı, bir <xref:System.Windows.Media.SkewTransform> benzetimi yapmasıdır [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] derinlemesine [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] nesneleri.  
@@ -55,5 +56,5 @@ Gösterilen üç SkewTransform örneği
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.SkewTransform>  
- [Dönüşümler genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

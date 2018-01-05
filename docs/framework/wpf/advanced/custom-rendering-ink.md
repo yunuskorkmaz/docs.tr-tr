@@ -20,18 +20,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Vuruş özelliğinin boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak verir, ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Hava fırça, Petrol boyama ve diğer birçok efekt görünümünü işlemede tarafından mürekkep görünümünü özelleştirmek isteyebilirsiniz. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] , Özel işleme mürekkep özel bir uygulama tarafından verir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  
   
  Bu konu, aşağıdaki alt bölümleri içerir:  
   
--   [Mimarisi](#Architecture)  
+-   [Mimari](#Architecture)  
   
 -   [Dinamik işleyici uygulama](#ImplementingADynamicRenderer)  
   
@@ -102,4 +103,4 @@ ms.lasthandoff: 10/22/2017
  Kendi türetme mürekkep görünümünü özelleştirebilirsiniz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, ve <xref:System.Windows.Controls.InkCanvas> sınıfları. Birlikte, bu sınıfları vuruşun görünümünü vuruşun kullanıcı çizer ve toplandıktan sonra tutarlı olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş mürekkep işleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

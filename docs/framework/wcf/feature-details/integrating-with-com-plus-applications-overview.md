@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için. Yaygın bir senaryo, varolan COM + ya da kuruluş Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz durumdur.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  COM + işlem geri dönüştürme özellikleri tümleşik uygulamalar üzerinde kullanılamaz. Uygulamanın işlem geri dönüştürme kullanmak üzere yapılandırılmış ve bileşenleri bir COM + barındırılan işlemde çalışan hizmeti başlatmak başarısız olur. Bu gereksinim, işlem geri dönüştürme ayarları uygulanmaz Web barındırılan işlem dışı modunu kullanarak Hizmetleri içermez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM uygulamaları ile tümleştirme genel bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e02ea1cbcb1fdd86d182bfba23241acb91c4b54a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme (Windows Forms)
 Windows Forms kullanırsanız <xref:System.Windows.Forms.PictureBox> denetim bir form üzerinde ayarladığınız <xref:System.Windows.Forms.PictureBox.SizeMode%2A> özelliği için:  
@@ -94,7 +95,7 @@ Windows Forms kullanırsanız <xref:System.Windows.Forms.PictureBox> denetim bir
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.PictureBox>  
- [Nasıl yapılır: tasarımcıyı kullanarak resim yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [PictureBox denetimine genel bakış](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [Nasıl yapılır: çalışma zamanında resimleri ayarlama](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox denetimi](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+ [Nasıl yapılır: Tasarımcıyı Kullanarak Resim Yükleme](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [PictureBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ [PictureBox Denetimi](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

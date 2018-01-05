@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Bildirilen Öğe Adları (Visual Basic)
 Bildirilen her öğe olarak da adlandırılan bir ada sahip bir *tanımlayıcısı*, olduğu kod başvurduğu için kullanır.  
@@ -71,7 +71,7 @@ Bildirilen her öğe olarak da adlandırılan bir ada sahip bir *tanımlayıcıs
  `xyz$wv`  
   
 > [!CAUTION]
->  Öğe adları alt çizgi ile başlayan (`_`) parçası olan [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../../docs/standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod tür adları tanımlayan bir bileşen kullanamazlar. Ancak, alt çizgi herhangi bir öğe adı konumunda CLS uyumlu değildir.  
+>  Öğe adları alt çizgi ile başlayan (`_`) parçası olan [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod tür adları tanımlayan bir bileşen kullanamazlar. Ancak, alt çizgi herhangi bir öğe adı konumunda CLS uyumlu değildir.  
   
 ### <a name="name-length-guidelines"></a>Ad uzunluğu yönergeleri  
  Pratik geçtiğinden bağımsız adınızı hala açık bir şekilde öğe yapısını tanımlanırken olabildiğinde kısa olması gerekir. Bu, kodunuzun okunabilirliğini artırır ve satır uzunluğu ve kaynak dosya boyutu azaltır.  
@@ -98,7 +98,7 @@ Bildirilen her öğe olarak da adlandırılan bir ada sahip bir *tanımlayıcıs
  Yerel ayarı karşılaştırma adlarının bağımsızdır. İki adı bir yerel ayarda eşleşirse, bunlar tüm yerel eşleşen sağlanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bildirilen öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Bildirilen öğe özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Deyimleri](../../../../visual-basic/language-reference/statements/index.md)
+ [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Deyimler](../../../../visual-basic/language-reference/statements/index.md)

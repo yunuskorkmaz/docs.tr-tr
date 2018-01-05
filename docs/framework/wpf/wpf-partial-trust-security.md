@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a>Genel olarak, Internet uygulamaları kötü amaçlı zarar önlemek için önemli sistem kaynaklarına doğrudan erişimi olmaktan sınırlandırılmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dili önemli sistem kaynaklarına erişmek mümkün değildir. Çünkü [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabilir, kısıtlamaları benzer bir dizi uymalıdır. Bu kısıtlamaları zorlamak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem dayanır [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet bölgesi isteği [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet ya da yerel bilgisayar başlatıldığında yedeklemiş izinler kümesi. Herhangi bir şey izinler kümesini değerinden ile çalışan uygulamalar, kısmi güven ile çalışan söylenir.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |Özellik alanı|Özellik|  
 |------------------|-------------|  
 |Genel|Bir tarayıcı penceresi<br /><br /> Kaynak erişim site<br /><br /> IsolatedStorage (512KB sınırı)<br /><br /> UIAutomation sağlayıcıları<br /><br /> Komut verme<br /><br /> Giriş Yöntemi Düzenleyicileri (IME'ler)<br /><br /> Tablet kalem ve mürekkep<br /><br /> Fare yakalama ve taşıma olaylarını kullanarak sanal sürükle/bırak<br /><br /> OpenFileDialog<br /><br /> XAML seri durumdan çıkarma (aracılığıyla XamlReader.Load)|  
-|Web tümleştirme|Tarayıcı indirme iletişim kutusu<br /><br /> Üst düzey kullanıcı tarafından başlatılan gezinme<br /><br /> mailto:Links<br /><br /> Tekdüzen Kaynak Tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME içinde barındırılan WPF içeriği<br /><br /> Aynı sitede HTML sayfalarını çerçeve kullanarak barındırma<br /><br /> Aynı Site HTML WebBrowser kullanarak sayfaları barındırma<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation'ı kullanarak)<br /><br /> Komut dosyası oluşturma<br /><br /> Belge nesne modeli|  
+|Web tümleştirme|Tarayıcı indirme iletişim kutusu<br /><br /> Üst düzey kullanıcı tarafından başlatılan gezinme<br /><br /> mailto:Links<br /><br /> Tekdüzen Kaynak Tanımlayıcısı parametreleri<br /><br /> HTTPWebRequest<br /><br /> IFRAME içinde barındırılan WPF içeriği<br /><br /> Aynı sitede HTML sayfalarını çerçeve kullanarak barındırma<br /><br /> Aynı Site HTML WebBrowser kullanarak sayfaları barındırma<br /><br /> Web Hizmetleri (ASMX)<br /><br /> Web Hizmetleri (Windows Communication Foundation'ı kullanarak)<br /><br /> Betik Oluşturma<br /><br /> Belge nesne modeli|  
 |Görsel|2B ve 3B<br /><br /> Animasyon<br /><br /> Ortam (kaynak etki alanları arası ve Site)<br /><br /> Görüntüleme/Ses/Video|  
 |Okuma|FlowDocuments<br /><br /> XPS belgeleri<br /><br /> Katıştırılmış & yazı tipleri<br /><br /> CFF & TrueType yazı tipleri|  
 |Düzenleme|Yazım denetimi<br /><br /> RichTextBox<br /><br /> Düz metin ve mürekkep Pano desteği<br /><br /> Kullanıcı tarafından başlatılan Yapıştır<br /><br /> Kopyalama içerik seçilmedi|  
@@ -175,5 +176,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik](../../../docs/framework/wpf/security-wpf.md)  
- [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF Güvenlik Stratejisi - Güvenlik mühendislik](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+ [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

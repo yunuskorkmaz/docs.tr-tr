@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f81cf7df0272a1b90de77332712b3b8a9e202de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1b34881b86d9962603118b93c9dc5d866794397
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi sahip olayları durumunda değişikliklerini algılamak için kullanabileceğiniz bir dizi <xref:System.Windows.Forms.DataGridView> hücreleri. En yaygın kullanılan ikisidir <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olaylar.  
@@ -54,5 +55,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>  
- [Hücrelerini, satırları ve sütunları Windows Forms DataGridView denetiminde ile programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [İzlenecek yol: Windows Forms DataGridView denetiminde verileri doğrulama](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

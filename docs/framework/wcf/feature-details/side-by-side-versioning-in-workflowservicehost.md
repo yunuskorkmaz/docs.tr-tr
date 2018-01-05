@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost Yan Yana Sürüm Oluşturma
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Yan yana sürüm oluşturma kullanıma sunulan [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] birden fazla sürümünü tek bir uç noktada bir iş akışı hizmeti ana bilgisayar yeteneği sağlar. Sağlanan yan yana işlevleri iş akışı hizmeti yeni örneklerini örnekleri tam varolan tanımı kullanılarak çalıştırılırken yeni iş akışı tanımı kullanılarak oluşturulan şekilde yapılandırılması bir iş akışı hizmeti sağlar. Bu konuda iş akışı hizmeti kullanılarak yan yana yürütme genel bir bakış sağlar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

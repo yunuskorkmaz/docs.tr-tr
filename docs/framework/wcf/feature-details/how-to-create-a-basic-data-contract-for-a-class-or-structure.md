@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e530cfa5cd5716e937318bf8fc458d372202ffeb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6241df0fd5a0b6ee532691eee2279f618be25a56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma
 Bu konu, temel sınıf veya yapı kullanarak bir veri sözleşmesi oluşturma adımlarını gösterir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veri sözleşmeleri ve kullanıldıkları bkz [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -49,6 +50,6 @@ Bu konu, temel sınıf veya yapı kullanarak bir veri sözleşmesi oluşturma ad
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)

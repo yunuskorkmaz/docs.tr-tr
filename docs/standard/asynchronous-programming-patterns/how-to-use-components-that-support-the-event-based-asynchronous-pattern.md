@@ -28,11 +28,14 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49e03a8d886ccd4ed6e4b2a19692c1874f5928ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cff126734dbaee315382d20cd43ded45d9f8e885
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
 Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemek için ses ve, ana iş parçacığı kesinti olmadan çalışmaya devam ederken "arka planda" görüntüleri etkinleştir.  
@@ -70,6 +73,6 @@ Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini i�
      Görüntü yükleme devam ettikçe formun serbestçe hareket, simge durumuna küçültün ve onu en üst düzeye çıkarmak.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir işlemi arka planda çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  [IN derleme değil: Visual Basic'te çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)

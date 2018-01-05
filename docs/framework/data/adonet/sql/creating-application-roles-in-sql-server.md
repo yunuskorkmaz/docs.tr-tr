@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 632b25408db8556dd9604f653f975bccbea75e2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7808f2e60902eeb2fce0ac53010e329e4252a24e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server uygulama rolleri oluşturma
 Uygulama rolleri veritabanı rolü veya kullanıcı yerine bir uygulama izinleri atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanmak, uygulama rolünü etkinleştirmek ve uygulamaya verilen izinler varsayalım. Uygulama rolü verilen izinler yürürlükte bağlantısı süresince değil.  
@@ -69,7 +70,7 @@ Uygulama rolleri veritabanı rolü veya kullanıcı yerine bir uygulama izinleri
 |[Uygulama rolleri](http://msdn.microsoft.com/library/ms190998.aspx) SQL Server Çevrimiçi Kitapları'nda|Oluşturmayı ve SQL Server 2008'de uygulama rolleri kullanmayı açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server güvenlik genel bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server'daki uygulama güvenlik senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a69acb9b640c17e6641efc6c30798e3856ef6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulaması içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer yandan hataları hizmet sınırları boyunca gibi istemci (veya tersi) sunucusundan iletişim kurmak için kullanılır. Hataları yanı sıra, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP taşıma (bir arıza geri gönderilecek bitiş noktası yoktur) bir var olmayan uç nokta URL'si iletişim kurmak için durum kodları 404 gibi kullanır. Özel kanal yazarları için kılavuzluk üç bölüm, bu belgede oluşur. İlk bölümde, ne zaman ve nasıl tanımlamak ve özel durumlar oluşturma yönergeler sağlanmaktadır. İkinci bölümde oluşturma ve hatalarını tüketen etrafında yönergeler sağlanmaktadır. Üçüncü bölüm özel kanal kullanıcı çalışan uygulamalarda sorun gidermede yardımcı olmak için izleme bilgilerini sağlamayı açıklar.  

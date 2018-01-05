@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b1a312159d548351e96fd16c32caf35a0522065
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff59a7b716944779fd5c87b58034eb60d5981b02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme
 Ekleme işareti <xref:System.Windows.Forms.ListView> Denetim burada sürüklenen öğeleri eklenecek noktası kullanıcıları gösterir. Bir kullanıcı iki diğer öğeleri arasında bir noktasına bir öğe sürüklendiğinde ekleme işareti öğenin beklenen yeni konumu gösterir.  
@@ -56,7 +57,7 @@ Ekleme işareti <xref:System.Windows.Forms.ListView> Denetim burada sürüklenen
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListViewInsertionMark>  
- [ListView denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [ListView denetimine genel bakış](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [ListView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [Windows XP özellikleri ve Windows Forms denetimleri](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [İzlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+ [İzlenecek yol: Windows Forms'ta Sürükle ve Bırak İşlemi Gerçekleştirme](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

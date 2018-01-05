@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a20f9675af5a67291d95a9297b1ffa1c81a80522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4311b610859b36f1587e5e3f85e2a5f06503e1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitwise-canonical-functions"></a>Bit düzeyinde kurallı işlevleri
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bit düzeyinde kurallı işlevler içerir.  
@@ -27,10 +28,10 @@ ms.lasthandoff: 10/18/2017
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|`BitWiseAnd (` `value1` `,`  `value2` `)`|Bit düzeyinde birlikte, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32`, ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
-|`BitWiseNot (` `value` `)`|Bit düzeyinde değilleme işlemi döndürür `value`.<br /><br /> **Bağımsız değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32`, ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
-|`BitWiseOr (` `value1` `,`  `value2` `)`|Bit düzeyinde ayrım, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32` ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
-|`BitWiseXor (` `value1` `,`  `value2` `)`|Bit düzeyinde özel ayrım, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32` ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
+|`BitWiseAnd (` `value1` `,`  `value2` `)`|Bit düzeyinde birlikte, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32`, ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 1.`<br /><br /> `BitWiseAnd(1,3)`|  
+|`BitWiseNot (` `value` `)`|Bit düzeyinde değilleme işlemi döndürür `value`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32`, ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns -4.`<br /><br /> `BitWiseNot(3)`|  
+|`BitWiseOr (` `value1` `,`  `value2` `)`|Bit düzeyinde ayrım, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32` ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 3.`<br /><br /> `BitWiseOr(1,3)`|  
+|`BitWiseXor (` `value1` `,`  `value2` `)`|Bit düzeyinde özel ayrım, döndürür `value1` ve `value2` türü olarak `value1` ve `value2`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Byte`, `Int16`, `Int32` ve `Int64`.<br /><br /> **Örnek**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+ [Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

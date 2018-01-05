@@ -14,11 +14,11 @@ ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e8e9cd761263b3b61a4e6d3e33c5f7f875be7a1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6cdb7cff2221930113d6b49a640da0844f175f1b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imports-visual-basic"></a>/imports (Visual Basic)
 Ad alanları belirtilen derlemesinden alır.  
@@ -42,7 +42,7 @@ Ad alanları belirtilen derlemesinden alır.
   
 |Ayarlanacak/Visual Studio tümleşik geliştirme ortamında alır|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **başvuruları** sekmesi.<br />3.  Ad alanı adı kutuya girin **ekleme kullanıcı alma** düğmesi.<br />4.  Tıklatın **ekleme kullanıcı alma** düğmesi.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **başvuruları** sekmesi.<br />3.  Ad alanı adı kutuya girin **ekleme kullanıcı alma** düğmesi.<br />4.  Tıklatın **ekleme kullanıcı alma** düğmesi.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod ne zaman derler `/imports:system` belirtilir.  
@@ -51,5 +51,5 @@ Ad alanları belirtilen derlemesinden alır.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [References ve Imports deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

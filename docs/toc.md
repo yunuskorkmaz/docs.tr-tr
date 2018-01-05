@@ -17,13 +17,13 @@
 ### [.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi](standard/microservices-architecture/)
 ## [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](standard/choosing-core-framework-server.md)
 ## ["Yönetilen kod" nedir?](standard/managed-code.md)
-### [Otomatik Bellek Yönetimi](standard/automatic-memory-management.md) 
+### [Otomatik Bellek Yönetimi](standard/automatic-memory-management.md)
 ## [Ortak Dil Çalışma Zamanı Modülü (CLR)](standard/clr.md)
 ## [Dil Bağımsızlığı](standard/language-independence.md)
 ### [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](standard/language-independence-and-language-independent-components.md)
 ## [Framework Kitaplıkları](standard/framework-libraries.md)
-### [Sınıf Kitaplığına Genel Bakış](standard/class-library-overview.md)  
-### [Temel Türler](standard/base-types/)  
+### [Sınıf Kitaplığına Genel Bakış](standard/class-library-overview.md)
+### [Temel Türler](standard/base-types/)
 ## [.NET Sınıf kitaplıkları](standard/class-libraries.md)
 ## [Taşınabilirlik Çözümleyicisi](standard/portability-analyzer.md)
 ## [Özel durumları işleme ve atma](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [.NET Core Uygulamaları için Docker Görüntülerinizi Derleme](core/docker/building-net-docker-images.md)
 ### [Docker için Visual Studio Araçları](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Birim Testi](core/testing/index.md)
-### [Dotnet testi ve xUnit ile birim testi](core/testing/unit-testing-with-dotnet-test.md)
-### [Dotnet testi ve MSTest ile birim testi](core/testing/unit-testing-with-mstest.md)
-### [Dotnet testi ve xUnit ile F# birim testi](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [Dotnet testi ve MSTest ile birim testi](core/testing/unit-testing-fsharp-with-mstest.md)
+### [xUnit ile C# birim testi](core/testing/unit-testing-with-dotnet-test.md)
+### [NUnit ile C# birim testi](core/testing/unit-testing-with-nunit.md)
+### [MSTest ile C# birim testi](core/testing/unit-testing-with-mstest.md)
+### [xUnit ile F# birim testi](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [NUnit ile F# birim testi](core/testing/unit-testing-fsharp-with-nunit.md)
+### [MSTest ile F# birim testi](core/testing/unit-testing-fsharp-with-mstest.md)
+### [xUnit ile VB birim testi](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [NUnit ile VB birim testi](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [MSTest ile VB birim testi](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Seçmeli birim testleri çalıştırma](core/testing/selective-unit-tests.md)
 ### [Birim Test Yayımlanmış Çıktısı](core/testing/unit-testing-published-output.md)
 ### [Visual Studio ile .NET Core projelerinde canlı birim testi](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [C# Turu](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# Yenilikleri](csharp/whats-new/index.md) 
+## [C# Yenilikleri](csharp/whats-new/index.md)
 ### [C# 7.2 Yenilikleri](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1 Yenilikleri](csharp/whats-new/csharp-7-1.md)
 ### [C# 7 Yenilikleri](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [C# Sürüm Geçmişi](csharp/whats-new/csharp-version-history.md)
 ### [Dil ile çerçeve arasındaki ilişkiler](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## C# Kavramları
 ### [C# Tür sistemi](csharp/programming-guide/types/index.md)
 ### [Ad alanları](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [Demetler](csharp/tuples.md)
 ### [Demetleri ve diğer türleri ayrıştırma](csharp/deconstruct.md)
 ### [Arabirimler](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [Yöntemler](csharp/methods.md)
+#### [Yöntemler](csharp/methods.md)
 #### [Lambda İfadeleri](csharp/lambda-expressions.md)
 ### [Özellikler](csharp/properties.md)
 ### [Dizin Oluşturucular](csharp/indexers.md)
@@ -242,7 +244,6 @@
 #### [Temsilcileri ve Olayları Ayırt Etme](csharp/distinguish-delegates-events.md)
 ### [Dil ile Tümleşik Sorgu (LINQ)](csharp/linq/)
 ### [Zaman uyumsuz programlama](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Desen Eşleştirme](csharp/pattern-matching.md)
 ### [Değer türleri ile başvuru semantiği](csharp/reference-semantics-with-value-types.md)
 ### [İfade Ağaçları](csharp/expression-trees.md)
@@ -254,11 +255,10 @@
 #### [İfade Çevirme](csharp/expression-trees-translating.md)
 #### [Özet](csharp/expression-trees-summary.md)
 ### [Native ile birlikte çalışma](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Kodunuzu belgeleme](csharp/codedoc.md)
 ### [Sürüm Oluşturma](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [.NET Compiler Platform SDK’sı (Roslyn API’leri)](csharp/roslyn-sdk/)
 ## [C# Programlama Kılavuzu](csharp/programming-guide/)
 ## [Dil Başvurusu](csharp/language-reference/)
 ## [İzlenecek yollar](csharp/walkthroughs.md)

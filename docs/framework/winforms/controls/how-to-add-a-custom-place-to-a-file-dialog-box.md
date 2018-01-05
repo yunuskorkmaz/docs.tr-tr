@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ce5efccfd2efda2f333b51868e375849f7c7752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1a10a58552dd416084da39838a9e36f15e85074
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Nasıl Yapılır: Dosya İletişim Kutusuna Özel Yer Ekleme
 Varsayılan açın ve iletişim kutuları kaydetmek [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] başlıklı iletişim kutusunun sol tarafında bir alana sahip **sık kullanılan bağlantılar**. Bu alan özel yerler adı verilir. <xref:System.Windows.Forms.OpenFileDialog> Ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları klasörlere eklemenize izin <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonu.  
@@ -49,4 +50,4 @@ Varsayılan açın ve iletişim kutuları kaydetmek [!INCLUDE[wiprlhext](../../.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FileDialog>  
  <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>  
- [Dosya iletişim kutusu özel yerleri için bilinen klasör GUID'leri](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+ [Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)

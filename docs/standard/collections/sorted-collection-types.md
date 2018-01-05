@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0f23a69a8e2493e018b0a37628762247c0e33430
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7efe53d472e1789d49acc3973acdf190c8ff6662
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sorted-collection-types"></a>Sıralanmış Koleksiyon Türleri
 <xref:System.Collections.SortedList?displayProperty=nameWithType> Sınıfı, <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> genel bir sınıf ve <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> genel sınıfı benzer <xref:System.Collections.Hashtable> sınıfı ve <xref:System.Collections.Generic.Dictionary%602> genel sınıf uyguladıkları, <xref:System.Collections.IDictionary> arabirimi, ancak bunların bakımını kendi anahtara göre sıralama öğelerinde sipariş ve O(1) ekleme ve alma karma tablosu özellik yok. Üç sınıfları ortak çeşitli özelliklere sahiptir:  
@@ -59,4 +62,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
- [Çok kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md)
+ [Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)

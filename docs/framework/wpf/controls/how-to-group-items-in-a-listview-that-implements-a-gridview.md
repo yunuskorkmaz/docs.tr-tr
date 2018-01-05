@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30808e8ee0223c31085a65ff025fb188c0132057
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8a97a6c85036a6daf4e8c908186953f9a75f952a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Nasıl yapılır: GridView Uygulayan ListView İçinde Öğeleri Gruplandırma
 Bu örnek öğelerinin gruplarını görüntülemek nasıl gösterir <xref:System.Windows.Controls.GridView> görüntüleme modu, bir <xref:System.Windows.Controls.ListView> denetim.  
@@ -41,4 +42,4 @@ Bu örnek öğelerinin gruplarını görüntülemek nasıl gösterir <xref:Syste
  <xref:System.Windows.Controls.GridView>  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

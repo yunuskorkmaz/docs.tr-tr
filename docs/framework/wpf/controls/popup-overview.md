@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ee7b227d4e2ea5dfcb0b8870d77d03abf08db8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-overview"></a>Açılır Pencereye Genel Bakış
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi atanmış bir öğe veya ekran koordinat göre geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.Primitives.Popup> denetlemek ve kullanımı hakkında bilgi sağlar.  

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Varlık veri modeli: Basit veri türleri
 Varlık veri modeli (EDM) tanımlamak için kullanılan soyut temel veri türleri (örneğin, dize, Boolean, Int32 ve benzeri), bir kümesini destekler [özellikleri](../../../../docs/framework/data/adonet/property.md) kavramsal modelde. Proxy, depolama veya bir SQL Server veritabanı veya ortak dil çalışma zamanı (CLR) gibi barındırma ortamına desteklenen gerçek temel veri türleri için bu temel veri türleridir. EDM ilkel veri türleri üzerinde işlemler veya dönüşümleri semantiği tanımlamaz; Bu semantiği depolama veya barındırma ortamı tarafından tanımlanır. Genellikle, EDM ilkel veri türleri, depolama veya barındırma ortamı karşılık gelen temel veri türleriyle eşlenir. Entity Framework EDM ilkel türlerinde SQL Server veri türleri için nasıl eşlendiğini hakkında daha fazla bilgi için bkz: [varlık FrameworkTypes SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
@@ -49,5 +50,5 @@ Varlık veri modeli (EDM) tanımlamak için kullanılan soyut temel veri türler
 |Zaman|Günün saati içerir.|Duyarlık boş değer atanabilir, varsayılan|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık veri modeli temel kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

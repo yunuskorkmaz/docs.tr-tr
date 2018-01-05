@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e64a52ca70606f83138b636f7ccb62ba18908f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a33420d50a964479c74a59bf5b7cc0da320aee04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>ICorDebugVariableHomeEnum arabirimi
 Yerel değişkenleri ve bir işlev bağımsız değişkenleri için bir numaralandırıcı sağlar.  
@@ -32,7 +33,7 @@ Yerel değişkenleri ve bir işlev bağımsız değişkenleri için bir numarala
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Belirtilen sayıda alır [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) yerel değişkenleri ve bir işlev bağımsız değişkenleri hakkında bilgi içeren örnekleri.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Belirtilen sayıda alır [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) yerel değişkenleri ve bir işlev bağımsız değişkenleri hakkında bilgi içeren örnekleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugVariableHomeEnum` Arabirimini uygulayan Icordebugenum arabirimi.  
@@ -49,5 +50,5 @@ Yerel değişkenleri ve bir işlev bağımsız değişkenleri için bir numarala
  **.NET framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ICorDebugVariableHome arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugVariableHome Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

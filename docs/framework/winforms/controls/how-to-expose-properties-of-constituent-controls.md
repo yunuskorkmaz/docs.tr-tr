@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb85cb77c28ad443fb6837a5305a080c450220f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a970864a406f98477fa3e09bdefcf959d2078fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Nasıl yapılır: Bağlı Denetimlerin Özelliklerini Açma
 Bileşik denetimini oluşturan denetimler adlandırılır *bağlı denetimler*. Bu denetimler, normalde özel bildirilir ve böylece geliştirici tarafından erişilemez. Bu denetimlerin özelliklerini gelecekteki kullanıcılar için kullanılabilir hale getirmek istiyorsanız, kullanıcıya ortaya gerekir. Bağlı bir denetimin bir özelliği bir özellik, kullanıcı denetimi oluşturma ve kullanma sunulan `get` ve `set` bağlı denetiminin özel özellik değişikliği etkilemek için o özelliğin erişimciler.  
@@ -69,5 +70,5 @@ public Color ButtonColor
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.UserControl>  
- [Windows Forms denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

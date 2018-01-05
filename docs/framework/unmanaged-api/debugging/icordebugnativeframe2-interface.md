@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c33eaa36313f0cf6aae904761fb40bb2dbf9d753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f501d49f007e22c6f7db0e759ee19b40f87b4b33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 Arabirimi
 Alt ve üst çerçeve ilişkilerini sınayan yöntemler sağlar.  
@@ -32,9 +33,9 @@ Alt ve üst çerçeve ilişkilerini sınayan yöntemler sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Ischild yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Geçerli çerçeve alt çerçeve olup olmadığını belirler.|  
-|[Ismatchingparentframe yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Belirtilen çerçeve geçerli çerçevenin üst olup olmadığını belirler.|  
-|[GetStackParameterSize yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|İşletim sistemleri x86 yığında parametreleri toplam boyutu döndürür.|  
+|[IsChild Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Geçerli çerçeve alt çerçeve olup olmadığını belirler.|  
+|[IsMatchingParentFrame Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Belirtilen çerçeve geçerli çerçevenin üst olup olmadığını belirler.|  
+|[GetStackParameterSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|İşletim sistemleri x86 yığında parametreleri toplam boyutu döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim, mantıksal olarak "ICorDebugNativeFrame" arabirimi genişletir.  
@@ -53,5 +54,5 @@ Alt ve üst çerçeve ilişkilerini sınayan yöntemler sağlar.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
     
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

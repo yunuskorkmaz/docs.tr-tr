@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a934cd8c122a1564c034f8578e8bad680ba919a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fa73b8bf872cbed10b606c1fc60e8e8087f1c39f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: çağrı nesne yöntemleri olarak modeli tarafından tanımlanan İşlevler
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf bir statik yöntem olarak. A *modeli tanımlı işlev* kavramsal modelde tanımlanan bir işlev değil. Konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. Model tanımlı işlevler LINQ to Entities sorgularında çağırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: sorgularda Call Model-Defined işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -117,5 +118,5 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [LINQ to Entities sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
- [LINQ to Entities sorgularında işlevleri çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+ [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
+ [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

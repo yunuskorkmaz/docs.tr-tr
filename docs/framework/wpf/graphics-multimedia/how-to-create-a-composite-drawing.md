@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7789f9aa94db32d3dc61ccf01ef9ddfe1e777a37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 424f77b076344ad86db992614175243d1473886d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Nasıl yapılır: Bileşik Çizim Oluşturma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.DrawingGroup> birden çok birleştirerek karmaşık çizimler oluşturmak için <xref:System.Windows.Media.Drawing> tek bileşik çizim nesnelerine.  
@@ -58,4 +59,4 @@ Birden çok DrawingGroup nesneleri bileşik çizim sahip
  <xref:System.Windows.Media.DrawingGroup.Opacity%2A>  
  <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>  
  <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>  
- [Çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+ [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c2806003e06d00a492568d1e2d86add66b5f0ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7ac3a4cd5ec2aff1b60cd51ca33d411e5cc81eb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugfunction2-interface1"></a>Icordebugfunction2 Interface1
 Mantıksal olarak hangi kullanıcı olmayan kod atlar sadece kendi kodumu adımla için hata ayıklama, destek sağlamak için ICorDebugFunction arabirimi genişletir.  
@@ -32,10 +33,10 @@ Mantıksal olarak hangi kullanıcı olmayan kod atlar sadece kendi kodumu adıml
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateNativeCode yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|(Henüz uygulanmadı.) Bu Icordebugfunction2 nesnesi tarafından başvurulan işlev yerel kod deyimlerinde içeren bir Icordebugcodeenum için bir arabirim işaretçisi alır.|  
-|[GetJMCStatus yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|Bu işlev kullanıcı kodu olarak işaretlenmiş olup olmadığını belirten bir değer alır.|  
-|[GetVersionNumber yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|Bu işlev Düzenle ve devam et sürümünü alır.|  
-|[SetJMCStatus yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|Bu işlev sadece kendi kodumu işaretler atlama.|  
+|[EnumerateNativeCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|(Henüz uygulanmadı.) Bu Icordebugfunction2 nesnesi tarafından başvurulan işlev yerel kod deyimlerinde içeren bir Icordebugcodeenum için bir arabirim işaretçisi alır.|  
+|[GetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|Bu işlev kullanıcı kodu olarak işaretlenmiş olup olmadığını belirten bir değer alır.|  
+|[GetVersionNumber Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|Bu işlev Düzenle ve devam et sürümünü alır.|  
+|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|Bu işlev sadece kendi kodumu işaretler atlama.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -52,4 +53,4 @@ Mantıksal olarak hangi kullanıcı olmayan kod atlar sadece kendi kodumu adıml
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

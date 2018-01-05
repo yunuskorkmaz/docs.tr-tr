@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c407a2fcccfbda29ba23f63ba6ae71302c734d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa6d3f7109e8258dff0a07556bc8572f6071c961
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Nasıl yapılır: Freezable'ı Salt Okunur Yapma
 Bu örnek nasıl yapılacağını gösteren bir <xref:System.Windows.Freezable> salt okunur çağırarak kendi <xref:System.Windows.Freezable.Freeze%2A> yöntemi.  
@@ -48,5 +49,5 @@ Bu örnek nasıl yapılacağını gösteren bir <xref:System.Windows.Freezable> 
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CanFreeze%2A>  
  <xref:System.Windows.Freezable.Freeze%2A>  
- [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

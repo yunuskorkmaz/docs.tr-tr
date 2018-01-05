@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaa6c58afa8dd39151f7e19890a6e933d82d049d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e540e394226f20c40915f4d9de31afcffdf6e35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme
 Windows Forms öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.DomainUpDown> denetim kodu. Çağrı <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> denetimin öğeler eklemek için sınıfı <xref:System.Windows.Forms.DomainUpDown.Items%2A> özelliği. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Yöntemi, bir koleksiyonun sonuna bir öğe ekler sırada <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi, belirtilen konumda bir öğe ekler.  
@@ -68,5 +69,5 @@ Windows Forms öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.DomainUpDown
  <xref:System.Windows.Forms.DomainUpDown>  
  <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>  
  <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>  
- [DomainUpDown denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- [DomainUpDown denetimine genel bakış](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)
+ [DomainUpDown Denetimi](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ [DomainUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)

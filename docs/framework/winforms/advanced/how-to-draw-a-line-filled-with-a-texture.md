@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33374a16e6fee80dd45227acd4c5860d5bfc4545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0aaba7981dc68bf7bdfe6dbd45685e61f7b763a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Nasıl yapılır: Bir Dokuyla Doldurulmuş Çizgi Çizme
 Düz renk ile bir satır çizim yerine bir doku ile bir çizgi çizebilirsiniz. Çizgiler ve eğrilerle bir doku ile çizmek için oluşturma bir <xref:System.Drawing.TextureBrush> nesne ve, geçirin <xref:System.Drawing.TextureBrush> nesnesine bir <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu. Çizgi veya eğri kalem çizer, kalem vuruşun döşeli doku belirli piksel ortaya çıkardığı ve doku fırça ile ilişkili bit eşlem düzlemi (görünmez) döşeme için kullanılır.  
@@ -43,5 +44,5 @@ Düz renk ile bir satır çizim yerine bir doku ile bir çizgi çizebilirsiniz. 
  Bir Windows formu oluşturma ve form ele <xref:System.Windows.Forms.Control.Paint> olay. Önceki kod içine yapıştırma <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştir `Texture.jpg` , sisteminizde geçerli bir görüntü ile.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler ve şekiller çizmek için kalem kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

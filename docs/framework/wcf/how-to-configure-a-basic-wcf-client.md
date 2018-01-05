@@ -14,11 +14,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9ee75734349210ac9379aaf30523a98c4a14f94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 377a67edb37ada5c9e1b022d50a4718b5740afd8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Yapılandırma
 Temel bir oluşturmak için gereken altı görevleri beşinci budur [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -64,8 +65,8 @@ Temel bir oluşturmak için gereken altı görevleri beşinci budur [!INCLUDE[in
 2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu yapılandırma ile oluşturulan istemciyi kullanma hakkında [nasıl yapılır: bir istemci kullanın](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Kendini barındırma](../../../docs/framework/wcf/samples/self-host.md)
+ [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)

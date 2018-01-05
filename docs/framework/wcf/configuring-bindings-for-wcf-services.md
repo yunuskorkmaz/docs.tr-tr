@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc3886f81ee401cbd3de2fb6ef251e4c340394
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
 Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici kararları erteleneceği istersiniz. Örneğin, genellikle bir hizmet adresi ya da Tekdüzen Kaynak Tanımlayıcısı (URI) ne olacağını önceden bilmesinin yolu yoktur. Sabit bir adresi kodlama yerine, bir hizmet oluşturduktan sonra bunu yapmak için yönetici izin vermek için tercih edilir. Bu esneklik yapılandırma aracılığıyla gerçekleştirilir.  
@@ -63,8 +64,7 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 ```  
   
@@ -89,8 +89,7 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -113,12 +112,11 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
 </behaviors>  
 <services>  
     <service   
-       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
+       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
        <endpoint   
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-          binding="basicHttpBinding" />  
-       </endpoint>  
+          binding="basicHttpBinding" />
     </service>  
 </services>  
 ```  
@@ -136,14 +134,12 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
         address="http://computer:8080/Hello1"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="shortTimeout"  
-    </endpoint>  
+        bindingConfiguration="shortTimeout" />
     <endpoint  
         address="http://computer:8080/Hello2"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="Secure"  
-     </endpoint>  
+        bindingConfiguration="Secure" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -151,8 +147,9 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
         timeout="00:00:00:01"   
      />  
      <basicHttpBinding   
-        name="Secure" />  
+        name="Secure">  
         <Security mode="Transport" />  
+     </basicHttpBinding>
 </bindings>  
 ```  
   
@@ -175,7 +172,7 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)  
- [Uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+ [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

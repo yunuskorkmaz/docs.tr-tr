@@ -12,11 +12,12 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnetcore
+ms.openlocfilehash: 9935578f750e75c2261e1206cb6cc3292d16a049
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
@@ -113,7 +114,7 @@ Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnek
 
  [Dotnet-framework: 3.5 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) temel "hello world" kullanımını gösteren [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Size nasıl derleme ve .NET Framework 3. 5'Docker ' bağlı olan bir proje dağıtma gösterir.
 
-#### <a name="aspnet-core"></a>ASP.NET Çekirdeği
+#### <a name="aspnet-core"></a>ASP.NET Core
 
 * [Bu ASP.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) Docker görüntülerinizi ASP.NET Core için üretim için uygulamalar oluşturmak için en iyi yöntem desen gösterir. Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
 

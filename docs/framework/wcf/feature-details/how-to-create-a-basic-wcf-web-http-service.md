@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72e111340fc01df3def2fcb1d5360b00720af2f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir Web uç noktası kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Web uç noktaları XML veya JSON veri gönderme, SOAP Zarfı. Bu konu, bu tür bir uç nokta kullanıma gösterilmiştir.  
@@ -125,4 +126,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

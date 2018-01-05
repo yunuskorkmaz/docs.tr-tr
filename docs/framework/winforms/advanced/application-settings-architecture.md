@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 423f138ea4a9a76a105faca27956e9025dbe0c76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c437f305b847ff7922c98b4917e86ebd39ee100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Uygulama ayarları mimarisi nasıl çalıştığını, bu konuda açıklar ve mimarisinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikler araştırır.  
@@ -159,7 +160,7 @@ Uygulama ayarları mimarisi nasıl çalıştığını, bu konuda açıklar ve mi
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  <xref:System.Configuration.LocalFileSettingsProvider>  
- [Uygulama ayarlarına genel bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Özel denetimler için uygulama ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
- [ClickOnce ve uygulama ayarları](/visualstudio/deployment/clickonce-and-application-settings)  
+ [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [Özel Denetimler için Uygulama Ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
+ [ClickOnce ve Uygulama Ayarları](/visualstudio/deployment/clickonce-and-application-settings)  
  [Uygulama Ayarları Şeması](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 431f4abd55da3b8c4e348d3abbd107e2f6344d5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-transformations-overview"></a>3B Dönüşümlere Genel Bakış
 Bu konu, 3-b modellerinde dönüştürmeleri uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik sistemi. Dönüşümleri geliştiricinin yeniden konumlandırmak, yeniden boyutlandırma ve bunları tanımlayan temel değerleri değiştirmeden modelleri yeniden yönlendirmesine izin verin.  
@@ -117,5 +118,5 @@ Döndürme örneği
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [3B Grafiklere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Dönüşümler genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [2-D dönüşümler örnek](http://go.microsoft.com/fwlink/?LinkID=158252)

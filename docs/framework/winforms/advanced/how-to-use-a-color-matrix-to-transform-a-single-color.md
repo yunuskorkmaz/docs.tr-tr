@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve görüntüleri düzenleme için sınıflar. <xref:System.Drawing.Image>ve <xref:System.Drawing.Bitmap> 32 bitlik bir sayı nesneleri depolamak her piksel rengi: 8 bit her kırmızı, yeşil, mavi ve alfa için. Dört bileşenlerinden her biri, 0-hiçbir yoğunluğu ve tam yoğunluğu temsil eden 255 temsil eden 0 ile 255 arasında bir sayıdır. Renk saydam alfa bileşeni belirtir: 0 tamamen saydamdır ve 255'tir tamamıyla opak.  
@@ -74,5 +75,5 @@ ms.lasthandoff: 11/21/2017
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntüleri yeniden renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- [Koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+ [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

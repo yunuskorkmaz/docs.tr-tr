@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e61a15a7a249a90ce9eca035ebe6fd67275bb74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7ade624f57f58a5ec91a5d993375c73d1cc26fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma
 Aşağıdaki kod örneğinde ses sürekli olarak yürütür. Olduğunda kodda `stopPlayingButton_Click` olay işleyicisi çalışır, durakları oynatılmakta ses. Ses çalma, hiçbir şey olmaz.  
@@ -65,5 +66,5 @@ Aşağıdaki kod örneğinde ses sürekli olarak yürütür. Olduğunda kodda `s
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Nasıl yapılır: bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [SoundPlayer sınıfına genel bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+ [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [SoundPlayer Sınıfına Genel Bakış](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

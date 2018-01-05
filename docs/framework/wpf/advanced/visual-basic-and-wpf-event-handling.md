@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca55e31060388012e6bb94e40159c2e602484911
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
 İçin [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] dil dile özgü özellikle kullanabilirsiniz `Handles` öznitelikleri ile olay işleyicileri ekleme veya kullanma yerine örnekleri, olay işleyicileri ilişkilendirmek için anahtar sözcüğü <xref:System.Windows.UIElement.AddHandler%2A> yöntemi. Ancak, `Handles` örneklerine işleyicileri iliştirmek için teknik çünkü bazı sınırlamalar vardır `Handles` sözdizimi belirli yönlendirilmiş olay özelliklerinden bazıları destekleyemez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi.  
@@ -54,6 +55,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.UIElement.AddHandler%2A>  
- [İşaretleme yönlendirilmiş olarak işlenen ve sınıf işlemesi olaylar](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

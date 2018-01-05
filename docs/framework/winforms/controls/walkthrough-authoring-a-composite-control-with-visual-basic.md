@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c31e76e9f190990f0a3dddab359ef9523783d955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
 Bileşik denetimler olarak özel grafik arabirimler oluşturulabilir yeniden ve bir yol sağlar. Bileşik Denetim aslında bir görsel gösterimi ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirme veya yazar tarafından gerekli diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimler aynı şekilde Windows Forms'ta yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci bölümünde, işlevselliğini genişletmek `ctlClock` devralma yoluyla.  
@@ -406,7 +407,7 @@ Bileşik denetimler olarak özel grafik arabirimler oluşturulabilir yeniden ve 
      Bu kılavuz temel kavramları sayısı ele. Bileşik Denetim kapsayıcıya denetimleri ve bileşenleri birleştiren bileşik denetim oluşturmak öğrendiniz. Denetiminize özellikleri ekleyin ve özel işlevsellik uygulamak için kod yazma öğrendiniz. Son bölümünde devralma yoluyla belirli bir bileşik denetim işlevselliğini genişletmek ve bu yöntemi geçersiz kılarak konak yöntemleri işlevselliğini alter öğrendiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Nasıl yapılır: bileşik denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Nasıl yapılır: bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Nasıl yapılır: Bileşik Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Bileşen geliştirme izlenecek yollar](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

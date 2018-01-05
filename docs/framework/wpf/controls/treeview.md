@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d93b60a4172f7acebb5c9ec533efdff9a61d959c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb882dbdc8b394fe416b0e173129c745977566db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView> Denetim bilgileri hiyerarşik yapıda daraltılabilir düğümleri kullanarak görüntüler.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
  ![TreeView çizimi](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TreeView genel bakış](../../../../docs/framework/wpf/controls/treeview-overview.md)  
+ [TreeView Genel Bakış](../../../../docs/framework/wpf/controls/treeview-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+  [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)

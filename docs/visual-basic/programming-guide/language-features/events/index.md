@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje gerçekte bir sırayla yürütmek yordamları bir dizi olarak çoğu olay yönelimli programlardır — akışını anlamı adlı dış oluşumu tarafından belirlenir *olayları*.  
@@ -107,11 +107,11 @@ Görselleştirme ancak bir [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] proje ger
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Adım adım nasıl bildirme ve bir sınıf için olaylarını açıklamasını sağlar.|  
-|[İzlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Bir olay işleyicisi yordam yazmak gösterilmiştir.|  
-|[Nasıl yapılır: engellemekten Kaçınacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Zaman uyumsuz olarak çağrılacak kendi olay işleyicileri sağlayan özel bir olay tanımlamak gösterilmiştir.|  
-|[Nasıl yapılır: bellekten kazanacak şekilde özel olayları bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Yalnızca olay işlendiğinde bellek kullanan özel bir olay tanımlamak gösterilmiştir.|  
+|[İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Adım adım nasıl bildirme ve bir sınıf için olaylarını açıklamasını sağlar.|  
+|[İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Bir olay işleyicisi yordam yazmak gösterilmiştir.|  
+|[Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Zaman uyumsuz olarak çağrılacak kendi olay işleyicileri sağlayan özel bir olay tanımlamak gösterilmiştir.|  
+|[Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Yalnızca olay işlendiğinde bellek kullanan özel bir olay tanımlamak gösterilmiştir.|  
 |[Devralınmış olay işleyicileri Visual Basic sorunlarını giderme](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Olay işleyicileri devralınan bileşenleri ile ortaya ortak sorunları listeler.|  
-|[Olayları](../../../../standard/events/index.md)|Olay modelinde genel bir bakış sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Windows Forms'ta olay işleyicileri oluşturma](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesnelerle ilişkilendirilen olayları ile nasıl çalışılacağını açıklar.|  
+|[Olaylar](../../../../standard/events/index.md)|Olay modelinde genel bir bakış sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
+|[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesnelerle ilişkilendirilen olayları ile nasıl çalışılacağını açıklar.|  
 |[Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic'te temsilciler genel bir bakış sağlar.|

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 586e26825bd01947706bb26061ef1b8879fecb4c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Güvenilir Mesajlaşma Protokolü sürüm 1.1
 Bu konuda ele alınmaktadır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WS-ReliableMessaging uygulama ayrıntılarını Şubat 2007 (sürüm 1.1) Protokolü HTTP aktarımı kullanarak birlikte çalışabilirlik için gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu konuda açıklanan açıklamalar ve kısıtlamaları WS-ReliableMessaging izler. WS-ReliableMessaging sürüm 1.1 protokolünü başlayarak uygulandığını unutmayın [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  

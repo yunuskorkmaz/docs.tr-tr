@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama
 Veriye bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> herhangi bir Windows Forms denetimi için gibi denetleme. Ancak, veritabanındaki verilerinizin biçimini maskesi tanımı tarafından beklenen biçimde eşleşmiyorsa, verileri yeniden biçimlendirmek gerekir. Aşağıdaki yordamı kullanarak bunu yapmayı gösteren <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> olayları <xref:System.Windows.Forms.Binding> ayrı telefon numarasını görüntülemek ve tek düzenlenebilir bir alanı telefon uzantısı veritabanı alanları sınıfı.  
@@ -260,4 +261,4 @@ Veriye bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> herhangi
 -   Uygulamayı derleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: MaskedTextBox denetimiyle çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+ [İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

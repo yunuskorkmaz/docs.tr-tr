@@ -29,11 +29,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4209866f63931fb3d80f35e211bd5f9b35ed48bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d9cc6568813af866acaf20696b870bedc3099be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -62,34 +63,34 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView> Denetimidir yüksek oranda yapılandırılabilir ve genişletilebilir ve birçok özellikleri, yöntemleri ve görünümünü ve davranışını özelleştirmek için olayları sağlar. Tablo verileri görüntülemek için Windows Forms uygulaması istediğinizde kullanmayı <xref:System.Windows.Forms.DataGridView> diğerlerinden önce denetim (örneğin, <xref:System.Windows.Forms.DataGrid>). Salt okunur değerlerini oluşan küçük bir kılavuz görüntülüyorsanız veya kayıtları, milyonlarca içeren bir tablo düzenlemek bir kullanıcı etkinleştiriyorsanız <xref:System.Windows.Forms.DataGridView> denetimi, bir yedeğe programlanabilir, bellek verimli çözümüyle sağlayacaktır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataGridView denetimi teknoloji özeti](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
+ [DataGridView Denetimi Teknoloji Özeti](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
  Özetler <xref:System.Windows.Forms.DataGridView> kavramları ve ilgili sınıfların kullanımını denetleme.  
   
- [DataGridView denetimi mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [DataGridView Denetimi Mimarisi](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
  Mimarisini açıklar <xref:System.Windows.Forms.DataGridView> türü hiyerarşi ve devralma yapısını açıklayan denetim.  
   
- [DataGridView denetimi senaryoları](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
+ [DataGridView Denetimi Senaryoları](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
  En yaygın senaryoları açıklar <xref:System.Windows.Forms.DataGridView> denetimleri kullanılır.  
   
- [DataGridView denetimi kod dizini](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
+ [DataGridView Denetimi Kod Dizini](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
  Kod örneklerinde çeşitli belgelerine ait bağlantılar sağlanmıştır <xref:System.Windows.Forms.DataGridView> görevler. Bu örnekler görev türü tarafından ayrılır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms DataGridView denetiminde sütun türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Sütun Türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
  Windows Forms'ta sütun türleri açıklanmaktadır <xref:System.Windows.Forms.DataGridView> denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcılara izin vermek için kullanılır.  
   
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
  El ile veya bir dış veri kaynağından veri denetimiyle doldurmak nasıl açıklayan konulara sağlar.  
   
- [Windows Forms DataGridView denetimini özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  Özel boyama açıklayan konulara sağlar <xref:System.Windows.Forms.DataGridView> hücre ve satırları ve oluşturma türetilmiş hücre, sütun ve satır türleri.  
   
- [Performans ayarlama Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Performans Ayarlaması](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Denetim verimli bir şekilde büyük miktarlarda veri ile çalışırken, performans sorunlarını önlemek için nasıl kullanılacağını açıklayan konulara sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [DataGridView denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Varsayılan işlevsellik Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
- [Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+ [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Windows Forms DataGridView Denetimindeki Varsayılan İşlevler](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Varsayılan Klavye ve Fare Kullanımı](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cd9e5c4f978eb6e8492d9bd6c90a32f87cfbce9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* bir hizmeti etki alanı kaynaklarına istemci erişimini kısıtlamak için hizmetlerini kullanan ortak bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinede bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: bir hizmete bir istemcinin kimliğine bürünmek](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -229,7 +230,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ChannelFactory%601>  
  <xref:System.Security.Principal.TokenImpersonationLevel.Identification>  
- [Taşıma güvenliği ile kimliğe bürünme kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
- [İstemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
- [Nasıl yapılır: bir hizmette istemci kimliğine bürün](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+ [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

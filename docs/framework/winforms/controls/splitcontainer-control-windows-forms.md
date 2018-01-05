@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 336243cc4db7039225ba272cac1ba7a3f173f361
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66eb0e8fc630696c86c8b85c85b67023bd568dc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer Denetimi (Windows Forms)
 Windows Forms `SplitContainer` kontrol zorlayıcı bileşik olarak; iki bölme taşınabilir bir çubukla ayrılan değer. Fare işaretçisini çubuğu üzerine olduğunda çubuğu taşınabilir olduğunu göstermek için Şekil işaretçi.  
@@ -31,16 +32,16 @@ Windows Forms `SplitContainer` kontrol zorlayıcı bileşik olarak; iki bölme t
  `SplitContainer` Denetim karmaşık kullanıcı arabirimleri oluşturmanıza olanak tanır; bu genellikle, bir panelinde seçimi hangi nesneleri diğer panelinde gösterileceğini belirler. Bu düzenlemenin görüntüleme ve bilgi gözatma için çok etkili olur. İki bölme sahip alanlarda toplama bilgilere izin, ve çubuğu ya da "bölme," paneller yeniden boyutlandırmak kullanıcılar için kolaylaştırır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SplitContainer denetimine genel bakış](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
+ [SplitContainer Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Tanıtır `SplitContainer` denetlemek ve yaygın olarak kullanılan özellikleri, yöntemleri ve olayları açıklar.  
   
- [Nasıl yapılır: yeniden boyutlandırma ve bölünmüş pencerede davranışı konumlandırma tanımlayın](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  Bölümlendirici içinde denetlemek açıklar `SplitContainer` denetim.  
   
- [Nasıl yapılır: pencereyi yatay bölme](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [Nasıl yapılır: Pencereyi Yatay Bölme](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  İçinde Bölümlendirici yönlendirmesini denetlemek açıklar `SplitContainer` denetim.  
   
- [Nasıl yapılır: Windows formları ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms ile Çok Bölmeli Kullanıcı Arabirimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Microsoft Outlook içinde kullanılan benzer bir çok bölmesi kullanıcı arabirimi oluşturur.  
   
  Ayrıca bkz. [nasıl yapılır: pencereyi yatay olarak kullanarak bir tasarımcı bölme](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [nasıl yapılır: bir Windows formunda Windows Gezgini stilinde bir arabirim oluşturma](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [nasıl yapılır: ile çok bölmeli kullanıcı arabirimi oluşturma Tasarımcı kullanarak Windows Formları](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
@@ -50,8 +51,8 @@ Windows Forms `SplitContainer` kontrol zorlayıcı bileşik olarak; iki bölme t
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
  Özellikle Windows Forms ile çalışmak üzere tasarlanmış denetimleriyle ilgili konulara bağlantılar sağlar.  
   
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

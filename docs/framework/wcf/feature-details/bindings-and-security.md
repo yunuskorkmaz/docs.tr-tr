@@ -18,11 +18,12 @@ caps.latest.revision: "42"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 İle birlikte gelen sistem tarafından sağlanan bağlamalar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] program hızlı bir şekilde sunma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  
@@ -234,9 +235,9 @@ ms.lasthandoff: 11/21/2017
 |IssuedToken|Özel belirteç sağlamak için bir güvenlik belirteci hizmeti kullanmak hizmet sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Güvenlik davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Kimlik Bilgisi Türü Seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [Güvenlik Davranışları](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

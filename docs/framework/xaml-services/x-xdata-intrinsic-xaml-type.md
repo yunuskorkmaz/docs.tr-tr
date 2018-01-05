@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData İç XAML Türü
 XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri içinde `x:XData` hareket varsayılan XAML ad uzayı parçası veya diğer bir XAML ad olmaları durumunda gibi XAML işlemcileri tarafından değerlendirilmelidir değil. `x:XData`rastgele doğru biçimlendirilmiş XML içerebilir.  
@@ -61,5 +62,5 @@ XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri için
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.XmlDataProvider>  
- [Veri bağlama genel bakış](../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Bağlama biçimlendirme uzantısı](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+ [Veri Bağlamaya Genel Bakış](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [İşaretleme Uzantısı Bağlama](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

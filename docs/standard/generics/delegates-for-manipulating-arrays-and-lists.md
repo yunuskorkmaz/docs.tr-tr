@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 905f30d8b7e6d7c10a0e2b32109076e2950a99ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b82943a2382fd18a2ddbcee69707a02b97661ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 Bu konu, bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek genel temsilciler dönüşümleri, arama koşulları ve Eylemler için genel bir bakış sağlar.  
@@ -51,7 +54,7 @@ Bu konu, bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek genel
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
  <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Genel türler](../../../docs/standard/generics/index.md)  
- [.NET Framework'teki genel koleksiyonlar](../../../docs/standard/generics/collections.md)  
- [Genel arabirimler](../../../docs/standard/generics/interfaces.md)  
- [Kovaryans ve kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)
+ [Genel Türler](../../../docs/standard/generics/index.md)  
+ [.NET Framework'teki Genel Koleksiyonlar](../../../docs/standard/generics/collections.md)  
+ [Genel Arabirimler](../../../docs/standard/generics/interfaces.md)  
+ [Kovaryans ve Kontravaryans](../../../docs/standard/generics/covariance-and-contravariance.md)

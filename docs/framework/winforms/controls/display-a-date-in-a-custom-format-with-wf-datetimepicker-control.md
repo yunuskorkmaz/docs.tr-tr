@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5f5c7d856991ae8e0bf7caff656bf7010255628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> denetim tarihler ve saatler denetiminde görüntüsünü biçimlendirme esneklik sağlar. <xref:System.Windows.Forms.DateTimePicker.Format%2A> Özelliği listelenen önceden tanımlanmış biçimlerden seçmenize olanak verir <xref:System.Windows.Forms.DateTimePickerFormat>. Bunlar hiçbiri amaçlarınız için yeterli değilse listelenen biçimi karakter kullanarak kendi biçimi stili oluşturabilirsiniz <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
@@ -74,5 +75,5 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> denetim tarihler ve saa
      Kültür ayarı bağlı olarak, tek tırnak işaretleri içine olmayan herhangi bir karakter değiştirilebilir. Örneğin, yukarıdaki biçim dizesi biçiminde geçerli tarihi görüntüler "Bugün: 05:30:31 02 Mart 2012 Cuma" İngilizce (ABD) kültür. "Ss: dd: içinde" olduğu gibi sınırlandırma karakterine olacak şekilde tasarlanmamıştır çünkü ilk iki nokta üst üste tek tırnak içine alınmış olduğunu unutmayın. Başka bir kültürün biçimi olarak görünebilir "Bugün: 05.30.31 02 Mart 2012 Cuma".  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DateTimePicker denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Nasıl yapılır: tarihleri Windows Forms DateTimePicker denetimi ayarlama ve döndürme](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+ [DateTimePicker Denetimi](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

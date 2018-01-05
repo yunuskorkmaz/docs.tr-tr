@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
 .NET normal ifadelerde üç çeşitli dil yapıları içerir. Bir etkinleştirmek veya normal ifade deseni ortasında belirli eşleştirme seçenekleri devre dışı bırakmanızı sağlar. İki kalan normal ifadede açıklamalar dahil olanak tanır.  
@@ -110,4 +113,4 @@ ms.lasthandoff: 10/18/2017
  Sağlama yerine Not `(?x)` oluşturmak normal ifadede açıklama da çağırarak kabul edilmemiş <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi ve onu <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> numaralandırma değeri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

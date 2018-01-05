@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Veri Hizmetleri ile çalışmaya başlama
 Bu bölümdeki konular, hızlı bir şekilde anlamanıza yardımcı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ve nasıl kullanılacağını [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma ve kullanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları temel teknolojileri açıklayarak. Bu bölüm hem kavramsal içerik içerir ve bir [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Öğreticisi.  
@@ -26,22 +27,22 @@ Bu bölümdeki konular, hızlı bir şekilde anlamanıza yardımcı [!INCLUDE[ss
 ## <a name="in-this-section"></a>Bu Bölümde  
  Aşağıdaki konular kullanarak veri hizmetleri oluşturmak nasıl açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Bir hizmet olarak verilerinizi gösterme](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Kullanarak bir veri hizmeti oluşturmak için gereken adımları açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Veri Hizmeti kaynaklara erişmeyi](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  İle nasıl çalışılacağını açıklar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
- [Veri Hizmeti istemci uygulamasında kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
  İle nasıl çalışılacağını açıklar bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir .NET Framework istemci uygulamasında akış.  
   
- [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
  Oluşturma ve basit bir erişim gösterilmektedir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Northwind örnek veritabanını temel alan bir akış sunar hizmet tabanlı.  
   
- [Uygulama senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Bir dizi vurgular [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] tarafından desteklenen senaryoları [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Kaynakları](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
+ [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
  Bağlantılar sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kaynakları.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

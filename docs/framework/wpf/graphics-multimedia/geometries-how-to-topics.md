@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries-how-to-topics"></a>Geometriler ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Media.Geometry> uygulamalarınızda nesneleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [EllipseGeometry animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [ArcSegment boyutunu animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [Bileşik şeklin dolgu denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [Birleşik Geometri oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [Bileşik şekil oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Küp Bezier eğrisi oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [LineGeometry kullanarak çizgi oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [İçinde bir LineSegment oluşturulacağını](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [Bir şekli PathGeometry kullanarak oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Bir StreamGeometry kullanarak şekil oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [İkinci dereceden Bezier eğrisi oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Elips yay oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [PathGeometry içinde birden çok alt oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [RectangleGeometry kullanarak dikdörtgen tanımlayın](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [Yuvarlamak RectangleGeometry köşelerinde](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [EllipseGeometry'ye Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [ArcSegment Boyutuna Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [Bileşik Şeklin Dolgusunu Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [Birleşik Geometri Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [Bileşik Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [Üçüncü Dereceden Bezier Eğrisi Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [LineGeometry Kullanarak Çizgi Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [PathGeometry İçinde LineSegment Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [PathGeometry Kullanarak Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [StreamGeometry Kullanarak Şekil Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [İkinci Dereceden Bezier Eğrisi Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [Elips Yay Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [Bir PathGeometry İçinde Birden Çok Alt Yol Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [RectangleGeometry Kullanarak Dikdörtgen Tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [RectangleGeometry'nin Köşelerini Yuvarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

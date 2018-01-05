@@ -23,11 +23,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7302b17beb5ce20ec2bd8865149fe2e0bae9cee4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan Biçim Dizeleri
 A <xref:System.TimeSpan> biçim dizesi tanımlayan dize gösterimini bir <xref:System.TimeSpan> bir biçimlendirme işleminin sonuçları değeri. Özel bir biçim dizesi bir veya daha fazla özel oluşur <xref:System.TimeSpan> biçimlendirmek değişmez değer karakter herhangi bir sayıda birlikte tanımlayıcıları. Değil herhangi bir dize bir [standart TimeSpan biçim dizesi](../../../docs/standard/base-types/standard-timespan-format-strings.md) özel olarak yorumlanır <xref:System.TimeSpan> biçim dizesi.  
@@ -400,5 +403,5 @@ A <xref:System.TimeSpan> biçim dizesi tanımlayan dize gösterimini bir <xref:S
  [Tablo dön](#table)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Standart TimeSpan biçim dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)

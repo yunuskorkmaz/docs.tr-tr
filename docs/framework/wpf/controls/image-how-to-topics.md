@@ -17,20 +17,21 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Görüntü ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Image> öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Resim öğesi kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [Bir görüntüyü gri ölçeği için dönüştürme](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [Görüntü kırpma](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [Görüntüyü Döndür](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+ [Görüntü Öğesi Kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+  [Görüntüyü Gri Tona Dönüştürme](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
+  [Görüntü Kırpma](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+  [Görüntü Döndürme](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Image>  
@@ -40,5 +41,5 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

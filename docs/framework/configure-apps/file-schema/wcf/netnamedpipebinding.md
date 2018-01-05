@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1fa9823c0b66409cfbcef45b95d9d37124b180da
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f5bf4a933928770744e8974b5bb20ef06f18c93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Güvenli, güvenilir, üzerinde-makine çapraz işlem iletişim için en iyi hale getirilmiş bir bağlama tanımlar. Varsayılan olarak, güvenilirlik, ileti teslimi ve ikili ileti kodlama için adlandırılmış kanallar aktarımı güvenlik için taşıma güvenliği için çalışma zamanı iletişim yığını WS-ReliableMessaging ile oluşturur.  
@@ -156,6 +157,6 @@ Güvenli, güvenilir, üzerinde-makine çapraz işlem iletişim için en iyi hal
  <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)

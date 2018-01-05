@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc782ba262527a319cbb05cc6d36ca568afc55c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma
 İki kez arabelleğe alma bellek arabelleği birden çok boyama işlemlerle ilişkili titreşimi sorunları ele almak için kullanır. İki kez arabelleğe alma etkinleştirildiğinde, tüm boyama işlemleri ilk ekranda çizim yüzeyini yerine bir arabelleğe işlenir. Tüm boyama işlemleri tamamlandıktan sonra Ara belleğe doğrudan ilişkili çizim yüzeyini kopyalanır. Yalnızca bir grafik işlem ekranda gerçekleştirildiğinden, karmaşık boyama işlemlerle ilişkili görüntü titremeyi ortadan kalkar. Çoğu uygulama için varsayılan iki kez arabelleğe alma sağladığı [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en iyi sonuçlar sağlar. Varsayılan olarak arabelleğe alınan standart Windows Forms denetimleri çift. Varsayılan, formlarda arabelleğe alma çift etkinleştirebilirsiniz ve denetimleri iki yolla yazıldı. Ya da ayarlayabilirsiniz <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğine `true`, ya da çağırabilirsiniz <xref:System.Windows.Forms.Control.SetStyle%2A> ayarlamak için yöntemin <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> bayrağını `true`. Her iki yöntem varsayılan çift form veya denetim için arabelleğe almayı etkinleştir ve titreşimsiz grafik işleme sağlayın. Çağırma <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemi için yazdığınız tüm işleme kod yalnızca fazla özel denetimler için önerilir.  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
  <xref:System.Windows.Forms.Control.SetStyle%2A>  
- [Çift arabelleğe alınan grafikleri](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [İki Kez Arabelleğe Alınan Grafikler](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

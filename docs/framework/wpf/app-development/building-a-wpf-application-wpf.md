@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc027381ec8a5311d53077f103be035dd6c311d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]uygulamalar, olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  
@@ -176,7 +177,7 @@ End Sub
 -   Hiçbir şey (projedeki hiçbir şey değiştirilmişse) derlenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF uygulaması dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [WPF MSBuild başvurusu](/visualstudio/msbuild/wpf-msbuild-reference)  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [WPF Uygulama kaynağı, içerik ve veri dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+ [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [WPF MSBuild Başvurusu](/visualstudio/msbuild/wpf-msbuild-reference)  
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

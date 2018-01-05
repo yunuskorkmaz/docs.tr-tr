@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilişkili varlıklar, disk belleğine alınan yanıt verilerini ve gerektiğinde veri hizmetinden ikili veri akışlarını gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza ertelenmiş tür içeriği yüklemek açıklar.  
@@ -69,4 +70,4 @@ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Veri Hizmeti sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+ [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

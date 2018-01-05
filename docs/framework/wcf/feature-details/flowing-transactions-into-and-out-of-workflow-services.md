@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d097068720bb937911316fdb29a83ba0e8e67713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 İş akışı hizmetleri ve istemciler işlemlerde yer alabilir.  Bir hizmet işlemi ortam bir işlemin parçası olmaya yerleştirin bir <xref:System.ServiceModel.Activities.Receive> içinde etkinlik bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> etkinlik. Tarafından yapılan çağrılar bir <xref:System.ServiceModel.Activities.Send> veya <xref:System.ServiceModel.Activities.SendReply> içinde etkinlik <xref:System.ServiceModel.Activities.TransactedReceiveScope> ortam işlem içinde da yapılır. Bir iş akışı istemci uygulamasını kullanarak bir ortam işlem oluşturabilirsiniz <xref:System.Activities.Statements.TransactionScope> ortam hareket kullanarak etkinliği ve çağrı hizmet işlemleri. Bu konu bir iş akışı hizmeti ve katılmak iş akışı istemci işlemleri oluşturmada size yol gösterir.  
@@ -323,6 +324,6 @@ ms.lasthandoff: 12/02/2017
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Windows Communication Foundation işlemleri genel bakış](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
- [TransactedReceiveScope kullanımı](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Windows Communication Foundation İşlemleri Genel Bakış](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [TransactedReceiveScope Kullanımı](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)

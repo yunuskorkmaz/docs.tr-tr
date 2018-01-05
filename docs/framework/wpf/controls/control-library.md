@@ -17,11 +17,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d1ea41597f0bba7aed61854119ee33136ed07d5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: bc2186c4b1acaf06ec7c6adf0d5ef8460957869b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-library"></a>Denetim Kitaplığı
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Denetim kitaplığı tarafından sağlanan denetimler hakkında bilgi içeren [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], alfabetik olarak listelenir.  
@@ -29,10 +30,10 @@ ms.lasthandoff: 10/22/2017
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Kenarlık](../../../../docs/framework/wpf/controls/border.md)  
  [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [Düğmesi](../../../../docs/framework/wpf/controls/button.md)  
+ [Düğme](../../../../docs/framework/wpf/controls/button.md)  
  [Takvim](../../../../docs/framework/wpf/controls/calendar.md)  
- [Tuvale](../../../../docs/framework/wpf/controls/canvas.md)  
- [Onay kutusu](../../../../docs/framework/wpf/controls/checkbox.md)  
+ [Tuval](../../../../docs/framework/wpf/controls/canvas.md)  
+ [CheckBox](../../../../docs/framework/wpf/controls/checkbox.md)  
  [ComboBox](../../../../docs/framework/wpf/controls/combobox.md)  
  [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
  [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
@@ -52,25 +53,25 @@ ms.lasthandoff: 10/22/2017
  [ListBox](../../../../docs/framework/wpf/controls/listbox.md)  
  [ListView](../../../../docs/framework/wpf/controls/listview.md)  
  [Menü](../../../../docs/framework/wpf/controls/menu.md)  
- [Paneli](../../../../docs/framework/wpf/controls/panel.md)  
+ [Panel](../../../../docs/framework/wpf/controls/panel.md)  
  [PasswordBox](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [Açılan](../../../../docs/framework/wpf/controls/popup.md)  
+ [Açılan Pencere](../../../../docs/framework/wpf/controls/popup.md)  
  [ProgressBar](../../../../docs/framework/wpf/controls/progressbar.md)  
  [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
  [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
  [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
  [Şerit (WPF)](http://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
  [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [Kaydırma çubuğu](../../../../docs/framework/wpf/controls/scrollbar.md)  
+ [ScrollBar](../../../../docs/framework/wpf/controls/scrollbar.md)  
  [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [Ayırıcı](../../../../docs/framework/wpf/controls/separator.md)  
+ [Ayıraç](../../../../docs/framework/wpf/controls/separator.md)  
  [Kaydırıcı](../../../../docs/framework/wpf/controls/slider.md)  
  [StackPanel](../../../../docs/framework/wpf/controls/stackpanel.md)  
  [StatusBar](../../../../docs/framework/wpf/controls/statusbar.md)  
  [TabControl](../../../../docs/framework/wpf/controls/tabcontrol.md)  
  [TextBlock](../../../../docs/framework/wpf/controls/textblock.md)  
- [Metin kutusu](../../../../docs/framework/wpf/controls/textbox.md)  
- [Araç çubuğu](../../../../docs/framework/wpf/controls/toolbar.md)  
+ [TextBox](../../../../docs/framework/wpf/controls/textbox.md)  
+ [Araç Çubuğu](../../../../docs/framework/wpf/controls/toolbar.md)  
  [Araç İpucu](../../../../docs/framework/wpf/controls/tooltip.md)  
  [TreeView](../../../../docs/framework/wpf/controls/treeview.md)  
  [WrapPanel](../../../../docs/framework/wpf/controls/wrappanel.md)  
@@ -82,8 +83,8 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Controls.Primitives>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
   
- [Kategoriye göre denetimler](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [Kategoriye Göre Denetimler](../../../../docs/framework/wpf/controls/controls-by-category.md)  
   
- [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)

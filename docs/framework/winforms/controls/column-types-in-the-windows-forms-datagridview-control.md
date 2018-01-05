@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e45ddcec4459e376a5dab4eec36e51cc2e5e49c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Türleri
 <xref:System.Windows.Forms.DataGridView> Denetim bilgilerini görüntülemek ve değiştirmek veya bilgi eklemek kullanıcıların sağlamak için birkaç sütun türleri kullanır.  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridViewImageColumn>  
  <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
  <xref:System.Windows.Forms.DataGridViewLinkColumn>  
- [DataGridView denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Nasıl yapılır: Windows hücrelerinde görüntü görüntüleme Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetimini özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+ [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Resim Görüntüleme](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

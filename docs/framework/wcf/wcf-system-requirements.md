@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65f5c2e8ac0a767d3ecc4d270ac9280a8cc78bfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-system-requirements"></a>WCF Sistem Gereksinimleri
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]dağıtılmış uygulamaları oluşturmak için kullanılan bir iletişim altyapısıdır. Aşağıdaki sağlar gereksinimler listelenir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çalıştırmak için.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
  **Not** Message Queuing (MSMQ) işlevselliğini [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yalnızca desteklenen [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], ve [!INCLUDE[wxppro](../../../includes/wxppro-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kavramsal genel bakış](../../../docs/framework/wcf/conceptual-overview.md)  
- [Temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)  
- [Kılavuzları ve en iyi uygulamalar](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+ [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)  
+ [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)

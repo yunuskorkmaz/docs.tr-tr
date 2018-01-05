@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79ef7b899adfb068a03e41cf0f3aa29f34f27b88
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f86679d38b8d1a1d6443c1aac37cfa75f426e402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma
 İstek-yanıt sözleşmesi yanıt döndüren bir yöntem belirtir. Yanıt gönderilir ve bu sözleşmenin koşulları altında isteğine bağıntılı. Yanıt yöntem olsa bile (`void` C# ' ta, veya bir `Sub` Visual Basic'te), altyapı oluşturur ve çağırana boş iletisi gönderir. Bir boş yanıt iletisini göndermeyi önlemek için işlem için tek yönlü sözleşme kullanın.  
@@ -59,5 +60,5 @@ public interface ICalculator
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [Nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+ [Hizmet Sözleşmeleri Tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)  
+ [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

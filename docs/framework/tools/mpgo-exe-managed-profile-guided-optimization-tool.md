@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 Yönetilen profil temelli iyileştirme Aracı (Mpgo.exe) tarafından oluşturulan yerel görüntü derlemeleri en iyi duruma getirmek için son kullanıcı senaryoları kullanan bir komut satırı aracıdır [yerel Görüntü Oluşturucu (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Bu araç, profil verilerini oluşturan eğitim senaryolarını çalıştırmanızı sağlar. [Yerel Görüntü Oluşturucu (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) kendi oluşturulan yerel görüntü uygulama derlemeleri iyileştirmek için bu verileri kullanır. Eğitim senaryosu, uygulamanızın beklenen bir kullanımına ilişkin denemedir. Mpgo.exe, Visual Studio Ultimate 2012 ve sonraki sürümlerinde kullanılabilir. İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], ayrıca Mpgo.exe en iyi duruma getirmek için kullanabileceğiniz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
@@ -134,7 +135,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [Masaüstü uygulamalarınızın başlatma performansı iyileştirme](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [.NET 4.5, performans iyileştirmeleri genel bakış](http://go.microsoft.com/fwlink/p/?LinkId=249131)

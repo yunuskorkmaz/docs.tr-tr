@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: edae357dad95a363926afbacc8e52355a1bcbd65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-path-normalization"></a>Azaltma: Yolu normalleştirme
 Hedef uygulamalarla başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], .NET Framework'teki yolu normalleştirme değişti.  
@@ -71,4 +72,4 @@ Hedef uygulamalarla başlangıç [!INCLUDE[net_v462](../../../includes/net-v462-
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yeniden hedefleme değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+ [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

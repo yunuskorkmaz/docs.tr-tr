@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7dd9d70a3b93faf721b5ac3bbd5f1114bf5c1461
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
 Internet Information Services (IIS) tarafından barındırılan örnekleri çalıştırmak için IIS düzgün yüklendiğinden ve çalıştığından emin olmanız gerekir.  
@@ -32,8 +33,7 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
 4.  Seçin **Web sunucusu (IIS)** onay kutusu. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken özellikleri Ekle**. Tıklatın **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** Web sunucusu (IIS) rolü için iletişim kutusu.  
   
-5.  Genişletme **Yönetim Araçları**, genişletin ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken rol hizmetlerini Ekle**. 
-              **İleri**'ye tıklayın.  
+5.  Genişletme **Yönetim Araçları**, genişletin ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken rol hizmetlerini Ekle**. **İleri**'ye tıklayın.  
   
 6.  Seçim Özeti doğru ise, tıklatın **yükleme**.  
   
@@ -92,8 +92,7 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
 4.  Seçin **Web sunucusu (IIS)** onay kutusu. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken özellikleri Ekle**. Tıklatın **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** Web sunucusu (IIS) rolü için iletişim kutusu.  
   
-5.  Genişletme **Yönetim Araçları**, genişletin ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken rol hizmetlerini Ekle**. 
-              **İleri**'ye tıklayın.  
+5.  Genişletme **Yönetim Araçları**, genişletin ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklatın **gereken rol hizmetlerini Ekle**. **İleri**'ye tıklayın.  
   
 6.  Seçim Özeti doğru ise, tıklatın **yükleme**.  
   

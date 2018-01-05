@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f66821f38e8915ee93cf5b1b77dd75e32662121
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Bir hizmet için meta veri uç noktası eklemek için destek sağlar. Bu meta veri uç noktalarını bir URL HTTP GET isteklerine yanıt vermesini sağlayabilirsiniz bir `?wsdl` querystring ve WS-MetadataExchange (MEX) belirtiminde tanımlanan WS aktarma GET istekleri. MEX uç noktaları uygulamak <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> sözleşme.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
  Özel bağlama üzerinden meta veri yayımlama sırasında bağlama meta verileriniz gerektiren güvenlik desteği sağladığından emin olun. Örneğin, istemci meta verileri elde hakkına sahip olduğundan emin olun ve bilgilerin açığa çıkmasını önlemek için meta verilerinizin ve uygulamanızı daha güvenli yapılandırarak yapabilirsiniz, <xref:System.ServiceModel.Description.IMetadataExchange> kimlik doğrulama ve şifreleme gerektirecek şekilde uç noktası. Örnek [özel güvenli meta veri uç noktasının](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) bu senaryo gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetleri güvenli hale getirme](../../../../docs/framework/wcf/securing-services.md)  
- [WS-MetadataExchange bağlamaları](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
- [Nasıl yapılır: yapılandırma özel bir WS-Metadata değişimi bağlaması](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [Nasıl yapılır: meta verileri üzerinden alma bir MEX olmayan bağlama](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+ [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)  
+ [WS-MetadataExchange Bağlamaları](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [Nasıl yapılır: Özel Bir WS-Metadata Exchange Bağlaması Yapılandırma](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

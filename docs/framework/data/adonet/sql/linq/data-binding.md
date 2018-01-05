@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7405cf37aaa21f8773952c9e7ed941bc8ae3150b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99aa438c64fdb8f2d14207e6afb06afa8e5f014a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding"></a>Veri Bağlama
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Kılavuz denetimleri gibi ortak denetimlere bağlama destekler. Özellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri kılavuza bağlama ve ana-ayrıntı bağlama, hem görüntüleme ve güncelleme açısından işleme için temel düzenlerden tanımlar.  
@@ -117,4 +118,4 @@ ms.lasthandoff: 10/18/2017
 -   Bir varlık iki ayrı kılavuzlarda (örneğin, bir ana ve başka bir ayrıntı) bağlıysa bir `Delete` ana kılavuzda ayrıntılı kılavuz dağıtılmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

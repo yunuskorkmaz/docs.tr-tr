@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ac129bf133cca88a6d2f6a724d25ea2519cb72e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910210b8360956b9e92b613fad52e7bfc7f5e49e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Boole Değerine Animasyon Ekleme
 Bu örnek Boolean özellik değerinin animasyon gösterilmektedir bir <xref:System.Windows.Controls.Button> anahtar çerçeveler kullanarak denetim.  
@@ -42,5 +43,5 @@ Bu örnek Boolean özellik değerinin animasyon gösterilmektedir bir <xref:Syst
  <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
  <xref:System.Windows.UIElement.IsEnabled%2A>  
  <xref:System.Windows.Controls.Button>  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar çerçeve nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

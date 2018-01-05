@@ -17,19 +17,20 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d010e83b0bc5a3e69f8a0c205247681d2bb3d26
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a947e1e7ccfe31ffcb638f8e09aae5cdd594b449
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.StackPanel> içeriği yatay veya dikey olarak yığmak için öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [StackPanel ve DockPanel arasında seçim yapma](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [StackPanel ve DockPanel Arasında Seçim Yapma](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
  [StackPanel Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [StackPanel içeriği yatay veya dikey olarak Hizala](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [StackPanel İçinde Yatay veya Dikey Olarak İçerik Hizalama](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -49,6 +50,6 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer'a Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`) iki birleştirir. Bu konuda, ileti güvenliği ve kullanmak için nedenleri açıklanmaktadır.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/02/2017
 -   XML düzeyi güvenlik mekanizmaları ve Destek, WS-Security belirtimi için gerektirir. Bu, birlikte çalışabilirlik etkileyebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Taşıma güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Nasıl yapılır: kullanım taşıma Güveniği ve ileti kimlik bilgileri](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [Nasıl yapılır: Aktarım Güvenliği ve İleti Kimlik Bilgilerini Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Microsoft desenleri ve uygulamalar, Bölüm 3: uygulama taşıma ve ileti güvenlik katmanı](http://go.microsoft.com/fwlink/?LinkId=88897)

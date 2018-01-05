@@ -9,11 +9,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43732c6c2effd38b8bfdb49c1a5fbf8275eb15e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
 WCF Web HTTP programlama modeli yanıt olarak döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
@@ -172,7 +173,7 @@ public class Service : IService
 ## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.UriTemplate>  
  <xref:System.UriTemplateMatch>  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF Web HTTP programlama modeli genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+ [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

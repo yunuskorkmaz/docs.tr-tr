@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7362c57afa3d5615ffaa0616823a954a2d577cfe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 57b140391526c5b2a0e73a8bab2355ae445b395b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Nasıl yapılır: MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi
 Aşağıdaki örnek, medya kullanma kayıttan yürütmeyi denetlemek gösterilmiştir bir <xref:System.Windows.Controls.MediaElement>. Örnek yürütmek, duraklatmak, durdurmak ve İleri ve geri ortamda Atla yanı sıra, ses ve hız oranını ayarlamak olanak sağlayan bir basit medya oynatıcı oluşturur.  
@@ -45,4 +46,4 @@ Aşağıdaki örnek, medya kullanma kayıttan yürütmeyi denetlemek gösterilmi
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Film şeridi kullanarak MediaElement'i denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)
+ [Görsel Taslak Kullanarak MediaElement'i Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)

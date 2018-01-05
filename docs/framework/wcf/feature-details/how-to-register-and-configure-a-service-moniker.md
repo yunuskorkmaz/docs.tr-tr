@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32cb95eebbc5738204b063f1cf5f8264e775791f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet bilinen adı yazılı sözleşme ile COM uygulama içinde gerekli öznitelikli türleri COM ile kaydetme ve COM uygulama ve ad gerekli bağlama yapılandırması ile yapılandırmanız gerekir.  
@@ -108,4 +109,4 @@ Kullanmadan önce [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet
      Böylece tüm yöntemleri döndürür bu alınan Arabirim tanımları değiştiren bir `HResult`. Diğer tüm dönüş değerleri out Parametreleri uygulamasına dönüştürülür. Genel yöntemler yürütülmesi aynı kalır. Bu yöntem proxy çağırırken özel bir durum nedenini belirlemenize olanak sağlar. Bu işlevsellik yalnızca C++ koddan kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

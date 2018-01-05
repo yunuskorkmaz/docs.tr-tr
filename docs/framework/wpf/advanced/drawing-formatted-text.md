@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad79f26a48f3f5e905b2f2ac7de9191dd8539f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konuda özelliklerini genel bakış sağlar <xref:System.Windows.Media.FormattedText> nesnesi. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -135,7 +136,7 @@ Metnin yol geometri video görüntüleme
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.FormattedText>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Anahatları belirlenmiş metin oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
  [Nasıl yapılır: metin için PathGeometry Animasyonu oluşturma](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)

@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12913a9afc0003b041b260379a55e469273c5910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
 İstek-yanıt desen bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemini kodu olarak temsil edilir olsa bile bir istek-yanıt desende istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek veya gönderen bir beklediğiniz yapar.  
@@ -65,4 +66,4 @@ public interface IOneWayCalculator
  Bu, bunun yerine, istemci yanı sıra hizmet çeşitli denetimleri inceleyin ve ardından her iki tarafında en iyi yapılandırma belirlemek için uygulama senaryolarınızı test önerilir. Oturumları kullanımını hizmetinizi üzerinde iletilerinin işlenmesini engelleyen varsa, örneğin, ayarlayabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğine <xref:System.ServiceModel.InstanceContextMode.PerCall> böylece her ileti farklı hizmet örneği tarafından işlenen ve ayarlama <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> için <xref:System.ServiceModel.ConcurrencyMode.Multiple> aynı anda iletilerinin gönderilmesi birden çok iş parçacığı izin vermek üzere. Başka bir yaklaşım, hizmet ve istemci bağlamaları okuma kotaları artırmaktır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek yönlü](../../../../docs/framework/wcf/samples/one-way.md)
+ [Tek Yönlü](../../../../docs/framework/wcf/samples/one-way.md)

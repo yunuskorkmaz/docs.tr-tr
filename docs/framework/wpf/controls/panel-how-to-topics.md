@@ -17,21 +17,22 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 877367098baf6e50b18ecfba2e6b20cdbe29313d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-how-to-topics"></a>Panel ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Panel> öğesi ve ilgili [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: bir öğeye LayoutTransform Uygula](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [Özel Panel öğesi oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Panel OnRender yöntemini geçersiz kılma](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [Bir öğenin yüksekliği özelliklerini ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Bir öğenin genişlik özelliklerini ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Özel Panel Öğesi Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
+ [Panel OnRender Yöntemini Geçersiz Kılma](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
+ [Öğenin Yükseklik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [Öğenin Genişlik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -51,6 +52,6 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Window
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer'a Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

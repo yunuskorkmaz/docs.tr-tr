@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Bağımlılık Özelliği Geri Aramaları ve Doğrulama
 Bu konuda doğrulamayı belirleme, özelliğin geçerli değeri değiştiğinde çağrılan geri aramalar gibi özelliği ile ilgili özellikler için alternatif özel uygulamalar kullanarak ve geçersiz kılma bağımlılık özelliklerin nasıl oluşturulacağı açıklanmaktadır olası değeri belirleme etkileri dışında. Bu konuda Ayrıca varsayılan özellik sistemi davranışlarını bu teknikleri kullanarak genişletmenin uygun olduğu senaryolar anlatılmaktadır.  
@@ -91,6 +92,6 @@ Bu konuda doğrulamayı belirleme, özelliğin geçerli değeri değiştiğinde 
  Özellik sistemi herhangi değerlendirir <xref:System.Windows.CoerceValueCallback> değerini döndüren <xref:System.Windows.DependencyProperty.UnsetValue> bir özel durum olarak. Bu özel durum ile sonuçlandı özellik değişikliği anlamına <xref:System.Windows.CoerceValueCallback> çağrılan özellik sistemi tarafından reddedilmesi ve özellik sistemi yerine özelliği önceki değerini bildirmesi. Bu mekanizma zaman uyumsuz olarak başlatılan değişiklikleri bir özellik için geçerli nesne durumu için hala geçerli olduğundan emin olun ve değilse değişiklikleri bastırma yararlı olabilir. Başka bir olası hangi özellik bileşene bağlı olarak değeri belirleme raporlandığını değeri sorumlu olduğu bir değer seçerek gizleyebilirsiniz senaryodur. Bunu yapmak için kullanabileceğiniz <xref:System.Windows.DependencyProperty> geri çağırma ve özellik tanımlayıcısı için giriş olarak geçirilen <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>ve ardından işleme <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Bağımlılık özelliği meta verileri](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

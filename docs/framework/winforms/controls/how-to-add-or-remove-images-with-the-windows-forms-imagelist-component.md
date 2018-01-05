@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e09448cb834453a4c8fce4494ab9fbb53eb0dc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Nasıl yapılır: Windows Forms ImageList Bileşeni ile Görüntü Ekleme veya Kaldırma
 Windows Forms <xref:System.Windows.Forms.ImageList> denetimi ile ilişkili önce bileşen görüntülerle genellikle doldurulur. Ancak, Ekle ve görüntü listesi denetimi ile ilişkilendirdikten sonra görüntüleri kaldırın.  
@@ -154,6 +155,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ImageList bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [ImageList bileşenine genel bakış](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+ [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [ImageList Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

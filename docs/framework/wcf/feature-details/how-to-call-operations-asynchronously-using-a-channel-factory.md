@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e0ef2dbd52e6628e7b784c50d2ce29306216772
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fec4a82ca2b6b5affce3ef3934a86adcd52a5b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma
 Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanırken erişebilir kapsar bir <xref:System.ServiceModel.ChannelFactory%601>-tabanlı istemci. (Kullanırken bir <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> olay tabanlı zaman uyumsuz çağırma model kullanabileceğiniz hizmetini çağırmak için nesne. Daha fazla bilgi için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz: [birden çok iş parçacıklı programlama olay tabanlı zaman uyumsuz desen ile](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  

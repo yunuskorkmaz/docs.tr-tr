@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Paketleme ve Dağıtma Kaynakları
 Uygulamaları kullanan üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi, <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynaklar almak için sınıf. Kaynak Yöneticisi'ni bir hub ve bağlı bileşen modeli paketini ve kaynakları dağıtmak için kullanıldığını varsayar. Hub nonlocalizable yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; Bu kültürdür yerelleştirilmiş kaynaklar bulunamazsa, kaynakları kullanılır. Her bağlı bileşen tek bir kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır.  
@@ -192,7 +193,7 @@ Bon jour!
  Zaman veya bütçe kısıtlamaları kaynaklar için uygulamanızın destekleyen her bir alt kümesi oluşturma engelleyebilir. Bunun yerine, tüm subcultures ilgili bir üst kültür kullanabilir, tek bir uydu derlemesi oluşturabilirsiniz. Örneğin, bölgeye özgü İngilizce kaynakları isteği kullanıcılar tarafından alınan tek bir İngilizce uydu derlemesi (TR) ve bölgeye özgü Almanca kaynakları isteyen kullanıcılar için tek Almanca uydu derlemesi (de) sağlayabilir. Örneğin, Almanca olarak Almanya (de-DE), konuşulan gibi Avusturya (AT de) ve İsviçre (CH de) Almanca uydu derlemesi (de) geri döner ister. Varsayılan kaynaklar son geri dönüş ve bu nedenle, uygulamanızın kullanıcılarıyla çoğunluğu tarafından istenen kaynakları böylece bu kaynakları dikkatle seçin. Bu yaklaşım, daha az culturally özeldir, ancak uygulamanızın yerelleştirme maliyetlerini önemli ölçüde azaltabilir kaynakları dağıtır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)  
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
  [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)  
- [Kaynak dosyalar oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+ [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

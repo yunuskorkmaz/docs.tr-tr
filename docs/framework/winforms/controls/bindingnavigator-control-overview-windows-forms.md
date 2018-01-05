@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932223a48500d8a0df5be6ae1ca08e1f333fc711
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 921f8c7791620d51107fa2ff31a637094fc0c633
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator Denetimine Genel Bakış (Windows Forms)
 Kullanabileceğiniz <xref:System.Windows.Forms.BindingNavigator> aramak ve bir Windows formunda veri değiştirmek kullanıcılar için standartlaştırılmış bir yol oluşturmak için denetim. Sık kullandığınız <xref:System.Windows.Forms.BindingNavigator> ile <xref:System.Windows.Forms.BindingSource> bir form üzerinde veri kayıtlarda taşımak ve kayıtlarıyla etkileşim kullanıcılar etkinleştirmek için bileşen.  
@@ -53,4 +54,4 @@ Kullanabileceğiniz <xref:System.Windows.Forms.BindingNavigator> aramak ve bir W
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingNavigator denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+ [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)

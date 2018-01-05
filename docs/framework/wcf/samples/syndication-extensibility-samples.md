@@ -13,21 +13,22 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b356fd413ab61990b685d3104b9f1bc00dfbd71c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility-samples"></a>Dağıtım genişletilebilirliği örnekleri
 Bu bölüm, özel dağıtım gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güçlü yazılmış uzantılar](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
+ [Kesin Tür Belirtilmiş Uzantılar](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
  Önerilen Atom iş parçacığı oluşturma uzantıları RFC tanımlı bir uzantı öğesi uygulamak gösterilmiştir.  
   
- [Akış biçimlendirici (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
+ [Akış Biçimlendirici (JSON)](../../../../docs/framework/wcf/samples/feed-formatter-json.md)  
  Örneğini serileştirmek nasıl gösteren bir <xref:System.ServiceModel.Syndication.SyndicationFeed> sınıfı bir özel kullanarak JavaScript nesne gösterimi (JSON) biçiminde <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
- [Akış gerçekleştirme](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
+ [Akış Yapma](../../../../docs/framework/wcf/samples/streaming-feeds-sample.md)  
  Çok sayıda öğe içeren dağıtım akışlarını yönetmek gösterilmiştir.

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
 Dosya boyutu en aza indirmek ve kalitesini iyileştirmek için diske görüntüyü kaydederken bir görüntü parametreleri değiştirmek isteyebilirsiniz. Sıkıştırma düzeyini değiştirerek bir JPEG resim kalitesini ayarlayabilirsiniz. JPEG Resim kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve ona geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Initialize <xref:System.Drawing.Imaging.EncoderParameters> olan birini oluşan bir dizi nedenle nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcı ve istenen sıkıştırma düzeyi.  
@@ -140,6 +141,6 @@ End Function
 -   Adlı bir görüntü dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir kodlayıcı tarafından desteklenen parametreleri belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [Bit eşlem türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [Yönetilen GDI +'GÖRÜNTÜ Kodlayıcıları ve kod çözücüleri kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+ [Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ [Bit Eşlem Türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

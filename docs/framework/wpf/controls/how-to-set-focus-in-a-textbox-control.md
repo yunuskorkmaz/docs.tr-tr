@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c25f9dbc05ac9d5c14eb794236613b49f8240e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe07633e41986e383d5f40dc66c0689a91e33116
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>Nasıl yapılır: TextBox Denetiminde Odak Ayarlama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.UIElement.Focus%2A> odak ayarlamak için yöntemi bir <xref:System.Windows.Controls.TextBox> denetim.  
@@ -42,5 +43,5 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.UIElement.Fo
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.UIElement.Focusable%2A>  
  <xref:System.Windows.UIElement.IsFocused%2A>  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a34377403a55ba42d9d3f2946ef26ea48982f5d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9716d91a99eb79e38b729424389b2962d1eb6b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Nasıl yapılır: Arka Plan Olarak Kullanılan bir Görüntünün En Boy Oranını Koruma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği bir <xref:System.Windows.Media.ImageBrush> resmin oranını korumak için.  
@@ -51,4 +52,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.TileBr
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.TileBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

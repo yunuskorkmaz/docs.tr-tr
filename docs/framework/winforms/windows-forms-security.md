@@ -20,26 +20,27 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-security"></a>Windows Forms Güvenliği
 Windows Forms (kod tabanlı güvenlik düzeyleri kod kodu çalıştıran kullanıcının bağımsız olarak ayarlanır) bir güvenlik modeli sunar. Ek olarak, bilgisayar sisteminizdeki zaten yerinde olabilir tüm güvenlik şemaları budur. Bu tarayıcı (örneğin, bölge tabanlı güvenlik Internet Explorer'da kullanılabilir) veya işletim sistemi (örneğin, Windows NT kimlik bilgisi tabanlı güvenlik) de dahil edebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms'a genel bakış güvenliği](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
  .NET Framework güvenlik modeli ve uygulamanızı Windows Forms'ta sağlamak için gereken temel adımlarda güvenli kısaca açıklanmaktadır.  
   
- [Daha güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
  Dosyaları ve yarı güvenilir bir ortamda verilerine erişmesini açıklar.  
   
- [Windows Forms'ta daha güvenli yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
  Yarı güvenilir bir ortamda yazdırma özelliklerine erişmek açıklar.  
   
- [Windows Forms'ta ek güvenlik konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Windows Forms'ta Ek Güvenlik Konuları](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
  Pano kullanma ve yönetilmeyen kod yarı güvenilir bir ortamda aramalarına gerçekleştirme penceresi işleme açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
@@ -52,13 +53,13 @@ Windows Forms (kod tabanlı güvenlik düzeyleri kod kodu çalıştıran kullan�
  [Tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
  Bazı circumvented bir güvenlik sistemi izin verebilir.NET Framework izinler açıklanmaktadır.  
   
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)  
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)  
  Güvenli bir şekilde .NET Framework karşı kod yazmaya yönelik en iyi uygulamaları açıklayan konulara bağlantılar.  
   
  [NIB: İzinleri isteyen](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  Kodunuzu çalıştırmak için gereken izinleri bilmeniz çalışma zamanı izin özniteliklerin kullanmayı açıklar.  
   
- [Temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md)  
+ [Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)  
  Kod güvenliği temel yönlerini kapak konulara bağlantılar.  
   
  [Kod erişim güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)  

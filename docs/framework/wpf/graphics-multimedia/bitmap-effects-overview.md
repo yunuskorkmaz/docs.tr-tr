@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76b767fd210deed536b4452dc6d7bb505f5bd3e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f642c699a0ecf3e3cce328363f90110766002e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri etkinleştirme işlenen görsel efektler uygulanacağını tasarımcıları ve geliştiricilerin [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] içeriği. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekti veya Bulanıklaştırma etkili bir görüntü veya bir düğme.  
@@ -74,7 +75,7 @@ Bit eşlem efektleri etkinleştirme işlenen görsel efektler uygulanacağını 
  <xref:System.Windows.Media.Effects.BitmapEffectInput>  
  <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
  [Yönetilmeyen WPF Bit eşlem efekti](https://msdn.microsoft.com/library/ms735092.aspx)  
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
  [Güvenlik](../../../../docs/framework/wpf/security-wpf.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

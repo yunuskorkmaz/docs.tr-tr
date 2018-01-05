@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2738856f0abada9b7fcd5f2a1d457508c8a0dc3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 213cf8df3694ec3020057de65006ff6351961cc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Yönlendirme
 Aşağıdaki kod örneğinde işlemek için çeşitli yollar gösterir <xref:System.Windows.Forms.DataGridView> özelliklerini kullanarak sütunları <xref:System.Windows.Forms.DataGridViewColumn> sınıfı.  
@@ -47,4 +48,4 @@ Aşağıdaki kod örneğinde işlemek için çeşitli yollar gösterir <xref:Sys
  <xref:System.Windows.Forms.DataGridViewBand>  
  <xref:System.Windows.Forms.DataGridViewRow>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
- [Hücrelerini, satırları ve sütunları Windows Forms DataGridView denetiminde ile programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+ [Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)

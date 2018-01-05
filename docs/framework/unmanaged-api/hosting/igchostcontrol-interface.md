@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1364a990b13cfca010d9dad29403da367965d98b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0f34d7dca85ea76aac33b073a31b6251a804ec7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl Arabirimi
 Sanal bellek sınırları değiştirmek için ana istemek atık toplayıcı izin veren bir yöntem sağlar.  
@@ -32,7 +33,7 @@ Sanal bellek sınırları değiştirmek için ana istemek atık toplayıcı izin
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RequestVirtualMemLimit yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Sanal bellek sınırları değiştirmek için ana ister.|  
+|[RequestVirtualMemLimit Yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Sanal bellek sınırları değiştirmek için ana ister.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,4 +45,4 @@ Sanal bellek sınırları değiştirmek için ana istemek atık toplayıcı izin
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

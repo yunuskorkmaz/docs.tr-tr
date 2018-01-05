@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamaları, ortak bir uygulama uygulama ve Yönetim için geçerli işlevi sahip olma eğilimi gösterir. Bu konu içinde işlevlerine genel bakış sağlar <xref:System.Windows.Application> oluşturmak ve uygulamaları yönetmek için sınıf.  
@@ -376,9 +377,9 @@ Tüm uygulamaları, ortak bir uygulama uygulama ve Yönetim için geçerli işle
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Application>  
- [WPF Windows genel bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [WPF Uygulama kaynağı, içerik ve veri dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [WPF Windows'a Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [Uygulama modeli: Nasıl Yapılır Konuları](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [Uygulama geliştirme](../../../../docs/framework/wpf/app-development/index.md)
+ [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)

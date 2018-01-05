@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc3566cf25282749a09c5f2372cd1c81e3ce881
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 252da422ffb34e5865a29112e349e18d0f40327f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Nasıl yapılır: Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme
 Bu örnek, içinde bir anahtar çerçeve animasyon ana kare zamanlamasını denetlemek gösterilmiştir. Diğer animasyonları gibi anahtar çerçeve animasyonları sahip bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği. Animasyonun süresini belirtmeye ek olarak, bu süre hangi kısmının her anahtar çerçeveleri ayrılan belirtmeniz gerekir. Zamanı paylaştırmak için belirttiğiniz bir <xref:System.Windows.Media.Animation.KeyTime> animasyonun her anahtar çerçevede için.  
@@ -76,6 +77,6 @@ Bu örnek, içinde bir anahtar çerçeve animasyon ana kare zamanlamasını dene
  Tam bir örnek için bkz: [ana kare animasyon örneği](http://go.microsoft.com/fwlink/?LinkID=160012). Anahtar çerçeve animasyonları hakkında daha fazla bilgi için bkz: [anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

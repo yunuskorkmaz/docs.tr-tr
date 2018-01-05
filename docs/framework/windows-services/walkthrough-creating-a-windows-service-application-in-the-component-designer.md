@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma
 Bu makalede, bir olay günlüğü iletileri Yazar Visual Studio'da basit bir Windows hizmet uygulaması oluşturmak gösterilmiştir. Hizmetinizi oluşturmak için gerçekleştirdiğiniz temel adımlar şunlardır:  
@@ -488,7 +489,7 @@ Bu kod değiştirir **ImagePath** varsayılan parametre değerleri ekleyerek Win
  Uygulama çalıştığında bir olay günlüğü oluşturmak yerine, uygulama yüklenirken bir olay günlüğü oluşturmak için bir yükleyici kullanabilirsiniz. Ayrıca, uygulama kaldırıldığında olay günlüğü de yükleyici tarafından silinecektir. Daha fazla bilgi için bkz: <xref:System.Diagnostics.EventLogInstaller> başvuru sayfası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamaları](../../../docs/framework/windows-services/index.md)  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)  
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Hizmetleri (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

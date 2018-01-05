@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: abe9487f9c2ebbb93c2e712959237f722ee707b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99845420549393829582ade11f38b75e3ebff484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel veritabanı SqlClient desteği
 ' Den başlayarak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kod adı Denali, hafif bir sürümüdür ve [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], yerel veritabanı olarak adlandırılan, kullanılabilir olacaktır. Bu konuda bir LocalDB veritabanına bağlanmak nasıl ele alınmıştır.  
@@ -69,5 +70,5 @@ ms.lasthandoff: 11/21/2017
 -   Kullanım `AttachDBFilename` belirtmek için bağlantı dizesi anahtar sözcüğü. MDF dosyası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

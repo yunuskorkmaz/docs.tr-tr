@@ -15,21 +15,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37a811f8c3d4e7da82c24fa8f2147ee4cafe64c6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0bdd08efff930b2ddb8b985376992dd895067cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-how-to-topics"></a>Olaylar ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, WPF içinde olayları kullanmayı açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kod kullanarak bir olay işleyicisi ekleme](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Yönlendirilmiş olay işleme](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Özel yönlendirilmiş olay oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Bir olay işleyicisi kaynak öğesi bulma](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Sınıf için yönlendirilmiş olay işleyicisi ekleme](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Kod Kullanarak bir Olay İşleyicisi Ekleme](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
+ [Yönlendirilmiş Olayı İşleme](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [Özel Yönlendirilmiş Olay Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
+ [Olay İşleyicisinde Kaynak Öğesi Bulma](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
+ [Yönlendirilmiş Olay için Sınıf İşleme Ekleme](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.RoutedEvent>  

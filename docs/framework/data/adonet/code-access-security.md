@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3f8e1f776a64ab1fd957fdf327eada2cb722777a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 754c380972d79343eab83b9e862e478798218ffc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework rol tabanlı güvenlik yanı sıra kod erişim güvenliği (CAS), her ikisi de ortak dil çalışma zamanı tarafından (CLR) sağlanan ortak bir altyapı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında uygulamaların çoğu kullanıcı veya asıl izinlerle yürütün. Sonuç olarak, bilgisayar sistemleri kötü amaçlı olduğunda tehlikeye bozuk ve özel veri olabilir veya yazılım hatası doldurulmuş bir kullanıcı tarafından yükseltilmiş ayrıcalıklarla çalıştırın.  
@@ -205,8 +206,8 @@ Failed, as expected: Request failed.
  .NET Framework COM birlikte çalışma üzerinden erişim sağlayarak geriye dönük uyumluluk varolan COM bileşenleri de destekler. İlgili COM türlerini almak için COM birlikte çalışma araçları kullanarak COM bileşenlerini .NET Framework uygulamasına dahil edebilirsiniz. İçeri aktarılan sonra COM türlerini kullanmak hazır olursunuz. COM birlikte çalışma ayrıca COM istemcilerin derleme meta verilerini bir tür kitaplığı dışarı aktarma ve yönetilen bileşen bir COM bileşeni kaydı tarafından yönetilen kod erişmesine olanak sağlar. Daha fazla bilgi için bkz: [Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
  [Kod erişimi güvenliği](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Rol tabanlı güvenlik](http://msdn.microsoft.com/en-us/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Rol Tabanlı Güvenlik](http://msdn.microsoft.com/en-us/239442e3-5be4-4203-b7fd-793baffea803)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

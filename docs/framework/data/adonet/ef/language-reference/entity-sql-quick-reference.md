@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19be8e04f8bb0cb11c98d5361deb6deffe797fca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-quick-reference"></a>Varlık SQL hızlı başvuru
 Bu konu, hızlı başvuru sağlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular. Bu konuda sorgularda AdventureWorks satış model üzerinde temel alır.  
@@ -373,5 +374,5 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |TRUE|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

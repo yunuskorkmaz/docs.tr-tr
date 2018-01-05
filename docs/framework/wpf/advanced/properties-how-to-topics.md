@@ -18,18 +18,19 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa929e36128086466f9b5843b617bb2363fd7672
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2831055ea0c99aa029b8f5ce8f15460304ec3c44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-how-to-topics"></a>Özellikler ile İlgili Nasıl Yapılır Konuları
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağımlılık özelliği uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [Bağımlılık özelliği için bir sahip türü ekleme](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [Ekli özellik kaydetme](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [Meta veri bağımlılık özelliği için geçersiz kılma](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+ [Bağımlılık Özelliği Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
+ [Bağımlılık Özelliği için Sahip Türü Ekleme](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [Ekli Özelliği Kaydetme](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
+ [Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.DependencyProperty>  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Özellikleri](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+ [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
 Bazen geliştiriciler, veriler bir hizmeti işleminin nasıl döndürülür, tam denetimi olmalıdır. Bir hizmet işlemi tarafından desteklenmeyen bir biçimde veri döndürmesi gerekir, bu durumda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu konuda ele alınmıştır kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP programlama gibi bir hizmet oluşturmak için modeli. Bu hizmet bir akış döndüren bir işlemi var.  
@@ -186,4 +187,4 @@ namespace RawImageService
 -   Örnek kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlerken.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

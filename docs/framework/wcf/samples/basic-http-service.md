@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9da2addce9c837499783664bb3b1417d30b937b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
 Bu örnek, özellik "POX" (düz eski XML) hizmet vermek için başvurulan – kullanarak bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programlama modeli. Bu örnek iki bileşenden oluşur: kendini barındıran [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (Program.cs).  
@@ -54,4 +55,4 @@ Bu örnek, özellik "POX" (düz eski XML) hizmet vermek için başvurulan – ku
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md)
+ [Temel Kaynak Hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md)

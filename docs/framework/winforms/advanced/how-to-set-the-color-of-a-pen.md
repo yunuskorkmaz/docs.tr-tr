@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 452e88b4b41a22cc78f73e120e49468e4f4dad56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66527be5a70f9c7c60f4ca3836ee68b96872442f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Nasıl yapılır: Bir Kalemin Rengini Ayarlama
 Bu örnek önceden var olan rengini değiştirir <xref:System.Drawing.Pen> nesnesi  
@@ -44,7 +45,7 @@ Bu örnek önceden var olan rengini değiştirir <xref:System.Drawing.Pen> nesne
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Pen>  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Nasıl yapılır: Kalem oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Çizgiler ve şekiller çizmek için kalem kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Kalemler, çizgiler ve dikdörtgenler GDI +'da](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Nasıl yapılır: Kalem Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [GDI+'da Kalemler, Çizgiler ve Dikdörtgenler](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

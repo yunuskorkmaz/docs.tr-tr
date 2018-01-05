@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6193e4cc86a470f046c220dc21150e0fc0bf792a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b671910ac77b7456492cab871ace3abb61ac7fd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama
 Bağlayabilirsiniz <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.ListBox> verileri bir veritabanındaki verilere göz atma gibi görevleri gerçekleştirmek için yeni verileri girmeden veya var olan verileri düzenleme.  
@@ -66,6 +67,6 @@ Bağlayabilirsiniz <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Veri bağlama ve Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Veri Bağlama ve Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

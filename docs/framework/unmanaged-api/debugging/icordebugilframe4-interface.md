@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80b42a2ed4e93fd5e4c662bab34b111fe0757890
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66e4ba870319a1c60419ab794088a41eb9c4db3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 Arabirimi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumerateLocalVariablesEx yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|Geçerli çerçevede kullanılabilir yerel değişkenler listesini döndürür.|  
-|[GetCodeEx yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|Bu yığın çerçevesi çalıştıran kodu döndürür.|  
-|[GetLocalVariableEx yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|Yerel bir değişken değerini IL çerçevede döndürür.|  
+|[EnumerateLocalVariablesEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|Geçerli çerçevede kullanılabilir yerel değişkenler listesini döndürür.|  
+|[GetCodeEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|Bu yığın çerçevesi çalıştıran kodu döndürür.|  
+|[GetLocalVariableEx Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|Yerel bir değişken değerini IL çerçevede döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntemler tarafından sağlanana ek olarak işlevleri sunar [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md), [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md), ve [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) yöntemleri. Her yöntem içerir bir `flags` ek yerel değişkenler veya Profil Oluşturucu'nın ReJIT isteği tarafından tanımlanan kod olup görünür belirten parametre.  
@@ -49,5 +50,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

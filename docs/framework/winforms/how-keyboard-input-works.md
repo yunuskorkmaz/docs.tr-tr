@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
 Windows Forms klavye olayları Windows iletilere yanıt olarak yükselterek klavye girişi işler. Çoğu Windows Forms uygulamaları klavye olayları işleme tarafından özel olarak klavye girişi işleyin. Ancak, bir denetim düşmeden önce anahtarları kesintiye uğratan gibi daha gelişmiş klavye girişi senaryolar uygulayabilirsiniz şekilde klavye iletileri nasıl çalıştığını anlamanız gerekir. Bu konuda Windows Forms tanır ve klavye iletileri nasıl yönlendirildiği genel bir bakış sağlar anahtar veri türleri açıklanmaktadır. Klavye olayları hakkında daha fazla bilgi için bkz: [kullanan klavye olayları](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -82,6 +83,6 @@ Windows Forms klavye olayları Windows iletilere yanıt olarak yükselterek klav
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.WndProc%2A>  
  <xref:System.Windows.Forms.Control.PreProcessMessage%2A>  
- [My.Computer.Keyboard nesnesi](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)  
- [Klavyeye erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
- [Klavye olaylarını kullanma](../../../docs/framework/winforms/using-keyboard-events.md)
+ [My.Computer.Keyboard Nesnesi](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)  
+ [Klavyeye Erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
+ [Klavye Olaylarını Kullanma](../../../docs/framework/winforms/using-keyboard-events.md)

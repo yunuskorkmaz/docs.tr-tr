@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d7288eeffeb642d1e897e11153802633d71747bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0921e154f10abecb7cdedb23092f4341987a26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür ortaya çıkarır tahmin etmek mümkün olduğundan, bir uygulamanın tüm saldırılarına karşı güvenli olduğu garanti edebilir noktası olacaktır. Buna karşılık, yalnızca hiç kimse olduğundan henüz bulunan (veya yayımlanmış) güvenlik açıkları sistemindeki gelmez hiçbiri mevcut veya mevcut. Yanı sıra güvenlik için proje tasarım aşamasında planlama güvenlik uygulama ömrü boyunca nasıl sürdürüleceği planlamak gerekir.  
@@ -51,7 +52,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Uygulamalarının güvenliğini sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konulara bağlantılar içerir. Ayrıca dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve Masaüstü uygulamaları güvenliğini sağlamaya yönelik konulara bağlantılar içerir.|  
+|[Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konulara bağlantılar içerir. Ayrıca dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve Masaüstü uygulamaları güvenliğini sağlamaya yönelik konulara bağlantılar içerir.|  
   
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)  
  Kod erişim güvenliği (CAS), korunan kaynaklara ve işlemlere koduna sahip erişimi sınırlamak yardımcı olan bir mekanizmadır. .NET Framework'teki CA'lar aşağıdaki işlevleri gerçekleştirir:  
@@ -76,7 +77,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kod erişimi güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilen ortamlar arasındaki etkileşimler açıklanmaktadır.|  
+|[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilen ortamlar arasındaki etkileşimler açıklanmaktadır.|  
 |[Kod erişimi güvenliği](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework CA'LARDA açıklayan ek konulara bağlantılar içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
@@ -98,7 +99,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[SQL Server güvenlik](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server'ı hedefleyen güvenli ADO.NET uygulamaları oluşturmak için kılavuzluk uygulama senaryoları ile SQL Server güvenlik genel bir bakış sağlar.|  
+|[SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server'ı hedefleyen güvenli ADO.NET uygulamaları oluşturmak için kılavuzluk uygulama senaryoları ile SQL Server güvenlik genel bir bakış sağlar.|  
 |[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
   
 ## <a name="security-policy-and-administration"></a>Güvenlik İlkesi ve yönetim  
@@ -112,7 +113,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
 |[NIB: İlke en iyi güvenlik uygulamaları](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
- [SQL Server güvenlik](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

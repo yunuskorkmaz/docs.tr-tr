@@ -19,11 +19,14 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ac5ddfb0ac7ae83537717e9bd0cd46eb629641fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c875fee667639923faf44c79afd6488cfc205e20
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici sınırlı Automaton (NFA) altyapısı içerir kırıntıları oluşturma bir normal ifade Eşleştirici altyapısıdır. Bu ondan daha hızlı ve daha kısıtlı, saf normal ifade belirleyici sınırlı Automaton (DFA) altyapılarını awk, egrep veya lex bulunanlar gibi ancak ayırır. Bu ayrıca, standartlaştırılmış, ancak daha yavaş, ayırt POSIX NFAs. Aşağıdaki bölümde normal ifade motorları üç tür ve geleneksel NFA altyapısını kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  
@@ -152,13 +155,13 @@ ms.lasthandoff: 10/18/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Geri dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Dalları alternatif eşleşmeleri bulmak için geri dönüş nasıl normal ifade hakkında bilgi sağlar.|  
-|[Derleme ve yeniden kullanma](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Derleme ve performansı artırmak için normal ifadeler yeniden kullanma hakkında bilgi sağlar.|  
-|[İş parçacığı güvenliği](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve ne zaman normal ifade nesnelere erişimi eşitlenmesi gerektiğini açıklar.|  
+|[Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Dalları alternatif eşleşmeleri bulmak için geri dönüş nasıl normal ifade hakkında bilgi sağlar.|  
+|[Derleme ve Yeniden Kullanma](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Derleme ve performansı artırmak için normal ifadeler yeniden kullanma hakkında bilgi sağlar.|  
+|[İş Parçacığı Güvenliği](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve ne zaman normal ifade nesnelere erişimi eşitlenmesi gerektiğini açıklar.|  
 |[.NET framework normal ifadeleri](../../../docs/standard/base-types/regular-expressions.md)|Normal ifadeler programlama dili yönünü genel bir bakış sağlar.|  
-|[Normal ifade nesnesi modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Bilgi ve normal ifade sınıflarının nasıl kullanılacağını gösteren kod örnekleri sağlar.|  
-|[Normal ifade örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Sık kullanılan uygulamalar normal ifadelerde kullanımını gösteren kod örnekleri içerir.|  
-|[Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Karakter, işleçler ve normal ifadeler tanımlamak için kullanabileceğiniz yapıları kümesi hakkında bilgi verilmektedir.|  
+|[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Bilgi ve normal ifade sınıflarının nasıl kullanılacağını gösteren kod örnekleri sağlar.|  
+|[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Sık kullanılan uygulamalar normal ifadelerde kullanımını gösteren kod örnekleri içerir.|  
+|[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Karakter, işleçler ve normal ifadeler tanımlamak için kullanabileceğiniz yapıları kümesi hakkında bilgi verilmektedir.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

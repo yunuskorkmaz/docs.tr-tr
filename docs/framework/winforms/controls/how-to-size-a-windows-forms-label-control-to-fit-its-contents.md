@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd89d72264e5837d2c41fcb0ab024a7b16f4205b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2c34506ca33af80b83f365893e56a5a9d437b89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma
 Windows Forms <xref:System.Windows.Forms.Label> denetim tek satırlı veya çok satırlı olabilir ve ya da boyutu sabit ya da otomatik olarak kendisini yazısına uyum sağlayacak şekilde boyutlandırabilirsiniz. <xref:System.Windows.Forms.Label.AutoSize%2A> Özelliği resim yazısını çalışma zamanında değişecekse özellikle yararlı olduğu daha büyük veya küçük resim yazıları, sığması için denetimleri boyut yardımcı olur.  
@@ -35,6 +36,6 @@ Windows Forms <xref:System.Windows.Forms.Label> denetim tek satırlı veya çok 
  Varsa <xref:System.Windows.Forms.Label.AutoSize%2A> ayarlanır `false`, belirtilen sözcükler <xref:System.Windows.Forms.Label.Text%2A> özelliği mümkünse sonraki satıra kaydır, ancak denetim yok büyüyecektir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- [Etiket denetimine genel bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [Etiket denetimi](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+ [Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ [Etiket Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Etiket Denetimi](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

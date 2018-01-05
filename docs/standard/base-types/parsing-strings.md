@@ -19,31 +19,34 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 811db42e04e73d7acbc03e303297b19fdf643384
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c2193dd1b1f3c0478efb5fc9c2b80250ef1878f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-strings-in-net"></a>.NET dizeleri ayrıştırma
 Ayrıştırma işlemi bir .NET taban türü, temel türü içine temsil eden bir dize dönüştürür. Örneğin, bir ayrıştırma işlemi, bir dizeyi bir kayan noktalı sayı veya tarih ve saat değerine dönüştürmek için kullanılır. Ayrıştırma işlemi gerçekleştirmek için en yaygın olarak kullanılan yöntemidir `Parse` yöntemi. Ayrıştırma (bir taban türü dize gösterimine dönüştürülmesi içerir) biçimlendirme tersine çevirme işlemi olduğundan, aynı kuralları ve kuralları birçoğu uygulayın. Arabirimini uygulayan bir nesneye yalnızca biçimlendirme olarak kullanan <xref:System.IFormatProvider> arabirimini uygulayan bir nesne de kullandığı ayrıştırma kültüre duyarlı biçimlendirme bilgi sağlamak için <xref:System.IFormatProvider> bir dize gösterimi yorumlama belirlemek için arabirimi . Daha fazla bilgi için bkz: [biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sayısal dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-numeric.md)  
+ [Sayısal Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-numeric.md)  
  Dizeleri .NET sayısal türlerine dönüştürmek açıklar.  
   
- [Tarih ve saat dizelerini ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)  
+ [Tarih ve Saat Dizelerini Ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)  
  Dizeleri .NET dönüştürülmesi açıklanmaktadır **DateTime** türleri.  
   
- [Diğer dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-other.md)  
+ [Diğer Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-other.md)  
  Dizelere dönüştürme açıklar **Char**, **Boolean**, ve **Enum** türleri.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  Biçim belirticiler ve biçim sağlayıcıları gibi temel biçimlendirme kavramlarını açıklar.  
   
- [.NET tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
+ [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
  Türleri dönüştürme açıklar.  
   
- [Taban türleri](../../../docs/standard/base-types/index.md)  
+ [Temel Türler](../../../docs/standard/base-types/index.md)  
  .NET temel türlerinde gerçekleştirdiğiniz ortak işlemleri açıklanır.

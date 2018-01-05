@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b960e52d8d7dca590411f1c5f096a6942e1ade9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>XAML Dili Ortak Temelleri İçin Yerleşik Türler
 XAML 2009 sık kullanılan temelleri ortak dil çalışma zamanı (CLR) ve diğer programlama dilleri olan çeşitli veri türleri için XAML dil düzeyi destek sunar. XAML 2009 bu temelleri için destek ekler: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, ve`x:Array`  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5868e03ee05a744be3f1c3782613e11e71352024
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarları altında olduğunda barındırılan (inetmgr.exe Aracı'nı kullanarak) IIS içinde yapılandırılabilir. Bir WCF Hizmeti kendini barındıran ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -101,4 +102,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [Nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

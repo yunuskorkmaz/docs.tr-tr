@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1677ab1be071eeabd72b29c7ce61d01aaf6164a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc980a2c61be736e2c1d8e52d8f13d0ea5ed09f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-property"></a>Gezinme özelliği
 A *gezinti özelliği* üzerinde isteğe bağlı bir özellik olan bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) izin veren bir gezinti için [son](../../../../docs/framework/data/adonet/association-end.md) , bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) için diğer sonu. Diğer aksine [özellikleri](../../../../docs/framework/data/adonet/property.md), gezinti özellikleri veri taşımak değil.  
@@ -46,5 +47,5 @@ A *gezinti özelliği* üzerinde isteğe bağlı bir özellik olan bir [varlık 
  XML öznitelikleri bir gezinti özelliği tanımlamak gerekli bilgileri iletişim kurmak için kullanılır unutmayın: öznitelik `Name` özelliğinin adını içeren `Relationship` , gider, ilişkilendirme adını içerir ve `FromRole` ve `ToRole` ilişkilendirme ucunun içerir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık veri modeli temel kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

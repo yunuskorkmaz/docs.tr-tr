@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 716de57574beef55d066a3bb121a6fc19a4959d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Nasıl yapılır: Windows Forms Süreölçer Bileşeni ile Belirlenen Aralıklarda Yordamları Çalıştırma
 Bazen belirli zaman aralıklarında bir döngü sona erdi veya ayarlanmış bir zaman aralığından geçtiğinde çalıştıran kadar çalıştıran bir yordam oluşturmak isteyebilirsiniz. <xref:System.Windows.Forms.Timer> Bileşen bu tür bir yordam olanaklı kılar.  
@@ -254,5 +255,5 @@ private:
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Timer>  
- [Süreölçer bileşeni](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Süreölçer bileşenine genel bakış](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+ [Süreölçer Bileşeni](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [Süreölçer Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

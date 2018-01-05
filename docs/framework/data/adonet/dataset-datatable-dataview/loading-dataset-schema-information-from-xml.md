@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 09fc69ba6d82fdab5aa03dd3987ec1acdf0be17e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e41eb1168774a5ebfc17147f65901de0e432789f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML'den veri kümesi şema bilgileri yükleniyor
 Şeması bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkileri ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **doldurun** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklemek için **DataSet** şema bilgileri bir XML belgesinden kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **DataSet**. **ReadXmlSchema** yüklemek veya Infer sağlayan **DataSet** XML Şeması Tanım Dili (XSD) şeması veya satır içi XML Şeması XML belgesiyle içeren belgedeki şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor sırasında şemasını XML belgesinden olanak tanır.  
@@ -96,9 +97,9 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kümesini XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Türetilen DataSet ilişkisel yapısından XML Şeması (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [Veri kümesi ilişkisel XML yapısından çıkarımını yapma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Bir veri kümesini XML dosyası şuradan yükleniyor](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

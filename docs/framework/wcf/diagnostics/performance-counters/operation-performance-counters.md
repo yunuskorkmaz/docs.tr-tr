@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c752c56fa60cd717f54a7a06d0d3be8b70e7772
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f5724e32c61bb49c3251f4fd9785396e6c97f55f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-performance-counters"></a>İşlem Performansı Sayaçları
 İşlem performansı sayaçları altında bulunan `ServiceModelOperation 4.0.0.0` Performans İzleyicisi (Perfmon.exe) görüntülerken Performans nesnesi. Her işlem tek bir örneği vardır. Diğer bir deyişle, belirli bir sözleşme 10 işlemler varsa, 10 işlemi örnekleri bu sözleşme ile ilişkilendirilmiş. Nesne örneklerini şu biçimi kullanarak adlandırılır:  
@@ -32,4 +33,4 @@ ms.lasthandoff: 12/02/2017
 >  Bir performans sayacı örneğinin adının uzunluğu bir sınırı yoktur. Zaman bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] sayaç örneği adı en fazla uzunluğu aşıyor [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] örnek adının bir kısmını karma değeri ile değiştirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Performans sayaçları](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+ [Performans Sayaçları](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

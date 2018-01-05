@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8e0ce4a171e9bc57ef28aef1fe2761907acc73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06638a9f5aa031bec07a9aac510ce832f75980fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Bir İş Akışı Hizmeti içinde Kimlik Bilgilerine Erişme
 Bir iş akışı hizmeti içinde kimlik bilgilerine erişmek için uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. İçinde <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> erişebilirsiniz yöntemi <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> erişim kimlik bilgileri. Bu konuda bu özelliğe belirir özel bir aktivite yanı sıra bu yürütme özellik uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında etkinlik.  Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve kimlik bilgileri alınır.  
@@ -584,6 +585,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [OperationContext erişimi](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [OperationContext Erişimi](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

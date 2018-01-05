@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 868e76b39156dc2fff85da2afe3501e39faf8812
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Test İstemcisi (WcfTestClient.exe), kullanıcılara giriş test parametreleri, bu hizmete giriş gönderme olanağı sağlar ve hizmet geri gönderdiği yanıt görüntülemek bir GUI aracıdır. İle birleştirildiğinde deneyimi sınama sorunsuz bir hizmet sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı.  
@@ -176,4 +177,4 @@ ms.lasthandoff: 12/02/2017
 -   Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu hem kapatır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti otomatik ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemcisi ve durduğunda [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] işlem hata ayıklama.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+ [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

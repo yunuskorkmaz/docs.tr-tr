@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34b517366a5f143a86388abff5ae13022bc710c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler ve akış Gelişmiş belgelerini destekleyen gelişmiş özellikler görüntüleme denetimleri, güçlü 2B ile birleştirilir ve 3B grafik yeteneklerinden yararlanabilmek [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] kalite ve kullanıcı deneyimi, yeni bir düzeyi uygulamaları.  Esnek bir bellek içi temsili bir belgenin yönetme kabiliyeti özelliğidir anahtar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], ve verimli bir şekilde belgeleri kaydetme ve bir veri deposundan yükleme yapamamasına neredeyse her uygulamanın.  Bir belgeyi iç bellek içi gösteriminden bir dış veri deposuna dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposu okuma ve özgün bellek içi örneğini yeniden tersine çevirme işlemi seri olarak adlandırılır.  
@@ -87,6 +88,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Documents.Serialization>  
  <xref:System.Windows.Xps.XpsDocumentWriter>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [XML Kağıt Belirtimi: genel bakış](http://go.microsoft.com/fwlink?LinkID=106246)

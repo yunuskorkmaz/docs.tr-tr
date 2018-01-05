@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6cd38a2fd0a682ebae0a32cc1fec31a3ac40851
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient ve DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient>ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> istemci tarafında Hizmetleri aramak için kullanılan iki sınıf. <xref:System.ServiceModel.Discovery.DiscoveryClient>belirli bir eşleşen hizmetlerin listesini sizinle ölçütünü ayarlamak ve hizmetlere bağlanmanıza olanak sağlayan sağlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint>aynı işlemi gerçekleştirir ve otomatik olarak bağlanır bulundu hizmetlerden biri için ek olarak. Herhangi bir uç nokta içine yapılabilir bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>, arama ölçütlerini de yapılandırması, bu nedenle eklenebilir <xref:System.ServiceModel.Discovery.DynamicEndpoint> yararlı olduğunda bulma çözümünüzde gerekir, ancak istemci mantığı değiştirmek istiyor musunuz – uç noktalarını değiştirmek yeterlidir. <xref:System.ServiceModel.Discovery.DiscoveryClient>Öte yandan, arama işlemi üzerinde daha hassas denetim kazanmak için kullanılabilir. Kullanır ve her birinin avantajları aşağıda ayrıntılandırılmıştır.  
@@ -118,6 +119,6 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kapsam ile keşif](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
+ [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
+ [Zaman Uyumsuz Bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

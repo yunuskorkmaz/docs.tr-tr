@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 01c94df1d8e6ddef0110268461a2b28f594201b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c3464b4ad963b2fe764cefc5868440b7748f8c4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue-interface1"></a>Icordebugvalue Interface1
 Ayıklanacak işlemindeki bir değeri temsil eder. Değer bir okuma veya yazma değeri olabilir.  
@@ -32,10 +33,10 @@ Ayıklanacak işlemindeki bir değeri temsil eder. Değer bir okuma veya yazma d
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateBreakpoint yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Bu metot şu anda uygulanmadı.|  
-|[GetAddress yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Bu adresini alır `ICorDebugValue` hata ayıklaması sürecinde nesne.|  
-|[GetSize yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Bu bayt cinsinden boyutu alır `ICorDebugValue` nesnesi.|  
-|[GetType yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Bu temel türünü alır `ICorDebugValue` nesnesi.|  
+|[CreateBreakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Bu metot şu anda uygulanmadı.|  
+|[GetAddress Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Bu adresini alır `ICorDebugValue` hata ayıklaması sürecinde nesne.|  
+|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Bu bayt cinsinden boyutu alır `ICorDebugValue` nesnesi.|  
+|[GetType Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Bu temel türünü alır `ICorDebugValue` nesnesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Genel olarak, bu döndürüldüğünde bir değer nesnesi sahipliğini geçirilir. Alıcı nesnesiyle tamamlandığında, bir başvuru nesneden kaldırmak için sorumludur.  
@@ -59,5 +60,5 @@ Ayıklanacak işlemindeki bir değeri temsil eder. Değer bir okuma veya yazma d
     
     
     
- [Icordebugvalue3 arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugValue3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9a9765d8d8330c7ad2a6e8cb25166427cdd9414a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04a20a06cd8ed8785b37bdc604a817b475f93873
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Nasıl yapılır: salt okunur olarak bilgisi alma
 Verileri değiştirmek düşünmüyorsanız, salt okunur sonuçları aramayı tarafından sorguların performansını artırabilir.  
@@ -37,6 +38,6 @@ Verileri değiştirmek düşünmüyorsanız, salt okunur sonuçları aramayı ta
  [!code-vb[DLinqQuerying#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Veritabanı sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
- [Ertelenmiş karşı hemen yükleniyor](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+ [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
+ [Ertelenmiş ve Hemen Yükleme Karşılaştırması](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1a3062365f41247c579f5420497946128b183a88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 618196473e8e947e84b0506771bce84ee71a1c2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Yönetilen hata ayıklama Yardımcısı (MDA) davranışını değiştirir <xref:System.Object> sınıfı gerçekleştirmek için bir işlem tarafından döndürülen karma kodu modulo <xref:System.Object.GetHashCode%2A> yöntemi. Bu MDA varsayılan mod neden olan 1 ' dir <xref:System.Object.GetHashCode%2A> tüm nesneleri için 0 dönün.  
@@ -71,4 +72,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
- [Yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0de3b8596bc06c79f391141ef85fec65ac343d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme (Windows Forms)
 Seçenek düğmeleri, olarak da bilinen radyo düğmeleri, kullanıcılar yalnızca birer birer seçebilirsiniz onay kutularını benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesi davranışı sağlamaz, sınıf menü öğeleri için seçenek düğmesi davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranışı sağlamak bir <xref:System.Windows.Forms.MenuStrip> denetim.  
@@ -99,5 +100,5 @@ Seçenek düğmeleri, olarak da bilinen radyo düğmeleri, kullanıcılar yalnı
  <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RadioButtonRenderer>  
- [MenuStrip denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- [Nasıl yapılır: özel ToolStripRenderer uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)
+ [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [Nasıl yapılır: Özel ToolStripRenderer Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 030ad5e61d215bd840da5b16a56e4b8f8b7791ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget Arabirimi
 Belirli bir hedef işleme erişim sağlayan bir geri arama arabirimi sunar.  
@@ -32,9 +33,9 @@ Belirli bir hedef işleme erişim sağlayan bir geri arama arabirimi sunar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetPlatform yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|İşlemci mimarisi ve hedef işlemin çalıştığı işletim sistemi dahil olmak üzere bu platform hakkında bilgi sağlar.|  
-|[ReadVirtual yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Belirtilen adresten başlayarak bitişik bellek bloğu alır ve sağlanan arabellek döndürür.|  
-|[GetThreadContext yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Belirtilen iş parçacığı için geçerli iş parçacığının içeriği ister.|  
+|[GetPlatform Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|İşlemci mimarisi ve hedef işlemin çalıştığı işletim sistemi dahil olmak üzere bu platform hakkında bilgi sağlar.|  
+|[ReadVirtual Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|Belirtilen adresten başlayarak bitişik bellek bloğu alır ve sağlanan arabellek döndürür.|  
+|[GetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Belirtilen iş parçacığı için geçerli iş parçacığının içeriği ister.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugDataTarget`ve yöntemlerinden aşağıdaki özelliklere sahiptir:  
@@ -62,5 +63,5 @@ Belirli bir hedef işleme erişim sağlayan bir geri arama arabirimi sunar.
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

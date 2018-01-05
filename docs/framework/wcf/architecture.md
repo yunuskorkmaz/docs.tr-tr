@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7be93c5949966c052e77adebe8bb4d7aac9149bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation Mimarisi
 Aşağıdaki grafikte ana katmanları gösterilmektedir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] mimarisi.  
@@ -56,5 +57,5 @@ Aşağıdaki grafikte ana katmanları gösterilmektedir [!INCLUDE[indigo1](../..
  Hizmetleri de olabilir *barındırılan*, veya IIS ya da Windows Etkinleştirme Hizmeti (WAS) gibi bir dış aracı tarafından yönetilen bir yürütülebilir dosyayı çalıştırın. WAS etkinleştirir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WAS çalıştıran bir bilgisayara dağıtıldığında otomatik olarak etkinleştirilecek uygulamalar. Hizmetleri, yürütülebilir dosyalar (.exe dosyaları) da bir el ile çalıştırılabilir. Bir hizmet ayrıca otomatik olarak bir Windows hizmeti olarak çalıştırılabilir. COM + bileşenleri de barındırılması olarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation nedir](../../../docs/framework/wcf/whats-wcf.md)  
- [Temel Windows Communication Foundation kavramları](../../../docs/framework/wcf/fundamental-concepts.md)
+ [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  
+ [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4633a70f6c3d010e6cc75236778cf2fd59c0e05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e349a33c90d08606da09ebdf32de6dedb8d6a52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenleme için genellikle, kullanıcılarınızın veri deposuna yeni veri satırları ekleme yeteneği vermek istediğiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır olarak gösterilen sağlayarak bu işlevselliği destekler. Satır üstbilgisi içinde bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde, yeni kayıtlar için satır programla etkin olduğunda düşünmelisiniz şeylerden bazıları açıklanmaktadır.  
@@ -70,5 +71,5 @@ Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızda
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- [Veri girişi Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtin](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+ [Windows Forms DataGridView Denetiminde Veri Girişi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)

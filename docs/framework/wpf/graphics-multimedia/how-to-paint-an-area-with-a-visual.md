@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Nasıl yapılır: Görsel ile bir Alanı Boyama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.VisualBrush> sahip bir alan boyamak için sınıf bir <xref:System.Windows.Media.Visual>.  
@@ -42,4 +43,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Visual
  Bu kod örneği için sağlanan daha büyük bir örneğin parçasıdır <xref:System.Windows.Media.VisualBrush> sınıfı. Tam bir örnek için bkz: [büyütüleceğini](http://go.microsoft.com/fwlink/?LinkID=160049).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

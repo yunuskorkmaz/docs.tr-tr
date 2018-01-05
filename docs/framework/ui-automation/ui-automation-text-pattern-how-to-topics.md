@@ -18,11 +18,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96fab367bcec7f501e80f4533b2ee36e4cf86c77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80bd85af56608563b7a3c49912ce31a5f6dd0744
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI Otomasyonu Metin Düzeni Nasıl Yapılır Konuları
 > [!NOTE]
@@ -31,9 +32,9 @@ ms.lasthandoff: 10/18/2017
  Bu bölümde UI Otomasyon metin düzeni kullanmayı açıklayan konuları içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonu kullanarak metin kutusuna içerik ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI Otomasyonu kullanarak metin bulma ve vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI Otomasyonu kullanarak metin özniteliklerini alma](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [UI Otomasyonu kullanarak karışık metin özniteliği ayrıntılarını alma](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [UI otomasyonunu kullanarak çapraz](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [UI Otomasyonu kullanarak katıştırılmış nesnelere erişme](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [UI Otomasyonu Kullanarak Metin Özniteliklerini Alma](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
+ [UI Otomasyonu Kullanarak Karışık Metin Özniteliği Ayrıntılarını Alma](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
+ [UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)

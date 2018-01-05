@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbb86ef98befda8a246bdded4f30cf93f02e727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a733327145dd36fc36ab00bb58ca495b991e61fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme
 Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetim, kullanıcılar bazen istediğiniz belirli sütunlardaki değerleri karşılaştırmak. Özellikle kullanıcılar geri ve İleri yatay ilginizi tüm sütunları görmek için kaydırırsanız gerekir, bu yaygın denetiminde sütunları ayrılırsa bilinmelidir. Sütunları yeniden sıralamak, kullanıcılarınızın sağlayarak daha kolay sütun değerleri karşılaştırma görevini yapabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcıların bir sütun fareyle sütun başlığını sürükleyerek yeni bir konuma taşıyabilirsiniz.  
@@ -39,6 +40,6 @@ Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>  
- [Nasıl yapılır: sütunları dondurma Windows Forms DataGridView denetiminde Tasarımcısı'nı kullanarak](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Dondurma](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
  [Nasıl yapılır: bir Windows uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Nasıl yapılır: Windows formlarına denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

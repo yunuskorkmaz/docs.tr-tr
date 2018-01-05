@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f524bab55527bf9d3c744cb6f50d1df1fc9a2302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma
 Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım ortamı tarafından sağlanan: `GenerateMember` ve `Modifiers`. `GenerateMember` Özelliği, Windows Form Tasarımcısı bileşeni için bir üye değişkenine oluşturduğunda belirtir. `Modifiers` Bu üye değişkenine atanan erişim değiştiricisi bir özelliktir. Varsa değerini `GenerateMember` özelliği `false`, değeri `Modifiers` özelliğinin hiçbir etkisi.  
@@ -71,6 +72,6 @@ Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım or
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Button>  
- [Windows Forms görsel devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [İzlenecek yol: Görsel devralmayı gösterme](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- [Nasıl yapılır: Windows formlarını devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+ [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [İzlenecek Yol: Görsel Devralmayı Gösterme](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [Nasıl yapılır: Windows Forms’u Devralma](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

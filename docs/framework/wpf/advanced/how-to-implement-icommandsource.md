@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdff5ebeb51daff4e8848e9a7c8282c2eee6f208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-icommandsource"></a>Nasıl yapılır: ICommandSource Uygulama
 Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir <xref:System.Windows.Input.ICommandSource>.  Komutu bir komut çağrılacak bildiği bir nesne kaynağıdır.  <xref:System.Windows.Input.ICommandSource> Bir arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>çağrılacak komuttur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutu işleyen yönteme geçirilen bir kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komut üzerinde yürütülmekte olan nesnesidir.  
@@ -71,4 +72,4 @@ Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir 
  <xref:System.Windows.Input.ICommandSource>  
  <xref:System.Windows.Input.ICommand>  
  <xref:System.Windows.Input.RoutedCommand>  
- [Komut verme genel bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+ [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)

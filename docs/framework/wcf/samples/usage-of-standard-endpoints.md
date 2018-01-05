@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8e8851f40c4c5e5c1a9399e5dec1f56aa0a5509
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ac8a9c639099e952f6030f5625958dd2bf84757
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="usage-of-standard-endpoints"></a>Standart uç noktaları kullanma
 Bu örnek, hizmet yapılandırma dosyalarını standart uç noktaları kullanımı gösterilmiştir. Standart bir uç noktası için ilişkili ek özellikleri ile bir adresi, bağlama ve sözleşme birleşimi açıklamak için tek bir özellik kullanarak uç nokta tanımları basitleştirme olanak tanır. Bu örnek nasıl tanımlamak ve özel bir standart uç noktası uygulanacağını ve uç belirli özelliklerini tanımlamak nasıl gösterilir.  

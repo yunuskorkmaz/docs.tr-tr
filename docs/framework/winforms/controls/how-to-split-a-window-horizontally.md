@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02133cc38221b23ea1e2b14bfd0bbcf1987ab532
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de94bff7c39120a0f40760b0b5887b0a9f566fe8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Nasıl yapılır: Pencereyi Yatay Bölme
 Aşağıdaki kod örneğinde böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetim yatay.  
@@ -67,4 +68,4 @@ Aşağıdaki kod örneğinde böler Bölümlendirici yapar <xref:System.Windows.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+ [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a>Bu makaledeki tablolar'te eski türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenir. Eski türler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri aynı zamanda artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz: [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -785,5 +786,5 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll geçersiz bir derleme ve yalnızca geriye dönük uyumluluk yok.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sınıf Kitaplığı'nda artık kullanılmayan nedir](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Eski üyeler](../../../docs/framework/whats-new/obsolete-members.md)
+ [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Eski Üyeler](../../../docs/framework/whats-new/obsolete-members.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f40c79ad1a6eedc2b1de4dffa9de5b48aeb8e6f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba5ce91f4cb3edd93698f7c0ba028186afdb8111
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
 Web Hizmetleri Güvenlik protokolleri, tüm mevcut Kurumsal güvenlik gereksinimlerini Mesajlaşma kapak Web Hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde açıklanmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sürüm 1.0 ayrıntıları (uygulanan <xref:System.ServiceModel.Channels.SecurityBindingElement>) güvenlik protokolleri aşağıdaki Web Hizmetleri için.  

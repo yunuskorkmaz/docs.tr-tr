@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d18563c44381a276d15996dff3f9552c46833b4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbd8bd7e36b7b773837b839e77ec88a8e7c8f0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Nasıl yapılır: Otomatik Düzen için Kılavuz Kullanma
 Bu örnek, otomatik düzen yaklaşımı yerelleştirilebilir bir uygulama oluşturmak için bir kılavuz kullanmayı açıklar.  
@@ -40,5 +41,5 @@ Bu örnek, otomatik düzen yaklaşımı yerelleştirilebilir bir uygulama oluşt
 Kılavuz  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Otomatik Düzen Kullanım genel bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Bir düğme oluşturmak için otomatik düzenini kullanın](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+ [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [Düğme Oluşturmak için Otomatik Düzeni Kullanma](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)

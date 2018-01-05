@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c6826a9b214e7507c63752a8a990116b88dda09d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-wrappers-manually"></a>Nasıl yapılır: Sarmalayıcıları Elle Oluşturma
 Yönetilen kaynak kodunda el ile COM türlerinizi karar verirseniz, başlatmak için en iyi varolan arabirimi tanım dili (IDL) dosyası ya da tür kitaplığı ile yerdir. IDL dosya yok veya bir tür kitaplığı dosya oluşturulamıyor, yönetilen bildirimleri oluşturarak COM türlerini benzetimini yapabilirsiniz ve sonuçta elde edilen derleme için bir tür kitaplığı dışarı aktarma.  
@@ -111,5 +112,5 @@ namespace SAServer
  [COM veri türleri](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
  [Nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
  [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Anonim İstemci ile Taşıma Güvenliği
 Bu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] senaryosu, gizliliği ve bütünlük sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu ile Güvenli Yuva Katmanı (SSL) sertifikası kimlik doğrulaması gerekir ve istemcilerin sunucu sertifikasına güvenmesi gerekir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonim bir işlemdir.  
@@ -125,7 +126,7 @@ Bu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] senaryosu, gizliliği
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [WS taşıma güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [Taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [WS Aktarım Güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

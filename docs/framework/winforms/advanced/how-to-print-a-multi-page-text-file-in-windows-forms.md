@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfb196a7c3eba665d6ad145323fe18bb00b15bca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4576e969ba917b845cc8fbd6420741e2b24062fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma
 Metin yazdırmak çalışan Windows tabanlı uygulamalar için çok yaygındır. <xref:System.Drawing.Graphics> Sınıfı bir ekran veya yazıcı gibi bir cihaza çizim nesneleri (grafik veya metin) için yöntemler sağlar.  
@@ -73,4 +74,4 @@ Metin yazdırmak çalışan Windows tabanlı uygulamalar için çok yaygındır.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Brush>  
- [Windows Forms yazdırma desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

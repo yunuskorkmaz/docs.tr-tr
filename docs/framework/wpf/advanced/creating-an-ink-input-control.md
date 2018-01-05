@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-ink-input-control"></a>Mürekkep Giriş Denetimi Oluşturma
 Statik olarak mürekkep işler ve özel bir denetim, dinamik olarak oluşturabilir. Diğer bir deyişle, "tablet kalem akışı" ve sonra mürekkep görüntülemek için eklenir denetimine tablet kalem aracılığıyla ya da panodan yapıştırılan veya bir dosyasından yüklenen görünmesi mürekkep neden olan bir kullanıcı bir vuruş çizer gibi mürekkep işler. Dinamik olarak mürekkep işlemek için denetiminizin kullanmalısınız bir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statik olarak mürekkep işlemek için Kalem olay yöntemleri geçersiz kılmanız gerekir (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, ve <xref:System.Windows.UIElement.OnStylusUp%2A>) toplamak için <xref:System.Windows.Input.StylusPoint> verileri, vuruş oluşturmak ve bunları Ekle bir <xref:System.Windows.Controls.InkPresenter> (denetimindeki mürekkep işleyen).  
@@ -109,5 +110,5 @@ Statik olarak mürekkep işler ve özel bir denetim, dinamik olarak oluşturabil
  Toplar ve Kalem olay yöntemleri geçersiz kılarak mürekkep işleyen bir denetim oluşturabilirsiniz. Kendi denetim oluşturarak, kendi türetme <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve bunları ekleme içine <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, neredeyse tüm dijital mürekkep ile hayal davranışları uygulayabilirsiniz. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak oluşturulur, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş ve uygulamanız için uygun şekilde ekranda işleme. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> veri mürekkep koleksiyonu uygulamak ve uygulamanız için en uygun performans ile işlenemiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş mürekkep işleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [Verilere erişme ve kalem giriş düzenleme](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

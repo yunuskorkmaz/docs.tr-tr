@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 52c9cfeab362a1603c1d18a9caa1601cd76711b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b3cc18f481a0e66d52f021b7bf6b76938fc5018
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>İzlenecek yol: Kullanarak yalnızca (C#) saklı yordamlar
 Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yürüterek verilere erişmek için senaryo saklı yordamlar yalnızca. Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.  
@@ -198,5 +199,5 @@ Bu kılavuz bir temel uçtan uca sağlar [!INCLUDE[vbtecdlinq](../../../../../..
  Bazı değişiklikler yaparak bu proje geliştirebilirsiniz. Örneğin, liste kutusunda kullanılabilir saklı yordamları listeler, kullanıcı yürütmek için hangi yordamların Seç içerir. Ayrıca bir metin dosyasına raporları çıkış akış.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Öğrenme tarafından izlenecek yollar](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [Saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+ [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
+ [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

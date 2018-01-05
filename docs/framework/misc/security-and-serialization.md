@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9897bbfff542bf708f8fbbc1ac29f7688a1590ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a870834b86f1ed99181614278a7381932a18ac8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
 Seri hale getirme bakın veya aksi durumda erişilemez olacak nesne örnek verileri değiştirmek başka bir kod izin verebilir, özel bir izni serileştirme gerçekleştirme kodu gereklidir çünkü: <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında için Internet indirilen bu izni verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir.  
@@ -56,4 +57,4 @@ Seri hale getirme bakın veya aksi durumda erişilemez olacak nesne örnek veril
 -   Serileştirme için kullanılan özel Oluşturucu de kapsamlı giriş doğrulaması yapmalıdır ve korumalı veya kötü amaçlı kod tarafından kötüye karşı korunmasına yardımcı olmak için özel olması gerekir. Aynı güvenlik denetimleri ve başka bir yöntemle açıkça sınıfı oluşturma veya Fabrika çeşit üzerinden dolaylı olarak oluşturma gibi herhangi bir tür sınıfının bir örneği elde etmek için gereken izinler uygulamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

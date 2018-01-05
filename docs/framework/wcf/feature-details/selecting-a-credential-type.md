@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 455dec4adefc479433945f9f9b02708c23437991
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* verileri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir talep kimliği veya özellikleri kurmak için kullanır. Örneğin, passport bir kamu sorunlarını vatandaşlığa benzer bir ülke veya bölgedeki kanıtlamak için bir kimlik bilgisi ' dir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kimlik bilgileri, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms alabilir. Kimlik bilgileri, bu konuda ele alınmıştır, nasıl kullanıldıkları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve uygulamanız için doğru kimlik bilgilerini seçme.  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [Güvenlik kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+ [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
+ [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

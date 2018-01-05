@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta verileri kullanarak ne zaman özellikleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yayımlama güvenlik etkilerini göz önünde bulundurmanız, alma ve kullanarak hizmet meta verileri.  
@@ -49,5 +50,5 @@ Meta verileri kullanarak ne zaman özellikleri [!INCLUDE[indigo1](../../../../in
  Bir hizmetin uygulama yapılandırma dosyasını kontrol edebilir nasıl ve meta verileri yayımlanır. Uygun erişim denetim listeleriyle (ACL) bir saldırgan bu ayarları değiştiremezsiniz emin olmak için uygulama yapılandırma dosyasını korumak için iyi bir fikirdir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+ [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d5537c636edfa557c75298c5cf63127f10f4827
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek veri toplamaya gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  

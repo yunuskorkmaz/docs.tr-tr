@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e8d05bd0c3e76d643d56b652c8849eef1045ea8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-and-local-transformations"></a>Genel ve Yerel Dönüştürmeler
 Genel bir dönüşüm tarafından çizilmiş her öğe için geçerli bir dönüşümü gerçekleşir bir verilen <xref:System.Drawing.Graphics> nesnesi. Buna karşılık, yerel bir dönüşüm çizilecek belirli bir öğeye uygulanan bir dönüşüm ' dir.  
@@ -71,5 +72,5 @@ Genel bir dönüşüm tarafından çizilmiş her öğe için geçerli bir dönü
  ![Dönüşümleri](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Koordinat sistemleri ve dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Yönetilen GDI +'da dönüştürmeleri kullanma](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+ [Koordinat Sistemleri ve Dönüştürmeler](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Yönetilen GDI+'da Dönüştürmeleri Kullanma](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

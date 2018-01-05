@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e6a5119d514120f2c23728c058466663f7b8380
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 798968f4e3a88a283258af828e22b490de6e5359
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalueenum-interface1"></a>Icordebugvalueenum Interface1
 "ICorDebugEnum" yöntemlerini uygular ve "ICorDebugValue" diziler numaralandırır.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Belirtilen sayıda alır `ICorDebugValue` geçerli konumdan başlayarak numaralandırması örneklerden.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Belirtilen sayıda alır `ICorDebugValue` geçerli konumdan başlayarak numaralandırması örneklerden.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -51,4 +52,4 @@ ms.lasthandoff: 10/18/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
     
     
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

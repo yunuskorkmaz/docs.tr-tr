@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmetine erişim (WCF Veri Hizmetleri Hızlı Başlangıç)
 Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gelen [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ve isteğe bağlı olarak devre dışı bırak akışı okuma Web tarayıcısında. Sonra hizmet tanımı belge almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı aracılığıyla göndererek veri hizmeti kaynaklara erişim.  
@@ -81,7 +82,7 @@ Bu görevde, başlayacak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Başarıyla eriştiğiniz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir Web tarayıcısından HTTP GET veren tarayıcı ile belirtilen kaynaklara ister. Bir Web tarayıcısı istekleri adresleme söz dizimi ile denemek ve sonuçları görüntülemek için kolay bir yol sağlar. Ancak, bir üretim veri hizmeti genellikle bu yöntem tarafından erişilebilir değil. Genellikle, uygulamaların veri hizmeti uygulaması aracılığıyla etkileşim kodu veya komut dosyası dili. Ardından, ortak dil çalışma zamanı (CLR) nesneleri değilmiş gibi veri hizmeti kaynaklara erişmek için istemci kitaplıkları kullanan bir istemci uygulaması oluşturacak:  
   
- [.NET Framework istemci uygulaması oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [.NET Framework İstemci Uygulaması Oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti kaynaklara erişmeyi](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+ [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

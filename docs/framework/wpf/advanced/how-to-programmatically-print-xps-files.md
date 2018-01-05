@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 949d92e8599ee083593cbd7f970a9b37d31970ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 402568a78ccb2f56c6adb108536edfb121440642
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları açmadan bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
@@ -77,5 +78,5 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
  [XPS Belge yazdırma](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
  [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [isXPS.exe (isXPS uyumluluk aracı)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

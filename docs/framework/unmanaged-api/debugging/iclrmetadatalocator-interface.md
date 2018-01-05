@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 955bd6bffe56a166b4c9c313fcb730ce714bf24b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a06997c47a85ced56dc579759192f7256def4f5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator Arabirimi
 Bir hedef işlemde derlemelerin meta verileri bulmak için veri erişim Hizmetleri katmanı tarafından kullanılır.  
@@ -32,7 +33,7 @@ Bir hedef işlemde derlemelerin meta verileri bulmak için veri erişim Hizmetle
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetMetadata yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Görüntü meta verilerini hedef işleminden alır.|  
+|[GetMetadata Yöntemi](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Görüntü meta verilerini hedef işleminden alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  API istemcisi (yani hata ayıklayıcı) bu arabirimi belirli hedef işlem için uygun şekilde yürütmelidir. Örneğin, canlı bir işlem uygulamasını bir bellek dökümü farklı olacaktır.  
@@ -47,4 +48,4 @@ Bir hedef işlemde derlemelerin meta verileri bulmak için veri erişim Hizmetle
  **.** **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

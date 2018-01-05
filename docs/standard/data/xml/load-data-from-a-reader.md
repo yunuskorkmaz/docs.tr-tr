@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Bir okuyucudan veri yükleme
 Kullanarak bir XML belgesi yüklerse <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve bir parametresi bir <xref:System.Xml.XmlReader>, verileri diğer biçimlerinden davranışı karşılaştırıldığında ortaya çıkan davranış farklılıklar vardır. Okuyucu ilk durumuna ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriği kullanır ve XML belge nesne modeli (DOM) Okuyucudaki tüm verileri oluşturur.  
@@ -37,4 +40,4 @@ Kullanarak bir XML belgesi yüklerse <xref:System.Xml.XmlDocument.Load%2A> yönt
  Varsayılan olarak, <xref:System.Xml.XmlDocument.Load%2A> XML belge türü tanımı (DTD) veya şema doğrulaması kullanarak geçerli olup olmadığını doğrulamaz. Yalnızca XML iyi biçimlendirilmiş olup olmadığını doğrular. Gerçekleşmesi doğrulama için sırayla oluşturmanız gerekir. bir <xref:System.Xml.XmlReader> kullanarak <xref:System.Xml.XmlReaderSettings> sınıfı. <xref:System.Xml.XmlReader> Sınıfı DTD ya da şema tanım dili (XSD) şeması kullanarak doğrulama zorla. <xref:System.Xml.ValidationType> Özelliği <xref:System.Xml.XmlReaderSettings> sınıfı belirler olup olmadığını <xref:System.Xml.XmlReader> örneği doğrulama zorlar. XML verilerini doğrulama hakkında daha fazla bilgi için Açıklamalar bölümüne bakın <xref:System.Xml.XmlReader> başvuru sayfası.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

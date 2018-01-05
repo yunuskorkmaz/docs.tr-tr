@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72c68568f0178956d6154f0b3a070e69b6ff0502
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5cf68d4927daa79e160df42f94aff9cbcb611592
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-author-composite-controls"></a>Nasıl yapılır: Bileşik Denetimler Yazma
 Bileşik denetimler birçok yolla değişiklik. Windows masaüstü uygulaması projesi parçası olarak bunları yazar ve bunları yalnızca projesinde formlarda kullanabilirsiniz. Veya Windows Denetim Kitaplığı projede yazar, bir derlemeye Projeyi derlemek ve diğer projelerinde denetimleri kullanın. Bile, bunları devralır ve görsel devralma bunları hızlı bir şekilde özel amaçlarla özelleştirmek için kullanın.  
@@ -89,10 +90,10 @@ Bileşik denetimler birçok yolla değişiklik. Windows masaüstü uygulaması p
      DLL bileşik denetiminden devralındığını bağlı denetimler görebilir ve denetimlerin özelliklerini değiştirebilir, **değiştiricileri** özelliği **ortak**. Denetim özelliklerini değiştiremezsiniz, **değiştiricileri** özelliği **özel**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [İzlenecek yol: Visual C# ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [İzlenecek yol: Visual C# ile bir Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- [Denetim türü önerileri](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
- [Nasıl yapılır: Windows formları için denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [Denetim Türü Önerileri](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
+ [Nasıl yapılır: Windows Forms için Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

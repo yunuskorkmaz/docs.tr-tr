@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlama bağlama kaynak nesnesi verileri elde ettiğiniz nesneye başvurur. Bu konu bağlama kaynağı olarak kullanabileceğiniz nesne türlerini açıklar.  
@@ -107,8 +108,8 @@ Veri bağlama bağlama kaynak nesnesi verileri elde ettiğiniz nesneye başvurur
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Data.ObjectDataProvider>  
  <xref:System.Windows.Data.XmlDataProvider>  
- [Bağlama kaynağı belirtin](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Bağlama Kaynağı Belirtme](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [WPF veri bağlama ile LINQ-XML genel bakış](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [LINQ to XML ile WPF Verilerini Bağlamaya Genel Bakış](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

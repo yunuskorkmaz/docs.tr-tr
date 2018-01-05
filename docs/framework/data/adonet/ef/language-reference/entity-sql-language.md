@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08e366e8bbd9df31f367496ca5e106b876921896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0485dc9ee1e1b6fa134e0a7518b7ae49748ae292
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-language"></a>Varlık SQL dili
 Varlık SQL SQL benzer bir depolama bağımsız sorgu dildir. Varlık SQL sorgu bir varlığın verilerinin nesneler olarak veya bir tablo formunda sağlar. Varlık SQL aşağıdaki durumlarda kullanmayı düşünmeniz gerekir:  
@@ -33,27 +34,27 @@ Varlık SQL SQL benzer bir depolama bağımsız sorgu dildir. Varlık SQL sorgu 
 ## <a name="using-entity-sql-with-the-entityclient-provider"></a>Varlık SQL EntityClient sağlayıcısı ile kullanma  
  Varlık SQL EntityClient sağlayıcısı ile kullanmak istiyorsanız, daha fazla bilgi için aşağıdaki konulara bakın:  
   
- [Entity Framework için EntityClient sağlayıcısı](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ [Entity Framework için EntityClient Sağlayıcısı](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
   
- [Nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma](../../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [Nasıl yapılır: StructuralType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [Nasıl yapılır: RefType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [Nasıl yapılır: karmaşık türleri döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [Nasıl yapılır: iç içe geçmiş koleksiyonları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Nasıl yapılır: EntityCommand kullanarak parametreli varlık SQL sorgusu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Nasıl yapılır: EntityCommand Kullanarak Parametreli Varlık SQL Sorgusu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Nasıl yapılır: EntityCommand kullanarak parametreli bir saklı yordamı yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Nasıl yapılır: EntityCommand Kullanarak Parametreli Saklı Yordam Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Nasıl yapılır: çok biçimli bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Nasıl yapılır: Çok Biçimli Sorgu Yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [Nasıl yapılır: ilişkileriyle gidin işleci gidin](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme](../../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>Varlık SQL nesne sorgularıyla kullanma  
  Varlık SQL nesne sorgularıyla kullanmak istiyorsanız, daha fazla bilgi için aşağıdaki konulara bakın:  
@@ -85,9 +86,9 @@ Varlık SQL SQL benzer bir depolama bağımsız sorgu dildir. Varlık SQL sorgu 
  [Nasıl yapılır: sonuçları sorgu aracılığıyla sayfası](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
   
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  

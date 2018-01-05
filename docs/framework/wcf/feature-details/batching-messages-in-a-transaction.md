@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
 Sıraya alınan uygulamaları işlemleri doğruluk ve iletilerin güvenilir teslimini emin olmak için kullanın. İşlemler, ancak pahalı işlemleri ve ileti işleme önemli ölçüde azaltabilir. İleti verimini artırmak için bir uygulamanın okuma ve tek bir işlem içinde birden çok iletileri işlemek için yoludur. Performans ve kurtarma arasında dengelemeyi olduğundan: toplu ileti sayısı arttıkça, bu nedenle işlemler geri alınacak, gerekli kurtarma iş miktarı verir. Toplu işlem ve oturumları ileti işleme arasındaki farkı dikkate almak önemlidir. A *oturum* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler grubudur. Oturumlar, genellikle bir grup ilgili iletiler birlikte işlenmesi gereken olduğunda kullanılır. Bunun bir örneğini çevrimiçi bir alışveriş Web sitesidir. *Toplu* birden çok işlemek için kullanılan, ilgisiz artar verimlilik ileti şekilde iletileri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]oturumları, bkz: [gruplandırma sıraya alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Bir toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu iletileri arasında hiçbir ilişki olabilir. Bir işlemde toplu ileti işleme, uygulama nasıl çalışacağını değişmeyen bir hale getirilmesidir.  
@@ -92,5 +93,5 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [WCF'de kuyruğa alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+ [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

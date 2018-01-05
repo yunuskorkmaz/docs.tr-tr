@@ -13,11 +13,12 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0541ecf73fb719e7d28497492626d24fad0cc6d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ae0e11ea5780ba7b86d097029615b0b176171e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar .NET Framework 4.5 ve sonraki sürümlerinde derlemesi tarafından düzenlenen'te eski tür üyeleri listeler. Eski üyeler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu eski türler üyeleri listesinde değil. Eski türler listesi için bkz: [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -802,5 +803,5 @@ Bu makaledeki tablolar .NET Framework 4.5 ve sonraki sürümlerinde derlemesi ta
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Kayıt defteri anahtarı çalışır yalnızca Win9x, .NET Framework'ün bu sürümünde desteklenmiyor. Kullanım `PerformanceData` kayıt defteri anahtarı yerine. Bu özellik, gelecek bir sürümünde Framework kaldırılır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sınıf Kitaplığı'nda artık kullanılmayan nedir](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Eski türler](../../../docs/framework/whats-new/obsolete-types.md)
+ [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)

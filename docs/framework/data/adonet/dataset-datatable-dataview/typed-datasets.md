@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3d5edc4f469b59ff787e500ad447fe0076c332c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ede928352c9e0f02f6ad4c27ce8f5347b868986
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typed-datasets"></a>Yazılan veri kümeleri
 Zayıf yazılmış değişkenlerinin değerlerini geç bağlama erişimi birlikte <xref:System.Data.DataSet> kesin türü belirtilmiş bir benzetimini verilerine erişmesini sağlar. Tabloları ve parçası olan sütunları **DataSet** kolay adlar kullanılarak erişilebilir ve değişkenleri'kesin türü belirtilmiş.  
@@ -27,12 +28,12 @@ Zayıf yazılmış değişkenlerinin değerlerini geç bağlama erişimi birlikt
  Ayrıca, kesin türü belirtilmiş **DataSet** derleme zamanında doğru türü olarak değerlerine erişim sağlar. Kesin türü belirtilmiş ile **DataSet**, tür uyuşmazlığı hatalarının kodu derlenmiş yerine, çalışma zamanında yakalandı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kesin türü belirtilmiş veri kümeleri oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [Kesin Türü Belirtilmiş DataSets Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Oluşturma ve kesin türü belirtilmiş kullanma açıklar **DataSet**.  
   
- [Yazılan veri kümeleri yorumlama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [Türü Belirtilmiş DataSets için Yorum Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Kesin türü belirtilmiş oluşturmak için kullanılan XML Şeması Tanım Dili (XSD) şeması açıklama ekleme açıklar **DataSet**, vermek için **DataSet** temel şeması değiştirmeden öğeleri kolay adlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

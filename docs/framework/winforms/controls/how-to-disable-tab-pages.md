@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2db19d402f32bd43bb7053403428e8055755d017
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-tab-pages"></a>Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma
 Bazı durumlarda, Windows Forms uygulamanızdaki kullanılabilir verilere erişimi kısıtlamak isteyeceksiniz. Sekme denetimi sekmesi sayfalarında görüntülenen verileri varsa, bunun bir örneği olabilir; Yöneticiler, konuk veya alt düzey kullanıcılara kısıtlamak istediğiniz bir sekme sayfası hakkında bilgi olabilir.  
@@ -112,7 +113,7 @@ Bazı durumlarda, Windows Forms uygulamanızdaki kullanılabilir verilere erişi
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TabControl denetimine genel bakış](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [Nasıl yapılır: sekme sayfasına denetim ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleme ve kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
- [Nasıl yapılır: Windows Forms Tabcontrol'nin görünüşünü değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+ [TabControl Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Sekme Sayfasına Denetim Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Nasıl yapılır: Windows Forms TabControl’un Görünüşünü Değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

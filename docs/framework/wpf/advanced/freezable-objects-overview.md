@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49778dc9551652ee4a4d36426b4b396652b9dcd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390181570c6deeea77e5e76493a62e84107286b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 Bu konu, etkili bir şekilde kullanmak ve oluşturmak açıklar <xref:System.Windows.Freezable> uygulama performansının artırılmasına yardımcı olan özel özellikleri sağlayan nesne. Fırçalar, kalemler, dönüşümleri, geometri ve animasyonları freezable nesneleri örneklerindendir.  
@@ -174,5 +175,5 @@ mc:Ignorable="PresentationOptions"
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Freezable>  
  [Özel animasyon örneği](http://go.microsoft.com/fwlink/?LinkID=159981)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

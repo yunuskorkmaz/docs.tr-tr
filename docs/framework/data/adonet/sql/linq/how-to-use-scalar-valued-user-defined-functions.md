@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ef9e687522e200487e0fc2a661bbd545d4eb4bbf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a70d46362ef8b2be0533a1530c79124c464375af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: kullanıcı tanımlı işlevler skaler değerli kullanın
 Kullanıcı tanımlı bir işlev için bir sınıf tarafından tanımlanan bir istemci yöntemi eşleyebilirsiniz <xref:System.Data.Linq.Mapping.FunctionAttribute> özniteliği. Yönteminin gövdesi yöntem çağrısının amacı yakalar ve bu ifadeye aktaran bir ifade oluşturur Not <xref:System.Data.Linq.DataContext> çeviri ve yürütme.  
@@ -48,4 +49,4 @@ END
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+ [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b83f5ae935ed9ba6c5351d48175ee7747e7b01b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 875ad9a17078865c526770587d36b1db1adf378c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Nasıl Yapılır: Arka Planda Dosya İndirme
 Dosya indirme ortak bir görevdir ve bu büyük olasılıkla uzun süren işlem ayrı bir iş parçacığı üzerinde çalıştırmak genellikle yararlıdır. Kullanım <xref:System.ComponentModel.BackgroundWorker> çok az kod ile bu görevi gerçekleştirmek için bileşen.  
@@ -77,5 +78,5 @@ Dosya indirme ortak bir görevdir ve bu büyük olasılıkla uzun süren işlem 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.BackgroundWorker>  
- [Nasıl yapılır: bir işlemi arka planda çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [Nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+ [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

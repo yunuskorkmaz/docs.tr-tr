@@ -26,20 +26,21 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e04dc0cd878f4583fb4e0bd0ba5816ddfe0b358
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1fa9592dd6f2f0cb3f6fc70f0cc5843ee3b76403
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-wpf-in-visual-studio-2015"></a>Visual Studio 2015’te WPF’ye Giriş
 Visual Studio 2015'te Windows Presentation Foundation (WPF), modern iş kolu satır Windows Masaüstü uygulamaları oluşturmak için birleşik bir programlama modeli geliştiricilere sağlar.  
   
- [Windows Presentation Foundation ile modern masaüstü uygulamaları oluşturma](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Windows Presentation Foundation ile Modern Masaüstü Uygulamaları Oluşturma](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
  [Visual Studio ve Visual Studio için Blend'de XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [WPF giriş](/visualstudio/designers/introduction-to-wpf)  
+ [WPF'ye Giriş](/visualstudio/designers/introduction-to-wpf)  
   
  [.NET Framework'teki WPF](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)  
   

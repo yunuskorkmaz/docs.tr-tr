@@ -168,11 +168,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22f556c87f676b86228fbb68f66206f3c39140cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
 Derleme işlem çağrıları [Winmdexp.exe (Windows çalışma zamanı meta veri verme aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** şablonunda [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], Winmdexp.exe hata iletileri görüntülenir **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektirdiği için derleme başarılı sürece, hata iletileri görünmüyor.  
@@ -182,5 +183,5 @@ Derleme işlem çağrıları [Winmdexp.exe (Windows çalışma zamanı meta veri
  Hata makalesinde ele alınmamıştır ve ileti sorunu gidermek için yeterli bilgi içermiyor düşünüyorsanız, lütfen geri bildirim bağlantısı makalesinde kullanın ve hata iletisi içerir. Bir hata, alternatif olarak, dosya [Microsoft Connect Web](http://go.microsoft.com/fwlink/p/?LinkId=251130). De daha fazla bilgi için bakabilirsiniz [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Winmdexp.exe (Windows çalışma zamanı meta veri verme aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  [Windows çalışma zamanı bileşeni hata koşulları tanılama](http://go.microsoft.com/fwlink/p/?LinkId=251127)

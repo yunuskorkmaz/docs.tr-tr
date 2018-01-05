@@ -20,11 +20,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2bcd9572ab5f8547916d95fc11e0cffc864ad2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da0fed9a491c91881a9e0296e2c849d8430bb954
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a>Bu konuda, hem kullanan karma uygulamalar yazarken oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
@@ -128,9 +129,9 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF Tasarımcısı'nda birlikte çalışabilirlik](http://msdn.microsoft.com/en-us/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Windows Forms ve WPF birlikte çalışabilirlik girdi mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [Nasıl yapılır: etkinleştirmek karma uygulamada görsel stiller](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [WindowsFormsHost Öğesi için yerleşim konuları](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Windows Forms ve WPF özellik eşlemesi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Windows Formları tasarımcısında tasarım zamanı hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [Geçiş ve birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+ [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
+ [Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
+ [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
+ [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

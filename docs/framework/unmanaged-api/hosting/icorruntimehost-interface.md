@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 844648cd2cfafc561e27bea870703ee3a55fb404
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b115b8d52f904fef41a2e85c1192a18e5c3d3e08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost Arabirimi
 Ortak dil çalışma zamanı (CLR) oluşturmak ve uygulama etki alanları, varsayılan etki alanı erişmek ve tüm etki alanları işlemde çalışan listeleme için yapılandırmak için açıkça durdurmak ve başlatmak ana bilgisayar sağlayan yöntemler sağlar.  
@@ -34,25 +35,25 @@ Ortak dil çalışma zamanı (CLR) oluşturmak ve uygulama etki alanları, varsa
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CloseEnum yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Bir etki alanı Numaralandırıcı geri etki alanı listesi başlangıç durumuna sıfırlar.|  
-|[CreateDomain yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Uygulama etki alanı oluşturur. Çağıran bir arabirim işaretçisi türü alan <xref:System._AppDomain> türünün bir örneği için <xref:System.AppDomain?displayProperty=nameWithType>.|  
-|[CreateDomainEx yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Uygulama etki alanı oluşturur. Bu yöntem döndürülen ek özelliklerini yapılandırmak için Iappdomainsetup örneği geçirmek arayan sağlar <xref:System._AppDomain> örneği.|  
-|[CreateDomainSetup yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Arabirim işaretçisi türü alır `IAppDomainSetup` için bir <xref:System.AppDomainSetup> örneği. `IAppDomainSetup`uygulama etki alanı yönlerini oluşturulmadan önce yapılandırmak için yöntemleri sağlar.|  
-|[CreateEvidence yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Arabirim işaretçisi türü alır <xref:System.Security.Principal.IIdentity>, geçirilecek güvenlik bulgu oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
-|[CreateLogicalThreadState yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|Kullanmayın.|  
-|[CurrentDomain yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Arabirim işaretçisi türü alır <xref:System._AppDomain> geçerli iş parçacığı üzerinde yüklenen etki alanı temsil eder.|  
-|[DeleteLogicalThreadState yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-deletelogicalthreadstate-method.md)|Kullanmayın.|  
-|[EnumDomains yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)|Bir Numaralandırıcı geçerli işlem için etki alanları alır.|  
-|[GetConfiguration yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getconfiguration-method.md)|CLR geri çağırma yapılandırmasını belirtmek ana bilgisayar tanır bir nesneyi alır.|  
-|[GetDefaultDomain yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getdefaultdomain-method.md)|Arabirim işaretçisi türü alır <xref:System._AppDomain> , geçerli işlem için varsayılan etki alanını temsil eder.|  
-|[LocksHeldByLogicalThread yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-locksheldbylogicalthread-method.md)|Kullanmayın.|  
-|[MapFile yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-mapfile-method.md)|Belirtilen dosya belleğe eşler. Bu yöntem artık kullanılmıyor.|  
-|[NextDomain yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|Arabirim işaretçisi sonraki etki alanına numaralandırmada alır.|  
-|[Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-start-method.md)|CLR başlatır.|  
-|[Stop yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-stop-method.md)|Geçerli işlem için çalışma zamanında kod yürütmeyi durdurur.|  
-|[Switchınlogicalthreadstate yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchinlogicalthreadstate-method.md)|Kullanmayın.|  
-|[SwitchOutLogicalThreadState yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|Kullanmayın.|  
-|[UnloadDomain yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Belirtilen uygulama etki alanından geçerli işlem kaldırır.|  
+|[CloseEnum Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Bir etki alanı Numaralandırıcı geri etki alanı listesi başlangıç durumuna sıfırlar.|  
+|[CreateDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Uygulama etki alanı oluşturur. Çağıran bir arabirim işaretçisi türü alan <xref:System._AppDomain> türünün bir örneği için <xref:System.AppDomain?displayProperty=nameWithType>.|  
+|[CreateDomainEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Uygulama etki alanı oluşturur. Bu yöntem döndürülen ek özelliklerini yapılandırmak için Iappdomainsetup örneği geçirmek arayan sağlar <xref:System._AppDomain> örneği.|  
+|[CreateDomainSetup Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Arabirim işaretçisi türü alır `IAppDomainSetup` için bir <xref:System.AppDomainSetup> örneği. `IAppDomainSetup`uygulama etki alanı yönlerini oluşturulmadan önce yapılandırmak için yöntemleri sağlar.|  
+|[CreateEvidence Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Arabirim işaretçisi türü alır <xref:System.Security.Principal.IIdentity>, geçirilecek güvenlik bulgu oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
+|[CreateLogicalThreadState Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|Kullanmayın.|  
+|[CurrentDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Arabirim işaretçisi türü alır <xref:System._AppDomain> geçerli iş parçacığı üzerinde yüklenen etki alanı temsil eder.|  
+|[DeleteLogicalThreadState Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-deletelogicalthreadstate-method.md)|Kullanmayın.|  
+|[EnumDomains Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)|Bir Numaralandırıcı geçerli işlem için etki alanları alır.|  
+|[GetConfiguration Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getconfiguration-method.md)|CLR geri çağırma yapılandırmasını belirtmek ana bilgisayar tanır bir nesneyi alır.|  
+|[GetDefaultDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getdefaultdomain-method.md)|Arabirim işaretçisi türü alır <xref:System._AppDomain> , geçerli işlem için varsayılan etki alanını temsil eder.|  
+|[LocksHeldByLogicalThread Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-locksheldbylogicalthread-method.md)|Kullanmayın.|  
+|[MapFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-mapfile-method.md)|Belirtilen dosya belleğe eşler. Bu yöntem artık kullanılmıyor.|  
+|[NextDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|Arabirim işaretçisi sonraki etki alanına numaralandırmada alır.|  
+|[Start Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-start-method.md)|CLR başlatır.|  
+|[Stop Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-stop-method.md)|Geçerli işlem için çalışma zamanında kod yürütmeyi durdurur.|  
+|[SwitchInLogicalThreadState Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchinlogicalthreadstate-method.md)|Kullanmayın.|  
+|[SwitchOutLogicalThreadState Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|Kullanmayın.|  
+|[UnloadDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Belirtilen uygulama etki alanından geçerli işlem kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -66,7 +67,7 @@ Ortak dil çalışma zamanı (CLR) oluşturmak ve uygulama etki alanları, varsa
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.AppDomain>  
  [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [Iclrruntimehost arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
+ [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
  [Çalışma zamanı ana bilgisayarlar](http://msdn.microsoft.com/en-us/99d9246a-b994-4fe5-985c-8588d1d59998)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Corruntimehost ortak sınıfı](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

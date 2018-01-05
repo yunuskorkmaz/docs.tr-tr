@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e6133576d65e95ac42a1680de152d84892e2c5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6049e5e0f2d79bab8ad90b6e63e91d4d4fa705ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Formları Denetimlerinden Devralma
 Varolan bir denetim işlevselliğini genişletmek istiyorsanız, varolan denetimi devralma yoluyla türetilmiş bir denetim oluşturabilirsiniz. Varolan denetimden devralırken tüm işlevleri ve bu denetim görsel özelliklerini devralır. Örneğin, devralınan bir denetim oluşturuyorsanız <xref:System.Windows.Forms.Button>, yeni denetim görünür ve act tam gibi standart bir <xref:System.Windows.Forms.Button> denetim. Sonra genişletin veya yeni denetiminiz özel yöntemleri ve özellikleri uyarlamasını aracılığıyla işlevlerini değiştirin. Bazı denetimler de devralınan denetim görsel görünümünü geçersiz kılarak değiştirebilirsiniz kendi <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
@@ -94,10 +95,10 @@ Varolan bir denetim işlevselliğini genişletmek istiyorsanız, varolan denetim
 11. Kaydet ve denetiminizin sınayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Nasıl yapılır: denetim sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Nasıl yapılır: UserControl sınıfından devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Nasıl yapılır: Windows formları için denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Nasıl yapılır: Denetim Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [Nasıl yapılır: UserControl Sınıfından Devralma](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [Nasıl yapılır: Windows Forms için Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
  [Devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [İzlenecek yol: Visual C# ile bir Windows Forms Denetimi'nden devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+ [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

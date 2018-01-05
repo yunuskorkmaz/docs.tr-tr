@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 83e455c2377168c316bf34c25b687cde48b0fa3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma
 Güvenli bir oturumda bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanarak oturum dönüştürülüyor hizmet dayanabilir. Örneğin, durum bilgisiz SCT güvenli bir oturumda kullanılır ve Internet Information Services (IIS) sıfırlanır sonra hizmetiyle ilişkili oturum veriler kaybolur. Bu oturum verilerini bir SCT belirteç önbelleği içerir. SCT ile ilişkili anahtar alınamadığından bu nedenle, bir istemci hizmeti durum bilgisiz SCT gönderir başlatıldığında bir hata, döndürülür. Ancak, bir durum bilgisi olan SCT kullanılıyorsa, SCT ile ilişkili anahtar SCT içinde yer alır. Anahtar SCT içinde yer alan ve bu nedenle iletinin içinde yer alan olduğundan, güvenli oturum dönüştürülüyor hizmeti tarafından etkilenmez. Varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] durum bilgisiz SCTs güvenli bir oturumda kullanır. Bu konu, güvenli bir oturumda durum bilgisi olan SCTs kullanmayı ayrıntıları verilmektedir.  

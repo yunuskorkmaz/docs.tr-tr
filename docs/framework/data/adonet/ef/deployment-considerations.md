@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 792588bd12493c54da73887a326fc4ce950ec7ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Dağıtım konuları (Entity Framework)
 Bu konu, veri erişimi için ADO.NET Entity Framework kullanan uygulamaları dağıtma hakkında bilgi sağlar. Entity Framework hakkında daha fazla bilgi için bkz: [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -40,4 +41,4 @@ Bu konu, veri erişimi için ADO.NET Entity Framework kullanan uygulamaları da�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Geliştirme ve dağıtım konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+ [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

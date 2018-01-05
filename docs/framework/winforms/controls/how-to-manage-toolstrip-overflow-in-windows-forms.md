@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Taşmasını Yönetme
 Zaman üzerindeki tüm öğeleri bir <xref:System.Windows.Forms.ToolStrip> denetimi ayrılan alanı Sığdır değil, üzerinde taşma işlevselliğini etkinleştirmek <xref:System.Windows.Forms.ToolStrip> ve özel taşma davranışını belirleyen <xref:System.Windows.Forms.ToolStripItem>s.  
@@ -57,6 +58,6 @@ Zaman üzerindeki tüm öğeleri bir <xref:System.Windows.Forms.ToolStrip> denet
  <xref:System.Windows.Forms.ToolStripOverflowButton>  
  <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  
  <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
- [ToolStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip denetim mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip Teknoloiji özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

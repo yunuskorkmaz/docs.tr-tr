@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf04af2baa037b2df9e2980cc2347460de961c39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]klavye odağı aldığında bir denetim görsel görünümünü değiştirmek için iki paralel mekanizma sağlar. Özellik ayarlayıcıları gibi özellikleri kullanmak için ilk mekanizmasıdır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. İkinci mekanizma değeri olarak ayrı bir stil sağlamaktır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özellik; "odak görsel stili" denetimi yerine üzerinde denetim ya da diğer UI görsel ağaç değiştirme çizer donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Odağı genel bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Odağa Genel Bakış](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)

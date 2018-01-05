@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 001cc32aa9e1f31695f3b349480b6dd5154b31a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Nasıl yapılır: Windows Forms NumericUpDown Denetiminin Biçimini Ayarlama
 Windows Forms'ta değerlerin nasıl görüntüleneceğini yapılandırabilirsiniz <xref:System.Windows.Forms.NumericUpDown> denetim. <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Özelliği, kaç tane numaraları görünür ondalık ayırıcıdan sonra belirler; varsayılan değer 0'dır. <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Özelliği, her üç ondalık basamak arasında bir ayırıcı eklenip eklenmeyeceğini belirler; varsayılan `false`. Denetim değerleri ondalık biçiminde yerine onaltılık görüntüleyebilirsiniz <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> özelliği ayarlanmış `true`; varsayılan `false`.  
@@ -69,5 +70,5 @@ Windows Forms'ta değerlerin nasıl görüntüleneceğini yapılandırabilirsini
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.NumericUpDown>  
- [NumericUpDown denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [NumericUpDown denetimine genel bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+ [NumericUpDown Denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [NumericUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

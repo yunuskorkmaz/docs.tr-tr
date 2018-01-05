@@ -13,29 +13,30 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 91d76cb823bd16b716889a8ef52dc1c6d2c94ee3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4bc63a2de6e5aa7cf0af8df79cf6a8b398c713ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-how-to39s-index"></a>WIF nasıl yapılır &#39; s dizini
--   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması oluşturma](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması oluşturma](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Nasıl yapılır: Form tabanlı kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması oluşturma](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
--   [Nasıl yapılır: Windows kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması oluşturma](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
+-   [Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
--   [Nasıl yapılır: Talep kullanan uygulama ve WIF izlemeyi kullanma hizmetleri hata ayıklama](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+-   [Nasıl yapılır: WIF İzleme Kullanarak Talep Kullanan Uygulama ve Hizmetlerde Hata Ayıklama](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
--   [Nasıl yapılır: Görüntü WIF kullanarak durumunda imzalı](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
+-   [Nasıl yapılı: WIF Kullanarak Oturum Açmış Durumu Gösterme](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
--   [Nasıl yapılır: Belirteç yeniden yürütme algılaması etkinleştir](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
+-   [Nasıl yapılır: Belirteç Yeniden Yürütme Algılamasını Etkinleştirme](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
   
--   [Nasıl yapılır: WIF izlemeyi etkinleştirme](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
+-   [Nasıl yapılır: WIF İzlemeyi Etkinleştirme](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
   
--   [Nasıl yapılır: Bir WCF Web hizmeti uygulaması WIF etkinleştir](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
+-   [Nasıl yapılır: WCF Web Hizmeti Uygulaması için WIF Etkinleştirme](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
--   [Nasıl yapılır: Gelen talep dönüştürme](../../../docs/framework/security/how-to-transform-incoming-claims.md)
+-   [Nasıl yapılır: Gelen Talepleri Dönüştürme](../../../docs/framework/security/how-to-transform-incoming-claims.md)

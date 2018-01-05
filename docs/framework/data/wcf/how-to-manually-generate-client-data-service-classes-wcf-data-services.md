@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ed668fb7648daa8a3571f407b3243291d3f8bd86
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f72f898b2a80d7d88a74deabe013e2eecc298bdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Nasıl yapılır: istemci verileri hizmet sınıfları (WCF Veri Hizmetleri) el ile oluştur
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]İstemci veri hizmeti sınıfları kullandığınızda otomatik olarak oluşturmak üzere etkinleştirmek için Visual Studio ile tümleşir **hizmet Başvurusu Ekle** bir başvuru veri hizmeti için bir Visual Studio projesi eklemek için iletişim kutusu. Daha fazla bilgi için bkz: [nasıl yapılır: bir veri hizmet Başvurusu Ekle](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Kod oluşturma aracı kullanarak el ile de aynı istemci veri hizmeti sınıfları oluşturabilirsiniz `DataSvcUtil.exe`. Bu araç ile birlikte [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], .NET Framework sınıfları veri hizmeti tanımı oluşturur. Ayrıca, kavramsal model (.csdl) dosyası ve bir Visual Studio projesi Entity Framework modelinde temsil eden .edmx dosyasının'ndan veri hizmeti sınıfları oluşturmak için de kullanılabilir.  
@@ -104,6 +105,6 @@ ms.lasthandoff: 12/02/2017
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- [Nasıl yapılır: bir veri hizmet Başvurusu Ekle](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)  
- [WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+ [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti Başvurusu Ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)  
+ [WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)

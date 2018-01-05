@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  
@@ -116,6 +117,6 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
 -   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi kaç kez sayısını tutar bir ileti özelliği denemesi destekler. Bu iptal sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aynı iletiyi birden fazla tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkün olacak şekilde durdurma sayısı bellekte saklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] grubunda hizmet.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Windows Vista, Windows Server 2003 ve Windows XP'de kuyruğa alma özelliği farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+ [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

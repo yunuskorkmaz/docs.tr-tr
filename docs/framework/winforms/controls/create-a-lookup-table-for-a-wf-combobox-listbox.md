@@ -25,11 +25,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb7ffb8a7f20c1e53b24a1db8bda326d73743a93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93f49a8fbd2cc8ffae94e4dcbbc4babf7c1137cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma
 Bazen kullanımı kolay bir biçimde bir Windows formunda veri görüntüleme, ancak veri programınıza daha anlamlı bir biçimde depolamak kullanışlıdır. Örneğin, bir sipariş formu Yemek için bir liste kutusunda ada göre menü öğelerini görüntüleyebilir. Ancak, sipariş kaydı veri tablosu yemek temsil eden benzersiz kimlik numaraları içerecektir. Aşağıdaki tablolarda, depolamak ve Yemek Sipariş formu verileri görüntülemek nasıl bir örneği gösterilmektedir.  
@@ -81,8 +82,8 @@ Bazen kullanımı kolay bir biçimde bir Windows formunda veri görüntüleme, a
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama ve Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [ListBox denetimine genel bakış](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [ComboBox denetimine genel bakış](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [CheckedListBox denetimine genel bakış](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Veri Bağlama ve Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [ListBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [ComboBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [CheckedListBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

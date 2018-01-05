@@ -17,23 +17,24 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid-how-to-topics"></a>Kılavuz ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, kullanarak öğeleri konumlandırmak anlatmaktadır <xref:System.Windows.Controls.Grid> öğesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kılavuz kullanarak standart kullanıcı Arabirimi iletişim kutusu oluşturma](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Karmaşık bir kılavuz oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Kılavuz öğesi oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [Oluşturma ve GridLengthConverter nesnesi kullanma](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Satırları ve sütunları ColumnDefinitionsCollections ve RowDefinitionsCollections kullanarak yönlendirme](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Bir kılavuzun alt öğelerini getirin](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Kılavuzlar arasında boyutlandırma özelliklerini paylaşma](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Kılavuz Kullanarak Standart UI İletişim Kutusu Oluşturma](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Karmaşık Kılavuz Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
+ [Kılavuz Öğesi Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
+ [GridLengthConverter Nesnesi Oluşturma ve Kullanma](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [ColumnDefinitionsCollections ve RowDefinitionsCollections Kullanarak Sütunları ve Satırları İşleme](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Bir Kılavuzun Alt Öğelerini Konumlandırma](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
+ [Kılavuzlar Arasında Boyutlandırma Özelliklerini Paylaşma](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Panel>  
@@ -53,6 +54,6 @@ Bu bölümdeki konular, kullanarak öğeleri konumlandırmak anlatmaktadır <xre
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer'a Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer Genel Bakış](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

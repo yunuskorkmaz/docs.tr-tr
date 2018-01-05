@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a65f2c1daaac7e0e795412d666bb7d15e639361
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Seri hale getirici kendisini yanı sıra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ilişkili şema alma ve şema verme mekanizmaları içerir. *Şema* seri hale getirici üreten veya seri durumdan çıkarıcının erişebileceği XML şeklini resmi, kesin ve makine tarafından okunabilir açıklamasıdır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]World Wide Web Konsorsiyumu (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla yaygın olarak çalışabilir, şema gösterimi olarak kullanır.  
@@ -73,5 +74,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [Sınıf oluşturmak için şemayı içe aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
- [Sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+ [Sınıf Oluşturmak için Şemayı İçeri Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)  
+ [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

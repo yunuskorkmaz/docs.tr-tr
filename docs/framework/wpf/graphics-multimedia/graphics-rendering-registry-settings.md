@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1a86d715edb68564d6ebfcc8a419e333da4ea03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a760f910bfd9e64fddfe2e7db3bb380cf744719d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] etkileyen kayıt defteri ayarlarını grafik oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -108,5 +109,5 @@ Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../incl
  **Başvuru tarayıcısını seçeneği kullanma** bir DWORD değeri alır. 0 değeri, görüntüleyiciye kullanılmadığını belirtir. Diğer bir sıfır olmayan bir değer zorlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyiciye kullanılacak.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Grafik İşleme Katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

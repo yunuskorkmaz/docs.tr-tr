@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Veri sözleşmesi modeli XML doğrudan temsil eden belirli türlerini destekler. Bu tür için XML serileştirildiği zaman seri hale getirici herhangi başka bir işleme olmadan bu tür XML içeriği yazar. Desteklenen türler <xref:System.Xml.XmlElement>, dizilerin <xref:System.Xml.XmlNode> (ama `XmlNode` kendisini yazın), türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> Ve <xref:System.Data.DataTable> türü olarak yazılan veri kümeleri, veritabanı programlaması kullanılan yaygın olarak. Bu türleri uygulayan `IXmlSerializable` arabirimi ve bu nedenle veriler serileştirilebilir sözleşme modeli. Bu tür için bazı özel durumlar, bu konunun sonunda listelenmiştir.  
@@ -215,5 +216,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.IXmlSerializable>  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri sözleşmesi seri hale getirici tarafından desteklenen türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

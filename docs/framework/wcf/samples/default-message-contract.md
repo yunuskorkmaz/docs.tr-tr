@@ -14,11 +14,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1219f2c1a173f454827c7450e66d90a500d87e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
 Varsayılan ileti sözleşmesi örnek özel bir kullanıcı tarafından tanımlanan ileti için ve hizmet işlemleri geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı arabirimi yazılan hizmet olarak uygular. Ayrıca, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek işlenenler ve işlecini içeriyor ve döndüren özel bir ileti geçirir aritmetik hesaplama sonucu.  

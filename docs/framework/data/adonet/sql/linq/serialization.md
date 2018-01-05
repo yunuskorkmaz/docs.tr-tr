@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f73644a047230a590e75f095575cf85140f3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization"></a>Serileştirme
 Bu konuda açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seri hale getirme özellikleri. İzleyin paragrafları tasarım zamanı ve çalışma zamanı serileştirme davranışını serileştirme kod oluşturma sırasında ekleme hakkında bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfları.  
@@ -83,6 +84,6 @@ Bu konuda açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vb
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arka plan bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [Nasıl yapılır: varlıklar seri hale getirilebilir hale getirin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+ [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [SqlMetal.exe (Kod Üretme Aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
+ [Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

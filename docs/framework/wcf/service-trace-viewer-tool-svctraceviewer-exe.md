@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet izleme Görüntüleyicisi aracı tarafından oluşturulan tanılama izlemeleri çözümlemenize yardımcı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece, tanılama, onarım doğrulayın ve izleme iletilerini günlüğüne filtrelemek için bir yöntem sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sorunları.  
@@ -460,6 +461,6 @@ ms.lasthandoff: 12/02/2017
  Arapça bir işletim sistemi kullanılarak oluşturulan bir izleme günlüğü açarsanız, filtre çalışmıyor saat fark edebilirsiniz. Örneğin, yıl 2005 Arapça takvimindeki yılın 1427 karşılık gelir. Ancak, hizmet izleme Görüntüleyicisi aracı Filtresi tarafından desteklenen zaman aralığı 1752'den önceki bir tarih desteklemez. Bu, filtrenin doğru bir tarih seçin mümkün olmadığını kapsıyor. Bu sorunu gidermek için bir özel filtre oluşturabilirsiniz (**görünüm/özel filtreler**) belirli bir zaman aralığına dahil etmek için bir XPath ifadesi kullanarak.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlemeleri görüntüleme bağıntılı için hizmet izleme görüntüleyicisini kullanma ve sorun giderme](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Etkinlik izleme ve uçtan uca izleme bağıntı yayma](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

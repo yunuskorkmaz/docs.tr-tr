@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a>Birlikte çalışma hazırlama veri çağrı sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanı 's hazırlama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -153,13 +154,13 @@ Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Varsayılan hazırlama davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)|Birlikte çalışma hazırlama hizmetinin verileri hazırlamak için kullandığı kurallar açıklanmaktadır.|  
-|[Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Yöntem parametreleri bildirme ve yönetilmeyen kitaplıkları tarafından dışarı aktarılan işlevler için bağımsız değişkenler geçirmek açıklar.|  
-|[COM birlikte çalışma ile verileri hazırlama](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Hazırlama davranışı değiştirmek için COM sarmalayıcıları özelleştirmeyi açıklar.|  
-|[Nasıl yapılır: yönetilen kodu DCOM'dan WCF'ye geçirme](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme açıklar.|  
-|[Nasıl yapılır: HRESULTs ve özel durumları eşleme](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|HRESULTs için özel durumları eşleme açıklar ve .NET Framework kendi karşılaştırılabilir özel durum sınıfına her HRESULT tam eşleme sağlar.|  
+|[Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)|Birlikte çalışma hazırlama hizmetinin verileri hazırlamak için kullandığı kurallar açıklanmaktadır.|  
+|[Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Yöntem parametreleri bildirme ve yönetilmeyen kitaplıkları tarafından dışarı aktarılan işlevler için bağımsız değişkenler geçirmek açıklar.|  
+|[COM Birlikte Çalışma ile Verileri Hazırlama](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Hazırlama davranışı değiştirmek için COM sarmalayıcıları özelleştirmeyi açıklar.|  
+|[Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme açıklar.|  
+|[Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|HRESULTs için özel durumları eşleme açıklar ve .NET Framework kendi karşılaştırılabilir özel durum sınıfına her HRESULT tam eşleme sağlar.|  
 |[Genel türler kullanma birlikte çalışma](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Genel türler COM birlikte çalışabilirlik için kullanılırken hangi eylemleri desteklenen açıklar.|  
-|[Yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md)|Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.|  
+|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)|Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.|  
 |[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|COM bileşenlerini .NET Framework uygulamasına ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
 |[Birlikte çalışma için tasarım konuları](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Tümleşik COM bileşenlerini yazmak için ipuçları verilmektedir.|  
   

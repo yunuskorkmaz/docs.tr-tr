@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 750e5c42158a87c04a7fb0f2a83f126a698bb93f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma
 Bu kılavuzda, bir Windows Presentation Foundation (WPF) uygulamasında barındırmak için uygun olan Direct3D9 içeriğinin nasıl oluşturulacağını gösterir. WPF uygulamalarında Direct3D9 içeriği barındırma ile ilgili daha fazla bilgi için bkz: [WPF ve Direct3D9 birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
@@ -50,8 +51,7 @@ Bu kılavuzda, bir Windows Presentation Foundation (WPF) uygulamasında barınd�
   
      Win32 Uygulama Sihirbazı'nı açar ve Hoş Geldiniz ekranı görüntüler.  
   
-2.  
-              **İleri**'ye tıklayın.  
+2.  **İleri**'ye tıklayın.  
   
      Uygulama ayarları ekranı görüntülenir.  
   
@@ -151,5 +151,5 @@ Bu kılavuzda, bir Windows Presentation Foundation (WPF) uygulamasında barınd�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Interop.D3DImage>  
- [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
- [İzlenecek yol: WPF içinde Direct3D9 içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+ [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
+ [İzlenecek yol: WPF'de Direct3D9 İçeriği Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

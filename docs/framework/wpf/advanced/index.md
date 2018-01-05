@@ -1,5 +1,5 @@
 ---
-title: "(Windows Presentation Foundation) Gelişmiş"
+title: "Gelişmiş (Windows Presentation Foundation)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,26 +19,27 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="advanced-windows-presentation-foundation"></a>(Windows Presentation Foundation) Gelişmiş
+# <a name="advanced-windows-presentation-foundation"></a>Gelişmiş (Windows Presentation Foundation)
 Bu bölümde Gelişmiş WPF alanlarında bazıları açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [Temel öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [Öğe ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [Sürükleme ve bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [Belgeleri](../../../../docs/framework/wpf/advanced/documents.md)  
- [Genelleştirme ve yerelleştirme](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [Geçiş ve birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+ [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
+ [Öğe Ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+ [Sürükleme ve Bırakma](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Belgeler](../../../../docs/framework/wpf/advanced/documents.md)  
+ [Genelleştirme ve Yerelleştirme](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
+ [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Performans](../../../../docs/framework/wpf/advanced/performance.md)  
- [İş parçacığı modeli](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF eklentilere genel bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
+ [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)  
+ [WPF Eklentilerine Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
  [Yönetilmeyen WPF API Başvurusu](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler

@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a24f1bd921de848cb75a2c9f35fa3dd279bc741
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
   
      [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Hizmet meta verilerini WSDL, XML şeması ve WS-Policy gibi endüstri standartları belirtilen biçimlerini kullanarak yayımlamayı destekler. Bu meta veriler otomatik olarak oluşturmak ve erişmek için istemcileri yapılandırmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Meta veriler, HTTP ve HTTPS yayımlanabilir veya Web hizmeti meta veri değişimi standart kullanma. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).  
   
--   **Veri sözleşmeleri**  
+-   **Veri Anlaşmaları**  
   
      Çünkü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanılarak oluşturulan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ayrıca kod kolay uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Evrensel türdeki sözleşmelerin veri sözleşmesi biridir. Visual C# veya Visual Basic kullanarak hizmetinizi kod, esas olarak, verileri işlemek için en kolay yolu veri varlığa ait özelliklere sahip bir veri varlığı temsil eden sınıfları oluşturarak aynıdır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Bu kolay şekilde verilerle çalışmak için kapsamlı bir sistem içerir. Verilerini temsil eden sınıfları oluşturduktan sonra hizmetiniz tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Veri sözleşmelerini kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
@@ -104,10 +105,10 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel>  
- [Temel Windows Communication Foundation kavramları](../../../docs/framework/wcf/fundamental-concepts.md)  
- [Windows Communication Foundation mimarisi](../../../docs/framework/wcf/architecture.md)  
- [Kılavuzları ve en iyi uygulamalar](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)  
+ [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  
+ [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
  [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Belgeler için kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- [Temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Belgeler için Kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

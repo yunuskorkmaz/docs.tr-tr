@@ -19,11 +19,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
@@ -49,7 +50,7 @@ tlbexp assemblyName [options]
 |**/ asmpath:** *dizini*|Derlemelerin aranacağı konumu belirtir. Bu seçeneği kullanırsanız, geçerli dizini de dahil olmak üzere, başvurulan derlemelerin aranacağı konumları açıkça belirtmeniz gerekir.<br /><br /> Kullandığınızda **asmpath** seçeneği, tür kitaplığı dışarı Aktarıcı değil arar bir derlemeyi genel derleme önbelleğinde (GAC).|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ adları:** *dosya adı*|Bir tür kitaplığındaki adların büyük küçük harfle nasıl yazılacağını belirtir. *Filename* bağımsız değişkeni bir metin dosyasıdır. Dosyadaki her bir satır, tür kitaplığındaki bir adın büyük küçük harfle nasıl yazılacağını belirtir.|  
-|**/ nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
+|**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/oldnames**|Bir tür adı çakışması varsa, Tlbexp.exe'yi donatılmış tür adlarını dışarı aktarmaya zorlar. .NET Framework sürüm 2.0'dan önceki sürümlerde varsayılan davranışın bu olduğunu unutmayın.|  
 |**/ out:** *dosyası*|Üretilecek tür kitaplığı dosyasının adını belirtir. Bu seçeneği atlarsanız, Tlbexp.exe, derlemeyle (derlemeyi içeren dosyayla aynı olması gerekmeyen, gerçek derleme adı) aynı adda ve .tlb uzantılı bir tür kitaplığı üretir.|  
 |**/ Sessiz:**`warningnumber`|Belirtilen uyarının görüntülenmesini bastırır. Bu seçenek kullanılamaz **/sessiz**.|  
@@ -58,7 +59,7 @@ tlbexp assemblyName [options]
 |**/tlbrefpath:** *yolu*|Başvurulan tür kitaplığının tam olarak belirtilen yolu.|  
 |**/Win32**|64 bit'lik bir bilgisayarda derleme yaparken, bu seçenek Tlbexp.exe'nin bir 32 bit tür kitaplığı ürettiğini belirtir.|  
 |**/Win64**|32-bit bir bilgisayarda derlerken, bu seçenek Tlbexp.exe bir 64-bit tür kitaplığı oluşturur belirtir.|  
-|**/ verbose**|Ayrıntılı modu belirtir; kendileri için bir tür kitaplığı üretilmesi gereken tüm başvurulan derlemelerin listesini görüntüler.|  
+|**/verbose**|Ayrıntılı modu belirtir; kendileri için bir tür kitaplığı üretilmesi gereken tüm başvurulan derlemelerin listesini görüntüler.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 > [!NOTE]
@@ -139,8 +140,8 @@ tlbexp Sample.dll
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
- [Araçları](../../../docs/framework/tools/index.md)  
- [RegAsm.exe (derleme kayıt aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
  [Derleme Kitaplığı dönüştürme özeti yazın](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

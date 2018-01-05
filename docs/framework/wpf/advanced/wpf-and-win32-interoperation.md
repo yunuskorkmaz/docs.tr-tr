@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ff6e008c95844388930a505caacbaf6d407edd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f762751da94d25a934d038c1da5adf4a7b88439b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konu çalışmasını nasıl bir bakış sunar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, onu olabilir bazı kodun yeniden kullanmak daha etkili.  
@@ -170,5 +171,5 @@ Bu konu çalışmasını nasıl bir bakış sunar [!INCLUDE[TLA2#tla_winclient](
  <xref:System.Windows.Interop.HwndHost>  
  <xref:System.Windows.Interop.HwndSource>  
  <xref:System.Windows.Interop>  
- [İzlenecek yol: bir WPF Win32 denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [İzlenecek yol: Win32 içerisinde WPF içeriği barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+ [İzlenecek yol: WPF'te Win32 Denetimi Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
+ [İzlenecek yol: Win32'de WPF Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

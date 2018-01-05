@@ -16,17 +16,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077b98eb63559a0a4bb691b4b35949aa98d0592c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-and-print-system-management"></a>Yazdırma ve Yazdırma Sistemi Yönetimi
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]ve [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] yeni bir yazdırma yolunu tanıtmak — alternatif [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] yazdırma — ve yazdırma sistemi yönetim fazla genişletilmiş bir dizi [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  Yeni yazdırma yolu tartışması ve [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
@@ -36,5 +37,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [XPS](http://www.microsoft.com/xps)

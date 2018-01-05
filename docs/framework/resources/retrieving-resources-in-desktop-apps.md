@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak varsayılan veya bağımsız kültür için kaynakları ana bütünleştirilmiş kod ile paketini ve her dil veya uygulamanızın destekleyen kültür için ayrı uydu derlemesi oluşturmanız. Daha sonra <xref:System.Resources.ResourceManager> sınıfı adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi. Ana derleme ve uydu derlemelerini kaynaklarınızı katıştırmak değil seçerseniz, ayrıca ikili .resources dosyaları doğrudan, bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyaları alma kaynaklardan](#from_file) daha sonra bu makale.  Kaynaklarında almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları bkz [oluşturma ve Windows mağazası uygulamalarında kaynakları alma](http://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'ndeki.  
@@ -210,7 +211,7 @@ csc Example.cs
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Resources.ResourceManager>  
- [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md)  
- [Paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Çalışma zamanı derlemeleri nasıl bulur](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)  
+ [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Oluşturma ve Windows mağazası uygulamalarında kaynakları alma](http://go.microsoft.com/fwlink/p/?LinkID=241674)

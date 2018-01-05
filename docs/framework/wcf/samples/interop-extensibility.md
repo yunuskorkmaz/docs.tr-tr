@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8bdee2c495fadfd1035930f1533d612218b8f738
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50da86434dcbf380caee7f8ca902eb7a03c20dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-extensibility"></a>Birlikte Çalışabilirlik Genişletmesi
 Bu bölüm, özel birlikte çalışabilirlik gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Gövde öğesine göre Dağıt](../../../../docs/framework/wcf/samples/dispatch-by-body-element.md)  
+ [Gövde Öğesine göre Dağıtma](../../../../docs/framework/wcf/samples/dispatch-by-body-element.md)  
  Gelen iletileri işlemlerine izin atamak için alternatif bir algoritma uygulamak gösterilmiştir.  
   
- [Gövdeye göre yönlendir](../../../../docs/framework/wcf/samples/route-by-body.md)  
+ [Gövdeye göre Yönlendirme](../../../../docs/framework/wcf/samples/route-by-body.md)  
  Herhangi bir SOAP eylem içeren message nesneleri kabul eden bir hizmeti gerçekleştirmelerine olanak gösterilmiştir.

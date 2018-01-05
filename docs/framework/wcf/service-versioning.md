@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra Hizmetleri (ve bunların kullanıma uç noktaları) çeşitli değişen işletme gereksinimlerine göre bilgi teknolojisi gereksinimleri gibi nedenlerle, değiştirilecek veya diğer gidermenin gerekebilir sorunları. Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır. Bu konuda, sürüm oluşturma dikkate alınması gereken açıklanmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -196,5 +197,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [Veri sözleşmesi eşitliği](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Sürüm toleranslı seri hale getirme geri çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+ [Veri Anlaşması Eşitliği](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

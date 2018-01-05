@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 65c9cb50ee33df90707060efca06f6b12fc2a35e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 952657584a4e6aea130e59d42f0c3adfc775c01b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>Pencere Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -94,5 +95,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Automation.ControlType.Window>  
- [UI Otomasyon denetim türlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI Otomasyon genel bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)
+ [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)

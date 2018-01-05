@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec541a8f83990eec79226be7fb4880ef8dda639d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d9bd7d0721aae8691fdbca4d7b934f820666536
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Nasıl Yapılır: Uygulamanıza C#'de Birden Çok Ayar Kümesi Ekleme #
 Bazı durumlarda, bir uygulamada birden çok ayar kümesi sahip olmak isteyebilirsiniz. Belirli bir ayar grubu sık değiştirmek için beklenirken bir uygulama geliştiriyorsanız, örneğin, diğer ayarları etkilenmemesini değiştirmeden dosyası tümden değiştirilebilir böylece tüm tek bir dosyaya ayırmak akıllıca olabilir. Visual Studio projenize birden çok ayar kümesi eklemenizi sağlar. Ek ayarları kümesi Properties.Settings nesnesi erişilebilir.  
@@ -36,5 +37,5 @@ Bazı durumlarda, bir uygulamada birden çok ayar kümesi sahip olmak isteyebili
 4.  Ekleyin ve diğer ayarları dosyası gibi bu dosyada ayarları kullanın. Bu ayar grubu Properties.Settings nesnesi aracılığıyla erişebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama ayarları ve kullanıcı ayarlarını kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [Uygulama ayarlarına genel bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+ [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [Uygulama Ayarlarına Genel Bakış](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 47a70e55d0f5b6197dc7c77b9e95f2279b814737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol Gradyanı Oluşturma
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı renkleri kademeli olarak değişen bir şekli doldurmak özelleştirmenize olanak tanır. Örneğin, merkezi bir yolu için tek bir renk ve başka bir renk sınırın bir yolu belirtebilirsiniz. Ayrıca her bir yolu sınırları boyunca çeşitli noktalar için ayrı renkleri belirtebilirsiniz.  
@@ -121,4 +122,4 @@ ms.lasthandoff: 10/22/2017
  Önceki örneklerde Windows Forms ile kullanılmak üzere tasarlanmıştır ve ihtiyaç <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Şekilleri doldurmak için gradyan fırçası kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+ [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

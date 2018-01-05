@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşıma için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
@@ -60,17 +61,17 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../..
   
 |örneği|Açıklama|Örnek|Çizim|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|Bir öğe tarafından belirtilen döndüğü <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Nesneyi döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Döndürme çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|Bir öğe tarafından belirtilen ölçeklendirir <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> tutarlar.|[Bir öğeyi ölçeklendirmek](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Ölçeklendirme çizim](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|Bir öğe tarafından belirtilen Eğer <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> tutarlar.|[Bir öğenin eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Çizim eğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|Taşır (çevirir) tarafından belirtilen bir öğe <xref:System.Windows.Media.TranslateTransform.X%2A> ve <xref:System.Windows.Media.TranslateTransform.Y%2A> tutarlar.|[Bir öğenin Çevir](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Çeviri çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|Bir öğe tarafından belirtilen döndüğü <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Nesne Döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Döndürme çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|Bir öğe tarafından belirtilen ölçeklendirir <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> ve <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> tutarlar.|[Öğe Ölçeklendirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Ölçeklendirme çizim](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|Bir öğe tarafından belirtilen Eğer <xref:System.Windows.Media.SkewTransform.AngleX%2A> ve <xref:System.Windows.Media.SkewTransform.AngleY%2A> tutarlar.|[Bir Öğeyi Eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Çizim eğme](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|Taşır (çevirir) tarafından belirtilen bir öğe <xref:System.Windows.Media.TranslateTransform.X%2A> ve <xref:System.Windows.Media.TranslateTransform.Y%2A> tutarlar.|[Bir Öğeyi Çevirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Çeviri çizimi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  Daha karmaşık dönüşümleri oluşturmak için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aşağıdaki iki sınıfı sağlar:  
   
 |örneği|Açıklama|Örnek|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|Grupları birden çok <xref:System.Windows.Media.TransformGroup> nesnelerini tek <xref:System.Windows.Media.Transform> , sonra Özellikler dönüştürmek için uygulayabilirsiniz.|[Nesneye birden çok Dönüşümler Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Tarafından sağlanmayan özel dönüşümleri oluşturur <xref:System.Windows.Media.Transform> sınıfları. Kullandığınızda, bir <xref:System.Windows.Media.MatrixTransform>, Matrisi doğrudan düzenlersiniz.|[Özel dönüşümleri oluşturmak için MatrixTransform kullanın](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|Grupları birden çok <xref:System.Windows.Media.TransformGroup> nesnelerini tek <xref:System.Windows.Media.Transform> , sonra Özellikler dönüştürmek için uygulayabilirsiniz.|[Nesneye Birden Çok Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Tarafından sağlanmayan özel dönüşümleri oluşturur <xref:System.Windows.Media.Transform> sınıfları. Kullandığınızda, bir <xref:System.Windows.Media.MatrixTransform>, Matrisi doğrudan düzenlersiniz.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Ayrıca sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] dönüşümler. Daha fazla bilgi için bkz: <xref:System.Windows.Media.Media3D.Transform3D> sınıfı.  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.509 dijital sertifikalar genellikle istemcilerin ve sunucuların kimliğini doğrulamak için kullanılan, şifrelemek ve iletileri dijital olarak imzala. Bu konu kısaca X.509 dijital sertifika özelliklerini ve bunların içinde nasıl kullanılacağını açıklamaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve bu kavramları daha fazla açıklamak veya kullanarak ortak görevleri gerçekleştirmek nasıl Göster konulara bağlantılar içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve sertifikalar.  
@@ -184,4 +185,4 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  
  <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

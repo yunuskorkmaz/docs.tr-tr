@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c30dd18e7303cf9fe913760da3f9dad7bca3c95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma
 Windows Gezgini'nde bir ortak kullanıcı arabirimi uygulamalar için kendi hazır benzerlik nedeniyle seçimdir.  
@@ -61,7 +62,7 @@ Windows Gezgini'nde bir ortak kullanıcı arabirimi uygulamalar için kendi haz�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SplitContainer>  
- [Nasıl yapılır: Windows formları ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- [Nasıl yapılır: yeniden boyutlandırma ve bölünmüş pencerede davranışı konumlandırma tanımlayın](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- [Nasıl yapılır: pencereyi yatay bölme](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- [SplitContainer denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+ [Nasıl yapılır: Windows Forms ile Çok Bölmeli Kullanıcı Arabirimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Nasıl yapılır: Pencereyi Yatay Bölme](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

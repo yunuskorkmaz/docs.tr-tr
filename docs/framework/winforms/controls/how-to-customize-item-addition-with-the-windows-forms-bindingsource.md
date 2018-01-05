@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d1978d3b2cf8634d9222ee5278077dfbe437d04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 807aa16e4d70a105bcd2fb1426a94d6fdcebbf31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Nasıl yapılır: Windows Forms BindingSource ile Öğe Eklemeyi Özelleştirme
 Kullandığınızda, bir <xref:System.Windows.Forms.BindingSource> bir Windows Forms denetimini bir veri kaynağına bağlama bileşeni yeni öğeler oluşturma özelleştirmek gerekli bulabilirsiniz. <xref:System.Windows.Forms.BindingSource> Bileşen yapar bu basit sağlayarak <xref:System.Windows.Forms.BindingSource.AddingNew> ilişkili denetim yeni bir öğe oluşturmak gerektiğinde genellikle oluşan olayı,. Olay işleyicinizi ne olursa olsun özel davranış (örneğin, bir Web hizmeti bir yöntemi çağırma veya yeni bir nesne bir sınıf fabrikası alma) gereklidir sağlayabilir.  
@@ -52,5 +53,5 @@ Kullandığınızda, bir <xref:System.Windows.Forms.BindingSource> bir Windows F
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

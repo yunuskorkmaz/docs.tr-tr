@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Yönetim Araçları (WMI) ve performans sayaçları (yönetilmeyen API Başvurusu)
 
@@ -28,15 +29,15 @@ API aşağıdaki işlevleri içerir:
 | [BeginMethodEnumeration işlevi](beginmethodenumeration.md) |  Bir nesne için kullanılabilen yöntemler numaralandırması başlar. |
 | [BlessIWbemServices işlevi](blessiwbemservices.md) | Kullanıcı kimlik bilgilerini belirli bir IWbemServices sınıf erişime olup olmadığını gösterir. |
 | [BlessIWbemServicesObject işlevi](blessiwbemservicesobject.md) | Kullanıcı kimlik bilgilerinin belirtilen IWbem servis nesnesi erişime olup olmadığını gösterir. |
-| [Kopya işlevi](clone.md) | Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür. |
+| [Clone işlevi](clone.md) | Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür. |
 | [CloneEnumWbemClassObject işlevi](cloneenumwbemclassobject.md) | Numaralandırma içindeki geçerli konumunu koruyarak bir numaralandırıcı mantıksal bir kopyasını oluşturur. |
 | [CompareTo işlevi](compareto.md) | Nesneyi başka bir Windows Yönetim nesnesi için karşılaştırır. |
 | [ConnectServerWmi işlevi](connectserverwmi.md) | Belirtilen bir bilgisayardaki bir WMI ad alanı için DCOM aracılığıyla yapılan bağlantı oluşturur. |
 | [CreateClassEnumWmi işlevi](createclassenumwmi.md) | Belirtilen seçim ölçütü karşılayan tüm sınıflar için bir numaralandırıcı döndürür. |
 | [CreateInstanceEnumWmi işlevi](createinstanceenumwmi.md) | Belirtilen bir sınıfın belirtilen seçim ölçütlerine intances döndüren bir numaralandırıcı döndürür. |
-| [İşlev Sil](delete.md) | Belirtilen bir özelliği bir sınıf tanımı ve tüm alt niteleyicileri siler. |
+| [Delete işlevi](delete.md) | Belirtilen bir özelliği bir sınıf tanımı ve tüm alt niteleyicileri siler. |
 | [DeleteMethod işlevi](deletemethod.md) | Belirtilen yöntem bir CIM sınıfı tanımından siler. |
-| [Örneğin işlevi](endenumeration.md) | Bir numaralandırma sırasını sonlandırır. | 
+| [EndEnumeration işlevi](endenumeration.md) | Bir numaralandırma sırasını sonlandırır. | 
 | [EndMethodEnumeration işlevi](endmethodenumeration.md) | Çağrılarak başlatılan bir numaralandırma sırasını sonlandırır [BeginMethodEnumeration işlevi](beginmethodenumeration.md). |
 | [ExecNotificationQueryWmi işlevi](execnotificationquerywmi.md) | Olaylarını almak için bir sorgu yürütür. |
 | [ExecQueryWmi işlevi](execquerywmi.md) | Nesneleri almak için bir sorgu yürütür. |

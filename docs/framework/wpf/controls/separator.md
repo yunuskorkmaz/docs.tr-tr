@@ -17,11 +17,12 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c630c92b8b6fd6a419f9e99f7719e5a0dab2358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b2a4755f506007cb38dbb9bddc33f01c0f9b5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="separator"></a>Ayırıcı
 A <xref:System.Windows.Controls.Separator> denetim çizer çizgi, yatay veya dikey, denetimler, içindeki öğeler arasında gibi <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, ve <xref:System.Windows.Controls.ToolBar>.  

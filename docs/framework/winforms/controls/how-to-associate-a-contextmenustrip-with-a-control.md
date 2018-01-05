@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0681e837e324bd62f28e673c22e29103dbe0abcf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7307af535dce39443b623e1fee4491dd48ffbd94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Nasıl yapılır: ContextMenuStrip'ni Bir Denetimle İlişkilendirme
 Kısayol menüleri ve denetimleri oluşturduktan sonra kullanıcı denetimi tıklattığında verilen kısayol menüsünü görüntülemek için aşağıdaki yordamları kullanın. Bu yordamları ilişkilendirmek bir <xref:System.Windows.Forms.ContextMenuStrip> ve bir Windows formu ile bir <xref:System.Windows.Forms.ToolStrip> denetim.  
@@ -55,5 +56,5 @@ Kısayol menüleri ve denetimleri oluşturduktan sonra kullanıcı denetimi tık
  <xref:System.Windows.Forms.ContextMenuStrip>  
  <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>  
  <xref:System.Windows.Forms.ToolStrip>  
- [Nasıl yapılır: bir Contextmenustrip'ne menü öğeleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
- [ContextMenuStrip denetimi](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+ [Nasıl yapılır: Bir ContextMenuStrip'e Menü Öğeleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
+ [ContextMenuStrip Denetimi](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52726a770e33bec4b5ec9b24f33deb44ed6379b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fabe176ade1ae94a20100162ab7ab6fadfb2999f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>Nasıl Yapılır: OpenFileDialog Bileşenini Kullanarak Dosyaları Açma
 <xref:System.Windows.Forms.OpenFileDialog> Bileşeni, kullanıcıların ağ üzerindeki herhangi bir bilgisayar veya bilgisayarlarını klasörleri bulun ve açmak için bir veya daha fazla dosya seçin sağlar. İletişim kutusu, iletişim kutusunda seçili kullanıcı dosyasının adını ve yolunu döndürür.  
@@ -185,4 +186,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.OpenFileDialog>  
- [OpenFileDialog bileşeni](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+ [OpenFileDialog Bileşeni](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

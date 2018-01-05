@@ -15,11 +15,12 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; öğesi
 Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini belirtir. Bu öğe, .NET Framework'ün 1.1 veya sonraki bir sürümüyle oluşturulan tüm uygulamaları tarafından kullanılmalıdır.  
@@ -46,7 +47,7 @@ Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini bel
 ## <a name="remarks"></a>Açıklamalar  
 Varsa  **\<supportedRuntime >** öğesi uygulama yapılandırma dosyasında mevcut değil, uygulama oluşturmak için kullanılan çalışma zamanı sürümü kullanılır.  
 
-**\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) öğesi.  
+ **\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) öğesi.  
   
 > [!NOTE]
 >  Kullanırsanız [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyası belirtmek için işlev, kullanmalısınız `<requiredRuntime>` öğesi çalışma zamanının tüm sürümler için. `<supportedRuntime>` Öğesi göz ardı edilir kullandığınızda [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -111,5 +112,5 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [İşlem içi yan yana yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [İşlem İçi Yan Yana Yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

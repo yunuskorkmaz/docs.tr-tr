@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284bd30a0a42f245c6b75d916853b264c7f72e6a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 83ee8c5e0cd578a0eb821a35a27c5ff0072e5533
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modeline Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) uygulamaları iki türden erişebilirsiniz:  
@@ -56,4 +57,4 @@ Yönetilen HTML belgesi nesne modeli (DOM) uygulamaları iki türden erişebilir
 1.  Uygulamanızı veya <xref:System.Windows.Forms.UserControl> yönetilen HTML DOM erişmek için tam güven gerektirir Windows Forms uygulaması kullanarak dağıtıyorsanız [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], izin yükseltme veya güvenilir uygulama dağıtımı kullanarak tam güven isteyebilir; bkz [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications) Ayrıntılar için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen HTML belgesi nesne modelini kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+ [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

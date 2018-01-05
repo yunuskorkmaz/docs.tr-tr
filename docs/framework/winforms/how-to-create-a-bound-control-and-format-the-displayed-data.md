@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8c2836d841215ed3ca8e04461b1298cd41287de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33d5491feccacba7f7b010b57e890ff7543a46f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme
 Windows Forms veri bağlama ile kullanarak bir veri bağlama denetiminde gösterilen veriler biçimlendirebilirsiniz **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu.  
@@ -65,6 +66,6 @@ Windows Forms veri bağlama ile kullanarak bir veri bağlama denetiminde göster
 8.  Tıklatın **Tamam** kapatmak için **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu ve Özellikler penceresini dönün.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Windows Forms'ta kullanıcı girdisi doğrulama](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Windows Forms veri bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
+ [Windows Forms'ta Kullanıcı Girdisi Doğrulama](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)

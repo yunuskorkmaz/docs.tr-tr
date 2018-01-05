@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: dce5f5ae2d672349c21a89bb35a56da0b11f864a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b117b8b75cd4b90f3689fa535b0afbac0ca00fdc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-datasets"></a>ADO.NET veri kümeleri
 <xref:System.Data.DataSet> Dağıtılmış veri senaryoları ile bağlantısı kesildi, Destek Merkezi nesnesidir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **DataSet** bir veri kaynağı bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlar veri bellekte gösterimidir. Birden fazla ile kullanılabilir ve farklı veri kaynakları, XML verileriyle ya da uygulamaya yerel verileri yönetmek için. **DataSet** ilişkili tabloları, kısıtlamalar ve tablolar arasında ilişkiler gibi veriler, eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **DataSet** nesne modeli.  
@@ -56,7 +57,7 @@ Veri kümesi nesne modeli
  Daha fazla bilgi için bkz: [LINQ-DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET genel bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Alma ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

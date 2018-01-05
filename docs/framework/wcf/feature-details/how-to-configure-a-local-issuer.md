@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90edf0735d890e0abc1560de5a7f523ee2faa7c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
 Bu konu, istemciyi yerel yayımlayan verilen belirteçleri kullanacak şekilde yapılandırmak açıklar.  
@@ -85,6 +86,6 @@ Bu konu, istemciyi yerel yayımlayan verilen belirteçleri kullanacak şekilde y
  Bir veren adresi ve bağlama için belirtilen bir bağlama belirtilirse, yerel yayımlayan bu bağlamayı kullanan uç noktaları için kullanılıp kullanılmadığını unutmayın. Her zaman yerel yayımlayan kullanmayı düşündüğünüz istemcileri sağlamak veren adresi böylece bunlar bağlama değiştirmek veya böyle bir bağlama kullanmayın `null`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

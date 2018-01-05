@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a465ae44d3b8a4c43e5e34eaeedcd739d328bff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Nasıl yapılır: ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme
 Varsayılan olarak, her bir sütunun içeriğini bir <xref:System.Windows.Controls.ListViewItem> sola hizalı değil. Her sütunun hizalamasını sağlayarak değiştirebileceğiniz bir <xref:System.Windows.DataTemplate> ve ayarı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> öğe içinde özellikte <xref:System.Windows.DataTemplate>. Bu konuda gösterilmektedir nasıl bir <xref:System.Windows.Controls.ListView> içeriğini varsayılan ve bir sütunda hizalamasını değiştirme hizalar bir <xref:System.Windows.Controls.ListView>.  
@@ -37,7 +38,7 @@ Varsayılan olarak, her bir sütunun içeriğini bir <xref:System.Windows.Contro
 [!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Bir XMLDataProvider ve XPath sorgularını kullanarak XML verilere bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)

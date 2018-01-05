@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle oluştururken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulamaları, geliştiricilerin serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini içinde veri yazımının iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri aktarımı hizmet sözleşmelerinde belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -457,5 +458,5 @@ public class OperationDetails
  İleti nesnesi olarak almak istiyorsanız `Result` özelliği ve bu nesne üzerinde özellikleri kullanma gibi döndürülen değerlere sahip `/messageContract` komut seçeneği. Bu olarak yanıt iletisi döndüren bir imza oluşturur `Result` özellikte <xref:System.EventArgs> nesnesi. Tüm iç dönüş değerleri yanıt iletisi nesnesi sonra özellikleridir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)

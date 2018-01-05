@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d000cd88fc9ee9fd48ef25e9bb4982688564a2a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ba91b42bc9815b1b12fdc761882741b11790060
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-strings-in-net"></a>.NET ile yeni dizeler oluşturma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Basit atama kullanılarak oluşturulması dizeleri sağlar ve aynı zamanda çok sayıda farklı parametreler kullanarak dize oluşturma desteklemek için bir sınıf oluşturucu overloads. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca çeşitli yöntemlerin sağlar <xref:System.String?displayProperty=nameWithType> yeni bir dize oluşturma sınıf nesneleri birkaç dizeleri, dizeleri, dizilerin birleştirerek veya nesneleri.  
@@ -88,5 +91,5 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
- [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+ [Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)

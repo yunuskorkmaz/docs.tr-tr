@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec80eed37777fc7b17b435e1bef63ecbb94bdf46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10558348a963f0b243dcfbe23171f6e24da6da0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>İzlenecek yol: WPF'de Direct3D9 İçeriği Barındırma
 Bu kılavuz, bir Windows Presentation Foundation (WPF) uygulamasında Direct3D9 içeriğini barındırmak gösterilmiştir.  
@@ -83,4 +84,4 @@ Bu kılavuz, bir Windows Presentation Foundation (WPF) uygulamasında Direct3D9 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Interop.D3DImage>  
- [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+ [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)

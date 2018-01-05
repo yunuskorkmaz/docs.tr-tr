@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen denetimleri için temel bir veri kaynağına bağlama işlemini basitleştirmek için tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen bir conduit ve bağlamak diğer denetimler için bir veri kaynağı olarak davranır. Temel alınan veri listesine komutları geçirme sırasında formun veri bağlantısı için bir Özet sağlar. Böylece bir veri kaynağı olarak bileşen işlevleri Ayrıca, veri doğrudan bu onu ekleyebilirsiniz.  
@@ -70,8 +71,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
- [BindingSource bileşeni mimarisi](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [BindingSource Bileşeni Mimarisi](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

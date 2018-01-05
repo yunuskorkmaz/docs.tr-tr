@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ca1eb73842f3f7dac5557c1eafff637396d317a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ASP.NET Web Hizmetleri gibi Hizmetleri Internet Information Services (IIS) içinde barındırmak için tesis oluşturmak için .NET Framework sınıf kitaplıkları ve araçlar sağlar. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].NET Framework sınıf kitaplıkları, araçları ve Web Hizmetleri tarafından kullanılan dahil olmak üzere herhangi bir protokol kullanarak iletişim kurmak için yazılım varlıkları etkinleştirme barındırma olanakları sağlar.  Geçirme ASP.NET Web Hizmetleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni özellikleri ve özgü geliştirmeleri avantajlarından yararlanmak, uygulamaların sağlayan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -46,8 +47,8 @@ ASP.NET Web Hizmetleri gibi Hizmetleri Internet Information Services (IIS) için
  Bu bölümde bu seçenekler ayrıntılı açıklar, ASP.NET Web Hizmetleri için karşılaştırır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve ASP.NET Web Hizmetleri kodunuzu geçirmek yönergeler sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation'ı benimsemeyi bekleme: gelecekteki taşınmayı kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
- [Windows Communication Foundation'ı benimsemeyi bekleme: gelecekteki tümleştirmeyi kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
- [Windows Communication Foundation'ı benimsemeyi](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
- [ASP.NET Web hizmetlerini amaç temel alarak WCF ve kullanılan standartları karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
- [ASP.NET Web hizmetlerini geliştirmeye göre WCF karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+ [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  
+ [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)  
+ [Windows Communication Foundation'ı Benimseme](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)  
+ [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)  
+ [ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

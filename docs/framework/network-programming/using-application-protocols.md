@@ -23,16 +23,17 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: cbbdc2f3fc326de43e9e6a066350ef28aacbec05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8e87e800e9f1b3a2627716d5e2116e5ba08b837
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-protocols"></a>Uygulama protokolleri kullanma
 .NET Framework yaygın olarak kullanılan Internet uygulama protokollerini destekler. Bu bölümde kullanma hakkında bilgi içeren [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
- [Ağ programlama örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
+ [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN kod Galerisi'nden .NET ağ örnekleri](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

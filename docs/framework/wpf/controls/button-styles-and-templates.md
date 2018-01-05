@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27d68cd4102e8ba8502f1be5a9709082fa3d9ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bea309cea0ed6d21b747f31794f1ebb440bf102
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-styles-and-templates"></a>Düğme Stilleri ve Şablonları
 Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows.Controls.Button> denetim. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetimi benzersiz bir görünüm vermek için. Daha fazla bilgi için bkz: [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -61,7 +62,7 @@ Stilleri ve şablonları için bu konuda açıklanmaktadır <xref:System.Windows
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim stilleri ve şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+ [Denetim Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

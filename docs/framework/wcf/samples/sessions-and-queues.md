@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9479308dd29c6d65599ffa1bfcc88f6baefae16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-and-queues"></a>Oturumlar ve Kuyruklar
 Bu örnek, gönderip bir dizi ilgili ileti kuyruğa alınan iletişim Message Queuing (MSMQ) aktarımı üzerinden gösterilmiştir. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  

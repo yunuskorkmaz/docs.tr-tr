@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ef5406831e1bfaa9c1c4f959363bc8b26cd3820
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-exchange-protocol"></a>Bağlam Değişimi Protokolü
 Bu bölümde sunulan bağlam değişimi protokolü açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] serbest bırakın. Bu protokol hizmeti tarafından sağlanan bir bağlam kabul etmek ve tüm istekler aynı istemci kanal örneği gönderilen bu hizmete uygulamak istemci kanal sağlar. Bağlam değişimi Protokolü aşağıdaki iki mekanizmalardan biri sunucu ve istemci arasındaki bağlam yaymak için kullanabilirsiniz: HTTP tanımlama bilgilerini veya SOAP üstbilgisi.  
@@ -78,4 +79,4 @@ Bu bölümde sunulan bağlam değişimi protokolü açıklar [!INCLUDE[indigo1](
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+ [Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

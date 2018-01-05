@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 538b2e9cc1ce11dc336a8d90ec84ba504baa6f2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac3e03cfc0ca8bbb6f61f1bc6663c67fd6303f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı
 Özellik değeri devralma özelliğidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi. Özellik değeri devralma ağacında belirli bir özellik değerini en yakın üst öğede herhangi bir yere ayarlanmış olarak bu değer devralma öğeler, üst öğeden elde öğelerinin alt öğeleri sağlar. Sistem büyük olasılıkla bu süreç boyunca tüm sayfa kök recurses şekilde üst öğenin de değerini özellik değeri devralma aracılığıyla elde. Özellik değeri devralma varsayılan özellik sistemi davranış değildir; bir özellik, özellik değeri devralma, alt öğelerde başlatmak bu özelliği neden için belirli meta veri ayarı ile oluşturulmuş olmalıdır.  
@@ -52,6 +53,6 @@ ms.lasthandoff: 11/21/2017
  Özellik devralma öğeleri ağacının çapraz geçiş yapan çalışır. Bu genellikle mantıksal ağacının paralel ağacıdır. Bununla birlikte, her dahil WPF çekirdek düzeyinde bir nesne gibi bir öğe ağacı tanımlayan biçimlendirmedeki bir <xref:System.Windows.Media.Brush>, kesintili bir mantıksal ağaç oluşturdunuz. True mantıksal ağacının yoluyla kavramsal olarak genişlemez <xref:System.Windows.Media.Brush>, çünkü mantıksal ağacının bir WPF çerçeve düzeyi kavramıdır. Bu yöntemleri kullanarak sonuçları yansıtılmış görebilirsiniz <xref:System.Windows.LogicalTreeHelper>. Ancak, özellik değeri devralma bu mantıksal ağacında boşluğunu ve devralınabilir özellik iliştirilmiş bir özellik ve kasıtlı devralmayı engelleme sınır kayıtlı olduğu sürece, devralınan değerleri hala geçirebilirsiniz (bir gibi<xref:System.Windows.Controls.Frame>) ile karşılaşıldı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağımlılık özelliği meta verileri](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Ekli özellikler genel bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Bağımlılık özelliği değeri önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+ [Bağımlılık Özelliği Meta Verisi](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Ekli Özelliklere Genel Bakış](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
+ [Bağımlılık Özelliği Değer Önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)

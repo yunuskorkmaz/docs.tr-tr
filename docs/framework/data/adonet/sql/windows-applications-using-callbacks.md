@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e1ee2acfec989ac76ced5d4f5a47f49d72152ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-applications-using-callbacks"></a>Geri aramalar kullanarak Windows uygulamaları
 Çoğu zaman uyumsuz işleme senaryoda, bir veritabanı işlemini başlatmak ve veritabanı işlemin tamamlanmasını beklemeden çalışan diğer işlemleri devam etmek istiyor. Ancak, birçok senaryo veritabanı işlemi sona erdikten sonra bir şey yapmak gerektirir. Örneğin, bir Windows uygulamasında yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı verirken uzun süre çalışan işlemi için bir arka plan iş parçacığı temsilci isteyebilirsiniz. Ancak, veritabanı işlemi tamamlandığında, sonuçları formu doldurmak için kullanmak istediğiniz. Bu tür senaryosu en iyi bir geri arama ile uygulanır.  
@@ -389,5 +390,5 @@ private void Form1_Load(object sender, System.EventArgs e)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz işlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

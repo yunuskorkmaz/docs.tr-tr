@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f3e01e54cb60c7da1a57940246c5402ba635778
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
@@ -162,5 +163,5 @@ public class App
  <xref:System.Management>  
  <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
  <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

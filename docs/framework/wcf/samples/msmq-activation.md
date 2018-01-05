@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4112be5980bee171d0b6b79f0126919f1d0865d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak gösterilmiştir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırdığı bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satınalma siparişi durumunu izlemek için konsola çıkarır.  

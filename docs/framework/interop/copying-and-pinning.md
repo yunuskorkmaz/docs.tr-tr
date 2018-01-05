@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Verileri hazırlama, birlikte çalışabilirlik Sıralayıcı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını tek bir yerden bellek başka bir bellek konuma yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirildi.  
@@ -86,7 +87,7 @@ Değer ve başvuru tarafından geçirilen başvuru türleri
  Zaman bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değeri, iç arabellek başvuru Sıralayıcı geçişleri tarafından geçirilen **StringBuilder** doğrudan çağırana. Çağıran ve çağrılan arabellek boyutunu kabul etmeniz gerekir. Arayan oluşturmaktan sorumlu bir **StringBuilder** yeterli uzunluğu. Aranan arabellek değil taşması emin olmak için gerekli önlemleri almalıdır. **StringBuilder** olduğu değeri tarafından geçirilen türler başvuru kural için bir özel parametreler olduğu gibi varsayılan olarak geçirilir. Bu her zaman geçirilen olarak giriş/çıkış.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan hazırlama davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Bellek yönetimi ile birlikte çalışma Sıralayıcı](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
  [Tek yönlü öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+ [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

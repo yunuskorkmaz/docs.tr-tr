@@ -1,5 +1,5 @@
 ---
-title: "Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları"
+title: "Güvenlik Doğrulama ve Kimlik Doğrulama Hataları"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,13 +13,14 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c1d448d709c7ad20e9d08a291f5a38546cd93ce4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c52b54d2be2e824de478e0ee9ec2452c57e181b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="security-validation-and-authentication-failures"></a>Güvenlik Doğrulaması ve Kimlik Doğrulaması Hataları
+# <a name="security-validation-and-authentication-failures"></a>Güvenlik Doğrulama ve Kimlik Doğrulama Hataları
 Sayaç adı: güvenlik doğrulaması ve kimlik doğrulama hataları  
   
 ## <a name="description"></a>Açıklama  

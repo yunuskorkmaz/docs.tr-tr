@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], bir istemci için oluşturma bir *Federasyon Hizmeti* üç ana adımdan oluşur:  
@@ -171,10 +172,10 @@ ms.lasthandoff: 12/02/2017
 >  Verili URI için kapsamlı sertifikaları istemci fikrini yalnızca Uç noktalara bu URI kullanıma hizmetlerine giden çağrıları yapma uygulamalar için geçerlidir. Tarafından döndürülen toplama sunucusuna yapılandırılanlar gibi verilen Belirteçleri imzalamak için kullanılan sertifikaları uygulanmaz <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> sınıfı. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Nasıl yapılır: Güvenli WSFederationHttpBinding gücenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Nasıl yapılır: meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+ [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

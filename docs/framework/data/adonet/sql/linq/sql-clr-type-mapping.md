@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 885c87439ebf7393380c7ff20165d8587f1b26f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84c7f870edd1c8082936b380547e181d129f529e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-type-mapping"></a>SQL CLR türü eşlemesi
 LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ilişkisel veritabanı veri modelinin eşler. Uygulama çalıştırıldığında LINQ-SQL dil ile tümleşik sorgu nesne modelinde SQL'e çevirir ve bunları yürütme için veritabanı gönderir. LINQ-SQL veritabanı sonuçları döndürdüğünde, geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
@@ -265,7 +266,7 @@ LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ili
  LINQ-SQL bu çeşitli türleri için başka bir tür eşlemeleri desteklemez.  Daha fazla bilgi için bkz: [türü eşleme çalıştırma zamanı davranışı matris](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Veri türleri ve işlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL CLR türüyle eşleşmiyor](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+ [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
+ [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

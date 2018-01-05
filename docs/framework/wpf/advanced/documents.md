@@ -15,22 +15,23 @@ caps.latest.revision: "86"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 921a9f3abd8c4cba8cfa0f59b8321ee309642dbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f65d6c25627ba84ffe83677bbaadfc2e55e6f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents"></a>Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi uygulamaları oluşturmak, geliştiricilerin bileşenleri yönlü kümesi sağlar. Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Belgeyi seri hale getirme ve depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [Ek Açıklamalar](../../../../docs/framework/wpf/advanced/annotations.md)  
- [İçerik akışı](../../../../docs/framework/wpf/advanced/flow-content.md)  
+ [Akış İçeriği](../../../../docs/framework/wpf/advanced/flow-content.md)  
  [Tipografi](../../../../docs/framework/wpf/advanced/typography.md)  
- [Yazdırma ve baskı Sistem Yönetimi](../../../../docs/framework/wpf/advanced/printing-and-print-system-management.md)  
+ [Yazdırma ve Yazdırma Sistemi Yönetimi](../../../../docs/framework/wpf/advanced/printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.DocumentViewer>  

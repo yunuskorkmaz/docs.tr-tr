@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1d39d1666f63d7d6f7a6154a124280486c3fccce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0235a63a24f81968718d526ff676b023c060b9a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden fazla etkin sonuç kümesi etkinleştirme
 Birden fazla etkin sonuç kümeleri (MARS) birden çok toplu işlem yürütme üzerinde tek bir bağlantıya izin vermek için SQL Server ile çalışan bir özelliktir. MARS, SQL Server ile kullanmak için etkinleştirildiğinde, kullanılan her komut nesnesi bir oturum bağlantısı ekler.  
@@ -122,5 +123,5 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS okuyarak desteği için bir uygulama denetleyebilirsiniz `SqlConnection.ServerVersion` değeri. Ana 9 SQL Server 2005 ve SQL Server 2008 için 10 olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birden fazla etkin sonuç kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

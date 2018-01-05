@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 42298bc8e3101b03f6c3e03fec453b72cd959efb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-programming-patterns"></a>Zaman Uyumsuz Programlama Desenleri
 
@@ -80,9 +83,9 @@ DOKUNUN, APM ve EAP kapsamlı bir tartışma için sonraki bölümde sağlanan b
 
 | Başlık | Açıklama |
 | ----- | ----------- |
-| [Zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | Kullanan eski modeli açıklayan <xref:System.IAsyncResult> zaman uyumsuz davranışı sağlamak için arabirim. Bu model, artık yeni geliştirme projeleri için önerilir. |
-| [Olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | Zaman uyumsuz davranışı sağlamak için olay tabanlı eski modeli açıklar. Bu model, artık yeni geliştirme projeleri için önerilir. |
-| [Görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | Temel yeni zaman uyumsuz deseni açıklar <xref:System.Threading.Tasks> ad alanı. Bu model, .NET Framework 4 ve sonraki sürümlerde zaman uyumsuz programlama için önerilen yaklaşımdır. |
+| [Zaman Uyumsuz Programlama Modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | Kullanan eski modeli açıklayan <xref:System.IAsyncResult> zaman uyumsuz davranışı sağlamak için arabirim. Bu model, artık yeni geliştirme projeleri için önerilir. |
+| [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | Zaman uyumsuz davranışı sağlamak için olay tabanlı eski modeli açıklar. Bu model, artık yeni geliştirme projeleri için önerilir. |
+| [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | Temel yeni zaman uyumsuz deseni açıklar <xref:System.Threading.Tasks> ad alanı. Bu model, .NET Framework 4 ve sonraki sürümlerde zaman uyumsuz programlama için önerilen yaklaşımdır. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

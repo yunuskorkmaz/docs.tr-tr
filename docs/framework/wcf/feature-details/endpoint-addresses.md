@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumunu belirten URI), oluşur. Uç nokta adresi temsil edilen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programlama modeli tarafından <xref:System.ServiceModel.EndpointAddress> isteğe bağlı bir içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası ile ileti değiş tokuşu diğer uç noktaları tarafından kimlik doğrulamasını etkinleştirir özelliği ve İsteğe bağlı kümesi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gerekli diğer SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üstbilgi ek sağlar ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşim kurmak için adresleme bilgi. Bir uç nokta adresi kablo WS adresleme uç noktası başvuru olarak (EPR) gösterilir.  
@@ -148,5 +149,5 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
  Bazı senaryolarda, bir uç nokta temel aktarımı ve uygun yalnızca olanlar gelen tüm iletileri alır `To` üstbilgi. Bunu etkinleştirmek için kullanıcı kullanabilir <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir uç noktası adresi belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Uç Nokta Adresi Belirtme](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

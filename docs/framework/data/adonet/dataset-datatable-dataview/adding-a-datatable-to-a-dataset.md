@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f70292794866530de5b7abf7dac1edd09d300c94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5846f93cfa75d7f0e760a24ee65fa838abc1eb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>DataTable bir veri kümesine ekleme
 ADO.NET oluşturmanıza olanak sağlayan <xref:System.Data.DataTable> nesneleri ve var olan eklemesini <xref:System.Data.DataSet>. Kısıtlama bilgi için ayarlayabileceğiniz bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.PrimaryKey%2A> ve <xref:System.Data.DataColumn.Unique%2A> özellikleri.  
@@ -43,5 +44,5 @@ ADO.NET oluşturmanıza olanak sağlayan <xref:System.Data.DataTable> nesneleri 
  Farklı ad alanlarında olsa bile ADO.NET'ın 2.0'den önceki sürümlerinde aynı adlı iki tablo sahip. Bu sınırlama aşağıdaki haller ADO.NET 2.0 kaldırıldı. A <xref:System.Data.DataSet> aynı olan iki tablo içerebilir <xref:System.Data.DataTable.TableName%2A> özellik değeri farklı ancak <xref:System.Data.DataTable.Namespace%2A> özellik değerleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

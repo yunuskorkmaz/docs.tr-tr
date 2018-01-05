@@ -17,24 +17,25 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10a3dc67cb1edffb01671d34c8671f8228146bf3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9860b90ad61dcd53a990235acb3924c08168782b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (Yönetilmeyen API Başvurusu)
 Fusion API uygulama için bu kaynakların doğru sürümlerini bulmak için uygulamanın kaynak özelliklerine erişmek bir çalışma zamanı ana bilgisayarı sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Fusion arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  Fusion API kullanan yönetilmeyen arabirimler açıklanmaktadır.  
   
- [Fusion genel statik işlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
  Fusion API kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.  
   
- [Fusion numaralandırmaları](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
  Fusion API kullanan yönetilmeyen numaralandırmalar açıklar.  
   
- [Fusion yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
+ [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
  Fusion API kullanan yönetilmeyen yapılar açıklar.

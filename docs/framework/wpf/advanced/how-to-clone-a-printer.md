@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 303cb9c1c5b6521839987a56cdc008eac0559cf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-clone-a-printer"></a>Nasıl yapılır: Yazıcı Kopyalama
 Çoğu işletme belirli bir noktada aynı modelin birden çok yazıcı satın alacaklardır. Genellikle, bunlar tüm neredeyse aynı yapılandırma ayarları ile yüklenir. Her yazıcı yükleme alabilir ve hataya. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Ad alanı ve <xref:System.Printing.PrintServer.InstallPrintQueue%2A> ile sunulan sınıfı [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] var olan bir yazdırma kuyruğundan kopyalandığı ek yazdırma sıralarını herhangi bir sayıda hemen yüklemeye olanak sağlar.  
@@ -71,5 +72,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing.LocalPrintServer>  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Collections.DictionaryEntry>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

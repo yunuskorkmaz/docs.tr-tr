@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a779229a61d18ec835197bafac66579c026e2ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bbbe8dbbfa6b2aebd3834314f0f56b7c7643c21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
 MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), bu formların kullanıcı etkileşimi merkezi olarak.  
@@ -117,8 +118,8 @@ MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamal
     >  MDI alt formu olduğunda bir <xref:System.Windows.Forms.MainMenu> bileşeni (yapısıyla, genellikle, menü menü öğeleri) ve onu içeren MDI üst formu içinde açıldığında bir <xref:System.Windows.Forms.MainMenu> bileşeni (ile genellikle bir menü yapısı menü öğelerinin), öğeleri birleştirme otomatik olarak menüsü ayarlamış olmanız durumunda <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği (ve isteğe bağlı olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği). Ayarlama <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği hem <xref:System.Windows.Forms.MainMenu> bileşenleri ve tüm alt formun menü öğelerinin <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ayrıca, olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği hem menülerden menü öğelerini böylece sıralamada görünür. Ayrıca, MDI üst formu kapattığınızda, her MDI alt başlatır forms göz önünde bulundurmanız bir <xref:System.Windows.Forms.Form.Closing> önce olay <xref:System.Windows.Forms.Form.Closing> MDI üst olayı oluşturulur. Bir MDI çocuğun iptal etme <xref:System.Windows.Forms.Form.Closing> olay MDI üst öğenin engellemez <xref:System.Windows.Forms.Form.Closing> gerçekleştirilen; gelen olay ancak <xref:System.ComponentModel.CancelEventArgs> MDI üst öğenin için bağımsız değişken <xref:System.Windows.Forms.Form.Closing> olay şimdi şekilde ayarlanacak `true`. MDI ve tüm MDI alt formları ayarlayarak kapatmaya zorlamak <xref:System.ComponentModel.CancelEventArgs> bağımsız değişkeni `false`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birden çok belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Nasıl yapılır: etkin MDI alt öğesini belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Nasıl yapılır: etkin MDI alt öğesine veri gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- [Nasıl yapılır: MDI alt formlarını düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+ [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [Nasıl yapılır: MDI Üst Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
+ [Nasıl yapılır: MDI Alt Formlarını Düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

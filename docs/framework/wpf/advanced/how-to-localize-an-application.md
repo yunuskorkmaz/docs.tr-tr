@@ -16,11 +16,12 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğretici LocBaml aracını kullanarak yerelleştirilmiş bir uygulama oluşturma açıklanmaktadır.  
@@ -216,5 +217,5 @@ Bu öğretici LocBaml aracını kullanarak yerelleştirilmiş bir uygulama oluş
  Şimdi LocBaml aracının nasıl kullanılacağını ilgili temel bilgilere sahip olmalıdır.  Uıd'leri içeren bir dosyayı olun olması gerekir. LocBaml aracını kullanarak, yerelleştirilebilir içerik ayıklamak için dosyayı ayrıştırabiliyor olmalıdır ve içeriği çevrilen sonra oluşturabilir olmalıdır bir. çevrilmiş içeriği birleştiren resources.dll dosyası. Bu konu, olası her ayrıntıyı içermez, ancak şu anda uygulamalarınızı yerelleştirme için LocBaml kullanmak için gerekli bilgiye sahipsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF için genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Otomatik Düzen Kullanım genel bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+ [WPF için Genelleştirme](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [Otomatik Düzen Kullanımına Genel Bakış](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

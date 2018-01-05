@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fb2f920928002e4ee374e36f307a537e4af593c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 142973793fd002925bbe2b4b09ce8e6d34553031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 ya da DirectX gibi bir uygulama içinde birden çok sunu teknolojileri kullanılıyorsa, ortak bir üst düzey penceresi içinde işleme alanlarını paylaşması gerekir. Bu konu, sunu ve WPF birlikte çalışabilirlik uygulamanız için giriş etkileyebilir sorunları açıklar.  
@@ -71,6 +72,6 @@ WPF, Win32 ya da DirectX gibi bir uygulama içinde birden çok sunu teknolojiler
 -   Uygulamanızı çalışıyorsa [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], windows üzerinde katmanlanmış [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yüzeyleri Titreşim zaman [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] uygulama işler.  (Gerçek işleme dizisi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencere sonra gizler [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] çizer ve ardından [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri koyar).  Olmayan[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı windows de bu sınırlamaya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF ve Win32 birlikte çalışma](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [İzlenecek yol: bir WPF saatin Win32 barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)  
- [Win32 WPF içeriği barındırma](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+ [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [İzlenecek yol: Win32'de WPF Saati Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)  
+ [WPF'de Win32 İçeriği Barındırma](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)

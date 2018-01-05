@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8658b51515d8d3934613b40a8d4bec0ab9bf618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma
 Örnek metin özel çizim gösterir bir <xref:System.Windows.Forms.ComboBox> denetim. Bir öğe belirli bir ölçütü karşıladığında büyük yazı tipiyle çizilmiş ve kırmızı açık.  
@@ -80,6 +81,6 @@ End Sub
  <xref:System.Windows.Forms.ComboBox.DrawItem>  
  <xref:System.Windows.Forms.DrawItemEventArgs>  
  <xref:System.Windows.Forms.ComboBox.MeasureItem>  
- [Yerleşik sahip çizimi destekli denetimler](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [ListBox denetimi](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- [ComboBox denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+ [Yerleşik Sahip Çizimi Destekli Denetimler](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [ListBox Denetimi](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [ComboBox Denetimi](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

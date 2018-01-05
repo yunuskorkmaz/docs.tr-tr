@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf852c67bec8abb2af3593d537010e5cc2718176
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Yeniden Girme
 Bu örnek, elde etmenizi ve bir hizmet uygulaması ConcurrencyMode.Reentrant kullanmanın etkileri gösterir. ConcurrencyMode.Reentrant gelir hizmetinin (veya geri çağırma) tek bir ileti belirli bir zamanda işleyen (benzer `ConcurencyMode.Single`). İş parçacığı güvenliği sağlamak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kilitleri `InstanceContext` böylece başka iletiler işlenebilen bir ileti işleme. Desteklemeyeceğini modu durumunda `InstanceContext` yalnızca hizmet (aşağıdaki örnekte gösterildiği gibi desteklemeyeceğini olabilir) sonraki çağrısını, böylece izin giden bir çağrı yapar önce kilidinin açık olduğundan bu geldiğinde hizmete sonraki zamanı kilidi elde etmek. Davranış göstermek için bir istemci ve hizmet iletileri birbirine çift yönlü sözleşme kullanma arasında nasıl gönderebilirsiniz örnek göstermektedir.  

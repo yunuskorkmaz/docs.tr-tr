@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Microsoft Windows Hizmetleri, önceden NT hizmeti olarak bilinen kendi Windows oturumlarında çalışan uzun süre çalışan yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bilgisayar önyükleme yaptığında, bu hizmetler otomatik olarak yeniden başlatılabilir duraklatıldı ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla etkilemediğinden uzun süre çalışan işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Oturum açmış olan kullanıcının farklı belirli bir kullanıcı hesabı veya varsayılan bilgisayar hesabının güvenlik bağlamı hizmetleri de çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  
@@ -89,11 +90,11 @@ Microsoft Windows Hizmetleri, önceden NT hizmeti olarak bilinen kendi Windows o
 -   Windows Hizmetleri içeren projeler proje ve Hizmetleri için Yükleme bileşenleri olması gerekir. Bu gelen kolayca gerçekleştirilebilir **özellikleri** penceresi. Daha fazla bilgi için bkz: [nasıl yapılır: Hizmet uygulamanız için yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamaları](../../../docs/framework/windows-services/index.md)  
- [Hizmet uygulaması programlama mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Nasıl yapılır: Hizmetleri başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [İzlenecek yol: Bileşen tasarımcısında Windows hizmet uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [Nasıl yapılır: hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)  
+ [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ [Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Nasıl Yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

@@ -13,20 +13,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e05042b8b94949c44e8a7a4942f02e7b7a84dd8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ-DataSet örnekleri
 Bu bölümde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standart sorgu işleçleri kullanma örnekleri programlama. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanılarak doldurulur `FillDataSet` belirtilen yöntemi [yüklenirken veri içine bir veri kümesi](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sorgu ifade örnekleri](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ [Sorgu İfadesi Örnekleri](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
  Aşağıdaki örnekler içerir:  
   
--   [Yansıtma](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [Projeksiyon](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
 -   [Kısıtlama](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
@@ -34,34 +35,34 @@ Bu bölümde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] s
   
 -   [Sıralama](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Öğe işleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+-   [Öğe İşleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [Toplama işleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Toplama İşleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [Birleştirme işleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+-   [Birleşim İşleçleri](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [Yöntem temelli sorgu örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [Metot Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  Aşağıdaki örnekler içerir:  
   
--   [Yansıtma](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [Projeksiyon](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
 -   [Bölümlendirme](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
 -   [Sıralama](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Küme işleci](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [Ayarlama İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [Dönüştürme işleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [Dönüştürme İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
--   [Öğe işleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+-   [Öğe İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [Toplama işleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Toplama İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
 -   [Birleştirme](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [Veri kümesi özgü işleci örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ [DataSet’e Özgü İşleç Örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
  Nasıl kullanılacağını gösteren örnekleri içeren <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi ve <xref:System.Data.DataRowComparer> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Bir veri kümesine veri yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+ [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

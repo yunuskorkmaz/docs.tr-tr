@@ -17,17 +17,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations"></a>Ek Açıklamalar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]belge görüntüleme belge içeriğine açıklama eklemeyi destekleyen denetimleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Ek açıklamalar genel bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
+ [Ek Açıklamalara Genel Bakış](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
   [Ek Açıklamalar Şeması](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Controls.DocumentViewer>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
-  [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+  [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

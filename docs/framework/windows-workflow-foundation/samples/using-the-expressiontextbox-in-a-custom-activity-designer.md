@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85fe8dcbd0ef5e774ab81ed167ff937ec2e09d83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 708ebe4891469572365523a10bd2ee411283e528
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Özel Etkinlik Tasarımcısı'nda ExpressionTextBox kullanma
 Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Activities.Presentation.View.ExpressionTextBox> özel etkinlik Tasarımcısı'nda. Özel Etkinlik `MultiAssign`, iki dize değişkenleri iki dize değeri atar. Bazı <xref:System.Activities.Presentation.View.ExpressionTextBox> denetimleri bağlamak için <xref:System.Activities.InArgument>s ve bazı bağlamak için <xref:System.Activities.OutArgument>s.  
@@ -57,4 +58,4 @@ Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Activities.Pre
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  
- [İş Akışı Tasarımcısı ile uygulamaları geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [İş Akışı Tasarımcısı ile Uygulama Geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 İle kullanılabilen şemaları sınıfları oluşturmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  
@@ -194,8 +195,8 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
  <xref:System.Runtime.Serialization.ImportOptions>  
- [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Veri sözleşmesi yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Şema içeri ve dışarı aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+ [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Veri Anlaşması Yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
+ [Şema İçeri ve Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
+ [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

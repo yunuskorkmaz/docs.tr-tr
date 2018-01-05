@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konuda yer alan üç ana taşımalar arasından seçim ölçütleri ele alınmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP ve adlandırılmış kanallar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak bu belgede, message queuing kapsamaz.  
@@ -79,6 +80,6 @@ Bu konuda yer alan üç ana taşımalar arasından seçim ölçütleri ele alın
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Bağlamaları](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Kullanıcı tanımlı bağlamalar oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+ [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

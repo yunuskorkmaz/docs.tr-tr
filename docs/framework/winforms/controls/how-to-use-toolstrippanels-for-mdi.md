@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b9d7c35a77a24ed9a531a46f0c8cd358134a41b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8e52f2b4dd44ad05ba1dba178c05d851f802635
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>Nasıl yapılır: MDI için ToolStripPanels Kullanma
 <xref:System.Windows.Forms.ToolStripPanel> Kullanarak birden çok belge arabirimi (MDI) uygulamaları için esneklik sağlar <xref:System.Windows.Forms.ToolStripPanel.Join%2A> yöntemi.  
@@ -44,4 +45,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ToolStripPanel>  
- [Nasıl yapılır: Toolstrippanels'ni](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)
+ [Nasıl yapılır: ToolStripPanels'i Birleştirme](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)

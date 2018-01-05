@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>YükDengeleme
 Tek yönlü kapasitesini artırmak için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamaları bunları bir yük dengeli sunucu grubunda dağıtarak ölçeğini etmektir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]uygulamalar, donanım tabanlı Yük Dengeleme cihazları yanı sıra, standart Yük Dengeleme yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere teknikler kullanılarak Yük Dengeleme olabilir.  
@@ -101,4 +102,4 @@ Tek yönlü kapasitesini artırmak için [!INCLUDE[indigo1](../../../includes/in
  Yük dengeli senaryolarda en iyi performans için kullanmayı <xref:System.ServiceModel.NetTcpSecurity> (ya da <xref:System.ServiceModel.SecurityMode.Transport> veya <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services barındırma en iyi uygulamaları](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+ [Internet Information Services Barındırma En İyi Uygulamaları](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

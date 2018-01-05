@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa497567c5cf380d7764499991ad9e7e95a5cbe0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
 Bir uygulama arabirimi eklendiğinde veya COM + hizmet yapılandırması aracını kullanarak kaldırıldığında, Web hizmeti yapılandırması uygulamanın yapılandırma dosyasında güncelleştirilir. COM + barındırılan modunda uygulama kök dizininde Application.config dosya yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılandır). Ya da Web barındırılan modları, Web.config dosyasında belirtilen vroot dizininde yer alır.  
@@ -106,4 +107,4 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM + uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+ [COM+ Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

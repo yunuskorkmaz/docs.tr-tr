@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5531689a3a4ba66fddfc98cadec7dc8d51c8629a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7110ea2e39411d65d70ea14992959cdddc1d3bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 Arabirimi
 Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim Icordebugheapvalue ve Icordebugheapvalue2 arabirimleri genişletir.  
@@ -32,8 +33,8 @@ Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim Icordebugheapval
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetThreadOwningMonitorLock yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Bu nesne üzerinde İzleyici kilit sahibi yönetilen iş parçacığı döndürür.|  
-|[GetMonitorEventWaitList yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|İzleyici kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.|  
+|[GetThreadOwningMonitorLock Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Bu nesne üzerinde İzleyici kilit sahibi yönetilen iş parçacığı döndürür.|  
+|[GetMonitorEventWaitList Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|İzleyici kilit ile ilişkili olay sıraya alınan iş parçacıkları sıralı bir listesini sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -50,5 +51,5 @@ Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim Icordebugheapval
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

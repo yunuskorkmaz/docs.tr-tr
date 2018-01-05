@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarla ilgili sorunları gidermek için izleme kullanma
 [!INCLUDE[wf](../../../includes/wf-md.md)]Ayrıntılar yürütülmesi vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlayan bir [!INCLUDE[wf2](../../../includes/wf2-md.md)] uygulama veya hizmet. [!INCLUDE[wf2](../../../includes/wf2-md.md)]ana bilgisayarlar bir iş akışı örneği yürütülürken iş akışı olaylarını yakalamak kullanabilirsiniz. İş akışınızı arıza ya da özel durum oluşturursa, kullanabileceğiniz [!INCLUDE[wf2](../../../includes/wf2-md.md)] ayrıntıları işlemesi sorun giderme için izleme.  

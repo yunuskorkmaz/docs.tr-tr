@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9666b4b0272dbd7e7da485108ebecfb911781bcd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a438a16174343c785ecb68bf6d38e95f37af46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication"></a>Dağıtım
 Bu bölümde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağıtım.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağımsız tanılama akışı](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)  
+ [Bağımsız Tanılama Akışı](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)  
  İle dağıtım için akış RSS/Atom oluşturulması gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Geniş yazılmış uzantılar](../../../../docs/framework/wcf/samples/loosely-typed-extensions-sample.md)  
+ [Geniş Yazılmış Uzantılar](../../../../docs/framework/wcf/samples/loosely-typed-extensions-sample.md)  
  Uzantı verilerle çalışmak için temel teknikleri gösterir.

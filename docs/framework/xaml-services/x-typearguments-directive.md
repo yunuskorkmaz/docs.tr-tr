@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
 Sınırlama geçişleri genel tür oluşturucuya genel bağımsız değişkenlerini yazın.  
@@ -92,7 +93,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  WPF ve hedeflerken [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], XAML 2009 özellikleri ile birlikte kullanabileceğiniz `x:TypeArguments` ancak yalnızca gevşek XAML (işaretleme-derlenmemiş XAML). XAML biçimlendirme derlenmiş WPF ve XAML BAML form için şu anda desteklemediği XAML 2009 anahtar sözcükleri ve özellikler. XAML biçimlendirme derleme varsa, "XAML 2006 ve WPF genel XAML kullanımları" bölümünde belirtildiği kısıtlamaları altında çalışması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [x: Class yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x: Type işaretleme uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [XAML dili ortak temelleri için yerleşik türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [XAML'deki genel türler](../../../docs/framework/xaml-services/generics-in-xaml.md)
+ [x:Class Yönergesi](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [x:Type İşaretleme Uzantısı](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [XAML Dili Ortak Temelleri İçin Yerleşik Türler](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
+ [XAML'deki Genel Türler](../../../docs/framework/xaml-services/generics-in-xaml.md)

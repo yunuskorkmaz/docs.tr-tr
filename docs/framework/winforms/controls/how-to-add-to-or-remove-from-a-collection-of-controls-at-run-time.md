@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b359679df68bf3caa9bab1bdbadedadcde45ac5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında bir Denetimler Koleksiyonuna Ekleme veya Kaldırma
 Uygulama geliştirme, ortak görevler için denetimler ekleme ve herhangi bir kapsayıcı denetimi, formlarında denetimleri kaldırma (gibi <xref:System.Windows.Forms.Panel> veya <xref:System.Windows.Forms.GroupBox> denetim veya formun kendisi bile). Tasarım zamanında denetimleri doğrudan Masası veya grup kutusu sürüklenebilir. Bu denetimler çalışma zamanında korumak bir `Controls` hangi denetimlerin üzerine yerleştirilen izler koleksiyonu.  
@@ -112,4 +113,4 @@ Uygulama geliştirme, ortak görevler için denetimler ekleme ve herhangi bir ka
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Panel>  
- [Panel denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+ [Panel Denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

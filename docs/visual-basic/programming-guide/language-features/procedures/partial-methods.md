@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
 Kısmi yöntemler koda Özel mantık ekleme geliştiricilerin. Genellikle, bir tasarımcı tarafından oluşturulan sınıfın parçası kodudur. Kısmi yöntemler Kod Oluşturucu tarafından oluşturulan bir parçalı sınıf tanımlanır ve bunlar genellikle bir şey değiştirildiğini bildirim sağlamak için kullanılır. Bunlar değişikliğe yanıt özel davranış belirlemek Geliştirici etkinleştirin.  
@@ -79,9 +79,9 @@ End Sub
  `Quantity was changed to 100`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sub deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Alt yordamlar](./sub-procedures.md)  
- [İsteğe bağlı parametreler](./optional-parameters.md)  
- [Kısmi](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ-SQL kod oluşturma](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [Kısmi yöntemler kullanarak iş mantığı ekleme](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Alt Yordamlar](./sub-procedures.md)  
+ [İsteğe Bağlı Parametreler](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [LINQ to SQL’de Kod Oluşturma](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Kısmi Yöntemler Kullanarak İş Mantığı Ekleme](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

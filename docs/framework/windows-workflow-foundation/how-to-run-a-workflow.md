@@ -15,11 +15,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3467b9319a883445d95978e0c167a5552211afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışını çalıştırma
 Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir iş akışı ana bilgisayarı oluşturmak ve önceki tanımlanan iş akışını çalıştırmak nasıl ele [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.  
@@ -171,9 +172,9 @@ Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.WorkflowApplication>  
  <xref:System.Activities.Bookmark>  
- [Windows Workflow Foundation programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Nasıl yapılır: bir iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Nasıl yapılır: oluşturma ve uzun çalıştırma iş akışını çalıştıran](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
- [Bir iş akışında giriş bekleniyor](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
- [İş akışı barındırma](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)
+ [Nasıl yapılır: İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
+ [Bir iş akışında giriş bekleme](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
+ [İş Akışları Barındırma](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

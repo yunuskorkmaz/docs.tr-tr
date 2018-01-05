@@ -21,11 +21,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63194d01d5de1eab9d71376e472a70613f83d1ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04fee5f753cb4b3786d5ca58f85880f151caf0b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimine Veri Bağlama
 <xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli veri kaynakları için bağlı olacağı şekilde standart Windows Forms veri bağlama modelini destekler. Çoğu durumda, ancak siz bağlanacağı bir <xref:System.Windows.Forms.BindingSource> veri kaynağıyla etkileşim ayrıntılarını yönetecek bileşeni. <xref:System.Windows.Forms.BindingSource> Bileşeni herhangi bir Windows Forms veri kaynağını temsil edebilir ve seçme veya değiştirirken, verilerin konumu büyük esneklik sağlar. Tarafından desteklenen veri kaynakları hakkında daha fazla bilgi için <xref:System.Windows.Forms.DataGridView> denetlemek için bkz: [DataGridView denetimine genel bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
@@ -69,5 +70,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.BindingSource>  
- [Windows Forms DataGridView denetiminde verileri görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+ [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)

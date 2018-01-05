@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 Bir hizmeti oluşturduktan sonra sonraki adıma oluşturmaktır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy. Bir istemci uygulaması kullanan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetiyle iletişim kurmak için istemci proxy. İstemci uygulamaları genellikle oluşturmak için bir hizmetin meta verileri içe aktarma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetini çağırmak için kullanılan istemci kodu.  
@@ -193,12 +194,12 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
  Bu tür özel durumlar ortaya çıktığında, sorunu çözmek için en iyi hizmet tarafı izlemeyi etkinleştirmek ve hangi özel durumu var. oluştu belirlemek için yoludur. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: izleme, [izleme](../../../docs/framework/wcf/diagnostics/tracing/index.md) ve [uygulamanız sorun giderme kullanarak izlemeyi](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Nasıl yapılır: çağrı hizmet işlemlerini zaman uyumsuz olarak](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Nasıl yapılır: Erişim Hizmetleri tek yönlü ve istek-yanıt sözleşmeleri](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Nasıl yapılır: WSE 3.0 Erişim hizmeti](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Oluşturulmuş istemci kodlarını anlama](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [Nasıl yapılır: Başlangıç saati, WCF istemci XmlSerializer kullanarak geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
- [İstemci çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [İstemci davranışlarını yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Nasıl yapılır: WSE 3.0 Hizmetine Erişme](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Oluşturulmuş İstemci Kodlarını Anlama](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [İstemci Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [İstemci Davranışlarını Yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md)

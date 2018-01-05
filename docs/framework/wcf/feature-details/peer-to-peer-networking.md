@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-networking"></a>Eşler Arası Ağ
 Eş kanal, çok taraflı, eşler arası (P2P) iletişim teknolojisinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu uygulama geliştiricileri için bir güvenli ve ölçeklenebilir ileti tabanlı P2P iletişim kanalını sağlar. Bir ortak eş kanaldan yararlanabilir taraflı bir uygulama gibi sohbet, ortak bir uygulama sunucuları olmadan bir eşler arası şekilde birbiriyle kişiler sohbet birtakım burada örnektir. Eş kanal P2P işbirliği, içerik dağıtımı, Yük Dengeleme sağlar ve tüketici ve kurumsal senaryoları için işleme dağıtılmış.  

@@ -17,11 +17,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu anahtarı çerçeve animasyonlarını tanıtır. Anahtar çerçeve animasyonları ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -299,7 +300,7 @@ Anahtar eğrisi denetim noktaları (0.25, 0,5) ve (0,75, 1.0)
  <xref:System.Windows.Media.Animation.Timeline>  
  [Anahtar eğri animasyon örneği](http://go.microsoft.com/fwlink/?LinkID=160011)  
  [Ana kare animasyon örneği](http://go.microsoft.com/fwlink/?LinkID=160012)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Anahtar çerçeve nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
  [Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

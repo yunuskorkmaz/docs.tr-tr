@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 014dc690d034c27f0f004172fb8108249bb5c89b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed448ea3af702706b45e27e923ebe540d83de868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; Öğesi (.NET Yerel)
 Belirtilen bir ad alanı içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.  
@@ -92,6 +93,6 @@ Belirtilen bir ad alanı içindeki tüm türler için çalışma zamanı yansım
  Bir alt öğesi olduğunda [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi, `<Namespace>` öğesi tarafından tanımlanan çalışma zamanı yansıma ilkesini geçersiz kılar [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma zamanı yönerge öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+ [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

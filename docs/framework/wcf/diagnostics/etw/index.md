@@ -17,28 +17,29 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42683acdfe2e63d59a13496b210f83fb97c02de7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a16f66ed8443749764e66d2616ae566ad788d571
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW ile Çözümleme İzleme
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Çözümleme izleme yürütülmesi sırasında tanılama bilgileri yakalamak için bir yol sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Çözümleme izleme olayları yayılan anahtar noktalarında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , sorun giderme izin vermek için yığın [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir üretim ortamında Hizmetleri. Analitik izlemeyi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmetleri barındıran bir ürün sunucusunun performansı üzerinde en az etki olan [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri bu olayları olay izleme için Windows (ETW) oturumuna çok verimli bir şekilde gösterilen gibi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çözümleme izleme genel bakış](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
+ [Analitik İzlemeye Genel Bakış](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
  Anlatılmaktadır nasıl [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] çözümleme izleme çalışır [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
   
- [Analitik izlemeyi dinamik olarak etkinleştirme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
+ [Analitik İzlemeyi Dinamik Olarak Etkinleştirme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
  Etkinleştirmek veya kullanarak dinamik olarak ETW İzleme devre dışı bırakma açıklanır.  
   
- [İleti akışı izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
+ [İleti Akışı İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
  İleti akışı izlemeyi yapılandırmak açıklar.  
   
- [Çözümleme izleme etkinliği başvurusu](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
+ [Analitik İzleme Etkinliği Başvurusu](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
  Bir olay kimliklerini olay düzeyleri, olay iletileri ve anahtar sözcükler tablosu gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF hizmetleri ve Windows için olay izleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- [Windows'da izleme olayı içine olayları izleme](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)
+ [WCF Hizmetleri ve Windows için Olay İzleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
+ [Windows'da Olay İzleme ile Olayları İzleme](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

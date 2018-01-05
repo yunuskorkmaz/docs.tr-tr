@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms Veri Bağlamada Bildirimi Değiştirme
 Windows Forms veri bağlama en önemli kavramlarını biri *bildirimi değiştirme*. Veri kaynağı ve ilişkili denetimler her zaman en yeni verilere sahip olduğunuzdan emin olmak için veri bağlama için değişiklik bildirimi eklemeniz gerekir. Özellikle, kendi veri kaynağına yapılan değişiklikler, ilişkili denetimler bildirilir olmak istiyorsanız ve veri kaynağı bir denetim ilişkili özelliklerine yapılan değişiklikler, bildirim.  
@@ -46,6 +47,6 @@ Windows Forms veri bağlama en önemli kavramlarını biri *bildirimi değiştir
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.ComponentModel.INotifyPropertyChanged>  
  <xref:System.ComponentModel.BindingList%601>  
- [Windows Forms veri bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Windows Forms tarafından desteklenen veri kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- [Veri bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+ [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Windows Forms Tarafından Desteklenen Veri Kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

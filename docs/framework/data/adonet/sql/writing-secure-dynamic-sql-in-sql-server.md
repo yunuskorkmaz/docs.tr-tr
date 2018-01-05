@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 926794f4bb603548b74dd95fd9040d9471d70a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35d1a5489173dd79fb87a6ab6e82becd154c2b44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server'da güvenli dinamik SQL yazma
 SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir kullanıcının girdiği işlemidir. Giriş doğrulamasından geçmeden doğrudan sunucuya geçirilir ve uygulama yanlışlıkla eklenen kod yürütülürse, saldırı zarar veya verilere zarar olasılığı vardır.  
@@ -78,10 +79,10 @@ SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir 
 |[Yeni SQL kesilmesi saldırıları ve bunları önlemenin](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) MSDN dergisi içinde.|Karakterler ve dizeler, SQL ekleme ve değiştirme kesilmesi saldırılarının sınırlandırmak açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server güvenlik genel bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server'daki uygulama güvenlik senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Saklı yordamlar SQL Server'daki izinlerle yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [Saklı yordamlar SQL Server'daki imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [Kimliğe bürünme SQL Server'daki izinlerle özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

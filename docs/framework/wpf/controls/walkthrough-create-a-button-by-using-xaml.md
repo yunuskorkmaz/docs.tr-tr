@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.workload: dotnet
+ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak için bu kılavuzun amacı olan bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] uygulama. Bu kılavuz, kodu yeniden kullanma ve düğme mantığının ayrılması düğme bildiriminden izin veren bir özelleştirilmiş düğme kaynak oluşturmak için stilleri ve bir şablonu kullanır. Bu kılavuzda tamamen yazılmış [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -399,8 +400,8 @@ Animasyonlu bir düğme kullanılmak üzere oluşturma konusunda bilgi almak iç
 -   Özelleştirilmiş kullanıcı eylemlerine yanıt olarak düğme davranışını (gibi <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) animasyon efektleri dahil.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Microsoft Expression Blend kullanarak bir düğme oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Bit eşlem efektleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+ [Microsoft Expression Blend Kullanarak Düğme Oluşturma](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Bit Eşlem Etkilerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

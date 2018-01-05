@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
 Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> XML API'si JavaScript nesne gösterimi (JSON) içeriği sağlar. JSON, JavaScript nesne değişmez değerler kümesini kullanarak verileri kodlar. JSON içeriği yüklenirken okuyucular ve bu fabrikası tarafından üretilen yazarları aynı zamanda kullanılan gönderilen veya alınan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanan uygulamalar <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> veya <xref:System.ServiceModel.WebHttpBinding>.  
@@ -243,4 +244,4 @@ Ray'|0 veya daha fazla EIIs|Bir başlangıç ayrıntılarıyla açıklandığı 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
- [Bağımsız JSON seri hale getirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+ [Bağımsız JSON Seri Hale Getirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

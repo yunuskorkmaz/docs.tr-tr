@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 19116aba3049dce6612ca1a7170030f7ced6705e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81506cfb0c08bbbd99d76dc76010fdb933623e0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>&#39; teki Windows Identity Foundation 4.5'deki yenilikler
 Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme olarak gönderildi ve .NET 3.5 SP1 zaman çerçevesinde kullanıma sunulduğundan WIF 3.5 olarak bilinmekteydi. .NET 4.5 sürümünden itibaren WIF, .NET çerçevesinin bir parçası olmuştur. Framework'te doğrudan kullanılabilen WIF sınıfları sahip talep tabanlı kimlik talepleri kullanan kolaylaştırma .NET içinde çok derin tümleştirme sağlar. WIF 3.5 için yazılmış uygulamalar için yeni model yararlanmak için değiştirilmesi gerekir; bilgi için bkz: [bir uygulama yerleşik kullanarak WIF 3.5 WIF 4.5 sürümüne geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -66,7 +67,7 @@ Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme ola
      Kullandığınızda **kimlik ve erişim aracı Visual Studio 2012 için** (bkz **değiştirir Visual Studio deneyimine** yukarıda), aracı ekler bir `<serviceCredentials>` öğeyle `useIdentityConfiguration` özniteliği ayarlamak sizin için yapılandırma dosyası. Ayrıca bir karşılık gelen ekler [ \<System.IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) WIF yapılandırma ayarlarını içeren ve bağlama ve kimlik doğrulama, seçilen STS için dış kaynak sağlamak gerekli diğer ayarları ekler öğesi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [WIF 3.5 ve WIF 4.5 arasında Namespace eşleme](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [WIF 3.5 Kullanılarak Derlenmiş bir Uygulamayı WIF 4.5’e Geçirme Yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+ [WIF 3.5 ile WIF 4.5 Arasında Ad Alanı Eşleme](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
  [WIF API Başvurusu](../../../docs/framework/security/wif-api-reference.md)  
- [WIF yapılandırma başvurusu](../../../docs/framework/security/wif-configuration-reference.md)
+ [WIF Yapılandırma Başvurusu](../../../docs/framework/security/wif-configuration-reference.md)

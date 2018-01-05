@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f03ddd0c8a09826068ae30e23773016faf3f56e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a56cae8b8e300b22a07184cdb69f2c876b101f72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="row-states-and-row-versions"></a>Satır durumları ve satır sürümleri
 ADO.NET satır durumları ve sürümleri kullanarak tablolardaki satırların yönetir. Bir satır durumu bir satır durumunu gösterir; Satır sürümleri, geçerli, özgün ve varsayılan değerler dahil olmak üzere değişiklik gibi bir satırda depolanan değerleri korur. Örneğin, bir satırda bir sütun yapılan bir değişikliği yaptıktan sonra satır satır durumunu olacaktır `Modified`, ve iki sürümleri satır: `Current`, geçerli satır değerleri içeren ve `Original`, sütun önce satır değerlerini içerir değiştirdi.  
@@ -105,7 +106,7 @@ foreach (DataRow delRow in delRows)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir DataTable tablosundaki verileri düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [DataAdapters ve DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataAdapters ve DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>Önizleme Olayları
 Tünel olayları olarak da bilinen önizleme olayları yönlendirilmiş burada olayı ve olay veri kaynağı olarak bildirilen öğe doğru uygulama kökünden rota yönü geçen olaylardır. Tüm olay senaryoları desteklemek veya önizleme olayları gerektirir; Bu konuda, burada özel bileşenlerde veya sınıflarda önizleme olayları oluşturma uygun durumlarda olabilir ve önizleme olayları, uygulama veya bileşenler bunları nasıl yöneteceğini var olduğu durumlar açıklanmaktadır.  
@@ -40,5 +41,5 @@ Tünel olayları olarak da bilinen önizleme olayları yönlendirilmiş burada o
  Her tekniğin yan etkileri veya sınırlamaları vardır. Bu noktada olay işleme kabarcıklanma olayını işlemek için beklediğiniz işleyicileri devre dışı bırakabilir ve bu nedenle, genellikle Previ üzerinde hala durumdayken işlenen olayı işaretlemek için iyi bir fikir olmadığını kısıtlamadır Önizleme olay işlemenin yan etkisi olan Rota eni bölümü. Sınırlama `handledEventsToo` tekniği olan, belirtemezsiniz bir `handledEventsToo` işleyicisinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelik olarak, olay işleyicisi kodunda işleyici bağlı olduğu bir nesne başvurusu öğesine aldıktan sonra kaydetmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İşaretleme yönlendirilmiş olarak işlenen ve sınıf işlemesi olaylar](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+ [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

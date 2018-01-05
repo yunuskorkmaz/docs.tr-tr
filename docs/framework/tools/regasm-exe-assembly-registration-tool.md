@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 Derleme Kayıt aracı, derleme içindeki meta verileri okur ve kayıt defterine gerekli girişleri ekler, bu da COM istemcilerinin şeffaf olarak .NET Framework sınıfları oluşturmalarına izin verir. Sınıf kaydettirildikten sonra, COM istemcileri artık sınıfı bir COM sınıfıymış gibi kullanabilir. Sınıf yalnızca bir defa, derleme yüklenirken kaydettirilir. Derleme içindeki sınıf örnekleri gerçekten kaydettirilene kadar COM'dan oluşturulamaz.  
@@ -48,12 +49,12 @@ regasm assemblyFile [options]
 |**/ codebase**|Kayıt defterinde bir Kod Temeli girişi oluşturur. Kod Temeli girişi, genel derleme önbelleğinde yüklü olmayan bir derleme için dosya yolunu belirtir. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz. *AssemblyFile* belirlediğiniz bağımsız değişkeni **/ codebase** seçeneği olmalıdır bir [tanımlayıcı adlı derleme](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
 |**/ kayıtlı**|Bu aracın yalnızca zaten kayıtlı durumdaki tür kitaplıklarına başvuracağını belirtir.|  
 |**/asmpath:Directory**|Derleme başvuruları içeren bir dizini belirtir. İle birlikte kullanılmalıdır **/regfile** seçeneği.|  
-|**/ nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
+|**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/ regfile** [**:** *regFile*]|Gerekli kayıt defteri girdilerini içeren derleme için belirtilen .reg dosyasını oluşturur. Bu seçeneği belirtmek kayıt defterini değiştirmez. Bu seçenek ile kullanamazsınız **/u** veya **TLB** seçenekleri.|  
 |**/ Sessiz** veya   **/s**|Başarı iletilerinin görüntülenmesini bastırır.|  
 |**TLB** [**:** *typeLibFile*]|Belirtilen derlemeden, derleme içinde tanımlanmış erişilebilir türlerin tanımlarını içeren bir tür kitaplığı oluşturur.|  
 |**/ kaydı** veya **/u**|Bulunan creatable sınıfları kaydını siler *assemblyFile*. Bu seçeneği kullanmamak, Regasm.exe'nin derlemedeki oluşturulabilir sınıfları kaydettirmesine neden olur.|  
-|**/ verbose**|Ayrıntılı modu belirtir; görüntüler herhangi bir listesini başvurulan derlemeler için tür kitaplığı, belirtilen zaman oluşturulması gereken **TLB** seçeneği.|  
+|**/verbose**|Ayrıntılı modu belirtir; görüntüler herhangi bir listesini başvurulan derlemeler için tür kitaplığı, belirtilen zaman oluşturulması gereken **TLB** seçeneği.|  
 |**/?** veya   **/Yardım**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 > [!NOTE]
@@ -90,8 +91,8 @@ regasm myTest.dll /tlb:myTest.tlb
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Derlemeleri COM ile kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Bütünleştirilmiş Kodları COM ile Kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

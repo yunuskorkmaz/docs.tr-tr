@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Yansıma sağlayıcısı (WCF Veri Hizmetleri)
 Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kesinlikle bir varlık tabanlı modelde tanımlı değil veri hale getirebilir. Dönüş uygulama türleri sınıflardaki yansıma sağlayıcısı kullanıma sunan <xref:System.Linq.IQueryable%601> arabirimi. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Bu sınıf için bir veri modeli gerçekleştirip yansıma kullanır ve adresi tabanlı sorgular kaynaklara karşı dil ile tümleşik sorgu (LINQ) çevirebilir-gösterilen sorguları temel <xref:System.Linq.IQueryable%601> türleri.  
@@ -104,4 +105,4 @@ Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra
  Entity Framework varsayılan olarak yerel olarak desteklendiğinden ilişkisel veri ile kullanmak için önerilen veri sağlayıcısı olduğu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Ancak, bir veri hizmeti ile SQL sınıfları LINQ kullanmasını yansıma Sağlayıcısı'nı kullanabilirsiniz. <xref:System.Data.Linq.Table%601> Neden üzerinde yöntemleri tarafından döndürülen kümeleri <xref:System.Data.Linq.DataContext> LINQ to SQL Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) uygulama tarafından üretilen <xref:System.Linq.IQueryable%601> arabirimi. Bu, bu yöntemleri erişmek ve varlık verilerini SQL Server'dan SQL sınıfları için oluşturulan LINQ kullanarak dönmek yansıma sağlayıcı sağlar. Ancak, LINQ to SQL uygulamayan çünkü <xref:System.Data.Services.IUpdatable> arabirimi, ihtiyacınız var olan genişleten bir parçalı sınıf eklemek <xref:System.Data.Linq.DataContext> eklemek için kısmi sınıfı <xref:System.Data.Services.IUpdatable> uygulama. Daha fazla bilgi için bkz: [nasıl yapılır: bir LINQ to SQL veri kaynağı kullanarak bir veri hizmeti oluşturmak](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

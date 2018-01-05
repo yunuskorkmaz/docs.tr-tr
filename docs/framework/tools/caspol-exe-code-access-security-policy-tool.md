@@ -26,11 +26,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71f0a8c8d0e5e09cb6f39e5b8b104c0848c4d8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -95,7 +96,7 @@ caspol [options]
 |**-appdir**|Uygulama dizini belirtir. Belirtirseniz **– appdir** üyelik koşulu kod URL kanıtı uygulama dizin kanıtı bu kodu ile karşılaştırılır. Her iki kanıt değeri de aynıysa, bu üyelik koşulu gerçekleşmiş demektir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
 |**-özel***xmldosyası* |Özel üyelik koşulu ekler. Zorunlu *xmldosyası* bağımsız değişken özel üyelik koşulu XML serileştirilmesi içeren .xml dosyasını belirtir.|  
 |**-karma** *KarmaAlgoritma* {**-onaltılık** *hashValue* &#124; **-dosya** *assembly_file* }|Belirtilen derleme karmasına sahip kodu belirtir. Bir karmayı kod grubu üyelik koşulu olarak kullanmak için, karma değerini ya da derleme dosyasını belirtmelisiniz. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***hex_string* }  |Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.PublisherMembershipCondition>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***hex_string* }|Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.PublisherMembershipCondition>.|  
 |**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örneğin:<br /><br /> **-site** www.proseware.com<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.SiteMembershipCondition>.|  
 |**-strong - dosya** *dosya_adı* {*adı* &#124; **- noname**} {*sürüm* &#124; **- noversion**}|Dosya adı, derleme adı olarak bir dize ve derleme sürümü tarafından belirlenen olarak belirli bir tanımlayıcı adı biçiminde olan kod belirtir *ana*. *küçük*. *Yapı*. *Düzeltme*. Örneğin:<br /><br /> **-strong - dosya** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
 |**-url** *URL'si*|Belirtilen URL'den kaynaklanan kodu belirtir. URL'de http:// veya ftp:// gibi bir protokol bulunmalıdır. Ayrıca, bir joker karakter (\*) belirli bir URL birden çok derlemelerden belirtmek için kullanılır. **Not:** bir URL birden çok ad kullanılarak tanımlanabilir olduğundan, üyelik koşulu kod kimliğini onaylaması için güvenli bir şekilde olmadığı bir URL kullanarak. Mümkün olan yerlerde, bir tanımlayıcı ad üyelik koşulu, bir yayımcı üyelik koşulu veya karma üyelik koşulu kullanın. <br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.UrlMembershipCondition>.|  
@@ -255,5 +256,5 @@ caspol -all -resolveperm testassembly
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b0a29b59b6b2f7b8dd3a430b2395b18c1e4f83fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
 Sertifikaları kullanabilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HTTP (HTTPS) veya TCP üzerinden Aktarım Katmanı Güvenliği (TLS) yanı sıra ileti katmanlı (SOAP) güvenlik ile. Bu konuda bu tür sertifikalar doğrulanır farklılıklar açıklanmaktadır.  
@@ -58,4 +59,4 @@ Sertifikaları kullanabilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [Sertifikalar ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

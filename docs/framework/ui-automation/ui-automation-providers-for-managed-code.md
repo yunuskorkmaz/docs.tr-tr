@@ -18,11 +18,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 26d4bed96ca9d61ab30886322e6ca8fa25babb61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 442817b5ab96bd992fff2e8bc85c45ac03dac81a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Yönetilen Kod İçin UI Otomasyon Sağlayıcılar
 > [!NOTE]
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  Bu bölüm, genel bakışlar ve nasıl yazılacağını açıklar nasıl yapılır konuları içerir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özel sağlayıcıları [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğeleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sunucu tarafı UI Otomasyon sağlayıcıyı uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI Otomasyon sağlayıcılara genel bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [İstemci tarafı UI Otomasyon sağlayıcıyı uygulama](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
+ [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
+ [İstemci Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
  [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)

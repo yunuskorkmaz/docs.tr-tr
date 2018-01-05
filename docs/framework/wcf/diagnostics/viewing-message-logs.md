@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df1d796ec5009008e00391eea2987f5256df6c48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09a26d3580b37ea92bf4ef5708a238396f22eb4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-message-logs"></a>İleti Günlüklerini Görüntüleme
 Bu konuda, ileti günlüklerini nasıl görüntüleyebileceğiniz açıklanır.  
@@ -71,6 +72,6 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 -   Kodlama UTF-8'e dönüştürme için etkinleştirilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [İzlemeleri görüntüleme bağıntılı için hizmet izleme görüntüleyicisini kullanma ve sorun giderme](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [İleti günlüğe kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+ [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)

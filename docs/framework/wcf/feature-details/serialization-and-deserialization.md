@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir seri hale getirme altyapısı içeren <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
@@ -274,5 +275,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
  <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [İkili seri hale getirme](../../../../docs/standard/serialization/binary-serialization.md)  
- [Veri sözleşmesi seri hale getirici tarafından desteklenen türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [İkili Serileştirme](../../../../docs/standard/serialization/binary-serialization.md)  
+ [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

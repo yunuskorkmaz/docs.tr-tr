@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 438243d16d8031d99e27993cadb44fd58bbec0b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a9514d845580bfe921fefa5f4a249c5a905d03d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Bir Grafik Nesnesinin Durumunu Yönetme
 <xref:System.Drawing.Graphics> Sınıftır merkezinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Herhangi bir şey çizmek için elde bir <xref:System.Drawing.Graphics> nesne özelliklerini ayarlamak ve yöntemlerini çağırın <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>vb.).  
@@ -161,5 +162,5 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
  ![Sınırlı Kırpma bölgesinin](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [İç içe grafik kapsayıcılarını kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [İç İçe Grafik Kapsayıcılarını Kullanma](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)

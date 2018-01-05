@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3f732f60afeba71d26391ba5fb6484ab7562654a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c0c70719e3f149ddf1f1e22cee8158e31fccf3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse türetme
 <xref:System.Net.WebResponse> Sınıfı, .NET Framework takılabilir Protokolü modeli uygun protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan bir Özet temel sınıf. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri sınıfına kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** descendants soyut üyelerini uygulanmalı **WebResponse** sınıfı.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Net.WebResponse>  
  <xref:System.Net.HttpWebResponse>  
  <xref:System.Net.FileWebResponse>  
- [Programlama takılabilir protokolleri](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [WebRequest türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+ [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
+ [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)

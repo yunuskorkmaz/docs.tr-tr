@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>Bilgileri Açıklama
 Bilgilerin açığa çıkmasına bir sistemi hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, her zaman ve ortaya bilgiler, kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını göz önünde bulundurun. Aşağıdaki olası bilgileri açığa saldırıları listeler ve bunları azaltmanın yollarını her sağlar.  
@@ -67,9 +68,9 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  Etki alanı belirtildi, ancak geçersiz hizmet asıl adı uç noktası kimlik özelliği kullanılarak belirtilir NTLM kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uç noktası kimlik belirtilen bkz [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ayrıcalık yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Hizmet reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Oynama](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Yeniden yürütme saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
+ [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

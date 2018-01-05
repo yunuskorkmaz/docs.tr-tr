@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9efad2da27f4003632b643b9f5f0602be0d55480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi
 Özel denetimler, bazen bir koleksiyon özelliği olarak açığa çıkarır. Bu kılavuzda nasıl kullanılacağı ortaya <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> koleksiyonu tasarım zamanında nasıl serileştirilmiş denetlemek için sınıf. Uygulama <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> koleksiyon özelliği için değer sağlar özelliği seri hale getirilir.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
     |**Çok satırlı**|`true`|  
     |**Yerleştirme**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**Kaydırma çubukları**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
-    |**Salt okunur**|`true`|  
+    |**ReadOnly**|`true`|  
   
 6.  İçinde **Kod düzenleyicisinde**, adında bir dize dizisi alan bildirin `stringsValue` içinde `SerializationDemoControl`.  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 11/21/2017
   
 -   [Tasarım zamanı mimarisi](http://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
   
--   [Windows Forms denetimlerindeki öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
 -   [Tasarımcı serileştirme genel bakış](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [İzlenecek yol: Visual Studio tasarım-zamanı özellikleri yararlanan bir Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
  [Tasarımcı serileştirme genel bakış](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
  [Nasıl yapılır: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+ [İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

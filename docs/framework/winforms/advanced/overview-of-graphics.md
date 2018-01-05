@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0a3286cbcaa0eebf59500582a749804b5e1b8ba
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3438fe2f1c3a6fc40efda0ff2583208f38bf7d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-graphics"></a>Grafiklere Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Microsoft Windows işletim sistemi alt formları bir uygulama programlama arabirimi (API) var. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]ekranlar ve yazıcılar bilgilerini görüntülemek için sorumludur. Adından da anlaşılacağı gibi [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] devamıdır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], önceki Windows sürümlerinde bulunan grafik cihaz arabirimi.  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/22/2017
  Grafik cihaz arabirimi ile gibi [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], belirli görüntü aygıtı ayrıntılar hakkında endişelenmeniz zorunda kalmadan bir ekran veya yazıcı bilgileri görüntüleyebilirsiniz. Programcı tarafından sağlanan yöntemleri çağrılar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sınıfları. Bu yöntem, buna karşılık, belirli aygıt sürücüleri için uygun çağrıları yapma. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Grafik donanım uygulamadan korunmasını sağlar. CİHAZDAN bağımsız uygulamalar oluşturmak için programcı sağlayan bu yalıtımı olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafiklere genel bakış](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
+ [Grafiklere Genel Bakış](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)

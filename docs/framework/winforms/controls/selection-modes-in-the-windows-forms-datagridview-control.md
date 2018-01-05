@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Seçim Modları
 İçindeki kullanıcı seçimleri temel eylemleri gerçekleştirmek için uygulamanızın bazen istediğiniz bir <xref:System.Windows.Forms.DataGridView> denetim. Eylemler bağlı olarak, olası seçimi türlerini sınırlamak isteyebilirsiniz. Örneğin, uygulamanız şu anda seçili kaydı için bir rapor yazdırabilirsiniz varsayalım. Bu durumda, yapılandırmak isteyebilirsiniz <xref:System.Windows.Forms.DataGridView> denetim satır içinde her zaman herhangi bir yere tıklayarak böylece tüm satırı seçer ve bu nedenle, aynı anda yalnızca bir satır seçilebilir.  
@@ -59,5 +60,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
  <xref:System.Windows.Forms.DataGridViewSelectionMode>  
- [Seçim ve Pano kullanımı Windows Forms DataGridView denetimi ile](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminin seçim modunu ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

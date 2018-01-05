@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35f89bb5d87ef58c5ecda7be4cb9fb41da08e8a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-shear-colors"></a>Nasıl yapılır: Renkleri Bükme
 Yamultma artırır veya başka bir renk bileşenine orantılı bir miktar renk bileşeni azaltır. Örneğin, burada kırmızı bileşenini yarısı değerle mavi bileşeninin artırılır dönüştürme göz önünde bulundurun. Bu tür bir dönüşüm altında rengi (0.2, 0,5, 1) duruma (0,7, 0,5, 1). Yeni kırmızı 0.2 bileşendir + (1/2)(1) 0,7 =.  
@@ -53,5 +54,5 @@ Yamultma artırır veya başka bir renk bileşenine orantılı bir miktar renk b
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  <xref:System.Drawing.Imaging.ImageAttributes>  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Görüntüleri yeniden renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)

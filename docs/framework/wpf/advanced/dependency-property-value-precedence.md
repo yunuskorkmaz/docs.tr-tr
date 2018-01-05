@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b52b809b732f3859a7ce02a4433b2387e797932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a>Bu konuda açıklanmaktadır nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistem geçerli bir özellik için geçerli değerini öncelik açıklar.  
@@ -139,6 +140,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Bağımlılık özelliği geri çağrıları ve doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Bağımlılık Özelliği Geri Aramaları ve Doğrulama](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

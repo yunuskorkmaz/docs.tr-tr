@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb66908c28a54d4dc24cb77bd82c59862a7fd789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Hazırlama
 Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi türleri olarak In/Out parametreleri geçirir. Buna karşılık, birlikte çalışabilirlik Sıralayıcı parametreleri olduğu gibi bir dizi varsayılan olarak geçirir.  
@@ -381,7 +382,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varsayılan hazırlama davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blok halinde kopyalanabilir ve kopyalanamaz türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [Tek yönlü öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopyalama ve sabitleme](../../../docs/framework/interop/copying-and-pinning.md)
+ [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)

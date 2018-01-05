@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 676f7f696fda26ee9d86d14f06dc7b70e2565157
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xname-directive"></a>x:Name Yönergesi
 XAML isim alanı XAML tanımlanan öğelerinde benzersiz olarak tanımlar. Çerçeveler API'leri sağlayın ya da XAML oluşturulan nesne grafiği çalışma zamanında erişme davranışlarını uygulamak XAML ad kapsamları ve kendi benzersizlik modelleri örneklenen nesnelere uygulanabilir.  
@@ -79,4 +80,4 @@ XAML isim alanı XAML tanımlanan öğelerinde benzersiz olarak tanımlar. Çer�
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
  <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [WPF ağaçlarında](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+ [WPF İçinde Ağaçlar](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

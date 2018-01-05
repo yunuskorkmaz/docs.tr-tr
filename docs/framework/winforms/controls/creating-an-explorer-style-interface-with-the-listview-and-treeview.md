@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4a16ee1ca39ffb0eb170e206467d612cb707e5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 Visual Studio avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için yeteneğidir. Yaygın bir senaryo, bir kullanıcı arabirimi (UI) ile oluşturuyor <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarda dosya ve klasörlerin hiyerarşik bir yapı görüntüler.  
@@ -104,16 +105,16 @@ Visual Studio avantajlarından biri kısa bir süre, profesyonel görünümlü W
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulamaya kullanabileceğiniz bir yolunun bir örneği sunar <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ListView> birlikte denetler. Bu denetimler hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Nasıl yapılır: ListView denetimine arama yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Nasıl yapılır: TreeView Düğümüne ShortCut Menüsü Ekleme](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.TreeView>  
- [ListView denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Nasıl yapılır: ekleme ve kaldırma düğümleri Windows Formları TreeView denetimi](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [Nasıl yapılır: ekleme ve kaldırma öğeleri Windows Forms ListView denetimi](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [Nasıl yapılır: sütunları Windows Forms ListView denetimine ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+ [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)

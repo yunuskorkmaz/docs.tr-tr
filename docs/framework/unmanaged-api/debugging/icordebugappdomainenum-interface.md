@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a77ce6e00ed4bbf866b8761d6339f4191151a6f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5d3d11e3897ff56ffcd475eb363405651578c1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomainenum-interface1"></a>Icordebugappdomainenum Interface1
 Sağlar `Next` belirtilen sayıda döndürür yöntemi `ICorDebugAppDomainEnum` listedeki sonraki konumunda başlayan değer. Bu arabirim "ICorDebugEnum" sınıfıdır.  
@@ -32,7 +33,7 @@ Sağlar `Next` belirtilen sayıda döndürür yöntemi `ICorDebugAppDomainEnum` 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Uygulama etki alanları belirtilen sayıda geçerli İmleç konumuna başlangıç koleksiyondan alır.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Uygulama etki alanları belirtilen sayıda geçerli İmleç konumuna başlangıç koleksiyondan alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,5 +50,5 @@ Sağlar `Next` belirtilen sayıda döndürür yöntemi `ICorDebugAppDomainEnum` 
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icordebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

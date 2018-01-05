@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0057be1457ad369b84f311008180dc7c4a3c323d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 434111cc5955c5145bf7cd6fff4d76f138aeda7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator Arabirimi
 Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatalarını raporlama için yöntemleri sağlar.  
@@ -32,8 +33,8 @@ Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatal
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Formateventınfo yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hata hakkında ayrıntılı bir ileti alır.|  
-|[Validate yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Taşınabilir yürütülebilir dosyayı veya Microsoft Ara dili (MSIL) belirtilen dosyada doğrular.|  
+|[FormatEventInfo Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hata hakkında ayrıntılı bir ileti alır.|  
+|[Validate Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Taşınabilir yürütülebilir dosyayı veya Microsoft Ara dili (MSIL) belirtilen dosyada doğrular.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,6 +46,6 @@ Taşınabilir yürütülebilir (PE) görüntüler doğrulama ve doğrulama hatal
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iclrerrorreportingmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Clrruntimehost ortak sınıfı](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+ [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

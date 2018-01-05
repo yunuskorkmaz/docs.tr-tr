@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b2e53df114c491e99e13940ae47a4119bd8da46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aac8d56c87ff03b313565a3d04cd3f3cc4e85f72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme
 Windows işletim sistemlerinde, bir kullanıcı daha büyük veya küçük görünür varsayılan yazı tipi yapmak için sistem genelinde yazı tipi ayarlarını değiştirebilirsiniz. Bu yazı tipi ayarlarını değiştirme ekranlarını üzerindeki metin okumak büyük türü gerektirir ve görme engelli kullanıcılar için kritik öneme sahiptir. Bu değişiklikleri artırarak veya yazı tipi düzenini değiştiğinde form ve içerdiği tüm metin boyutunu azaltarak tepki vermek için Windows Forms uygulaması ayarlayabilirsiniz. Formunuz yazı tipi boyutlarını değişiklikleri dinamik olarak sağlamak istiyorsanız, kod ekleyebilirsiniz.  
@@ -75,4 +76,4 @@ Windows işletim sistemlerinde, bir kullanıcı daha büyük veya küçük gör�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
- [Windows Forms'ta otomatik ölçeklendirme](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+ [Windows Forms'ta Otomatik Ölçeklendirme](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)

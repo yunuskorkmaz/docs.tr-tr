@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb666c41f849ac39386c3eaf85bbaf8b19053e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-overview"></a>Windows Forms'a Genel Bakış
 Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama ve bugünün kuruluşlar ve son kullanıcıların ihtiyaçlarını karşılamak akıllı istemciler oluşturmak için Windows Forms nasıl kullanabileceğiniz ana özelliklerini avantajları açıklanır.  
@@ -51,10 +52,10 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
 |Açıklama|Yardım konusu|  
 |-----------------|----------------|  
-|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows formlarına denetimler ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
-|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı kullanarak standart öğelerle temel bir ToolStrip oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
-|Grafik oluşturma<xref:System.Drawing>|[Grafik programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
-|Özel denetimler oluşturma|[Nasıl yapılır: UserControl sınıfından devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
+|Form üzerinde denetimleri kullanma|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
+|Kullanarak <xref:System.Windows.Forms.ToolStrip> denetimi|[Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir ToolStrip Oluşturma](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
+|Grafik oluşturma<xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ### <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme  
  Birçok uygulama, verileri bir veritabanı, XML dosyası, XML Web hizmeti veya başka bir veri kaynağını görüntülemeniz gerekir. Windows Forms adlı esnek bir denetim sağlar <xref:System.Windows.Forms.DataGridView> her veri parçası kendi hücrenin kapladığı bir geleneksel bir satır ve sütun biçiminde, bu tür tablo verilerini görüntüleme için denetim. Kullandığınızda <xref:System.Windows.Forms.DataGridView>, tek tek hücrelerin görünüşünü özelleştirme, rasgele satırları kilitlemek ve sütunlarında yerleştirin ve diğer özellikler arasında hücreleri içinde karmaşık denetimleri görüntüler.  
@@ -70,10 +71,10 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
 |Açıklama|Yardım konusu|  
 |-----------------|----------------|  
-|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: Windows Forms denetimlerini Tasarımcısı'nı kullanarak BindingSource bileşeni ile bağlama](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|İle çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows Forms BindingSource bileşeni ile ADO.NET verilerini sıralama ve filtreleme](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
+|Kullanarak <xref:System.Windows.Forms.BindingSource> bileşeni|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|İle çalışma [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri kaynakları|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|  
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Bir Windows formunda veri görüntüleme](http://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|  
-|Uygulama ayarları kullanma|[Nasıl yapılır: uygulama ayarları oluştur](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
+|Uygulama ayarları kullanma|[Nasıl yapılır: Uygulama Ayarları Oluşturma](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>İstemci bilgisayarlara uygulamaları dağıtma  
  Uygulamanızı yazdıktan sonra yükleyebilir ve kendi istemci bilgisayarlarda çalıştırmak için kullanıcılarınızın uygulamaya göndermeniz gerekir. Kullandığınızda [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] teknolojisi, dağıtabileceğiniz uygulamalarınızdan içinde [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] göre yalnızca birkaç tıklama kullanılması ve Web uygulamanıza işaret eden bir URL ile kullanıcılarınız sağlar. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]tüm öğeleri ve bağımlılıklarını, uygulamanızda yönetir ve uygulama, istemci bilgisayarda doğru şekilde yüklendiğini sağlar.  
@@ -87,9 +88,9 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
 |Açıklama|Yardım konusu|  
 |-----------------|----------------|  
-|Kullanarak bir uygulamayı dağıtma[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Güncelleştirme bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımı|[Nasıl yapılır: ClickOnce uygulaması için güncelleştirmeleri yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Güvenlik ile yönetme[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştir](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Kullanarak bir uygulamayı dağıtma[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Güncelleştirme bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımı|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Güvenlik ile yönetme[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ### <a name="other-controls-and-features"></a>Diğer denetimleri ve özellikleri  
  Windows Forms'ta uygulama ortak görevleri hızlı ve kolay iletişim kutuları oluşturma, yazdırma, Yardım ve belgeler ekleme ve uygulamanız birden çok dilde yerelleştirme için destek gibi olun birçok özelliği vardır. Ayrıca, Windows Forms güçlü güvenlik sistemde dayanır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu sistemiyle müşterileriniz için daha güvenli uygulamalar serbest bırakabilirsiniz.  
@@ -99,14 +100,14 @@ Aşağıdaki özette akıllı istemci uygulamaları, Windows Forms programlama v
   
 |Açıklama|Yardım konusu|  
 |-----------------|----------------|  
-|Form içeriğinin yazdırma|[Nasıl yapılır: Windows Forms'ta grafik yazdırma](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|  
-|Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'a genel bakış güvenliği](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
+|Form içeriğinin yazdırma|[Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|  
+|Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms'a Başlarken](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
- [Yeni bir Windows formu oluşturma](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
- [ToolStrip denetimine genel bakış](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [DataGridView denetimine genel bakış](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- [BindingSource bileşenine genel bakış](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
- [Uygulama ayarlarına genel bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
+ [Yeni bir Windows Formu Oluşturma](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
+ [ToolStrip Denetimine Genel Bakış](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [DataGridView Denetimine Genel Bakış](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [BindingSource Bileşenine Genel Bakış](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
+ [Uygulama Ayarlarına Genel Bakış](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)

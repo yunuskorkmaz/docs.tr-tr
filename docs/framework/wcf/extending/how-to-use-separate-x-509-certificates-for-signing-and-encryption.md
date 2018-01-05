@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 312a4b854cb527e63d6866247d4147720ce0710c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl Yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma
 Bu konuda nasıl yapılandırılacağını göstermektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere.  
@@ -105,4 +106,4 @@ Bu konuda nasıl yapılandırılacağını göstermektedir [!INCLUDE[indigo1](..
  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  
- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgileri oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+ [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

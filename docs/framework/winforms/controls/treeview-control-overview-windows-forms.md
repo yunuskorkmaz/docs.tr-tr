@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView Denetimine Genel Bakış (Windows Forms)
 Windows Forms ile <xref:System.Windows.Forms.TreeView> denetim, kullanıcılara, yol dosyaları ve klasörleri Windows işletim sisteminin Windows Explorer özelliği sol bölmesinde görüntülenen gibi bir hiyerarşi düğümlerinin görüntüleyebilir. Ağaç görünümünde her düğüm olarak adlandırılan, diğer düğümler içerebilir *alt düğümleri*. Üst düğüm görüntüleyebilir veya alt düğümleri olarak içeren düğümler genişletilen veya daraltılmış. Ağaç görünümün ayarlayarak düğümleri yanındaki onay kutularını bulunduğu ağaç görünümü görüntüleyebilirsiniz <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> özelliğine `true`. Ardından program aracılığıyla seçin veya temizleyin düğümleri düğümün ayarlayarak yapabilirsiniz <xref:System.Windows.Forms.TreeNode.Checked%2A> özelliğine `true` veya `false`.  
@@ -29,9 +30,9 @@ Windows Forms ile <xref:System.Windows.Forms.TreeView> denetim, kullanıcılara,
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.TreeView>  
- [TreeView denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Nasıl yapılır: Windows Forms TreeView denetimi için simgeler ayarlama](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  
- [Nasıl yapılır: ekleme ve kaldırma düğümleri Windows Formları TreeView denetimi](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [Nasıl yapılır: Windows Forms TreeView denetiminin tüm düğümlerinde yineleme](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
- [Nasıl yapılır: hangi TreeView düğümüne tıklandığını belirleme](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
- [Nasıl yapılır: bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+ [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms TreeView Denetimi için Simgeler Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  
+ [Nasıl yapılır: Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [Nasıl yapılır: Bir Windows Forms TreeView Denetiminin Tüm Düğümlerinde Yineleme](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [Nasıl yapılır: Hangi TreeView Düğümüne Tıklandığını Belirleme](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

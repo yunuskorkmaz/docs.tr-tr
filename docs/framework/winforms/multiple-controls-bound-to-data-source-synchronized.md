@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama
 Windows Forms veri bağlama ile görmemeleri çalışırken, birden çok denetimler aynı veri kaynağına bağlıdır. Bazı durumlarda, bağlı denetimlerin özelliklerini birbirine ve veri kaynağı ile eşitlenmiş kalmasını sağlamak için ek adımlar gerekebilir. Bu adımları iki durumlarda gereklidir:  
@@ -51,7 +52,7 @@ Windows Forms veri bağlama ile görmemeleri çalışırken, birden çok denetim
 -   Bir formla <xref:System.Windows.Forms.Form.Load> işlenen olay ve yapılan bir çağrı `InitializeControlsAndDataSource` formun örnekten yönteminde <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bağlı veri BindingSource bileşenini kullanarak formlar arasında paylaşma](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
- [Windows Forms veri bağlamada bildirimi değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Veri bağlama ile ilgili arabirimler](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
- [Windows Forms veri bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Nasıl Yapılır: BindingSource Bileşenini Kullanarak Bağlı Verileri Formlar Arasında Paylaşma](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Veri Bağlama ile İlgili Arabirimler](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)

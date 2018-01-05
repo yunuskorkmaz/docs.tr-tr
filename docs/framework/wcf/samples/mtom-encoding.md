@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 560cf7358105eb760d1edeb645340ea12f12b2a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed65e2098a95a05f7cc5efa6d9014f67bf5ed261
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
 Bu örnek bir WSHttpBinding kodlama ileti iletim en iyi duruma getirme mekanizmasını (MTOM) iletisi kullanımını göstermektedir. MTOM SOAP iletilerle büyük ikili dosya eklerini ham bayt olarak iletmek için bir küçük iletiler için izin verme mekanizmadır.  

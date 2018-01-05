@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1afed1aefbdd8a2733697c342fcf7aafabd8f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7927d3b4d41731c9b69154fa8895a8f698f53e31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 Arabirimi
 Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olaylar meydana geldiğinde kod profil oluşturucu bildirmek için kullanılan yöntemleri sağlar. `ICorProfilerCallback2` Arabirimi uzantısıdır [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) arabirimi. Diğer bir deyişle, .NET Framework 2.0 sürümünde sunulan yeni geri aramalar sağlar.  
@@ -35,14 +36,14 @@ Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olaylar 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Kod profil oluşturucu bir sonlandırıcı sahip bir nesne yürütülmesi için sonlandırıcıyı iş parçacığı için sıraya bildirir, `Finalize` yöntemi.|  
-|[GarbageCollectionFinished yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Profil Oluşturucu çöp toplama tamamlandı ve tüm atık toplama geri aramalar için verilmiş bildirir.|  
-|[GarbageCollectionStarted yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Kod profil oluşturucu çöp toplama başlatıldı bildirir.|  
-|[HandleCreated yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Kod profil oluşturucu bir atık toplama tanıtıcı oluşturulduğunu size bildirir.|  
-|[HandleDestroyed yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Kod profil oluşturucu bir atık toplama tanıtıcı yok bildirir.|  
-|[RootReferences2 yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Çöp toplama gerçekleştikten sonra Profil Oluşturucu kök başvurular hakkında uyarır. Bu yöntem uzantısıdır [Icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) yöntemi.|  
-|[SurvivingReferences yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Profil Oluşturucu çöp toplama derdi bitti nesne başvuruları hakkında uyarır.|  
-|[ThreadNameChanged yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Kod profil oluşturucu, bir iş parçacığı adına değiştiğini bildirir.|  
+|[FinalizeableObjectQueued Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Kod profil oluşturucu bir sonlandırıcı sahip bir nesne yürütülmesi için sonlandırıcıyı iş parçacığı için sıraya bildirir, `Finalize` yöntemi.|  
+|[GarbageCollectionFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Profil Oluşturucu çöp toplama tamamlandı ve tüm atık toplama geri aramalar için verilmiş bildirir.|  
+|[GarbageCollectionStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Kod profil oluşturucu çöp toplama başlatıldı bildirir.|  
+|[HandleCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Kod profil oluşturucu bir atık toplama tanıtıcı oluşturulduğunu size bildirir.|  
+|[HandleDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Kod profil oluşturucu bir atık toplama tanıtıcı yok bildirir.|  
+|[RootReferences2 Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Çöp toplama gerçekleştikten sonra Profil Oluşturucu kök başvurular hakkında uyarır. Bu yöntem uzantısıdır [Icorprofilercallback::rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) yöntemi.|  
+|[SurvivingReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Profil Oluşturucu çöp toplama derdi bitti nesne başvuruları hakkında uyarır.|  
+|[ThreadNameChanged Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Kod profil oluşturucu, bir iş parçacığı adına değiştiğini bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  CLR bir yöntem çağrıları `ICorProfilerCallback` (veya `ICorProfilerCallback2`) için profil oluşturucu abone, bir olay gerçekleştiğinde, profil oluşturucu bildirmek için arabirimi oluşur. Üzerinden CLR kod Profil Oluşturucu ile iletişim kurar birincil geri çağırma arabirimidir.  
@@ -64,7 +65,7 @@ Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olaylar 
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Icorprofilercallback arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Icorprofilercallback3 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
- [Icorprofilercallback4 arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [ICorProfilerCallback3 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
+ [ICorProfilerCallback4 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

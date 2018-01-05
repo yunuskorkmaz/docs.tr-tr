@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d9012d1a31eeaf50560b6166d32ac58662c5aa4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint Yöntemini Geçersiz Kılma
 Tanımlanan herhangi bir olay geçersiz kılma için temel adımlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aynıdır ve aşağıdaki listede özetlenmiştir.  
@@ -97,6 +98,6 @@ public class PaintEventArgs : EventArgs {
  Bir denetim çağırır kendi <xref:System.Windows.Forms.Control.OnPaint%2A> görsel görünümünü değiştirmeye ihtiyaç duyduğunda yöntemi. Bu yöntem sırayla başlatır <xref:System.Windows.Forms.Control.Paint> olay.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olayları](../../../../docs/standard/events/index.md)  
- [Windows Forms denetimi oluşturma](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- [Olay tanımlama](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+ [Olaylar](../../../../docs/standard/events/index.md)  
+ [Windows Forms Denetimini İşleme](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ [Olay Tanımlama](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

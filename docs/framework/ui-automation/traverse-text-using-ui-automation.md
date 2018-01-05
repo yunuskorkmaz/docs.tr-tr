@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 5b3d08c0a6293b6621d9b6debfa4d63c8abaf3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fadeb1cff4956b6be8ae01c8a9ffa911772514cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="traverse-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma
 > [!NOTE]
@@ -48,8 +49,8 @@ ms.lasthandoff: 11/21/2017
  Herhangi bir yöntemini kullanarak <xref:System.Windows.Automation.Text.TextUnit> sonraki erteler en büyük <xref:System.Windows.Automation.Text.TextUnit> desteklenen IF verilen <xref:System.Windows.Automation.Text.TextUnit> denetim tarafından desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon textpattern öğesine genel bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [UI Otomasyonu kullanarak metin kutusuna içerik ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI Otomasyonu kullanarak metin bulma ve vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [İstemciler için UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+ [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

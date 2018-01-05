@@ -13,24 +13,25 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9182c95b9770cac94b2a747e277fcd0cc02b387f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a125aa0968abbd69580cab46f3231a6536eff9c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="behavior-security"></a>Davranış Güvenliği
 Bu bölüm, hizmet davranışları için yapılandırma güvenlik gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Hizmet denetleme davranışı](../../../../docs/framework/wcf/samples/service-auditing-behavior.md)  
+ [Hizmet Denetleme Davranışı](../../../../docs/framework/wcf/samples/service-auditing-behavior.md)  
  Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hizmet işlemleri sırasında güvenlik olaylarının denetimini etkinleştirmek için.  
   
- [Üyelik ve rol sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
+ [Üyelik ve Rol Sağlayıcısı](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
  Bu örnek, bir hizmetin nasıl kullanabileceğinizi gösterir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimlik doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
   
- [Hizmet işlemlerine erişimi yetkilendirme](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  Bu örnek nasıl kullanılacağı ortaya [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) kullanımını etkinleştirmek için <xref:System.Security.Permissions.PrincipalPermissionAttribute> hizmet işlemlerine erişimi yetkilendirmek için öznitelik.  
   
- [İstemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md)  
  Bu örnek, hizmet sistem kaynaklarını arayan adına erişebilmesi için hizmet çağıran uygulamayı taklit gösterilmiştir.

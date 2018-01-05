@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd48993f50ec8b91ba7941a682d7de9f22aa12e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 714c361507a95fc5f45efbca79191b17e7917fba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET diğer dizeleri ayrıştırma
 Sayısal yanı sıra ve <xref:System.DateTime> dizeleri, türleri temsil eden dizeleri de ayrıştırmak <xref:System.Char>, <xref:System.Boolean>, ve <xref:System.Enum> veri türlerine.  
@@ -58,6 +61,6 @@ Sayısal yanı sıra ve <xref:System.DateTime> dizeleri, türleri temsil eden di
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  [.NET tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)

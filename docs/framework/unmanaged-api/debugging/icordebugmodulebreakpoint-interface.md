@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e3937c6c0baef4cc927b5c5d789826c70beebf2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cec51a7efe17c2188f12039333dd90f557b1e724
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodulebreakpoint-interface1"></a>Icordebugmodulebreakpoint Interface1
 Belirli modüller erişim sağlar. Bu arabirim Icordebugbreakpoint arabirimi sınıfıdır.  
@@ -32,7 +33,7 @@ Belirli modüller erişim sağlar. Bu arabirim Icordebugbreakpoint arabirimi sı
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetModule yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Arabirim işaretçisi bu kesme ayarlandığı modülü başvuruda bulunan bir Icordebugmodule alır.|  
+|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Arabirim işaretçisi bu kesme ayarlandığı modülü başvuruda bulunan bir Icordebugmodule alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,4 +50,4 @@ Belirli modüller erişim sağlar. Bu arabirim Icordebugbreakpoint arabirimi sı
  **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

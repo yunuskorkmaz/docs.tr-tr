@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3145df6517df9db580bfcc5d67edd9d1a61f290b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b8135a55c537f480e0d595e127c2cad55e977ca
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM Namespace desteği
 XML belge nesne modeli (DOM) ad alanı tamamen uyumlu. Yalnızca ad alanı algılayan XML belgelerini desteklenir. World Wide Web Konsorsiyumu (W3C) Düzey 1 uygulamak DOM uygulamaları ad alanı kullanmayan olabilir ve DOM Düzey 2 özellikleri ad alanı algılayan belirtir. Ancak, XML DOM'ındaki tüm özelliklere ad alanı algılayan, yöntem düzey 1 veya Düzey 2 DOM öneri ise bakılmaksızın değildir.  
@@ -33,4 +36,4 @@ XML belge nesne modeli (DOM) ad alanı tamamen uyumlu. Yalnızca ad alanı algı
 -   İki nokta bulunursa, adı ilk iki nokta karakteri konumuna bağlı iki parçalara bölünür. Önek dizesi iki nokta üst üste önce bulunamadı ayarlanır ve yerel ad sonra iki nokta üst üste bulunan dizeye ayarlayın. NamespaceURI değeri namespaceURI ediyorsa ve kalır almayan yöntemleri için boş dize olarak ayarlayın. Aksi takdirde namespaceURI yönteme geçirilen dize ayarlanır. Önek tanımsızsa sonra **kaydetmek** yöntemi ve **InnerXml** ve **OuterXml** özellikleri başarısız olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

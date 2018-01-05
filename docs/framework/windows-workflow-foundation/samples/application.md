@@ -12,27 +12,28 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3122119c84b747f74f753bb10a066aaa0cd0bf21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b3037f6229c16ef6a5164cb0e7053f5993d2a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application"></a>Uygulama
 Bu bölümde iş akışı uygulamalarda ilgili örnekleri içeren [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Belge onay işlemi](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
+ [Belge Onay İşlemi](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
  Bir iş kolu satır uygulama bir iş akışı kullanmayı gösterir.  
   
- [Şirket satın alma işlemi](../../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
+ [Şirket Satın Alma İşlemi](../../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
  Pencere ve Web barındırılan bir uygulamada bir iş akışı kullanmayı gösterir.  
   
- [İşe alma işlemi](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+ [İşe Alma İşlemi](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
  Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir.  
   
- [Görsel iş akışı izleme](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
+ [Görsel İş Akışı İzleme](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
  Mesajlaşma etkinlikleri ve iş akışı Hizmetleri olarak barındırılan iki iş akışlarını kullanarak bir iş sürecini uygulamak gösterilmiştir.  
   
- [Askıya alınmış örnek Yönetimi](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
+ [Askıya Alınmış Örnek Yönetimi](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
  Askıya alınan iş akışı örnekleri yönetmek gösterilmiştir.

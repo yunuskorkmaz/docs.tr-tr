@@ -12,11 +12,11 @@ ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ad7a3f2ee82d0a582e755035448d565a9a8cb9d
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c079250211a4216b09e84140ff537b3f57127967
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Nasıl yapılır: bir derlemeyi başka uygulamalarla (Visual Basic) paylaşma
 Derlemeler, özel veya paylaşılan olabilir: varsayılan olarak, diğer uygulamalar tarafından kullanılması amaçlanmıştır değil çünkü basit programlarının çoğu özel bir derlemenin oluşur.  
@@ -29,7 +29,7 @@ Derlemeler, özel veya paylaşılan olabilir: varsayılan olarak, diğer uygulam
   
 2.  Güçlü bir ad, derlemenizi atayın. Daha fazla bilgi için bkz: [nasıl yapılır: bir derlemeyi tanımlayıcı adla oturum](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
-3.  Sürüm bilgileri, derlemenizi atayın. Daha fazla bilgi için bkz: [derleme sürümü oluşturma](../../../../../docs/framework/app-domains/assembly-versioning.md).  
+3.  Sürüm bilgileri, derlemenizi atayın. Daha fazla bilgi için bkz: [derleme sürümü oluşturma](../../../../framework/app-domains/assembly-versioning.md).  
   
 4.  Derleme genel derleme önbelleğine ekleme. Daha fazla bilgi için bkz: [nasıl yapılır: bir derlemeyi genel derleme önbelleğine yükleme](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
@@ -37,4 +37,4 @@ Derlemeler, özel veya paylaşılan olabilir: varsayılan olarak, diğer uygulam
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama kavramları](../../../../visual-basic/programming-guide/concepts/index.md) [derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Derlemelerle programlama](../../../../framework/app-domains/programming-with-assemblies.md)
+ [Bütünleştirilmiş Kodlarla Programlama](../../../../framework/app-domains/programming-with-assemblies.md)

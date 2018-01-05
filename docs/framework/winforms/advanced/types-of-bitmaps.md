@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem her piksel rengi piksel dikdörtgen bir dizi belirtin BITS dizisidir. BITS için tek bir piksel hoşlanıyorsanız sayısını o piksel atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilen, örneğin, ardından belirli bir piksel 16 farklı renk biri atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksel atanabilir renklerin sayısı birkaç örneği gösterilmektedir.  
@@ -99,5 +100,5 @@ Bir bit eşlem her piksel rengi piksel dikdörtgen bir dizi belirtin BITS dizisi
  <xref:System.Drawing.Image?displayProperty=nameWithType>  
  <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
  <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Resimler, bit eşlemler, simgeler ve meta dosyaları ile çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

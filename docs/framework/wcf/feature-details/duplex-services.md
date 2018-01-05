@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 08fcb852977272d593229abea426abc8bf9b7e48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 Çift yönlü hizmet sözleşmesi, her iki uç nokta ileti diğer bağımsız olarak gönderebilirsiniz bir ileti değişim deseni değil. Çift yönlü bir hizmet, bu nedenle, olay benzeri davranışı sağlama geri istemci uç noktaya iletileri gönderebilir. Çift yönlü iletişimi bir istemci bir hizmetine bağlanır ve hizmet üzerinde hizmet istemciye iletiler gönderebilir bir kanal sağlar oluşur. Çift yönlü hizmetler olay benzeri davranışını yalnızca bir oturumunda çalıştığını unutmayın.  
@@ -95,6 +96,6 @@ binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  Bir hizmet veya istemci kendi kanal kapandığında çift yönlü modeli otomatik olarak algılamaz. Bu nedenle istemci beklenmedik şekilde sona ererse, varsayılan olarak hizmet değil bildirilecek veya bir istemci beklenmedik şekilde sona ererse, hizmet olmayan bildirilir. Bu nedenle seçerseniz birbirine bildirmek için kendi protokolü, istemciler ve hizmetler uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çift yönlü](../../../../docs/framework/wcf/samples/duplex.md)  
- [İstemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Nasıl yapılır: kanal fabrikası oluşturma ve kanal oluşturmak ve yönetmek için kullanın](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+ [Çift Yönlü](../../../../docs/framework/wcf/samples/duplex.md)  
+ [İstemci Çalışma Zamanı Davranışını Belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
+ [Nasıl yapılır: Kanal Fabrikası Oluşturma ve Bunu Kanal Oluşturmak ve Yönetmek için Kullanma](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

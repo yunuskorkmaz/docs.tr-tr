@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69b62699f5db0ab11fac3cc4d1ba4e2aa022934d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bb0fbce0d7b45fd051db187cd6d7e920b08cab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; &lt;taşıma&gt;
 Bu bağlama ile yapılandırılan eş tarafından gönderilen güvenli iletiler aktarım türünü belirtir.  
@@ -71,10 +72,10 @@ Bu bağlama ile yapılandırılan eş tarafından gönderilen güvenli iletiler 
  <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [Taşıma güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [Aktarım Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Taşıma seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

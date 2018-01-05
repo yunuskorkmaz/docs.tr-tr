@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebfb45e6d568b4fa1db209264e02332df636474f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ca2db0cd7082a596999f1d74c9092264a65692ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS Numaralandırması
 Ortak dil çalışma zamanı (CLR) başlangıç davranışını belirtmek değerlerini içerir. Varsayılan olarak, atık toplama eşzamanlı olmayan ve yalnızca temel sınıf kitaplığı etki alanı Tarafsız alanına yüklenir.  
@@ -86,4 +87,4 @@ typedef enum {
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma numaralandırmaları](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+ [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

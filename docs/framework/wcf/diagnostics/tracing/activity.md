@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382197f2a8d2375903f286dc5aa54ce5dc632bce
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity"></a>Etkinlik
 Bu konu, etkinlik izlemeleri açıklar [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] izleme modeli. Etkinlikler hata kapsamını daraltmak kullanıcı Yardımı birimleri işliyor. Aynı etkinlik içindeki oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan bir işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde izlemeleri hem işlem hem de ileti şifre çözme hatası görünür.  
@@ -109,7 +110,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [İzlemeleri görüntüleme bağıntılı için hizmet izleme görüntüleyicisini kullanma ve sorun giderme](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+ [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [Kullanıcı Kodu İzlemeleri Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

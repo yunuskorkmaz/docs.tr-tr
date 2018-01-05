@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e09f0f39d0c9a40a0e91299d308921917067166
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a7e87295a50f901be0c7028bb2d6025b51c248c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>Nasıl yapılır: Basit veya Karmaşık TreeViews Oluşturma
 Bu örnekte basit veya karmaşık oluşturulacağını gösterir <xref:System.Windows.Controls.TreeView> kontrol eder.  
@@ -53,5 +54,5 @@ Bu örnekte basit veya karmaşık oluşturulacağını gösterir <xref:System.Wi
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
- [TreeView genel bakış](../../../../docs/framework/wpf/controls/treeview-overview.md)  
+ [TreeView Genel Bakış](../../../../docs/framework/wpf/controls/treeview-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)

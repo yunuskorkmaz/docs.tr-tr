@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 684d9bcf2e4787457a6ef3251e0202e1559561b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışarı Aktarma
 Bu konu hizmet uç noktalarından meta verileri dışarı aktarma açıklar.  
@@ -66,6 +67,6 @@ Bu konu hizmet uç noktalarından meta verileri dışarı aktarma açıklar.
  Program.cs başvuru System.ServiceModel.dll derlerken.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veri mimarisi genel bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- [Meta verilerini kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Uç noktalar: Adresler, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

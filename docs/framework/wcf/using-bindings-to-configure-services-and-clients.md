@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
 Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntılarını belirtin nesneleridir. Daha açık belirtmek gerekirse bağlamaları taşımaları, bağlantı biçimlerini (ileti kodlama) ve ilgili uç noktası veya istemci kanalı protokolleri ayrıntılarını tanımlayarak istemci veya hizmet çalışma zamanı oluşturmak için kullanılan yapılandırma bilgilerini içerir. Çalışan bir oluşturmak için [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet, hizmet her bitiş bağlama gerektirir. Bu konuda ne bağlamaları, nasıl tanımlanır ve belirli bir bağlama için bir uç nokta nasıl belirtilen açıklanmaktadır.  
@@ -66,8 +67,8 @@ Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntı
 -   [Nasıl yapılır: bir istemci yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) Yapılandırması'nı kullanarak bir istemci oluşturma bir örnek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Nasıl yapılır: yapılandırmada hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Nasıl yapılır: kodda hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  
- [Nasıl yapılır: yapılandırmada istemci bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)  
- [Nasıl yapılır: kodda istemci bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Nasıl yapılır: Yapılandırmada Hizmet Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [Nasıl yapılır: Code’da Hizmet Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  
+ [Nasıl yapılır: Yapılandırmada İstemci Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)  
+ [Nasıl yapılır: Code’da İstemci Bağlaması Belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

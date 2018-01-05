@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26385d91b4201820a5f6ba77b512e7bcfd5372c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>Nasıl yapılır: bir etkinlik oluşturmak
 Etkinliklerin davranışını çekirdek biriminin olduğundan [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Yönetilen kodda bir etkinlik yürütme mantığını uygulanabilir veya diğer etkinlikleri kullanarak uygulanabilir. Bu konuda iki etkinlik oluşturma gösterilir. İlk etkinlik, yürütme mantığını uygulamak için kod kullanan basit bir etkinliktir. İkinci etkinlik uyarlamasını diğer etkinlikleri kullanarak tanımlanır. Bu etkinlikler içindeki adımları izleyerek öğreticide kullanılır.  
@@ -118,7 +119,7 @@ Etkinliklerin davranışını çekirdek biriminin olduğundan [!INCLUDE[wf1](../
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.CodeActivity>  
  <xref:System.Activities.NativeActivity%601>  
- [Tasarlama ve uygulama özel etkinlikler](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
+ [Özel Etkinlikler Tasarlama ve Uygulama](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Nasıl yapılır: bir iş akışı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Özel Etkinlik Tasarımcısı'nda ExpressionTextBox kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [Nasıl yapılır: İş Akışı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

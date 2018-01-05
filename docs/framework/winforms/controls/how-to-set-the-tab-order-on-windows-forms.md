@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d514b20381b44102076c776d12181df3838e4eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Sekme Sırasını Ayarlama
 Sekme sırası, kullanıcı odak bir denetimden diğerine SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırası vardır. Varsayılan olarak, sekme sırasını denetimleri oluşturulan siparişi ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
@@ -65,7 +66,7 @@ Sekme sırası, kullanıcı odak bir denetimden diğerine SEKME tuşuna basarak 
     >  Radyo düğmesi grubunda çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmesi ile kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlamak `true`, diğer düğmeleri varken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimleri bkz [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Windows Forms denetimleri işlevi](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

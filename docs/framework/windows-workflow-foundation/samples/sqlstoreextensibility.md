@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3e63a11ce87c95a5afc8e7f60c8e262da5c6bd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özellikleri yapılandırmasını gösterir. SQL iş akışı örneği deposuna bir SQL tabanlı bir örnek deposuna uygulamasıdır. Durumu kaydedin ve durumunu bir SQL Server veya SQL Server Express veritabanı gelen ve giden yüklemek bir örnek sağlar. Depolama genişletilebilirlik özelliği örneği deposunda saklanır özelliklerini tanımlamak kullanıcı sağlar. Bu özellikler için sorgu kullanıcıya veren bir yükseltilen özellikleri görünümü görüntülenir.  
@@ -87,6 +88,6 @@ Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özell
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)

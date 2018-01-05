@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 447ba37330e8027d86fd24239a8aca2461dce8d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 Dil Özellikleri
 XAML 2009 varolan XAML dil belirtimi genişleten yeni XAML dil özellikleri için toplu terimdir. XAML 2009 birkaç yeni yönergeleri ve yapıları tanıtır. Bunlar[x: Arguments yönergesi](../../../docs/framework/xaml-services/x-arguments-directive.md); [x: FactoryMethod yönergesi](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x: Reference işaretleme uzantısı](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x: TypeArguments yönergesi ](../../../docs/framework/xaml-services/x-typearguments-directive.md); ve ortak dil temelleri için yerleşik türleri (örneğin `x:Char`).  
@@ -43,4 +44,4 @@ XAML 2009 varolan XAML dil belirtimi genişleten yeni XAML dil özellikleri içi
  Olaylar tarafından yedeklenen öznitelikleri için XAML 2006 biçimlendirmesi derleme karmaşıktır ve biçimlendirme derleme olaylara gönderdikten varsayar. XAML 2009 olay kablolama çalıştırma ayrıştırma ve XAML yükleme kadar erteler biçimlendirme uzantısı benzer bir işaretleme biçimini destekler. Ancak, WPF uygulamaları ve XAML senaryoları WPF UI için bu özellik genellikle kullanmayın. WPF ve XAML 2006 uygulaması için tanımlanan yönlendirilmiş olaylar için olay işleyicisi kablolama bileşimini kullanır <xref:System.Windows.UIElement> düzeyi ve biçimlendirme derleyici adım büyük bir olay özniteliği işlemesi için. Biçimlendirme derleyici burada biçimlendirme derleyici kullanılır yapı eylemleri bildirmek XAML'de bulunan tüm olay öznitelikler de preprocesses.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

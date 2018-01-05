@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22c35a683f479660a17f11e44f9a0721f9d35968
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee18503bdd6100cbe7a62ac70d7ea0848fb124eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Nasıl yapılır: Görselin Sapmasını Alma
 Bu örnekler ya da herhangi üst veya alt öğesi kendi üst göre görsel bir nesne uzaklık değerini almak nasıl gösterir.  
@@ -78,4 +79,4 @@ Bu örnekler ya da herhangi üst veya alt öğesi kendi üst göre görsel bir n
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

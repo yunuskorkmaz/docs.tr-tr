@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3dd2b4880ea61f5c3236a3e15ba1c939dbc2952
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3634d5c14b0d0fcc0113296dec4843585625698d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 Bu örnek gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yönetilen bir Windows hizmetinde barındırılan hizmeti. Windows Hizmetleri, hizmetler uygulamasını kullanarak denetlenir **Denetim Masası** ve bir sistem yeniden başlatıldıktan sonra otomatik olarak başlatılmasını yapılandırılabilir. Örnek, bir istemci programını ve bir Windows hizmeti programı oluşur. Hizmet bir .exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak için ise gerekli değildir kod barındırma.  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ec6cb2d077f95f53a2ee0daf8e2819ae91cb13b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5261e0769e63513720cc2df185920d424fa1a8f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>WFC &lt;activityStateQueries&gt;
 Bir iş akışı örneği olun etkinliklerin ömrünü değişiklikleri izlemek için kullanılan sorgu koleksiyonunu temsil eder. Örneğin, bir iş akışı örneği içinde "E-posta Gönder" etkinlik tamamlandıktan her zaman izlemek isteyebilirsiniz. Bu sorgu, etkinlik durumu kaydı nesnelere abone olmak izleme katılımcı için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.  
@@ -57,5 +58,5 @@ Bir iş akışı örneği olun etkinliklerin ömrünü değişiklikleri izlemek 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
  <xref:System.Activities.Tracking.ActivityStateQuery>    
- [İzleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox Nasıl Yapılır Konuları
 Bu bölümde kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir örnekler <xref:System.Windows.Controls.RichTextBox> denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [RichTextBox metin içeriği Ayıkla](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [RichTextBox seçimde program aracılığıyla değiştirme](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [, Yükleme, kaydetme ve RichTextBox içeriği Yazdır](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [RichTextBox içinde özel bağlam menüsü konumlandırma](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [RichTextBox'dan Metin İçeriği Ayıklama](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
+ [RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
+ [RichTextBox İçinde Özel Açılır Menü Konumlandırma](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
  [Nasıl yapılır: RichTextBox için varsayılan içerik konağını değiştirme](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.TextBox>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

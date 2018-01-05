@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: db227b5c7915b6ce0b0fe8400a8545256ea6d6b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
 İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], her iki [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML dil uygulama dahil. WPF XAML uygulamasını genişletilebilirlik sağlanan genel türleri çoğunu WindowsBase, PresentationCore ve PresentationFramework derlemelerde vardı. Benzer şekilde, genel türleri için genişletilebilirlik sağlanan [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], bazı XAML ilgili türleri System.Xaml derlemeye geçirilir. Bir ortak XAML dil Hizmetleri .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan ancak artık genel parçası olan birçok XAML genişletilebilirlik senaryoları mümkün kılar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML dil desteği. Bu konu, geçişle ilgili sorunlar açıklanır ve geçirilir türleri listelenmektedir.  

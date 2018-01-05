@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efd8016e0169a258dbe7b6d9a54a81b1cda94ee4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0dcc6d11eebc7758d0c5d4c6308bc56dfcc0fc31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Nasıl yapılır: Viewport3D'de Tıklama Testi
 Bu örnek isabet testi de 3B görsellerinin gösterilmektedir bir <xref:System.Windows.Controls.Viewport3D>.  

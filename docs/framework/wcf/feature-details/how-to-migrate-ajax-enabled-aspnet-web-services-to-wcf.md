@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
 Bu konu için eşdeğer bir temel ASP.NET AJAX hizmeti geçirme yordamları özetler AJAX etkinleştirilmiş [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet. İşlevsel olarak eşdeğer oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX hizmeti sürümü. İki hizmet daha sonra bir yan yana kullanılabilir veya [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.  
@@ -223,4 +224,4 @@ d.Add("two", 2);
 |Kaçış karakterli karakterleri|Her zaman bir kaçış ile eğik çizgi (/); ilet hiçbir zaman "\n" gibi atlanmamış geçersiz JSON karaktere izin verilir.|Bir kaçış ile eğik çizgi (/) DateTime değerleri için iletin.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+ [Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

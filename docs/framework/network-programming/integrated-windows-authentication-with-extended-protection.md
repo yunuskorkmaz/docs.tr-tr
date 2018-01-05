@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a32019a99421cdb2b581f1196a0e477c8e5d30a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a453a2142ee8c3d1ab8d8d00e84e1ead60c46d91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş koruma ile tümleşik Windows kimlik doğrulaması
 Geliştirmeler nasıl tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ilgili sınıflar ve <xref:System.Net> ve ilgili ad alanları. Güvenliği artırmak genişletilmiş koruma için destek eklendi.  

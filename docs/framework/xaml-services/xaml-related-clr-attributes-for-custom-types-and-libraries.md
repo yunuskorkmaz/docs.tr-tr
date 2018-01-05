@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, uygulama türlerini veya derlemeler için XAML ilişkili bir senaryo olan .NET Framework tanımlanan diğer CLR öznitelikleri açıklanmaktadır. Derlemeler, türleri ve üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML tür sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek için veya ayrılmış XAML okuyucuları ve XAML yazıcılarının aracılığıyla .NET Framework XAML hizmetleri kullanan tüm XAML tüketici için bilgi sağlanmaktadır.  
@@ -279,4 +280,4 @@ Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çal
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Attribute>  
- [.NET Framework XAML Hizmetleri ile kullanmak için özel türleri tanımlama](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+ [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

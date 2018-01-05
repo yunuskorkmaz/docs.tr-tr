@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c2929f37895f0dee5529a5bf90f84146585032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5cf2091d50433bb936b3d4976d1c3eabea73edc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Nasıl yapılır: PrintTickets'i Doğrulama ve Birleştirme
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Yazdırma şema](http://go.microsoft.com/fwlink/?LinkId=186397) esnek ve Genişletilebilir içeren <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğeleri. Yazdırma cihazı yeteneklerini eski maddeler halinde listelemektedir ve aygıtın bu özellikler belgeleri, belgenin veya tek tek sayfa belirli bir dizi göre nasıl kullanması gereken ikinci belirtir.  
@@ -74,6 +75,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing.EnumeratedPrintQueueTypes>  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Şema Yazdırma](http://go.microsoft.com/fwlink/?LinkId=186397)

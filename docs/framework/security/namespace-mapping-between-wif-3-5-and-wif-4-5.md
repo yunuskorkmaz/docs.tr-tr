@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e2c8d3150f19b5790f2db7b93b3100a9becff4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8d27385a08c58c61983315da41f27f4dcb29368
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 ve WIF 4.5 arasında Namespace eşleme
 .NET 4. 5'ile başlayan, Windows Identity Foundation (WIF), tam olarak .NET Framework'e tümleştirilmiştir. Bu tümleştirme ad değişikliklerini ve bazı WIF ad alanları ve API yüzeyi birleştirilmesi oluşturmuştur. Bu konu, bazı yönergeler ve WIF 3.5 ad alanları ve WIF 4.5 ad alanları arasında genel bir eşleme sağlar. Kapsamlı, ancak yerine tanıdık WIF 3.5 sınıfları WIF 4.5 nerede bulacağını ilgili bazı genel bilgileri sağlamak üzere tasarlanmamıştır. WIF 3.5 ve WIF 4.5 arasındaki farklar hakkında daha ayrıntılı bilgi için bkz: [Windows Identity Foundation 4. 5'de](../../../docs/framework/security/whats-new-in-wif.md). WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamalar geçirme hakkında yönergeler için bkz [bir uygulama yerleşik kullanarak WIF 3.5 WIF 4.5 sürümüne geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  Aşağıdaki tabloda WIF 4.5 WIF 3.5 sınıfları bulunabileceği hakkında bilgi sağlar.  
   
-|**WIF 3.5 Namespace**|**WIF 4.5 Namespace**|**Açıklamaları**|  
+|**WIF 3.5 Namespace**|**WIF 4.5 Namespace**|**Açıklamalar**|  
 |-|-|-|  
 |`Microsoft.IdentityModel`|<xref:System.IdentityModel?displayProperty=nameWithType>|-Sabitleri temsil eden sınıflar çoğunu uygulanmadı.<br />-Güvenlik belirteci hizmetleri oluşturmak için kullanılan sınıfları gelen taşınmış `Microsoft.IdentityModel.SecurityTokenService` için <xref:System.IdentityModel?displayProperty=nameWithType>.<br />-Sınıflarda `Microsoft.IdentityModel.Threading` taşınmıştır <xref:System.IdentityModel?displayProperty=nameWithType>.<br />- `ExceptionMapper` Ve `MruSecurityTokenCache` sınıfları uygulanmadı.|  
 |`Microsoft.IdentityModel.Claims`|<xref:System.Security.Claims?displayProperty=nameWithType>|- `IClaimsPrincipal` Ve `IClaimsIdentity` arabirimleri WIF 4.5 uygulanmadı. Bunun yerine <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> çoğu hangi .NET temel sınıflardan asıl sunulmuştur ve kimlik sınıflar türetilir. Bu asıl ve kimlik sınıflar gibi özelleştirilmiş talepler için gerekli olduğu anlamına gelir `Microsoft.IdentityModel.Claims.WindowsClaimsPrincipal` ve `Microsoft.IdentityModel.Claims.WindowsClaimsIdentity` WIF 4.5 içinde kullanmak <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> ve <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> yerine. Aynı diğer WIF 3.5 var olan diğer özel talep asıl ve kimlik sınıflar için geçerlidir.<br />- `Microsoft.IdentityModel.Claims.ClaimsCollection` Sınıfı WIF 4.5 uygulanmadı. Bunun yerine, talep koleksiyonları numaralandırılabilir koleksiyon türü olarak sunulan <xref:System.Security.Claims.Claim?displayProperty=nameWithType>.<br />-   <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>ve <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> şimdi LINQ tam destek yöntemleri sağlar.|  
@@ -54,5 +55,5 @@ ms.lasthandoff: 11/21/2017
 |`Microsoft.IdentityModel.WindowsTokenService`|WIF 4.5 uygulanmadı|-|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Identity Foundation 4.5 yenilikler nelerdir?](../../../docs/framework/security/whats-new-in-wif.md)  
- [WIF 4.5 WIF 3.5 kullanılarak oluşturulan bir uygulamayı geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+ [Windows Identity Foundation 4.5'teki Yenilikler](../../../docs/framework/security/whats-new-in-wif.md)  
+ [WIF 3.5 Kullanılarak Derlenmiş bir Uygulamayı WIF 4.5’e Geçirme Yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

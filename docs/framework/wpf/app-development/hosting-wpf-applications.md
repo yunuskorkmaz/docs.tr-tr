@@ -18,23 +18,24 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c61c4fd5651b8915971f67addeb162aca50108
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 051f37b0a7098cad5ac43766877cd973ca86e5b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-wpf-applications"></a>WPF Uygulamaları Barındırma
 WPF XAML tarayıcısı uygulamaları (XBAP'ler), bir Web sunucusuna dağıtılır ve tarayıcıda başlatılan zengin istemci uygulamalarıdır. WPF Konağı (PresentationHost.exe), kabuk ve XBAP ve XAML dosyaları için MIME işleyici olarak kaydedilir. Bu nedenle, bir XBAP başlatıldığında WPF konağı başlatmak için Internet Explorer bilir. Firefox kullanıcıları Firefox yanı sıra konak için XBAP etkinleştirmek Firefox eklentiler yükleyebilirsiniz. Bir XBAP diğer tarayıcılar veya tek başına uygulamaları barındırma API'leri sağlanan yerel tarayıcı WPF tarafından kullanarak barındırılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF XAML tarayıcısı uygulamaları genel bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
+ [WPF XAML Tarayıcı Uygulamalarına Genel Bakış](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
    [WPF Konağı (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [.NET uygulama dağıtımını desteklemek için Firefox eklentileri](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [Yerel WPF tarayıcı desteği API'leri barındırma](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+  [.NET Uygulaması Dağıtımını Destekleyen Firefox Eklentileri](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
+  [Destek API'leri Barındıran Yerel WPF Tarayıcısı](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF içinde pencereler](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Derleme ve dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [WPF’de Windows](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
+  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

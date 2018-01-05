@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7354306b5385ef135ea496766026c3ac99505ffe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f1026320114592c25bb5fd123bf92227b26b015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
 İşte hakkında sağlanan yönergeleri [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] belgeleri. Bağlı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerini göre gruplandırılmış önerilir.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/02/2017
  Sistem tarafından sağlanan bağlamalar destekli protokollerin bir listesini görmek için bkz: [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Sistem tarafından sağlanan bağlamalar listesini görmek için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation örnekleri](../../../docs/framework/wcf/samples/index.md)  
- [Kavramsal genel bakış](../../../docs/framework/wcf/conceptual-overview.md)  
- [Kılavuzları ve en iyi uygulamalar](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [İstemci oluşturma](../../../docs/framework/wcf/building-clients.md)
+ [Windows Communication Foundation Örnekleri](../../../docs/framework/wcf/samples/index.md)  
+ [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)

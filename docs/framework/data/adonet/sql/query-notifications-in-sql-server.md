@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 854407d2e6d1341d5917cc78664c1f653e55fa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d922598cb31e60b1c1648884555695c1ba089726
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da sorgu bildirimleri
 Hizmet Aracısı altyapı inşa edilen sorgu bildirimleri veriler değiştiğinde bildirim almak uygulamaların olanak tanır. Bu özellik, bilgileri bir veritabanından, bir Web uygulaması gibi bir önbellekte sağlamak ve veri kaynağını değiştiğinde bildirim almak gereken uygulamalar için özellikle yararlıdır.  
@@ -49,16 +50,16 @@ Hizmet Aracısı altyapı inşa edilen sorgu bildirimleri veriler değiştiğind
 -   [Geliştirme (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sorgu bildirimleri etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+ [Sorgu Bildirimlerini Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  Etkinleştirme ve bunları kullanarak gereksinimlerini de dahil olmak üzere sorgu bildirimlerinin nasıl kullanılacağını açıklar.  
   
- [Bir ASP.NET uygulamasında SqlDependency](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
+ [Bir ASP.NET Uygulamasında SqlDependency](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
  Bir ASP.NET uygulamasında sorgu bildirimlerinin nasıl kullanılacağını gösterir.  
   
- [SqlDependency ile değişiklikleri algılama](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
+ [SqlDependency ile Değişiklikleri Algılama](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
  Sorgu sonuçları başlangıçta alınan olanlardan farklı algılayabilir gösterir.  
   
- [Bir SqlNotificationRequest ile SqlCommand yürütme](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [Bir SqlNotificationRequest ile SqlCommand Yürütme](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Yapılandırma gösteren bir <xref:System.Data.SqlClient.SqlCommand> sorgu bildirimi ile çalışmak için nesne.  
   
 ## <a name="reference"></a>Başvuru  

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c122931b0a00f487ddab07550913988462cfd50e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 74735afcb1d6be319ad5d497615a3b725a4d5574
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Çoklu Belge Arabirimi (MDI) Uygulamaları
 Birden çok belge arabirimi (MDI) uygulamaları, kendi penceresinde görüntülenen her belgeyle aynı anda birden çok belgeleri görüntülemek etkinleştirir. MDI uygulamaları genellikle windows veya belgeler arasında geçiş yapmak için alt menüler pencere Menü öğesiyle sahiptir.  
@@ -31,17 +32,17 @@ Birden çok belge arabirimi (MDI) uygulamaları, kendi penceresinde görüntüle
 >  Bazı Windows Forms MDI formları tek belge arabirimi (SDI) windows arasındaki davranış farklılıkları vardır. `Opacity` Özelliği MDI alt formları görünümünü etkilemez. Ayrıca, <xref:System.Windows.Forms.Form.CenterToParent%2A> yöntemi MDI alt formları davranışını etkilemez.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Nasıl yapılır: MDI Üst Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
  MDI uygulama içinde birden çok belge için bir kapsayıcı oluşturma için yönergeler sağlar.  
   
- [Nasıl yapılır: MDI alt formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [Nasıl yapılır: MDI Alt Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  MDI üst formu içinde çalışan bir veya daha fazla windows oluşturma için yönergeler sağlar.  
   
- [Nasıl yapılır: etkin MDI alt öğesini belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
  Odaklanmış alt pencere doğrulama için yönergeler sağlar (ve içeriğini panoya gönderme).  
   
- [Nasıl yapılır: etkin MDI alt öğesine veri gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
+ [Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
  Etkin alt pencere bilgileri taşıma için yönergeler sağlar.  
   
- [Nasıl yapılır: MDI alt formlarını düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)  
+ [Nasıl yapılır: MDI Alt Formlarını Düzenleme](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)  
  Döşeme, geçişli veya uygulamanın MDI alt pencereleri düzenleme için yönergeler sağlar.

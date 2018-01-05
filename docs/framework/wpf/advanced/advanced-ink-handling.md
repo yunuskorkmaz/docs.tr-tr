@@ -18,11 +18,12 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3b256b36affb310be3a59bbe1d058a3ff3a57b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ac7bb57f06f0d7021f3c060005033d25ec448b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-ink-handling"></a>Gelişmiş Mürekkep İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Birlikte <xref:System.Windows.Controls.InkCanvas>, ve toplama ve mürekkep görüntüleme hemen başlatmak için uygulamanızda koyabilir bir öğedir. Ancak, varsa <xref:System.Windows.Controls.InkCanvas> denetim Denetim yeterli düzeyini sağlamaz, kendi mürekkep koleksiyonu kullanarak ve mürekkep işleme sınıflarınızı özelleştirerek daha yüksek düzeyde denetim sağlayabilirsiniz <xref:System.Windows.Input.StylusPlugIns>.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Input.StylusPlugIns> Sınıfları üzerinde alt düzey denetim uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dinamik olarak mürekkep işleme. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranışı uygulamak ve en iyi performans için Kalem aygıtından gelen veri akışı için bir mekanizma sağlar. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Özelleştirilmiş <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, yani, dinamik olarak işleme mürekkep verileri gerçek zamanlı özelleştirmenize olanak tanır <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dijital mürekkep çizer hemen olarak <xref:System.Windows.Input.StylusPoint> veri oluşturulur, "kalem akış için" görünmesi aygıt.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Özel işleme mürekkep](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Kalem girişten kesintiye uğratan](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Mürekkep giriş denetim oluşturma](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Mürekkep iş parçacığı modeli](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Özel İşleme Mürekkebi](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
+  [Ekran Kaleminden Gelen Girişi Önleme](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
+  [Mürekkep Giriş Denetimi Oluşturma](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
+  [Mürekkep İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)

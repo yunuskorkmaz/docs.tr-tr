@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 876932c707a30d25e6ee6d9abf8e3510dcd13f65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91f9520750ddd8f35728ae6c5afc2390b7aa8274
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calls-failed-per-second"></a>Saniyede Başarısız Olan Çağrı
 Sayaç adı: Saniyede başarısız olan çağrılar  
@@ -32,4 +33,4 @@ Sayaç adı: Saniyede başarısız olan çağrılar
  Bu sayaç artırılır her, bu işlem içinde işlenmeyen bir özel yoktur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

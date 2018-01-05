@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b06d290760afa9a52274c30899e25f00bc18af2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 WCF istemci uygulamalarını kullanan <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıfı.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
@@ -123,7 +124,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ClientBase%601>  
- [İstemci oluşturma](../../../../docs/framework/wcf/building-clients.md)  
+ [İstemci Derleme](../../../../docs/framework/wcf/building-clients.md)  
  [İstemciler](../../../../docs/framework/wcf/feature-details/clients.md)  
- [Bir WCF istemcisi kullanarak hizmetlere erişme](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Nasıl yapılır: ChannelFactory Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

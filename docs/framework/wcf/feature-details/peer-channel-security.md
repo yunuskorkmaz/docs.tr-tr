@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8d9b63e4cb056cf72f2e7b4796883f3fc2873a49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-security"></a>Eş Kanalı Güvenliği
 Eş kanal çeşitli taraflı mesajlaşmayı bağımlı dağıtılmış uygulama türlerini sağlar. Burada güvenilen bir kaynak (örneğin, medya veya yazılım güncelleştirmeleri) içerik dağıtır, Internet ölçeğinde içerik dağıtımı bazı örnekler bir arkadaş grubuyla exchange müzik ve fotoğraf veya iş arkadaşlarınızı ekibi birliğine dayalı olarak bir belgeyi Düzenle. Bu senaryoların her biri benzersiz güvenlik modelini gerektirir. Eş kanal güvenlik modeli bu senaryosu için tasarlanmıştır ve farklı kimlik, kimlik doğrulama ve yetkilendirme modelleri ilgili gereksinimleriniz için bir güvenlik modeli sağlar.  
@@ -44,6 +45,6 @@ Eş kanal çeşitli taraflı mesajlaşmayı bağımlı dağıtılmış uygulama 
  Eş kanal uygulama desteklenen belirteç türleri birini seçer sürece belirli bir kimlik modeli gerektirmez. Uygulamalar, bu kimlikleri ve kimlik doğrulama kararları yaşam döngüsünü tamamen kendi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş kanalı uygulamalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Eş kanal kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Eş kanal uygulaması oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
+ [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

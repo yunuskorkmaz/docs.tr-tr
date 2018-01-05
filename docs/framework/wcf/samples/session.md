@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01c1bc2d202080349db32452adfe549d7a6dd3cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 46994828124452d00ae74c30142dd62c52000b39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="session"></a>Oturum
 Oturum örnek, bir oturum gerektiren bir sözleşmesini uygulama gösterilmiştir. Bir oturum, birden çok işlemleri gerçekleştirmek için bir bağlam sağlar. Sonraki işlemleri önceki bir işlemin durumunu kullanabilirsiniz, bu durum belirli bir oturum ile ilişkilendirmek bir hizmet sağlar. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesap makinesi hizmetinin uygular. `ICalculator` Sözleşme, çalışan bir sonuç tutarken gerçekleştirilecek aritmetik işlemler kümesi izin verecek şekilde değiştirildi. Bu işlev tarafından tanımlanan `ICalculatorSession` sözleşme. Bir hesaplama gerçekleştirmek için birden çok hizmet işlemleri adlı olarak hizmet için bir istemci durumu tutar. İstemcisi, çağırarak geçerli sonucu alabilir `Result()` ve çağırarak sıfır sonucu temizleyin `Clear()`.  

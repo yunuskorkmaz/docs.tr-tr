@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 24560a1e9b663a3145b589b5a03af8a8b72236ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee2885868c07b00f16290b6414e7f7bdd64fd68c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Nasıl yapılır: GridView Kullanarak ListView İçeriklerini Görüntüleme
 Bu örnek nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Controls.GridView> görüntüleme modu için bir <xref:System.Windows.Controls.ListView> denetim.  
@@ -38,5 +39,5 @@ Bu örnek nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.Con
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

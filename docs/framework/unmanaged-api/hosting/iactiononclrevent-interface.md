@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eecc04fea993de3c502d1a203f0023c81c3b7909
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b51784f07a90faa9eeb29c18a784d4fbc2c4654
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent Arabirimi
 Sağlar [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) geri aramalar için bir çağrı kullanılarak kaydedilmiş olayları gerçekleştirir yöntemi [Iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) yöntemi.  
@@ -32,7 +33,7 @@ Sağlar [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/ho
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnEvent yöntemi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Kayıtlı bir olay için bir geri çağırma gerçekleştirir.|  
+|[OnEvent Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)|Kayıtlı bir olay için bir geri çağırma gerçekleştirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,7 +45,7 @@ Sağlar [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/ho
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [EClrEvent numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
- [Iclrcontrol arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
- [Iclroneventmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [EClrEvent Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
+ [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
+ [ICLROnEventManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

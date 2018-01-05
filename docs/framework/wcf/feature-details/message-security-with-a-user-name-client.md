@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-user-name-client"></a>Kullaıcı Adı İstemcisi ile İleti Güvenliği
 Aşağıdaki çizimde gösterildiği bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet ve istemci ileti düzeyi güvenlik kullanarak güvenliği. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parola kullanarak kimliğini doğrular.  
@@ -136,8 +137,8 @@ Aşağıdaki çizimde gösterildiği bir [!INCLUDE[indigo1](../../../../includes
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [İleti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [Hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [İleti Güvenliği Kullanıcı Adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<Kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

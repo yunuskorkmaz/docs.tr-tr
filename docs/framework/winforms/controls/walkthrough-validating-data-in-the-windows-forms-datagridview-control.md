@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2ede616b311119d174534e53cb3aaf9e366c7c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama
 Kullanıcılara veri girişi işlevlerini görüntülediğinizde, sık formunuza girilen veri doğrulama gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı verileri veri deposuna yürütülmeden önce doğrulama gerçekleştirmek için kullanışlı bir yöntem sağlar. İşleyerek veri doğrulama <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından gerçekleştirilen olay <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  
@@ -101,7 +102,7 @@ Kullanıcılara veri girişi işlevlerini görüntülediğinizde, sık formunuza
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [Veri girişi Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminde verileri doğrulama](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
- [İzlenecek yol: Windows Forms DataGridView denetimindeki veri girişi sırasında oluşan hataları işleme](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+ [Windows Forms DataGridView Denetiminde Veri Girişi](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Verileri Doğrulama](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+ [İzlenecek yol: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)

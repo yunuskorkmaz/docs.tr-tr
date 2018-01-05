@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>İşlemi tek aşamalı ve çok aşaması Tamamlanıyor
 Bir işlem içinde kullanılan her bir kaynağın eylemlerini işlem yöneticisi (TM) tarafından düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Kaydetme kaynakları bir işlemde katılımcı olarak](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konuda ele alınmıştır bir kaynak (veya birden çok kaynak) bir işlem içinde nasıl kaydedilebilir. Bu konuda ele alınmıştır nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabilir.  
@@ -119,5 +120,5 @@ public void InDoubt (Enlistment enlistment)
  Tüm güncelleştirmeleri herhangi bir açık işbirliği yapıldığından tek aşaması yürütme Protokolü çalışma zamanında daha etkilidir. Bu protokol, daha fazla bilgi için bkz [tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Bir işlemde katılımcı olarak kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+ [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

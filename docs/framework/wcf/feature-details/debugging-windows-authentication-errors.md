@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c153fc3fa44b6f84d5aa11a7f20dcce3df533c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar tarafından çıkmış [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  
@@ -159,5 +160,5 @@ Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Gü
  <xref:System.ServiceModel.Security.WindowsServiceCredential>  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.ClientBase%601>  
- [Temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Desteklenmeyen senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+ [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

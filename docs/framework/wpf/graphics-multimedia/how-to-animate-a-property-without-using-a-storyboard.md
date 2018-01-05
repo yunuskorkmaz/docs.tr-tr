@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a1292dae3a6fc7e86387ecbe3bf2b1da6912cc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Kullanmadan Özelliğe Animasyon Ekleme
 Bu örnek, bir animasyon kullanmadan bir özelliğe uygulamak için bir yol gösterir. bir <xref:System.Windows.Media.Animation.Storyboard>.  
@@ -52,4 +53,4 @@ Bu örnek, bir animasyon kullanmadan bir özelliğe uygulamak için bir yol gös
  <xref:System.Windows.Media.Animation>  
  <xref:System.Windows.Media.Animation.Storyboard>  
  [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c80769a1563953fc412afc6baeffcb91b49667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 Bu konu önemli özelliklerinden bazıları bir bakış sunar [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi teknolojisinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -373,6 +374,6 @@ OpenType büyük harf kullanarak metin
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Documents.Typography>  
  [OpenType Belirtimi](http://go.microsoft.com/fwlink/?LinkId=96731)  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Örnek OpenType yazıtipi paketi](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Uygulamalarla paketleme yazı tipleri](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Örnek OpenType Yazı Tipi Paketi](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [Uygulamalarla Yazı Tiplerini Paketleme](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

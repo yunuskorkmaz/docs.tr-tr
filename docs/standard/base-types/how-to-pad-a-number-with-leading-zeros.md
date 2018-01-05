@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 "D" kullanarak bir tamsayı baştaki sıfırlarla ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) duyarlık Belirleyicisi ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlarla kullanarak ekleyebileceğiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu konu, her iki yöntem sayıyı baştaki sıfırlarla paneli için nasıl kullanılacağını gösterir.  
@@ -101,6 +104,6 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)
+ [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)

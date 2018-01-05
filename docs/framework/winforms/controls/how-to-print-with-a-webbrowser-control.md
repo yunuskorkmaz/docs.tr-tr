@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7a0f80785ee923874379a206b344db6a8c80055
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72ba017870bfccbb7c0e404c57cab77a96ab8b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Nasıl yapılır: Bir WebBrowser Denetimi ile Yazdırma
 Aşağıdaki kod örneğinde gösterilmektedir kullanma <xref:System.Windows.Forms.WebBrowser> denetim görüntüleme olmadan bir Web sayfası yazdırın.  
@@ -45,8 +46,8 @@ Aşağıdaki kod örneğinde gösterilmektedir kullanma <xref:System.Windows.For
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowser.Print%2A>  
  <xref:System.Windows.Forms.WebBrowser.Url%2A>  
- [Nasıl yapılır: WebBrowser denetimi ile URL'ye gidin](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [Nasıl yapılır: bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [Nasıl yapılır: bir Windows Forms uygulamasında HTML belge Görüntüleyicisi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [WebBrowser denetimine genel bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [WebBrowser güvenliği](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+ [Nasıl yapılır: WebBrowser Denetimi ile URL'ye Gitme](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Nasıl yapılır: Bir Windows Forms Uygulamasına Web Tarayıcısı Yetenekleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Nasıl yapılır: Bir Windows Forms Uygulamasında HTML Belge Görüntüleyicisi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [WebBrowser Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [WebBrowser Güvenliği](../../../../docs/framework/winforms/controls/webbrowser-security.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def1f6273809ad3d759f53ab225607c71d04ba4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu genel bir bakış sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katmanı. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
@@ -271,8 +272,8 @@ Grafikler ve farklı DPI ayarlarıyla metin
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Görsel katmanda isabet sınaması](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [DrawingVisual nesnelerini kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Öğretici: Bir Win32 uygulaması görsel nesneleri barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Görsel Katmanda Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [DrawingVisual Nesnelerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [Eğitmen: Win32 Uygulamasında Görsel Nesneler Barındırma](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a4bdd15d8e40c4c5d08a38db680b9db24140c02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 57fe853fb600de214fd9945d244ef54a5d774247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridsplitter"></a>GridSplitter
 <xref:System.Windows.Controls.GridSplitter> Sütun veya satırları arasındaki boşluğu yeniden dağıtır bir <xref:System.Windows.Controls.Grid> denetim.  

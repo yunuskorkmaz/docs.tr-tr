@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET bağlantı dizeleri
 .NET Framework 2.0 bağlantı dizeleri, yeni anahtar sözcüklerin giriş geçerli bir bağlantı dizeleri çalışma zamanında oluşturma kolaylaştırmak bağlantı dizesi Oluşturucu sınıflarına dahil olmak üzere ile çalışmak için yeni özellikler sunar.  
@@ -35,18 +36,18 @@ ms.lasthandoff: 11/21/2017
  Bu sorunları gidermek için her .NET Framework veri sağlayıcısı için yeni bağlantı dizesi oluşturucular ADO.NET 2.0 kullanıma sunuldu. Anahtar sözcükler, özellikleri, veri kaynağına gönderilmesinden önce doğrulanacak bağlantı dizesi sözdizimi etkinleştirme olarak sunulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Nasıl kullanılacağı ortaya `ConnectionStringBuilder` sınıfları geçerli bağlantı dizeleri oluşturmak için çalışma süresi.  
   
- [Bağlantı dizeleri ve yapılandırma dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
+ [Bağlantı Dizeleri ve Yapılandırma Dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
  Bağlantı dizelerini yapılandırma dosyalarında depolanıp gösterilmiştir.  
   
- [Bağlantı dizesi sözdizimi](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
+ [Bağlantı Dizesi Söz Dizimi](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
  Sağlayıcıya özgü bağlantı dizeleri için yapılandırmayı açıklar `SqlClient`, `OracleClient`, `OleDb`, ve `Odbc`.  
   
- [Bağlantı bilgileri koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  Bir veri kaynağına bağlanmak için kullanılan bilgiler koruyan tekniklerini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kaynağına bağlanma](/cpp/data/odbc/connecting-to-a-data-source)  
+ [Veri Kaynağına Bağlanma](/cpp/data/odbc/connecting-to-a-data-source)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

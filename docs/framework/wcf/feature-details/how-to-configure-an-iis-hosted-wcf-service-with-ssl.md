@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e43aca439ee354557cac42ba88599b6ea105b097
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
 Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındırılan bir WCF hizmeti kurmak açıklar. HTTP taşıma güvenliği ile IIS kaydedilmesi için bir SSL sertifikası gerektirir. Bir SSL sertifikası yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Sonraki web sitesi için SSL bağlaması eklemek ve web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
@@ -155,7 +156,7 @@ Bu konu, HTTP taşıma güvenliği kullanılacak bir IIS tarafından barındır�
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Internet Information Services barındırma en iyi uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Satır içi kod kullanarak IIS barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+ [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Satır İçi Kod Kullanarak IIS Barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

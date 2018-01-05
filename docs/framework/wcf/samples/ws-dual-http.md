@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c45801ba4b2d1fa2a9dafd14a5bc1b2f2221055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fea95db5bf1536b41b282bedab55a9deef8e8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-dual-http"></a>WS İkili Http
 İkili Http örnek nasıl yapılandırılacağını göstermektedir `WSDualHttpBinding` bağlama. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet çift yönlü sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculatorDuplex` matematik işlemleri kullanıma sunan arabirim (eklemek, çıkarma, çarpma ve bölme). Bu örnekte `ICalculatorDuplex` arabirimi oturumu üzerinden çalışan bir sonuç hesaplama matematik işlemleri gerçekleştirmek istemci izin verir. Bağımsız olarak, hizmet sonuçları döndürür `ICalculatorDuplexCallback` arabirimi. İstemci ile hizmet arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlam kurulmalıdır için çift yönlü sözleşme bir oturum gerektirir. `WSDualHttpBinding` Bağlama, çift yönlü iletişimi destekler.  

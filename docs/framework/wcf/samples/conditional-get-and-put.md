@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 59a9f0638855206f390ee7fbace580ba37e25e23
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 08efa127ed06ffc8cff3c7bb83af7be929329794
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="conditional-get-and-put"></a>Şartlı Alma ve Yerleştirme
 Bu örnek yeni koşullu almak ve API'ler için WCF REST programlama modeli güncelleştirmek nasıl kullanılacağı gösterilmektedir. Koşullu alın ve güncelleştirme için en uygun olduğundan kaynak odaklı ve REST Hizmetleri, bu örnek genişletir [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek. Koşullu almak ve güncelleştirme desteği eklemek için bu örnek odaklanır [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) sunulan yeni API'leri kullanarak örnek [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb44a32e63fd7a0ff0e480c205d5459da2ce2bd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView Denetimi Mimarisi (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Denetim ve ilişkili sınıfları görüntüleme ve tablo veri düzenlemek için esnek ve Genişletilebilir bir sistem olacak şekilde tasarlanmıştır. Bu sınıfların tüm bulunan <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ve tüm adlı "DataGridView" öneki.  
@@ -151,6 +152,6 @@ DataGridViewRow nesne modeli
  Etkinleştirirseniz, <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği, yeni satır eklemek için özel bir satır son satır olarak görünür. Bu satır parçası olan <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu, ancak dikkat etmeniz gereken özel işlevselliği vardır. Daha fazla bilgi için bkz: [Windows Forms DataGridView denetiminde yeni kayıtlar için satır kullanma](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGridView denetimine genel bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- [Windows Forms DataGridView denetimini özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView denetiminde yeni kayıtlar için satır kullanma](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+ [DataGridView Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [Windows Forms DataGridView Denetimini Özelleştirme](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

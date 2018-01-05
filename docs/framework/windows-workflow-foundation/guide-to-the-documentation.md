@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be645a0aa07a38e8cac7fa0a6d03634c64d3e11e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0367d3c492947beb1a193650a8172f7e7293f4c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows iş akışı belgeler için kılavuz
 Bu konu, Windows Workflow Foundation belgeleri kullanma hakkında bilgiler içerir. Bağlı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerini göre gruplandırılmış önerilir.  

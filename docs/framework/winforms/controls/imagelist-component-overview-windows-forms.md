@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ImageList> bileşen denetimleri tarafından görüntülenebilen görüntüleri depolamak için kullanılır. Görüntü listesi görüntülerinin tek, tutarlı bir katalog için kod yazmayı sağlar. Örneğin, tarafından görüntülenen görüntüleri döndürebilirsiniz bir <xref:System.Windows.Forms.Button> düğmenin değiştirerek sadece denetim <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> veya <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> özelliği. Ayrıca, aynı resim listesi birden çok denetimleri ile ilişkilendirebilirsiniz. Örneğin, her ikisi de kullanıyorsanız, bir <xref:System.Windows.Forms.ListView> denetim ve <xref:System.Windows.Forms.TreeView> denetimi dosyaları, görüntü listedeki bir dosyanın simgeyi değiştirme aynı listesini görüntülemek için her iki görünümde de görünen için yeni simgesine neden olur.  
@@ -37,4 +38,4 @@ Windows Forms <xref:System.Windows.Forms.ImageList> bileşen denetimleri tarafı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ImageList>  
- [Nasıl yapılır: Ekle veya Kaldır görüntüleri Windows Forms ImageList bileşeni](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+ [Nasıl yapılır: Windows Forms ImageList Bileşeni ile Görüntü Ekleme veya Kaldırma](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

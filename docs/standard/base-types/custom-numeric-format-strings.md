@@ -26,11 +26,14 @@ caps.latest.revision: "54"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>Özel Sayısal Biçim Dizeleri
 Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel sayısal biçim dizesi değil tüm biçim dizesi olan bir [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -237,7 +240,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.NumberFormatInfo>  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Nasıl yapılır: sayıyı baştaki sıfırlarla doldurur](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [Örnek: .NET Framework 4 yardımcı biçimlendirme](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

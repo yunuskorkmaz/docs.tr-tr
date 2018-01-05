@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2d618fee858a9a3b864d4213c940cd28fd5e1be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4ccab2f885a6e177cb81cce153aa92c457b4fb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) Örnekleri
 Bu örnekler üzerinde çeşitli yönlerini yönerge sağlamak [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Anonim İstemci ile İleti Güvenliği
 Aşağıdaki senaryoda bir istemci ve hizmet tarafından güvenli hale getirilmiş gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti güvenlik. Böylece gelecekte daha zengin bir talep tabanlı modeli destekleyebilir tasarım hedefi taşıma güvenliği yerine ileti güvenliği kullanmaktır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]yetkilendirme için zengin talep kullanarak bkz [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -142,8 +143,8 @@ Aşağıdaki senaryoda bir istemci ve hizmet tarafından güvenli hale getirilmi
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Dağıtılan uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [İleti güvenliği anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- [Hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Dağıtılan Uygulama Güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [İleti Güvenliği Anonim](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

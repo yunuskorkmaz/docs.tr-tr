@@ -25,11 +25,14 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve ayrıca diller arası Integration zamanının desteği önemli bir parçasıdır. Ortak tür sistemi aşağıdaki işlevleri gerçekleştirir:  
@@ -46,9 +49,9 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 -   [.NET türleri](#types_in_the_net_framework)  
   
--   [Tür tanımları](#type_definitions)  
+-   [Tür Tanımları](#type_definitions)  
   
--   [Tür üyeleri](#type_members)  
+-   [Tür Üyeleri](#type_members)  
   
 -   [Tür üyeleri özellikleri](#characteristics_of_type_members)  
   
@@ -62,13 +65,13 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
  .NET içinde ortak tür sistemi türleri aşağıdaki beş kategorilerini destekler:  
   
--   [Sınıfları](#Classes)  
+-   [Sınıflar](#Classes)  
   
--   [Yapıları](#Structures)  
+-   [Yapılar](#Structures)  
   
--   [Numaralandırmalar](#Enumerations)  
+-   [Sabit Listeleri](#Enumerations)  
   
--   [Arabirimleri](#Interfaces)  
+-   [Arabirimler](#Interfaces)  
   
 -   [Temsilciler](#Delegates)  
   
@@ -238,15 +241,15 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ## <a name="type-members"></a>Tür üyeleri  
  Çalışma zamanı davranışı ve bir türünün durumunu belirtir, türün üyeleri tanımlamanızı sağlar. Tür üyeleri şunları içerir:  
   
--   [Alanları](#Fields)  
+-   [Alanlar](#Fields)  
   
--   [Özellikleri](#Properties)  
+-   [Özellikler](#Properties)  
   
--   [Yöntemleri](#Methods)  
+-   [Yöntemler](#Methods)  
   
 -   [Oluşturucular](#Constructors)  
   
--   [Olayları](#Events)  
+-   [Olaylar](#Events)  
   
 -   [İç içe geçmiş türler](#NestedTypes)  
   
@@ -330,4 +333,4 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET sınıf kitaplığı](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)  
- [.NET tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)
+ [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

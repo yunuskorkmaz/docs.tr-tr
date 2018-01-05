@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57983e667f3cca5d8f68a0f2355182b8756e3ceb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-and-tokens"></a>Beyanlar ve Belirteçler
 Bu konu çeşitli açıklar talep türleri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desteklediği varsayılan gelen belirteçleri oluşturur.  
@@ -78,4 +79,4 @@ Bu konu çeşitli açıklar talep türleri [!INCLUDE[indigo1](../../../../includ
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.Rights>  
  <xref:System.IdentityModel.Claims.ClaimTypes>  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

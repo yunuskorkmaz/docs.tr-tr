@@ -13,26 +13,27 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 14be34b5d988a51a4785defbfcec95a4a073cc2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 907761184256b7cf51c7c0f20fa43ee603e0ab12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-concepts"></a>Sorgu kavramları
 Bu bölümde tasarlama için anahtar kavramlar açıklanmaktadır [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgular [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [LINQ to SQL sorguları](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
+ [LINQ to SQL Sorguları](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-queries.md)  
  Genel başvuruyor [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] konuları ve öğeleri için belirli açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [İlişkiler arasında sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
+ [İlişkilerde Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)  
  Association'ların kullanımı açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli.  
   
- [Uzak vs. Yerel çalıştırma](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
+ [Uzak ve Yerel Yürütme Karşılaştırması](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)  
  Yürütülen sorgunuzu istediğiniz yeri belirtin açıklanmaktadır.  
   
- [Ertelenmiş karşı hemen yükleniyor](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
+ [Ertelenmiş ve Hemen Yükleme Karşılaştırması](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)  
  İlişkili nesneleri ne zaman yüklediğini belirtin açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation Uç Noktaları
 İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servis oluşur aracılığıyla *uç noktaları* hizmetinin. Uç noktaları, istemcilerin erişim işlevine sağlar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sunar.  
@@ -33,30 +34,30 @@ ms.lasthandoff: 12/02/2017
   
  Bu tek tek bir uç nokta bölümlerini belirtme hakkında daha fazla açıklamaları için bkz:  
   
--   [Bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+-   [Uç Nokta Adresi Belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+-   [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [Hizmetleri Tasarlama ve uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+-   [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  Bir uç nokta yapısını tanımlar ve varsayılan uç noktalar, bağlamaları ve davranışları kullanmak için çalışma zamanı tarafından sağlanan nasıl bir uç nokta yapılandırması ve kodda, nasıl tanımlanacağı de özetler.  
   
- [Bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [Uç Nokta Adresi Belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  Açıklar nasıl ile iletişim bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bitiş noktalarından oluşur.  
   
- [Nasıl yapılır: yapılandırmada hizmet uç noktası oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Hizmet uç noktası yapılandırması oluşturmak gösterilmiştir.  
   
- [Nasıl yapılır: kod içinde hizmet uç noktası oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Kod içinde hizmet uç noktası oluşturma gösterilmektedir.  
   
- [Yayımlama meta veri uç noktaları](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
+ [Meta Veri Uç Noktalarını Yayımlama](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
  Meta veri meta veri uç noktalarını yapılandırma ve kodun yayımlayarak gösterilmiştir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.EndpointAddress>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel programlama yaşam döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)
+ [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)

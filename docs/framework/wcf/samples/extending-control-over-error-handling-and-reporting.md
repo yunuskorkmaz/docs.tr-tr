@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4284f07a21a9bb176a78a8a2abefe7c7c7c6b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
 Bu örnek hata işleme ve içinde hata bildirimi üzerinden denetimini genişletme yapmayı gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanarak hizmet <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci birkaç hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyasına kaydeder.  

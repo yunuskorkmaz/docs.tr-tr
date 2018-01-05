@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff13a123bcb2c61d786f2156e600a16cdd6bb31e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 833ffbbccfb35fd51ddde5dbeb4e3de3d79923ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-defined-functions"></a>Kullanıcı Tanımlı İşlevler
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Kullanıcı tanımlı işlevler temsil etmek için nesne modelinde yöntemlerini kullanır. Uygulayarak işlevleri olarak belirttiğiniz yöntemleri <xref:System.Data.Linq.Mapping.FunctionAttribute> özniteliği ve gerektiğinde, <xref:System.Data.Linq.Mapping.ParameterAttribute> özniteliği. Daha fazla bilgi için bkz: [LINQ to SQL nesne modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/18/2017
  Bu bölümdeki konular, form ve kodu kendiniz yazarsanız, uygulamanızda bu yöntemleri çağırmak nasıl gösterir. Kullanan geliştiriciler [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] genellikle kullanırsınız [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kullanıcı tanımlı işlevler eşlemek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: kullanıcı tanımlı işlevler skaler değerli kullanın](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
+ [Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
  Skaler değerler döndüren bir işlev uygulamak açıklar.  
   
- [Nasıl yapılır: kullanıcı tanımlı tablo değerli işlevler kullanın](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
+ [Nasıl yapılır: Tablo Değerli Kullanıcı Tanımlı İşlevler Kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
  Tablo değerleri döndüren bir işlev uygulamak açıklar.  
   
- [Nasıl yapılır: çağrı kullanıcı tanımlı işlevler satır içi](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
+ [Nasıl yapılır: Kullanıcı Tanımlı Satır İçi İşlevleri Çağırma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
  Satır içi çağrısı yapıldığında satır içi işlevler ve yürütme farklılıkları aramalarda açıklar.

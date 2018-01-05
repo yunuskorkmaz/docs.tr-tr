@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir uygulama için yazılım nasıl onu diğer yazılımlarla iletişim kurduğu gelen nasıl yazılmış ayırır. Bağlamaları Aktarım, kodlama ve istemcileri ve Hizmetleri birbirleri ile iletişim kurması gereken protokol ayrıntılarını belirtmek için kullanılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]temel alınan hat gösterimine uç noktanın bağlama ayrıntıları çoğunu iletişim kuran tarafların üzerinde anlaşmaya varılan gerekir böylece oluşturmak için bağlamaları kullanır. Bunu elde etmenin en kolay yolu, bir hizmet bağlaması aynı hizmet kullandığı için uç nokta kullanmak istemcileri içindir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bunu yapmak için bkz: nasıl [kullanarak bağlamaları yapılandırma Windows Communication Foundation Hizmetleri ve istemcilere](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
@@ -33,13 +34,13 @@ ms.lasthandoff: 12/02/2017
  Bir koleksiyonu gerekiyorsa bağlama öğeleri sağlanmamış bu sistem tarafından sağlanan bağlamalar biri tarafından bağlama gerekli öğelerinin koleksiyonunu içeren özel bir bağlama oluşturabilirsiniz. Bu özel bağlama oluşturma yapmak kolaydır ve yeni bir sınıf gerekmez, ancak özellikleri bağlama öğeleri veya ayarlarını denetlemek için sağladıkları değil. Bağlama öğeleri erişmek ve onları içeren koleksiyonu aracılığıyla ayarlarını değiştirin. Ayrıntılar için bkz [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Kullanın ve bağlamaları değiştirmek açıklar, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] senaryoları desteklemek için sağlar.  
   
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Nasıl tanımlanacağını açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmetler ve istemcileri imperatively kodu ve bildirimli olarak Yapılandırması'nı kullanarak bağlamaları.  
   
- [Özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  
  Ne açıklayan bir <xref:System.ServiceModel.Channels.CustomBinding> olduğu ve ne zaman kullanılır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -50,4 +51,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels.CustomBinding>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)
+ [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9f05e59f0df6326fe3ba68e35d83e3eda880ee8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 854e04c53bf438c3356072d762f129b7f21b7dd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-convoy-scope"></a>İşlem Convoy kapsamı
 Bu örnek nasıl paralel etkinlik düzeni ile birlikte Mesajlaşma Convoy oluşturulduğunu gösteren bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> burada birkaç işlem oluşabilir tüm aynı işlem altında herhangi bir sırada bir protokol modellemek için. Bu örnek ayrıca gösterir nasıl bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> istemci kullanmayan şekilde bir sunucuya akıtılan değil, yeni bir işlem otomatik olarak oluşturur işlemler kullanın.  

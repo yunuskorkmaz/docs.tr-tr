@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f625a9ebc3a522d93232922aa1f87ef15ed48558
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1f8f6bd4d8661393bc849405a8668341f65f8d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği türü belirler olduğu bir hizmette kimlik Ayarla gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` özniteliği Windows.  
@@ -76,5 +77,5 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [Hizmet kimliği ve kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

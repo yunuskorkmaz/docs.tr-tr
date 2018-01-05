@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a324c3b7f24d3395382067ea5581313af58e13f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 219b8173fdbfd84719733edc2f900511f58967d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML şema kısıtlamaları ve ilişkileri
 Bir XML Şeması Tanım Dili (XSD) şemasında, kısıtlamalar belirtebilirsiniz (benzersiz anahtar ve keyref kısıtlamaları) ve ilişkileri (kullanarak **msdata:Relationship** ek açıklama). Bu konuda, kısıtlamalar ve bir XML şemasında belirtilen ilişkiler oluşturmak için nasıl yorumlanır açıklanmaktadır <xref:System.Data.DataSet>.  
@@ -197,5 +198,5 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
  İç içe geçmiş bir tabloya başvuran keyref kısıtlaması içeriyorsa **msdata:IsNested = "true"** ek açıklama, **DataSet** keyref kısıtlaması bağlı tek bir iç içe geçmiş ilişki oluşturur ve ilgili benzersiz/key kısıtlaması.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Türetilen DataSet ilişkisel yapısından XML Şeması (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

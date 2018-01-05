@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0241745396ab01a777eef6e3b88e4c12bdd8b429
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f069d09f25575c39db097024384ad1bf14eaaf02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
 Tür kitaplığını yükler ve sağlanan kullanır [Itypelibresolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) herhangi dahili olarak başvurulan tür kitaplıklarının çözümlemek için.  
@@ -96,5 +97,5 @@ HRESULT LoadTypeLibWithResolver(
  **.NET framework sürümü:** 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tlbexp yardımcı işlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx işlevi](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

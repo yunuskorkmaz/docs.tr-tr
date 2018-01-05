@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Yeni bir TCP tabanlı ağ protokolü (net.tcp://) için yüksek performanslı iletişim sağlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aynı zamanda yeni bir sistem bileşeni olan birden çok kullanıcı işlemleri arasında paylaşılacak net.tcp bağlantı noktalarını etkinleştirir Net.TCP bağlantı noktası Paylaşımı hizmeti sunar.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
  Net.TCP bağlantı noktası Paylaşımı hizmeti işlemleri uygulamalar ve ağ arasında bir katmanı sağlasa da, ağ üzerinde doğrudan dinleme gibi bağlantı noktası Paylaşımı kullanan uygulamalar yine güvenli hale getirilmelidir. Özellikle, bağlantı noktası Paylaşımı kullanan uygulamalar, altında çalıştığı işlem ayrıcalıkları değerlendirmelisiniz. Ağ iletişimi için gereken işlem ayrıcalıklar en az sayıda ile çalıştırır yerleşik ağ hizmeti hesabını kullanarak uygulamanızı çalıştıran göz önünde bulundurun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Net.TCP bağlantı noktası hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
+ [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Nasıl yapılır: bağlantı noktası paylaşımı için bir WCF hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir WCF Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Nasıl yapılır: Net.TCP Bağlantı Noktası Paylaşım Hizmetini Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

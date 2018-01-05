@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 244eb38ea47bbd7376c2f8c6f5b2609fbd9c4330
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2a6885a594e5fcd747f85dedf1afbd39ec644717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>Nasıl yapılır: Çok Satırlı TextBox Denetimi Oluşturma
 Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] tanımlamak için bir <xref:System.Windows.Controls.TextBox> birkaç satırlık metin uyum sağlayacak şekilde otomatik olarak genişletecek denetim.  
@@ -34,5 +35,5 @@ Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_xaml](../../../
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.TextWrapping>  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

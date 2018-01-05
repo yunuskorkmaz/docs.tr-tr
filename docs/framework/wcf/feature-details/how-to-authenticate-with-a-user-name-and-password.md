@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama
 Bu konuda etkinleştirmeye gösterilmiştir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows etki alanı kullanıcı adı ve parola ile bir istemci kimlik doğrulaması için hizmet. Bu, bir çalışma, kendi kendini barındıran WCF Hizmeti varsayar. Bir temel kendini barındıran WCF Hizmeti bakın, oluşturmanın bir örneği için [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bu konu, hizmet kodunda yapılandırılan varsayar. Bir yapılandırma dosyası kullanarak benzer bir hizmet yapılandırma bir örnek görmek istiyorsanız bkz [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
@@ -99,6 +100,6 @@ Bu konuda etkinleştirmeye gösterilmiştir bir [!INCLUDE[indigo1](../../../../i
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
  <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
- [Temel kimlik doğrulama ile taşıma güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- [Dağıtılan uygulama güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Temel Kimlik Doğrulama ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Dağıtılan Uygulama Güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

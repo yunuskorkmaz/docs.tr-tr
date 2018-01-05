@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e40ea594c7743dfec06876515a1165da1a16d4e5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c62aa9ac582e93bb86399472e47c41fdb6fad2d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Nasıl yapılır: ServiceContractGenerator için UzantıYazma
 Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.ServiceContractGenerator>. Bu uygulama tarafından yapılabilir <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> arabirim üzerinde bir işlemi davranışı veya uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sözleşme davranışına arabirimi. Bu konuda nasıl uygulandığını gösterir <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> sözleşme davranışına arabirimi.  
@@ -109,5 +110,5 @@ Bu konu için uzantıyazma açıklar <xref:System.ServiceModel.Description.Servi
 7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>Her sözleşme davranışı uygulayan belirli bir sözleşme için otomatik olarak adlandırılan <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Bu yöntem daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Description.ServiceContractGenerationContext> geçirildi. Bu örnekte açıklamaları eklenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Nasıl yapılır: özel WSDL içe aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [Nasıl yapılır: Özel WSDL İçe Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

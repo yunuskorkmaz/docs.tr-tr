@@ -13,11 +13,12 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  

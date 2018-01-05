@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 Bir koleksiyondaki her öğe için bir grup ifadeleri tekrarlar.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Daha fazla örnek için bkz: [koleksiyonları](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) ve [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Daha fazla örnek için bkz: [koleksiyonları](../../../standard/collections/index.md) ve [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>İç içe geçmiş döngüler  
  Geçirebilmenize `For Each` döngüler içinde başka bir döngü koyarak kullanılabilir.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Daha fazla bilgi için bkz: [yineleyiciler](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [Yield deyimi](../../../visual-basic/language-reference/statements/yield-statement.md), ve [yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Daha fazla bilgi için bkz: [yineleyiciler](../../programming-guide/concepts/iterators.md), [Yield deyimi](../../../visual-basic/language-reference/statements/yield-statement.md), ve [yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Teknik Uygulama  
  Zaman bir `For Each`...`Next` deyimi çalıştığında, Visual Basic koleksiyon yalnızca bir kez döngü başlamadan önce değerlendirir. Bir ifade bloğu değişirse `element` veya `group`, bu değişiklikleri döngü etkilemez.  
@@ -180,12 +180,12 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Koleksiyonları](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [İçin... Sonraki deyim](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Döngü yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [While... End While deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Yapın... Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [Genişletme ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Koleksiyonlar](../../../standard/collections/index.md)  
+ [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [While...End While Deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)

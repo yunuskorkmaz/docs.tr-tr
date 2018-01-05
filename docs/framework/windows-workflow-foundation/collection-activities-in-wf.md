@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9d044ab9b95eb4144770a90367028b5b513a69c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-activities-in-wf"></a>WF etkinlikleri koleksiyonu
 Koleksiyon etkinlikler koleksiyonu nesneleri bir iş akışında çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]ekleme ve koleksiyondan öğeleri kaldırma, bir koleksiyondaki bir öğe varlığını için test etme ve bir koleksiyon temizlemek için sistem tarafından sağlanan etkinlikler içeriyor. `ExistsInCollection`ve `RemoveFromCollection` sahip bir <xref:System.Activities.OutArgument%601> türü <xref:System.Boolean>, sonuç gösterir.  
@@ -435,4 +436,4 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+ [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4497b72f229a8f3d62ecb1829fda88ea3d76bbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92d619cb713e22d49e5c62bf7545d946b418dbda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Nasıl yapılır: TextBox'a Filigran Ekleme
 Aşağıdaki örnek, kullanılabilirliğini yardımcı olmak gösterilmiştir bir <xref:System.Windows.Controls.TextBox> içinde açıklayıcı arka plan görüntüsü görüntüleyerek <xref:System.Windows.Controls.TextBox> metin kullanıcı girdi kadar bu noktada görüntü kaldırılır. Ayrıca, kullanıcının kendi giriş kaldırırsa arka plan resmini yeniden geri yüklendi. Aşağıdaki şekle bakın.  
@@ -40,5 +41,5 @@ Aşağıdaki örnek, kullanılabilirliğini yardımcı olmak gösterilmiştir bi
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

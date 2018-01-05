@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5117d2aba6fe368a7a17e3d35d8c4887582267e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4870e5f3a71f51cb788eae1aa2a1884f5084ad40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulating-data"></a>Verileri düzenleme
 Giriş, birden fazla etkin sonuç kümesi (MARS) önce geliştiricilerin belirli senaryolar çözmek için birden çok bağlantıları veya sunucu tarafı imleçler kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda kullanılan, ayrıca, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekirdi. Aşağıdaki senaryolarda nasıl yerine birden çok bağlantı MARS etkin bir bağlantı kullanılacağını gösterir.  
@@ -413,5 +414,5 @@ private static string GetConnectionString()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Birden fazla etkin sonuç kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

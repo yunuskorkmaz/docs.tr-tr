@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c19125d96d5f4a9e91fc083d53f36ebebd2c569
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d55500efbe808b2fce16e869422e727b8ed0b93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent Arabirimi
 Ana bilgisayarın uygulamasını elle sıfırlama olayı bir gösterimini sağlar.  
@@ -32,9 +33,9 @@ Ana bilgisayarın uygulamasını elle sıfırlama olayı bir gösterimini sağla
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Reset yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Geçerli sıfırlar `IHostManualEvent` işaret olmayan bir duruma örneği.|  
-|[Set yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Geçerli ayarlar `IHostManualEvent` iş durumuna örneği.|  
-|[Wait yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Geçerli neden `IHostManualEvent` örneği ait kadar bekleyin veya belirli bir süre geçtikten miktarını.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|Geçerli sıfırlar `IHostManualEvent` işaret olmayan bir duruma örneği.|  
+|[Set Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|Geçerli ayarlar `IHostManualEvent` iş durumuna örneği.|  
+|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|Geçerli neden `IHostManualEvent` örneği ait kadar bekleyin veya belirli bir süre geçtikten miktarını.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -46,8 +47,8 @@ Ana bilgisayarın uygulamasını elle sıfırlama olayı bir gösterimini sağla
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Iclrsyncmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [Ihostautoevent arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [Ihostsemaphore arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
- [Ihostsyncmanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
+ [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
+ [IHostSemaphore Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
+ [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

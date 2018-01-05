@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f788456065a5508441b9fec38ad4a7f531f9f303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e1690f5fe8f1417e6547ed94db8c71f079ebf5e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc Arabirimi
 Ortak dil çalışma zamanı (CLR) ana bilgisayar üzerinden öbek hassas ayırmaları istemesini sağlayan yöntemler sağlar.  
@@ -32,9 +33,9 @@ Ortak dil çalışma zamanı (CLR) ana bilgisayar üzerinden öbek hassas ayırm
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Alloc yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Ana bilgisayar yığınından istenilen bellek miktarını tahsis istek sayısı.|  
-|[DebugAlloc yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Konak istenilen bellek miktarını yığınından ayırın ve ayrıca burada belleği ayrıldı izlemek ister.|  
-|[Free yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Kullanarak ayrılmış bellek boşaltır `Alloc` yöntemi.|  
+|[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Ana bilgisayar yığınından istenilen bellek miktarını tahsis istek sayısı.|  
+|[DebugAlloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Konak istenilen bellek miktarını yığınından ayırın ve ayrıca burada belleği ayrıldı izlemek ister.|  
+|[Free Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|Kullanarak ayrılmış bellek boşaltır `Alloc` yöntemi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  CLR bir arabirim işaretçisi alır bir `IHostMalloc` çağırarak örneği [Ihostmemorymanager::createmalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi.  
@@ -49,5 +50,5 @@ Ortak dil çalışma zamanı (CLR) ana bilgisayar üzerinden öbek hassas ayırm
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ihostmemorymanager arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
- [Barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [IHostMemoryManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+ [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

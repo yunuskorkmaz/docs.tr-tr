@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 548606a0196012fdd21bf5512e8ea7b089c723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
 Visual C++ ve Visual Basic'te yığın yukarı daha fazla filtre ifadesi önce çalışır **son** deyimi. **Catch** blok ile ilişkili sonra bu filtre çalışan **son** deyimi. Daha fazla bilgi için bkz: [Using User-Filtered özel durumları](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sırada güvenlik etkilerini inceler. Hangi filtre ifadesini sırayla gösterilmektedir aşağıdaki sahte kod örneği göz önünde bulundurun ve **son** deyimleri çalıştırın.  
@@ -168,4 +169,4 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

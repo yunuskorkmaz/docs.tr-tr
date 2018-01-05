@@ -16,11 +16,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbf0df6e4fbf62ab0e7ec8c741a0f3be01c35ef
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma
 Yönetilen bir uygulama içinde bir hizmet barındırmak için hizmet içinde yönetilen uygulama kodu için kod ekleme, hizmet için bir uç nokta imperatively kodda, yapılandırma veya varsayılan uç noktalarını kullanarak aracılığıyla bildirimli olarak tanımlamanızı ve ardından oluşturmak bir örneği <xref:System.ServiceModel.ServiceHost>.  
@@ -102,11 +103,11 @@ Yönetilen bir uygulama içinde bir hizmet barındırmak için hizmet içinde y�
  <xref:System.Uri>  
  <xref:System.Configuration.ConfigurationManager.AppSettings%2A>  
  <xref:System.Configuration.ConfigurationManager>  
- [Nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
- [Kendini barındırma](../../../docs/framework/wcf/samples/self-host.md)  
- [Barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md)  
- [Nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Nasıl yapılır: bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)
+ [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)  
+ [Barındırma Hizmetleri](../../../docs/framework/wcf/hosting-services.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşmasını Uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)

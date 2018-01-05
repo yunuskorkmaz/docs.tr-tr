@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Kullanarak büyük iletileri gönderirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti gövdesi akış olmaktır. Ancak bazı protokolleri tüm ileti arabelleğe almayı gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilmiştir. Başka bir olası öbekleri adı verilen daha küçük iletilerine büyük ileti bölmek, aynı anda bu öbekleri bir öbek göndermek ve büyük iletiyi alan tarafta yeniden oluşturma için çözümüdür. Uygulama bu Öbekleme yapabilirsiniz ve XML'deki Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl özel protokol veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  

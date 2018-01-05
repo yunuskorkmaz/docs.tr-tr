@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a5d2e1d8c5381f322ea1b6ffc9022853683efc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7447d11e93cf33e69bc52d2cdec239c1be55bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="host-lock-renewal-period"></a>Ana bilgisayar kilit yenileme süresi
 **Konak kilit yenileme süresini** özelliği SQL iş akışı örneği deposunun konak içinde bir iş akışı örneği üzerinde kendi kilit yeniler süre belirtmenize olanak sağlar. Kilidi geçerli kaldığı için ana bilgisayar kilit yenileme süresini + 30 saniye. Kilidi yenilemek ana bilgisayar başarısız olursa (diğer bir deyişle, kira süresini) kilidi bu süre içinde süresi dolar ve Kalıcılık sağlayıcı örneği kilidini açar. Bu özellik için değer "ss: dd:" biçiminde TimeSpan türüdür. Değer izin verilen minimum "00: 00:01" (1 saniye). Bu özelliğin varsayılan değeri "00: 00:30" (30 saniye).  

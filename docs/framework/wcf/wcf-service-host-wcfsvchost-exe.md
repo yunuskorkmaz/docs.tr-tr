@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d59e23b407a01e91f68022a1b67e590858235e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 495088463a6a7463ce1452588dc55d35110f0092
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet Konağı (WcfSvcHost.exe) başlatmak verir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı otomatik olarak ana bilgisayar ve uygulanan bir hizmeti test (F5). Hizmetini kullanarak sınayabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (WcfTestClient.exe) ya da kendi istemci bulmak ve olası hataları düzeltmek için.  

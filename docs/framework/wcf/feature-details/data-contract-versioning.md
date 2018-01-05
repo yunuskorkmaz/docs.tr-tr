@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları geliştikçe, aynı zamanda değiştirmeniz gerekebilir Hizmetleri kullanım verileri sözleşme. Bu konuda açıklanmaktadır sürüm veri sözleşmeleri nasıl. Bu konuda veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Tam genel bakış ve düzenleyici sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -134,8 +135,8 @@ Doğal olarak, koleksiyon (örneğin, bir tamsayı listesinden dizeleri listesin
  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
  <xref:System.Runtime.Serialization.SerializationException>  
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Sürüm toleranslı seri hale getirme geri çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+ [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [İleri Uyumlu Veri Anlaşmaları](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

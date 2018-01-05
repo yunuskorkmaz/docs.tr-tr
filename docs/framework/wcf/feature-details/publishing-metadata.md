@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 275499a2373bfd1a1713d0b9c7291a117faa9671
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-metadata"></a>Meta Verileri Yayımlama
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Hizmetleri, bir veya daha fazla meta veri uç noktalarını yayımlayarak meta veri yayımlama. Hizmet meta veri yayımlama meta verileri WS-MetadataExchange (MEX) ve HTTP/GET istekleri gibi standart protokoller kullanılarak kullanılabilir hale getirir. Meta veri uç noktalarını, sahip oldukları bir adresi, bağlama ve bir sözleşme ve hizmet ana bilgisayar yapılandırması veya kesinlik temelli kodu üzerinden için eklenebilir, diğer hizmet uç noktaları benzerdir.  
@@ -37,10 +38,10 @@ ms.lasthandoff: 12/02/2017
  HTTP/GET isteklerine yanıt hizmetiniz için bir meta veri uç noktası eklemek için ayarlayın <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliği <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> için `true`. Ayarlayarak HTTPS kullanan bir meta veri uç noktası da yapılandırabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> özelliği <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> için `true`.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  Nasıl yapılandırılacağını göstermektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS-MetadataExchange ya da bir HTTP/GET isteği kullanarak kullanarak meta verilerini alabilmesi meta veri yayımlama için hizmet `?wsdl` sorgu dizesi.  
   
- [Nasıl yapılır: kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  Meta veri yayımlama için etkinleştirme gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS-MetadataExchange ya da bir HTTP/GET isteği kullanarak kullanarak meta verilerini alabilmesi kod içinde hizmet `?wsdl` sorgu dizesi.  
   
 ## <a name="reference"></a>Başvuru  
@@ -53,4 +54,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.MetadataExchangeBindings>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veri alma ve verme](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+ [Meta Verileri Dışarı ve İçeri Aktarma](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

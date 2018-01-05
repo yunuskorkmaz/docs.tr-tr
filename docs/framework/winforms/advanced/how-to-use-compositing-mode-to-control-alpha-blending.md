@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 564d46cb2d72ac63962657b39146489aaafd6a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40461ddb3fdae8076df5290afe669a8eca9f6a8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Nasıl yapılır: Alfa Karışım Kullanmayı Denetlemek için Birleştirme Modunu Kullanma
 Aşağıdaki özelliklere sahip bir ekran dışı bitmap oluşturmak istediğinizde zamanlar olabilir:  
@@ -68,4 +69,4 @@ Aşağıdaki özelliklere sahip bir ekran dışı bitmap oluşturmak istediğini
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Color.FromArgb%2A>  
- [Çizgi ve dolgularda alfa karıştırma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+ [Çizgi ve Dolgularda Alfa Karışım Kullanma](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

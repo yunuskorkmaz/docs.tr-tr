@@ -17,41 +17,42 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72ec8c723ccb5c13a21360bd5abfcc5261dce1b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e3123df62e66354b35da26bbda894c5828136d05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyon ve zamanlama sistemi uygulamalarınızda.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Hızlandırma veya animasyonun hızını düşürün](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [Yineleme döngüsü sırasında animasyon değerlerini accumulate](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Animasyon çıkış değeri başlangıç değeri bir animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Film şeridi kullanarak bir özelliği animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Film şeridi kullanmadan bir özellik animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [Bir ControlTemplate animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [Stil içinde animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [Bir öğe veya fırça geçirgenliğini animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [Bir saat hızı zaman çizelgesinin hızını değiştirmeden değiştirme](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [Etkileşimli yöntemlerini kullanarak başladıktan sonra film şeridi kontrol etme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Bir animasyon gelen ve kullanarak denetimi](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [Ad kapsamı tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [Saatin durumu değiştiğinde bildirim alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
+ [Bir Animasyonu Hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
+ [Yineleme Döngüsü Sırasında Animasyon Değerlerini Biriktirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Animasyon Başlangıç Değerine Animasyon Çıkış Değeri Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Görsel Taslak Kullanmadan Özelliğe Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [ControlTemplate İçinde Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
+ [Bir Stile Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
+ [Bir Öğe veya Fırça Opaklığına Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [Zaman Çizelgesinin Hızını Değiştirmeden Saat Hızını Değiştirme](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
+ [Görsel Taslağı Başladıktan Sonra Etkileşimli Yöntemlerini Kullanarak Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [Bir Animasyonu Gelen, İçin ve Göre Kullanarak Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
+ [Ad Kapsamı Tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
+ [Saatin Durumu Değiştiğinde Bildirim Alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
  [Nasıl yapılır: bir film şeridi Kaldır](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)  
- [Animasyonu yineleyin](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Film şeridi arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [Film şeridi zaman uyumlu olarak arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [Bir süre için bir animasyon ayarlayın](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Film şeridi animasyon sonra bir özellik Ayarla](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [Alt zaman çizelgelerini kullanarak animasyonları basitleştirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Film şeridi animasyonları arasında HandoffBehavior belirtin](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [Etkin döneme ait ulaştığı zaman çizelgesi için FillBehavior belirtin](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [Bir zaman çizelgesi otomatik olarak ters çevrilip çevrilmeyeceğini belirleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Bir özellik değeri değiştiğinde animasyon tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Başladıktan sonra film şeridi denetlemek için olay tetikleyicileri kullanın](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [Animasyonu Yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
+ [Görsel Taslak Arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
+ [Görsel Taslağı Zaman Uyumlu Olarak Arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
+ [Animasyon için Süre Ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
+ [Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [Alt Öğe Zaman Çizelgelerini Kullanarak Animasyonları Basitleştirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
+ [Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [Etkin Döneminin Sonuna Gelen Zaman Çizelgesi için FillBehavior Belirtme](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
+ [Zaman Çizelgesinin Otomatik Olarak Ters Çevrilip Çevrilmeyeceğini Belirtme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -65,4 +66,4 @@ Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winc
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

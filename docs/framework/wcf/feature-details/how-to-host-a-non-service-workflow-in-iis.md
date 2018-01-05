@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma
 İş akışı hizmetleri iş akışları IIS altında barındırılan / OLUŞTU. Başkası tarafından yazılmış bir iş akışı barındırma gerektiğinde kullanışlıdır. Örneğin, iş akışı Tasarımcısı'nı yeniden barındırma ve kullanıcılar kendi iş akışları oluşturmak izin verirseniz.  IIS'de hizmet olmayan iş akışı barındırma işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi özellikleri için destek sağlar. IIS barındırılan iş akışı hizmetleri içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve bu IIS tarafından bir ileti alındığında etkinleştirildi. Hizmet olmayan iş akışları Mesajlaşma etkinlikleri içermez ve bir ileti göndererek varsayılan olarak devre dışı bırakılamaz.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ve iş akışı örneği oluşturmak için işlemleri içeren bir hizmet sözleşmesini tanımlama. Bu konu basit bir iş akışı oluşturma, bir istemci, iş akışını etkinleştirmek için kullanabileceğiniz bir hizmet sözleşmesini tanımlama ve öğesinden bir sınıf türetme size yol gösterecektir <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istekleri oluşturma iş akışı için dinlemek için hizmet sözleşmesi kullanır.  
@@ -683,11 +684,11 @@ namespace CreationClient
  Hiçbir zaman uygulayan bir hizmet uyguladığınız için bu örnek karmaşık görünebilir `IWorkflowCreation`. Bunun nedeni, `CreationEndpoint` bunu sizin için yapar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internet Information Services barındırma en iyi uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Windows iş akışı mimarisi](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [WorkflowHostingEndpoint Sürdür yer işareti](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [İş Akışı Tasarımcısı yeniden barındırma](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Windows iş akışı genel bakış](../../../../docs/framework/windows-workflow-foundation/overview.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Windows Workflow Mimarisi](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [WorkflowHostingEndpoint Sürdürme Yer İşareti](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [İş Akışı Tasarımcısını Yeniden Barındırma](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Windows Workflow’a Genel Bakış](../../../../docs/framework/windows-workflow-foundation/overview.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eefa3145f50ffa24c1b3cf895c9e5097adb5e9d9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b9e0c7e077a9f47de6df31b00f4df320b845150
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindinggt"></a>&lt;bağlama&gt;
 Kullanabileceğiniz `binding` öğesi farklı türlerde yapılandırmak için Windows Communication Foundation (WCF) tarafından sağlanan bağlamaları önceden tanımlanmış.  
@@ -49,6 +50,6 @@ Kullanabileceğiniz `binding` öğesi farklı türlerde yapılandırmak için Wi
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
- [Bağlamaları](../../../docs/framework/wcf/bindings.md)  
- [Özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [Bağlamalar](../../../docs/framework/wcf/bindings.md)  
+ [Özel Bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

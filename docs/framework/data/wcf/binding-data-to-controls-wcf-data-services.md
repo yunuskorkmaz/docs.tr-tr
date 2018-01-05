@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca580801e6bb8786071ec705d4a86d367b02f622
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4f6c4d7fb657cf091c5637f110d115059055c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>(WCF Veri Hizmetleri) denetimlere veri bağlama
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], denetimleri gibi bağlayabilirsiniz `ComboBox` ve `ListView` örneği denetimlere <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı. Öğesinden devralınan bu koleksiyonu <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfı, verileri içeren bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu sınıf bildirimleri öğeleri eklendiğinde veya kaldırılan sağlayan dinamik veri koleksiyonunu temsil eder. Bir örneğini kullandığınızda <xref:System.Data.Services.Client.DataServiceCollection%601> veri bağlama için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları tarafından izlenen nesneleri emin olmak için bu olayları işleme <xref:System.Data.Services.Client.DataServiceContext> ilişkili kullanıcı Arabirimi öğesi verilerle eşitlenmiş olarak kalır.  
@@ -124,5 +125,5 @@ ms.lasthandoff: 12/02/2017
  Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: el ile istemci veri hizmeti sınıfları oluşturma](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)  
- [Nasıl yapılır: bir veri hizmet Başvurusu Ekle](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+ [Nasıl yapılır: El İle İstemci Veri Hizmeti Sınıfları Oluşturma](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)  
+ [Nasıl yapılır: Veri Hizmeti Başvurusu Ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

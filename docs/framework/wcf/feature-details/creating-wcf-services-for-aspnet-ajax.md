@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f13fffcfb6094b56f1cbfdffca52a1b24f437b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2e3ba1d360c55f10cde9447b3961d84ffe1cdb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile zengin kullanıcı deneyimi içeren Web sayfaları hızlı bir şekilde oluşturmanızı sağlar. ASP.NET AJAX tarayıcılar arası ECMAScript (JavaScript) ve dinamik HTML (DHTML) teknolojilerini istemci-komut dosyası kitaplıkları sağlar ve onu ASP.NET 2.0 sunucu tabanlı geliştirme platformu ile tümleştirir. ASP.NET AJAX'ı kullanarak, kullanıcı deneyimi ve Web uygulamalarınızın verimliliğini artırabilir.  
@@ -68,7 +69,7 @@ Microsoft ASP.NET AJAX, esnek ve tanıdık kullanıcı arabirimi öğeleri ile z
  AJAX uç noktalarını [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanmadan ASP.NET AJAX framework bile tüketilebilir. Bunun yapılması AJAX desteği destek mimarisini bilinmesini gerektirir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu mimarinin bir tartışma için bkz: [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Bu yaklaşım gösteren bir kod örneği için bkz: [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Nasıl yapılır: yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
- [Nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  
- [Nasıl yapılır: istekleri ASP.NET AJAX uç noktaları için HTTP POST ve HTTP GET arasında seçim yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
+ [Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  
+ [Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

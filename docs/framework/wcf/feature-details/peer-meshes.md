@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d747b2916f544294bb69f01aadc1321370878689
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-meshes"></a>Eş Kafesleri
 A *mesh* iletişim kendilerini arasında ve bir benzersiz kafes kimliği tarafından tanımlanan eş düğümlerinin adlandırılmış koleksiyonu (birbirine bağlı bir grafik) Her düğüm için birden çok diğer düğümlere bağlanır. İyi bağlantılı bir kafes kafes en ilerideki kenarlarında düğümler arasında nispeten az durakları herhangi iki düğüm arasında bir yolu yoktur ve bazı düğümler veya bağlantıları bırakma olsa bile kafes bağlı kalır. Diğer eş bunları bulabilmesi için Kafes etkin düğüm karşılık gelen bir kafes kimliği ile uç nokta bilgilerini yayımlayabilir.  

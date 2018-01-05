@@ -18,11 +18,12 @@ caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: 93db69b67bfac3bcefbc818032aae64df0fd47b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: wiwagn
+ms.openlocfilehash: 60c25de889e5055241486078baf46657b6870afd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak kodunuz temel belirli kurallarında izleyerek bazen yürütme hızını artırabilir. Bazı programlarda kodu yakından inceleyin ve mümkün olduğunca hızlı çalıştığından emin olmak için profil oluşturucular kullanmak önemlidir. Diğer programlarda hızlı yazılan kod çalışarak çalıştığından gibi en iyi duruma getirme gerçekleştirmek zorunda değildir. Bu makalede, bazı ortak burada performans olumsuz etkilenebilir alanları ve bunun yanı sıra ek performans konulara bağlantılar geliştirme ipuçları listelenmektedir. Planlama ve performans için ölçme hakkında daha fazla bilgi için bkz: [performans](../../../docs/framework/performance/index.md)  
@@ -54,4 +55,4 @@ Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak 
  [Performans](../../../docs/framework/performance/index.md)  
  [Programlama Kavramları](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)  
- [C# programlama kılavuzu](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+ [C# Programlama Kılavuzu](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)

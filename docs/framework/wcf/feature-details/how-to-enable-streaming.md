@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea506499cf6678beb51195654739f2537b98a188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b75fe67d99fa611f248c8d5dbb779f47e2bc717d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]arabelleğe alınan veya akış aktarımları kullanarak iletiler gönderebilir. Bir alıcı okumadan önce varsayılan arabelleğe aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemek başlayabilirsiniz. Geçirilen bilgi uzun olduğunda ve seri olarak işlenebilen akış modu yararlıdır. Akış modu de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
@@ -85,5 +86,5 @@ ms.lasthandoff: 12/02/2017
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Büyük veri ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Büyük Veriler ve Akış Yapma](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [Akış](../../../../docs/framework/wcf/samples/stream.md)

@@ -14,11 +14,11 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65149c617220966bc3bb6897d757a71cd60167d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fc5210d2dcf30d9c4603b67b890c78510af1338
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32icon"></a>/win32icon
 Bir .ico dosyasını çıktı dosyasına ekler. Çıktı dosyasında bu .ico dosyasını temsil eden **dosya Gezgini**.  
@@ -42,7 +42,7 @@ Bir .ico dosyasını çıktı dosyasına ekler. Çıktı dosyasında bu .ico dos
   
 |/ Win32icon Visual Studio IDE'de ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. Daha fazla bilgi için bkz: [Proje Tasarımcısı giriş](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **simgesi** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **simgesi** kutusu.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlerken `In.vb` ve bir .ico dosyasını ekler `Rf.ico`.  
@@ -53,4 +53,4 @@ vbc /win32icon:rf.ico in.vb
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

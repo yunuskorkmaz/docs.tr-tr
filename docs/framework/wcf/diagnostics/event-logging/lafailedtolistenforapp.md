@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b24fd3951721a90874b098f0aa71e6612a43cf53
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 364568ff119a275efc782f18056ab333b2616243
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lafailedtolistenforapp"></a>LAFailedToListenForApp
 Kimliği: 160  
@@ -30,5 +31,5 @@ Kimliği: 160
  Bu olay bir hata belirtilen Protokolü belirtilen etkinleştirme hizmetinde belirtilen site için dinleme çalışılırken böylece Protokolü site için geçici olarak devre dışıdır oluştuğunu belirten... Olay durumunu, özel durum, işlem adı ve işlem kimliği URL'yi listeler  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Etkinlik genel başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

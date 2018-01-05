@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5c0e032c7f4483648826ed8c03a8bdaa0ce5e4a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44bd1672c6423277fa90eee98ce954e7c1c5334e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Veri kaynakları ile DataAdapters güncelleştiriliyor
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı bir <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapıldı, değişiklikler içeriyor ve `DataTable` değişiklikleri alınacağı tabloyu tanımlar. Öyle değilse `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
@@ -379,9 +380,9 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Satır durumları ve satır sürümleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Satır Durumları ve Satır Sürümleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [AcceptChanges ve RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
- [Veri kümesi içeriği birleştirme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
- [Kimliği veya sayı değerlerini alma](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [DataSet İçeriklerini Birleştirme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
+ [Kimliği veya Otomatik Sayı Değerlerini Alma](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

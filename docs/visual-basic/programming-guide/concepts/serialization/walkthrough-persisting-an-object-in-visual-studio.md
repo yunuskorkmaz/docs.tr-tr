@@ -12,11 +12,11 @@ ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9a7abe74b76b2b7d0b4b2d45894e2cd4940f989a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio (Visual Basic) bir nesneyi kalıcı kılma
 Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyor olsa da, çalışma zamanında girdiğiniz değerleri nesne bozulduğunda kaybolur. Bir nesnenin veri değerlerini depolamak ve nesne örneği bir sonraki başlatılışında almak sağlar örnekleri arasında kalıcı hale getirmek için seri hale getirme kullanabilirsiniz.  
@@ -33,7 +33,7 @@ Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyo
 >  Bu örnek, bir ikili verileri depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas verileri için kullanılmamalıdır.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma  
  İlk adım oluşturmaktır bir `Loan` sınıfı ve sınıfını kullanan bir test uygulaması.  

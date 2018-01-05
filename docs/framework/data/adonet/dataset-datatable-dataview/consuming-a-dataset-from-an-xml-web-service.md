@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73af93286530fe94145cb5c05f4c70eed110d6ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e46783c627657f1185e93b4ddbb7f996df064250
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 <xref:System.Data.DataSet> Kısmen Kolay Aktarım verilerin Internet üzerinden kolaylaştırmak için bağlantısı kesik bir tasarım, tasarlanmış. **DataSet** bir girdi olarak belirtilebilir veya ek bir kodlama olmadan XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **DataSet** bir XML Web hizmeti bir istemci ve geri. **DataSet** biçimini kullanarak bir XML akışı örtük olarak dönüştürülen, ağ üzerinden gönderilen ve XML akışından yeniden bir **DataSet** alan uçta. Bu, çok basit ve esnek bir yöntemdir iletmek ve XML Web Hizmetleri ile ilişkisel veri döndürmek için sunar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -271,10 +272,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [DataAdapter kümesinden doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- [Veri kaynakları ile DataAdapters güncelleştiriliyor](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [DataAdapter’dan bir DataSet Doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

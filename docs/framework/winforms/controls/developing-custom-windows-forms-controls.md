@@ -16,41 +16,42 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework ile Özel Windows Forms Denetimleri Geliştirme
 Windows Forms denetimleri, kullanıcı arabirimi işlevselliği kapsüllemek ve istemci tarafı Windows tabanlı uygulamalarda kullanılır yeniden kullanılabilir bileşenleridir. Yalnızca Windows Forms pek çok kullanıma hazır denetimleri sağlar, ayrıca kendi denetimleri geliştirme için altyapı sağlar. Var olan denetimleri birleştirmek, var olan denetimleri genişletmek veya kendi özel denetimler yazar. Bu bölüm, arka plan bilgileri ve Windows Forms denetimleri geliştirmenize yardımcı olmak için örnekleri sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms'ta denetimleri kullanma konusuna genel bakış](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ [Windows Forms'da Denetimlerin Kullanımına Genel Bakış](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  Windows Forms uygulamalarında denetimlerini kullanarak temel öğeleri vurgular.  
   
- [Özel denetim çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Özel Denetim Çeşitleri](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  Özel denetimler ile yazabilirsiniz farklı türleri açıklanmaktadır <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı.  
   
- [Windows Forms denetimi geliştirmenin esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Windows Forms Denetimi Geliştirmenin Esasları](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
  Bir Windows Forms denetimi geliştirme ilk adımlar açıklanır.  
   
- [Windows Forms denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Özellikler](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  Windows Forms denetimlerine özellikleri eklemek gösterilmiştir.  
   
- [Windows Forms denetimlerindeki olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
  İşlemek ve Windows Forms denetimlerinde olay tanımlama gösterilmektedir.  
   
- [Windows Forms denetimlerindeki öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Öznitelikler](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Özellikleri veya diğer özel denetimleri ve bileşenleri üyeleri uygulayabilirsiniz öznitelikleri açıklanmaktadır.  
   
- [Özel denetim boyama ve işleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ [Özel Denetim Boyama ve İşleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
  Denetimlerinizin görünümünü özelleştirmek nasıl gösterir.  
   
- [Düzen Windows Forms denetimleri](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerindeki Düzenler](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
  Gelişmiş düzenlerinin formlar ve denetimler için nasıl oluşturulacağını gösterir.  
   
- [Windows Forms denetimlerinde çoklu iş parçacığı kullanımı](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ [Windows Forms Denetimlerinde Çoklu Kullanım](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
  Birden çok iş parçacıklı denetimler uygulamak gösterilmiştir.  
   
 ## <a name="reference"></a>Başvuru  

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42a788e44fde80662748e19a7244ce77bb26118f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23a9db5f7c5286eaab50f2499845f7294af878ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider Bileşenine Genel Bakış (Windows Forms)
 Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) bileşen bir HTML Yardımı 1.x Yardım dosyası (HTML Yardım Atölyesi ile üretilen bir .chm dosyasını veya bir .htm dosyasının), Windows uygulama ile ilişkilendirmek için kullanılır. Çeşitli şekillerde Yardım sağlayabilirsiniz:  
@@ -46,4 +47,4 @@ Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helppr
 >  Göreli yolu kullanarak sorunlarla karşılaşabilirsiniz zaman belirtmeyi Yardım dosyasının yolu içinde <xref:System.Windows.Forms.Help.ShowHelp%2A> yöntemi veya <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliği <xref:System.Windows.Forms.HelpProvider> denetim. Bu nedenle, Yardım dosyasını belirtmek için mutlak dosya yolunu kullandığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms uygulamalarındaki yardım sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+ [Windows Forms Uygulamalarındaki Yardım Sistemleri](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

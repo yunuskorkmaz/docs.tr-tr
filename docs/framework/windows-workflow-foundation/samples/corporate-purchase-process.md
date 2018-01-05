@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61a5ecdf05fed6c171a84c4f30f50e9a468a414d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
 Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın alma işlemi çok basit bir istek oluşturulacağını gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.  
@@ -87,7 +88,7 @@ Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın 
 ## <a name="projects-in-this-sample"></a>Bu örnek proje  
  Bu örnek aşağıdaki projeleri içerir.  
   
-|Project|Açıklama|  
+|Proje|Açıklama|  
 |-------------|-----------------|  
 |Ortak|(İstek teklifi, satıcı ve satıcı teklifi) işlemi içinde kullanılan varlık nesnesi.|  
 |WfDefinition|İşlem tanımını (olarak bir [!INCLUDE[wf1](../../../../includes/wf1-md.md)] program) ve ana bilgisayar (`PurchaseProcessHost`) oluşturma ve satın alma işlemi iş akışı örneği kullanmak için istemci uygulamaları tarafından kullanılır.|  

@@ -40,11 +40,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0aa85c9ec6e6b911444b07a4169dc769ac4df816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu koşulları sık bu belge, WPF belgeleri için her ikisini de geri kalanı boyunca özellikle ve XAML ya da XAML dil desteği System.Xaml düzeyinde etkinleştirilir temel XAML kavramları kullanan diğer çerçeveleri için kullanılır. Konu başlığı altında tanıtılan temel terimler bu konuda genişletir. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -326,9 +327,9 @@ Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tan�
  Ancak olduğu gibi *typeName*. *memberName* öznitelikleri için form *baseTypeName*. *memberName* biçimlendirmede zayıf stili ve kaçınmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [XAML Ad Alanı (x:) Dil Özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML Uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters ve XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XAML ve WPF için özel sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [WPF için XAML ve Özel Sınıflar](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 56b0774db462c92c6ab0d66ab7158dcc01da0c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 > [!NOTE]
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/21/2017
  **Katıştırılmış nesne**  
  Katıştırılmış nesneler iki tür vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin modeli. Metin tabanlı içerik öğeleri Köprüler veya tablolar gibi ve görüntüleri ve düğmeleri gibi denetim öğeleri oluşur. Daha ayrıntılı bilgi için bkz: [erişim katıştırılmış nesneler kullanarak UI Otomasyonu](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
   
- **Uç noktası**  
+ **Uç nokta**  
  Mutlak <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> veya <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> bir metin kapsayıcı içindeki bir metin aralığını noktası.  
   
  ![TextPatternRangeEndpoints &#40; başlangıç ve bitiş &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
@@ -138,10 +139,10 @@ Başlangıç ve bitiş noktalarını kümesi gösterilmektedir.
  Bir metin aralığını mantıksal parçalarını gezinmek için kullanılan metin (karakter, word, satır veya paragraf), önceden tanımlanmış bir birimi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemciler için UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI otomasyonda önbelleğe almayı kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [UI Otomasyon sağlayıcısında denetim düzenleri desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [UI Otomasyon istemcileri için Denetim düzeni eşleştirmesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [Metin hizmetleri altyapısı](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

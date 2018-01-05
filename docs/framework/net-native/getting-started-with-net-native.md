@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07882617e7625c07bade85c59116581e16f95121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native'i Kullanmaya Başlama
 Windows 10 için yeni bir Windows uygulaması yazma veya varolan bir Windows mağazası uygulaması geçirdiğiniz yordamları aynı kümesini izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:  
@@ -57,7 +58,7 @@ Windows 10 için yeni bir Windows uygulaması yazma veya varolan bir Windows ma�
   
  Çalışma zamanı yönergeleri dosya çalışma zamanında uygulamanızın gerektiğini meta verileri tanımlamak için kullanılır. Bazı durumlarda, dosyanın varsayılan sürümü yeterli olabilir. Ancak, serileştirme veya yansıma dayanır biraz kod ek giriş çalışma zamanı yönergeleri dosyası gerektirebilir.  
   
- **Seri hale getirme**  
+ **Serileştirme**  
  Serileştiricileri iki kategorisi vardır ve her ikisi de ek giriş çalışma zamanı yönergeleri dosyası gerektirebilir:  
   
 -   Olmayan yansıma serileştiricileri temel. Serileştiricileri bulunan .NET Framework Sınıf Kitaplığı'nda gibi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıfları, yansıma bağlı değil. Ancak, gerekli serileştirilecek veya seri için nesne üzerinde temel kod oluşturulabilir.  Daha fazla bilgi için "Microsoft Serializers" bölümüne bakın [serileştirme ve meta veri](../../../docs/framework/net-native/serialization-and-metadata.md).  
@@ -114,17 +115,17 @@ Windows 10 için yeni bir Windows uygulaması yazma veya varolan bir Windows ma�
   
  Özel durumlar ve uygulamanızı test edilirken oluşan diğer sorunlar işleme bazı belirli örnekler için bkz:  
   
--   [Örnek: Veri bağlama sırasında özel durum işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Örnek: Veri Bağlama Sırasında Özel Durum İşleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Örnek: Dinamik programlama sorunlarını giderme](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Örnek: Dinamik Programlama Sorunlarını Giderme](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET yerel uygulamalar çalışma zamanı özel durumları](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET Native Uygulamalarında Çalışma Zamanı Özel Durumları](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [NIB: .NET yerel kurulum ve yapılandırma](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
- [.NET yerel ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md)  
- [Yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [Yansıma kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
- [Serileştirme ve meta veriler](../../../docs/framework/net-native/serialization-and-metadata.md)  
- [Windows mağazası uygulamanızı .NET Yerel'e taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+ [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)  
+ [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+ [Serileştirme ve Meta Veriler](../../../docs/framework/net-native/serialization-and-metadata.md)  
+ [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

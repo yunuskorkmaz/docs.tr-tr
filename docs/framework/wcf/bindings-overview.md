@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntılarını belirtmek için kullanılan nesneleri bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet. İçindeki her bir uç nokta bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bağlama iyi belirtilen olmasını gerektirir. Bu konu bağlamaları tanımlamak, iletişim ayrıntılarını hangi bağlamaları içinde yer alan bir bağlama öğelerini türlerini özetler [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ve bir bağlama için bir uç nokta nasıl belirtilebilir.  
@@ -65,4 +66,4 @@ Bağlamaları değil uç noktasına bağlanmak için gereken iletişim ayrıntı
  İki yolla bağlamaları tanımlayabilirsiniz: kod veya yapılandırma aracılığıyla. Bu iki yaklaşım, sistem tarafından sağlanan bir bağlamayı veya özel bağlama kullanma üzerinde güvenmeyin. Genel olarak, kod kullanarak bir bağlama tasarım zamanında tanımı üzerinde tam denetim verir. Yapılandırma, diğer yandan kullanarak sağlayan bir sistem yöneticisi veya kullanıcısı bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet veya hizmet uygulamayı yeniden derlemenize gerek kalmadan bağlaması parametreleri değiştirmek için istemci. Bu esneklik çoğunlukla, belirli bir makine gereksinimlerini tahmin etmenin hiçbir yolu olduğundan tercih edilir. bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamasıdır dağıtılacak. Bağlama (ve adresleme) tutma bilgileri kodu dışında gerektirmeden yeniden derlenmek veya uygulama çözümünüzün yeniden dağıtımını değiştirmek için bunları sağlar. Kod içinde tanımlanan bağlamaları sonra yapılandırma dosyasında belirtilen bağlamaları herhangi bir yapılandırma tanımlanmış bağlamaları üzerine yazmak kod tanımlı bağlamalar izin vererek oluşturulduğunu unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

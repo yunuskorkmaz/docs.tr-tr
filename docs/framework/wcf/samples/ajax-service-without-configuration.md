@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf0ed4e1c06bc464b8ebeffbf3be10de3064f479
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82d9bb27ef20aa4e425e232a23c785af3b7e6e5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-without-configuration"></a>Yapılandırma Olmadan AJAX Hizmeti
 Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] herhangi bir yapılandırma ayarı kullanmadan bir temel ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebilirsiniz hizmeti) oluşturmak için. Hizmet otomatik olarak bir AJAX uç noktayı etkinleştirme .svc dosyasında özel sözdizimini kullanır.  
@@ -61,4 +62,4 @@ Bu örnek nasıl kullanılacağı ortaya [!INCLUDE[indigo1](../../../../includes
 >  Lütfen bu örnek çalıştırırken, anonim kimlik doğrulaması ve Windows kimlik doğrulaması aynı anda IIS ServiceModelSamples klasörü için etkin olmadığını emin olun. Lütfen bu durumda, Windows kimlik doğrulamasını devre dışı bırakın. Örnek çalıştırdıktan sonra Windows kimlik doğrulamasını etkinleştirmek ve "iisreset" çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+ [Temel AJAX Hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

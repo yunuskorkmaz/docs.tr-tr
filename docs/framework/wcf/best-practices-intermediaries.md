@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfedfbd0177018de4affce67f16ee5f713f7d5de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7aecdcecedcee98828b398f9172985d2e09fb9be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-intermediaries"></a>En İyi Uygulamalar: Aracılar
 Hizmet tarafı kanalları aracı üzerinde düzgün kapalı olduğundan emin olmak için aracılar çağrılırken doğru hataları işlemek için dikkatli olunması gerekir.  
@@ -43,5 +44,5 @@ catch (Exception e)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF hata işleme](../../../docs/framework/wcf/wcf-error-handling.md)  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+ [WCF Hata İşleme](../../../docs/framework/wcf/wcf-error-handling.md)  
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

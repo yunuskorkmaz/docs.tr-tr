@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3fcf99bf52f6870ba4c8dcbab30a86b70c32491b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30d94534f0da0e3946d036fd8e0db59971615c0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices Sınıfı ve Temel XAML Okuma veya Yazma
 <xref:System.Xaml.XamlServices>XAML düğümü akışı belirli erişim gerektiriyor mu XAML senaryosu için kullanılan bir .NET Framework XAML Hizmetleri tarafından sağlanan sınıfı veya bu düğümlerden alınan XAML tür sistem bilgileri değil. <xref:System.Xaml.XamlServices>API aşağıdaki gibi özetlenen: `Load` veya `Parse` XAML yükleme yolu desteklemek için `Save` kaydetme yolu, bir XAML desteklemek için ve `Transform` bir yükleme yolu katıldığı bir teknik sağlamak ve yolunu kaydedin. `Transform`başka bir XAML şema değiştirmek için kullanılabilir. Bu konu, her biri bu API sınıflandırmalarını özetler ve belirli yöntemi aşırı yüklemeleri arasındaki farklar açıklanmaktadır.  

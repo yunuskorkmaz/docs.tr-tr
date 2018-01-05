@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abb9891fb8e4dde1e94f2d8786ece299ff6579d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40a0d683a6b9b91233cf9a5c1d133540e47192cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme
 <xref:System.Windows.Forms.ToolStrip> Denetimleriniz aşağıdaki sınıfları (boyama) işleme ilişkili:  
@@ -147,6 +148,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.ToolStripSystemRenderer>  
  <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
  <xref:System.Windows.Forms.ToolStripRenderer>  
- [Yerleşik sahip çizimi destekli denetimler](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [Nasıl yapılır: oluşturun ve ToolStrip denetimi Windows Forms için özel Oluşturucu ayarlayın](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
- [ToolStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+ [Yerleşik Sahip Çizimi Destekli Denetimler](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [Nasıl yapılır: Windows Forms'da ToolStrip Denetimi için Özel Oluşturucu Oluşturma ve Ayarlama](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+ [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

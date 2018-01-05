@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Nasıl yapılır: DataGrid Denetiminde Verileri Gruplandırma, Sıralama ve Filtreleme
 Genellikle verileri görüntülemek için yararlı bir <xref:System.Windows.Controls.DataGrid> gruplandırma, sıralama ve verileri filtreleme, farklı şekillerde. Grup, sıralamak ve verileri filtrelemek için bir <xref:System.Windows.Controls.DataGrid>, onu bağladıktan bir <xref:System.Windows.Data.CollectionView> bu işlevleri destekleyen. Ardından verileri ile çalışabilirsiniz <xref:System.Windows.Data.CollectionView> temel alınan veri kaynağını etkilemeden. Koleksiyon görünümü değişiklikleri yansıtılır <xref:System.Windows.Controls.DataGrid> kullanıcı arabirimi (UI).  
@@ -162,8 +163,8 @@ DataGrid içinde gruplandırılmış veri
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Oluşturun ve ObservableCollection bağlayın](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [Bir görünümündeki verileri filtreleme](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Bir görünümdeki verileri sıralama](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [XAML'de bir görünümü kullanarak Grup verileri sıralama ve](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [ObservableCollection Oluşturma ve Bağlama](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
+ [Görünümde Veri Filtreleme](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
+ [Görünümde Verileri Sıralama](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
+ [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)

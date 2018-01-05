@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d33e809a0db0b812cf7311d7b5686d9125e80976
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-activation"></a>Örnek etkinleştirme
 SQL iş akışı örneği deposuna düzenli aralıklarla uyanır ve runnable veya activatable iş akışı örnekleri Kalıcılık veritabanında algılar iç bir görev çalıştırır. Runnable iş akışı örneği bulursa örneği etkinleştirilirken özelliğine sahip iş akışı ana bildirir. Örnek deposuna activatable iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştirir genel bir ana bilgisayar bildirir. Bu konudaki aşağıdaki bölümlerde ayrıntılı örneği etkinleştirme işlemi açıklanmaktadır.  

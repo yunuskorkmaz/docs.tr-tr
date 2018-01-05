@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca34f04fe4ffa53bcb9bd85e5a6f3aa69b96465
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>Nasıl yapılır: Özel WSDL Dışarı Aktarma
 Bu konuda, özel WSDL bilgilerini dışarı aktarmak açıklanmaktadır. Bunu yapmak için şu adlı yeni bir kod öznitelik tanımlayacaksınız `WsdlDocumentationAttribute` hizmeti tarafından oluşturulan WSDL özel bilgileri eklenir.  
@@ -206,4 +207,4 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+ [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

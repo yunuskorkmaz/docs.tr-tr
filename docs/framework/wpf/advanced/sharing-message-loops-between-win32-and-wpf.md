@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcf8baa87038bc5625d46968b39d759daae25cbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3122100f93d15c04c109564e1abd2dc13f37990
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 ve WPF Arasında İleti Döngüleri Paylaşma
 Bu konu ile birlikte çalışma için bir ileti döngüsü uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], varolan kullanarak ya da ileti döngüsü <xref:System.Windows.Threading.Dispatcher> veya üzerinde ayrı bir ileti döngüsü oluşturarak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodunuzun tarafında.  
@@ -74,6 +75,6 @@ Bu konu ile birlikte çalışma için bir ileti döngüsü uygulamak açıklar [
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Interop.ComponentDispatcher>  
  <xref:System.Windows.Interop.IKeyboardInputSink>  
- [WPF ve Win32 birlikte çalışma](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [İş parçacığı modeli](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)  
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Nasıl yapılır: TreeView İçinde TreeViewItem Bulma
 <xref:System.Windows.Controls.TreeView> Denetimi hiyerarşik verileri görüntülemek için kullanışlı bir yol sağlar. Varsa, <xref:System.Windows.Controls.TreeView> bir veri kaynağına bağlı olduğu <xref:System.Windows.Controls.TreeView.SelectedItem%2A> özelliği, hızlı bir şekilde seçili veri nesnesini almak kolay bir yol sağlar. Temel alınan veri nesnesi ile çalışmak genellikle en iyisidir, ancak bazen verinin içeren programsal gerekebilir <xref:System.Windows.Controls.TreeViewItem>. Örneğin, program aracılığıyla genişletmeniz gerekebilir <xref:System.Windows.Controls.TreeViewItem>, veya farklı bir öğe seçin <xref:System.Windows.Controls.TreeView>.  
@@ -52,4 +53,4 @@ ms.lasthandoff: 10/22/2017
  [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TreeView performansını artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+ [TreeView'ın Performansını Artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

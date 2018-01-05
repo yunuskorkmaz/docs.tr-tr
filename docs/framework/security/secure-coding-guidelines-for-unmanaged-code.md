@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6eec726342381f7e3ec71aeedd2ff012bc6c3e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
 Yönetilmeyen kod (örneğin, yerel kod gibi Win32 API'ları) çağırmak bazı kitaplık kodu gerekir. Bu yönetilen kod için güvenlik çevre dışında son giderek gösterdiğinden dikkat gereklidir. Tarafsız güvenlik kodunuzu ise hem kodunuz hem de çağırır herhangi bir kod kod izni yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağı belirtilmiş).  
@@ -57,7 +58,7 @@ Yönetilmeyen kod (örneğin, yerel kod gibi Win32 API'ları) çağırmak bazı 
 |-------------|-----------------------------|  
 |**Güvenli**|Herhangi bir kod için çağırmak için bile kötü amaçlı kod zararsız tamamen. Diğer yönetilen kod gibi kullanılabilir. Örneğin, günün saatini alır bir işlev genellikle güvenlidir.|  
 |**Yerel**|Tarafsız güvenlik; diğer bir deyişle, kodu çağırma izni gerektiren yönetilmeyen kod yönetilmeyen. Güvenlik, yetkisiz bir arayan vermemeye denetlenir.|  
-|**güvenli olmayan**|Gizlenen güvenlik potansiyel olarak tehlikeli olabilecek yönetilmeyen kod giriş noktası. Geliştiriciler en dikkat gibi yönetilmeyen kod kullanırken diğer korumaları bir güvenlik açığı önlemek için yerine getirildiğinden emin kullanmalıdır. Bu anahtar sözcük güvenlik sistemi geçersiz kılmaları geliştiriciler sorumlu olması gerekir.|  
+|**unsafe**|Gizlenen güvenlik potansiyel olarak tehlikeli olabilecek yönetilmeyen kod giriş noktası. Geliştiriciler en dikkat gibi yönetilmeyen kod kullanırken diğer korumaları bir güvenlik açığı önlemek için yerine getirildiğinden emin kullanmalıdır. Bu anahtar sözcük güvenlik sistemi geçersiz kılmaları geliştiriciler sorumlu olması gerekir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

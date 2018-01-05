@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c0b4c128667cab04ca8ed015b44dae60d11b474
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a6edc48c93f83611bdc2be5b7398ab0abe843407
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-images-with-gdi"></a>Nasıl yapılır: GDI+ ile Görüntü İşleme
 Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] uygulamalarınızdaki dosyaları olarak mevcut resimleri işlemek için. Yeni bir nesne oluşturarak bunu bir <xref:System.Drawing.Image> sınıfı (gibi <xref:System.Drawing.Bitmap>), oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyini başvuruyor nesne ve çağırma <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> nesnesi. Görüntü grafik sınıfı tarafından temsil edilen çizim yüzeyine boyandığında. Oluşturma ve tasarım zamanında resim dosyalarını düzenlemek için görüntü düzenleyicisi kullanın ve bunları işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çalışma zamanında. Daha fazla bilgi için bkz: [simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons).  
@@ -92,10 +93,10 @@ Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Kalemler, çizgiler ve dikdörtgenler GDI +'da](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
- [Nasıl yapılır: bir Windows formunda metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [GDI+'da Kalemler, Çizgiler ve Dikdörtgenler](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ [Nasıl yapılır: Bir Windows Formunda Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Çizim çizgi veya kapalı şekiller](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)  
- [Simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
+ [Simgeler için Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)

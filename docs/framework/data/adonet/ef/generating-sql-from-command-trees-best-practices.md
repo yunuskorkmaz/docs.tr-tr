@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 06d2711d9dac203645c127fa86581a9888db3cb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>SQL komut ağaçlarını - en iyi uygulamaları oluşturma
 Çıktı sorgu komut ağaçlarını yakından sorguları SQL'de ifade model. Ancak, SQL bir çıkış komut ağacından oluştururken sağlayıcısı yazıcılarına ilişkin ortak bazı zorluklar mevcuttur. Bu konuda bu zorluklar anlatılmaktadır. Sonraki konusundaki örnek sağlayıcısı bu güçlükleri gösterilmektedir.  
@@ -149,4 +150,4 @@ ON b.y = d.z
  Tüm olası değerler uyacak şekilde, kavramsal (EDM) türleri sağlayıcısı türlerinin eşlerken, geniş türü (Int32) eşlenmesi gerekir. Ayrıca, BLOB türleri gibi birçok işlem için kullanılamaz türler için eşleme kaçının (örneğin, `ntext` içinde [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+ [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

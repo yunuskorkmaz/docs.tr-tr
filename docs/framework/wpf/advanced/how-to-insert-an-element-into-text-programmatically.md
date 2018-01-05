@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b99b4f77f43f8ca9ac1516be2bf6a671810e7d90
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b200489c4b7fb06f2eb98c0ec9c84da42f18a395
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Nasıl yapılır: Metne Program Aracılığıyla Öğe Ekleme
 Aşağıdaki örnekte iki kullanmayı gösterir <xref:System.Windows.Documents.TextPointer> metinde uygulamak için bir aralık belirtmek için nesneleri bir <xref:System.Windows.Documents.Span> öğesi.  
@@ -40,4 +41,4 @@ Aşağıdaki örnekte iki kullanmayı gösterir <xref:System.Windows.Documents.T
  ![Bir metin aralığına uygulanan bir Span öğesi](../../../../docs/framework/wpf/advanced/media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Akış belgesi genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

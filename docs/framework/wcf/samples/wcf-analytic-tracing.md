@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek, kendi izleme olaylarını analitik akışının içine izlerini eklemek gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ETW Yazar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performanslı cezası ödeme olmadan Hizmetleri içine görünürlük elde kolaylaştırmak için yöneliktir. Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri ile tümleştirmenize yazma olayları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  

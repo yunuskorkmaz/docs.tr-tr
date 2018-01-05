@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3dea98a381bf468182f24dff27af50e46ad38ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, çalışma zamanı yönergeleri girişleri eklemeniz gerekebilir (. rd.xml) dosyası gerekli meta veri çalışma zamanında mevcut olduğundan emin olun. Serileştiricileri iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  
@@ -73,7 +74,7 @@ Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, çalışma z
  Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz: [ \<türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma zamanı yönerge öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [\<Tür > öğesi](../../../docs/framework/net-native/type-element-net-native.md)  
  [\<Namespace > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md)

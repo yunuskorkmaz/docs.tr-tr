@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1eccb033dd07f634f3629fd6f314eaa3df56b422
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f1b976a0b5e0962cae155f380b17737077c5353
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızı ile için standart menü sağlayabilirsiniz <xref:System.Windows.Forms.MenuStrip> denetim.  
@@ -135,4 +136,4 @@ Formlarınızı ile için standart menü sağlayabilirsiniz <xref:System.Windows
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.StatusStrip>  
- [MenuStrip denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+ [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

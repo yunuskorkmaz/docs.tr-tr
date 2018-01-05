@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e10f7136b636829f99da34388db7676810cd06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişi alan öğesiyle ve mantıksal odak odaklanmış bir odak kapsamında öğesine başvuruyor.  Bu kavramlar bu genel bakış içindeki ayrıntısı ele alınmıştır.  Bu kavramlar farkı anlama odak burada alınabilir birden çok bölgeye sahip karmaşık uygulamalar oluşturmak için önemlidir.  
@@ -131,5 +132,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Input.FocusManager>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.ContentElement>  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Temel öğeler genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)

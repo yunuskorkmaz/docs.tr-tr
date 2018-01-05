@@ -12,11 +12,12 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08716b0988e8c76144d8e0a3871c7c91f7419306
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: f4a67df0729a85149984f0a72be668cdcee30216
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarını ile.
@@ -387,7 +388,7 @@ Aşağıdaki tabloda kullanılabilir .NET Framework dil paketlerini listeler [!I
 |1038|Macarca|hu|
 |1040|İtalyanca-İtalya|Bunu|
 |1041|Japonca|ja|
-|1042|Korece|Ko|
+|1042|Kore Dili|Ko|
 |1043|Felemenkçe-Hollanda|NL|
 |1044|Norveççe (Bokmål)|Yok|
 |1045|Lehçe|PL|

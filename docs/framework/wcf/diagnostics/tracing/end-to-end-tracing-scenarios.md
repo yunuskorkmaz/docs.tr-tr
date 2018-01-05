@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33f576b177ddb66d6145e0b1a5d0d104346640ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4980beca761a4c49c39e92c6c73a7bc1a5038b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Uçtan Uca İzleme Senaryoları
 Bu bölüm, izlemenin kullanmak için farklı senaryolar açıklanmaktadır konuları içerir.  
@@ -34,20 +35,20 @@ Bu bölüm, izlemenin kullanmak için farklı senaryolar açıklanmaktadır konu
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
+-   [Etkinlik Listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
   
--   [Etkinlik Kimliği yayma](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+-   [Etkinlik Kimliği Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
--   [HTTP, TCP veya Named-Pipe kullanan eşzamanlı senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [HTTP, TCP veya Named-Pipe kullanan zaman uyumsuz senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
+-   [HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
--   [İleti güvenliğinde Etkinlik izleme](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
+-   [İleti Güvenliğinde Etkinlik İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
   
 -   [MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
   
--   [COM +](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+-   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulamanızda sorun giderme için izlemeyi kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Uçtan uca izleme](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uçtan Uca İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

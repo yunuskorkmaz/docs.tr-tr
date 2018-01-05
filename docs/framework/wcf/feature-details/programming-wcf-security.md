@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, topluca olarak bilinen kapsar *Aktarım güvenlik*. Bu konuda yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); kapsamaz Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -111,5 +112,5 @@ Bu konu güvenli oluşturmak için kullanılan temel programlama görevleri aç�
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Ortak Güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+ [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

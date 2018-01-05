@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 48dab533e26d6353c29667d81ea547f4b15d280f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a10ac4f8b89259c7d5ff46ad99ad6c8a925726d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-types-entity-sql"></a>Türler (varlık SQL) oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]üç tür oluşturucular sağlar: satır Oluşturucular, adlandırılmış türü oluşturucuları ve koleksiyon oluşturucular.  
@@ -74,6 +75,6 @@ ms.lasthandoff: 11/21/2017
  Daha fazla bilgi için bkz: [adlı Tür oluşturucu](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Varlık SQL genel bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Tür sistemi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [Tür Sistemi](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

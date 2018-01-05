@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0175b14f556a68f9c289d84d79ce10a6982ffb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e890ff68967d04d5c0f487508c9ce559f377e56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Lisans Derleyici)
 Lisans Derleyicisi lisans bilgilerini içeren metin dosyalarını okur ve kaynak olarak bir ortak dil çalışma zamanı çalıştırılabilir dosyasının içinde katıştırılabilir bir ikili dosya oluşturur.  
@@ -53,7 +54,7 @@ Lisans Derleyicisi lisans bilgilerini içeren metin dosyalarını okur ve kaynak
 |**/complist:** *dosya adı*|.licenses dosyasına eklenecek lisanslı bileşenlerin listesini içeren dosyanın adını belirtin. Her bir bileşene, her satırda yalnızca bir bileşen olacak şekilde, bileşenin tam adı kullanılarak başvurulur.<br /><br /> Komut satırı kullanıcıları projedeki her bir form için ayrı bir dosya belirtebilir. Lc.exe birden çok giriş dosyasını kabul eder ve tek bir .licenses dosyası üretir.|  
 |**/h**[**ardım**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**i:** *Modülü*|Listelenen bileşenleri içeren modüllerin belirtir **/complist** dosya. Birden fazla modülü belirtmek için birden çok kullanın **/i** bayrakları.|  
-|**/ nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
+|**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**OutDir:** *yolu*|Çıkış .licenses dosyasının yerleştirileceği dizin belirtir.|  
 |**/ target:** *targetPE*|.licenses dosyasının kendisi için üretilmekte olduğu yürütülebilir dosyayı belirtir.|  
 |**/v**|Ayrıntılı modu belirtir; derleme ilerleme bilgilerini görüntüler.|  
@@ -103,6 +104,6 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Al.exe (derleme bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify Aracı)
 PEVerify aracı, Microsoft ara dili (MSIL) (derleyici yazıcıları, betik motor geliştiricileri vb.) oluşturan geliştiricilere, MSIL kodlarının ve ilişkili meta verilerinin güvenlik koşullarına uygun olup olmadığını belirlemede yardımcı olur. Bazı derleyiciler yalnızca belirli dil yapılarını kullanmaktan kaçındığınızda doğrulanabilir şekilde tür kullanımı uyumlu kod üretir. Bir geliştirici olarak, bilgisayar kullanıyorsanız, kodunuzun tür güvenliğini tehlikeye atmadığınızı doğrulamak isteyebilirsiniz. Bu durumda, MSIL ve meta verileri denetlemek için dosyalarınızda PEVerify aracını çalıştırabilirsiniz.  
@@ -56,12 +57,12 @@ peverify filename [options]
 |**Yoksay = @** *responseFile*|Belirtilen yanıt dosyasında listelenen hata kodlarını dikkate almaz.|  
 |**/İl**|Belirtilen derleme uygulanan yöntemleri için MSIL tür güvenlik doğrulama denetimleri gerçekleştirir *filename*. Belirtmediğiniz sürece bulunan her sorun için ayrıntılı açıklamalar aracı döndürür **/quiet** seçeneği.|  
 |**/MD**|Tarafından belirtilen derlemedeki meta veri doğrulama denetimlerini gerçekleştiren *filename*. Bu, dosya içindeki tüm meta veri yapısını ölçer ve karşılaşılan tüm doğrulama sorunlarını rapor eder.|  
-|**/ nologo**|Ürün sürümü ve telif hakkı bilgilerinin görüntülenmesini önler.|  
+|**/nologo**|Ürün sürümü ve telif hakkı bilgilerinin görüntülenmesini önler.|  
 |**/nosymbols**|.NET Framework sürüm 2.0'da, geriye doğru uyumluluk için satır numaralarını gizler.|  
-|**istemci bilgisayarlara**|Sessiz mod kullanılacağını belirtir; doğrulama sorunu raporlarının çıkışını önler. Peverify.exe dosyanın tür kullanımı uyumlu olup olmadığını bildirmeye devam eder, ancak tür güvenliği doğrulamasını önleyen sorunlar hakkında bilgi vermez.|  
+|**/quiet**|Sessiz mod kullanılacağını belirtir; doğrulama sorunu raporlarının çıkışını önler. Peverify.exe dosyanın tür kullanımı uyumlu olup olmadığını bildirmeye devam eder, ancak tür güvenliği doğrulamasını önleyen sorunlar hakkında bilgi vermez.|  
 |`/transparent`|Yalnızca saydam yöntemleri doğrulayın.|  
 |**/ benzersiz**|Yinelenen hata kodlarını dikkate almaz.|  
-|**/ verbose**|.NET Framework sürüm 2. 0'da, MSIL doğrulama iletilerinde ek bilgiler görüntüler.|  
+|**/verbose**|.NET Framework sürüm 2. 0'da, MSIL doğrulama iletilerinde ek bilgiler görüntüler.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -129,7 +130,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
+ [Araçlar](../../../docs/framework/tools/index.md)  
  [NIB: Doğrulanabilir şekilde tür kullanımı uyumlu kod yazma](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
  [Tür güvenliği ve güvenlik](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

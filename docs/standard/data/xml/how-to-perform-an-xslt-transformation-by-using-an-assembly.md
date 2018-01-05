@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d14c4338290856c09ca1d23ec6acc895450f83ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: bir derlemeyi kullanarak XSLT dönüşümü gerçekleştirin
 XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur. Derleme doğrudan geçirilen <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.  
@@ -190,6 +193,6 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [XSLT derleyici (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [XSLT dönüştürmeleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Komut satırı csc.exe derleme](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+ [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+ [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [csc.exe Kullanarak Komut Satırı Derleme](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

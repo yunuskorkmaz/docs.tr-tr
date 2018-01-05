@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 984cdaca14c354ca78118412911c69c282ddd1bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78ad7d455f1de4b7077288d9575ea4907c3f218d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Çizgi Çizme
 Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde çizerken formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve çizim gerçekleştirin ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>, bu örnekte gösterildiği gibi  
@@ -44,6 +45,6 @@ Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Graphics.DrawLine%2A>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Çizgiler ve şekiller çizmek için kalem kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

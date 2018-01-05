@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: İstek WebRequest sınıfı kullanarak verileri
 Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanılan adımlar, bir Web sayfasına veya dosya açıklar. Kaynak bir URI tarafından tanımlanan gerekir.  
@@ -182,8 +183,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet isteği oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [Ağda akışlarını kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Bir Proxy üzerinden Internet erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [İstekte bulunan verileri](../../../docs/framework/network-programming/requesting-data.md)  
- [Nasıl yapılır: WebRequest sınıfı kullanarak veri gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+ [İnternet İstekleri Oluşturma](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Ağda Akışları Kullanma](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)  
+ [Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri Gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

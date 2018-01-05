@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Sabitleme
 Çalışma zamanında kullanıcı genişletebilir bir form tasarlarken, form üzerinde denetimleri yeniden boyutlandırma ve düzgün bir şekilde yeniden konumlandırmak gerekir. Denetimleri form ile dinamik olarak yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.Control.Anchor%2A> Windows Forms denetimleri özelliği. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği denetimi için bir yer işareti konumunun tanımlar. Forma Denetim bağlantılı ve formu yeniden boyutlandırılabilir denetimi denetimi ve bağlantı konumlar arasındaki uzaklığı korur. Örneğin, bir <xref:System.Windows.Forms.TextBox> formun boyutlandırıldığında sol, sağ ve form alt kenarlarını bağlantılı denetim <xref:System.Windows.Forms.TextBox> denetimi yeniden boyutlandırır yatay böylece form sağ ve sol yanlarından aynı uzaklığı korur. Konumuna her zaman formun kenar aynı mesafe böylece ek olarak, Denetim kendisini dikey olarak yerleştirir. Bir denetim yok bağlantılı ve formu yeniden boyutlandırılabilir, denetimin formun kenarları göreli konumunu değiştirilir.  
@@ -64,10 +65,10 @@ ms.lasthandoff: 11/21/2017
  Devralınan denetimleri olmalıdır `Protected` bağlantılı için. Bir denetim erişim düzeyini değiştirmek için ayarlayın, `Modifiers` özelliğinde **özellikleri** penceresi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- [Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [Nasıl yapılır: Windows Forms denetimleri yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [İzlenecek yol: Bir TableLayoutPanel kullanarak Windows Forms'ta denetimleri düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+ [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms’da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [AutoSize Özelliğine Genel Bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Nasıl yapılır: Windows Forms’a Denetimleri Yerleştirme](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

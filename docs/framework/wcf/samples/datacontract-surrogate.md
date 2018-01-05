@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ffb8ec71d6a8bbbdf365b78ad13af7524cc33ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f14b69cba50839f3c4105b286af4de0523385b38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
 Bu örnek nasıl seri hale getirme ve seri durumdan çıkarma, şema verme ve şema alma veri sözleşmesi kullanılarak özelleştirilebilir gibi işlemleri sınıfı vekil gösterir. Bu örnek senaryoda burada veri seri hale getirilmiş ve arasında aktarılan bir istemci ve sunucu bir yedek kullanmayı gösterir bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci ve hizmet.  

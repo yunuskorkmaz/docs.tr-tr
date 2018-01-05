@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38357072b3a6e8e8a326a16600b2d7ed56cdcb2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfdab2857745dee7c40823ad25592de5dc833ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget Arabirimi
 Ortak dil çalışma zamanı (CLR) ortamı Silverlight tabanlı uygulamalarda hata ayıklamak, geliştiricilerin yöntemleri sağlar.  
@@ -47,7 +48,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Icordebugremotetarget::gethostname yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Ana bilgisayar adı veya bir uzak makinenin IP adresini döndürür.|  
+|[ICorDebugRemoteTarget::GetHostName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Ana bilgisayar adı veya bir uzak makinenin IP adresini döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Karışık mod (diğer bir deyişle, yönetilen ve yerel kodu) hata ayıklama Windows 95, Windows 98 veya Windows ME ya da (örneğin, IA-64 ve AMD64) x86 olmayan platformlarda desteklenmiyor.  
@@ -62,6 +63,6 @@ interface ICorDebugRemoteTarget  : IUnknown
  **.NET framework sürümleri:** 3.5 SP1  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icordebugremote arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Icordebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
+ [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

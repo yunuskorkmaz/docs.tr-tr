@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server'daki uygulama güvenlik senaryoları
 Güvenli bir SQL Server istemci uygulaması oluşturmak için tek doğru yolu yoktur. Her uygulama gereksinimleri, dağıtım ortamı ve kullanıcı nüfusu içinde benzersizdir. Başlangıçta dağıtıldığında makul güvenli bir uygulama zaman içinde daha az güvenli hale gelebilir. Hangi tehditleri gelecekte ortaya çıkan herhangi doğruluk ile tahmin etmek mümkün değildir.  
@@ -45,29 +46,29 @@ Güvenli bir SQL Server istemci uygulaması oluşturmak için tek doğru yolu yo
  Her zaman güçlü bir parola atayın `sa` , Windows kimlik doğrulaması kullanırken bile hesabı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Saklı yordamlar SQL Server'daki izinlerle yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Saklı yordamlar izinleri yönetmek ve veri erişimi denetlemek için nasıl kullanılacağını açıklar. Saklı yordamları kullanarak, birçok güvenlik tehditlerine karşı yanıt için etkili bir yoldur.  
   
- [SQL Server'da güvenli dinamik SQL yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Güvenli dinamik SQL saklı yordamları Kullanma yazma teknikleri açıklar.  
   
- [Saklı yordamlar SQL Server'daki imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  Saklı yordam, doğrudan erişim olmadığı verilerle çalışmak için kullanıcıları etkinleştirmek üzere bir sertifika ile oturum açıklar. Bu çağrıyı doğrudan gerçekleştirmek için izinlere sahip değil işlemlerini gerçekleştirmek saklı yordamlar sağlar.  
   
- [Kimliğe bürünme SQL Server'daki izinlerle özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  EXECUTE AS kullanmayı açıklar başka bir kullanıcının kimliğine bürünmesine yan tümcesi. Kimliğe bürünme çağrıyı yapandan yürütme bağlamı belirtilen kullanıcıya geçer.  
   
- [SQL Server'da satır düzeyi izinleri verme](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [SQL Server’da Satır Düzeyinde İzinler Verme](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  Veri erişimi kısıtlamak için satır düzeyi izinleri uygulamak açıklar.  
   
- [SQL Server uygulama rolleri oluşturma](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [SQL Server’da Uygulama Rolleri Oluşturma](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  Özellikleri ve uygulama rolleri işlevselliğini açıklar.  
   
- [SQL Server'da veritabanları arası erişimini etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [SQL Server'da Veritabanları Arası Erişimi Etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Veritabanları arası erişim güvenliği tehlikeye atmadan etkinleştirmeyi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server güvenlik](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server güvenlik genel bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [ADO.NET uygulamalarının güvenliğini sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ce86969bb9dc4a8db4359afa333d1f003c767895
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="including-or-importing-xml-schemas"></a>Dahil olmak üzere veya XML şemalarını içeri aktarma
 Bir XML Şeması içerebilir `<xs:import />`, `<xs:include />`, ve `<xs:redefine />` öğeleri. Bu şema öğeleri içerir veya bunları alır şema yapısını desteklemek için kullanılan diğer XML şemaları bakın. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> Ve <xref:System.Xml.Schema.XmlSchemaRedefine> map sınıfları, bu öğelere içinde şema nesne modeli (SOM) API.  
@@ -108,9 +111,9 @@ Bir XML Şeması içerebilir `<xs:import />`, `<xs:include />`, ve `<xs:redefine
  Hakkında daha fazla bilgi için `<xs:import />`, `<xs:include />`, ve `<xs:redefine />` öğeleri ve <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> ve <xref:System.Xml.Schema.XmlSchemaRedefine> sınıfları için bkz [W3C XML Şeması](http://go.microsoft.com/fwlink/?LinkId=45242) ve <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanı sınıf başvuru belgeleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML şema nesne modeline genel bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Okuma ve yazma XML şemaları](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Yapı XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [XML şemaları çapraz geçiş yapma](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [XML şemaları düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [XML Şemaları Okuma ve Yazma](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [XML Şemalarını Düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>gibi s <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> tek veri öğelerinin esnek stil veya veri öğeleri koleksiyonlarının etkinleştirmek için yerleşik işlevselliğe sahiptir. Sıralama, filtre ve Grup görünümleri, veriler üzerinde oluşturulabilir.  
@@ -185,9 +186,9 @@ ms.lasthandoff: 11/21/2017
   
  A <xref:System.Windows.Data.BindingExpression> nesne çağırmanın dönüş değeri elde edilebilir <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> veri bağlama nesnesi üzerinde. Aşağıdaki konular bazı kullanımlarını gösterir <xref:System.Windows.Data.BindingExpression> sınıfı:  
   
--   [Bağımlı hedef özelliğinden bağlama nesnesini alın](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [TextBox metni kaynağı güncelleştirdiğinde denetimi](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Veri Dönüştürme  
@@ -441,9 +442,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.DataErrorValidationRule>  
- [WPF sürüm 4.5 yenilikler nelerdir?](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [LINQ sorgu sonuçlarına bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [WPF Sürüm 4.5'teki Yenilikler](../../../../docs/framework/wpf/getting-started/whats-new.md)  
+ [LINQ Sorgusunun Sonuçlarına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Veri bağlama Tanıtımı](http://go.microsoft.com/fwlink/?LinkID=163703)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Bir ADO.NET veri kaynağına bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+ [ADO.NET Veri Kaynağına Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

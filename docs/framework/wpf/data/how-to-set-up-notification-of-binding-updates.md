@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e75ec53a769099e199b60f5466eeb4037b86862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a07337e99e985bfbc0a5dbc5f2d231ee36cf1422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
 Bu örnek, bağlama hedefinin (hedef) veya bir bağlama bağlama source (kaynak) özelliğini güncelleştirildiğinde bildirim almak için nasıl ayarlanacağını gösterir.  
@@ -43,5 +44,5 @@ Bu örnek, bağlama hedefinin (hedef) veya bir bağlama bağlama source (kaynak)
  Olay parametrelerinin (türü ya da aynı işleyici birden fazla öğeye bağlı olduğu belirli öğe gibi) değiştirilmiş özellik ayrıntılarını belirlemek için kullanılabilir olan tek bir öğede birden çok ilişkili özellikleri varsa yararlı olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

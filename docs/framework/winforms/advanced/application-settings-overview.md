@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d617ce5b4e7222b60ce711e2e081e0bf3cb8065d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f74595ce672079db69fd36fb2b2eb982bc90b448
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-overview"></a>Uygulama Ayarlarına Genel Bakış
 Bu konuda oluşturmak ve uygulamanızı ve kullanıcılarınızın adına ayar verileri depolamak nasıl ele alınmıştır.  
@@ -61,9 +62,9 @@ Bu konuda oluşturmak ve uygulamanızı ve kullanıcılarınızın adına ayar v
  <xref:System.Configuration.SettingsProvider>  
  <xref:System.Configuration.LocalFileSettingsProvider>  
  <xref:System.Configuration.IPersistComponentSettings>  
- [Nasıl yapılır: uygulama ayarlarını doğrulama](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [Uygulama ayarları (.NET) yönetme](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
- [Nasıl yapılır: Çalışma zamanında C# ile ayarları okuma](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [Uygulama ayarları ve kullanıcı ayarlarını kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [Uygulama ayarları mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Özel denetimler için uygulama ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+ [Nasıl yapılır: Uygulama Ayarlarını Doğrulama](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [Uygulama Ayarlarını Yönetme](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [Nasıl Yapılır: Çalışma Zamanında C# ile Ayarları Okuma](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
+ [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [Özel Denetimler için Uygulama Ayarları](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)

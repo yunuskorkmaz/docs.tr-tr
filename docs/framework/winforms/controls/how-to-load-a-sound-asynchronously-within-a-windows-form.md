@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4ff6670c8e4d8ab735323fe13549e34c6cfd55f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05c993763bdc436b5912515e0aa83e3a29f7bb83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme
 Aşağıdaki kod örneğinde zaman uyumsuz olarak bir URL'den ses yükler ve sonra yeni bir iş parçacığı üzerinde çalar.  
@@ -66,4 +67,4 @@ Aşağıdaki kod örneğinde zaman uyumsuz olarak bir URL'den ses yükler ve son
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  <xref:System.Media.SoundPlayer.LoadCompleted>  
  <xref:System.Media.SoundPlayer.Play%2A>  
- [Nasıl yapılır: bir Windows formdan ses çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+ [Nasıl yapılır: Bir Windows Formdan Ses Çalma](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ebe0a47d38a2cfda2a7d150b4a3886d9f63ee190
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f540ad92c69219a2c22763403ce4ecc734c8e5cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Nasıl yapılır: GridViewRowPresenter Kullanarak Veri Görüntüleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.GridViewRowPresenter> ve <xref:System.Windows.Controls.GridViewHeaderRowPresenter> sütunlarda verileri görüntülemek için nesneleri.  
@@ -34,4 +35,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.Gri
  <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
  <xref:System.Windows.Controls.GridViewRowPresenter>  
  <xref:System.Windows.Controls.GridViewColumnCollection>  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

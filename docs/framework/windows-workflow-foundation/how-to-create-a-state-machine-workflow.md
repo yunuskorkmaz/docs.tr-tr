@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b094fd88321ffcf8d3bb5cdefe870bd12524b4b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95ba37b123b57ba9f86fefb55a860fb2122ccd3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Nasıl yapılır: Durum makinesi iş akışı oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konudaki adımları hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma aracılığıyla <xref:System.Activities.Statements.StateMachine> etkinliği ve önceki özel etkinlikler [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. Sayı tahmin eden oyun iş akışını modeller.  
@@ -199,8 +200,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Statements.Flowchart>  
  <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [İş akışları tasarlama](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [Windows Workflow Foundation Programlama](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [İş Akışları Tasarlama](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Başlangıç Öğreticisi](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Nasıl Yapılır: Etkinlik Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Nasıl yapılır: İş Akışı Çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

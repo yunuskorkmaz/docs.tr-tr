@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ef6a314dd1b33adab7bd81dbcfe9e44e5910fee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fbbd27c0649fc1913ede79ad348c16c4df853c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltworkflowgt"></a>&lt;İş akışı&gt;
 Tüm sorgular tarafından tanımlanan belirli bir iş akışı için içeren bir yapılandırma öğesi **HYPERLINK "http://msdn.microsoft.com/en-us/library/ System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100) .aspx"ctivityDefinitionId** özelliği.  
@@ -145,5 +146,5 @@ Tüm sorgular tarafından tanımlanan belirli bir iş akışı için içeren bir
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
  <xref:System.Activities.Tracking.TrackingProfile>  
- [İzleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

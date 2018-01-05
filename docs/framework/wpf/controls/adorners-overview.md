@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42e37a1a1c00ab1a2039eba5f310cadf9a2175c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47b43b1b9848f91e77448d41609d8be5d60ecda5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adorners-overview"></a>Donatıcılara Genel Bakış
 Donatıcılar, özel bir tür <xref:System.Windows.FrameworkElement>, bir kullanıcı için görsel ipuçları sağlamak için kullanılan. Diğer kullanımlar arasında Donatıcılar işlevsel tanıtıcıları öğelere eklemek ya da bir denetimi hakkındaki durum bilgilerini sağlamak için kullanılabilir.  
@@ -112,7 +113,7 @@ Donatıcılar, özel bir tür <xref:System.Windows.FrameworkElement>, bir kullan
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.AdornerHitTestResult>  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Hücre Stilleri
 Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, arka plan rengi, ön plan renk ve yazı tipi gibi kendi stil sahip olabilir. Genellikle, ancak, birden çok hücreyi belirli stil özellikleri paylaşır.  
@@ -172,6 +173,6 @@ Her hücrede <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, ark
  <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>  
- [Temel biçimlendirme ve stil oluşturma Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- [Veri biçimlendirmeyi Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stillerini Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Veri Biçimlendirme](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)

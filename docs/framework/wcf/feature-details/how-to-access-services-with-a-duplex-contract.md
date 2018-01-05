@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme
 Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği. Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar. Bu konuda oluşturmaya yönelik adımlar gösterilmektedir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geri çağırma arabirimini uygulayan bir istemci sınıfı istemcisinde.  
@@ -99,7 +100,7 @@ Bir özelliği [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] çift yö
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: bir istemci oluşturma](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Nasıl yapılır: İstemci Oluşturma](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Nasıl yapılır: ChannelFactory Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

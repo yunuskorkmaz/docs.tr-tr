@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
 Uygulama ayarları mimarisi uygulamaları ayarları sarmalayıcı sınıfı veya tek tek özellikleri uygulanabilir birçok öznitelikleri sağlar. Bu öznitelikler çalışma zamanında uygulama ayarları altyapısı tarafından genellikle özellikle ayarları sağlayıcısı çalışan kendi özel sarmalayıcı belirtilen gereksinimlerine uyarlamak için incelenir.  
@@ -50,5 +51,5 @@ Uygulama ayarları mimarisi uygulamaları ayarları sarmalayıcı sınıfı veya
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
- [Uygulama ayarları mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Nasıl yapılır: uygulama ayarları oluştur](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)
+ [Uygulama Ayarları Mimarisi](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [Nasıl yapılır: Uygulama Ayarları Oluşturma](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)

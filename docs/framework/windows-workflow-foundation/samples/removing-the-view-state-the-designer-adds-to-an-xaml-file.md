@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9f153d212e1180e5de92a6299d2fbb2d6864c42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Görünüm durumu Tasarımcı kaldırma bir XAML dosyasına ekler
 Bu örnek türeyen bir sınıf oluşturmak nasıl gösterir <xref:System.Windows.Markup.XamlWriter> ve kaldırır XAML dosyası durumunu görüntüleyin. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]Görünüm durumu bilinen XAML belgesine bilgi yazar. Görünüm durumu, çalışma zamanında gerekli olmayan düzen konumlandırma gibi tasarım zamanında, gerekli olan bilgileri ifade eder. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]Bu bilgiler, düzenlenebilir XAML belgeye ekler. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]Görünüm durumu ile XAML dosyası Yazar `mc:Ignorable` XAML dosyası çalışma zamanı yüklediğinde, bu bilgileri yüklenmedi şekilde özniteliği. Bu örnek XAML düğümleri işlerken, Görünüm durumu bilgisini kaldırır bir sınıfın nasıl oluşturulacağı gösterilmektedir.  

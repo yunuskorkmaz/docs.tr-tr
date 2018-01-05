@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1ae6fb9a0aa6552459b2847243047244d0806db2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri, diğer denetimler için tanımlanabilen bir gruplandırma sağlamak için kullanılır. Genellikle, işlev tarafından bir form ayırabilir için Grup kutuları kullanın. Örneğin, kullanmak için hangi ertesi gün taşıyıcı gibi posta seçeneklerini belirtir. bir sipariş formu olabilir. Mantıksal bir görsel ipucu verir kullanıcı grup kutusu tüm seçeneklerinde gruplandırma ve tasarım zamanında tüm denetimler kolayca taşınabilir — tek taşıdığınızda <xref:System.Windows.Forms.GroupBox> denetlemek, tüm çok kapsanan denetimlerinden taşıyın.  
@@ -32,4 +33,4 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri, diğer denetimle
  <xref:System.Windows.Forms.GroupBox> Denetim benzer <xref:System.Windows.Forms.Panel> kontrol; ancak, yalnızca <xref:System.Windows.Forms.GroupBox> denetimi, bir resim yazısı görüntüler ve yalnızca <xref:System.Windows.Forms.Panel> denetim kaydırma çubukları sahip olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [GroupBox denetimi](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+ [GroupBox Denetimi](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

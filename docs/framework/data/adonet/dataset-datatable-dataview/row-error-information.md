@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 95cbac7f5bf2c28a3db206faca443edacc5b7be1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8600e7d1d14de9474bf3f9cfadb25e06f52b0b1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="row-error-information"></a>Satır hata bilgileri
 Satır hataları değerleri düzenlerken yanıt zorunda kalmamak için bir <xref:System.Data.DataTable>, daha sonra kullanmak için satır hata bilgilerini ekleyebilirsiniz. <xref:System.Data.DataRow> Nesne sağlayan bir <xref:System.Data.DataRow.RowError%2A> bu amaç için her satırda özelliği. Veri ekleme **RowError** özelliği bir **DataRow** ayarlar <xref:System.Data.DataRow.HasErrors%2A> özelliği **DataRow** için **doğru**. Varsa **DataRow** parçası olan bir **DataTable**, ve **DataRow.HasErrors** olan **true**, **DataTable.HasErrors** özelliktir de **doğru**. Bunun için de geçerlidir **DataSet** hangi **DataTable** ait. Hatalar için test edilirken kontrol edebilirsiniz **HasErrors** özelliği hata bilgileri için herhangi bir satır eklenip eklenmediğini belirler. Varsa **HasErrors** olan **true**, kullanabileceğiniz <xref:System.Data.DataTable.GetErrors%2A> yöntemi **DataTable** dönün ve aşağıdaki örnekte gösterildiği gibi yalnızca hatalar, satırları inceleyin.  
@@ -91,5 +92,5 @@ protected static void OnRowChanged(
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
- [Bir DataTable tablosundaki verileri düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

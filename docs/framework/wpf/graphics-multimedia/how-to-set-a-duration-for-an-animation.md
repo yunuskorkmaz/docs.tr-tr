@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9560e9d0a2809ae8f55a060eaec3b271539d5f94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e8d15a1b8432b3dae5bee73396bdec9fc9d50f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Nasıl yapılır: Animasyon için Süre Ayarlama
 A <xref:System.Windows.Media.Animation.Timeline> zaman kesimini ve bu kesimin uzunluğu zaman çizelgesinin tarafından belirlenir temsil <xref:System.Windows.Duration>. Zaman bir <xref:System.Windows.Media.Animation.Timeline> sonuna ulaşıldığında süresinin, yürütmeyi durdurur. Varsa <xref:System.Windows.Media.Animation.Timeline> alt zaman çizelgeleri varsa bunlar da yürütmeyi durdurur. Animasyonun, söz konusu olduğunda <xref:System.Windows.Duration> animasyon geçiş bitiş değeri başlangıç değerinden gereken süreyi belirtir.  
@@ -35,4 +36,4 @@ A <xref:System.Windows.Media.Animation.Timeline> zaman kesimini ve bu kesimin uz
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Duration>  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

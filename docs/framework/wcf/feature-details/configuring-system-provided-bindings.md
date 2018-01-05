@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç nokta konuşurken kullanmak için iletişim mekanizması belirtin. Bağlamaları oluşur tanımlayan öğeleri nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kanalları katmanlı yedeklemek için gerekli iletişim özelliklerini sağlamak için. Bağlama öğeleri üç tür içerir:  
@@ -87,6 +88,6 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
 |Akış|İleti akış desteklenip desteklenmediğini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç noktası oluşturma genel bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2798659d3b53cb32af8e5976d4fee69780266633
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80f152f8cdf459f920d723df66756af680b4bcea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığını ve sık bir WPF XAML dosyasının kök etiketinde bulunan iki XAML ad uzayı eşlemesinin amacını açıklanmaktadır. Ayrıca, benzer eşlemeleri kullanan kendi kodunuzda ve/veya ayrı derlemeler içinde tanımlanan öğeler için üretmek nasıl açıklanır.  
@@ -148,4 +149,4 @@ End Namespace
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML ad alanlarını anlama](http://go.microsoft.com/fwlink/?LinkId=98069)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

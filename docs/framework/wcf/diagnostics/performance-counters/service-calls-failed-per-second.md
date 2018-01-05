@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1b196f3bed9b4e02963b090cf92a771d4bc5742
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 632c81b6ffd84202b7609dccb89887af01ae706e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-calls-failed-per-second"></a>Hizmet: Saniyede Başarısız Olan Çağrı
 Sayaç adı: Saniye başına çağrı başarısız oldu.  
@@ -36,4 +37,4 @@ Sayaç adı: Saniye başına çağrı başarısız oldu.
  Olduğundan her zaman bu hizmeti işlenmeyen bir özel durum, bu sayaç artırılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

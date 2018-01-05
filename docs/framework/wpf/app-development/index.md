@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a>
@@ -134,10 +135,10 @@ ms.lasthandoff: 10/22/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Genel bir bakış sağlar <xref:System.Windows.Application> uygulama yaşam süresi, windows, uygulama kaynakları ve gezinti yönetme de dahil olmak üzere sınıfı.|  
-|[WPF içinde pencereler](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Windows nasıl kullanılacağı dahil olmak üzere, uygulamanızda yönetme ayrıntıları sağlar <xref:System.Windows.Window> sınıfı ve iletişim kutuları.|  
-|[Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Uygulamanızın sayfaları arasında gezinme yönetimine genel bir bakış sağlar.|  
+|[Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Genel bir bakış sağlar <xref:System.Windows.Application> uygulama yaşam süresi, windows, uygulama kaynakları ve gezinti yönetme de dahil olmak üzere sınıfı.|  
+|[WPF’de Windows](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Windows nasıl kullanılacağı dahil olmak üzere, uygulamanızda yönetme ayrıntıları sağlar <xref:System.Windows.Window> sınıfı ve iletişim kutuları.|  
+|[Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Uygulamanızın sayfaları arasında gezinme yönetimine genel bir bakış sağlar.|  
 |[Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Genel bir bakış sağlar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Derleme ve dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Derleme ve WPF uygulamanızı dağıtmak açıklar.|  
-|[Visual Studio 2015'te WPF'ye giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
-|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Gösterir uygulamasını kullanarak bir WPF oluşturmak için sayfa nasıl gezinme, düzeni, denetimleri, görüntüler, stil bir gözden geçirme ve bağlama.|
+|[Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Derleme ve WPF uygulamanızı dağıtmak açıklar.|  
+|[Visual Studio 2015’te WPF’ye Giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
+|[İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Gösterir uygulamasını kullanarak bir WPF oluşturmak için sayfa nasıl gezinme, düzeni, denetimleri, görüntüler, stil bir gözden geçirme ve bağlama.|

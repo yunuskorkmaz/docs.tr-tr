@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21623987e9e3798488df6ed0e001a2baf54c3575
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b433beaa67fa3c8d574f7b07e1d2f12af8b3dd00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Nasıl yapılır: Windows Forms Denetimini Bir Fabrika Nesnesine Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen, bir denetim için bir nesne veya diğer nesnelerini oluşturan yöntem bağlamak gerekli bulacaksınız. Bu tür bir nesneye veya yöntemi bir Fabrika adı verilir. Veri kaynağı, örneğin, bellek veya bir türü bir nesne yerine bir yöntem çağrısının dönüş değerini olabilir. Kaynak bir koleksiyon döndürür sürece bu türdeki veri kaynağının bir denetim bağlayabilirsiniz.  
@@ -51,5 +52,5 @@ Verilerle etkileşimli denetimleri oluştururken, bazen, bir denetim için bir n
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

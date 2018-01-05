@@ -24,11 +24,14 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0149bd97b997da8b29e225a7a1aeda17a6ffa226
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal ifadede aşağıdakilerden birini gösterir:  
@@ -77,4 +80,4 @@ Ters eğik çizgi (\\) normal ifadede aşağıdakilerden birini gösterir:
 |`\r?\n`|Ardından yeni bir satır başı sıfır veya bir örneğini Bul.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

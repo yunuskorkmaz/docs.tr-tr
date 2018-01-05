@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c38c7af4988e6e47ee307f5cd7a8b6733b043a7c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
 Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı izin doğrudan fiziksel bir kaynağa karşılık gelmeyen URL'leri kullanmak bir uygulama. Web yönlendirme kullanarak sağlar sonra geri gerçek eşlenen HTTP için sanal adres oluşturmak üzere Geliştirici [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Bu, bir WCF Hizmeti gerektirmeden fiziksel dosya veya kaynak barındırılan gerekir ya da hizmetleri .html veya .aspx gibi dosya içermediğini URL'ler ile erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösteren <xref:System.Web.Routing.RouteTable> sanal URI'ler global.asax dosyasında tanımlanmış hizmetlerini çalıştırmak için bu harita oluşturmak için sınıfı. Bu örnekte, WCF kullanılarak oluşturulan iki RSS akışları vardır: bir `movies` akış ve `channels` akış. Hizmetleri etkinleştirmek için URL'leri bir uzantıyı içermeyen ve kayıtlı `Application_Start` yöntemi `Global` türetilmiş sınıf <xref:System.Web.HttpApplication.Application_Start> sınıfı.  

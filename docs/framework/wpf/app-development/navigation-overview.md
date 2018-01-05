@@ -35,11 +35,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73bb3a2f43c5bd91d7a107a0a053381ca7bc0559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]iki tür uygulamalarda kullanılabilir tarayıcısı stilinde Gezinti destekler: tek başına uygulamaları ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinme, paket içeriği için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar <xref:System.Windows.Controls.Page> sınıfı. Birinden gidebilirsiniz <xref:System.Windows.Controls.Page> diğerine bildirimli olarak, kullanarak bir <xref:System.Windows.Documents.Hyperlink>, veya kullanarak programlı olarak <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Günlük sayfadan çıkıldığında sayfaları unutmayın ve bunları geri gitmek için kullanır.  
@@ -742,9 +743,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Application.SetCookie%2A>  
  <xref:System.Windows.Application.GetCookie%2A>  
- [Uygulama yönetimine genel bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Yapılandırılmış Gezinti genel bakış](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
- [Gezinti topolojilerine genel bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
+ [Uygulama Yönetimine Genel Bakış](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Yapılandırılmış Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
+ [Gezinti Topolojilerine Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
- [WPF uygulaması dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+ [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

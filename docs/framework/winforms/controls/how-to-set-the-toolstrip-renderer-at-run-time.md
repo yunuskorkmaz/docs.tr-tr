@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a7cde7e4ee81f6fdcb14e87d720b8578fd40c20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e88dec7383b9907bb291eb29f6959f3192e274f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında ToolStrip Oluşturucusunu Ayarlama
 Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> özel oluşturarak denetim `ProfessionalColorTable` sınıfı.  
@@ -66,4 +67,4 @@ Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> �
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- [ToolStrip denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

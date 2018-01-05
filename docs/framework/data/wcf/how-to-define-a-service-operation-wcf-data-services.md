@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcf4ffd46bbbca0e7e00cad7ae0b2a88f7bd986b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 03dc0b774fe6c3e077fa539fc14c7df4a1fb448d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Nasıl yapılır: bir hizmet işlemi (WCF Veri Hizmetleri) tanımlayın
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]sunucuda hizmet işlemleri tanımlanan yöntemler kullanıma sunar. Hizmet işlemleri sunucuda tanımlanmış bir yönteme bir URI üzerinden erişim sağlamak için bir veri hizmeti sağlar. Bir hizmet işlemi tanımlamak için uygulama [`WebGet]` veya `[WebInvoke]` özniteliği yöntemi. Sorgu işleçleri desteklemek için hizmet işlemi döndürmelidir bir <xref:System.Linq.IQueryable%601> örneği. Hizmet işlemleri, altta yatan veri kaynağını aracılığıyla erişebilir <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> özelliği <xref:System.Data.Services.DataService%601>. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -64,4 +65,4 @@ ms.lasthandoff: 12/02/2017
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

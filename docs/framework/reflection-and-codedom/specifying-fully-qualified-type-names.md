@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Tam Olarak Nitelenmiş Tür Adlarını Belirtme
 Tür adları çeşitli yansıma işlemleri için geçerli giriş belirtmeniz gerekir. Tam olarak nitelenmiş tür adını bir derleme adı belirtimi, bir ad alanı belirtimi ve tür adı oluşur. Tür adı belirtimleri kullanılan yöntemler tarafından gibi <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -157,4 +158,4 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
  <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
  <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [Tür bilgilerini görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+ [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

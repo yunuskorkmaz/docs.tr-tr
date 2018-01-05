@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45945fb07f7d1807674453296f7c5e62c829a401
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d51e6e5b72deea417b7313d88a4d58610b401244
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-bindings"></a>Özel Bağlamalar
 Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sistem tarafından sağlanan bağlamalar birini hizmetinizi gereksinimlerini karşılamadığında sınıfı. Tüm bağlamaları bağlama öğelerinin sıralı bir kümesinden oluşturulur. Özel bağlamalar sistem tarafından sağlanan bağlama öğeleri kümesinden oluşturulabilir veya kullanıcı tanımlı özel bağlama öğelerini içerebilir. Özel bağlama öğeleri yeni taşımaları veya bir hizmet uç noktada kodlayıcılar kullanımını etkinleştirmek için kullanabilirsiniz. Çalışma örnekler için bkz: [özel bağlama örnekleri](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -83,9 +84,9 @@ Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sistem tar
  Ayrıca, kendi bağlama öğeleri tanımlamak ve herhangi bir önceki tanımlı katmanlar arasında ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç noktası oluşturma genel bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hizmetler ve istemcileri yapılandırmak için bağlamaları kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Nasıl yapılır: sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
  [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Özel bağlama](../../../../docs/framework/wcf/samples/custom-binding.md)
+ [Özel Bağlama](../../../../docs/framework/wcf/samples/custom-binding.md)

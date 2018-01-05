@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1828b6ffe2d24c2bfb98b4668a9540adf5978e5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-text-formatting"></a>Gelişmiş Metin Biçimlendirme
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Sağlam bir dizi sağlar [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] uygulamanızda metin dahil etmek için. Düzen ve [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Controls.TextBlock>, en yaygın sağlamak ve genel öğeleri metin sunumu için kullanın. Çizim [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], gibi <xref:System.Windows.Media.GlyphRunDrawing> ve <xref:System.Windows.Media.FormattedText>, biçimlendirilmiş metin çizimlerini dahil etmek için bir yol sağlar. En gelişmiş düzeyde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletilebilir bir metin metin Depolama Yönetimi, çalıştırmak metin biçimlendirme yönetimi ve katıştırılmış nesne yönetimi gibi metin sunu her yönüyle denetlemek için altyapısı biçimlendirme sağlar.  
@@ -105,5 +106,5 @@ Uygulama ve TextFormatter arasındaki etkileşimi
  <xref:System.Windows.Media.TextFormatting.TextRun>nesneleri metin deposu tarafından sağlanan özellikleri kullanılarak biçimlendirilir. Bu özellikler iki türlerinde gelen <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> ve <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>Paragraf dahil özellikler gibi ele <xref:System.Windows.TextAlignment> ve <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties>Her metin ön plan Fırçası gibi bir paragraf içinde çalıştırmak için farklı özellikleri <xref:System.Windows.Media.Typeface>ve yazı tipi boyutu. Özel Paragraf ve özellik türleri çalıştırmak özel metin uygulamak için uygulamanızın öğesinden türetilen sınıflar oluşturmalısınız <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> ve <xref:System.Windows.Media.TextFormatting.TextRunProperties> sırasıyla.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF'de tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma
 Özel Etkinlik tasarımcıları, bunların ilişkili etkinliklerini onlarla tasarım yüzeyi açın, tasarımcıları bırakılabilir diğer etkinlikleri ile birleştirilebilir; böylece genellikle uygulanır. Bu işlev bir özel etkinlik Tasarımcısı "isteğe bağlı bir etkinlik nereye yerleştirileceğini bırakma bölgesi" ve ayrıca tasarım yüzeyine öğelerde elde edilen koleksiyonunu yönetmenizi anlamına gelir sağlaması gerekir. Bu konuda, bu tür bir bırakma bölgesi içeren bir özel etkinlik Tasarımcısı oluşturma ve düzenleme işlevi Tasarımcı öğe koleksiyonunu yönetmek gerekli olduğunu sağlayan bir özel etkinlik Tasarımcısı oluşturma açıklanmaktadır.  
@@ -357,4 +358,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
  <xref:System.Activities.Presentation.WorkflowViewElement>  
  <xref:System.Activities.Presentation.Model.ModelItem>  
- [İş akışı tasarım deneyimini özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+ [İş Akışı Tasarım Deneyimini Özelleştirme](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

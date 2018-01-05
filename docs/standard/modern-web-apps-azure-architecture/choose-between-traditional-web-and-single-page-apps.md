@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
 
@@ -85,7 +88,7 @@ Diğer istemciler tarafından kullanılacak bir web API destekleniyorsa zaten su
 
 Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seçerken dikkate alınması gereken temel etmenler özetler.
 
-  | **Faktörü** | **Geleneksel Web uygulaması** | **Tek sayfalı uygulama** |
+  | **Faktörü** | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
   |---|---|---|
   | JavaScript/TypeScript gerekli takım aşina | **En az** | **Gerekli** |
   | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |

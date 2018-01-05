@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54acfb1a130c8a790411a05958518665ef790e53
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28f5f4a57f8fd6ee8b739b38735d41a118abc0cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-from-xaml"></a>XAML yükleme
 Bu örnek nasıl XamlBuildTask aracını çalıştırmak zorunda kalmadan bir XAML iş akışı dinamik olarak yükleneceğini gösterir. Bunun yerine, örnek çağırır <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> yöntemi. Örnek bir [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] kullanarak XAML iş akışları yükleyen istemci uygulaması <xref:System.Activities.XamlIntegration.ActivityXamlServices> sınıfı ve bunları yürütür. Kullanarak yüklendiğini sonra <xref:System.Activities.XamlIntegration.ActivityXamlServices> sınıfı, bir <xref:System.Activities.DynamicActivity%601> , yürütülebilir döndürülür.  

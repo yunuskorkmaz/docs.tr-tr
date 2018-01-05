@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>URI'yı Windows Çalışma Zamanı'na Geçirme
 Windows çalışma zamanı yöntemleri yalnızca mutlak URI kabul edin. Göreli URI'yı geçirirseniz bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] yöntemi, bir <xref:System.ArgumentException> özel durumu oluşur. Neden şöyledir: kullandığınızda [!INCLUDE[wrt](../../../includes/wrt-md.md)] .NET Framework kodda, [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) sınıfı görünür olarak <xref:System.Uri?displayProperty=nameWithType> IntelliSense içinde. <xref:System.Uri?displayProperty=nameWithType> Sınıfı göreli URI'ler sağlar ancak [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) sınıfı yok. Bu, aynı zamanda, kullanıma yöntemleri için geçerlidir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri. Bileşeniniz bir URI götüren bir yöntemi gösterir, kodunuzda imza içeren <xref:System.Uri?displayProperty=nameWithType>. Ancak, bileşeniniz kullanıcılara imza içeren [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376). Bileşeniniz için geçirilen bir URI mutlak URI olmalıdır.  
@@ -45,4 +48,4 @@ Windows çalışma zamanı yöntemleri yalnızca mutlak URI kabul edin. Göreli 
  Bu düzenleri hakkında daha fazla bilgi için bkz: [URI şemaları](http://msdn.microsoft.com/library/windows/apps/jj655406.aspx) Windows geliştirme Merkezi'ndeki.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows mağazası uygulamaları ve Windows çalışma zamanı için .NET framework desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+ [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

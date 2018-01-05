@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı Klasik aşağıda gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama dağıtımı sıraya alındı.  
@@ -115,4 +116,4 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
  Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekler kullanabileceğiniz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan hizmet. Yöntemi bir özel durum belirtme `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunu nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sıraya alınmış bir uygulamayı Web'de barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

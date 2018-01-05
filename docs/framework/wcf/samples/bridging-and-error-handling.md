@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc809b75a965107594f7b2aa8a78d412bf284d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bridging-and-error-handling"></a>Köprü Oluşturma ve Hata İşleme
 Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yönlendirme hizmeti, bir istemci ile farklı bağlamaları kullanan bir hizmeti arasındaki iletişimi köprü oluşturma için kullanılır. Bu örnek ayrıca yedekleme Hizmeti'nin yük devretme senaryoları için nasıl kullanılacağını gösterir. Yönlendirme hizmeti bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştırır bileşeni. Bu örnek standart uyum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hesaplayıcı yönlendirme hizmeti kullanarak iletişim kurmak için örnek.  

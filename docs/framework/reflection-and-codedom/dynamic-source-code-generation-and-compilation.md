@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a74d25372b83c848621a44f6ea32a455a0f18ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dinamik Kaynak Kodu Oluşturma ve Derleme
 Kod belge nesnesi kodun temsil ettiği tek bir modelini temel alan kaynak kodu çalışma zamanında birden çok programlama dillerinde oluşturmak için kaynak kodu yayma programların geliştiriciler sağlayan modeli (CodeDOM) adlı bir mekanizma .NET Framework içerir İşlenecek.  
@@ -39,16 +40,16 @@ Kod belge nesnesi kodun temsil ettiği tek bir modelini temel alan kaynak kodu �
  .NET Framework kod oluşturucuları ve kod derleyicileri içerir <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider>, ve <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Codedom'yi kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [CodeDOM'yi Kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
  Ortak kullanımlar açıklar ve CodeDOM kullanarak basit bir nesne grafik oluşturma gösterir.  
   
  [Kaynak kodu oluşturma ve CodeDOM grafiğinden bir programı derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
  Kaynak kodu oluşturma ve içinde tanımlanan sınıflar kullanarak bir dış derleyici ile oluşturulan kod derleme açıklar `System.CodeDom.Compiler` ad alanı.  
   
- [Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
  XML belgeleri yorumları koduyla oluşturup XML belgeleri çıktısı oluşturur, böylece oluşturulan kod derleme CodeDOM kullanmayı açıklar.  
   
- [Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
  CodeDOM alanları, özellikleri, bir yöntemi, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturmak için nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  

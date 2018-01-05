@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 357a9bb6c1a01b00e7f9bcfc17267797f20366b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama
 Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz görünebilir.  
@@ -75,5 +76,5 @@ Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz 
  <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
  <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Media.Animation.RemoveStoryboard>  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

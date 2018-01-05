@@ -26,11 +26,12 @@ caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3582516dece69589d98acb66f1dde2249d9d8832
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -77,6 +78,6 @@ Güvenlik yığın ilerlemesi
 |[Kod erişim güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)|Kod erişimi güvenliği ve en yaygın kullanımları açıklar.|  
 |[Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Güvenlik saydamlık modelinde açıklar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
 |[Kısmen güvenilen koddan kitaplıkları kullanma](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Yönetilmeyen kod ile kullanmak için kitaplıkları etkinleştirmek ve yönetilmeyen koddan kitaplıkları kullanma açıklar.|  
-|[Temel güvenlik kavramları](../../../docs/standard/security/key-security-concepts.md)|Anahtar terimleri ve kavramları .NET Framework güvenlik sisteminde kullanılan çoğu bir bakış sağlar.|  
-|[Rol tabanlı güvenlik](../../../docs/standard/security/role-based-security.md)|Güvenlik rollerine göre içerecek şekilde açıklar.|  
+|[Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)|Anahtar terimleri ve kavramları .NET Framework güvenlik sisteminde kullanılan çoğu bir bakış sağlar.|  
+|[Rol Tabanlı Güvenlik](../../../docs/standard/security/role-based-security.md)|Güvenlik rollerine göre içerecek şekilde açıklar.|  
 |[Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)|Şifreleme uygulamalarınıza içerecek şekilde açıklar.|

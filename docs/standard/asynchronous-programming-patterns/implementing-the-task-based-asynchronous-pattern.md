@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e61b0c94b1512509008d67017389fa11f938999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz desen (TAP) üç yolla uygulayabilirsiniz: C# ve Visual Basic derleyicileri Visual Studio kullanarak el ile veya derleyici ve el ile yöntemlerinin bir birleşimini yoluyla. Aşağıdaki bölümlerde her yöntemin ayrıntılı açıklanmaktadır. İşlem bağlama ve g/Ç-bağlı zaman uyumsuz işlemleri uygulamak için DOKUNUN desen kullanabilirsiniz. [İş yükleri](#workloads) bölüm işlemi her türünü açıklar.
@@ -106,6 +109,6 @@ Zaman uyumsuz yöntemleri için yalnızca işlem bağlı veya g/Ç-bağlı işle
 Bu örnek ayrıca bir tek iptal belirteci ile birden çok zaman uyumsuz işlemleri nasıl akıtılan gösterir. Daha fazla bilgi için İptal kullanım bölümüne bakın [görev tabanlı zaman uyumsuz desen kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [Görev tabanlı zaman uyumsuz desen kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
- [Diğer zaman uyumsuz desen ve türlerle birlikte çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+ [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Görev Tabanlı Zaman Uyumsuz Desen Kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
+ [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  

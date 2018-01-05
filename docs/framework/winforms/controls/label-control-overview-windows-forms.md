@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-overview-windows-forms"></a>Etiket Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanıcı tarafından düzenlenemez görüntüler görüntülemek için kullanılır. Bir form üzerinde nesneleri tanımlamak için kullanılan — hangi belirli bir denetimin açıklamasını yeterlidir tıkladıysanız, örneğin sağlayın ya da bir çalışma zamanı olay veya işlem uygulamanızda yanıt bilgileri görüntülemek için. Örneğin, etiketleri metin kutuları, liste kutuları, birleşik giriş kutuları ve benzeri tanımlayıcı resim yazıları eklemek için kullanabilirsiniz. Ayrıca olaylarına yanıt olarak bir etiket tarafından çalışma zamanında görüntülenen metni değiştirir kod yazabilirsiniz. Örneğin, uygulamanızın bir değişiklik işlemek için birkaç dakika sürer, bir etiket işleme durum iletisi görüntüleyebilirsiniz.  
@@ -34,5 +35,5 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Label>  
- [Nasıl yapılır: Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+ [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

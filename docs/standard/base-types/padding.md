@@ -23,11 +23,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 29cd40645cf06ac9babb4738259938a3da04a155
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea903c1f950e7c226e043c1fa7276a66126b2512
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="padding-strings-in-net"></a>.NET dizeleri doldurma
 Aşağıdakilerden birini kullanmak <xref:System.String> baştaki veya sondaki belirtilen toplam uzunluğu karakterleri ile doldurulan bir özgün dize içeren yeni bir dize oluşturmak için yöntem. Doldurma karakteri boşluk ya da belirtilen bir karakterin olabilir ve bunun sonucunda da sağa hizalı sola hizalı veya bozulmuş olabilir.  
@@ -56,4 +59,4 @@ Aşağıdakilerden birini kullanmak <xref:System.String> baştaki veya sondaki b
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)

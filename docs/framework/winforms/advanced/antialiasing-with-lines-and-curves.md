@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Nasıl yapılır: Çizgiler ve Eğrilerle Düzgünleştirme
 Kullandığınızda [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir çizgi çizmek için başlangıç noktası ve bitiş noktası satırının sağlar, ancak tek pikselleri hakkında hiçbir bilgi satırına sağlamak zorunda değilsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]belirli görüntü cihazında çizgisini göstermek için hangi piksel yanar belirlemek için görüntüleme sürücü yazılımı ile birlikte çalışır.  
@@ -56,5 +57,5 @@ Kullandığınızda [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: metinle düzgünleştirme kullanma](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Metinle Düzgünleştirme Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9b69b9150e8d2c2938c53fcd47e72b7fcb6d238
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0f7bb16c2cd641579706609ff14ca16cc57bd620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>Nasıl yapılır: Öğeden Tüm Donatıcıları Kaldırma
 Bu örnek program aracılığıyla tüm donatıcıların belirtilen bir nasıl kaldırılacağını gösterir <xref:System.Windows.UIElement>.  
@@ -39,4 +40,4 @@ Bu örnek program aracılığıyla tüm donatıcıların belirtilen bir nasıl k
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornersshort)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Donatıcılar genel bakış](../../../../docs/framework/wpf/controls/adorners-overview.md)
+ [Donatıcılara Genel Bakış](../../../../docs/framework/wpf/controls/adorners-overview.md)

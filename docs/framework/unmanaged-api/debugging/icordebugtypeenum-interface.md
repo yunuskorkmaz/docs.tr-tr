@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97d74ef295a89261262bed9796ea88e59303aede
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f61477d1580d9609b021f98c6662c8f1cad8541c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugtypeenum-interface1"></a>Icordebugtypeenum Interface1
 "ICorDebugEnum" yöntemlerini uygular ve "ICorDebugType" diziler numaralandırır.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Belirtilen sayıda alır `ICorDebugType` geçerli konumdan başlayarak numaralandırması örneklerden.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Belirtilen sayıda alır `ICorDebugType` geçerli konumdan başlayarak numaralandırması örneklerden.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,4 +50,4 @@ ms.lasthandoff: 10/18/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

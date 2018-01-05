@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c4ec6554ee024450e397ee7757649be7537eaae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e87717f6e2691142efa54a7e363f1038f8b74c1b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme
 Bu örnek götüren bir özelliğin değerini animasyon gösterilmektedir bir <xref:System.Double> anahtar çerçeveler kullanarak.  
@@ -52,5 +53,5 @@ Bu örnek götüren bir özelliğin değerini animasyon gösterilmektedir bir <x
  <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  
  <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>  
  <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Anahtar çerçeve nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

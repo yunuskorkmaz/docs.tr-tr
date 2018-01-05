@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba6f46fb8c16b00f1e63be94b0a6ef300d56d6d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b5d8fbd1b6502bc011f78e17a3e9d1c112be73d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Nasıl yapılır: Windows Presentation Foundation öğelerine (WCF Veri Hizmetleri) veri bağlama
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], Windows Presentation Foundation (WPF) öğelerini aşağıdaki gibi bağlayabileceğiniz bir <xref:System.Windows.Controls.ListBox>'' veya <xref:System.Windows.Controls.ComboBox> örneğine <xref:System.Data.Services.Client.DataServiceCollection%601>, tutmak için denetimler tarafından oluşturulan olayları işleme <xref:System.Data.Services.Client.DataServiceContext> değişikliklerle eşitlenmesi denetimlerinde verileri için yapılır. Daha fazla bilgi için bkz: [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

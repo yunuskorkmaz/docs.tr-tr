@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5f41c8088f095802cf35239afab279d6324adb55
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 230c98e85bd0aa3bd2f368965b6f7ac028e43df4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken Metodu
 Belirtilen keyfile veya anahtar kapsayıcısı için ortak anahtar belirteci alır.  
@@ -59,6 +60,6 @@ HRESULT GetPublicKeyToken(
  ALink.h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ialink2 arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

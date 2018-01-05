@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cb6f7ee9a7c52ff4763c0c310d679e4889dbd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 995dd5982601ba92a2ec23b82acd7131db183835
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları Panelinin Arka Planını Ayarlama
 Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi ve arka plan resmini görüntüleyebilirsiniz. <xref:System.Windows.Forms.Control.BackColor%2A> Özelliği ayarlar etiketler gibi Masası'nda bulunan ve radyo düğmeleri denetimleri için arka plan rengi. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçim bölmesinin tüm doldurur. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, resim panelinde bulunan denetimleri arkasında görüntülenir.  
@@ -49,6 +50,6 @@ Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi ve arka 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Control.BackColor%2A>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Panel denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Panel denetimine genel bakış](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [Nasıl yapılır: Tasarımcı kullanarak Windows Formları Panel denetimi ile denetimleri gruplandırma](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)
+ [Panel Denetimi](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Panel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Panel Denetimi ile Denetimleri Gruplandırma](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)

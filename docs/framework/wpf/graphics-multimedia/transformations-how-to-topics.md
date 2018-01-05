@@ -19,28 +19,29 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2ec81fa63b07a33f79a54b500ae3d7e62f367f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0159848e8add1f66ca7690c0fc692522102e74d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transformations-how-to-topics"></a>Dönüşümler ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nesnelere farklı dönüştürmeleri açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir olay gerçekleştiğinde bir öğeye Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [Nesneye birden çok Dönüşümler Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [Bir öğe döngüsünü yerinde yapın](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [Nesneyi döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [Bir öğeyi ölçeklendirmek](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [Bir öğenin eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [Göreli değerlerini kullanarak bir dönüşüm kökeni belirtin](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [Bir öğenin Çevir](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [Özel dönüşümleri oluşturmak için MatrixTransform kullanın](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [Nesneye Birden Çok Dönüşüm Uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
+ [Bir Öğenin Yerinde Dönmesini Sağlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
+ [Nesne Döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
+ [Öğe Ölçeklendirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
+ [Bir Öğeyi Eğme](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
+ [Göreli Değerler Kullanarak Dönüşümün Kaynağını Belirtme](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [Bir Öğeyi Çevirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
+ [Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Transform>  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
  [Düzen](../../../../docs/framework/wpf/advanced/layout.md)

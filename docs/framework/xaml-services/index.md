@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: b8d1214e011e4a6569b5612d7be93ed05b776166
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-services"></a>XAML Hizmetleri
 Bu konu Hizmetleri .NET Framework XAML bilinen bir teknoloji kümesi özelliklerini açıklar. Açıklanan API'leri ve Hizmetleri çoğunluğu ile sunulan bir derleme System.Xaml derlemesindeki bulunur [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core derlemeler kümesini. Hizmetleri içeren okuyucuları ve yazıcıları, şema sınıfları ve şema desteği oluşturucuları sınıfları, XAML dili iç desteği ve diğer XAML dil özellikleri öznitelik atanıyor.  

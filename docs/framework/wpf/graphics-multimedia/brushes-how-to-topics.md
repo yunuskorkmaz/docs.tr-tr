@@ -17,34 +17,35 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188c9c484d6cdb8f1175bd9ac88791e3fbdf23bc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 189cec2bec9364e4f03ec3a3e0e8c8420dbfcab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes-how-to-topics"></a>Fırçalar ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ekran içeriğini boyamak için Fırçalar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Renk veya SolidColorBrush geçirgenliğini animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [Konum veya renk gradyan durağının animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [Bir yansıma oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [Bir TileBrush farklı döşeme desenleri oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [Kalem tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [Bir alanı çizim ile Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [Bir alanı bir görüntü ile Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [Doğrusal gradyan ile bir alanı boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [Radyal gradyan ile bir alanı boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [Düz renk ile bir alanı boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [Sistem fırçası ile bir alanı boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Bir Video sahip bir alan boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [Görsel sahip bir alan boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [En boy oranı arka plan olarak kullanılan görüntü](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [TileBrush Yatay ve dikey hizalamasını ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [TileBrush için döşeme boyutunu ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [Fırça dönüşümü](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [Bir gradyan kullanım sistem renkleri](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [SolidColorBrush'ın Rengine veya Opaklığına Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [Gradyan Duraklarının Konumuna veya Rengine Animasyon Ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [Yansıma Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
+ [TileBrush ile Farklı Döşeme Desenleri Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [Kalem Tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
+ [Çizim ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
+ [Görüntü ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
+ [Doğrusal Gradyan ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
+ [Radyal Gradyan ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
+ [Düz Renk ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
+ [Sistem Fırçası ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [Video ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
+ [Görsel ile bir Alanı Boyama](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
+ [Arka Plan Olarak Kullanılan bir Görüntünün En Boy Oranını Koruma](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [TileBrush Yatay ve Dikey Hizalamasını Ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [TileBrush için Döşeme Boyutunu Ayarlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [Fırça Dönüşümü](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
+ [Sistem Renklerinin Gradyan İçinde Kullanımı](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Media.Brush>  
@@ -60,6 +61,6 @@ Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winc
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

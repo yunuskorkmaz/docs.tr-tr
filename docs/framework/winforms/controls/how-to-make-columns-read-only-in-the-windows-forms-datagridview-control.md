@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3fb80b5baeafff53781cb1ff430ad05dd93f2ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a3b6a72a3dac2e7957f73ee466ded0282988923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Salt Okunur Yapma
 Tüm veri düzenleme için yöneliktir. İçinde <xref:System.Windows.Forms.DataGridView> denetlemek, sütun <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> özellik değeri kullanıcılar o sütundaki hücreleri düzenleyip düzenleyemeyeceğini belirler. Salt okunur tamamen denetimi yapma hakkında daha fazla bilgi için bkz: [nasıl yapılır: önlemek satır ekleme ve silme Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
@@ -48,5 +49,5 @@ Tüm veri düzenleme için yöneliktir. İçinde <xref:System.Windows.Forms.Data
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>  
- [Temel sütun, satır ve hücre özellikleri Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- [Nasıl yapılır: satır ekleme ve engelleme silme Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)
+ [Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satır Eklemeyi ve Silmeyi Engelleme](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)

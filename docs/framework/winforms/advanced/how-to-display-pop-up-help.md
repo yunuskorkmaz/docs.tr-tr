@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5f57e0a7981e8cae93960c8ffc3ed2168594cf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d139c283d002ac76005f22385d83190144c5082
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-pop-up-help"></a>Nasıl yapılır: Açılır Yardımı Görüntüleme
 Windows Forms'ta Yardım görüntülemek için bir yol olduğu aracılığıyla **yardımcı** üzerinden erişilebilir başlık çubuğunu sağ tarafında bulunan düğmesini <xref:System.Windows.Forms.Form.HelpButton%2A> özelliği. Bu Yardım görüntüleme iletişim kutuları ile kullanmak için oldukça uygun türüdür. Kalıcı olarak gösterilen iletişim kutuları (ile <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi) kalıcı iletişim kutuları için başka bir pencere odak kaydırabilirsiniz önce kapatılması gerektiğinden dış yardım sistemleri hale getirme konusunda sorun yaşıyor. Ayrıca, kullanarak **yardımcı** düğmesi gerektiren olduğunu hiçbir **simge durumuna küçült** düğmesini veya **Ekranı Kapla** başlık çubuğunda gösterilen düğmesi. Formlar genellikle sahip bir standart iletişim kutusu kuralı ise **simge durumuna küçült** ve **Ekranı Kapla** düğmeler.  
@@ -53,6 +54,6 @@ Windows Forms'ta Yardım görüntülemek için bir yol olduğu aracılığıyla 
 6.  Tuşuna **yardımcı** düğmesini başlık çubuğunda ve Yardım dizesi ayarladığınız denetim'ı tıklatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ToolTips kullanarak denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Windows Forms'ta kullanıcı Yardımı tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

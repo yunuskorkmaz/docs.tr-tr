@@ -14,11 +14,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 418a1b6d2033b8bc84a18578cfc227c5f227ad91
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konuda yazarken bilmeniz gereken sorunlar açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] küresel pazarda uygulamaları. Genelleştirme programlama öğeleri tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] içinde `System.Globalization`.  
@@ -187,4 +188,4 @@ Aşağıdaki örnekte bir onaltılı karakter başvurusunu gösterir. Olan bildi
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Genelleştirme ve yerelleştirme genel bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+ [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

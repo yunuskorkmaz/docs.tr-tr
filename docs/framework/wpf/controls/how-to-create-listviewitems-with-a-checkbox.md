@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cc6ebb3671dcc65d690fde5d4796c9034553eb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be87183efd8101233bd5cbda49d556d09802b630
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Nasıl yapılır: CheckBox ile ListViewItems Oluşturma
 Bu örnek bir sütunu görüntülemek nasıl gösterir <xref:System.Windows.Controls.CheckBox> denetimlerini bir <xref:System.Windows.Controls.ListView> kullanan denetim bir <xref:System.Windows.Controls.GridView>.  
@@ -44,4 +45,4 @@ Bu örnek bir sütunu görüntülemek nasıl gösterir <xref:System.Windows.Cont
  <xref:System.Windows.Controls.GridView>  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

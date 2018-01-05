@@ -27,11 +27,14 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET dizeleri kullanmak için en iyi uygulamalar
 <a name="top"></a>.NET yerelleştirilmiş ve globalized uygulamaları geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi ortak işlemleri gerçekleştirirken geçerli kültür ya da belirli bir kültür kuralları uygula kolay hale getirir. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
@@ -375,4 +378,4 @@ ms.lasthandoff: 10/18/2017
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizeleri düzenleme](../../../docs/standard/base-types/manipulating-strings.md)
+ [Dizeleri Düzenleme](../../../docs/standard/base-types/manipulating-strings.md)

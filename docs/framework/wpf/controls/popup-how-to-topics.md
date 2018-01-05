@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6853b915cb133b2ea1cbc0579f3eb59e1e956f5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: dfe53e4782fda95142a9eaa8ab10227f5353612b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-how-to-topics"></a>Açılan Pencere ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Primitives.Popup> geçerli uygulama penceresi üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Açılan pencere animasyon ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [Özel açılan konumunu belirtin](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [Açılan Pencereye Animasyon Ekleme](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
+ [Özel Açılan Pencere Konumu Belirtme](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Açılan genel bakış](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)

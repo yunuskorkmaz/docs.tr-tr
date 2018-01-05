@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2acb455db8f8bdc5a95bfd2462b651cebbb692c3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]sağlar <xref:System.Windows.Style> ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıfların) kaynaklarında bir öğeyi görsel görünümünü tanımlamak için bir yol kullanılabilmesi için birden çok kez kullanabilmek. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri yararlanma <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman kaynak referans varolan stilleri ve şablonları olarak yerine satır içi yenilerini tanımlayın.  
@@ -47,4 +48,4 @@ ms.lasthandoff: 10/22/2017
  Nesne döndüren biçimlendirme uzantıları tarafından etkinleştirilmiş diğer sözdizimleri de stil ve şablonlar için mümkündür. Olası senaryolar sahip olan iki uzantı şunlardır [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)

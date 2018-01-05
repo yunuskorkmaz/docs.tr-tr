@@ -4,11 +4,14 @@ description: "Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 6c1bbbcd99c2abee43a789fddf4546e7ee8d3380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>Kaldırın ve mevcut uygulamalar DevOps kaydırma
 > Görme: Kaldırın ve mevcut .NET Framework uygulamalarınızı daha hızlı sevk ve uygulama teslim maliyetleri azaltmak için dağıtım çevikliğinin büyük ölçüde artırmak için bulut DevOps çapında kullanılmaya hazır uygulamalar için shift.

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1c0452e03e9c6471a35cd8612c1f36bbabe002d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae0bb07688cf1e9573d02826f186811cd7340c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-data-types"></a>Temel veri türleri
 Transact-SQL önce LINQ to SQL sorguları Çevir çünkü bunlar Microsoft SQL Server üzerinde yürütülür. LINQ-SQL temel veri türleri için SQL Server mu aynı yerleşik işlevlerinin çoğunu destekler.  
@@ -33,5 +34,5 @@ Transact-SQL önce LINQ to SQL sorguları Çevir çünkü bunlar Microsoft SQL S
 -   Is işleci: `IS` işleci devralma eşleme kullanıldığında, desteklenen bir çeviri içeriyor. Bu doğrudan ayrıştırıcı sütunun sınama yerine bir nesne belirli bir varlık türü ve ayrıştırıcı sütunun bir denetim için çevrilen olup olmadığını belirlemek için kullanılabilir. Visual Basic ve C# işleçleri hakkında daha fazla bilgi için bkz: [Is işlecini](~/docs/visual-basic/language-reference/operators/is-operator.md) ve [olan](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL CLR türü eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [Veri türleri ve işlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+ [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

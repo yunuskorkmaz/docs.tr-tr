@@ -13,29 +13,30 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d065f4af7476e90c789c0647b1944aa50b5af5fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 35994b76498d9287f5f0c22c024afc176d1f9260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-authorization"></a>Özel Yetkilendirme
 Yetkilendirme kaynakları ve görevleri erişimi denetleme işlemidir. Bu bölümdeki konular, farklı talep türlerini ya da ilkeleri uygulamak için oluşturmanızı sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: özel yetkilendirme ilkesi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
  Özel bir ilke oluşturmayı açıklar.  
   
- [Nasıl yapılır: bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  Özel Yöneticisi oluşturmayı açıklar.  
   
- [Nasıl yapılır: özel beyan oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
  Bir özel talep oluşturmayı açıklar.  
   
- [Nasıl yapılır: Beyanları](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [Nasıl yapılır: Talepleri Karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  Talep Karşılaştırılacak açıklar.  
   
- [Nasıl yapılır: özel esas kimlik oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
+ [Nasıl yapılır: Özel Asıl Kimlik Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-principal-identity.md)  
  Senaryo gösterilmektedir, <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> özel yetkilendirme ilkesi ve özel bir kural ile birlikte kullanılır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -44,4 +45,4 @@ Yetkilendirme kaynakları ve görevleri erişimi denetleme işlemidir. Bu bölü
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [Güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md)
+ [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1894ee59b6120abfe4cb216baba086fcd1650f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
 Bu konu, önerilen izleme ve farklı işletim ortamlar için ileti günlüğe kaydetme ayarlarını açıklar.  
@@ -123,4 +124,4 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tanılama için Windows Yönetim Araçları'nı kullanma](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+ [Tanılama için Windows Yönetim Araçlarını Kullanma](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e050a3e5d3207f883be915aa6f00d527023f561e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c06692f19fe31bfcf2ae1f9778d847f412a007e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
 Görmemeleri ile Windows Forms veri bağlama çalışırken, verileri ne üst/alt adında veya ana/Ayrıntılar görünümü görüntülenir. Bu aynı kaynaktan veri iki denetimlerinde görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçim değiştirme değiştirmek için ikinci denetiminde gösterilen veriler neden olur. Örneğin, ilk denetim müşteriler ve ilk denetimindeki seçili müşteri siparişleri listesini ilgili ikinci bir listesini içerebilir.  
@@ -94,6 +95,6 @@ Görmemeleri ile Windows Forms veri bağlama çalışırken, verileri ne üst/al
  Bu örnek için komut satırından derleme hakkında bilgi için [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] veya [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı yapı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek ayrıca oluşturmak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] yeni bir proje kodunu yapıştırma tarafından.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Veri bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+ [Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [BindingSource Bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

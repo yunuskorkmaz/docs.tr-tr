@@ -21,11 +21,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14c67daa387f06a3c7d6e43219991950bceb73e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonlar (WCF Veri Hizmetleri)
 Projeksiyon bir mekanizma sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen akıştaki veri miktarını azaltmak için. Daha fazla bilgi için bkz: [OData: Sistem sorgusu seçeneği ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
@@ -96,4 +97,4 @@ Projeksiyon bir mekanizma sağlar [!INCLUDE[ssODataFull](../../../../includes/ss
  Daha fazla bilgi için bkz: [nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Hizmeti sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+ [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cefca8e6856680d509d6166eec4d97855f1babc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri
 <xref:System.Windows.Forms.DataGridView>Satırlar, sütunlar ve üstbilgiler boyutunu birçok farklı oluşum sonucu olarak değiştirebilirsiniz. Aşağıdaki tabloda bu örnekleri gösterilmektedir.  
@@ -164,6 +165,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>  
  <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>  
  <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>  
- [Windows Forms DataGridView denetimindeki satırları ve sütunları yeniden boyutlandırma](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
- [Sütun doldurma modu Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Boyutlandırma Modlarını Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

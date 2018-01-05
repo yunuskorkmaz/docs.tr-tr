@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d4f27c9dcdc1bc7e00b0c809c62889b6c61cd16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2c0cc5136aaed3f7465102e7e7b6d2d9c2fc920
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Sütununun Türünü Değiştirme
 Bazen bir Windows Forms zaten eklenmiş bir sütunun türünü değiştirmek istersiniz <xref:System.Windows.Forms.DataGridView> denetim. Örneğin, bir veri kaynağına denetimi bağladığınızda otomatik oluşturulan sütunları bazıları türlerini değiştirmek isteyebilirsiniz. Görüntü tablosu yabancı anahtarları ilgili tablodaki satırları içeren sütunlar olduğunda yararlıdır. Bu durumda, bu yabancı anahtarları ilişkili tablo daha anlamlı değerleri görüntülemek birleşik giriş kutusu sütunlarla görüntülemek metin kutusu sütunları değiştirmek isteyebilirsiniz.  
@@ -47,4 +48,4 @@ Bazen bir Windows Forms zaten eklenmiş bir sütunun türünü değiştirmek ist
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
  [Nasıl yapılır: bir Windows uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Nasıl yapılır: Windows formlarına denetimler ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+ [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Erişen veri hizmeti kaynakları (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]destekleyen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi URI tarafından adreslenebilir kaynaklarla akışı olarak kullanıma sunmak için. Bu kaynaklar varlık ilişkisi kurallarına göre temsil [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md). Bu modelde, varlık veri türleridir müşteriler, siparişler, öğeleri ve ürünler gibi bir uygulama etki alanındaki verilerin işletimsel birimleri temsil eder. Varlık veri erişilen ve temsili durum aktarımı (REST), özellikle de, GET, standart HTTP fiilleri semantiği kullanarak değiştirilen, PUT, POST ve SİLİN.  

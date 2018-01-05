@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a111a600230bda529362ac19969a8a4b7d32916
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2337de6889a92b295e0a4f3a88d2a5039e583508
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalizing-windows-forms"></a>Windows Formlarını Genelleştirme
 *Genelleştirme* tasarlama ve birden çok kültür için işlevleri bir yazılım ürünü geliştirmeye işlemidir.  
@@ -32,17 +33,17 @@ ms.lasthandoff: 10/22/2017
  [Kodlama ve Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)  
  Tam Unicode desteği ve onun etkileri açıklanmaktadır.  
   
- [Uluslararası yazı tipleri Windows Formları ve denetimlerindeki](../../../../docs/framework/winforms/advanced/international-fonts-in-windows-forms-and-controls.md)  
+ [Windows Forms ve Denetimlerindeki Uluslararası Yazı Tipleri](../../../../docs/framework/winforms/advanced/international-fonts-in-windows-forms-and-controls.md)  
  Windows Forms'ta uluslararası karakterler görüntülenmesi için yazı tipi seçmek nasıl ve ne zaman açıklanmaktadır.  
   
- [IMEMode özelliğiyle Asya karakterlerinin görüntülenmesi](../../../../docs/framework/winforms/advanced/display-of-asian-characters-with-the-imemode-property.md)  
+ [ImeMode Özelliğiyle Asya Karakterlerinin Görüntülenmesi](../../../../docs/framework/winforms/advanced/display-of-asian-characters-with-the-imemode-property.md)  
  Tanıtır `ImeMode` Windows Form veya denetim kabul giriş türü denetlemek için kullanılan özellik.  
   
--   [İzlenecek yol: ClickOnce dağıtım Tasarımcısı'nı kullanarak API'si ile uydu derlemelerini indirme](http://msdn.microsoft.com/library/ms366788\(v=vs.110\))  
+-   [İzlenecek yol: Tasarımcıyı Kullanarak ClickOnce Dağıtım API'si ile Uydu Derlemelerini İndirme](http://msdn.microsoft.com/library/ms366788\(v=vs.110\))  
   
--   [ClickOnce uygulamalarını yerelleştirme](http://msdn.microsoft.com/library/ms404266\(v=vs.110\))  
+-   [ClickOnce Uygulamalarını Yerelleştirme](http://msdn.microsoft.com/library/ms404266\(v=vs.110\))  
   
--   [İzlenecek yol: ClickOnce dağıtım API'si ile uydu derlemelerini indirme](http://msdn.microsoft.com/library/ms404269\(v=vs.110\))  
+-   [İzlenecek yol: ClickOnce Dağıtım API'si ile Uydu Derlemelerini İndirme](http://msdn.microsoft.com/library/ms404269\(v=vs.110\))  
   
 -   [Nasıl yapılır: Windows Forms Genelleştirme için UI kültürü ve kültür ayarlayın](http://msdn.microsoft.com/library/b28bx3bh\(v=vs.110\))  
   
@@ -56,18 +57,18 @@ ms.lasthandoff: 10/22/2017
   
 -   [Nasıl yapılır: çift yönlü Windows Forms için ileti kutuları oluşturma](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
   
--   [İzlenecek yol: ClickOnce dağıtım Tasarımcısı'nı kullanarak API'si ile uydu derlemelerini indirme](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))  
+-   [İzlenecek yol: Tasarımcıyı Kullanarak ClickOnce Dağıtım API'si ile Uydu Derlemelerini İndirme](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))  
   
--   [ClickOnce uygulamalarını yerelleştirme](http://msdn.microsoft.com/library/ms404266\(v=vs.120\))  
+-   [ClickOnce Uygulamalarını Yerelleştirme](http://msdn.microsoft.com/library/ms404266\(v=vs.120\))  
   
--   [İzlenecek yol: ClickOnce dağıtım API'si ile uydu derlemelerini indirme](http://msdn.microsoft.com/library/ms404269\(v=vs.120\))  
+-   [İzlenecek yol: ClickOnce Dağıtım API'si ile Uydu Derlemelerini İndirme](http://msdn.microsoft.com/library/ms404269\(v=vs.120\))  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
-1.  [Uygulamaları Genelleştirme ve yerelleştirme](http://msdn.microsoft.com/library/1021kkz0\(v=vs.110\))  
+1.  [Uygulamaları Genelleştirme ve Yerelleştirme](http://msdn.microsoft.com/library/1021kkz0\(v=vs.110\))  
   
 2.  [Uygulamaları Genelleştirme](http://msdn.microsoft.com/library/eaa7b9c0\(v=vs.110\))  
   
-3.  [Uygulamaları Genelleştirme ve yerelleştirme](http://msdn.microsoft.com/library/1021kkz0\(v=vs.120\))  
+3.  [Uygulamaları Genelleştirme ve Yerelleştirme](http://msdn.microsoft.com/library/1021kkz0\(v=vs.120\))  
   
 4.  [Uygulamaları Genelleştirme](http://msdn.microsoft.com/library/eaa7b9c0\(v=vs.120\))

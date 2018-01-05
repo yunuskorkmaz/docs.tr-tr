@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cba37a82174ab255cb6814e296154485fbdd54c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)
 Zaman [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan doğrular X.509 sertifikası güvenilen bir sertifika yetkilisi tarafından verilmiş bir X.509 sertifikası ile imzalanmış bir SOAP iletisi alır. Bu sertifika deposunda bakarak ve sertifika, sertifika yetkilisi olarak belirlendiyse için güvenilir belirleme gerçekleştirilir. Sırayla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bunun belirlenmesi için sertifika yetkilendirme sertifika zincirini doğru sertifika depolama alanına yüklenmelidir.  
@@ -44,4 +45,4 @@ Zaman [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] varsayılan doğru
          [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sertifikalar ek bileşenini MMC ile bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sertifikalar ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

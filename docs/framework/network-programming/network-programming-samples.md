@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b0e507e44fd9ce50269081c39eabc953e5b56dfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df1e1c16c52afc79219d7ea2503b200a420477df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-samples"></a>Ağ programlama örnekleri
 Bu bölümde açıklamaları ve sınıfları kullanma örnekleri programlama indirilebilir ağ bağlantıları içeren <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security> , <xref:System.Net.Sockets>ve ilgili ad alanları.  
@@ -74,6 +75,6 @@ Bu bölümde açıklamaları ve sınıfları kullanma örnekleri programlama ind
  <xref:System.Net.Sockets>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework'te ağ programlaması](../../../docs/framework/network-programming/index.md)  
- [Nasıl Yapılır Konuları programlama ağ](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
+ [Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [.NET için ağ örnekleri](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

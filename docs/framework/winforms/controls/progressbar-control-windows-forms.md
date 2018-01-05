@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e34c86d63cc4d9eb2d6ba08466e72086719d880a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar Denetimi (Windows Forms)
 > [!IMPORTANT]
@@ -29,10 +30,10 @@ ms.lasthandoff: 10/18/2017
  Windows Forms <xref:System.Windows.Forms.ProgressBar> denetim yatay çubuğunda düzenlenmiş dikdörtgenler uygun sayıda görüntüleyerek bir eylemin ilerleme durumunu gösterir. Eylem tamamlandığında çubuğu girilir. İlerleme çubukları nasıl bir göstergesi kullanıcıya vermek için kullanılan yaygın olarak tamamlanması uzun bir eylem için beklenecek uzun — Örneğin, ne zaman büyük bir dosya yükleniyor.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ProgressBar denetimine genel bakış](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
+ [ProgressBar Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  Genel kavramlarını tanıtır <xref:System.Windows.Forms.ProgressBar> grafiksel bir işlemin ilerlemesini görüntülemek sağlayan denetim.  
   
- [Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ [Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  Çeşitli tarafından görüntülenen değeri artırmak için farklı yollarla ele <xref:System.Windows.Forms.ProgressBar> denetim.  
   
 ## <a name="reference"></a>Başvuru  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
  Sınıf ve üyelerine başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

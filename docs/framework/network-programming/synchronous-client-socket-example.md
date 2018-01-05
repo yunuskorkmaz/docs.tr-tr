@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-client-socket-example"></a>Zaman uyumlu istemci yuva örneği
 Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur. İstemci zaman uyumlu bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür kadar istemci uygulamasının yürütme askıya alınmış şekilde. Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.  
@@ -145,6 +146,6 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumlu Server yuva örneği](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [Zaman uyumlu istemci yuvası kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Yuva kod örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)
+ [Zaman Uyumlu Sunucu Yuvası Örneği](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8cd80805eee58db16f5865683cbd322a49c554a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konu, farklı bölgelerdeki çeşitli özellikleri açıklar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] kaynak tüketimini denetleme ve performans ölçümleri etkileyen iş mimarisi.  
@@ -57,5 +58,5 @@ Bu konu, farklı bölgelerdeki çeşitli özellikleri açıklar [!INCLUDE[indigo
  Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, IIS ve ASP.NET yapılandırma ayarlarını WCF hizmetini işleme ve bellek ayak etkileyebilir.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]ASP.NET performansı bkz [ASP.NET performans geliştirme](http://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçlara olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemci sabit veya küçük bir sayısı varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 CPU kullanımı % 100 yakın olan çok işlemcili bir makinede verimliliği artırma sağlayabilir. Bu artış performans maliyeti ile gelir: de ölçeklenebilirlik azaltabilir bellek kullanımında artışa neden olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md)  
- [Büyük veri ve akış](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+ [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Büyük Veriler ve Akış Yapma](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

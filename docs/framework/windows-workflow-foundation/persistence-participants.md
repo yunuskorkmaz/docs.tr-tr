@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-participants"></a>Kalıcılık katılımcıları
 Kalıcılık katılımcı bir uygulama ana bilgisayarı tarafından tetiklenen bir sürdürme işlemi (kaydetme veya yük) katılabilirsiniz. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıflar ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık katılımcı oluşturmak için kullanabilirsiniz. Kalıcılık katılımcı bu sınıfların birinden türetilen, ilgi yöntemlerini uygular ve sınıfının bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama ana bilgisayarı gibi iş akışı uzantıları için bir iş akışı örneği kalıcı olduğunda bakın ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırma olabilir.  
@@ -67,7 +68,7 @@ Kalıcılık katılımcı bir uygulama ana bilgisayarı tarafından tetiklenen b
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Nasıl yapılır: özel Kalıcılık katılımcı oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Depolama genişletilebilirliği](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+ [Depo Genişletilebilirliği](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)

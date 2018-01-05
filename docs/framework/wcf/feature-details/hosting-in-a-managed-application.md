@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>Yönetilen Bir Uygulamada Barındırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Hizmetler barındırılması birinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama. Kendi kendine barındırma hizmetleri en esnek barındırma seçenektir; çünkü dağıtmak için en az altyapısı gerektirir. Yönetilen uygulamaların farklı barındırma seçenekleri Gelişmiş barındırma ve yönetim özellikleri sağlıyor mu ancak ayrıca en az sağlam barındırma seçeneği demektir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], Internet Information Services (IIS) ve Windows Hizmetleri gibi.  
@@ -35,5 +36,5 @@ ms.lasthandoff: 12/02/2017
  Kendi kendine barındırma etkinleştirir olanlar göre gibi zengin istemci uygulamaları olan diğer ortak senaryolar [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] ya da Windows Forms (WinForms). Barındırma bu seçenek ayrıca zengin istemci uygulamaları gibi kolaylaştırır [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] ve dış dünyayla iletişim kurmak için WinForms uygulamalar. Örneğin, kullanan eşler arası işbirliği istemci [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kendi kullanıcı arabirimi ve ayrıca ana bilgisayarlar için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlanmak ve bilgi paylaşmak diğer istemciler sağlayan hizmet.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
+ [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
  [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)

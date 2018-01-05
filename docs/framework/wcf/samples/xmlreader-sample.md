@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b8fe20b1a5d65a011ec0315773eafd6b4dd6ade
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ab5ea1204a4fbb8ef623191d54d1b24f3dc8f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlreader-sample"></a>XmlReader Örneği
 XmlReader örneği kullanarak bir ileti gövdesinin işlenmesini gösteren bir <xref:System.Xml.XmlReader>. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesap makinesi hizmetinin uygular. Bir ek hizmet işlemi `Sum`, bir dizi birlikte eklenecek değerleri içeren bir ileti kabul eden eklendi. İletiyi kullanarak hizmet okuyan bir <xref:System.Xml.XmlReader>.  

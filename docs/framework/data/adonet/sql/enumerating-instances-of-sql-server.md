@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 99111cb9e48bd5ccd4463afcee6b78bc2387cf7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) örneklerini numaralandırma
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]bulunacak uygulamaları verir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] geçerli ağ içindeki örnekleri. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayan uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür tüm sunucuları hakkında bilgi içeren. Bu tablo bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerindeki tüm kullanılabilir sunuculara içeren aşağı açılır liste genişleten ağda kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikler** iletişim kutusu. Gösterilen sonuçları her zaman eksiksiz değildir.  

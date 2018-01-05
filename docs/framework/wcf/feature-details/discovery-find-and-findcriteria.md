@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana Eylemler biridir. Bir bulma gerçekleştirme WS-bulma araştırma ileti ağ üzerinden gönderir. Ölçütlere uyan Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bulma iletilerini görmek [WS-bulma belirtimi](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -75,8 +76,8 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Keşif istemcisi kanalını kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Kapsam ile keşif](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Zaman uyumsuz bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
+ [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
+ [Zaman Uyumsuz Bulma](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

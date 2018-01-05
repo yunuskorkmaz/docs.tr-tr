@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41cd8c9cd647c7efbc4e6cf13517ed638245e51c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 31c59f4c90eed00775fc9fceaf872391faa93784
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-cursor-type"></a>Nasıl yapılır: İmleç Türünü Değiştirme
 Bu örnek nasıl değiştirileceğini gösterir <xref:System.Windows.Input.Cursor> uygulama ve belirli bir öğe için fare işaretçisi.  
@@ -43,4 +44,4 @@ Bu örnek nasıl değiştirileceğini gösterir <xref:System.Windows.Input.Curso
  [!code-vb[cursors#ChangeCursorsSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Giriş genel bakış](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)

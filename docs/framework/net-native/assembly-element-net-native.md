@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 073a526e72f46864b2e08d33ec14a53034c144b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-net-native"></a>&lt;Assembly&gt; Öğesi (.NET Yerel)
 Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.  
@@ -100,6 +101,6 @@ Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke
  `Activate`, `Browse`, `Dynamic`, Ve `Serialize` öznitelikleri tüm isteğe bağlı. Ancak, `<Assembly>` öğesi bu öznitelikler en az birini içermelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Çalışma zamanı yönerge öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+ [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

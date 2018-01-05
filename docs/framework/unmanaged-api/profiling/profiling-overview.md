@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 <a name="top"></a>Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) profil oluşturucu ileti almak ve profil oluşturma API kullanarak için CLR iletileri göndermek işlevler oluşan bir dinamik bağlantı kitaplığı (DLL) olur. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
@@ -237,8 +238,8 @@ Profil oluşturma mimarisi
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Profil oluşturma ortamını ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Bir profil oluşturucu başlatmak, olay bildirimlerini ayarlamak ve bir Windows hizmeti profil açıklanmaktadır.|  
-|[Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Profil oluşturma API'si kullanan yönetilmeyen arabirimler açıklanmaktadır.|  
-|[Profil oluşturma genel statik işlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Profil oluşturma API'si kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.|  
-|[Profil oluşturma numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Profil oluşturma API'si kullanan yönetilmeyen numaralandırmalar açıklar.|  
-|[Profil oluşturma yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Profil oluşturma API'si kullanan yönetilmeyen yapılar açıklar.|
+|[Profil Oluşturma Ortamını Ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Bir profil oluşturucu başlatmak, olay bildirimlerini ayarlamak ve bir Windows hizmeti profil açıklanmaktadır.|  
+|[Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Profil oluşturma API'si kullanan yönetilmeyen arabirimler açıklanmaktadır.|  
+|[Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Profil oluşturma API'si kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.|  
+|[Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|Profil oluşturma API'si kullanan yönetilmeyen numaralandırmalar açıklar.|  
+|[Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|Profil oluşturma API'si kullanan yönetilmeyen yapılar açıklar.|

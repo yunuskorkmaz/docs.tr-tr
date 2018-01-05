@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f231a4e43723ce3ea73831086ed54e9ee08c1a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variables-and-arguments"></a>Değişkenleri ve bağımsız değişkenler
 İçinde [!INCLUDE[wf](../../../includes/wf-md.md)]değişkenlerini temsil eden veri depolama ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bir etkinlik bir bağımsız değişkenler kümesine sahip ve etkinlik imza yapın. Ayrıca, aktivite Geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenlerin listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifadeye kullanarak bağlanır.  

@@ -19,11 +19,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15eeb27d493cd1138b0d3d41b55a57228a226a11
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 <a name="introduction"></a>
@@ -341,21 +342,21 @@ ms.lasthandoff: 10/22/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Animasyon ve zamanlama sistemi özeti](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|Zamanlama sistemi nasıl kullandığını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> animasyonları oluşturmanızı sağlayan sınıflar.|  
-|[Animasyon ipuçları ve püf noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Performans gibi animasyonları ile ilgili sorunları çözmek için yararlı ipuçları listeler.|  
-|[Özel Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|Anahtar çerçeveler, animasyon sınıfları veya çerçeve başına geri aramalar animasyon sistemini genişletmek açıklar.|  
+|[Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|Zamanlama sistemi nasıl kullandığını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> animasyonları oluşturmanızı sağlayan sınıflar.|  
+|[Animasyon İpuçları ve Püf Noktaları](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Performans gibi animasyonları ile ilgili sorunları çözmek için yararlı ipuçları listeler.|  
+|[Özel Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|Anahtar çerçeveler, animasyon sınıfları veya çerçeve başına geri aramalar animasyon sistemini genişletmek açıklar.|  
 |Gelen/İçin/Göre Animasyonlarına Genel Bakış|İki değer arasında geçişler animasyonun oluşturmayı açıklar.|  
-|[Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|İlişkilendirme yöntemi denetleme olanağı dahil olmak üzere birden çok hedef değeri olan bir animasyon oluşturmayı açıklar.|  
-|[İşlevler kolaylaştırma](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışı elde etmek üzere, animasyonları uygulamak açıklanmaktadır.|  
-|[Yol animasyonlarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|Taşımak veya karmaşık bir yolda bir nesne döndürmek açıklar.|  
+|[Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|İlişkilendirme yöntemi denetleme olanağı dahil olmak üzere birden çok hedef değeri olan bir animasyon oluşturmayı açıklar.|  
+|[Hızlandırma İşlevleri](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışı elde etmek üzere, animasyonları uygulamak açıklanmaktadır.|  
+|[Yol Animasyonlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|Taşımak veya karmaşık bir yolda bir nesne döndürmek açıklar.|  
 |[Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)|Film şeritleri kullanarak özellik animasyonları, yerel animasyonları, saatler ve çerçeve başına animasyonları açıklar.|  
-|[Film şeritleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|Film şeritleri ile birden çok zaman çizelgelerini karmaşık animasyon oluşturmak için nasıl kullanılacağını açıklar.|  
+|[Görsel Taslaklara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|Film şeritleri ile birden çok zaman çizelgelerini karmaşık animasyon oluşturmak için nasıl kullanılacağını açıklar.|  
 |[Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|Açıklar <xref:System.Windows.Media.Animation.Timeline> türleri ve animasyonları kullanılan özellik.|  
-|[Zamanlama olaylarına genel bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|Kullanılabilir olaylarını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> gibi zaman çizelgesi noktalarında kod yürütmek için nesneleri başlamak, duraklatma, sürdürme, Atla veya durdurmak.|  
+|[Zamanlama Olaylarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|Kullanılabilir olaylarını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> gibi zaman çizelgesi noktalarında kod yürütmek için nesneleri başlamak, duraklatma, sürdürme, Atla veya durdurmak.|  
 |[Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|Animasyonları ve zamanlamaları, uygulamanızda kullanmak için kod örnekleri içerir.|  
-|[Saatler nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|Kullanmak için kod örnekleri içerir <xref:System.Windows.Media.Animation.Clock> uygulamanızda nesnesi.|  
-|[Anahtar çerçeve nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|Anahtar çerçeve animasyonları, uygulamanızda kullanmak için kod örnekleri içerir.|  
-|[Yol animasyon nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|Yol animasyonları, uygulamanızda kullanmak için kod örnekleri içerir.|  
+|[Saatler ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|Kullanmak için kod örnekleri içerir <xref:System.Windows.Media.Animation.Clock> uygulamanızda nesnesi.|  
+|[Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|Anahtar çerçeve animasyonları, uygulamanızda kullanmak için kod örnekleri içerir.|  
+|[Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|Yol animasyonları, uygulamanızda kullanmak için kod örnekleri içerir.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Başvuru  

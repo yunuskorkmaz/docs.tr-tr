@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta veri belgelerini hizmet modeli kodundan hizmet modeli kodu oluşturmak için kullanılır.  
@@ -35,11 +36,11 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
   
 |Görev|Konu|  
 |----------|-----------|  
-|Hizmet veya statik meta veri belgelerini çalışmasını kod oluşturur.|[Hizmet meta verilerinden WCF istemcisi oluşturma](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|Meta veri belgelerini derlenmiş kodundan dışa aktarır.|[Nasıl yapılır: meta verileri derlenmiş hizmet kodundan dışarı aktarmak için Svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|Derlenmiş hizmet kodunu doğrular.|[Nasıl yapılır: derlenmiş hizmet kodunu doğrulamak için Svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|Meta veri belgelerini Hizmetleri çalıştıran indirir.|[Nasıl yapılır: meta veri belgelerini indirmek için Svcutil.exe kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|Seri hale getirme kod oluşturur.|[Nasıl yapılır: Başlangıç saati, WCF istemci XmlSerializer kullanarak geliştirin](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|Hizmet veya statik meta veri belgelerini çalışmasını kod oluşturur.|[Hizmet Meta Verilerinden WCF İstemcisi Oluşturma](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|Meta veri belgelerini derlenmiş kodundan dışa aktarır.|[Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|Derlenmiş hizmet kodunu doğrular.|[Nasıl yapılır: Derlenmiş Hizmet Kodunu Doğrulamak için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|Meta veri belgelerini Hizmetleri çalıştıran indirir.|[Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|Seri hale getirme kod oluşturur.|[Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  Parametre olarak sağlanan adlarının özdeş ise Svcutil bir disk üzerinde var olan dosyaların üzerine yazar. Bu kod dosyaları, yapılandırma veya meta veri dosyaları içerebilir. Bu kod ve yapılandırma uçarak oluştururken önlemek için `/mergeConfig` geçin.  
@@ -274,4 +275,4 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

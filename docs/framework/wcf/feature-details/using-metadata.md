@@ -13,24 +13,25 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0a7d5390681e7270381df109601d269f12a707a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa545e812de8c87191d6bba7df5cc5a5a494af3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-metadata"></a>Meta Verileri Kullanma
 Hizmet meta verilerini makine tarafından okunabilir hizmet açıklamasını içerir. Hizmet meta verilerini hizmet uç noktaları, bağlamaları, sözleşmeler, işlemleri ve iletileri açıklamalarını içerir. Hizmet meta verilerini amacıyla, bir istemci hizmeti kullanan, hizmet açıklaması uygulama ve bir istemci için bağlama dinamik olarak güncelleştirmek için otomatik olarak oluşturmasını da dahil olmak üzere çeşitli kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Oluşturulmuş istemci kodlarını anlama](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Oluşturulmuş İstemci Kodlarını Anlama](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Aracının oluşturduğu Svcutil.exe arabirimleri ve farklı sınıflar açıklanmaktadır.  
   
- [Nasıl yapılır: meta verileri alma ve uyumlu bir hizmet ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  İçin svcutil.exe kullanma meta verilerini almak ve uyumlu bir hizmet gösterilmiştir.  
   
- [Hizmet meta verilerinden WCF istemcisi oluşturma](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  
+ [Hizmet Meta Verilerinden WCF İstemcisi Oluşturma](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  
  Svcutil.exe kullanarak meta verilerini almak ve oluşturmak nasıl gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
+ [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

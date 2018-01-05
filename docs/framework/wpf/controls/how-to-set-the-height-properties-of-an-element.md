@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ae66e60375cfbc45a4f1e8834b6420bc5c0b70a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc06eea281f7761abfae74edf1547fc914b5655a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>Nasıl yapılır: Öğenin Yükseklik Özelliklerini Ayarlama
 ## <a name="example"></a>Örnek  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.FrameworkElement.MaxHeight%2A>  
  <xref:System.Windows.FrameworkElement.MinHeight%2A>  
  <xref:System.Windows.FrameworkElement.Height%2A>  
- [Bir öğenin genişlik özelliklerini ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Öğenin Genişlik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Yükseklik özellikleri örneği](http://go.microsoft.com/fwlink/?LinkID=159993)

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01c07c132a703d6fd9401d9c191f5467667cc156
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d18d9607928b9a54a3b2639988775572f205c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-solid-brush"></a>Nasıl yapılır: Düz Fırça Oluşturma
 Bu örnekte bir <xref:System.Drawing.SolidBrush> tarafından kullanılan nesne bir <xref:System.Drawing.Graphics> şekilleri doldurma nesnesi.  
@@ -41,6 +42,6 @@ Bu örnekte bir <xref:System.Drawing.SolidBrush> tarafından kullanılan nesne b
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.SolidBrush>  
  <xref:System.Drawing.Brush>  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Fırçalar ve dolgulu şekiller GDI +'da](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
- [Şekilleri doldurmak için fırça kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [GDI+'da Fırçalar ve Dolgulu Şekiller](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
+ [Şekilleri Doldurmak için Fırça Kullanma](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7367cabecc18f32860e0a391ce5cf48d54503dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-equivalence"></a>Veri Sözleşmesi Eşitliği
 Bir hizmeti veya başarılı bir şekilde bir istemciye veri göndermek için bir hizmeti belirli bir türde veri başarıyla göndermek bir istemci için gönderilen türü mutlaka alan tarafta mevcut gerekmez. Veri sözleşmeleri her iki türdeki eşdeğer tek gereksinimdir. (Bazı durumlarda, katı eşdeğer anlatıldığı gibi gerekli değil [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -72,6 +73,6 @@ Bir hizmeti veya başarılı bir şekilde bir istemciye veri göndermek için bi
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Veri üye sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Veri sözleşmesi bilinen türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+ [Veri Üye Sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
+ [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

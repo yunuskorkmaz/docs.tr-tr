@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Gelişmiş performans ve ek taşımalar, ek güvenlik senaryoları ve WS - desteği dahil * belirtimleri. WSE 3.0 geçirilmiş bir Web hizmeti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en fazla 200-% 400 performans iyileştirmesi yaşayabilirsiniz. Tarafından desteklenen aktarmalar hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Tarafından desteklenen senaryolarla listesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [ortak güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Tarafından desteklenen belirtimleri listesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -133,7 +134,7 @@ Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../incl
  Bir WSE 3.0 özel taşıma denk [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir kanal uzantısıdır. Bir kanal uzantısı oluşturma hakkında daha fazla bilgi için bkz: [kanal katmanını genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel programlama yaşam döngüsü](../../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- [Özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Nasıl yapılır: belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [Temel Programlama Yaşam Döngüsü](../../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

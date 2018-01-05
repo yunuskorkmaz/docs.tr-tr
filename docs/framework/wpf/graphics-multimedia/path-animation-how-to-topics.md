@@ -17,22 +17,23 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dcda3888df64e95704e726db118bf75c92deaa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c1eeb859ecb39c5c2bb7eaef480e32c17d391cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animation-how-to-topics"></a>Yol Animasyonu ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nesnenin yol boyunca animasyon göstermektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yol (çift animasyon) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [Yol (noktası animasyon) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [Yol (Matris Animasyonu) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Yol (uzaklık Birikme ile matris animasyonu) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Geometrik yol (Matris Animasyonu) kullanarak bir nesne döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Geometrik yol kullanarak bir nesne döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Çift Animasyon)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Sapma Birikmesi ile Matris Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Geometrik Yol Kullanarak Nesneyi Döndürme (Matris Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Geometrik Yol Kullanarak Nesneyi Döndürme](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -40,6 +41,6 @@ Bu bölümdeki konular, nesnenin yol boyunca animasyon göstermektedir.
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Anahtar çerçeve animasyonları genel bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Anahtar-Çerçeve Animasyonlara Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows mağazası uygulamaları
 Bu konuda, ne zaman analiz yazma tanılama araçları içinde Windows mağazası uygulaması çalıştıran yönetilen kodu hakkında düşünmek için gerekenler açıklanmaktadır.  Ayrıca, Windows mağazası uygulamaları karşı çalıştırdığınızda çalışmaya devam etmek için mevcut geliştirme araçları değiştirmek için yönergeler sağlar.  Bu bilgileri anlamak için ortak dil çalışma zamanı profil oluşturma API'si ile sahibiyseniz, zaten bu API Windows Masaüstü uygulamaları için ve karşı düzgün çalışır şimdi aracı değiştirme ilgileniyor, bir tanı aracı olarak kullandığınız en iyisidir Windows mağazası uygulamaları karşı doğru çalışması için.  
@@ -56,7 +57,7 @@ Bu konuda, ne zaman analiz yazma tanılama araçları içinde Windows mağazası
  [Yönetilen iş parçacığı ForceGC oluşturur](#ForceGC)  
  [ConditionalWeakTableReferences](#WeakTable)  
 [Sonuç](#Conclusion)  
-[Kaynakları](#Resources)  
+[Kaynaklar](#Resources)  
   
 <a name="Intro"></a>   
 ## <a name="introduction"></a>Giriş  
@@ -424,7 +425,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 -   [CLR meta veri API Başvurusu](../../../../docs/framework/unmanaged-api/metadata/index.md)  
   
  **Windows çalışma zamanı ile CLR'nin etkileşimi**  
- [Windows mağazası uygulamaları ve Windows çalışma zamanı için .NET framework desteği](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
   
  **Windows mağazası uygulamaları**  
  -   [Dosya erişim ve izinleri (Windows çalışma zamanı uygulamaları](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  
@@ -434,4 +435,4 @@ GetAppContainerFolderPath(acSid, out acDir);
 -   [IPackageDebugSettings arabirimi](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Profil oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)
+ [Profil Oluşturma](../../../../docs/framework/unmanaged-api/profiling/index.md)

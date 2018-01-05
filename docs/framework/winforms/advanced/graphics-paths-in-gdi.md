@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 022a591a1d646b154c2bd59a2f2ab21b78b9dbda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+'da Grafik Yolları
 Yollar çizgiler, dikdörtgenler ve basit Eğriler birleştirerek oluşturulur. Gelen geri çağırma [vektör grafiklerine genel bakış](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) resim çizim için en kullanışlı olması için aşağıdaki temel yapı taşlarının kanıtlanmış:  
@@ -79,6 +80,6 @@ Yollar çizgiler, dikdörtgenler ve basit Eğriler birleştirerek oluşturulur. 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
  <xref:System.Drawing.Point?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Yollar oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Yollar Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cfe9d9c9f1442d3577772dde1ff33a7807394019
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a11d80e0aee459b3bbc985f38f482d5b1db61c70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-dataset-events"></a>Veri kümesi olayları işleme
 <xref:System.Data.DataSet> Nesnesi üç olayları sağlar: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, ve <xref:System.Data.DataSet.MergeFailed>.  
@@ -66,7 +67,7 @@ private static void DataSetMergeFailed(
  İle çalışırken kullanılabilir diğer olaylar hakkında bilgi için bir `DataSet`, bkz: [DataTable olayları işleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) ve [olaylarını işleme](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Verileri doğrulama](http://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)  
- [Alma ve ADO.NET veri değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

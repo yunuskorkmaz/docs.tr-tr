@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 241fe815f1a7c2e70a664068a47d511a3dbd7e0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Arka Plan Kod ve WPF İçindeki XAML
 <a name="introduction"></a>Arka plan kodu biçimlendirme tanımlı nesneler ile birleştirilen kodu açıklamak için kullanılan bir terim olduğu durumlarda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası biçimlendirme derlenmiş. Bu konu, arka plan kodu için gereksinimler ve aynı zamanda kodu için bir alternatif satır içi kod mekanizmasının açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
  Önleme veya satır içi kod kullanımını sınırlama düşünmelisiniz. Mimari ve kodlama felsefesi açısından, biçimlendirme ve arka plan kodu arasında ayrım koruma tasarımcı ve geliştiricinin rollerini daha ayrı tutar. Her zaman içine yazıyorsanız olduğundan daha teknik bir düzeyde için satır içi kod yazmayı kod yazmak garip olabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] parçalı sınıf oluşturulur ve varsayılan XML ad alanı eşlemeleri yalnızca kullanabilirsiniz. Ekleyemezsiniz çünkü `using` deyimleri, gerekir tam olarak nitelemek birçok [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] yaptığınız çağrıları. Varsayılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eşlemeleri dahil en ancak değil tüm [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] mevcut ad alanları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler; türleri ve diğer CLR ad içinde bulunan üye çağrıları tam olarak nitelemek gerekir. Parçalı sınıf dışında bir şey de satır içi kod tanımlayamaz ve tüm kullanıcı kodu varlıkları başvuru olarak bir üye veya değişken oluşturulan kısmi sınıf içinde bulunmalıdır. Dil belirli programlama gibi diğer özelliklerin makroları veya `#ifdef` genel değişkenler veya derleme değişkenleri karşı de kullanılamaz. Daha fazla bilgi için bkz: [x: Code iç XAML türü](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [x: Code iç XAML türü](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
- [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Ayrıntılı XAML sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [x:Code İç XAML Türü](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
+ [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Ayrıntılı XAML Sözdizimi](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

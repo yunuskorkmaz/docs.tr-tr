@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 257f343a7fa01e251159797a83e89b533292b6b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8a85426dc526e1e8560f494bcde5247fc394f7bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Nasıl yapılır: Bağlam Menüsü ile Yazım Denetimi Kullanma
 Varsayılan olarak, bir düzenleme denetiminde yazım etkinleştirdiğinizde ister <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox>, bağlam menüsünde yazım denetimi seçenekleri Al. Kullanıcı yanlış yazılmış bir sözcük tıkladığında, örneğin, yazım önerileri ya da seçeneğini elde **Tümünü Yoksay**. Ancak, kendi özel bağlam menüsü ile varsayılan bağlam menüsünü geçersiz kıldığınızda, bu işlevsellik kaybolur ve bağlam menüsünden Yazım denetimi özelliği yeniden etkinleştirmek için kod yazmanız gerekir. Aşağıdaki örnek, bunu etkinleştirmek gösterilmiştir bir <xref:System.Windows.Controls.TextBox>.  
@@ -49,7 +50,7 @@ Varsayılan olarak, bir düzenleme denetiminde yazım etkinleştirdiğinizde ist
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Yazım denetimi düzenleme bir metin denetimini etkinleştir](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [TextBox ile özel bağlam menüsünü kullanın](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)
+ [Metin Düzenleme Denetiminde Yazım Denetimini Etkinleştirme](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [TextBox ile Özel Bağlam Menüsü Kullanma](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)

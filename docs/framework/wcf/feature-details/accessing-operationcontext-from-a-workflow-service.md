@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 445a7c5e9b0665fcf57138144c8cf3445f2d15f2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Bir İş Akışı Hizmetinden OperationContext Erişimi
 Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizmeti içinde uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. Geçersiz kılma <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> başvuru iletilen yöntemi <xref:System.ServiceModel.OperationContext>. Bu konu, bu özelliğe belirir özel etkinlik yanı sıra, bir özel üst bilgi almak için bu yürütme özelliği uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında.  Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve <xref:System.ServiceModel.OperationContext> bilgi alınabilir.  Bu konu aynı zamanda istemci-tarafı erişim gösterilmektedir <xref:System.ServiceModel.OperationContext> aracılığıyla giden üstbilgilerini eklemek için <xref:System.ServiceModel.Activities.ISendMessageCallback> arabirimi.  
@@ -850,6 +851,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
  İsteğe bağlı yorumlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [OperationContext erişimi](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [OperationContext Erişimi](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

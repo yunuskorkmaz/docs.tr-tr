@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d52512ef98596e1e3d5f0acb3b1bbc0eebffe867
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma
 Bir Windows hizmeti .NET Framework kullanarak geliştiriyorsanız InstallUtil.exe olarak adlandırılan bir komut satırı yardımcı programını kullanarak hizmet uygulamanızı hızlı bir şekilde yükleyebilirsiniz. Geliştiriciyseniz Windows kullanıcıları yüklemek ve kaldırmanız hizmeti yayımlamayı isteyen InstallShield kullanmanız gerekir. Bkz: [Windows Installer dağıtımı](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -72,7 +73,7 @@ Bir Windows hizmeti .NET Framework kullanarak geliştiriyorsanız InstallUtil.ex
 3.  Bazı durumlarda, hizmet yürütülebilir dosyası için bir hizmet silindikten sonra kayıt defterinde mevcut olabilir. Bu durumda, komutunu [sc delete](http://technet.microsoft.com/library/cc742045.aspx) girişi hizmeti için kayıt defterinden kaldırmak için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Nasıl yapılır: hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Installutil.exe (Yükleme aracı)](../../../docs/framework/tools/installutil-exe-installer-tool.md)
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Installutil.exe (Yükleme Aracı)](../../../docs/framework/tools/installutil-exe-installer-tool.md)

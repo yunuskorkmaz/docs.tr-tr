@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09804e91b872e4daca929d9f9740d691d42b31c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c92aa17f25271173ca0bcbad1a8a180c9129abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-tracing"></a>İzlemeyi Genişletme
 Bu örnek nasıl genişletileceğini gösterir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yazarak izleme özelliği. Bu izleme etkinlikleri oluşturmak ve izlemeleri iş mantıksal birimler halinde gruplandırmak kullanıcının sağlar. Aktarımları (içinde aynı uç noktası) etkinlikleri ve yayma (uç noktalar arasında) ilişkilendirmek mümkündür. Bu örnekte, hem istemci hem de hizmet için izleme etkinleştirilir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  

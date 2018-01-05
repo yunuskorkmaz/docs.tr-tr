@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 103a22a729029118b0770e2889c419074be6ad50
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c63882055718bd54d1983ea0aa10d208bd70793f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrency"></a>Eşzamanlılık
 Eşzamanlılık örneği kullanmayı göstermektedir <xref:System.ServiceModel.ServiceBehaviorAttribute> ile <xref:System.ServiceModel.ConcurrencyMode> bir hizmet örneği iletilerin sıralı olarak veya aynı anda işler olup olmadığını denetler numaralandırması. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnek yeni bir sözleşme tanımlar `ICalculatorConcurrency`, devralan `ICalculator`, hizmet eşzamanlılık durumunu incelemek için iki ek işlem sağlama. Eşzamanlılık ayarı değiştirerek istemci çalıştırarak davranışında değişiklik görebilirsiniz.  

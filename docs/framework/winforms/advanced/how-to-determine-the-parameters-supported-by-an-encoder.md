@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3304adc9ab22d12905bd2a6c3739d909387d82cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme
 Kalite ve sıkıştırma düzeyi gibi görüntü parametreleri değiştirebilirsiniz ancak hangi parametreleri verilen görüntü Kodlayıcı tarafından desteklenen bilmeniz gerekir. <xref:System.Drawing.Image> SAX <xref:System.Drawing.Image.GetEncoderParameterList%2A> yöntemi hangi görüntü parametreleri için belirli bir kodlayıcı desteklenen belirleyebilmesi. Kodlayıcı ile bir GUID belirtin. <xref:System.Drawing.Image.GetEncoderParameterList%2A> Yöntemi bir dizi döndürür <xref:System.Drawing.Imaging.EncoderParameter> nesneleri.  
@@ -40,6 +41,6 @@ Kalite ve sıkıştırma düzeyi gibi görüntü parametreleri değiştirebilirs
 -   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: yüklenen Kodlayıcıları listeleme](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
- [Bit eşlem türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [Yönetilen GDI +'GÖRÜNTÜ Kodlayıcıları ve kod çözücüleri kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+ [Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Bit Eşlem Türleri](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

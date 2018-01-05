@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]yönetilen kod Geliştirici bağlı uygulamaları oluşturmak için zengin bir ortam sağlar. Ancak, yönetilmeyen COM tabanlı kodunda önemli ölçüde yatırımınız varsa ve geçirmek istemediğiniz hala tümleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri doğrudan varolan kodunuza kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet bilinen adı. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  
@@ -75,4 +76,4 @@ ms.lasthandoff: 12/02/2017
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: kaydetmek ve hizmet bilinen adı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

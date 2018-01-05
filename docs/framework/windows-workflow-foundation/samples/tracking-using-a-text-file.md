@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abb29dc584bbede14adcb396df8cd37a894b6f2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-using-a-text-file"></a>Bir metin dosyası kullanarak izleme
 Bu örnek izlemede genişletmek gösterilmiştir [!INCLUDE[wf](../../../../includes/wf-md.md)] özel izleme katılımcı oluşturarak. İzleme katılımcıları yayılan gibi çalışma zamanını şuradan izleme kayıtları aldığınız .NET Framework sınıflarıdır. Hangi hedef senaryonuz için gerekli izleme olayları taşıma için bir izleme katılımcı oluşturabilirsiniz. Örneğin, (Windows için olay izleme) ETW İzleme katılımcı parçası olarak sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Bu örnekte izleme katılımcı kayıtları XML biçiminde bir metin dosyasına yazar.  

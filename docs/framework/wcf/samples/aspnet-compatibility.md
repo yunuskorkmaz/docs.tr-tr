@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Uyumluluğu
 Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modunda [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Çalışan hizmetleri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu katılmak tam olarak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama kanal ve yapabilirsiniz kullanımı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dosya/URL yetkilendirmesi, oturum durumu gibi özellikleri ve <xref:System.Web.HttpContext> sınıfı. <xref:System.Web.HttpContext> Sınıfı, tanımlama bilgileri, oturumlar ve diğer erişmesine olanak tanır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] özellikleri. Bu mod HTTP aktarımını bağlamaları kullanın ve hizmet IIS'de barındırılması gerekir gerektirir.  

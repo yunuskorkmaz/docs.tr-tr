@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 612b983f53f147102ddf7bab03d4ec6783dc4026
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2dabc20c3cd3a97ed86dc45436eaad5e7a07c91a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-log-information-about-services"></a>Nasıl Yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
 Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü ile etkileşim ve bilgi ve özel durumları yazma özelliği vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliği, bu işlev, uygulamanızda isteyip istemediğinizi belirtin. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir form, kullanabileceğiniz <xref:System.Diagnostics.EventLog> sınıfının bir örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazma bir <xref:System.Diagnostics.EventLog> bileşeni veya el ile bir kaynak kaydı.  
@@ -79,4 +80,4 @@ Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü 
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

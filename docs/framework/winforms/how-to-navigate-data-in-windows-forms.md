@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d99d794164307cb22c5dfc89d6c9c227aa457a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Verilerde Gezinme
 Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtlarını gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerine bileşen <xref:System.Windows.Forms.BindingSource>. Sonra yerleşik gezinti yöntemi kullanabileceğinizi <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulur ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  
@@ -61,7 +62,7 @@ Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtların�
      [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms tarafından desteklenen veri kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- [Windows Forms veri bağlamada bildirimi değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Veri bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows Forms veri bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Windows Forms Tarafından Desteklenen Veri Kaynakları](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Windows Forms Veri Bağlamada Bildirimi Değiştirme](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Veri Bağlama ve Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30fc31055563db75512639bf7fb3b9119be280e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 003b07326612f3b51390d691c7bba0ef1c1b85dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma
 Bu konuda, çift yönlü (iki yönlü) sözleşme kullanan yöntemleri oluşturmak için temel adımlar gösterilmektedir. Çift yönlü sözleşme, istemciler ve sunucular ya da diğer çağrıları başlatmak için birbiriyle bağımsız olarak iletişim kurması sağlar. Çift yönlü sözleşme kullanılabilir üç ileti modelinden biridir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri. Diğer iki desenleri iletisi olan tek yönlü ve istek-yanıt. Çift yönlü sözleşme istemci ve sunucu arasında iki yönlü sözleşme oluşur ve yöntem çağrılarını ilintili olması gerekli değildir. Bu tür bir sözleşme hizmetiniz daha fazla bilgi için istemci sorgulamak veya açıkça istemci üzerindeki olaylara Yükselt kullanın. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz. çift yönlü bir sözleşme için bir istemci uygulaması oluşturma [nasıl yapılır: çift yönlü sözleşme ile Erişim Hizmetleri](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../../docs/framework/wcf/samples/duplex.md) örnek.  
@@ -79,8 +80,8 @@ Bu konuda, çift yönlü (iki yönlü) sözleşme kullanan yöntemleri oluşturm
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Çift yönlü](../../../../docs/framework/wcf/samples/duplex.md)  
- [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Oturumu](../../../../docs/framework/wcf/samples/session.md)
+ [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Çift Yönlü](../../../../docs/framework/wcf/samples/duplex.md)  
+ [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Oturum](../../../../docs/framework/wcf/samples/session.md)

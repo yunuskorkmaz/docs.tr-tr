@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a2461c507c0d2a27f1c2bdfe85327d11318b17ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a68c9278d4e8092be5c744109e56f7cb52498095
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms'ta yüksek DPI desteği
 
@@ -140,4 +141,4 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Windows Forms yapılandırma öğesi Ekle](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)  
-[Windows Forms ölçeğini ve boyutu ayarlama](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+[Windows Forms Boyutunu ve Ölçeğini Ayarlama](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)

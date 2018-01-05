@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afc08d08a8843460972daf259027475cbbc10b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma
 Bu konu hizmet uç noktaları koleksiyona meta verileri alma ve içinde tanımlanan Hizmeti'yle açıklanmaktadır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu konu hizmet ve çağrıları sonra meta verileri içe aktaran bir istemci uygulaması oluşturmak nasıl Göster `Add` hizmette yöntemi.  
@@ -48,5 +49,5 @@ Bu konu hizmet uç noktaları koleksiyona meta verileri alma ve içinde tanımla
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
  [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)

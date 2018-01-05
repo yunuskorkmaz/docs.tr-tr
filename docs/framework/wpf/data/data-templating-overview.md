@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91ab838ec543e2cc17e380ee9ec0d629989a003e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri veri sunumu özelleştirme desteklemek için yerleşik işlevselliğe sahiptir. Bu konuda ilk nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.DataTemplate> ve Özel mantık ve hiyerarşik veri görüntüsünü desteği göre şablonları seçimi gibi diğer veri şablon özellikleri sunar.  
@@ -203,8 +204,8 @@ WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik
  ![HierarchicalDataTemplate örnek ekran görüntüsü](../../../../docs/framework/wpf/data/media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [DataTemplate oluşturulan öğeleri bulma](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [GridView sütun üstbilgi stil ve şablonlarına genel bakış](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [DataTemplate ile Oluşturulan Öğeleri Bulma](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)

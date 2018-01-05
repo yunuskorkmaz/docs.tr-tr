@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerle [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu platformda Windows kimlik doğrulaması ile bir hizmeti çalıştıran desteklemiyor. Kullanıcı adı/parola ve HTTP/HTTPS ile tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları çalıştırırken desteklenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows XP Home Edition altında.  
@@ -119,9 +120,9 @@ ms.lasthandoff: 12/02/2017
  Düzeltme alma yaptıktan sonra bağlama doğrudan istemcide değiştirmektir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Bilgilerin açığa çıkmasına](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Ayrıcalık yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Hizmet reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Oynama](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Yeniden yürütme saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

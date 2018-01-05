@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef8a2f43138eba1189f9e56419b9f95a5a9a043f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
 Dağıtım API, çeşitli biçimlerde hat açın yazılacak dağıtılmış içerik sağlayan bir biçimi Tarafsız programlama modeli sağlamak için tasarlanmıştır. Soyut veri modeli şu sınıflardan oluşur:  
@@ -88,6 +89,6 @@ Dağıtım API, çeşitli biçimlerde hat açın yazılacak dağıtılmış içe
 -   Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Atom 1.0 ve RSS 2.0 teknik özelliklerine tanımlanmamış dağıtım akışlarını için öznitelikler ve öğeler eklemenize izin verir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Dağıtım programlama modeli özel özniteliklere ve uzantıları ile çalışmaya ilişkin iki yolla sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [WCF dağıtım nesnesi modeli Atom ve RSS nasıl eşlendiğini](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
+ [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

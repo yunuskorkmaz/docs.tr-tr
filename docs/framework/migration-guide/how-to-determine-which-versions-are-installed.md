@@ -15,11 +15,12 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework Sürümlerinin Yüklü Olduğunu Belirleme
 Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sürümünü çalıştırın. Geliştirme ya da uygulamanızı dağıtma kullanıcının bilgisayarda hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir. .NET Framework sürümü tutulan ayrı ayrı olan iki ana bileşen içerdiğini unutmayın:  
@@ -134,12 +135,12 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
     |.NET framework 4.5.1 Windows 8.1 ile yüklü|378675|
     |.NET framework 4.5.1 Windows 8, Windows 7 SP1 veya Windows Vista SP2 yüklü|378758|
     |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]Windows 10 ile yüklü|393295|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]diğer tüm Windows işletim sistemi sürümlerinde yüklü|393297|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]Windows 10 yüklü|394254|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]diğer tüm Windows işletim sistemi sürümlerinde yüklü|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]Windows 10 Anniversary Update'te yüklü|394802|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]diğer tüm Windows işletim sistemi sürümlerinde yüklü|394806|
+    |Windows 10 ile yüklü .NET framework 4.6|393295|
+    |.NET framework 4.6 diğer tüm Windows işletim sistemi sürümlerinde yüklü|393297|
+    |.NET framework 4.6.1 üzerinde Windows 10 yüklü|394254|
+    |.NET framework 4.6.1 diğer tüm Windows işletim sistemi sürümlerinde yüklü|394271|
+    |.NET framework 4.6.2 Windows 10 Anniversary Update'te yüklü|394802|
+    |.NET framework 4.6.2 diğer tüm Windows işletim sistemi sürümlerinde yüklü|394806|
     |.NET framework Windows 10 oluşturucuları Update'te yüklü 4.7|460798|
     |.NET framework tüm diğer Windows işletim sistemi sürümleri yüklü 4.7|460805|
     |.NET framework Windows 10 sonbaharda oluşturucuları Update'te yüklü 4.7.1|461308|
@@ -215,6 +216,6 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
     ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+ [Nasıl yapılır: Hangi .NET Framework Güncelleştirmelerinin Yüklü Olduğunu Belirleme](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
  [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)  
- [Sürümleri ve bağımlılıkları](~/docs/framework/migration-guide/versions-and-dependencies.md)
+ [Sürümler ve Bağımlılıklar](~/docs/framework/migration-guide/versions-and-dependencies.md)

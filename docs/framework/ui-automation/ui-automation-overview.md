@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4dde3e44778511606a2dcd2ce32cb479788c0478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d86c70ec4421bc716b12044bac30f8f925c375f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-overview"></a>UI Otomasyonuna Genel Bakış
 > [!NOTE]
@@ -56,11 +57,11 @@ ms.lasthandoff: 11/21/2017
 |Bölüm|Konuyla ilgili|Hedef Kitle|  
 |-------------|--------------------|--------------|  
 |[UI Otomasyon Temelleri](../../../docs/framework/ui-automation/index.md) (Bu bölüm)|Kavramlar genel bakış.|Tüm.|  
-|[Yönetilen kod için UI Otomasyon sağlayıcılar](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Genel bakış ve API sağlayıcısı kullanmanıza yardımcı olması için nasıl yapılır konuları.|Denetim geliştiriciler.|  
-|[Yönetilen kod için UI Otomasyon istemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Genel bakış ve istemci API'si kullanmanıza yardımcı olması için nasıl yapılır konuları.|İstemci uygulama geliştiricileri.|  
-|[UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Denetim desenleri sağlayıcıları tarafından nasıl uygulanması ve hangi işlevleri istemciler için kullanılabilir hakkında bilgiler.|Tüm.|  
-|[UI Otomasyon metin düzeni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Metin denetim düzeni sağlayıcıları tarafından nasıl uygulanması ve hangi işlevleri istemciler için kullanılabilir hakkında bilgiler.|Tüm.|  
-|[UI Otomasyon denetim türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Farklı denetim türleri tarafından desteklenen özellikler ve denetim düzenleri hakkında bilgi sağlar.|Tüm.|  
+|[Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Genel bakış ve API sağlayıcısı kullanmanıza yardımcı olması için nasıl yapılır konuları.|Denetim geliştiriciler.|  
+|[Yönetilen Kod İçin UI Otomasyonu İstemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Genel bakış ve istemci API'si kullanmanıza yardımcı olması için nasıl yapılır konuları.|İstemci uygulama geliştiricileri.|  
+|[UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Denetim desenleri sağlayıcıları tarafından nasıl uygulanması ve hangi işlevleri istemciler için kullanılabilir hakkında bilgiler.|Tüm.|  
+|[UI Otomasyonu Metin Deseni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Metin denetim düzeni sağlayıcıları tarafından nasıl uygulanması ve hangi işlevleri istemciler için kullanılabilir hakkında bilgiler.|Tüm.|  
+|[UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Farklı denetim türleri tarafından desteklenen özellikler ve denetim düzenleri hakkında bilgi sağlar.|Tüm.|  
   
  Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanları, bunları ve bunları kullanan hedef kitle içeren DLL'leri.  
   
@@ -85,8 +86,8 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olaylar ile istemci uygulamaları için bilgiler de sağlar. Farklı [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)], [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar üzerinde bir yayın mekanizması bağlı değil. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]istemcileri belirli olay bildirimleri kaydı ve bu özel isteyebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri ve denetim düzeni bilgileri kendi olay işleyicileri bayraklarıdır. Ayrıca, bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay ortaya çıkan öğeye başvuru içeriyor. Sağlayıcıları, olayları seçerek, tüm istemciler dinleme bağlı olarak yükselterek performansını iyileştirebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+ [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
+ [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
+ [UI Otomasyonu Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

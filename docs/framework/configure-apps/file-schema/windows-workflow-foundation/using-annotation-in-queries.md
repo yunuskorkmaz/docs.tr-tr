@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a6edccba458bfd3629cab851c5d818a69d26173
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e871533afc1a472bb5ee05e3e13275bdfb1acc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-annotation-in-queries"></a>Ek açıklama sorgularda kullanma
 Ek açıklamalar, rasgele yapı zamanından sonra yapılandırılmış bir değerle kayıtları izleme etiketi izin verir. Örneğin, "Posta sunucusuyla" etiketli için çeşitli iş akışları arasında birkaç izleme kayıtları istiyor olabilirsiniz "Posta Sunucu1" ==. Bu izleme kayıtları daha sonra sorgularken bu etikete sahip tüm kayıtları bulmayı kolaylaştırır.  
@@ -42,5 +43,5 @@ Ek açıklamalar, rasgele yapı zamanından sonra yapılandırılmış bir değe
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
  <xref:System.Activities.Tracking.TrackingProfile>  
  [\<Katılımcıları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)  
- [İzleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

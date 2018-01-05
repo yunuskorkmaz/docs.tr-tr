@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
 Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmetin sözleşme, hangi veri türleri olan yardımcı kullanılan ve diğer tasarım sorunları karşılamak işlemleri Senaryonuz gereksinimleri.  
@@ -279,12 +280,12 @@ End Interface
  Bunun bir sonucu, adları ve ad alanları açıkça ayarlanmazsa, derleme üzerinde IL gizleme kullanımını sözleşme tür adları ad alanlarını ve değiştirilen WSDL ve genellikle başarısız kablo alışverişleri sonuçlarında değiştirir ' dir. Ad alanları ve sözleşme adlarını açıkça ayarlı değil, ancak gizleme kullanmak istiyorsanız, kullanmak <xref:System.Reflection.ObfuscationAttribute> ve <xref:System.Reflection.ObfuscateAssemblyAttribute> sözleşme değiştirilmesini engellemek için öznitelik adları ve ad alanları yazın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: istek-yanıt sözleşmesi oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [Nasıl yapılır: tek yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [Nasıl yapılır: çift yönlü sözleşme oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Hizmet sözleşmelerinde belirten veri aktarımı](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Oturumları kullanma](../../../docs/framework/wcf/using-sessions.md)  
- [Zaman uyumlu ve zaman uyumsuz işlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [Güvenilir hizmetler](../../../docs/framework/wcf/reliable-services.md)  
- [Hizmetler ve işlemler](../../../docs/framework/wcf/services-and-transactions.md)
+ [Nasıl yapılır: İstek-Yanıt Anlaşması Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [Nasıl yapılır: Tek Yönlü Anlaşma Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [Nasıl yapılır: Çift Yönlü Anlaşma Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [Oturumları Kullanma](../../../docs/framework/wcf/using-sessions.md)  
+ [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
+ [Güvenilir Hizmetler](../../../docs/framework/wcf/reliable-services.md)  
+ [Hizmetler ve İşlemler](../../../docs/framework/wcf/services-and-transactions.md)

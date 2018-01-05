@@ -13,28 +13,29 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7853aabe8efc4536473b3430508cdbf0ad7985fe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 743a2541552e5378403234675c43a2a0224a1cc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost Yapılandırma
 Bu bölümde kısa "nasıl" kümesini içeren farklı özelliklerini yapılandırmak nasıl kısaca açıklayan konulara <xref:System.ServiceModel.Activities.WorkflowServiceHost> yapılandırmasında sınıfı. Bu konularda belirli hizmet yapılandırması, iş akışı kapak, diğer tüm yapılandırma bir normal şekilde yapılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  
+ [Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  
  Bir iş akışı hizmeti kullandığınız için kalıcılığı yapılandırma açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Nasıl yapılır: WorkflowServiceHost ile izlemeyi yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-tracking-with-workflowservicehost.md)  
+ [Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-tracking-with-workflowservicehost.md)  
  İş akışı iş akışı kullanarak hizmet için izleme yapılandırmayı açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Nasıl yapılır: WorkflowServiceHost ile boşta davranışı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
+ [Nasıl yapılır: WorkflowServiceHost ile Boşta Davranışı Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
  Kullanarak bir iş akışı hizmeti boşta davranışı yapılandırma açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Nasıl yapılır: iş akışı yapılandırma işlenmeyen özel durum davranışını WorkflowServiceHost ile](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
  Kullanarak bir iş akışı hizmeti işlenmeyen bir özel durum davranışını yapılandırma açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [İş akışı hizmetlerini barındırma genel bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)

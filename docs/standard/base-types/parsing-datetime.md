@@ -24,11 +24,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1beceb2b2d32c500e73cd7786c480fcd84c3001c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e3ef01abdb615b2850b5a9d07e1208ee22eda95
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve saat dizelerini .NET ayrıştırma
 Ayrıştırma yöntemleri için eşdeğer bir tarih ve saat dize gösterimini Dönüştür <xref:System.DateTime> nesnesi. <xref:System.DateTime.Parse%2A> Ve <xref:System.DateTime.TryParse%2A> yöntemleri herhangi bir tarih ve saat birkaç ortak gösterimlerini Dönüştür. <xref:System.DateTime.ParseExact%2A> Ve <xref:System.DateTime.TryParseExact%2A> yöntemleri bir tarih ve saat biçim dizesi tarafından belirtilen desenle uyan bir dize gösterimi Dönüştür. (Konularına bakın [standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).)  
@@ -72,6 +75,6 @@ Ayrıştırma yöntemleri için eşdeğer bir tarih ve saat dize gösterimini D�
  [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example4.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [.NET tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)
+ [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

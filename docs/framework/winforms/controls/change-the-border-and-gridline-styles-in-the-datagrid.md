@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Kenarlık ve Kılavuz Çizgi Stillerini Değiştirme
 İle <xref:System.Windows.Forms.DataGridView> denetim, denetimin kenarlık ve kullanıcı deneyimini geliştirmek için kılavuz çizgilerini görünümünü özelleştirebilirsiniz. Kılavuz çizgisi rengi ve denetim hücrelerde kenarlık stilleri yanı sıra Denetim kenarlık stili değiştirebilirsiniz. Ayrıca, farklı bir hücre kenarlık stilleri sıradan hücre, Satır üstbilgisi hücreleri ve sütun başlığı hücreleri uygulayabilirsiniz.  
@@ -75,4 +76,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
  <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
- [Temel biçimlendirme ve stil oluşturma Windows Forms DataGridView denetimi](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

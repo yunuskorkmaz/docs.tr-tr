@@ -12,11 +12,11 @@ ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1db4cb8ae7187b99b6340eaf0ebd244fbf566a19
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e2a78340e358fa0e0739e10f7b8da3cbc25b9541
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)]herhangi bir numaralandırılabilir nesnesinde üzerinden sorgu sağlar [!INCLUDE[vstecado](~/includes/vstecado-md.md)] kullanarak [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programlama modeli.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/09/2017
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]nesne modelinde devralma ve saklı yordamları ve veritabanındaki kullanıcı tanımlı işlevler için destek içerir.  
   
- Daha fazla bilgi için bkz: [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Daha fazla bilgi için bkz: [LINQ-SQL](../../../../framework/data/adonet/sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ - Varlıklar  
  Aracılığıyla [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], ilişkisel veri .NET ortamı nesneler olarak gösterilir. Bu katman için ideal bir hedef nesnesi haline getirir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] desteği, iş mantığı oluşturmak için kullanılan dil veritabanından sorguları formüle yayınlamasına izin verme. Bu özellik olarak bilinen [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. Bkz: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md) daha fazla bilgi için.  

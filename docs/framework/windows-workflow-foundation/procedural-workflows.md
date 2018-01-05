@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd879d138a95c003ca0ffb12b3ce010534c3e158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10cf83264fbdc2ed3dc088c11865c630c0b8f4f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="procedural-workflows"></a>Yordam iş akışları
 Yordam iş akışları yordam dillerinde bulunan benzer akış denetimi yöntemlerini kullanın. Bu yapıları içermek `While` ve `If`. Bu iş akışları gibi diğer akış denetimi etkinlikleri kullanarak serbestçe birleştirilebilen <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence>.  
@@ -46,4 +47,4 @@ Yordam iş akışları yordam dillerinde bulunan benzer akış denetimi yönteml
 >  Kullanıyorsanız [!INCLUDE[dublin](../../../includes/dublin-md.md)] ana iş akışları bir Web grubunda AppFabric örnekleri farklı AppFabric sunucular arasında taşınır. Bu kaynaklar tüm düğümler arasında paylaşılan mümkün olmasını gerektirir.  Varsayılan NET 4 iş akışı etkinlikleri hiçbiri yerel kaynaklara erişmek herhangi bir işlem içerir. Bir geliştirici AppFabric iş akışı immovable olarak işaretlemek için herhangi bir mekanizma sunmaz olduğundan, bir iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Akış Çizelgesi iş akışları](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
+ [Akış Çizelgesi İş Akışları](../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)

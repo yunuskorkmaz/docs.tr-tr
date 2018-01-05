@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
 İş nesneleri özel türler tanımlamak ya da bir bağımlılık belirli çerçevesinde yok türleri, izleyebilirsiniz XAML için bazı en iyi yöntemler vardır. Bu yöntemler, .NET Framework XAML hizmetlerinde izleyin ve kendi XAML okuyucuları ve XAML yazıcıları türünüz XAML özelliklerini bulmak ve XAML tür sistemi kullanarak bir XAML düğüm akış uygun gösterimi vermek istiyorsanız. Bu konu için tür tanımları, üye tanımları ve CLR türleri veya üyeleri öznitelik atanıyor en iyi uygulamaları açıklar.  
@@ -124,5 +125,5 @@ ms.lasthandoff: 11/21/2017
  WPF XAML terminoloji içinde bir *iç tür* de başvuru XAML içeren aynı derlemesi tarafından tanımlanan bir tür. Bu tür bir türü kasıtlı olarak derleme atlar XAML ad uzayı eşlenebilir bir bu gibi bir durumda eşleme kısmı = `xmlns:local="clr-namespace:WPFApplication1"`.  BAML iç tür başvuran varsa ve türü olduğunu `internal` erişim düzeyi, bu oluşturur bir `GeneratedInternalTypeHelper` derleme için sınıf. Önlemek istiyorsanız `GeneratedInternalTypeHelper`, ya da kullanmalıdır `public` erişim düzeyini veya gerekir ilgili sınıfı ayrı bir derleme faktörü ve bu derleme kaynağına bağımlı kılın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel türler ve Kitaplıkar için XAML ilişkili CLR öznitelikleri](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
+ [Özel Türler ve Kitaplıklar İçin XAML İlişkili CLR Öznitelikleri](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
  [XAML Hizmetleri](../../../docs/framework/xaml-services/index.md)

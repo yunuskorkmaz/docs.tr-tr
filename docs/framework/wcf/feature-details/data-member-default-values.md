@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7d6aa8d695dd6fc79b23e6cbb69bf523ef680f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerlerin*. Örneğin, varsayılan değer tüm başvuru türündeki `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır olduğunda. Varsayılan değer olarak ayarlandığında serileştirilmiş verilerinden bir veri üyesi atlamak için bazen istenen bir durumdur. Üye varsayılan değeri olduğundan, gerçek bir değer serileştirilmesi değil; Bu performans avantajı vardır.  

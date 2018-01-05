@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aada475af0ccac03dfa6ef9248b0fb07fd86b3ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Seçili Hücre, Satır ve Sütunları Alma
 Seçili hücre, satır veya sütunlarından alabileceğiniz bir <xref:System.Windows.Forms.DataGridView> ilgili özelliklerini kullanarak denetim: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. Aşağıdaki yordamlarda, seçili hücreleri almak ve satır ve sütun dizinlerini görüntülemek bir <xref:System.Windows.Forms.MessageBox>.  
@@ -72,4 +73,4 @@ Seçili hücre, satır veya sütunlarından alabileceğiniz bir <xref:System.Win
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>  
- [Seçim ve Pano kullanımı Windows Forms DataGridView denetimi ile](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

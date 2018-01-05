@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c494b386cc52786c5adfbcbbea78b912bbf9887d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 Uygulanan gibi XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçeveleri destekleyen özel sınıf veya yapı birinde tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim XAML biçimlendirme kullanarak sınıfı. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlı türleri ve özel türlerinizi aynı biçimlendirme dosyası içinde genellikle XAML ad alanı öneki özel türler eşleyerek. Bu konuda bir XAML öğesi olarak kullanılabilmesi için özel bir sınıf getirmelidir gereksinimleri açıklanmaktadır.  
@@ -123,8 +124,8 @@ Uygulanan gibi XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-
  Eğer gibi belirli senaryolarda, bir denetim yazarı, XAML'de oluşturulabilir herhangi bir nesne temsili de geri eşdeğer XAML işaretleme serileştirilmesi güvence altına almak isteyebilirsiniz. Seri hale getirme gereksinimleri, bu konudaki açıklanmamaktadır. Bkz: [kontrol yazma genel bakışı](../../../../docs/framework/wpf/controls/control-authoring-overview.md) ve [öğe ağacı ve Serileştirme](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Özel bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Denetim genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Temel öğeler genel bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [XAML yükleme ve bağımlılık özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Özel Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Temel Öğelere Genel Bakış](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [XAML Yükleme ve Bağımlılık Özellikleri](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857cc04af6c619035fa2bf0a548053f57292f7bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac54e18f397cf455ffd5fa33c2e000d87b917a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.ToolBar>  
- [Araç çubuğu denetimi](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [Nasıl yapılır: bir ToolBar denetimine düğme ekleme](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Nasıl yapılır: araç çubuğu düğmeleri için menü olaylarını tetikleme](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+ [ToolBar Denetimi](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ [Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)

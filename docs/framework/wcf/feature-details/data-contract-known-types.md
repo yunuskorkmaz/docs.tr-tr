@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli göz önünde bulundurarak seri durumdan çıkarma sırasında için dahil edilecek türleri belirtmenize olanak verir. Çalışan bir örnek için bkz: [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  
@@ -183,6 +184,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Object>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [Bilinen türler](../../../../docs/framework/wcf/samples/known-types.md)  
- [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)
+ [Bilinen Türler](../../../../docs/framework/wcf/samples/known-types.md)  
+ [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Hizmet Sözleşmeleri Tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)

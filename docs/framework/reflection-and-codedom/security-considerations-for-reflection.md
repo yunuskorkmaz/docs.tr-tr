@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma erişim üyeleri ve bu türleri ve üyeleri hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemleri ve almak ve özelliği ayarlamak için oluşturucular çağırmak için değerleri, ekleme ve olay işleyicileri kaldırın ve benzeri). Türleri ve üyeleri hakkında bilgi edinmek için yansıma kullanımını sınırlı değildir. Tüm kod yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  
@@ -116,9 +117,9 @@ Yansıma erişim üyeleri ve bu türleri ve üyeleri hakkında bilgi alma özell
  <xref:System.Security.Permissions.ReflectionPermissionFlag>  
  <xref:System.Security.Permissions.ReflectionPermission>  
  <xref:System.Security.Permissions.SecurityPermission>  
- [Güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md)  
+ [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)  
  [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)  
- [Güvenlik sorunları yansıma yayma](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Tür bilgilerini görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Öznitelikleri uygulama](../../../docs/standard/attributes/applying-attributes.md)  
- [Özel özniteliklere erişme](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+ [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Öznitelikleri Uygulama](../../../docs/standard/attributes/applying-attributes.md)  
+ [Özel Özniteliklere Erişim](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

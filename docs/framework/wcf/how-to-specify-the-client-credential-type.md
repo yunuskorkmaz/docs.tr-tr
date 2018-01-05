@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6959ec7f2226f0d6554e9210b3ee1311871cdcf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24336c180ad8d10a60567ebfeb0f0899f972e2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme
 Bir güvenlik modunu (taşıma veya ileti) ayarladıktan sonra istemci ayar kimlik bilgisi türü seçeneğiniz vardır. Bu özellik ne tür bir kimlik bilgisi istemci kimlik doğrulaması için hizmet sağlamalısınız belirtir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: (istemci kimlik bilgisi türü ayarlamadan önce gerekli bir adım), güvenlik modu ayarı [nasıl yapılır: güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -68,5 +69,5 @@ Bir güvenlik modunu (taşıma veya ileti) ayarladıktan sonra istemci ayar kiml
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md)  
- [Nasıl yapılır: güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+ [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
+ [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

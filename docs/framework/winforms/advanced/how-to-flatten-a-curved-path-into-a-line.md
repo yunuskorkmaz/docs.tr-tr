@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 62dedc987c2b622dc3f3aa81dac3cdea6dd75740
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 334fc0fee7166f8f8c5c1db61d3b9e370da72f87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Nasıl yapılır: Eğik bir Yolu Düzleştirerek Çizgiye Dönüştürme
 A <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesi bir dizi satırları ve Bézier eğrileri saklar. Bir yol Eğriler (üç nokta, yaylar, eğriler) çeşitli türlerde ekleyebilirsiniz ancak yolunda saklanan önce her eğri bir Bézier eğrisi dönüştürülür. Bir yol düzleştirme bir dizi düz satır yolundaki her bir Bézier eğrisi dönüştürme oluşur. Aşağıdaki çizimde, önce ve sonra düzleştirme bir yolunu gösterir.  
@@ -36,5 +37,5 @@ A <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesi bir dizi satırları ve B
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Yollar oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Yollar Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

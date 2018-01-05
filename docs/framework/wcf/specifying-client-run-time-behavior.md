@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>İstemci Çalışma Zamanı Davranışını Belirtme
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]istemciler, ister [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, istemci uygulaması uyacak şekilde çalışma zamanı davranışını değiştirmek için yapılandırılabilir. Üç öznitelikler, istemci çalışma zamanı davranışını belirtmek için kullanılabilir. Çift yönlü istemci geri araması nesneleri kullanabileceğiniz <xref:System.ServiceModel.CallbackBehaviorAttribute> ve <xref:System.ServiceModel.Description.CallbackDebugBehavior> kendi çalışma zamanı davranışını değiştirmek için öznitelikler. Başka bir öznitelik <xref:System.ServiceModel.Description.ClientViaBehavior>, hemen ağ hedef mantıksal hedef ayırmak için kullanılır. Ayrıca, çift yönlü istemci geri araması türlerine bazı hizmet tarafı davranışları kullanabilirsiniz. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Hizmeti çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -53,4 +54,4 @@ ms.lasthandoff: 12/02/2017
  Kullanabileceğiniz <xref:System.ServiceModel.Description.ClientViaBehavior> davranışı taşıma kanalı oluşturulmalıdır Tekdüzen Kaynak Tanımlayıcısı belirtin. Bu davranış, hemen Ağ hedefi iletinin hedeflenen işlemci olmadığında kullanın. Bu çoklu atlamalı görüşmeleri veya çağrı yapan uygulamanın ultimate hedef emin değilseniz zaman sağlar hedef `Via` üstbilgi bir adresi değil.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+ [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

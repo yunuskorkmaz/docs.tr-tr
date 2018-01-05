@@ -20,30 +20,31 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02e0fbf7c8b6ddfe0d722575042b4cbc82ba9bb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1a29b28608c9ca16dd5a2023bd3d9e135618d753
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications"></a>COM Uygulamaları ile Tümleştirme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa, kullanabileceğiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeniden yazmak zorunda yerine mevcut mantığınızı genişletmek için. Bu bölüm içindeki konuları COM + ile kullanmayı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [COM + uygulamaları ile tümleştirme genel bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [COM+ Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  COM + bileşenleri bütünleştirmek nasıl ve ne zaman bir bakış sağlar.  
   
- [Nasıl yapılır: COM + hizmet modeli yapılandırma aracını kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  COM + hizmet modeli yapılandırma komut satırı aracı (ComSvcConfig.exe) olarak gösterilen istediğiniz uygulama arabirimleri yapılandırmak için nasıl kullanılacağını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
   
- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  Bir COM + nesnesi olarak yapılandırılmasını açıklamaktadır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
   
- [Nasıl yapılır: COM + tümleştirme uygulaması dağıtma](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [Nasıl Yapılır: COM+ Tümleştirme Uygulaması Dağıtma](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  COM + tümleştirme uygulaması taşınacağı açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [COM uygulamaları ile tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+ [COM Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1f29cbd51c036ecc15306f67fdd32dee6a4f1b68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-null-values"></a>Boş değerler işleme
 Bir sütundaki değeri bilinmeyen ya da eksik olduğunda ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri) ne (sayısal veri türleri için) sıfır değeri olur. Böylece tüm null değerlere tutarlı bir şekilde işlenir ANSI SQL-92 belirtimi null tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Ad alanı uygulayarak null semantiği sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` bu veri türünün bir örneğine atanan değer.  
@@ -152,5 +153,5 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

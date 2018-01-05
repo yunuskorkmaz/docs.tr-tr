@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ab9baca1103adf8de96204bdb1b3353a5456b94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae10153f31b79a220b84cae7a6525eca0ce0bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Nasıl yapılır: Özel Açılan Pencerenin Konumunu Belirtme
 Bu örnek için özel bir konum belirtmek nasıl gösterir bir <xref:System.Windows.Controls.Primitives.Popup> denetimi <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliği ayarlanmış <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
@@ -43,5 +44,5 @@ Bu örnek için özel bir konum belirtmek nasıl gösterir bir <xref:System.Wind
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.Primitives.Popup>  
- [Açılan genel bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Açılan Pencereye Genel Bakış](../../../../docs/framework/wpf/controls/popup-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

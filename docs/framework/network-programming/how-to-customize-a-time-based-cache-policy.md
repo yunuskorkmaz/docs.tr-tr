@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 58fa5c71bc459b65d35f9a59bdddccab9a0f5e56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86e56a2caed3ae7644b567c2e4af207689017c63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: bir zamana dayalı önbellek İlkesi özelleştirme
 Bir zamana dayalı önbellek ilkesi oluştururken, en uzun geçerlilik süresi, minimum yenilik, en fazla eskime durumu veya önbellek eşitleme tarihi için değerleri belirtilerek önbelleğe alma davranışını özelleştirebilirsiniz. <xref:System.Net.Cache.HttpRequestCachePolicy> Nesnesi, bu değerlerin geçerli birleşimleri belirtmenize olanak veren birkaç Oluşturucusu sağlar.  
@@ -124,8 +125,8 @@ Level:Default MaxAge:36000 MinFresh:18000
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ uygulamaları için önbellek yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Konum temelli önbellek ilkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Önbellek zaman tabanlı ilkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

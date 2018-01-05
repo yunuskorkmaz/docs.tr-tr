@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
 Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur. Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), uygulanan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kendisini keşif proxy'sine kayıtlı hizmet. Bu konuda, oluşturduğunuz bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bulmak için keşif proxy'si kullanan istemci [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
@@ -292,6 +293,6 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Nasıl yapılır: keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+ [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

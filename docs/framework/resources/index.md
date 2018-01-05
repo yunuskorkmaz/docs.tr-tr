@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Masaüstü Uygulamalarındaki Kaynaklar
 Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir. Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir. Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir. Kaynaklar ve nesneleri kalıcı forms dizeleri, görüntüleri dahil olmak üzere, çeşitli veri içerebilir. (Kalıcı nesneleri bir kaynak dosyasına yazmak için, nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizi bir kaynak dosyasında depolamak bütün uygulamanızı yeniden derlemeden bu verileri değiştirmenize olanak tanır. Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.  
@@ -72,8 +73,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
- [Uygulama temelleri](../../../docs/standard/application-essentials.md)  
- [Kaynak dosyalar oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Paketleme ve dağıtma kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+ [Uygulama Temelleri](../../../docs/standard/application-essentials.md)  
+ [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Kaynakları Alma](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)

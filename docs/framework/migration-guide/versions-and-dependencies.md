@@ -10,11 +10,12 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e6cea26c07bc9c9d7d8bd590e5fbb13cf6d01a9e
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: 5875e5900f925e29fec303d276483947c994da8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework Sürümleri ve Bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  

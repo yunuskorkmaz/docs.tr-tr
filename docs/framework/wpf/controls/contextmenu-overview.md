@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3061b7fed225f00bf6bb91efe529de35a5a036a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0776e7960aa76a76422d01180af5fd6a089bc98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-overview"></a>ContextMenu Genel Bakışı
 <xref:System.Windows.Controls.ContextMenu> Sınıf bağlamı özgü kullanarak işlevselliği kullanıma sunan bir öğeyi temsil eder <xref:System.Windows.Controls.Menu>. Genellikle, bir kullanıcı sunan <xref:System.Windows.Controls.ContextMenu> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] fare düğmesini sağ tıklanarak. Bu konu tanıtır <xref:System.Windows.Controls.ContextMenu> öğesi ve içinde kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kod.  
@@ -78,5 +79,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Menu>  
  <xref:System.Windows.Controls.MenuItem>  
  [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [ContextMenu stilleri ve şablonları](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
+ [ContextMenu Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
  [WPF denetimleri galeri örneği](http://go.microsoft.com/fwlink/?LinkID=160053)

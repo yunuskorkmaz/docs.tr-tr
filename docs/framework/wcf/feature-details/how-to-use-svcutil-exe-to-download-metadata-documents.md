@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6868bbecd83305c07e0b547d0102d7bca48d41f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 571465ab483aef3e3e663b9f82974f35e100c73e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma
 Meta Veri Hizmetleri çalıştıran indirmek ve meta veriler için yerel dosyaları kaydetmek için Svcutil.exe kullanabilirsiniz. WS-MetadataExchange kullanarak meta verilerini almak HTTP ve HTTPS URL'si şemaları için Svcutil.exe çalışır ve [XML Web hizmeti bulma](http://go.microsoft.com/fwlink/?LinkId=94950). Diğer tüm URL şemalarını için Svcutil.exe yalnızca WS-MetadataExchange kullanır.  
@@ -57,4 +58,4 @@ svcutil /t:metadata http://service/metadataEndpoint
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

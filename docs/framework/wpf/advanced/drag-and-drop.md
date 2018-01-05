@@ -18,19 +18,20 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>Sürükleme ve Bırakma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]çok esnek sürükleme ve her ikisi de içindeki verilerin bırakarak destekleyen bırakma altyapısını sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları yanı sıra diğer [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] uygulamalar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sürükle ve bırak genel bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [Veri ve veri nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [İzlenecek yol: Etkinleştirme sürükle ve bırak bir kullanıcı denetimi hakkında](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Sürükleme ve Bırakmaya Genel Bakış](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
+ [Veri ve Veri Nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
+ [İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  

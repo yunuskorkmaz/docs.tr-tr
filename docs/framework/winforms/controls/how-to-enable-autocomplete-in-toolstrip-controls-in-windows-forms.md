@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac74e50eb6558c38d46714dd7bfe0cfd61133ac8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bbae29cea265fbc4cd92213066198b3f721c01d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Denetimlerinde AutoComplete Seçeneğini Etkinleştirme
 Aşağıdaki yordam birleştiren bir <xref:System.Windows.Forms.ToolStripLabel> ile bir <xref:System.Windows.Forms.ToolStripComboBox> , bırakılan öğeleri listesi gibi son göstermek için Web sitelerini ziyaret. Kullanıcı listesindeki öğelerden birini ilk karakteri ile eşleşen bir karakter yazarsa öğesi hemen görüntülenir.  
@@ -105,6 +106,6 @@ Aşağıdaki yordam birleştiren bir <xref:System.Windows.Forms.ToolStripLabel> 
  <xref:System.Windows.Forms.ToolStripComboBox>  
  <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>  
  <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>  
- [ToolStrip denetimine genel bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip denetim mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [ToolStrip Teknoloiji özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [ToolStrip Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip Denetim, Mimarisi](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [ToolStrip Teknoloji Özeti](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

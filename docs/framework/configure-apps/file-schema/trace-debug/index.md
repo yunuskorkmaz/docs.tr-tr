@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e6d9e5ca97e4d5940dd9de3f3ffbd4db4183196c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-and-debug-settings-schema"></a>İzleme ve Hata Ayıklama Ayarları Şeması
 İzleme ve hata ayıklama ayarları toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicileri belirtin.  
@@ -61,4 +62,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.Debug>  
- [Yapılandırma dosyası şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
+ [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

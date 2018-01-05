@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dbc09bd409dc106046d6c5e51dae8932c9eba326
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerektirmez. IP adreslerini kafes kimliği alır ve bu belirli kafes kimliği ile kayıtlı düğümler için karşılık gelen adresleri listesi döndüren bir çözümleyici hizmeti ile iletişim kurarak elde edilir Çözümleyici hizmete kaydolmak her düğümünde kafes sağlayarak oluşturur kayıtlı adreslerinin bir listesini tutar.  
@@ -45,9 +46,9 @@ Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerek
  Özel Çözücü uygulamak nasıl tanıtımı için bkz: [eş kanalı özel eş çözümleyici](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Custompeerresolverservice: istemci kayıtları](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [CustomPeerResolverService İçinde: İstemci Kayıtları](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş kanal kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Eş kanalı güvenliği](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Eş kanal uygulaması oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+ [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
+ [Eş Kanalı Güvenliği](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

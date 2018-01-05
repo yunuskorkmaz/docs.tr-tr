@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-windows-services"></a>Nasıl Yapılır: Windows Hizmetleri Oluşturma
 Bir hizmet oluşturduğunuzda adlı bir Visual Studio Proje şablonu kullanabilirsiniz **Windows hizmeti**. Bu şablon otomatik olarak işin çoğunu sizin için uygun sınıfları ve ad alanları, hizmetleri, temel sınıfından devralma ayarlama başvurarak yapar ve birkaç yöntemleri geçersiz kılma, büyük bir olasılıkla geçersiz kılmak istiyor.  
@@ -77,11 +78,11 @@ Bir hizmet oluşturduğunuzda adlı bir Visual Studio Proje şablonu kullanabili
 8.  Hizmetini yükleyin. Daha fazla bilgi için bkz: [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Nasıl yapılır: Hizmetleri programlamayla yazma](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
- [Nasıl yapılır: hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Nasıl yapılır: hizmet bilgilerini günlüğe kaydetme](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Nasıl yapılır: Hizmetleri başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Nasıl yapılır: Hizmetleri için güvenlik bağlamı belirtin](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [İzlenecek yol: Bileşen tasarımcısında Windows hizmet uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+ [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Nasıl Yapılır: Hizmetleri Programlamayla Yazma](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
+ [Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Nasıl Yapılır: Hizmet Bilgilerini Günlüğe Kaydetme](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [Nasıl Yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Nasıl Yapılır: Hizmetler için Güvenlik İçeriği Belirtme](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45f57fd90eb787099e37b012eb528a2072f175c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e0359e3094b86e3433cebee7c835c7eecec16fe0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-types"></a>Bilinen Türler
 Bu örnek, bir veri sözleşmesi türetilmiş türler hakkında bilgi belirtmek gösterilmiştir. Veri sözleşmeleri için ve Hizmetleri'nden yapılandırılmış veri iletmek sağlar. Nesne odaklı programlama içinde başka bir türünden devralan bir tür özgün türü yerine kullanılabilir. Hizmet odaklı programlamada türleri yerine şemaları bildirilmesi ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmede dahil edilecek türetilmiş türler hakkında bilgi sağlar. Bu mekanizma kullanılmazsa, türetilmiş bir tür gönderilen veya değiştirilemez bir taban türü beklenirken aldı.  

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dc9f8f4e958d1988cecd769431e99d70ff2a4cfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 970b428343f4e2dec73e7eceec20414cd8bdfbac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Nasıl yapılır: bir genel Proxy seçim geçersiz kıl
 Bu örnek gönderir bir **WebRequest** genel proxy seçimi adlı bir proxy sunucusu ile geçersiz kılmaları www.contoso.com için `alternateproxy` bağlantı noktası 80 üzerinde.  
@@ -42,5 +43,5 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 -   Başvurular **System.Net** ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama protokolleri kullanma](../../../docs/framework/network-programming/using-application-protocols.md)  
- [Bir Proxy üzerinden Internet erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+ [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

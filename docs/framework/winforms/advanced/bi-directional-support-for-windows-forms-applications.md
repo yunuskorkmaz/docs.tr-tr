@@ -13,11 +13,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 09ed8b59e9682b45f3f3720335686002761f7bce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için. Bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilir tüm denetimler bu formlarda içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
@@ -122,4 +123,4 @@ Kullanabileceğiniz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Arapç
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ASP.NET Web uygulamaları için çift yönlü destek](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Windows Forms Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+ [Windows Forms’u Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

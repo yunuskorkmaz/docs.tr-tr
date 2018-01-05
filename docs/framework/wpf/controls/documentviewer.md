@@ -17,11 +17,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa8d4fba67227e9ca1e3971ea9dc983a5054e08e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6a46884b056b5ba3bc768deb0725f96386fea84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) numaralı bir biçimde.  
@@ -32,6 +33,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Belgeleri](../../../../docs/framework/wpf/advanced/documents.md)  
- [Belgeyi seri hale getirme ve depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Belgeler](../../../../docs/framework/wpf/advanced/documents.md)  
+ [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

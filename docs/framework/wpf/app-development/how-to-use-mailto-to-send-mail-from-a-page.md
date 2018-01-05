@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cc06c18a93e3a3ee6d11faed84fef6a00a7128d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d7d218c0b77b2dc1c251e08dbc957d22785d948
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>Nasıl yapılır: mailto kullanın: bir sayfanın posta göndermek için
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Hyperlink> ile birlikte bir **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
@@ -32,4 +33,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Hy
  [!code-xaml[HOWTONavigationMailToSnippet#MailToMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationMailToSnippet/CS/HomePage.xaml#mailtomarkup)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

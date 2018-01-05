@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5ba089c671fe54afe1c97da0a7bd786949cb5c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9226ac10e4f221cc381b7c59179b2667e20aa757
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-stackpanel"></a>Nasıl yapılır: StackPanel Oluşturma
 Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Controls.StackPanel>.  
@@ -54,5 +55,5 @@ Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Control
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.StackPanel>  
- [Paneller Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Panellere Genel Bakış](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

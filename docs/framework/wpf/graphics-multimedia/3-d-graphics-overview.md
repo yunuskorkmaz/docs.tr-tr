@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979cc7580471f616d39056f541b8374b372e8e88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
 <a name="introduction"></a>[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] geliştiricilerin çizim, dönüştürme ve 3-b grafik işaretleme ve yordam kodunda animasyon sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimleri oluşturmak, veri karmaşık çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]desteklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu genel bir bakış sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  
@@ -184,8 +185,8 @@ Perspektif ve Dikçizgisel projeksiyonu
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
  <xref:System.Windows.Media.Media3D.DirectionalLight>  
  <xref:System.Windows.Media.Media3D.Material>  
- [3B dönüşümler genel bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
- [WPF 3B performansını en üst düzeye çıkarmak](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
+ [3B Dönüşümlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
+ [WPF 3B Performansını En Üst Düzeye Çıkarma](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

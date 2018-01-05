@@ -13,33 +13,34 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92e75f8f23bb0bc6d11e9bb6fd6e83c35559b847
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e01f24af2b6853c7a43377bc0b7f7d338195472
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel İşlemsel Desteği
 Bu bölümdeki konular, işlem işlevlerini açıklayan [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ServiceModel işlem öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
+ [ServiceModel İşlem Öznitelikleri](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
  İki standart açıklar <xref:System.ServiceModel> işlemleri için davranışını yapılandırmanızı sağlayan öznitelikler bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
   
- [ServiceModel işlem yapılandırması](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
+ [ServiceModel İşlem Yapılandırması](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)  
  Bir hizmeti için işlem etkinleştirmek için kullanılabilecek çeşitli yapılandırma ayarları açıklanmaktadır.  
   
- [İşlem akışını etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
+ [İşlem Akışını Etkinleştirme](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)  
  İşlem akışını etkinleştirmeyi açıklar.  
   
- [Nasıl yapılır: işlemsel hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
+ [Nasıl yapılır: İşlemsel Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-transactional-service.md)  
  İşlem bir hizmet oluşturmak nasıl gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [İşlemsel uygulamaları tanılama](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
+ [İşlemsel Uygulamaları Tanılama](../../../../docs/framework/wcf/feature-details/diagnosing-transactional-applications.md)  
  Yönetim ve tanılama özelliğinin nasıl kullanılacağı açıklanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlem uygulamanızda sorun giderme için.  
   
- [COM + ve ServiceModel işlemlerini karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
+ [COM+ ve ServiceModel İşlemlerini Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-transactions-in-com-and-servicemodel.md)  
  İşlem tarafından sağlanan özniteliklerini kullanarak COM + hizmet davranışını benzetmek açıklar <xref:System.ServiceModel> ad alanı.  
   
- [Kurumsal Hizmetler işlemsel bileşenlerini tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
+ [Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-enterprise-services-transactional-components.md)  
  Tümleştirmeyi açıklayan, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri ile Kurumsal hizmeti kullanan kod.

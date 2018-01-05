@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yanıt olarak bir özellik değerinde bir değişiklik ortaya çeşitli olaylarını tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen yönlendirilmiş olay ve bazı durumlarda standart bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişikliklerini genellikle ise bazı özellik değişikliklerini daha uygun bir öğe ağacı üzerinden yönlendirilir çünkü olay tanımını senaryo bağlı olarak değişir sorun nerede özelliği değiştirildi nesnesine yalnızca biri.  
@@ -72,5 +73,5 @@ ms.lasthandoff: 11/21/2017
  Özellik tetikleyicileri hakkında daha fazla bilgi için bkz: [stil ve şablon](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirilmiş olaylara genel bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Bağımlılık özelliklerine genel bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+ [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Bağımlılık Özelliklerine Genel Bakış](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

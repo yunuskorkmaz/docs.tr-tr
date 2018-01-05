@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-overview"></a>ToolTip Genel Bakışı
 Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu zaman görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>. Bu konu, araç ipucu tanıtır ve nasıl oluşturulacağı ve araç ipucu içeriğini özelleştirmek açıklanır.  

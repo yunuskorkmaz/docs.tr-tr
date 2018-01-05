@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4989a13ef16445bc19b3dc3c6d265d943a464c62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f73a336da5b61de90a67a8392b5cfc8f28619254
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
 Olaya yanıt verebilirsiniz bir eylem veya "işlemek," kodunu içerir. Olaylar, fareyi tıklatarak veya bir tuşa basılması gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodla; veya sistem tarafından.  
@@ -54,5 +55,5 @@ Olaya yanıt verebilirsiniz bir eylem veya "işlemek," kodunu içerir. Olaylar, 
  Temsilciler ile kullanılan bağlama dinamik mekanizmadır: çalışma zamanında, imza, olay işleyicisinin eşleşen herhangi bir yöntemi için bir temsilci bağlanabilir. Bu özellik ile ayarlayın veya bağlı bir koşul olarak ve bir olay işleyicisi için bir denetim dinamik olarak eklemek için bağlama yöntemini değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+ [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Olay İşleyicilerine Genel Bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

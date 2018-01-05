@@ -25,11 +25,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="location-based-cache-policies"></a>Konum temelli önbellek ilkeleri
 Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek göre geçerli önbelleğe alınan girdileri yenilik tanımlar. Önbelleğe alınan bir kaynağın geçerli olduğu kullanmadan yoksa sunucu belirtilen COLLECTION gereksinimleri ihlal değil. Konum temelli önbellek İlkesi kullanılarak programlı olarak oluşturulan bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> sınıfı oluşturucusu. Konum tabanlı ilke türünü Oluşturucusu kullanmaya geçirilen bir <xref:System.Net.Cache.RequestCacheLevel> veya <xref:System.Net.Cache.HttpRequestCacheLevel> numaralandırma değeri. Konum temelli önbellek ilkeleri oluşturma kod örnekleri için bkz [nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlamak](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Aşağıdaki bölümlerde her Köprü Metni Aktarım Protokolü (http ve https) kaynaklar için önbellek konumu tabanlı ilke türü açıklanmaktadır.  
@@ -56,8 +57,8 @@ Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek g
  Kaynak önbelleğinde kopyasını sunucudaki kopyayla karşılaştırır. Sunucudaki kopyası yeniyse isteği karşılamak için kullanılır ve önbelleğinde kopyasının yerini alır. Önbelleğe alınan kopya önbelleğinde kopyalama sunucu kopyası ile aynı olduğunda kullanılır. HTTP protokolü önbelleğe alma, bu koşullu istek kullanarak elde edilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Ağ uygulamaları için önbellek yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- [Önbellek zaman tabanlı ilkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Ağ uygulamalarında önbelleğe alma yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

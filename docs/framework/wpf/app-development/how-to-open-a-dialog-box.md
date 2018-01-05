@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d318f35f8f009f0f2c77210ca8b6b29bedfb7619
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e6201b7dbcc57a15583b7d95d6b603ab50e951a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-a-dialog-box"></a>Nasıl yapılır: bir iletişim kutusu açın
 Bu örnek, bir iletişim kutusunu açmak gösterilmiştir.  
@@ -38,4 +39,4 @@ Bu örnek, bir iletişim kutusunu açmak gösterilmiştir.
  Çağırma <xref:System.Windows.Window.ShowDialog%2A> tüm windows ve kullanıcı girdi olaylarını kısıtlama olmaksızın kullanma izni gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İletişim kutusu sonucunu döndürür](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)
+ [İletişim Kutusu Sonucu Döndürme](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)

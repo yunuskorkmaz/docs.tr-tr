@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Nasıl yapılır: Windows Forms NumericUpDown Denetimi ile Sayı Değerleri Ayarlama ve Döndürme
 Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denetim belirlenir kendi <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği. Herhangi bir özellik olarak olduğu denetimin değeri için koşullu testleri yazabilirsiniz. Bir kez <xref:System.Windows.Forms.NumericUpDown.Value%2A> özelliği ayarlanmışsa, doğrudan bu işlemleri gerçekleştirmek için kod yazarak ayarlayabilir veya çağırabilirsiniz <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ve <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> yöntemleri.  
@@ -105,5 +106,5 @@ Windows Forms sayısal değerini <xref:System.Windows.Forms.NumericUpDown> denet
  <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>  
- [NumericUpDown denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [NumericUpDown denetimine genel bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+ [NumericUpDown Denetimi](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [NumericUpDown Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser Denetimine Genel Bakış
 <xref:System.Windows.Forms.WebBrowser> Denetimi WebBrowser ActiveX denetimi için yönetilen sarmalayıcı sağlar. Yönetilen sarmalayıcı Windows Forms istemci uygulamalarınızda Web sayfaları görüntülemenizi sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> Internet Explorer Web uygulamanızı veya gözatma işlevselliği çoğaltmak için denetim varsayılan Internet Explorer işlevselliği devre dışı bırakabilir ve basit bir HTML belge görüntüleyici olarak denetimi kullanın. DHTML tabanlı kullanıcı arabirimi öğeleri formunuza eklemek ve içinde barındırılan olgu gizlemek için denetimi de kullanabilirsiniz <xref:System.Windows.Forms.WebBrowser> denetim. Bu yaklaşım, tek bir uygulamada Windows Forms denetimleri ile Web denetimleri sorunsuzca birleştirin olanak tanır.  
@@ -61,9 +62,9 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
  <xref:System.Windows.Forms.WebBrowserReadyState>  
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
- [Nasıl yapılır: WebBrowser denetimi ile URL'ye gidin](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [Nasıl yapılır: bir WebBrowser denetimi ile yazdırma](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
- [Nasıl yapılır: bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [Nasıl yapılır: bir Windows Forms uygulamasında HTML belge Görüntüleyicisi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [Nasıl yapılır: DHTML koduyla istemci uygulaması kodu arasında iki yönlü iletişim](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
- [WebBrowser güvenliği](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+ [Nasıl yapılır: WebBrowser Denetimi ile URL'ye Gitme](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Nasıl yapılır: Bir WebBrowser Denetimi ile Yazdırma](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Nasıl yapılır: Bir Windows Forms Uygulamasına Web Tarayıcısı Yetenekleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Nasıl yapılır: Bir Windows Forms Uygulamasında HTML Belge Görüntüleyicisi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Nasıl yapılır: DHTML Koduyla İstemci Uygulaması Kodu Arasında İki Yönlü İletişim Gerçekleştirme](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [WebBrowser Güvenliği](../../../../docs/framework/winforms/controls/webbrowser-security.md)

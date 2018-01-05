@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4f046f26391d581bc1663e9a7041225ede99bd31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
 Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir mekanizma bir parçasıdır. Bir CER kodu alanının tamamının yürütülmesini önleyen bant dışı özel durumları atma ortak dil çalışma zamanı (CLR) kısıtlı bir alanı tanımlar. Bu bölge içinde kullanıcı kodu atma bant dışı özel durumları neden olan kod yürütülmesini sınırlı değildir. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Yöntemi hemen gelmelidir bir `try` bloğu ve işaretleri `catch`, `finally`, ve `fault` kısıtlı yürütme bölgeleri olarak engeller. Kısıtlanmış bir bölge işaretlenmiş sonra kod güçlü güvenilirlik sözleşmeleri ile başka bir kod yalnızca çağırmanız gerekir ve kod ayırmak veya gerekir kod hataları işlemek için hazırlanan sürece hazırlıksız ya da güvenilir olmayan yöntemleri sanal çağrı yapmak. Bir CER yürütülen kod için CLR gecikmeler iş parçacığı durdurur.  
@@ -123,4 +124,4 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazma için bir meka
 -   İşlev işaretçileri ve temsilciler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenilirlik en iyi uygulamalar](../../../docs/framework/performance/reliability-best-practices.md)
+ [Güvenilirlik En İyi Yöntemleri](../../../docs/framework/performance/reliability-best-practices.md)

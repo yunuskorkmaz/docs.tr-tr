@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ce4f821a7b964b3ed2e03c795346b47bb88d618
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama
 Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı davranışını sınama gerekir. Ayrı Windows tabanlı uygulama projesi oluşturun ve test form üzerindeki denetiminizi yerleştirin, ancak bu yordam, kullanışsız kullanılır. Daha hızlı ve kolay bir yolu kullanmaktır **UserControl Test kapsayıcısı** Visual Studio tarafından sağlanan. Bu test kapsayıcısı doğrudan Windows Denetim Kitaplığı projenizden başlatır.  
@@ -78,7 +79,7 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.UserControl>  
- [Nasıl yapılır: bileşik denetimler yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [İzlenecek yol: Visual C# ile bileşik denetim yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [Nasıl yapılır: Bileşik Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  [Kullanıcı denetimi Tasarımcısı](http://msdn.microsoft.com/en-us/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

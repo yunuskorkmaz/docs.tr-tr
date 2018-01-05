@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>Null karşılaştırmaları
 A `null` veri kaynağındaki değer, değer bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, kontrol edebilirsiniz null değerleri bu nedenle, bazı hesaplamalar veya karşılaştırmaları yalnızca geçerli veya boş olan satırlar üzerinde gerçekleştirilen veri. CLR null semantiği, ancak veri kaynağı null semantiği farklı olabilir. Çoğu veritabanları, null karşılaştırma işlemek için üç değerli mantığı sürümünü kullanın. Diğer bir deyişle, bir null değer karşılaştırmak için değerlendirmez `true` veya `false`, için değerlendirir `unknown`. Genellikle bu ANSI null değerlere uygulamasıdır, ancak bu her zaman geçerli değildir.  
@@ -57,4 +58,4 @@ WHERE h.ShipDate IS Null
  İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], destekleyen bir koleksiyonu geçirdiğinizde `IQueryable` bir toplama işlevi için veritabanına toplama işlemleri gerçekleştirilir. Bellek içinde gerçekleştirilen bir sorgu ve veritabanına gerçekleştirilen sorgu sonuçları farklılıklar olabilir. Herhangi bir eşleşme varsa bir bellek içi sorgusu ile sorgu sıfır döndürür. Adlı veritabanı, aynı sorgu döndürür `null`. Varsa bir `null` LINQ Toplama işlevi için geçirilen değer, bir özel durum. Olası kabul etmek için `null` değerleri, cast türleri ve türlerin boş değer atanabilir türler için sorgu sonuçlarını almak özellikleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ to Entities sorgu ifadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+ [LINQ to Entities Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

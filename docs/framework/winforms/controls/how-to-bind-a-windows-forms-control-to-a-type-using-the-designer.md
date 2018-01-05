@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 215a69a47b0588e45fcc28202dce4c6210b1dfe6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a25b0dc81a6511698394eb86343f09051befc87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Windows Formları Denetimini bir Türe Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen bir nesne yerine bir tür bir denetimi bağlamak gerekir. Genellikle bir denetim tasarım zamanında ne zaman veri kullanılamıyor olabilir, ancak hala bir türün ortak arabirimi verileri görüntülemek için veri bağlama denetimleri istediğiniz bir türe bağlama gerekir. Aşağıdaki yordamlarda yeni bir oluşturma gösterilmektedir <xref:System.Windows.Forms.BindingSource> diğer bir deyişle bir tür için sınır ve ardından tür özelliklerinden biri nasıl bağlanacağı <xref:System.Windows.Forms.TextBox.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox>.  
@@ -64,6 +65,6 @@ Verilerle etkileşimli denetimleri oluştururken, bazen bir nesne yerine bir tü
 4.  İçinde **DataSource UI türü düzenleyici**, düğümünü genişletin <xref:System.Windows.Forms.BindingSource> daha önce eklediğiniz ve bağlamak istediğiniz ilişkili tür özelliğine seçin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
  [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

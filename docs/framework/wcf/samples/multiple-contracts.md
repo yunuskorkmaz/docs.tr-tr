@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db3f0628c98133ce46e75df046cf8a3d2044ad69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfd9446edc176e3d4cb014db578990971128707c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-contracts"></a>Birden Fazla Sözleşme
 Birden fazla sözleşme örnek bir hizmette birden fazla sözleşme gerçekleştirme ve her uygulanan sözleşmeleri ile iletişim kurmak için bitiş noktalarını yapılandırmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İki sözleşmelerini tanımlamak için hizmet değiştirilmiş `ICalculator` sözleşme ve `ICalculatorSession` sözleşme.  

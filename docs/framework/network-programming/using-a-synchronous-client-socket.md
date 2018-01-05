@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
 Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuva uygulama programı askıya alır. Zaman uyumlu yuva ağ yoğun olarak kullanılır, işlem için uygulamalar için uygun değildir, ancak basit ağ hizmetlerine erişim için diğer uygulamalar için etkinleştirebilirsiniz.  
@@ -80,6 +81,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz istemci yuvası kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Yuva başına dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Zaman uyumlu istemci yuva örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+ [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

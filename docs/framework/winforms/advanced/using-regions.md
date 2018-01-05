@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b53501e2f1e10cb3f8936434b63557d221c91bbc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9a7cbd5226bc1ff1a92b7eb8af5f5241c32ce399
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-regions"></a>Bölgeleri Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Sınıfı özel bir şekil tanımlamanıza olanak verir. Şeklin satırları, çokgenler ve eğriler oluşur.  
@@ -28,10 +29,10 @@ ms.lasthandoff: 10/22/2017
  Test ve kırpma ulaştı. bölgeler için iki yaygın kullanımları. İsabet testi fare ekranın belirli bir bölgede tıklandığını belirliyor. Kırpma belirli bir bölgeye çizim kısıtlama.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: kullanım isabet sahip bir bölge test etme](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
+ [Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
  Nasıl kullanılacağını gösteren bir <xref:System.Drawing.Region> isabet testi gerçekleştirmek için.  
   
- [Nasıl yapılır: kırpma sahip bir bölge kullanın](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)  
+ [Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)  
  Kırpma bölgesini ayarlamak açıklanmaktadır bir <xref:System.Drawing.Graphics> nesnesi.  
   
 ## <a name="reference"></a>Başvuru  

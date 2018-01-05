@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5faeb409e6076fe934d1b8c88423a8a348f786ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c6afdc93a207615a4ba92db10392dfaf311e2e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-service-host"></a>Özel Hizmet Konağı
 Bu örnek özel bir türevi kullanımı gösterilmiştir <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf. Bu yaklaşım, hizmetleri, çok sayıda yaygın bir şekilde yapılandırmak için yeniden kullanılabilir bir alternatif sağlar. Örnek de nasıl kullanılacağı ortaya <xref:System.ServiceModel.Activation.ServiceHostFactory> Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamında özel ServiceHost kullanılacak sınıfı.  
@@ -185,4 +186,4 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 5.  Kaldırmak için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] Cleanup.bat Çalıştırma uygulaması.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+ [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

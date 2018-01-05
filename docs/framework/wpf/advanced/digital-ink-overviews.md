@@ -17,17 +17,18 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="digital-ink-overviews"></a>Dijital Mürekkebe Genel Bakış
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Mürekkep ile çalışmaya başlama](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [Mürekkep toplama](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [El yazısı tanıma](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [Mürekkep depolama](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [Mürekkep Nesnesi Modeli: Windows Forms ve WPF karşı COM](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [Gelişmiş mürekkep işleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [Mürekkep ile Çalışmaya Başlama](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
+  [Mürekkep Toplama](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+  [El Yazısı Tanıma](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+  [Mürekkep Depolama](../../../../docs/framework/wpf/advanced/storing-ink.md)  
+  [Mürekkep Nesnesi Modeli: Windows Forms ve WPF'ye Karşı COM](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [Gelişmiş Mürekkep İşleme](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

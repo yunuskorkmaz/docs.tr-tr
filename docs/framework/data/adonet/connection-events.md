@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e551a09ef6dc778f5dfab9ba8cf263f803556f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0eb38eb764faa51524565e57826db17311fc5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-events"></a>Bağlantı olayları
 Tüm .NET Framework veri sağlayıcısı **bağlantı** bilgilendirici iletileri bir veri kaynağından veri almak veya belirlemek için kullanabileceğiniz iki olay nesneleriyle durumunu bir **bağlantı** sahip değiştirildi. Aşağıdaki tabloda olayların açıklanmaktadır **bağlantı** nesnesi.  
@@ -116,5 +117,5 @@ protected static void OnStateChange(object sender,
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir veri kaynağına bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

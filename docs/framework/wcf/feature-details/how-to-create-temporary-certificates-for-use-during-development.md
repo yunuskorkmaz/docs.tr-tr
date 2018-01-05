@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f93d6bac0e16fe0b44ea5aba718ddb4dcf7c6e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 Güvenli hizmeti veya kullanan istemci geliştirirken [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kimlik bilgisi olarak kullanılacak bir X.509 sertifikası sağlamak genellikle gereklidir. Sertifika genellikle bilgisayar güvenilen kök sertifika yetkilileri deposunda bulunan kök yetkisine sahip bir sertifika zinciri parçasıdır. Bir sertifika zinciri sahip genellikle kök yetkilisi kuruluşunuz ya da iş birimi olduğu sertifikalar kümesini kapsam sağlar. Bu geliştirme anında benzetmek için güvenlik gereksinimlerini karşılamak için iki sertifika oluşturabilirsiniz. İlk olan otomatik olarak imzalanan bir sertifika olduğundan güvenilen kök sertifika yetkilileri deposunda yerleştirilir ve ikinci sertifikayla birinciden oluşturulur ve yerel makine konumunun kişisel deposunda ya kişisel deposuna yerleştirilir Geçerli kullanıcı konumu. Bu konuda kullanarak bu iki sertifika oluşturmak için adımlarda size yol [sertifika oluşturma Aracı (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), tarafından sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
@@ -122,6 +123,6 @@ Güvenli hizmeti veya kullanan istemci geliştirirken [!INCLUDE[indigo1](../../.
  Tüm geçici kök yetkilisi sertifikalardan sildiğinizden emin olun **güvenilen kök sertifika yetkilileri** ve **kişisel** sertifikayı sağ tıklatıp sonra tıklatarak klasörleri  **Silme**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sertifikalar ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

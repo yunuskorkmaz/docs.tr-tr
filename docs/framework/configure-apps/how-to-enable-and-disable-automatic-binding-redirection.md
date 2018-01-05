@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 83b004934c303c95bdc4e6edb6031a86e2b1a6ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6887706aeef3855c1e02c8b1379856022cdac04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
 İle başlayarak [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], hedefleyen uygulamalar derlediğinizde [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yeniden yönlendirmeleri otomatik olarak eklenebilir birleştirici derleme geçersiz kılmak için uygulama yapılandırma dosyası. Uygulamanız veya bileşenleri, aynı derlemenin birden çok sürümüne başvurursa, uygulamanızın yapılandırma dosyasında bağlama yeniden yönlendirmelerini el ile belirtseniz de, bağlama yeniden yönlendirmeleri eklenir. Otomatik bağlama yeniden yönlendirme özelliğini hedefleyen geleneksel masaüstü uygulamaları ve web uygulamaları etkiler [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], davranışı için bir web uygulaması biraz farklı olmasına rağmen. .NET Framework'ün önceki sürümlerini hedefleyen var olan uygulamalarınız varsa otomatik bağlama yeniden yönlendirmesini etkinleştirebilir veya el ile yazılan bağlama yeniden yönlendirmelerini tutmak istiyorsanız bu özelliği devre dışı bırakabilirsiniz.  
@@ -91,4 +92,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [\<bindingRedirect > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
- [Derleme sürümlerini yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+ [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 865aa82ebc119a3952124a93f9042c2732e3ab48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9f1ba281c1c7bd6a6a0d96746caa512c6c208b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>İki sıraları kümesi birleşimini döndürür
 Kullanım <xref:System.Linq.Queryable.Union%2A> iki sıraları kümesi birleşimi döndürülecek işleci.  
@@ -34,5 +35,5 @@ Kullanım <xref:System.Linq.Queryable.Union%2A> iki sıraları kümesi birleşim
  İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.Queryable.Union%2A> işleci için multisets multisets sırasız birleştirme tanımlanır (sonucu etkili bir şekilde `UNION ALL` SQL yan tümcesinde).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Standart sorgu işleci çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+ [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ [Standart Sorgu İşleci Çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

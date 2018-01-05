@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e34e9dc864ffa3960c7c4f60f84b4996bab0bb28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63b7b704cf5d69ea2186ddef6e86f5c6d7993778
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms'ta Güvenliğe Genel Bakış
 ' İn yayımlanmasından önce [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], çalışan tüm kod bir kullanıcı bilgisayar aynı hakları veya bilgisayarın kullanıcısı olan kaynaklara erişim izinleri olan kullanıcının. Örneğin, kullanıcının dosya sistemine erişim izni varsa, kodu dosya sistemi erişmesine izin; Kullanıcı bir veritabanına erişmek için izin verilen, o veritabanına erişmek için kod izin. Bu hak ve izinler kullanıcı açıkça yerel bilgisayarda yüklü yürütülebilir dosyalarında kod için kabul edilebilir olmakla birlikte, bunlar Internet veya yerel Intranet gelen zararlı kod için kabul edilebilir olmayabilir. Bu kodu izniniz olmadan kullanıcının bilgisayar kaynaklarına erişebildiğini olmamalıdır.  
@@ -93,9 +94,9 @@ ms.lasthandoff: 11/21/2017
  Kullanarak Windows Forms uygulaması dağıttıysanız [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], kısmi güven veya kısıtlı izin geliştirme ortamından kümesinin hata ayıklamayı etkinleştirebilirsiniz.  Ayrıca bkz. [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) veya [nasıl yapılır: sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Forms güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms Güvenliği](../../../docs/framework/winforms/windows-forms-security.md)  
  [Kod erişim güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)  
- [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Güvenilir Uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
- [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (bildirim üretme ve düzenleme aracı, grafik istemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+ [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Güvenilir Uygulama Dağıtımına Genel Bakış](/visualstudio/deployment/trusted-application-deployment-overview)  
+ [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

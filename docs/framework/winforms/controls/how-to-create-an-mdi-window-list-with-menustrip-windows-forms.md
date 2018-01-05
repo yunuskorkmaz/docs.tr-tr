@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea2b3f41e6e40b589589db99bb2a5a0ba474c8cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8bf09170b4def3f041e34942a968fdf41fcdf66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Nasıl yapılır: MenuStrip (Windows Forms) ile MDI Pencere Listesi Oluşturma
 Çoklu belge arabirimi (MDI), aynı saat ve kopyalama sırasında birkaç belge açabilir ve başka bir belgeden içeriği yapıştırmak uygulamaları oluşturmak için kullanın.  
@@ -92,6 +93,6 @@ ms.lasthandoff: 11/21/2017
 -   Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: MDI üst formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Nasıl yapılır: MDI alt formları oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [MenuStrip denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+ [Nasıl yapılır: MDI Üst Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Nasıl yapılır: MDI Alt Formları Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [MenuStrip Denetimi](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>&#39; teki .NET Framework Sınıf Kitaplığı'te eski
 .NET Framework zaman içinde değişir. Her yeni sürümü yeni türleri ve yeni işlevsellik sağlar tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değiştirin. Örneğin, bazı türleri destekledikleri teknolojisi tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelmiştir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli yeni yöntemler tarafından değiştirilen.  
@@ -71,9 +72,9 @@ ms.lasthandoff: 10/18/2017
 |1.0|V1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>.NET Framework 4.5 ve 4.6 için artık kullanılmayan listeleri  
- [Eski türler](../../../docs/framework/whats-new/obsolete-types.md)  
+ [Eski Türler](../../../docs/framework/whats-new/obsolete-types.md)  
   
- [Eski üyeler](../../../docs/framework/whats-new/obsolete-members.md)  
+ [Eski Üyeler](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Önceki sürümler için artık kullanılmayan listeleri  
  [.NET Framework 4'te eski türler](http://go.microsoft.com/fwlink/?LinkId=224224)  

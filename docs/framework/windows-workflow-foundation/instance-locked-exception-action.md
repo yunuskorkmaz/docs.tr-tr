@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3a52550624e93fb9d262f7df2d2e922369c90a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b221b0eef1e132789ef04fb59b56126f023bc43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-locked-exception-action"></a>Özel eylem örneği kilitli
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> Özelliği SQL iş akışı örneği deposunun SQL Kalıcılık sağlayıcısı tarafından alındığında almalıdır eylemi belirtmenize olanak sağlar bir <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Başka bir hizmet ana bilgisayarı tarafından şu anda kilitli bir iş akışı hizmeti örneği kilitlemek çalıştığında, bu özel Kalıcılık sağlayıcısı alır. Bu özellik için değerler <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>, ve <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Varsayılan değer <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry> şeklindedir. Aşağıdaki listede üç seçenekten açıklanmaktadır:  

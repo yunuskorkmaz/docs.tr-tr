@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
 Bazı resim dosyaları görüntü özelliklerini belirlemek için okuyabilir meta veriler içerir. Örneğin, dijital bir fotoğraf marka ve model görüntüsünü yakalamak için kullanılan kamera belirlemek için okuyabilir meta verileri içerebilir. İle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], var olan meta verileri okuyabilir ve resim dosyaları için yeni meta verileri de yazabilirsiniz.  
@@ -134,5 +135,5 @@ Bazı resim dosyaları görüntü özelliklerini belirlemek için okuyabilir met
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve bu kodu boyama olay işleyicisi yapıştırın. Değiştirmeniz gereken `FakePhoto.jpg` görüntü adı ve yolu, sistem ve içeri aktarma geçerli olan `System.Drawing.Imaging` ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Resimler, bit eşlemler, simgeler ve meta dosyaları ile çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

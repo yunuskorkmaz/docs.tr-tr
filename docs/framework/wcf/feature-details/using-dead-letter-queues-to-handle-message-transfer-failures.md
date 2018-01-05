@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd717b24eaf161145249e175425bd5296f3ef727
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Sıraya alınan iletileri teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen sırada kaydedilir. Başarısız teslim nedenlerden ötürü ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında teslim etmek için bir hata neden olabilir.  
@@ -84,6 +85,6 @@ Sıraya alınan iletileri teslim başarısız olabilir. Bu başarısız iletiler
   
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Nasıl yapılır: WCF uç noktaları iletileri kuyruğa alınan](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Zehirli ileti işleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+ [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

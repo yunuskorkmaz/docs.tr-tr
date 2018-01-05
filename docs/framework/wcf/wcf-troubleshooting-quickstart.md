@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d464042411b2d06368bb596e6d8d1dc0976808e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırasında çalıştırdığınız bilinen sorunlar sayısını listeler. İçine çalıştırdığınız sorunu bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve özel durumlar hakkında ayrıntılı bilgi almak hizmet içinde gerçekleşen. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -144,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Kerberos protokolü Bkz [WCF güvenlik kavramları kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
   
--   [Windows kimlik doğrulama hatalarını ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+-   [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
 -   [Http.sys kullanarak Kerberos hizmet asıl adlarını kaydetme](http://go.microsoft.com/fwlink/?LinkId=86943)  
   
@@ -260,4 +261,4 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows kimlik doğrulama hatalarını ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+ [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

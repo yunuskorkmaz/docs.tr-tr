@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f01fc82be38f7c5acb02c28960785e97a782909
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 415ffebbcf196a163932b1b83e32a6128f0bf1a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Nasıl yapılır: ShowDialog Yöntemi ile bir Windows Formunu Görüntüleyerek COM Birlikte Çalışmasını Destekleme
 Üzerinde Windows formunu görüntüleyerek Bileşen Nesne Modeli (COM) birlikte çalışabilirlik sorunlarını çözebilir bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] kullanılarak oluşturulan ileti döngüsü <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> yöntemi.  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 -   Tüm çağrıları Değiştir <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> çağrıları yöntemiyle <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> yönteminde, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bileşeni.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework bileşenlerini COM'da gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Nasıl yapılır: her Windows formunu kendi iş parçacığında görüntüleyerek COM birlikte çalışmasını destekleme](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
- [Windows Forms ve yönetilmeyen uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

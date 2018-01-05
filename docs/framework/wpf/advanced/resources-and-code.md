@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1177f7eeb2b6184ea6ae0a021730658913a4794b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
 Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilen veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sözdizimi. Genel kaynak kullanımı ve kaynaklardan hakkında daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından bkz [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -57,5 +58,5 @@ Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../..
  Çoğu kaynak kullanımları bir dize olacak şekilde kaynak anahtarı ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri kasıtlı olarak kullanmayın bir dize türü anahtarları belirtmek için bunun yerine bu parametre bir nesnedir. Nesne tarafından anahtarlanmış kaynağa sahip olma yeteneği tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve tema desteği. Aksi durumda stili olmayan bir denetim için varsayılan stil haline gelen Temalar içindeki stillerin her tarafından Anahtarlanan <xref:System.Type> uygulanması gereken denetimi. Türe göre anahtarlı her denetim türünün varsayılan örnekleri üzerinde çalışan güvenilir bir arama mekanizması sağlar ve türü yansıma tarafından algılanır ve türetilmiş bir tür Aksi takdirde varsayılan stil yok olmasına rağmen türetilen sınıflar stil eklemek için kullanılır. Belirleyebileceğiniz bir <xref:System.Type> tanımlanan bir kaynak için anahtar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanarak [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Benzer uzantılar destekleyen diğer dize olmayan anahtar kullanımları için mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi özellikleri [ComponentResourceKey Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [XAML Kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)

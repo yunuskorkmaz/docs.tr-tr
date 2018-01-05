@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1ef5633c53f537f34a3c72ede89f55b1beac09a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d06889144edd9c2c5d93292e3513f92be55ea035
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Kullanarak bir veri kümesi doldurma ya da daha fazla REF imleçler
 Bu Microsoft Visual Basic örnek doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.  
@@ -56,5 +57,5 @@ Private Sub Button1_Click(ByVal sender As Object, _
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Oracle REF imleçler](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 533176b3859c820d3549e5162dcbe5d80e5fcee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 211a52288010adabb712618cee40dbdd9d8b5262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 Bu konuda ele alınmıştır WCF yazma sağlayan yeni özellikler daha basit uygulamalar.  
@@ -98,7 +99,7 @@ Bu konuda ele alınmıştır WCF yazma sağlayan yeni özellikler daha basit uyg
 ## <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerler  
  Aşağıdaki tabloda, değişen ayarlar ve ek bilgiler nerede açıklanmaktadır.  
   
-|Özellik|Açık|Yeni varsayılan|Daha Fazla Bilgi|  
+|Özellik|Açık|Yeni varsayılan|Daha fazla bilgi|  
 |--------------|--------|-----------------|----------------------|  
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|Bu özellik bir TCP bağlantısı .net kullanarak kendi kimliğini doğrulamak için ne kadar sürebilir belirler çerçeveleme iletişim kuralı. Bir istemci, sunucu kimlik doğrulaması gerçekleştirmek için yeterli bilgiye sahip bazı ilk veri göndermeniz gerekir. Böylece kötü amaçlı kimliği doğrulanmamış istemciler için uzun sunucuya bağlı bağlantılar tutma bu zaman aşımı bilerek ReceiveTimeout (10 dak) daha küçük hale gelir. Varsayılan değer 30 saniyedir. [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * işlemci sayısı|Bu yuva düzeyi özelliği "kabul et" nesne sayısını açıklayan sıraya istekleri. Dinleme biriktirme listesi sıranın dolarsa yeni yuva istekleri kabul edilmeyecek. [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  

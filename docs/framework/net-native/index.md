@@ -19,11 +19,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a79744d99571fa1428da1fade8f63c4c80ae7b6c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]Visual Studio 2015 ve sonraki sürümleri ile birlikte oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Ayrıca yönetilen kod (C# veya Visual Basic) ve bu hedef .NET Framework ve Windows 10 yerel koda yazılan uygulamaları sürümünü otomatik olarak derler.  
@@ -75,19 +76,19 @@ Ancak [!INCLUDE[net_native](../../../includes/net-native-md.md)] birden çok der
   
 -   [.NET yerel ve derleme:](../../../docs/framework/net-native/net-native-and-compilation.md) yerel kod projenize .NET nasıl yerel derler.  
   
--   [Yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md)  
+-   [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
   
-    -   [Yansıma kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+    -   [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
-    -   [Yansıtma API'si başvurusu](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+    -   [Yansıma API'si Başvurusu](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
-    -   [Çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+    -   [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
--   [Serileştirme ve meta veriler](../../../docs/framework/net-native/serialization-and-metadata.md)  
+-   [Serileştirme ve Meta Veriler](../../../docs/framework/net-native/serialization-and-metadata.md)  
   
--   [Windows mağazası uygulamanızı .NET Yerel'e taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
+-   [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)  
   
--   [.NET yerel genel sorun giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
+-   [.NET Native Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET yerel ile ilgili SSS](http://msdn.microsoft.com/vstudio/dn642499.aspx)

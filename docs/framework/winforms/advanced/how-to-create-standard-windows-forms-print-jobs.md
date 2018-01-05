@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c2b0ce30f76fe7f8cbdc156c4a8ff5abffafae10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 69499cdee7803de504e960b08754df33602cfcf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma
 Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> bileşen — daha belirgin olarak <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay. İşlemek için kod yazarak <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay, yazdırma gerekenler ve yazdırmak nasıl belirtebilirsiniz.  
@@ -88,4 +89,4 @@ Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> b
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Printing.PrintDocument>  
- [Windows Forms yazdırma desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [Windows Forms Yazdırma Desteği](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

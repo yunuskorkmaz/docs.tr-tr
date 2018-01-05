@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) stil ve şablon bir uygulama, belge veya kullanıcı arabirimini (UI) Tasarımcısı görsel olarak ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve film şeritleri) ve için bir paketi bakın kendi ürün için özel bir görünüm üzerinde standart hale getirme.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Nasıl yapılır: Bul ControlTemplate oluşturulan öğeleri](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Style>  
@@ -37,5 +38,5 @@ Windows Presentation Foundation (WPF) stil ve şablon bir uygulama, belge veya k
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Gelişmiş](../../../../docs/framework/wpf/advanced/index.md)  
-  [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+  [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)  
+  [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

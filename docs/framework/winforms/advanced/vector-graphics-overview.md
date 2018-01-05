@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vector-graphics-overview"></a>Vektör Grafiklerine Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]çizgiler, dikdörtgenler ve diğer şekiller bir koordinat sistemi çizer. Koordinat sistemleri çeşitli arasından seçebilirsiniz, ancak varsayılan koordinat sistemi kaynağını sol üst köşedeki sağa ve aşağı işaret eden y ekseni işaret eden x eksenine sahip. Piksel varsayılan koordinat sistemi ölçü birimidir.  
@@ -69,5 +70,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: çizim için grafik nesneleri oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)

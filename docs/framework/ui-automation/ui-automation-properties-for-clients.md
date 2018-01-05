@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0c9a007d88189172e6331c6876f2a18f341cd5cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdd748da4bb414726e2eae88dcab59cf60259a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
@@ -114,6 +115,6 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Statik özelliği) Kök <xref:System.Windows.Automation.AutomationElement>.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI otomasyonda önbelleğe alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Sunucu tarafı UI Otomasyon sağlayıcıyı uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+ [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

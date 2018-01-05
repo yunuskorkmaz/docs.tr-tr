@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1364aa4284bcc858a9164f78e14daecc1a3ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
 Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -115,28 +116,28 @@ Bu bölümde, kuyruğa alınan iletişim kullanmayı açıklar [!INCLUDE[indigo1
 ### <a name="sample-code"></a>Örnek kod  
  WCF yazma hakkında adım adım yönergeler için MSMQ kullanan hizmetler aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: WCF uç noktaları iletileri Exchange ve Message Queuing uygulamaları](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Nasıl yapılır: WCF uç noktaları iletileri kuyruğa alınan](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF MSMQ kullanımını gösteren tamamlanmış kod örneği için aşağıdaki konulara bakın:  
   
--   [İşlem gerçekleştirilmiş MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+-   [İşlem Gerçekleştirilmiş MSMQ Bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [Geçici kuyruğa alınmış iletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+-   [Geçici Kuyruğa Alınmış İletişim](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [Teslim edilemeyen iletiler sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+-   [Teslim Edilemeyen İletiler Sırası](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
 -   [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [İki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md)  
+-   [Çift Yönlü İletişim](../../../../docs/framework/wcf/samples/two-way-communication.md)  
   
--   [İşlem yapılan toplu işlem](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+-   [İşlem Yapılan Toplu İşlem](../../../../docs/framework/wcf/samples/transacted-batching.md)  
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [İleti kuyruğa alma ile ileti güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet uç noktaları ve kuyruk işleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [Sıraya alınmış bir uygulamayı Web'de barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
+ [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60c2fc812bc00fcbc27335cf3b9539aacb32c91c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a584e78c15d900bad8bdd3a85abe5e090ed47de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Nasıl yapılır: varlık ilişkileri (WCF Veri Hizmetleri) tanımlayın
 Yeni bir varlıkta eklediğinizde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], yeni varlık ve ilgili varlıklar arasındaki ilişkileri otomatik olarak tanımlanmamış. Oluşturma ve varlık örnekleri arasındaki ilişkileri değiştirmek ve veri hizmeti bu değişiklikleri yansıtmak için istemci kitaplığı sahiptir. Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -42,4 +43,4 @@ Yeni bir varlıkta eklediğinizde [!INCLUDE[ssAstoria](../../../../includes/ssas
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Nasıl yapılır: ekleme, değiştirme ve silme varlıklar](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)
+ [Nasıl yapılır: Varlık Ekleme, Değiştirme ve Silme](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8483c53ed8b35fd3948ec42b14859146afa8ce42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 894d3295b83a1971792e6da845f276be486a4ea5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 Arabirimi
 Özel hata ayıklayıcı bildirimlerini denetler.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetEnableCustomNotification yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Belirtilen türün özel hata ayıklayıcı bildirimleri devre dışı bırakır ve sağlar.|  
+|[SetEnableCustomNotification Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Belirtilen türün özel hata ayıklayıcı bildirimleri devre dışı bırakır ve sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim, mantıksal olarak Icordebugprocess ve Icordebugprocess2 arabirimleri genişletir.  
@@ -50,5 +51,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

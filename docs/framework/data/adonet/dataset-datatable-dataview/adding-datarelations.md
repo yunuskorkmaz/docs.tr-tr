@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31494ee9ac6fc8efc9a041f5d56dbba4a4bddad1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9741f44b68e1cac8c464338f556979d682d9e128
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-datarelations"></a>DataRelation ekleme
 İçinde bir <xref:System.Data.DataSet> birden çok <xref:System.Data.DataTable> nesneleri kullanabileceğiniz <xref:System.Data.DataRelation> diğerine tabloları gidin ve bir ilişkili tablodan alt veya üst satır dönmek için bir tablo ilişkilendirmek için nesneleri.  
@@ -46,5 +47,5 @@ customerOrders.Relations.Add("CustOrders",
  A **DataRelation** de sahip bir **iç içe** özelliği, ayarlandığında **doğru**, üst tablo ilişkili satırdaki iç içe alt tablodan satırları neden olur kullanarak XML öğeleri yazılırken <xref:System.Data.DataSet.WriteXml%2A> . Daha fazla bilgi için bkz: [XML kullanarak bir veri kümesinde](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri kümeleri, DataTable ve DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

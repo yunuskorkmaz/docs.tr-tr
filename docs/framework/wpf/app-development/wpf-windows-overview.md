@@ -39,11 +39,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3323efa3306fd55d7c1d43cbc6eeaaf846e373ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
@@ -506,5 +507,5 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  <xref:System.Windows.MessageBox>  
  <xref:System.Windows.Navigation.NavigationWindow>  
  <xref:System.Windows.Application>  
- [İletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+ [İletişim Kutularına Genel Bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [WPF Uygulaması Derleme](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)

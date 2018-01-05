@@ -13,30 +13,31 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 99c7c0e02d82b9c7d05ab04cd8896449f8a7de89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contracts"></a>Veri Sözleşmeleri
 Bu bölüm veri sözleşmelerinde gösteren örnekleri içeren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Temel veri sözleşmesi](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
+ [Temel Veri Anlaşması](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
  Veri sözleşmesi uygulama gösterir.  
   
- [DataContractSerializer örneği](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
+ [DataContractSerializer Örneği](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
  Gösteren <xref:System.Runtime.Serialization.DataContractSerializer>, genel serileştirme gerçekleştirir ve seri durumdan çıkarma Hizmetleri için veri sözleşmesi sınıfları.  
   
- [Bilinen türler](../../../../docs/framework/wcf/samples/known-types.md)  
+ [Bilinen Türler](../../../../docs/framework/wcf/samples/known-types.md)  
  Bir veri sözleşmesi türetilmiş türler hakkında bilgi belirtmek gösterilmiştir.  
   
- [Nesne başvuruları](../../../../docs/framework/wcf/samples/object-references.md)  
+ [Nesne Başvuruları](../../../../docs/framework/wcf/samples/object-references.md)  
  Sunucu ile istemci arasında başvurular nesneleri geçirmek gösterilmiştir.  
   
- [POCO desteği](../../../../docs/framework/wcf/samples/poco-support.md)  
+ [POCO Desteği](../../../../docs/framework/wcf/samples/poco-support.md)  
  İşaretsiz türleri için seri hale getirme destek gösterir; diğer bir deyişle, kendisine serileştirme özniteliklerini uygulanmamış, türleri bazen başvurduğu düz eski CLR nesnesi (POCO) türleri olarak.  
   
- [Seri hale getirme Bağlayıcısı kullanımı](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  
+ [Serileştirme Bağlayıcısı Kullanımı](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  
  Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Runtime.Serialization.SerializationBinder> , serileştirildiğinde genel bir tür sürümünü değiştirmek için.

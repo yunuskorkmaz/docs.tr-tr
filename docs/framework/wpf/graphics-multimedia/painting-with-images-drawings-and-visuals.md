@@ -23,11 +23,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16c3184c329fa83ddf091326c97d6faf2e2c88f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Görüntüler, Çizimler ve Görsellerle Boyama
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> bir alanı bir görüntü ile boyamak için nesneleri bir <xref:System.Windows.Media.Drawing>, veya bir <xref:System.Windows.Media.Visual>.  
@@ -149,11 +150,11 @@ Birden çok döşeme ile TileBrush bileşenleri
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
- [TileBrush genel bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [WPF Fırçaları Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Görüntü oluşturmaya genel bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Çizim nesnelerine genel bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Opaklık maskeleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [TileBrush’a Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [WPF Fırçalarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [Görüntülemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Çizim Nesnelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Opaklık Maskelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
  [ImageBrush Örneği](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush örneği](http://go.microsoft.com/fwlink/?LinkID=160049)

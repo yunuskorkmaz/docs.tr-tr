@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7f959318c5991fea2df92ff8000e85345fb35ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
 Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bir derlemeyi ya da bir sınıf bir açık kaynak sözlüğü yerine bir derlemeyi hedef türünü belirtmek bir kaynak arama sağlar.  
@@ -87,6 +88,6 @@ Tanımlar ve dış derlemelerden yüklenen kaynaklar tuşları başvurur. Bu, bi
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.ComponentResourceKey>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [Denetim genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Denetim Yazımına Genel Bakış](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

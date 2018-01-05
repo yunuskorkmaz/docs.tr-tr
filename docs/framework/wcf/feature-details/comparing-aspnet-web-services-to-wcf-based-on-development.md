@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]etkinleştirmek için bir ASP.NET uyumluluk modu seçeneği sahip [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlanmış ve yapılandırılmış olması uygulamalar gibi ASP.NET Web Hizmetleri ve davranışlarını taklit etmek. Aşağıdaki bölümlerde ASP.NET Web Hizmetleri karşılaştırın ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne iki teknolojiyi kullanarak uygulamaları geliştirmek için gerekli olduğuna bağlı olarak.  
@@ -761,4 +762,4 @@ public void Receive(Message input)
  ASP.NET yapılandırma dil tek tek Hizmetleri için kültür belirtmenize olanak tanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu yapılandırma ayarı dışında ASP.NET uyumluluk modunda desteklemiyor. Yerelleştirme için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] değil ASP.NET Uyumluluk modunu kullanmak, hizmet türü kültüre özgü derlemeler içine derlemek ve ayrı kültüre özgü uç noktaları her kültüre özgü derlemesi için hizmet.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET Web hizmetlerini amaç temel alarak WCF ve kullanılan standartları karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
 <a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve bir denetim görsel davranışını belirtir. Yeni bir BT vererek, denetimin görünümünü özelleştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, işlevselliğini değiştirmeden varolan bir denetim görünümünü değiştirin. Örneğin, düğmeleri uygulamanızda yerine varsayılan kare şekli yuvarlak yapabileceğiniz ancak düğmesi hala oluşturacağı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
@@ -272,4 +273,4 @@ Bir özel denetim şablonu basılı durumda kullanan bir düğme
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)

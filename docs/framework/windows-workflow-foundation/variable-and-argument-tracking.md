@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bcb67fa4f51318ef7afa69e37d03bb80400539
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c0857830b52b2f71df5d81f4bd232b62b894da63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve bağımsız değişkeni izleme
 Bir iş akışının yürütülmesini izlerken, genellikle veri ayıklamak kullanışlıdır. Bu, bir izleme kayıt post yürütme erişirken ek bağlam sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], herhangi bir görünür değişkeni veya herhangi bir etkinlik izleme kullanarak bir iş akışı kapsamında bağımsız değişkeni ayıklayabilirsiniz. İzleme profilleri veri ayıklamak kolaylaştırır.  

@@ -14,11 +14,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14f516ed32ecbada0b612cf06179e47acf18ddc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem için istemci ve sunucu seçenekleri WS-Atomic işlem veya OleTransactions protokolü kullanarak akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygulayan ancak kullanımını göstermek için işlemleri öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için numaralandırması. Akışlı işlem kapsamı içinde istenen işlem günlüğünü veritabanına yazılır ve Eşgüdümlü istemci işlemi tamamlanana kadar - istemci işlemi tamamlanmazsa devam ederse Web hizmeti işlemi sağlar veritabanı için uygun güncelleştirmeleri iletilmez.  

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91f706b527551bd66bfa18dc926f9453ea9b30fe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-tree-inspection"></a>Etkinlik ağaç denetleme
 Etkinlik ağaç denetleme, uygulama tarafından barındırılan iş akışları incelemek için iş akışı uygulama yazarlar tarafından kullanılır. Kullanarak <xref:System.Activities.WorkflowInspectionServices>iş akışları etkinlikler belirli alt etkinlikler için arama ve bunların özelliklerini olarak numaralandırılmış ve etkinliklerin çalışma zamanı meta verileri, belirli bir süre boyunca önbelleğe alınacağını. Bu konu genel bir bakış sağlar <xref:System.Activities.WorkflowInspectionServices> ve bir etkinlik ağacı incelemek için kullanma.  

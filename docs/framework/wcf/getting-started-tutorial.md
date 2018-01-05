@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programlama deneyimine. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
@@ -40,22 +41,22 @@ Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLU
  Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir hizmet sözleşmesini tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  Nasıl oluşturulacağını açıklar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanıcı tanımlı bir arabirimini kullanarak sözleşme. Sözleşme hizmeti tarafından kullanıma sunulan işlevsellikten tanımlar.  
   
- [Nasıl yapılır: bir hizmet sözleşmesini uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [Nasıl yapılır: Bir Hizmet Anlaşmasını Uygulama](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Bir hizmet sözleşmesini uygulama açıklar. Bir sözleşme tanımlama eklendiğinde, bir hizmet sınıfıyla uygulanmalıdır.  
   
- [Nasıl yapılır: temel bir hizmet barındırma ve çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
+ [Nasıl yapılır: Temel Bir Hizmet Barındırma ve Çalıştırma](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
  Kod içinde hizmet için bir uç nokta yapılandırın ve hizmeti bir konsol uygulamasında barındırma açıklar. Etkin hale gelmesi bir hizmet yapılandırılmalı ve çalışma zamanı ortamı içinde barındırılan. Bu ortam hizmeti oluşturur ve yaşam süresi ve bağlam denetler.  
   
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  Oluşturmak için kullanılan meta verilerini almak açıklar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy sunucudan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu işlem, Visual Studio 2011 Hizmet Başvurusu Ekle işlevini kullanır.  
   
- [Nasıl yapılır: bir istemci yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ [Nasıl yapılır: İstemci Yapılandırma](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Bir WCF yapılandırmayı açıklar istemcisi istemci yapılandırma gerektirir İstemcinin hizmete erişmek için kullandığı uç noktası belirtme.  
   
- [Nasıl yapılır: bir istemci kullanın](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
+ [Nasıl yapılır: İstemci Kullanma](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
  Nasıl kullanılacağını açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy hizmet işlemlerini çağırma.  
   
 ## <a name="reference"></a>Başvuru  
@@ -64,12 +65,12 @@ Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLU
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Communication Foundation örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Temel programlama yaşam döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kavramsal genel bakış](../../../docs/framework/wcf/conceptual-overview.md)  
- [Belgeler için kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- [Windows Communication Foundation nedir](../../../docs/framework/wcf/whats-wcf.md)  
- [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)
+ [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Belgeler için Kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  
+ [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)

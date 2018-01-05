@@ -23,11 +23,14 @@ caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 .NET Framework içindeki bileşik biçimlendirme özelliği, giriş olarak bir nesne listesi ve bir bileşik biçimlendirme dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
@@ -93,11 +96,11 @@ ms.lasthandoff: 11/21/2017
   
 |Tür veya tür kategorisi|Bkz. |  
 |---------------------------|---------|  
-|Tarih ve saat türleri (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Numaralandırma türleri (tüm türleri türetilmiş <xref:System.Enum?displayProperty=nameWithType>)|[Numaralandırma biçimi dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Sayısal türler (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tarih ve saat türleri (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Numaralandırma türleri (tüm türleri türetilmiş <xref:System.Enum?displayProperty=nameWithType>)|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Sayısal türler (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
-|<xref:System.TimeSpan>|[Standart TimeSpan biçim dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
+|<xref:System.TimeSpan>|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Çıkış Yapan Ayraçlar  
  Açma ve kapatma ayraçları bir biçim öğesinin başlangıcı ve bitişi olarak yorumlanır. Sonuç olarak, sabit bir açılış veya kapanış ayracını görüntülemek için bir kaçış dizisi kullanmanız gerekir. Bir açılış ayracı ("{") görüntülemek için sabit metinde iki açılış ayracı ("{{"), veya bir kapanış ayracı ("}") görüntülemek için sabit metinde iki kapanış ayracı ("}}") belirtin. Bir biçim öğesindeki ayraçlar, karşılaşıldıkları sırada sıralı olarak yorumlanır. İç içe ayraçları yorumlama desteklenmez.  
@@ -166,11 +169,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)  
- [Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Standart TimeSpan biçim dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
- [Özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Numaralandırma biçimi dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
+ [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
+ [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)

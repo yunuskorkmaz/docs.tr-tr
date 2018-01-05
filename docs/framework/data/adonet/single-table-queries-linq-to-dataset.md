@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Tek tablo sorgu (LINQ-DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]İş uygulayan veri kaynaklarını sorguları <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. <xref:System.Data.DataTable> Çağırmanız gerekir böylece sınıfı ya da arabirimini uygulamıyor <xref:System.Data.DataTableExtensions.AsEnumerable%2A> kullanmak istiyorsanız, yöntem <xref:System.Data.DataTable> bir kaynak olarak `From` yan tümcesinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu.  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
  Veri türü genel parametresinde belirtilen Not `T` , <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi, temel alınan değerin türü eşleşmelidir veya bir <xref:System.InvalidCastException> oluşturulur. Belirtilen sütun adı aynı zamanda bir sütunun adını uymalıdır <xref:System.Data.DataSet> veya bir <xref:System.ArgumentException> oluşturulur. Sorgu çalıştırıldığında her iki durumda da, çalışma zamanında veri numaralandırma sırasında özel durum oluşur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Geçici tablo sorguları](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Yazılan veri kümeleri sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Genel alan ve SetField yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+ [Tablolar Arası Sorgular](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [Türü Belirtilmiş DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

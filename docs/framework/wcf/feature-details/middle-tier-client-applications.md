@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b73641fcbc881e57465f722d3a0f647938a5e12e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13399243994943ddf853447e2e29f3695702aa35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="middle-tier-client-applications"></a>Orta Katman İstemci Uygulamaları
 Bu konuda kullanan Orta katman istemci uygulamaları için özgü çeşitli sorunları ele alınmıştır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -46,4 +47,4 @@ Bu konuda kullanan Orta katman istemci uygulamaları için özgü çeşitli soru
  Ayrıca, seri hale getirilebilir kullanarak veri türlerini kullanan bu istemciler için başlangıç performansını artırabilirsiniz <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve bu yavaş başlatma performansının düşmesine neden olabilir çalışma zamanında veri türleri için seri hale getirme kodu derleyin. [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) başlangıcından bu uygulamalar için uygulama için derlenmiş derlemelerden gerekli serileştirme kod oluşturarak performansı artırabilir. Daha fazla bilgi için bkz: [nasıl yapılır: Başlangıç saati, WCF istemci XmlSerializer kullanarak uygulamaları geliştirmek](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir WCF istemcisi kullanarak hizmetlere erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+ [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

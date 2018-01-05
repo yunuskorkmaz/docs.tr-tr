@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
 Güvenlik bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servis oluşur iki birincil gereksinimlerini: güvenlik ve yetkilendirme aktarın. (Üçüncü bir gereksinim güvenlik olaylarının denetlenmesini açıklanan [denetim](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Kısaca, Aktarım güvenlik (hem hizmet hem de istemci kimliğini doğrulama) kimlik doğrulama, gizliliği (ileti şifreleme) ve bütünlüğü (oynama algılamak imzalama sayısal) içerir. Yetkilendirme kaynaklarına, örneğin, bir dosyayı okumak yalnızca ayrıcalıklı kullanıcıların erişim denetimdir. Özelliklerini kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], iki birincil gereksinimlerini kolayca uygulanır.  
@@ -113,16 +114,16 @@ Güvenlik bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servis oluşu
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
- [Hizmet kimliği ve kimlik doğrulaması](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Koruma düzeylerini anlama](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Koruma Düzeylerini Anlama](../../../docs/framework/wcf/understanding-protection-level.md)  
+ [Temsilcilik ve Kimliğe Bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)  
  [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)  
- [Güvenlik genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Nasıl yapılır: Windows kimlik bilgilerine sahip bir hizmeti güvenli hale getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Nasıl yapılır: güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Nasıl yapılır: istemci kimlik bilgileri türünü belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Nasıl yapılır: bir hizmette istemci kimliğine bürün](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Nasıl yapılır: güvenlik bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+ [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
+ [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [Nasıl Yapılır: Güvenlik Bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

@@ -18,18 +18,18 @@ ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c46799dea71a727b47a79f9fc108d676b253513
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33b79a00533e4ad8960c7f3cb512aafbe36e50b0
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme (Visual Basic)
 Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları yürütün daha kolay hale getirir. Varsayılan olarak, LINQ sorguları anonim bir tür olarak nesnelerin bir listesini döndürür. Bir sorgu kullanarak belirli bir tür listesini döndürmek belirtebilirsiniz `Select` yan tümcesi.  
   
  Aşağıdaki örnek, bir SQL Server veritabanı sorguları gerçekleştirir ve sonuçları belirli bir adlandırılmış tür olarak projeleri yeni bir uygulama oluşturmak nasıl gösterir. Daha fazla bilgi için bkz: [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) ve [Select tümcesi](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -85,6 +85,6 @@ Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları y
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

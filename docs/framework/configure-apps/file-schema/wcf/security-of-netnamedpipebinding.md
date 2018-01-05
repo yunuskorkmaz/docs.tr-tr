@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: efb6289c63cdc98402336949ef5916e7568775a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fb5d1d3a767a9f4034473baad271c40677cedca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt; &lt;güvenliği&gt;
 Bağlama için güvenlik ayarlarını tanımlar.  
@@ -66,9 +67,9 @@ Bağlama için güvenlik ayarlarını tanımlar.
  <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>  
- [Hizmetler ve istemcileri güvenli hale getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bir kimlik bilgisi türü seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

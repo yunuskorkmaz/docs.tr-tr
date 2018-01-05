@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 964a4d051600621d581e05dcf6b518b2766e2750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ-DataSet sorguları hata ayıklama
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]hata ayıklama destekleyen [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktalarını ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme gibi. Ancak, sorgu yürütme hata ayıklama sırasında dikkate almanız gereken bazı yan etkileri olan ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve devam et kullanmanın bazı sınırlamalar vardır. Bu konuda ele alınmıştır özgü hata ayıklama yönlerini [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] karşılaştırıldığında olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  

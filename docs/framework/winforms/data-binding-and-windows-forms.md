@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20753aab569bf90b7db2f062050c7e185d638fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
 Windows Forms'ta yalnızca geleneksel veri kaynaklarına bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapısına. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerleri dizisi bağlayabilirsiniz.  
@@ -65,6 +66,6 @@ Windows Forms'ta yalnızca geleneksel veri kaynaklarına bağlayabilirsiniz, anc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Binding>  
- [Windows Forms veri bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [BindingSource bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)
+ [Windows Forms Veri Bağlama](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [BindingSource Bileşeni](../../../docs/framework/winforms/controls/bindingsource-component.md)

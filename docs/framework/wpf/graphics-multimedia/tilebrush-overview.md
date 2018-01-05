@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
 <xref:System.Windows.Media.TileBrush>nesneleri sağlar, çok yüksek bir alanı bir görüntü ile nasıl boyanır üzerinden denetiminin <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> bir alanı boyar.  
@@ -136,8 +137,8 @@ Döşemenin TileMode'u TileBrush bileşenleri
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Freezable nesnelere genel bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Freezable Nesnelerine Genel Bakış](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [ImageBrush Örneği](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush örneği](http://go.microsoft.com/fwlink/?LinkID=160049)

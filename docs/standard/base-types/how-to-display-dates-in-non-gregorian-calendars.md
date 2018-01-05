@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a79860091e549dcf4eaa7090947f9506eceb6119
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 <xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu tarih ve saat değerinin çağırma yani `ToString` yöntemi, tarihin dize gösterimini görüntüler ve saati, tarih ve saat olsa bile Gregoryen takvim, başka bir takvim kullanılarak oluşturulmuş. Bu tarih ve saat değeri ile Farsça takvim oluşturmak için iki farklı şekilde kullanır, ancak hala çağırdığında Gregoryen takvim bu tarih ve saat değerleri görüntüler aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek belirli bir takvim tarihi görüntüleme için iki yaygın olarak kullanılan ancak yanlış teknikleri yansıtır.  
@@ -98,4 +101,4 @@ ms.lasthandoff: 10/18/2017
  Kodu, csc.exe veya vb.exe kullanarak komut satırında derleyin. Kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] içinde derlemek için, bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme işlemlerini gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+ [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85a980191e727ec1a20cca618504d1d9cbc2c277
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Hata ayıklama ve Yardım bilgileri özellikleri belirten bir [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] hizmet.  
@@ -81,6 +82,6 @@ Hata ayıklama ve Yardım bilgileri özellikleri belirten bir [!INCLUDE[indigo1]
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
  <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Özel durumlar ve hataları işleme](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Hizmet hata ayıklama davranışı](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [Özel Durum ve Hataları İşleme](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
+ [Hizmet Hata Ayıklama Davranışı](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

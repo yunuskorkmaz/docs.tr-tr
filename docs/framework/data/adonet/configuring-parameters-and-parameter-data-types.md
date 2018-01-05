@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama sağlayan saklı yordamlar için değerleri geçirmek için kullanın. Komut metni parametre girişini yürütülebilir kod olarak değil, sabit değer olarak kabul edilir. Bu, bu sunucuda güvenlik ihlalleri güvenlik SQL deyimi içine bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı koruma yardımcı olur.  
@@ -206,7 +207,7 @@ parameter.Direction = ParameterDirection.Output;
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

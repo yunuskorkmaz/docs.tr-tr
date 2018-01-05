@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Federe Senaryolarda Güven Protokollerini Karıştırma
 Aynı güven sürümüne sahip değil Federasyon istemciler bir hizmeti ve bir güvenlik belirteci hizmeti (STS) ile iletişim senaryolar olabilir. WSDL içerebilir hizmeti bir `RequestSecurityTokenTemplate` STS daha farklı sürümlerini WS-Trust öğeleri onaylama işlemi. Böyle durumlarda, bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] istemci dönüştürür alınan WS-Trust öğeleri `RequestSecurityTokenTemplate` eşleşecek şekilde STS sürümü güvenen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]yalnızca standart bağlamaları için eşleşmeyen tanıtıcıları güven sürümleri. Tarafından tanınan tüm standart algoritma parametreleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standart bağlama parçasıdır. Bu konuda açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] davranışa çeşitli ayarları hizmeti ve STS arasında güven.  

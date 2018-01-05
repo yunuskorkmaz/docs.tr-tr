@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Zamanlama Olaylarına Genel Bakış
 Bu konu, üzerinde kullanılabilir beş zamanlama olayları kullanmayı açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> nesneleri.  
@@ -87,6 +88,6 @@ Bu konu, üzerinde kullanılabilir beş zamanlama olayları kullanmayı açıkla
  İçin kaydettiğinizde <xref:System.Windows.Media.Animation.Timeline.Completed> bir zaman çizelgesi olayda, örneğin, gerçekte söyleyen kaydetmek için sistem <xref:System.Windows.Media.Animation.Clock.Completed> oluşturulan her zaman çizelgesi saati olay. Kodda, önce bu olay için kaydetmeniz gerekir <xref:System.Windows.Media.Animation.Clock> için bu zaman çizelgesi; oluşturulan Aksi takdirde, bildirim almazsınız. Bu otomatik olarak gerçekleşir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; ayrıştırıcı önce olayı için otomatik olarak kaydeder <xref:System.Windows.Media.Animation.Clock> oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Animasyon ve zamanlama sistemi özeti](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animasyon ve Zamanlama Sistemine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Zamanlama Davranışlarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

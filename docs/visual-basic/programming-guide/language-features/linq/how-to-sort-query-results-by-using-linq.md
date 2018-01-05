@@ -20,18 +20,18 @@ ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
 caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 956eb92ca802b478fac9452cc98b5dd2e2fbcd4a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5e034548a61b91eededd8dc21445beb7ac68007e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama (Visual Basic)
 Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları yürütün daha kolay hale getirir.  
   
  Aşağıdaki örnek, bir SQL Server veritabanı sorguları gerçekleştirir ve sonuçları birden çok alan göre kullanarak sıralar yeni bir uygulama oluşturmak nasıl gösterir `Order By` yan tümcesi. Her alan için sıralama düzeni artan veya azalan sırayla düzenleyin. Daha fazla bilgi için bkz: [Order By yan tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu konudaki örnekler Northwind örnek veritabanı kullanır. Northwind örnek veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web sitesi. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -83,6 +83,6 @@ Dil ile tümleşik sorgu (LINQ) Veritabanı bilgilerine erişmek ve sorguları y
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorguları](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ-SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

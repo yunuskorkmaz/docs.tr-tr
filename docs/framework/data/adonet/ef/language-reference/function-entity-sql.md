@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 40c8f218238492bbbc4af543aa6f9a635454b359
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a195656d02d3b7e26ad4f0d8715fc8bf5663750b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="function-entity-sql"></a>İŞLEVİ (varlık SQL)
 Varlık SQL sorgu komutunu kapsamında bir işlevi tanımlar.  
@@ -86,5 +87,5 @@ FUNCTION function-name
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Varlık SQL dili](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+ [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Entity SQL Dili](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

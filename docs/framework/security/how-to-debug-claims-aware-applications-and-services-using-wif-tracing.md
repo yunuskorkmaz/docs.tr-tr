@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 36cb961345cb724597d8e48ec3be6cbb84df4632
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Nasıl yapılır: Talep kullanan uygulama ve WIF izlemeyi kullanma hizmetleri hata ayıklama
 ## <a name="applies-to"></a>Uygulandığı öğe:  
@@ -117,4 +118,4 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-items"></a>İlgili öğeler  
   
--   [İzlemeleri görüntüleme bağıntılı için hizmet izleme görüntüleyicisini kullanma ve sorun giderme](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](http://msdn.microsoft.com/library/aa751795.aspx)

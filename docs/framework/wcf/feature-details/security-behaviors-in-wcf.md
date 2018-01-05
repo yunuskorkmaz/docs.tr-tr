@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. ([!INCLUDE[crabout](../../../../includes/crabout-md.md)] davranışları genel olarak, bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
@@ -228,5 +229,5 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Denetleme](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

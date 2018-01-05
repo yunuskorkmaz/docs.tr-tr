@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 134f42da7e4366d4d5bb971aaf26b2a3b57a4c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
 Bu konu ile çizmek nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesneleri. A <xref:System.Windows.Shapes.Shape> bir tür <xref:System.Windows.UIElement> ekrana bir şekil çizme olanak sağlar. Kullanıcı Arabirimi öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri içinde kullanılabilir <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim.  
@@ -229,8 +230,8 @@ myPolygon.StrokeThickness = 2;
  Önceki örneklerde, tek bir dönüştürme her şekil nesnesine uygulandı. Bir şekle (veya başka bir UI öğesine) çoklu dönüşüm uygulamak için kullanmak bir <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

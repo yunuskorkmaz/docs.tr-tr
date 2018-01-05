@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd30b2d62d3ecf21027c0225490da6f31113cb07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef174f457114003e5b2783b50040424d9a96945c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 Birlikte çalışabilirlik [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri ve [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Hizmetleri elde edilebilir iki teknolojiyi kullanılarak uygulanan Hizmetleri WS uygun sağlayarak-ı temel Profil 1.1 belirtimini. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web WS uygun Hizmetleri-ı temel Profil 1.1 birlikte çalışabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanarak istemcileri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan bir bağlamayı, <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -66,4 +67,4 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak üzere yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+ [Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 Yapılandırma tarafından oluşturulan izleme verileri toplamak için izlemeyi etkinleştirme yanı sıra [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], program aracılığıyla içinde kullanıcı kodu izleri yayma. Bu şekilde, tanılama amaç için daha sonra tekrar kullanmanıza izleme verileri önceden oluşturabilirsiniz. Bu konuda, bunu yapmak nasıl ele alınmıştır.  
@@ -151,4 +152,4 @@ Hata bağıntı grafik görünümü
  Etkinlikleri tanımlama ve etkinlik kimliği yayma bize uç noktalar arasında doğrudan hata bağıntı gerçekleştirmesini sağlar. Bu şekilde, biz hata kök nedenini daha hızlı bir şekilde bulabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlemeyi genişletme](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+ [İzlemeyi Genişletme](../../../../../docs/framework/wcf/samples/extending-tracing.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e2670132bc6af1c914efa17cfbb98fd6577bd1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e42f6ef0f2416822f42d2c73032631965b9bb097
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter parametreleri
 <xref:System.Data.Common.DbDataAdapter> Verileri almak ve veri kaynağına verileri güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği, veri kaynağından; verileri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağında değişiklikler. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` olarak adlandırılan, hangi veri değişikliklerinin yapıldığı bağlı olarak <xref:System.Data.DataTable>. Satır eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncellenen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler için geçirilir `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  
@@ -63,7 +64,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|Parametre sütun özgün değeri kullanır.|  
 |`Proposed`|Önerilen bir değer parametresini kullanır.|  
   
- `SqlClient` Sonraki bölümde kod örneğinde tanımlayan bir parametre için bir <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> , `CustomerID` sütun olarak kullanılan bir `SourceColumn` iki parametre için: `@CustomerID` (`SET CustomerID = @CustomerID`), ve `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). `@CustomerID` Parametresi güncelleştirmek için kullanılan **CustomerID** geçerli değeri sütuna `DataRow`. Sonuç olarak, `CustomerID` `SourceColumn` ile bir `SourceVersion` , `Current` kullanılır. *@OldCustomerID*  Parametresi geçerli satır veri kaynağındaki tanımlamak için kullanılır. İçinde eşleşen sütun değeri bulduğundan `Original` satır aynı sürümü `SourceColumn` (`CustomerID`) ile bir `SourceVersion` , `Original` kullanılır.  
+ `SqlClient` Sonraki bölümde kod örneğinde tanımlayan bir parametre için bir <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> , `CustomerID` sütun olarak kullanılan bir `SourceColumn` iki parametre için: `@CustomerID` (`SET CustomerID = @CustomerID`), ve `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). `@CustomerID` Parametresi güncelleştirmek için kullanılan **CustomerID** geçerli değeri sütuna `DataRow`. Sonuç olarak, `CustomerID` `SourceColumn` ile bir `SourceVersion` , `Current` kullanılır.  *@OldCustomerID*  Parametresi geçerli satır veri kaynağındaki tanımlamak için kullanılır. İçinde eşleşen sütun değeri bulduğundan `Original` satır aynı sürümü `SourceColumn` (`CustomerID`) ile bir `SourceVersion` , `Original` kullanılır.  
   
 ## <a name="working-with-sqlclient-parameters"></a>SqlClient parametreleri ile çalışma  
  Aşağıdaki örnekte nasıl oluşturulduğunu gösteren bir <xref:System.Data.SqlClient.SqlDataAdapter> ve <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> için <xref:System.Data.MissingSchemaAction.AddWithKey> veritabanından ek şema bilgileri almak için. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, Ve <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> özellikler kümesini ve bunların karşılık gelen <xref:System.Data.SqlClient.SqlParameter> eklenen nesneleri <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> koleksiyonu. Yöntem bir `SqlDataAdapter` nesnesi.  
@@ -175,9 +176,9 @@ adapter.Fill(customers, "Customers");
 >  Bir parametre adı için bir parametre sağlanmazsa, parametre parametresinin bir artımlı varsayılan adı verilen*N* *,* "Parametre1" ile başlayan. Parametresi kaçınmanızı öneririz*N* bir parametre adı sağladığında, sağladığınız ad mevcut bir varsayılan parametre adı çakışıyor çünkü adlandırma kuralı `ParameterCollection`. Sağlanan adı zaten varsa, özel durum oluşur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataAdapters ve DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Komutları ve parametreleri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Veri kaynakları ile DataAdapters güncelleştiriliyor](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [Saklı yordamlar verilerle değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

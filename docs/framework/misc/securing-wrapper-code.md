@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 70df7cb2f87fc2a6616d0818acdde6974bcce4d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -110,4 +111,4 @@ ms.lasthandoff: 10/18/2017
 -   Türleri ve uyguladıkları arabirimler. Bu bağlantı talepleri tutarlı bir şekilde kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

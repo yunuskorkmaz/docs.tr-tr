@@ -14,11 +14,12 @@ caps.latest.revision: "52"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 561e451656cd725a732ea727badeb47087252b9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 769869fb00c5cc8352ebe8c3952b3d7a9aa75abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-anonymous"></a>İleti Güvenliği Anonim
 İleti güvenliği anonim örnek nasıl uygulandığını gösteren bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ileti düzeyi güvenlik herhangi bir istemci kimlik doğrulaması kullanan ancak sunucunun X.509 sertifikası kullanılarak kimlik doğrulaması gerektiren uygulama. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örnek. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

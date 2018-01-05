@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f26ab394ea94b27257b6d0b662f3a78f3e68ca99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, ve <xref:System.Windows.Media.RadialGradientBrush> düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile boyamak için nesneleri.  
@@ -183,6 +184,6 @@ RadialGradientBrushes farklı GradientOrigin, merkezi, RadiusX ve RadiusY ayarla
  <xref:System.Windows.Media.SolidColorBrush>  
  <xref:System.Windows.Media.LinearGradientBrush>  
  <xref:System.Windows.Media.RadialGradientBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Fırça dönüşümüne genel bakış](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Grafik işleme katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Fırça Dönüşümüne Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [Grafik İşleme Katmanları](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)

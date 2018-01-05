@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e76e1d814df5946d0e0f946cbc8d55507a07c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
@@ -248,5 +249,5 @@ Bir özel denetim şablonu kullanan bir onay kutusu
  [!code-vb[VSMCustomControl#ControlLogic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ControlTemplate oluşturarak varolan denetiminin görünümünü özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)  
- [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+ [ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)  
+ [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)

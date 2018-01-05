@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9237ed7467e87cd3e6ba72418c6964ce918751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5b26e63b7671e3ea37c150055f9aa646ec8293c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretim sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem Initiative önemli bir unsurdur [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Standart mühendislik işlemler ile birlikte güvenli kod teslimini kolaylaştırmak için kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization, measurability ve ek yapı ile en iyi yöntemler birleştiren on aşamadan oluşur dahil olmak üzere:  
@@ -101,8 +102,8 @@ Güvenilir bilgi işlem, güvenli kod üretim sağlamaya yönelik bir Microsoft 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik](../../../docs/framework/wpf/security-wpf.md)  
- [WPF kısmi güven güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [WPF Kısmi Güven Güvenliği](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [WPF Güvenlik Stratejisi - Platform Güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
  [Güvenilir bilgi işlem](http://www.microsoft.com/mscorp/twc/default.mspx)  
  [Uygulama iş parçacığı modelleme](http://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)  
  [Güvenlik yönergeleri: .NET Framework 2.0](http://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)

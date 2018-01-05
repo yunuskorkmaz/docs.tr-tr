@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a60d74bdf3343d02eaf912ac7700f36a649f659c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xnull-markup-extension"></a>x:Null İşaretleme Uzantısı
 Belirtir `null` XAML üyesi için bir değer olarak.  
@@ -56,5 +57,5 @@ Belirtir `null` XAML üyesi için bir değer olarak.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.DependencyProperty.UnsetValue>  
- [XAML genel bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Biçimlendirme uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [XAML'ye Genel Bakış (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

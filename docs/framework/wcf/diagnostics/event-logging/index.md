@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a2d856aad069a5e532ba893185b6222ee1db0f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Windows Olay Günlüğü'nde iç olayları izler.  
@@ -57,5 +58,5 @@ ms.lasthandoff: 12/02/2017
  "Daha fazla bilgi" tıkladığınızda, Olay Görüntüleyicisi'nde bir olayı görüntülerken, Olay Görüntüleyicisi'ni Internet üzerinden bilgi gönderebilir. Daha fazla bilgi için Olay Görüntüleyicisi'ni yardımına bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Etkinlik genel başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+ [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

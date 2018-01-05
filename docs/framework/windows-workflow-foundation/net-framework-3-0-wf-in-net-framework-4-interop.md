@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Itanium tabanlı sistemler için .NET Framework 4 ile birlikte çalışma etkinlik .NET Framework 3.0 WF etkinlikleri kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] içinde (WF 3.5) etkinlik bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. WF 3 etkinlik tek yaprak etkinlik veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve kalıcılığı [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik ortaya bağlamında [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütüyor iş akışı örneği.  
@@ -64,4 +65,4 @@ ms.lasthandoff: 12/02/2017
 4.  WF 3 özel bir aktivite içinde WF 3 iş akışı çalışma zamanı gibi aynı şekilde tam olarak birlikte çalışabilirlik ortamı içindeki iş akışı kuyrukları kullanma verilere erişebilir. Özel Etkinlik kodu değişiklik gerekmez. Konak üzerinde sıraya alınan WF 3 iş akışı kuyruğuna sürdürme tarafından verilerdir bir <xref:System.Activities.Bookmark>. Yer işareti dize biçiminde adıdır <xref:System.IComparable> iş akışı sıra adı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework 3.0 veya .NET Framework 3.5 etkinliği bir .NET Framework 4.5 iş akışında kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+ [.NET Framework 4.5 İş Akışında .NET Framework 3.0 veya .NET Framework 3.5 Etkinliği Kullanma](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

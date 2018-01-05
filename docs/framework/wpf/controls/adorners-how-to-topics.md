@@ -15,21 +15,22 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 328ecec80670e112019364d6749c4c54a58ddf48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f9c38e8cb466963d229b96e21f8149b7a4afaa7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adorners-how-to-topics"></a>Donatıcılar ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner çerçevesi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Donatıcı uygulama](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [Bir öğeye donatıcı bağlama](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [Bir panelinin alt ekleyin](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [Bir öğeden donatıcı kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [Bir öğeden tüm donatıcıları kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [Donatıcı Uygulama](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
+ [Öğeye bir Donatıcı Bağlama](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
+ [Panelin Alt Öğelerini Donatma](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
+ [Öğeden Donatıcıyı Kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
+ [Öğeden Tüm Donatıcıları Kaldırma](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

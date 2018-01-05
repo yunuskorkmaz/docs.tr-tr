@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f5439975adcb6329ef072ef5a2bc98155e56c033
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc95b8474cdf9398d5b6705cce1b98772e5add98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
 Genel türler hakkında bilgi tıpkı diğer türleri hakkında bilgi elde edilir: inceleniyor tarafından bir <xref:System.Type> genel türünü temsil eden nesne. İlkeye genel bir tür listesini içeren farktır <xref:System.Type> genel tür parametreleri temsil eden nesne. Bu bölümdeki ilk yordam genel türler inceler.  
@@ -134,6 +135,6 @@ Genel türler hakkında bilgi tıpkı diğer türleri hakkında bilgi elde edili
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Type>  
  <xref:System.Reflection.MethodInfo>  
- [Yansıma ve genel türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Tür bilgilerini görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Genel türler](../../../docs/standard/generics/index.md)
+ [Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
+ [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Genel Türler](../../../docs/standard/generics/index.md)

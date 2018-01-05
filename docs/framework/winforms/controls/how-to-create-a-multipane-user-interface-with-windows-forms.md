@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Çok Bölmeli Kullanıcı Arabirimi Oluşturma
 Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacak bir **klasörü** listesinde, bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenlemenin, formun denetimleriyle chiefly yerleştirme aracılığıyla elde edilir.  
@@ -188,5 +189,5 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Nasıl yapılır: Tasarımcı kullanarak Windows formları ile çok bölmeli kullanıcı arabirimi oluşturma](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+ [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ile Çok Bölmeli bir Kullanıcı Arabirimi Oluşturma](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

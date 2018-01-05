@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 237dbe83fa52bb967d2f2429fb2beb021c084f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10f2e27a2f68dd784c6fce66ae63873436923d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
 <a name="introduction"></a>Bu konu, çıkış değerlerini oluşturmak için geometrik yol kullanmanıza olanak yol animasyonları tanıtır. Yol animasyonları karmaşık yollarda nesneleri döndürme ve taşıma için kullanışlıdır.  
@@ -63,9 +64,9 @@ ms.lasthandoff: 11/21/2017
   
 |Özellik türü|Karşılık gelen yol animasyon sınıfı|Örnek|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Yol (çift animasyon) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Yol (Matris Animasyonu) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Yol (noktası animasyon) boyunca bir nesneyi animasyon ekleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Çift Animasyon)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> oluşturur <xref:System.Windows.Media.Matrix> gelen değerleri kendi <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. İle kullanıldığında bir <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> bir yol boyunca bir nesneyi taşıyabilirsiniz. Ayarlarsanız <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> özelliği <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> için `true`, ayrıca yol Eğriler boyunca nesneyi döndürür.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yol animasyonu örneği](http://go.microsoft.com/fwlink/?LinkID=160028)  
- [Biçimlendirme sözdizimi yolu](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Yol animasyon nasıl yapılır konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Animasyon genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Yol İşaretleme Söz Dizimi](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
+ [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Özellik Animasyon Tekniklerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

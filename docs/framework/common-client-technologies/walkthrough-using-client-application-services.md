@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma
 Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulamasının nasıl oluşturulacağını açıklar.  
@@ -157,8 +158,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
      **Güvenlik Kurulum Sihirbazı'nı** görünür ve görüntüler **Hoş Geldiniz** adım.  
   
-3.  
-              **İleri**'ye tıklayın.  
+3.  **İleri**'ye tıklayın.  
   
      **Erişim yöntemi seçin** adımı görüntülenir.  
   
@@ -170,8 +170,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
 6.  Seçin **etkinleştirmek için bu Web sitesi rolleri**.  
   
-7.  
-              **İleri**'ye tıklayın. **Yeni rol oluşturma** formu görüntülenir.  
+7.  **İleri**'ye tıklayın. **Yeni rol oluşturma** formu görüntülenir.  
   
 8.  İçinde **yeni rol adı** metin kutusunda, `manager` ve ardından **Rol Ekle**.  
   
@@ -181,8 +180,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
   
      Yeni değer görünür **mevcut rolleri** tablo.  
   
-10. 
-              **İleri**'ye tıklayın.  
+10. **İleri**'ye tıklayın.  
   
      **Yeni kullanıcı Ekle** adımı görüntülenir.  
   
@@ -549,9 +547,9 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
  Uygulamanızın güvenliğini artırmak için uygulama ve sunucu dağıtmadan önce sınamanız emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İstemci uygulama hizmetleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [İstemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Nasıl yapılır: istemci uygulama hizmetlerini yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [İstemci Uygulama Servisleri](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [İstemci Uygulama Servislerine Genel Bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Nasıl Yapılır: İstemci Uygulama Servislerini Yapılandırma](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [ASP.NET Web sitesi yönetim aracı](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Oluşturma ve uygulama hizmetleri veritabanına SQL Server için yapılandırma](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [İzlenecek yol: ASP.NET uygulama hizmetlerini kullanma](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

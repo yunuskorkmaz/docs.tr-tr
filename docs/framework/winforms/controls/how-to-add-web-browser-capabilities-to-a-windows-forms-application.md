@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4bc8592dd821fdef68c2b77242d9d3f2f2b776bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b061b62c782cf511d26d165d5b8bdf0c9c9486b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasına Web Tarayıcısı Yetenekleri Ekleme
 İle <xref:System.Windows.Forms.WebBrowser> denetim, uygulamanıza Web tarayıcısı işlevselliği ekleyebilirsiniz. Denetim varsayılan olarak bir Web tarayıcısı gibi çalışır. İlk URL ayarlayarak yükledikten sonra <xref:System.Windows.Forms.WebBrowser.Url%2A> özelliği gezinmenizi köprüleri tıklayarak veya geri taşımak ve gezinti geçmişinde iletmek için klavye kısayollarını kullanma. Varsayılan olarak, ek tarayıcısı işlevselliği sağ kısayol menüsünden erişebilirsiniz. Yeni belgeler denetimini üzerine bırakarak da açabilirsiniz. <xref:System.Windows.Forms.WebBrowser> Denetimi de sahip çeşitli özellikleri, yöntemleri ve kullanıcı arabirimi özellikleri Internet Explorer'da bulunan benzer uygulamak için kullanabileceğiniz olaylar.  
@@ -48,4 +49,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.WebBrowser>  
- [WebBrowser denetimi](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+ [WebBrowser Denetimi](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed1b4dd4816f67bb98472b7150f3da3bd5b927b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2c9b23472cdeee15788d496fae160c3e7d2de20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver Arabirimi
 Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), bir tür kitaplığı dosya yolunu çözümler.  
@@ -32,7 +33,7 @@ Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbex
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Basit bir tür kitaplığı adı, tam yolunu döndürerek çözümler.|  
+|[ResolveTypeLib Yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Basit bir tür kitaplığı adı, tam yolunu döndürerek çözümler.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,5 +45,5 @@ Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbex
  **.NET framework sürümü:** 4, 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tlbexp yardımcı işlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx işlevi](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

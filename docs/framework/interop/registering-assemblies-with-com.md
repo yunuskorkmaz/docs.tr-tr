@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c04511772e83129be8042ba5758dc647f82243c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1473fa07b57dcd19ea192db6cdb0a395f119b159
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
 Adlı bir komut satırı aracını çalıştırabilirsiniz [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) kaydetmek veya com ile kullanmak için bir derleme kaydını kaldırma COM istemcileri .NET Framework sınıf şeffaf bir şekilde kullanabilmeniz için Regasm.exe Sistem kayıt defterine sınıfı hakkında bilgi ekler. <xref:System.Runtime.InteropServices.RegistrationServices> Sınıfı eşdeğer işlevsellik sağlar.  
@@ -52,7 +53,7 @@ Adlı bir komut satırı aracını çalıştırabilirsiniz [derleme Kayıt Arac�
  İçin `InprocServer32` alt anahtarı Mscoree.dll başvuru ortak dil çalışma zamanı yönetilen nesnesi oluşturur belirtmek için geleneksel COM tür kitaplığı yerine görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Nasıl yapılır: com'dan .NET türlerine başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
  [Bir .NET nesnesini çağırma](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
  [COM erişim için bir uygulama dağıtma](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)

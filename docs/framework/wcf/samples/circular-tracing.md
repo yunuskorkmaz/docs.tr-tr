@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21a455c0fcb7a6b4164da6f7fdc7efaa007273ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4942e7e23b3cddd0f1c5bd3be8195ceeb190ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="circular-tracing"></a>Döngüsel İzleme
 Bu örnek uygulama döngüsel arabellek İzleme dinleyicisi ortaya koyar. Üretim Hizmetleri için yaygın bir senaryo Hizmetleri, uzun bir süre için kullanılabilir olmasını ve izleme günlüğü düşük bir düzeyde etkin değil. Bu hizmetler çok disk alanı kullanabilir. Bir hizmet sorunlarını giderirken, izleme günlüğü en son verileri bir sorunu çözmek için geçerlidir. Bu örnek yalnızca en son izlemeleri içinde yapılandırılabilir miktarda veri kadar diskte tutulur döngüsel arabellek İzleme dinleyicisi uygulaması gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve özel İzleme dinleyicisi içerir.  

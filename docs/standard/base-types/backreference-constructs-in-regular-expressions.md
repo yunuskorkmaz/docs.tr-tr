@@ -21,11 +21,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Normal İfadelerdeki Yeniden Başvuru Yapıları
 Yeniden başvurular yinelenen karakter veya bir dize içindeki alt dizenin tanımlamak için kolay bir yol sağlamak. Örneğin, giriş dizesi birden çok tekrarı rastgele bir alt dizeyi içeriyorsa, birinci yakalama grubu ile eşleşen ve ardından sonraki oluşumlarını alt dizeyi eşleştirmek için bir yeniden başvuru kullanın.  
@@ -129,4 +132,4 @@ Yeniden başvurular yinelenen karakter veya bir dize içindeki alt dizenin tanı
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Normal ifade dili - hızlı başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+ [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

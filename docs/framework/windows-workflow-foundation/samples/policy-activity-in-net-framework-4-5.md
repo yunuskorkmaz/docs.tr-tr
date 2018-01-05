@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68c81b81ac8070cff539b52c75e1cd7ffb3e54b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 66968503d2f481647d999854358a246b4d963475
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 ilke etkinlik
 Policy4 etkinlik verir [!INCLUDE[wf2](../../../../includes/wf2-md.md)] içinde [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> kullanılacak nesneleri [!INCLUDE[wf2](../../../../includes/wf2-md.md)] içinde [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan. Bu etkinlik kullanarak oluşturma ve WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 kural Windows Workflow Foundation, bir parçası olarak dahil edilen altyapısı Lütfen Windows Workflow Foundation kurallar altyapısı giriş okuyun. Geçiş hakkında daha fazla bilgi için WF kuralları [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], Lütfen okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

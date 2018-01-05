@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f6a1d205a0e8443d7dc81da53855a1b7920def
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9928b6a63f30e111d0e84ae6d83b730ae15eedce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongly-typed-extensions-sample"></a>Güçlü Yazılmış Uzantılar Örneği
 Örnek kullanır <xref:System.ServiceModel.Syndication.SyndicationFeed> amacıyla sınıfının örneği. Ancak, bu örnekte gösterilen desenleri tüm uzantısını verileri destekleyen dağıtım sınıflar ile kullanılabilir.  

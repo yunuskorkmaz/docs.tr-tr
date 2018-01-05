@@ -18,11 +18,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ca710fcd4d5ded93bdc1f47b3c8a523f3afa05f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c374281af80d4546368d33b09a63b4fdb654f16c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-text-pattern"></a>UI Otomasyon Metin Düzeni
 > [!NOTE]
@@ -31,13 +32,13 @@ ms.lasthandoff: 11/21/2017
  Bu konu, genel bakışlar içerir ve yardımcı olmak üzere nasıl yapılır konuları metin öğe programlamada Başlarken [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyon textpattern öğesine genel bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern ve katıştırılmış nesnelere genel bakış](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
+ [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [TextPattern ve Katıştırılmış Nesnelere Genel Bakış](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
  [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [İstemciler için UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+ [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

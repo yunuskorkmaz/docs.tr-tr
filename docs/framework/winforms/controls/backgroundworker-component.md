@@ -22,32 +22,33 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d83ff69053a71626d0bf9a844d9e94235080d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker Bileşeni
 `BackgroundWorker` Bileşen form veya bir işlem zaman uyumsuz olarak çalıştırmak için denetim sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [BackgroundWorker bileşenine genel bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ [BackgroundWorker Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
  Açıklar `BackgroundWorker` bileşeni, uygulamanızın ana kullanıcı Arabirimi iş parçacığından farklı bir iş parçacığı üzerinde zaman uyumsuz olarak ("arka planda"), zaman alıcı işlemlerini yürütmek için olanak sağlar.  
   
- [İzlenecek yol: bir işlemi arka planda çalışan](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
+ [İzlenecek yol: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  Nasıl kullanılacağı ortaya `BackgroundWorker` uzun süren işlem ayrı bir iş parçacığı üzerinde çalıştırmak için Tasarımcısı'nda bileşen.  
   
- [Nasıl yapılır: bir işlemi arka planda çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  Nasıl kullanılacağı ortaya `BackgroundWorker` uzun süren işlem ayrı bir iş parçacığı üzerinde çalıştırmak için bileşen.  
   
- [İzlenecek yol: Arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
+ [İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
  Zaman uyumsuz olarak matematiksel hesaplamalar yapan Tasarımcısı'nı kullanarak bir uygulama oluşturur.  
   
- [Nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  Zaman uyumsuz olarak matematiksel hesaplamalar yapan bir uygulama oluşturur.  
   
- [Nasıl yapılır: arka planda dosya indirme](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
+ [Nasıl Yapılır: Arka Planda Dosya İndirme](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
  Nasıl kullanılacağı ortaya `BackgroundWorker` ayrı bir iş parçacığı üzerinde bir dosyayı indirmek için bileşen.  
   
 ## <a name="reference"></a>Başvuru  
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/22/2017
  İçin verileri tutar türünü açıklayan <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olay.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Olay tabanlı zaman uyumsuz desene genel bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  Ne zaman uyumsuz desen birden çok iş parçacıklı uygulamalar avantajları birçok karmaşık sorunları birden çok iş parçacıklı tasarımında yapısında gizleme çalışırken kullanılabilir hale getirir açıklar.

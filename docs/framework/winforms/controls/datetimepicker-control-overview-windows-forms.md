@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a97eecc43614c84867e9dbdd527dbebd7dfd426e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> kullanıcının tarihleri veya saatleri listesinden tek bir öğe seçmesine izin verir. Bir tarihi temsil etmek için kullanıldığında, iki parça halinde görüntülenir: metin ve listenin yanındaki aşağı oka tıkladığınızda görüntülenen bir kılavuz temsil edilen bir tarihle aşağı açılan liste. Kılavuz benzer <xref:System.Windows.Forms.MonthCalendar> birden çok tarihi seçmek için kullanılan denetim. Daha fazla bilgi için <xref:System.Windows.Forms.MonthCalendar> denetlemek için bkz: [MonthCalendar denetimine genel bakış](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  
@@ -34,5 +35,5 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> kullanıcının tarihle
  Denetimin <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> ve <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> özellikleri tarihler ve saatler aralığını belirler. <xref:System.Windows.Forms.DateTimePicker.Value%2A> Özelliği, geçerli tarih ve saat Denetimi ayarlanmış içerir. Ayrıntılar için bkz [nasıl yapılır: ayarlama ve Windows Forms DateTimePicker denetimi ile tarihleri dönmek](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Tarafından belirlenen dört biçimlerde değerleri görüntülenen <xref:System.Windows.Forms.DateTimePicker.Format%2A> özelliği: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, veya <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Özel bir biçim seçtiyseniz ayarlamalısınız <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> uygun bir dize özelliği. Ayrıntılar için bkz [nasıl yapılır: Windows Forms DateTimePicker denetimi ile özel biçimde tarih görüntüleme](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows Forms DateTimePicker denetimi ile özel biçimde tarih görüntüleme](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
- [Nasıl yapılır: tarihleri Windows Forms DateTimePicker denetimi ayarlama ve döndürme](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+ [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

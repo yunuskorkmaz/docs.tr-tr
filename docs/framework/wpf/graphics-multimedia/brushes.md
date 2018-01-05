@@ -18,22 +18,23 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ece5049f6749315e393aa0aad4e002fcb416ba7c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9af3fcfc2e910a61e9ac1b999863e40bc26400da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes"></a>Fırçalar
 Aşağıdaki konular nasıl kullanılacağı açıklanmıştır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] "ekran içeriğini boyamak için" Fırçalar  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF Fırçaları Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Fırça dönüşümüne genel bakış](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Opaklık maskeleri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Boyama düz renklerle ve gradyan genel bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush genel bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [WPF Fırçalarına Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [Fırça Dönüşümüne Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [Opaklık Maskelerine Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [TileBrush’a Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -50,6 +51,6 @@ Aşağıdaki konular nasıl kullanılacağı açıklanmıştır [!INCLUDE[TLA#tl
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

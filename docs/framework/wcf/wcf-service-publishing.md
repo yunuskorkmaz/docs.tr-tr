@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gerçekten uygulamayı test amacıyla bir üretim ortamında dağıtmak için Test istemcisi. Son dağıtım plana yürütme önce kullanabileceğiniz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] doğrulamak için Yayımlama hizmeti, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  
@@ -81,6 +82,6 @@ ms.lasthandoff: 12/02/2017
  IIS Yönetici hesabında çalıştıran gerektirdiğinden yayımlama yerel IIS Yönetici ayrıcalığı gerektirir. Yönetici ayrıcalığı olmayan bir kullanıcı açarsa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet yayımlama, IIS bir hedef konum olarak kullanılabilir değil. Dosya sistemi veya FTP sitesi için yayımlama yönetici ayrıcalığı çalışır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF Visual Studio şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
- [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
  [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

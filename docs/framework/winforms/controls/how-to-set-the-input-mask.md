@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş Maskesini Ayarlama
 Maskelenmiş metin kutusu denetimi, kabul etme veya reddetme kullanıcı girişi için bir bildirim temelli söz dizimi destekleyen bir Gelişmiş metin kutusu denetimi ' dir. Mask özelliği ayarlayarak, uygulamanızda herhangi bir özel doğrulama mantık yazmadan izin verilen kullanıcı girişini belirtebilirsiniz. Daha fazla bilgi için Açıklamalar bölümüne bakın <xref:System.Windows.Forms.MaskedTextBox> sınıfı.  
@@ -72,4 +73,4 @@ Maskelenmiş metin kutusu denetimi, kabul etme veya reddetme kullanıcı girişi
      Maske girildiğini **maskesi** özelliğinde **özellikleri** penceresi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: MaskedTextBox denetimiyle çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+ [İzlenecek Yol: MaskedTextBox Denetimiyle Çalışma](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

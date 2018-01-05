@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43fe1f9fa5189a3dfd5f700660f0528592382510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-text"></a>Performansı İyileştirme: Metin
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sunu özelliklerini kullanarak zengin metin içeriği için destek içerir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak üç katmanı metin oluşturma işlemi:  
@@ -171,12 +172,12 @@ MouseEnter üzerinde köprü
  En iyi paragraf özelliği, <xref:System.Windows.Documents.FlowDocument> nesnesi, böylece boşluk mümkün olduğunca eşit dağıtılmış paragrafları yerleştirir. Varsayılan olarak, en uygun paragraf özelliği devre dışıdır. Nesnenin ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> özelliğine `true`. Ancak, bu özelliği etkinleştirmek, uygulama performansını etkiler. Gerekmedikçe en uygun paragraf özelliği kullanmamanız önerilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Uygulama performansı en iyi duruma getirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Uygulama performansını planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Donanım yararlanarak](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Düzen ve tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Nesne davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Uygulama kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Veri bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Diğer performans önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+ [WPF Uygulama Performansını İyileştirme](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Uygulama Performansını Planlama](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Donanımdan Yararlanma](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Düzen ve Tasarım](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Nesne Davranışı](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Uygulama Kaynakları](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Veri Bağlama](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Diğer Performans Önerileri](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

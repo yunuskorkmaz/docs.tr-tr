@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71fa29fc36292bb6620ab458785abaabc749c38d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05dd1e06c2cba31bca1282e8d409ab1b5610d1dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Nasıl yapılır: Tasarımcı ile ImageList' Görüntüleri Ekleme veya Kaldırma
 Görüntüleri ekleyebilirsiniz bir <xref:System.Windows.Forms.ImageList> bileşen birkaç farklı yolu. İle ilişkili akıllı etiket kullanarak görüntüleri çok hızlı bir şekilde ekleyebilirsiniz <xref:System.Windows.Forms.ImageList>, ya da diğer bazı özellikleri ayarlıyorsanız <xref:System.Windows.Forms.ImageList>, daha kullanışlı Özellikler penceresini görüntülerle eklemek fark edebilirsiniz. Kod kullanarak görüntüleri de ekleyebilirsiniz. Kod görüntülerle ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms ImageList bileşeni ile görüntüleri ekleme veya kaldırma](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Genellikle, doldurmak <xref:System.Windows.Forms.ImageList> denetimi ile ilişkilidir, ancak bu zorunlu değildir önce görüntülerle bileşen.  
@@ -48,6 +49,6 @@ Görüntüleri ekleyebilirsiniz bir <xref:System.Windows.Forms.ImageList> bileş
 4.  İçinde **görüntüleri Koleksiyonu Düzenleyicisi** tıklatın **Ekle** veya **kaldırmak** eklemek veya görüntüleri listesinden kaldırmak için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [İzlenecek yol: Windows akıllı etiketleri kullanarak ortak görevleri gerçekleştirme Forms denetimleri](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- [ImageList bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [ImageList Bileşeni](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

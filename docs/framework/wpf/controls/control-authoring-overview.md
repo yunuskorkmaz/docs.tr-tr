@@ -19,11 +19,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a3722fc9cb5b4e992ddf695696fa1eb40c6ad4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca474b4a63ed907c73306e7b7f1fb39c948f12d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetim modeli yeni bir denetim oluşturmak için gereken önemli ölçüde azaltır. Ancak, bazı durumlarda, hala özel bir denetim oluşturmak gerekebilir. Bu konuda bir özel denetim ve farklı denetim yazma modellerini oluşturma gereksiniminizi en aza özellikleri ele alınmıştır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konu ayrıca yeni bir denetimin nasıl oluşturulacağını gösterir.  
@@ -280,5 +281,5 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
- [WPF içinde URI'leri paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)
+ [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)

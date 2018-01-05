@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 *Açıklama ağaç* türleri hiyerarşisidir (ile başlayan <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> sınıfı), bir hizmetin her açıdan birlikte açıklanmaktadır. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Web Hizmetleri Açıklama Dili (WSDL), XML Şeması Tanım Dili (XSD) ve ilke onaylamalarını (meta verileri) ve istemcilerin bağlanmak ve hizmeti kullanmak için kullandığı hizmet hakkında yayımlamak için geçerli bir hizmet çalışma zamanı oluşturmak için kullandığı bir açıklama ağacı çeşitli kod ve yapılandırma dosyası gösterimlerini açıklama ağaç değerleri oluşturur.  
@@ -124,4 +125,4 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Açıklama ağaç değerler meta verileri dönüştürülür bkz [ServiceDescription ve WSDL başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceDescription ve WSDL başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+ [ServiceDescription ve WSDL Başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

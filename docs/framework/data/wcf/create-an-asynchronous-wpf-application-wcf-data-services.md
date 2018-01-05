@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52e952abc6f1b47d9caf7a5583bb591c51a70dde
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e922ad20f9954a17f63f42559877f0a05a2ba1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Nasıl yapılır: zaman uyumsuz Windows Presentation Framework uygulama (WCF Veri Hizmetleri) oluşturma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bir Windows Presentation Framework (WPF) uygulama kullanıcı Arabirimi öğesi için bir veri hizmetinden alınan veriler bağlayabilirsiniz. Daha fazla bilgi için bkz: [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). Uygulama veri hizmet isteğine yanıt beklenirken yanıt vermeye devam sağlar zaman uyumsuz bir şekilde veri hizmeti karşı işlemleri de çalıştırabilirsiniz. Silverlight uygulamaları, veri hizmeti zaman uyumsuz olarak erişmek için gereklidir. Daha fazla bilgi için bkz: [zaman uyumsuz işlemleri](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

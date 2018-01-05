@@ -17,35 +17,36 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42762812c9d27073fac34b20df5011b386f05740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b29c63ea9dfbd69863aad1afa712444405be763e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
 Bu bölümde, profil oluşturma API'si kullanan yönetilmeyen yapılar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Cor_prf_assembly_reference_ınfo yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
+ [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)  
  Ortak dil çalışma zamanı bir derleme başvurusu kapatma ilerlemesi gerçekleştirirken düşünmelisiniz bir başvuru derleme hakkında bilgi sağlar.  
   
- [Cor_prf_code_ınfo yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
+ [COR_PRF_CODE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)  
  Yerel kod bellekte bir bitişik bloğunu temsil eder.  
   
- [Cor_prf_ex_clause_ınfo yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
+ [COR_PRF_EX_CLAUSE_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md)  
  Bir özel durum yan tümcesi örneği ve ilişkili çerçevesini ilgili bilgileri depolar.  
   
- [Cor_prf_functıon yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
+ [COR_PRF_FUNCTION Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-structure.md)  
  Derlenmiş sürüm kimliği Kimliğini birleştiren bir işlev benzersiz bir gösterimini sağlar.  
   
- [Cor_prf_functıon_argument_ınfo yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
+ [COR_PRF_FUNCTION_ARGUMENT_INFO Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)  
  Soldan sağa sırayla bir işlevin bağımsız değişkenler temsil eder.  
   
- [Cor_prf_functıon_argument_range yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
+ [COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)  
  İşlev bağımsız değişkenleri bitişik bellek soldan sağa sırayla depolanan bloğunu temsil eder.  
   
- [Cor_prf_gc_generatıon_range yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
+ [COR_PRF_GC_GENERATION_RANGE Yapısı](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
  Çöp toplama yapılıyor bir bellek aralığı (yani, blok) açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
@@ -53,10 +54,10 @@ Bu bölümde, profil oluşturma API'si kullanan yönetilmeyen yapılar açıklan
   
  COR_IL_MAP  
   
- [Profil oluşturmaya genel bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+ [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   
- [Profil oluşturma genel statik işlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
   
- [Profil oluşturma numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+ [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

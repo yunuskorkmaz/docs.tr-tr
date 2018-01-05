@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]taşımalar iletileri aktarmak için iki modunu destekler:  
@@ -57,4 +58,4 @@ ms.lasthandoff: 12/02/2017
  Akışı arabelleğe aktarımı modundan değiştirme TCP ve adlandırılmış kanal taşımaları yerel kanal şeklini değiştirir. Arabelleğe alınan aktarımları için yerel kanal şeklin olduğu <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Yerel kanal akış aktarımları için olan <xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>. Bunlar kullanan mevcut bir uygulamayı aktarım modunda değiştirme taşımaları doğrudan (diğer bir deyişle, bir hizmet sözleşmesini üzerinden değil) beklenen kanal şekli kanal fabrikaları ve dinleyiciler için değiştirilmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: akışı etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

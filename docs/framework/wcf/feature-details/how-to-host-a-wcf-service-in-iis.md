@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 934b5d16cdea7026e0e7874cf04ab53c8fbdf58e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti Barındırma
 Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Internet Information Services (IIS) barındırılan hizmet. Bu konu, IIS ile bilgi sahibiyseniz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenme varsayar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS bkz [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449). A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS ortamında çalışan bir hizmete işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi IIS özellikleri tüm avantajlarından yararlanır. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak herhangi bir barındırma kod uygulamanın bir parçası yazılması gerektirmez. IIS ile yalnızca bir HTTP aktarma barındırma kullanabilirsiniz.  
@@ -86,8 +87,8 @@ Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Services'te barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
- [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
+ [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
+ [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

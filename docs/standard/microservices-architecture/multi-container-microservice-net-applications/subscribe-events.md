@@ -4,26 +4,36 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay
 keywords: "Docker, mikro, ASP.NET, kapsayıcı"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: fe17b53a39ff2964cd60183e291e2936d3ba28df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 97035f297743626c5d9b306712cefdbd8a086c51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
 Olay veri yolu kullanarak ilk mikro almak istediği olaylara abone olma adımdır. Alıcı mikro yapılmalıdır.
 
-Aşağıdaki basit kod her alıcı mikro hizmet başlatılırken uygulamak gereken gösterir (diğer bir deyişle, başlangıç sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Örneğin, basket.api mikro hizmet ProductPriceChangedIntegrationEvent iletileri abone olması gerekir. Bu ürün fiyat mikro hizmet değişikliklerin farkında yapar ve bu ürünün kullanıcının sepetteki ise değişiklik hakkında kullanıcıyı uyarmak olanak tanır.
+Aşağıdaki basit kod her alıcı mikro hizmet başlatılırken uygulamak gereken gösterir (diğer bir deyişle, `Startup` sınıfı) şekilde bu olayları, ihtiyaçlarını kaydeder. Bu durumda, `basket.api` mikro hizmet abone olmak için gereksinim duyduğu `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletileri. 
+
+Örneğin, abone olduğunda `ProductPriceChangedIntegrationEvent` Sepeti mikro hizmet herhangi farkında yapan olay Ürün Fiyat değiştirir ve bu ürünün kullanıcının sepetteki ise değişiklik hakkında kullanıcıyı uyarmak etmenizi sağlar.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent>(
-    ProductPriceChangedIntegrationEventHandler);
+
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+                   ProductPriceChangedIntegrationEventHandler>();
+
+eventBus.Subscribe<OrderStartedIntegrationEvent, 
+                   OrderStartedIntegrationEventHandler>();
+
 ```
 
 Bu kod çalıştıktan sonra abone mikro hizmet RabbitMQ kanallardan dinleme. Her ileti türü ProductPriceChangedIntegrationEvent geldiğinde kodu kendisine geçirilen ve olay işleyen olay işleyiciyi çağırır.
@@ -83,7 +93,10 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-Bu durumda, basit bir CRUD mikro hizmet kaynak mikro hizmet olduğuna göre bu kodu bir Web API denetleyicisi sağ yerleştirilir. Daha gelişmiş mikro içinde özgün veriler kaydedildikten sonra onu CommandHandler sınıfında, doğru uygulanabilir.
+Bu durumda, basit bir CRUD mikro hizmet kaynak mikro hizmet olduğuna göre bu kodu bir Web API denetleyicisi sağ yerleştirilir. 
+ 
+CQRS yaklaşımlar kullanırken gibi daha gelişmiş mikro onu içinde uygulanabilir `CommandHandler` sınıfı, içinde `Handle()` yöntemi. 
+
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Kararlılık ve dayanıklılık olay yoluna yayımlarken tasarlama
 
@@ -152,57 +165,60 @@ Daha anlaşılır olması için aşağıdaki örnek kod tek bir parça tüm işl
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult>
-    UpdateProduct([FromBody]CatalogItem productToUpdate)
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
 {
-    var catalogItem = await _catalogContext.CatalogItems
-        .SingleOrDefaultAsync(i => i.Id == productToUpdate.Id);
+  var catalogItem = 
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
+                                                               productToUpdate.Id); 
+  if (catalogItem == null) return NotFound();
 
-    if (catalogItem == null) return NotFound();
+  bool raiseProductPriceChangedEvent = false; 
+  IntegrationEvent priceChangedEvent = null; 
 
-    bool raiseProductPriceChangedEvent = false;
+  if (catalogItem.Price != productToUpdate.Price) 
+          raiseProductPriceChangedEvent = true; 
 
-    IntegrationEvent priceChangedEvent = null;
+  if (raiseProductPriceChangedEvent) // Create event if price has changed
+  {
+      var oldPrice = catalogItem.Price; 
+      priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
+                                                                  productToUpdate.Price, 
+                                                                  oldPrice); 
+  }
+  // Update current product
+  catalogItem = productToUpdate; 
 
-    if (catalogItem.Price != productToUpdate.Price)
-        raiseProductPriceChangedEvent = true;
+  // Just save the updated product if the Product's Price hasn't changed.
+  if !(raiseProductPriceChangedEvent) 
+  {
+      await _catalogContext.SaveChangesAsync();
+  }
+  else  // Publish to event bus only if product price changed
+  {
+        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // with a local transaction
+        using (var transaction = _catalogContext.Database.BeginTransaction())
+        {
+           _catalogContext.CatalogItems.Update(catalogItem); 
+           await _catalogContext.SaveChangesAsync();
 
-    if (raiseProductPriceChangedEvent) // Create event if price has changed
-    {
-        var oldPrice = catalogItem.Price;
-        priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-            productToUpdate.Price,
-            oldPrice);
-    }
+           // Save to EventLog only if product price changed
+           if(raiseProductPriceChangedEvent) 
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
 
-    // Update current product
-    catalogItem = productToUpdate;
-    // Achieving atomicity between original DB and the IntegrationEventLog
-    // with a local transaction
+           transaction.Commit();
+        }   
 
-    using (var transaction = _catalogContext.Database.BeginTransaction())
-    {
-        _catalogContext.CatalogItems.Update(catalogItem);
+      // Publish the intergation event through the event bus
+      _eventBus.Publish(priceChangedEvent); 
 
-        await _catalogContext.SaveChangesAsync();
+      integrationEventLogService.MarkEventAsPublishedAsync(
+                                                priceChangedEvent); 
+  }
 
-        // Save to EventLog only if product price changed
-        if(raiseProductPriceChangedEvent)
-            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
-        transaction.Commit();
-   }
-
-   // Publish to event bus only if product price changed
-
-   if (raiseProductPriceChangedEvent)
-   {
-       _eventBus.Publish(priceChangedEvent);
-       integrationEventLogService.MarkEventAsPublishedAsync(
-           priceChangedEvent);
-   }
-
-   return Ok();
+  return Ok();
 }
+
 ```
 
 ProductPriceChangedIntegrationEvent tümleştirme olay oluşturulduktan sonra özgün etki alanı işlemi (güncelleştirme katalog öğesi) depolar işlem Kalıcılık olayın olay günlüğüne tabloda de içerir. Bu tek bir işlem yapar ve, her zaman gönderilen olay iletileri olup olmadığını denetlemek kullanamazsınız.
@@ -306,6 +322,9 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
+-   **Çatallanmış NServiceBus (belirli yazılım) kullanarak eShopOnContainers**
+    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+
 -   **Olay tabanlı Mesajlaşma**
     [*http://soapatterns.org/design\_desen/olay\_güdümlü\_Mesajlaşma*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
@@ -316,7 +335,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Sınırlanmış bağlamları arasında iletişim**
-    [*https://msdn.microsoft.com/en-us/library/jj591572.aspx*](https://msdn.microsoft.com/en-us/library/jj591572.aspx)
+    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Nihai tutarlılık**
     [*https://en.wikipedia.org/wiki/Eventual\_tutarlılık*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -331,7 +350,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Olay kaynak Hizmeti'nden Tanıtımı**
-    [*https://msdn.microsoft.com/en-us/library/jj591559.aspx*](https://msdn.microsoft.com/en-us/library/jj591559.aspx)
+    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Olay deposu veritabanı**. Resmi sitesi.
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -346,7 +365,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
      [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Veri tutarlılığı Primer**
-    [*https://msdn.microsoft.com/en-us/library/dn589800.aspx*](https://msdn.microsoft.com/en-us/library/dn589800.aspx)
+    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Saling rick. CAP Teoremi: "Her şeyi farklı Bulut ve Internet olmasının"**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
@@ -354,7 +373,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Eric Brewer. CAP üzeri on iki yıllık: "Kurallar" nasıl değiştiğini**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Dış (DTC) işlemlere katılan** (MSMQ) [ *https://msdn.microsoft.com/en-us/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/en-us/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Dış (DTC) işlemlere katılan** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure hizmet veri yolu. Aracılı mesajlaşmayı: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

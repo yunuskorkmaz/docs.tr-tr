@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 160a9597ff22ffc044cf3a35d345ba7d7e1606e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea9e12140e351bb5cc2b51ac2efca8a24e94bf2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
 <xref:System.Runtime.InteropServices> Ad alanı, üç kategoride birlikte çalışmaya özgü özniteliklerin sağlar: olanlar sizin tarafınızdan tasarım zamanında uygulanan, olanlar COM birlikte çalışma Araçlar ve API'ler tarafından dönüştürme işlemi sırasında uygulanan ve bu da siz veya COM birlikte çalışma tarafından uygulanan.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices>  
- [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Öznitelikleri](../../../docs/standard/attributes/index.md)  
- [Birlikte çalışma için .NET türlerini niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [COM için derlemeyi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Öznitelikler](../../../docs/standard/attributes/index.md)  
+ [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
+ [COM için Bütünleştirilmiş Kod Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

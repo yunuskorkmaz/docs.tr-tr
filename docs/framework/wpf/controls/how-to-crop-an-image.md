@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6de7914a1226381da763b3348d1794453fe93b02
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 084e3dc7fad2bcb3b7ab787302f55c824ff3739d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-crop-an-image"></a>Nasıl yapılır: Görüntü Kırpma
 Bu örnek kullanarak bir görüntü kırpma gösterilmektedir <xref:System.Windows.Media.Imaging.CroppedBitmap>.  

@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
 Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir Windows hizmeti tarafından barındırılan hizmet. Senaryo barındırma uzun süreli olduğundan seçeneği yönetilen Windows hizmeti tarafından etkin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinleştirildi, değil ileti güvenli bir ortamda Internet Information Services (IIS) dışında barındırılan hizmeti. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  
@@ -145,7 +146,7 @@ Bu konu oluşturmak için gereken temel adımlarda özetler bir [!INCLUDE[indigo
  "Kendi kendine barındırma" seçeneği gibi bazı barındırma kod uygulamanın bir parçası yazılması barındırma ortamı Windows hizmetini gerektirir. Hizmeti bir konsol uygulaması olarak uygulanır ve kendi barındırma kodu içerir. Windows İşlem Etkinleştirme Hizmeti (WAS) barındıran Internet Information Services (IIS) gibi diğer ortamlarda barındırma, geliştiricilerin yazmak için ise gerekli değildir kod barındırma.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)  
- [Yönetilen bir uygulamada barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
- [Barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
+ [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)  
+ [Yönetilen Bir Uygulamada Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
  [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)

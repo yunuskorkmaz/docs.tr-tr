@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a98e57d325fc7fd9413babb45d235cbb353a0c86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 <xref:System.Windows.Forms.DataGridView>üç sıralama modları sütuna sahip. Her sütun için sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> numaralandırma değerleri.  
@@ -75,6 +76,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>  
- [Windows Forms DataGridView denetiminde verileri sıralama](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
- [Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+ [Windows Forms DataGridView Denetimindeki Verileri Sıralama](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunlar için Sıralama Modlarını Ayarlama](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 616751adfd14e2f07de764b37d684ecdc276847b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analytic-trace-event-reference"></a>Çözümleme İzleme Etkinliği Başvurusu
 Aşağıdaki tabloda tanımlayıcıları olay düzeyleri tanımlar ve iletileri ilişkili [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analitik izleme.  
@@ -59,7 +60,7 @@ Aşağıdaki tabloda tanımlayıcıları olay düzeyleri tanımlar ve iletileri 
 |[301 - UserDefinedErrorOccurred](../../../../../docs/framework/wcf/diagnostics/etw/301-userdefinederroroccurred.md)|Hata|Ad: '%1', başvuru: '%2', yük: %3.|Sorun giderme, ServiceModel UserEvents, ögesi, EndToEndMonitoring|  
 |[302 - UserDefinedWarningOccurred](../../../../../docs/framework/wcf/diagnostics/etw/302-userdefinedwarningoccurred.md)|Uyarı|Ad: '%1', başvuru: '%2', yük: %3.|Sorun giderme, ServiceModel UserEvents, ögesi, EndToEndMonitoring|  
 |[303 - UserDefinedInformationEventOccured](../../../../../docs/framework/wcf/diagnostics/etw/303-userdefinedinformationeventoccured.md)|Bilgiler|Ad: '%1', başvuru: '%2', yük: %3.|Sorun giderme, ServiceModel UserEvents, ögesi, EndToEndMonitoring|  
-|[401 - StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme|  
+|[401- StopSignPostEvent](../../../../../docs/framework/wcf/diagnostics/etw/401-stopsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme|  
 |[402 - StartSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/402-startsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme|  
 |[403 - SuspendSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/403-suspendsignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme|  
 |[404 - ResumeSignpostEvent](../../../../../docs/framework/wcf/diagnostics/etw/404-resumesignpostevent.md)|Bilgiler|Etkinlik sınırı.|Sorun giderme|  
@@ -368,7 +369,7 @@ Aşağıdaki tabloda tanımlayıcıları olay düzeyleri tanımlar ve iletileri 
 |[5605 - SessionCookieReadingSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5605-sessioncookiereadingsuccess.md)|Ayrıntılı|Oturum tanımlama bilgisi okuma oturum belirtecinden başarılı oldu.|Güvenlik|  
 |[5606 - PrincipalSettingFromSessionTokenStarted](../../../../../docs/framework/wcf/diagnostics/etw/5606-principalsettingfromsessiontokenstarted.md)|Ayrıntılı|Oturum belirteci asıl ayarından başlatıldı.|Güvenlik|  
 |[5607 - PrincipalSettingFromSessionTokenSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5607-principalsettingfromsessiontokensuccess.md)|Ayrıntılı|Oturum belirteci asıl ayarından başarılı oldu.|Güvenlik|  
-|[57393 - appDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Bilgiler|AppDomain boşaltma. AppDomain.FriendlyName %1, işlemadı %2, işlem kimliği %3.|Altyapı|  
+|[57393 - AppDomainUnload](../../../../../docs/framework/wcf/diagnostics/etw/57393-appdomainunload.md)|Bilgiler|AppDomain boşaltma. AppDomain.FriendlyName %1, işlemadı %2, işlem kimliği %3.|Altyapı|  
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|Bilgiler|Bir özel durum işleme.|Altyapı|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Hata|Beklenmeyen bir hata oluştu. Uygulamalar, bu hatayı işlemeye çalışmamalısınız. Tanılama amacıyla İngilizce bu ileti hata ile ilişkilidir: %1.|Altyapı|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|Uyarı|Bir özel durum atma. Kaynağı %1.|Altyapı|  

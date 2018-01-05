@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
 SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616) ziyaretçisi komut ağacı temsil eden ifade ağaç olarak uygulanır. Nesil tek geçişte ifade ağacına yapılır.  
@@ -425,4 +426,4 @@ IsEmpty(inut) = Not Exists(input)
  Uzantı diğer adlar ve sütunlar için benzersiz adlar oluşturmak için n henüz kullanılmamış küçük diğer adı olduğu < existing_name > _n kullanın. Tüm diğer adları genel listesini basamaklı yeniden adlandırır gereksinimini artırır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek Sağlayıcısı'nda SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+ [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

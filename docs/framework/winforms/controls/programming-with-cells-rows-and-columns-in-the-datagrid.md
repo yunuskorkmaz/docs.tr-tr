@@ -19,32 +19,33 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama
 Bu bölümde hücre, satır ve sütun nesneleri içeren çeşitli programlama görevleri gösteren konuları sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: araç ipuçlarını ayrı hücrelere bir Windows Forms DataGridView denetiminde ekleme](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellFormatting> farklı araç ipuçları için tek tek hücreler sağlamak için olay.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminin bir hücresindeki değişikliklere dayalı olarak özel eylem gerçekleştirme](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olaylar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde bantları yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Bantları Yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  Türündeki nesnelerle program açıklar <xref:System.Windows.Forms.DataGridViewBand>, satırları ve sütunları için temel tür değil.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde satırları yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırları Yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Türündeki nesnelerle program açıklar `DataGridViewRow`.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunları yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Yönlendirme](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Türündeki nesnelerle program açıklar `DataGridViewColumn`.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  İle programlamayı açıklamaktadır `DataGridViewImageColumn` sınıfı.  
   
 ## <a name="reference"></a>Başvuru  
@@ -61,9 +62,9 @@ Bu bölümde hücre, satır ve sütun nesneleri içeren çeşitli programlama g�
  Başvuru belgelerine sağlar <xref:System.Windows.Forms.DataGridViewColumn> sınıfı.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel sütun, satır ve hücre özellikleri Windows Forms DataGridView denetiminde](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Yaygın olarak açıklayan konulara hücre, satır ve sütun özelliklerinin kullanılmasını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [DataGridView denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Windows Forms DataGridView denetiminde sütun türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+ [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Windows Forms DataGridView Denetiminde Sütun Türleri](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri yanı sıra Windows formlarına ActiveX ve özel denetimler ekleyebilirsiniz. Gereksinim duyduğunuz Denetim burada listelenen bulamazsanız, ayrıca kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz: ihtiyaç [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  

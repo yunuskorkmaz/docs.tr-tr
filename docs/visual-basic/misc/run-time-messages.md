@@ -11,11 +11,11 @@ ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic çalışma zamanı iletileri
 Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluşan hata iletileri çalışma zamanında.  
@@ -24,11 +24,11 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Bir sınırlayıcı Nothing veya boş bir dize olamaz](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
- [Çift tırnak işareti ayrılmış alanlar EscapeQuote True olarak ayarlandığı için geçerli açıklama belirteci değildir](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
+ [EscapeQuote True olarak ayarlandığında çift tırnak işareti ayrılmış alanlar için geçerli bir açıklama belirteci değildir](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
   
  [Bir günlük bu makinede bu adla zaten oluşturuldu](../../visual-basic/misc/a-log-has-already-been-created-with-this-name-on-this-machine.md)  
   
- [Bir özellik veya yöntem çağrısı bağımsız değişken olarak ya da dönüş değeri olarak özel bir nesneye başvuru içeremez](../../visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)  
+ [Özellik veya yöntem çağrısı, bir özel nesneye bağımsız değişken ya da dönüş değeri olarak başvuru içeremez](../../visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)  
   
  [Başlangıç formu belirtilmedi](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
@@ -40,7 +40,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Geçersiz bir ad için olay günlüğünü belirtildi](../../visual-basic/misc/an-invalid-name-was-specified-for-the-event-log.md)  
   
- [Tek örnek başlatmak için gereken bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
+ [Tek örnek başlatmak için gerekli olan bir işletim sistemi kaynağı alınamadığından, beklenmeyen bir hata oluştu](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
   
  [Başka bir olay günlüğü bu ada sahip bir kaynak zaten kaydettirildi](../../visual-basic/misc/another-event-log-has-already-registered-a-source-with-this-name.md)  
   
@@ -124,7 +124,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Otomasyon nesnesi varsayılan bir değere sahip değil](../../visual-basic/misc/automation-object-does-not-have-a-default-value.md)  
   
- [Hatalı DLL çağrı standardı](../../visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)  
+ [Hatalı DLL çağırma kuralı](../../visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)  
   
  [Hatalı dosya modu](../../visual-basic/language-reference/error-messages/bad-file-mode.md)  
   
@@ -152,7 +152,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Başlangıç değeri türü dönüştürülemiyor '\<type1 >', sınırı değeri '\<type2 >' ve adım değeri '\<Tür3 >' ortak bir türü için](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
- [ActiveX bileşeni oluşturulamıyor](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
+ [ActiveX Bileşeni oluşturulamıyor](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
  [Bir kayıt defteri kovanı silinemiyor](../../visual-basic/misc/cannot-delete-a-registry-hive.md)  
   
@@ -172,7 +172,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Sınıfı\<classname >' System.Collections.ICollection arabirimini uygulamıyor](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
- [Sınıf Otomasyonu desteklemiyor veya beklenen arabirimi desteklemiyor](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
+ [Sınıf Otomasyonu veya beklenen arabirimi desteklemiyor](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
  [Yerel makinede kaydedilmemiş sınıfı](../../visual-basic/misc/class-not-registered-on-local-machine.md)  
   
@@ -194,7 +194,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [DataBits 0'dan büyük olmalıdır](../../visual-basic/misc/databits-must-be-greater-than-0.md)  
   
- [Aygıt g/ç hatası](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
+ [Cihaz G/Ç hatası](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
   
  [Aygıt kullanılamıyor](../../visual-basic/misc/device-unavailable.md)  
   
@@ -244,11 +244,11 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Dosya bilgileri yazma açıkken sorgulanamıyor](../../visual-basic/misc/file-information-cannot-be-queried-while-open-for-writing.md)  
   
- [Dosya bir bayt dizisine okunamayacak çok büyük](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
+ [Dosya bir bayt dizisine okunamayacak kadar büyük](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
  [Dosya adı veya sınıf adı (Visual Basic) Otomasyon işlemi sırasında bulunamadı](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
- [Dosya bulunamadı (Visual Basic çalışma zamanı hatası)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
+ [Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
  [Dosya adı tarafından belirtilen dosya FileEncoding tarafından belirtilen kodlama kullanmaz](../../visual-basic/misc/file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding.md)  
   
@@ -304,7 +304,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Yöntem veya veri üyesi bulunamadı](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.Log boş disk alanı miktarı belirlenemiyor](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
  [Adlandırılmış bağımsız değişkeni '\<argumentname >' birden çok kez belirtildi](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
@@ -364,7 +364,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Dize alana (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
- [Taşma (Visual Basic çalışma zamanı hatası)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
+ [Taşma (Visual Basic Çalışma Süresi Hatası)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
  [Yol '\<yol adı >' bulunamadı](../../visual-basic/misc/path-pathname-not-found.md)  
   
@@ -388,7 +388,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Özellik dizisi dizini geçerli değil](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
- [Özelliğin let yordamı tanımlı değil ve get yordamı bir nesne döndürmedi](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
+ [Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
   
  [Özellik bulunamadı](../../visual-basic/language-reference/error-messages/property-not-found.md)  
   
@@ -462,7 +462,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [TextFieldParser endline karakterden ayırıcıları desteklemiyor](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
- [TextFieldParser arabellek boyutu üst sınırı aşıldığından okuma işlemini tamamlayamadı](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
+ [TextFieldParser, arabellek boyutu üst sınırı aşıldığından okuma işlemini tamamlayamadı](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
   
  [UploadFile adresinin bir dosya adı içermesi gerekir](../../visual-basic/misc/the-address-for-uploadfile-needs-to-include-a-filename.md)  
   
@@ -496,7 +496,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Bu dizi sabit veya geçici olarak kilitli (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
- [Bu anahtar Bu koleksiyonun bir öğesiyle ilişkilendirilmiş zaten](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
+ [Bu anahtar bu koleksiyonun bir öğesi ile zaten ilişkili](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
  [Dosya kapatıldığında bu işlem yalnızca yapılabilir.](../../visual-basic/misc/this-operation-can-only-be-done-when-the-file-is-closed.md)  
   
@@ -512,13 +512,13 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Çok fazla sayıda DLL uygulama istemci](../../visual-basic/misc/too-many-dll-application-clients.md)  
   
- [Çok fazla dosya](../../visual-basic/language-reference/error-messages/too-many-files.md)  
+ [Çok fazla sayıda dosya](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
  [Tür uyumsuzluğu (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
  [Bağımsız değişken türü '\<argumentname >' olduğundan '\<typename >', sayısal olmayan](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
- [Bir iç sistem hatası nedeniyle seri bağlantı noktası adları alınamıyor](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
+ [İç sistem hatası nedeniyle seri bağlantı noktası adları alınamıyor](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
  [Günlük için bir akış alınamıyor](../../visual-basic/misc/unable-to-obtain-a-stream-for-the-log.md)  
   
@@ -544,7 +544,7 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
   
  [Kullanıcı müdahalesi gerçekleşti](../../visual-basic/misc/user-interrupt-occurred.md)  
   
- [Değişkeni Visual Basic'de desteklenmeyen bir Otomasyon türünü kullanıyor](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
+ [Değişken, Visual Basic'de desteklenmeyen bir Otomasyon türünü kullanıyor](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
   
  [VbStrConv.Wide ve VbStrConv.Narrow belirtilen yerel ayar için geçerli değildir](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-are-not-applicable-to-the-locale-specified.md)  
   
@@ -559,5 +559,5 @@ Bu bölüm içerir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sırasında oluş
  [Geçerli klasör veya alt klasörlerinde altında bir yol belirtmeniz gerekir](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [NOTINBUILD nasıl yapılır: Visual Basic çalışma zamanı hataları hakkında bilgi alma](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
- [Hata iletileri](../../visual-basic/language-reference/error-messages/index.md)
+   
+ [Hata İletileri](../../visual-basic/language-reference/error-messages/index.md)

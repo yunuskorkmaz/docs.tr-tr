@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8e311d6e9c67a30636bdeaea7982057605678684
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 754a13d62a8a3eb238799b46ae2304b84077140e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="model-defined-function"></a>Model tanımlı işlevi
 A *modeli tanımlı işlev* kavramsal modelde tanımlanan bir işlev değil. Model tanımlı bir işlev gövdesi olarak ifade edilen [varlık SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), işlevin bağımsız ifade veren kuralları veya veri kaynağında desteklenen diller.  
@@ -47,6 +48,6 @@ A *modeli tanımlı işlev* kavramsal modelde tanımlanan bir işlev değil. Mod
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık veri modeli temel kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+ [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [Varlık Veri Modeli: Basit Veri Türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

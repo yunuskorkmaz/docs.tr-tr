@@ -18,19 +18,20 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9ebc62926efc09eb45e51ca9a7bf08527568929
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13affab3e1e6a1a732231763219e9b419ea7ea51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization"></a>Öğe Ağacı ve Serileştirme
 WPF programlama öğeleri ağaç ilişki birbirlerine çeşit genellikle bulunmaktadır. Örneğin, UI XAML'de oluşturulan bir uygulama nesne ağacı olarak kavramsallaştırılabileceği. Öğe ağacı iki ayrı henüz bazen paralel ağaçlara daha ayrılabilir: mantıksal ağacının ve görsel ağaç. WPF içinde serileştirme içerir bu durumu iki kaydetme ağaçları uygulama durumu ve potansiyel olarak XAML bir dosyaya yazma yanı sıra.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF ağaçlarında](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [XamlWriter.Save'in serileştirme sınırlamaları](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [Bir nesne ağacındaki nesne öğelerinin başlatılması](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
+ [WPF İçinde Ağaçlar](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [XamlWriter.Save'in Serileştirme Sınırlamaları](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
+ [Nesne Ağacında Olmayan Nesne Öğelerini Başlatma](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -41,12 +42,12 @@ WPF programlama öğeleri ağaç ilişki birbirlerine çeşit genellikle bulunma
  <xref:System.Windows.Media.VisualTreeHelper>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+ [WPF Mimarisi](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [WPF'de XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Temel öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Özellikleri](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Olayları](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [Temel Öğeler](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [Özellikler](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
+  [Olaylar](../../../../docs/framework/wpf/advanced/events-wpf.md)  
   [Giriş](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Kaynakları](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [İş parçacığı modeli](../../../../docs/framework/wpf/advanced/threading-model.md)
+  [Kaynaklar](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [İş Parçacığı Modeli](../../../../docs/framework/wpf/advanced/threading-model.md)

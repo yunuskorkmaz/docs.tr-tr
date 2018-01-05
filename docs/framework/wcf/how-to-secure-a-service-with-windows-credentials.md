@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 09e15fcb1f18a91961ee77a57dd8eed80f3faf6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
 Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] bir Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan hizmet. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Bu senaryo, bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
@@ -158,7 +159,7 @@ Bu konu, taşıma güvenliği etkinleştirmek gösterilmiştir bir [!INCLUDE[ind
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WSHttpBinding>  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Nasıl yapılır: bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md)  
- [Güvenlik genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
+ [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)

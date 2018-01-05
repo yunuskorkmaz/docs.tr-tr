@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e48ac307087d5b90567c720d0c215ac0d52ccb6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99a87a3d0dfabb053ca05644e0b3e53361821b9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Özelleştirme ekleme, güncelleştirme ve silme işlemleri
 Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] INSERT uygulamak, okuma, güncelleştirme ve silme işlemleri için dinamik SQL oluşturur. Uygulamada, ancak, genellikle uygulamanız, iş gereksinimlerinize uyacak şekilde özelleştirin.  
@@ -28,14 +29,14 @@ Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
  Konu bu bölümde teknikleri açıklar, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ekleme, okuma, güncelleştirme ve silme işlemleri, uygulamanızda özelleştirmek için sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İşlem özelleştirme: genel bakış](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [İşlemleri Özelleştirme: Genel Bakış](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  Çeşitli teknikleri açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ekleme, okuma, güncelleştirme ve silme işlemleri özelleştirmek için sağlar.  
   
- [INSERT, Update ve silme işlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
+ [Insert, Update ve Delete İşlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
  Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varsayılan veritabanı verileri işlemek için kullanılan işlemler.  
   
- [Varsayılan davranışı geçersiz kılma, geliştirici sorumlulukları](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ [Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
  Geliştirici tarafından zorlanmazsa gereksinimleri uygulamaya rolü açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Kısmi yöntemler kullanarak iş mantığı ekleme](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
+ [Kısmi Yöntemler Kullanarak İş Mantığı Ekleme](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
  Kısmi yöntemler otomatik olarak oluşturulur yöntemleri geçersiz kılmak için nasıl kullanılacağını açıklar.

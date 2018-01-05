@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 302be9cafc0fd2ef327767cbf1178d4927757d2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb6671af34c22d824368de014362452ac9014279
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Yol açabilir türü kimliğinin sorunları önlemek için bu makalede ele <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Makaleyi aşağıdaki öneriler ele alınmıştır:  
@@ -177,4 +178,4 @@ Yol açabilir türü kimliğinin sorunları önlemek için bu makalede ele <xref
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
  <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [Eklentiler ve genişletilebilirlik](../../../docs/framework/add-ins/index.md)
+ [Eklentiler ve Genişletilebilirlik](../../../docs/framework/add-ins/index.md)

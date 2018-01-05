@@ -26,11 +26,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08cdc3dcb9e6d73b0d3b95915bf955ee27782782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sınıfı nesne modeli de dahil olmak üzere XAML, biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve XAML Hizmetleri .NET uygulaması genel özelliğidir. Bu konuda özellikle kullanımda WPF XAML işaretleme uzantılarına ayrıntılarını verir.  
@@ -128,10 +129,10 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
  Nesne öğesi sözdiziminde bir özellik öğesi doldurmak için kullanıldığında, çoğu biçimlendirme uzantıları, içerik ya da daha fazla özellik öğesi sözdizimini içinde sahip olmaz. Bu nedenle nesne öğe etiketi kapatın ve hiçbir alt öğeleri sağlayın. Herhangi bir nesne öğesi XAML işlemcisi tarafından karşılaşıldığında, ayrıştırılmış öğesinden oluşturulan nesnesini başlatır o sınıfın Oluşturucusu çağrılır. Biçimlendirme uzantısı sınıfı farklı değildir: nesne öğesi sözdiziminde kullanılabilmesi için biçimlendirme uzantısı istiyorsanız, varsayılan bir oluşturucu sağlamanız gerekir. Var olan bazı biçimlendirme uzantıları etkili başlatma için belirtilen en az bir gerekli özellik değerine sahip. Öyleyse, bu özellik değeri olarak bir özellik özniteliği genellikle nesnesi öğesinde verilir. İçinde [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md) ve [WPF XAML uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md) başvuru sayfaları, biçimlendirme gerekli özellikleri (ve gerekli özellikleri adları) sahip olan uzantı not ettiğiniz. Başvuru sayfaları, ayrıca nesne öğesi sözdizimi veya öznitelik sözdizimi belirli biçimlendirme uzantıları için izin verilmeyen olmadığını unutmayın. Önemli bir durumdur [x: Array işaretleme uzantısı](../../../../docs/framework/xaml-services/x-array-markup-extension.md), hangi destekleyemez öznitelik sözdizimi çünkü bu dizinin içeriğini içinde etiketleme içeriği olarak belirtilmelidir. Dizi içeriği genel nesneler olarak işlenir, bu nedenle hiçbir öznitelik için varsayılan tür dönüştürücüsünü uygulanabilirdir. Ayrıca, [x: Array işaretleme uzantısı](../../../../docs/framework/xaml-services/x-array-markup-extension.md) gerektiren bir `type` parametresi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML Namespace (x:) Dil özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Bağlama biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
- [DynamicResource Biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
- [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [XAML Ad Alanı (x:) Dil Özellikleri](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML Uzantıları](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
+ [StaticResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [İşaretleme Uzantısı Bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
+ [DynamicResource İşaretleme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [x:Type İşaretleme Uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

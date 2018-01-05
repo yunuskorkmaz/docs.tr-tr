@@ -28,11 +28,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="comparing-strings-in-net"></a>.NET dizeleri karşılaştırma
 .NET dizeleri değerleri karşılaştırmak için çeşitli yöntemler sağlar. Aşağıdaki tabloda listelenmekte ve değer karşılaştırması yöntemleri açıklar.  
@@ -158,5 +161,5 @@ ms.lasthandoff: 11/21/2017
  Her iki yöntem ile birlikte kullanıldığında faydalı **String.Remove** yöntemi. Kullanabilirsiniz **IndexOf** veya **lastIndexOf** bir karakterin almak ve bu konuma sağlamak için yöntemleri **kaldırmak** kaldırmak için yöntemi bir karakter veya bu karakteri ile başlayan bir sözcük.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel dize işlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
- [Kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)  
+ [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

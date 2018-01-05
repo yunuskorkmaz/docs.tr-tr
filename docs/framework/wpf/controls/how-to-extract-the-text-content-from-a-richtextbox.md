@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f24b71bcb5f013c4b7054dd0948e5f2709230a99
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36a34e8f5a96f8b45a6c830ec3c1edeea816bd3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>Nasıl yapılır: RichTextBox'dan Metin İçeriği Ayıklama
 Bu örnek, içeriği ayıklamak gösterilmiştir bir <xref:System.Windows.Controls.RichTextBox> düz metin olarak.  
@@ -45,4 +46,4 @@ Bu örnek, içeriği ayıklamak gösterilmiştir bir <xref:System.Windows.Contro
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [RichTextBox Genel Bakış](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [TextBox genel bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)
+ [TextBox Genel Bakış](../../../../docs/framework/wpf/controls/textbox-overview.md)

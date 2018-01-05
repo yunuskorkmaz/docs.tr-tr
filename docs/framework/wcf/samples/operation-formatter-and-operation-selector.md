@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
 Bu örnek gösterilmektedir nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] genişletilebilirlik noktaları, farklı bir biçimde ne gelen ileti veri sağlamak için kullanılabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bekliyor. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] biçimlendiricileri beklediğiniz altında dahil edilecek yöntem parametreleri `soap:body` öğesi. Örnek, bunun yerine bir HTTP GET sorgu dizesi parametre verilerini ayrıştırır ve bu verileri kullanarak yöntemlerini çağıran bir özel işlem biçimlendirici uygulamak gösterilmiştir.  

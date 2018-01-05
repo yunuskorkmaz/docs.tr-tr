@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31548f3190425f4c50e68369320828b11ee3928c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e186043a6cb32eaf5ed6bac6be3eaf50cb1ea32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama
 İki bilgisayardaki saat ayarları farklıysa zaman açısından kritik işlevler derailed. Bu olasılığını azaltmak için ayarlayabileceğiniz `MaxClockSkew` özelliğine bir <xref:System.TimeSpan>. Bu özellik üzerinde iki sınıf bulunmaktadır:  
@@ -98,4 +99,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+ [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

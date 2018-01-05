@@ -21,11 +21,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c9bb58b0d7b45ca197653742844be01ac3bbe41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f84fcba0ef37fa45c3dd0fb3ba56f5f912bfc2f1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-numeric-strings-in-net"></a>NET sayısal dizeleri ayrıştırma
 Tüm sayısal türler iki statik ayrıştırma yöntemleri vardır `Parse` ve `TryParse`, bir sayı dize gösterimini sayısal bir türü dönüştürmek için kullanabilirsiniz. Bu yöntemler, içinde belirtilen biçim dizeleri kullanma tarafından üretilen dizeleri ayrıştırma olanak [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md). Varsayılan olarak, `Parse` ve `TryParse` yöntemleri yalnızca tamsayı değerleri için tam sayı ondalık basamak içeren dizeleri başarıyla dönüştürebilirsiniz. Bunlar başarıyla Entegral ve kesirli ondalık basamak, Grup ayırıcılar ve kayan nokta değerlerine ondalık ayırıcı içeren dizeleri dönüştürebilirsiniz. `Parse` Yöntemi bir özel durum oluşturur işlemi başarısız olursa, ancak `TryParse` yöntemi döndürür `false`.  
@@ -92,5 +95,5 @@ Tüm sayısal türler iki statik ayrıştırma yöntemleri vardır `Parse` ve `T
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.NumberStyles>  
- [Dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
- [Biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md)
+ [Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)  
+ [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)

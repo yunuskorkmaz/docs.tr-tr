@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc0190747545e9325b62453bc79d163d3e566791
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] şablonlarıdır içinde kullanabileceğiniz önceden tanımlanmış proje ve öğe şablonları [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hızlı bir şekilde oluşturmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetler ve çevresindeki uygulamalar.  
@@ -93,5 +94,5 @@ ms.lasthandoff: 12/02/2017
 >  Silverlight özellikli WCF hizmeti sunan bir `basicHttpBinding` güvenlik ayarlarını etkinleştirmeden uç noktası. Bu nedenle, bu hizmete bağlanan tüm istemciler tarafından hizmeti hakkında bilgi alınamıyor. Hizmet ve istemci arasında alınıp iletileri imzalanmış veya şifrelenmiş de güncelleştirilmez. Uç nokta güvenliğini düzgün şekilde sağlamak için ASP.NET kimlik doğrulaması, HTTPS veya diğer mekanizmaları kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
  [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 400e367581ea773d88320e593aa525d812ea0238
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme
 Windows Forms birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusunda belirli öğelere erişme önemli bir görevdir. Bir listedeki herhangi belirli konumunda nedir programlı olarak belirlemenizi sağlar.  
@@ -65,4 +66,4 @@ Windows Forms birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusu
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

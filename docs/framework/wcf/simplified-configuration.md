@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Yapılandırma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman hangi ayarların gerekli olduğunu belirlemek kolay değildir. Yapılandırma dosyaları esnekliğini artırmak sırada [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetleri de oldukları sorunları bulmak sabit sayıda kaynağı. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]Bu sorunu giderir ve boyutunu ve hizmet yapılandırmasını karmaşıklığını azaltmak için bir yol sağlar.  
@@ -121,9 +122,9 @@ Yapılandırma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, 
 >  Bu özellik yalnızca WCF hizmeti yapılandırmasını istemci yapılandırmasını ilişkilendirir. Çoğu kez, WCF istemci yapılandırması svcutil.exe veya Visual Studio'dan bir hizmet başvurusu ekleme gibi bir araç tarafından oluşturuldu. Bir WCF istemcisi el ile yapılandırıyorsanız eklemeniz gerekir bir \<istemci > yapılandırma öğesine ve istediğiniz çağırmak için uç nokta belirtin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yapılandırma dosyalarını kullanarak hizmetleri yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
  [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [WCF hizmetlerini kodda yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+ [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

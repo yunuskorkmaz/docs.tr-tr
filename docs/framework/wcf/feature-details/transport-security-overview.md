@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bağlamada değişir ve kullanılan taşıma. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı, aktarım HTTP ve taşıma güvenliğini sağlamak için birincil mekanizmayı Güvenli Yuva Katmanı (SSL) genellikle HTTPS adlı HTTP üzerinden şeklindedir. Bu konuda kullanılan ana taşıma güvenlik mekanizmaları ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan bağlamalar.  
@@ -131,4 +132,4 @@ Aktarım de güvenlik mekanizmaları [!INCLUDE[indigo1](../../../../includes/ind
  Tam bir aktarım tartışma için bkz: (daha önce MSMQ olarak da adlandırılır) Message Queuing ile güvenlik [taşıma güvenliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF güvenliğini programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+ [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

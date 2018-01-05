@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4409e0d603bf667ee041725dbe02b3e2f3a82e73
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 51f5c91ae63f7c483aab08affe53d6d4b6ceaa01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
 Bu örnek, bir özel UserNamePassword Doğrulayıcıyı uygulamak gösterilmiştir. Bu, yerleşik UserNamePassword doğrulama modları hiçbiri uygulama gereksinimleri için uygun olduğu durumlarda kullanışlıdır. Örneğin, ne zaman kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış deposunda depolanır. Bu örnek için iki belirli kullanıcı adı/parola çiftleri denetler özel bir doğrulayıcı sahip bir hizmeti gösterir. İstemci bu tür bir kullanıcı adı/parola çifti hizmetin kimliğini kullanır.  

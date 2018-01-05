@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarları tanımlamak için kullanılabilir. Bir etiket denetiminde bir erişim anahtarı tanımladığınızda, kullanıcı ALT tuşuyla birlikte odağını sekme sırasında izleyen denetime taşıma için belirttiğiniz karakter tuşlarına basabilirsiniz. Etiketleri odak alamaz olduğundan odağını sekme sırasında bir sonraki denetime otomatik olarak taşır. Metin kutuları, birleşik giriş kutuları, liste kutuları ile veri kılavuzları erişim tuşları atamak için bu tekniği kullanabilirsiniz.  
@@ -74,6 +75,6 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler i
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Etiket denetimine genel bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [Etiket denetimi](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+ [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Etiket Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Etiket Denetimi](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

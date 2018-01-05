@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9b707108d5849db57dcebfb4cb1f7b18378bff0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation"></a>Federasyon
 Bu konu, Federasyon güvenlik kavramı kısa bir genel bakış sağlar. Ayrıca açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] destek federe güvenlik mimarileri dağıtmak için. Federasyon gösteren örnek bir uygulama için bkz: [Federasyon örnek](../../../../docs/framework/wcf/samples/federation-sample.md).  

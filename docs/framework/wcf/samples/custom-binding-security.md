@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 943a56095707efdba0e20c40b2c96e24e8fd4ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6ac67f79a5fb527acd793778111dad6970922d71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-security"></a>Özel Bağlama Güvenliği
 Bu örnek güvenliğinin özel bağlama kullanılarak nasıl yapılandırılacağı gösterilmektedir. Özel bağlama güvenli bir taşıma birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu, güvenli bir taşıma hizmet ve istemci arasındaki iletileri iletmek için gerekli ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır durumunda faydalı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.  

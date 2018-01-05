@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zengin bir uygulamanın yaşam farklı aşamalarını izlemenize yardımcı olabilir işlevler sağlar. Örneğin, hizmetleri ve dağıtım istemcilerinde ayarlamak için yapılandırma kullanabilirsiniz. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca İnceleme çalışma zamanında bir hizmetin kullanıma sunan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı. Uygulama arızalanması veya hatalı davranan başlatıldığında, önemli bir şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. Hangi olayların oluşmasını uçtan uca uygulamanızda olduğunu görmek için ileti günlüğe kaydetme ve izleme de kullanabilirsiniz. Bu özellikler geliştiriciler ve BT uzmanları sorun giderme için yardımcı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] düzgün çalışmıyorsa, uygulama.  
@@ -50,15 +51,15 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca çeşitli GUI ve komut satırı araçları oluşturmak kolaylaştırmak için dağıtmak ve yönetmek sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Communication Foundation Araçları](../../../../docs/framework/wcf/tools.md). Örneğin, kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturmak ve düzenlemek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] XML doğrudan düzenlemek yerine bir Sihirbazı'nı kullanarak yapılandırma ayarları. Aynı zamanda [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) görüntülemek, Grup ve böylece tanılamak izleme iletilerini filtrelemek için onarın ve sorunları doğrulayın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulamanızı yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
- [Hizmetleri dağıtma](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
- [Özel durum başvurusu](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
- [Olay günlüğü](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [İleti günlüğe kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [ServiceModel kayıt aracı](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
+ [Uygulamanızı Yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
+ [Hizmet Dağıtma](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
+ [Özel Durum Başvurusu](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
+ [Günlüğe Olay Kaydetme](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
+ [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
+ [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
+ [ServiceModel Kayıt Aracı](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)  
  [İzleme](../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Tanılama için Windows Yönetim Araçları'nı kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
- [Performans sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
- [Windows Communication Foundation araçları](../../../../docs/framework/wcf/tools.md)
+ [Tanılama için Windows Yönetim Araçlarını Kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)  
+ [Performans Sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)  
+ [Windows Communication Foundation Araçları](../../../../docs/framework/wcf/tools.md)

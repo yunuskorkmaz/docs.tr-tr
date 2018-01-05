@@ -14,11 +14,12 @@ ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c8ed8b0211c8366d799fe158d91dcb42f92ad0cf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="section-element"></a>\<Bölüm > öğesi
 
@@ -56,7 +57,7 @@ Aşağıdaki öznitelikler, yalnızca ASP.NET uygulamaları için geçerlidir. Y
 |                     | Açıklama |
 | ------------------- | ----------- |
 | **allowDefinition** | Bölüm kullanılabilir hangi yapılandırma dosyasını belirtir. Aşağıdaki değerlerden birini kullanın:<br><br>**Her yerde**<br>Her yapılandırma dosyasında kullanılacak bölümü sağlar. Bu varsayılandır.<br>**MachineOnly**<br>Yalnızca makine yapılandırma dosyasında kullanılacak bölümü sağlar (*Machine.config*).<br>**MachineToApplication**<br>Makine yapılandırma dosyası veya uygulama yapılandırma dosyasında kullanılacak bölümü sağlar. |
-| **allowLocation**   | Bölüm içinde kullanılıp kullanılamayacağını belirler  **\<konumu >** öğesi. Aşağıdaki değerlerden birini kullanın:<br><br>**TRUE**<br>İçinde kullanılacak bölümü sağlar  **\<konumu >** öğesi. Bu varsayılandır.<br>**false**<br>İçinde kullanılacak bölümüne izin vermiyor  **\<konumu >** öğesi. |
+| **allowLocation**   | Bölüm içinde kullanılıp kullanılamayacağını belirler  **\<konumu >** öğesi. Aşağıdaki değerlerden birini kullanın:<br><br>**true**<br>İçinde kullanılacak bölümü sağlar  **\<konumu >** öğesi. Bu varsayılandır.<br>**false**<br>İçinde kullanılacak bölümüne izin vermiyor  **\<konumu >** öğesi. |
 
 ## <a name="parent-elements"></a>Üst öğeler
 

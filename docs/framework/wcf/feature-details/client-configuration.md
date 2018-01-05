@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 Kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , bağlama davranışı adresi belirtin ve sözleşme istemci yapılandırmasını, hizmet uç noktalarına bağlanmak için istemcileri kullanın istemci uç nokta "ABC" özelliklerini. [ \<İstemci >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi özniteliklerini ABC uç noktası yapılandırmak için kullanılır. Bu öznitelikler, bu konunun "Uç noktaları yapılandırma" bölümünde ele alınmıştır.  
@@ -104,5 +105,5 @@ Kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , ba
  [ \<Meta verileri >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) öğe meta verileri kaydetmek için kullanılan ayarları içeri uzantılarını belirtmek için kullanılır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]meta veri sistemini genişletme bkz[meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç noktalar: Adresler, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [İstemci davranışlarını yapılandırma](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+ [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [İstemci Davranışlarını Yapılandırma](../../../../docs/framework/wcf/configuring-client-behaviors.md)

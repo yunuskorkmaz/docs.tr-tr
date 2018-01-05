@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ad417ee61026f6573f19e70409511e0b28e4d78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7653e05fff241f05836624ff02273fb8c24ef6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+'daki Ana Eğri Cetvelleri
 Kardinal eğri daha büyük bir eğri oluşturmak için birleştirilmiş tek tek Eğriler dizisidir. Eğri bir dizi noktaları ve gerilim parametresi tarafından belirtilir. Kardinal eğri her bir dizi noktası sorunsuz geçtiği; hiçbir keskin köşeleri ve eğri tightness ani hiçbir değişiklik vardır. Aşağıdaki çizimde bir dizi noktaları ve kümedeki her noktası geçtiği bir Kardinal eğri gösterir.  
@@ -46,5 +47,5 @@ Kardinal eğri daha büyük bir eğri oluşturmak için birleştirilmiş tek tek
  [!code-vb[LinesCurvesAndShapes#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Eğriler oluşturma ve çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Eğriler Oluşturma ve Çizme](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

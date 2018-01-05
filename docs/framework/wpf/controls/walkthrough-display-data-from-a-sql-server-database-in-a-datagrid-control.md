@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c89ed9425920602f80a2407b7529b3eb215a2e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme
 Bu kılavuzda, bir SQL Server veritabanından veri almak ve bu verileri görüntüleyen bir <xref:System.Windows.Controls.DataGrid> denetim. ADO.NET Entity Framework verileri temsil eder ve LINQ varlık sınıfından belirtilen verileri alan bir sorgu yazmak için kullanabileceğiniz varlık sınıfları oluşturmak için kullanın.  

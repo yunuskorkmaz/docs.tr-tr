@@ -19,23 +19,24 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ded27d60bdfcd9b9b1de4ba719c2f5b6018df1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c066b3c6c84d89a74b18e90ac3a6aa80c63a9b0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-overview-windows-forms"></a>Grafiklere Genel Bakış (Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]CİHAZDAN bağımsız uygulamaları yazmak programcıları sağlayan bir grafik cihaz arabirimi var. Hizmetlerini [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıflar bir dizi sunulur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Grafiklere genel bakış](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ [Grafiklere Genel Bakış](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
  Genel bir giriş sağlar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Üç grafik hizmeti kategorisi](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
+ [Üç Grafik Hizmeti Kategorisi](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
  İle programlama oluşturan üç kategorileri açıklanmaktadır [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Grafik arabiriminin yapısı](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
+ [Grafik Arabiriminin Yapısı](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
  Yönetilen sınıf arabiriminin açıklar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Başvuru  

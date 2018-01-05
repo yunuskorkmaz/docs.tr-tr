@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46a532b45024321a6885fa3e45d172c054d18c1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-contract-resolver"></a>Veri Sözleşmesi Çözücü Kullanma
 Veri sözleşmesi Çözücü bilinen türleri dinamik olarak yapılandırmanıza izin verir. Bilinen türler seri hale getirme veya bir veri sözleşmesine göre beklendiği bir türü seri durumdan gereklidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Bilinen türler normalde statik olarak belirtilir. Bunun anlamı tüm olası türleri bir işlem bilmesi gerekir, uygulama işlemi sırasında alabilirsiniz. Bu doğru değildir ve bilinen türleri dinamik olarak belirtmek için önemli senaryolar vardır.  
@@ -98,6 +99,6 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  Veri sözleşmesi Çözücü bir hizmete uygulanan bir öznitelik uygulayarak bildirimli olarak belirtebilirsiniz.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) örnek. Bu örnek "KnownAssembly" adlı bir öznitelik uygular, özel veri sözleşmesi Çözücü hizmetin davranışa ekler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri sözleşmesi bilinen türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [DataContractSerializer örneği](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
+ [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [DataContractSerializer Örneği](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

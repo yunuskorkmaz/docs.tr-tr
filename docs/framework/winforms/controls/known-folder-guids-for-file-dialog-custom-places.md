@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri
 Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bilinen klasörlerin eklediğinizde klasör bir <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonu. Bilinen klasör GUID'leri büyük küçük harfe duyarlı değildir ve KnownFolders.h dosyasında tanımlanan [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
@@ -298,4 +299,4 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Nasıl yapılır: dosya iletişim kutusuna özel yer ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+ [Nasıl Yapılır: Dosya İletişim Kutusuna Özel Yer Ekleme](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

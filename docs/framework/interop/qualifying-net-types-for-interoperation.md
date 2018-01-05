@@ -15,11 +15,12 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 165536656f0de6b53680565bee93f0bb8d607d48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b0a6d6a2a8139127b46484f972eb797642b4ee53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Birlikte Çalışma için Niteleyici .NET Türleri
 COM uygulamaları için derlemedeki türleri kullanıma sunmak istiyorsanız, tasarım zamanında COM birlikte çalışma gereksinimlerini göz önünde bulundurun. Aşağıdaki yönergelere uygun olduğunda yönetilen türler (sınıf, arabirim, yapısı ve numaralandırma) COM türleri ile sorunsuz tümleştirme:  
@@ -52,7 +53,7 @@ COM uygulamaları için derlemedeki türleri kullanıma sunmak istiyorsanız, ta
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
- [Birlikte çalışma özniteliklerini uygulama](../../../docs/framework/interop/applying-interop-attributes.md)  
- [COM için derlemeyi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+ [Birlikte Çalışma Özniteliklerini Uygulama](../../../docs/framework/interop/applying-interop-attributes.md)  
+ [COM için Bütünleştirilmiş Kod Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

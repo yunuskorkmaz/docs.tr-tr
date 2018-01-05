@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 386e58c5b04ed82f9ee42c7f04eacd4610c2a598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Bazı güvenlik ele alırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu, bazı güvenlik koşulları kısa açıklamaları sağlar, ancak her öğe için kapsamlı belgeler sağlamak üzere tasarlanmamıştır.  
@@ -192,6 +193,6 @@ Bazı güvenlik ele alırken kullanılan terminolojiyi bilinmiyor olabilir. Bu k
  Kendi gerekli bölümleri tanımlayan bir Uluslararası tanınan standart sertifikalar için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)  
- [Güvenlik kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Temel Windows Communication Foundation Kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)  
+ [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

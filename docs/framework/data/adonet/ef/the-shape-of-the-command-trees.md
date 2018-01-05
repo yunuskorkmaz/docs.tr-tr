@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarını şekli
 SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikleri ve sorgu komut ağaçlarını yapısını anlatılmaktadır.  
@@ -116,4 +117,4 @@ SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde
  İlkel türler çıkış komut ağaçlarında başvurulduğunda genellikle kavramsal modelin ilkel türlerinde başvurulur. Ancak, belirli ifadeleri için karşılık gelen deposu ilkel tür sağlayıcıları gerekir. Sağlayıcı null değerine karşılık gelen tür cast gerekiyorsa, bu tür örnekleri DbCastExpression ve büyük olasılıkla DbNullExpression, içerir. Bu durumlarda, sağlayıcıları, ilkel türü türü ve onun modelleri göre sağlayıcı türü için eşleme yapmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+ [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

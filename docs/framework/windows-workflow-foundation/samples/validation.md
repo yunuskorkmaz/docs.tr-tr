@@ -12,24 +12,25 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: caff98a6cd0ace0f34cf1c2b839bb6291a77da1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8f0f6d30fe03117cddbc4faea63b36955854ba5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validation"></a>Doğrulama
 Bu bölüm, etkinlik doğrulamayı gösterme örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Dış etkinlik doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/external-activity-validation.md)  
+ [Dış Etkinlik Doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/external-activity-validation.md)  
  Bu örnek nasıl doğrulama mantığını yazarı olmayan yerleşik bir etkinlik ekleneceğini gösterir.  
   
- [Temel doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)  
+ [Temel Doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md)  
  Bir etkinliği gösterir `CreateProduct`, hangi doğrular, kendi `Cost` bağımsız değişkeni ' den küçük veya eşit kendi `Price` bağımsız değişkeni.  
   
  [OverloadGroups](../../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)  
  Bir etkinlik gösteren `CreateLocation`, bağımsız değişkenleri ve isteğe bağlı bağımsız değişkenler gerektirir ve iki farklı kümesinden bağımsız değişken sağlamayı tercih olanak tanır.  
   
- [Etkinlik ilişkileri doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md)  
+ [Etkinlik İlişkilerini Doğrulama](../../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md)  
  Etkinlikleri arasındaki ilişkileri doğrulamak gösterilmiştir.

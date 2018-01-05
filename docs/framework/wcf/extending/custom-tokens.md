@@ -14,15 +14,16 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b36910f9448fadc6ffb5efc86a091fbac58c35f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fdb016cac94f9a77ae05445ea05ed263e3df1f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-tokens"></a>Özel Belirteçler
 Ancak [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] yerel olarak destekler X.509 sertifikaları, güvenlik bağlamı belirteçleri, Kerberos biletleri ve kullanıcı adı belirteçleri kimlik bilgileri olarak, bu özel bilgilerinizi kullanmanıza izin vermek için yeterince esnektir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ [Nasıl yapılır: Özel Belirteç Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
  Kullanarak bir özel güvenlik belirteci oluşturmayı açıklar <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcısı ile authenticator ile tümleştirme.

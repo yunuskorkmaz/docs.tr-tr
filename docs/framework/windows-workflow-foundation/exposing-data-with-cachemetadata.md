@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c68c24ad525d077d26f0b7bd917a936372e0a5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a25e658d512cf0575a4e3902a9a951099675e29a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata verilerle gösterme
 Bir etkinliği yürütmeden önce iş akışı çalışma zamanı tüm yürütülmesinin korumak için gereken etkinliği hakkında bilgi edinir. İş akışı çalışma zamanı yürütme işlemi sırasında bu bilgileri alır <xref:System.Activities.Activity.CacheMetadata%2A> yöntemi. Bu yöntem varsayılan uygulamasını tüm ortak bağımsız değişkenleri, değişkenler ve yürütülür aynı anda etkinlik tarafından sunulan alt etkinlikleri ile çalışma zamanı sağlar; Etkinlik daha fazla bilgi için çalışma zamanı bu (örneğin, özel üyelerin veya etkinlikleri etkinlik tarafından zamanlanacak) vermek gerekirse, bunu sağlamak için bu yöntem geçersiz kılınabilir.  

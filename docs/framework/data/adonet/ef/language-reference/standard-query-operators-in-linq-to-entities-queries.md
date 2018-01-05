@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 97782834480e8acb5f66d8da2099089b1c47e093
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7413bf21167af129c7e20b199d7ea6a0ac1c8978
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
 Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu de nasıl bu bilgileri sıralanmış, gruplandırılmış ve, döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntemler kümesi sağlar. Bu yöntemlerin çoğu sıraları üzerinde çalışır; Bu bağlamda, türü uygulayan bir nesne sırasıdır <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevi filtreleme, yansıtma, toplama, sıralama, gruplandırma, disk belleği ve daha fazlasını içerir. Bazıları, böylece sorgu ifade sözdizimi kullanılarak çağrılabilir işleçleri anahtar sözcüğü sözdizimi ayrılmış standart sorgu sık kullanılır. Bir sorgu ifadesi, bir sorgu tabanlı yöntemini eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi yan tümceleri derleme zamanında sorgu yöntemleri çağrıları içine çevrilir. Eşdeğer sorgu ifadesi yan tümceleri sahip standart sorgu işleçleri listesi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -87,5 +88,5 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu d
  Disk belleği yöntemleri sayısı, veri kaynağına veya veri kaynağı üzerinde kümelerinin örtük sıralama olmaması işlevleri eşlemek için bağlanamama ya da son desteklenmez. Varsayılan değer döndüren yöntemler kavramsal model temel eleman türleri ve başvuru türleri null varsayılanları ile kısıtlanır. Boş bir dizi üzerinde yürütülen disk belleği yöntemleri null döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [Standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [Standart Sorgu İşleçlerine Genel Bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4584b74cd7a394f7dd04d0cfba150b907ca7c82
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7515f34858ef6f4b0495ac6fc545ae498d45c7f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-transformations-to-scale-colors"></a>Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma
 Ölçeklendirme dönüştürme, bir veya daha fazla bir sayıyla dört renk bileşenleri çarpar. Ölçeklendirme temsil eden renk matrisi girişi aşağıdaki tabloda verilmiştir.  
@@ -76,5 +77,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  <xref:System.Drawing.Imaging.ImageAttributes>  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Görüntüleri yeniden renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Görüntüleri Yeniden Renklendirme](../../../../docs/framework/winforms/advanced/recoloring-images.md)

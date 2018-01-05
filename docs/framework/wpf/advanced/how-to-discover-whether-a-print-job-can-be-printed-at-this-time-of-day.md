@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat için kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan daha bakım farklı bir sıra gerekir. Diğer bölümler için sıra 17: 00 sonra kullanılamaz hale gelmesine ayarlanması, ayrıcalıklı bölümün sırası olacak şekilde ayarlanması kullanılabilir hiç uğruyor.  
@@ -88,5 +89,5 @@ Yazdırma sıralarını her zaman günde 24 saat için kullanılabilir değil. G
  <xref:System.DateTime>  
  <xref:System.Printing.PrintSystemJobInfo>  
  <xref:System.Printing.PrintQueue>  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Yazdırma genel bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

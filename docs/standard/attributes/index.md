@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8151fd7738dd41ee6ae330a90f3814ec2cc9eb62
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae399e5213c95b29736c54fcc48ac45a778ba25b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-metadata-using-attributes"></a>Öznitelikleri Kullanarak Meta Verileri Genişletme
 Ortak dil çalışma zamanı anahtar sözcük benzeri tanımlayıcı bildirimler eklemenize olanak sağlayan türleri, alanları, yöntemleri ve özellikleri gibi programlama öğelerine ek açıklama eklemek için öznitelikler çağrılır. Çalışma zamanı için kodunuzu derlerken Microsoft Ara dile (MSIL) dönüştürülür ve taşınabilir yürütülebilir (PE) dosya derleyici tarafından oluşturulan meta verilerinin yanı sıra içinde yerleştirilir. Öznitelikler, çalışma zamanı yansıma Hizmetleri kullanarak ayıklanan meta verileri içine fazladan açıklayıcı bilgiler yerleştirin olanak tanır. Öğesinden türetilen özel sınıfların örneklerini bildirirken derleyici öznitelikleri oluşturur <xref:System.Attribute?displayProperty=nameWithType>.  
@@ -37,11 +40,11 @@ Ortak dil çalışma zamanı anahtar sözcük benzeri tanımlayıcı bildirimler
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Öznitelikleri uygulama](../../../docs/standard/attributes/applying-attributes.md)|Bir öznitelik kodunuzun bir öğeye uygulamak açıklar.|  
-|[Özel öznitelikler yazma](../../../docs/standard/attributes/writing-custom-attributes.md)|Özel öznitelik sınıfları tasarım konuları açıklanmaktadır.|  
-|[Özniteliklerde depolanan bilgileri alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Yürütme bağlamına yüklenen kod için özel öznitelikleri almak açıklar.|  
-|[Meta veriler ve kendiliğinden açıklayıcı bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)|Meta veri genel bir bakış sağlar ve bir .NET Framework taşınabilir yürütülebilir (PE) dosyasında nasıl uygulandığı açıklanmaktadır.|  
-|[Nasıl yapılır: salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma bağlamda özel öznitelik bilgileri almak açıklanmaktadır.|  
+|[Öznitelikleri Uygulama](../../../docs/standard/attributes/applying-attributes.md)|Bir öznitelik kodunuzun bir öğeye uygulamak açıklar.|  
+|[Özel Öznitelikler Yazma](../../../docs/standard/attributes/writing-custom-attributes.md)|Özel öznitelik sınıfları tasarım konuları açıklanmaktadır.|  
+|[Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Yürütme bağlamına yüklenen kod için özel öznitelikleri almak açıklar.|  
+|[Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)|Meta veri genel bir bakış sağlar ve bir .NET Framework taşınabilir yürütülebilir (PE) dosyasında nasıl uygulandığı açıklanmaktadır.|  
+|[Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma bağlamda özel öznitelik bilgileri almak açıklanmaktadır.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Attribute?displayProperty=nameWithType>

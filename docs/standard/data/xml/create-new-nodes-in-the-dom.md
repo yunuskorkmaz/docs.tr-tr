@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec624a02f98fda4352b5ba8ff43681fba040c676
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 195c0f8184bbbd84826def87ce74daa49965cb93
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Yeni düğümler DOM'da oluşturma
 <xref:System.Xml.XmlDocument> Tüm düğüm türü için create yöntemi vardır. Gerekli olduğunda bir adla yöntemi sağlayın ve içerik veya içeriğe (örneğin, bir metin düğümü) sahip düğümleri ve düğüm için başka parametre oluşturulur. Aşağıdaki yöntemler, bir ada ihtiyacınız olanları ve uygun bir düğüm oluşturmak için doldurulmuş birkaç diğer parametreleri yöneliktir.  
@@ -59,4 +62,4 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|Ekler bir <xref:System.Xml.XmlAttribute> sonuna kadar bir öğesiyle ilişkili öznitelik koleksiyonu düğümü. Daha fazla bilgi için bkz: <xref:System.Xml.XmlAttributeCollection.Append%2A> yöntemi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML belge nesne modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

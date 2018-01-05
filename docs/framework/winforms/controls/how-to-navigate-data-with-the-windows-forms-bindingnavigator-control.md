@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08b9fb555966cf8459646a12da69c6db3361f0b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6c5b49d84f98213e95c83c5476007297149adc16
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile Verilerde Gezinme
 Geliştirilirken <xref:System.Windows.Forms.BindingNavigator> Windows Forms denetiminde oluşturdukları formlarında basit veri gezinme ve düzenleme kullanıcı arabirimi ile son kullanıcılar sağlamak için geliştiriciler sağlar.  
@@ -65,5 +66,5 @@ Geliştirilirken <xref:System.Windows.Forms.BindingNavigator> Windows Forms dene
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.BindingNavigator>  
- [BindingNavigator denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [ToolStrip denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [BindingNavigator Denetimi](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [ToolStrip Denetimi](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6666f486613321cf00196c920cff8a71d7adc35b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
@@ -58,7 +59,7 @@ signtool [command] [options] [file_name | ...]
 |-------------------|-----------------|  
 |**/q**|Komut başarıyla çalışırsa bir çıktı görüntülemez ve komut başarısız olursa en az çıktı görüntüler.|  
 |**/v**|Komutun başarıyla çalıştırıldığına veya başarısız olduğuna bakılmaksızın ayrıntılı çıktıyı görüntüler ve uyarı iletilerini görüntüler.|  
-|**/ Debug**|Hata ayıklama bilgisini görüntüler.|  
+|**/debug**|Hata ayıklama bilgisini görüntüler.|  
   
 <a name="catdb"></a>   
 ## <a name="catdb-command-options"></a>catdb Komut Seçenekleri  
@@ -218,5 +219,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

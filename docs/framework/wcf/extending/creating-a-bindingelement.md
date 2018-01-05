@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) yerlerdir nerede [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama modeli, kanal fabrikaları ve kanal dinleyicileri ile ilişkilendirilmiş. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, kanalda kullanarak etkinleştirmek için en düşük gereksinim ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], geliştirilmesi bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -83,5 +84,5 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.BindingElement>  
- [Geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
+ [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
  [Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 497d7242b581a61aa156741a8c2f0ea278fe2372
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma
 Bu konuda özel bir WS-Metadata yapılandırmak nasıl anlatılmıştır değişimi bağlaması. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dört sistem tanımlı meta veri bağlaması içeriyor ancak istediğiniz herhangi bir bağlamayı kullanarak meta verilerini yayımlayabilirsiniz. Bu konuda meta verileri kullanarak yayımlamak nasıl yapacağınızı gösterir `wsHttpBinding`. Bu bağlama meta verileri güvenli bir şekilde gösterme seçeneği sunar. Bu makaledeki kod dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -124,8 +125,8 @@ Bu konuda özel bir WS-Metadata yapılandırmak nasıl anlatılmıştır değiş
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [Meta veri alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- [Meta veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Yayımlama meta veri uç noktaları](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+ [Meta Veri Yayımlama Davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
+ [Meta Verileri Alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
+ [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ [Meta Veri Uç Noktalarını Yayımlama](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

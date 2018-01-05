@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?
 Geliştirirken bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağıtım hizmeti, oluşturduğunuz akışları ve aşağıdaki sınıflar kullanarak öğeleri:  
@@ -408,8 +409,8 @@ Geliştirirken bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dağ�
  `</content>`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Dağıtım mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Nasıl yapılır: temel bir RSS akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Nasıl yapılır: temel bir Atom akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Nasıl yapılır: bir akışı hem Atom olarak kullanıma sunmak ve RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Nasıl Yapılır: Temel Bir Atom Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

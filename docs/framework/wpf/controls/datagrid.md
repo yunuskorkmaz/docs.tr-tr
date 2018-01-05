@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Denetimi görüntülemek ve bir SQL veritabanı, LINQ sorgusu veya diğer bir bağlanabilir veri kaynağından gibi birçok farklı kaynaklardan gelen verileri düzenlemenize olanak sağlar. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
@@ -59,17 +60,17 @@ ms.lasthandoff: 11/21/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: Bir SQL Server veritabanından veri DataGrid denetiminde görüntüleme](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Kümesine yeni bir WPF projesi, bir varlık çerçevesi öğesi ekleyin, kaynağı ve verileri görüntülemek açıklar bir <xref:System.Windows.Controls.DataGrid>.|  
-|[Nasıl yapılır: satır ayrıntıları DataGrid denetimine ekleme](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|Satır ayrıntılarını oluşturmayı açıklar bir <xref:System.Windows.Controls.DataGrid>.|  
-|[Nasıl yapılır: uygulama DataGrid denetimi ile doğrulama](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|Değerleri doğrulamak açıklar <xref:System.Windows.Controls.DataGrid> hücre ve satırları ve görüntü doğrulaması geri bildirim.|  
-|[Varsayılan klavye ve fare davranışı DataGrid denetiminde](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Etkileşim açıklar <xref:System.Windows.Controls.DataGrid> klavye ve fare kullanarak denetim.|  
-|[Nasıl yapılır: Grup, sıralama ve filtre veri DataGrid denetiminde](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Verileri görüntülemeyi açıklar bir <xref:System.Windows.Controls.DataGrid> gruplandırma, sıralama ve verileri filtreleme, farklı şekillerde.|  
-|[DataGrid denetiminde boyutlandırma seçenekleri](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|Mutlak ve otomatik boyutlandırma denetlemek açıklar <xref:System.Windows.Controls.DataGrid>.|  
+|[İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Kümesine yeni bir WPF projesi, bir varlık çerçevesi öğesi ekleyin, kaynağı ve verileri görüntülemek açıklar bir <xref:System.Windows.Controls.DataGrid>.|  
+|[Nasıl yapılır: DataGrid Denetimine Satır Ayrıntıları Ekleme](../../../../docs/framework/wpf/controls/how-to-add-row-details-to-a-datagrid-control.md)|Satır ayrıntılarını oluşturmayı açıklar bir <xref:System.Windows.Controls.DataGrid>.|  
+|[Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama](../../../../docs/framework/wpf/controls/how-to-implement-validation-with-the-datagrid-control.md)|Değerleri doğrulamak açıklar <xref:System.Windows.Controls.DataGrid> hücre ve satırları ve görüntü doğrulaması geri bildirim.|  
+|[DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı](../../../../docs/framework/wpf/controls/default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Etkileşim açıklar <xref:System.Windows.Controls.DataGrid> klavye ve fare kullanarak denetim.|  
+|[Nasıl yapılır: DataGrid Denetiminde Verileri Gruplandırma, Sıralama ve Filtreleme](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Verileri görüntülemeyi açıklar bir <xref:System.Windows.Controls.DataGrid> gruplandırma, sıralama ve verileri filtreleme, farklı şekillerde.|  
+|[DataGrid Denetimindeki Boyutlandırma Seçenekleri](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|Mutlak ve otomatik boyutlandırma denetlemek açıklar <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.DataGrid>  
- [Stil ve şablon oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Veri şablonu özeti](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Denetimleri](../../../../docs/framework/wpf/controls/index.md)  
- [WPF içerik modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [Stil ve Şablon Oluşturma](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Veri Bağlamaya Genel Bakış](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Veri Şablonu Oluşturmaya Genel Bakış](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Denetimler](../../../../docs/framework/wpf/controls/index.md)  
+ [WPF İçerik Modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md)

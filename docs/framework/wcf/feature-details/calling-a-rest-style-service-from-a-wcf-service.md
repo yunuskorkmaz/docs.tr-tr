@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efb04f36ad83755edd2e7d49c7cdec3cce77273b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b056e2c4dad46429462b377994919b46109cb9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
 Normal bir (SOAP tabanlı) WCF hizmetinden REST tarzı bir hizmete çağırma etkinleştirildiğinde (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlamı geçersiz kılar. Bu değişiklik HTTP POST istekleri için HTTP GET isteklerine neden olur. REST stilinde service çağırmak için doğru içeriği kullanmak için WCF Hizmeti zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın. Bu konu, bu tekniği gösterir basit bir örnek oluşturmak nasıl anlatmaktadır.  
@@ -244,5 +245,5 @@ public class CallingRESTSample
 ```
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir temel WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [WCF Web HTTP programlama nesnesi modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+ [Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

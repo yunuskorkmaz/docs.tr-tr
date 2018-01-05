@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
 Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konuda varsayılan davranışını yanı sıra veri sözleşmeleri adlandırma kuralları açıklanır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] adları oluşturulurken altyapı.  
@@ -84,7 +85,7 @@ Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri 
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
- [Veri sözleşmelerini kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Veri sözleşmesi adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [Veri Anlaşması Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

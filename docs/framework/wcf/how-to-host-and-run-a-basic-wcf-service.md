@@ -14,11 +14,12 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92aa512a12911913c1d4d7ca1587bb04df0a501d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
 Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -427,4 +428,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Kendini barındırma](../../../docs/framework/wcf/samples/self-host.md)
+ [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)

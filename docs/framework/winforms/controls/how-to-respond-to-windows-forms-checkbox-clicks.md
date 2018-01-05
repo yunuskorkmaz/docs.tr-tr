@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f15adb84f92c9434d6835e80f08bf1d9bd500ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe7826d1081f69bae1d220c22447886511cf58e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme
 Her bir kullanıcı, bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur. Onay kutusunun durumunu bağlı olarak bazı eylemleri gerçekleştirmek için uygulamanızın programlama yapabilirsiniz.  
@@ -147,6 +148,6 @@ Her bir kullanıcı, bir Windows Forms <xref:System.Windows.Forms.CheckBox> dene
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.CheckBox>  
- [CheckBox denetimine genel bakış](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [Nasıl yapılır: seçenekleri ile Windows Forms CheckBox denetimlerini ayarlama](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [CheckBox denetimi](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+ [CheckBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [CheckBox Denetimi](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

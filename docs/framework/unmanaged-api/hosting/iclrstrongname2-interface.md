@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9e9a88f1064c888d60e363be569d06458299143d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d4e1274f675ae9289faa6c530d34cd61d033aa07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrstrongname2-interface"></a>ICLRStrongName2 Arabirimi
 Tanımlayıcı adlar SHA-2 grubunu güvenli karma algoritması (SHA-256, SHA-384 ve SHA-512) kullanarak oluşturmanıza olanak sağlar.  
@@ -32,8 +33,8 @@ Tanımlayıcı adlar SHA-2 grubunu güvenli karma algoritması (SHA-256, SHA-384
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[StrongNameGetPublicKeyEx yöntemi](../../../../docs/framework/unmanaged-api/hosting/strongnamegetpublickeyex-method.md)|Ortak anahtarı bir genel/özel anahtar çifti alır ve bir karma algoritması ve imza algoritmasını belirtir.|  
-|[StrongNameSignatureVerificationEx2 yöntemi](../../../../docs/framework/unmanaged-api/hosting/strongnamesignatureverificationex2-method.md)|Türü kesin adlandırılmış bir derleme imzasını doğrular ve gerçek bir anahtara ECMA anahtarından bir eşleme sağlar.|  
+|[StrongNameGetPublicKeyEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/strongnamegetpublickeyex-method.md)|Ortak anahtarı bir genel/özel anahtar çifti alır ve bir karma algoritması ve imza algoritmasını belirtir.|  
+|[StrongNameSignatureVerificationEx2 Yöntemi](../../../../docs/framework/unmanaged-api/hosting/strongnamesignatureverificationex2-method.md)|Türü kesin adlandırılmış bir derleme imzasını doğrular ve gerçek bir anahtara ECMA anahtarından bir eşleme sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

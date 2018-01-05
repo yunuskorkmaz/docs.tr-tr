@@ -26,11 +26,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0e2aec42fa3656b64140134efa27fe8e940e1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimine Dosyaları Yükleme
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim düz metin, Unicode düz metin veya zengin metin biçimi (RTF) dosyasını görüntüleyebilirsiniz. Bunu yapmak için arama <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> yöntemi. Aynı zamanda <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> bir akışından veri yükleme yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
@@ -93,5 +94,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim düz metin, Unicod
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [RichTextBox Denetimi](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

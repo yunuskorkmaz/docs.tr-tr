@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03734babf27ac4350580e7bed03645f3049c956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 İçinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> sınıfı ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) yapılandırmasında) Federasyon Hizmeti gösterme için bir mekanizma sağlar. Diğer bir deyişle, istemcilerin bir güvenlik belirteci hizmeti tarafından verilen bir güvenlik belirteci kullanarak kimlik doğrulaması gerektiren bir hizmeti. Bu konu nasıl ayarlanacağını gösterir bir <xref:System.ServiceModel.WSFederationHttpBinding> kod ve yapılandırma. Bağlama oluşturulduktan sonra bu bağlamayı kullanmak için uç nokta ayarlamayı ayarlayabilirsiniz.  
@@ -116,5 +117,5 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Nasıl yapılır: Güvenli WSFederationHttpBinding gücenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+ [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

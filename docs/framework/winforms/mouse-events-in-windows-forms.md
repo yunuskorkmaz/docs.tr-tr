@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 803f2daab5b8f6e216effe4a9ae9f34752d24e70
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5bde1c1045849fe5507081171711d5a00e99b0b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms'ta Fare Olayları
 Fare girişi uyguluyorsanız, genellikle fare konumunu işaretçi ve fare düğmelerinin durumunu bilmek ister. Bu konuda ayrıntıları fare olayları bu bilgilerin nasıl alınacağını sağlar ve hangi fare tıklatma Windows Forms denetimlerindeki olaylar oluşturulur sipariş açıklanmaktadır. Liste ve tüm fare olayları açıklaması için bkz: [nasıl fare giriş çalışır Windows Forms'ta](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Ayrıca bkz. [olay işleyicilerine genel bakış (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -152,4 +153,4 @@ Fare girişi uyguluyorsanız, genellikle fare konumunu işaretçi ve fare düğm
     >  Kullanıcının fare düğmesini basılı olsa işaretçiyi iki durumlu düğme denetim dışında taşınırsa (fareyi hareket gibi <xref:System.Windows.Forms.Button> , basıldığında kontrol), iki durumlu düğme denetim gerçekleştiği yer boyamak durum ve yalnızca <xref:System.Windows.Forms.Control.MouseUp> olayı oluşur. <xref:System.Windows.Forms.Control.Click> Veya <xref:System.Windows.Forms.Control.MouseClick> olayları, bu durumda gerçekleşmez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Forms bir Windows uygulamasında fare girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

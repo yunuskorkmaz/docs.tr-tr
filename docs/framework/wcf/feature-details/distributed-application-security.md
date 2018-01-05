@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
  İleti güvenlik modu aktarımı güvenlik gerçekleştirin, böylelikle hizmet kimlik bilgilerini bir ilk anlaşmasının bir parçası istemcinin değiştirilir sağlar. Anlaşma etkinleştirmek için ayarlanmış <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliğine `true`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uç noktası oluşturma genel bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Sistem tarafından sağlanan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Güvenlik genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

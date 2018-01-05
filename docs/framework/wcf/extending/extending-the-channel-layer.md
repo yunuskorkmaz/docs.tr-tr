@@ -14,24 +14,25 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f9d14183092b70f0bbe1ce8894f10369aa46c31
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a1a1bb0b1f2c5e6b42ee793f18f5ad442b1fe8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-channel-layer"></a>Kanal Katmanını Genişletme
 Kanal katmanını, istemciler ve hizmetler arasında ileti alışverişi sorumludur. Kanal uzantıları, güvenlik veya SOAP iletilerine taşımak için yeni bir ağ aktarımı uygulama gibi aktarım işlevlerini gibi yeni protokol işlevselliği uygulayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
+ [Kanal Modeline Genel Bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
  Hangi kanalları özelliklerdir, sağladıkları ve hem de bir hizmet ve bir istemci uygulaması nasıl çalıştıklarını üst düzey bir genel bakış sağlar.  
   
- [Geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
+ [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
  Derinlemesine kanal altyapı çeşitli yürütmek rolleri, durumu altyapısı ve durumu yaşam döngüsü nasıl çalıştığını, özel durum ve hataları nasıl ele alınacağını, meta verileri desteği uygulama ve kanalları ileti kodlayıcılarla nasıl çalışır? açıklar.  
   
- [Özel kodlayıcılar](../../../../docs/framework/wcf/extending/custom-encoders.md)  
+ [Özel Kodlayıcılar](../../../../docs/framework/wcf/extending/custom-encoders.md)  
  Kanallar ve bir oluşturma iletisi kodlayıcılar yürütebilirsiniz rolü açıklanmaktadır.  
   
- [Özel akış yükseltmeleri](../../../../docs/framework/wcf/extending/custom-stream-upgrades.md)  
+ [Özel Akış Yükseltmeleri](../../../../docs/framework/wcf/extending/custom-stream-upgrades.md)  
  Akış odaklı taşımaları tarafından sağlanan akışlar yükseltme işlemini açıklar.

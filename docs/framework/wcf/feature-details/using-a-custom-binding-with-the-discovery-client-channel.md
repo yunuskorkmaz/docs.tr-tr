@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c18be6868c2b0d092d1924b227b444b8b679a383
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 85c88132b1fa610b2bcb63635ae553ef47bb359c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 Özel bağlama ile kullanırken <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, tanımlamanız gerekir bir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> oluşturan <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örnekleri.  
@@ -56,6 +57,6 @@ customBinding.Elements.Insert(0, discoveryBindingElement);
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Keşif istemcisi kanalını kullanma Bkz [keşif istemcisi kanalını kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). Tam kod örneği için bkz: [keşif bağlama öğesi örneği](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Keşif istemcisi kanalını kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- [Keşif bağlama öğesi örneği](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)
+ [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Bulma Bağlama Öğesi Örneği](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)

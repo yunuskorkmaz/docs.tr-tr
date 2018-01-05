@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 740a454873976e407843c417a7b09e5a5218398d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26068ab72473a541b1f16aeb2a1f0d43ec7a7313
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="polygons-in-gdi"></a>GDI+'daki Çokgenler
 Çokgen üç veya daha fazla düz kenarlar ile kapalı bir Şekil ' dir. Örneğin, bir üçgen üç kenarı sahip bir çokgenin, bir Çokgen dört kenara dikdörtgen şeklinde ve beş kenara sahip bir çokgenin bir pentagon olduğu. Aşağıda birkaç çokgenler gösterilmektedir.  
@@ -44,5 +45,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: Kalem oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: Kalem Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

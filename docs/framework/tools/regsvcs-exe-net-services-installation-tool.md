@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
@@ -64,12 +65,12 @@ ms.lasthandoff: 11/21/2017
 |**/FC**|Hedef uygulamayı bulur veya oluşturur.|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/noreconfig**|Varolan bir hedef uygulamayı yeniden yapılandırmaz.|  
-|**/ nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
+|**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/parname:** *adı*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
 |**/reconfig**|Varolan bir hedef uygulamayı yeniden yapılandırır. Bu varsayılandır.|  
 |**TLB:** *typelibraryfile*|Yüklenecek tür kitaplığı dosyasını belirtir.|  
 |**/u**|Hedef uygulamayı kaldırır.|  
-|**istemci bilgisayarlara**|Sessiz modu belirtir; logo ve başarı iletisi görüntüsünü bastırır.|  
+|**/quiet**|Sessiz modu belirtir; logo ve başarı iletisi görüntüsünü bastırır.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -95,6 +96,6 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Araçları](../../../docs/framework/tools/index.md)  
- [Nasıl yapılır: bir derlemeyi tanımlayıcı adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Araçlar](../../../docs/framework/tools/index.md)  
+ [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

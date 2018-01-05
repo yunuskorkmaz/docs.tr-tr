@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 1d556b3da13b70a0a5e69eb72905e04a01dffa9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45eca9205e56d1245720425c36c6adfacae720a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>İstemciler İçin UI Otomasyon Denetim Düzenleri
 > [!NOTE]
@@ -55,11 +56,11 @@ ms.lasthandoff: 11/21/2017
  Özel denetim türlerini uygulayan denetimlerin işlevleri temsil etmek için gereken denetim düzenleri herhangi bir kümesi olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [UI Otomasyon metin düzeni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Otomasyonu kullanarak denetim çağırma](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [UI otomasyonunu kullanarak onay kutusunun Değiştir durumunu alma](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [UI Otomasyon istemcileri için Denetim düzeni eşleştirmesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [UI Otomasyonu Metin Deseni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
+ [UI Otomasyonu Kullanarak Denetim Çağırma](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [UI Otomasyonunu Kullanarak Onay Kutusunun Değiştir Durumunu Alma](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [TextPattern Ekle metin örneği](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [TextPattern arama ve seçim örneği](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)  
  [InvokePattern'ı ve ExpandCollapsePattern'ı menü öğesi örneği](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

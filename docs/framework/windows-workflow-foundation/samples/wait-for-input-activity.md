@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>Giriş etkinliği bekle
 Bu örnek bir iş akışında adlandırılmış yer işaretleri oluşturulacağını gösterir. [!INCLUDE[wf](../../../../includes/wf-md.md)]bir etkinlik bildirim temelli yer işareti oluşturmak için sağlamaz. Bu nedenle, iş akışında yer işareti oluşturmak istediğinizde, oluşturduğu özel bir aktivite yazmanız gerekir. `WaitForInput` Bu örnekte tanımlanan faaliyet, kullanıcılar bir iş akışındaki bildirimli olarak yer işaretleri oluşturabilmesi için bu işlevselliği sağlar.  

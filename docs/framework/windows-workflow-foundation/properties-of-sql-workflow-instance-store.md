@@ -12,28 +12,29 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4b890b80880638fae62c1ae79f8d2f436ef309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL iş akışı örneği deposu özellikleri
 Bu bölümdeki konularda SQL iş akışı örneği deposunun özellikleri hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Örnek kodlama seçeneği](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
+-   [Örnek Kodlama Seçeneği](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
--   [Örnek tamamlama eylemi](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
+-   [Örnek Tamamlama Eylemi](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
   
--   [Özel eylem örneği kilitli](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
+-   [Örnek Kilitli Özel Durum Eylemi](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
   
--   [Ana bilgisayar kilit yenileme süresi](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
+-   [Konak Kilidi Yenileme Dönemi](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
   
--   [Runnable örnekleri algılama süresi](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
+-   [Çalıştırılabilir Örnekleri Algılama Dönemi](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
   
--   [Bağlantı dizesini ve bağlantı dizesi adı](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
+-   [Bağlantı Dizesi ve Bağlantı Dizesi Adı](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Server App Fabric örneği deposu](http://go.microsoft.com/fwlink/?LinkId=201201)  

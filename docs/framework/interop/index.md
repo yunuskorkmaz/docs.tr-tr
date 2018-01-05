@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2db5b8c2425637e24086f54e8ef69b0e5aac3633
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen Kod ile Birlikte Çalışma
 .NET Framework COM bileşenleri, COM + Hizmetleri, dış tür kitaplıklarını ve birçok işletim sistemi Hizmetleri ile etkileşim yükseltir. Veri türleri, yöntem imzaları ve hata işleme mekanizmaları yönetilen ve yönetilmeyen nesne modelleri arasında farklılık gösterir. Yönetilmeyen kod ile .NET Framework bileşenleri arasındaki birlikte çalışabilirlik basitleştirmek ve geçiş yolunun kolaylaştırmak için istemciler ve sunucular bu nesne modelleri farklılıkları ortak dil çalışma zamanı gizler.  
@@ -36,22 +37,22 @@ ms.lasthandoff: 10/18/2017
  [Yönetilmeyen kod nasıl yapılır konuları ile birlikte çalışma](http://msdn.microsoft.com/en-us/ec21c6e1-e233-4cd9-95ae-b9b9cf807f9d)  
  Yönetilmeyen kod ile birlikte çalışma için kavramsal belgelerinde bulunan tüm nasıl yapılır konuları için bağlantılar sağlar.  
   
- [COM bileşenlerini .NET Framework'te gösterme](../../../docs/framework/interop/exposing-com-components.md)  
+ [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)  
  .NET Framework uygulamalarında COM bileşenlerini kullanmayı açıklar.  
   
- [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  COM uygulamaları .NET Framework bileşenlerini kullanmayı açıklar.  
   
- [Yönetilmeyen DLL işlevlerini kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
  Yönetilmeyen çağrılacağını açıklar platformu kullanılarak DLL işlevleri çağırma.  
   
  [Birlikte çalışma için tasarım konuları](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
  Tümleşik COM bileşenlerini yazmak için ipuçları verilmektedir.  
   
- [Birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md)  
+ [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)  
  COM birlikte çalışma ve platform çağırma için hazırlamayı açıklar.  
   
- [Nasıl yapılır: HRESULTs ve özel durumları eşleme](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
+ [Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)  
  Özel durumlar ve HRESULTs arasında eşleme açıklar.  
   
  [Genel türler kullanma birlikte çalışma](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)  

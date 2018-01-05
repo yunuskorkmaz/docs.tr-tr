@@ -13,27 +13,28 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d533a1f559044caf3bc711e9401b75703254bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d3ca06c2e702ef64a05834116e1c89b4872b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-peer-channel-application"></a>Eş Kanal Uygulaması Oluşturma
 Aşağıdaki bölümlerde, eş kanalı uygulamalarını geliştirme Kılavuzu sağlamak.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir NetTcpBinding uygulamasını eş kanalı uygulamasına dönüştürme](../../../../docs/framework/wcf/feature-details/converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
+ [Bir NetTcpBinding Uygulamasını Eş Kanalı Uygulamasına Dönüştürme](../../../../docs/framework/wcf/feature-details/converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
  Bir NetTcpBinding uygulamasını eş kanalı uygulamasına dönüştürme Hot açıklar.  
   
- [İleti dağıtımını sınırlandırma](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
+ [İleti Dağıtımını Sınırlandırma](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  İletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklanır ve bir yaklaşım seçimi için genel yönergeler sağlar.  
   
- [Çevrimiçi ve çevrimdışı durum ekleme](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [Çevrimiçi ve Çevrimdışı Durum Ekleme](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  Nasıl kullanılacağını açıklar <xref:System.ServiceModel.IOnlineStatus> belirli ayrıntılarını eş kanal bağlantısının çevrimiçi ve çevrimdışı durumunu izlemek için arabirim.  
   
- [Eş kanalı uygulamalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  Taşıma ve ileti tabanlı güvenlik ve eş kanalı uygulamalarını güvenli hale getirmek için en iyi uygulamaları açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eş kanal kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+ [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

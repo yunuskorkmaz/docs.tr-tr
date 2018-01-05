@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 64b404fec3f3cd46912deede61bf08f8e962f1d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63b56a927c16a746352e030df2a4de2ed28f7a09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltworkflowinstancequerygt-of-wcf"></a>WCF &lt;workflowInstanceQuery&gt;
 Başlatılan ya da tamamlanan olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleyen bir sorgu temsil eder.  
@@ -84,5 +85,5 @@ Başlatılan ya da tamamlanan olay gibi iş akışı örneği yaşam döngüsü 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [İzleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

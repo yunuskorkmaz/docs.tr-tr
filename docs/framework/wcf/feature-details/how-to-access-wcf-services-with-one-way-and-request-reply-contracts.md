@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5926af60d62e9063588cf7f7f8c4309568594337
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ae2153ef7246194774535fd399d03dd109a221a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
 Aşağıdaki yordamları nasıl erişileceği açıklayan bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlar ve çift yönlü iletişim düzeni kullanmaz hizmeti.  
@@ -411,4 +412,4 @@ namespace Microsoft.ServiceModel.Samples
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tek yönlü hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+ [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fe6affcf82a16a4fd51a5e5a4bf33b247dae0688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1096942775dd579fa530415873694b3e6e67a74a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 Arabirimi
 İşlevin dönüş değerini içeren bir yöntem sağlar. `ICorDebugILFrame3`Icordebugılframe ve Icordebugılframe2 arabirimlerinin mantıksal bir uzantısıdır.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Getreturnvalueforıloffset yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Bir işlevin dönüş değeri yalıtan bir Icordebugvalue nesneyi alır.|  
+|[GetReturnValueForILOffset Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Bir işlevin dönüş değeri yalıtan bir Icordebugvalue nesneyi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
  **.NET framework sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Icordebugcode3 arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugCode3 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

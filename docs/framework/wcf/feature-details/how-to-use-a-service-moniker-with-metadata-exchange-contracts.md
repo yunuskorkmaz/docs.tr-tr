@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Bazı yeni geliştirme sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri karar bir komut dosyası veya Visual Basic 6.0 uygulamadan bu hizmetleri çağıran kullanabilmek ister. Bir yöntem oluşturmak için olacak bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme derlemesini COM ile kaydetme, derlemeyi GAC'ye yükleyin ve ardından Visual Basic kodunuzdan COM türlerini başvuru. Uygulamayı dağıttığınızda, dağıtmanız gerekecek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. Ardından, kullanıcı WCF istemcisi derlemesini COM ile kaydetme ve GAC'ye yerleştirmek sahip olur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]COM birlikte çalışma de aynı hizmet çağrıları öğesine bağlı kalmadan almanıza imkan tanır bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci derleme. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ad herhangi bir çağrıda olanak tanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet herhangi bir dilden bir meta veri exchange (Mex) uç noktası kullanan hizmet adının URI belirterek COM uyumlu (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) hizmeti hakkında türü bilgi ayıklamak için. Bu konu, Başlarken çağrılacağını açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanarak örnek bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Mex uç nokta belirtir ad.  
@@ -50,5 +51,5 @@ Bazı yeni geliştirme sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.
     >  Ad hatalı veya hizmet kullanılamıyor çağrısı `GetObject` "Geçersiz sözdizimi." bildiren bir hata döndürür  Bu hatayı alırsanız, kullanmakta olduğunuz adının doğru olduğundan ve hizmet kullanılabilir olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Windows Communication Foundation Hizmeti bilinen adını kaydolmadan kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
- [Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+ [Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ [Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

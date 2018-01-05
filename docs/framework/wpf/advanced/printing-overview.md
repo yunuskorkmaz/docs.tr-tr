@@ -26,11 +26,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7234dfd3c1a80ebd2c21d3748bc3281573bb4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 İle [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], uygulama geliştiricilerinin kullanarak [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] yazdırmayı ve baskı sistem yönetimi zengin yeni kümesine sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazıları bu yazdırma sistemi geliştirmelerini ayrıca oluşturma geliştiricilerine kullanılabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaları ve kullanan geliştiriciler yönetilmeyen kodu. Bu yeni işlevsellik özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -153,7 +154,7 @@ Gerektirmeyen uygulamalar için [!INCLUDE[TLA2#tla_metro](../../../../includes/t
  <xref:System.Printing.PrintServer>  
  <xref:System.Printing.PrintQueue>  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- [WPF belgeleri](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [XPS](http://www.microsoft.com/xps)  
- [Belgeyi seri hale getirme ve depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [Belge Serileştirme ve Depolama](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
  [Microsoft XPS Belge dönüştürücü (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

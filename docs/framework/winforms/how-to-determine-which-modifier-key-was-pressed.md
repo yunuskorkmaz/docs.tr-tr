@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6fdc93063bbc8c9428f2f01c6cd5c0578e77ab01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffe09cc07b3eb36184a7242d418fd6782219806e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Nasıl yapılır: Hangi Değiştirici Tuşa Basıldığını Belirleme
 Kullanıcının tuş vuruşlarını kabul eden bir uygulama oluşturduğunuzda, üst karakter, ALT ve CTRL tuşları gibi değiştirici tuşları izlemek isteyebilirsiniz. Değiştirici tuşa birlikte diğer anahtarlarla veya fare tıklatma ile basıldığında uygulamanızı uygun şekilde yanıt verebilir. Örneğin, S harfi basıldıysa bu basitçe "ekranda görünmesi bir s" neden olabilir, ancak CTRL + S anahtarları basıldıysa geçerli belge kaydedilebilir. İşleme, <xref:System.Windows.Forms.Control.KeyDown> olayı <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> özelliği <xref:System.Windows.Forms.KeyEventArgs> alınan hangi değiştirici tuşları basılı tarafından olay işleyicisi belirtir. Alternatif olarak, <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> özelliği <xref:System.Windows.Forms.KeyEventArgs> bit düzeyinde OR ile birlikte herhangi değiştirici tuşları de basıldı karakteri belirtir. Ancak, işleniyorsa <xref:System.Windows.Forms.Control.KeyPress> veya fare olayın olay işleyicisi bu bilgilerini almaz. Bu durumda, kullanmalısınız <xref:System.Windows.Forms.Control.ModifierKeys%2A> özelliği <xref:System.Windows.Forms.Control> sınıfı. Her iki durumda da, uygun bir bit düzeyinde AND gerçekleştirmelisiniz <xref:System.Windows.Forms.Keys> ve test ettiğiniz değerleri. <xref:System.Windows.Forms.Keys> Numaralandırma Çeşitlemeler bitwise gerçekleştirmek önemlidir her değiştirici tuşa ve doğru değerle sunar. Örneğin, SHIFT tuşunu tarafından temsil edilen <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> ve <xref:System.Windows.Forms.Keys.LShiftKey> SHIFT değiştirici tuşa olarak test etmek için doğru değeri <xref:System.Windows.Forms.Keys.Shift>. Benzer şekilde, DNTL ve ALT değiştiricileri test etmek için kullanması gereken <xref:System.Windows.Forms.Keys.Control> ve <xref:System.Windows.Forms.Keys.Alt> değerler, sırasıyla.  
@@ -58,5 +59,5 @@ Kullanıcının tuş vuruşlarını kabul eden bir uygulama oluşturduğunuzda, 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
- [Forms bir Windows uygulamasında klavye girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Bir Windows Forms Uygulamasında Klavye Girdisi](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
  [Nasıl yapılır: CapsLock etkin Visual Basic'te olup olmadığını belirleme](http://msdn.microsoft.com/en-us/91e60f5c-dd61-4222-ba5f-39af803afd8c)

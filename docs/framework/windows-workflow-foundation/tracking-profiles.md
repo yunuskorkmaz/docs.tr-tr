@@ -12,11 +12,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5bd1a0b5b34c8d812362d492b03e57c73a41c5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a3b1e96451eb89544d0902a1f3498263dec981a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-profiles"></a>Profillerini izleme
 İzleme profilleri çalışma zamanında bir iş akışı örneğinin durumu değiştiğinde, gösterilen iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir.  
@@ -390,6 +391,6 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL izleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
+ [SQL İzleme](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
  [Windows Server App Fabric izleme](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [App Fabric ile uygulamaları izleme](http://go.microsoft.com/fwlink/?LinkId=201275)

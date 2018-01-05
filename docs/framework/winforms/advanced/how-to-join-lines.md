@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f02da181d66f7bb26a8414782e42eff2570e6918
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d12cc7b4b4c878ec812190fd56a1face64118ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-join-lines"></a>Nasıl yapılır: Çizgileri Birleştirme
 Satır birleştirme, uçları karşıladığında veya üst üste iki çizgiyle biçimlendirilmiş ortak alandır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]üç çizgi birleştirme stili sağlar: gönye, eğim ve yuvarlar. Çizgisi birleştirme stili bir özelliğidir <xref:System.Drawing.Pen> sınıfı. Çizgisi birleştirme stili için belirttiğinizde bir <xref:System.Drawing.Pen> nesnesi, birleştirme stili herhangi bir bağlı olan tüm satırları uygulanacak <xref:System.Drawing.Drawing2D.GraphicsPath> nesne bu kalem kullanarak çizilir.  
@@ -48,4 +49,4 @@ Satır birleştirme, uçları karşıladığında veya üst üste iki çizgiyle 
  Önceki örnekte Windows Forms ile kullanılmak üzere tasarlanmış ve gerektirip <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olarak olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çizgiler ve şekiller çizmek için kalem kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+ [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

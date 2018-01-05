@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, isabet sınama ve alt düzey bileşimi visual katmanı kullanmak üzere nasıl ekleyebileceğiniz gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Görsel uzaklığı alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [Görsel çizim içeriğini listeleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [Test geometri görselde ulaştı.](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Geometri parametre olarak kullanan isabet testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [Win32 Konak Kapsayıcısı kullanan isabet testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [Üzerinde işlemek bir CompositionTarget kullanarak çerçeve aralığı başına](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [Görselin Sapmasını Alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [Görselin Çizim İçeriğini Numaralandırma](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [Görselde Tıklama Testi Geometrisi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [Geometriyi Parametre Olarak Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [Win32 Konak Kapsayıcısı Kullanan Tıklama Testi](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

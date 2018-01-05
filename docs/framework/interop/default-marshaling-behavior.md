@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4cd38d8e026b3cf4bb0bf224f81be9bdab23e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -447,8 +448,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Blok halinde kopyalanabilir ve kopyalanamaz türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Kopyalama ve sabitleme](../../../docs/framework/interop/copying-and-pinning.md)  
- [Diziler için varsayılan hazırlama](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Nesneler için varsayılan hazırlama](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Dizeler için varsayılan hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)  
+ [Diziler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [Nesneler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-objects.md)  
+ [Dizeler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)

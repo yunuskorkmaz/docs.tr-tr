@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
 Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullanın özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kodu çalışma zamanında belirttiğiniz karşın, bir başlangıç tarih veya saat XAML'de belirtebilirsiniz. WPF XAML ayrıştırıcısı ayrıştırılmasını işler <xref:System.DateTime> değerlerini yerleşik XAML metin sözdizimini kullanarak. Bu konuda, özelliklerini açıklanmaktadır <xref:System.DateTime> XAML metin sözdizimi.  
@@ -85,4 +86,4 @@ Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.W
  Önceden belirtildiği gibi bir <xref:System.DateTime> XAML'de kabul edilebilir olan herhangi bir dize belirtilmesi için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu, diğer şekillendirilmiş biçimleri içerir (örneğin <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) ve belirli bir HTTP'dir değil biçimleri <xref:System.Globalization.DateTimeFormatInfo> formu. Örneğin, form `YYYY/mm/dd` kabul edilebilir için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu konu, çalışan ve bunun yerine standart bir yöntem olarak kısa tarih düzeni önerir tüm olası biçimleri açıklamaya denemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML'ye Genel Bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

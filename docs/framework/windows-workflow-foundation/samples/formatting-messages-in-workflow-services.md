@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 726ce98f3fe11bbc3cd13d90cdae335c0741efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be200882b59af3604a88c33ad1b3a99687ded860
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>İş akışı hizmetleri iletilerinde biçimlendirme
 Bu örnek nasıl farklı kullanıcı türleri kullanılabilir Mesajlaşma etkinlikleri (WF Hizmetleri) gösterir. Örnek hizmeti bir basit gider onay hizmetidir ve üç işlemini kullanıma sunar. `ApproveExpense`bir veri sözleşmesi türü alır ve bilinen türleri kullanmayı gösterir. İşlemi döndürür `true` veya `false` gider miktarına bağlı. `ApprovePO`XmlSerializer türü alıp döndüren `true` veya `false` gider miktarına bağlı.`ApprovedVendor` Sözleşme türden bir ileti alıp döndüren `true` veya `false` satıcı onaylanan satıcılar listesinde ise veya istek (Finans departmanı herhangi bir satıcı kullanabilir) Finans departmanından geldiyse.  

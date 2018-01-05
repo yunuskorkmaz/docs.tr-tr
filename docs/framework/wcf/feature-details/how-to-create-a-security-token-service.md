@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: bfb1acc5c1c665ebd410b0a49e8f357e5b9458f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü uygular. Bu protokol, ileti biçimleri ve verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için ileti exchange desenleri tanımlar. Verilen güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en yaygın bir senaryo arar: belirteci verme uygulama.  
@@ -141,4 +142,4 @@ Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü u
  <xref:System.IdentityModel.Tokens.SamlAssertion>  
  <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
  <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
+ [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)

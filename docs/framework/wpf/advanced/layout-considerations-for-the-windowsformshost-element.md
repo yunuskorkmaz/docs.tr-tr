@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d21077e6012f8e48a1418f67e8f0d156d82003c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konuda açıklanmaktadır nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşime [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -111,7 +112,7 @@ Bu konuda açıklanmaktadır nasıl <xref:System.Windows.Forms.Integration.Windo
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [İzlenecek yol: WPF içinde Windows Forms denetimleri düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
+ [İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
  [WPF örnek Forms denetimlerini pencereleri düzenleme](http://go.microsoft.com/fwlink/?LinkID=159971)  
- [Windows Forms ve WPF özellik eşlemesi](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Geçiş ve birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+ [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52529689242342afa8920a7b01b532a24337f562
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 755df7c86d80214ded4e8c9534f88910a171c7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Nasıl yapılır: bir LINQ SQL veri kaynağı (WCF Veri Hizmetleri) kullanarak bir veri hizmeti oluşturma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]varlık verilerini veri hizmet olarak sunar. Üye sunan herhangi bir sınıf üzerinde dayalı bir veri modeli tanımlamak için bu iade yansıma sağlayıcı sağlar bir <xref:System.Linq.IQueryable%601> uygulaması. Veri kaynağındaki güncelleştirmeler yapmak için bu sınıfları ayrıca uygulamalıdır <xref:System.Data.Services.IUpdatable> arabirimi. Daha fazla bilgi için bkz: [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). Bu konu LINQ Northwind örnek veritabanı yansıtma sağlayıcı kullanarak erişim SQL sınıfları için oluşturma yanı sıra, bu veri sınıflara göre veri hizmetin nasıl oluşturulacağını gösterir.  
@@ -77,6 +78,6 @@ ms.lasthandoff: 12/02/2017
 6.  Northwind.svc veri hizmeti bir Web tarayıcısı kullanarak test etmek için konudaki yönergeleri [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: bir ADO.NET Entity Framework Veri kaynağı kullanarak bir veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
- [Nasıl yapılır: yansıma sağlayıcısını kullanarak bir veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
- [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Nasıl yapılır: ADO.NET Entity Framework Veri Kaynağı Kullanarak Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+ [Nasıl yapılır: Yansıma Sağlayıcısını Kullanarak Veri Hizmeti Oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffde36d9644dade3372292a6fb3961cbbfb6a5da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d346e1f853d735e8aae0dd5647c14ac6eb8c237b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen, bir nesne yerine bir tür bir denetimi bağlamak gerekli bulacaksınız. Ne zaman veri kullanılamayabilir, ancak bir türün ortak arabirim bilgilerini görüntülemek, veri bağlama denetimleri hala gerekir özellikle tasarım zamanında, bu durum ortaya çıkar. Örneğin, bağlayabilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetlemek için bir Web hizmeti tarafından sunulan bir nesne ve istediğiniz <xref:System.Windows.Forms.DataGridView> sütunlarını tasarım zamanında üyeyi içeren özel bir tür adlarını etiketlemek için denetim.  
@@ -48,4 +49,4 @@ Verilerle etkileşimli denetimleri oluştururken, bazen, bir nesne yerine bir t�
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+ [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)

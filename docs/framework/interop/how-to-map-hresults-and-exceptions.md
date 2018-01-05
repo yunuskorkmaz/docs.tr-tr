@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41220f37837c1bd2e983a82ecb3406fe1cb918e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı iki arasında geçiş işler. .NET Framework'teki her özel durum sınıfı bir HRESULT eşler.  
@@ -151,4 +152,4 @@ CMyClass::MethodThatThrows
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- [Özel durumlar](../../../docs/standard/exceptions/index.md)
+ [Özel Durumlar](../../../docs/standard/exceptions/index.md)

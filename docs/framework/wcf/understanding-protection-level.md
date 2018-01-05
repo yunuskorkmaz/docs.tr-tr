@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 `ProtectionLevel` Özelliği bulundu birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özelliği bir ileti bölümü (veya tam) nasıl korumalı denetler. Bu konuda açıklanmaktadır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] özelliği ve nasıl çalışır.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.MessageHeaderAttribute>  
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
  <xref:System.Net.Security.ProtectionLevel>  
- [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md)  
- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Belirtme ve sözleşme ve hizmetlerde hataları işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [İleti sözleşmeleri kullanılıyor](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+ [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
+ [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
+ [İleti Anlaşmaları Kullanma](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

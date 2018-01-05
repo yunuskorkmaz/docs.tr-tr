@@ -24,20 +24,21 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e672c0bf6eddaef7bd0b2103fdde75ae2554dedd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox Denetimi (Windows Forms)
 Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <xref:System.Windows.Forms.ListBox> denetlemek ve listedeki öğeleri yanındaki onay işareti de görüntüleyebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CheckedListBox denetimine genel bakış](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [CheckedListBox Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
  Bu denetimi nedir ve anahtar özellikleri ve özelliklerini açıklar.  
   
- [Nasıl yapılır: işaretli öğeleri Windows Forms CheckedListBox denetimi belirleme](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ [Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  Hangi öğelerin denetlenir belirlemek için bir listeyi gözden geçirip açıklar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -45,8 +46,8 @@ Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <x
  Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
  Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz işlemler listesini sağlar.  
   
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.

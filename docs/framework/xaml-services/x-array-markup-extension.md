@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc2304ba68956b705904c72e29a17bdac4536c79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarray-markup-extension"></a>x:Array İşaretleme Uzantısı
 Nesnelerin XAML biçimlendirme uzantısı aracılığıyla diziler için genel destek sağlar. Bu karşılık `x:ArrayExtension` [MS-XAML] XAML yazın.  
@@ -80,5 +81,5 @@ Nesnelerin XAML biçimlendirme uzantısı aracılığıyla diziler için genel d
  Dizi öğeleri olarak kullanılan özel türler için sınıf ayrıca XAML'de nesne öğeleri oluşturulmasını gereksinimleri desteklemesi gerekir. Daha fazla bilgi için bkz: [XAML ve WPF için özel sınıfları](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [WPF'den System.xaml'e geçirilen türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+ [İşaretleme Uzantıları ve WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [WPF'den System.Xaml'e Geçirilen Türler](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

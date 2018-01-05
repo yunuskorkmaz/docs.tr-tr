@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+'da Kalemler, Çizgiler ve Dikdörtgenler
 Satırıyla çizmek için [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne ve <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesne gerçekten çizimi yapmak yöntemler sağlar ve <xref:System.Drawing.Pen> nesnesi çizgi rengini, genişliğini ve stil gibi özniteliklerini depolar.  
@@ -81,6 +82,6 @@ Satırıyla çizmek için [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgd
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  
- [Nasıl yapılır: Kalem oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [Nasıl yapılır: bir Windows formunda çizgi çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- [Nasıl yapılır: Anahatlı şekil çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+ [Nasıl yapılır: Kalem Oluşturma](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Nasıl yapılır: Bir Windows Formunda Çizgi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [Nasıl yapılır: Ana Hatlı Şekil Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

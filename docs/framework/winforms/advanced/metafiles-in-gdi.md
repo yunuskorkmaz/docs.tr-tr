@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b75ceb08df0454172a000d5d1ad15445f685ddf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2b9d378f82b2a7edca00fedaacdcc0fca179c5a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metafiles-in-gdi"></a>GDI+'da Meta Dosyaları
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]sağlar <xref:System.Drawing.Imaging.Metafile> kaydedin ve meta dosyaları görüntülemek için sınıf. Bir vektör görüntüsü olarak da adlandırılan meta dosyası komutları ve ayarlar çizim sırası depolanan resimdir. Komutlar ve ayarlar kaydedilen bir <xref:System.Drawing.Imaging.Metafile> nesne bellekte veya bir dosya veya akışınıza kaydedildi.  
@@ -48,4 +49,4 @@ ms.lasthandoff: 10/22/2017
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Resimler, bit eşlemler ve meta dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+ [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

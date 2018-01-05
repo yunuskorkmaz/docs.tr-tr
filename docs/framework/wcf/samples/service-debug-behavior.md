@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb609857dbe3aaee0014e284d80af3b93ac395e5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 007ce7eeae6022255ad1b31921e14e0518d72bee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-debug-behavior"></a>Hizmet Hata Ayıklama Davranışı
 Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılabilir gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnek, hizmet hata ayıklama davranışı yapılandırma dosyasında açıkça tanımlar. Bu da imperatively kodda yapılabilir.  

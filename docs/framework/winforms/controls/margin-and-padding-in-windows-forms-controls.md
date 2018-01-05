@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d8a73963a8f9f1e3d8b80b6c16f189e0221c55
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28092704d3c7eaa4820bf6dcbc1678f806ac213e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Kenar Boşluğu Bırakma ve Doldurma
 Formunuza denetimler tam yerleşimi, pek çok uygulama yüksek önceliktir. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı, bunu başarmak için birçok yerleşim özellikleri verir. En önemli ikisidir <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özellikleri.  

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c45e044bf5ae8e3afa56b06b253a43fbb95f83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f5f723ddf5c81550661c6b96de77b35984b1eeb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Protokol uygulama ayrıntılarını WCF Veri Hizmetleri
 ## <a name="odata-protocol-implementation-details"></a>OData Protokolü uygulama ayrıntıları  
@@ -33,5 +34,5 @@ ms.lasthandoff: 12/02/2017
  Ne zaman veri hizmetine gönderilen bir sorgu isteği içeren bir `$top` veya `$skip` sistem sorgusu seçeneği ve içermemesi `$orderby` sistem sorgusu seçeneği, döndürülen akışa göre artan sırada anahtar özellikleri sıralandığı. Sıralama sonuçları doğru disk belleği emin olmak için gerekli olmasıdır. Bunu yapmak için veri hizmeti bir sıralama ifadesi sorguya ekler. Disk belleği sunucu tabanlı veri hizmeti etkin olduğunda bu davranış da oluşur. Daha fazla bilgi için bkz: [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Sıralama döndürülen akışa denetlemek için içermelidir `$orderby` URI sorgu.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF veri hizmetleri tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

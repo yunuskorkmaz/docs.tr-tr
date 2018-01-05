@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9065f467cd353c17471db2c0d67001a188459819
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 015003becc47910b875629f021a9e196ba8445f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server ikili ve değeri büyük veri
 SQL Server sağlar `max` depolama kapasitesini genişletir belirleyici `varchar`, `nvarchar`, ve `varbinary` veri türleri. `varchar(max)`, `nvarchar(max)`, ve `varbinary(max)` toplu olarak adlandırılır *büyük değer veri türleri*. En fazla 2 depolamak için büyük değer veri türleri kullanabilirsiniz ^ 31-1 veri baytı sayısı.  
@@ -25,14 +26,14 @@ SQL Server sağlar `max` depolama kapasitesini genişletir belirleyici `varchar`
  SQL Server 2008 dosya sisteminde veritabanında depolanan büyük değer verilerinin vererek FILESTREAM öznitelik, bir veri türü değil, ancak bunun yerine bir sütuna, tanımlı bir öznitelik tanıtır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ADO.NET büyük değer (Maks) verileri değiştirme](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
+ [ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
  Büyük değer veri türleri ile çalışmak açıklar.  
   
- [FILESTREAM verileri](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
+ [FILESTREAM Verileri](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
  FILESTREAM özniteliği ile SQL Server 2008'de depolanan değeri büyük veri ile nasıl çalışılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL Server veri türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [SQL Server veri işlemleri ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Alma ve ADO.NET veri değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

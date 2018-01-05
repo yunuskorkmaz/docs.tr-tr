@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e9b746fe66635054dbd35463f727d28a8abd3d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Nasıl yapılır: TileBrush için Döşeme Boyutunu Ayarlama
 Bu örnek için döşeme boyutunu nasıl ayarlayacağınızı gösterir bir <xref:System.Windows.Media.TileBrush>. Varsayılan olarak, bir <xref:System.Windows.Media.TileBrush> tamamen boyama alanını dolduracak tek bir döşeme üretir. Ayarlayarak bu davranışı geçersiz kılabilirsiniz <xref:System.Windows.Media.TileBrush.Viewport%2A> ve <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> özellikleri.  
@@ -50,5 +51,5 @@ Bu örnek için döşeme boyutunu nasıl ayarlayacağınızı gösterir bir <xre
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Media.TileBrush>  
- [Görüntüleri, çizimler ve görsellerle boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Bir TileBrush farklı döşeme desenleri oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+ [Görüntüler, Çizimler ve Görsellerle Boyama](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [TileBrush ile Farklı Döşeme Desenleri Oluşturma](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

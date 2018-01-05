@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 40d073a2ae390a434f5bf4562da7a6226993cfcb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -249,4 +250,4 @@ class Implemented : ICanCastToMe
  Bu geçersiz kılmaları derleme hatası ile bir dil derleyici engeller olsa bile, geçersiz kılmak için diğer derleyicileri ile yazılan kod mümkündür olduğunu unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Güvenli kodlama yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

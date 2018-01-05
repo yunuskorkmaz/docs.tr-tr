@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Nasıl yapılır: Windows Forms NotifyIcon Bileşeniyle TaskBar'na Uygulama Simgeleri Ekleme
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşen durumu görev çubuğu bildirim alanında tek bir simge görüntüler. Durum alanında birden çok simgeleri göstermek için birden çok sahip <xref:System.Windows.Forms.NotifyIcon> formunuzda bileşenleri. Bir denetim için görüntülenen simge ayarlamak için kullanın <xref:System.Windows.Forms.NotifyIcon.Icon%2A> özelliği. Ayrıca kod yazabilirsiniz <xref:System.Windows.Forms.NotifyIcon.DoubleClick> kullanıcı simgesine tıkladığında bu bir şey için olay işleyicisi. Örneğin, bir iletişim kutusu kullanıcının simgesi tarafından temsil edilen arka plan işlemi yapılandırmak görünür hale getirebilir.  
@@ -83,6 +84,6 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> bileşen durumu görev çub
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.NotifyIcon>  
  <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Nasıl yapılır: bir kısayol menüsünü Windows Forms Notifyıcon bileşeniyle ilişkilendirme](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- [Notifyıcon bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [Notifyıcon bileşenine genel bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+ [Nasıl yapılır: Bir Kısayol Menüsünü Windows Forms NotifyIcon Bileşeniyle İlişkilendirme](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ [NotifyIcon Bileşeni](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ [NotifyIcon Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

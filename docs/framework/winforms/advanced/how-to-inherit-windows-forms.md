@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e986c79887ad19c77761b5ce134e4a3d68200d1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f190fb101a3ff666d194d854c9ce152657ebf85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 Temel formlardan devralarak yeni Windows Forms oluşturma en iyi çabalarınız bunu gerektiren her zaman bir form tamamen yeniden sürecinde geçmeden çoğaltmak için kullanışlı bir yoludur.  
@@ -51,8 +52,8 @@ Temel formlardan devralarak yeni Windows Forms oluşturma en iyi çabalarınız 
  Forms devralırken her olay hem temel sınıfını hem de devralınan sınıfı tarafından işlenmediğinden oluşabilecek sorunları, iki kez çağrılan olay işleyicileri açısından göz önünde bulundurun. Bu sorunu önlemek nasıl daha fazla bilgi için bkz: [sorun giderme devralınmış olay işleyicileri Visual Basic'te](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Inherits deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [Imports deyimi (.NET Namespace ve türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [kullanma](~/docs/csharp/language-reference/keywords/using.md)  
- [Taban formun görünüşünü değiştirmenin etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Windows Forms görsel devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+ [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
+ [Imports Deyimi (.NET Ad Alanı ve Türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [using](~/docs/csharp/language-reference/keywords/using.md)  
+ [Taban Formun Görünüşünü Değiştirmenin Etkileri](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
+ [Windows Forms Görsel Devralma](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

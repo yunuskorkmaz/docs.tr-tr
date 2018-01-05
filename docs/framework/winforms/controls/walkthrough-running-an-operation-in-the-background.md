@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de485eb0b9c67ee9c3c897b6521971f50aaf751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9be47fd57e49973c0f77a069c4f3371e4f63194
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
 Tamamlanması uzun zaman alacağı işleme sahip ve kullanıcı arabiriminde gecikmelere neden istemediğiniz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> işlemi başka bir iş parçacığında çalıştırmak için sınıf.  
@@ -44,7 +45,7 @@ Tamamlanması uzun zaman alacağı işleme sahip ve kullanıcı arabiriminde gec
   
     |Düğme|Ad|Metin|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Başlat**|  
+    |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**İptal**|  
   
 2.  Açık **araç**, tıklatın **bileşenleri** sekmesini tıklatın ve ardından sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen.  
@@ -113,6 +114,6 @@ Tamamlanması uzun zaman alacağı işleme sahip ve kullanıcı arabiriminde gec
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.DoWorkEventArgs>  
- [Nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Nasıl yapılır: bir işlemi arka planda çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [BackgroundWorker bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+ [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

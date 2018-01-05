@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlamak için bunları etkinleştirerek geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu yayın stratejidir. Bu platform ADO.NET Entity Framework ve ilgili teknolojileri içerir.  
@@ -50,6 +51,6 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlama
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Veri Hizmetleri Web veya intranet üzerinde dağıtır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlerine uygun olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET genel bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET yenilikler nelerdir?](../../../../docs/framework/data/adonet/whats-new.md)  
+ [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64e51a8911e27a612500ba222df7e3637cd24a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
 Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğesinde bir <xref:System.Windows.Forms.ListView> denetim. Türetme özel yöntemler ve bunları işlemek için oluşturucular yanı sıra, gerekli tüm alanları eklemenize izin verir. Bu özellik bir kullanımını her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Burada için örnekler bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetim.  
@@ -140,5 +141,5 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TreeView denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [ListView denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+ [TreeView Denetimi](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [ListView Denetimi](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

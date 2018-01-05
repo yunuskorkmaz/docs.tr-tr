@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML Belirteçleri ve Talepleri
 Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterimlerini şunlardır. Varsayılan olarak, SAML belirteçlerini [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] federe güvenlik senaryolarda kullanımları *verilen belirteçler*.  
@@ -57,9 +58,9 @@ Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterim
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Nasıl yapılır: federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Nasıl yapılır: federe bir hizmette kimlik bilgilerini yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Beyanlar ve belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Talep oluşturma ve kaynak değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Nasıl yapılır: özel beyan oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [Talepler ve Belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
+ [Talep Oluşturma ve Kaynak Değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
+ [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

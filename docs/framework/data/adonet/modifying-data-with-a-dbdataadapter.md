@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 850e56e6d6b5e6416ff9bb99e8c458982347e860
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc821aeb1fb7812b3a858bf901e91ccc625f142a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Bir DbDataAdapter verilerle değiştirme
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Yöntemi bir <xref:System.Data.Common.DbProviderFactory> nesne size bir <xref:System.Data.Common.DbDataAdapter> Fabrika oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcı için kesin türü belirtilmiş nesnesi. Daha sonra kullanabileceğiniz bir <xref:System.Data.Common.DbCommandBuilder> komutları eklemek için oluşturmak, güncelleştirmek ve verileri silmek bir <xref:System.Data.DataSet> bir veri kaynağına.  
@@ -54,6 +55,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Bir DbProviderFactory alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
+ [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
  [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

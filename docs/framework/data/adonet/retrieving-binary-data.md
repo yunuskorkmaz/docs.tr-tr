@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd524ed605f1fe125480bae0949745f4f045f03a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43e937836911808789e2cad8affb395cc73ceb68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-binary-data"></a>İkili veriler alınıyor
 Varsayılan olarak, **DataReader** bütün bir veri satırının kullanılabilir olduğu anda gelen verileri bir satır olarak yükler. Tek bir satırda bulunan verileri gigabayt içerdiğinden ikili büyük nesneler (BLOB) ancak, farklı işleme gerekir. **Command.ExecuteReader** yöntemi sürer bir aşırı sahip bir <xref:System.Data.CommandBehavior> varsayılan davranışını değiştirmek için bağımsız değişken **DataReader**. Geçirebilirsiniz <xref:System.Data.CommandBehavior.SequentialAccess> için **ExecuteReader** varsayılan davranışını değiştirmek için yöntemi **DataReader** böylece alındığında veri satırı yükleme yerine, verileri sıralı olarak yükler. Bu, BLOB veya diğer büyük veri yapılarını yüklemek için idealdir. Bu davranış, veri kaynağında değişebilir unutmayın. Örneğin, bir BLOB Microsoft Access'ten döndürme alındığında belleğe yerine sıralı olarak yüklenen tüm BLOB yükler.  
@@ -165,5 +166,5 @@ connection.Close();
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataReader ile çalışma](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [SQL Server ikili ve değeri büyük veri](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server İkili ve Büyük Değerli Veriler](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

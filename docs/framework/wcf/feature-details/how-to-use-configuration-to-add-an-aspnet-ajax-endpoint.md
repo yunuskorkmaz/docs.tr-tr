@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4db4b105bc958a19dc803aa74dc9193e8a8a7edb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir ASP.NET AJAX etkinleştirilmiş uç nokta bir istemci Web sitesinde JavaScript'ten çağrılabilir kullanılabilir hale getirir bir hizmet oluşturmanıza olanak sağlar. Bu tür bir uç nokta oluşturmak için ya da bir yapılandırma dosyası tüm diğer olarak kullanabileceğiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uç noktaları veya tüm yapılandırma öğeleri gerektirmeyen bir yöntemi kullanın. Bu konuda yapılandırma yaklaşım gösterilir.  
@@ -115,5 +116,5 @@ ms.lasthandoff: 12/02/2017
 1.  Hizmet kullanıma sunulmuştur ve service.svc/ için istek göndererek çağrılabilir uç nokta .svc dosyasıyla ilişkili boş bir adresindeki yapılandırıldığından\<işlemi > - Örneğin, service.svc/Add için `Add` işlemi. ASP.NET AJAX komut dosyası Manager denetim betikleri koleksiyona uç nokta URL'sini girerek kullanabilirsiniz. Bir örnek için bkz: [AJAX hizmeti kullanarak HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET AJAX için WCF hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- [Nasıl yapılır: AJAX etkinleştirilmiş ASP.NET Web hizmetlerini WCF'ye taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+ [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

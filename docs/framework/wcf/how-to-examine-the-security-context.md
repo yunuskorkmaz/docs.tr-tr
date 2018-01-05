@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 72bc3dfcc91cb0fe5b393c9735c83b6331d5e0dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d6852a3162b3a8666c711d455e72517a91c4477
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-examine-the-security-context"></a>Nasıl Yapılır: Güvenlik Bağlamını İnceleme
 Programlama zaman [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, hizmet güvenlik bağlamı, istemci kimlik bilgileri ve hizmeti ile kimlik doğrulaması için kullanılan talep ayrıntılarını belirlemenize olanak sağlar. Bu özellikleri kullanarak yapılır <xref:System.ServiceModel.ServiceSecurityContext> sınıfı.  
@@ -65,5 +66,5 @@ Programlama zaman [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetler
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md)  
- [Hizmet kimliği ve kimlik doğrulaması](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+ [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
+ [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

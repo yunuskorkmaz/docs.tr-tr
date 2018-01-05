@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b4422b165f06b60dedff95fc3de58e5627db7fac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c4d777d601866ca9600a7e2b88aca8854f32a17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent Arabirimi
 Tüm temel arabiriminden tanımlar `ICorDebug` hata ayıklama olayları türetilir.  
@@ -26,8 +27,8 @@ Tüm temel arabiriminden tanımlar `ICorDebug` hata ayıklama olayları türetil
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetEventKind yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)|Bu olay türlerini gösterir `ICorDebugDebugEvent` nesne temsil eder.|  
-|[GetThread yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-getthread-method.md)|Olayın oluştuğu iş parçacığı alır.|  
+|[GetEventKind Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)|Bu olay türlerini gösterir `ICorDebugDebugEvent` nesne temsil eder.|  
+|[GetThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-getthread-method.md)|Olayın oluştuğu iş parçacığı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki arabirimleri türetilmiş `ICorDebugDebugEvent` arabirimi:  
@@ -49,5 +50,5 @@ Tüm temel arabiriminden tanımlar `ICorDebug` hata ayıklama olayları türetil
  **.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Hata ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

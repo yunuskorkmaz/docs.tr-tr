@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72487c4a6720f80119beb837fbb3b5ea25ac3b93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörüne eşlenmiş servicemodelsamples adlı ortak bir sanal dizini paylaşmak için yöneliktir.  
@@ -65,8 +66,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  Yolun % SystemDrive%\inetpub\wwwroot\servicemodelsamples ayarlayın. Çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri hizmeti yürütülebilir dosyaları yapılandırıldığında bu konuma kopyalayın.  
   
-6.  
-              **İleri**'ye tıklayın.  
+6.  **İleri**'ye tıklayın.  
   
 7.  Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
@@ -202,4 +202,4 @@ ms.lasthandoff: 12/02/2017
     3.  İçinde **grup** sütun denetleyin değeri **ASPNET** "kullanıcıları."  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+ [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

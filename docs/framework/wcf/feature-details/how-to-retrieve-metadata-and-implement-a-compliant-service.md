@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33090cd855aa41607f6d330d695f24a6f60197d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
 Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmeleri tasarlanmış ya da Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve geliştirici sağlanan sözleşme ile uyumlu bir hizmet uygulamalıdır. Varolan bir hizmete geçirmek isteyebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ancak kablo biçimini korumak. Ayrıca, çift yönlü sözleşmeler da bir geri çağırma sözleşmesini uygulama arayanlar gerektirir.  
@@ -67,4 +68,4 @@ Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uy
  [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+ [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

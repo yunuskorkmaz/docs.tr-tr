@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf12cac374759c1cb45a7086ac771a982758e78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Konağı Dahili Bileşenleri
 <xref:System.ServiceModel.WorkflowServiceHost>bir ana bilgisayar için iş akışı hizmetleri sağlar. Gelen iletiler için dinleme sorumludur ve bunları uygun iş akışı hizmeti örneğine yönlendirme, onu kaldırılması ve boşta iş akışları ve daha pek çok kalıcı denetler. Bu konuda, gelen iletileri WorkflowServiceHost nasıl işlediği açıklanmıştır.  
@@ -60,10 +61,10 @@ ms.lasthandoff: 12/02/2017
 >  İş akışı hizmeti ana bilgisayarı, SQL Server yalnızca NamedPipe protokolünü dinleyemedi yapılandırılmışsa açmak başarısız olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [İş akışı hizmetlerini barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
- [İş akışı denetim uç noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- [İş akışı Yönetimi uç nokta örnek](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [Nasıl yapılır: iş akışı yapılandırma işlenmeyen özel durum davranışını WorkflowServiceHost ile](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
- [Uzun süre çalışan iş akışı hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
- [İş akışı kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+ [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [İş Akışı Hizmetlerini Barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
+ [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
+ [İş Akışı Yönetimi Uç Nokta Örneği](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+ [Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

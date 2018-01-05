@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5fa8cafdaf7856e95129f648da1d4b4ccb2f54eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b0b027aa34b310413fa02e81149292fabb40f79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Nasıl yapılır: Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme
 Bu örnek, bir dizi bağlı çizgilere kullanmaktır bir çoklu çizgi çizmek gösterilmektedir <xref:System.Windows.Shapes.Polyline> öğesi.  
@@ -49,4 +50,4 @@ Bu örnek, bir dizi bağlı çizgilere kullanmaktır bir çoklu çizgi çizmek g
  <xref:System.Windows.Shapes.Polygon>  
  <xref:System.Windows.Shapes.Shape>  
  [Şekil öğeleri örneği](http://go.microsoft.com/fwlink/?LinkID=160037)  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)

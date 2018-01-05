@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e5cfaec2d77bd4455877f92da2e65f7080fa6dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9da1b5534f0cddd8bdf4624ca96f60f7894ce003
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Güvenli, güvenilir ve en iyi duruma getirilmiş bağlama makineler arası iletişim için uygun belirtir. Varsayılan olarak, bir çalışma zamanı iletişim yığını Windows güvenliği ile ileti güvenliği ve kimlik doğrulama, ileti teslimi ve ikili ileti kodlama için TCP oluşturur.  
@@ -154,7 +155,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Sistem tarafından sağlanan bağlamaları yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

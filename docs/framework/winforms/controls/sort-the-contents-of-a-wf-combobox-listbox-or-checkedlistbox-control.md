@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e43a23d632b397889721373471a8fa165052d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4f266af44f954cb8416e1f7672f6642ab7c6995b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama
 Verilere bağlı olduklarında Windows Forms denetimleri sıralama değil. Sıralanmış veri görüntülemek için sıralama destekleyen bir veri kaynağı kullanmak ve sıralanmasını veri kaynağına sahip. Sıralama destekleyen veri kaynakları veri görünümleri, veri yöneticileri görüntülemek ve diziler sıralanır.  
@@ -40,7 +41,7 @@ Verilere bağlı olduklarında Windows Forms denetimleri sıralama değil. Sıra
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  
- [Windows Forms veri bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Nasıl yapılır: ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
- [Windows Forms ComboBox, ListBox yerine kullanmak ne zaman](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Windows Forms denetimleri seçenekleri listelemek için kullanılır](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Windows Forms Veri Bağlama](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

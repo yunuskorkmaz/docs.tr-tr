@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ec2800d2b6a910f75366e323b7580afe08de2acb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
 Bir hizmeti bir X.509 sertifikası ile güvenli hale getirme olan bir temel teknik, çoğu bağlama [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kullanın. Bu konuda bir X.509 sertifikası ile kendini barındıran hizmet yapılandırma adımları açıklanmaktadır.  
@@ -93,4 +94,4 @@ Bir hizmeti bir X.509 sertifikası ile güvenli hale getirme olan bir temel tekn
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sertifikalar ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+ [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

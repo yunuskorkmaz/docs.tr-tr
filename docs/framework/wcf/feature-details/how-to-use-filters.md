@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 20e9fd7bd962adb20d2c4bc394012603c7e0f2ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
 Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlarda özetler. Bu örnekte, iletiler için bir hesap makinesi hizmetinin, regularCalc ve roundingCalc iki uygulamaları yönlendirilir. Her iki uygulamaları aynı işlemleri destekler; Ancak bir hizmet döndürmeden önce hesaplamalarının yakın tamsayı değere yuvarlar. Bir istemci uygulaması hizmetinin yuvarlama sürümü kullanılıp kullanılmayacağını belirtmek kurabilmesi gerekir; Hizmet tercih ifade, ileti iki hizmetleri arasında dengeli yoktur. Her iki Hizmetleri tarafından sunulan işlemleri şunlardır:  

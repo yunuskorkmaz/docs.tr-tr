@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 149f293616cfc2aa7b68377964c14a7cfa9e3edf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazıcılarının kullanan iki tekniklerle aynıdır. Bazı özellikleri paylaşır rağmen tür dönüştürücüleri ve İşaretleme uzantıları farklı bir XAML düğüm akış gösterilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantıları ve benzer yapıları bazen topluca için değer dönüştürücüler bilinir.  
@@ -78,6 +79,6 @@ Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenl
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
- [Biçimlendirme XAML uzantılarına genel bakış](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [XAML genel bakış için tür dönüştürücüleri](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)  
- [Tür dönüştürücülerinde ve İşaretleme uzantılarında kullanılabilir hizmet bağlamları](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+ [XAML İşaretleme Uzantılarına Genel Bakış](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
+ [XAML Tür Dönüştürücülerine Genel Bakış](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)  
+ [Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)

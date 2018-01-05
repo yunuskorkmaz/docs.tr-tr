@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad2a4d3768c26755a9437826c70585a43f967d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 971e3e366c2383828dde8e8f152660fb39c886ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltvariablegt"></a>&lt;değişken&gt;
 Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.  
@@ -88,5 +89,5 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [İzleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+ [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

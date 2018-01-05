@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a4f58c5124e229f1692dabbb0abded0e21a346f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmetidir. Yönlendirme hizmeti çekirdek işlevselliğini iletisini üstbilgisinde veya ileti gövdesi içinde bir değere göre bir istemci uç noktası iletilmesi için bir ileti verir ileti içeriği göre iletileri yönlendirmek için yeteneğidir.  
@@ -117,5 +118,5 @@ Yönlendirme iletisi yönlendirici olarak davranan genel bir SOAP aracı hizmeti
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [Sözleşmeleri yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [İleti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)
+ [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
+ [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)

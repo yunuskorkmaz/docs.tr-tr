@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 072f50a53c8596a09e1a7ee0cdb8585c3778f245
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6fe4d8222bfed231c618ee4e5616dab37f912836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
 Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetleri arasında nedensel ilişkilerini belirlemek gereklidir. Kök neden analizi ve izleme, sorun giderme sistem durumu gibi kritik senaryoları desteklemek için bir istek akışının bir parçası olan çeşitli bileşenleri anlamak önemlidir. Aşağıdaki özellikler sayesinde destek eklediğimiz izlemeleri bağıntı .NET Framework 4'te çeşitli hizmetler arasında etkinleştirmek için:  

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44455f6509778a84d39a0cba167328c4a7801fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7afdbcde68a811dd8fb2be84c1ae298496992c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-token-provider"></a>SAML Belirteç Sağlayıcı
 Bu örnek, özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiştir. Bir belirteç sağlayıcısı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı birlikte verilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Ayrıca birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  

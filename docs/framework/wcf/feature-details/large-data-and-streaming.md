@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  
@@ -249,4 +250,4 @@ public class UploadStreamMessage
 >  Arabelleğe alınan veya akış aktarımları kullanmaya karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Aktarım modunu ayarlama hizmet arabirimi açıklamasında yansıtılmaz. Oluşturma sonrasında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci bir hizmet ile akış aktarımları modu ayarlamak için kullanılması hedeflenen Hizmetleri için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama yayılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: akışı etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

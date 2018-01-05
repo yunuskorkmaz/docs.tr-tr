@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aeba49c31238c62a12dba96d3dc47c3cc8ef1bcb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7fe57d99382c3472d0af5e5f64f7b237692b921b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme
 Bu örnek sınırlama ve engelleme işlevi bir özel koleksiyon sınıfına uygulayarak nasıl ekleneceğini gösterir <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> arabirim sınıfında ve dahili depolama mekanizması olarak bir sınıf örneği kullanarak bir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Sınırlama ve engelleme hakkında daha fazla bilgi için bkz: [BlockingCollection genel bakışı](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
@@ -35,4 +38,4 @@ Bu örnek sınırlama ve engelleme işlevi bir özel koleksiyon sınıfına uygu
  Varsayılan olarak, depolama alanı için bir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> olan <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş parçacığı koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+ [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

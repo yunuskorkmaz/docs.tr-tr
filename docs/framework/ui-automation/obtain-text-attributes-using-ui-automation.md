@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c95fbbe2917261e6b8a4a911a7ea5978da00d662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099ce10a5c0f05e95652f3d384628d4d2fac8208
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>UI Otomasyonu Kullanarak Metin Özniteliklerini Alma
 > [!NOTE]
@@ -45,9 +46,9 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Automation.TextPattern> Dağıtımınızla birlikte denetim düzeni <xref:System.Windows.Automation.Text.TextPatternRange> sınıfı, temel metin özniteliklerini destekler, özellikleri ve yöntemleri. Tarafından desteklenmeyen özel denetim işlevselliği için <xref:System.Windows.Automation.TextPattern> veya <xref:System.Windows.Automation.Text.TextPatternRange> <xref:System.Windows.Automation.AutomationElement>, sınıf karşılık gelen yerel nesne modeline erişmek UI Otomasyon istemcisi için yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [UI Otomasyon textpattern öğesine genel bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [UI Otomasyonu kullanarak metin kutusuna içerik ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI Otomasyonu kullanarak metin bulma ve vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [İstemciler için UI Otomasyon denetim düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Otomasyonu kullanarak karışık metin özniteliği ayrıntılarını alma](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)
+ [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [UI Otomasyonu Kullanarak Karışık Metin Özniteliği Ayrıntılarını Alma](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)

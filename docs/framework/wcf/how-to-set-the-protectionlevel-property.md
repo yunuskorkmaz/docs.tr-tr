@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6105b1b367f9f8cab1f2ba3a38b148038478c780
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama
 Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlayabilirsiniz. Her ileti tüm parçalarını etkilemek için hizmet düzeyinde koruma ayarlayabilirsiniz veya yöntemlerden ileti bölümleri için giderek daha çok parçalı düzeyde koruma ayarlayabilirsiniz. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel` özelliği, bkz: [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md).  
@@ -104,4 +105,4 @@ Uygun bir öznitelik uygulama ve özelliğini ayarlayarak koruma düzeyi ayarlay
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.ServiceModel.MessageContractAttribute>  
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
- [Koruma düzeylerini anlama](../../../docs/framework/wcf/understanding-protection-level.md)
+ [Koruma Düzeylerini Anlama](../../../docs/framework/wcf/understanding-protection-level.md)

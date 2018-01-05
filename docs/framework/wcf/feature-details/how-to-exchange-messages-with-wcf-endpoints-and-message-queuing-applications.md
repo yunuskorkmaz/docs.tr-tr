@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme
 Message Queuing (MSMQ) uygulamalarınız ile tümleştirebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] gelen ve giden MSMQ iletileri dönüştürmek için MSMQ tümleştirme bağlama kullanarak uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri. Bu sayede MSMQ alıcı uygulamalardan çağırmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çağrısına yanı sıra istemcilerin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ Gönderen uygulamalardan Hizmetleri.  
@@ -73,9 +74,9 @@ Message Queuing (MSMQ) uygulamalarınız ile tümleştirebilirsiniz [!INCLUDE[in
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Nasıl yapılır: WCF uç noktaları iletileri kuyruğa alınan](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Message Queuing (MSMQ) yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Windows Communication Foundation'a ileti kuyruğa alma](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [İleti kuyruğa alma ile ileti güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Windows Communication Foundation'dan Message Queuing’e](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Message Queuing (MSMQ) Yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Message Queuing’den Windows Communication Foundation'a](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

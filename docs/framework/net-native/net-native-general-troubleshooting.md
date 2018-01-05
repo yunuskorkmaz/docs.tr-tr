@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 151a36eed22323c32fed93a88d8270bdbfd99061
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9e92e99b978d12c32cc46b9133621875f35af634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
 Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunları gidermek nasıl açıklar [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -51,4 +52,4 @@ Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunla
      Daha fazla bilgi için bkz: [yansıma ve .NET yerel](../../../docs/framework/net-native/reflection-and-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows mağazası uygulamanızı .NET Yerel'e taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+ [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

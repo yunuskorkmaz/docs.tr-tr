@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfb1d09fc8bc52a03576054197488dff0aacf841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90083692c2415ed6c1117185474d6bbaa9d1963b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Görev 3: PropertyGrid bölmeleri ve araç kutusu oluşturma
 Bu görevde, oluşturacağınız **araç** ve **PropertyGrid** bölmeleri ve bunları rehosted Ekle [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -222,6 +223,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İş Akışı Tasarımcısı yeniden barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Görev 1: yeni bir Windows Presentation Foundation uygulaması oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Görev 2: ana bilgisayar iş akışı Tasarımcısı](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+ [İş Akışı Tasarımcısını Yeniden Barındırma](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [Görev 2: İş Akışı Tasarımcısını Barındırma](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab60561372f2c30055aed95ff60599ea80da1eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 753c58686e943f5753c76a8d695f4401c4a69952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Nasıl yapılır: Ardışık Düzende Engelleme Koleksiyonu Dizilerini Kullanma
 Aşağıdaki örnek dizileri kullanmayı gösterir <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> statik yöntemleriyle gibi nesneleri <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> ve <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> bileşenleri arasında hızlı ve esnek veri aktarımını uygulamak için.  
@@ -34,4 +37,4 @@ Aşağıdaki örnek dizileri kullanmayı gösterir <xref:System.Collections.Conc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [İş parçacığı koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)
+ [İş Parçacığı Güvenli Koleksiyonları](../../../../docs/standard/collections/thread-safe/index.md)

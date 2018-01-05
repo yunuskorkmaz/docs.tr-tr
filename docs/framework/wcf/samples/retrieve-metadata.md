@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 275e74d6a95971ceb33bf2a879b97de88c0ddbb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7321578cb76b9f06f09086834c2826a72631e49f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieve-metadata"></a>Meta Verileri Alma
 Bu örnek, dinamik olarak hangi iletişim kurmak bir uç nokta seçmek için bir hizmet meta verileri alır istemcisini uygulama gösterilmiştir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İki uç nokta kullanıma sunmak için hizmetin değiştirilmiş — taban adresi kullanarak bir uç nokta `basicHttpBinding` bağlama ve güvenli bir uç noktada {*baseaddress*} / kullanarak güvenli `wsHttpBinding` bağlama. İstemci uç nokta adresleri ve bağlamalarla yapılandırmak yerine, istemci dinamik olarak kullanarak hizmet için meta verileri alır <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfı ve meta veri içe aktaran bir <xref:System.ServiceModel.Description.ServiceEndpointCollection> kullanarak <xref:System.ServiceModel.Description.WsdlImporter> sınıfı.  

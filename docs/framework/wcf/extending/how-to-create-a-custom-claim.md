@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0cc23d5b6720d78afdc1acd50a2b84b76b977e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Beyan Oluşturma
 Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] oluşturmak için bir dizi yerleşik talep türlerini ve hakları ile yardımcı işlevleri sağlar <xref:System.IdentityModel.Claims.Claim> bu türleri ve hakları ile örnekleri. Bu yerleşik talepler bulunan model bilgisi için tasarlanmış kimlik bilgisi istemcisinde türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan olarak destekler. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar özel talep gerektirebilir. Bir talep talep türünü, talep geçerli olduğu için kaynak ve sağ diğer bir deyişle sürülen bu kaynak oluşur. Bu konuda bir özel talep oluşturmayı açıklar.  
@@ -90,5 +91,5 @@ Kimlik modeli altyapısında [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  <xref:System.IdentityModel.Claims.ClaimTypes>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Beyanlar ve yetkilendirmeyi kimlik modeliyle yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

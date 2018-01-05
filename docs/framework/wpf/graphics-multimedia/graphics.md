@@ -17,24 +17,25 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>Grafikler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Entegre multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bit eşlem etkileri](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
+ [Bit Eşlem Etkileri](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [Fırçalar](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [Çizimler](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [Geometri](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [Görüntüleri](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
+ [Geometriler](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [Görüntüler](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
  [Şekiller](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [Dönüşümleri](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [Grafik işleme kayıt defteri ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
+ [Dönüşümler](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
+ [Grafik İşleme Kayıt Defteri Ayarları](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [2B grafik ve görüntü](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [2B Grafikleri ve Görüntüleme](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [WPF Grafik İşlemeye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

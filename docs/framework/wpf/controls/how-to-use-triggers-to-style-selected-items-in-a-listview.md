@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e86c7f875376a4ab28eec7cd032a165745445441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f8965ee524d6a5cb03a54ac07d8889ff9801440
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Nasıl yapılır: ListView İçindeki Seçili Öğelere Stil Eklemek için Tetikleyicileri Kullanma
 Bu örnek nasıl tanımlanacağı gösterilmektedir <xref:System.Windows.Style.Triggers%2A> için bir <xref:System.Windows.Controls.ListViewItem> denetim için bir özellik değeri, bir <xref:System.Windows.Controls.ListViewItem> değişiklikleri, <xref:System.Windows.Style> , <xref:System.Windows.Controls.ListViewItem> yanıt değişiklikler.  
@@ -44,4 +45,4 @@ Bu örnek nasıl tanımlanacağı gösterilmektedir <xref:System.Windows.Style.T
  <xref:System.Windows.Controls.GridView>  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView Genel Bakış](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView genel bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView Genel Bakış](../../../../docs/framework/wpf/controls/gridview-overview.md)

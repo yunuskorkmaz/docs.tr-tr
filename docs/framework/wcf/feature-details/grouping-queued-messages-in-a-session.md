@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Oturumda Kuyruğa Alınmış İletileri Gruplandırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]tek bir alıcı uygulama tarafından bir dizi ilgili ileti işleme için bir arada gruplandırmak izin veren bir oturum sağlar. Oturumun bir parçası olan iletiler aynı işlemin parçası olmalıdır. Tüm oturum işlenmek üzere bir ileti başarısız olursa tüm iletileri aynı işlemin bir parçası olduğundan geri alınır. Oturumu sıralarındaki ve zararlı sıraları açısından benzer davranışları yok. Oturumları için yapılandırılmış bir sıralı bağlama üzerinde ayarlanan yaşam süresi (TTL) özelliği için zaman oturum bir bütün olarak uygulanır. Yalnızca TTL süresi dolmadan önce bazı iletiler oturumunda gönderilen tüm oturum sahipsiz sıraya konur. Benzer şekilde, bir uygulama için uygulama sırasından gönderilmek üzere bir oturumdaki iletilerin başarısız olduğunda, tüm oturum zararlı sırasına (varsa) yerleştirilir.  
@@ -96,4 +97,4 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+ [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)

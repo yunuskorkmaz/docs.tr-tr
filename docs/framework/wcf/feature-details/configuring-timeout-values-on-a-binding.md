@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd6206d3b9445b321230bf5968891773abcac9c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Bağlamada Zaman Aşımı Değerlerini Yapılandırma
 WCF bağlamaları birtakım zaman aşımı ayarları yok. Bu zaman aşımı ayarını ayarları doğru değil yalnızca hizmetinizin performans aynı zamanda play bir rol kullanılabilirlik ve güvenlik hizmetinizin artırabilir. WCF bağlamaları üzerinde aşağıdaki zaman aşımları kullanılabilir:  

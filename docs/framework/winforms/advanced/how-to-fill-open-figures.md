@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8a2d5a13cac97063bf2a04969928c859a5954d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-open-figures"></a>Nasıl Yapılır: Açık Şekilleri Doldurma
 Geçirerek bir yolu doldurabilir bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesinin <xref:System.Drawing.Graphics.FillPath%2A> yöntemi. <xref:System.Drawing.Graphics.FillPath%2A> Yöntemi yolunu ayarlanmış yolun dolgu modunu (alternatif veya sarma) göre doldurur. Tüm açık şekilleri yol varsa, bu rakamları kapatılan gibi yolun girilir. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]bir şekil, başlangıç noktası bitiş noktasından bir çizgide çizerek kapatır.  
@@ -43,4 +44,4 @@ Geçirerek bir yolu doldurabilir bir <xref:System.Drawing.Drawing2D.GraphicsPath
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
- [GDI +'da grafik yolları](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)
+ [GDI+'da Grafik Yolları](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

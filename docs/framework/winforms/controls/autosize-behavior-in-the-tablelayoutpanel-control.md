@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06bd0686b31b52ccb8580a545910339d2e2cd5bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel Denetiminde AutoSize Davranışı
 ## <a name="distinct-autosize-behaviors"></a>Ayrı AutoSize davranışı  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.TableLayoutPanel>  
- [TableLayoutPanel denetimine genel bakış](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+ [TableLayoutPanel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

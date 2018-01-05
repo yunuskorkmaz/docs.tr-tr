@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d0e0c5b0ea05d1a0a9798e1b6f22ce06257f03b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a667c303cd1a98e0b027ca2026fe9c719e6baf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: oluşturma ve uzun çalıştırma iş akışını çalıştıran
 Merkezi özelliklerinden biri [!INCLUDE[wf](../../../includes/wf-md.md)] kalıcı hale getirmek ve boşta iş akışları veritabanına unload zamanının yeteneği. ' Ndaki adımları [nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) bir konsol uygulaması kullanarak iş akışı barındırma temelleri gösterilmektedir. Örnekler başlangıç iş akışları, iş akışı yaşam döngüsü işleyicileri ve devam ettirme yer işaretleri gösterilmesine neden olan. İş akışı Kalıcılık etkili bir şekilde göstermek için daha karmaşık bir iş akışı ana gerekli değildir başlatılıyor ve birden çok iş akışı örneği sürdürme destekler. Bu adım öğreticide nasıl başlatma ve sürdürme birden çok iş akışı örnekleri, iş akışı Kalıcılık destekleyen ve izleme gibi gelişmiş özellikler için temel sağlayan uygulama ve olan sürüm oluşturma Windows form konağı oluşturulacağını gösterir sonraki öğretici adımlar gösterilmektedir.  
@@ -103,7 +104,7 @@ Merkezi özelliklerinden biri [!INCLUDE[wf](../../../includes/wf-md.md)] kalıc�
   
     |Denetim|Özellik: değer|  
     |-------------|---------------------|  
-    |**Düğmesi**|Ad: NewGame<br /><br /> Konum: 13, 13<br /><br /> Boyut: 75, 23<br /><br /> Metin: Yeni bir oyun|  
+    |**Düğme**|Ad: NewGame<br /><br /> Konum: 13, 13<br /><br /> Boyut: 75, 23<br /><br /> Metin: Yeni bir oyun|  
     |**Etiket**|Konum: 94, 18<br /><br /> Metin: tahmin ettiğiniz bir sayı 1'den|  
     |**ComboBox**|Ad: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeleri: 10, 100, 1000<br /><br /> Konum: 228, 12<br /><br /> Boyut: 143, 21|  
     |**Etiket**|Konum: 13, 43<br /><br /> Metin: İş akışı türü|  
@@ -119,10 +120,10 @@ Merkezi özelliklerinden biri [!INCLUDE[wf](../../../includes/wf-md.md)] kalıc�
     |**Etiket**|Konum: 7, 20<br /><br /> Metin: İş akışı örneği kimliği|  
     |**ComboBox**|Name: örnek kimliği<br /><br /> DropDownStyle: DropDownList<br /><br /> Konum: 121, 17<br /><br /> Boyut: 227, 21|  
     |**Etiket**|Konum: 7, 47<br /><br /> Metin: tahmin|  
-    |**Metin kutusu**|Ad: tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|  
-    |**Düğmesi**|Ad: EnterGuess<br /><br /> Konum: 121, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Tahmin girin|  
-    |**Düğmesi**|Ad: QuitGame<br /><br /> Konum: 274, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: çıkın|  
-    |**Metin kutusu**|Ad: WorkflowStatus<br /><br /> Konum: 10, 73<br /><br /> Çok satırlı: True<br /><br /> Salt okunur: True<br /><br /> Kaydırma çubukları: dikey<br /><br /> Boyut: 338, 208|  
+    |**TextBox**|Ad: tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|  
+    |**Düğme**|Ad: EnterGuess<br /><br /> Konum: 121, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Tahmin girin|  
+    |**Düğme**|Ad: QuitGame<br /><br /> Konum: 274, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: çıkın|  
+    |**TextBox**|Ad: WorkflowStatus<br /><br /> Konum: 10, 73<br /><br /> Çok satırlı: True<br /><br /> Salt okunur: True<br /><br /> Kaydırma çubukları: dikey<br /><br /> Boyut: 338, 208|  
   
 5.  Ayarlama **AcceptButton** forma özelliğinin **EnterGuess**.  
   

@@ -16,41 +16,42 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>Kurulum Yönergeleri
 Bu konular kümesini çalıştırmak için gereken Services'i ayarlamak açıklar bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmet.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Communication Foundation örnekleri için bir kerelik Kurulum prosedürü](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
+ [Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
  Ayarlama adımlarını özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri.  
   
- [Güvenlik Duvarı yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
+ [Güvenlik Duvarı Yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
  İzin vermek için Windows Güvenlik duvarını ayarlama için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri için işlevi.  
   
- [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  ISS kurmak için gereken adımlar açıklanır.  
   
- [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [Internet Information Services (IIS) Sunucu Sertifikası Yükleme Yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  IIS için sunucu sertifikaları yükleme işlemini açıklar.  
   
- [Sanal dizin ayarlama yönergeleri](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
+ [Sanal Dizin Ayarlama Yönergeleri](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
  Bir sanal dizin oluşturmak için gereken adımlar açıklanır.  
   
- [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  Derleme için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri.  
   
- [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Windows Communication Foundation Örneklerini Çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Çalıştırmak için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri aynı makine üzerindeki ve makinelerde.  
   
  [Eşler arası Hizmetleri etkinleştirme](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  Windows Eşler-bileşeni, eşler arası ileti Hizmetleri için yerleşik bir çözümleyici yüklemek için gereken adımları özetler.  
   
- [Message Queuing (MSMQ) yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Message Queuing (MSMQ) Yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Message Queuing yüklemek için gereken adımları özetler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

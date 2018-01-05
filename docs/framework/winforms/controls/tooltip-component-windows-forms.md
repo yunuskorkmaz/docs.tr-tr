@@ -16,23 +16,24 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af751c31de87ef2a299e66c82bc66e9f0b540fce
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2e051fa13eee9a9110654d8791d83b2ff51cbdb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolTip> bileşen kullanıcı denetimleri işaret ettiğinde metin görüntüler. Bir araç ipucu herhangi bir denetimle ilişkili olabilir. Bu denetim örnek kullanımını: bir form üzerinde alanı kaydetmek için küçük bir simge bir düğme görüntüleyebilir ve düğmenin işlevi açıklamak için bir araç ipucunu kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ToolTip bileşenine genel bakış](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+ [ToolTip Bileşenine Genel Bakış](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
  Genel kavramlarını tanıtır <xref:System.Windows.Forms.ToolTip> bir denetimine fare geldiğinizde metni görmek kullanıcılara bileşeni.  
   
- [Nasıl yapılır: araç ipuçları bir Windows formundaki denetimler için tasarım zamanında ayarlama](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ [Nasıl yapılır: Tasarım Zamanında Windows Formundaki Denetimler için ToolTips Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
  Araç ipuçları kod veya Tasarımcısı'nda nasıl ayarlanacağı açıklanır.  
   
- [Nasıl yapılır: Windows Forms ToolTip bileşeninin gecikmesini değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ [Nasıl yapılır: Windows Forms ToolTip Bileşeninin Gecikmesini Değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  Bir araç ipucu görünmesi gereken süreyi kontrol değerlerin nasıl ayarlanacağını ve için görüntülendiği süre açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -40,8 +41,8 @@ Windows Forms <xref:System.Windows.Forms.ToolTip> bileşen kullanıcı denetimle
  Sınıf ve üyelerine başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta kullanılacak denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
   
- [ToolTips kullanarak denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [ToolTips Kullanarak Denetim Yardımı](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
  Kısa yapmanın bir yolu özelleştirilmiş gibi Yardım iletileri Windows Forms ayrı ayrı denetimler için araç ipuçları açıklanır.

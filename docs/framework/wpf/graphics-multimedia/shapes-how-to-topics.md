@@ -19,23 +19,24 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-how-to-topics"></a>Şekiller ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Shapes.Shape> nesnelerinin ekrana temel şekiller çizmek için.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bir Çokgen öğesi kullanarak kapalı bir şekil çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [Elips veya daire çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [Çizgi çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Çoklu satır öğesini kullanarak bir çoklu çizgi çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [Dikdörtgene çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [Çizgi veya Segment sonunda Cap değiştirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Çokgen Öğe Kullanarak Kapalı Şekil Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Elips veya Daire Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
+ [Çizgi Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
+ [Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Dikdörtgen Çizme](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
+ [Satır veya Segment Sonunda Uç Değiştirme](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Shapes.Shape>  
- [Grafik ve çoklu ortam](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafikler ve Multimedya](../../../../docs/framework/wpf/graphics-multimedia/index.md)

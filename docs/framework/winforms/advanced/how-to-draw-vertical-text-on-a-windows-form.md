@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76da7be50f9e12454e16e08ec4db494585fae613
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56feadd3bb5300376a16cc1d06d9af73ad77b565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Dikey Metin Çizme
 Aşağıdaki kod örneği kullanarak bir formunda dikey metin çizme gösterilmektedir <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics>.  
@@ -52,5 +53,5 @@ Aşağıdaki kod örneği kullanarak bir formunda dikey metin çizme gösterilme
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  
  <xref:System.Drawing.StringFormatFlags>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Yazı tipleri ve metin kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Yazı Tipleri ve Metin Kullanma](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

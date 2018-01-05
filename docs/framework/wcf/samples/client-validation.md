@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 340af20c44b8fde3fdff92d07837c3cc04ca517d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f187e6fb64fd3bbf08b3d0b92917ffc640b02186
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 Hizmetleri sık otomatik oluşturma ve istemci proxy türlerinin yapılandırılmasını etkinleştirmek için meta veri yayımlama. Hizmet güvenilir olmadığı durumlarda, istemci uygulamaları meta verileri istemci uygulama ilkesi güvenlik işlemleri, hizmet sözleşmesini türü ile ilgili vb. uyduğunu doğrulamalıdır. Aşağıdaki örnek, bir istemci bu hizmet uç noktası güvenli olduğundan emin olmak için hizmet uç noktası doğrulama uç noktası davranışı yazma gösterilmiştir.  
@@ -74,4 +75,4 @@ Hizmetleri sık otomatik oluşturma ve istemci proxy türlerinin yapılandırıl
     >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bilgisayarlar arasında sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Meta verilerini kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)

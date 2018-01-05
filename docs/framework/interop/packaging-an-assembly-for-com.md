@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 149d0c2595844c5b71767e2ea3ee5b0c6002c080
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
 COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı:  
@@ -91,10 +92,10 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [.NET Framework bileşenlerini COM'da gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Birlikte çalışma için .NET türlerini niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
+ [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
- [Derleme güvenliği konuları](../../../docs/framework/app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Derlemeleri COM ile kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Bütünleştirilmiş Kod Güvenliği Konuları](../../../docs/framework/app-domains/assembly-security-considerations.md)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Bütünleştirilmiş Kodları COM ile Kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md)  
  [Nasıl yapılır: tür kitaplıklarını uygulamalarında Win32 kaynaklar olarak ekleme](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

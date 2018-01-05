@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1ec4dc2d7f066d79b2cf54c3d474b47e769b626c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için varsayılan olarak, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
@@ -128,5 +129,5 @@ Bir kullanıcı adı ve parola kullanıldığında kimlik doğrulaması için va
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Nasıl yapılır: ASP.NET üyelik sağlayıcısı kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+ [Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
+ [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

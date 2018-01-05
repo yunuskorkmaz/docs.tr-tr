@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c9c82044e7136f05d64a20fb24ee0b209742caf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGrid Denetimini Biçimlendirme
 > [!NOTE]
@@ -111,5 +112,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.GridTableStylesCollection>  
  <xref:System.Windows.Forms.GridColumnStylesCollection>  
  <xref:System.Windows.Forms.DataGrid>  
- [Nasıl yapılır: sütunları silme veya gizleme Windows Forms DataGrid denetimi](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [DataGrid denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+ [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [DataGrid Denetimi](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

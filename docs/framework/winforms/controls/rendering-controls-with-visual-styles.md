@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İşletim sistemlerinde desteklemek görsel stiller kullanarak arabirimi (UI) öğeleri işleme denetimleri ve başka bir Windows kullanıcı için destek sağlar. Bu konuda destek birkaç düzeyini ele alınmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve işletim sisteminin geçerli görsel stil ile diğer kullanıcı Arabirimi öğeleri için.  
@@ -89,4 +90,4 @@ ms.lasthandoff: 10/22/2017
 >  Kullanmak istiyorsanız, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> kullanıcı etkinleştirir ya da görsel stiller anahtarları bir denetim ya da kullanıcı Arabirimi öğesi oluşturmak için bu işlerken yaptığınızdan emin olun <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> yerine olay <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> olay. Kullanırsanız, bir özel durum <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> sınıf işlerken <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Özel denetim boyama ve işleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+ [Özel Denetim Boyama ve İşleme](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

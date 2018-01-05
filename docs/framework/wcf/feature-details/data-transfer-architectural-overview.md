@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu gönderme veya kullanıcı kodu tarafından verilen verilerden iletileri oluşturmak ve bunları bir hedefe teslim et. Gelişmiş geliştiricileri için tasarlanmıştır, bu konu, iletileri ve içerilen verileri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev yönelimli görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -282,4 +283,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>ve <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> işlemi davranışları ileti biçimlendiricilerini takma için sorumlu olan `DataContractSerializer` ve `XmlSerializer`sırasıyla. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Davranışı türetilen seri hale getirici ile gerçekte çalışabilir <xref:System.Runtime.Serialization.XmlObjectSerializer>dahil <xref:System.Runtime.Serialization.NetDataContractSerializer> (kullanarak tek başına serileştirmede ayrıntılı açıklanmıştır). Davranışı birine çağrılarını `CreateSerializer` sanal yöntemi aşırı seri hale getirici elde edilir. İçinde farklı bir seri hale getirici takmak için yeni bir oluşturma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> alt sınıf ve geçersiz kılma `CreateSerializer` aşırı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hizmet sözleşmelerinde belirten veri aktarımı](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+ [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

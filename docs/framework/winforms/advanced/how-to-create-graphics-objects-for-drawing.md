@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d4b626d3d87c6537b74b6d28e086303474ea2c3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
 Çizgiler ve şekiller çizme önce metin oluşturmak veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesnesi. <xref:System.Drawing.Graphics> Nesne gösteren bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
@@ -177,13 +178,13 @@ ms.lasthandoff: 11/21/2017
   
     |Oluşturulacak|Bkz. |  
     |---------------|---------|  
-    |satırları|[Nasıl yapılır: bir Windows formunda çizgi çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |Şekiller|[Nasıl yapılır: Anahatlı şekil çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Metin|[Nasıl yapılır: bir Windows formunda metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Görüntüler|[Nasıl yapılır: GDI + ile görüntü işleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |satırları|[Nasıl yapılır: Bir Windows Formunda Çizgi Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |Şekiller|[Nasıl yapılır: Ana Hatlı Şekil Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |Metin|[Nasıl yapılır: Bir Windows Formunda Metin Çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |Görüntüler|[Nasıl yapılır: GDI+ ile Görüntü İşleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Grafik programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Grafikler ve Windows Forms'ta çizme](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Çizgiler, eğriler ve şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Nasıl yapılır: GDI + ile görüntü işleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+ [Grafik Programlamaya Başlarken](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [Windows Forms’da Grafikler ve Çizim](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Çizgiler, Eğriler ve Şekiller](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Nasıl yapılır: GDI+ ile Görüntü İşleme](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

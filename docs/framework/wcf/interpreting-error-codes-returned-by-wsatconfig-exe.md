@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 Bu konuda tüm hata kodları WS-AtomicTransaction yapılandırma yardımcı programı tarafından (wsatConfig.exe) oluşturulur ve önerilen gerçekleştirilecek eylemleri listeler.  
@@ -78,4 +79,4 @@ Bu konuda tüm hata kodları WS-AtomicTransaction yapılandırma yardımcı prog
 |56|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+ [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

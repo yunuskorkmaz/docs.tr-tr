@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 25a5092da1526bc266c5cc483cc3cd81d2ac3385
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 75ee159f45932f6130db2ce47c6923c24b38ca99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı bilgisayarda çalıştırma yeteneğidir. Bir bilgisayar üzerinde ortak dil çalışma zamanı sürümünün ve bir uygulamanın ve çalışma zamanının bir sürümünü kullanan bileşenin çeşitli sürümlerine aynı anda sahip olabilirsiniz.  
@@ -122,11 +123,11 @@ publicKeyToken=...,
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: etkinleştirme ve otomatik bağlama yönlendirmesini devre dışı](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
-|[Derleme bağlama yönlendirmesini yapılandırma](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
-|[İşlem içi yan yana yürütme](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
-|[Ortak dil çalışma zamanı derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  
-|[Uygulama etki alanları](../../../docs/framework/app-domains/application-domains.md)|Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.|  
+|[Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
+|[Bütünleştirilmiş Kod Bağlama Yönlendirmesini Yapılandırma](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
+|[İşlem İçi Yan Yana Yürütme](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
+|[Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  
+|[Uygulama Etki Alanları](../../../docs/framework/app-domains/application-domains.md)|Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
  [\<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 193620902d5bcc2b71f91a26518ab4b6560e6753
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e516d41a9f9736877fb3974774ddaf4b3bddb198
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-management-endpoint-sample"></a>İş akışı Yönetimi uç nokta örnek
 Bu örnek, bir iş akışı denetim uç noktası oluşturmak ve iş akışları hem yerel hem de uzaktan çalıştırmak için nasıl kullanılabileceğini gösterir. Örnek bir denetim uç noktası ana bilgisayar ve istemcileri yazma nasıl oluşturulduğunu gösteren oluşturmak ve bir iş akışı örneği çalıştırmak için denetim uç noktası çağırın. İş akışı bir hizmeti değil.  

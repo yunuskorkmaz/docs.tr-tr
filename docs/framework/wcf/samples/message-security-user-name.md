@@ -14,11 +14,12 @@ caps.latest.revision: "57"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: acf01818a697f2267307bdf7b9e469fec5741511
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4df9b3d5c1f073b1b2348220ac1a77efbe797311
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-user-name"></a>İleti Güvenliği Kullanıcı Adı
 Bu örnek, istemci için kullanıcı adı kimlik doğrulaması ile WS güvenliği kullanan ve sunucunun X.509v3 sertifikasını kullanarak kimlik doğrulaması gerektiren bir uygulama uygulamak gösterilmiştir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Varsayılan olarak, kullanıcı adı ve istemci tarafından sağlanan parola kullanılan oturum açmak için geçerli bir Windows hesabı. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Bu örnek, bir istemci konsol programı (Client.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (Service.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  

@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1130c6f91f8f55e539e85b6deda535e92258165c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d669152a699ae8586114a12ff46b49f41c6d4475
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;customBinding&gt; &lt;güvenliği&gt;
 Özel bağlama için güvenlik seçeneklerini belirtir.  
@@ -182,9 +183,9 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  <xref:System.ServiceModel.Configuration.SecurityElement>  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [Bağlamaları](../../../../../docs/framework/wcf/bindings.md)  
- [Bağlamaları genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
+ [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Özel bağlama güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+ [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -17,19 +17,20 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2770f1a0c965dc956e837c5c362e5767d0c9cea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5256c0ffffb219776a8705dfee0409ebde07a7ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.GridSplitter> denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [GridSplitter ile satırları yeniden boyutlandırma](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [GridSplitter ile sütunları yeniden boyutlandırma](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [GridSplitter görünür olduğundan emin olun](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+ [GridSplitter ile Satırları Yeniden Boyutlandırma](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
+ [GridSplitter ile Sütunları Yeniden Boyutlandırma](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
+ [Bir GridSplitter'ın Görünür Olduğundan Emin Olma](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.GridSplitter>  

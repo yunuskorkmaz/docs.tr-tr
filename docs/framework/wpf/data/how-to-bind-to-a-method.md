@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c276e9da3eaaf786038a117532848364b03e9b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45f2a141b09c52085c13803b8d338fdc9eebf135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-method"></a>Nasıl yapılır: Bir Yönteme Bağlama
 Aşağıdaki örnek, bir yöntemi kullanarak bağlamak gösterilmiştir <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -43,4 +44,4 @@ Aşağıdaki örnek, bir yöntemi kullanarak bağlamak gösterilmiştir <xref:Sy
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Bir sabit bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)
+ [Sabit Listesine Bağlama](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)

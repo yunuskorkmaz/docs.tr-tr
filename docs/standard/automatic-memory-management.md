@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f8ee49861902002e69af96168def5883d73c3a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="automatic-memory-management"></a>Otomatik Bellek Yönetimi
 Otomatik bellek yönetimi, ortak dil çalışma zamanı sırasında sağladığı hizmetlerden biri [yönetilen yürütme](../../docs/standard/managed-execution-process.md). Ortak dil çalışma zamanı'nın atık toplayıcı ayırma ile bir uygulama için bellek sürümü yönetir. Geliştiriciler için bu, yönetilen uygulamalar geliştirirken bellek yönetimi görevleri gerçekleştirmek için kod yazmaya gerek olmadığı anlamına gelir. Otomatik bellek yönetimi, bir nesneyi serbest bırakmayı unutarak bir bellek sızıntısına neden olmak veya daha önce serbest bırakılmış bir nesnenin belleğine erişmeye çalışmak gibi yaygın sorunları ortadan kaldırabilir. Bu bölümde, atık toplayıcının belleği nasıl ayırdığı ve serbest bıraktığı açıklanmaktadır.  
@@ -60,5 +63,5 @@ Otomatik bellek yönetimi, ortak dil çalışma zamanı sırasında sağladığ�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.GC>  
- [Çöp toplama](../../docs/standard/garbage-collection/index.md)  
- [Yönetilen yürütme işlemi](../../docs/standard/managed-execution-process.md)
+ [Atık Toplama](../../docs/standard/garbage-collection/index.md)  
+ [Yönetilen Yürütme İşlemi](../../docs/standard/managed-execution-process.md)
