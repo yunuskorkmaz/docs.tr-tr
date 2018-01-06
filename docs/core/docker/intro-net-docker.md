@@ -13,11 +13,11 @@ ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
 ms.workload: dotnetcore
-ms.openlocfilehash: e5f420df6c5cf4f9d517dd6ce2c6b33d3d3479d1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
@@ -46,7 +46,7 @@ Oluşturabilir ya da kendi [görüntüleri katmanlı](https://docs.docker.com/en
 
 Resmi .NET Docker görüntüleri oluşturulur ve Microsoft tarafından en iyi duruma getirilmiş. Bunlar Microsoft depoları Docker hub'ındaki genel olarak kullanılabilir. Her depo işletim sistemi sürümleri ve .NET sürümleri bağlı olarak birden fazla görüntü içerebilir. Çoğu görüntü depoları belirli framework sürümünü ve (Linux distro veya Windows sürümü) bir işletim sistemi seçmenize yardımcı olmak için kapsamlı etiketleme sağlar.
 
-## <a name="scenario-based-guidance"></a>Senaryo tabanlı Kılavuzu
+## <a name="scenario-based-guidance"></a>Temel senaryo Kılavuzu
 
 Microsoft'un hedefi .NET depoları için belirli bir senaryoyu ya da iş yükünü temsil ayrıntılı ve odaklanmış depoları olmalıdır.
 
@@ -201,8 +201,7 @@ Farklı Docker görüntüler ve Docker platform hakkında öğrendiniz, zengin D
 * [Ellere Visual Studio ile Mac, kapsayıcıları ve sunucusuz kodu bulutta hakkında alma](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Mac Laboratuvar için Docker ve Visual Studio ile çalışmaya başlama](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-## <a name="next-steps"></a>Sonraki Adımlar
+## <a name="next-steps"></a>Sonraki adımlar
 
 * [.NET Core ile Docker Temellerini Öğrenme](docker-basics-dotnet-core.md)
 * [.NET Core Docker görüntülerinizi oluşturmak](building-net-docker-images.md)
-\

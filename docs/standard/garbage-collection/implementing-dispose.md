@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 90edda252c33b6f07c795b8db1a0edaf1a688445
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose yöntemi uygulama
 
@@ -117,7 +117,7 @@ Geçersiz kılan bir taban sınıfı için dispose desen uygulamak için genel d
 
 Arabirimini uygulayan bir sınıftan türetilmiş bir sınıf <xref:System.IDisposable> döndürmemelidir arabirimini uygulayan <xref:System.IDisposable>, temel sınıf çünkü uyarlamasını <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> kendi türetilen sınıflar tarafından devralınır. Onun yerine, türetilen bir sınıfa ilişkin olarak dispose desenini uygulamak için aşağıdakileri sağlarsınız:  
   
-* A `protected``Dispose(Boolean)` temel sınıf yöntemini geçersiz kılar ve türetilmiş sınıf Kaynakları yayınlama gerçek iş gerçekleştiren yöntemi. Bu yöntem de çağırmanız gerekir `Dispose(Boolean)` yöntemi taban sınıf ve değerini geçirin `true` için *atma* bağımsız değişkeni.  
+* A `protected Dispose(Boolean)` temel sınıf yöntemini geçersiz kılar ve türetilmiş sınıf Kaynakları yayınlama gerçek iş gerçekleştiren yöntemi. Bu yöntem de çağırmanız gerekir `Dispose(Boolean)` yöntemi taban sınıf ve değerini geçirin `true` için *atma* bağımsız değişkeni.  
   
 * Her iki sınıfın türetildiği <xref:System.Runtime.InteropServices.SafeHandle> Yönetilmeyen kaynağınızın (önerilen) veya bir geçersiz kılma sarmalar <xref:System.Object.Finalize%2A?displayProperty=nameWithType> yöntemi. <xref:System.Runtime.InteropServices.SafeHandle> Sınıfı, kodu bir kalmaktan boşaltır sonlandırıcıyı sağlar. Bir sonlandırıcı sağlarsanız, çağırmalıdır `Dispose(Boolean)` ile aşırı bir *atma* bağımsız değişkeni `false`.  
   
