@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload: dotnetcore
-ms.openlocfilehash: 40469204906bef16e1604d052471721bad64cd7f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dotnet-vstest"></a>DotNet vstest
 
@@ -118,6 +118,10 @@ Testleri çalıştırmak `mytestproject.dll`:
 
 `dotnet vstest mytestproject.dll`
 
+Testleri çalıştırmak `mytestproject.dll`, özel adda özel klasör verme:
+
+`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+
 Testleri çalıştırmak `mytestproject.dll` ve `myothertestproject.exe`:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
@@ -129,3 +133,4 @@ Testleri çalıştırmak `mytestproject.dll` ve `myothertestproject.exe`:
 Çalıştırma `TestMethod1` ve `TestMethod2` testleri:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
+

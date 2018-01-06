@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fa9f3ad2e08b68fcdc60375ab164cb87a3eeb91
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -318,9 +318,7 @@ API için Swagger meta verileri oluşturmak için nedenler şunlardır:
 
 **Otomatik olarak kullanabilir ve Apı'lerinizi tümleştirmek diğer ürünleri yeteneği**. Ürünler onlarca ve [ticari Araçları](http://swagger.io/commercial-tools/) ve birçok [kitaplıklarını ve çerçevelerini](http://swagger.io/open-source-integrations/) Swagger destekler. Microsoft, üst düzey ürünleri ve otomatik olarak aşağıdaki gibi Swagger tabanlı API'ler tüketebileceği araçlara sahiptir:
 
--   [AutoRest](https://github.com/Azure/AutoRest). .NET istemci sınıfları Swagger çağırmak için otomatik olarak oluşturabilir. Bu
-
--   Aracı CLI üzerinden kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirir.
+-   [AutoRest](https://github.com/Azure/AutoRest). .NET istemci sınıfları Swagger çağırmak için otomatik olarak oluşturabilir. CLI üzerinden bu aracı kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirir.
 
 -   [Microsoft Akış](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
 

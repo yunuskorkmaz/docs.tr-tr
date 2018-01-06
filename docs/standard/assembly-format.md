@@ -13,15 +13,15 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 94f102c85ffdda5345a3ef3f0a8485b18b0b6893
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="net-assembly-file-format"></a>.NET derleme dosyası biçimi
 
-.NET tam olarak tanımlamak ve .NET programları içeren için kullanılan bir ikili dosya biçimi - "derlemesi" - tanımlar. Derlemeler, tüm bağımlı kitaplıkları yanı sıra program kendileri için kullanılır. Bir .NET program hiçbir diğer gerekli yapılarına uygun .NET uygulaması ötesinde ile daha fazla derlemeleri biri olarak çalıştırılabilir. İşletim sistemi API'leri dahil olmak üzere yerel bağımlılıklar ayrı bir sorun olduğundan ve bazen bu biçimle (örneğin, WinRT) açıklanan rağmen .NET derleme biçimi içinde yer almayan.
+.NET tam olarak tanımlamak ve .NET programları içeren için kullanılan bir ikili dosya biçimi - "derlemesi" - tanımlar. Derlemeler, tüm bağımlı kitaplıkları yanı sıra program kendileri için kullanılır. Bir .NET program hiçbir diğer gerekli yapıtlarla, uygun .NET uygulaması dışında bir veya daha fazla derlemeleri olarak çalıştırılabilir. İşletim sistemi API'leri dahil olmak üzere yerel bağımlılıklar ayrı bir sorun olduğundan ve bazen bu biçimle (örneğin, WinRT) açıklanan rağmen .NET derleme biçimi içinde yer almayan.
 
 > Her CLI bileşen bildirimler, uygulamalar ve bu bileşen için belirli başvuruları için meta verileri taşır. Bu nedenle, bileşen özgü meta veriler bileşen meta adlandırılır ve sonuçta elde edilen bileşen – ECMA 335 I.9.1, bileşenleri ve derlemeler kendiliğinden açıklayıcı olması söylenir.
 

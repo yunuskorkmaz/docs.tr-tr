@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker içinde barındırılan mikro
-
-## <a name="introduction"></a>Giriş
 
 Bu öğretici oluşturmak ve ASP.NET Core mikro Docker kapsayıcısı içinde dağıtmak gerekli görevlerin ayrıntılarını verir. Bu öğreticinin sürecinde şunları öğreneceksiniz:
 
@@ -56,13 +54,13 @@ Bu noktada bir dizi ASP.NET core geliştirme desteği komut satırı araçları 
 
 `npm install -g yo bower grunt-cli gulp`
 
-`-g` Seçeneği gösteren bir genel yükleme olduğunu ve bu araçlar kullanılabilir sistem genelinde. (Yerel bir yükleme paketi tek bir proje kapsamları). Bu çekirdek araçları yükledikten sonra yeoman asp.net şablon oluşturucuları yüklemeniz gerekir:
+`-g` Seçeneği gösteren bir genel yükleme olduğunu ve bu araçlar kullanılabilir sistem genelinde. (Yerel bir yükleme paketi tek bir proje kapsamları). Bu çekirdek araçları yükledikten sonra yeoman ASP.NET şablon oluşturucuları yüklemeniz gerekir:
 
 `npm install -g generator-aspnet`
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-Tüm Araçlar yüklediniz, yeni bir asp.net core uygulaması oluşturun. Komut satırı Oluşturucu kullanmak için sık kullanılan Kabuğu'nda aşağıdaki yeoman komutu yürütün:
+Tüm Araçlar yüklediniz, yeni bir ASP.NET Core uygulaması oluşturun. Komut satırı Oluşturucu kullanmak için sık kullanılan Kabuğu'nda aşağıdaki yeoman komutu yürütün:
 
 `yo aspnet`
 
@@ -70,12 +68,12 @@ Bu komutun ne tür bir uygulama oluşturmak istediğiniz seçmenizi ister. Bu mi
 
 Şablon sekiz dosyaları oluşturur:
 
-* ASP.NET core uygulamaları için özelleştirilmiş bir .gitignore.
+* ASP.NET Core uygulamaları için özelleştirilmiş bir .gitignore.
 * Haline dosya. Bu uygulamanın temel içerir.
 * Program.cs dosyasının. Bu uygulama giriş noktasını içerir.
 * Bir WeatherMicroservice.csproj dosyası. Bu uygulama için yapı dosyasıdır.
 * Bir Dockerfile. Bu komut, uygulama için bir Docker görüntü oluşturur.
-* Bir README.md. Bu, diğer asp.net core kaynaklarına bağlantılar içerir.
+* Bir README.md. Bu, diğer ASP.NET Core kaynaklarına bağlantılar içerir.
 * Bir web.config dosyası. Bu, temel yapılandırma bilgilerini içerir.
 * Bir runtimeconfig.template.json dosyası. IDE tarafından kullanılan hata ayıklama ayarları içerir.
 
@@ -113,7 +111,7 @@ Project.JSON, proje hakkında bilgi içerir. Genellikle ile karşılaşmayacağ�
 
 Uygulama haline içinde uygulanır. Bu dosya başlangıç sınıfı içerir.
 
-İki yöntem yapılandırmak ve uygulamayı çalıştırmak için asp.net core altyapısı tarafından çağrılır. `ConfigureServices` Yöntemi bu uygulama için gerekli hizmetleri açıklar. Bağımlılıkları yapılandırmak gerekli olmayan şekilde yalın mikro hizmet oluşturmakta olduğunuz. `Configure` Yöntemi işleyiciler gelen HTTP isteklerini yapılandırır. Şablon 'Hello World!' metinle herhangi bir istek için yanıt veren basit bir işleyici oluşturur.
+İki yöntem yapılandırmak ve uygulamayı çalıştırmak için ASP.NET Core altyapısı tarafından çağrılır. `ConfigureServices` Yöntemi bu uygulama için gerekli hizmetleri açıklar. Bağımlılıkları yapılandırmak gerekli olmayan şekilde yalın mikro hizmet oluşturmakta olduğunuz. `Configure` Yöntemi işleyiciler gelen HTTP isteklerini yapılandırır. Şablon 'Hello World!' metinle herhangi bir istek için yanıt veren basit bir işleyici oluşturur.
 
 ## <a name="build-a-microservice"></a>Bir mikro hizmet oluşturma
 
@@ -227,7 +225,7 @@ A ***Docker kapsayıcısı*** Docker görüntü çalışan bir örneğini temsil
 
 Benzerleme tarafından düşünebilirsiniz *Docker görüntü* olarak bir *sınıfı*ve *Docker kapsayıcısı* bir nesne ya da bu sınıfının bir örneği olarak.  
 
-Asp.net şablonu tarafından oluşturulan Dockerfile bizim amacıyla hizmet verecektir. Şimdi içeriğinin gidin.
+ASP.NET şablonu tarafından oluşturulan Dockerfile bizim amacıyla hizmet verecektir. Şimdi içeriğinin gidin.
 
 İlk satırı kaynak görüntü belirtir:
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Bu proje dosyayı geçerli dizinden docker VM kopyalayın ve tüm paketleri geri yükleyin. Dotnet CLI kullanarak Docker görüntünün .NET Core SDK içermelidir anlamına gelir. Bundan sonra uygulamanızın rest kopyalanan ve dotnet komutu yapılar ve paketleri uygulamanızı yayımlayın.
+Bu proje dosyası Docker VM geçerli dizinden kopyalayın ve tüm paketler geri yükleme. Dotnet CLI kullanarak Docker görüntünün .NET Core SDK içermelidir anlamına gelir. Bundan sonra uygulamanızın rest kopyalanan ve dotnet komutu yapılar ve paketleri uygulamanızı yayımlayın.
 
 Dosyanın son satırının uygulama çalışır:
 
@@ -267,7 +265,7 @@ Dosyanın son satırının uygulama çalışır:
 ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
-Bu yapılandırılan bağlantı noktası başvuru `--server.urls` bağımsız değişkeni `dotnet` Dockerfile son satırında. `ENTRYPOINT` Komutu, hizmet başlatma hangi komut ve komut satırı seçenekleri Docker sizi bilgilendirir. 
+Bu yapılandırılan bağlantı noktası başvuru `--server.urls` bağımsız değişkeni `dotnet` Dockerfile son satırında. `ENTRYPOINT` Komut hangi komut ve komut satırı seçenekleri hizmeti başlatmak Docker bildirir. 
 
 ## <a name="building-and-running-the-image-in-a-container"></a>Oluşturma ve görüntüyü bir kapsayıcıda çalıştırma.
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-Docker derleme komutunu kullanarak görüntüsünü oluşturabilirsiniz. Kodunuzu içeren dizininden aşağıdaki komutu çalıştırın.
+Görüntü kullanarak yapı `docker build` komutu. Kodunuzu içeren dizininden aşağıdaki komutu çalıştırın.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 `--sig-proxy=false` Bağımsız değişkeni anlamına `Ctrl-C` komutları kapsayıcı işleme gönderilen değil, ancak yerine Durdur `docker attach` komutu. Son bağımsız değişkeni kapsayıcısında verilen addır `docker run` komutu. 
 
 > [!NOTE]
-> Kapsayıcı kimliği atanan docker, herhangi bir kapsayıcıya başvurmak için de kullanabilirsiniz. Kapsayıcı için bir ad belirtirseniz kaydetmedi `docker run` kapsayıcı kimliği kullanmanız gerekir.
+> Kapsayıcı kimliği atanan Docker, herhangi bir kapsayıcıya başvurmak için de kullanabilirsiniz. Kapsayıcı için bir ad belirtirseniz kaydetmedi `docker run` kapsayıcı kimliği kullanmanız gerekir.
 
 Bir tarayıcı açın ve hizmetinize gidin. Tanılama iletileri ekli çalışan kapsayıcısından komutu Windows görürsünüz.
 
@@ -346,8 +344,8 @@ docker rmi weather-microservice
 
 ## <a name="conclusion"></a>Sonuç 
 
-Bu öğreticide asp.net core mikro hizmet yerleşik ve birkaç basit özellikler eklenir.
+Bu öğreticide ASP.NET Core mikro hizmet yerleşik ve birkaç basit özellikler eklenir.
 
-Bir docker kapsayıcısı görüntü hizmetin yerleşik ve bu kapsayıcı, makinenizde çalıştı. Bir terminal penceresi hizmete bağlı ve tanılama iletileri hizmetinizden gördünüz.
+Bir Docker kapsayıcısı görüntü hizmetin yerleşik ve bu kapsayıcı, makinenizde çalıştı. Bir terminal penceresi hizmete bağlı ve tanılama iletileri hizmetinizden gördünüz.
 
 Yol boyunca eylem C# dilinin çeşitli özellikler gördünüz.

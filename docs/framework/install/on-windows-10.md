@@ -4,16 +4,16 @@ description: ".NET Framework Windows 10 veya Windows Server 2016 üzerinde nası
 author: rlander
 ms.author: mairaw
 keywords: ".NET framework, yükleme"
-ms.date: 11/17/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
 ms.workload: dotnet
-ms.openlocfilehash: f18049ddae661e9f0ac34d250074814f0bd15432
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>.NET Framework Windows 10 ve Windows Server 2016 yükleyin
 
@@ -28,7 +28,7 @@ Bir uygulamayı çalıştırmak çalışıyor ve makinenizde aşağıdakine benz
 .NET Framework 4.7.1 bulunur:
 
 * [Windows 10 sonbaharda oluşturucuları güncelleştirme (sürüm 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server 2016 (sürüm 1709)](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows Server, sürüm 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
 
 > [!div class="button"]
 [.NET Framework 4.7.1 indirin](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)

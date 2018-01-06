@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]Visual Studio 2015 ve sonraki sürümleri ile birlikte oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Ayrıca yönetilen kod (C# veya Visual Basic) ve bu hedef .NET Framework ve Windows 10 yerel koda yazılan uygulamaları sürümünü otomatik olarak derler.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   En iyi duruma getirilmiş uygulama bellek kullanımı.  
 
 > [!IMPORTANT]
-> Uygulamaları ve senaryoları büyük çoğunluğu için .NET yerel önemli ölçüde daha hızlı başlangıç süreleri ve IL veya NGEN görüntü için derlenmiş bir uygulama karşılaştırıldığında üstün performans sunar. Ancak, sonuçlarınızı farklılık gösterebilir. Uygulamanız .NET yerel olarak performans iyileştirmeleriyle benefited olmak için uygulamanızı .NET yerel sürümü ile kendi performansını karşılaştırmanız gerekir. Daha fazla bilgi için bkz: [performans oturumuna genel bakış](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Uygulamaları ve senaryoları büyük çoğunluğu için .NET yerel önemli ölçüde daha hızlı başlangıç süreleri ve IL veya NGEN görüntü için derlenmiş bir uygulama karşılaştırıldığında üstün performans sunar. Ancak, sonuçlarınızı farklılık gösterebilir. Uygulamanız .NET yerel olarak performans iyileştirmeleriyle benefited olmak için uygulamanızı .NET yerel sürümü ile kendi performansını karşılaştırmanız gerekir. Daha fazla bilgi için bkz: [performans oturumuna genel bakış](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
  
 Ancak [!INCLUDE[net_native](../../../includes/net-native-md.md)] birden çok derleme yerel koda içerir. .NET Framework uygulamalarını yerleşik ve yürütülen şekilde dönüştürür. Özellikle:  
   

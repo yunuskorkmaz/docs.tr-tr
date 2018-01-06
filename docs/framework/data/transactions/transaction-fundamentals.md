@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>İşlem temelleri
 İşlemleri birden çok görev birbirine bağlayın. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir veritabanında yeni bir tablo oluşturur. Ardından, Topla, biçimlendirme ve yeni tabloya veri eklemek için özel bir nesne çağırır. Yeni bir tablo ile veri doldurun sürece oluşturmamaya özen gösterin istediğiniz şekilde bu iki görevleri ilgili ve hatta bağımlı. Tek bir işlem kapsamı içinde her iki görevi yürütme aralarındaki bağlantıyı zorlar. İkinci görev başarısız olursa, yeni bir tablo oluşturulmadan önce ilk görev bir noktaya geri alınır.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  Tarafından sağlanan sınıflarını kullanarak işlem bir uygulama geliştirirken <xref:System.Transactions>ne tür işlemler ihtiyacınız hakkında endişelenmeniz gerekmez veya işlem yöneticisi dahil. <xref:System.Transactions> Altyapı otomatik olarak yönetir, bu.  
   
- Bir işlem oluşturduğunuzda, harekete uygulanan yalıtım düzeyini belirtebilirsiniz. Tarafından tanımlanan yalıtım düzeyi <xref:System.Transactions.IsolationLevel> sınıfı, diğer işlemleri verileri etkilenen işlem tarafından erişim düzeyini belirler.  
+ Bir işlem oluşturduğunuzda, harekete uygulanan yalıtım düzeyini belirtebilirsiniz. Tarafından tanımlanan yalıtım düzeyi <xref:System.Transactions.IsolationLevel> enum, diğer işlemleri verileri etkilenen işlem tarafından erişim düzeyini belirler.  
   
  ADO.NET kullanarak işlemleri oluşturabilirsiniz <xref:System.EnterpriseServices>, veya tarafından sağlanan işlem programlama modeli <xref:System.Transactions> ad alanı. [System.Transactions tarafından sağlanan özellikleri](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) konuda ele alınmıştır kullanarak bir işlemle ilgili uygulama yazmak için kullanabileceğiniz özellikler <xref:System.Transactions> ad alanı.  
   

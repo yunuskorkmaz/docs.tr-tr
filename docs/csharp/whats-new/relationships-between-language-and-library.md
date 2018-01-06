@@ -8,11 +8,11 @@ ms.date: 07/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 93fd26a72743fcf45df3904cb8d0c787d8a228a8
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Dil özellikleri ve kitaplık türleri arasındaki ilişkileri
 
@@ -32,7 +32,7 @@ Dil Tasarım ekibi, türleri ve uyumlu bir standart Kitaplığı'nda gerekli üy
 
 ## <a name="managing-your-dependencies"></a>Bağımlılıklarınız yönetme
 
-C# Derleyici araçları şimdi .NET kitaplıklarına yayın döngüsü desteklenen platformlarda gelen birbirinden ayrılır. Aslında, farklı bir sürüm döngüleri farklı .NET kitaplıklarına olan: .NET Framework Windows relesed Windows güncelleştirmesi olarak, .NET Core gelir ayrı bir zamanlama ve her hedef platformu için Xamarin araçlarıyla Kitaplığı güncelleştirmeleri sevk Xamarin sürümleri.
+C# Derleyici araçları şimdi .NET kitaplıklarına yayın döngüsü desteklenen platformlarda gelen birbirinden ayrılır. Aslında, farklı bir sürüm döngüleri farklı .NET kitaplıklarına olan: .NET Framework Windows üzerinde bir Windows Update ile serbest bırakıldı, .NET Core gelir ayrı bir zamanlama ve her hedef platformu için Xamarin araçlarıyla Kitaplığı güncelleştirmeleri sevk Xamarin sürümleri.
 
 Çoğu zaman, bu değişiklikler fark olmaz. Ancak, bu platformda daha yeni bir sürümüyle özelliklerin gerekli olmayan dil henüz .NET kitaplıklarına çalışırken bu yeni türleri sağlamak için NuGet paketlerini başvuru.
 Uygulama destekler, yeni framework yüklemeleriyle güncelleştirilir platformları ek başvuru kaldırabilirsiniz.

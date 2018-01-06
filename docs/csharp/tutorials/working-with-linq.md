@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -329,6 +329,6 @@ Derleme ve yeniden çalıştırın. Çıktı biraz temizleyici ve kod biraz daha
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu örnek, bazı gereken LINQ kullanılan yöntemlerinin LINQ ile kolayca kullanılacak kendi yöntemleri oluşturmak nasıl kodu etkinleştirildi. Bu ayrıca, yavaş ve istekli değerlendirme karar performans üzerinde olabilir etkileyen arasındaki farkları gösterilmiştir.
+Bu örnek, LINQ kullanılan yöntemlerin bazıları gösterdi, kodu LINQ ile kolayca kullanılacak kendi yöntemleri oluşturmak nasıl etkinleştirildi. Bu ayrıca, yavaş ve istekli değerlendirme karar performans üzerinde olabilir etkileyen arasındaki farkları gösterilmiştir.
 
-Bir bit hakkında bir magician'ın tekniği de öğrendiniz. Magician'ın kullanımı faro burada her kartı deste taşır kontrol sağladığından karıştırılır. Bazı ipuçlarını magician deste en üstünde bir kart yerleştirin bir izleyici üyenin ve burada bu kartı gider bilerek birkaç kez seçimdeki. Belirli bir yolla deste ayarlamak diğer İllüzyonları gerektirir. Bir magician eli gerçekleştirmeden önce deste ayarlar. Ardından aynen 5 kez iç karışık kullanarak deste karışık. Aşama üzerinde aynen rastgele deste gibi göründüğünü göster, 3 kez daha karışık ve tam olarak nasıl istediği ayarlamak deste sahip.
+Bir bit hakkında bir magician'ın tekniği de öğrendiniz. Burada, her kartı deste taşır kontrol sağladığından magicians faro karışık kullanın. Bazı ipuçlarını magician deste en üstünde bir kart yerleştirin bir izleyici üyenin ve burada bu kartı gider bilerek birkaç kez seçimdeki. Belirli bir yolla deste ayarlamak diğer İllüzyonları gerektirir. Bir magician eli gerçekleştirmeden önce deste ayarlar. Ardından aynen 5 kez iç karışık kullanarak deste karışık. Aşama üzerinde aynen rastgele deste gibi göründüğünü göster, 3 kez daha karışık ve tam olarak nasıl istediği ayarlamak deste sahip.

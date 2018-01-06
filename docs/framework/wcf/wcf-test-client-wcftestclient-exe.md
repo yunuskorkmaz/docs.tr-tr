@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28098a4e598d1c3bede3b05e3afe1001c3944d42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Test İstemcisi (WcfTestClient.exe), kullanıcılara giriş test parametreleri, bu hizmete giriş gönderme olanağı sağlar ve hizmet geri gönderdiği yanıt görüntülemek bir GUI aracıdır. İle birleştirildiğinde deneyimi sınama sorunsuz bir hizmet sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı.  
   
- Bulabileceğiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (WcfTestClient.exe) aşağıdaki konumda: C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\  
+ Genellikle bulabilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (WcfTestClient.exe) aşağıdaki konumda: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE - topluluk "Kuruluş", "Professional" veya "Topluluk" biri olabilir hangi bağlı olarak, Visual Studio düzeyini yüklenir.
   
 ## <a name="scenarios-for-using-test-client"></a>Test İstemcisi kullanma senaryoları  
  Aşağıdaki bölümlerde içinde kullanabileceğiniz en yaygın senaryolar açıklanmaktadır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] geliştirme sürecini kolaylaştırmak için Test istemcisi.  

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: deb02217b5d2a79cdf90d511658657f642ca1fc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 994ccb677d1376eff5b889a0a4ddfe072557bdea
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Nasıl yapılır: JSON Verilerini Seri Hale Getrime ve Seri Halden Çıkarma
 JSON (JavaScript nesne gösterimi) küçük miktarda veri istemci tarayıcıları ve AJAX etkinleştirilmiş Web hizmetleri arasında hızlı alışverişleri sağlayan bir verimli veri kodlama biçimidir.  
@@ -36,23 +36,23 @@ JSON (JavaScript nesne gösterimi) küçük miktarda veri istemci tarayıcılar�
   
 1.  Veri sözleşmesi tanımlayın `Person` ekleyerek <xref:System.Runtime.Serialization.DataContractAttribute> sınıfına ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği seri hale getirmek istediğiniz üyeleri. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Veri sözleşmeleri bkz [Hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-    ```  
+    ```csharp  
     [DataContract]  
-        internal class Person  
-        {  
-            [DataMember]  
-            internal string name;  
+    internal class Person  
+    {  
+        [DataMember]  
+        internal string name;  
   
-            [DataMember]  
-            internal int age;  
-        }  
+        [DataMember]  
+        internal int age;  
+    }  
     ```  
   
 ### <a name="to-serialize-an-instance-of-type-person-to-json"></a>JSON kişiye türünün bir örneği seri hale getirmek için  
   
 1.  Bir örneğini oluşturmak `Person` türü.  
   
-    ```  
+    ```csharp  
     Person p = new Person();  
     p.name = "John";  
     p.age = 42;  
@@ -60,20 +60,20 @@ JSON (JavaScript nesne gösterimi) küçük miktarda veri istemci tarayıcılar�
   
 2.  Seri hale `Person` kullanarak bir bellek akış nesnesine <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
-    ```  
+    ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
 3.  Kullanım <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> JSON veri akışına yazmak için yöntem.  
   
-    ```  
+    ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
 4.  JSON çıktısını gösterir.  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     StreamReader sr = new StreamReader(stream1);  
     Console.Write("JSON form of Person object: ");  
@@ -84,23 +84,20 @@ JSON (JavaScript nesne gösterimi) küçük miktarda veri istemci tarayıcılar�
   
 1.  JSON olarak kodlanmış veriler yeni bir örneğini seri durumdan `Person` kullanarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> yöntemi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
 2.  Sonuçları gösterir.  
   
-    ```  
-    Console.Write("Deserialized back, got name=");  
-    Console.Write(p2.name);  
-    Console.Write(", age=");  
-    Console.WriteLine(p2.age);  
+    ```csharp  
+    Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
     ```  
   
 ## <a name="example"></a>Örnek  
   
-```  
+```csharp  
 // Create a User object and serialize it to a JSON stream.  
 public static string WriteFromObject()  
 {  
@@ -116,7 +113,6 @@ public static string WriteFromObject()
     byte[] json = ms.ToArray();  
     ms.Close();  
     return Encoding.UTF8.GetString(json, 0, json.Length);  
-  
 }  
   
 // Deserialize a JSON stream to a User object.  
@@ -134,13 +130,14 @@ public static User ReadToObject(string json)
 > [!NOTE]
 >  JSON seri hale getirici, aşağıdaki örnek kodda gösterildiği gibi aynı ada sahip birden çok üyeli veri sözleşmeleri için seri hale getirme özel durumu oluşturur.  
   
-```  
+```csharp  
 [DataContract]  
 public class TestDuplicateDataBase  
 {  
     [DataMember]  
     public int field1 = 123;  
-}  
+}
+
 [DataContract]  
 public class TestDuplicateDataDerived : TestDuplicateDataBase  
 {  

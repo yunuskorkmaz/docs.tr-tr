@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 yenilikler nelerdir?
 
@@ -25,7 +25,7 @@ C# 7.2 kullanan [dil sürümü seçimi](csharp-7-1.md#language-version-selection
 
 Bu sürümdeki yeni diz özellikleri şunlardır:
 
-* [Başvuru semantiği ile değer türleri](#reference-semantics-with-value-types)
+* [Değer türleri ile başvuru semantiği](#reference-semantics-with-value-types)
   - Başvuru anlamsallarını kullanarak değer türleri ile çalışmayı etkinleştirmek sözdizimi geliştirmeleri birleşimi.
 * [Olmayan sondaki-adlandırılmış bağımsız değişkenler](#non-trailing-named-arguments)
   - Adlandırılmış bağımsız değişkenler konumsal değişkenleriyle izlenebilir.
@@ -59,7 +59,7 @@ C# 7.0 basamak ayırıcıları desteği uyarlamasını izin kaydetmedi `_` ilk k
 int binaryValue = 0b_0101_0101;
 ```
 
-## `private protected`
+## <a name="private-protected-access-modifier"></a>_korumalı özel_ erişim değiştiricisi
 
 Son olarak, yeni bir bileşik erişim değiştiricisi: `private protected` üyesi sınıfı ya da aynı bütünleştirilmiş kodda bildirilen türetilen sınıflar içeren tarafından erişilebileceği gösterir. Sırada `protected internal` türetilen sınıflar ya da aynı bütünleştirilmiş kodda olan sınıfları tarafından erişime izin veren `private protected` aynı bütünleştirilmiş kodda bildirilen türetilmiş türler erişimi sınırlar.
 
