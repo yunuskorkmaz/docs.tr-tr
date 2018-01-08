@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak, bu konuda yolunu belirtmek için kullanabileceğiniz güçlü ve karmaşık Mini dili ayrıntılı olarak açıklanmaktadır. geometri kullanarak daha sıkı şekilde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -50,7 +51,7 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
 ### <a name="a-note-about-white-space"></a>Boşluk hakkında bir Not  
  Kısaltma amacıyla, tek bir boşluk izleyen sözdizimi bölümlerinde gösterilen, ancak birden fazla boşlukları da tek bir boşluk gösterilen her yerde kabul edilir.  
   
- İki sayı gerçekte bir virgül veya boşluk ile ayrılmış olması gerekmez, ancak sonuç dizesini anlaşılır olduğunda bu yalnızca yapılabilir. Örneğin, `2..3` gerçekte iki sayıdır: "2." Ve ". 3". Benzer şekilde, `2-3` "2" ve "-3" olur. Alanları komutlardan, önce veya sonra ya da gerekli değildir.  
+ İki sayı gerçekte bir virgül veya boşluk ile ayrılmış olması gerekmez, ancak sonuç dizesini anlaşılır olduğunda bu yalnızca yapılabilir. Örneğin, `2.3` gerçekte iki sayıdır: "2." Ve ". 3". Benzer şekilde, `2-3` "2" ve "-3" olur. Alanları komutlardan, önce veya sonra ya da gerekli değildir.  
   
 ### <a name="syntax"></a>Sözdizimi  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Öznitelik kullanım sözdizimi için bir <xref:System.Windows.Media.StreamGeometry> isteğe oluşur <xref:System.Windows.Media.FillRule> değer ve bir veya daha fazla açıklamaları şekil.  
@@ -239,6 +240,6 @@ Büyük harf `V` belirten `y` mutlak bir değer; olan küçük harf `v` belirten
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.PathFigureCollection>  
- [Şekiller ve temel çizim WPF genel bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Geometri genel bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Geometriye Genel Bakış](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
