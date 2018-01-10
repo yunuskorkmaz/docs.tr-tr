@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c3fe36e93cdea1315ee92f2dfdf76953511309a2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp Toplamanın Temelleri
 <a name="top"></a>Ortak dil çalışma zamanı (CLR), atık toplayıcı otomatik bellek yöneticisi olarak görev yapar. Aşağıdaki avantajları sağlar:  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/23/2017
   
  Yönetilen yığın yönetilen her işlem için yok. İşlemdeki tüm iş parçacıklarının aynı yığında nesneler için bellek ayırın.  
   
- Bellek ayırma için Win32 atık toplayıcı çağırır [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) işlevi ve yönetilen uygulamalar için aynı anda belleğin bir kesim yedekler. Atık toplayıcı ayrıca kesimleri gerektiği gibi ayırır ve işletim sistemi geri segmentlere (bunları herhangi bir nesne temizledikten sonra) Win32 çağırarak serbest bırakır [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) işlevi.  
+ Bellek ayırma için Win32 atık toplayıcı çağırır [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) işlevi ve yönetilen uygulamalar için aynı anda belleğin bir kesim yedekler. Atık toplayıcı ayrıca kesimleri gerektiği gibi ayırır ve işletim sistemi geri segmentlere (bunları herhangi bir nesne temizledikten sonra) Win32 çağırarak serbest bırakır [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) işlevi.  
   
 > [!IMPORTANT]
 >  Çöp toplayıcı tarafından ayrılan Segment boyutu uygulamasına özeldir ve düzenli güncelleştirmeleri dahil olmak üzere, istediğiniz zaman değiştirilebilir. Uygulamanız hiçbir zaman hakkında varsayımlar olun veya belirli bir segmentle boyutuna göre değişir ve segment ayırmalarının kullanılabilir bellek miktarını yapılandırmak için denemeniz gerekir.  

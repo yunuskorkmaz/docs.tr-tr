@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlama bağlama kaynak nesnesi verileri elde ettiğiniz nesneye başvurur. Bu konu bağlama kaynağı olarak kullanabileceğiniz nesne türlerini açıklar.  
@@ -39,7 +39,7 @@ Veri bağlama bağlama kaynak nesnesi verileri elde ettiğiniz nesneye başvurur
 |dinamik nesneler|Kullanılabilir özellikler ve dizin oluşturucular uygulayan nesnenin bağlayabilirsiniz <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimi. Kodda üyeye erişebiliyorsanız, onu bağlayabilirsiniz. Örneğin, bir dinamik Nesne bir üye kodu aracılığıyla erişmenizi sağlayan `someObjet.AProperty`, onu bağlama yolu ayarlayarak bağlayabilirsiniz `AProperty`.|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]nesneleri|Bağlayabileceğiniz [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] gibi nesneleri <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Uygulayan <xref:System.ComponentModel.IBindingList> bağlama altyapısı dinler değişim bildirimlerini sağlayan arabirim.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]nesneleri|Bağlayabilir ve çalıştırabilirsiniz `XPath` üzerinde sorgular bir <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XmlElement>. Erişmek için kolay bir yol [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] biçimlendirmede bağlama kaynağı veri kullanmaktır bir <xref:System.Windows.Data.XmlDataProvider> nesnesi. Daha fazla bilgi için bkz: [XML verileri kullanarak bir XMLDataProvider ve XPath sorguları bağlamak](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Ayrıca bağlayabileceğiniz bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>, veya bağı LINQ-XML kullanarak bu tür nesneler üzerinde çalışan sorgu sonuçları. LINQ-XML biçimlendirmede bağlama kaynağı XML verilere erişmek için kullanılacak kolay bir yol kullanmaktır bir <xref:System.Windows.Data.ObjectDataProvider> nesnesi. Daha fazla bilgi için bkz: [XDocument, XElement veya LINQ XML sorgu sonuçları için bağlamak](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|<xref:System.Windows.DependencyObject>nesneleri|Herhangi bir bağımlılık alıştırmalarda bağlayabilirsiniz <xref:System.Windows.DependencyObject>. Bir örnek için bkz: [özellikleri, iki denetimler bağlama](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|<xref:System.Windows.DependencyObject>nesneleri|İçin bağımlılık özellikleri herhangi bağlayabilirsiniz <xref:System.Windows.DependencyObject>. Bir örnek için bkz: [özellikleri, iki denetimler bağlama](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Bağlama kaynağı için bir sınıf uygulama  

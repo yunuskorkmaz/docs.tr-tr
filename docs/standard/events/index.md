@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
 .NET Framework'teki olayları temsilci model üzerinde temel alır. Temsilci modeli kaydetme ve bir sağlayıcıdan bildirimleri almak abone etkinleştirir gözlemci tasarım deseni izler. Bir olay gönderen bir olay oluştu ve olay alıcı bu bildirimi alır ve bir yanıta tanımlayan bir bildirim gönderir. Bu makalede, temsilci modeli ana bileşenlerini, olayları uygulamalarında kullanma ve nasıl kodunuzda olayları uygulanacağı açıklanmaktadır.  
@@ -102,6 +102,6 @@ ms.lasthandoff: 12/23/2017
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Olaylar ve yönlendirilmiş olaylara genel bakış (Windows mağazası uygulamaları)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Olaylar ve yönlendirilmiş olaylara genel bakış (UWP uygulamalar)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [Olaylar (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Olaylar (C# programlama Kılavuzu)](../../csharp/programming-guide/events/index.md)

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f19d6b5907fe85ae96eeafe6c5ee68bf6c7856d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET normal ifadeler için en iyi uygulamalar
 <a name="top"></a>.NET normal ifade altyapısında desen eşleşmeleri yerine karşılaştırma ve metin eşleştirme göre metin işler güçlü, tam özellikli bir araçtır. Çoğu durumda desen eşleme işlemini hızlı ve verimli şekilde yapar. Ancak bazı durumlarda normal ifade motoru çok yavaş görünebilir. Aşırı durumlarda saatler ve hatta günler boyunca görece küçük bir girişi işlerken yanıt vermeyi durdurmuş gibi bile görünebilir.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Bir desen geliştirirken, özellikle de normal ifadeniz sınırlandırılmamış girdiyi işlemek üzere tasarlandıysa, geri dönüşün normal ifade altyapısının performansını nasıl etkileyeceğini düşünmelisiniz. Daha fazla bilgi için bkz: [ele ücret, geri dönüş](#Backtracking) bölümü.  
   
--   Normal ifadenizi geçerli girdilerin yanı sıra gereçsiz ve neredeyse geçerli girdiler de kullanarak baştan aşağı test edin. Belirli bir normal ifade için giriş rastgele oluşturmak için kullanabileceğiniz [Rex](http://go.microsoft.com/fwlink/?LinkId=210756), Microsoft Research bir normal ifade keşif aracından olduğu.  
+-   Normal ifadenizi geçerli girdilerin yanı sıra gereçsiz ve neredeyse geçerli girdiler de kullanarak baştan aşağı test edin. Belirli bir normal ifade için giriş rastgele oluşturmak için kullanabileceğiniz [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), Microsoft Research bir normal ifade keşif aracından olduğu.  
   
  [Başa dön](#top)  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/23/2017
  Merkezinde. NET'in normal ifade nesnesi modeli <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> normal ifade motoru temsil eden sınıf. Genellikle, normal ifade performansı etkileyen tek büyük şekilde faktördür <xref:System.Text.RegularExpressions.Regex> altyapısı kullanılır. Normal bir ifadeyi tanımlama, normal ifade motorunu bir normal ifade deseni ile sıkı şekilde eşlemeyi içerir. İşlem Kuplaj, mı yoksa, başlatmasını içerdiğini bir <xref:System.Text.RegularExpressions.Regex> nesnesine bir normal ifade deseni kurucusu geçirerek veya bir statik yöntem çözümlenecek dize birlikte normal ifade deseni geçirerek çağrılırken, tarafından reddedilir bir pahalı bir.  
   
 > [!NOTE]
->  Yorumlanan ve derlenmiş normal ifadeler kullanarak performans etkileri hakkında daha ayrıntılı bilgi için bkz: [normal ifade performansı en iyi duruma getirme, Bölüm II: alma ücret, geri dönüş](http://go.microsoft.com/fwlink/?LinkId=211566) BCL ekip blogu içinde.  
+>  Yorumlanan ve derlenmiş normal ifadeler kullanarak performans etkileri hakkında daha ayrıntılı bilgi için bkz: [normal ifade performansı en iyi duruma getirme, Bölüm II: alma ücret, geri dönüş](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) BCL ekip blogu içinde.  
   
  Normal ifade altyapısını belirli bir normal ifade deseniyle birleştirebilir, sonra altyapıyı birkaç şekilde metin eşlemesi yapmak üzere kullanabilirsiniz:  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 12/23/2017
  Sıradan şekilde, normal ifade motoru bir giriş dizsi içinde ilerlemek ve bunu bir normal ifade deseni ile karşılaştırmak için doğrusal ilerlemeyi kullanır. Ancak, ne zaman gibi belirsiz nicelik `*`, `+`, ve `?` kullanılan bir normal ifade deseni normal ifade altyapısı başarılı kısmi eşleşmeler bir kısmı verin ve daha önce kaydedilen bir duruma dönmek Tüm deseni için başarılı bir eşleşme aramak için. Bu işlem geri dönüş olarak bilinir.  
   
 > [!NOTE]
->  Geri dönüş daha fazla bilgi için bkz: [normal ifade davranış ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Geri dönüş ayrıntılı bilgi için bkz: [normal ifade performansı en iyi duruma getirme, Bölüm II: alma ücret, geri dönüş](http://go.microsoft.com/fwlink/?LinkId=211567) BCL ekip blogu içinde.  
+>  Geri dönüş daha fazla bilgi için bkz: [normal ifade davranış ayrıntıları](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) ve [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Geri dönüş ayrıntılı bilgi için bkz: [normal ifade performansı en iyi duruma getirme, Bölüm II: alma ücret, geri dönüş](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) BCL ekip blogu içinde.  
   
  Geri dönüş için destek, normal ifadelere güç ve esneklik kazandırır. Ayrıca normal ifade motorunun çalışmasının denetlenmesini sorumluluğunu normal ifade geliştiricisine teslim eder. Geliştiriciler genelde bu sorumluluğun farkında olmadığından, geri dönüşü yanlış kullanmaları ya da aşırı geri dönüşe bağımlılıkları genelde normal ifade performansının düşmesinde önemli bir rol oynar. En kötü senaryoda yürütme süresi girdi dizesinde her ek karakter ile iki katına çıkar. Aslında geri izlemeyi aşırı şekilde kullanarak, girişin normal ifade desenini yakın eşlemesi halinde sonsuz bir döngünün program eşdeğerini oluşturmak kolaydır; normal ifade motorunun görece kısa bir giriş dizesini işlemesi saatler ve hatta günler alabilir.  
   

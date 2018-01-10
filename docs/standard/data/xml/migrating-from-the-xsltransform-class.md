@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fe2848deadd8de4494f485d792604663515686e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3b9bc281127213a81d39a6e82c35afcb684a2f25
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Çok sınıftan geçirme
 XSLT mimari olarak tasarlandığından [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] serbest bırakın. <xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirildi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
@@ -36,7 +36,7 @@ XSLT mimari olarak tasarlandığından [!INCLUDE[vsprvslong](../../../../include
  <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı ayrıca çok daha hızlı hale diğer en iyi duruma getirmeleri içerir <xref:System.Xml.Xsl.XslTransform> sınıfı.  
   
 > [!NOTE]
->  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıftır daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı, <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez üzerinde dönüştürme adı verilir. XSLT dosyasının yüklendiği önce derlenmelidir olmasıdır. Daha fazla bilgi için aşağıdaki blog gönderisine bakın: [XslCompiledTransform çok daha yavaş?](http://go.microsoft.com/fwlink/?LinkId=130590)  
+>  Ancak genel performansını <xref:System.Xml.Xsl.XslCompiledTransform> sınıftır daha iyi <xref:System.Xml.Xsl.XslTransform> sınıfı, <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı daha gerçekleştirebileceğiniz daha yavaş <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi <xref:System.Xml.Xsl.XslTransform> sınıfı ilk kez üzerinde dönüştürme adı verilir. XSLT dosyasının yüklendiği önce derlenmelidir olmasıdır. Daha fazla bilgi için aşağıdaki blog gönderisine bakın: [XslCompiledTransform çok daha yavaş?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
   
 ## <a name="security"></a>Güvenlik  
  Varsayılan olarak, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı, XSLT desteğini devre dışı bırakır `document()` işlevi ve katıştırılmış komut dosyası. Bu özellikler oluşturarak etkin hale getirilebilir bir <xref:System.Xml.Xsl.XsltSettings> etkin ve kendisine geçirme özelliklere sahip nesne <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi. Aşağıdaki örnek, betik kullanımını etkinleştirmek ve XSLT dönüşümü gerçekleştirmeye gösterilmektedir.  
