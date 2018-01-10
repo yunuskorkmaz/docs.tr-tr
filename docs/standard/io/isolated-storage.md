@@ -31,17 +31,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 286261e9b40e65450113128c51c7c9b384380878
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a>İçin [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamalar, yalıtılmış depolama mekanizmasıdır kodu kaydedilmiş verilerle ilişkilendirme standartlaştırılmış yöntemler tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.  
   
 > [!IMPORTANT]
->  Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama veri sınıflarında kullanın `Windows.Storage` ad alanlarını dahil [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için bkz: [uygulama verilerini](http://go.microsoft.com/fwlink/?LinkId=229175) Windows geliştirme Merkezi'ndeki.  
+>  Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama veri sınıflarında kullanın `Windows.Storage` ad alanlarını dahil [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için bkz: [uygulama verilerini](/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'ndeki.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   

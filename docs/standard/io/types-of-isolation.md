@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 173d7974d9cad24aff7c4da8f38f22b150ea8a0c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi her zaman oluşturan kullanıcıya sınırlıdır. Bu tür bir yalıtım uygulamak için depolama açıldığında kodu çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı işletim sistemini algılar, kullanıcı kimliği aynı kavramı kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  
@@ -64,7 +64,7 @@ Yalıtılmış Depolama türleri
  Belirli bir bilgisayarın yerel depolama tesisleri kullandığından depoları gezici dışında yalıtılmış depolama her zaman örtük olarak bilgisayar tarafından yalıtılır olduğunu unutmayın.  
   
 > [!IMPORTANT]
->  Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama veri sınıflarında kullanın `Windows.Storage` ad alanlarını dahil [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için bkz: [uygulama verilerini](http://go.microsoft.com/fwlink/?LinkId=229175) Windows geliştirme Merkezi'ndeki.  
+>  Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bunun yerine, uygulama veri sınıflarında kullanın `Windows.Storage` ad alanlarını dahil [!INCLUDE[wrt](../../../includes/wrt-md.md)] yerel verileri ve dosyaları depolamak için API. Daha fazla bilgi için bkz: [uygulama verilerini](/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'ndeki.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  

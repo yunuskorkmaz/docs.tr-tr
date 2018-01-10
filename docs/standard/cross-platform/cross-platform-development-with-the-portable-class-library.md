@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü, platformlar arası uygulamalar ve Microsoft platformları için kitaplıkları hızla ve kolayca oluşturmanıza yardımcı olur.  
@@ -57,7 +57,7 @@ Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü,
   
 |Visual Studio SKU|Taşınabilir sınıf kitaplığı oluşturmak için destek|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010 Professional, Premium veya Ultimate|Evet, yüklediğinizde [taşınabilir kitaplık Araçları](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Visual Studio 2010 Professional, Premium veya Ultimate|Evet, yüklediğinizde [taşınabilir kitaplık Araçları](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Visual Studio Express 2010 sürümleri|Hayır.|  
 |Visual Studio 2012 Professional, Premium veya Ultimate|Evet. Telefon desteği için yükleme [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Visual Studio Express 2012 sürümleri|Hayır.|  
@@ -171,7 +171,7 @@ Visual Studio 2012'de değişiklik hedefleri iletişim kutusu
   
  Örneğin, yalnızca Windows 8.1 ve Windows Phone 8.1 hedeflediğinizde taşınabilir sınıf kitaplığı UI ilgili türler içerir. Ayrıca, taşınabilir sınıf kitaplığı giriş önce yayımlanan platformları (örneğin, Xbox, .NET Framework 4 ve Windows Phone 7) hedefliyorsanız sınırlamaları karşılaşabilirsiniz. .NET Framework paketler bazı eski bu platformlar için taşınabilir sınıf kitaplığı desteği artırır NuGet aracılığıyla yayımlar. Daha fazla bilgi ve NuGet paketleri listesi için bkz: [.NET Framework ve bant dışı sürümler](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Üye taşınabilir Sınıf Kitaplığı'nda ve seçili hedeflerinizi destekleniyorsa, IntelliSense projenizde görünür. Ayrıca, taşınabilir sınıf kitaplığı simgesi ![taşınabilir kitaplığı tarafından desteklenen](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") üyeleri tablolarda görünür [.NET Framework sınıf kitaplığı](http://go.microsoft.com/fwlink/?LinkId=211358) yanındaki üyeleri desteklenir. Örneğin, aşağıdaki üyeleri tablo gösterir <xref:System.String.Chars%2A> özelliğinde <xref:System.String> sınıfı taşınabilir Sınıf Kitaplığı'nda desteklenir:  
+ Üye taşınabilir Sınıf Kitaplığı'nda ve seçili hedeflerinizi destekleniyorsa, IntelliSense projenizde görünür. Ayrıca, taşınabilir sınıf kitaplığı simgesi ![taşınabilir kitaplığı tarafından desteklenen](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") üyeleri tablolarda görünür [.NET Framework sınıf kitaplığı](https://msdn.microsoft.com/library/mt472912.aspx) yanındaki üyeleri desteklenir. Örneğin, aşağıdaki üyeleri tablo gösterir <xref:System.String.Chars%2A> özelliğinde <xref:System.String> sınıfı taşınabilir Sınıf Kitaplığı'nda desteklenir:  
   
  ![Desteklenen üye simgesi](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Taşınabilir sınıf kitaplığı simgesi  

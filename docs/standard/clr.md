@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 43c3d8e2c6e99d88f461b3c45f6839ddf738ae6a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f465ee77e06255c576146e3e184adede05f5d7bc
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="common-language-runtime-clr"></a>Ortak Dil Çalışma Zamanı (CLR)
 .NET Framework kod çalışır ve geliştirme sürecini kolaylaştırmak hizmetleri sağlayan ortak dil çalışma adlı bir çalışma zamanı ortamı sağlar.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
  Derleyicileri ve araçları ortak dil çalışma zamanı 's işlevselliği kullanıma sunar ve bu yönetilen yürütme ortamından bu avantajları kod yazmanızı etkinleştirin. Çalışma zamanı hedefleyen bir dil derleyici geliştirmek kod yönetilen kod çağrılır; diller arası tümleştirme, diller arası özel durum işleme, Gelişmiş güvenlik, sürüm ve dağıtım desteği bileşen etkileşimi ve hata ayıklama ve profil oluşturma hizmetleri için basitleştirilmiş bir model gibi özelliklerinden yararlanır.  
   
 > [!NOTE]
->  Derleyicileri ve araçları tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi) tüm, ECMA ortak dil gibi ortak bir standart tanımlı olduğundan, ortak dil çalışma zamanı tüketebileceği bir çıktı oluşturmak için Altyapı belirtimi. Daha fazla bilgi için bkz: [ECMA C# ve ortak dil altyapısı belirtimleri](http://go.microsoft.com/fwlink/?LinkId=99212).  
+>  Derleyicileri ve araçları tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi) tüm, ECMA ortak dil gibi ortak bir standart tanımlı olduğundan, ortak dil çalışma zamanı tüketebileceği bir çıktı oluşturmak için Altyapı belirtimi. Daha fazla bilgi için bkz: [ECMA C# ve ortak dil altyapısı belirtimleri](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/).  
   
  Yönetilen kod hizmetleri sağlamak üzere çalışma zamanı etkinleştirmek için dil derleyicileri türleri, üyeleri ve kodunuzu başvurularında açıklayan meta veriler yayması gerekir. Meta veriler koduyla depolanır; Her yüklenebilir ortak dil çalışma zamanı taşınabilir yürütülebilir (PE) dosya meta verileri içerir. Çalışma zamanı meta verileri bulun ve sınıfları yük bellek durumlarda yerleştirme yöntemi çağrılarını çözmek yerel kod oluşturmak güvenlik zorlama ve çalışma zamanı bağlam sınırları ayarlamak kullanır.  
   

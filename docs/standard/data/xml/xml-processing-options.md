@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2619842bedef2c28e792969dfbd5c724375122bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-processing-options"></a>XML işleme seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir listesi için aşağıdaki tablolara bakın.  
@@ -40,8 +40,8 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir l
   
 |**Seçeneği**|**Açıklama**|  
 |----------------|---------------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)|-a olmayan önbelleğe alma hızlı ve güvenli, yardımcı salt iletme XML Ayrıştırıcı yapı yüksek performanslı XML uygulamalar.<br />-Dinamik bağlantı kitaplıklarını (DLL'ler); kullanabilirsiniz herhangi bir dil ile çalışır C++ kullanmanızı öneririz.|  
-|[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|-Windows işletim sisteminde bulunan XML işlemek için COM tabanlı teknolojidir.<br />-DOM yerel bir uygulama XPath ve XSLT için destek sağlar.<br />-Olay tabanlı SAX2 ayrıştırıcısını içerir.|  
+|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|-a olmayan önbelleğe alma hızlı ve güvenli, yardımcı salt iletme XML Ayrıştırıcı yapı yüksek performanslı XML uygulamalar.<br />-Dinamik bağlantı kitaplıklarını (DLL'ler); kullanabilirsiniz herhangi bir dil ile çalışır C++ kullanmanızı öneririz.|  
+|[MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|-Windows işletim sisteminde bulunan XML işlemek için COM tabanlı teknolojidir.<br />-DOM yerel bir uygulama XPath ve XSLT için destek sağlar.<br />-Olay tabanlı SAX2 ayrıştırıcısını içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DOM Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  

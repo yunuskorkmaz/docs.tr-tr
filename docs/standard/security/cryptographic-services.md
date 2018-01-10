@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 <a name="top"></a>Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B desteği  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Ulusal Güvenlik Teşkilatı (NSA) tarafından yayımlanan şifreleme algoritmaları Suite B kümesini destekler. Suite B hakkında daha fazla bilgi için bkz: [NSA Suite B şifreleme olgu sayfası](http://go.microsoft.com/fwlink/?LinkId=100111).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Ulusal Güvenlik Teşkilatı (NSA) tarafından yayımlanan şifreleme algoritmaları Suite B kümesini destekler. Suite B hakkında daha fazla bilgi için bkz: [NSA Suite B şifreleme olgu sayfası](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Aşağıdaki algoritmaları eklenmiştir:  
   

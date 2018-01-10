@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1650365946797e4c352421d0196b3b0e17913456
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 Gözlemci tasarım deseni ile kaydetmek ve bir sağlayıcıdan bildirimleri almak abone sağlar. Gönderim tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcı* (olarak da bilinen bir *konu* veya bir *observable*) ve sıfır, bir veya daha fazla *gözlemcilerin*. Sağlayıcının gözlemcilerin kaydı ve önceden tanımlı bir koşul olduğunda, olay veya durum değişikliği, sağlayıcı, tüm gözlemcilerin otomatik olarak kendi yöntemlerini çağıran biri tarafından size bildirir. oluşur. Bu yöntem çağrısı sağlayıcı gözlemcilerin için geçerli durum bilgisini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi, bildirimi bilgi sağlayan türünü temsil eder.  
@@ -56,7 +56,7 @@ Gözlemci tasarım deseni ile kaydetmek ve bir sağlayıcıdan bildirimleri alma
 -   Sağlayıcı için kendi gözlemcilerin gönderir verileri içeren bir nesne. Bu nesne türü için genel tür parametresinin karşılık gelen <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Bu nesnenin aynı olsa da <xref:System.IObservable%601> uygulama, en yaygın olarak ayrı bir tür değil.  
   
 > [!NOTE]
->  Gözlemci tasarım deseni uygulama yanı sıra, kullanılarak oluşturulan kitaplıkları keşfetme ilgilenebilirsiniz <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Örneğin, [.NET (Rx) için geriye dönük uzantıları](http://go.microsoft.com/fwlink/?LinkId=186345) genişletme yöntemleri ve zaman uyumsuz programlama desteklemek için LINQ standart dizisi işleçleri kümesinden oluşur.  
+>  Gözlemci tasarım deseni uygulama yanı sıra, kullanılarak oluşturulan kitaplıkları keşfetme ilgilenebilirsiniz <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Örneğin, [.NET (Rx) için geriye dönük uzantıları](https://msdn.microsoft.com/library/hh242985.aspx) genişletme yöntemleri ve zaman uyumsuz programlama desteklemek için LINQ standart dizisi işleçleri kümesinden oluşur.  
   
 ## <a name="implementing-the-pattern"></a>Düzeni uygulama  
  Aşağıdaki örnek, bir havaalanı bagaj talep bilgi sistemi uygulamak için gözlemci tasarım deseni kullanır. A `BaggageInfo` sınıfı, her uçuş gelen bagaj olduğu için alımı kullanılabilir karusel'leri ve gelen uçuşlar hakkında bilgi sağlar. Aşağıdaki örnekte gösterilir.  
