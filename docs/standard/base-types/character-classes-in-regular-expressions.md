@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f488990232448e69ba2fa0d7c7a730df57d170fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a>Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
@@ -408,7 +408,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Desteklenen Unicode Genel Kategorileri  
- Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Konumundaki "UCD dosya biçimi" ve "Genel kategori değerler" konuları daha fazla bilgi için bkz: [Unicode karakter veritabanı](http://go.microsoft.com/fwlink/?LinkId=57650).  
+ Unicode aşağıdaki tabloda listelenen genel kategorileri tanımlar. Konumundaki "UCD dosya biçimi" ve "Genel kategori değerler" konuları daha fazla bilgi için bkz: [Unicode karakter veritabanı](http://www.unicode.org/reports/tr44/).  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  

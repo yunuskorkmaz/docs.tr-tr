@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 
@@ -37,7 +37,7 @@ Tarih ve saatleri saat dilimleri arasındaki farklar işlemek için birlikte ça
 
 ## <a name="converting-to-coordinated-universal-time"></a>Eşgüdümlü Evrensel Saat dönüştürme
 
-Eşgüdümlü Evrensel Saat (UTC) bir Yüksek duyarlılık, atomik standart zamandır. Dünyanın saat dilimi UTC gelen olumlu veya olumsuz uzaklıkları olarak ifade edilir. Bu nedenle, UTC saat dilimi boş veya saat dilimi nötr saat tür sağlar. UTC saati tarih zaman önerilir ve bilgisayarlar arasında zaman taşınabilirlik önemlidir. (Ayrıntıları ve tarihler ve saatler kullanarak diğer en iyi yöntemler için bkz: [DateTime .NET Framework kullanarak en iyi yöntemler kodlama](http://go.microsoft.com/fwlink/?LinkId=92342).) Tek tek saat dilimleri için UTC Dönüştürme zaman karşılaştırmaları kolaylaştırır.
+Eşgüdümlü Evrensel Saat (UTC) bir Yüksek duyarlılık, atomik standart zamandır. Dünyanın saat dilimi UTC gelen olumlu veya olumsuz uzaklıkları olarak ifade edilir. Bu nedenle, UTC saat dilimi boş veya saat dilimi nötr saat tür sağlar. UTC saati tarih zaman önerilir ve bilgisayarlar arasında zaman taşınabilirlik önemlidir. (Ayrıntıları ve tarihler ve saatler kullanarak diğer en iyi yöntemler için bkz: [DateTime .NET Framework kullanarak en iyi yöntemler kodlama](https://msdn.microsoft.com/library/ms973825.aspx).) Tek tek saat dilimleri için UTC Dönüştürme zaman karşılaştırmaları kolaylaştırır.
 
 > [!NOTE]
 > Ayrıca serileştirebilen bir <xref:System.DateTimeOffset> yapısı belirsizliğe zamanında tek bir nokta temsil eder. Çünkü <xref:System.DateTimeOffset> nesneleri depolamak tarih ve saat değeri kendi UTC uzaklığı birlikte, bunlar her zaman belirli bir noktaya ilişki zamanında UTC'ye temsil eder.
@@ -74,7 +74,7 @@ Bu yöntemlerin ele <xref:System.DateTime> parametreler ve dönüş değerleri b
 
 UTC yerel saate dönüştürme için aşağıdaki "yerel için UTC saat dönüştürme" bölümüne bakın. UTC saat belirttiğiniz herhangi bir saat dilimi, dönüştürmek için arama <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> yöntemi. Yöntemi iki parametre alır:
 
-* Dönüştürülecek UTC. Bu bir <xref:System.DateTime> özelliği değeri <xref:System.DateTime.Kind%2A> özelliği ayarlanmış <xref:System.DateTimeKind?displayProperty=nameWithType> veya <xref:System.DateTimeKind?displayProperty=nameWithType>.
+* Dönüştürülecek UTC. Bu bir <xref:System.DateTime> özelliği değeri <xref:System.DateTime.Kind%2A> özelliği ayarlanmış `Unspecified` veya `Utc`.
 
 * UTC'ye dönüştürmek için saat dilimi.
 

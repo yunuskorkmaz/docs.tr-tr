@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt; öğesi"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> sınıfı yeni işlevsellik için vazgeçme mekanizma sağlar.  
@@ -79,6 +79,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Ayarlandığında `false`, FIPS etkinleştirildiğinde XAML tabanlı iş akışı projelerinin Visual Studio ile hata ayıklama sağlar. Bu olmadan, bir <xref:System.NullReferenceException> System.Activities derleme yöntemlerinde çağrılarında oluşturulur.|.NET framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Hata ayıklayıcı bir iş akışı örneği için sağlama toplamı MD5 veya SHA1 kullanıp kullanmadığını denetler. | .NET framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Denetimleri olup olmadığını <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> yöntemi bir özel durum oluşturur, bir <xref:System.Drawing.Icon> nesnesi PNG çerçeveler sahiptir. Daha fazla bilgi için bkz: [azaltma: simgesi nesneleri PNG çerçevelere](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Denetimleri olup olmadığını performansını <xref:System.Windows.Forms.PrintPreviewDialog> ağ yazıcıları için optimize edilmiştir. Daha fazla bilgi için bkz: [PrintPreviewDialog denetimine genel bakış](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Zaman uyumsuz işlemleri çağıran iş parçacığının bağlamından geçmez olup olmadığını denetler. Daha fazla bilgi için bkz: [CurrentCulture ve CurrentUICulture akış görevleri](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Denetimleri olup olmadığını <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> yöntemi, yalnızca son DNS girişi ile talep türüyle eşleşecek şekilde çalışır. Daha fazla bilgi için bkz: [azaltma: X509CertificateClaimSet.FindClaims yöntemi](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|Denetimleri olup olmadığını yolları daha uzun `MAX_PATH` (260 karakter) throw bir <xref:System.IO.PathTooLongException>. Daha fazla bilgi için bkz: [uzun yol Destek](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
