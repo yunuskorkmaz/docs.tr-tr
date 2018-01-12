@@ -38,11 +38,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 31cb95b20369eaef85f280497acb99e294e97faa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="formatting-types-in-net"></a>.NET biçimlendirme türleri
 <a name="Introduction"></a>Biçimlendirme Sonuç dizesini kullanıcılara görüntülenen ya da özgün veri türü geri yüklemek için seri, dize gösterimi için genellikle bir sınıf, yapı veya sabit listesi değeri örneği dönüştürme işlemidir. Bu dönüştürme belirli zorluklar oluşturabilir:  
@@ -261,17 +261,15 @@ ms.lasthandoff: 12/23/2017
  [Başa dön](#Introduction)  
   
 <a name="stringRef"></a>   
-### <a name="format-strings-and-net-class-library-types"></a>Biçim dizeleri ve .NET sınıf kitaplığı türleri  
- Tüm sayısal türler (diğer bir deyişle, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>ve <xref:System.Numerics.BigInteger>türleri)  
-  
- , hem de <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, ve tüm sabit listesi türleri, destek ile biçim dizeleri biçimlendirme. Her türü tarafından desteklenen özel biçim dizeleri hakkında daha fazla bilgi için aşağıdaki konulara bakın  
+### <a name="format-strings-and-net-types"></a>Biçim dizeleri ve .NET türleri  
+ Tüm sayısal türler (diğer bir deyişle, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>ve <xref:System.Numerics.BigInteger>türleri), yanı sıra <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, ve tüm sabit listesi türleri, destek ile biçim dizeleri biçimlendirme. Her türü tarafından desteklenen özel biçim dizeleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
 |Başlık|Tanım|  
 |-----------|----------------|  
 |[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerleri yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
 |[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özgü biçimi oluşturmanıza özel biçim dizeleri açıklar.|  
-|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
-|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> değerleri.|  
+|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.|  
+|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Uygulamaya özgü biçimleri için oluşturduğunuz özel biçim dizeleri açıklar <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.|  
 |[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları yaygın olarak kullanılan dize temsilini oluşturmak standart biçim dizeleri açıklar.|  
 |[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimleri oluşturma özel biçim dizeleri açıklar.|  
 |[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsilini oluşturmak için kullanılan standart biçim dizeleri açıklar.|  

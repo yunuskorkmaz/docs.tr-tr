@@ -1,12 +1,8 @@
 ---
 title: "Nasıl yapılır: Veri Akışı Bloğunu İptal Etme"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,26 +12,24 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 321b4a01b4ce6445ac43cffcc14cb68f29db050d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğunu İptal Etme
 Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, iş öğelerini bir veri akışı ardışık yanı sıra iptal etkilerini etkin olduğu göstermek için Windows Forms kullanır.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
-> [!TIP]
->  TPL veri akışı kitaplığı (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> ad alanı) ile dağıtılmaz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi açın [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], seçin **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi arama `Microsoft.Tpl.Dataflow` paket.  
-  
-### <a name="to-create-the-windows-forms-application"></a>Form uygulama Windows oluşturmak için  
+## <a name="to-create-the-windows-forms-application"></a>Form uygulama Windows oluşturmak için  
   
 1.  Bir C# veya Visual Basic oluşturma **Windows Forms uygulaması** projesi. Aşağıdaki adımlarda proje adı `CancellationWinForms`.  
   
@@ -50,7 +44,7 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
 ## <a name="creating-the-dataflow-pipeline"></a>Veri akışı ardışık düzenleri oluşturma  
  Bu bölümde, iş öğelerini işler ve ilerleme çubukları güncelleştiren veri akışı ardışık düzen oluşturmak açıklar.  
   
-#### <a name="to-create-the-dataflow-pipeline"></a>Veri akışı ardışık düzen oluşturmak için  
+### <a name="to-create-the-dataflow-pipeline"></a>Veri akışı ardışık düzen oluşturmak için  
   
 1.  Projenizde, System.Threading.Tasks.Dataflow.dll bir başvuru ekleyin.  
   
@@ -81,7 +75,7 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Veri akışı ardışık düzeni için kullanıcı arabirimi bağlanma  
  Bu bölümde, veri akışı ardışık düzeni için kullanıcı arabirimi bağlanmak açıklar. Ardışık düzen oluşturma hem çalışma öğelerini ardışık düzenine eklemek için olay işleyicisi tarafından denetlenen **çalışma öğeleri ekleme** düğmesi. İptal tarafından başlatılır **iptal** düğmesi. Kullanıcı ya da bu düğmeleri tıkladığında, uygun eylemi bir zaman uyumsuz olarak başlatılır.  
   
-#### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Veri akışı ardışık düzeni için kullanıcı arabirimi bağlanmak için  
+### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Veri akışı ardışık düzeni için kullanıcı arabirimi bağlanmak için  
   
 1.  Ana form için form designer'ı oluşturmak için bir olay işleyicisi <xref:System.Windows.Forms.ToolStripItem.Click> olayı için **çalışma öğeleri ekleme** düğmesi.  
   
@@ -106,8 +100,6 @@ Bu belge, uygulamanızda iptalini etkinleştir gösterilmiştir. Bu örnekte, i�
  Aşağıdaki çizimde çalışan uygulama gösterir.  
   
  ![Windows Forms uygulaması](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
-  
-## <a name="robust-programming"></a>Güçlü Programlama  
-  
+
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

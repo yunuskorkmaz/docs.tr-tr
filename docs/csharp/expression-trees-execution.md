@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>İfade ağaçlarını yürütme
 
@@ -28,7 +28,7 @@ Tüm LambdaExpression veya yürütülebilir IL LambdaExpression türetilmiş her
 
 Çoğu durumda, bu deyim ve karşılık gelen temsilci arasında basit bir eşleme oluşturur. Örneğin, tarafından temsil edilen bir ifade ağacına `Expression<Func<int>>` türü temsilciye dönüştürülür `Func<int>`. Dönüş türü ve bağımsız değişken listesi lambda ifadesi için bu lamdba ifade tarafından temsil edilen yürütülebilir kod hedef türü olan bir temsilci türü vardır.
 
-`LamdbaExpression` Türünü içeren `Compile` ve `CompileToMethod` bir ifade ağacına yürütülebilir koduna dönüştürmek için kullanacağınız üyeleri. `Compile` Yöntemi, bir temsilci oluşturur. `ConmpileToMethod` Yöntemi güncelleştirmeleri bir `MethodBuilder` ifade ağacına derlenmiş çıktısını gösterir IL nesnesiyle. Unutmayın `CompileToMethod` yalnızca tam masaüstü çerçevesi, .NET Core framework üzerinde kullanılabilir.
+`LamdbaExpression` Türünü içeren `Compile` ve `CompileToMethod` bir ifade ağacına yürütülebilir koduna dönüştürmek için kullanacağınız üyeleri. `Compile` Yöntemi, bir temsilci oluşturur. `CompileToMethod` Yöntemi güncelleştirmeleri bir `MethodBuilder` ifade ağacına derlenmiş çıktısını gösterir IL nesnesiyle. Unutmayın `CompileToMethod` yalnızca tam masaüstü çerçevesi, .NET Core framework üzerinde kullanılabilir.
 
 İsteğe bağlı olarak, ayrıca sağlayabilirsiniz bir `DebugInfoGenerator` bilgi oluşturulan temsilci nesne için hata ayıklama simgesi alırsınız. Bu, ifade ağacına bir temsilci nesnesine dönüştürmek ve oluşturulan temsilci hakkında tam hata ayıklama bilgileri sağlar.
 

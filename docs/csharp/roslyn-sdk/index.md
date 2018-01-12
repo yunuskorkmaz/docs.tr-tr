@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 8bebb739805f28bdc192aef7678e762d0aa51016
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET derleme Platform SDK'si
 
-Derleyicileri sözdizimi ve bu kodu semantiği doğrulamak uygulama kodunun ayrıntılı bir model oluşturma. Kullanımı bu model kaynak kodunu yürütülebilir çıkışı oluşturmak için. .NET derleme Platform SDK'sı bu modeline erişim sağlar. Giderek, biz tümleşik geliştirme ortamı (IDE) özelliklerini kullanan yeniden düzenleme, IntelliSense, akıllı yeniden adlandır, "tüm başvuruları Bul" ve "Tanıma Git" gibi bizim üretkenliği artırmak için. Kod çözümleme araçları bizim kod kalitesini ve uygulama yapısında yardımcı olmak için kod oluşturucuları geliştirmek için kullanır. Bu araçları akıllı aldıkça, çok daha da fazla uygulama kodu işlemek gibi yalnızca derleyicileri oluşturduğunuz modelinin erişim. Çekirdek Görev Roslyn API'leri budur: siyah kutuları açma ve araçları ve son kullanıcıların bilgi derleyicileri bol içinde paylaşmak izin vererek kodumuza hakkında sahip.
+Derleyicileri sözdizimi ve bu kodu semantiği doğrulamak uygulama kodunun ayrıntılı bir model oluşturma. Kaynak kodu yürütülebilir çıkışı oluşturmak için bu modeli kullanırlar. .NET derleme Platform SDK'sı bu modeline erişim sağlar. Giderek, biz tümleşik geliştirme ortamı (IDE) özelliklerini kullanan yeniden düzenleme, IntelliSense, akıllı yeniden adlandır, "tüm başvuruları Bul" ve "Tanıma Git" gibi bizim üretkenliği artırmak için. Kod çözümleme araçları bizim kod kalitesini ve uygulama yapısında yardımcı olmak için kod oluşturucuları geliştirmek için kullanır. Bu araçları akıllı aldıkça, çok daha da fazla uygulama kodu işlemek gibi yalnızca derleyicileri oluşturduğunuz modelinin erişim. Çekirdek Görev Roslyn API'leri budur: siyah kutuları açma ve araçları ve son kullanıcıların bilgi derleyicileri bol içinde paylaşmak izin vererek kodumuza hakkında sahip.
 Roslyn, aracılığıyla donuk kaynak kod içinde ve nesne kodu genişletme çevirmenler yerine derleyicileri platformları hale: araç ve uygulama kodu ilgili görevler için kullanabileceğiniz bir API.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET derleme Platform SDK'sı kavramları

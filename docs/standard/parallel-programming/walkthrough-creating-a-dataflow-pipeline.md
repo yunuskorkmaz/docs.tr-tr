@@ -1,12 +1,8 @@
 ---
 title: "İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +12,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6cc65464248ec27c4bda4934408a9bafc823a80c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6385f5f597ad31ad50253bc7b472b3344b74db7a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
-Kullanabilirsiniz ancak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemleri kaynak blokları, ileti blokları forma bağlanabilir bir *veri akışı ardışık düzenleri*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı blokları*, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her bir veri akışı ardışık düzen veri akışı bloğunda çalışma gerçekleştirir. Benzetme bu otomobil üretim için bir derleme satırdır. Her araç derleme satırın geçerken bir istasyon çerçeve derler, bir sonraki altyapısı vb. yükler. Bir derleme satırı aynı anda birleştirilen birden çok taşıtlardan sağladığından, aynı anda tam taşıtlardan bir birleştirme daha iyi verimlilik sağlar.  
-  
-> [!TIP]
->  TPL veri akışı kitaplığı (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> ad alanı) ile dağıtılmaz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi açın [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], seçin **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi arama `Microsoft.Tpl.Dataflow` paket.  
-  
+Kullanabilirsiniz ancak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemleri kaynak blokları, ileti blokları forma bağlanabilir bir *veri akışı ardışık düzenleri*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı blokları*, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her bir veri akışı ardışık düzen veri akışı bloğunda çalışma gerçekleştirir. Benzetme bu otomobil üretim için bir derleme satırdır. Her araç derleme satırın geçerken bir istasyon çerçeve derler, bir sonraki altyapısı vb. yükler. Bir derleme satırı aynı anda birleştirilen birden çok taşıtlardan sağladığından, aynı anda tam taşıtlardan bir birleştirme daha iyi verimlilik sağlar.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
  Bu belge rehberini yükler veri akışı ardışık gösterir *Homer Iliad* olan ayrı sözcükleri eşleştirmeye metin bir Web sitesi ve aramaları ilk word'ün karakterleri bu ters sözcükleri. Bu belgedeki veri akışı ardışık oluşturulması aşağıdaki adımlardan oluşur:  
   
 1.  Katılmak veri akışı blokları ardışık düzeninde oluşturun.  

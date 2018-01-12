@@ -1,30 +1,25 @@
 ---
 title: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9f5a771818231e87f05777803fff39cb40ebd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5389b1a9d608ad8aae002f3ef9b00420f998b76
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek veri akışı bloklarının bir ağ oluşturmak gösterilmiştir.  
@@ -33,11 +28,9 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Okuma [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) bu kılavuza başlamadan önce.  
-  
-> [!TIP]
->  TPL veri akışı kitaplığı (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> ad alanı) ile dağıtılmaz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi açın [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], seçin **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi arama `Microsoft.Tpl.Dataflow` paket.  
- 
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="sections"></a>Bölümler  
  Bu kılavuz aşağıdaki bölümleri içerir:  
   
@@ -142,8 +135,6 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
  Aşağıdaki çizimde ortak \Sample Pictures\ klasörü için tipik çıkış gösterir.  
   
  ![Windows Forms uygulaması](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
-  
+
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

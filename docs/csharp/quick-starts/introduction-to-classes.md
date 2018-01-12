@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44ee6a3d2dd800f91b5066ea578f4b37852ff295
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 55d6050d7573b9088b361fb571b96425533bda1f
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="introduction-to-classes"></a>Giriş sınıfları
 
@@ -40,7 +40,7 @@ namespace classes
 
 Bu Hızlı Başlangıç, banka hesabı temsil eden yeni türlerin oluşturacağız. Genellikle geliştiriciler, farklı bir metin dosyasında her sınıfını tanımlar. Bu, bir program boyutu büyüdükçe yönetmenizi kolaylaştırır.  Adlı yeni bir dosya oluşturun **BankAccount.cs** içinde **sınıfları** dizin. 
 
-Bu dosya, deefinition içerecek bir ***banka hesabı***. Oriented programlama kodu biçiminde türleri oluşturarak düzenler nesne ***sınıfları***. Bu sınıfları, belirli bir varlık gösteren kodu içerir. `BankAccount` Sınıfı, bir banka hesabı temsil eder. Kod yöntemleri ve özellikleri aracılığıyla belirli işlemlerini uygular. Bu Hızlı Başlangıç, banka hesabı bu davranış destekler:
+Bu dosya tanımını içerecek bir ***banka hesabı***. Oriented programlama kodu biçiminde türleri oluşturarak düzenler nesne ***sınıfları***. Bu sınıfları, belirli bir varlık gösteren kodu içerir. `BankAccount` Sınıfı, bir banka hesabı temsil eder. Kod yöntemleri ve özellikleri aracılığıyla belirli işlemlerini uygular. Bu Hızlı Başlangıç, banka hesabı bu davranış destekler:
 
 1. Banka hesabı benzersiz olarak tanıtan 10 basamaklı bir sayı sahiptir.
 1. Ad veya adlar sahiplerinin depolayan bir dize içeriyor.

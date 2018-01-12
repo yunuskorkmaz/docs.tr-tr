@@ -1,12 +1,8 @@
 ---
 title: "Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,24 +11,22 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f4f68cfd5abb319a453ab209c4161476e775534
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
 Bu belge, iletileri yazma ve veri akışı bloğundan iletiler okuma TPL veri akışı kitaplığı kullanmayı açıklar. TPL veri akışı kitaplığı iletileri ve bir veri akışı bloğu okuma iletilerden yazmak için zaman uyumlu ve zaman uyumsuz yöntemleri sağlar. Bu belgede <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfı. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletilerini arabelleğe alır ve her iki ileti kaynağı olarak ve bir ileti hedefine olarak davranır.  
-  
-> [!TIP]
->  TPL veri akışı kitaplığı ( <xref:System.Threading.Tasks.Dataflow> ad alanı) .NET Framework ile dağıtılan değil. Yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi Visual Studio'da açın, seçin **NuGet paketlerini Yönet** gelen **proje** menü ve çevrimiçi arama `System.Threading.Tasks.Dataflow` paket.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Veri akışı bloğundan eşzamanlı okuma ve yazma  
  Aşağıdaki örnek kullanır <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> yazmak için yöntemi bir <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> veri akışı bloğu ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> aynı nesneden okumak için yöntem.  

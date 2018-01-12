@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
-Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
+Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
   
  Bir dosya kalıcı depolaması olan bir sipariş edilen ve adlandırılmış bayt toplamıdır. Bu dosyalarla çalışırken dizin yolları, disk depolama ve dosya ve dizin adları ile çalışırsınız. Buna karşılık akış birkaç depolama ortamından biri olan (örneğin disk veya bellek) yedekleme deposuna yazma ve yedekleme deposundan okuma için kullanılan bir sıra bayttır. Disklerden başka sadece birkaç yedekleme deposu olduğu gibi ağ, bellek ve boru akışları gibi dosya akışlarından farklı olan birkaç tür akış vardır.  
   
@@ -51,7 +51,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Bu sınıfların kullanarak ek olarak, Visual Basic kullanıcılar tarafından sağlanan özellikleri ve yöntemleri kullanabilir <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dosya g/ç için sınıf.  
   
- Bkz: [nasıl yapılır: dizinleri kopyalama](../../../docs/standard/io/how-to-copy-directories.md), [nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Bkz: [nasıl yapılır: dizinleri kopyalama](../../../docs/standard/io/how-to-copy-directories.md), [nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), ve [nasıl yapılır: dizinleri ve dosyaları numaralandırma](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Akışlar  
  Özet temel sınıf <xref:System.IO.Stream> bayt okuma ve yazma destekler. Akışlar temsil eden tüm sınıflar devralınmalıdır <xref:System.IO.Stream> sınıfı. <xref:System.IO.Stream> Sınıfı ve türetilmiş sınıflarının veri kaynakları ve depoları ortak bir görünümünü sağlar ve işletim sistemi ve arka plandaki cihazların belirli ayrıntıları Programcı yalıtır.  
@@ -128,7 +128,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
 ## <a name="isolated-storage"></a>Yalıtılmış Depolama  
  Yalıtılmış depolama, kaydedilmiş verilerle bir birlikte ilişkili bir kodun standartlaştırılmış yolları tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Depolama kullanıcı, derleme ve etki alanı (isteğe bağlı) tarafından izole edilmiş bir sanal bir dosya sistemi sağlar. Yalıtılmış depolama özellikle uygulamanızın kullanıcı dosyalarına erişim izni yokken yararlıdır. Uygulamanız bilgisayarın güvenlik ilkesi tarafından kontrol edilir bir şekilde ayarlar veya dosyaları kaydedebilirsiniz.  
   
- Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları; bunun yerine, uygulama veri sınıflarında kullanın [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) ad alanı. Daha fazla bilgi için bkz: [uygulama verilerini](http://go.microsoft.com/fwlink/?LinkId=229175) Windows geliştirme Merkezi'ndeki.  
+ Yalıtılmış depolama için kullanılabilir olmadığından [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları; bunun yerine, uygulama veri sınıflarında kullanın [Windows.Storage](/uwp/api/Windows.Storage) ad alanı. Daha fazla bilgi için bkz: [uygulama verilerini](/previous-versions/windows/apps/hh464917(v=win.10)) Windows geliştirme Merkezi'ndeki.  
   
  Aşağıdaki sınıflar yalıtılmış depolama uygularken sık kullanılır:  
   
@@ -147,7 +147,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
 -   Türleri özellikle ilgili dosya işlemleri için gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmez [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, türler kullanın [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) ad alanı [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) ve [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Yalıtılmış Depolama kullanılabilir değil; Bunun yerine, kullanın [uygulama verileri](http://go.microsoft.com/fwlink/?LinkId=229175).  
+-   Yalıtılmış Depolama kullanılabilir değil; Bunun yerine, kullanın [uygulama verileri](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Zaman uyumsuz yöntemleri gibi kullandığınız <xref:System.IO.Stream.ReadAsync%2A> ve <xref:System.IO.Stream.WriteAsync%2A>, kullanıcı Arabirimi iş parçacığı engellenmesini önlemek için.  
   
@@ -160,7 +160,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
 ## <a name="io-and-security"></a>G/Ç ve Güvenlik  
  Sınıflarda kullandığınızda <xref:System.IO?displayProperty=nameWithType> ad alanı, dosyalar ve dizinler erişimi denetlemek için erişim denetim listelerini (ACL'ler) gibi işletim sistemi güvenlik gereksinimleri izlemelidir. Bu gereksinim yanı sıra olan <xref:System.Security.Permissions.FileIOPermission> gereksinimleri. ACL'leri program aracılığıyla yönetebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: erişim denetimi listesi girdileri ekleyip](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- Varsayılan güvenlik ilkeleri, internet veya intranet uygulamalarının kullanıcının bilgisayarındaki dosyalara erişmesini engeller. Bu nedenle, internet veya intranet üzerinden indirilecek kodu yazarken fiziksel bir dosyaya olan yolu gerektirecek g/ç sınıflarını kullanmayın. Bunun yerine, kullanın [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md) geleneksel .NET Framework uygulamaları veya kullanım için [uygulama verileri](http://go.microsoft.com/fwlink/?LinkId=229175) için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
+ Varsayılan güvenlik ilkeleri, internet veya intranet uygulamalarının kullanıcının bilgisayarındaki dosyalara erişmesini engeller. Bu nedenle, internet veya intranet üzerinden indirilecek kodu yazarken fiziksel bir dosyaya olan yolu gerektirecek g/ç sınıflarını kullanmayın. Bunun yerine, kullanın [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md) geleneksel .NET Framework uygulamaları veya kullanım için [uygulama verileri](/previous-versions/windows/apps/hh464917(v=win.10)) için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
   
  Güvenlik denetimi yalnızca akış oluşturulduğunda gerçekleştirilir. Bu nedenle, bir akış açmayın ve sonra onu en az güvenilen koda veya uygulama alanına geçirin.  
   

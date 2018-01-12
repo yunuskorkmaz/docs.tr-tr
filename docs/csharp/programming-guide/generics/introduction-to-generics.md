@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Genel Türlere Giriş (C# Programlama Kılavuzu)
 Genel sınıflar ve yöntemler yeniden kullanılırlığı, tür güvenliği ve genel olmayan'dekiler edilemez şekilde verimliliği birleştirir. Genel türler, koleksiyonlar ve bunlar üzerinde çalışan yöntemleri ile en sık kullanılır. .NET Framework sınıf kitaplığı 2.0 sürümünü sağlayan yeni bir ad alanı <xref:System.Collections.Generic>, birkaç yeni genel dayalı koleksiyon sınıfları içerir. Tüm uygulamalar hedef önerilir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 ve daha sonra yeni genel koleksiyon sınıfları yerine eski genel olmayan ortaklarınıza gibi kullandığınız <xref:System.Collections.ArrayList>. Daha fazla bilgi için bkz: [.NET Framework Sınıf Kitaplığı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
@@ -22,9 +22,9 @@ Genel sınıflar ve yöntemler yeniden kullanılırlığı, tür güvenliği ve 
   
 -   Bir yöntemin parametre türü olarak `AddHead` yöntemi.  
   
--   Genel yöntem dönüş türü olarak `GetNext` ve `Data` iç içe bir özellik `Node` sınıfı.  
+-   Dönüş türü olarak `Data` iç içe bir özellik `Node` sınıfı.  
   
--   Özel üye verileri iç içe geçmiş sınıf türü.  
+-   Özel üye türü olarak `data` içinde iç içe geçmiş sınıf.  
   
  T iç içe geçmiş için kullanılabilir olduğunu unutmayın `Node` sınıfı. Zaman `GenericList<T>` somut bir türde ile örneğin olarak örneği bir `GenericList<int>`, her oluşumu `T` ile değiştirilecek `int`.  
   
@@ -36,5 +36,5 @@ Genel sınıflar ve yöntemler yeniden kullanılırlığı, tür güvenliği ve 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türler](../../../csharp/programming-guide/generics/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türler](../../../csharp/programming-guide/generics/index.md)

@@ -1,21 +1,21 @@
 ---
-title: "Visual Studio 2017 ile C# Hello World uygulamanızda hata ayıklama"
-description: "C# Visual Studio 2017 ile yazılmış bir Hello World uygulama hata ayıklama öğrenin."
+title: "Visual Studio 2017 ile C# veya Visual Basic Hello World .NET Core uygulamanızda hata ayıklama"
+description: "C# veya Visual Basic Visual Studio 2017 ile yazılmış bir Hello World uygulama hata ayıklama öğrenin."
 keywords: ".NET core, .NET Core konsol uygulaması, .NET Core hata ayıklama"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 12/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.workload: dotnetcore
-ms.openlocfilehash: 3ab19566acb36cb96e0572931ba39f2ae99a3ca7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6c8e1de4e0053ae6f74dc6c74fe37b6d7661932e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017 ile Hello World uygulamanızda hata ayıklama
 
@@ -33,17 +33,12 @@ Hata ayıklama modunda programınızı test ederek her zaman başlamalısınız.
 
 Hata ayıklama modunda programınızı çalıştırma ve birkaç deneyin hata ayıklama özellikleri:
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. A *kesme noktası* geçici olarak uygulamanın çalışmasını kesintiye uğratır *önce* kesme satırıyla yürütülür. 
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    Okur satırında bir kesme noktası belirleyerek `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` o satırdaki veya seçerek kod penceresinin sol kenar boşluğunda tıklayarak **hata ayıklama** > **kesme** satırı ile menü öğesi Seçili. Aşağıdaki şekilde gösterildiği gibi Visual Studio kesme noktası vurgulayarak ve sol kenar boşluğu içinde kırmızı bir daire görüntüleyerek ayarlamak satır gösterir.
 
    ![Visual Studio programı penceresiyle kesme noktası ayarlama](./media/debugging-with-visual-studio/setbreakpoint.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   Okur satırında bir kesme noktası belirleyerek `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` o satırdaki veya seçerek kod penceresinin sol kenar boşluğunda tıklayarak **hata ayıklama** > **kesme** satırı ile menü öğesi Seçili. Aşağıdaki şekilde gösterildiği gibi Visual Studio kesme noktası vurgulayarak ve sol kenar boşluğu içinde kırmızı bir daire görüntüleyerek ayarlamak satır gösterir.
-
-   <a name="visual-studio-program-window-with-breakpoint-setmediadebugging-with-visual-studiovb-setbreakpointpng"></a>![Visual Studio programı penceresiyle kesme noktası ayarlama](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
----
 
 1. Program seçerek hata ayıklama modunda çalıştırılması **HelloWorld** yeşil ok F5 tuşuna basarak veya seçme araç çubuğundan düğme **hata ayıklama** > **hata ayıklamayıBaşlat**.
 
@@ -51,36 +46,50 @@ Hata ayıklama modunda programınızı çalıştırma ve birkaç deneyin hata ay
 
 1. Program yürütme durdurur kesme noktasına ulaştığında ve önce `Console.WriteLine` yöntemini yürütür. **Otomobiller** penceresi geçerli satırında kullanılan değişkenlerin değerleri görüntüler. **Yereller** penceresi (tıklatarak görüntüleyebileceğiniz **Yereller** sekmesinde) şu anda yürütülen yönteminde tanımlı değişkenlerin değerleri görüntüler.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
    ![Visual Studio uygulama penceresi](./media/debugging-with-visual-studio/break.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-   <a name="visual-studio-application-windowmediadebugging-with-visual-studiovb-breakpng"></a>![Visual Studio uygulama penceresi](./media/debugging-with-visual-studio/vb-break.png)
----
 
 1. Programınızı nasıl etkilediği görmek için değişkenlerin değerini değiştirebilirsiniz. Varsa **komut penceresi** görünür durumda değilse seçerek görüntülemek **hata ayıklama** > **Windows** > **hemen**menü öğesi. **Komut penceresi** hata ayıklama uygulama ile etkileşim sağlar.
 
 1. Değişkenlerin değerleri etkileşimli olarak değiştirebilirsiniz. ENTER `name = "Gracie"` içinde **komut penceresi** ve Enter tuşuna basın.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. ENTER `date = new DateTime(2016,11,01,11,59,00)` içinde **komut penceresi** ve Enter tuşuna basın.
 
    **Komut penceresi** dize değişkenin değerini ve özelliklerini görüntüler <xref:System.DateTime> değeri. Ayrıca, değişkenlerin değerini güncelleştirilmiştir **otomobiller** ve **Yereller** windows.
 
    ![Otomatik değişkenler penceresi ve komut penceresi](./media/debugging-with-visual-studio/autosimmediate.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. ENTER `currentDate = new DateTime(2016,11,01,11,59,00)` içinde **komut penceresi** ve Enter tuşuna basın.
-
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
-
-   ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
--->
----
 
 1. Program yürütme seçerek devam **devam** düğmesini seçerek veya araç çubuğunda **hata ayıklama** > **devam** menü öğesi. Konsol penceresinde görüntülenen değerler, yaptığınız değişiklikleri karşılık **komut penceresi**.
 
    ![Yazılı değerinde prizine ne gösteren konsol penceresi nedir? 11: 59'de 1/11/2016'Hello Gracie tarafından izlenen istemi](./media/debugging-with-visual-studio/changed.png)
 
 1. Uygulama ve son hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. A *kesme noktası* geçici olarak uygulamanın çalışmasını kesintiye uğratır *önce* kesme satırıyla yürütülür. 
+
+   Okur satırında bir kesme noktası belirleyerek `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` o satırdaki veya seçerek kod penceresinin sol kenar boşluğunda tıklayarak **hata ayıklama** > **kesme** satırı ile menü öğesi Seçili. Aşağıdaki şekilde gösterildiği gibi Visual Studio kesme noktası vurgulayarak ve sol kenar boşluğu içinde kırmızı bir daire görüntüleyerek ayarlamak satır gösterir.
+
+   ![Visual Studio programı penceresiyle kesme noktası ayarlama](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+
+1. Program seçerek hata ayıklama modunda çalıştırılması **HelloWorld** yeşil ok F5 tuşuna basarak veya seçme araç çubuğundan düğme **hata ayıklama** > **hata ayıklamayıBaşlat**.
+
+1. Program için bir ad istediğinde konsol penceresinde bir dize girin ve Enter tuşuna basın.
+
+1. Program yürütme durdurur kesme noktasına ulaştığında ve önce `Console.WriteLine` yöntemini yürütür. **Otomobiller** penceresi geçerli satırında kullanılan değişkenlerin değerleri görüntüler. **Yereller** penceresi (tıklatarak görüntüleyebileceğiniz **Yereller** sekmesinde) şu anda yürütülen yönteminde tanımlı değişkenlerin değerleri görüntüler.
+
+   ![Visual Studio uygulama penceresi](./media/debugging-with-visual-studio/vb-break.png)
+
+1. Programınızı nasıl etkilediği görmek için değişkenlerin değerini değiştirebilirsiniz. Varsa **komut penceresi** görünür durumda değilse seçerek görüntülemek **hata ayıklama** > **Windows** > **hemen**menü öğesi. **Komut penceresi** hata ayıklama uygulama ile etkileşim sağlar.
+
+1. Değişkenlerin değerleri etkileşimli olarak değiştirebilirsiniz. ENTER `name = "Gracie"` içinde **komut penceresi** ve Enter tuşuna basın.
+
+1. ENTER `currentDate = new DateTime(2016,11,01,11,59,00)` içinde **komut penceresi** ve Enter tuşuna basın.
+
+1. Program yürütme seçerek devam **devam** düğmesini seçerek veya araç çubuğunda **hata ayıklama** > **devam** menü öğesi. Konsol penceresinde görüntülenen değerler, yaptığınız değişiklikleri karşılık **komut penceresi**.
+
+   ![Komut penceresi içinde girilen değiştirilmiş değerleri gösteren konsol penceresi](./media/debugging-with-visual-studio/changed.png)
+
+1. Uygulama ve son hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
+---
 
 ## <a name="setting-a-conditional-breakpoint"></a>Koşullu kesme noktası ayarlama
 
@@ -98,17 +107,6 @@ Koşullu kesme noktası ayarlayın ve kullanıcı bir dize girin başarısız ol
    ```csharp
    String.IsNullOrEmpty(name)
    ```
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Kesme noktası temsil eden kırmızı nokta üzerinde sağ tıklayın. Bağlam menüsünde seçin **koşullar** açmak için **kesme noktası ayarları** iletişim. Onay kutusunu için **koşullar**.
-
-   ![Kesme noktası ayarlar paneli](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
-
-1. İçin **koşullu ifade** Değiştir "Örneğin x 5 =" aşağıdaki:
-
-   ```vb
-   String.IsNullOrEmpty(name)
-   ```
----
 
    Kod koşulu için test ediyorsanız, `String.IsNullOrEmpty(name)` yöntemi çağrısı `true` ya da çünkü *adı* bir değer atanmadı ya da boş bir dize değeri olduğu için (""). De belirtebilirsiniz bir *isabet sayısı*, belirtilen kaç kez, yürütülen bir açıklamadır önce hangi kesmeler yürütme programı veya bir *filtre koşulu*, kesmeleri programı gibi üzerinde temel yürütme bir iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak öznitelikleri.
 
@@ -122,7 +120,6 @@ Koşullu kesme noktası ayarlayın ve kullanıcı bir dize girin başarısız ol
 
 1. Seçin **Yereller** olduğundan şu anda yürütülen yönteme yerel değişkenlerin değerleri gösterir penceresi `Main` programınızdaki yöntemi. Görüntülendiğini değerini `name` değişken `""`, veya <xref:System.String.Empty?displayProperty=nameWithType>.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Değer boş bir dize aşağıdaki ifadeyi girerek onaylayın **komut penceresi**. Sonuç `true`.
 
    ```csharp
@@ -130,21 +127,47 @@ Koşullu kesme noktası ayarlayın ve kullanıcı bir dize girin başarısız ol
    ```
 
    ![Deyim yürütüldükten sonra true değeri döndüren komut penceresi](./media/debugging-with-visual-studio/emptystring.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Değer boş bir dize aşağıdaki ifadeyi girerek onaylayın **komut penceresi**. Sonuç `true`.
-
-   ```vb
-   ? String.IsNullOrEmpty(name)
-   ```
-  ![Deyim yürütüldükten sonra true değeri döndüren komut penceresi](./media/debugging-with-visual-studio/vb-emptystring.png)
----
 
 1. Seçin **devam** program yürütme devam etmek için araç çubuğunda.
 
 1. Konsol penceresini kapatın ve hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
 
 1. Kesme noktası kod penceresinin sol kenar boşluğunda nokta tıklayarak veya seçerek temizleyin **hata ayıklama > kesme** menü öğesi seçili satır.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. Kesme noktası temsil eden kırmızı nokta üzerinde sağ tıklayın. Bağlam menüsünde seçin **koşullar** açmak için **kesme noktası ayarları** iletişim. Onay kutusunu için **koşullar**.
 
+   ![Kesme noktası ayarlar paneli](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+
+1. İçin **koşullu ifade** Değiştir "Örneğin x 5 =" aşağıdaki:
+
+   ```vb
+   String.IsNullOrEmpty(name)
+   ```
+
+   Kod koşulu için test ediyorsanız, `String.IsNullOrEmpty(name)` yöntemi çağrısı `True` ya da çünkü *adı* bir değer atanmadı ya da boş bir dize değeri olduğu için (""). De belirtebilirsiniz bir *isabet sayısı*, belirtilen kaç kez, yürütülen bir açıklamadır önce hangi kesmeler yürütme programı veya bir *filtre koşulu*, kesmeleri programı gibi üzerinde temel yürütme bir iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak öznitelikleri.
+
+1. Seçin **kapatmak** düğmesi iletişim kutusunu kapatın.
+
+1. Program hata ayıklama modunda çalıştırın.
+
+1. Konsol penceresinde adınızı girmeniz istendiğinde Enter tuşuna basın.
+
+1. Koşul biz belirtilmediğinden `name` ya `null` veya <xref:System.String.Empty?displayProperty=nameWithType>, memnun, program yürütme durdurur kesme noktasına ulaştığında ve önce `Console.WriteLine` yöntemini yürütür.
+
+1. Seçin **Yereller** olduğundan şu anda yürütülen yönteme yerel değişkenlerin değerleri gösterir penceresi `Main` programınızdaki yöntemi. Görüntülendiğini değerini `name` değişken `""`, veya <xref:System.String.Empty?displayProperty=nameWithType>.
+
+1. Değer boş bir dize aşağıdaki ifadeyi girerek onaylayın **komut penceresi**. Sonuç `true`.
+
+   ```vb
+   ? String.IsNullOrEmpty(name)
+   ```
+  ![Deyim yürütüldükten sonra true değeri döndüren komut penceresi](./media/debugging-with-visual-studio/vb-emptystring.png)
+
+1. Seçin **devam** program yürütme devam etmek için araç çubuğunda.
+
+1. Konsol penceresini kapatın ve hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
+
+1. Kesme noktası kod penceresinin sol kenar boşluğunda nokta tıklayarak veya seçerek temizleyin **hata ayıklama > kesme** menü öğesi seçili satır.
 ---
 ## <a name="stepping-through-a-program"></a>Bir program aracılığıyla Adımlama
 
@@ -160,19 +183,8 @@ Visual Studio bir program aracılığıyla satır adım ve yürütülmesinin izl
 1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio artık yürütme sonraki satıra vurgular. Aşağıdaki şekilde gösterildiği gibi son deyim ve bunu arasında kod yürütmek için kısa bir milisaniye sürdü. `args`yalnızca bildirilen değişken kalır ve konsol penceresi boş kalır.
 
    ![Visual Studio penceresi](./media/debugging-with-visual-studio/stepinto2.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-1. Menü çubuğunda seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular ve bir sonraki satıra yürütme dönüşecektir görüntüler.
 
-   ![Visual Studio penceresi](./media/debugging-with-visual-studio/vb-stepinto1.png)
-
-   AT noktada, program için herhangi bir komut satırı bağımsız değişkeni geçirilen henüz çünkü **otomobiller** penceresi gösterir, değeri `args` değişkeni, boş bir dize dizisi. Ayrıca, Visual Studio boş konsol penceresi açtı.
-
-1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio artık yürütme sonraki satıra vurgular. Aşağıdaki şekilde gösterildiği gibi son deyim ve bunu arasında kod yürütmek için kısa bir milisaniye sürdü. `args`yalnızca bildirilen değişken kalır ve konsol penceresi boş kalır.
-
-   ![Visual Studio penceresi](./media/debugging-with-visual-studio/vb-stepinto2.png)
----
-
-1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular içeren deyimi `name` değişken atama. **Otomobiller** penceresi gösterir `name` olan `null` (C# ' ta) veya `Nothing` (Visual Basic'te), ve "Adınızı nedir?" dizesini konsol penceresinde görüntüler.
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular içeren deyimi `name` değişken atama. **Otomobiller** penceresi gösterir `name` olan `null`, ve "Adınızı nedir?" dizesini konsol penceresinde görüntüler.
 
 1. Konsol penceresinde bir dize girerek ve Enter tuşuna basarak komutuna yanıt. Konsol yanıt vermiyor ve girdiğiniz dize konsol penceresinde görüntülenmez ancak <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> yöntemi yine de girişinizi yakalayın.
 
@@ -185,6 +197,31 @@ Visual Studio bir program aracılığıyla satır adım ve yürütülmesinin izl
 1. Seçin **hata ayıklama** > **Step Out** veya kaydırma ve F11 tuşuna basın. Bu adım adım çalışmayı durdurur. Konsol penceresinde bir ileti görüntüler ve herhangi bir tuşa basın için bekler.
 
 1. Konsol penceresini kapatın ve hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+1. Menü çubuğunda seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular ve bir sonraki satıra yürütme dönüşecektir görüntüler.
+
+   ![Visual Studio penceresi](./media/debugging-with-visual-studio/vb-stepinto1.png)
+
+   AT noktada, program için herhangi bir komut satırı bağımsız değişkeni geçirilen henüz çünkü **otomobiller** penceresi gösterir, değeri `args` değişkeni, boş bir dize dizisi. Ayrıca, Visual Studio boş konsol penceresi açtı.
+
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio artık yürütme sonraki satıra vurgular. Aşağıdaki şekilde gösterildiği gibi son deyim ve bunu arasında kod yürütmek için kısa bir milisaniye sürdü. `args`yalnızca bildirilen değişken kalır ve konsol penceresi boş kalır.
+
+   ![Visual Studio penceresi](./media/debugging-with-visual-studio/vb-stepinto2.png)
+
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular içeren deyimi `name` değişken atama. **Otomobiller** penceresi gösterir `name` olan `Nothing`, ve "Adınızı nedir?" dizesini konsol penceresinde görüntüler.
+
+1. Konsol penceresinde bir dize girerek ve Enter tuşuna basarak komutuna yanıt. Konsol yanıt vermiyor ve girdiğiniz dize konsol penceresinde görüntülenmez ancak <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> yöntemi yine de girişinizi yakalayın.
+
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio vurgular içeren deyimi `date` (C# ' ta) veya `currentDate` (Visual Basic'te) değişken atama. **Otomobiller** penceresi şunu gösterir <xref:System.DateTime.Now?displayProperty=nameWithType> özellik değeri ve çağrı tarafından döndürülen değer <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> yöntemi. Konsol penceresi de konsol için giriş istendiğinde girilen dizesini görüntüler.
+
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. **Otomobiller** penceresi gösterir değerini `date` atama sonra değişken <xref:System.DateTime.Now?displayProperty=nameWithType> özelliği. Konsol penceresinde değiştirilmez.
+
+1. Seçin **hata ayıklama** > **Step Into** veya F11 tuşuna basın. Visual Studio çağırır <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> yöntemi. Değerlerini `date` (veya `currentDate`) ve `name` değişkenleri görünür **otomobiller** ve konsol penceresinde görüntüler biçimlendirilmiş dize.
+
+1. Seçin **hata ayıklama** > **Step Out** veya kaydırma ve F11 tuşuna basın. Bu adım adım çalışmayı durdurur. Konsol penceresinde bir ileti görüntüler ve herhangi bir tuşa basın için bekler.
+
+1. Konsol penceresini kapatın ve hata ayıklama modundan çıkmak için herhangi bir tuşa basın.
+---
 
 ## <a name="building-a-release-version"></a>Bir yayın sürümü oluşturma
 

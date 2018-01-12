@@ -1,12 +1,8 @@
 ---
 title: "İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,27 +12,25 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a17bdf149d3a263b064f96feae8c660be34d375
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54882ce5f646e9e790703e0951459a9fceac3bb6
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma
 TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç veri akışı blok türü sağlasa da, özel blok türleri de oluşturabilirsiniz. Bu belge, özel davranışı uygulayan bir veri akışı blok türü oluşturmayı açıklar.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Okuma [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) önce bu belgeyi okuyun.  
-  
-> [!TIP]
->  TPL veri akışı kitaplığı (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> ad alanı) ile dağıtılmaz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Yüklemek için <xref:System.Threading.Tasks.Dataflow> ad alanı, projenizi açın [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], seçin **NuGet paketlerini Yönet** proje menüsünden ve çevrimiçi arama `Microsoft.Tpl.Dataflow` paket.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="defining-the-sliding-window-dataflow-block"></a>Kayan pencere veri akışı bloğu tanımlama  
  Giriş değerleri arabelleğe alınmış ve kayan bir pencere biçimde çıktı gerektiren bir veri akışı uygulaması göz önünde bulundurun. Örneğin, üç pencere boyutunu ve giriş değerler {0, 1, 2, 3, 4, 5} {0, 1, 2} çıkış dizileri kayan pencere veri akışı bloğu üretir {1, 2, 3}, {2, 3, 4} ve {3, 4, 5}. Aşağıdaki bölümlerde bu özel davranış uygulayan bir veri akışı blok türü oluşturmanın iki yolu açıklanmaktadır. İlk tekniği kullanan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> işlevselliğini birleştirmek için yöntemi bir <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> nesne ve bir <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> bir yayılması bloğuna nesnesi. İkinci tekniği türeyen bir sınıf tanımlar <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> ve özel davranış gerçekleştirmek için varolan birleştirir.  
@@ -73,8 +67,6 @@ TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç ver
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
  **Vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
-  
+
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

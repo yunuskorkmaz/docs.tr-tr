@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
 Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dillere yerelleştirilmiş bir uygulama da dahil olmak üzere, üç adımdan oluşur: yerelleştirilebilirlik gözden geçirin Genelleştirme ve Yerelleştirme.  
@@ -50,7 +50,7 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
   
  .NET Framework, dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamalar geliştirme için kapsamlı destek sağlar. Özellikle, .NET Framework sınıf kitaplığındaki birçok üye türü, geçerli kullanıcının kültür veya belirli bir kültürü yansıtan değerlerini döndürerek genelleştirmeye yardım eder. Ayrıca, .NET Framework, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.  
   
- Ek bilgi için bkz: [Git genel Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=235015).  
+ Ek bilgi için bkz: [Genelleştirme belgelerine](/globalization/).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
