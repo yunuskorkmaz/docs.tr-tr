@@ -31,16 +31,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cff126734dbaee315382d20cd43ded45d9f8e885
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dd5371c8ce80383e2929099c9d9658694858f8df
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
 Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemek için ses ve, ana iş parçacığı kesinti olmadan çalışmaya devam ederken "arka planda" görüntüleri etkinleştir.  
   
- Zaman uyumsuz yöntemleri destekleyen bir sınıf kullanarak [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin olay işleyicisi ekleme olarak kadar basit olabilir *MethodName* `Completed` olayı herhangi bir olay için yaptığınız gibi. Çağırdığınızda *MethodName* `Async` yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz *MethodName* `Completed` olayı oluşturulur. Olay işleyicisi incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlemi başarıyla tamamlandı veya iptal edildi belirlemek için parametre.  
+ Zaman uyumsuz yöntemleri destekleyen bir sınıf kullanarak [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin olay işleyicisi ekleme olarak kadar basit olabilir *MethodName *** tamamlandı** olayı herhangi bir olay için yaptığınız gibi. Çağırdığınızda *MethodName *** zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz *MethodName *** tamamlandı** olayı oluşturulur. Olay işleyicisi incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlemi başarıyla tamamlandı veya iptal edildi belirlemek için parametre.  
   
  Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz: [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   

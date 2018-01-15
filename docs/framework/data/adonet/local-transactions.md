@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="local-transactions"></a>Yerel işlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] iş tek bir birim olarak execute birden çok görev birbirine bağlamak istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir tablo sipariş bilgilerle güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirmeleri, öğeleri borçlandırılacağı sıralı. Her iki görev başarısız olursa, güncelleştirmelerinin her ikisini de geri alınır.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="determining-the-transaction-type"></a>İşlem türünü belirleme  
  Bir işlem tek aşamalı bir işlemdir ve veritabanı tarafından doğrudan gerçekleştirilir yerel bir işlem olarak kabul edilir. Bir işlem, bir işlem İzleyici tarafından düzenlenir ve işlem çözümlemesi için (örneğin, iki aşamalı kaydetme) yedek operatördür mekanizmaları kullanan bir dağıtılmış işlem olarak kabul edilir.  
   
- Her biri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları sahip kendi `Transaction` yerel işlemler gerçekleştirmek için nesne. Bir SQL Server veritabanında gerçekleştirilecek bir işlem gerekiyorsa seçin bir <xref:System.Data.SqlClient> işlem. Bir Oracle hareket kullanmak <xref:System.Data.OracleClient> sağlayıcısı. Ayrıca, var olan yeni bir <xref:System.Data.Common.DbTransaction> işlemleri gerektirir sağlayıcısı bağımsız kod yazmak için kullanılabilir sınıfı.  
+ Her biri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları sahip kendi `Transaction` yerel işlemler gerçekleştirmek için nesne. Bir SQL Server veritabanında gerçekleştirilecek bir işlem gerekiyorsa seçin bir <xref:System.Data.SqlClient> işlem. Bir Oracle hareket kullanmak <xref:System.Data.OracleClient> sağlayıcısı. Ayrıca, bir <xref:System.Data.Common.DbTransaction> işlemleri gerektirir sağlayıcısı bağımsız kod yazmak için kullanılabilir sınıfı.  
   
 > [!NOTE]
 >  Sunucuda gerçekleştirildiğinde işlemleri en iyi yoldur. Açık işlemleri kapsamlı kullanımını yapan bir SQL Server veritabanı ile çalışıyorsanız, Transact-SQL BEGIN TRANSACTION deyimiyle depolanmış yordam olarak yazma göz önünde bulundurun. Sunucu tarafı işlemleri gerçekleştirme hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  

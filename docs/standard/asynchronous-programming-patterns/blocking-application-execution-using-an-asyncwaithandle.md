@@ -26,20 +26,20 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ceaa207a93dfbeded93c786d40d5b8ee10f7014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 380080c0aa05bc5b94c9ec5fe471f2f255562cd2
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Bir AsyncWaitHandle Kullanarak Uygulamanın Yürütülmesini Engelleme
 İşlemi tamamlanana kadar diğer iş zaman uyumsuz bir işlem sonuçları için beklenirken yapmak için devam edemiyor uygulamaları engellemelidir. Bir zaman uyumsuz bir işlemin tamamlanması beklenirken, uygulamanın ana iş parçacığı engellemek için aşağıdaki seçeneklerden birini kullanın:  
   
--   Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliği <xref:System.IAsyncResult> zaman uyumsuz işlem tarafından döndürülen **başlamak** *OperationName* yöntemi. Bu yaklaşım, bu konuda gösterilmiştir.  
+-   Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliği <xref:System.IAsyncResult> zaman uyumsuz işlem tarafından döndürülen **başlamak *** OperationName* yöntemi. Bu yaklaşım, bu konuda gösterilmiştir.  
   
--   Zaman uyumsuz işlem çağrısı **son** *OperationName* yöntemi. Bu yaklaşım gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırarak uygulamanın yürütülmesini engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+-   Zaman uyumsuz işlem çağrısı **son *** OperationName* yöntemi. Bu yaklaşım gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırarak uygulamanın yürütülmesini engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
- Bir veya daha fazla kullanan uygulamaları <xref:System.Threading.WaitHandle> zaman uyumsuz bir işlem tamamlanana kadar engellemek için nesneleri genellikle çağıracaktır **başlamak** *OperationName* yöntemi yapılabilir herhangi bir iş gerçekleştirin işlem, ardından zaman uyumsuz işlemleri kadar blok sonuçlarını olmadan tamamlar. Bir uygulama üzerinde tek bir işlemi birini çağırarak engelleyebilirsiniz <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemlerini kullanarak <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Bir dizi tamamlamak için zaman uyumsuz işlemleri için beklenirken engellemek için ilişkili depolama <xref:System.IAsyncResult.AsyncWaitHandle%2A> bir dizi ve, çağrı nesneleri <xref:System.Threading.WaitHandle.WaitAll%2A> yöntemleri. Bir dizi tamamlamak için zaman uyumsuz işlemleri herhangi biri için beklenirken engellemek için ilişkili depolama <xref:System.IAsyncResult.AsyncWaitHandle%2A> bir dizi ve, çağrı nesneleri <xref:System.Threading.WaitHandle.WaitAny%2A> yöntemleri.  
+ Bir veya daha fazla kullanan uygulamaları <xref:System.Threading.WaitHandle> zaman uyumsuz bir işlem tamamlanana kadar engellemek için nesneleri genellikle çağıracaktır **başlamak *** OperationName* yöntemi, sonuçları yapılabilir herhangi bir iş gerçekleştirin işlem ve ardından zaman uyumsuz işlemleri tamamlanana kadar bloğu. Bir uygulama üzerinde tek bir işlemi birini çağırarak engelleyebilirsiniz <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemlerini kullanarak <xref:System.IAsyncResult.AsyncWaitHandle%2A>. Bir dizi tamamlamak için zaman uyumsuz işlemleri için beklenirken engellemek için ilişkili depolama <xref:System.IAsyncResult.AsyncWaitHandle%2A> bir dizi ve, çağrı nesneleri <xref:System.Threading.WaitHandle.WaitAll%2A> yöntemleri. Bir dizi tamamlamak için zaman uyumsuz işlemleri herhangi biri için beklenirken engellemek için ilişkili depolama <xref:System.IAsyncResult.AsyncWaitHandle%2A> bir dizi ve, çağrı nesneleri <xref:System.Threading.WaitHandle.WaitAny%2A> yöntemleri.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde, kullanıcı tarafından belirtilen bir bilgisayar için etki alanı adı sistemi bilgileri almak için DNS sınıfında zaman uyumsuz yöntemleri kullanarak gösterilmektedir. Örnek kullanarak engelleme gösterir <xref:System.Threading.WaitHandle> zaman uyumsuz işlemle ilişkili. Unutmayın `null` (`Nothing` Visual Basic'te) geçirilen <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` ve `stateObject` parametreleri bunlar bu yaklaşımı kullanarak, gerekli olmadığından.  

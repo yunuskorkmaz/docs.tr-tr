@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac206e41f727d24e7748226101b9b8a86ee77376
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen ve semantiği temsilci sınıflarıyla tanıdık olay zaman uyumsuz davranışı kullanıma sunmak için etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay tabanlı zaman uyumsuz deseni izler bir sınıf uygulama dikkate almanız yönergeler açıklanmaktadır.  
@@ -40,14 +40,14 @@ Olay tabanlı zaman uyumsuz desen ve semantiği temsilci sınıflarıyla tanıd�
  Olay tabanlı zaman uyumsuz desen uygulamak, garanti sınıfınızın doğru şekilde davranır ve sınıfınızın istemcileri bu tür davranış güvenebilirsiniz emin olmak için çeşitli sağlamanız gerekir.  
   
 ### <a name="completion"></a>Tamamlama  
- Her zaman çağırma *MethodName* `Completed` başarılı bir şekilde tamamlandığında, bir hata ya da iptal olduğunda olay işleyicisi. Uygulamalar, hiçbir zaman burada boşta kalır ve tamamlanma hiçbir zaman oluşur bir durum karşılaşabilirsiniz. Bu kural için bir özel, böylece hiçbir zaman tamamlanmıyor zaman uyumsuz işlemi üzere tasarlanmış varsa ' dir.  
+ Her zaman çağırma *MethodName *** tamamlandı** başarılı bir şekilde tamamlandığında, bir hata ya da iptal olduğunda olay işleyicisi. Uygulamalar, hiçbir zaman burada boşta kalır ve tamamlanma hiçbir zaman oluşur bir durum karşılaşabilirsiniz. Bu kural için bir özel, böylece hiçbir zaman tamamlanmıyor zaman uyumsuz işlemi üzere tasarlanmış varsa ' dir.  
   
 ### <a name="completed-event-and-eventargs"></a>Tamamlanan Olay ve EventArgs  
- Her ayrı için *MethodName* `Async` yöntemi, aşağıdaki tasarım gereksinimleri geçerlidir:  
+ Her ayrı için *MethodName *** zaman uyumsuz** yöntemi, aşağıdaki tasarım gereksinimleri geçerlidir:  
   
--   Tanımlayan bir *MethodName* `Completed` olayı yöntemi ile aynı sınıfta.  
+-   Tanımlayan bir *MethodName *** tamamlandı** olayı yöntemi ile aynı sınıfta.  
   
--   Tanımlayan bir <xref:System.EventArgs> sınıfı ve eşlik eden temsilci için *MethodName* `Completed` türetilen olay <xref:System.ComponentModel.AsyncCompletedEventArgs> sınıfı. Varsayılan sınıf adı biçiminde olmalıdır *MethodName*`CompletedEventArgs`.  
+-   Tanımlayan bir <xref:System.EventArgs> sınıfı ve eşlik eden temsilci için *MethodName *** tamamlandı** türetilen olay <xref:System.ComponentModel.AsyncCompletedEventArgs> sınıfı. Varsayılan sınıf adı biçiminde olmalıdır * MethodName ***CompletedEventArgs**.  
   
 -   Emin <xref:System.EventArgs> sınıftır dönüş değerleri belirli *MethodName* yöntemi. Kullandığınızda <xref:System.EventArgs> sınıfı, sonuç yayınlanamıyor geliştiriciler hiçbir zaman gerektiren.  
   
@@ -69,27 +69,27 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Değil tanımlayan bir <xref:System.EventArgs> döndüren yöntemler döndürmek için sınıf `void`. Bunun yerine, bir örneğini kullanması <xref:System.ComponentModel.AsyncCompletedEventArgs> sınıfı.  
   
--   Her zaman Yükselt olun *MethodName* `Completed` olay. Bu olay, başarılı bir şekilde tamamlandığında, bir hata veya iptal oluşmalıdır. Uygulamalar, hiçbir zaman burada boşta kalır ve tamamlanma hiçbir zaman oluşur bir durum karşılaşabilirsiniz.  
+-   Her zaman Yükselt olun *MethodName *** tamamlandı** olay. Bu olay, başarılı bir şekilde tamamlandığında, bir hata veya iptal oluşmalıdır. Uygulamalar, hiçbir zaman burada boşta kalır ve tamamlanma hiçbir zaman oluşur bir durum karşılaşabilirsiniz.  
   
 -   Zaman uyumsuz işlemi oluşur ve yakalanan özel durum atamak istediğiniz özel durumları yakalamak olun <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği.  
   
 -   Görevi tamamlamak hata oluşursa, sonuçları erişilebilir olmamalıdır. Zaman <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği `null`, o herhangi bir özellik erişimini sağlamak <xref:System.EventArgs> yapısı özel bir durum oluşturur. Kullanım <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> bu doğrulamayı gerçekleştirmek için yöntem.  
   
--   Zaman aşımı, hata olarak model. Zaman aşımı oluştuğunda Yükselt *MethodName* `Completed` olay ve ata bir <xref:System.TimeoutException> için <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği.  
+-   Zaman aşımı, hata olarak model. Zaman aşımı oluştuğunda Yükselt *MethodName *** tamamlandı** olay ve ata bir <xref:System.TimeoutException> için <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği.  
   
--   Sınıfınıza birden çok eşzamanlı çağrılarını destekliyorsa, emin *MethodName* `Completed` olayı uygun içeren `userSuppliedState` nesnesi.  
+-   Sınıfınıza birden çok eşzamanlı çağrılarını destekliyorsa, emin *MethodName *** tamamlandı** olayı uygun içeren `userSuppliedState` nesnesi.  
   
--   Emin *MethodName* `Completed` uygun iş parçacığı üzerinde ve uygulama yaşam döngüsü uygun zamanında olayı oluşturulur. Daha fazla bilgi için parçacıkları ve bağlamları bölümüne bakın.  
+-   Emin *MethodName *** tamamlandı** uygun iş parçacığı üzerinde ve uygulama yaşam döngüsü uygun zamanında olayı oluşturulur. Daha fazla bilgi için parçacıkları ve bağlamları bölümüne bakın.  
   
 ### <a name="simultaneously-executing-operations"></a>Aynı anda işlemleri çalıştırma  
   
--   Sınıfınıza birden çok eşzamanlı çağrılarını destekliyorsa, tanımlayarak her çağrıldığında ayrı ayrı izlemek Geliştirici etkinleştirmek *MethodName* `Async` adlı bir nesne değerli state parametresi ya da görev kimliği alır aşırı yüklemesi `userSuppliedState`. Bu parametre her zaman son parametre olmalıdır *MethodName* `Async` yöntemin imzası.  
+-   Sınıfınızda birden çok eşzamanlı çağrılarını destekliyorsa, tanımlayarak her çağrıldığında ayrı ayrı izlemek Geliştirici etkinleştirmek *MethodName *** zaman uyumsuz** bir durum nesnesi değerli parametresi ya da görev kimliği olarak adlandırılan, alanaşırıyüklemesi`userSuppliedState`. Bu parametre her zaman son parametre olmalıdır *MethodName *** zaman uyumsuz** yöntemin imzası.  
   
--   Sınıfınızda tanımlıyorsa *MethodName* `Async` bir durum nesnesi değerli parametresi ya da görev kimliği alır aşırı yükleme işlemi o görev kimliği'yla ömrü izlemek ve tamamlama geri sağladığınızdan emin olun emin olun işleyici. Yardımcı sınıfları yardımcı olmak kullanılabilir vardır. Eşzamanlılık yönetimi hakkında daha fazla bilgi için bkz: [izlenecek yol: olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Sınıfınızda tanımlıyorsa *MethodName *** zaman uyumsuz** bir durum nesnesi değerli parametresi ya da görev kimliği alır aşırı yükleme işlemi o görev kimliği'yla ömrü izlemek ve tamamlanma işleyiciye sağladığınızdan emin olun emin olun . Yardımcı sınıfları yardımcı olmak kullanılabilir vardır. Eşzamanlılık yönetimi hakkında daha fazla bilgi için bkz: [izlenecek yol: olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
--   Sınıfınızda tanımlıyorsa *MethodName* `Async` herhangi çağırma girişimi emin olun, yöntemi ve durum parametresi olmadan birden çok eşzamanlı çağrılarını desteklemiyor *MethodName* `Async` önceden önce *MethodName* `Async` çağırma başlatır tamamlandı bir <xref:System.InvalidOperationException>.  
+-   Sınıfınızda tanımlıyorsa *MethodName *** zaman uyumsuz** herhangi çağırma girişimi emin olun, yöntemi ve durum parametresi olmadan birden çok eşzamanlı çağrılarını desteklemiyor *MethodName *** zaman uyumsuz** Önceki önce *MethodName *** zaman uyumsuz** çağırma başlatır tamamlandı bir <xref:System.InvalidOperationException>.  
   
--   Genel olarak, bir özel durum varsa yükseltmeyin *MethodName* `Async` yöntemi olmadan `userSuppliedState` parametresi birden çok bekleyen işlemler vardır; böylece birden çok kez çağrılır. Sınıfınıza açıkça olamaz bu durumu yönetmek, ancak geliştiriciler bu birden çok ayırt geri aramalar işleyebilir varsayın bir özel durum yükseltebilirsiniz.  
+-   Genel olarak, bir özel durum varsa yükseltmeyin *MethodName *** zaman uyumsuz** olmadan yöntemi `userSuppliedState` parametresi birden çok bekleyen işlemler vardır; böylece birden çok kez çağrılır. Sınıfınıza açıkça olamaz bu durumu yönetmek, ancak geliştiriciler bu birden çok ayırt geri aramalar işleyebilir varsayın bir özel durum yükseltebilirsiniz.  
   
 ### <a name="accessing-results"></a>Sonuçlarına erişme  
   
@@ -101,7 +101,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   İlerleme durumu raporlama, mümkünse destekler. Bu sınıfınız kullandıklarında daha iyi bir uygulama kullanıcı deneyimi sağlamak için geliştiriciler sağlar.  
   
--   Öğesini uygularsanız bir `ProgressChanged` / *MethodName* `ProgressChanged` olay, sonra bu işlem belirli bir zaman uyumsuz işlem için oluşturulan hiçbir tür olaylara olduğundan emin olun *MethodName* `Completed` olay tetiklenir.  
+-   Öğesini uygularsanız bir **ProgressChanged** veya *MethodName *** ProgressChanged** olay, bu işlemin sonrabelirlibirzamanuyumsuzişlemiçinoluşturulanhiçbirtürolaylaraolduğundaneminolun*MethodName *** tamamlandı** olay tetiklenir.  
   
 -   Varsa standart <xref:System.ComponentModel.ProgressChangedEventArgs> olduğundan emin doldurulmuş <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> her zaman bir yüzde olarak yorumlanır. Yüzde doğru olması gerekmez, ancak bir yüzdesini temsil etmelidir. Ölçüm raporlama ilerleme durumunuzu yüzde dışında bir şey olması gerekiyorsa öğesinden bir sınıf türetin <xref:System.ComponentModel.ProgressChangedEventArgs> sınıfı ve bırakın <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 0. Bir raporlama ölçümü yüzde dışında kullanmaktan kaçının.  
   
@@ -111,7 +111,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Değil kullanıma bir `IsBusy` sınıfınız birden çok eşzamanlı çağrılarını destekliyorsa özelliği. Örneğin, XML Web hizmeti proxy'si değil ortaya bir `IsBusy` özelliğini zaman uyumsuz yöntemleri yönelik birden çok eşzamanlı çağrılarını desteklemediğinden.  
   
--   `IsBusy` Özelliği döndürmelidir `true` sonra *MethodName* `Async` yöntemi çağrılmadan önce *MethodName* `Completed` olay tetiklenir. Aksi takdirde döndürmelidir `false`. <xref:System.ComponentModel.BackgroundWorker> Ve <xref:System.Net.WebClient> bileşenleri kullanıma sınıfların örnekleri olan bir `IsBusy` özelliği.  
+-   `IsBusy` Özelliği döndürmelidir `true` sonra *MethodName *** zaman uyumsuz** yöntemi çağrılmadan önce *MethodName *** tamamlandı** olay tetiklenir. Aksi takdirde döndürmelidir `false`. <xref:System.ComponentModel.BackgroundWorker> Ve <xref:System.Net.WebClient> bileşenleri kullanıma sınıfların örnekleri olan bir `IsBusy` özelliği.  
   
 ### <a name="cancellation"></a>İptal Etme  
   
@@ -123,7 +123,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   İptal yöntemine yönelik çağrılar her zaman başarıyla döndürür ve hiçbir zaman bir özel durum Yükselt emin olun. Genel olarak, bir istemci bir işlem belirli bir zamanda gerçekten iptal edilebilen olup seçeceğine bildirilmez ve daha önce verilen iptal başarılı oldu konusunda bildirilmez. İptal başarılı olduğunda, uygulama tamamlanma durumu bölümü aldığından ancak, uygulama her zaman bildirim verilir.  
   
--   Yükselt *MethodName* `Completed` işlemi iptal ettiğinizde olay.  
+-   Yükselt *MethodName *** tamamlandı** işlemi iptal ettiğinizde olay.  
   
 ### <a name="errors-and-exceptions"></a>Hatalar ve özel durumlar  
   
@@ -132,7 +132,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>Parçacıkları ve bağlamları  
  Sınıfınızın doğru çalışması için istemcinin olay işleyicileri uygun iş parçacığı veya belirtilen uygulama modeli bağlamının çağrılır kritik dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ve Windows Forms uygulamaları. Zaman uyumsuz sınıfınız altında herhangi bir uygulama modeli düzgün şekilde davranan emin olmak için iki önemli yardımcı sınıfları sağlanır: <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager>.  
   
- <xref:System.ComponentModel.AsyncOperationManager>bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, döndüren bir <xref:System.ComponentModel.AsyncOperation>. *MethodName* `Async` yöntem çağrılarını <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız döndürülen kullanır <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görev ömrü izlemek için.  
+ <xref:System.ComponentModel.AsyncOperationManager>bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, döndüren bir <xref:System.ComponentModel.AsyncOperation>. *MethodName *** zaman uyumsuz** yöntem çağrılarını <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız döndürülen kullanır <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görev ömrü izlemek için.  
   
  İlerleme durumunu, artımlı sonuçları ve istemciye tamamlama bildirmek için arama <xref:System.ComponentModel.AsyncOperation.Post%2A> ve <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> yöntemlere <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation>istemcinin olay işleyicilerine uygun iş parçacığı veya bağlam çağrıları hazırlama için sorumludur.  
   

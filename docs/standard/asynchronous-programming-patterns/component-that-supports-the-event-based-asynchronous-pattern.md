@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5349bc9eada177a65cdfefd9a1f33c1c63e7fed6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a3e69ea3de0ac418956d51c6e942e33d90575c1d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>İzlenecek yol: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
 Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsanız uygulayarak zaman uyumsuz işlevselliği vermiş göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -70,7 +70,7 @@ Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsa
 -   Adlı bir sınıf oluşturmak `PrimeNumberCalculator` devraldığı <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olaylar ve temsilciler tanımlama  
- Bileşeniniz olayları kullanan istemciler için iletişim kurar. *MethodName* `Completed` olay uyarıları bir zaman uyumsuz görev tamamlandığında istemcilere ve *MethodName* `ProgressChanged` olay zaman uyumsuz bir görevi ilerlemesini istemcileri bildirir.  
+ Bileşeniniz olayları kullanan istemciler için iletişim kurar. *MethodName *** tamamlandı** olay uyarıları bir zaman uyumsuz görev tamamlandığında istemcilere ve *MethodName *** ProgressChanged** olay zaman uyumsuz bir görevi ilerlemesini istemcileri bildirir.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeniniz istemciler için zaman uyumsuz olayları tanımlamak için:  
   

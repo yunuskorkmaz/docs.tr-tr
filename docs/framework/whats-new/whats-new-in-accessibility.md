@@ -13,11 +13,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9fe4b24f14dd8f08d1168cc26b91e04faa4bf183
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6a6759ae285f2dd101bddf71ea8e5ca792e87df
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Erişilebilirlik .NET Framework'teki yenilikler
 
@@ -241,9 +241,9 @@ Yüksek Karşıtlık değişiklikler bazı örnekleri şunlardır:
  
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell> Artık destekliyor [değiştirme düzenini](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md).
  
-- <xref:System.Windows.Forms.ToolStripItem> Kontrol destekler <xref:System.Windows.Automation.AutomationElement.Name> özelliği ve [Genişlet/Daralt düzeni](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
+- <xref:System.Windows.Forms.ToolStripItem> Kontrol destekler <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliği ve [Genişlet/Daralt düzeni](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
-- <xref:System.Windows.Forms.NumericUpDown> Ve <xref:System.Windows.Forms.DomainUpDown> denetimleri Destek <xref:System.Windows.Automation.automationElement.Name> özelliği.
+- <xref:System.Windows.Forms.NumericUpDown> Ve <xref:System.Windows.Forms.DomainUpDown> denetimleri Destek <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliği.
 
 **Geliştirilmiş özellik tarayıcı deneyimi**
 
