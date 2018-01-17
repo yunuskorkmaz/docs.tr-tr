@@ -258,6 +258,7 @@
 ### [Kodunuzu belgeleme](csharp/codedoc.md)
 ### [Sürüm Oluşturma](csharp/versioning.md)
 ## [C# Kullanımı Hakkındaki Konular](csharp/how-to/index.md)
+### [`String.Split` kullanarak dizeleri ayrıştırma](csharp/how-to/parse-strings-using-split.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK’sı (Roslyn API’leri)](csharp/roslyn-sdk/)
 ## [C# Programlama Kılavuzu](csharp/programming-guide/)
