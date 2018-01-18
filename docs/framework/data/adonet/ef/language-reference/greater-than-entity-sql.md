@@ -10,40 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9444aec821cd9ab6a6008989de83e929ba5f6baf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f2bd509de0db92d4b33791ab3d83947ac36ad3c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="gt-greater-than-entity-sql"></a><span data-ttu-id="285cc-102">&gt;(Büyük) (Varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="285cc-102">&gt; (Greater Than) (Entity SQL)</span></span>
-<span data-ttu-id="285cc-103">Sol ifade sağ ifade büyük bir değere sahip olup olmadığını belirlemek için iki ifadeye karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="285cc-103">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>  
+# <a name="gt-greater-than-entity-sql"></a><span data-ttu-id="e7994-102">&gt;(Büyük) (Varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="e7994-102">&gt; (Greater Than) (Entity SQL)</span></span>
+<span data-ttu-id="e7994-103">Sol ifade sağ ifade büyük bir değere sahip olup olmadığını belirlemek için iki ifadeye karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="e7994-103">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="285cc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="285cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7994-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e7994-104">Syntax</span></span>  
   
 ```  
 expression > expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="285cc-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="285cc-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e7994-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="e7994-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="285cc-106">Herhangi bir geçerli ifade.</span><span class="sxs-lookup"><span data-stu-id="285cc-106">Any valid expression.</span></span> <span data-ttu-id="285cc-107">Her iki ifadeleri örtük olarak dönüştürülebilir veri türlerine sahip olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="285cc-107">Both expressions must have implicitly convertible data types.</span></span>  
+ <span data-ttu-id="e7994-106">Herhangi bir geçerli ifade.</span><span class="sxs-lookup"><span data-stu-id="e7994-106">Any valid expression.</span></span> <span data-ttu-id="e7994-107">Her iki ifadeleri örtük olarak dönüştürülebilir veri türlerine sahip olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e7994-107">Both expressions must have implicitly convertible data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="285cc-108">Sonuç türleri</span><span class="sxs-lookup"><span data-stu-id="285cc-108">Result Types</span></span>  
- <span data-ttu-id="285cc-109">`true`Sol ifade sağ ifade büyük bir değer varsa; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="285cc-109">`true` if the left expression has a value greater than the right expression; otherwise, `false`.</span></span>  
+## <a name="result-types"></a><span data-ttu-id="e7994-108">Sonuç türleri</span><span class="sxs-lookup"><span data-stu-id="e7994-108">Result Types</span></span>  
+ <span data-ttu-id="e7994-109">`true`Sol ifade sağ ifade büyük bir değer varsa; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="e7994-109">`true` if the left expression has a value greater than the right expression; otherwise, `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="285cc-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="285cc-110">Example</span></span>  
- <span data-ttu-id="285cc-111">Aşağıdaki varlık SQL sorgusu kullanır > karşılaştırma işlecinin sol ifade sağ ifade büyük bir değere sahip olup olmadığını belirlemek için iki ifadeye karşılaştırın.</span><span class="sxs-lookup"><span data-stu-id="285cc-111">The following Entity SQL query uses > comparison operator to compare two expressions to determine whether the left expression has a value greater than the right expression.</span></span> <span data-ttu-id="285cc-112">Sorgu AdventureWorks satış modelini temel alır.</span><span class="sxs-lookup"><span data-stu-id="285cc-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="285cc-113">Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="285cc-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="e7994-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="e7994-110">Example</span></span>  
+ <span data-ttu-id="e7994-111">Aşağıdaki varlık SQL sorgusu kullanır > karşılaştırma işlecinin sol ifade sağ ifade büyük bir değere sahip olup olmadığını belirlemek için iki ifadeye karşılaştırın.</span><span class="sxs-lookup"><span data-stu-id="e7994-111">The following Entity SQL query uses > comparison operator to compare two expressions to determine whether the left expression has a value greater than the right expression.</span></span> <span data-ttu-id="e7994-112">Sorgu AdventureWorks satış modelini temel alır.</span><span class="sxs-lookup"><span data-stu-id="e7994-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e7994-113">Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:</span><span class="sxs-lookup"><span data-stu-id="e7994-113">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="285cc-114">Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="285cc-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="e7994-114">Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e7994-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="285cc-115">Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="285cc-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="e7994-115">Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:</span><span class="sxs-lookup"><span data-stu-id="e7994-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#GREATER](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater)]  
   
-## <a name="see-also"></a><span data-ttu-id="285cc-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="285cc-116">See Also</span></span>  
- [<span data-ttu-id="285cc-117">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="285cc-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="e7994-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e7994-116">See Also</span></span>  
+ [<span data-ttu-id="e7994-117">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="e7994-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

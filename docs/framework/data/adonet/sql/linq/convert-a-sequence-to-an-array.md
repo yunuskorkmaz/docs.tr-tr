@@ -13,24 +13,24 @@ dev_langs:
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8739a939e3ad5ce8c3277120755fb72f77b3e175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4846a45b0a49de102cab05857a69476680198a0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="convert-a-sequence-to-an-array"></a><span data-ttu-id="86c73-102">Bir dizi bir dizi Dönüştür</span><span class="sxs-lookup"><span data-stu-id="86c73-102">Convert a Sequence to an Array</span></span>
-<span data-ttu-id="86c73-103">Kullanım <xref:System.Linq.Enumerable.ToArray%2A> bir dizisinden bir dizi oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="86c73-103">Use <xref:System.Linq.Enumerable.ToArray%2A> to create an array from a sequence.</span></span>  
+# <a name="convert-a-sequence-to-an-array"></a><span data-ttu-id="53652-102">Bir dizi bir dizi Dönüştür</span><span class="sxs-lookup"><span data-stu-id="53652-102">Convert a Sequence to an Array</span></span>
+<span data-ttu-id="53652-103">Kullanım <xref:System.Linq.Enumerable.ToArray%2A> bir dizisinden bir dizi oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="53652-103">Use <xref:System.Linq.Enumerable.ToArray%2A> to create an array from a sequence.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="86c73-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="86c73-104">Example</span></span>  
- <span data-ttu-id="86c73-105">Aşağıdaki örnek kullanır <xref:System.Linq.Enumerable.ToArray%2A> hemen bir diziye bir sorguyu değerlendirmek ve üçüncü öğesini almak için.</span><span class="sxs-lookup"><span data-stu-id="86c73-105">The following example uses <xref:System.Linq.Enumerable.ToArray%2A> to immediately evaluate a query into an array and to get the third element.</span></span>  
+## <a name="example"></a><span data-ttu-id="53652-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="53652-104">Example</span></span>  
+ <span data-ttu-id="53652-105">Aşağıdaki örnek kullanır <xref:System.Linq.Enumerable.ToArray%2A> hemen bir diziye bir sorguyu değerlendirmek ve üçüncü öğesini almak için.</span><span class="sxs-lookup"><span data-stu-id="53652-105">The following example uses <xref:System.Linq.Enumerable.ToArray%2A> to immediately evaluate a query into an array and to get the third element.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#44](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#44)]
  [!code-vb[DLinqQueryExamples#44](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#44)]  
   
-## <a name="see-also"></a><span data-ttu-id="86c73-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="86c73-106">See Also</span></span>  
- [<span data-ttu-id="86c73-107">Sorgu Örnekleri</span><span class="sxs-lookup"><span data-stu-id="86c73-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="53652-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="53652-106">See Also</span></span>  
+ [<span data-ttu-id="53652-107">Sorgu Örnekleri</span><span class="sxs-lookup"><span data-stu-id="53652-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

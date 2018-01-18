@@ -10,30 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 42afded36f6006f369dfddb7ed3a51598b3fc33a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76f6d64c6577456d1208d2d157c5560e49f85f7e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="how-to-represent-computed-columns"></a><span data-ttu-id="4724e-102">Nasıl yapılır: hesaplanan sütunlar temsil eder</span><span class="sxs-lookup"><span data-stu-id="4724e-102">How to: Represent Computed Columns</span></span>
-<span data-ttu-id="4724e-103">Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliği bir <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği içeriği hesaplamanın sonucu olan bir sütunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4724e-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property on a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to represent a column whose contents are the result of calculation.</span></span>  
+# <a name="how-to-represent-computed-columns"></a><span data-ttu-id="ef5c8-102">Nasıl yapılır: hesaplanan sütunlar temsil eder</span><span class="sxs-lookup"><span data-stu-id="ef5c8-102">How to: Represent Computed Columns</span></span>
+<span data-ttu-id="ef5c8-103">Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliği bir <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği içeriği hesaplamanın sonucu olan bir sütunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-103">Use the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property on a <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to represent a column whose contents are the result of calculation.</span></span>  
   
- <span data-ttu-id="4724e-104">Kod örnekleri için bkz: <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span><span class="sxs-lookup"><span data-stu-id="4724e-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span></span>  
+ <span data-ttu-id="ef5c8-104">Kod örnekleri için bkz: <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-104">For code examples, see <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="4724e-105">Hesaplanan sütunlar birincil anahtarlar olarak desteklemez.</span><span class="sxs-lookup"><span data-stu-id="4724e-105"> does not support computed columns as primary keys.</span></span>  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ef5c8-105">Hesaplanan sütunlar birincil anahtarlar olarak desteklemez.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-105"> does not support computed columns as primary keys.</span></span>  
   
-### <a name="to-represent-a-computed-column"></a><span data-ttu-id="4724e-106">Hesaplanmış bir sütun göstermek için</span><span class="sxs-lookup"><span data-stu-id="4724e-106">To represent a computed column</span></span>  
+### <a name="to-represent-a-computed-column"></a><span data-ttu-id="ef5c8-106">Hesaplanmış bir sütun göstermek için</span><span class="sxs-lookup"><span data-stu-id="ef5c8-106">To represent a computed column</span></span>  
   
-1.  <span data-ttu-id="4724e-107">Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliğine <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="4724e-107">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
+1.  <span data-ttu-id="ef5c8-107">Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliğine <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-107">Add the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property to the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute.</span></span>  
   
-2.  <span data-ttu-id="4724e-108">Bir formüle dize gösterimini atamak <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="4724e-108">Assign a string representation of the formula to the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property.</span></span>  
+2.  <span data-ttu-id="ef5c8-108">Bir formüle dize gösterimini atamak <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-108">Assign a string representation of the formula to the <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4724e-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4724e-109">See Also</span></span>  
- [<span data-ttu-id="4724e-110">LINQ to SQL Nesne Modeli</span><span class="sxs-lookup"><span data-stu-id="4724e-110">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [<span data-ttu-id="4724e-111">Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="4724e-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a><span data-ttu-id="ef5c8-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ef5c8-109">See Also</span></span>  
+ [<span data-ttu-id="ef5c8-110">LINQ to SQL Nesne Modeli</span><span class="sxs-lookup"><span data-stu-id="ef5c8-110">The LINQ to SQL Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [<span data-ttu-id="ef5c8-111">Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="ef5c8-111">How to: Customize Entity Classes by Using the Code Editor</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
