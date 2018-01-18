@@ -11,18 +11,18 @@ ms.topic: article
 dev_langs: vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a2cde3b50732a7f2ae7e1935a7805cb69e2aba25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccbf300dc3c3b94cb6d9ca2fef0247e1fb8f031
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a><span data-ttu-id="969e2-102">Bir OracleDataReader kullanarak birden çok REF imleçler veri alma</span><span class="sxs-lookup"><span data-stu-id="969e2-102">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>
-<span data-ttu-id="969e2-103">Bu Microsoft Visual Basic örnek kullanarak değerlerini okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="969e2-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
+# <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a><span data-ttu-id="7b0bf-102">Bir OracleDataReader kullanarak birden çok REF imleçler veri alma</span><span class="sxs-lookup"><span data-stu-id="7b0bf-102">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>
+<span data-ttu-id="7b0bf-103">Bu Microsoft Visual Basic örnek kullanarak değerlerini okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="7b0bf-103">This Microsoft Visual Basic example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
 ```vb  
 Private Sub Button1_Click( _  
@@ -60,6 +60,6 @@ Private Sub Button1_Click( _
 End Sub   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="969e2-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="969e2-104">See Also</span></span>  
- [<span data-ttu-id="969e2-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="969e2-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [<span data-ttu-id="969e2-106">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="969e2-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7b0bf-104">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7b0bf-104">See Also</span></span>  
+ [<span data-ttu-id="7b0bf-105">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="7b0bf-105">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [<span data-ttu-id="7b0bf-106">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="7b0bf-106">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

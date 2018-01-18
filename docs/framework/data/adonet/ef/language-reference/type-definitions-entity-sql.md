@@ -10,54 +10,54 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 269d0b7942a949b899a445af0fc15502e0ae3f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a1321ae85b1f4952334672e7333e80094ad2e31
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="type-definitions-entity-sql"></a><span data-ttu-id="8f1bb-102">Tür tanımları (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="8f1bb-102">Type Definitions (Entity SQL)</span></span>
-<span data-ttu-id="8f1bb-103">Bir tür tanımı bildirimi deyiminde kullanılan bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] satır içi işlev.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  
+# <a name="type-definitions-entity-sql"></a><span data-ttu-id="f98c2-102">Tür tanımları (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="f98c2-102">Type Definitions (Entity SQL)</span></span>
+<span data-ttu-id="f98c2-103">Bir tür tanımı bildirimi deyiminde kullanılan bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] satır içi işlev.</span><span class="sxs-lookup"><span data-stu-id="f98c2-103">A type definition is used in the declaration statement of an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8f1bb-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8f1bb-104">Remarks</span></span>  
- <span data-ttu-id="8f1bb-105">Satır içi işlev bildirimi deyimi oluşan [işlevi](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) parantez (için parametre tanımı listesinde işlevi adından (örneğin, "MyAvg") temsil eden tanımlayıcı arkasından anahtar sözcüğü Örneğin, "nedeniyle Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="8f1bb-105">The declaration statement for an inline function consists of the [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) keyword followed by the identifier representing the function name (for example, "MyAvg") followed by a parameter definition list in parenthesis (for example, "dues Collection(Decimal)").</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f98c2-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f98c2-104">Remarks</span></span>  
+ <span data-ttu-id="f98c2-105">Satır içi işlev bildirimi deyimi oluşan [işlevi](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) parantez (için parametre tanımı listesinde işlevi adından (örneğin, "MyAvg") temsil eden tanımlayıcı arkasından anahtar sözcüğü Örneğin, "nedeniyle Collection(Decimal)").</span><span class="sxs-lookup"><span data-stu-id="f98c2-105">The declaration statement for an inline function consists of the [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) keyword followed by the identifier representing the function name (for example, "MyAvg") followed by a parameter definition list in parenthesis (for example, "dues Collection(Decimal)").</span></span>  
   
- <span data-ttu-id="8f1bb-106">Parametre tanımı listesi sıfır veya daha fazla parametre tanımlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-106">The parameter definition list consists of zero or more parameter definitions.</span></span> <span data-ttu-id="8f1bb-107">Her parametre tanımı bir tür tanımı (örneğin, "Collection(Decimal)"). ardından bir tanımlayıcı (örneğin, "sonu" işlevi için parametre adı) oluşur</span><span class="sxs-lookup"><span data-stu-id="8f1bb-107">Each parameter definition consists of an identifier (the name of the parameter to the function, for example, "dues") followed by a type definition (for example, "Collection(Decimal)").</span></span>  
+ <span data-ttu-id="f98c2-106">Parametre tanımı listesi sıfır veya daha fazla parametre tanımlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-106">The parameter definition list consists of zero or more parameter definitions.</span></span> <span data-ttu-id="f98c2-107">Her parametre tanımı bir tür tanımı (örneğin, "Collection(Decimal)"). ardından bir tanımlayıcı (örneğin, "sonu" işlevi için parametre adı) oluşur</span><span class="sxs-lookup"><span data-stu-id="f98c2-107">Each parameter definition consists of an identifier (the name of the parameter to the function, for example, "dues") followed by a type definition (for example, "Collection(Decimal)").</span></span>  
   
- <span data-ttu-id="8f1bb-108">Tür tanımları birini kullanabilir:</span><span class="sxs-lookup"><span data-stu-id="8f1bb-108">The type definitions can be either:</span></span>  
+ <span data-ttu-id="f98c2-108">Tür tanımları birini kullanabilir:</span><span class="sxs-lookup"><span data-stu-id="f98c2-108">The type definitions can be either:</span></span>  
   
--   <span data-ttu-id="8f1bb-109">Tanımlayıcı (örneğin, "Int32" veya "AdventureWorks.Order") türü.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-109">The type of the identifier (for example, "Int32" or "AdventureWorks.Order").</span></span>  
+-   <span data-ttu-id="f98c2-109">Tanımlayıcı (örneğin, "Int32" veya "AdventureWorks.Order") türü.</span><span class="sxs-lookup"><span data-stu-id="f98c2-109">The type of the identifier (for example, "Int32" or "AdventureWorks.Order").</span></span>  
   
--   <span data-ttu-id="8f1bb-110">Anahtar sözcüğü `COLLECTION` parantez (örneğin, "Collection(AdventureWorks.Order)"). başka bir tür tanımında ve ardından</span><span class="sxs-lookup"><span data-stu-id="8f1bb-110">The keyword `COLLECTION` followed by another type definition in parenthesis (for example, "Collection(AdventureWorks.Order)").</span></span>  
+-   <span data-ttu-id="f98c2-110">Anahtar sözcüğü `COLLECTION` parantez (örneğin, "Collection(AdventureWorks.Order)"). başka bir tür tanımında ve ardından</span><span class="sxs-lookup"><span data-stu-id="f98c2-110">The keyword `COLLECTION` followed by another type definition in parenthesis (for example, "Collection(AdventureWorks.Order)").</span></span>  
   
--   <span data-ttu-id="8f1bb-111">Anahtar özellik tanımları parantez (örneğin, "Row(x AdventureWorks.Order)") içinde listesini satır arkasından.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-111">The keyword ROW followed by a list of property definitions in parenthesis (for example, "Row(x AdventureWorks.Order)").</span></span> <span data-ttu-id="8f1bb-112">Özellik tanımları olan bir biçim gibi "`identifier type_definition`, `identifier type_definition`,...".</span><span class="sxs-lookup"><span data-stu-id="8f1bb-112">Property definitions have a format such as "`identifier type_definition`, `identifier type_definition`, ...".</span></span>  
+-   <span data-ttu-id="f98c2-111">Anahtar özellik tanımları parantez (örneğin, "Row(x AdventureWorks.Order)") içinde listesini satır arkasından.</span><span class="sxs-lookup"><span data-stu-id="f98c2-111">The keyword ROW followed by a list of property definitions in parenthesis (for example, "Row(x AdventureWorks.Order)").</span></span> <span data-ttu-id="f98c2-112">Özellik tanımları olan bir biçim gibi "`identifier type_definition`, `identifier type_definition`,...".</span><span class="sxs-lookup"><span data-stu-id="f98c2-112">Property definitions have a format such as "`identifier type_definition`, `identifier type_definition`, ...".</span></span>  
   
--   <span data-ttu-id="8f1bb-113">Parantez (örneğin, "Ref(AdventureWorks.Order)"). tanımlayıcıda türünü ve ardından REF anahtar sözcüğü</span><span class="sxs-lookup"><span data-stu-id="8f1bb-113">The keyword REF followed by the type of the identifier in parenthesis (for example, "Ref(AdventureWorks.Order)").</span></span> <span data-ttu-id="8f1bb-114">REF türü tanımı işleci bağımsız değişken olarak bir varlık türü gerektirir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-114">The REF type definition operator requires an entity type as the argument.</span></span> <span data-ttu-id="8f1bb-115">Bağımsız değişken olarak bir ilkel türü belirtilemez.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-115">You cannot specify a primitive type as the argument.</span></span>  
+-   <span data-ttu-id="f98c2-113">Parantez (örneğin, "Ref(AdventureWorks.Order)"). tanımlayıcıda türünü ve ardından REF anahtar sözcüğü</span><span class="sxs-lookup"><span data-stu-id="f98c2-113">The keyword REF followed by the type of the identifier in parenthesis (for example, "Ref(AdventureWorks.Order)").</span></span> <span data-ttu-id="f98c2-114">REF türü tanımı işleci bağımsız değişken olarak bir varlık türü gerektirir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-114">The REF type definition operator requires an entity type as the argument.</span></span> <span data-ttu-id="f98c2-115">Bağımsız değişken olarak bir ilkel türü belirtilemez.</span><span class="sxs-lookup"><span data-stu-id="f98c2-115">You cannot specify a primitive type as the argument.</span></span>  
   
- <span data-ttu-id="8f1bb-116">Tür tanımları içe kullanabilirsiniz (örneğin, "koleksiyonu (Row(x Ref(AdventureWorks.Order)))").</span><span class="sxs-lookup"><span data-stu-id="8f1bb-116">You can also nest type definitions (for example, "Collection(Row(x Ref(AdventureWorks.Order)))").</span></span>  
+ <span data-ttu-id="f98c2-116">Tür tanımları içe kullanabilirsiniz (örneğin, "koleksiyonu (Row(x Ref(AdventureWorks.Order)))").</span><span class="sxs-lookup"><span data-stu-id="f98c2-116">You can also nest type definitions (for example, "Collection(Row(x Ref(AdventureWorks.Order)))").</span></span>  
   
- <span data-ttu-id="8f1bb-117">Tür tanımı Seçenekler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="8f1bb-117">The type definition options are:</span></span>  
+ <span data-ttu-id="f98c2-117">Tür tanımı Seçenekler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="f98c2-117">The type definition options are:</span></span>  
   
--   <span data-ttu-id="8f1bb-118">`IdentifierName supported_type`, veya</span><span class="sxs-lookup"><span data-stu-id="8f1bb-118">`IdentifierName supported_type`, or</span></span>  
+-   <span data-ttu-id="f98c2-118">`IdentifierName supported_type`, veya</span><span class="sxs-lookup"><span data-stu-id="f98c2-118">`IdentifierName supported_type`, or</span></span>  
   
--   <span data-ttu-id="8f1bb-119">`IdentifierName`KOLEKSİYON (`type_definition`), veya</span><span class="sxs-lookup"><span data-stu-id="8f1bb-119">`IdentifierName` COLLECTION(`type_definition`), or</span></span>  
+-   <span data-ttu-id="f98c2-119">`IdentifierName`KOLEKSİYON (`type_definition`), veya</span><span class="sxs-lookup"><span data-stu-id="f98c2-119">`IdentifierName` COLLECTION(`type_definition`), or</span></span>  
   
--   <span data-ttu-id="8f1bb-120">`IdentifierName`SATIR (`property_definition`), veya</span><span class="sxs-lookup"><span data-stu-id="8f1bb-120">`IdentifierName` ROW(`property_definition`), or</span></span>  
+-   <span data-ttu-id="f98c2-120">`IdentifierName`SATIR (`property_definition`), veya</span><span class="sxs-lookup"><span data-stu-id="f98c2-120">`IdentifierName` ROW(`property_definition`), or</span></span>  
   
--   <span data-ttu-id="8f1bb-121">`IdentifierName`REF (`supported_entity_type`)</span><span class="sxs-lookup"><span data-stu-id="8f1bb-121">`IdentifierName` REF(`supported_entity_type`)</span></span>  
+-   <span data-ttu-id="f98c2-121">`IdentifierName` REF(`supported_entity_type`)</span><span class="sxs-lookup"><span data-stu-id="f98c2-121">`IdentifierName` REF(`supported_entity_type`)</span></span>  
   
- <span data-ttu-id="8f1bb-122">Özellik tanımı seçenek `IdentifierName type_definition`.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-122">The property definition option is `IdentifierName type_definition`.</span></span>  
+ <span data-ttu-id="f98c2-122">Özellik tanımı seçenek `IdentifierName type_definition`.</span><span class="sxs-lookup"><span data-stu-id="f98c2-122">The property definition option is `IdentifierName type_definition`.</span></span>  
   
- <span data-ttu-id="8f1bb-123">Desteklenen türler geçerli ad alanındaki tüm türleridir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-123">Supported types are any types in the current namespace.</span></span> <span data-ttu-id="8f1bb-124">Bunlar, ilkel ve varlık türleri içerir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-124">These include both primitive and entity types.</span></span>  
+ <span data-ttu-id="f98c2-123">Desteklenen türler geçerli ad alanındaki tüm türleridir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-123">Supported types are any types in the current namespace.</span></span> <span data-ttu-id="f98c2-124">Bunlar, ilkel ve varlık türleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-124">These include both primitive and entity types.</span></span>  
   
- <span data-ttu-id="8f1bb-125">Yalnızca varlık türleri geçerli ad alanındaki türler başvurmak varlık desteklenir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-125">Supported entity types refer to only entity types in the current namespace.</span></span> <span data-ttu-id="8f1bb-126">İlkel türler içermez.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-126">They do not include primitive types.</span></span>  
+ <span data-ttu-id="f98c2-125">Yalnızca varlık türleri geçerli ad alanındaki türler başvurmak varlık desteklenir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-125">Supported entity types refer to only entity types in the current namespace.</span></span> <span data-ttu-id="f98c2-126">İlkel türler içermez.</span><span class="sxs-lookup"><span data-stu-id="f98c2-126">They do not include primitive types.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="8f1bb-127">Örnekler</span><span class="sxs-lookup"><span data-stu-id="8f1bb-127">Examples</span></span>  
- <span data-ttu-id="8f1bb-128">Aşağıda, bir basit tür tanımı bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-128">The following is an example of a simple type definition.</span></span>  
+## <a name="examples"></a><span data-ttu-id="f98c2-127">Örnekler</span><span class="sxs-lookup"><span data-stu-id="f98c2-127">Examples</span></span>  
+ <span data-ttu-id="f98c2-128">Aşağıda, bir basit tür tanımı bir örnektir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-128">The following is an example of a simple type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -67,7 +67,7 @@ Function MyRound(p1 EDM.Decimal) AS (
 MyRound(CAST(1.7 as EDM.Decimal))  
 ```  
   
- <span data-ttu-id="8f1bb-129">Bir KOLEKSİYON türü tanımının bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-129">The following is an example of a COLLECTION type definition.</span></span>  
+ <span data-ttu-id="f98c2-129">Bir KOLEKSİYON türü tanımının bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-129">The following is an example of a COLLECTION type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -77,7 +77,7 @@ Function MyRound(p1 Collection(EDM.Decimal)) AS (
 MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})  
 ```  
   
- <span data-ttu-id="8f1bb-130">Satır türü tanımı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-130">The following is an example of a ROW type definition.</span></span>  
+ <span data-ttu-id="f98c2-130">Satır türü tanımı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-130">The following is an example of a ROW type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -87,7 +87,7 @@ Function MyRound(p1 Row(x EDM.Decimal)) AS (
 select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)} as a  
 ```  
   
- <span data-ttu-id="8f1bb-131">REF türü tanımı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-131">The following is an example of a REF type definition.</span></span>  
+ <span data-ttu-id="f98c2-131">REF türü tanımı bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f98c2-131">The following is an example of a REF type definition.</span></span>  
   
 ```  
 USING Microsoft.Samples.Entity  
@@ -97,6 +97,6 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f1bb-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8f1bb-132">See Also</span></span>  
- [<span data-ttu-id="8f1bb-133">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8f1bb-133">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [<span data-ttu-id="8f1bb-134">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="8f1bb-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="f98c2-132">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f98c2-132">See Also</span></span>  
+ [<span data-ttu-id="f98c2-133">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f98c2-133">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="f98c2-134">Entity SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="f98c2-134">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
