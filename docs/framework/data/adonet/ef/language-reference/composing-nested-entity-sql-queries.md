@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aab21c4b22e731f3d85a2f444e82bc04906c320
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç içe geçmiş varlık SQL sorguları oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir zengin işlevsel dilidir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler. İfade bir değer parametreli veya diğer bazı ifadesi oluşur.  

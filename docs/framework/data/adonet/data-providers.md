@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ff16c00f1e0e87c9f046c1f5944e11a9111f6e1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırma ve sonuçları için kullanılır. Bu sonuçlar ya da doğrudan yerleştirilen işlenir bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden fazla kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa çıkarılması için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katman işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -34,7 +34,7 @@ A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayı
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]OLE DB veri sağlayıcısı|OLE DB kullanılarak tarafından kullanıma sunulan veri kaynakları için. Kullanan <xref:System.Data.OleDb> ad alanı.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ODBC için veri sağlayıcısı|ODBC kullanılarak tarafından kullanıma sunulan veri kaynakları için. Kullanan <xref:System.Data.Odbc> ad alanı.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Oracle için veri sağlayıcısı|Oracle veri kaynakları için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Veri sağlayıcısı Oracle için Oracle istemci yazılımı 8.1.7 destekler ve daha sonra ve kullandığı <xref:System.Data.OracleClient> ad alanı.|  
-|EntityClient sağlayıcısı|Varlık veri modeli (EDM) uygulamaları için veri erişim sağlar. Kullanan <xref:System.Data.EntityClient> ad alanı.|  
+|EntityClient Provider|Varlık veri modeli (EDM) uygulamaları için veri erişim sağlar. Kullanan <xref:System.Data.EntityClient> ad alanı.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Veri sağlayıcısı için [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0.|Microsoft Veri erişim sağlayan [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0. Kullanan [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) ad alanı.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework veri sağlayıcıları çekirdek nesneleri  
@@ -165,7 +165,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]'' ODBC için veri sağlayıcısı|ODBC veri kaynakları için Orta ve tek katmanlı uygulamaları önerilir.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]'' İçin Oracle veri sağlayıcısı|Oracle veri kaynaklarını kullanmak Orta ve tek katmanlı uygulamalar için önerilir.|  
   
-## <a name="entityclient-provider"></a>EntityClient sağlayıcısı  
+## <a name="entityclient-provider"></a>EntityClient Provider  
  EntityClient sağlayıcısı, varlık veri modeli (EDM) tabanlı verilerine erişmek için kullanılır. Diğer .NET Framework veri sağlayıcıları farklı olarak, bu veri kaynağı ile doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcı ile iletişim kurmak için varlık SQL kullanır. Daha fazla bilgi için bkz: [EntityClient ve varlık SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

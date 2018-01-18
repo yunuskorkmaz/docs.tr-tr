@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri görüntüleme
 İçeriğine erişmek için bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Aynı zamanda <xref:System.Data.DataTable.Select%2A> veri alt kümesi döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** bir birincil anahtar değeri kullanarak belirli bir satır için arama yaparken.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |DataViewRowState değeri|Açıklama|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Geçerli satır değişmeden, eklenen ve değiştirilen satırları dahil olmak üzere.|  
-|**Silindi**|Silinen satır.|  
+|**Deleted**|Silinen satır.|  
 |**ModifiedCurrent**|Özgün veriler değiştirilmiş bir sürümünü olan bir geçerli sürümü. (Bkz **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Tüm değiştirilen satırları özgün sürümü. Geçerli sürümdür kullanılabilir kullanarak **ModifiedCurrent**.|  
 |**Eklenen**|Yeni bir satır.|  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>Mimari ve tasarım
 SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616) ziyaretçisi komut ağacı temsil eden ifade ağaç olarak uygulanır. Nesil tek geçişte ifade ağacına yapılır.  
@@ -29,7 +29,7 @@ SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?Link
   
 -   Diğer adlar yeniden adlandırmak için yeniden adlandırma sırasında çakışmaları önlemek için tüm kullanılan diğer adlarını tanımlamanız gerekir. SqlBuilder içinde yeniden adlandırma seçenekler erteleme simgenin nesneleri yeniden adlandırmak için adaylar sütunları göstermek için kullanın.  
   
- ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  İfade ağacına ziyaret sırasında ilk aşamasında, ifadeleri SqlSelectStatements gruplandırılır, birleştirmeler düzleştirilmiş ve birleştirme diğer adlar düzleştirilmiş. Bu geçişi sırasında simgesi nesneleri, sütunları veya adlandırılabilir giriş diğer adı temsil eder.  
   
@@ -251,7 +251,7 @@ private bool IsParentAJoin{get}
   
 -   DbFilterExpression  
   
--   Bir DbGroupByExpression  
+-   DbGroupByExpression  
   
 -   DbLimitExpession  
   
@@ -354,12 +354,12 @@ ORDER BY sk1, sk2, ...
   
 -   Bir simge döndürülürse, ziyaret yöntemi SqlBuilder yöntemi bu örneği diğer ad olarak ve sütun adı olarak özellik adını döndürür.  
   
-### <a name="dbnewinstanceexpression"></a>Dbnewınstanceexpression  
+### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbProjectExpression projeksiyon özelliği olarak kullanıldığında, Dbnewınstanceexpression tahmini sütunları temsil etmek için bağımsız değişkenlerin virgülle ayrılmış bir liste oluşturur.  
   
  Dbnewınstanceexpression koleksiyonu dönüş türü olan ve yeni bir bağımsız değişken olarak sağlanan ifadeleri koleksiyonunu tanımlar, aşağıdaki üç durumda ayrı olarak ele alınmıştır:  
   
--   Dbnewınstanceexpression tek bağımsız değişken olarak DbElementExpression varsa, aşağıdaki gibi çevrilir:  
+-   If DbNewInstanceExpression has DbElementExpression as the only argument, it is translated as follows:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

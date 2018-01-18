@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: efaa9f3e72af6f5ed948b974920564188ae42b44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2da2bc39fc1a2df7dd440292b2abc8e7113c8033
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Veri bağlama ve LINQ-DataSet
 *Veri bağlama* uygulama kullanıcı Arabirimi iş mantığı arasında bir bağlantı kurar işlemidir. Bağlama doğru ayarları varsa ve veri değeri değiştiğinde veri uygun bildirimleri sağlarsa, veriye bağlı öğeleri değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağını bakılmaksızın sağlayan veri bellek içi gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sağlar bir <xref:System.Data.DataTable>. Bu işlevsellik, genellikle veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>farklı sıralamalar olan bir tabloda veri getirebilir ve veri satırı durum ya da bir filtre ifadesi göre göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne için bkz: [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  

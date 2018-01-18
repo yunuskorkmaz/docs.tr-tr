@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b984fdef7f7f43e266ec4ba42b04990aced159c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ-DataSet) yükleniyor
 Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz Microsoft sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri SQL Server veri deposu olarak kullanın. SQL Server Express ücretsiz kullanılabilir olan Edition yerine SQL Server veri deposu olarak da kullanılabilir.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
   
-1.  Internet Explorer'ı başlatın.  
+1.  Start Internet Explorer.  
   
 2.  Git [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) sayfa indirin.  
   

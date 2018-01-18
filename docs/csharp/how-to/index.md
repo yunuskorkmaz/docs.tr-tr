@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 04c780980ef0665b40a0c3a698193fc9fa738424
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -57,7 +57,7 @@ Görüntülemek veya metin işlemek için kullanılan temel bir veri türü dize
 - [Dizeleri karşılaştırmak](../programming-guide/strings/how-to-compare-strings.md).
 - [Bir dize içeriklerini değiştirme](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Bir dizeyi bir sayı temsil edip etmediğini belirlemek](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Kullanım <xref:System.String.Split%2A> dizeleri ayırmak için](../programming-guide/strings/how-to-parse-strings-using-string-split.md).
+- [Kullanım `String.Split` dizeleri ayırmak için](parse-strings-using-split.md).
 - [Birden çok dizenin bir nesnede birleştirme](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
 - [Metin dizesindeki arama](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Normal ifadeler kullanarak dizeleri arama](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).

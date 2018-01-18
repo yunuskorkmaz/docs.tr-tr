@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f28f4ed728ee429a691a0a19b3fc143ac0e832ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1086a8775c2bc478c91d74656cfbebc5408727ce
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="commands-and-parameters"></a>Komutları ve parametreleri
 Bir veri kaynağına bağlantı kurulduktan sonra komutları yürütün ve sonuçları kullanarak veri kaynağının dönmek bir <xref:System.Data.Common.DbCommand> nesnesi. Komut oluşturuculardan birine çalıştığınız .NET Framework veri sağlayıcısı kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağında yürütmek için bir SQL deyimi gibi isteğe bağlı bağımsız değişkenler gerçekleştirebileceğiniz bir <xref:System.Data.Common.DbConnection> nesnesi veya bir <xref:System.Data.Common.DbTransaction> nesnesi. Bu nesneler komutu özelliklerini de yapılandırabilirsiniz. Belirli bir bağlantısı kullanmak için bir komut oluşturabilirsiniz <xref:System.Data.Common.DbConnection.CreateCommand%2A> yöntemi bir `DbConnection` nesnesi. Komutu tarafından yürütülen SQL deyimi kullanılarak yapılandırılabilir <xref:System.Data.Common.DbCommand.CommandText%2A> özelliği.  

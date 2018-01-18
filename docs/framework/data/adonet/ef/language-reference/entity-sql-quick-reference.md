@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81fd76d09f9cc02e89ac34d5f8fa74bd7f9d92f9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-quick-reference"></a>Varlık SQL hızlı başvuru
 Bu konu, hızlı başvuru sağlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular. Bu konuda sorgularda AdventureWorks satış model üzerinde temel alır.  
@@ -116,7 +116,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
 |ProductID|Ad|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Tur Panniers, büyük|PA T100|…|  
+|842|Tur Panniers, büyük|PA-T100|…|  
   
 ### <a name="object"></a>Nesne  
  [Tür oluşturucu adlı](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) gibi kullanıcı tanımlı (adlandırılmış) nesneleri oluşturur `person("abc", 12)`.  
@@ -134,8 +134,8 @@ AS o
   
 |SalesOrderDetailID|CarrierTrackingNumber|OrderQty|ProductID|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
-|1.|4911 403C 98|1.|776|...|  
-|2|4911 403C 98|3|777|...|  
+|1.|4911-403C-98|1.|776|...|  
+|2|4911-403C-98|3|777|...|  
 |...|...|...|...|...|  
   
 ## <a name="references"></a>Referanslar  

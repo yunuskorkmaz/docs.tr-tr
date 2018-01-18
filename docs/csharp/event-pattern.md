@@ -1,7 +1,7 @@
 ---
 title: Standart .NET olay desenleri
 description: ".NET olay desenleri ve standart olay kaynakları oluşturma ve abone olma ve kodunuzda standart olayları işleme hakkında bilgi edinin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ff36438ab02ae6822d7df8425a615aef2ddbf2f2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-net-event-patterns"></a>Standart .NET olay desenleri
 
@@ -91,7 +91,7 @@ Bu durum, hatalı nesne yönelimli uygulama olarak görüneceği bir ortak alan 
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFIleFound;
+lister.FileFound += onFileFound;
 ```
 
 ve işleyici kaldırın:
@@ -259,4 +259,4 @@ Bu desenleri ve kuralları öğrenerek, kullanılan deyimsel C# ve .NET hızla y
 
 Ardından, bu desenleri .NET en son sürümündeki bazı değişiklikler görürsünüz.
 
-[Sonraki](modern-events.md)
+[Next](modern-events.md)

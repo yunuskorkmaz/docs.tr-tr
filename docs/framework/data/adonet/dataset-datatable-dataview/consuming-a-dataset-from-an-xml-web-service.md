@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e46783c627657f1185e93b4ddbb7f996df064250
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f60a26d94734dacaba7e540c0584c8eb1ada803
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 <xref:System.Data.DataSet> Kısmen Kolay Aktarım verilerin Internet üzerinden kolaylaştırmak için bağlantısı kesik bir tasarım, tasarlanmış. **DataSet** bir girdi olarak belirtilebilir veya ek bir kodlama olmadan XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **DataSet** bir XML Web hizmeti bir istemci ve geri. **DataSet** biçimini kullanarak bir XML akışı örtük olarak dönüştürülen, ağ üzerinden gönderilen ve XML akışından yeniden bir **DataSet** alan uçta. Bu, çok basit ve esnek bir yöntemdir iletmek ve XML Web Hizmetleri ile ilişkisel veri döndürmek için sunar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
