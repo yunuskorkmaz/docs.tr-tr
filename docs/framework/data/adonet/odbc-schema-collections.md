@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b8c31f4e8b1463c184c9a8ff1cf64808783f030d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45cfed80decc2336c5a2bacf24fd075c2b81c531
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="odbc-schema-collections"></a>ODBC şeması koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri için şema koleksiyonu desteği açıklanmaktadır.  
@@ -163,7 +163,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |SS_TYPE_SCHEMA|Dize|  
 |SS_DATA_TYPE|Bayt|  
   
-## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC sürücüsü  
+## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC Driver  
  Microsoft SQL Server Oracle ODBC sürücüsü ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  
   
 -   tabloları  
@@ -203,7 +203,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLILIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANINI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |ORDINAL_POSITION|Int32|  
@@ -235,10 +235,10 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLILIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANINI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
-|AŞIRI YÜKLEME|Int32|  
+|OVERLOAD|Int32|  
 |ORDINAL_POSITION|Int32|  
   
 ## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC sürücüsü  
@@ -281,7 +281,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLILIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANINI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
 |ORDINAL_POSITION|Int32|  
@@ -313,10 +313,10 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet ODBC sürücüleri i
 |DUYARLILIK|Int32|  
 |UZUNLUĞU|Int32|  
 |ÖLÇEK|Int16|  
-|SAYI TABANINI|Int16|  
+|RADIX|Int16|  
 |BOŞ DEĞER ATANABİLİR|Int16|  
 |AÇIKLAMALAR|Dize|  
-|AŞIRI YÜKLEME|Int32|  
+|OVERLOAD|Int32|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  

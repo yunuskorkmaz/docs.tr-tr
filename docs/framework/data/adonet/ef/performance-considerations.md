@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0b12703343480c58024d91ee87f001373552f66a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f03a82c2164eac489a568ff4c0f3f9c55cf4326
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performance-considerations-entity-framework"></a>Başarım düşünceleri (Entity Framework)
 Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity Framework uygulamalarının performansını geliştirmeye yardımcı olmak için bazı noktalar sağlar.  

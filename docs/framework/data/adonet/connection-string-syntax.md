@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3be73589897bf4ffeb3d80a82bf2b560e814a4a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği. .NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.  
@@ -70,7 +70,7 @@ Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nes
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>SQL Server oturumu açma  
+### <a name="sql-server-logins"></a>SQL Server Logins  
  Windows kimlik doğrulaması SQL Server'a bağlanmak için tercih edilir. Ancak, SQL Server kimlik doğrulaması gerekiyorsa, bir kullanıcı adı ve parola belirtmek için aşağıdaki sözdizimini kullanın. Bu örnekte, yıldız işareti, geçerli bir kullanıcı adı ve parola göstermek için kullanılır.  
   
 ```  

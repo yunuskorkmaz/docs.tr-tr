@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9781d97a133a39a7768c853ce80f7524db87df39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri kullanmanız gerekir: iş mantığı ve sunu katmanı için yüksek düzey bir dil (gibi [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) ve veritabanıyla etkileşim için bir sorgu dili ( gibi[!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde bilgisi olmasını gerektirir ve aynı zamanda dil uyuşmazlıkları geliştirme ortamında neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişim API'sini kullanan bir uygulamayı tırnak işaretleri kullanarak sorgu bir dize belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir durumdadır ve geçersiz sözdizimi veya olup sütunlara veya satırlara başvurduğu gerçekten var gibi hataları kontrol edilmez. Sorgu parametrelerini ve Hayır denetimi türü yok `IntelliSense` ya da destekler.  

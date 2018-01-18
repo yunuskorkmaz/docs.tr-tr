@@ -1,5 +1,5 @@
 ---
-title: "SQL Server bağlantı (ADO.NET) havuzu"
+title: SQL Server Connection Pooling (ADO.NET)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,17 +13,17 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 18e67fd379e877ce25058ba3c90e3831b6361a0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sql-server-connection-pooling-adonet"></a>SQL Server bağlantı (ADO.NET) havuzu
+# <a name="sql-server-connection-pooling-adonet"></a>SQL Server Connection Pooling (ADO.NET)
 Genellikle bir veritabanı sunucusuna bağlanmayı zaman birkaç adımdan oluşur. Bir yuva veya bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma olmalıdır, kurulmalıdır bağlantı dizesi bilgilerini ayrıştırılır, bağlantı sunucu tarafından doğrulanması gerekir, denetimleri içinde kaydetme için çalıştırılması gerekir Geçerli hareket ve benzeri.  
   
  Uygulamada, çoğu uygulamayı bağlantıları için yalnızca bir veya birkaç farklı yapılandırmaları kullanın. Bu uygulama yürütmesi sırasında birçok aynı bağlantıları art arda açılan kapalı anlamına gelir. Bağlantılar, açma maliyetini en aza indirmek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] adında bir en iyi duruma getirme teknik kullanır *bağlantı havuzu*.  

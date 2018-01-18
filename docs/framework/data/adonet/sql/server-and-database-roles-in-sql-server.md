@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ebae481ba2ab486066997b52d794d9bd631c8400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Sunucusu ve SQL Server veritabanı rolleri
 SQL Server'ın tüm sürümleri için tek tek kullanıcılar yerine bir rol veya grup kullanıcıya izinleri atayın izin veren rol tabanlı güvenlik kullanın. Sabit sunucu ve sabit veritabanı rollerinin atanmış izinleri sabit kümesine sahiptir.  

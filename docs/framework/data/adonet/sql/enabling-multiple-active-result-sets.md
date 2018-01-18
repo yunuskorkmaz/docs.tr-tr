@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0235a63a24f81968718d526ff676b023c060b9a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden fazla etkin sonuç kümesi etkinleştirme
 Birden fazla etkin sonuç kümeleri (MARS) birden çok toplu işlem yürütme üzerinde tek bir bağlantıya izin vermek için SQL Server ile çalışan bir özelliktir. MARS, SQL Server ile kullanmak için etkinleştirildiğinde, kullanılan her komut nesnesi bir oturum bağlantısı ekler.  
@@ -109,7 +109,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Beklenen: (boş)  
   
- Alınan: System.Data.SqlClient.SqlException  
+ Received: System.Data.SqlClient.SqlException  
   
  Bu senaryo işlemek için üç seçenek vardır:  
   

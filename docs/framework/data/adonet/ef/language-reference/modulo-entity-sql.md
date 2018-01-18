@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a04b2972c80aff654331aeb319390b6f817374bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e204612904aa55b4a0ae9aa65f2bbfd644bbc396
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modulo-entity-sql"></a>(Modül) (Varlık SQL)
 Bir başkası tarafından ayrılmış bir ifade kalanı döndürür.  
@@ -37,7 +37,7 @@ dividend % divisor
  Tarafından bölünen bölmek için sayısal ifade. `divisor`sayısal veri türleri herhangi birinin geçerli bir ifade değil.  
   
 ## <a name="result-types"></a>Sonuç türleri  
- EDM.Int32  
+ Edm.Int32  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki varlık SQL sorgusunu % aritmetik işleç başkası tarafından ayrılmış bir ifade kalanı döndürmek için kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  

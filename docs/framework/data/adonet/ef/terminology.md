@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9e27ba9cbf2a87fe15355b812ea2447197425173
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 25ff37093bce2a496c8664b876785c8e52fae2d1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminolojisi
 Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Ek bilgi kullanılabilir olduğu ilgili konulara bağlantılar sağlanmaktadır.  
@@ -32,7 +32,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |karmaşık türü|A [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] kavramsal modelde tanımlanan bir karmaşık özellik temsil eden sınıf. Karmaşık türler varlıklar düzenlenmesine olanak skaler özellikler etkinleştirin. Karmaşık nesneler karmaşık türler örnekleridir. Daha fazla bilgi için bkz: [ComplexType öğesi (CSDL)](http://msdn.microsoft.com/en-us/f1c2f311-9889-4b87-abd8-a94f322052e3) ve [karmaşık tür](../../../../../docs/framework/data/adonet/complex-type.md).|  
 |ComplexType|Skaler olmayan özellik anahtar özelliğine sahip olmayan bir varlık türünün temsil eden bir veri türü için belirtimi.<br /><br /> Daha fazla bilgi için bkz: [ComplexType öğesi (CSDL)](http://msdn.microsoft.com/en-us/f1c2f311-9889-4b87-abd8-a94f322052e3) ve [karmaşık tür](../../../../../docs/framework/data/adonet/complex-type.md).|  
 |kavramsal model|Bir uygulama etki alanındaki varlık türleri, karmaşık türler, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişkilendirme için bir Özet belirtimi ayarlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Kavramsal modelin csdl'deki .csdl dosyasında tanımlanır.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  
-|.CSDL dosyası|CSDL ifade edilen kavramsal model içeren bir XML dosyası.|  
+|.csdl file|CSDL ifade edilen kavramsal model içeren bir XML dosyası.|  
 |kavramsal şema tanım dili (CSDL)|Varlık türleri, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişki tanımlamak için kullanılan XML tabanlı bir dil kavramsal modelini ayarlar.<br /><br /> Daha fazla bilgi için bkz: [CSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).|  
 |kapsayıcı|Varlık ve ilişkilendirme mantıksal bir gruplandırması ayarlar.<br /><br /> Daha fazla bilgi için bkz: [EntityContainer öğesi (CSDL)](http://msdn.microsoft.com/en-us/06d03ecb-3b7a-4e7f-95d5-b95307d47a27) ve [varlık kapsayıcısının](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |eşzamanlılık|Paylaşılan veri aynı anda erişmek ve değiştirmek birden çok kullanıcı izin veren bir işlem. Varsayılan olarak, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] iyimser eşzamanlılık modeli uygular.|  
@@ -68,7 +68,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |Nesne Katman|Varlık türleri ve Entity Framework tarafından kullanılan nesne bağlamı tanımlar.|  
 |sorgu nesnesi|Kavramsal model karşı bir nesne bağlamına içinde yürütülen bir sorgu, veri ve nesneleri olarak döndürür.<br /><br /> Daha fazla bilgi için bkz: [nesne sorguları](http://msdn.microsoft.com/en-us/0768033c-876f-471d-85d5-264884349276).|  
 |Nesne İlişkisel eşleme|Nesne odaklı yazılım uygulamalarında kullanılan veri türlerine ilişkisel bir veritabanındaki verileri dönüştürme için bir teknik.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nesne ilişkisel eşleme Hizmetleri tarafından tanımlanan depolama modelindeki eşleme ilişkisel verileri veri türleri için kavramsal modelde tanımlanan sağlar.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  
-|Nesne Hizmetleri|Tarafından sağlanan hizmetlerin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gibi varlıkları üzerinde çalışacağı uygulama kodu etkinleştir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nesneleri.|  
+|Object Services|Tarafından sağlanan hizmetlerin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gibi varlıkları üzerinde çalışacağı uygulama kodu etkinleştir [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] nesneleri.|  
 |Kalıcılık kullanmayan nesnesi|Veri depolama alanına ilgili herhangi bir mantık içermiyor bir nesne. POCO varlık olarak da bilinir.|  
 |POCO|Düz eski CLR nesnesi. Başka bir sınıftan ya da bir arabirimini uygulayan bir nesne.|  
 |POCO varlık|Bir varlığı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , devralmaz gelen <xref:System.Data.Objects.DataClasses.EntityObject> veya <xref:System.Data.Objects.DataClasses.ComplexObject> ve uygulamayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] arabirimleri. POCO varlıklar sık kullandığınız etki alanı nesnelerini mevcut olan bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama. Bu varlıklar Kalıcılık kullanmayan destekler. Daha fazla bilgi için bkz: [POCO varlıklarla çalışmaya](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).|  
@@ -83,7 +83,7 @@ Bu konuda sık başvurulan terimleri tanımlar [!INCLUDE[adonet_ef](../../../../
 |Depolama modeli|Mantıksal bir ilişkisel veritabanı gibi desteklenen veri kaynağındaki veri modelinin bir tanımı. Depolama modelinin SSDL .ssdl dosyasında tanımlanır.<br /><br /> Daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md) ve [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |.SSDL dosyası|SSDL ifade edilen depolama modeli içeren bir XML dosyası.|  
 |depo şeması tanım dili (SSDL)|Depolama modelinin sık bir veritabanı şeması karşılık gelen bir varlık türleri, ilişkileri, varlık kapsayıcıları, varlık kümeleri ve ilişki tanımlamak için kullanılan XML tabanlı bir dili ayarlar.<br /><br /> Daha fazla bilgi için bkz: [SSDL belirtimi](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
-|Tablo başına hiyerarşisi|Bir tabloda hiyerarşideki tüm türleri özniteliklerini içeren bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
+|table-per-hierarchy|Bir tabloda hiyerarşideki tüm türleri özniteliklerini içeren bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
 |Tablo başına türü|Çeşitli türleri modellemek için birden çok tablo ile bire bir ilişkiler kullanan bir veritabanı tür hiyerarşisinde modelleme yöntem.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

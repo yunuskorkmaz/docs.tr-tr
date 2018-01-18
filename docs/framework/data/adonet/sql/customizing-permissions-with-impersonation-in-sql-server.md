@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fbd5aa34fa9e90df972e718c28d0ba97287c3d8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7175542d8a9441d9f0d3eeb05acc67cf12d6a270
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Kimliğe bürünme SQL Server'daki izinlerle özelleştirme
 Birçok uygulama, sahipliği tablolar temel erişimi kısıtlamak için zincirleme bağlı olan verilere erişmek için saklı yordamları kullanın. Saklı yordamlar, yürütme izinlerini iptal etme veya reddetme temel tablolar üzerindeki izinleri verebilirsiniz. Tabloları ve saklı yordam aynı sahip varsa, SQL Server çağıran izinleri denetlemez. Ancak, sahipliği zincirleme nesneleri farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda işe yaramaz.  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a547bbb38d58d5b4c22e78bfd64fef4094865143
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="date-and-time-data"></a>Tarih ve saat verilerini
 SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır. Yeni veri türleri, tarih ve saat için ayrı türleri ve büyük aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 hizmet paketi (SP) 1, SQL Server için .NET Framework veri sağlayıcısı başlatılıyor (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) bu yeni özellikleri ile SqlClient kullanılacak.  
@@ -30,7 +30,7 @@ SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır.
   
  SQL Server veri türleri için kapsamlı belgeler SQL Server Books Online içinde kullanılabilir. Aşağıdaki tabloda, tarih ve saat verilerini için sürüme özgü giriş seviyesi konuları listeler.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Books Online**  
   
 1.  [Tarih ve saat verilerini kullanma](http://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -160,7 +160,7 @@ parameter.SqlDbType = SqlDbType.DateTime2
 parameter.Value = DateTime.Parse("1666-09-02 1:00:00");  
 ```  
   
-### <a name="datetimeoffset-example"></a>DateTimeOffSet örneği  
+### <a name="datetimeoffset-example"></a>DateTimeOffSet Example  
  Aşağıdaki kod parçası nasıl belirleneceğini göstermektedir bir `DateTimeOffSet` parametresi bir tarih, bir saat ve saat dilimi uzaklığı 0 ile.  
   
 ```csharp  
@@ -194,7 +194,7 @@ command.Parameters.AddWithValue( _
   
  Aşağıdaki tabloda gösterir `SqlDbTypes` hangi CLR türlerinden sonuçlandı:  
   
-|CLR türü|Çıkarsanan SqlDbType|  
+|CLR türü|Inferred SqlDbType|  
 |--------------|------------------------|  
 |DateTime|SqlDbType.DateTime|  
 |TimeSpan|SqlDbType.Time|  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6d22b72e05e6293a7fd3bcf7ddfba6e116e441f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (varlık SQL)
 Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri karşılaştırma türü örnekleri içerir:  
@@ -42,14 +42,14 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
   
  Null atanabilirlik işlemleri:  
   
--   NULL  
+-   IS NULL  
   
 -   NULL OLMAYAN  
   
 ## <a name="explicit-distinction"></a>Açık ayrım  
  Eşitlik fark:  
   
--   FARKLI  
+-   DISTINCT  
   
 -   GRUPLANDIRMA ÖLÇÜTÜ  
   
@@ -64,7 +64,7 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
   
 -   INTERSECT  
   
--   DIŞINDA  
+-   EXCEPT  
   
 -   AYARLAMA  
   
@@ -77,7 +77,7 @@ Aşağıdakilerden herhangi birini gerçekleştirme [!INCLUDE[esql](../../../../
 ## <a name="supported-combinations"></a>Desteklenen birleşimleri  
  Aşağıdaki tabloda her türde Karşılaştırma işleçleri tüm desteklenen birleşimleri gösterilmektedir:  
   
-|**Türü**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **FARKLI**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL OLMAYAN**|  
+|**Türü**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **NULL OLMAYAN**|  
 |-|-|-|-|-|-|-|-|  
 |Varlık türü|Ref<sup>1</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Tüm özellikleri<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
 |karmaşık türü|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 876ebeb5568ffff0a10aa5a54ce96c256d237d86
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6090221981c8aaa894f94ebb7910659a1dbf210c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="large-udts"></a>Büyük atama
 Kullanıcı tanımlı türler (atama) ortak dil çalışma zamanı (CLR) nesneleri bir SQL Server veritabanında depolayarak sunucunun skaler tür sistemini genişletmek Geliştirici izin verin. Atama birden çok öğe içerebilir ve tek bir SQL Server sistem veri türü oluşur geleneksel diğer veri türleri farklı davranışlar olabilir.  
@@ -33,7 +33,7 @@ Kullanıcı tanımlı türler (atama) ortak dil çalışma zamanı (CLR) nesnele
   
  Kullanıcı tanımlı türler için kapsamlı belgeler için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Books Online**  
   
 1.  [Kullanıcı Tanımlı CLR Türleri](http://go.microsoft.com/fwlink/?LinkId=98366)  
   

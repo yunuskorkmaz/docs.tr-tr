@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>Varlık SQL Başvurusu
 Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başvuru konuları. Bu konuda özetler ve grupları [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kategoriye göre işleçler.  
@@ -82,7 +82,7 @@ Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başv
 |--------------|---------|  
 |[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|Kullanılan koleksiyon belirtir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimleri.|  
 |[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|Hangi nesneleri, bir sorgu tarafından döndürülür grupları belirtir ([seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) ifade olan yerleştirilecek.|  
-|[Grouppartıtıon](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|Bağımsız değişken değerleri toplama ilgili olduğu Grup bölümünün öngörülen koleksiyonunu döndürür.|  
+|[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|Bağımsız değişken değerleri toplama ilgili olduğu Grup bölümünün öngörülen koleksiyonunu döndürür.|  
 |[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|Bir grup veya bir toplama için bir arama koşulu belirtir.|  
 |[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|İle kullanılan [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) gerçekleştirilen fiziksel disk belleği yan tümcesini.|  
 |[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|Döndürülen nesneler üzerinde kullanılan sıralama düzenini belirleyen bir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimi.|  
@@ -111,7 +111,7 @@ Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başv
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Tüm farklı değerler koleksiyonu sorgu ifadesinden de sorgu ifadesinden EXCEPT işleneni sağındaki döndürülmez EXCEPT işleneni sola döndürür.|  
 |[&#91; DEĞİL &#93; VAR](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Bir koleksiyonu boş olup olmadığını belirler.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Değişkeninin bir koleksiyonlar koleksiyonu düzleştirilmiş bir koleksiyonuna dönüştürür.|  
-|[&#91; DEĞİL &#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Bir değer bir koleksiyondaki herhangi bir değer eşleşip eşleşmediğini belirler.|  
+|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Bir değer bir koleksiyondaki herhangi bir değer eşleşip eşleşmediğini belirler.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Her iki sorgu ifadeleri sol tarafından döndürülen tüm farklı değerler koleksiyonu ve INTERSECT işleneni sağ tarafında döndürür.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|İki koleksiyon ortak öğeler sahip olup olmadığını belirler.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Kaldırılan tüm yinelenen öğeler ile yeni bir koleksiyon sağlayan tarafından bir kümesine nesneler koleksiyonunu dönüştürmek için kullanılır.|  

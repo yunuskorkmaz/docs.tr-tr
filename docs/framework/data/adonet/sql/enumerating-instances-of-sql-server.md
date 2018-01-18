@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) örneklerini numaralandırma
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]bulunacak uygulamaları verir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] geçerli ağ içindeki örnekleri. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayan uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür tüm sunucuları hakkında bilgi içeren. Bu tablo bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerindeki tüm kullanılabilir sunuculara içeren aşağı açılır liste genişleten ağda kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikler** iletişim kutusu. Gösterilen sonuçları her zaman eksiksiz değildir.  
@@ -59,7 +59,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Sunucunun adıdır.|  
 |**InstanceName**|Sunucu örneğinin adı. Sunucunun varsayılan örneği olarak çalışıyorsa, boş.|  
 |**IsClustered**|Sunucu bir kümenin parçası olup olmadığını gösterir.|  
-|**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
   
 ## <a name="enumeration-limitations"></a>Numaralandırma sınırlamaları  
  Tüm kullanılabilir sunuculara olabilir ya da listelenmez. Liste zaman aşımları ve ağ trafiğini gibi etkenlere bağlı olarak değişebilir. Bu listenin iki ardışık çağrılarını farklı olması neden olabilir. Yalnızca aynı ağ üzerinde sunucuları listelenir. Yayın paketleri genellikle yönlendiriciler, listelenen bir sunucu göremeyebilirsiniz neden olduğu çapraz olmaz ancak çağrıları arasında dengeli olur.  

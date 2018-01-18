@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarını şekli
 SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikleri ve sorgu komut ağaçlarını yapısını anlatılmaktadır.  
@@ -84,7 +84,7 @@ SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde
   
  Ayrıca, işlevleri NiladicFunction özniteliğine sahip bağımsız değişken yoktur ve sonunda parantez olmadan çevrilmesi gerekir.  Diğer bir deyişle,  *\<functionName >* yerine  *\<functionName > ()*.  
   
-#### <a name="dbnewinstanceexpression"></a>Dbnewınstanceexpression  
+#### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Dbnewınstanceexpression, yalnızca aşağıdaki iki durumlarda oluşabilir:  
   
 -   DbProjectExpression projeksiyon özelliği olarak.  Bu nedenle kullanıldığında aşağıdaki kısıtlamalar geçerlidir:  
@@ -98,7 +98,7 @@ SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde
 #### <a name="dbvariablereferenceexpression"></a>DbVariableReferenceExpression  
  Bir DbVariableReferenceExpression DbPropertyExpression düğümün alt öğesi olması gerekir.  
   
-#### <a name="dbgroupbyexpression"></a>Bir DbGroupByExpression  
+#### <a name="dbgroupbyexpression"></a>DbGroupByExpression  
  Bir dbgroupbyexpression toplamalar özelliği yalnızca DbFunctionAggregate türündeki öğeler olabilir. Başka bir toplama türü vardır.  
   
 #### <a name="dblimitexpression"></a>DbLimitExpression  

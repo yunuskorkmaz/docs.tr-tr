@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren. Bu koleksiyonları tüm gerekli sütunları açıklanmaktadır. Sağlayıcıları istediklerinde ek sütunlar eklemek boş. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyonuna ekleyin.  
@@ -41,12 +41,12 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
   
 |columnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "@&#124; \\." (Oracle için).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "@&#124; \\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
+|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "@&#124; \\." (for Oracle).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "@&#124; \\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
 |DataSourceProductName|dize|"Oracle" veya "SQLServer" gibi sağlayıcısı tarafından erişilen ürünün adı.|  
 |DataSourceProductVersion|dize|Veri kaynakları yerel biçiminde ve Microsoft biçiminde değil sağlayıcısı tarafından erişilen ürünün sürümünü gösterir.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda, bu her zaman aynı olacaktır.|  
 |DataSourceProductVersionNormalized|dize|Verileri için normalleştirilmiş bir sürümü kaynak ile karşılaştırılabilir şekilde `String.Compare()`. Bu sürüm 1 ve sürüm 2 arasında sıralamasını sürüm 10 önlemek için Sağlayıcı'nin tüm sürümleri için tutarlı biçimidir.<br /><br /> Örneğin, Oracle sağlayıcısı Oracle 8i veri kaynağı "08.01.07.04.01" döndürülecek neden olan kendi normalleştirilmiş sürümü için "nn.nn.nn.nn.nn" biçimini kullanır. SQL Server normal Microsoft "nn.nn.nnnn" biçimini kullanır.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda bu her zaman aynı olacaktır.|  
 |GroupByBehavior|<xref:System.Data.Common.GroupByBehavior>|Seçim listesindeki bir GROUP BY yan tümcesinde sütunlar ve toplanan olmayan sütunlar arasındaki ilişkiyi belirtir.|  
-|IdentifierPattern|dize|Bir tanımlayıcı ile eşleşen ve tanımlayıcısı eşleşme değerine sahip bir normal ifade. Örneğin, "[A-Za-z0-9_ #$]".|  
+|IdentifierPattern|dize|Bir tanımlayıcı ile eşleşen ve tanımlayıcısı eşleşme değerine sahip bir normal ifade. For example "[A-Za-z0-9_#$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Tırnak işaretli olmayan tanıtıcıları olarak büyük küçük harfe duyarlı olmadığı kabul edilip edilmeyeceğini belirtir.|  
 |OrderByColumnsInSelect|bool|Seçim listesinde ORDER BY yan tümcesi sütunlarında olması gerekip gerekmediğini belirtir. Doğru değeri, seçim listesinde olması gerekir, false değeri, seçim listesinde olması gerekmez gösterir gösterir.|  
 |ParameterMarkerFormat|dize|Bir parametre biçimlendirme temsil eden bir biçim dizesi.<br /><br /> Adlandırılmış parametreleri veri kaynağı tarafından destekleniyorsa, bu dizenin ilk yer tutucuyu parametre adı burada biçimlendirilmiş olması gerekir.<br /><br /> Örneğin, veri kaynağı adlı ve önekine sahip parametreleri görüyorsa bir ':' Bu olur ": {0}". Bu parametre adı "p1" ile elde edilen biçimlendirirken dizedir ": p1".<br /><br /> Veri kaynağı ile önek için parametre bekliyor varsa ' @', zaten bunları adlarında, bu '{0}' olur ve bir parametre biçimlendirme sonucu adlı ancak "@p1"yalnızca olacaktır"@p1".<br /><br /> Adlandırılmış parametreler beklediğiniz ve kullanımını beklediğiniz veri kaynakları için '?' karakter, biçim dizesi basit belirtilebilir '?', parametre adı yoksayacaktır. OLE DB için döndürürüz '?'.|  
@@ -73,7 +73,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 |IsAutoincrementable|bool|doğru — değerleri bu veri türünün otomatik artırma olabilir.<br /><br /> yanlış — değerleri bu veri türünün otomatik artırma olmayabilir.<br /><br /> Bu yalnızca otomatik artan bu veri türünde bir sütun olabilir olup olmadığını belirtir, Not Bu türdeki tüm sütunları otomatik artan değil.|  
 |IsBestMatch|bool|doğru — tüm veri türlerinin veri deposunda ve veri türü sütunundaki değeri tarafından belirtilen .NET Framework veri türü arasında en iyi eşleşme veri türüdür.<br /><br /> yanlış — veri türü en iyi eşleşmeyi değil.<br /><br /> Her veri türü sütununun değeri olduğu aynı satır kümesi için IsBestMatch sütun ayarlamak tek bir satırda true.|  
 |IsCaseSensitive|bool|doğru — veri türü bir karakter türü ve küçük harf duyarlıdır.<br /><br /> yanlış — veri türü bir karakter türü değil veya büyük küçük harfe duyarlı değildir.|  
-|Isfixedlength|bool|doğru — veri tanımlama dili (DDL) tarafından oluşturulan bu veri türü sütunlar, sabit uzunluk olacaktır.<br /><br /> yanlış — DDL tarafından oluşturulan bu veri türü sütunlar, değişken uzunlukta olacaktır.<br /><br /> DBNull.Value—It sağlayıcı sabit uzunluklu veya değişken uzunlukta bir sütun bu alanla eşler bilinmiyor.|  
+|IsFixedLength|bool|doğru — veri tanımlama dili (DDL) tarafından oluşturulan bu veri türü sütunlar, sabit uzunluk olacaktır.<br /><br /> yanlış — DDL tarafından oluşturulan bu veri türü sütunlar, değişken uzunlukta olacaktır.<br /><br /> DBNull.Value—It sağlayıcı sabit uzunluklu veya değişken uzunlukta bir sütun bu alanla eşler bilinmiyor.|  
 |IsFixedPrecisionScale|bool|doğru — Sabit duyarlık ve ölçek veri türüne sahip.<br /><br /> yanlış — veri türü, Sabit duyarlık ve ölçek yok.|  
 |IsLong|bool|doğru — veri türü çok uzun veri içeriyorsa sağlayıcıya özgü çok uzun veri tanımıdır.<br /><br /> yanlış — veri türü çok uzun veri içermiyor.|  
 |IsNullable|bool|doğru — veri türü null olabilir.<br /><br /> yanlış — veri türü null olabilir değil.<br /><br /> Veri türü null atanabilir olup olmadığını DBNull.Value—It bilinmiyor.|  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26678ebf9478efadc73661defe19be77cb69d075
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlamak için bunları etkinleştirerek geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu yayın stratejidir. Bu platform ADO.NET Entity Framework ve ilgili teknolojileri içerir.  
@@ -29,7 +29,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlama
 ### <a name="entity-data-model-edm"></a>Varlık Veri Modeli (EDM)  
  Varlık veri modeli (EDM) varlıkları ve ilişkileri ayarlar gibi uygulama verileri tanımlayan bir tasarım belirtimidir. Bu modelde veri nesne ilişkisel eşleme ve veri programlama uygulama sınırlarında destekler.  
   
-### <a name="object-services"></a>Nesne Hizmetleri  
+### <a name="object-services"></a>Object Services  
  Nesne Hizmetleri programcıların kavramsal model bir dizi ortak dil çalışma zamanı (CLR) sınıfları aracılığıyla etkileşim sağlar. Bu sınıfların kavramsal modelden otomatik olarak oluşturulabilir veya bağımsız olarak kavramsal model yapısını yansıtacak şekilde geliştirilebilir. Nesne hizmetleri de varlık durum yönetimi, değişiklik izleme, kimlik çözünürlüğü gibi hizmetleri dahil olmak üzere yüklemek ve ilişkileri, nesne değişiklikleri veritabanı değişikliklerine yayılıyor gezinme Framework için altyapı destek sağlar, ve varlık SQL desteği sorgu oluşturma. Daha fazla bilgi için bkz: [nesne Hizmetleri'ne Genel Bakış (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar  

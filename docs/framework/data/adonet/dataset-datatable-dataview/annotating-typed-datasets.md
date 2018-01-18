@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>Yazılan veri kümeleri yorumlama
 Ek açıklamalar, yazılı öğeleri adlarını değiştirmek etkinleştirme <xref:System.Data.DataSet> temel şeması değiştirmeden. Temel alınan şemanızı öğeleri adları değiştirilmesi neden yazılı **DataSet** değil veri kaynağında mevcut yanı sıra veri kaynağında mevcut nesneleri başvuru kaybetmek nesneleri başvurmak için.  

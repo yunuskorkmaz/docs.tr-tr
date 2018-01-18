@@ -1,5 +1,5 @@
 ---
-title: DataView
+title: DataViews
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad24de9fd003637d1c6e31841da209346a872143
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="dataviews"></a>DataView
+# <a name="dataviews"></a>DataViews
 A <xref:System.Data.DataView> depolanan verilerin farklı görünümlerini oluşturmanızı sağlayan bir <xref:System.Data.DataTable>, veri bağlama uygulamalarında sık kullanılan bir özellik. Kullanarak bir **DataView**farklı sıralamalar olan bir tabloda veri getirebilir ve veri satırı durum ya da bir filtre ifadesi göre göre filtre uygulayabilirsiniz.  
   
  A **DataView** temel veri dinamik bir görünümünü sunan **DataTable**: Bunlar ortaya çıktığında içerik, sıralama ve üyelik değişiklikleri yansıtacak. Bu davranış farklı **seçin** yöntemi **DataTable**, döndüren bir <xref:System.Data.DataRow> bir tablo diziden dayalı üzerinde belirli bir filtre ve/veya sıralama düzeni: thiscontent değişiklikleri yansıtır Tablo, ancak üyeliğini temel ve sıralama statik kalır. Dinamik özelliklerini **DataView** veri bağlama uygulamaları için ideal olun.  

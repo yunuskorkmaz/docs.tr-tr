@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f25c94582ade23b645942a13829a5aa559e3e4f6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Varlık veri modeli: Basit veri türleri
 Varlık veri modeli (EDM) tanımlamak için kullanılan soyut temel veri türleri (örneğin, dize, Boolean, Int32 ve benzeri), bir kümesini destekler [özellikleri](../../../../docs/framework/data/adonet/property.md) kavramsal modelde. Proxy, depolama veya bir SQL Server veritabanı veya ortak dil çalışma zamanı (CLR) gibi barındırma ortamına desteklenen gerçek temel veri türleri için bu temel veri türleridir. EDM ilkel veri türleri üzerinde işlemler veya dönüşümleri semantiği tanımlamaz; Bu semantiği depolama veya barındırma ortamı tarafından tanımlanır. Genellikle, EDM ilkel veri türleri, depolama veya barındırma ortamı karşılık gelen temel veri türleriyle eşlenir. Entity Framework EDM ilkel türlerinde SQL Server veri türleri için nasıl eşlendiğini hakkında daha fazla bilgi için bkz: [varlık FrameworkTypes SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  

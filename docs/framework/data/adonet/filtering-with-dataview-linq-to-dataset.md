@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d578c36500af6f388e63ad921a4dbb8acac225f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f1eb878bcc38d8bbeed42638cc5ccda230f60f1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) ile filtreleme
 Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView>verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
@@ -64,7 +64,7 @@ Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi de
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
   
- SoundEx İngilizce, başlangıçta ABD ticaret geliştirilmiş belirgin olarak adları sesle, dizin oluşturma işlemi için kullanılan bir ses algoritmasıdır Census kuruluşu. SoundEx yöntemi bir İngilizce harfini üç numaralarına göre izleyen oluşan bir ad dört karakter kodunu döndürür. Harfi adının ilk harfi ve sayıları adında kalan ünsüzler kodlayın. Benzer görünen adları aynı SoundEx kodu paylaşır. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulaması burada gösterilir:  
+ SoundEx İngilizce, başlangıçta ABD ticaret geliştirilmiş belirgin olarak adları sesle, dizin oluşturma işlemi için kullanılan bir ses algoritmasıdır Census Bureau. SoundEx yöntemi bir İngilizce harfini üç numaralarına göre izleyen oluşan bir ad dört karakter kodunu döndürür. Harfi adının ilk harfi ve sayıları adında kalan ünsüzler kodlayın. Benzer görünen adları aynı SoundEx kodu paylaşır. Önceki örnekte SoundEx yönteminde kullanılan SoundEx uygulaması burada gösterilir:  
   
  [!code-csharp[DP DataView Samples#SoundEx](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#soundex)]
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  

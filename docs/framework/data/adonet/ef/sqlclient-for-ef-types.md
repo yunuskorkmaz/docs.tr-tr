@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Varlık FrameworkTypes SqlClient
 SQL Server (SqlClient) sağlayıcı bildirim dosyası için .NET Framework veri sağlayıcısı sağlayıcısı ilkel türler, her bir türü için modelleri kavramsal ve depolama modeli ilkel türlerini ve yükseltme ve dönüştürme arasındaki eşlemeleri listesini içerir kavramsal ve depolama modeli ilkel türlerini arasındaki kuralları.  
@@ -34,12 +34,12 @@ SQL Server (SqlClient) sağlayıcı bildirim dosyası için .NET Framework veri 
 |`bigint`|yok|`Edm.Int64`|yok|  
 |`float`|yok|`Edm.Double`|yok|  
 |`real`|yok|`Edm.Double`|yok|  
-|`decimal`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> -En az: 1<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 18<br /><br /> -Sabit: yanlış<br /><br /> Ölçek:<br /><br /> -En düşük: 0<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 0<br /><br /> -Sabit: yanlış|  
-|`numeric`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> -En az: 1<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 18<br /><br /> -Sabit: yanlış<br /><br /> Ölçek:<br /><br /> -En düşük: 0<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 0<br /><br /> -Sabit: yanlış|  
+|`decimal`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 18<br /><br /> -Sabit: yanlış<br /><br /> Ölçek:<br /><br /> - Minimum: 0<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 0<br /><br /> -Sabit: yanlış|  
+|`numeric`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 18<br /><br /> -Sabit: yanlış<br /><br /> Ölçek:<br /><br /> - Minimum: 0<br /><br /> -En fazla: 38<br /><br /> -Varsayılan: 0<br /><br /> -Sabit: yanlış|  
 |`smallmoney`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> -Varsayılan: 10<br /><br /> -Sabit: True<br /><br /> Ölçek:<br /><br /> -Varsayılan: 4<br /><br /> -Sabit: True|  
 |`money`|yok|`Edm.Decimal`|Duyarlık:<br /><br /> -Varsayılan: 19<br /><br /> -Sabit: True<br /><br /> Ölçek:<br /><br /> -Varsayılan: 4<br /><br /> -Sabit: True|  
-|`binary`|yok|`Edm.Binary`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
-|`varbinary`|yok|`Edm.Binary`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
+|`binary`|yok|`Edm.Binary`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
+|`varbinary`|yok|`Edm.Binary`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
 |`varbinary(max)`<br /><br /> Not: Bu tür desteklenmeyen [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 214748364780<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
 |`image`|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 2147483647<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
 |`timestamp`|yok|`Edm.Binary`|MaxLength:<br /><br /> -Varsayılan: 8<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
@@ -50,10 +50,10 @@ SQL Server (SqlClient) sağlayıcı bildirim dosyası için .NET Framework veri 
 |`time`<br /><br /> Not: SQL Server 2005 ve SQL Server 2000'de bu türü desteklenmiyor.|yok|`Edm.Time`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: yanlış|  
 |`datetime2`<br /><br /> Not: SQL Server 2005 ve SQL Server 2000'de bu türü desteklenmiyor.|yok|`Edm.DateTime`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: yanlış|  
 |`datetimeoffset`<br /><br /> Not: SQL Server 2005 ve SQL Server 2000'de bu türü desteklenmiyor.|yok|`Edm.DateTimeOffset`|Duyarlık:<br /><br /> -Varsayılan: 7<br /><br /> -Sabit: yanlış|  
-|`nvarchar`<br /><br /> Not: Bu tür desteklenmeyen [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
-|`varchar`<br /><br /> Not: Bu tür desteklenmeyen [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
-|`char`|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
-|`nchar`|yok|`Edm.String`|MaxLength:<br /><br /> -En az: 1<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
+|`nvarchar`<br /><br /> Not: Bu tür desteklenmeyen [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
+|`varchar`<br /><br /> Not: Bu tür desteklenmeyen [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)].|yok|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
+|`char`|yok|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 8000<br /><br /> -Varsayılan: 8000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
+|`nchar`|yok|`Edm.String`|MaxLength:<br /><br /> - Minimum: 1<br /><br /> -En fazla: 4000<br /><br /> -Varsayılan: 4000<br /><br /> -Sabit: yanlış<br /><br /> Unicode:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True|  
 |`varchar`(`max`)|yok|`Edm.String`|MaxLength:<br /><br /> -Varsayılan: 2147483647<br /><br /> -Sabit: True<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
 |`nvarchar`(`max`)|yok|`Edm.String`|MaxLength:<br /><br /> -Varsayılan: 1073741823<br /><br /> -Sabit: True<br /><br /> Unicode:<br /><br /> -Varsayılan: True<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  
 |`ntext`|Eşitlik için karşılaştırılabilir: yanlış<br /><br /> Sıralı karşılaştırılabilir: yanlış|`Edm.String`|MaxLength:<br /><br /> -Varsayılan: 1073741823<br /><br /> -Sabit: True<br /><br /> Unicode:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: True|  

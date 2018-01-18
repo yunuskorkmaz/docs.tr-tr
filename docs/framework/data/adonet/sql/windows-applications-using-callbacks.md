@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4e1ee2acfec989ac76ced5d4f5a47f49d72152ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb20d30122f5478236deab3528dcc225efddf4e0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="windows-applications-using-callbacks"></a>Geri aramalar kullanarak Windows uygulamaları
 Çoğu zaman uyumsuz işleme senaryoda, bir veritabanı işlemini başlatmak ve veritabanı işlemin tamamlanmasını beklemeden çalışan diğer işlemleri devam etmek istiyor. Ancak, birçok senaryo veritabanı işlemi sona erdikten sonra bir şey yapmak gerektirir. Örneğin, bir Windows uygulamasında yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı verirken uzun süre çalışan işlemi için bir arka plan iş parçacığı temsilci isteyebilirsiniz. Ancak, veritabanı işlemi tamamlandığında, sonuçları formu doldurmak için kullanmak istediğiniz. Bu tür senaryosu en iyi bir geri arama ile uygulanır.  

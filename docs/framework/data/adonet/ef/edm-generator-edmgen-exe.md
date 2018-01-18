@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve dosyaları eşleme. Aşağıdakileri yapmak için EdmGen.exe Aracı'nı kullanabilirsiniz:  
@@ -66,7 +66,7 @@ EdmGen /mode:choice [options]
 |`/outssdl:`\<Dosya >|Oluşturulacak .ssdl dosya adını belirtir.|  
 |`/outobjectlayer:`\<Dosya >|.Csdl dosyasından oluşturulan nesneleri içeren kaynak kodu dosyasının adını belirtir.|  
 |`/outviews:`\<Dosya >|Oluşturulan görünümleri içeren kaynak kodu dosyasının adını belirtir.|  
-|`/language:`[VB &#124; CSharp]|Oluşturulan kaynak kodu dosyaları dilini belirtir. C# dil Varsayılanları.|  
+|`/language:`[VB&#124;CSharp]|Oluşturulan kaynak kodu dosyaları dilini belirtir. C# dil Varsayılanları.|  
 |`/namespace:`\<dize >|Kullanılacak model ad belirtir. Ad alanı .csdl dosyasında çalıştırırken ayarlandığından `/mode:FullGeneration` veya `/mode:FromSSDLGeneration`. Ad alanı çalıştırırken kullanılmayan `/mode:EntityClassGeneration`.|  
 |`/entitycontainer:`\<dize >|Uygulamak için adını belirtir `<EntityContainer>` eşleme dosyaları ve oluşturulmuş bir model öğesi.|  
 |`/pl[uralize]`|Singulars ve çoğul ekleri için İngilizce kuralları uygular `Entity`, `EntitySet`, ve `NavigationProperty` kavramsal modelde adları. Bu seçenek, aşağıdaki eylemleri gerçekleştirir:<br /><br /> -Tüm olun `EntityType` tekil adları.<br />-Tüm olun `EntitySet` adlarını çoğul.<br />-İçin her `NavigationProperty` en çok bir varlık döndüren, adı tekil yapın.<br />-İçin her `NavigationProperty` birden fazla varlık döndüren, adı çoğul olun.|  

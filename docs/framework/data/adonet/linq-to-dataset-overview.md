@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ-DataSet genel bakış
 <xref:System.Data.DataSet> Daha yaygın olarak kullanılan bileşenlerden biri [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Anahtar öğesi bağlantısı kesilmiş olan programlama modeli [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , temel alır ve bunu, farklı veri kaynaklarından açıkça Önbellek verileri olanak tanır. Sunu katmanı için <xref:System.Data.DataSet> veri bağlama için GUI denetimleri ile tümleşiktir. Orta katman için veri ilişkisel şeklini korur ve hızlı Basit Sorgu ve hiyerarşi Gezinti hizmetleri içeren bir önbellek sağlar. Bir veritabanı isteklerinde sayısını azaltmak için kullanılan ortak kullanmak için bir tekniktir <xref:System.Data.DataSet> orta katman önbelleğe alma için. Örneğin, veri güdümlü göz önünde bulundurun [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması. Genellikle, uygulama verilerini önemli bir kısmını sık değişmeyen ve oturumlar veya kullanıcılar arasında ortak olan. Bu veriler veritabanında istek sayısını azaltan ve kullanıcının etkileşimleri hızlandırır Web sunucusu üzerindeki bellekte tutulabilir. Başka bir yararlı yönünü <xref:System.Data.DataSet> veri alt kümesi uygulama alanına bir veya daha fazla veri kaynağından getirmek bir uygulama tanımasıdır. Uygulama, ilişkisel şeklini koruyarak veri bellek içi, ardından yönetebilirsiniz.  

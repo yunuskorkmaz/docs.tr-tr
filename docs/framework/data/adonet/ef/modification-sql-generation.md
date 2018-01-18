@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4ed5c6fd4e8bdbf148a57401163936631236b46b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlatır, (SQL:1999-uyumlu bir veritabanına) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimleri değişikliği komut ağacı çevirmek için sorumludur.  
@@ -38,9 +38,9 @@ Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlat�
   
  DbModificationCommandTree ve tarafından üretilen bunun uygulamalarını [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] her zaman tek bir satır işlemi temsil eder. Bu bölümde, bu tür, .NET Framework sürüm 3.5 kısıtlamalar ile açıklanmaktadır.  
   
- ![Diyagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree değiştirme işlemi için ayarlanmış hedef temsil eden bir hedef özelliğine sahiptir. Giriş kümesi tanımlar hedefin ifade özelliği her zaman DbScanExpression olur.  Bir DbScanExpression ya da bir tablo veya Görünüm gösterebilir veya meta veri özelliği, hedef "sorgu tanımlama" ise, bir veri kümesi null olmayan bir sorgu ile tanımlanan.  
+ DbModificationCommandTree has a Target property that represents the target set for the modification operation. Giriş kümesi tanımlar hedefin ifade özelliği her zaman DbScanExpression olur.  Bir DbScanExpression ya da bir tablo veya Görünüm gösterebilir veya meta veri özelliği, hedef "sorgu tanımlama" ise, bir veri kümesi null olmayan bir sorgu ile tanımlanan.  
   
  Bir sorgu temsil eden bir DbScanExpression yalnızca bir sağlayıcı değiştirme hedefi olarak belirlenen modelde tanımlayan bir sorgu kullanarak tanımlandı, ancak hiçbir işlev karşılık gelen değiştirme işlemi için sağlanan ulaşabilir. Sağlayıcıları (SqlClient, örneğin, desteklemez) senaryosunu destekleyecek mümkün olmayabilir.  
   
@@ -76,7 +76,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
  Değer yeni değer özelliği güncelleştirileceği ile belirtir. Türü ya da DbConstantExpression veya DbNullExpression.  
   
-#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>DbUpdateCommandTree ve DbDeleteCommandTree karşılaştırma  
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predicate in DbUpdateCommandTree and DbDeleteCommandTree  
  Koşulu, hangi hedef koleksiyonun üyeleri güncelleştirilemez veya belirlemek için kullanılan koşulu belirtir. DbExpressions aşağıdaki alt kümesini yerleşik bir ifade ağacına şöyledir:  
   
 -   DbComparisonExpression tür aşağıda kısıtlı olarak DbPropertyExression olan sağ alt ve sol alt bir DbConstantExpression ile eşittir.  
@@ -85,7 +85,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
 -   Bir DbPropertyExpresison kısıtlı olarak üzerinden DbIsNullExpression  
   
--   Karşılık gelen DbModificationCommandTree hedef başvuru temsil eden bir DbVariableReferenceExpression üzerinden DbPropertyExpression.  
+-   DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.  
   
 -   DbAndExpression  
   
@@ -98,7 +98,7 @@ The elements of the list are specified as type DbModificationClause, which speci
   
  (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) örnek sağlayıcısı'nın değişikliği SQL oluşturma modülü giriş DbModificationCommandTree alır ve tek bir değişiklik büyük olasılıkla döndürmek için bir select deyimi tarafından izlenen SQL deyimini üreten bir DbModificationCommandTree tarafından belirtilen okuyucu. Hedef SQL Server veritabanı tarafından oluşturulan komutları şeklini etkileyeceğini unutmayın.  
   
-### <a name="helper-classes-expressiontranslator"></a>Yardımcı sınıfları: ExpressionTranslator  
+### <a name="helper-classes-expressiontranslator"></a>Helper Classes: ExpressionTranslator  
  Tüm değişiklik komut ağacı özelliklerinin DbExpression türünde bir ortak basit Çeviricisi ExpressionTranslator görür. Yalnızca değişikliği komut ağacı özelliklerini kısıtlı ifade türleri çevrilmesi destekler ve aklınızda belirli kısıtlamalar ile yapılandırılır.  
   
  Aşağıdaki bilgiler, belirli ifade türleri (Önemsiz çevirileri düğümleriyle göz ardı edilir) ziyaret açıklanır.  

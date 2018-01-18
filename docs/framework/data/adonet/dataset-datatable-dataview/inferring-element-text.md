@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00a66a1f995ac4d705af2bf39993cb387e3bf25d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 239c70ca0e7f8894b988f17d248b2e5b3b98bf6a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="inferring-element-text"></a>Öğe metni çıkarımını yapma
 Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğeleri gibi yeni bir sütun adıyla tabloları gibi olayla için alt öğe varsa **TableName_Text** öğe için olayla tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satırı eklenir ve yeni bir sütun depolanır. **ColumnMapping** yeni bir sütun özelliği, ayarlanacak **MappingType.SimpleContent**.  
@@ -39,7 +39,7 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
-|Değer1|Metin1|  
+|Değer1|Text1|  
   
  Bir öğenin metni içeren, ancak Ayrıca metin içeren alt öğeleri varsa, bir sütun öğesinde yer metin depolamak için tabloya eklenmez. Alt öğeler metinde tablosunda bir satırı dahil ederken öğesinde yer metin yoksayılacak. Örneğin, aşağıdaki XML göz önünde bulundurun.  
   

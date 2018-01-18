@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e9dd92ad1b5c91798923296def8f207637b4bad2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fab9111bb14b41244fab3bcd9c2ea0b0f91d72ce
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Nasıl yapılır: üye çakışma bilgisi alma
 Kullanabileceğiniz <xref:System.Data.Linq.MemberChangeConflict> çakışan tek tek üyeleri hakkında bilgi almak için sınıf. Aynı bu bağlamda herhangi bir üyesi için özel işleme çakışmanın sağlayabilir. Daha fazla bilgi için bkz: [iyimser eşzamanlılık: genel bakış](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

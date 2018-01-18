@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c8a518dd3f8bc4c1123099522ad4a4f452c78f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ-DataSet sorguları hata ayıklama
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]hata ayıklama destekleyen [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktalarını ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme gibi. Ancak, sorgu yürütme hata ayıklama sırasında dikkate almanız gereken bazı yan etkileri olan ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve devam et kullanmanın bazı sınırlamalar vardır. Bu konuda ele alınmıştır özgü hata ayıklama yönlerini [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] karşılaştırıldığında olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  

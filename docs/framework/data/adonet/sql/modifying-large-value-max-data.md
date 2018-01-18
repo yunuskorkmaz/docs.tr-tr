@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55403df391f6d7d44de46483d945ed32a694a63b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET büyük değer (Maks) verileri değiştirme
 Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` değerlerin depolama 2 büyüklüğünde izin vermek için veri türleri ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtebilir `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve herhangi bir özel işleme yapılmadan hem giriş ve çıkış parametresi değerleri olarak belirtilebilir. İçin büyük `varchar` veri türleri, veri alınır ve artımlı olarak güncelleştirildi.  
@@ -30,7 +30,7 @@ Büyük nesne (LOB) veri türleri 8 kilobayt (KB) en fazla satır boyutunu aşan
   
  Aşağıdaki tabloda, SQL Server Books Online'da belgelere bağlantılar sağlar.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Books Online**  
   
 1.  [Değer büyük veri türlerini kullanma](http://go.microsoft.com/fwlink/?LinkId=120498)  
   
@@ -79,9 +79,9 @@ FROM OPENROWSET
 |Eğer|Ardından|  
 |--------|----------|  
 |İfade NULL olarak ayarlandı|`@Length`göz ardı edilir ve değer *column_name* kesilir belirtilen `@Offset`.|  
-|`@Offset`NULL.|Güncelleştirme işlemi var olan sonunda ifade ekler *column_name* değeri ve `@Length` göz ardı edilir.|  
+|`@Offset` is NULL|Güncelleştirme işlemi var olan sonunda ifade ekler *column_name* değeri ve `@Length` göz ardı edilir.|  
 |`@Offset`column_name değeri uzunluğundan daha büyük|SQL Server hata döndürür.|  
-|`@Length`NULL.|Güncelleştirme işlemi tüm verileri kaldırır `@Offset` sonuna `column_name` değeri.|  
+|`@Length` is NULL|Güncelleştirme işlemi tüm verileri kaldırır `@Offset` sonuna `column_name` değeri.|  
   
 > [!NOTE]
 >  Ne `@Offset` ya da `@Length` negatif bir sayı olabilir.  

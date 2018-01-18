@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-query-operator-translation"></a>Standart sorgu işleci çevirisi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Standart sorgu işleçleri için SQL komutlarını çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantiği belirler.  
@@ -165,7 +165,7 @@ ORDER BY [t0].[CustomerID]
   
  İşleçler `is` ve `as`ve `GetType` yöntem sınırlı değildir `Select` işleci. Bunlar ayrıca diğer sorgu işleçleri kullanılabilir.  
   
-## <a name="sql-server-2008-support"></a>SQL Server 2008 desteği  
+## <a name="sql-server-2008-support"></a>SQL Server 2008 Support  
  LINQ-SQL, .NET Framework 3.5 SP1 ile başlayarak, yeni bir tarih ve saat türleri SQL Server 2008 ile sunulan eşleme destekler. Ancak, bu yeni tür eşlenen değerleri karşı çalışırken kullanabileceğiniz SQL sorgu işleçleri için LINQ için bazı kısıtlamalar vardır.  
   
 ### <a name="unsupported-query-operators"></a>Desteklenmeyen sorgu işleçleri  

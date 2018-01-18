@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c28dee75d5371da50dec1d3b73ec6c305176582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML verileri olarak DataSet içeriğini yazma
 ADO.NET bir XML temsili yazabilen bir <xref:System.Data.DataSet>, ile veya olmadan şemasına. Şema bilgileri XML ile birlikte satır içi ise XML Şeması Tanım Dili (XSD) kullanılarak yazılır. Tablo tanımları bir şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.  
@@ -44,7 +44,7 @@ string xmlDS = custDS.GetXml();
   
  Aşağıdaki tabloda seçeneklerini gösterir **XmlWriteMode**.  
   
-|XmlWriteMode seçeneği|Açıklama|  
+|XmlWriteMode option|Açıklama|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|Geçerli içeriğini Yazar <xref:System.Data.DataSet> bir XML Şeması olmadan XML verileri olarak. Bu varsayılandır.|  
 |**WriteSchema**|Geçerli içeriğini Yazar <xref:System.Data.DataSet> XML Şeması satır içi olarak ilişkisel yapısı ile XML verileri olarak.|  
@@ -82,7 +82,7 @@ xmlSW.Close();
 |**Öğesi**|Bu varsayılandır. Sütun, burada ColumnName öğenin adını ve sütun içeriğini öğesinin metin olarak yazılan bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Özniteliği**|Sütun XML öğesi burada ColumnName özniteliğin adını ve sütun içeriğini öznitelik değeri olarak yazılan geçerli satır için XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|Sütunun içeriğine metin XML öğesi geçerli satır için olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Unutmayın **SimpleContent** sahip bir tablo için bir sütun ayarlanamaz **öğesi** sütunları veya iç içe ilişkiler.|  
-|**Gizli**|Sütun XML çıktısında yazılmaz.|  
+|**Hidden**|Sütun XML çıktısında yazılmaz.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  

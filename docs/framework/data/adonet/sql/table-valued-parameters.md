@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ce210e1da2002fe599a3703ec90374afba843c3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli parametreleri
 Tablo değerli parametreleri birden çok istemci uygulamasından veri satırı sıralama için kolay bir yol sağlamak [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] verileri işlemek için birden çok gidiş dönüş veya özel bir sunucu tarafı mantık gerektiren olmadan. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

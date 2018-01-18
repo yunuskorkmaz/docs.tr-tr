@@ -1,7 +1,7 @@
 ---
-title: ".NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi"
+title: ".NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ön konular"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87a4b9f2bb076eccfa79e2951e509a35461ff257
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/17/2018
 ---
 ![](./media/cover.png)
 
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi
 
 İNDİRME bulunabilir: <https://aka.ms/microservicesebook>
 
@@ -53,7 +53,7 @@ Ortak yazarlar:
 
 > **Cesar de la Torre**, Sr. PM .NET ürün ekibi, Microsoft Corp.
 >
-> **Fatura Wagner**, Sr. Geliştirici, C + E, Microsoft Corp. içerik
+> **Fatura Wagner**, Sr. Content Developer, C+E, Microsoft Corp.
 >
 > **Can Rousos**, asıl yazılım mühendisi, DevDiv CAT ekibi, Microsoft
 
@@ -65,7 +65,7 @@ Düzenleyiciler:
 
 Katılımcıların ve gözden geçirenler:
 
-> **Gamze Ritcher**, iş ortağı yazılım Eng, Azure ekibi, Microsoft
+> **Jeffrey Richter**, Partner Software Eng, Azure team, Microsoft
 >
 > **Jimmy Bogard**, Headspring adresindeki Baş Mimarı
 >
@@ -81,7 +81,7 @@ Katılımcıların ve gözden geçirenler:
 >
 > **Hakan Dorrans**, Sr. Güvenlik Program Yöneticisi
 >
-> **Rowan Mert**, Sr. Program Yöneticisi, Microsoft
+> **Rowan Miller**, Sr. Program Yöneticisi, Microsoft
 >
 > **Ankit Asthana**, asıl PM Yöneticisi, .NET ekibi, Microsoft
 >
@@ -103,7 +103,7 @@ Katılımcıların ve gözden geçirenler:
 >
 > **Javier Valero**, baş Müdürü Grupo çözümleri adresindeki işletim
 >
-> **Pierre Millet**, Sr. Danışman, Microsoft
+> **Pierre Millet**, Sr. Consultant, Microsoft
 >
 > **Michael Friis**, ürün Yöneticisi, Docker Inc
 >

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 473f1ca54d54a1d852edaed424729778e5a7513d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7b02ba7959a5cfc2205222655460026847c3098
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="enabling-query-notifications"></a>Sorgu bildirimleri etkinleştirme
 Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim vardır. Veri kaynağınızı SQL sorgu bildirimleri desteklemek için doğru şekilde yapılandırılmalıdır ve kullanıcı doğru istemci ve sunucu tarafı izinlerine sahip olmalıdır.  
@@ -39,7 +39,7 @@ Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim var
 ## <a name="query-notifications-requirements"></a>Sorgu bildirimleri gereksinimleri  
  Sorgu bildirimleri yalnızca belirli bir gereksinimler listesini karşılayan SELECT deyimleri için desteklenir. Aşağıdaki tablo, SQL Server Çevrimiçi Kitaplar'da Service Broker ve Sorgu Bildirimleri belgelerine bağlantılar sağlar.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Books Online**  
   
 -   [Bildirim için sorgu oluşturma](http://msdn.microsoft.com/library/ms181122.aspx)  
   
@@ -55,7 +55,7 @@ Sorgu bildirimleri kullanmasına uygulamalarının ortak bir dizi gereksinim var
   
 -   [Çözüm tasarım konuları (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [Hizmet aracısı geliştirici Bilgi Merkezi](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](http://msdn.microsoft.com/library/ms166100.aspx)  
   
 -   [Geliştirici Kılavuzu (hizmet Aracısı)](http://msdn.microsoft.com/library/bb522908.aspx)  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET Veri odaklı yazılım uygulamaları geliştirme desteği teknolojileri kümesidir. İki çok farklı hedeflerine ulaşmasına gerek mimarları ve geliştiricileri veri odaklı uygulamalar zorlandığınız. Varlıklar, ilişkileri ve iş sorunlarını çözme mantığını model gerekir ve depolamak ve verileri almak için kullanılan veri yapısıyla de çalışması gerekir. Veriler birden çok depolama sistemleri, her biri kendi protokollerle yayılabilir; tek bir depolama sistemiyle çalışacak bile uygulamaları verimli ve sürdürülebilir uygulama kodu yazarken gereksinimleri karşı depolama sistem gereksinimlerini dengelemeniz gerekir.  

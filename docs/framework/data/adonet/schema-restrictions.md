@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-restrictions"></a>Şema kısıtlamaları
 İkinci isteğe bağlı parametresi, **GetSchema** yöntemdir şema bilgi tutarını sınırlamak için kullanılan kısıtlamaları döndürülür ve için geçirilen **GetSchema** bir dize dizisi olarak yöntemi . Dizideki konumu geçirebilirsiniz değerleri belirler ve bu kısıtlama sayıya eşdeğerdir.  
@@ -148,7 +148,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılan|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_name|@Name|name|1.|  
+|User_Name|@Name|name|1.|  
   
 ### <a name="databases"></a>Veritabanları  
   
@@ -207,7 +207,7 @@ class Program
 |Katalog|@Catalog|SPECIFIC_CATALOG|1.|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
 |Ad|@Name|SPECIFIC_NAME|3|  
-|Parametre|@Parameter|PARAMETRE_ADÝ|4|  
+|Parametre|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Yordamlar  
   
@@ -223,7 +223,7 @@ class Program
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılan|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|db_name()|1.|  
-|Sahip|@Owner|USER_NAME()|2|  
+|Sahip|@Owner|user_name()|2|  
 |Tablo|@Table|o.Name|3|  
 |ConstraintName|@ConstraintName|x.Name|4|  
 |Sütun|@Column|c.Name|5|  
@@ -233,15 +233,15 @@ class Program
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılan|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|db_name()|1.|  
-|Sahip|@Owner|USER_NAME()|2|  
+|Sahip|@Owner|user_name()|2|  
 |Tablo|@Table|o.Name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılan|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|assembly_name|@AssemblyName|Assemblies.Name|1.|  
-|udt_name|@UDTName|Types.assembly_class|2|  
+|assembly_name|@AssemblyName|assemblies.name|1.|  
+|udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  
   

@@ -1,5 +1,5 @@
 ---
-title: Oracle LOB'lar
+title: Oracle LOBs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -10,25 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="oracle-lobs"></a>Oracle LOB'lar
+# <a name="oracle-lobs"></a>Oracle LOBs
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleLob> Oracle ile çalışmak için kullanılan sınıf **LOB** veri türleri.  
   
  Bir **OracleLob** bunlardan birini olabilir <xref:System.Data.OracleClient.OracleType> veri türleri:  
   
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
-|**BLOB**|Bir Oracle **BLOB** en fazla 4 gigabayt ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
-|**CLOB**|Bir Oracle **CLOB** varsayılan karakterine bağlı karakter verileri içeren veri türü ayarlamak 4 gigabayt boyut sınırı ile sunucuya. Bu eşlendiği **dize**.|  
+|**Blob**|Bir Oracle **BLOB** en fazla 4 gigabayt ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
+|**Clob**|Bir Oracle **CLOB** varsayılan karakterine bağlı karakter verileri içeren veri türü ayarlamak 4 gigabayt boyut sınırı ile sunucuya. Bu eşlendiği **dize**.|  
 |**NClob**|Bir Oracle **NCLOB** Ulusal karakter sınırını 4 gigabayt ile sunucuya kümesini temel karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
   
  Bir **OracleLob** farklı bir <xref:System.Data.OracleClient.OracleBFile> içeren veriler yerine sunucunun işletim sistemini fiziksel bir dosyasında depolanır. Farklı bir okuma-yazma nesnesi da olabilir bir **OracleBFile**, olduğu her zaman salt okunur.  

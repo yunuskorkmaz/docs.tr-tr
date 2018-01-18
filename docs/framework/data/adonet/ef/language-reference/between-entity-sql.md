@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 06008847a564d91d92a596978b90b040b6c508f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b27aee261e9195c2cb5f15e369cf26de4c0691a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="between-entity-sql"></a>(Varlık SQL)
 Belirtilen aralıktaki bir değere bir ifade sonucu olup olmadığını belirler. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Arasındaki deyim arasında Transact-SQL ifadesi aynı işlevleri vardır.  
@@ -39,7 +39,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  `end_expression`  
  Herhangi bir geçerli ifade. `end_expression`her ikisi de aynı türde olmalıdır `expression` ve `begin_expression`.  
   
- DEĞİL  
+ NOT  
  BETWEEN sonucunu tasarruflarını gerektiğini belirtir.  
   
  AND  

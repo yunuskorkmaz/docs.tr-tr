@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ae9ee83802b71eeab63fe5305b49d79a5cfaaf39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8eda365fa1970f4fa836440151cc1ba0d3ae9dd
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) sıralama
 Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView>verileri sıralama ve veri satırı sıralama ölçüte göre sıralanmış dönmek için çeşitli yöntemler sağlar. Sıralama özellikleri, kendi dize tabanlı yanı sıra <xref:System.Data.DataView> kullanmanıza olanak tanır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ifadeleri sıralama ölçütleri için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri izin verir. Bu konuda kullanarak sıralama için her iki yaklaşım açıklanmaktadır <xref:System.Data.DataView>.  

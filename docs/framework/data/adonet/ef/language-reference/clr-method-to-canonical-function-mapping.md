@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Kurallı işlev eşlemesi için CLR yöntemi
 Entity Framework dize düzenlemesi ve matematik işlevleri gibi birçok veritabanı sistemler arasında ortak olan işlevselliğini uygulayan kurallı işlevler kümesini sağlar. Bu, çok çeşitli veritabanı sistemleri hedeflemek geliştiricilere sağlar. LINQ to Entities, gibi bir sorgulama teknolojisi gelen bunlar kurallı çağrıldığında işlevleri için kullanılan sağlayıcısı için doğru karşılık gelen depolama işlevi çevrilir. Bu veri kaynakları arasında tutarlı bir sorgu deneyimi sağlayan ortak bir formda arasında veri kaynaklarına, ifade işlev çağrılarını sağlar. Bit düzeyinde AND, OR değil ve işlenen sayısal bir tür olduğunda XOR işleçleri kurallı işlevleri de eşleniyor. Boole işlenenler, bit düzeyinde AND, OR, NOT, için ve XOR işleçleri mantıksal AND, OR değil, işlem ve bunların işlenenler XOR işlemlerini. Daha fazla bilgi için bkz: [kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -37,7 +37,7 @@ Entity Framework dize düzenlemesi ve matematik işlevleri gibi birçok veritaba
 |Boole op_Equality (dize `a`, dize `b`)|= işleci|  
 |Boolean op_Inequality (dize `a` , dize `b`)|!= operator|  
 |Microsoft.VisualBasic.Strings.Trim (dize `str`)|Trim (`str`)|  
-|Microsoft.VisualBasic.Strings.LTrim (dize `str`)|LTrim (`str`)|  
+|Microsoft.VisualBasic.Strings.LTrim (dize `str`)|Ltrim(`str`)|  
 |Microsoft.VisualBasic.Strings.RTrim (dize `str`)|RTrim (`str`)|  
 |Microsoft.VisualBasic.Strings.Len (dize `expression`)|Uzunluğu (`expression`)|  
 |Microsoft.VisualBasic.Strings.Left (dize `str`, Int32 `Length`)|Sol (`str`, `Length`)|  
@@ -64,8 +64,8 @@ istem. Dize Değiştir (dize `oldValue`, dize `newValue`)|Değiştir (`this`, `o
 |System.String ToLower()|ToLower (`this`)||  
 |System.String ToUpper()|ToUpper (`this`)||  
 |System.String Trim()|Trim (`this`)||  
-|System.String TrimEnd(Char[] `trimChars`)|RTrim (`this`)||  
-|System.String TrimStart(Char[]`trimChars`)|LTrim (`this`)||  
+|System.String TrimEnd(Char[] `trimChars`)|RTrim(`this`)||  
+|System.String TrimStart(Char[]`trimChars`)|LTrim(`this`)||  
 |Boole eşittir (dize `value`)|= işleci||  
   
 ## <a name="systemdatetime-method-static-mapping"></a>System.DateTime yöntemi (statik) eşleme  
@@ -80,15 +80,15 @@ istem. Dize Değiştir (dize `oldValue`, dize `newValue`)|Değiştir (`this`, `o
 |Boolean op_GreaterThanOrEqual (DateTime `t1`, DateTime `t2`)|>= işleci||  
 |Boolean op_Inequality (DateTime `t1`, DateTime `t2`)|!= operator||  
 |Boolean op_LessThan (DateTime `t1`, DateTime `t2`)|< işleci||  
-|Boolean op_LessThanOrEqual (DateTime `t1`, DateTime `t2`)|<= işleci||  
-|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` DateInterval, olarak\_<br /><br /> ByVal `DateValue` DateTime, olarak\_<br /><br /> İsteğe bağlı ByVal `FirstDayOfWeekValue` FirstDayOfWeek olarak VbSunday, =\_<br /><br /> İsteğe bağlı ByVal `FirstWeekOfYearValue` yılın ilk haftası olarak VbFirstJan1 =\_<br /><br /> ) Tamsayı olarak||Daha fazla bilgi için DatePart işlevi bölümüne bakın.|  
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= işleci||  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` DateInterval, olarak\_<br /><br /> ByVal `DateValue` DateTime, olarak\_<br /><br /> İsteğe bağlı ByVal `FirstDayOfWeekValue` FirstDayOfWeek olarak VbSunday, =\_<br /><br /> İsteğe bağlı ByVal `FirstWeekOfYearValue` yılın ilk haftası olarak VbFirstJan1 =\_<br /><br /> ) As Integer||Daha fazla bilgi için DatePart işlevi bölümüne bakın.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
-|Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||  
-|Microsoft.VisualBasic.DateAndTime.Month (DateTime `TimeValue`)|Month()||  
-icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
-|Microsoft.VisualBasic.DateAndTime.Hour (DateTime `TimeValue`)|Hour()||  
-|Microsoft.VisualBasic.DateAndTime.Minute (DateTime `TimeValue`)|Minute()||  
-|Microsoft.VisualBasic.DateAndTime.Second (DateTime `TimeValue`)|Second()||  
+|Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
+|Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
+|Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
+|Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
+|Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  
   
 ## <a name="systemdatetime-method-instance-mapping"></a>System.DateTime eşleme yöntemi (örneği)  
   

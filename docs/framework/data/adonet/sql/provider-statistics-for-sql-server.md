@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 87f3dfbb3af6e638207d68540217f7134b95c354
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43cafc8feb6cee761baffcb2efe41aec18e98abb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için sağlayıcı istatistikleri
 .NET Framework sürüm 2.0 ile başlayarak, SQL Server için .NET Framework veri sağlayıcısı çalışma zamanı istatistikleri destekler. Ayarlayarak istatistikleri etkinleştirmelisiniz <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> nesnesine `True` oluşturulan geçerli bir bağlantı nesnesi sonra. İstatistikleri etkinleştirildikten sonra bunları "anlık görüntü olarak zaman içinde" alarak gözden geçirebilirsiniz bir <xref:System.Collections.IDictionary> aracılığıyla başvuru <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> nesnesi. Ad/değer çifti dictionary girişlerinin bir dizi listesini numaralandırır. Bu ad/değer çiftleri sırasız şunlardır. Herhangi bir zamanda çağırabilirsiniz <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> sayaçları sıfırlamak için nesne. Toplama istatistiği etkin değil, bir özel durum oluşturulmaz. Ayrıca, varsa <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> olmadan adlı <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ilk çağrılmış alınan her giriş için başlangıç değerlerini değerlerdir. İstatistikleri etkinleştirirseniz, bir süre için uygulamanızı çalıştırın ve istatistikleri devre dışı bırakmak, alınan değerleri nerede istatistikleri devre dışı bırakılan noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel bir bağlantı başına temelinde değerlerdir.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 |`BytesSent`|Uygulama sağlayıcısını kullanarak başlatıldı ve istatistikleri etkinleştirilmiş sonra SQL Server'a TDS paketlerinde gönderilen veri baytı sayısı sayısını döndürür.|  
 |`ConnectionTime`|Bağlantı kaldırıldı süre (milisaniye olarak) miktarını istatistikleri etkinleştirdikten sonra açılan (toplam bağlantı süresi istatistikleri bağlantı açmadan önce etkinleştirilmişse).|  
 |`CursorOpens`|Uygulama sağlayıcısını kullanarak başlatıldı ve istatistikleri etkinleştirilmiş sonra bir imleç bağlantı üzerinden açık sayısını döndürür.<br /><br /> SELECT deyimleri tarafından döndürülen yalnızca/ileri-salt okunur sonuçları imleçler dikkate alınmaz ve bu nedenle bu sayaç etkilemez unutmayın.|  
-|`ExecutionTime`|Toplam süreyi (milisaniye cinsinden) sağlayıcı istatistikleri etkinleştirildikten sonra işleme harcanan, saatin yanı sıra, sunucunun yanıt beklerken harcanan süre dahil olmak üzere sağlayıcı kod çalıştırırken harcadığı döndürür.<br /><br /> Zamanlama kod dahil sınıfları şunlardır:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Performans açısından kritik üyeleri olabildiğince küçük tutmak için aşağıdaki üyeleri zamanlanır değil:<br /><br /> SqlDataReader<br /><br /> Bu [] işleci (tüm aşırı)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> Getınt16<br /><br /> Getınt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDbNull|  
+|`ExecutionTime`|Toplam süreyi (milisaniye cinsinden) sağlayıcı istatistikleri etkinleştirildikten sonra işleme harcanan, saatin yanı sıra, sunucunun yanıt beklerken harcanan süre dahil olmak üzere sağlayıcı kod çalıştırırken harcadığı döndürür.<br /><br /> Zamanlama kod dahil sınıfları şunlardır:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Performans açısından kritik üyeleri olabildiğince küçük tutmak için aşağıdaki üyeleri zamanlanır değil:<br /><br /> SqlDataReader<br /><br /> Bu [] işleci (tüm aşırı)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
 |`IduCount`|Uygulama sağlayıcısını kullanarak başlatıldı ve istatistikleri etkinleştirilmiş sonra bağlantı üzerinden yürütülen ekleme, silme ve güncelleştirme deyimleri toplam sayısını döndürür.|  
 |`IduRows`|Uygulama sağlayıcısını kullanarak başlatıldı ve istatistikleri etkinleştirilmiş sonra bağlantı üzerinden yürütülen ekleme, silme ve güncelleştirme deyimleri tarafından etkilenen satırların toplam sayısını döndürür.|  
 |`NetworkServerTime`|Uygulama sağlayıcısını kullanarak başlatıldı ve istatistikleri etkinleştirilmiş sonra sağlayıcının'ın sunucudan yanıt beklerken harcanan süre (milisaniye cinsinden) toplu miktarını döndürür.|  

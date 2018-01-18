@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server şeması koleksiyonları
 SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleksiyonları yanı sıra ek şeması koleksiyonları destekler. Şema koleksiyonları, kullanmakta olduğunuz SQL Server sürümü tarafından biraz farklılık gösterir. Desteklenen şeması koleksiyonları listesini belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren.  
@@ -52,17 +52,17 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması ko
 |constraint_catalog|Dize|Katalog dizin ait.|  
 |constraint_schema|Dize|Şema dizini içerir.|  
 |constraint_name|Dize|Dizinin adı.|  
-|TABLE_CATALOG|Dize|Tablo adı dizin ile ilişkilendirilir.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
+|table_catalog|Dize|Tablo adı dizin ile ilişkilendirilir.|  
+|table_schema|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
 |TABLE_NAME|Dize|Tablo adı.|  
 |index_name|Dize|Dizin adı.|  
   
-### <a name="indexes-sql-server-2008"></a>Dizinleri (SQL Server 2008)  
+### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için dizinler şema koleksiyonu eklenmiştir. Bu sütun, önceki .NET Framework ve SQL Server sürümlerinde desteklenmez.  
   
 |columnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|type_desc|Dize|Dizin türünü aşağıdakilerden biri olacaktır:<br /><br /> -HEAP<br />-KÜMELENMİŞ<br />-KÜMELENMEMİŞ<br />-XML<br />-UZAMSAL|  
+|type_desc|Dize|Dizin türünü aşağıdakilerden biri olacaktır:<br /><br /> -   HEAP<br />-KÜMELENMİŞ<br />-KÜMELENMEMİŞ<br />-   XML<br />-UZAMSAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -71,10 +71,10 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması ko
 |constraint_catalog|Dize|Katalog dizin ait.|  
 |constraint_schema|Dize|Şema dizini içerir.|  
 |constraint_name|Dize|Dizinin adı.|  
-|TABLE_CATALOG|Dize|Tablo adı dizin ile ilişkilendirilir.|  
-|TABLE_SCHEMA|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
+|table_catalog|Dize|Tablo adı dizin ile ilişkilendirilir.|  
+|table_schema|Dize|Tabloyu içeren şeması dizini ile ilişkili.|  
 |TABLE_NAME|Dize|Tablo adı.|  
-|COLUMN_NAME|Dize|Sütun adı dizin ile ilişkilendirilir.|  
+|column_name|Dize|Sütun adı dizin ile ilişkilendirilir.|  
 |ORDINAL_POSITION|Int32|Sütun sıralı konumu.|  
 |keyType|Bayt|Nesnenin türü.|  
 |index_name|Dize|Dizin adı.|  
@@ -104,7 +104,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması ko
 |PARAMETER_MODE|Dize|IF IF bir giriş parametresi bir output parametresi ve INOUT bir giriş/çıkış parametresi varsa döndürür.|  
 |IS_RESULT|Dize|Evet döndüren bir işlev yordamı sonucunu gösterir. Aksi takdirde, döndürür No|  
 |AS_LOCATOR|Dize|Evet Bulucu bildirilen varsa döndürür. Aksi takdirde, döndürür No|  
-|PARAMETRE_ADÝ|Dize|Parametrenin adı. Bu işlevin dönüş değerine karşılık gelen yoksa NULL.|  
+|PARAMETER_NAME|Dize|Parametrenin adı. Bu işlevin dönüş değerine karşılık gelen yoksa NULL.|  
 |DATA_TYPE|Dize|Sistem tarafından sağlanan veri türü.|  
 |CHARACTER_MAXIMUM_LENGTH|Int32|İkili veya karakter veri türleri için karakter cinsinden en büyük uzunluğu. Aksi takdirde NULL döndürür.|  
 |CHARACTER_OCTET_LENGTH|Int32|İkili veya karakter veri türleri için bayt cinsinden en büyük uzunluğu. Aksi takdirde NULL döndürür.|  
@@ -153,7 +153,7 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı ortak şeması ko
 |CHARACTER_SET_NAME|Dize|Bu sütunu karakter veya metin verilerini ise benzersiz bir ad karakter kümesi getirir yazın. Aksi takdirde null değeri döndürülür.|  
 |COLLATION_CATALOG|Dize|Sütun karakter veri veya metin veri ise harmanlama tanımlanmış veritabanı belirten döndürür ana türü. Aksi takdirde, bu sütun NULL olur.|  
   
-### <a name="columns-sql-server-2008"></a>Sütunlar (SQL Server 2008)  
+### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
  SQL Server 2008 ve .NET Framework sürüm 3.5 SP1 ile başlayarak, aşağıdaki sütunları yeni uzamsal türler, FILESTREAM ve seyrek sütun desteklemek için sütunları şema koleksiyonu eklenmiştir. Bu sütun, önceki .NET Framework ve SQL Server sürümlerinde desteklenmez.  
   
 |columnName|Veri türü|Açıklama|  
