@@ -12,11 +12,11 @@ ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` Değiştiricisi değiştirilen bir şey yok veya eksik bir uygulaması olduğunu gösterir. Soyut değiştiricisi sınıfları, yöntemleri, özellikleri, dizin oluşturucular ve olayları ile kullanılabilir. Kullanım `abstract` bir sınıfı diğer sınıfların temel sınıf yalnızca olması amaçlanmıştır belirtmek için bir sınıf bildirimindeki değiştiricisi. Özet olarak işaretlenmiş ya da bir Özet sınıfta dahil üyeleri soyut sınıftan türeyen sınıflar tarafından uygulanmalıdır.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Bir Özet yöntem bildirimi gerçek uygulaması sağladığından, hiçbir yöntem gövdesi yoktur; yöntem bildirimi yalnızca noktalı virgül ile sona erer ve imza izleyen hiçbir süslü ayraçlar ({}) vardır. Örneğin:  
   
-    ```  
+    ```csharp  
     public abstract void MyMethod();  
     ```  
   
@@ -75,19 +75,19 @@ ms.lasthandoff: 11/21/2017
   
  Önceki örnekte, böyle bir deyimi kullanarak soyut sınıf örneği çalışırsanız:  
   
-```  
+```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- Derleyici 'BaseClass' bir Özet sınıfın örneği oluşturulamıyor bildiren bir hata alırsınız.  
+Derleyici 'BaseClass' bir Özet sınıfın örneği oluşturulamıyor bildiren bir hata alırsınız.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
- [sanal](../../../csharp/language-reference/keywords/virtual.md)  
- [geçersiz kılma](../../../csharp/language-reference/keywords/override.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

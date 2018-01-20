@@ -14,18 +14,18 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 30f44ad6ce7219ddd874108e62111ff947d7aa0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dda6e48d3d2fec7f3ad6b9dd665e8a1092a47d60
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; &lt;güvenliği&gt;
 Güvenlik özellikleri temsil eden [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<wsHttpBinding >  
+\<wsHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
   
@@ -77,7 +77,7 @@ Güvenlik özellikleri temsil eden [ \<wsHttpBinding >](../../../../../docs/fram
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|HTTP taşıma uygulamaları için güvenli bir bağlama.|  
+|[\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|HTTP taşıma uygulamaları için güvenli bir bağlama.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  WSHttpBinding sınıfı WS - uygulama hizmetleri ile birlikte çalışma için tasarlanmıştır * belirtimleri. Bu bağlama için taşıma güvenliği, HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) vardır.  
@@ -90,5 +90,5 @@ Güvenlik özellikleri temsil eden [ \<wsHttpBinding >](../../../../../docs/fram
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

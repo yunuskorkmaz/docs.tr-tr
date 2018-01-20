@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET çerçevesi aracılığıyla erişilebilir özellikleri sağlar.  
@@ -29,59 +29,59 @@ Bu bölüm, anahtar C# dili hakkında ayrıntılı bilgi özellikleri ve C# .NET
   
 ## <a name="program-sections"></a>Program bölümleri
 
-[Bir C# programı içinde](../../csharp/programming-guide/inside-a-program/index.md)  
+[C# Programı İçinde](../../csharp/programming-guide/inside-a-program/index.md)  
   
-[Ana() ve komut satırı bağımsız değişkenleri](../../csharp/programming-guide/main-and-command-args/index.md)  
+[Ana() ve Komut Satırı Bağımsız Değişkenleri](../../csharp/programming-guide/main-and-command-args/index.md)  
  
 ## <a name="language-sections"></a>Dil bölümleri  
-[Deyimler, ifadeler ve işleçler](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Deyimler, İfadeler ve İşleçler](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
  [Türler](../../csharp/programming-guide/types/index.md)  
 
- [Sınıflar ve yapılar](../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Sınıflar ve Yapılar](../../csharp/programming-guide/classes-and-structs/index.md)  
   
- [Arabirimleri](../../csharp/programming-guide/interfaces/index.md)  
+ [Arabirimler](../../csharp/programming-guide/interfaces/index.md)  
 
- [Numaralandırma türleri](../../csharp/programming-guide/enumeration-types.md)  
+ [Sabit Listesi Türleri](../../csharp/programming-guide/enumeration-types.md)  
   
  [Temsilciler](../../csharp/programming-guide/delegates/index.md)  
  
  [Diziler](../../csharp/programming-guide/arrays/index.md)  
   
- [Dizeleri](../../csharp/programming-guide/strings/index.md)  
+ [Dizeler](../../csharp/programming-guide/strings/index.md)  
   
- [Özellikleri](../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Özellikler](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
- [Dizin oluşturucular](../../csharp/programming-guide/indexers/index.md)  
+ [Dizin Oluşturucular](../../csharp/programming-guide/indexers/index.md)  
   
- [Olayları](../../csharp/programming-guide/events/index.md)  
+ [Olaylar](../../csharp/programming-guide/events/index.md)  
   
- [Genel türler](../../csharp/programming-guide/generics/index.md)  
+ [Genel Türler](../../csharp/programming-guide/generics/index.md)  
   
  [Yineleyiciler](../../csharp/programming-guide/concepts/iterators.md)
   
- [LINQ Sorgu ifadeleri](../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [LINQ Query Expressions](../../csharp/programming-guide/linq-query-expressions/index.md)  
   
- [Lambda ifadeleri](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Lambda İfadeleri](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
- [Ad alanları](../../csharp/programming-guide/namespaces/index.md)  
+ [Ad Alanları](../../csharp/programming-guide/namespaces/index.md)  
   
- [Boş değer atanabilir türler](../../csharp/programming-guide/nullable-types/index.md)  
+ [Boş Değer Atanabilir Tipler](../../csharp/programming-guide/nullable-types/index.md)  
   
- [Güvenli olmayan kod ve işaretçiler](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Güvenli Olmayan Kod ve İşaretçiler](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML belgeleri yorumları](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML Belge Açıklamaları](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Platform bölümleri  
- [Uygulama etki alanları (C# ve Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Uygulama etki alanları (C# ve Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Derlemeler ve Genel Derleme Önbelleği](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
- [Öznitelikleri](../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Öznitelikler](../../csharp/programming-guide/concepts/attributes/index.md)  
   
- [Koleksiyonları](../../csharp/programming-guide/concepts/collections.md)  
+ [Koleksiyonlar](../../csharp/programming-guide/concepts/collections.md)  
   
- [Özel durumlar ve özel durum işleme](../../csharp/programming-guide/exceptions/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](../../csharp/programming-guide/exceptions/index.md)  
   
  [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../csharp/programming-guide/file-system/index.md)  
   

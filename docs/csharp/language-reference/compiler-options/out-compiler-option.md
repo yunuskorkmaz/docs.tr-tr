@@ -13,19 +13,19 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out (C# Derleyici Seçenekleri)
-**/Out** seçeneği çıktı dosyası adını belirtir.  
+# <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
+**-Out** seçeneği çıktı dosyası adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  Derleyici tarafından oluşturulan çıkış dosyasının adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut satırında, derleme için birden çok çıktı dosyaları belirtmek mümkündür. Aşağıdaki bir veya daha fazla kaynak kodu dosyaları bulmak derleyici bekliyor **/out** seçeneği. Ardından, tüm kaynak kodu dosyaları tarafından belirtilen çıktı dosyasına derlenecek **/out** seçeneği.  
+ Komut satırında, derleme için birden çok çıktı dosyaları belirtmek mümkündür. Aşağıdaki bir veya daha fazla kaynak kodu dosyaları bulmak derleyici bekliyor **-out** seçeneği. Ardından, tüm kaynak kodu dosyaları tarafından belirtilen çıktı dosyasına derlenecek **-out** seçeneği.  
   
  Oluşturmak istediğiniz dosya uzantısını ve tam adını belirtin.  
   
@@ -45,11 +45,11 @@ ms.lasthandoff: 11/21/2017
   
  Bir çıkış dosyası derlemek için kullanılan bir kaynak kodu dosyasının aynı derlemede başka bir çıktı dosyası derleme için kullanılamaz.  
   
- Komut satırı derleme birden çok çıktı dosyasında üretirken, çıktı dosyaları yalnızca tek bir derleme olabilir ve yalnızca ilk çıkış dosyası belirtilen göz önünde bulundurun (örtük veya açık olarak ile **/out**) derleme olabilir .  
+ Komut satırı derleme birden çok çıktı dosyasında üretirken, çıktı dosyaları yalnızca tek bir derleme olabilir ve yalnızca ilk çıkış dosyası belirtilen göz önünde bulundurun (örtük veya açık olarak ile **-out**) derleme olabilir .  
   
  Bir derleme bir parçası olarak oluşturulan herhangi bir modül ayrıca derlemede üretilen derleme ile ilişkili dosyalar haline gelir. Kullanım [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) ilişkili dosyaları görmek için derleme bildirimi görüntülemek için.  
   
- / Out derleyici seçeneği sırada bir arkadaş derleme hedefi bir exe için gereklidir. Daha fazla bilgi için bkz: [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Çıkış derleyici seçeneği sırada bir arkadaş derleme hedefi bir exe için gereklidir. Daha fazla bilgi için bkz: [arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/21/2017
  Derleme `t.cs` ve çıktı dosyası oluşturma `t.exe`, yapı yanı sıra `t2.cs` ve modül çıkış dosyası oluşturma `mymodule.netmodule`:  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Arkadaş derlemeleri](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Arkadaş Bütünleştirilmiş Kodları](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

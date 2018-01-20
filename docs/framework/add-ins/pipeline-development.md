@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>Ardışık Düzen Geliştirme
 Eklenti ardışık düzeni konak uygulama ve onun eklenti birbirleri ile iletişim kurmak için kullanması gereken ardışık düzeni kesimlerini yoludur.  
@@ -41,14 +41,14 @@ Eklenti ardışık düzeni
   
  Ayrı uygulama etki alanlarına konak ve eklenti yüklerseniz, kapsamı konak uygulamadan eklentisinin kapsamını ayıran bir yalıtım sınırı vardır. Hem konak hem de eklenti uygulama etki alanları yüklenen yalnızca derleme sözleşmedir. Ana bilgisayar ve eklenti her sözleşme yöntemleri yalnızca kendi görünümüne bakın. Bu nedenle, bunlar bir sözleşmeden Soyutlama Katmanı ayrılmıştır.  
   
- Ardışık düzeni kesimlerini geliştirmek için bunları içeren bir dizin yapısına oluşturmanız gerekir. Geliştirme gereksinimleri ve kapsam yönergeleri hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Ardışık düzeni kesimlerini geliştirmek için bunları içeren bir dizin yapısına oluşturmanız gerekir. Geliştirme gereksinimleri ve kapsam yönergeleri hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
  Aşağıdaki çizimde, ardışık düzen segmentlerini yapmak türleri gösterilmektedir. Çizimde gösterilen türlerinin adlarını rasgele, ancak bilgi deposu oluşturmak yöntemler tarafından bulunabilmeleri için konak ve konak hariç tüm türleri eklenti iste özniteliklerini görüntüleyin.  
   
  ![Ekleme &#45; türlerinde gerekli öznitelikler modeliyle. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Eklenti ardışık düzeni türleriyle  
   
- Aşağıdaki tabloda bir eklentiyi etkinleştirmek için ardışık düzeni kesimlerini açıklanmaktadır. Bu kesimler hakkında daha fazla bilgi için bkz: [sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ Aşağıdaki tabloda bir eklentiyi etkinleştirmek için ardışık düzeni kesimlerini açıklanmaktadır. Bu kesimler hakkında daha fazla bilgi için bkz: [sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Ardışık düzen segmenti|Açıklama|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ Ana bilgisayar için etkinleştirme yolu bileşeninden Ekle
   
      Toplama, çıkarma, çarpma ve bölme hesaplamalar için konak gerçekleştirir hesaplayıcı eklenti açıklar.  
   
--   [İzlenecek yol: Ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [İzlenecek yol: Ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Bir hesap makinesi eklentisi Gelişmiş hesaplama özellikleri ve ilk hesaplayıcı eklentisi ile uyumluluğu korumak nasıl açıklar.  
   
--   [İzlenecek yol: Geçirme koleksiyonları arasında konakları ve eklentiler](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [İzlenecek yol: Geçirme koleksiyonları arasında konakları ve eklentiler](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      Bir kitap deposu senaryoyu kullanarak ardışık düzeni veri koleksiyonları geçirmek açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eklenti ardışık düzeni senaryoları](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Eklenti ardışık düzeni senaryoları](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Eklentiler ve Genişletilebilirlik](../../../docs/framework/add-ins/index.md)

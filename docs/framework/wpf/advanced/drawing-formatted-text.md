@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konuda özelliklerini genel bakış sağlar <xref:System.Windows.Media.FormattedText> nesnesi. Bu nesne, metin çizim için alt düzey denetim sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
@@ -96,7 +96,7 @@ Vuruş ve vurgulamaya uygulanan resim fırçası örneği
  ![Metnin yol geometri izleyen küre](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Metnin yol geometri izleyen küre  
   
- Daha fazla bilgi için bkz: [nasıl yapılır: metin için PathGeometry animasyon oluşturmak](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Daha fazla bilgi için bkz: [nasıl yapılır: metin için PathGeometry animasyon oluşturmak](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  İçin dönüştürüldükten sonra biçimlendirilmiş metin ilginç başka amaçlarla oluşturabileceğiniz bir <xref:System.Windows.Media.PathGeometry> nesnesi. Örneğin, içinde görüntülemek için video bölebilirsiniz.  
   
@@ -113,7 +113,7 @@ Metnin yol geometri video görüntüleme
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> ve <xref:System.Windows.Media.FormattedText.Width%2A> çıktı dikdörtgeni hesaplamak için özellikler.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> ayarlamak değere sahip özelliği <xref:System.Windows.TextAlignment.Center>.|  
 |DT_EDITCONTROL|Yok.|Gerekli değildir. Alanı genişlik ve son çizgi işleme framework ile aynı düzenleme denetimindeki ile aynıdır.|  
-|F:SYSTEM.WİNDOWS.TEXTTRİMMİNG.WORDELLİPSİS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> değere sahip özelliği <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Kullanım <xref:System.Windows.TextTrimming.WordEllipsis> almak için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] f:System.Windows.TextTrimming.WordEllipsis DT_WORD_ELIPSIS ile son üç nokta — bu durumda, üç nokta karakteri yalnızca tek bir satırda sığmayacak sözcükler ortaya çıkar.|  
+|DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> değere sahip özelliği <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Kullanım <xref:System.Windows.TextTrimming.WordEllipsis> almak için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] f:System.Windows.TextTrimming.WordEllipsis DT_WORD_ELIPSIS ile son üç nokta — bu durumda, üç nokta karakteri yalnızca tek bir satırda sığmayacak sözcükler ortaya çıkar.|  
 |DT_EXPAND_TABS|Yok.|Gerekli değildir. Sekmeleri otomatik olarak durdurur için her 4 ems yaklaşık 8 dilden bağımsız karakter genişliğini olduğu genişletilir.|  
 |DT_EXTERNALLEADING|Yok.|Gerekli değildir. Dış başında her zaman satır aralığına dahil edilir. Kullanım <xref:System.Windows.Media.FormattedText.LineHeight%2A> kullanıcı tanımlı satır aralığı oluşturmak için özellik.|  
 |DT_HIDEPREFIX|Yok.|Desteklenmez. '&' Dize oluşturmadan önce Kaldır <xref:System.Windows.Media.FormattedText> nesnesi.|  
@@ -139,4 +139,4 @@ Metnin yol geometri video görüntüleme
  [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF'de Tipografi](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Anahatları Belirlenmiş Metin Oluşturma](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Nasıl yapılır: metin için PathGeometry Animasyonu oluşturma](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [Nasıl yapılır: metin için PathGeometry Animasyonu oluşturma](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

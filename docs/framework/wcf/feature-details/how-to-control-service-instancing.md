@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 60a2537f1ddc4563c1514032f7df4894f6ef47af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c77cae35abacb780aec86750c37c6ecd91ff370
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-control-service-instancing"></a>Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme
 Bir hizmet örneği modunu ayarlama, sağlar, ne zaman belirtmek bir <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (ve onun ilişkili kullanıcı tanımlı bir hizmet nesnesi) oluşturulur. Bkz: <xref:System.ServiceModel.InstanceContextMode> olası modları için numaralandırması. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]davranışları bkz [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Çalışma örnekler için bkz: [davranışları](../../../../docs/framework/wcf/samples/behaviors.md).  
@@ -45,4 +45,4 @@ Bir hizmet örneği modunu ayarlama, sağlar, ne zaman belirtmek bir <xref:Syste
  <xref:System.ServiceModel.ServiceBehaviorAttribute>  
  <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>  
  <xref:System.ServiceModel.InstanceContextMode>  
- [Hizmet: Davranışları örnekleri](http://msdn.microsoft.com/en-us/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)
+ [Hizmet: Davranışları örnekleri](http://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)

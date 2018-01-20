@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve ses akışları, görüntüler, belge dosyaları veya diğer ikili medya türleri temsil edebilir. Bir veya daha fazla ikili özelliklerinin bir varlık veri modeli içerir, bu ikili veri akışı yanıt girişi içinde base-64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme performansını etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlık bağımsız ikili veri almak için bir mekanizma tanımlar. Bu, bir veya daha fazla veri akışlara varlıktan ikili veri ayırarak gerçekleştirilir.  
@@ -100,7 +100,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
   
  Daha fazla bilgi için bkz: [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) ve [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Varsayılan olarak, Internet Information Services (IIS) 4 MB isteklerine boyutunu de sınırlar. IIS üzerinde çalışan akışları 4 MB'den daha büyük almak, veri hizmeti etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:  
+ Varsayılan olarak, Internet Information Services (IIS) 4 MB isteklerine boyutunu de sınırlar. IIS üzerinde çalışan akışları 4 MB'den daha büyük almak, veri hizmeti etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:  
   
   
   
@@ -130,7 +130,7 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
   
 -   Ne zaman uygulamanız <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, veya <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> yöntemlerini kullanmanız gerekir eTag ve sağlanan Content-Type değerleri yöntem parametreleri. ETag veya Content-Type üst bilgilerinde ayarlı değil, <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı uygulaması.  
   
--   Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. Çünkü [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] büyük ikili akışlar kabul etmelisiniz akış bir veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız, geliştirme sunucusu, bu tür kodlama desteklemiyor. Daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu bkz [ASP.NET Web projeleri için Visual Studio'da Web sunucuları](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. Çünkü [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] büyük ikili akışlar kabul etmelisiniz akış bir veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız, geliştirme sunucusu, bu tür kodlama desteklemiyor. Daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] geliştirme sunucusu bkz [ASP.NET Web projeleri için Visual Studio'da Web sunucuları](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Sürüm oluşturma gereksinimleri  

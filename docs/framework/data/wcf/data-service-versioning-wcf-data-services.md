@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73e394c4d0a7f78fca7c8c70f68bfc16da556d8d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürüm oluşturma (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'ler kullanarak kaynakları, bir veri modeline bağlı olarak veri erişim sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Ayrıca hizmet işlemleri tanımını destekler. İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra bu veri hizmetleri için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimleri değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için gerekebilir. Varolan bir veri hizmeti bir değişiklik yaptığınızda mi verilerinizi yeni bir sürümünü tanımlamak dikkate almanız gereken service ve mevcut istemci uygulamaları üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. Ayrıca açıklanır nasıl [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir exchange istemcileri ve farklı sürümlerini destekler veri hizmetleri arasında işleme [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 |Sürüm 3|-Karşıdan yükleyip destekleyen bir yayın öncesi sürüm [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 3 sürümünden [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|  
   
 ### <a name="metadata-versions"></a>Meta veri sürümleri  
- Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri modeli temsil etmek için CSDL 1.1 sürümünü kullanır. Bu her zaman bir yansıma sağlayıcısı veya bir özel veri hizmeti sağlayıcısı dayanarak veri modelleri için geçerlidir. Ancak, ne zaman veri modeli tanımlanmış kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], CSDL sürümü döndürülen tarafından kullanılan sürümüyle aynı [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. CSDL sürümü ad alanı tarafından belirlenir [Schema öğesi](http://msdn.microsoft.com/en-us/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]belirtimi [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](http://go.microsoft.com/fwlink/?LinkId=159072).  
+ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri modeli temsil etmek için CSDL 1.1 sürümünü kullanır. Bu her zaman bir yansıma sağlayıcısı veya bir özel veri hizmeti sağlayıcısı dayanarak veri modelleri için geçerlidir. Ancak, ne zaman veri modeli tanımlanmış kullanarak [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], CSDL sürümü döndürülen tarafından kullanılan sürümüyle aynı [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. CSDL sürümü ad alanı tarafından belirlenir [Schema öğesi](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]belirtimi [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](http://go.microsoft.com/fwlink/?LinkId=159072).  
   
  `DataServices` Döndürülen meta veri öğesi de içerir bir `DataServiceVersion` değerin aynısıdır özniteliği olarak `DataServiceVersion` üstbilgisi yanıt iletisi. İstemci uygulamaları gibi **hizmet Başvurusu Ekle** iletişim kutusunda [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], doğru sürümü ile çalışması istemci veri hizmeti sınıfları oluşturmak için bu bilgileri kullanın [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmeti ana bilgisayar. Daha fazla bilgi için bkz: [OData: iletişim kuralı sürüm](http://go.microsoft.com/fwlink/?LinkId=186071).  
   

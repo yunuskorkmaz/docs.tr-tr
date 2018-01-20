@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28e4cc9189c144404bcfe2b7f8e255a74eef76c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Türetilen bir güvenli ve birlikte çalışabilir bağlama [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ve Federasyon güvenlik destekler.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<ws2007FederationHttpBinding >  
+\<ws2007FederationHttpBinding>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -82,7 +82,7 @@ Türetilen bir güvenli ve birlikte çalışabilir bağlama [ \<wsFederationHttp
 |`proxyAddress`|HTTP proxy adresini belirtir URI. Varsa `useDefaultWebProxy` olan `true`, bu ayar olmalıdır `null`. Varsayılan, `null` değeridir.|  
 |`receiveTimeout`|A <xref:System.TimeSpan> bir alma işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10: 00'dır.|  
 |`sendTimeout`|A <xref:System.TimeSpan> bir gönderme işleminin tamamlanması için sağlanan zaman aralığı belirten değer. Bu değer sıfırdan büyük veya eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
-|`textEncoding`|Karakter kümesi bağlama iletilerde yayma için kullanılacak kodlama ayarlar. Geçerli değerler şunlardır:<br /><br /> -BigEndianUnicode: Unicode Big Endian'ya kodlaması.<br />-Unicode: 16 bit kodlama.<br />-UTF8: 8 bit kodlama.<br /><br /> UTF8 varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
+|`textEncoding`|Karakter kümesi bağlama iletilerde yayma için kullanılacak kodlama ayarlar. Geçerli değerler şunlardır:<br /><br /> -   BigEndianUnicode: Unicode Big Endian encoding.<br />-Unicode: 16 bit kodlama.<br />-   UTF8: 8-bit encoding.<br /><br /> UTF8 varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
 |`transactionFlow`|Bağlama boyunca WS-işlemleri destekleyip desteklemediğini belirten bir değer. Varsayılan, `false` değeridir.|  
 |`useDefaultWebProxy`|Sistemin otomatik yapılandırılan HTTP Proxy'si kullanılıp kullanılmadığını gösteren bir değer. Proxy adresi olmalıdır `null` (diğer bir deyişle, ayarlanmamış) bu özniteliği ise `true`. Varsayılan, `true` değeridir.|  
   
@@ -91,8 +91,8 @@ Türetilen bir güvenli ve birlikte çalışabilir bağlama [ \<wsFederationHttp
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[reliableSession](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Güvenilir oturumlar kanal uç noktaları arasında kurulan olup olmadığını belirtir.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[reliableSession](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)|Güvenilir oturumlar kanal uç noktaları arasında kurulan olup olmadığını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -101,7 +101,7 @@ Türetilen bir güvenli ve birlikte çalışabilir bağlama [ \<wsFederationHttp
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamaları koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Federasyon kimlikleri birden çok kuruluşlar veya kimlik doğrulama ve yetkilendirme için güven etki alanları paylaşma olanağı ' dir. Başka bir kimlik temsili bir güven etki alanından eşlemek için WS-Trust protokolünü kullanır. Karma mod güvenliği yanı sıra SOAP Güvenliği Federasyon HTTP bağlama destekler, ancak taşıma güvenliği desteklemiyor. Bu bağlama ile yapılandırılan hizmetler HTTP aktarımı kullanmanız gerekir. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Federasyon kimlikleri birden çok kuruluşlar veya kimlik doğrulama ve yetkilendirme için güven etki alanları paylaşma olanağı ' dir. Başka bir kimlik temsili bir güven etki alanından eşlemek için WS-Trust protokolünü kullanır. Karma mod güvenliği yanı sıra SOAP Güvenliği Federasyon HTTP bağlama destekler, ancak taşıma güvenliği desteklemiyor. Bu bağlama ile yapılandırılan hizmetler HTTP aktarımı kullanmanız gerekir. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
 ## <a name="example"></a>Örnek  
   
@@ -139,8 +139,8 @@ Türetilen bir güvenli ve birlikte çalışabilir bağlama [ \<wsFederationHttp
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.WS2007FederationHttpBinding>  
  <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
- [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
+ [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 64858f89a569be3056f878561f8031f16830f81d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what39s-new-in-adonet"></a>&#39; teki ADO.NET'deki yenilikler
 Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -65,5 +65,5 @@ Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [WCF Veri Hizmetleri yenilikleri](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [WCF Veri Hizmetleri yenilikleri](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

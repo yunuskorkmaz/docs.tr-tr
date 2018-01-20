@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma
 Özel bir denetim için tasarım zamanı deneyimi ilişkili bir özel Tasarımcısı yazarak geliştirilebilir.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  Tam kod listesi için bkz: [nasıl yapılır: bir Windows Forms denetimi, geçen avantajı, tasarım-zamanı özellikleri oluşturma](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu kılavuzu tamamlamak için gerekir:  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
--   "MarqueeControlTest." adlı bir Windows Forms uygulaması projesi oluşturma Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   "MarqueeControlTest." adlı bir Windows Forms uygulaması projesi oluşturma Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Bir denetim kitaplığı projesi oluşturma  
  Sonraki adım, denetim kitaplığı projesi oluşturmaktır. Yeni bir özel denetim ve karşılık gelen kendi özel Tasarımcısı oluşturur.  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  Bir Windows Forms Denetim Kitaplığı proje çözüme ekleyin. "MarqueeControlLibrary." proje adı  
   
-2.  Kullanarak **Çözüm Gezgini**, projenin varsayılan denetim seçim dilinizi bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosya silerek silin. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Kullanarak **Çözüm Gezgini**, projenin varsayılan denetim seçim dilinizi bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosya silerek silin. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Yeni bir ekleme <xref:System.Windows.Forms.UserControl> öğesinin `MarqueeControlLibrary` projesi. Yeni kaynak dosyası "MarqueeControl.", temel bir ad verin  
   
-4.  Kullanarak **Çözüm Gezgini**, yeni bir klasör oluşturun `MarqueeControlLibrary` projesi. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Yeni bir klasör adı "Tasarım."  
+4.  Kullanarak **Çözüm Gezgini**, yeni bir klasör oluşturun `MarqueeControlLibrary` projesi. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Yeni bir klasör adı "Tasarım."  
   
 5.  Sağ **tasarım** klasörü ve yeni bir sınıf ekleyin. Kaynak dosya "MarqueeControlRootDesigner.", temel bir ad verin  
   
@@ -230,7 +230,7 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>Özel denetim için bir alt denetimi oluşturma  
  `MarqueeControl` Alt denetim iki tür barındıracak: `MarqueeBorder` denetim ve `MarqueeText` denetim.  
   
--   `MarqueeBorder`: Bu denetim "ışık" kendi köşelerindeki kenarlığın boyar. Kenarlığın taşıma göründükleri şekilde ışık sırayla, flash. Hangi ışık flash hızı adlı bir özellik tarafından denetlenen `UpdatePeriod`. Diğer özel bazı özellikleri denetimin görünümünü diğer yönlerini belirler. Adlı iki yöntem `StartMarquee` ve `StopMarquee`, ne zaman animasyon başlatır ve durdurur denetim.  
+-   `MarqueeBorder`: Bu denetim "ışık" kendi köşelerindeki kenarlığın boyar. Kenarlığın taşıma göründükleri şekilde ışık sırayla, flash. Hangi ışık flash hızı adlı bir özellik tarafından denetlenen `UpdatePeriod`. Several other custom properties determine other aspects of the control's appearance. Adlı iki yöntem `StartMarquee` ve `StopMarquee`, ne zaman animasyon başlatır ve durdurur denetim.  
   
 -   `MarqueeText`: Bu denetim yanıp sönen bir dize boyar. Gibi `MarqueeBorder` denetim, hangi metni yanıp sönen hızı tarafından denetlenir `UpdatePeriod` özelliği. `MarqueeText` Denetimi de sahip `StartMarquee` ve `StopMarquee` yöntemleri common ile `MarqueeBorder` denetim.  
   

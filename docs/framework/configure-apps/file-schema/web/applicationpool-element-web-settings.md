@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; öğesi (Web Ayarları)
 Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
@@ -60,7 +60,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<System.Web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ana bilgisayar uygulaması ile nasıl etkileşim kurduğunu hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Çalıştırdığınızda [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümünü tümleşik modda bu öğe birleşimi, bir IIS uygulama havuzunda uygulama barındırıldığında ASP.NET iş parçacıkları ve Kuyruklar istekleri nasıl yönettiğini yapılandırmanıza olanak sağlar. IIS 6 çalıştırmak veya çalıştırdığınız [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] bu ayarlar, Klasik modda veya ISAPI modunu göz ardı edilir.  
@@ -72,7 +72,7 @@ Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek
   
  İçin `maxConcurrentRequestsPerCPU` ayarı, varsayılan ayarı "5000" olan [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] CPU başına 5000 veya daha fazla isteği gerçekte yoksa etkili bir şekilde isteği başka bir deyişle azaltma devre dışı bırakır ASP.NET tarafından denetlenir. Varsayılan ayar yerine CLR iş parçacığı başına CPU eşzamanlılık otomatik olarak yönetmek için havuz bağlıdır. Zaman uyumsuz istek işlemeye kapsamlı kullanımını olun veya ağ g/ç üzerinde engellenen pek çok uzun süre çalışan istekleri sahip uygulamalar artan varsayılan sınır gelen yararlanacaktır [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Ayarı `maxConcurrentRequestsPerCPU` için ASP.NET isteklerini işlemek için yönetilen iş parçacığı kullanımını sıfır kapatır. Bir uygulama bir IIS uygulama havuzunda çalıştığında, istekleri IIS g/ç iş parçacığı üzerinde kalır ve bu nedenle eşzamanlılık IIS iş parçacığı ayarları tarafından kısıtlanıyor.  
   
- `requestQueueLimit` Ayarı aynı şekilde çalışır `requestQueueLimit` özniteliği [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) ASP.NET uygulamaları için Web.config dosyalarında ayarlanan öğesi. Ancak, `requestQueueLimit` aspnet.config dosyasındaki ayarı geçersiz kılar `requestQueueLimit` Web.config dosyasındaki ayarlama. Diğer bir deyişle, her iki öznitelik ayarlarsanız (varsayılan olarak, bu doğrudur), `requestQueueLimit` aspnet.config dosyasındaki ayarı önceliklidir.  
+ `requestQueueLimit` Ayarı aynı şekilde çalışır `requestQueueLimit` özniteliği [processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) ASP.NET uygulamaları için Web.config dosyalarında ayarlanan öğesi. Ancak, `requestQueueLimit` aspnet.config dosyasındaki ayarı geçersiz kılar `requestQueueLimit` Web.config dosyasındaki ayarlama. Diğer bir deyişle, her iki öznitelik ayarlarsanız (varsayılan olarak, bu doğrudur), `requestQueueLimit` aspnet.config dosyasındaki ayarı önceliklidir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, aşağıdaki durumlarda aspnet.config dosyasındaki ASP.NET işlem genelinde davranışı yapılandırmak gösterilmektedir:  

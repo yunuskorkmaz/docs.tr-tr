@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c70b7df47cb3f367318fb388ceda2163f538cb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Nasıl yapılır: WCF Aracısı ile WSE 3.0 Hizmetine Erişme
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]istemcileridir hat düzeyinde uyumlu Web Services Enhancements (WSE) 3.0 ile ne zaman Microsoft .NET hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır. Ancak, WSE 3.0 hizmetlerini meta veri değişimi (MEX) protokolü, bu nedenle desteklemeyen kullandığınızda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci sınıfı, güvenlik ayarları uygulanmaz için oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Bu nedenle, sonra WSE 3.0 hizmet gerektiren güvenlik ayarlarını belirtmeniz gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci oluşturulur.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  WSE 3.0 Web Hizmetleri ile iletişim kurabilen bir bağlama temsil eden bir sınıf oluşturun.  
   
-     Aşağıdaki sınıf parçası olan [WSE ile birlikte](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41) örnek:  
+     Aşağıdaki sınıf parçası olan [WSE ile birlikte](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) örnek:  
   
     1.  Türeyen bir sınıf oluşturun <xref:System.ServiceModel.Channels.Binding> sınıfı.  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.Binding>  
- [WSE ile birlikte çalışma](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [WSE ile birlikte çalışma](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

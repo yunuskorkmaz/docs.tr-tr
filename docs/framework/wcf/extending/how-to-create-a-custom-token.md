@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3b423158cc3c38e92897d0dc5e48c22cf28396ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel Belirteç Oluşturma
 Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilmektedir <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcısı ile authenticator ile tümleştirme. Tam kod örneği için bkz: [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md) örnek.  
@@ -41,7 +41,7 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
   
  Bkz: <xref:System.IdentityModel.Tokens> güvenlik belirteçlerini temsil eden daha fazla sınıflar için ad alanı.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları, bkz: [güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları, bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Yordamlar  
  Bir istemci uygulaması, güvenlik altyapısı kredi kartı bilgilerini belirtmek için bir yol sağlanmalıdır. Bu bilgiler bir özel istemci kimlik bilgileri sınıf tarafından uygulamaya kullanılabilir hale getirilir. İlk adım, özel istemci kimlik bilgileri için kredi kartı bilgileri temsil eden bir sınıf oluşturmaktır.  
@@ -176,4 +176,4 @@ Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilm
  [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

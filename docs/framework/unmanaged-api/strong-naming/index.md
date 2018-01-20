@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
 Tanımlayıcı adlı derlemeler için imzalama yönetmek bir istemci güçlü adlandırma API sağlar.  
@@ -30,7 +30,7 @@ Tanımlayıcı adlı derlemeler için imzalama yönetmek bir istemci güçlü ad
  Bir derlemeyi katı bir adla imzalamak, dosyaya derleme bildirimini içeren ortak bir anahtar şifrelemesi ekler. Tanımlayıcı ad imzası yardımcı adı benzersizlik doğrulayın adı yanıltma engeller ve başvuru çözümlendiğinde arayanlar benzersiz bir kimliği sağlar. Ancak, hiçbir güven düzeyini tanımlayıcı bir ad ile ilişkilidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güçlü adlandırma genel statik işlevleri](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Güçlü adlandırma genel statik işlevleri](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Güçlü adlandırma API'sini kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ Tanımlayıcı adlı derlemeler için imzalama yönetmek bir istemci güçlü ad
  [StrongNameTokenFromPublicKey İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Bir ortak anahtar temsil eden bir belirteci alır. İle başlayarak kullanım dışı [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Güçlü adlandırma yapısı](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Güçlü adlandırma yapısı](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  Tanımlayıcı adlı derlemeler için imzalama yönetmek için güçlü adlandırma API'sini kullanan yönetilmeyen yapısını açıklar...  
   
  [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

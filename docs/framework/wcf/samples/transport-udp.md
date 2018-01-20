@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek UDP tek noktaya yayın ve çok noktaya yayın özel olarak uygulamak gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] taşıma. Örnek olarak özel bir taşıma oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kanal çerçevesi kullanarak ve aşağıdaki [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir taşıma oluşturmaya yönelik adımlar aşağıdaki gibidir:  
@@ -119,7 +119,7 @@ ArraySegment<byte> messageBuffer = EncodeMessage(message);
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
-### <a name="the-udpchannellistener"></a>UdpChannelListener  
+### <a name="the-udpchannellistener"></a>The UdpChannelListener  
  '' Örnek uygulayan UdpChannelListener türer <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngü UDP yuvaya kullanarak verileri alır. Veri kodlaması ileti Framework kullanarak iletilere sonra dönüştürülür.  
   
 ```csharp
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>İstemci ve UDP Test hizmeti  
- Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. Hizmet koduna iki sınamaları oluşur — bir test koddan bağlamalar ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla yapar. Her iki testleri iki uç nokta kullanın. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `true`. Diğer uç nokta ile özel bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `false`. Her iki testleri bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve sonra kullanıcıya hizmet kapatmadan önce ENTER tuşuna basın bekler.  
+ Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. Hizmet koduna iki sınamaları oluşur — bir test koddan bağlamalar ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla yapar. Her iki testleri iki uç nokta kullanın. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `true`. Diğer uç nokta ile özel bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `false`. Her iki testleri bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve sonra kullanıcıya hizmet kapatmadan önce ENTER tuşuna basın bekler.  
   
  Hizmet test uygulaması başlattığınızda aşağıdaki çıktı görmeniz gerekir.  
   

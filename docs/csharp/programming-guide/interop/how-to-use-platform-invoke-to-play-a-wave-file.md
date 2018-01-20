@@ -13,11 +13,11 @@ ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d037e17ef48ebfdd5cfd860efbacf195e7b6a76d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2aacad0e8004e60471a59ebef695ddae5f7a2a7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma (C# Programlama Kılavuzu)
 Aşağıdaki C# kod örneğinde nasıl platform kullanılacağını anlatan Windows işletim sisteminde ses wave dosyasını oynatmak için hizmetlerini çağırma.  
@@ -49,8 +49,8 @@ Aşağıdaki C# kod örneğinde nasıl platform kullanılacağını anlatan Wind
  Daha fazla bilgi için bkz: [.NET Framework Güvenliği](http://go.microsoft.com/fwlink/?LinkId=37122).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Birlikte çalışabilirliğe genel bakış](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- [Birlikte çalışabilirliğe genel bakış](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- [Yakından Platform çağırma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
- [Platform Çağırma ile veri hazırlama](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Birlikte Çalışabilirliğe Genel Bakış](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+ [Birlikte Çalışabilirliğe Genel Bakış](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+ [Yakından Platform çağırma](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Platform Çağırma ile Veri Hazırlama](../../../framework/interop/marshaling-data-with-platform-invoke.md)

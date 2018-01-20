@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ab5d1bd8116c2f5c07c9e91bbf0a5168c6d075d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]gösterme ve olarak verinin tüketimi için senaryolar, bir çekirdek kümesini destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda aşağıdaki senaryolar için ilgili konulara işaret eder.  
@@ -48,11 +48,11 @@ ms.lasthandoff: 12/22/2017
 -   [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Silverlight tabanlı istemci uygulamasında akış.  
- -   [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Nasıl yapılır: veri hizmeti verilerini (WCF Veri Hizmetleri/Silverlight) denetimlere bağlama](http://msdn.microsoft.com/en-us/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Nasıl yapılır: veri hizmeti verilerini (WCF Veri Hizmetleri/Silverlight) denetimlere bağlama](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Tüketen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] AJAX tabanlı istemci uygulamada akış.  
  -   [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
  Kullanıma ve tüketmek bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişilen ve bir akış olarak değiştirilmiş bir ikili büyük nesne ile akış.  
  -   [Akış Sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

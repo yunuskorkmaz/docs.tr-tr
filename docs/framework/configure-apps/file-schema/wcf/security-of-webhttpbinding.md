@@ -14,18 +14,18 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 3afd67e7f2d42cec458db7919529e09e4607f1ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; &lt;güvenliği&gt;
 İle yapılandırılmış bir uç nokta için güvenlik gereksinimlerini belirtir bir [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<webHttpBinding >  
+\<webHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Uç noktaları için yapılandırmak için kullanılan bir bağlama öğesi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web Hizmetleri bu SOAP iletilerine yerine HTTP isteklerine yanıt.|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Uç noktaları için yapılandırmak için kullanılan bir bağlama öğesi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web Hizmetleri bu SOAP iletilerine yerine HTTP isteklerine yanıt.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
@@ -86,6 +86,6 @@ ms.lasthandoff: 12/22/2017
  [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)  
  [WCF Web HTTP Programlama Modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

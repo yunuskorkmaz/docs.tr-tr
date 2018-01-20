@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (C# Derleyici Seçenekleri)
+# <a name="-langversion-c-compiler-options"></a>-langversion (C# Derleyici Seçenekleri)
 Derleyicinin yalnızca seçilen C# dil belirtimi dahil sözdizimini kabul etmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -52,13 +52,13 @@ Derleyicinin yalnızca seçilen C# dil belirtimi dahil sözdizimini kabul etmesi
 
   
 ## <a name="remarks"></a>Açıklamalar  
- C# uygulamanız tarafından başvurulan meta veri değil tabi **/langversion** derleyici seçeneği.  
+ C# uygulamanız tarafından başvurulan meta veri değil tabi **- langversion** derleyici seçeneği.  
   
- C# Derleyici her sürümü uzantıları dil belirtimi içerdiğinden **/langversion** Derleyici önceki bir sürümünü eşdeğer işlevselliğini sağlamaz.  
+ C# Derleyici her sürümü uzantıları dil belirtimi içerdiğinden **- langversion** Derleyici önceki bir sürümünü eşdeğer işlevselliğini sağlamaz.  
  
  C# sürüm güncelleştirmelerini ile ana .net Framework sürümleri genellikle çakıştığı olsa da, ayrıca, özellikleri ve yeni sözdizimini mutlaka bu belirli framework sürümüne bağlı olmak zorunda değildir. Yeni özelliklerin yanı sıra C# düzeltme de serbest yeni bir derleyici güncelleştirme kesinlikle gerektirir, ancak her belirli özellik kendi minimum .net API veya alt düzey çerçeveleri tarafından üzerinde çalışmasına izin verebilir ortak dil çalışma zamanı gereksinimleri vardır. NuGet paketlerini veya diğer kitaplıkları dahil olmak üzere.
   
- Hangi **/langversion** ayarını kullanın, .exe veya .dll dosyası oluşturmak için geçerli ortak dil çalışma zamanı sürümünü kullanacak. Tek istisnası arkadaş derlemeleri ve [/moduleassemblyname (C# derleyici seçeneği)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), hangi altında çalışan **/langversion:ISO-1**.  
+ Hangi **- langversion** ayarını kullanın, .exe veya .dll dosyası oluşturmak için geçerli ortak dil çalışma zamanı sürümünü kullanacak. Tek istisnası arkadaş derlemeleri ve [- moduleassemblyname (C# derleyici seçeneği)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), hangi altında çalışan **- langversion: ISO-1**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -78,9 +78,9 @@ Derleyicinin yalnızca seçilen C# dil belirtimi dahil sözdizimini kabul etmesi
  
 ### <a name="c-language-specification"></a>C# Dil Belirtimi
  [C# dil belirtimi başvurusu](../../../csharp/language-reference/language-specification/index.md) : .NET Foundation  
- C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) bilgi teknolojisi--C# dil belirtimi: ISO Kataloğu  
- C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) bilgi teknolojisi--C# dil belirtimi: ISO Kataloğu  
- C# 2.0 [c042926_ISO_IEC_23270_2006 (E) .zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) PDF biçimli ISO/IEC 23270:2006: ISO serbestçe kullanılabilir standartları  
+ C# 1.0/1.1 [ISO/IEC 23270:2003](https://www.iso.org/standard/36768.html) Information technology -- C# Language Specification : ISO Catalogue  
+ C# 2.0 [ISO/IEC 23270:2006](https://www.iso.org/standard/42926.html) Information technology -- C# Language Specification : ISO Catalogue  
+ C# 2.0 [c042926_ISO_IEC_23270_2006(E).zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c042926_ISO_IEC_23270_2006(E).zip) ISO/IEC 23270:2006 in PDF format : ISO Freely Available Standards  
  C# 3.0 [CSharp dil Specification.doc](http://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc) C# dil belirtimi sürüm 3.0: Microsoft Corporation'ın  
  C# 4.0 [Ecma-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf) standart ECMA 334 4 Edition    
  C# 5.0 [CSharp dil Specification.docx](https://www.microsoft.com/download/details.aspx?id=7029) C# dil belirtimi Sürüm 5.0: Microsoft Corporation'ın  
@@ -95,7 +95,7 @@ Derleyicinin yalnızca seçilen C# dil belirtimi dahil sözdizimini kabul etmesi
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Tüm dil özellikleri desteklemek için gereken en düşük derleyici sürümü   
 [↩](#TDefault)<a name="FDefault">varsayılan</a>, <a name="FISO1">ISO1</a>: Microsoft Visual Studio/derleme araçları .net 2002 veya ile birlikte gelen .net Framework 1.0 derleyici     
-[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/derleme araçları 2005 veya ile birlikte gelen .net Framework 2.0 derleyici    
+[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 or bundled .Net Framework 2.0 compiler    
 [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/derleme araçları 2008 ya da ile birlikte gelen .net Framework 3.5 derleyici    
 [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/derleme araçları 2010 veya ile birlikte gelen .net Framework 4.0 derleyici    
 [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/derleme araçları 2012 ya da ile birlikte gelen .net Framework 4.5 derleyici    

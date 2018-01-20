@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f4cd38d8e026b3cf4bb0bf224f81be9bdab23e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -33,7 +33,7 @@ Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek 
  Bu bölüm, hizmet hazırlama birlikte çalışabilirliği varsayılan davranış özelliklerini tanımlar. Diziler, Boolean türleri, karakter türleri, temsilciler, sınıflar, nesneler, dizeleri ve yapıları hazırlama hakkında ayrıntılı bilgi sunar.  
   
 > [!NOTE]
->  Genel türlerin hazırlama desteklenmiyor. Daha fazla bilgi için [birlikte kullanarak genel türler](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  Genel türlerin hazırlama desteklenmiyor. Daha fazla bilgi için [birlikte kullanarak genel türler](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Bellek yönetimi ile birlikte çalışma Sıralayıcı  
  Birlikte çalışma sıralayıcı tarafından yönetilmeyen kod ayrılan belleği boşaltmak her zaman çalışır. Bu davranış COM bellek yönetimi kurallarıyla uyumlu, ancak yerel C++ yöneten kurallarından farklıdır.  
@@ -50,10 +50,10 @@ BSTR MethodOne (BSTR b) {
   
  Bununla birlikte, her bir platform çağırma olarak prototip yöntemi tanımlayın, yerini **BSTR** ile yazın bir <xref:System.String> yazın ve arama `MethodOne`, ortak dil çalışma zamanı serbest girişimlerini `b` iki kez. Kullanarak hazırlama davranışı değiştirebilirsiniz <xref:System.IntPtr> türleri yerine **dize** türleri.  
   
- Çalışma zamanı her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntem. Çalıştığınız bellek ile ayrılmamış varsa **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntem kullanılarak el ile bellek boş. Otomatik bellek boşaltma burada bellek hiçbir zaman serbest durumlarda, bu tür benzer şekilde, önleyebilirsiniz olarak kullanırken **GetCommandLine** çekirdek bellek için bir işaretçi döndürür Kernel32.dll işlevinden. El ile bellek boşaltma hakkında daha fazla bilgi için bkz [arabellekleri örnek](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Çalışma zamanı her zaman kullanır **CoTaskMemFree** belleği boşaltmak için yöntem. Çalıştığınız bellek ile ayrılmamış varsa **CoTaskMemAlloc** yöntemini kullanmalıdır bir **IntPtr** ve uygun yöntem kullanılarak el ile bellek boş. Otomatik bellek boşaltma burada bellek hiçbir zaman serbest durumlarda, bu tür benzer şekilde, önleyebilirsiniz olarak kullanırken **GetCommandLine** çekirdek bellek için bir işaretçi döndürür Kernel32.dll işlevinden. El ile bellek boşaltma hakkında daha fazla bilgi için bkz [arabellekleri örnek](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
   
 ## <a name="default-marshaling-for-classes"></a>Varsayılan sınıflar için hazırlama  
- Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve arabirimleri olarak her zaman hazırlanırlar. Bazı durumlarda sınıfı sıralama için kullanılan arabirim sınıf arabirimi olarak bilinir. Tercih ettiğiniz bir arabirim ile sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve arabirimleri olarak her zaman hazırlanırlar. Bazı durumlarda sınıfı sıralama için kullanılan arabirim sınıf arabirimi olarak bilinir. Tercih ettiğiniz bir arabirim ile sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 ### <a name="passing-classes-to-com"></a>COM sınıflarına geçirme  
  Yönetilen bir sınıfın COM geçirildiğinde, birlikte çalışabilirlik Sıralayıcı otomatik olarak bir COM proxy ile sınıfı sarmalar ve COM yöntem çağrısı proxy'sine tarafından üretilen sınıf arabirimi geçirir. Proxy sınıfı arabirimde tüm çağrıları yönetilen nesneye sonra atar. Proxy sınıfı tarafından açıkça uygulanmadı diğer arabirimleri de sunar. Proxy otomatik olarak arabirimlerini gibi uygular **IUnknown** ve **IDispatch** sınıfı adına.  
@@ -387,7 +387,7 @@ interface _Graphics {
 |Sistem değer türü|IDL türü|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**TARİH**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**ONDALIK**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   

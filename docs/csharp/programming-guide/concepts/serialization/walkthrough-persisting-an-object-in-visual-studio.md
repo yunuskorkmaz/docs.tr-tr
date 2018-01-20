@@ -11,11 +11,11 @@ ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da (C#) bir nesneyi kalıcı kılma
 Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyor olsa da, çalışma zamanında girdiğiniz değerleri nesne bozulduğunda kaybolur. Bir nesnenin veri değerlerini depolamak ve nesne örneği bir sonraki başlatılışında almak sağlar örnekleri arasında kalıcı hale getirmek için seri hale getirme kullanabilirsiniz.  
@@ -29,7 +29,7 @@ Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyo
 >  Bu örnek verileri bir ikili biçimi dosyasında depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas verileri için kullanılmamalıdır.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma  
  İlk adım oluşturmaktır bir `Loan` sınıfı ve sınıfını kullanan bir test uygulaması.  
@@ -221,5 +221,5 @@ Tasarım zamanında varsayılan değerlere nesnenin özellikleri belirlenebiliyo
  Bu noktada, yeniden yapılandırabilir ve uygulamayı çalıştırın. Başlangıçta, varsayılan değerleri metin kutularında görünür. Dördüncü metin kutusuna bir ad girin ve değerleri değiştirmek deneyin. Uygulamayı kapatın ve yeniden çalıştırın. Yeni değerler şimdi metin kutularına göründüğüne dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Seri hale getirme (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [C# programlama kılavuzu](../../../../csharp/programming-guide/index.md)
+ [Serileştirme (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+ [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

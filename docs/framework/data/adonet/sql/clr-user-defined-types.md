@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4e7de05028b4d3fe7b402b276925b24c901b4c0e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ed299dd91b16815cbbb50cd51602bb0161ec6939
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-user-defined-types"></a>CLR kullanıcı tanımlı türler
 Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile (CLR) uygulanan kullanıcı tanımlı türler (atama) için destek sağlar. CLR SQL Server'a tümleşiktir ve bu düzenek veritabanının tür sistemi genişletmenizi sağlar. Atama kullanıcı genişletilebilirlik SQL Server veri türü sisteminin ve karmaşık yapılandırılmış türleri tanımlama yeteneği sağlar.  
@@ -36,5 +36,5 @@ Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile 
 1.  [Kullanıcı Tanımlı CLR Türleri](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen kodda SQL Server 2005'te nesneleri oluşturma](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Yönetilen kodda SQL Server 2005'te nesneleri oluşturma](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

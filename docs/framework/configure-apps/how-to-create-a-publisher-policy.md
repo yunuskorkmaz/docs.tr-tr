@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla dahil ederek uygulamalar derleme daha yeni bir sürümü kullanmalıdır durumu. Yayımcı ilkesi dosyası derleme yeniden yönlendirme ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası olarak ile aynı biçimi kullanır. Yayımcı ilkesi dosyası bütünleştirilmiş koda derlenmemiş ve genel derleme önbelleğinde yerleştirilir.  
@@ -100,7 +100,7 @@ Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla da
   
 1.  Komut isteminde aşağıdaki komutu yazın:  
   
-     **Gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Aşağıdaki komut ekler `policy.1.0.myAssembly.dll` genel derleme önbelleği için.  
   
@@ -115,7 +115,7 @@ Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla da
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

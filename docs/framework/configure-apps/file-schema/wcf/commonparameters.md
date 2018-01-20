@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efd4f37adb19940e81109924c3ec313d71bf6e7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dcce701d8c051381317173b37fd37b840bcfa89d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil eder. Bu koleksiyon genellikle sürekli hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
-\<davranışı >  
+\<serviceBehaviors>  
+\<behavior>  
 \<İş akışı workflowRuntime >  
-\<commonParameters >  
+\<commonParameters>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,7 +50,7 @@ Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|Bir ad-değer çifti koleksiyonuna Hizmetleri tarafından kullanılan ortak parametreler ekler.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|Bir ad-değer çifti koleksiyonuna Hizmetleri tarafından kullanılan ortak parametreler ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -96,7 +96,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
   
 ## <a name="example"></a>Örnek  
   
@@ -113,5 +113,5 @@ config.Save();
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<ekleme >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+ [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

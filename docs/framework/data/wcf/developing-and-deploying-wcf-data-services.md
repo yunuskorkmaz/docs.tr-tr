@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Geliştirme ve WCF Veri Hizmetleri dağıtma
 Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Hakkında daha fazla temel bilgiler için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bkz: [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) ve [genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -63,7 +63,7 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
     -   Bu sunucuya yalnızca yerel bilgisayar üzerinde erişilebilir.  
   
-    -   Bu sunucunun dinlediği `localhost` ve belirli bir bağlantı noktası, HTTP iletileri için varsayılan bağlantı noktası olan olmayan bağlantı noktası 80. Daha fazla bilgi için bkz: [ASP.NET Web projeleri için Visual Studio'da Web sunucuları](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+    -   Bu sunucunun dinlediği `localhost` ve belirli bir bağlantı noktası, HTTP iletileri için varsayılan bağlantı noktası olan olmayan bağlantı noktası 80. Daha fazla bilgi için bkz: [ASP.NET Web projeleri için Visual Studio'da Web sunucuları](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
     -   Bu sunucu, geçerli kullanıcı hesabınızın bağlamında veri hizmetini çalıştırır. Örneğin, bir yönetici düzeyi kullanıcı olarak çalışan bir veri Hizmeti çalışıyorsa [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server yönetici ayrıcalıklarına sahip olacaktır. Bu, veri hizmetinin IIS sunucusuna dağıtıldığında erişim hakkı olmayan kaynaklara erişebilmesini sağlar.  
   
@@ -89,7 +89,7 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
 -   Veri hizmetinde hata ayıklarken, veri hizmetinden bir hatayla ilgili olarak normal çalışmaya göre daha fazla bilgi almak isteyebilirsiniz. Ek hata bilgileri ayarlayarak veri hizmetinden veri alma <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfınaöznitelikte`true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]post [hata ayıklama WCF Veri Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=201868). İzleme de etkinleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP Mesajlaşma katmanda yükseltilmiş özel durumlarını görüntülemek için. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Veri Hizmeti genellikle olarak geliştirilen bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama projesi, ancak da oluşturabilir, veri hizmeti olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi projesinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. İki proje türleri arasındaki farklar hakkında daha fazla bilgi için bkz: [NIB: Visual Studio'da Web sitesi projeleri ile Web uygulaması projelerine](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Veri Hizmeti genellikle olarak geliştirilen bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama projesi, ancak da oluşturabilir, veri hizmeti olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi projesinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. İki proje türleri arasındaki farklar hakkında daha fazla bilgi için bkz: [NIB: Visual Studio'da Web sitesi projeleri ile Web uygulaması projelerine](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
 -   Kullanarak bir veri hizmeti oluşturduğunuzda **Yeni Öğe Ekle** iletişim kutusunda [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], veri hizmeti tarafından barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] IIS'de. Sırada [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve IIS varsayılan ana bilgisayar veri hizmeti için farklı barındırma seçenekleri desteklenir. Daha fazla bilgi için bkz: [veri hizmetini barındıran](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
@@ -102,9 +102,9 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
     -   **ASP.NET Web uygulamaları için dağıtım teknolojileri**  
   
-        -   [Web dağıtım paketi](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [Web dağıtım paketi](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [Tek tıklamayla yayımlama](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [Tek tıklamayla yayımlama](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **ASP.NET Web siteleri için dağıtım teknolojileri**  
   
@@ -114,19 +114,19 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]dağıtım seçenekleri bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, bkz: [Visual Studio ve ASP.NET Web dağıtımına genel bakış](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]dağıtım seçenekleri bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama, bkz: [Visual Studio ve ASP.NET Web dağıtımına genel bakış](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Veri hizmetini IIS'ye dağıtmayı denemeden önce, IIS çalıştıran Web sunucusuna dağıtımı test ettiğinizden emin olun. Daha fazla bilgi için bkz: [nasıl yapılır: bir WCF veri hizmeti üzerinde çalışan IIS geliştirmek](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
--   **Microsoft Azure**  
+-   **Windows Azure**  
   
      Veri Hizmeti için Windows Azure için Windows Azure araçları kullanarak dağıtabileceğiniz [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Windows Azure Araçları için indirebilirsiniz [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] gelen [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: post için Windows Azure, bir veri hizmeti dağıtma [Windows Azure bir OData hizmetini dağıtma](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Dağıtım Hakkında Önemli Noktalar  
  Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:  
   
--   Kullanan bir veri hizmeti dağıttığınızda [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya ikisi verilerinizi ile dağıtım hizmet. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Hedef veritabanında bunun için komut dosyalarını (.sql dosyaları) otomatik olarak oluşturabilir ve bu komut dosyaları Web dağıtımı paketi dahil edilebilir bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: bir veritabanı ile bir Web uygulaması projesi dağıtma](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b). İçin bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi, bunu yapabilirsiniz kullanarak **veritabanı Yayımlama Sihirbazı'nı** içinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Daha fazla bilgi için bkz: [veritabanı Yayımlama Sihirbazı'nı kullanarak bir veritabanı dağıtma](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Kullanan bir veri hizmeti dağıttığınızda [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya ikisi verilerinizi ile dağıtım hizmet. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Hedef veritabanında bunun için komut dosyalarını (.sql dosyaları) otomatik olarak oluşturabilir ve bu komut dosyaları Web dağıtımı paketi dahil edilebilir bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: bir veritabanı ile bir Web uygulaması projesi dağıtma](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). İçin bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi, bunu yapabilirsiniz kullanarak **veritabanı Yayımlama Sihirbazı'nı** içinde [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Daha fazla bilgi için bkz: [veritabanı Yayımlama Sihirbazı'nı kullanarak bir veritabanı dağıtma](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulaması, Windows Server'da çalışan IIS dağıtılmış bir veri hizmeti izlemek için Windows Server AppFabric kullanabilirsiniz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric bir veri hizmeti izlemek için bkz post [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

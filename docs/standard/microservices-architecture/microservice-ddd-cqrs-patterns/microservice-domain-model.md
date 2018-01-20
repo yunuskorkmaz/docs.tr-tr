@@ -1,7 +1,7 @@
 ---
 title: "Mikro hizmet etki alanı model tasarlama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı model tasarlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1813fe80ad4f84d891986123538dd9037f3fd945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Mikro hizmet etki alanı model tasarlama
 
@@ -71,7 +71,7 @@ Bazı kişiler anemic etki alanı modeli karşı bir düzeni olduğunu varsayal�
 
 -   **Martin Fowler. Anemic etki alanı modeli**
 
-    <https://martinfowler.com/bliki/AnemicDomainModel.HTML>
+    <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Değer nesnesi düzeni
 
@@ -108,7 +108,7 @@ Toplamalar tanımlayan zor olabilir. Bir toplama bir gruptur nesnelerin araya tu
 
 ### <a name="the-aggregate-root-or-root-entity-pattern"></a>Birleşik kök veya kök varlık düzeni
 
-Bir toplama en az bir varlık oluşur: Birleşik kök, kök varlık veya birincil ientity olarak da bilinir. Ayrıca, birden çok alt varlıkları ve tüm varlıkları ve gerekli davranışı ve işlemleri uygulamak üzere birlikte çalışan nesnelerle değeri nesneler olabilir.
+Bir toplama en az bir varlık oluşur: Birleşik kök, kök varlık veya birincil varlık olarak da bilinir. Ayrıca, birden çok alt varlıkları ve tüm varlıkları ve gerekli davranışı ve işlemleri uygulamak üzere birlikte çalışan nesnelerle değeri nesneler olabilir.
 
 Toplama tutarlılığını sağlamak için bir toplama kök amacı.; Yalnızca giriş noktası için toplama yöntemleri aracılığıyla güncelleştirmeleri olmalı veya işlemleri toplama sınıfı kök. Yalnızca toplama kök üzerinden toplama varlıkları değişiklik. Tüm invariants ve toplam olarak uymak için gerekebilecek tutarlık kuralları dikkate alarak toplama 's tutarlılık koruyucu olur. Alt varlık veya değer nesne bağımsız olarak değiştirirseniz, toplama kök toplama işlevinde geçerli bir durumda olduğundan emin olun olamaz. Gevşek bir bacağı içeren bir tablo gibi olacaktır. Bakımı tutarlılık toplama kök ana amacı budur.
 
@@ -151,7 +151,7 @@ Tanımlama ve toplamalar ile çalışma araştırma ve deneyimi gerektirir. Daha
 -   **Sergey Grybniak. DDD Taktik tasarım desenleri**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Uludağ. Toplamalar kullanarak işlem mikro geliştirme**
+-   **Chris Richardson. Toplamalar kullanarak işlem mikro geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. Birleşik düzenin**

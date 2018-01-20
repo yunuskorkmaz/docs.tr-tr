@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ad24de9fd003637d1c6e31841da209346a872143
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5b79461a6fc3314ca4178e0f9b1cff1c468cc3e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dataviews"></a>DataViews
 A <xref:System.Data.DataView> depolanan verilerin farklı görünümlerini oluşturmanızı sağlayan bir <xref:System.Data.DataTable>, veri bağlama uygulamalarında sık kullanılan bir özellik. Kullanarak bir **DataView**farklı sıralamalar olan bir tabloda veri getirebilir ve veri satırı durum ya da bir filtre ifadesi göre göre filtre uygulayabilirsiniz.  
@@ -55,10 +55,10 @@ A <xref:System.Data.DataView> depolanan verilerin farklı görünümlerini oluş
  Nasıl kullanılacağını açıklar bir **DataViewManager** yönetmek için **DataView** ayarları her tablo için bir **DataSet**.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ASP.NET Web uygulamaları](http://msdn.microsoft.com/en-us/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [ASP.NET Web uygulamaları](http://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
  ASP.NET uygulamaları, Web formları ve Web hizmetleri oluşturmak için genel bakışlar ve ayrıntılı, adım adım yordamlar sağlar.  
   
- [Windows uygulamaları](http://msdn.microsoft.com/en-us/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Windows uygulamaları](http://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
  Windows Forms ve konsol uygulamaları ile çalışma hakkında ayrıntılı bilgi sağlar.  
   
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

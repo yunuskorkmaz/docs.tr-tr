@@ -14,19 +14,19 @@ ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a473c02dba1b69a34d601b4d49e02cc202eeb158
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2585e494cc87978b47fe2de5a05b6d2e031c8929
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo (C# Derleyici Seçenekleri)
-**/Nologo** seçeneği derleyici başladığında oturum açma başlık görünümünü ve bilgilendirici iletileri görüntüsünü derleme sırasında gizler.  
+# <a name="-nologo-c-compiler-options"></a>-nologo (C# Derleyici Seçenekleri)
+**- Nologo** seçeneği derleyici başladığında oturum açma başlık görünümünü ve bilgilendirici iletileri görüntüsünü derleme sırasında gizler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/nologo  
+-nologo  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -36,4 +36,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b48e580d078ec6bb736ac762d505583cf632a8bd
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
 <a name="top"></a>Görev paralel kitaplığı (TPL) eşzamanlılık özellikli uygulamalar'ların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri topluca denir *TPL veri akışı Kitaplığı*. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri TPL'nin türleri ve zamanlama altyapısı üzerine kuruludur ve zaman uyumsuz programlama için C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve F# dil desteğiyle tümleşiktir. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntüsü çerçeveler geliştirir, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek oluşturabileceğiniz bir *ardışık düzen* veri akışı bileşenleri. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/10/2018
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- Bir veri akışı bloğunun tamamlanma durumu hakkında ek bilgi edinmek için devamlılık görevinin gövdesinde <xref:System.Threading.Tasks.Task.IsCanceled%2A> gibi özellikleri de kullanabilirsiniz. Devamlılık görevlerini ve nasıl iptal ve hata işleme için ilişkili oldukları hakkında daha fazla bilgi için bkz: [göre devamlılık görevlerini kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md), [özel durumu İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md), ve [NIB: nasıl yapılır: görevler tarafından oluşturulan özel durumları işleme](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+ Bir veri akışı bloğunun tamamlanma durumu hakkında ek bilgi edinmek için devamlılık görevinin gövdesinde <xref:System.Threading.Tasks.Task.IsCanceled%2A> gibi özellikleri de kullanabilirsiniz. Devamlılık görevlerini ve nasıl iptal ve hata işleme için ilişkili oldukları hakkında daha fazla bilgi için bkz: [göre devamlılık görevlerini kullanarak görevleri zincirleme](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md), [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md), [özel durumu İşleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md), ve [NIB: nasıl yapılır: görevler tarafından oluşturulan özel durumları işleme](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
  [[üstüne gidin](#top)]  
   

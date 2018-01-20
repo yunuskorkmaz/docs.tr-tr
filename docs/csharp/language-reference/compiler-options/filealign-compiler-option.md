@@ -21,19 +21,19 @@ ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f00db0cfd191de060b67aee4618d99740cb81248
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign (C# Derleyici Seçenekleri)
-**/Filealign** seçeneği, çıktı dosyanızdaki bölümlerin boyutunu belirtmenize olanak sağlar.  
+# <a name="-filealign-c-compiler-options"></a>-filealign (C# Derleyici Seçenekleri)
+**- Filealign** seçeneği, çıktı dosyanızdaki bölümlerin boyutunu belirtmenize olanak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/filealign:number  
+-filealign:number  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
  Çıktı dosyasında bölümlerin boyutunu belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192 ' dir. Bu değerler bayt cinsinden.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her bölümü olan bir sınır ile hizalanır **/filealign** değeri. Sabit varsayılan yok. Varsa **/filealign** belirtilmezse, ortak dil çalışma zamanı derleme zamanında varsayılan seçer.  
+ Her bölümü olan bir sınır ile hizalanır **- filealign** değeri. Sabit varsayılan yok. Varsa **- filealign** belirtilmezse, ortak dil çalışma zamanı derleme zamanında varsayılan seçer.  
   
  Bölüm boyutunu belirterek, çıkış dosyasının boyutunu etkiler. Bölüm boyutunu değiştirme küçük cihazlarda çalışan programlar için yararlı olabilir.  
   
@@ -61,4 +61,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

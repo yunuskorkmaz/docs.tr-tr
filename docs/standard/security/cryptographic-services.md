@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 <a name="top"></a>Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/09/2018
   
  Bu genel bakışta aşağıdaki bölümleri içerir:  
   
--   [Şifreleme temelleri](#primitives)  
+-   [Cryptographic Primitives](#primitives)  
   
 -   [Gizli anahtar şifreleme](#secret_key)  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alice, Bob için düz metin iletisi ve karma iletisi (dijital imzası) gönderir. Bob alır ve ileti karmaları ve kendisine Alice alınan karma değeri, karma değerini karşılaştırır. Karma değerleri aynıysa, ileti değiştirilmiş değil. Değerler aynı değilse, ileti Alice yazdığı sonra değiştirildi.  
   
-     Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz şey ileti imzası ile eşleşirse ve bunların iletiyi imzalamak için aynı karma algoritmayı kullanabilirsiniz. Bir adam-in--middle saldırı bir form budur. Bkz: [NIB: yeni nesil şifreleme (CNG) güvenli iletişim örnek](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) daha fazla bilgi için.  
+     Ne yazık ki, bu yöntem, Gönderenin özgünlüğünü oluşturmaz. Herkes Alice kimliğine bürünmek ve bir ileti göndermek. Bob belirleyebilirsiniz şey ileti imzası ile eşleşirse ve bunların iletiyi imzalamak için aynı karma algoritmayı kullanabilirsiniz. Bir adam-in--middle saldırı bir form budur. Bkz: [NIB: yeni nesil şifreleme (CNG) güvenli iletişim örnek](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) daha fazla bilgi için.  
   
 -   Alice, güvenli olmayan ortak bir kanal üzerinden Bob için düz metin iletisi gönderir. Aynen karma ileti özel güvenli bir kanal üzerinden gönderir. Bob düz metin iletisi alır, onu karıştırır ve karma özel olarak alışverişi karmayla karşılaştırır. Karmalar eşleşiyorsa Bob iki şey bilir:  
   

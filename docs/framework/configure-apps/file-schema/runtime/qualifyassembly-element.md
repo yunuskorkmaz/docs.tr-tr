@@ -21,18 +21,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; öğesi
 Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.  
   
  \<Yapılandırma >  
-\<çalışma zamanı >  
-\<assemblyBinding >  
+\<runtime>  
+\<assemblyBinding>  
 \<qualifyAssembly >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -87,4 +87,4 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: Kısmi derleme başvuruları](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: Kısmi derleme başvuruları](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

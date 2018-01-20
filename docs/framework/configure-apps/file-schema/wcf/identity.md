@@ -1,5 +1,5 @@
 ---
-title: '&lt;kimlik&gt;'
+title: '&lt;identity&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 819bb9dc9817050e45a39331361dd5489692f0b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e583acee6309b6f8145cf8567cff12cea1c237e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltidentitygt"></a>&lt;kimlik&gt;
+# <a name="ltidentitygt"></a>&lt;identity&gt;
 Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir istemci Geliştirici sağlar. İstemci ile hizmet arasında el sıkışma işleminde [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] altyapı beklenen hizmet kimliğini bu öğenin değerlerle eşleştiğinden ve böylece doğrulanabilir emin olun. Daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<İstemci >  
 \<uç noktası >  
   
@@ -66,10 +66,10 @@ Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir iste
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Özel >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Bir netPeerTcpBinding için özel eş çözümleyici belirtir.|  
-|[\<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Farklı türde uç noktalar yapılandırır.|  
-|[\<veren >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Güvenlik belirteci hizmeti (STS) Federasyon Hizmeti için belirtir.|  
-|[\<İssuedtokenparameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Güvenlik belirteci hizmeti (STS için) Federasyon Hizmeti meta veri uç noktasının belirtir.|  
-|[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|İçinde özel bağlama verilen bir belirteç parametrelerini tanımlar.|  
+|[\<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Farklı türde uç noktalar yapılandırır.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Güvenlik belirteci hizmeti (STS) Federasyon Hizmeti için belirtir.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Güvenlik belirteci hizmeti (STS için) Federasyon Hizmeti meta veri uç noktasının belirtir.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|İçinde özel bağlama verilen bir belirteç parametrelerini tanımlar.|  
 |[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Bir yerel güvenlik belirteci hizmeti (STS) belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

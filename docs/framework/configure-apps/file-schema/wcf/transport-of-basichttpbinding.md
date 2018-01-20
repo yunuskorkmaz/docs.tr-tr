@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 575bd9491573be949a2a8ea0d0b6a22cb399b977
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c6c0cf1b6eef441958931e4d722ba97980e5682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;taşıma&gt;
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tanımlar.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<basicHttpBinding >  
+\<basicHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<taşıma >  
@@ -70,7 +70,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tan
 |Yok.|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
-|NTLM|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
+|Ntlm|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
 |Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
@@ -80,7 +80,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tan
 |Yok.|-Aktarım sırasında iletileri güvenli değil.|  
 |Temel|Temel kimlik doğrulaması RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlandığı şekilde belirtir: temel ve Özet kimlik doğrulaması.|  
 |Özet|Özet kimlik doğrulaması RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlandığı şekilde belirtir: temel ve Özet kimlik doğrulaması.|  
-|NTLM|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
+|Ntlm|NTLM kimlik doğrulaması, mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa belirtir.|  
 |Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
 |Sertifika|Bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öznitelik `security` öğesi taşıma için ayarlanır ve TransportCredentialOnly için ayarlarsanız çalışmaz.|  
   
@@ -136,5 +136,5 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tan
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

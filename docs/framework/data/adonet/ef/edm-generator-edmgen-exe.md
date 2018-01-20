@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve dosyaları eşleme. Aşağıdakileri yapmak için EdmGen.exe Aracı'nı kullanabilirsiniz:  
@@ -29,7 +29,7 @@ EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INC
   
 -   Bir C# veya bir kavramsal model (.csdl) dosyasından oluşturulan nesne sınıfları içeren Visual Basic kod dosyası oluşturun. Daha fazla bilgi için bkz: [nasıl yapılır: nesne katman kodu oluşturmak için kullanım EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
   
--   Var olan bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: sorgu performansını artırmak için Pre-Generate görünümleri](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579).  
+-   Var olan bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: sorgu performansını artırmak için Pre-Generate görünümleri](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
   
  EdmGen.exe aracına [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dizin. Çoğu durumda bu C:\windows\Microsoft.NET\Framework\v4.0 içinde bulunur. 64 bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0 içinde bulunur. Visual Studio komut isteminden EdmGen.exe aracı da erişebilirsiniz (tıklatın **Başlat**, işaret **tüm programlar**, işaret **Microsoft Visual Studio 2010**, üzerine gelin **Visual Studio Araçları**ve ardından **Visual Studio 2010 Komut İstemi**).  
   
@@ -83,6 +83,6 @@ EdmGen /mode:choice [options]
  [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [Varlık Veri Modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

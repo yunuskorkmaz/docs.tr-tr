@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd5d812fbedcbef0f6ce10b324d60961eba804cf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2aab11481bb23228f9ad920c5d01ef7d345e05d3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: özel veritabanı işlevleri çağırma
 Bu konu, veritabanından LINQ Entities sorguları için tanımlanan özel işlevlerini açıklar.  
@@ -38,14 +38,14 @@ Bu konu, veritabanından LINQ Entities sorguları için tanımlanan özel işlev
   
 2.  .Edmx dosyasının depo şeması tanım dili (SSDL) işlevinde bildirin. İşlevin adı veritabanında bildirilen işlevin adı ile aynı olması gerekir.  
   
-     Daha fazla bilgi için bkz: [işlevi öğesi (SSDL)](http://msdn.microsoft.com/en-us/b60cfc3d-8b93-423e-8c99-b867256640a4).  
+     Daha fazla bilgi için bkz: [işlevi öğesi (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
   
 3.  Karşılık gelen bir yöntemi, uygulama kodunuzda bir sınıf ekleyin ve geçerli bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yönteme unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> özniteliğinin parametreleridir kavramsal model ad alanı adını ve kavramsal işlev adı Sırasıyla model. İşlevi ad çözümlemesi LINQ için büyük/küçük harfe duyarlıdır.  
   
 4.  Bir LINQ to Entities sorgusunda yöntemini çağırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir özel veritabanı işlevinden bir LINQ to Entities sorgusunda çağrı gösterilmiştir. Örneğin Okul modelini kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) ve [Okul .edmx dosyasının oluşturma](http://msdn.microsoft.com/en-us/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ Aşağıdaki örnek, bir özel veritabanı işlevinden bir LINQ to Entities sorgusunda çağrı gösterilmiştir. Örneğin Okul modelini kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) ve [Okul .edmx dosyasının oluşturma](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
   
  Aşağıdaki kod ekler `AvgStudentGrade` Okul örnek veritabanına işlevi.  
   
@@ -72,5 +72,5 @@ Bu konu, veritabanından LINQ Entities sorguları için tanımlanan özel işlev
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

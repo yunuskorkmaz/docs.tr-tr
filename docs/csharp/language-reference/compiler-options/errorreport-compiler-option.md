@@ -13,13 +13,13 @@ ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc8720662fb4c91953e2d399f08613f5055b1158
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 6d2fcb3f0bf4491de23b70c8beebf7ae495b2aa0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="errorreport-c-compiler-options"></a>/errorreport (C# Derleyici Seçenekleri)
+# <a name="-errorreport-c-compiler-options"></a>-errorreport (C# Derleyici Seçenekleri)
 Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kolay bir yol sağlar.  
   
 > [!NOTE]
@@ -28,26 +28,26 @@ Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kolay bir 
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/errorreport:{ none | prompt | queue | send }  
+-errorreport:{ none | prompt | queue | send }  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  **yok**  
  İç derleyici hataları hakkında raporlar değil toplanmayacak veya Microsoft'a gönderilir.  
   
- **istemi**  
+ **prompt**  
  Derleyici iç hatası aldığınızda, bir raporu göndermek isteyip istemediğinizi sorar. **İstemi** geliştirme ortamında bir uygulamayı derlediğinizde varsayılandır.  
   
- **sırası**  
+ **queue**  
  Hata raporu sıralar. Yönetici kimlik bilgileriyle oturum açtığınızda, günlüğe kaydedilmiş en son ne zaman bu yana hataları bildirebilirsiniz. Üç günde birden çok kez hata raporu göndermek için istenmez. **sıra** komut satırında bir uygulamayı derlediğinizde varsayılandır.  
   
  **Gönder**  
- Derleyici iç hata raporlarını otomatik olarak Microsoft'a gönderir. Bu seçeneği etkinleştirmek için önce Microsoft veri toplama ilkesini kabul etmeniz gerekir. Belirttiğiniz ilk kez **/errorreport:send** bir bilgisayarda, bir derleyici iletisi Microsoft Veri Toplama İlkesi içeren bir Web sitesine başvurur.  
+ Derleyici iç hata raporlarını otomatik olarak Microsoft'a gönderir. Bu seçeneği etkinleştirmek için önce Microsoft veri toplama ilkesini kabul etmeniz gerekir. Belirttiğiniz ilk kez **- errorreport: gönderme** bir bilgisayarda, bir derleyici iletisi Microsoft Veri Toplama İlkesi içeren bir Web sitesine başvurur.  
     
 ## <a name="remarks"></a>Açıklamalar  
  Kaynak kodu dosyasının derleyici işleyemediğinde iç derleyici hatası (çok) sonuçlanır. Bir çok oluştuğunda derleyici çıktı dosyası ya da kodunuzu düzeltmek için kullanabileceğiniz herhangi bir kullanışlı tanılama üretmez.  
   
- Bir çok alındığında önceki sürümlerde, sorunu bildirmek için Microsoft Ürün Destek Hizmetleri'ne başvurmanız önerilir. Kullanarak **/errorreport**, Visual C# ekibine çok bilgi sağlayabilir. Hata raporlarını gelecek derleyici sürümler artırmaya yardımcı olabilir.  
+ Bir çok alındığında önceki sürümlerde, sorunu bildirmek için Microsoft Ürün Destek Hizmetleri'ne başvurmanız önerilir. Kullanarak **- errorreport**, Visual C# ekibine çok bilgi sağlayabilir. Hata raporlarını gelecek derleyici sürümler artırmaya yardımcı olabilir.  
   
  Bir kullanıcının, raporları göndermek becerisini bilgisayar ve kullanıcı ilkesi izinlerine bağlıdır.  
   

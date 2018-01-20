@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi
 Özel denetimler, bazen bir koleksiyon özelliği olarak açığa çıkarır. Bu kılavuzda nasıl kullanılacağı ortaya <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> koleksiyonu tasarım zamanında nasıl serileştirilmiş denetlemek için sınıf. Uygulama <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> koleksiyon özelliği için değer sağlar özelliği seri hale getirilir.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Bu konuda tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: seri hale koleksiyonları standart türleri DesignerSerializationVisibilityAttribute ile](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu kılavuzu tamamlamak için gerekir:  
@@ -47,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Bir denetim ile seri hale getirilebilir bir koleksiyon oluşturmak için  
   
-1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun `SerializationDemoControlLib`. Daha fazla bilgi için bkz: [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun `SerializationDemoControlLib`. Daha fazla bilgi için bkz: [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Yeniden Adlandır `UserControl1` için `SerializationDemoControl`. Daha fazla bilgi için bkz: [nasıl yapılır: yeniden adlandırma tanımlayıcıları](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Yeniden Adlandır `UserControl1` için `SerializationDemoControl`. Daha fazla bilgi için bkz: [nasıl yapılır: yeniden adlandırma tanımlayıcıları](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  İçinde **özellikleri** penceresindeki değerini ayarlayın <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> özelliğine `10`.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
     |--------------|---------------|  
     |**Çok satırlı**|`true`|  
     |**Yerleştirme**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Kaydırma çubukları**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  İçinde **Kod düzenleyicisinde**, adında bir dize dizisi alan bildirin `stringsValue` içinde `SerializationDemoControl`.  

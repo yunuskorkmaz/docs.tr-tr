@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 129d699455467679c86c803e6d3124e6a7dfa1f9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir varolan genişletmek için daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Yaygın bir senaryo, bir eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] uygulama. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz: [denetim özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -254,8 +254,8 @@ Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim
     |GroupBox|Ad|Metin|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Özgün|  
-    |groupBox1|radioBackgroundLightGreen|Açık yeşil|  
-    |groupBox1|radioBackgroundLightSalmon|Açık Somon|  
+    |groupBox1|radioBackgroundLightGreen|LightGreen|  
+    |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
     |groupBox2|radioForegroundOriginal|Özgün|  
     |groupBox2|radioForegroundRed|kırmızı|  
     |groupBox2|radioForegroundYellow|Sarı|  
@@ -334,6 +334,6 @@ Bir Windows Forms uygulaması'nda barındırılan WPF bileşik denetim
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

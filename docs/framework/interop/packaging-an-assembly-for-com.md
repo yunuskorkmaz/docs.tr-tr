@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
 COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı:  
@@ -47,7 +47,7 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
   
      Sınıf arabirimini (COM birlikte çalışma oluşturulan arabirimi) yönetilen sınıflar sürüm kısıtlamalar geçerlidir.  
   
-     Sınıf arabirimi kullanma ile ilgili yönergeler için bkz: [sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Sınıf arabirimi kullanma ile ilgili yönergeler için bkz: [sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 -   Dağıtım yönergeleri  
   
@@ -69,7 +69,7 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
   
      Seçtiğiniz mekanizması bağımsız olarak, yalnızca genel türleri sağladığınız derlemede tanımlanan oluşturulan tür kitaplığı'nda bulunur.  
   
-     Tür kitaplığı ayrı bir dosya olarak paketini veya içinde Win32 kaynak dosyası olarak katıştırmak bir. NET tabanlı bir uygulama. Microsoft Visual Basic 6.0 Bu görev sizin için otomatik olarak gerçekleştirilebilir; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile ekleme. Yönergeler için bkz [nasıl yapılır: tür kitaplıklarını Win32 kaynak olarak ekleme. NET tabanlı uygulamalar](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     Tür kitaplığı ayrı bir dosya olarak paketini veya içinde Win32 kaynak dosyası olarak katıştırmak bir. NET tabanlı bir uygulama. Microsoft Visual Basic 6.0 Bu görev sizin için otomatik olarak gerçekleştirilebilir; Ancak, kullanırken [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], tür kitaplığı el ile ekleme. Yönergeler için bkz [nasıl yapılır: tür kitaplıklarını Win32 kaynak olarak ekleme. NET tabanlı uygulamalar](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Tür Kitaplığı Dışarı Aktarıcı  
@@ -94,8 +94,8 @@ COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen tü
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Sınıf arabirimi Tanıtımı](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Bütünleştirilmiş Kod Güvenliği Konuları](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Bütünleştirilmiş Kodları COM ile Kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Nasıl yapılır: tür kitaplıklarını uygulamalarında Win32 kaynaklar olarak ekleme](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Nasıl yapılır: tür kitaplıklarını uygulamalarında Win32 kaynaklar olarak ekleme](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

@@ -14,22 +14,22 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f31663d44774f84feab76f22f19400a955a3cf8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48c89eef074ab76547838f02a7b8dd0f45373d19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>WCF &lt;cancelRequestedQueries&gt;
 Üst etkinlik göre alt etkinlik iptal etme istekleri izlemek için kullanılan sorgu koleksiyonunu temsil eder. Sorgu isteği kaydı nesneleri iptal etmek için abone olmak izleme katılımcı için gereklidir.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel >  
-\<İzleme >  
-\<trackingProfile >  
+ \<system.serviceModel>  
+\<tracking>  
+\<trackingProfile>  
 \<İş akışı >  
-\<cancelRequestedQueries >  
+\<cancelRequestedQueries>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/22/2017
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cancelRequestedQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Üst etkinlik göre alt etkinlik iptal etme istekleri izlemek için kullanılan bir sorgu|  
+|[\<cancelRequestedQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Üst etkinlik göre alt etkinlik iptal etme istekleri izlemek için kullanılan bir sorgu|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `a HYPERLINK "http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` özelliği.|  
+|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `a HYPERLINK "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId` özelliği.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Tracking.CancelRequestedQuery>  

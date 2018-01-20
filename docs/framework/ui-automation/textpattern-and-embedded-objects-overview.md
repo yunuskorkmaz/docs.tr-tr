@@ -19,11 +19,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern ve Katıştırılmış Nesnelere Genel Bakış
 > [!NOTE]
@@ -83,7 +83,7 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlanac
   
 |Adlı yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"URL http://www.microsoft.com metin olarak katıştırılır" dizesini döndürür.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Returns the string "The URL http://www.microsoft.com is embedded in text".|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür bir <xref:System.Windows.Automation.AutomationElement> köprü denetimini temsil eden.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetChildren` yöntemi.|"Http://www.microsoft.com" gösteren aralığını döndürür.|  
@@ -167,4 +167,4 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlanac
  [UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern arama ve seçim örneği](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern arama ve seçim örneği](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

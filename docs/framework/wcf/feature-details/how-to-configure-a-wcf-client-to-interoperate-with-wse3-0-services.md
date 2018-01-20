@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 214e0de13ba362bf4f101a665e943a424c56363c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Nasıl yapılır: WCF İstemcisini WSE3.0 Hizmetleriyle Çalışacak Şekilde Yapılandırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]istemcileri Microsoft .NET (WSE) ne zaman Hizmetleri için Web Hizmetleri geliştirmeleri 3.0 hat düzeyinde uyumlu olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri WS adresleme belirtimi Ağustos 2004 sürümünü kullanacak şekilde yapılandırılır.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  WSE 3.0 Web Hizmetleri ile iletişim kurabilen bir bağlama temsil eden bir sınıf oluşturun.  
   
-     Aşağıdaki sınıf parçası olan [WSE ile birlikte](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41) örnek.  
+     Aşağıdaki sınıf parçası olan [WSE ile birlikte](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) örnek.  
   
     1.  Türeyen bir sınıf oluşturun <xref:System.ServiceModel.Channels.Binding> sınıfı.  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.Binding>  
- [WSE ile birlikte çalışma](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [WSE ile birlikte çalışma](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

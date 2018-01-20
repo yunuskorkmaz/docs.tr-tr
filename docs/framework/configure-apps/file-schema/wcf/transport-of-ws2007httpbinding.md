@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc60e72ae810578edb71b73b39e756a951b1f425
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; &lt;taşıma&gt;
 HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<bağlamaları >  
-\<ws2007HttpBinding >  
+\<ws2007HttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<taşıma >  
@@ -60,7 +60,7 @@ transport clientCredentialType =
 |Yok.|Güvenliği devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulaması kullanır.|  
 |Özet|Özet kimlik doğrulaması kullanır.|  
-|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
+|Ntlm|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulaması kullanır.|  
 |Sertifika|İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.|  
   
@@ -71,7 +71,7 @@ transport clientCredentialType =
 |Yok.|Güvenliği devre dışı bırakıldı.|  
 |Temel|Temel kimlik doğrulaması kullanır.|  
 |Özet|Özet kimlik doğrulaması kullanır.|  
-|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
+|Ntlm|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
 |Windows|Tümleşik Windows kimlik doğrulaması kullanır.|  
 |Sertifika|İstemci kimlik doğrulaması için X.509 sertifikaları kullanır.|  
   
@@ -92,5 +92,5 @@ transport clientCredentialType =
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

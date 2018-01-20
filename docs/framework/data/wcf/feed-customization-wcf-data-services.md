@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1ada694ed8bdb8aea4551a24f423f896ba1bd61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veriyi bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]veri akışları için hem Atom hem de JavaScript nesne gösterimi (JSON) biçimini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıkları ve ilişkileri HTTP iletisinin gövdesinde bulunan bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]bir varsayılan varlık özellik eşlemesi varlıklarda bulunan verileri Atom öğeler arasındaki tanımlar. Daha fazla bilgi için bkz: [OData: Atom biçimi](http://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  Daha fazla bilgi için bkz: [nasıl yapılır: özelleştirme akışları Entity Framework sağlayıcısı ile](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tarafından oluşturulan .edmx dosyasının [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] araçları, bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için veri modeli içeren XML dosyasını el ile değiştirmeniz gerekir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]tarafından oluşturulan .edmx dosyasının [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] araçları, bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Özel öznitelikler akışı  
  Aşağıdaki tabloda veri modeli tanımlayan kavramsal şema tanım dili için (CSDL) ekleyebileceğiniz akışları özelleştirme XML öznitelikleri gösterir. Bu öznitelikler özelliklerine eşdeğer <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> yansıma sağlayıcı ile kullanılır.  

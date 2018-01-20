@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (C# Derleyici Seçenekleri)
+# <a name="-platform-c-compiler-options"></a>-platform (C# Derleyici Seçenekleri)
 Ortak dil çalışma zamanı (CLR), hangi sürümünün derlemeyi çalıştırabileceğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
@@ -48,13 +48,13 @@ Ortak dil çalışma zamanı (CLR), hangi sürümünün derlemeyi çalıştırab
   
  Bir 64-bit Windows işletim sisteminde:  
   
--   Derlenmiş derlemeler **/platform:x 86** WOW64 altında çalışan 32 bit CLR yürütün.  
+-   Derlenmiş derlemeler **-platform: x 86** WOW64 altında çalışan 32 bit CLR yürütün.  
   
--   DLL ile derlenmiş **/platform:anycpu** aynı CLR içine yüklendiği bir işlem olarak yürütür.  
+-   DLL ile derlenmiş **-platform: anycpu** aynı CLR içine yüklendiği bir işlem olarak yürütür.  
   
--   İle derlenmiş yürütülebilir dosyalar **/platform:anycpu** 64-bit CLR yürütün.  
+-   İle derlenmiş yürütülebilir dosyalar **-platform: anycpu** 64-bit CLR yürütün.  
   
--   Derlenmiş olan yürütülebilir dosyalar **/platform:anycpu32bitpreferred** 32-bit CLR yürütün.  
+-   Derlenmiş olan yürütülebilir dosyalar **-platform: anycpu32bitpreferred** 32-bit CLR yürütün.  
   
  **Anycpu32bitpreferred** ayarı yalnızca yürütülebilir dosyası için geçerlidir (. EXE) dosyaları ve .NET Framework 4.5 gerektirir.  
   
@@ -68,15 +68,15 @@ Ortak dil çalışma zamanı (CLR), hangi sürümünün derlemeyi çalıştırab
   
 3.  Değiştirme **Platform hedefi** özelliği ve .NET Framework 4.5 hedefleyen projeler seçin veya temizleyin **tercih 32-bit** onay kutusu.  
   
- **/ Platform Not** Visual C# Express geliştirme ortamında kullanılamaz.  
+ **Not - platform** Visual C# Express geliştirme ortamında kullanılamaz.  
   
  Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir **/Platform** seçeneği uygulamayı 64-bit CLR tarafından bir 64-bit Windows işletim sisteminde çalıştırılması gerektiğini belirtin.  
+ Aşağıdaki örnekte nasıl kullanılacağını gösterir **-platform** seçeneği uygulamayı 64-bit CLR tarafından bir 64-bit Windows işletim sisteminde çalıştırılması gerektiğini belirtin.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

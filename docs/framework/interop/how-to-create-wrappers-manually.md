@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c6826a9b214e7507c63752a8a990116b88dda09d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>Nasıl yapılır: Sarmalayıcıları Elle Oluşturma
 Yönetilen kaynak kodunda el ile COM türlerinizi karar verirseniz, başlatmak için en iyi varolan arabirimi tanım dili (IDL) dosyası ya da tür kitaplığı ile yerdir. IDL dosya yok veya bir tür kitaplığı dosya oluşturulamıyor, yönetilen bildirimleri oluşturarak COM türlerini benzetimini yapabilirsiniz ve sonuçta elde edilen derleme için bir tür kitaplığı dışarı aktarma.  
@@ -36,11 +36,11 @@ Yönetilen kaynak kodunda el ile COM türlerinizi karar verirseniz, başlatmak i
   
 1.  Bir IDL dosya veya türü kitaplık dosyası olmadığı varsayılarak, hangi sınıflar ve arabirimler özel RCW dahil etmek istediğiniz karar verin. Doğrudan veya dolaylı olarak kullanmak için uygulamanızda düşünmüyorsanız türlerini hariç tutabilirsiniz.  
   
-2.  CLS uyumlu bir dilde kaynak dosyası oluşturma ve türleri bildirin. Bkz: [derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) alma dönüştürme işlemini eksiksiz bir açıklaması. Özel RCW oluşturduğunuzda, etkili bir şekilde el ile tarafından sağlanan tür dönüştürme etkinliği gerçekleştirdiğiniz [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Sonraki bölümdeki örnek, bir IDL veya tür kitaplığı dosyasını ve bunların karşılık gelen türlerine C# kodunda türlerini gösterir.  
+2.  CLS uyumlu bir dilde kaynak dosyası oluşturma ve türleri bildirin. Bkz: [derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) alma dönüştürme işlemini eksiksiz bir açıklaması. Özel RCW oluşturduğunuzda, etkili bir şekilde el ile tarafından sağlanan tür dönüştürme etkinliği gerçekleştirdiğiniz [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Sonraki bölümdeki örnek, bir IDL veya tür kitaplığı dosyasını ve bunların karşılık gelen türlerine C# kodunda türlerini gösterir.  
   
 3.  Bildirimleri tamamlandığı zaman, herhangi bir yönetilen kaynak kodu derleme gibi dosyasını derleyin.  
   
-4.  Türleriyle Tlbimp.exe ile içeri gibi bazı kodunuzu doğrudan ekleyebileceğiniz ek bilgi gerektirir. Ayrıntılar için bkz [nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).  
+4.  Türleriyle Tlbimp.exe ile içeri gibi bazı kodunuzu doğrudan ekleyebileceğiniz ek bilgi gerektirir. Ayrıntılar için bkz [nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği gösterilmektedir `ISATest` arabirimi ve `SATest` IDL sınıfında ve karşılık gelen türlerine C# kaynak kodu.  
@@ -108,9 +108,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çalışma zamanı aranabilir sarmalayıcıları özelleştirme](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [COM veri türleri](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
- [Nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Çalışma zamanı aranabilir sarmalayıcıları özelleştirme](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [COM veri türleri](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [Nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6c87e805bd710b49ce805af8223cddb5c7036c50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-dataset-events"></a>Veri kümesi olayları işleme
 <xref:System.Data.DataSet> Nesnesi üç olayları sağlar: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, ve <xref:System.Data.DataSet.MergeFailed>.  
@@ -62,7 +62,7 @@ private static void DataSetMergeFailed(
  `DataSet`türetilmiş <xref:System.ComponentModel.MarshalByValueComponent> her ikisi de gösteren sınıf <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> yöntemi ve <xref:System.ComponentModel.MarshalByValueComponent.Disposed> olay. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Olay bileşen silinen olayı dinlemek için bir olay işleyicisi ekler. Kullanabileceğiniz <xref:System.ComponentModel.MarshalByValueComponent.Disposed> olayı bir `DataSet` çalıştırmak istiyorsanız, ne zaman kod <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> yöntemi çağrılır. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>tarafından kullanılan kaynakları serbest <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
->  `DataSet` Ve `DataTable` nesneleri devralır <xref:System.ComponentModel.MarshalByValueComponent> ve Destek <xref:System.Runtime.Serialization.ISerializable> uzaktan iletişim için arabirim. Düğümlerde ADO.NET nesneler yalnızca bunlar. Daha fazla bilgi için bkz: [uzak nesneleri](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58).  
+>  `DataSet` Ve `DataTable` nesneleri devralır <xref:System.ComponentModel.MarshalByValueComponent> ve Destek <xref:System.Runtime.Serialization.ISerializable> uzaktan iletişim için arabirim. Düğümlerde ADO.NET nesneler yalnızca bunlar. Daha fazla bilgi için bkz: [uzak nesneleri](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
   
  İle çalışırken kullanılabilir diğer olaylar hakkında bilgi için bir `DataSet`, bkz: [DataTable olayları işleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) ve [olaylarını işleme](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   

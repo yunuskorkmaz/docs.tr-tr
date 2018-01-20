@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-types-and-functions"></a>Veri türleri ve işlevleri
 Aşağıdaki tabloda listelenen konular, üyeler, yapılar ve atamalar ortak dil çalışma zamanı (CLR) SQL desteği için LINQ açıklar. Desteklenen üyeleri ve yapıları, LINQ to SQL sorguları kullanmak kullanılabilir.  
@@ -45,4 +45,4 @@ Aşağıdaki tabloda listelenen konular, üyeler, yapılar ve atamalar ortak dil
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Visual Studio'da .NET framework sınıf kitaplığı](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [Visual Studio'da .NET framework sınıf kitaplığı](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak koda derlenmiş şifrelenmemiş bir bağlantı dizeleri kullanılarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Bağlantı dizesi hiç değişirse, ayrıca, uygulamanızı yeniden derlenmesi gerekiyor. Bu nedenlerle, bir uygulama yapılandırma dosyasında bağlantı dizeleri depolamanızı öneririz.  
@@ -156,7 +156,7 @@ Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları 
  <xref:System.Configuration> Ad alanı yapılandırma ayarları ile çalışmak için sınıflar sağlar programlı olarak. <xref:System.Configuration.ConfigurationManager> Sınıfı makine, uygulama ve kullanıcı yapılandırma dosyalarına erişim sağlar. Bir ASP.NET uygulaması oluşturuyorsanız, kullanabileceğiniz <xref:System.Web.Configuration.WebConfigurationManager> da olanlar gibi ASP.NET uygulamaları özgü ayarları erişmesine olanak tanıyan bulundu ancak, aynı işlevselliği sağlayan sınıf  **\< System.Web >**.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> Ad alanı, şifreleme ve verilerin şifresini çözmek için ek seçenekler sağlayan sınıflar içerir. Kullanılabilir kullanarak olmayan Şifreleme Hizmetleri Yapılandırması korumalı gerekiyorsa bu sınıfların kullanın. Başkalarının tamamen yönetilen uygulamaları çalışırken bu sınıfların yönetilmeyen Microsoft CryptoAPI için sarmalayıcıları bazılarıdır. Daha fazla bilgi için bkz: [Şifreleme Hizmetleri](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  <xref:System.Security.Cryptography> Ad alanı, şifreleme ve verilerin şifresini çözmek için ek seçenekler sağlayan sınıflar içerir. Kullanılabilir kullanarak olmayan Şifreleme Hizmetleri Yapılandırması korumalı gerekiyorsa bu sınıfların kullanın. Başkalarının tamamen yönetilen uygulamaları çalışırken bu sınıfların yönetilmeyen Microsoft CryptoAPI için sarmalayıcıları bazılarıdır. Daha fazla bilgi için bkz: [Şifreleme Hizmetleri](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>App.config örneği  
  Bu örnek şifreleme geçiş yapmayı gösteren **connectionStrings** bölümüne bir **app.config** dosyası bir Windows uygulaması için. Bu örnekte, yordam bağımsız değişken, örneğin, "MyApplication.exe" olarak uygulama adını alır. **App.config** dosya sonra şifrelenir ve yürütülebilir dosya adı "MyApplication.exe.config" altında içeren klasöre kopyalanır.  
@@ -178,7 +178,7 @@ Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları 
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET uygulamalarının güvenliğini sağlama daha fazla bilgi için bkz: [NIB: ASP.NET güvenlik](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik uygulamaları bir bakışta](http://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici Merkezi'ndeki.  
+ ASP.NET uygulamalarının güvenliğini sağlama daha fazla bilgi için bkz: [NIB: ASP.NET güvenlik](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) ve [ASP.NET 2.0 güvenlik uygulamaları bir bakışta](http://go.microsoft.com/fwlink/?LinkId=59997) ASP.NET Geliştirici Merkezi'ndeki.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  

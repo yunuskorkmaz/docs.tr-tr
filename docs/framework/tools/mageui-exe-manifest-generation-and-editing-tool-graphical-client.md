@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. MageUI.exe hedefle oluşturulan yeni bildirimleri [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Ekleme ya da bir bildirim veya varolan bildirimlerini yeniden imzalama derlemeleri kaldırma MageUI.exe bildirim hedefe güncelleştirmez [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Daha fazla bilgi için bkz: [Mage.exe (bildirim üretme ve düzenleme aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -111,7 +111,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Yayımcı**|Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
+|**Publisher**|Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Tam ürün adı. Seçtiyseniz **yerel olarak yüklemek** için **uygulama türü** öğede **dağıtım seçenekleri** dağıtım bildirimi, bu ad sekmesinde görünür ne olur **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|Müşteriler elde edebilirsiniz URL yardımcı olmak ve uygulama için destek.|  
   
@@ -138,7 +138,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Tür izni Ayarla**|Bu uygulamanın istemci üzerinde çalıştırmak için gerekli minimum izin kümesi. Bu izin kümeleri açıklaması ve yapın veya talep değil, hangi izinlerin [NIB: adlı izni ayarlar](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Tür izni Ayarla**|Bu uygulamanın istemci üzerinde çalıştırmak için gerekli minimum izin kümesi. Bu izin kümeleri açıklaması ve yapın veya talep değil, hangi izinlerin [NIB: adlı izni ayarlar](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Ayrıntıları**|İzni temsil etmek için uygulama bildirimi için oluşturulan XML ayarlayın. Uygulama bildiriminin XML biçimi iyi anlamış olmanız sürece, bu XML el ile düzenleme yapmamanız gerekir. Daha fazla bilgi için bkz: [ClickOnce Uygulama bildirimi](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Dağıtım bildirim sekmesi  
@@ -167,7 +167,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Yayımcı**|Gerekli. Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
+|**Publisher**|Gerekli. Kişinin veya kuruluşun uygulamadan sorumlu adı. Bu değer Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Gerekli. Tam ürün adı. Seçtiyseniz **yerel olarak yüklemek** için **uygulama türü** öğede **dağıtım seçenekleri** sekmesinde, bu adı ne görünür olacaktır **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|İsteğe bağlı. Müşteriler elde edebilirsiniz URL yardımcı olmak ve uygulama için destek.|  
   

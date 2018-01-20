@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 190e64945658f81400c2cc68beff82ccc38144f5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 100def5fdf531527705fb0c1aebdc20674e0ce60
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske güvenlik açıklarından korunması gereken birçok bölümleri oluşur. Güvenli kullanıcı arabirimleri oluşturma, birçok sorunları saldırganlar veri veya sistem kaynakları erişebilmesi engelleyerek engelleyebilir.  
@@ -50,7 +50,7 @@ Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske 
  [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Bir Windows Forms uygulaması yönetilmeyen uygulamalarda etkileşimde açıklar.  
   
- [ClickOnce dağıtımı Windows Forms uygulamaları](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [ClickOnce dağıtımı Windows Forms uygulamaları](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
  Nasıl kullanılacağını açıklar `ClickOnce` dağıtım bir Windows Forms uygulamasında ve güvenlik uygulamalarını açıklar.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET ve XML Web Hizmetleri  
@@ -62,23 +62,23 @@ Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[NIB: ASP.NET güvenliği](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET uygulamalarının güvenliğini sağlama anlatılmaktadır.|  
-|[ASP.NET kullanılarak oluşturulan XML Web Hizmetleri güvenli hale getirme](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET Web hizmeti için güvenlik uygulamak nasıl ele alınmaktadır.|  
+|[NIB: ASP.NET güvenliği](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|ASP.NET uygulamalarının güvenliğini sağlama anlatılmaktadır.|  
+|[ASP.NET kullanılarak oluşturulan XML Web Hizmetleri güvenli hale getirme](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|ASP.NET Web hizmeti için güvenlik uygulamak nasıl ele alınmaktadır.|  
 |[Komut dosyası açıkları genel bakış](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Bir Web sayfasına amaçlı karakter eklemesini çalışır bir komut dosyası yararlanma saldırılara karşı koruma sağlamak nasıl ele alınmaktadır.|  
-|[ASP.NET Web uygulamaları için NIB: temel güvenlik uygulamaları](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|Genel güvenlik bilgileri ve bağlantıları daha fazla bilgi için|  
+|[ASP.NET Web uygulamaları için NIB: temel güvenlik uygulamaları](http://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Genel güvenlik bilgileri ve bağlantıları daha fazla bilgi için|  
   
 ## <a name="remoting"></a>Uzaktan iletişim  
  .NET uzaktan iletişim uygulama bileşenlerinin tümünü tek bir bilgisayar üzerinde veya tüm dünyadaki dağılmış yaygın olarak dağıtılan uygulamaları kolayca oluşturmanıza olanak sağlar. Diğer işlemlerinde aynı bilgisayarda veya kendi ağ üzerinden erişilebilen herhangi bir bilgisayarda nesneleri kullanan istemci uygulamaları oluşturabilirsiniz. .NET uzaktan iletişim, diğer uygulama etki alanları aynı işlemde ile iletişim kurmak için de kullanabilirsiniz.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Uzak uygulama yapılandırması](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|Sık karşılaşılan sorunları önlemek için uzaktan iletişim uygulamalarının nasıl yapılandırılacağını açıklar.|  
-|[Uzaktan iletişim güvenliği](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|Uzaktan iletişim için ilgili ek güvenlik konuları yanı sıra kimlik doğrulama ve şifreleme açıklar.|  
+|[Uzak uygulama yapılandırması](http://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|Sık karşılaşılan sorunları önlemek için uzaktan iletişim uygulamalarının nasıl yapılandırılacağını açıklar.|  
+|[Uzaktan iletişim güvenliği](http://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Uzaktan iletişim için ilgili ek güvenlik konuları yanı sıra kimlik doğrulama ve şifreleme açıklar.|  
 |[Güvenlik ve uzaktan yönetim konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı aşma ile ilgili güvenlik sorunları açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)  
  [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

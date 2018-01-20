@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a859676adf48fda05040633fb8909d161e9ce8e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 040db3b350ebacfc3aff76d90e87e65206701069
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltaddgt-of-ltservicesgt"></a>&lt;hizmetlerin&gt; &lt;eklenmesi&gt;
 Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı barındırmak için [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Hizmetleri. Bu öğe türünde <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
-\<davranışı >  
-\<Hizmetleri >  
-\<ekleme >  
+\<serviceBehaviors>  
+\<behavior>  
+\<services>  
+\<add>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -81,4 +81,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+ [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)

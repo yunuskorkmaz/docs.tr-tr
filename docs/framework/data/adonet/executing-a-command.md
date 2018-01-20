@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 035d619574707ec7944c80b95d5b7a6ea0de1899
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c4879c49a410dfb40999f3163d8b23158cb71f0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="executing-a-command"></a>Bir komutu yürütme
 .NET Framework ile dahil her .NET Framework veri sağlayıcısı devraldığı kendi komut nesnesi sahip <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesne ODBC için .NET Framework veri sağlayıcısı içeren bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesnesi. Komutlar yürütülürken bu nesneleri çıkarır yöntemlerin her biri komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi istenen.  
@@ -53,5 +53,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataReader ile çalışma](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [DataReader ile çalışma](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

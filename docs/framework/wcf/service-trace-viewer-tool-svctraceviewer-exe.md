@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet izleme Görüntüleyicisi aracı tarafından oluşturulan tanılama izlemeleri çözümlemenize yardımcı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece, tanılama, onarım doğrulayın ve izleme iletilerini günlüğüne filtrelemek için bir yöntem sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sorunları.  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/22/2017
 |![Etkinlik İzlemeyi Durdur](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik İzlemeyi Durdur: Etkinliğin sonunu işaretleyen izleme. biçimindeki telefon numarasıdır. Bu etkinliğin adını içerir. Uygulama Tasarımcısı ya da geliştiricisi olarak, bir etkinliğin etkinlik kimliği izleme kaynağı başına başına İzlemeyi Durdur tanımlamanız gerekir. Hiçbir izlemeleri belirtilen izleme kaynağına izleme zaman ayrıntı yeterince küçük değilse dışında bu izleme kaynağı tarafından gösterilen Dur etkinlikten sonra görünür. Bu durum oluştuğunda bir Dur birlikte aynı anda ile iki izlemeleri görüntülendiğinde araya. Etkinlik Kimliği izleme bağıntı izleme kaynakları arasında yayılır aynı etkinlik kimliği (izleme kaynak her bir) için birden çok durdurulur görebilirsiniz. ActivityTracing izleme kaynağı etkinse, İzlemeyi Durdur yayınlanır.|  
 |![Etkinlik askıya alma izleme](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya alma izleme: bir etkinlik duraklatıldı zaman işaretleyen izleme. Etkinlik yeniden devam edene dek hiçbir izlemeleri askıya alınmış bir etkinlik gösterilen. Askıya alınmış bir etkinlik hiçbir işlem izleme kaynağı kapsamı içinde bu etkinlikte gerçekleşmekte olduğunu gösterir. Askıya alma Sürdür izlemeleri, profil için faydalıdır. ActivityTracing izleme kaynağı etkinse, askıya alma izleme yayınlanır.|  
 |![Etkinlik izleme sürdürmek](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Etkinlik izleme Sürdür: askıya alınmış sonra bir etkinlik sürdürüldü zaman işaretleyen izleme. Bu etkinlikte izlemeleri yeniden yayılan. Askıya alma Sürdür izlemeleri, profil için faydalıdır. İzleme kaynağı ActivityTracing etkinleştirilirse Sürdür izleme yayınlanır.|  
-|![Aktarım](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan bir izleme. Aktarımı kaynaklandığı etkinlik aktarımı gider etkinliğine paralel iş gerçekleştirmeye devam edebilir. İzleme kaynağı ActivityTracing etkinleştirilirse aktarım izleme yayınlanır.|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarılırken yayılan bir izleme. Aktarımı kaynaklandığı etkinlik aktarımı gider etkinliğine paralel iş gerçekleştirmeye devam edebilir. İzleme kaynağı ActivityTracing etkinleştirilirse aktarım izleme yayınlanır.|  
 |![Aktarımı](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Aktarımı: başka bir etkinliğin geçerli etkinliği bir aktarımı tanımlayan bir izleme.|  
 |![Transfer](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Aktarım için: bir aktarımını mantıksal denetim akışı geçerli etkinliğinden başka bir etkinliğin tanımlayan bir izleme.|  
   
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/22/2017
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Etkinlik](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Etkinliği: Geçerli etkinlik genel bir etkinlik olduğunu gösterir.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Etkinliği: Geçerli etkinlik genel bir etkinlik olduğunu gösterir.|  
 |![Kök etkinlik](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Kök etkinlik: bir işlem kök etkinliğini gösterir.|  
   
 ### <a name="wcf-activities"></a>WCF etkinlikleri  
@@ -463,4 +463,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Etkinlik izleme ve uçtan uca izleme bağıntı yayma](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Etkinlik izleme ve uçtan uca izleme bağıntı yayma](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

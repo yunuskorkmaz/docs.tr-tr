@@ -26,11 +26,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8903f7da1c945ff927ad6dfe0a92650849a36439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9c12c4811e8b23e86fca3960acdb4da06e38fbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyada Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmesi dosyanın derleme olup, bu bilgileri derlemenin öznitelikleri yanı sıra diğer modüller ve derleme başvurularını ekleyebilirsiniz. Bu bilgiler bir dosyayı bir derleme veya derleme parçası olmasına ve dosya derlemeleri veya diğer modüller başvurular olup saptamanıza yardımcı olabilir.  
@@ -98,6 +98,6 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
  Derleme bildirimi derleme içeriğini bağlı olarak farklı yönergeleri sayısı içerebilir. Derleme bildirimi yönergeleri kapsamlı bir listesi için "özellikle Bölüm II: meta veri tanım ve semantik" ve "Bölüm III: CIL yönerge kümesi" ECMA belgelerine bakın. Belge çevrimiçi kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](http://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)  
+ [Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)  
  [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
  [Ildasm.exe (IL Ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

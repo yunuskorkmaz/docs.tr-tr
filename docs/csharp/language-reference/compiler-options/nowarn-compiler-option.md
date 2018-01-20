@@ -13,19 +13,19 @@ ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2784e63b7c1e67b32fc448b4b112ad0252b1abd9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn (C# Derleyici Seçenekleri)
-**/Nowarn** seçeneği bir veya daha fazla uyarı görüntülenmesini derleyici bastırmak olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  
+# <a name="-nowarn-c-compiler-options"></a>-nowarn (C# Derleyici Seçenekleri)
+**- Nowarn** seçeneği bir veya daha fazla uyarı görüntülenmesini derleyici bastırmak olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/nowarn:number1[,number2,...]  
+-nowarn:number1[,number2,...]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,11 +33,11 @@ ms.lasthandoff: 11/21/2017
  Derleyicinin gizlemek için istediğiniz uyarı numaraları.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca uyarı tanımlayıcı sayısal parçası belirtmeniz gerekir. Örneğin, CS0028 gizlemek istiyorsanız, belirttiğiniz `/nowarn:28`.  
+ Yalnızca uyarı tanımlayıcı sayısal parçası belirtmeniz gerekir. Örneğin, CS0028 gizlemek istiyorsanız, belirttiğiniz `-nowarn:28`.  
   
- Derleyici öğesine iletilen uyarı numaralarını sessizce yoksayacak `/nowarn` , önceki sürümlerde geçerli ancak derleyiciden kaldırılmış. Örneğin, CS0679 Visual Studio .NET 2002 derleyicide geçerli ancak sonradan kaldırıldı.  
+ Derleyici öğesine iletilen uyarı numaralarını sessizce yoksayacak `-nowarn` , önceki sürümlerde geçerli ancak derleyiciden kaldırılmış. Örneğin, CS0679 Visual Studio .NET 2002 derleyicide geçerli ancak sonradan kaldırıldı.  
   
- Aşağıdaki uyarılarla tarafından gizlenen olamaz `/nowarn` seçeneği:  
+ Aşağıdaki uyarılarla tarafından gizlenen olamaz `-nowarn` seçeneği:  
   
 -   Derleyici Uyarısı (düzey 1) CS2002  
   
@@ -57,5 +57,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [C# derleyici hataları](../../../csharp/language-reference/compiler-messages/index.md)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+ [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)

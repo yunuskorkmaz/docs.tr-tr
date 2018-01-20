@@ -1,5 +1,5 @@
 ---
-title: "&lt;Özel&gt;"
+title: '&lt;custom&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bcab1e8361448abfe14db8ac38a924c656b9065
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ba9c8f6fa5bf574bdcaa9cb46b6c666e7117a9a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltcustomgt"></a>&lt;Özel&gt;
+# <a name="ltcustomgt"></a>&lt;custom&gt;
 Özel eş Çözümleyici hizmeti ayarlarını belirtir.  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<bağlamaları >  
-\<netPeerBinding >  
+\<netPeerBinding>  
 \<bağlama >  
 \<Çözümleyici >  
 \<Özel >  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 |[\<Çözümleyici >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak birkaç düğüm temsil eden bir dizi Eş düğüm adresleri kimliği kafes.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe barındırma hizmeti ve herhangi bir özel bağlama ayarı eş uç nokta adresi de dahil olmak üzere bir özel eş çözümleyici hizmetinin temel ayarlarını tanımlar. Özel Çözücü oluşturma hakkında daha fazla bilgi için bkz: [PeerChannel'a uygulamaya özel Çözücü ekleme](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419).  
+ Bu öğe barındırma hizmeti ve herhangi bir özel bağlama ayarı eş uç nokta adresi de dahil olmak üzere bir özel eş çözümleyici hizmetinin temel ayarlarını tanımlar. Özel Çözücü oluşturma hakkında daha fazla bilgi için bkz: [PeerChannel'a uygulamaya özel Çözücü ekleme](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -72,4 +72,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Özel Çözücü PeerChannel'a uygulamaya ekleme](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Özel Çözücü PeerChannel'a uygulamaya ekleme](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

@@ -11,11 +11,11 @@ ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81a085ff016fb9ee8f8a13167728c37ca799920a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86c9371a6a82c4034b7bdf279e7b205cfcc84bea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 Derleme zamanında bilinen ve program ömrü için değiştirmeyin değişmez değerler sabittir. Sabitler ile bildirildiğinde [const](../../../csharp/language-reference/keywords/const.md) değiştiricisi. Yalnızca C# yerleşik türleri (hariç <xref:System.Object?displayProperty=nameWithType>) olarak bildirilmelidir `const`. Yerleşik türler listesi için bkz: [yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md). Sınıflar, yapılar ve diziler dahil olmak üzere, kullanıcı tanımlı türler olamaz `const`. Kullanım [readonly](../../../csharp/language-reference/keywords/readonly.md) sınıf, yapı veya çalışma zamanında (örneğin, bir kurucu) ve bundan sonra bir kez başlatılan dizi oluşturmak için değiştiricisi değiştirilemez.  
@@ -51,9 +51,9 @@ Derleme zamanında bilinen ve program ömrü için değiştirmeyin değişmez de
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [Türler](../../../csharp/programming-guide/types/index.md)  
- [salt okunur](../../../csharp/language-reference/keywords/readonly.md)  
- [C# girişi bölüm bir: girişi türleri](http://go.microsoft.com/fwlink/?LinkId=112379)
+ [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+ [C# girişi bölüm bir: girişi türleri](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

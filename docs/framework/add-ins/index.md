@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Eklentiler ve Genişletilebilirlik
 <a name="top"></a>Eklentiler genişletilmiş özellikler veya bir ana bilgisayar uygulaması için hizmetleri sağlar. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Geliştiriciler eklentiler geliştirmek ve bunları kendi ana bilgisayar uygulamasında etkinleştirmek için kullanabileceğiniz bir programlama modelidir. Model bu konak ve eklenti arasındaki iletişim ardışık düzeni oluşturarak elde eder. Model türler kullanılarak uygulanır <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, ve <xref:System.AddIn.Contract> ad alanları.  
@@ -81,7 +81,7 @@ Eklenti ardışık düzeni
 ### <a name="discovery-and-activation"></a>Bulma ve etkinleştirme  
  Bir eklenti, bir bilgi deposundan bulunan eklentileri temsil eden bir koleksiyon uygulamasından bir belirteç kullanarak etkinleştirebilirsiniz. Eklentiler Eklenti ana bilgisayarın görünümü tanımlayan tür için arama yaparak bulunamadı. Bir özel eklenti tarafından eklenti tanımlayan tür bulabilirsiniz. Bilgi deposunu iki önbellek dosyaları içerir: ardışık düzen mağazaya ve eklenti.  
   
- Güncelleştirme ve bilgi deposunu yeniden oluşturma hakkında daha fazla bilgi için bkz: [eklenti bulma](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421). Eklentiler etkinleştirme hakkında daha fazla bilgi için bkz: [eklentisini etkinleştirme](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) ve [nasıl yapılır: farklı yalıtım ve güvenlik ile eklentileri etkinleştirmek](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Güncelleştirme ve bilgi deposunu yeniden oluşturma hakkında daha fazla bilgi için bkz: [eklenti bulma](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Eklentiler etkinleştirme hakkında daha fazla bilgi için bkz: [eklentisini etkinleştirme](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) ve [nasıl yapılır: farklı yalıtım ve güvenlik ile eklentileri etkinleştirmek](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Yalıtım düzeylerinde ve dış işlemleri  
  Eklenti modeli birkaç eklentileri veya ek bileşeni ve ana bilgisayar arasında yalıtım düzeyini destekler. Az yalıtılmış başlayarak, bu düzeylerin aşağıdaki gibidir:  
@@ -96,10 +96,10 @@ Eklenti ardışık düzeni
   
 -   Her eklenti özel olarak bir dış işlem kendi uygulama etki alanına yüklenir. Bu en yalıtılmış bir senaryodur.  
   
- Dış işlemlere kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: farklı yalıtım ve güvenlik ile eklentileri etkinleştirme](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Dış işlemlere kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: farklı yalıtım ve güvenlik ile eklentileri etkinleştirme](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Ömür Yönetimi  
- Uygulama etki alanı ve işlem sınırları eklenti modeli yayılan olduğundan atık toplama kendisi tarafından serbest bırakır ve nesneleri geri kazanmak için yeterli değil. Eklenti modeli belirteçleri ve başvuru sayımı kullanır bir yaşam süresi management mekanizma sağlar ve genellikle ek programlama gerektirmez. Daha fazla bilgi için bkz: [yaşam süresi Management](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Uygulama etki alanı ve işlem sınırları eklenti modeli yayılan olduğundan atık toplama kendisi tarafından serbest bırakır ve nesneleri geri kazanmak için yeterli değil. Eklenti modeli belirteçleri ve başvuru sayımı kullanır bir yaşam süresi management mekanizma sağlar ve genellikle ek programlama gerektirmez. Daha fazla bilgi için bkz: [yaşam süresi Management](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Başa dön](#top)  
   
@@ -115,7 +115,7 @@ Eklenti ardışık düzeni
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)|Eklenti konak uygulamaya bölümlerinin iletişim kanalı açıklar. Kod örnekleri ardışık düzenini oluşturmak ve ardışık düzeninde kesimleri dağıtmak anlatan izlenecek konularda sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|Güvenlik, güvenilirlik ve sürüm oluşturma için bir yalıtım sınırı sağlayan uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar.|  
+|[Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Güvenlik, güvenilirlik ve sürüm oluşturma için bir yalıtım sınırı sağlayan uygulama etki alanları ve derlemeler arasındaki ilişkiyi açıklar.|  
   
  [Başa dön](#top)  
   

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8bfeaa3eb96e69fdf3b10d132ea1e0266d56c78
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2f429a354c4042f0e85b9ef078bbc57ebe510d0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities sorgu ifadeleri
 Tek değer, nesne, yöntemi veya ad alanı için değerlendirilen kodunun bir parçası olan bir ifadedir. İfade, bir hazır değer, bir yöntem çağrısı, bir işleç ve işlenenleri veya basit bir ad içerebilir. Basit adları bir değişken, türü üyesinin, yöntem parametresi, ad alanı veya türü adı olabilir. İfadeler sırayla diğer ifadeleri parametreleri veya yöntem çağrılarını sırayla diğer yöntem çağrıları, parametreleridir olarak kullanma işleçleri kullanabilirsiniz. Bu nedenle, ifadeler basitten için çok karmaşık aralığında değişebilir.  
@@ -45,7 +45,7 @@ Tek değer, nesne, yöntemi veya ad alanı için değerlendirilen kodunun bir pa
   
  [Başlatma İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [Gezinti özellikleri](http://msdn.microsoft.com/en-us/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [Gezinti özellikleri](http://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

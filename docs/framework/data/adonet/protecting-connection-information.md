@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d4161d1fd0f78dcd59c650b08bb336a48d381c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="protecting-connection-information"></a>Bağlantı bilgileri koruma
 Veri kaynağınıza erişimi korumaya yönelik en önemli hedeflerini uygulama hale getirirken biridir. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı gösterir. Bağlantı bilgilerini düz metin olarak depolanması veya tüm sisteminizin belleği riskleri kalıcı yapma. Kaynak kodunuz katıştırılmış bağlantı dizeleri kullanılarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş bir bütünleştirilmiş kodunda Microsoft Ara dili (MSIL) görüntülemek için.  
@@ -53,5 +53,5 @@ Veri kaynağınıza erişimi korumaya yönelik en önemli hedeflerini uygulama h
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Yapılandırma bilgilerini korumalı Yapılandırması'nı kullanarak şifreleme](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

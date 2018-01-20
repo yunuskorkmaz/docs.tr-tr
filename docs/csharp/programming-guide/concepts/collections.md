@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek istediğiniz. Grup nesnelerine iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturma.  
@@ -581,14 +581,14 @@ private static IEnumerable<int> EvenSequence(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [Programlama Kavramları (C#)](../../../csharp/programming-guide/concepts/index.md)  
- [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [LINQ to nesneler (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Koleksiyonlar ve veri yapıları](../../../standard/collections/index.md)  
- [Oluşturma ve koleksiyonları düzenleme](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Koleksiyon sınıfı seçme](../../../standard/collections/selecting-a-collection-class.md)  
- [Karşılaştırmalar ve sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Genel koleksiyonları ne zaman kullanılacağı](../../../standard/collections/when-to-use-generic-collections.md)  
- [Nasıl yapılır: foreach ile koleksiyon sınıfına erişme](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
+ [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)  
+ [Oluşturma ve koleksiyonları düzenleme](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)  
+ [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)  
+ [Nasıl yapılır: foreach ile Koleksiyon Sınıfına Erişme](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)

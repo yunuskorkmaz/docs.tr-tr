@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak bir uygulama oluşturduğunuzda [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], sürüm 3.0, uygulamanızın, son kullanıcılarınızın gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi gönderme olabilir. Bu teknoloji, uygulamanızda Microsoft teknolojisi katıştırılmış içerirse, gizlilik etkileyebilecek kendi davranışa sahip olabilir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Siz veya son kullanıcı seçmediğiniz sürece, bize göndermek herhangi bir bilgi uygulamanızdan Microsoft göndermez.  
@@ -93,7 +93,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
 ## <a name="com-integration"></a>COM+ Tümleştirme  
  Bu özellik ile uyumlu olan hizmetleri oluşturmak için varolan COM ve COM + işlevi sarmalar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Bu özellik belirli üstbilgileri kullanmaz ve son kullanıcının makinedeki verileri korumaz.  
   
-## <a name="com-service-moniker"></a>COM hizmet bilinen adı  
+## <a name="com-service-moniker"></a>COM Service Moniker  
  Bu, standart bir yönetilmeyen bir sarmalayıcı sağlar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci. Bu özellik belirli üstbilgileri kablo yok veya makinedeki verileri devam etmez.  
   
 ## <a name="peer-channel"></a>Eş Kanal  
@@ -138,13 +138,13 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Kaldırılan anahtarları:  
   
- \-İçin xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst "http://schemas.xmlsoap.org/ws/2005/02/trust" =  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
- WST:BinarySecret  
+ wst:BinarySecret  
   
- WST:Entropy  
+ wst:Entropy  
   
- \-İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" =  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,37 +152,37 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Kaldırılır potansiyel olarak kişisel bilgi:  
   
- \-İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" =  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
- wsse:username  
+ wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Xmlns:saml için "urn: OASIS: adları: tc: (aşağıda) öğeleri kalın yazı tipiyle kaldırılır SAML:1.0:assertion" =:  
+ \- For xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" the items in bold (below) are removed:  
   
  \<Onaylama işlemi  
   
- MajorVersion = "1"  
+ MajorVersion="1"  
   
- MinorVersion = "1"  
+ MinorVersion="1"  
   
- Onaylama kimliği = "[ID]"  
+ AssertionId="[ID]"  
   
  Veren = "[dize]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<NotBefore koşulları "[dateTime]" NotOnOrAfter = "[dateTime]" = >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
  \<Hedef kitle > [URI]\</Audience > +  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--soyut taban türü  
   
@@ -206,7 +206,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  \<Deyimi / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Konu >  
   
@@ -222,19 +222,19 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
  \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [herhangi bir]\</SubjectConfirmationData >?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
  \</ Konu >  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -242,7 +242,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  AuthenticationMethod = "[URI]"  
   
- AuthenticationInstant = "[dateTime]"  
+ AuthenticationInstant="[dateTime]"  
   
  >  
   
@@ -258,11 +258,11 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  < AuthorityBinding  
   
- AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
- Konumu = "[URI]"  
+ Location="[uri]"  
   
- Bağlama = "[URI]"  
+ Binding="[uri]"  
   
  />*  
   
@@ -276,7 +276,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  AttributeName = "[dize]"  
   
- AttributeNamespace = "[URI]"  
+ AttributeNamespace="[uri]"  
   
  >  
   
@@ -288,9 +288,9 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  \<AuthorizationDecisionStatement  
   
- Kaynak = "[URI]"  
+ Resource="[uri]"  
   
- Karar = "[izin &#124; Reddet &#124; belirsiz]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
@@ -315,57 +315,57 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
   
  Aşağıdaki ad alanları için:  
   
- xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst "http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, hiçbir eylem yoksa) =  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (for example, if no action available)  
   
  Bilgiler, anahtar değişimi içeren bu gövdesi öğelerini için kaldırılır:  
   
- WST:RequestSecurityToken  
+ wst:RequestSecurityToken  
   
- WST:RequestSecurityTokenResponse  
+ wst:RequestSecurityTokenResponse  
   
- WST:RequestSecurityTokenResponseCollection  
+ wst:RequestSecurityTokenResponseCollection  
   
  Bilgi de her aşağıdaki eylemlerden birini kaldırılır:  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/Issue  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/Issue  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/Cancel  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/Cancel  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/Validate  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/Validate  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/SCT  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/SCT  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/SCT/Amend  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/SCT/Amend  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RST/SCT/Cancel  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
   
- http://schemas.xmlsoap.org/ws/2005/02/Trust/RSTR/SCT/Cancel  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Hiçbir bilgi uygulamaya özgü üstbilgi ve gövde verileri kaldırılır.  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]uygulamaya özgü üstbilgileri (örneğin, sorgu dizeleri) veya gövde verileri (örneğin, kredi kartı numarası) kişisel bilgilerin izlemez.  
@@ -401,7 +401,7 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
  Bu aracı bir makinede ServiceModel yükler yönetmesine olanak tanır. Aracı çalıştırır ve bu süreçte yapılandırması hakkında bilgi görüntüleyebilir, durum iletilerini konsol penceresinde görüntüler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yükleme.  
   
-#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe ve WSATUI.dll  
+#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe and WSATUI.dll  
  BT uzmanları, birlikte çalışabilen WS-AtomicTransaction ağ desteğini yapılandırmak bu araçları izin [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Araçları görüntülemek ve kayıt defterinde depolanan en yaygın kullanılan WS-AtomicTransaction ayarlarının değerleri değiştirmek izin verin.  
   
 ## <a name="cross-cutting-features"></a>Çapraz kesme özellikleri  
@@ -413,5 +413,5 @@ Microsoft, son kullanıcılar gizliliğinizi korumayı taahhüt eder. Kullanarak
  Web Hizmetleri Açıklama Dili (WSDL) bağlantı noktası bir tanım içeriyor. Her bağlantı noktası bir uç nokta adresi ve uygulama tarafından kullanılan hizmetler temsil eden bir bağlaması var. WSDL gösterme, yapılandırmayı kullanarak devre dışı açılabilir. Hiçbir bilgi makinede korunur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)

@@ -12,16 +12,16 @@ ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: fc3c0f6910238ba20582280426b4a40e68b95dd8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma (C# Programlama Kılavuzu)
 Adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız değişkenler de kullanıma sunulan [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], kolaylık, esneklik ve C# programlama okunabilirliğini artırmak. Ayrıca, bu özellikler, Microsoft Office Otomasyonu API'leri gibi COM arabirimlerine erişim büyük ölçüde kolaylaştırır.  
   
- Aşağıdaki örnekte, yöntem [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) altı gibi biçimlendirme, satırları ve sütunları sayısını sınırlayan bir tablo özelliklerini temsil eden parametreleri, yazı tiplerini ve renkleri vardır. Çoğu zaman, bunların tümünün için özel değerler belirtmek istemediğiniz tüm altı parametreler isteğe bağlıdır. Ancak, adlandırılmış ve isteğe bağlı bağımsız değişkenler bir değer veya bir yer tutucu değerini her parametre için sağlanması gerekir. Adlandırılmış ve isteğe bağlı bağımsız değişkenlerle projeniz için gerekli olan parametreleri için değerleri belirtin.  
+ Aşağıdaki örnekte, yöntem [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) altı gibi biçimlendirme, satırları ve sütunları sayısını sınırlayan bir tablo özelliklerini temsil eden parametreleri, yazı tiplerini ve renkleri vardır. Çoğu zaman, bunların tümünün için özel değerler belirtmek istemediğiniz tüm altı parametreler isteğe bağlıdır. Ancak, adlandırılmış ve isteğe bağlı bağımsız değişkenler bir değer veya bir yer tutucu değerini her parametre için sağlanması gerekir. Adlandırılmış ve isteğe bağlı bağımsız değişkenlerle projeniz için gerekli olan parametreleri için değerleri belirtin.  
   
  Bu yordamları tamamlamak için Microsoft Office Word, bilgisayarınızda yüklü olması gerekir.  
   
@@ -63,7 +63,7 @@ Adlandırılmış bağımsız değişkenler ve isteğe bağlı bağımsız deği
   
 ### <a name="to-display-text-in-a-word-document"></a>Bir Word belgesinde metni görüntülemek için  
   
-1.  İçinde `Program` sınıf Program.cs içinde bir Word uygulaması ve bir Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Ekle](http://go.microsoft.com/fwlink/?LinkId=145381) yöntemi dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerleri kullanır. Bu nedenle, bağımsız değişkenler arama deyiminde gerekli değildir.  
+1.  İçinde `Program` sınıf Program.cs içinde bir Word uygulaması ve bir Word belgesi oluşturmak için aşağıdaki yöntemi ekleyin. [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) yöntemi dört isteğe bağlı parametre vardır. Bu örnek, varsayılan değerleri kullanır. Bu nedenle, bağımsız değişkenler arama deyiminde gerekli değildir.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -102,7 +102,7 @@ ConvertToTable parametreleri
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Tablosu için önceden tanımlanmış bir biçim belirtmek için son satırında Değiştir `DisplayInWord` aşağıdaki ifadeyi ve CTRL + F5'e yazın. Biçim herhangi biri olabilir [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) sabitleri.  
+2.  Tablosu için önceden tanımlanmış bir biçim belirtmek için son satırında Değiştir `DisplayInWord` aşağıdaki ifadeyi ve CTRL + F5'e yazın. Biçim herhangi biri olabilir [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx) sabitleri.  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
@@ -112,4 +112,4 @@ ConvertToTable parametreleri
  [!code-csharp[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+ [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

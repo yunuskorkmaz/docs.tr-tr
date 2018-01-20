@@ -14,19 +14,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b2860c7ddd5f3d2f0ce2749c36afebcf9abfeac3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a7c24a6995339ecc5f172f1b6f4d1e1930fd719
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltworkflowruntimegt"></a>&lt;İş akışı workflowRuntime&gt;
 Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı barındırmak için [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Hizmetleri.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
-\<davranışı >  
+\<serviceBehaviors>  
+\<behavior>  
 \<İş akışı workflowRuntime >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -68,10 +68,10 @@ ms.lasthandoff: 12/22/2017
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
   
 ## <a name="example"></a>Örnek  
   
@@ -97,4 +97,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+ [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)

@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Csc.exe ile komut satırı derleme
 Yürütülebilir dosyanın adını yazarak C# Derleyici çağırabileceği (*csc.exe*) bir komut isteminde.
@@ -70,31 +70,31 @@ csc File.cs
 - Derlenen *File.cs* oluşturan *File.dll*:
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - Derlenen *File.cs* ve oluşturur *My.exe*:
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - Tüm C# dosyalarını geçerli dizinde iyileştirmeler etkinleştirilerek derler ve hata ayıklama simgesi tanımlar. Çıktı *File2.exe*:
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - Tüm C# geçerli dizindeki dosyaları bir hata ayıklama sürümü üreten derleyen *File2.dll*. Logo ve uyarı görüntülenir:
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - Tüm C# dosyalarını geçerli dizine derler *Something.xyz* (DLL):
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# Derleyici ve C++ Derleyici çıktısı arasındaki farklar
@@ -102,10 +102,10 @@ Hiçbir nesne vardır (*.obj*) dosyaları oluşturan C# Derleyici çağrılması
 
 ## <a name="see-also"></a>Ayrıca bkz.
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Alfabetik listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Kategoriye göre listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
- [Ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+ [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
  [Nasıl yapılır: komut satırı bağımsız değişkenlerini görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Nasıl yapılır: foreach kullanarak komut satırı bağımsız değişkenlerine erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Ana() dönüş değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+ [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

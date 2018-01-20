@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ca474b4a63ed907c73306e7b7f1fb39c948f12d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetim modeli yeni bir denetim oluşturmak için gereken önemli ölçüde azaltır. Ancak, bazı durumlarda, hala özel bir denetim oluşturmak gerekebilir. Bu konuda bir özel denetim ve farklı denetim yazma modellerini oluşturma gereksiniminizi en aza özellikleri ele alınmıştır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konu ayrıca yeni bir denetimin nasıl oluşturulacağını gösterir.  
@@ -35,7 +35,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="alternatives-to-writing-a-new-control"></a>Yeni bir denetim yazma alternatifleri  
  Tarihsel olarak, özelleştirilmiş bir deneyim varolan denetimden almak istiyorsanız, denetimin arka plan rengi, kenarlık genişliği ve yazı tipi boyutu gibi standart özelliklerini değiştirmek için sınırlı olmadığınız. Bu önceden tanımlanmış parametrelerin dışında denetimin davranışını veya görünümünü genişletmek istediğinizde, yeni bir denetim genellikle varolan denetimden devralma ve denetim çizim için sorumlu yöntemi geçersiz kılma tarafından oluşturmanız gerekir.  Bu seçenek, hala olsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zengin içerik modeli, stiller, şablonları ve Tetikleyicileri kullanarak mevcut denetimleri özelleştirmenizi, sağlar. Aşağıdaki listede, yeni bir denetim oluşturmak zorunda kalmadan özel ve tutarlı deneyimleri oluşturmak için bu özellikleri'nın nasıl kullanılabileceğini örnekler verilmektedir.  
   
--   **Zengin içerik.** Çoğu standart [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri Zengin içeriği destekler. Örneğin, içerik özelliği bir <xref:System.Windows.Controls.Button> türü <xref:System.Object>, bu nedenle teorik olarak herhangi bir şey görüntülenebilir üzerinde bir <xref:System.Windows.Controls.Button>.  Bir resim ve metin görüntüleme bir düğmeye sahip olmak için bir görüntü ekleyebilirsiniz ve <xref:System.Windows.Controls.TextBlock> için bir <xref:System.Windows.Controls.StackPanel> ve Ata <xref:System.Windows.Controls.StackPanel> için <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği. Çünkü denetimleri görüntüleyebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel öğelerini ve rasgele verileri, yeni bir denetim oluşturma veya karmaşık bir görsel öğe desteklemek için varolan denetimi değiştirme daha az gereksinimi yoktur. İçin içerik modeli hakkında daha fazla bilgi için <xref:System.Windows.Controls.Button> ve diğer içerik modelleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [WPF içeriği modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+-   **Rich Content.** Çoğu standart [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri Zengin içeriği destekler. Örneğin, içerik özelliği bir <xref:System.Windows.Controls.Button> türü <xref:System.Object>, bu nedenle teorik olarak herhangi bir şey görüntülenebilir üzerinde bir <xref:System.Windows.Controls.Button>.  Bir resim ve metin görüntüleme bir düğmeye sahip olmak için bir görüntü ekleyebilirsiniz ve <xref:System.Windows.Controls.TextBlock> için bir <xref:System.Windows.Controls.StackPanel> ve Ata <xref:System.Windows.Controls.StackPanel> için <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği. Çünkü denetimleri görüntüleyebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel öğelerini ve rasgele verileri, yeni bir denetim oluşturma veya karmaşık bir görsel öğe desteklemek için varolan denetimi değiştirme daha az gereksinimi yoktur. İçin içerik modeli hakkında daha fazla bilgi için <xref:System.Windows.Controls.Button> ve diğer içerik modelleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [WPF içeriği modeli](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 -   **Stilleri.** A <xref:System.Windows.Style> denetimin özelliklerini temsil eden değerleri koleksiyonudur. Stilleri kullanarak yeni bir denetim yazmadan istenen denetim görünümü ve davranışı yeniden kullanılabilir bir gösterimini oluşturabilirsiniz. Örneğin, tüm istediğinizi varsayalım, <xref:System.Windows.Controls.TextBlock> 14 yazı tipi boyutunu kırmızı, Arial yazı tipi için denetimleri. Bir kaynak olarak bir stil oluşturun ve uygun özellikleri uygun şekilde ayarlayın. Sonra her <xref:System.Windows.Controls.TextBlock> uygulamanıza eklemek aynı görünüme sahip olur.  
   
@@ -183,7 +183,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  Veri bağlama hakkında daha fazla bilgi için bkz: [veri bağlama genel bakış](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 ### <a name="design-for-designers"></a>Tasarımcılar için Tasarım  
- Özel WPF denetimleri için destek almak için [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (örneğin, Özellikler penceresi ile düzenleme özelliği), aşağıdaki yönergeleri izleyin.  Geliştirme hakkında daha fazla bilgi için [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], bkz: [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+ Özel WPF denetimleri için destek almak için [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (örneğin, Özellikler penceresi ile düzenleme özelliği), aşağıdaki yönergeleri izleyin.  Geliştirme hakkında daha fazla bilgi için [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], bkz: [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 #### <a name="dependency-properties"></a>Bağımlılık özellikleri  
  Uygulamak mutlaka [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] `get` ve `set` "Kullanım bağımlılık özelliklerinde." daha önce açıklandığı gibi erişimciler Tasarımcılar bağımlılık özelliği, ancak bunlar, varlığını gibi algılamak için sarmalayıcı kullanabilirler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve denetim istemcileri özelliği alırken veya ayarlarken erişimcileri çağırmak için gerekli değildir.  
@@ -280,6 +280,6 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [Denetim Özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md)

@@ -14,18 +14,18 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 15c2561487eecb44cf3542768de0a77d1dd6713d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb62bbe8b52032708dddd62dd895e61ba8c1c5e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan kaldırır.  
   
- \<System.IdentityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
 \<kaldırma >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -48,7 +48,7 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan k
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Kaldırılacak belirteç işleyici CLR türü adı. Nasıl belirleneceği hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvuruları](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Gerekli.|  
+|türü|Kaldırılacak belirteç işleyici CLR türü adı. Nasıl belirleneceği hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvuruları](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -57,7 +57,7 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan k
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki XML kullanımı gösterilmiştir `<add>` ve `<remove>` öğeleri varsayılan oturum belirteci işleyicisi özel oturum belirteci işleyicisi ile değiştirin. XML alınırlar `ClaimsAwareWebFarm` örnek.  

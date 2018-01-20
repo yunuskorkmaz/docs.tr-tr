@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
 Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu de nasıl bu bilgileri sıralanmış, gruplandırılmış ve, döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntemler kümesi sağlar. Bu yöntemlerin çoğu sıraları üzerinde çalışır; Bu bağlamda, türü uygulayan bir nesne sırasıdır <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevi filtreleme, yansıtma, toplama, sıralama, gruplandırma, disk belleği ve daha fazlasını içerir. Bazıları, böylece sorgu ifade sözdizimi kullanılarak çağrılabilir işleçleri anahtar sözcüğü sözdizimi ayrılmış standart sorgu sık kullanılır. Bir sorgu ifadesi, bir sorgu tabanlı yöntemini eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi yan tümceleri derleme zamanında sorgu yöntemleri çağrıları içine çevrilir. Eşdeğer sorgu ifadesi yan tümceleri sahip standart sorgu işleçleri listesi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -78,7 +78,7 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu d
 |`Sum`|Null değeri döndürür.|Null değeri döndürür.|Null olmayan değer toplamını bir sırada döndürür.|Sayısal değerler dizisi toplamını hesaplar.|  
   
 ## <a name="type-methods"></a>Tür yöntemleri  
- Tür dönüştürmeleri ve test etme ile ilgili iki LINQ yöntemleri bağlamında desteklenir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu yalnızca desteklenen türler uygun eşleme türleri anlamına gelir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] türü. Bu tür bir listesi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). Türü yöntemleri `Convert` ve `OfType`.  
+ Tür dönüştürmeleri ve test etme ile ilgili iki LINQ yöntemleri bağlamında desteklenir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu yalnızca desteklenen türler uygun eşleme türleri anlamına gelir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] türü. Bu tür bir listesi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Türü yöntemleri `Convert` ve `OfType`.  
   
  `OfType`varlık türleri için desteklenir. `Convert`kavramsal model ilkel türler için desteklenir.  C# `is` ve `as` yöntemleri de desteklenir.  
   

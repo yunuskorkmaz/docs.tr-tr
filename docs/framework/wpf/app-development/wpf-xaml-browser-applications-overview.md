@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Yeni bir XAML tarayıcısı uygulaması (XBAP) oluşturuluyor  
- Yeni bir XBAP projesi oluşturmak için en basit yolu [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Yeni bir proje oluştururken seçin **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Yeni bir XBAP projesi oluşturmak için en basit yolu [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Yeni bir proje oluştururken seçin **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  XBAP proje çalıştırdığınızda, tek başına bir pencere yerine bir tarayıcı penceresinde açar. Debug zaman gelen XBAP [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], uygulama Internet bölgesi izniyle çalıştırır ve bu nedenle bu izinleri aşılırsa güvenlik özel durumları durum oluşturur. Daha fazla bilgi için bkz: [güvenlik](../../../../docs/framework/wpf/security-wpf.md) ve [WPF kısmi güven güvenlik](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

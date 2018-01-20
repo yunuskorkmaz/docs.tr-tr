@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 15a6585e0653fd87730abd1aef08ffd392cf8c87
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-to-sql"></a>LINQ - SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir bileşeni olan [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] ilişkisel veri nesneleri olarak yönetmek için bir çalışma zamanı altyapısı sağlar sürüm 3.5.  
@@ -52,14 +52,14 @@ ms.lasthandoff: 01/17/2018
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Açıklar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] teknolojileri için [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] kullanıcılar.  
   
- [ADO.NET'e LINQ](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [ADO.NET'e LINQ](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  Bağlantılar için [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] portal.  
   
- [LINQ-SQL izlenecek yollar](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [LINQ-SQL izlenecek yollar](http://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
  İzlenecek yollar için kullanılabilir listeler [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Belgelerde kullanılan örnek veritabanları indirmek açıklar.  
   
- [LinqDataSource teknoloji genel bakış](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [LinqDataSource teknoloji genel bakış](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Açıklar nasıl <xref:System.Web.UI.WebControls.LinqDataSource> kontrol çıkarır [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] aracılığıyla Web geliştiricileri için [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] veri kaynağı denetim mimarisi.

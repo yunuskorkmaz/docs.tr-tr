@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ddb5abeee9c1cad12e40b84f2e5c81295cbed9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Her ikisi de alanları, özellikleri ve olayları olabilir. Ayrıca statik ve statik olmayan yöntemleri sahip olabilir. Bir dikkat çekici fark yapıları değer türleri ve başvuru türleri sınıflardır olduğundan ' dir.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/22/2017
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) uygulamalar için daha önce listelenen işlevleri ve dört yapıları içeren özel bir yönetilmeyen kitaplığıdır: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapıları aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) uygulamalar için daha önce listelenen işlevleri ve dört yapıları içeren özel bir yönetilmeyen kitaplığıdır: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapıları aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYPERSON  
@@ -138,7 +138,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile örneği  
- Bu örnek, yönetilmeyen bir işleve ikinci, katıştırılmış bir yapı içeren bir yapısı geçirmek gösterilmiştir. Ayrıca nasıl kullanılacağı ortaya <xref:System.Runtime.InteropServices.MarshalAsAttribute> yapısı içinde bir sabit uzunluk dizisi bildirmek için öznitelik. Bu örnekte, katıştırılmış yapı öğeleri üst yapısına eklenir. Katıştırılmış yapısının değil düzleştirilmiş bir örnek için bkz: [yapıları örnek](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
+ Bu örnek, yönetilmeyen bir işleve ikinci, katıştırılmış bir yapı içeren bir yapısı geçirmek gösterilmiştir. Ayrıca nasıl kullanılacağı ortaya <xref:System.Runtime.InteropServices.MarshalAsAttribute> yapısı içinde bir sabit uzunluk dizisi bildirmek için öznitelik. Bu örnekte, katıştırılmış yapı öğeleri üst yapısına eklenir. Katıştırılmış yapısının değil düzleştirilmiş bir örnek için bkz: [yapıları örnek](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
   
  FindFile örnek özgün işlevi bildiriminden gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
@@ -191,7 +191,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) daha önce listelenen işlevi ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplık **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) daha önce listelenen işlevi ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplık **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
   
 ```  
 union MYUNION  
@@ -228,7 +228,7 @@ union MYUNION2
   
  SysTime örnek özgün işlevi bildiriminden gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
--   **GetSystemTime** Kernel32.dll dışarı.  
+-   **GetSystemTime** exported from Kernel32.dll.  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -251,7 +251,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnekte `SystemTime` sınıfı sınıf üyeleri gösterilen özgün yapısı öğelerini içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği ayarlanmış üyeleri bellekte ardışık olarak göründükleri sırada düzenlenmiş emin olun.  
   
- `LibWrap` Sınıfı içeren yönetilen prototipi `GetSystemTime` geçirir yöntemi `SystemTime` sınıfı olarak bir giriş/çıkış parametresi varsayılan olarak. Parametresi ile bildirilmelidir <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> başvuru türleri olan sınıfları, varsayılan olarak olduğu gibi parametreleri geçirildiğinden öznitelikleri. Çağıran sonuçlarını almak için bu [yön öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) açıkça uygulanmış olması gerekir. `App` Sınıfının yeni bir örneğini oluşturur `SystemTime` sınıfı ve kendi veri alanları erişir.  
+ `LibWrap` Sınıfı içeren yönetilen prototipi `GetSystemTime` geçirir yöntemi `SystemTime` sınıfı olarak bir giriş/çıkış parametresi varsayılan olarak. Parametresi ile bildirilmelidir <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> başvuru türleri olan sınıfları, varsayılan olarak olduğu gibi parametreleri geçirildiğinden öznitelikleri. Çağıran sonuçlarını almak için bu [yön öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2) açıkça uygulanmış olması gerekir. `App` Sınıfının yeni bir örneğini oluşturur `SystemTime` sınıfı ve kendi veri alanları erişir.  
   
 ### <a name="code-samples"></a>Kod Örnekleri  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +263,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnek kullanarak yerel bir işleve nasıl çağırılacağını <xref:System.Runtime.InteropServices.Marshal> sınıfı ve güvenli olmayan kod kullanarak.  
   
- Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614), aynı zamanda sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapısı aşağıdaki öğeleri içerir:  
+ Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614), aynı zamanda sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapısı aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -299,6 +299,6 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [Platform çağırma veri türleri](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Platform çağırma veri türleri](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Dizeleri Hazırlama](../../../docs/framework/interop/marshaling-strings.md)  
- [Türlerin dizileri sıralama](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+ [Türlerin dizileri sıralama](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)

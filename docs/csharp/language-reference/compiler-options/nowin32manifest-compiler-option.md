@@ -13,19 +13,19 @@ ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1e0d4697e0e14c84c4bc642521cf4f9cdf6a4ed6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7682a3e1ecf483b8495d817ef01e57093ae0f987
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowin32manifest-c-compiler-options"></a>/nowin32manifest (C# Derleyici Seçenekleri)
-Kullanım **/nowin32manifest** herhangi bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil görevlendirin seçeneği.  
+# <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# Derleyici Seçenekleri)
+Kullanım **-nowin32manifest** herhangi bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil görevlendirin seçeneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/nowin32manifest  
+-nowin32manifest  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -33,8 +33,8 @@ Kullanım **/nowin32manifest** herhangi bir uygulama bildirimi yürütülebilir 
   
  Bu seçenek Visual Studio'da kümesinde **uygulama özelliği** seçerek sayfa **oluşturma uygulamayı bildirim olmadan** seçeneğini **bildirim** açılan liste. Daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
- Bildirim oluşturma hakkında daha fazla bilgi için bkz: [/win32manifest (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
+ Bildirim oluşturma hakkında daha fazla bilgi için bkz: [-win32manifest (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

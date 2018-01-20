@@ -14,11 +14,11 @@ ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, aslında bir statik olmayan sınıf ile aynı, ancak bir fark yoktur: statik sınıf örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıfı türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, statik sınıf üyeleri sınıf adı kullanarak erişir. Örneğin, bu sınıfı statik varsa adlı `UtilityClass` adlı ortak bir yöntemi olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemini çağırın:  
@@ -44,7 +44,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Tüm sınıf türleri ile olduğu gibi statik sınıf için tür bilgisi tarafından yüklenen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ortak dil çalışma zamanı (CLR) sınıfı başvuran program yüklendiğinde. Program, tam olarak ne zaman sınıfı yüklenen belirtemezsiniz. Ancak, yüklenmesi ve başlatılan alanlarını ve sınıf programınızdaki ilk kez başvuruluyor önce çağırılır, statik Oluşturucusu sağlanır. Statik Oluşturucu yalnızca bir kez çağrılır ve statik sınıf programınızı bulunduğu uygulama etki alanı için kullanım ömrünü bellekte kalır.  
   
 > [!NOTE]
->  Kendisini oluşturulması için yalnızca bir örneğine izin veren bir statik olmayan sınıf oluşturmak için bkz: [uygulama Singleton C#](http://go.microsoft.com/fwlink/?LinkID=100567).  
+>  Kendisini oluşturulması için yalnızca bir örneğine izin veren bir statik olmayan sınıf oluşturmak için bkz: [uygulama Singleton C#](https://msdn.microsoft.com/library/ms998558.aspx).  
   
  Aşağıdaki listede statik sınıf ana özelliklerini sağlar:  
   
@@ -92,9 +92,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [statik](../../../csharp/language-reference/keywords/static.md)  
- [Sınıfları](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [sınıfı](../../../csharp/language-reference/keywords/class.md)  
- [Statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
- [Örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [Statik Oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+ [Örnek Oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

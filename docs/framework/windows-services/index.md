@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-windows-service-applications"></a>Windows Hizmet Uygulamaları Geliştirme
 Microsoft kullanılarak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, kolayca oluşturabileceğiniz Hizmetleri hizmeti olarak yüklenen bir uygulama oluşturarak. Bu tür bir uygulama bir Windows hizmeti adı verilir. Framework özelliklerle hizmetleri oluşturmak, bunları yüklemeniz ve Başlat, durdurabilir ve davranışlarını denetleyebilirsiniz.  
@@ -57,5 +57,5 @@ Microsoft kullanılarak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] veya 
  <xref:System.ServiceProcess.ServiceInstaller>  
  Özelliklerini açıklayan <xref:System.ServiceProcess.ServiceInstaller> ile birlikte kullanılan sınıf <xref:System.ServiceProcess.ServiceProcessInstaller> yükleyip hizmetinizi kaldırmak için sınıf.  
   
- [Şablonlardan NIB oluşturma projeleri](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [Şablonlardan NIB oluşturma projeleri](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Projeleri açıklar ve bunlar arasında seçim yapma Bu bölümde kullanılan türleri.

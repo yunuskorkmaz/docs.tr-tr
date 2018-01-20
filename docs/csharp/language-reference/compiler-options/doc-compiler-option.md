@@ -18,19 +18,19 @@ ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ae3d6e1ffdaaa3245a51005070b16041c16dadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c668c79ca2c68d1a497521581857085e57c71f5c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="doc-c-compiler-options"></a>/doc (C# Derleyici Seçenekleri)
-**/Doc** seçeneği belge açıklamaları bir XML dosyasına yerleştirin olanak tanır.  
+# <a name="-doc-c-compiler-options"></a>-doc (C# Derleyici Seçenekleri)
+**-Doc** seçeneği belge açıklamaları bir XML dosyasına yerleştirin olanak tanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/doc:file  
+-doc:file  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
   
  Oluşturulan .xml dosyası ile kullanılmak üzere [IntelliSense](/visualstudio/ide/using-intellisense) özelliği, .xml dosyasının dosya adı olmasına aynı derlemeyle aynı dizinde istediğiniz .xml dosyasını emin olun ve desteklemek için derleme olduğu gibi izin verin. Bu nedenle, Visual Studio projesini derleme başvurulduğunda .xml dosyasını da bulunur. Bkz: [sağladığını kod açıklamaları](/visualstudio/ide/supplying-xml-code-comments) ve daha fazla bilgi için.  
   
- İle derleme sürece [/target: Module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` içerecek \<derleme >\</assembly > çıktı dosyası için derleme bildirimi içeren dosyanın adını belirten etiketler derleme.  
+ İle derleme sürece [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` içerecek \<derleme >\</assembly > çıktı dosyası için derleme bildirimi içeren dosyanın adını belirten etiketler derleme.  
   
 > [!NOTE]
->  / Doc seçeneği tüm giriş dosyaları için geçerlidir; veya, proje ayarlarında projedeki tüm dosyalar ayarlayın. Belge açıklamaları için belirli bir dosya veya kodun bölümü ilgili uyarıları devre dışı bırakmak için [#pragma Uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
+>  Doc seçenek, tüm giriş dosyaları için geçerlidir veya, proje ayarlarında projedeki tüm dosyalar ayarlayın. Belge açıklamaları için belirli bir dosya veya kodun bölümü ilgili uyarıları devre dışı bırakmak için [#pragma Uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md).  
   
  Bkz: [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) yolları belgeleri açıklamaları kodunuzda oluşturmak için.  
   
@@ -67,4 +67,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

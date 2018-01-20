@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırma ve sonuçları için kullanılır. Bu sonuçlar ya da doğrudan yerleştirilen işlenir bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden fazla kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa çıkarılması için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katman işlevselliği ödün vermeden performansı artırma oluşturma.  
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]'' İçin Oracle veri sağlayıcısı|Oracle veri kaynaklarını kullanmak Orta ve tek katmanlı uygulamalar için önerilir.|  
   
 ## <a name="entityclient-provider"></a>EntityClient Provider  
- EntityClient sağlayıcısı, varlık veri modeli (EDM) tabanlı verilerine erişmek için kullanılır. Diğer .NET Framework veri sağlayıcıları farklı olarak, bu veri kaynağı ile doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcı ile iletişim kurmak için varlık SQL kullanır. Daha fazla bilgi için bkz: [EntityClient ve varlık SQL](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient sağlayıcısı, varlık veri modeli (EDM) tabanlı verilerine erişmek için kullanılır. Diğer .NET Framework veri sağlayıcıları farklı olarak, bu veri kaynağı ile doğrudan etkileşime girmez. Bunun yerine, temel alınan veri sağlayıcı ile iletişim kurmak için varlık SQL kullanır. Daha fazla bilgi için bkz: [EntityClient ve varlık SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)  

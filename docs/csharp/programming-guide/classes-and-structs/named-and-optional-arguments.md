@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Bağımsız değişkenler adlı* , belirli bir parametre için bir bağımsız değişken bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenler* bazı parametreler için bağımsız değişken atlayın olanak sağlar. Her iki tekniği yöntemleri, dizin oluşturucular, Oluşturucular ve temsilciler ile kullanılabilir.  
@@ -106,7 +106,7 @@ ExampleMethod isteğe bağlı parametreler
 ## <a name="com-interfaces"></a>COM arabirimleri  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneler ve diğer geliştirmeler desteğinin yanı sıra Office Automation API'leri gibi COM API'leri ile birlikte çalışabilirlik büyük ölçüde artırır.  
   
- Örneğin, [biçim](http://go.microsoft.com/fwlink/?LinkId=148201) Microsoft Office Excel yönteminde [aralığı](http://go.microsoft.com/fwlink/?LinkId=148196) arabirimi tümü isteğe bağlı yedi parametreleri sahiptir. Bu parametreler aşağıdaki çizimde gösterilmektedir.  
+ Örneğin, [biçim](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) Microsoft Office Excel yönteminde [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) arabirimi tümü isteğe bağlı yedi parametreleri sahiptir. Bu parametreler aşağıdaki çizimde gösterilmektedir.  
   
  ![Otomatik Biçim yöntemi için IntelliSense Hızlı bilgileri. ] (../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Otomatik Biçim parametreleri  
@@ -134,7 +134,7 @@ Otomatik Biçim parametreleri
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
  [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Oluşturucular Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Dizin oluşturucular kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)
+ [Oluşturucuları Kullanma](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [Dizin Oluşturucular Kullanma](../../../csharp/programming-guide/indexers/using-indexers.md)

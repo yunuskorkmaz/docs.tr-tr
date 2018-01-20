@@ -11,11 +11,11 @@ ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6649537238af38e073eeb8747487822d058b7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c78b06b23805082251db8bbd7b377ffd36c6ef03
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli parametre listesi yöntemleriyle başvurular temsil eden bir tür ve dönüş türü. Bir temsilci oluşturduğunuzda, örneğini uyumlu bir imza ve dönüş türü içeren herhangi bir yöntemle ilişkilendirebilirsiniz. Yöntemi, temsilci örneği aracılığıyla çağırabilirsiniz.  
@@ -48,19 +48,19 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli pa
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
--   [Temsilcileri kullanma](../../../csharp/programming-guide/delegates/using-delegates.md)  
+-   [Temsilcileri Kullanma](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Arabirimler (C# programlama Kılavuzu) yerine ne zaman kullanılacağı temsilciler](http://msdn.microsoft.com/en-us/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [Arabirimler (C# programlama Kılavuzu) yerine ne zaman kullanılacağı temsilciler](http://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
   
--   [Temsilciler adlandırılmış vs ile. Anonim yöntemler](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [Temsilcilerin Adlandırılmış ve Anonim Yöntemlerde Karşılaştırılması](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
--   [Anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+-   [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
--   [Temsilcilerde varyans kullanma](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+-   [Temsilcilerde Varyans Kullanma](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
 -   [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [Nasıl yapılır: bildirme, oluşturma ve bir temsilci kullanın](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+-   [Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -72,5 +72,5 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) belirli pa
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Delegate>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Olayları](../../../csharp/programming-guide/events/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Olaylar](../../../csharp/programming-guide/events/index.md)

@@ -19,18 +19,18 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; öğesi
 Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.  
   
  \<yapılandırma öğesi >  
-\<System.codeDom öğesi >  
-\<compilers öğesi >  
+\<system.codedom Element>  
+\<compilers Element>  
 \<Derleyici > öğesi  
 \<providerOption > öğesi  
   
@@ -61,7 +61,7 @@ Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Yapılandırma > öğesi](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|[\<System.codeDom > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.|  
 |[\<derleyicileri > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilgi içeren `<compiler>` öğeleri.|  
 |[\<Derleyici > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.|  
   
@@ -105,4 +105,4 @@ Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.
  [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<derleyicileri > öğesi](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [compiler Ögesi (ASP.NET Ayarlar Şeması) derleyicileri](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [compiler Ögesi (ASP.NET Ayarlar Şeması) derleyicileri](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

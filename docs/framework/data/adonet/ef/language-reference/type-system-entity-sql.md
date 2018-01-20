@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b68bce0e3f1139b48446200decca5beb0a1a1a71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-system-entity-sql"></a>Tür sistemi (varlık SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir dizi türlerini destekler:  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Şemada açıkça tanımlanmayan anonim türler: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, ve <xref:System.Data.Metadata.Edm.RefType>.  
   
- Bu bölümde yer alan şemada açıkça tanımlanmayan ancak tarafından desteklenen anonim türleri açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Basit ve nominal türleri hakkında daha fazla bilgi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4).  
+ Bu bölümde yer alan şemada açıkça tanımlanmayan ancak tarafından desteklenen anonim türleri açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Basit ve nominal türleri hakkında daha fazla bilgi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Satırları  
  Bir satır yapısını satır oluşan yazılan ve adlandırılmış üyeleri bir dizi bağlıdır. Satır türü yok kimliği vardır ve kaynağından devralındı olamaz. Aynı satır türü örnekleri sırasıyla eşdeğer üyeleriyse eşdeğerdir. Satırları kendi yapısal eşdeğer ötesinde davranışı yok ve ortak dil çalışma zamanı'nda eşdeğeri sahiptir. Sorgu satırları veya satır koleksiyonları içeren yapılarını neden olabilir. API bağlama arasında [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular ve ana bilgisayar dil tanımlar satırları sonuç getirdi sorguda nasıl gerçekleştirilirler. Bir satır örneği oluşturma hakkında daha fazla bilgi için bkz: [oluşturma türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  

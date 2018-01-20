@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Geliştiricilerin eklenti genişletilebilirliği destekleyen uygulamalar oluşturmak için kullanabileceği bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirilebilen ve uygulama işlevselliğini genişleten eklentiler oluşturulmasına izin verir. Bazı senaryolarda uygulamalar da görüntülemeniz [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] eklentileri tarafından sağlanır. Bu konuda gösterilmektedir nasıl [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] güçlendirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bu senaryolar, arkasındaki mimariyi, faydalarını ve kısıtlamalarını sağlamak için eklenti modeli.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Sahip <xref:System.SerializableAttribute> özniteliği uygulanmıştır.  
   
 > [!NOTE]
->  Uzaktan erişilebilir oluşturulmasına ilişkin daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri bkz [nesneleri Uzaktan erişilebilir hale getirme](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Uzaktan erişilebilir oluşturulmasına ilişkin daha fazla bilgi için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri bkz [nesneleri Uzaktan erişilebilir hale getirme](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Türleri Uzaktan erişilebilir değil. Sorunu çözmek için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genişletir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] etkinleştirmek için eklenti modeli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] konak uygulamadan görüntülenecek eklentileri tarafından oluşturulmuş. Bu destek tarafından sağlanan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] iki tür tarafından: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve tarafından uygulanan iki statik yöntemler <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, aşağıdaki şekilde bu türleri ve yöntemleri kullanılır:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Eklentiler ve Genişletilebilirlik](../../../../docs/framework/add-ins/index.md)  
  [Uygulama Etki Alanları](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework Remoting genel bakış](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Nesneleri Uzaktan erişilebilir hale getirme](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [.NET framework Remoting genel bakış](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Nesneleri Uzaktan erişilebilir hale getirme](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/app-development/how-to-topics.md)

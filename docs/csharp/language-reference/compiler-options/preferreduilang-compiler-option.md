@@ -13,19 +13,19 @@ ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a96a054b3d1f73b0fee209557388f7ea213ebbe9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 4fcf075dd951d733d294a62de98365c77b16a51d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (C# Derleyici Seçenekleri)
-Kullanarak `/preferreduilang` derleyici seçeneği, C# Derleyici hata iletileri gibi bir çıkış görüntüler dil belirtebilirsiniz.  
+# <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (C# Derleyici Seçenekleri)
+Kullanarak `-preferreduilang` derleyici seçeneği, C# Derleyici hata iletileri gibi bir çıkış görüntüler dil belirtebilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/preferreduilang: language  
+-preferreduilang: language  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -33,10 +33,10 @@ Kullanarak `/preferreduilang` derleyici seçeneği, C# Derleyici hata iletileri 
  [Dil adı](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx) derleyici çıktı için kullanılacak dili.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `/preferreduilang` derleyici seçeneği hata iletileri ve diğer komut satırı çıktısı için kullanmak için C# Derleyici istediğiniz dili belirtin. Dili için dil paketi yüklü değilse, işletim sisteminin dil ayarından yerine kullanılır ve herhangi bir hata bildirdi.  
+ Kullanabileceğiniz `-preferreduilang` derleyici seçeneği hata iletileri ve diğer komut satırı çıktısı için kullanmak için C# Derleyici istediğiniz dili belirtin. Dili için dil paketi yüklü değilse, işletim sisteminin dil ayarından yerine kullanılır ve herhangi bir hata bildirdi.  
   
 ```csharp  
-csc.exe /preferreduilang:ja-JP  
+csc.exe -preferreduilang:ja-JP  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  

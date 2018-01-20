@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5ffdd5e8ba8b4b0d46ac3165ed401179ff6bf630
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 677955f0d5969d859febed2004e29ab8ebeb1b04
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları oluşturmak için kullanın
 Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aşağıdaki dosyaları oluşturmak için nasıl kullanılacağı gösterilmektedir:  
@@ -35,14 +35,14 @@ Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aş
   
  EdmGen.exe aracı /mode:FullGeneration yukarıda listelenen dosyaları oluşturmak için kullanır. EdmGen.exe komutları hakkında daha fazla bilgi için bkz: [EDM Oluşturucu (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   
- Model ve eşleme dosyaları oluşturmak için EdmGen.exe kullanırsanız hala yapılandırmanız gereken, [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] kullanmak için proje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+ Model ve eşleme dosyaları oluşturmak için EdmGen.exe kullanırsanız hala yapılandırmanız gereken, [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] kullanmak için proje [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için bkz: [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 > [!NOTE]
->  EdmGen.exe tarafından oluşturulan kavramsal model veritabanındaki tüm nesneleri içerir. Yalnızca belirli nesneleri içeren bir kavramsal model oluşturmak istiyorsanız, varlık veri modeli Sihirbazı'nı kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  EdmGen.exe tarafından oluşturulan kavramsal model veritabanındaki tüm nesneleri içerir. Yalnızca belirli nesneleri içeren bir kavramsal model oluşturmak istiyorsanız, varlık veri modeli Sihirbazı'nı kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>EdmGen.exe kullanarak bir Visual Basic proje Okul model oluşturmak için  
   
-1.  Okul veritabanı oluşturun. Daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
+1.  Okul veritabanı oluşturun. Daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
   
 2.  Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
   
@@ -54,7 +54,7 @@ Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aş
   
 ### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>Okul model EdmGen.exe kullanarak bir C# projesi oluşturmak için  
   
-1.  Okul veritabanı oluşturun. Daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
+1.  Okul veritabanı oluşturun. Daha fazla bilgi için bkz: [Okul örnek veritabanı oluşturma](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0).  
   
 2.  Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:  
   
@@ -66,7 +66,7 @@ Bu konuda EDM Oluşturucu (EdmGen.exe) aracı Okul veritabanını temel alan aş
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Modelleme ve Eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
- [Nasıl yapılır: bir Entity Framework projesi el ile yapılandırma](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)  
- [Nasıl yapılır: sorgu performansını artırmak için görünümlerini önceden oluşturmak](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)  
- [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [Nasıl yapılır: bir Entity Framework projesi el ile yapılandırma](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)  
+ [Nasıl yapılır: sorgu performansını artırmak için görünümlerini önceden oluşturmak](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)  
+ [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

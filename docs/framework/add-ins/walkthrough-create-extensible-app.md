@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>İzlenecek Yol: Genişletilebilir Uygulama Oluşturma
 Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için bir işlem hattı oluşturma açıklar. Gerçek dünya senaryoları gösterilmemiştir; Bunun yerine, bir ardışık düzen ve nasıl bir eklenti için hizmetleri bir konak sağlayabilir temel işlevselliğini gösterir.  
@@ -52,11 +52,11 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
   
 -   Ana bilgisayar uygulaması çalışıyor.  
   
- Bu ardışık seri hale getirilebilir türler yalnızca geçirir (<xref:System.Double> ve <xref:System.String>), konak ve eklenti arasında. Karmaşık veri türlerinin koleksiyonları geçirmek nasıl oluşturulduğunu gösteren örnek için bkz: [izlenecek yol: konaklar arasında geçirme koleksiyonları ve eklentiler](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Bu ardışık seri hale getirilebilir türler yalnızca geçirir (<xref:System.Double> ve <xref:System.String>), konak ve eklenti arasında. Karmaşık veri türlerinin koleksiyonları geçirmek nasıl oluşturulduğunu gösteren örnek için bkz: [izlenecek yol: konaklar arasında geçirme koleksiyonları ve eklentiler](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Bu ardışık düzen sözleşme dört aritmetik işlemler bir nesne modelini tanımlar: ekleme, çıkarma, çarpma ve bölme. Eklenti konağa sonucunu döndürür ve ana bilgisayar 2 + 2 gibi hesaplamakta bir eşitlik eklenti sağlar.  
   
- Sürüm 2 hesaplayıcı eklentisi fazla hesaplama olasılıkları sağlar ve sürüm oluşturma gösterir. Bölümünde açıklanan [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Sürüm 2 hesaplayıcı eklentisi fazla hesaplama olasılıkları sağlar ve sürüm oluşturma gösterir. Bölümünde açıklanan [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdakiler gerekir:  
@@ -73,7 +73,7 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
 2.  Çözüm adı `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Ardışık Düzen dizin yapısı oluşturma  
- Eklenti modeli belirtilen dizin yapısında yerleştirilecek ardışık düzen segment derlemeler gerektirir. Ardışık Düzen yapısı hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Eklenti modeli belirtilen dizin yapısında yerleştirilecek ardışık düzen segment derlemeler gerektirir. Ardışık Düzen yapısı hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Ardışık Düzen dizin yapısını oluşturmak için  
   
@@ -92,10 +92,10 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
       HostSideAdapters  
     ```  
   
-     Uygulama klasörünüzde ardışık düzen klasör yapısı koymak gerekli değildir; Ayrıca, yalnızca kolaylık sağlamak için burada yapılır. Uygun adımda Kılavuzu ardışık düzen klasör yapısı farklı bir konumda ise kodunu değiştirmek açıklanmaktadır. Ardışık Düzen directory gereksinimleri hakkında bilgi bkz [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Uygulama klasörünüzde ardışık düzen klasör yapısı koymak gerekli değildir; Ayrıca, yalnızca kolaylık sağlamak için burada yapılır. Uygun adımda Kılavuzu ardışık düzen klasör yapısı farklı bir konumda ise kodunu değiştirmek açıklanmaktadır. Ardışık Düzen directory gereksinimleri hakkında bilgi bkz [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  `CalcV2` Klasör, bu kılavuzda kullanılmaz; için tutucudur [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  `CalcV2` Klasör, bu kılavuzda kullanılmaz; için tutucudur [izlenecek yol: ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Sözleşme ve görünümler oluşturma  
  Bu ardışık düzen sözleşme kesimini tanımlar `ICalc1Contract` dört yöntemleri tanımlar arabirimi: `add`, `subtract`, `multiply`, ve `divide`.  
@@ -204,7 +204,7 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
   
  Bu ardışık düzeninde eklenti bir hizmet ana bilgisayarı ve türleri akış bileşeninden Ekle ana bilgisayara sağlar. Eklenti ana bilgisayardan akışı hiçbir türünü olduğundan, bir görünüm sözleşme bağdaştırıcısı içeriyor gerekmez.  
   
- Ömür Yönetimi uygulamak için kullandığınız bir <xref:System.AddIn.Pipeline.ContractHandle> sözleşmesine ömrü belirteci eklemek için nesne. Çalışmak yaşam süresi Management sırayla bu işlemek için bir başvuru tutmanız gerekir. Belirteç uygulandıktan sonra ek bir programlamaya artık kullanılıyor ve atık toplama için kullanılabilmesini eklenti sistemi nesnelerin dispose çünkü gereklidir. Daha fazla bilgi için bkz: [yaşam süresi Management](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Ömür Yönetimi uygulamak için kullandığınız bir <xref:System.AddIn.Pipeline.ContractHandle> sözleşmesine ömrü belirteci eklemek için nesne. Çalışmak yaşam süresi Management sırayla bu işlemek için bir başvuru tutmanız gerekir. Belirteç uygulandıktan sonra ek bir programlamaya artık kullanılıyor ve atık toplama için kullanılabilmesini eklenti sistemi nesnelerin dispose çünkü gereklidir. Daha fazla bilgi için bkz: [yaşam süresi Management](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Konak tarafındaki bağdaştırıcısı oluşturmak için  
   
@@ -339,7 +339,7 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
     |Calc1HVA|Uygulamam|  
   
     > [!NOTE]
-    >  Uygulama klasörü dışında bir konumda ardışık düzen klasör yapısı almaya karar verdiyseniz, buna göre tabloda gösterilen yolları değiştirmeniz gerekir. Ardışık Düzen directory gereksinimleri hakkında bilgi bkz [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Uygulama klasörü dışında bir konumda ardışık düzen klasör yapısı almaya karar verdiyseniz, buna göre tabloda gösterilen yolları değiştirmeniz gerekir. Ardışık Düzen directory gereksinimleri hakkında bilgi bkz [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Visual Studio çözümü oluşturun.  
   
@@ -348,7 +348,7 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
     > [!NOTE]
     >  Değil değiştirirseniz **kopya yerel** için **False** için `Calc1AddInView` proje başvurusu'nda `AddInCalcV1` projesi, yükleyici bağlamı sorunları engeller eklenti bulunan gelen.  
   
-     Ardışık düzene dağıtma hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Ardışık düzene dağıtma hakkında daha fazla bilgi için bkz: [ardışık düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Ana bilgisayar uygulamasını çalıştırma  
  Şimdi konak çalıştırın ve eklentisi ile etkileşim kurmak hazırsınız.  
@@ -364,8 +364,8 @@ Bu kılavuz, basit hesaplayıcı işlevler gerçekleştirdiği bir eklenti için
 4.  Tür **çıkmak** ve basın **Enter** uygulamayı kapatmak için anahtar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [İzlenecek yol: Geçirme koleksiyonları arasında konakları ve eklentiler](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Ardışık Düzen geliştirme gereksinimleri](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [İzlenecek yol: Ana bilgisayar değişikliklerinizi olarak geriye dönük uyumluluk etkinleştirme](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [İzlenecek yol: Geçirme koleksiyonları arasında konakları ve eklentiler](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Ardışık Düzen geliştirme gereksinimleri](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Sözleşmeler, görünümler ve bağdaştırıcıları](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [İşlem Hattı Geliştirme](../../../docs/framework/add-ins/pipeline-development.md)

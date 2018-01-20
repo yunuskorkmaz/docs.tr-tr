@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 51f5c91ae63f7c483aab08affe53d6d4b6ceaa01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 627670c989510bd82e4d9b6aa7550476be1ce750
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
 Bu örnek, bir özel UserNamePassword Doğrulayıcıyı uygulamak gösterilmiştir. Bu, yerleşik UserNamePassword doğrulama modları hiçbiri uygulama gereksinimleri için uygun olduğu durumlarda kullanışlıdır. Örneğin, ne zaman kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış deposunda depolanır. Bu örnek için iki belirli kullanıcı adı/parola çiftleri denetler özel bir doğrulayıcı sahip bir hizmeti gösterir. İstemci bu tür bir kullanıcı adı/parola çifti hizmetin kimliğini kullanır.  
@@ -302,9 +302,9 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 2.  Service.exe service\bin başlatın.  
   
-3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+3.  Launch Client.exe from \client\bin. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Makine genelinde örneği çalıştırmak için  
   
@@ -326,7 +326,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. İstemci makinesinde, bir komut istemi penceresinden Client.exe başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
   

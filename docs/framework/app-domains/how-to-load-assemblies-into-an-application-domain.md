@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 545ac4d3a14f083dc4513f12b018cda5c7833b21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55c166b4d996eb96b284ea8c78fd2df98431187f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme
 Uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Kullanmak için önerilen yoldur `static` (`Shared` Visual Basic'te) <xref:System.Reflection.Assembly.Load%2A> yöntemi <xref:System.Reflection.Assembly?displayProperty=nameWithType> sınıfı. Derlemeleri yüklenebilir diğer yolları şunlardır:  
@@ -46,7 +46,7 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Kullan
 > [!NOTE]
 >  .NET Framework sürüm 2.0 ile başlayarak, çalışma zamanı şu anda yüklenen çalışma zamanı'den daha yüksek bir sürüm numarası .NET Framework sürümü için derlenmiş bir derlemeyi yüklemez. Bu sürüm numarası birincil ve ikincil bileşenlerinin birleşimi için geçerlidir.  
   
- Uygulama etki alanları arasında tam zamanında (JIT) derlenmiş kod yüklenen derlemelerden şekilde paylaşılan belirtebilirsiniz. Daha fazla bilgi için bkz: [uygulama etki alanları ve derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346).  
+ Uygulama etki alanları arasında tam zamanında (JIT) derlenmiş kod yüklenen derlemelerden şekilde paylaşılan belirtebilirsiniz. Daha fazla bilgi için bkz: [uygulama etki alanları ve derlemeler](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod yükleri geçerli uygulama etki alanına "example.exe" veya "example.dll" adlı bir derleme alır adlı tür `Example` derlemesinden adlı parametresiz bir yöntemi alır `MethodA` , yazın ve yöntemini yürütür. Kapsamlı bir açıklama yüklenen bir derlemeden bilgi edinme hakkında bilgi için bkz: [dinamik olarak yükleme ve türleri kullanma](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
@@ -57,8 +57,8 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Kullan
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Uygulama etki alanları ile programlama](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
  [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)  
  [Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [Uygulama Etki Alanları ve Derlemeler](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

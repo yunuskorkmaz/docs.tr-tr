@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 722a317a01d79f56496810b8727ce041705c8f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir proxy üzerinden COM nesneleri gösterir. RCW .NET istemcileri sıradan bir nesneye görünmesine karşın, bir .NET istemcisi ve COM nesnesi arasındaki aramaları sıralamakta kendi birincil işlevi olduğu.  
@@ -54,7 +54,7 @@ COM arabirimleri ve çalışma zamanı aranabilir sarmalayıcısı
 |---------------|-----------------|  
 |**IDispatch**|COM nesnelerine yansıma aracılığıyla geç bağlama için.|  
 |**IErrorInfo**|Hata, kaynağı, bir Yardım dosyası, Yardım içeriği ve hata tanımlı arabirimi GUID metinsel açıklaması sağlar (her zaman **GUID_NULL** .NET sınıfları için).|  
-|**IProvideClassInfo'yu**|COM Nesne Implements sarılan varsa **IProvideClassInfo'yu**, RCW türü bilgileri daha iyi türü kimlik sağlamak için bu arabirimden ayıklar.|  
+|**IProvideClassInfo**|COM Nesne Implements sarılan varsa **IProvideClassInfo'yu**, RCW türü bilgileri daha iyi türü kimlik sağlamak için bu arabirimden ayıklar.|  
 |**IUnknown**|Nesne kimliği, türü zorlama ve ömür yönetimi için:<br /><br /> -Nesne Kimliği<br />     Çalışma zamanı değeri karşılaştırarak COM nesneleri arasında ayırt **IUnknown** her nesne için arabirim.<br />-Type zorlama<br />     RCW tarafından gerçekleştirilen dinamik tür bulma tanıdığı **QueryInterface** yöntemi.<br />-Ömür Yönetimi<br />     Kullanarak **QueryInterface** yöntemi RCW alır ve Çalışma Zamanı Modülü çöp toplama yönetilmeyen nesne serbest sarmalayıcı üzerinde gerçekleştirir kadar yönetilmeyen bir nesneye başvuru tutar.|  
   
  RCW isteğe bağlı olarak aşağıdaki tabloda listelenen arabirimler sarmaladığı nesnesi tarafından sunulan tüketir.  
@@ -62,12 +62,12 @@ COM arabirimleri ve çalışma zamanı aranabilir sarmalayıcısı
 |Arabirim|Açıklama|  
 |---------------|-----------------|  
 |**IConnectionPoint** ve **IConnectionPointContainer**|Bağlantı noktası olayı stili olayları temsilci göre kullanıma RCW dönüştürür nesneleri.|  
-|**Idispatchex**|Sınıf uyguluyorsa **Idispatchex**, RCW uygulayan **IExpando**. **Idispatchex** arabirimi uzantısıdır **IDispatch** aksine, arabirim **IDispatch**, numaralandırma, ekleme, silme, sağlar ve büyük küçük harfe duyarlı üyeleri çağrılıyor.|  
+|**IDispatchEx**|Sınıf uyguluyorsa **Idispatchex**, RCW uygulayan **IExpando**. **Idispatchex** arabirimi uzantısıdır **IDispatch** aksine, arabirim **IDispatch**, numaralandırma, ekleme, silme, sağlar ve büyük küçük harfe duyarlı üyeleri çağrılıyor.|  
 |**IEnumVARIANT**|Koleksiyon olarak kabul edilmesi için numaralandırmalar destekleyen COM türler sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM Sarmalayıcıları](../../../docs/framework/interop/com-wrappers.md)  
- [Seçili arabirimleri hazırlama](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
+ [Seçili arabirimleri hazırlama](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
  [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

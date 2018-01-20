@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0536197d4cb8b30d99f514d8066e94bf84bffdf3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f344139fd7d7c84aa75ab5e17b6312f3b0c3e031
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="startup-settings-schema"></a>Başlangıç Ayarları Şeması
 Başlangıç ayarları uygulama çalışması gerektiğini ortak dil çalışma zamanı sürümünü belirtin.  
@@ -35,4 +35,4 @@ Başlangıç ayarları uygulama çalışması gerektiğini ortak dil çalışma 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

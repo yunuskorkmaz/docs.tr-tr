@@ -16,19 +16,19 @@ ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="define-c-compiler-options"></a>/define (C# Derleyici Seçenekleri)
-**/ Define** seçeneği tanımlar `name` programınızın tüm kaynak kodda bir simge dosyaları olarak.  
+# <a name="-define-c-compiler-options"></a>-tanımlama (C# Derleyici Seçenekleri)
+**-Tanımlamak** seçeneği tanımlar `name` programınızın tüm kaynak kodda bir simge dosyaları olarak.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/define:name[;name2]  
+-define:name[;name2]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -36,16 +36,16 @@ ms.lasthandoff: 11/21/2017
  Tanımlamak istediğiniz bir veya daha fazla simgeleri adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **/ Define** seçeneğini kullanarak aynı etkiye sahip bir [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) önişlemci yönergesi derleyici seçeneği projedeki tüm dosyalar için etkin olması dışında. Bir simge, kadar kaynak dosyasında tanımlanmış kalır bir [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) kaynak dosyasını yönergesinde tanımı kaldırır. Kullandığınızda / define seçeneği, bir `#undef` bir dosyada yönergesi diğer kaynak kodu dosyaları projedeki hiçbir etkisi.  
+ **-Tanımlamak** seçeneğini kullanarak aynı etkiye sahip bir [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) önişlemci yönergesi derleyici seçeneği projedeki tüm dosyalar için etkin olması dışında. Bir simge, kadar kaynak dosyasında tanımlanmış kalır bir [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) kaynak dosyasını yönergesinde tanımı kaldırır. Kullandığınızda define seçeneği, bir `#undef` bir dosyada yönergesi diğer kaynak kodu dosyaları projedeki hiçbir etkisi.  
   
  Bu seçenek ile tarafından oluşturulan simgeleri kullanabilirsiniz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), ve [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) koşullu kaynak dosyalarını derlemek için.  
   
- **/d** kısa biçimi olan **/ define**.  
+ **-d** kısa biçimi olan **-tanımlamak**.  
   
- Birden çok sembolleriyle tanımlayabilirsiniz **/ define** sembol adları ayırmak için noktalı virgül veya nokta kullanarak. Örneğin:  
+ Birden çok sembolleriyle tanımlayabilirsiniz **-tanımlamak** sembol adları ayırmak için noktalı virgül veya nokta kullanarak. Örneğin:  
   
 ```console  
-/define:DEBUG;TUESDAY  
+-define:DEBUG;TUESDAY  
 ```  
   
  C# Derleyici kendisini bir simge veya kaynak kodunuzda kullanabilirsiniz makroları tanımlar; Tüm simge tanımlarının kullanıcı tanımlı olması gerekir.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ```csharp  
 // preprocessor_define.cs  
-// compile with: /define:xx  
+// compile with: -define:xx  
 // or uncomment the next line  
 // #define xx  
 using System;  
@@ -84,4 +84,4 @@ public class Test
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

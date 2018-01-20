@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetlerini Yapılandırma
 Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Proje Tasarımcısı** etkinleştirmek ve istemci uygulama hizmetleri yapılandırmak için. İstemci uygulama Hizmetleri kullanıcıları doğrulamak ve mevcut bir kullanıcı rolleri ve ayarları almak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama hizmeti. Yapılandırmadan sonra etkin hizmetleri, uygulama kodunuzda açıklandığı gibi erişebilirsiniz [istemci uygulama hizmetlerine genel bakış](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Hakkında daha fazla bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] uygulama bkz [ASP.NET uygulama hizmetleri genel bakış](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ Bu konuda nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../../../includ
   
 2.  Seçin veya temizleyin **yerel olarak çevrimdışı oturum açma etkinleştirmek için parola karması kaydetmek**. Bu seçeneği belirlediğinizde, kullanıcının parolasının şifrelenmiş biçimde yerel olarak önbelleğe alınır. Bu, uygulamanız için çevrimdışı modda uygularsanız yararlı olur. Bu seçenek ile kullanıcılar doğrulamak için bile <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> özelliği ayarlanmış `true`.  
   
-3.  Seçin veya temizleyin **sunucu tanımlama bilgisinin süresinin her tekrar oturum açmasını gerektiren**. Kimlik doğrulama tanımlama bilgisi uzak hizmet üzerindeki yapılandırılmış ve bir kullanıcı oturumunun ne kadar süreyle etkin kalacak gösterir. Tanımlama bilgisinin yapılandırma hakkında daha fazla bilgi için bkz: `timeout` özniteliğini [öğesi form kimlik doğrulamasını (ASP.NET Ayarlar Şeması) için](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Seçin veya temizleyin **sunucu tanımlama bilgisinin süresinin her tekrar oturum açmasını gerektiren**. Kimlik doğrulama tanımlama bilgisi uzak hizmet üzerindeki yapılandırılmış ve bir kullanıcı oturumunun ne kadar süreyle etkin kalacak gösterir. Tanımlama bilgisinin yapılandırma hakkında daha fazla bilgi için bkz: `timeout` özniteliğini [öğesi form kimlik doğrulamasını (ASP.NET Ayarlar Şeması) için](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Uzak rolleri erişmeye çalışan bu seçeneği seçin ya da kimlik doğrulama tanımlama bilgisini dolan Web ayarları Hizmetleri oluşturur bir <xref:System.Net.WebException>. Bu özel durumu işlemek ve kullanıcıların düzeltin için bir oturum açma iletişim kutusu görüntüler. Bu davranış bir örnek için bkz: [izlenecek yol: istemci uygulama hizmetleri kullanarak](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Bu seçenek, kullanım kalmaz sonra uygulama çalışır durumda bırakın kullanıcılar süresiz olarak authenticated emin olmak genel konumda dağıtılan uygulamalar için yararlıdır.  
   

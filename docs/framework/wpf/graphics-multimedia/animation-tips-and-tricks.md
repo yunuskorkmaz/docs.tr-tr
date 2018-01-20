@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
 Animasyonları ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir dizi ipuçları vardır ve, animasyonları yapabilirsiniz püf noktaları daha iyi performans ve yükünden kurtarın.  
@@ -116,7 +116,7 @@ Animasyonları ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Bir animasyon kaldırmak için farklı yolu vardır. Aşağıdaki teknikler ait animasyonları kaldırmak için kullanılan bir <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: bir film şeridi kaldırmak](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Kaldırmak için bir <xref:System.Windows.Media.Animation.Storyboard> bir olay tetikleyicisi ile başlattığınız için bkz: [nasıl yapılır: bir film şeridi kaldırmak](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
 -   Kaldırmak üzere kod kullanmak için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> yöntemi.  
   

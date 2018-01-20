@@ -14,24 +14,24 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 41e65ca61a176359a593a8e03c5b763bc4d28592
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20d452a6aa9047032d989d62d6c1121d7edc5ee3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt; öğesi
 Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir.  
   
  Eşler arası programlama hakkında daha fazla bilgi için bkz: [eşler arası ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<endpointBehaviors >  
-\<davranışı >  
-\<clientCredentials >  
+\<endpointBehaviors>  
+\<behavior>  
+\<clientCredentials>  
 \<Eş >  
-\<messageSenderAuthentication >  
+\<messageSenderAuthentication>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,7 +56,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |revocationMode|İptal edilen sertifika (CRL) listeler denetlemek için kullanılan modlarından birini.|  
 |trustedStoreLocation|İki sistem deposu konumlardan birini: `LocalMachine` veya `CurrentUser`. Bu değer, bir hizmet sertifikası istemciye anlaşıldığında kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** belirtilen depo konumda saklayın.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
+## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType Attribute  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -74,7 +74,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |-----------|-----------------|  
 |Sabit Listesi|Aşağıdaki değerlerden birini: `NoCheck`, `Online`, `Offline`. Varsayılan, `Online` değeridir.<br /><br /> Daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
-## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation özniteliği  
+## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation Attribute  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
@@ -120,6 +120,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Eşler Arası Ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Eş kanal ileti kimlik doğrulaması](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Eş kanal özel kimlik doğrulama](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Eş kanal ileti kimlik doğrulaması](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Eş kanal özel kimlik doğrulama](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

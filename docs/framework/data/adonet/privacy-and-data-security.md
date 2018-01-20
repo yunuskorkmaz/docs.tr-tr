@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>Gizlilik ve veri güvenliği
 Koruma ve ADO.NET uygulama gizli bilgileri yönetme, temel alınan ürünleri ve oluşturmak için kullanılan teknolojileri bağlıdır. ADO.NET Hizmetleri güvenli hale getirme veya verileri şifrelemek için doğrudan sağlamaz.  
   
 ## <a name="cryptography-and-hash-codes"></a>Şifreleme ve karma kodları  
- .NET Framework sınıfları <xref:System.Security.Cryptography> ad alanı okuma veya yetkisiz üçüncü taraflar tarafından değiştirilen verileri önlemek için ADO.NET uygulamalarınızdan kullanılabilir. Diğer yönetilen uygulamalar durumdayken bazı yönetilmeyen Microsoft CryptoAPI için sarmalayıcıları sınıflarıdır. [Şifreleme Hizmetleri](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781) konu şifreleme .NET Framework'teki genel bir bakış sağlar, cryptograph nasıl uygulanır ve belirli şifreleme görevleri nasıl gerçekleştirebileceğiniz açıklanmaktadır.  
+ .NET Framework sınıfları <xref:System.Security.Cryptography> ad alanı okuma veya yetkisiz üçüncü taraflar tarafından değiştirilen verileri önlemek için ADO.NET uygulamalarınızdan kullanılabilir. Diğer yönetilen uygulamalar durumdayken bazı yönetilmeyen Microsoft CryptoAPI için sarmalayıcıları sınıflarıdır. [Şifreleme Hizmetleri](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) konu şifreleme .NET Framework'teki genel bir bakış sağlar, cryptograph nasıl uygulanır ve belirli şifreleme görevleri nasıl gerçekleştirebileceğiniz açıklanmaktadır.  
   
  Veri şifrelenir ve ardından şifresi sağlar, şifreleme veri karma oluşturma tek yönlü bir işlemdir. Veri karma yararlıdır veri değiştirilmediğinden denetleyerek kurcalanmalarını engellemek istediğinizde: aynı giriş dizelerini verildiğinde, karma algoritmaları her zaman kolayca karşılaştırılabilir aynı kısa çıkış değerleri üretir. [Karma kodlarla veri bütünlüğünü sağlama](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) nasıl oluşturmak ve karma değerlerini doğrulamak açıklar.  
   

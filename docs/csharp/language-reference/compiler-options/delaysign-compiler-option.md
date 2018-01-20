@@ -13,31 +13,31 @@ ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 62f76747a29a90562706dff5fa742316c5b99b74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74cd4caaa134f881297134867018346c323deeab
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="delaysign-c-compiler-options"></a>/delaysign (C# Derleyici Seçenekleri)
+# <a name="-delaysign-c-compiler-options"></a>-delaysign (C# Derleyici Seçenekleri)
 Bu seçenek, böylece bir dijital imza daha sonra eklenebilir çıktı dosyasında yer ayırmak için derleyici neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/delaysign[ + | - ]  
+-delaysign[ + | - ]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Kullanım **/delaysign-** tam imzalı bir derleme istiyorsanız. Kullanım **/delaysign+** yalnızca ortak anahtar derlemede yerleştirmek istiyorsanız. Varsayılan değer **/delaysign-**.  
+ Kullanım **- delaysign-** tam imzalı bir derleme istiyorsanız. Kullanım **- delaysign +** yalnızca ortak anahtar derlemede yerleştirmek istiyorsanız. Varsayılan değer **- delaysign-**.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **/Delaysign** seçeneği hiçbir etkisi ile kullanılmadığı sürece [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) veya [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
+ **- Delaysign** seçeneği hiçbir etkisi ile kullanılmadığı sürece [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) veya [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
   
  Tam imzalı bir derleme istediğinde bildirimi (derleme meta verilerini) içeren ve karmayı özel anahtarıyla imzalar dosyayı derleyici karma hale getirir. Elde edilen dijital imza, bildirimi içeren dosyada depolanır. Bir derlemeyi imzalı gecikme olduğunda derleyici işlem değil ve daha sonra imzanın eklenmesi için imza ancak yer ayırır dosyasında depolamak.  
   
- Örneğin, kullanarak **/delaysign+** genel önbelleğinde derleme yerleştirilecek tester sağlar. Sınama sonra tam olarak derleme özel anahtarı kullanarak derlemeye koyarak oturum [derleme bağlayıcı](../../../framework/tools/al-exe-assembly-linker.md) yardımcı programı.  
+ Örneğin, kullanarak **- delaysign +** genel önbelleğinde derleme yerleştirilecek tester sağlar. Sınama sonra tam olarak derleme özel anahtarı kullanarak derlemeye koyarak oturum [derleme bağlayıcı](../../../framework/tools/al-exe-assembly-linker.md) yardımcı programı.  
   
  Daha fazla bilgi için bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) ve [Gecikmeli bir derleme imzalama](../../../framework/app-domains/delay-sign-assembly.md).  
   
@@ -51,4 +51,4 @@ Bu seçenek, böylece bir dijital imza daha sonra eklenebilir çıktı dosyasın
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

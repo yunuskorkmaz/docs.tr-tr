@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>Bağlam Değişimi Bağıntısı 
 Bağlam bağıntı açıklanan bağlam değişimi mekanizması temel [.NET bağlam değişimi protokolü belirtimi](http://go.microsoft.com/fwlink/?LinkId=166059). Bağlam bağıntı, doğru örneğini iletileri ilişkilendirmek için iyi bilinen içerik üstbilgisi veya tanımlama bilgisi kullanır. Bir bağlam tabanlı gibi bağlama bağlamı bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, veya <xref:System.ServiceModel.NetTcpContextBinding> için sağlanan uç kullanılmalıdır <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bu konu bir iş akışı hizmeti Mesajlaşma etkinliklerle bağlam bağıntı kullanmayı açıklar.  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- Bu örneklerde, bağlam bağıntı açıkça yapılandırıldığını unutmayın. İstemci iş akışı ayrıca içinde barındırılmıyorsa bir <xref:System.ServiceModel.Activities.WorkflowServiceHost>, etkinlikleri içerdiği sürece bağıntı açıkça, yapılandırılmalıdır sonra bir <xref:System.ServiceModel.Activities.CorrelationScope> etkinlik. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bağlam bağıntı bkz [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnek.  
+ Bu örneklerde, bağlam bağıntı açıkça yapılandırıldığını unutmayın. İstemci iş akışı ayrıca içinde barındırılmıyorsa bir <xref:System.ServiceModel.Activities.WorkflowServiceHost>, etkinlikleri içerdiği sürece bağıntı açıkça, yapılandırılmalıdır sonra bir <xref:System.ServiceModel.Activities.CorrelationScope> etkinlik. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bağlam bağıntı bkz [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnek.  
   
  İş akışı hizmeti çağrıları yapma istemci bir iş akışı değilse, bunu açıkça geri iş akışı hizmeti için ilk çağrısından döndürülen bağlam geçirir sürece sonra bunu hala yinelenen aramaları yapabilir. Hizmet başvuru ekleyerek oluşturulan proxy'leri [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] depolamak ve varsayılan olarak bu bağlamda geçer.

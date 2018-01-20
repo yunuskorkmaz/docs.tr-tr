@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn (C# Derleyici Seçenekleri)
-**/ Warn** seçeneği derleyici görüntülenecek uyarı düzeyini belirtir.  
+# <a name="-warn-c-compiler-options"></a>-warn (C# Derleyici Seçenekleri)
+**-Warn** seçeneği derleyici görüntülenecek uyarı düzeyini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Açıklamalar  
  Bir hata veya uyarı hakkında bilgi almak için Yardım dizini hata kodunu arayabilirsiniz. Bir hata veya uyarı hakkında bilgi almak diğer yolları için bkz: [C# derleyici hataları](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Kullanım [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) tüm uyarıları hata olarak değerlendirmek için. Kullanım [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) belirli uyarıları devre dışı bırakmak için.  
+ Kullanım [- warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) tüm uyarıları hata olarak değerlendirmek için. Kullanım [- nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) belirli uyarıları devre dışı bırakmak için.  
   
- **/w** kısa biçimi olan **/ warn**.  
+ **-w** kısa biçimi olan **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/21/2017
  Derleme `in.cs` ve derleyicinin yalnızca düzey 1 Uyarıları görüntüle:  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

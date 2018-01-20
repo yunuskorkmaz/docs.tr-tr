@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e528996ddbe56be009566a755adab2fd2d5413b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamamlandığında, bir zaman uyumsuz işlemi çok yaygın bir sorundur. Geleneksel olarak, bu geri çağırma yöntemlerini kullanarak gerçekleştirilmedi. Görev paralel kitaplığı aynı işlevselliği tarafından sağlanan *devamlılık görevlerini*. (Yalnızca devamlılığı olarak da bilinir) bir devamlılık görevi olarak bilinen başka bir görev tarafından çağrılan bir zaman uyumsuz bir görevdir *antecedent*, antecedent sona erdiğinde.  
@@ -127,7 +127,7 @@ Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamam
 ## <a name="associating-state-with-continuations"></a>Durum devamlılıklar ile ilişkilendirme  
  Rastgele durumu görev devamlılığı ile ilişkilendirebilirsiniz. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Yöntemi sağlar aşırı yüklenmiş sürümleri, her Al bir <xref:System.Object> devamlılık durumunu gösteren bir değer. Bu durum nesnesi kullanarak daha sonra erişebileceğiniz <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> özelliği. Bu durum nesne `null` bir değer belirtmezseniz.  
   
- Devamlılık durumunda yararlı kullanan var olan kodu dönüştürürken [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanılacak. APM, genellikle nesne durumda sağladığınız **başlamak***yöntemi* yöntemi ve kullanarak durum sonraki erişim <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, korumak bu durum TPL kullanmak için APM kullanan kodu dönüştürürken.  
+ Devamlılık durumunda yararlı kullanan var olan kodu dönüştürürken [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) TPL kullanılacak. APM, genellikle nesne durumda sağladığınız **başlamak *** yöntemi* yöntemi ve kullanarak durum sonraki erişim <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> özelliği. Kullanarak <xref:System.Threading.Tasks.Task.ContinueWith%2A> yöntemi, korumak bu durum TPL kullanmak için APM kullanan kodu dönüştürürken.  
   
  Devamlılık durumu da yararlı olabilir ile çalışırken <xref:System.Threading.Tasks.Task> nesnelerini [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı. Örneğin, **Paralel Görevler** penceresinde **görev** sütunu her görev için durum nesnenin dize gösterimini görüntüler. Hakkında daha fazla bilgi için **Paralel Görevler** penceresinde bkz [görevleri penceresini kullanma](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -154,7 +154,7 @@ Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamam
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Daha fazla bilgi için bkz: [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) ve [NIB: nasıl yapılır: görevler tarafından özel durum işleme](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Daha fazla bilgi için bkz: [özel durum işleme](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) ve [NIB: nasıl yapılır: görevler tarafından özel durum işleme](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Devamlılık kullanılarak oluşturulmuş bir ekli alt görev olup olmadığını <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> seçeneği, üst çağıran iş parçacığı tarafından eklenen herhangi bir alt durumda olduğu gibi özel durumlar yayılır. Daha fazla bilgi için bkz: [eklenen ve ayrılan alt görevler](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   

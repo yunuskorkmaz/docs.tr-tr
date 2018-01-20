@@ -20,19 +20,19 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 669811b20fd9980b6876683ec7eff4c235a676ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c50bf9e882ade86e70db217a75fef2a893c45572
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; öğesi (ağ ayarları)
 Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.  
   
  \<Yapılandırma >  
-\<System.NET >  
+\<system.net>  
 \<Ayarlar >  
-\<performans sayaçları >  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -63,7 +63,7 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
 ## <a name="remarks"></a>Açıklamalar  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
- Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir. Tüm ağ performans sayaçlarını etkin veya yapılandırma dosyasında tek bir ayar ile devre dışı. Performans sayaçları ağ tek etkin veya devre dışı. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz: [ağ performans sayaçları](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Ağ performans sayaçları yapılandırma dosyasında kullanılacak etkinleştirilmesi gerekir. Tüm ağ performans sayaçlarını etkin veya yapılandırma dosyasında tek bir ayar ile devre dışı. Performans sayaçları ağ tek etkin veya devre dışı. Belirli ağ performans sayaçları hakkında daha fazla bilgi için bkz: [ağ performans sayaçları](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
   
  Ağ performans sayaçları devre dışı bırakıldı varsayılan değerdir.  
   
@@ -88,4 +88,4 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Ağ performans sayaçları](http://msdn.microsoft.com/en-us/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Ağ performans sayaçları](http://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)

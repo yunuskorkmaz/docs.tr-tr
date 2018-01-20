@@ -12,11 +12,11 @@ ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 45dfc4dd4ab42c3ce8edd7e41b7b0401bb0db672
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c2f80eb8a0fbc655143ca02ead5f6f46f102918
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kodu, uygulamanızda eklediğinizde göz önünde bulundurun ve büyük olasılıkla, tamamlanmadan önce zaman uyumsuz bir işlem yeniden girme için başvuruyor yeniden giriş önlemek gerekir. Tanımlamak ve yeniden giriş olasılıklarını işlemek yok, beklenmeyen sonuçlara neden olabilir.  
@@ -67,7 +67,7 @@ TOTAL bytes returned:  890591
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
 2. msdn.microsoft.com/library/aa578028.aspx               205273  
 6. msdn.microsoft.com/library/ms404677.aspx               197325  
-3. msdn.microsoft.com/en-us/library/jj155761.aspx                29019  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
 7. msdn.microsoft.com                                            42972  
 4. msdn.microsoft.com/library/hh290140.aspx               117152  
 8. msdn.microsoft.com/library/ff730837.aspx               146159  
@@ -452,7 +452,7 @@ Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)
 End Function  
 ```  
   
-#### <a name="the-finishonegroupasync-method"></a>FinishOneGroupAsync yöntemi  
+#### <a name="the-finishonegroupasync-method"></a>The FinishOneGroupAsync Method  
  Bu yöntem, gruptaki her biri bekleniyor, indirilen Web sitesi uzunluğu görüntüleyerek ve toplam uzunluğu ekleyerek, indirme görevleri boyunca geçiş yapar.  
   
  İlk ifade, `FinishOneGroupAsync` kullanan `pendingWork` yöntemi girme zaten görüntü işleminde veya, zaten bekleyen bir işlem ile engellemez emin olmak için. Böyle bir işlem devam ediyor, kendi dönüş girme işlemi beklemeniz gerekir.  

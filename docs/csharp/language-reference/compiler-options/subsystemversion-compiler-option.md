@@ -8,22 +8,22 @@ ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3a6fee8f140a0c2e81f9904d5ceea7e290d48275
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (C# Derleyici Seçenekleri)
+# <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# Derleyici Seçenekleri)
 Böylece yürütülebilir dosyayı çalıştırmak Windows sürümlerinin belirleme oluşturulan yürütülebilir dosyanın çalıştırılabileceği alt en düşük sürümünü belirtir. En yaygın olarak, bu seçeneği, yürütülebilir dosyanın daha eski Windows sürümlerinde kullanılamaz belirli güvenlik özellikleri yararlanabilirsiniz sağlar.  
   
 > [!NOTE]
->  Alt belirtmek için kullanın [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) derleyici seçeneği.  
+>  Alt belirtmek için kullanın [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) derleyici seçeneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```console  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
@@ -46,22 +46,22 @@ Böylece yürütülebilir dosyayı çalıştırmak Windows sürümlerinin belirl
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Varsayılan değerler  
- Varsayılan değer olan **/subsystemversion** derleyici seçeneği, aşağıdaki listeden koşulların bağlıdır:  
+ Varsayılan değer olan **- subsystemversion** derleyici seçeneği, aşağıdaki listeden koşulların bağlıdır:  
   
 -   Aşağıdaki listede herhangi bir derleyici seçeneği ayarlandıysa varsayılan değeri 6.02 şöyledir:  
   
-    -   [/ target: appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+    -   [-target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
   
-    -   [/ target: winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+    -   [-target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/Platform:ARM](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
 -   MSBuild kullanıyorsanız, varsayılan değer 6,00, hedefleme [!INCLUDE[net_v45](~/includes/net-v45-md.md)], ve bu listede daha önce belirtilmiş derleyici seçenekleri hiçbirini ayarlamadıysanız.  
   
 -   Önceki koşulların hiçbiri true ise varsayılan değer 4.00 ' dir.  
   
 ## <a name="setting-this-option"></a>Bu seçeneği ayarlama  
- Ayarlamak için **/subsystemversion** derleyici seçeneği Visual Studio'da .csproj dosyasını açın ve için bir değer belirtmeniz gerekir `SubsystemVersion` MSBuild XML özellik. Bu seçenek, Visual Studio IDE içinde ayarlanamıyor. Daha fazla bilgi için bu konunun önceki kısımlarında "Varsayılan değerler" konusuna bakın veya [yaygın MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).  
+ Ayarlamak için **- subsystemversion** derleyici seçeneği Visual Studio'da .csproj dosyasını açın ve için bir değer belirtmeniz gerekir `SubsystemVersion` MSBuild XML özellik. Bu seçenek, Visual Studio IDE içinde ayarlanamıyor. Daha fazla bilgi için bu konunun önceki kısımlarında "Varsayılan değerler" konusuna bakın veya [yaygın MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)

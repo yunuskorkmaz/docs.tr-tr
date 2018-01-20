@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 45061ed18d5854092db4a8d90bc18d48e2e6e6db
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a75914e032adf5b160724e17966b683a119b69a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET veri türü eşlemeleri
 .NET Framework nasıl türleri bildirilen kullanılan ve çalışma zamanı'nda yönetilen tanımlar ortak tür sistemi dayanır. Değer türleri ve türetilen tüm hangi başvuru türleri oluşur <xref:System.Object> temel türü. Açıkça belirtilmezse, bir veri kaynağı ile çalışırken, veri türü veri sağlayıcısı'ndan algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnesidir herhangi belirli veri kaynağından bağımsız. Verileri bir `DataSet` bir veri kaynağından alınan ve değişiklikleri kullanarak veri kaynağına geri kaldı bir `DataAdapter`. Yani bir `DataAdapter` doldurur bir <xref:System.Data.DataTable> içinde bir `DataSet` sütunları sonuç veri türleri bir veri kaynağından alınan değerlerle `DataTable` olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri için belirli yerine türleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri veri kaynağına bağlanmak için kullanılan sağlayıcı.  
@@ -51,5 +51,5 @@ ms.lasthandoff: 01/17/2018
  [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Ortak Tür Sistemi](../../../../docs/standard/base-types/common-type-system.md)  
- [Türleri dönüştürme](http://msdn.microsoft.com/en-us/6038316e-bdaf-4f55-8006-407f591ce156)  
+ [Türleri dönüştürme](http://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

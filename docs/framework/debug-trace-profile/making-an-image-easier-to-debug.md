@@ -18,11 +18,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e05af51010e92586a9f1de423f6304ea8db78168
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="making-an-image-easier-to-debug"></a>Görüntüde Hata Ayıklamayı Kolaylaştırma
 Yönetilmeyen kod derlerken ayar IDE anahtarları veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir görüntü yapılandırabilirsiniz. Örneğin, kullanabileceğiniz /**Zi** Visual c++ komut satırı seçeneği, hata ayıklama simge dosyaları (dosya uzantısı .pdb) yaymak üzere isteyebilir. Benzer şekilde, /**Od** iyileştirme devre dışı bırakmak için derleyici komut satırı seçeneği söyler. Ortaya çıkan kodu daha yavaş çalışır, ancak bu gerekli olmalıdır hata ayıklamak daha kolay olur.  
@@ -67,4 +67,4 @@ AllowOptimize=0
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama, İzleme ve Profil Oluşturma](../../../docs/framework/debug-trace-profile/index.md)  
  [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- [Profil oluşturma etkinleştirme](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Profil oluşturma etkinleştirme](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

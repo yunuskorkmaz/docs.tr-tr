@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a29f761b4a3718293c1786d23d425265603f8c84
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı hizmeti iletileri birbirleriyle veya uygulama örneği durumu ilk isteğine yanıt ya da bir sıra kimliği gibi ilgili mekanizmadır. Bu konu bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her tür için ek bilgileri sağlayın.  
@@ -31,7 +31,7 @@ Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı h
 ## <a name="protocol-based-correlation"></a>Protokol tabanlı bağıntı  
  Protokol tabanlı bağıntı aktarım mekanizması birbirine ve uygun örneğini iletilerini ilişkilendirmek için kullanır. Bazı sistem tarafından sağlanan Protokolü bağıntıları istek-yanıt bağıntısı ve bağlam tabanlı bağıntı içerir. İstek-yanıt bağıntısı gibi iki yönlü bir işlem oluşturmak için Mesajlaşma etkinlikleri tek bir çift ilişkilendirmek için kullanılan bir <xref:System.ServiceModel.Activities.Send> ile eşleştirilmiş bir <xref:System.ServiceModel.Activities.ReceiveReply>, veya bir <xref:System.ServiceModel.Activities.Receive> ile eşleştirilmiş bir <xref:System.ServiceModel.Activities.SendReply>. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] İş akışı Tasarımcısı bu deseni hızlıca uygulamak için etkinlik şablonları kümesi de sağlar. Bağlam tabanlı bağıntı açıklanan bağlam değişimi mekanizması dayalı [.NET bağlam değişimi protokolü belirtimi](http://go.microsoft.com/fwlink/?LinkID=166059). Bir bağlam tabanlı gibi bağlama bağlamına dayalı bağıntı kullanılacak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> veya <xref:System.ServiceModel.NetTcpContextBinding> noktadaki kullanılması gerekir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]protokol bağıntı bkz [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md), [dayanıklı çift yönlü](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), ve [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] iş akışı Tasarımcısı etkinlik şablonları için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Örnek kod için bkz: [dayanıklı çift yönlü &#91; WF örnekleri &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) ve [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnekleri.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]protokol bağıntı bkz [bağlam değişimi](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md), [dayanıklı çift yönlü](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md), ve [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] iş akışı Tasarımcısı etkinlik şablonları için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Örnek kod için bkz: [dayanıklı çift yönlü &#91; WF örnekleri &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md) ve [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) örnekleri.  
   
 ## <a name="content-based-correlation"></a>İçeriğe dayalı bağıntı  
  İçeriğe dayalı bağıntı bazı bilgi parçasını iletide belirli bir örneğine ilişkilendirmek için kullanır. Protokol tabanlı bağıntı farklı olarak, içerik tabanlı bağıntı ilgili her iletide bu verileri bulunabileceği açıkça durumuna uygulama yazarı gerektirir. İçeriğe dayalı bağıntı kullanan etkinlikleri kullanarak bu ileti verileri belirtirseniz bir <xref:System.ServiceModel.MessageQuerySet>. İçeriğe dayalı bağıntı, bağlam bağlamaları gibi birini kullanmayın Hizmetleri ile iletişim kurarken yararlıdır <xref:System.ServiceModel.BasicHttpContextBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]içeriğe dayalı bağıntı bkz [içerik tabanlı](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Örnek kod için bkz: [içerik tabanlı bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) ve [bağıntılı hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) örnekleri.  
@@ -40,4 +40,4 @@ Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı h
  [İçerik Temelli Bağıntı](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [Bağıntılı Hesaplayıcı](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [Dayanıklı çift yönlü &#91; WF örnekleri &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+ [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

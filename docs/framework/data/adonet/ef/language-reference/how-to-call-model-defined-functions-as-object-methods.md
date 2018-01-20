@@ -17,18 +17,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d769eca17a45449505e1df96e1cbde584e42d65e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 81b9f8099f98915ec0b0f83dbe0f90e506cb2a79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: çağrı nesne yöntemleri olarak modeli tarafından tanımlanan İşlevler
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf bir statik yöntem olarak. A *modeli tanımlı işlev* kavramsal modelde tanımlanan bir işlev değil. Konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. Model tanımlı işlevler LINQ to Entities sorgularında çağırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: sorgularda Call Model-Defined işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Model tanımlı bir işlev olarak çağrısı bir <xref:System.Data.Objects.ObjectContext> yöntemi veya özel bir sınıf bir statik yöntem, ilk yöntemi modeli tanımlı işlev eşleme yapmalısınız bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Ancak, tanımladığınızda bir yöntem üzerinde <xref:System.Data.Objects.ObjectContext> sınıfı kullanmanız gerekir <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> ancak bir statik yöntem özel bir sınıf tanımladığınızda, kullanmalıdır LINQ sağlayıcıyı gösterme özelliği <xref:System.Linq.IQueryable.Provider%2A> özelliği LINQ sağlayıcıyı gösterme. Daha fazla bilgi için aşağıdaki yordamları izleyin örneklere bakın.  
   
- Model tanımlı bir işlev üzerinde bir yöntem olarak çağırmak için aşağıdaki yordamları üst düzey ana hatlarını sağlamak bir <xref:System.Data.Objects.ObjectContext> nesne ve özel bir sınıf bir statik yöntem olarak. Aşağıdaki örnekler yordamlarda bulunan adımları hakkında daha fazla ayrıntı sağlar. Yordamlar, kavramsal modelde tanımlanan bir işlev varsayar. Daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Model tanımlı bir işlev üzerinde bir yöntem olarak çağırmak için aşağıdaki yordamları üst düzey ana hatlarını sağlamak bir <xref:System.Data.Objects.ObjectContext> nesne ve özel bir sınıf bir statik yöntem olarak. Aşağıdaki örnekler yordamlarda bulunan adımları hakkında daha fazla ayrıntı sağlar. Yordamlar, kavramsal modelde tanımlanan bir işlev varsayar. Daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Bir ObjectContext nesnesinde bir yöntem olarak model tanımlı bir işlevi çağırmak için  
   
@@ -57,9 +57,9 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
 ## <a name="example"></a>Örnek  
  **Bir ObjectContext nesnesinde bir yöntem olarak Model tanımlı bir işlev çağırma**  
   
- Aşağıdaki örnek, bir yöntem olarak model tanımlı bir işlevi çağırmak gösterilmiştir bir <xref:System.Data.Objects.ObjectContext> nesnesi. Örnek kullanır [AdventureWorks satış modeli](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+ Aşağıdaki örnek, bir yöntem olarak model tanımlı bir işlevi çağırmak gösterilmiştir bir <xref:System.Data.Objects.ObjectContext> nesnesi. Örnek kullanır [AdventureWorks satış modeli](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
- Belirtilen ürün için ürün geliri aşağıdan kavramsal model işlevi döndürür göz önünde bulundurun. (Kavramsal modelinizi işlevi ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Belirtilen ürün için ürün geliri aşağıdan kavramsal model işlevi döndürür göz önünde bulundurun. (Kavramsal modelinizi işlevi ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -95,12 +95,12 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
 ## <a name="example"></a>Örnek  
  **Özel bir sınıf bir statik yöntem olarak Model tanımlı bir işlev çağırma**  
   
- Sonraki örnek, bir statik yöntem özel bir sınıf olarak model tanımlı bir işlevi çağırmak gösterilmiştir. Örnek kullanır [AdventureWorks satış modeli](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+ Sonraki örnek, bir statik yöntem özel bir sınıf olarak model tanımlı bir işlevi çağırmak gösterilmiştir. Örnek kullanır [AdventureWorks satış modeli](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
 > [!NOTE]
 >  Özel bir sınıf bir statik yöntem olarak model tanımlı bir işlev çağırdığınızda, model tanımlı işlevi bir koleksiyon kabul edip değerlerin bir toplama koleksiyonda dönün gerekir.  
   
- Bir satış siparişi ayrıntısını koleksiyon için ürün geliri aşağıdan kavramsal model işlevi döndürür göz önünde bulundurun. (Kavramsal modelinizi işlevi ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/en-us/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Bir satış siparişi ayrıntısını koleksiyon için ürün geliri aşağıdan kavramsal model işlevi döndürür göz önünde bulundurun. (Kavramsal modelinizi işlevi ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: özel işlevlerde tanımlamak kavramsal Model](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -117,6 +117,6 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

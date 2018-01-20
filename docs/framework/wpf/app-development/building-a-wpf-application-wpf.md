@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]uygulamalar, olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Microsoft Build Engine (MSBuild). Kod ve XAML dosyaları ek olarak, uygulamanın bir MSBuild proje dosyası içermesi gerekir. Daha fazla bilgi için "MSBuild" konusuna bakın.  
   
--   Visual Studio. Visual Studio WPF MSBuild uygulamalarla derler ve kullanıcı Arabirimi oluşturma için görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için bkz: [Visual Studio'da uygulama geliştirme](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68) ve [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+-   Visual Studio. Visual Studio WPF MSBuild uygulamalarla derler ve kullanıcı Arabirimi oluşturma için görsel tasarımcı içeren bir tümleşik geliştirme ortamıdır. Daha fazla bilgi için bkz: [Visual Studio'da uygulama geliştirme](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) ve [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF yapı ardışık düzen  

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırasında çalıştırdığınız bilinen sorunlar sayısını listeler. İçine çalıştırdığınız sorunu bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve özel durumlar hakkında ayrıntılı bilgi almak hizmet içinde gerçekleşen. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -113,7 +113,7 @@ public class MyServiceHost : ServiceHost
   
 -   Uygulama bağlantı noktasını açmanız gerekebilir. Ayrıntılar için bkz [güvenlik duvarı yönergeleri](../../../docs/framework/wcf/samples/firewall-instructions.md) SDK örnekleri gelen.  
   
--   Diğer olası sorunları için örnekleri konusuna [bir çalışma grubu ve üzerinden makineler örneklerini çalıştırma](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113).  
+-   Diğer olası sorunları için örnekleri konusuna [bir çalışma grubu ve üzerinden makineler örneklerini çalıştırma](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   İstemci Windows kimlik bilgilerini kullanarak ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos aşağıdaki gibi yapılandırın.  
   
@@ -149,7 +149,7 @@ public class MyServiceHost : ServiceHost
   
 -   [Http.sys kullanarak Kerberos hizmet asıl adlarını kaydetme](http://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos açıklanmıştır](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [Kerberos Explained](http://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Bir FaultException ı throw zaman\<özel durum > türü özel bir durum olduğunda, her zaman istemci üzerinde genel bir FaultException tür ve genel tür alıyorum. Ne oluyor?  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (C# Derleyici Seçenekleri)
+# <a name="-refout-c-compiler-options"></a>-refout (C# Derleyici Seçenekleri)
 
-**/Refout** seçeneği, bir dosya yolu burada referans derlemesini gerektiğini belirtir. Bu şekilde dönüşür `metadataPeStream` yayma API'sindeki.
+**- Refout** seçeneği, bir dosya yolu burada referans derlemesini gerektiğini belirtir. Bu şekilde dönüşür `metadataPeStream` yayma API'sindeki.
 
 ## <a name="syntax"></a>Sözdizimi
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Arguments
@@ -45,8 +45,8 @@ Daha fazla başvuru derlemeleri meta veriler (özel üyeler) yalnızca meta veri
 - Tüm sanal yöntemleri korunur. Açık arabirim uygulamaları tutulur. Kendi erişimciler sanal (ve dolayısıyla korunması gibi) açıkça gerçekleştirilen özellikleri ve olayları tutulur.
 - Yapı tüm alanları tutulur. (Bu bir post adaydır-C#-7.1 iyileştirme)
 
-`/refout` Ve [ `/refonly` ](refonly-compiler-option.md) seçenekleri karşılıklı olarak birbirini dışlar.
+`-refout` Ve [ `-refonly` ](refonly-compiler-option.md) seçenekleri karşılıklı olarak birbirini dışlar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+ [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

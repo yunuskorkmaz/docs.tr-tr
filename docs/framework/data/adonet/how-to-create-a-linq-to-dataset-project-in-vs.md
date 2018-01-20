@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3add191250a10d1d6016263ada0ba53fc8082717
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Nasıl yapılır: Visual Studio'da bir LINQ to DataSet projesi oluşturma
 Farklı türde [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projeleri gerektiren belirli içeri aktarılan ad alanları (Visual Basic) veya `using` yönergeleri (C#) ve başvuruları. En düşük gereksinim System.Core.dll başvurusudur ve `using` için yönerge <xref:System.Linq>. Yeni bir oluşturursanız, varsayılan olarak, bunlar sağlanan [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] projesi. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]Ayrıca bir başvuru System.Data.dll ve System.Data.DataSetExtensions.dll gerektirir ve bir `Imports` (Visual Basic) veya `using` yönergesi (C#).  
@@ -62,4 +62,4 @@ Farklı türde [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] proje
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [LINQ Kullanmaya Başlama](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+ [LINQ Kullanmaya Başlama](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

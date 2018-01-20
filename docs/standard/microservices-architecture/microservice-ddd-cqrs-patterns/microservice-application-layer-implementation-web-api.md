@@ -1,7 +1,7 @@
 ---
 title: "Mikro hizmet uygulama katmanı Web API kullanarak uygulama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı Web API kullanarak uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d1e14f2ab26360792b34fee48b7e180346064e46
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Mikro hizmet uygulama katmanı Web API kullanarak uygulama
 
@@ -117,7 +117,7 @@ DI .NET Core kullanırken, bir derlemeyi tarayın ve türlerinden kurala göre o
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Matthew Kol. Hizmetleri ile Scrutor kaydediliyor**
+-   **Matthew King. Hizmetleri ile Scrutor kaydediliyor**
     [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
 
 <!-- -->
@@ -223,7 +223,7 @@ Aşağıdaki örnek, Basitleştirilmiş CreateOrderCommand sınıfı gösterir. 
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/en-us/library/bb383979.aspx
+// https://msdn.microsoft.com/library/bb383979.aspx
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>

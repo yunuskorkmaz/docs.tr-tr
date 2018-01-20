@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
 Bu konu, yönetilmeyen işlevlere erişim açıklar ve yönetilen kod yöntemi tanımında açıklama birkaç öznitelik alanları tanıtır. Örnekler için nasıl oluşturulacağını gösterir. Platformuyla kullanılacak bildirimleri NET tabanlı çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [Giriş Noktası Belirtme](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)  
  [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Platform çağırma güvenlik konuları](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [Platform çağırma güvenlik konuları](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [DLL'lerde İşlevleri Tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [DLL İşlevleri için bir Sınıf Oluşturma](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

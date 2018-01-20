@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a>Kumanda bir giriş mekanizmasıdır içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] giriş cihaz giriş'den fazla anlamsal düzeyde işlenmesini sağlar. Komut örneklerindendir **kopya**, **Kes**, ve **Yapıştır** işlemleri birçok uygulama üzerinde bulunamadı.  
@@ -202,5 +202,5 @@ ms.lasthandoff: 12/22/2017
  [Girişe Genel Bakış](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Nasıl yapılır: bir MenuItem komut ekleme](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
+ [Nasıl yapılır: bir MenuItem komut ekleme](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [Özel bağlayan örneği oluşturma](http://go.microsoft.com/fwlink/?LinkID=159980)

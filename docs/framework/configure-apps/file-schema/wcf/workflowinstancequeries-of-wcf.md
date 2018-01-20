@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ecccb2f3b062afd631ef9ba36bc8ac8521db7646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f02336dc35083009f601b3c4fb3568585a0beeef
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF &lt;workflowInstanceQueries&gt;
 Başlatılan ya da tamamlanan olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izlemek yapılandırma öğelerinin koleksiyonunu temsil eder.  
   
  Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel >  
-\<İzleme >  
-\<trackingProfile >  
+ \<system.serviceModel>  
+\<tracking>  
+\<trackingProfile>  
 \<İş akışı >  
 \<Workflowınstancequeries >  
   
@@ -47,13 +47,13 @@ Başlatılan ya da tamamlanan olay gibi iş akışı örneği yaşam döngüsü 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Workflowınstancequery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|İş akışı örneği yaşam döngüsü değişiklikleri izlemek için kullanılan bir sorgu.|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|İş akışı örneği yaşam döngüsü değişiklikleri izlemek için kullanılan bir sorgu.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Tüm sorgular tarafından tanımlanan belirli bir iş akışı için içeren bir yapılandırma öğesi [activityDefinitionId](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) özelliği.|  
+|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Tüm sorgular tarafından tanımlanan belirli bir iş akışı için içeren bir yapılandırma öğesi [activityDefinitionId](http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) özelliği.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:  

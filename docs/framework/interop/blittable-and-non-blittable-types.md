@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 68e1d66b615db7369d71f56b402c13ce41ad5e54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türleri, yönetilen ve yönetilmeyen bellekte ortak bir gösterimi olan ve birlikte çalışma sıralayıcı tarafından özel işlem gerektirmez. Bu tür adlı *blittable türleri* arasında geçirildiğinde bunlar dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kodu.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Blittable türleri dizisi gibi tek boyutlu dizi. Ancak, bir değişken dizisini blittable türleri içeren bir tür kendisini değil blok halinde kopyalanabilir.  
   
--   Yalnızca blittable türleri (ve biçimlendirilmiş türleri olarak sıralanmış varsa sınıfları) içeren biçimlendirilmiş değer türleri. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a).  
+-   Yalnızca blittable türleri (ve biçimlendirilmiş türleri olarak sıralanmış varsa sınıfları) içeren biçimlendirilmiş değer türleri. Biçimlendirilmiş değer türleri hakkında daha fazla bilgi için bkz: [değer türleri için varsayılan hazırlama](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a).  
   
  Nesne başvuruları blittable değil. Bu başvurular blittable tek başına nesneler dizisi içerir. Örneğin, blittable olan bir yapı tanımlayabilirsiniz, ancak bu yapıların başvurularını dizisini içeren bir blittable türü tanımlayamazsınız.  
   
@@ -66,18 +66,18 @@ ms.lasthandoff: 12/22/2017
   
  Bazı yönetilen veri türleri farklı gösterimi yönetilmeyen bir ortamda gerektirir. Bu blittable olmayan veri türleri sıralanabilir bir forma dönüştürülmesi gerekir. Örneğin, yönetilen dizeler kopyalanamaz türler şunlardır: çünkü bunlar sıralanabilir önce dize nesnelerini dönüştürülmelidir.  
   
- Aşağıdaki tabloda blittable olmayan türlerinden listeler <xref:System> ad alanı. [Temsilciler](http://msdn.microsoft.com/en-us/d176ee76-f982-494b-b03d-92e4118896e2), bir statik yöntem ya da bir sınıf örneği veri yapılarını olduğu olan ayrıca kopyalanamaz.  
+ Aşağıdaki tabloda blittable olmayan türlerinden listeler <xref:System> ad alanı. [Temsilciler](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2), bir statik yöntem ya da bir sınıf örneği veri yapılarını olduğu olan ayrıca kopyalanamaz.  
   
 |Örnekteki türü|Açıklama|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Bir C tarzı diziye dönüştürür veya `SAFEARRAY`.|  
-|[System.Boolean](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|1, 2 veya 4-bayt değeri ile dönüştürür `true` 1 veya -1 olarak.|  
-|[System.Char](http://msdn.microsoft.com/en-us/cecc87c1-075e-4cde-aa56-33d189f66feb)|Unicode veya ANSI karakter türüne dönüştürür.|  
-|[System.Class](http://msdn.microsoft.com/en-us/fe334af5-0123-43d8-be84-26f6f023ddb6)|Bir sınıf arabirimi dönüştürür.|  
+|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|1, 2 veya 4-bayt değeri ile dönüştürür `true` 1 veya -1 olarak.|  
+|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|Unicode veya ANSI karakter türüne dönüştürür.|  
+|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|Bir sınıf arabirimi dönüştürür.|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Bir değişken veya arabirim dönüştürür.|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Bir C tarzı diziye dönüştürür veya `SAFEARRAY`.|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|BSTR veya null başvuru sonlandırma bir dizeye dönüştürür.|  
-|[System.Valuetype](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a)|Bir sabit bellek düzeni yapısıyla dönüştürür.|  
+|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|Bir sabit bellek düzeni yapısıyla dönüştürür.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Bir C tarzı diziye dönüştürür veya `SAFEARRAY`.|  
   
  Sınıf ve nesne türleri yalnızca COM birlikte çalışma tarafından desteklenir. Karşılık gelen türlerin [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# ve C++, bkz: [sınıf kitaplığına genel bakış](../../../docs/standard/class-library-overview.md).  

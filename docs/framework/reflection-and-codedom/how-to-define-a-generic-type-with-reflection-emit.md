@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e10f0f4ad1552c7b8ba7e6bc5175ffe7576ec986
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6096a54c6a530035bd32c24d427ba047f905476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
 Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamaları ve özel kısıtlamalar uygulamak nasıl ve parametre türleri olarak sınıfın türü parametreleri kullanma üyeleri oluşturmak üzere nasıl gösterir ve dönüş türleri.  
@@ -146,5 +146,5 @@ Bu konuda iki tür parametreleri ile basit bir genel tür oluşturma, tür param
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Yansıma kullanarak yayma](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Yansıma yayma dinamik derleme senaryoları](http://msdn.microsoft.com/en-us/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Yansıma kullanarak yayma](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Yansıma yayma dinamik derleme senaryoları](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

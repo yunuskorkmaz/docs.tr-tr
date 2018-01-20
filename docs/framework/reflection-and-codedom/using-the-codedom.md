@@ -32,11 +32,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0bb3ab57d78e1a7b6d53261af50d4698ab1a4ff2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2cd2b8e8ecb0e5d451ebf3c6823144e4a90e0d79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-the-codedom"></a>CodeDOM'yi Kullanma
 CodeDOM genel türlerde kaynak kod öğeleri temsil eden türler sağlar. Bir nesne grafiğinin derlemek için CodeDOM öğeleri kullanılarak bir kaynak kod modeli derlemeler bir program tasarlayabilirsiniz. Bu nesne grafiği, kaynak kodu CodeDOM Kod Oluşturucu için desteklenen bir programlama dili kullanılarak oluşturulabilir. CodeDOM ikili derlemeye kaynak kodu derlemek için de kullanılabilir.  
@@ -136,4 +136,4 @@ CodeDOM genel türlerde kaynak kod öğeleri temsil eden türler sağlar. Bir ne
   
  CodeDOM türlerinin her belge için başvuru belgelerine bakın <xref:System.CodeDom> ad alanı.  
   
- Kod öğesi belirli bir türü temsil eden CodeDOM öğesi bulmak hızlı grafiği için bkz: [CodeDOM hızlı başvuru](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Kod öğesi belirli bir türü temsil eden CodeDOM öğesi bulmak hızlı grafiği için bkz: [CodeDOM hızlı başvuru](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).

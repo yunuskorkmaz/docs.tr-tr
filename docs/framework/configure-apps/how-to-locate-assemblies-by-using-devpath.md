@@ -21,11 +21,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4ee4200a67ef9d9d123be3bc32b02ac61512d23b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma
 Geliştiriciler, oluşturmakta olduğunuz paylaşılan bir derleme birden çok uygulama ile doğru çalıştığından emin olmak isteyebilirsiniz. Sürekli olarak derlemeyi genel derleme önbelleğinde geliştirme döngüsü sırasında koyma yerine, geliştirici derlemesi için derleme çıktı dizinine işaret eden bir DEVPATH ortam değişkeni oluşturabilirsiniz.  
@@ -55,4 +55,4 @@ Geliştiriciler, oluşturmakta olduğunuz paylaşılan bir derleme birden çok u
 >  Bu ayar yalnızca geliştirme sırasında kullanın. Çalışma zamanı tanımlayıcı adlı derlemeler DEVPATH bulunan sürümlerinde denetlemez. Yalnızca, bulduğu ilk derleme kullanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

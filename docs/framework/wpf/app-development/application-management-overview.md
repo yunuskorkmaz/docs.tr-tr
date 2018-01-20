@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamaları, ortak bir uygulama uygulama ve Yönetim için geçerli işlevi sahip olma eğilimi gösterir. Bu konu içinde işlevlerine genel bakış sağlar <xref:System.Windows.Application> oluşturmak ve uygulamaları yönetmek için sınıf.  
@@ -381,5 +381,5 @@ Tüm uygulamaları, ortak bir uygulama uygulama ve Yönetim için geçerli işle
  [Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
  [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF İçinde URI'leri Paketleme](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Uygulama modeli: Nasıl Yapılır Konuları](http://msdn.microsoft.com/en-us/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
+ [Uygulama modeli: Nasıl Yapılır Konuları](http://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
  [Uygulama Geliştirme](../../../../docs/framework/wpf/app-development/index.md)

@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 273d467df5ee97b4803a1843a0b0d86f7244feae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ad2271b86d37d9063ac54d9a4e45681d132eb1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; &lt;taşıma&gt;
 İleti düzeyi güvenlik gereksinimleri ile yapılandırılmış bir uç nokta türünü tanımlar [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<netTcpBinding >  
+\<netTcpBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<taşıma >  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |clientCredentialType|İsteğe bağlı. Taşıma güvenliği kullanarak istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgileri türünü belirtir.<br /><br /> -Varsayılan değer `Windows`.<br />-Bu öznitelik türünde <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|ProtectionLevel|İsteğe bağlı. TCP Aktarım düzeyinde güvenlik tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar.<br /><br /> Varsayılan değer `EncryptAndSign` şeklindedir.|  
+|protectionLevel|İsteğe bağlı. TCP Aktarım düzeyinde güvenlik tanımlar. İletileri imzalama bir üçüncü taraf onu aktarılırken iletiyle oynama riskini azaltır. Şifreleme, aktarım sırasında veri düzeyi gizliliği sağlar.<br /><br /> Varsayılan değer `EncryptAndSign` şeklindedir.|  
 |sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Varsayılan değer: Tls &#124; Tls11 &#124; Tls12.|  
 |policyEnforcement|Bu numaralandırma ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorunlu tutulmalıdır.<br /><br /> 1.  Hiçbir zaman – ilke hiçbir zaman zorlanır (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke uygulanır.<br />3.  Her zaman – ilke her zaman zorlanır. Genişletilmiş Koruma desteklemeyen istemcilerin kimliğini doğrulamak başarısız olur.|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |-----------|-----------------|  
 |Yok.|Koruma yok.|  
 |Oturum|İmzalı iletiler.|  
-|Da EncryptAndSign|-İletileri şifrelenir ve imzalanmış.|  
+|EncryptAndSign|-İletileri şifrelenir ve imzalanmış.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -98,5 +98,5 @@ ms.lasthandoff: 12/22/2017
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: "&lt;gcServer&gt; öğesi"
+title: '&lt;gcServer&gt; Element'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,18 +20,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 207aeb1f9faf9be6ac547d8dd8acc80e8a4cb42f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltgcservergt-element"></a>&lt;gcServer&gt; öğesi
+# <a name="ltgcservergt-element"></a>&lt;gcServer&gt; Element
 Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağını belirtir.  
   
  \<Yapılandırma >  
-\<çalışma zamanı >  
-\<gcServer >  
+\<runtime>  
+\<gcServer>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -91,4 +91,4 @@ Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağı
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Nasıl yapılır: eş zamanlı çöp toplama devre dışı bırak](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [Nasıl yapılır: eş zamanlı çöp toplama devre dışı bırak](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

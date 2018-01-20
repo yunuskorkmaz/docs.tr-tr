@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF Masaüstü Uygulamam
 Bu kılavuzda geliştirilmesini tanıtılmaktadır bir [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] en yaygın olan öğeleri içeren uygulama [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] biçimlendirme, arka plan kodu, uygulama tanımları, denetimleri, düzeni veri bağlama ve stiller. 
@@ -56,7 +56,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
 ## <a name="creating-the-application-project"></a>Uygulama projesi oluşturma  
  Bu bölümde, uygulama tanımı, iki sayfaları ve görüntü içeren uygulama altyapısı oluşturun. 
   
-1. Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `ExpenseIt`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `ExpenseIt`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  Bu kılavuzda kullanılır <xref:System.Windows.Controls.DataGrid> .NET Framework 4'te kullanılabilir denetim. Sonraki veya projeniz .NET Framework 4 hedefleyen emin olun. Daha fazla bilgi için bkz:[nasıl yapılır: .NET Framework sürümü hedef](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -115,7 +115,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
 ## <a name="adding-files-to-the-application"></a>Dosyalar için uygulama ekleme  
  Bu bölümde, uygulamaya iki sayfaları ve görüntü ekleyin. 
   
-1. Yeni sayfa (WPF) adlı projeye eklemek `ExpenseItHome.xaml`. Daha fazla bilgi için bkz: [nasıl yapılır: bir WPF projesi için yeni öğeler eklemek](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Yeni sayfa (WPF) adlı projeye eklemek `ExpenseItHome.xaml`. Daha fazla bilgi için bkz: [nasıl yapılır: bir WPF projesi için yeni öğeler eklemek](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Uygulama başlatıldığında görüntülenen ilk sayfa sayfasıdır. Bir kullanıcı için harcama raporunu göstermek için bir kişinin seçebileceği kişilerin listesini gösterir. 
   
@@ -171,7 +171,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Projeye watermark.png adlı bir resim ekleyin. Kendi görüntünüzü oluşturabilir veya örnek koddan dosyasını kopyalayın. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Projeye watermark.png adlı bir resim ekleyin. Kendi görüntünüzü oluşturabilir veya örnek koddan dosyasını kopyalayın. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Oluşturma ve uygulama çalıştırma  
  Bu bölümde, derleme ve uygulamayı çalıştırın. 
@@ -280,7 +280,7 @@ Visual Studio en son sürümünü yükleme hakkında daha fazla bilgi için bkz:
   
 1. ExpenseItHome.xaml açın. 
   
-2. Ekleme bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisine <xref:System.Windows.Controls.Button> öğesi. Daha fazla bilgi için bkz: [nasıl yapılır: basit bir olay işleyicisi oluşturun](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Ekleme bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisine <xref:System.Windows.Controls.Button> öğesi. Daha fazla bilgi için bkz: [nasıl yapılır: basit bir olay işleyicisi oluşturun](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

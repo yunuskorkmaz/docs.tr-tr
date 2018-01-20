@@ -18,11 +18,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5f79ed7af91f2e54edbc2174da2afa1b3cb56557
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cfe8752ce3a562e1e4b576c63b56ff56255ff62
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-assembly39s-location"></a>Bir derlemeyi &#39; belirtme s konumu
 Derlemenin konumunu belirtmek için iki yolu vardır:  
@@ -31,7 +31,7 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
   
 -   Kullanarak [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) öğesi.  
   
- Aynı zamanda [.NET Framework yapılandırma aracını (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) derleme konumları belirtin veya derlemeler için araştırma ortak dil çalışma zamanı için konumlarını belirtin.  
+ Aynı zamanda [.NET Framework yapılandırma aracını (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) derleme konumları belirtin veya derlemeler için araştırma ortak dil çalışma zamanı için konumlarını belirtin.  
   
 ## <a name="using-the-codebase-element"></a>Kullanarak \<codeBase > öğesi  
  Kullanabileceğiniz  **\<codeBase >** derleme sürümünü de yönlendiren yalnızca makine yapılandırma veya yayımcı ilke dosyaları öğesinde. Çalışma zamanı kullanmak için hangi derleme sürümü belirlediğinde, sürüm belirleyen dosyasından kod temel ayar uygulanır. Hiçbir kod temeli belirtilirse, çalışma zamanı derlemesi için normal bir şekilde araştırmaları. Ayrıntılar için bkz [nasıl çalışma zamanı bulur derlemeleri](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -54,7 +54,7 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
 </configuration>  
 ```  
   
- **Sürüm** özniteliği tüm Tanımlayıcı adlı derlemeler için gerekli değildir ancak güçlü-adlandırılmamış derlemelerde alınmamalıdır.  **\<CodeBase >** öğesi gerektiriyor **href** özniteliği. Sürüm aralıklardaki belirtemezsiniz  **\<codeBase >** öğesi.  
+ **Sürüm** özniteliği tüm Tanımlayıcı adlı derlemeler için gerekli değildir ancak güçlü-adlandırılmamış derlemelerde alınmamalıdır. **\<CodeBase >** öğesi gerektiriyor **href** özniteliği. Sürüm aralıklardaki belirtemezsiniz  **\<codeBase >** öğesi.  
   
 > [!NOTE]
 >  Tanımlayıcı adlı olmayan bir derleme için bir kod temel ipucu sağlayarak, ipucu uygulama temel veya uygulamanın ana dizin alt işaret etmelidir.  
@@ -80,4 +80,4 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
  [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: abdc98a6fbf48a30f2f5702e7c2d78396381de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesnelerini ve bunların şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için nasıl kullanılacağını açıklar. Kullanmak <xref:System.Windows.Media.Drawing> küçük resim oluşturduğunuzda nesneleri boyamak ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  
@@ -191,12 +191,12 @@ DrawingGroup işlem sırası
   
 |Özellik|Açıklama|Çizim|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Seçili bölümlerini geçirgenliğini değiştirir <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: çizim geçirgenliğini kontrol](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![Geçirgenlik maskesi olan DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Aynı şekilde saydamlığını değiştirir <xref:System.Windows.Media.DrawingGroup> içeriği. Yapmak için bu özelliği kullanmak bir <xref:System.Windows.Media.Drawing> saydam veya kısmen saydam. Bir örnek için bkz: [nasıl yapılır: Çizime Geçirgenlik maskesi uygulama](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![Farklı geçirgenlik ayarları DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Geçerli bir <xref:System.Windows.Media.Effects.BitmapEffect> için <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: çizime BitmapEffect uygulama](http://msdn.microsoft.com/en-us/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![BlurBitmapEffect DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Küçük resimleri <xref:System.Windows.Media.DrawingGroup> bir bölgeye içeriğini açıklayan kullanarak bir <xref:System.Windows.Media.Geometry>. Bir örnek için bkz: [nasıl yapılır: çizim küçük](http://msdn.microsoft.com/en-us/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .|![Tanımlanan kırpma bölgesinin DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Seçili bölümlerini geçirgenliğini değiştirir <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: çizim geçirgenliğini kontrol](http://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee).|![Geçirgenlik maskesi olan DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Aynı şekilde saydamlığını değiştirir <xref:System.Windows.Media.DrawingGroup> içeriği. Yapmak için bu özelliği kullanmak bir <xref:System.Windows.Media.Drawing> saydam veya kısmen saydam. Bir örnek için bkz: [nasıl yapılır: Çizime Geçirgenlik maskesi uygulama](http://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f).|![Farklı geçirgenlik ayarları DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|Geçerli bir <xref:System.Windows.Media.Effects.BitmapEffect> için <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: çizime BitmapEffect uygulama](http://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5).|![BlurBitmapEffect DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|Küçük resimleri <xref:System.Windows.Media.DrawingGroup> bir bölgeye içeriğini açıklayan kullanarak bir <xref:System.Windows.Media.Geometry>. Bir örnek için bkz: [nasıl yapılır: çizim küçük](http://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058) .|![Tanımlanan kırpma bölgesinin DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|Belirtilen yönergeleriyle birlikte aygıt piksel aygıt bağımsız pikselleri tutturur. Bu özellik, ayrıntılı grafiklerinin düşük DPI ekranlarda keskin işlemeyi sağlamak için yararlıdır. Bir örnek için bkz: [çizime GuidelineSet uygulama](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md).|![İle ve GuidelineSet olmadan DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Dönüşümleri <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: bir dönüşüm çizime uygulama](http://msdn.microsoft.com/en-us/0d525f2b-682d-4d67-9660-cf46929fbabd).|![A Döndürülmüş DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|Dönüşümleri <xref:System.Windows.Media.DrawingGroup> içeriği. Bir örnek için bkz: [nasıl yapılır: bir dönüşüm çizime uygulama](http://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd).|![A Döndürülmüş DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>Çizim bir resim olarak görüntüleme  
@@ -229,7 +229,7 @@ DrawingBrush ile kullanılan GeometryDrawing
  A <xref:System.Windows.Media.DrawingVisual> çizimi işlemek için tasarlanmış görsel nesne türüdür. Çalışma visual katmanında doğrudan üst düzeyde özelleştirilmiş bir grafik ortamı oluşturmak ve bu genel bakışta açıklanmayan geliştiriciler için bir seçenektir. Daha fazla bilgi için bkz: [kullanarak DrawingVisual nesneleri](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md) genel bakış.  
   
 <a name="drawingcontextobjects"></a>   
-## <a name="drawingcontext-objects"></a>DrawingContext nesneleri  
+## <a name="drawingcontext-objects"></a>DrawingContext Objects  
  <xref:System.Windows.Media.DrawingContext> Sınıfı sağlar, doldurmak bir <xref:System.Windows.Media.Visual> veya <xref:System.Windows.Media.Drawing> visual içeriğe sahip. Bu tür birçok alt düzey grafik nesneleri kullanın bir <xref:System.Windows.Media.DrawingContext> çünkü grafik içeriği çok verimli bir şekilde açıklar.  
   
  Ancak <xref:System.Windows.Media.DrawingContext> çizim yöntemleri için çizim yöntemlerinin benzer görünür <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü, bunlar gerçekte çok farklı. <xref:System.Windows.Media.DrawingContext>olan bir saklama modu grafik sistemi ile kullanıldığında, while <xref:System.Drawing.Graphics?displayProperty=nameWithType> türü anlık kip grafik sistemi ile kullanılır. Kullandığınızda, bir <xref:System.Windows.Media.DrawingContext> nesnenin çizim komutları, gerçekte işleme yönergeler kümesini depoluyorsanız (tam depolama mekanizması sağlayan nesne türüne göre değişir ancak <xref:System.Windows.Media.DrawingContext>) daha sonra kullanılacak grafikleri ile sistem; gerçek zamanlı ekrana çizim değil. Ne hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] grafik sistem çalıştığını görmek [WPF Grafik işleme genel bakış](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  

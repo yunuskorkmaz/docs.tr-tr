@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 Önemli bir kısmını [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kullanıcıların bilgisayarlarına yerel olarak çalışan Windows Forms uygulamaları oluşturma yeteneği. Windows Forms kullanan uygulama ve kullanıcı arabirimini oluşturmak için Visual Studio'yu kullanabilirsiniz. Bir Windows Forms uygulaması sınıflardan üzerine inşa edilmiştir <xref:System.Windows.Forms> ad alanı.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |Bitiş|Bkz. |  
 |--------|---------|  
-|Yeni bir Windows Forms uygulaması oluşturma[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Yeni bir Windows Forms uygulaması oluşturma[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[İzlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Formlarında denetimleri kullanın|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Grafik oluşturma<xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

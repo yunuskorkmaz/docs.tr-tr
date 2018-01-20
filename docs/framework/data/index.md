@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak veri erişim hakkında bilgi sağlar.  
@@ -31,7 +31,7 @@ Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML k
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  ADO.NET mimarisi ve ADO.NET sınıflarını uygulama verilerini yönetmek ve Microsoft SQL Server, OLE DB veri kaynakları ve XML gibi veri kaynakları ile etkileşim kurmak için nasıl kullanılacağını açıklar.  
   
- [LINQ portalı](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ Portal](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  İlgili belgeler için dil tümleşik sorgu (LINQ) bağlantılar sağlar.  
   
  [İşlem Gerçekleştirme](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML k
  [XML Belgeleri ve Verileri](../../../docs/standard/data/xml/index.md)  
  .NET Framework'te XML belgeleri ve verileriyle çalışan sınıflardan oluşan kapsamlı ve tümleşik bir gruba genel bir bakış sağlar.  
   
- [XML standartları başvurusu](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML standartları başvurusu](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Microsoft destekleyen XML standartları başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

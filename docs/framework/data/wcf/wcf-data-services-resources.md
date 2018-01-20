@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tanıtım konularını aşağıdaki konumlarda bulunabilir. Bu konularda çoğunu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Görev tabanlı bir yaklaşım oluşturmaya sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve erişim uygulamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.  
   
- [Visual Studio ve .NET Framework Sözlüğü](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio ve .NET Framework Sözlüğü](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  İçinde kullanılan terimleri içeren [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] belgeleri.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  [OData Web sitesi](http://go.microsoft.com/fwlink/?LinkID=184554)  
  Birincil hakkında bilgi kaynağı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [OData SDK'sı](http://go.microsoft.com/fwlink/?LinkID=185248)  
+ [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)  
  Örnek Hizmetleri, örnekler ve çalışmak etkinleştirmeniz programlama kitaplıkları içeren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
  [OData blogu](http://go.microsoft.com/fwlink/?LinkId=185868)  

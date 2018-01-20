@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi verilmiştir. Bu bölümde yer alan Windows Forms denetimleri yanı sıra Windows formlarına ActiveX ve özel denetimler ekleyebilirsiniz. Gereksinim duyduğunuz Denetim burada listelenen bulamazsanız, ayrıca kendi oluşturabilirsiniz. Ayrıntılar için bkz [tasarım zamanında Windows Forms denetimleri geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Denetim seçme hakkında daha fazla bilgi için bkz: ihtiyaç [işleve göre Windows Forms denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -239,7 +239,7 @@ Denetimler ve Windows formlarında kullanılan bileşenler alfabetik bir listesi
  [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Adım adım konular, önerileri hangi tür oluşturmak için Denetim ve kendi denetimi oluşturma hakkında diğer bilgiler için bağlantılar sağlar.  
   
- [Denetimleri ve çeşitli diller ve kitaplıkları karşılaştırıldığında programlanabilir nesneleri](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Denetimleri ve çeşitli diller ve kitaplıkları karşılaştırıldığında programlanabilir nesneleri](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Visual Basic 6.0 denetimlerinde ilgili denetimin eşleyen bir tablo sağlar [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Denetimleri şimdi sınıflarda olduğuna dikkat edin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

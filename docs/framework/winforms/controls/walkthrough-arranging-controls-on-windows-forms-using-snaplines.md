@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd8bc5e227bd68fc3c5c59d80549322ca742bcf9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme
 Formunuza denetimler tam yerleşimi, pek çok uygulama yüksek önceliktir. Windows Form Tasarımcısı bunu gerçekleştirmek için birçok düzeni Araçlar verir. En önemlisi, biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
@@ -59,14 +59,14 @@ Formunuza denetimler tam yerleşimi, pek çok uygulama yüksek önceliktir. Wind
  İşiniz bittiğinde dayama çizgileri özelliği tarafından yürütülen düzeni rol anlaşılması gerekir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  Projeyi oluşturmak ve formu ayarlamak için ilk adımdır bakın.  
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  "SnaplineExample" adlı bir Windows tabanlı bir uygulama projesi oluşturun. Ayrıntılar için bkz [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  "SnaplineExample" adlı bir Windows tabanlı bir uygulama projesi oluşturun. Ayrıntılar için bkz [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Formu Form tasarımcısında seçin.  
   
@@ -233,7 +233,7 @@ Formunuza denetimler tam yerleşimi, pek çok uygulama yüksek önceliktir. Wind
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Dayama çizgileri tasarım ortamında devre dışı bırakmak için  
   
-1.  Gelen **Araçları** menüsünde, açık **seçenekleri** iletişim kutusu. Windows Forms Tasarımcısı iletişim kutusunu açın. Ayrıntılar için bkz [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Gelen **Araçları** menüsünde, açık **seçenekleri** iletişim kutusu. Windows Forms Tasarımcısı iletişim kutusunu açın. Ayrıntılar için bkz [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
   
 2.  Seçin **genel** düğümü. İçinde **Düzen modunu** bölümünde, seçimden değiştirme **dayama çizgileri** için **Snaptogrıd**.  
   

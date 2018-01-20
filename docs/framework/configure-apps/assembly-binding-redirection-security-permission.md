@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Derleme Bağlama Yönlendirmesi Güvenlik İzni
 Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. Ayarlayarak iznine sahip <xref:System.Security.Permissions.SecurityPermissionFlag> üzerinde bayrak <xref:System.Security.Permissions.SecurityPermission>. Yönetilen derlemeler varsayılan olarak bir izniniz yok.  
@@ -36,12 +36,12 @@ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlend
 |----------|-----------------------------------|  
 |Güvenilir bölgeye (yerel makine)|**AÇIK**|  
 |İntranet bölgesi|**AÇIK**|  
-|Internet Bölgesi|**KAPALI**|  
-|Güvenilmeyen bölgeleri|**KAPALI**|  
+|Internet Bölgesi|**OFF**|  
+|Güvenilmeyen bölgeleri|**OFF**|  
   
  Bir yönetici veya kısıtlama verilen bir bilgisayardaki belirli senaryoları desteklemek üzere bu güvenlik ayarlarını değiştirebilirsiniz. Değiştirmek için hiçbir araç vardır **BindingRedirects** varsayılandan; ayarlama bayrağı yönetici el ile bir kullanıcının bilgisayarda Security.config dosyasını düzenlemeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yayımcı ilke dosyaları ve yan yana yürütme](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
+ [Yayımcı ilke dosyaları ve yan yana yürütme](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [Yan Yana Yürütme](../../../docs/framework/deployment/side-by-side-execution.md)

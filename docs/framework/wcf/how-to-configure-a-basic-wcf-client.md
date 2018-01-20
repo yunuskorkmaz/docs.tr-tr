@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 377a67edb37ada5c9e1b022d50a4718b5740afd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Yapılandırma
 Temel bir oluşturmak için gereken altı görevleri beşinci budur [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -28,7 +28,7 @@ Temel bir oluşturmak için gereken altı görevleri beşinci budur [!INCLUDE[in
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Windows Communication Foundation istemcisi yapılandırma  
   
-1.  Oluşturulan yapılandırma dosyası (App.config) GettingStartedClient projesinden açın. Aşağıdaki örnek, oluşturulan yapılandırma dosyası görülmektedir. Altında [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, Bul [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+1.  Oluşturulan yapılandırma dosyası (App.config) GettingStartedClient projesinden açın. Aşağıdaki örnek, oluşturulan yapılandırma dosyası görülmektedir. Altında [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, Bul [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

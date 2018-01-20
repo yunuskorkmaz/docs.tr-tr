@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 09e384311f50553585c0a7a14a51df20858fb439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 548e5ec5369c697d2b35723a0778ccaf95c3b535
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; &lt;iletisi&gt; öğesi
 İleti düzeyi güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<wsFederatedBinding >  
+\<wsFederatedBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<İleti >  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |algorithmSuite|İleti şifreleme ve anahtar-wrap algoritmaları ayarlar. Bu özniteliğin geçerli değerler "algorithmSuite özniteliği" tablosuna bakın. Varsayılan değer `Basic256` şeklindedir.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen eşlenir.|  
-|issuedKeyType|Kesilecek anahtar türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Varsayılan, `SymmetricKey` değeridir. Bu öznitelik türünde <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedKeyType|Kesilecek anahtar türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> Varsayılan, `SymmetricKey` değeridir. Bu öznitelik türünde <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Verilmesine Belirtecin türü belirten bir URI'yı içeren bir dize. Varsayılan, `null` değeridir.|  
 |negotiateServiceCredential|Hizmet kimlik bilgilerini anlaşmasının bir parçası değiştirilen veya bant dışı kullanılabilir olup olmadığını belirten bir Boole değeri. Varsayılan değer `true`, hizmet kimlik bilgilerini anlaşılmadan anlamına gelir.|  
   
@@ -128,10 +128,10 @@ ms.lasthandoff: 12/22/2017
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türleri koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türleri koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |yayınlayan|Bir güvenlik belirteci verir bir uç nokta belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Uç nokta adresi verenin belirtir.|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri topluluğu. Her bir XML öğesi parametresidir.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri topluluğu. Her bir XML öğesi parametresidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -146,5 +146,5 @@ ms.lasthandoff: 12/22/2017
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Hizmetler ve istemcileri güvenli hale getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

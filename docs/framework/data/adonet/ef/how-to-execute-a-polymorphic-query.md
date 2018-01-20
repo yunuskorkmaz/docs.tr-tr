@@ -17,25 +17,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ecec90e3d09adeb6797e46d6c1f9056e21fca72b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3f2a51276568371c48647557f286ec60ac6531b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>Nasıl yapılır: çok biçimli bir sorgu yürütme
 Bu konuda, çok biçimli bir yürütmek gösterilmiştir [!INCLUDE[esql](../../../../../includes/esql-md.md)] kullanarak sorgu [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) işleci.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekte kodu çalıştırmak için  
   
-1.  Ekleme [Okul modeli](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) projenize ve projeniz Entity Framework kullanacak şekilde yapılandırın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  Ekleme [Okul modeli](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) projenize ve projeniz Entity Framework kullanacak şekilde yapılandırın. Daha fazla bilgi için bkz: [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 2.  Uygulamanız için kod sayfasında aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-3.  İçindeki adımları izleyerek bir tablo başına hierrachy devralma için kavramsal model değiştirme [izlenecek yol: eşleme devralma - tablo başına hiyerarşisi](http://msdn.microsoft.com/en-us/49b685cf-9db8-4d6d-b885-8837ed238f55).  
+3.  İçindeki adımları izleyerek bir tablo başına hierrachy devralma için kavramsal model değiştirme [izlenecek yol: eşleme devralma - tablo başına hiyerarşisi](http://msdn.microsoft.com/library/49b685cf-9db8-4d6d-b885-8837ed238f55).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, almak ve yalnızca koleksiyonu görüntülemek için bir OFTYPE işleç kullanır `OnsiteCourses` koleksiyonundan `Courses`.  

@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
   
-\<Sistem. ServiceModel >  
+\<system.ServiceModel>  
 \<bağlamaları >  
-\<netHttpBinding >  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -53,7 +53,7 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
 |---------------|-----------------|  
 |createNotificationOnConnection|Bağlantıda bir bildirim gönderilip gönderilmeyeceğini belirtir.|  
 |disablePayloadMasking|Web yuvasını maskeleme etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
-|KeepAliveInterval|Canlı tutma aralığını belirtir.|  
+|keepAliveInterval|Canlı tutma aralığını belirtir.|  
 |maxPendingConnections|Gönderme hizmeti üzerinde bekleyen bağlantı sayısını belirtir.|  
 |receiveBufferSize|Alış arabelleğinin boyutunu belirtir.|  
 |sendBufferSize|Gönderme arabellek boyutunu belirtir.|  
@@ -75,7 +75,7 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<netHttpBinding >|NetHttpBinding belirtir|  
+|\<netHttpBinding>|NetHttpBinding belirtir|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.  
@@ -103,5 +103,5 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

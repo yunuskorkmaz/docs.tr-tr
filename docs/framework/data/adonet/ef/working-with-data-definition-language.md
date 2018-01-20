@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>Veri tanımlama dili ile çalışma
 İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürüm 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] veri tanımlama dili (DDL) destekler. Bu, oluşturmak veya bağlantı dizesi ve depolama (SSDL) model meta verileri temel alan bir veritabanı örneği silmek sağlar.  
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/17/2018
   
 2.  Var olan bir model uygulamanıza ekleyin.  
   
-    1.  Adlı boş bir model eklemek `SchoolModel`. Boş bir model oluşturmak için bkz: [nasıl yapılır: yeni .edmx dosyasının oluşturma](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) konu.  
+    1.  Adlı boş bir model eklemek `SchoolModel`. Boş bir model oluşturmak için bkz: [nasıl yapılır: yeni .edmx dosyasının oluşturma](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) konu.  
   
      SchoolModel.edmx dosyası projenize eklenir.  
   
-    1.  Kavramsal, depolama kopyalayın ve içerik Okul modeli eşleme [Okul modeli](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) konu.  
+    1.  Kavramsal, depolama kopyalayın ve içerik Okul modeli eşleme [Okul modeli](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) konu.  
   
     2.  SchoolModel.edmx dosyasını açın ve içeriği içinde `edmx:Runtime` etiketler.  
   

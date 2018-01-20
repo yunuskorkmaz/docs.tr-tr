@@ -1,5 +1,5 @@
 ---
-title: "&lt;Çözümleyici&gt;"
+title: '&lt;resolver&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc6e919600fbea15937a61eaa65299b3a372caaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db95b6f9a988c133a6b4afd55849fc6fb650c24c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltresolvergt"></a>&lt;Çözümleyici&gt;
+# <a name="ltresolvergt"></a>&lt;resolver&gt;
 Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak birkaç düğüm temsil eden bir dizi Eş düğüm adresleri kimliği kafes belirtir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<netPeerBinding >  
+\<netPeerBinding>  
 \<bağlama >  
 \<Çözümleyici >  
   
@@ -69,4 +69,4 @@ Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak b
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement>  
  [Eş Çözücüler](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Özel Çözücü PeerChannel'a uygulamaya ekleme](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Özel Çözücü PeerChannel'a uygulamaya ekleme](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

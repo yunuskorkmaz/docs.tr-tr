@@ -1,7 +1,7 @@
 ---
 title: "C# sürüm oluşturma - C# Kılavuzu"
 description: "C# ve .NET sürüm nasıl çalıştığını anlamak"
-keywords: .NET, .NET core, C#
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>C# sürüm oluşturma #
 
@@ -57,7 +57,7 @@ Daha kolay, erken yükseltecek yeni kitaplığınızın, büyük olasılıkla's�
 
 ### <a name="application-configuration-file"></a>Uygulama yapılandırma dosyası
 
-Çok yüksek olasılığı yüksektir karşılaştı .NET geliştiricisi olarak [ `app.config` dosya](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) çoğu proje türleri de mevcut.
+Çok yüksek olasılığı yüksektir karşılaştı .NET geliştiricisi olarak [ `app.config` dosya](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) çoğu proje türleri de mevcut.
 Bu basit yapılandırma dosyası depoladıysanız yeni güncelleştirmeler sunum geliştirme içine gidebilirsiniz. Genellikle Kitaplıklarınızı düzenli olarak değiştirmek büyük olasılıkla bilgiler saklanır şekilde tasarlamanız gerekir, `app.config` , böylece gibi bilgileri güncelleştirildiğinde dosya eski sürümlerinin yapılandırma dosyası yalnızca yeni bir bağlantıyla değiştirilmesi gerekiyor Kitaplığı yeniden derlenmek gerek olmadan.
 
 ## <a name="consuming-libraries"></a>Kitaplıkları kullanma
@@ -68,7 +68,7 @@ Sizin için şanslı C# ve .NET ekosistemi ile birlikte gelen özellikleri ve bi
 
 ### <a name="assembly-binding-redirection"></a>Derleme bağlaması yeniden yönlendirme
 
-Kullanabileceğiniz `app.config` dosya bir kitaplık sürümünü güncelleştirmek için uygulama kullanır. Ne adlı ekleyerek bir [ *bağlama yeniden yönlendirmesinin* ](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) , yeni kitaplık sürümü, uygulamanızın yeniden derlemenize gerek kalmadan kullanabilirsiniz. Aşağıdaki örnek, uygulamanızın nasıl güncelleştirecektir gösterir `app.config` kullanmak üzere bir dosya `1.0.1` düzeltme eki sürümü `ReferencedLibrary` yerine `1.0.0` , ilk olarak derlenmiş ile sürümü.
+Kullanabileceğiniz `app.config` dosya bir kitaplık sürümünü güncelleştirmek için uygulama kullanır. Ne adlı ekleyerek bir [ *bağlama yeniden yönlendirmesinin* ](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) , yeni kitaplık sürümü, uygulamanızın yeniden derlemenize gerek kalmadan kullanabilirsiniz. Aşağıdaki örnek, uygulamanızın nasıl güncelleştirecektir gösterir `app.config` kullanmak üzere bir dosya `1.0.1` düzeltme eki sürümü `ReferencedLibrary` yerine `1.0.0` , ilk olarak derlenmiş ile sürümü.
 
 ```xml
 <dependentAssembly>
@@ -89,7 +89,7 @@ Aşağıdaki örnek alın:
 
 [!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
-**Çıktı**
+**Output**
 
 ```
 A base method
@@ -107,7 +107,7 @@ Durumlarda `new` değiştiricisi belirtilirse, türetilmiş bir sınıf bir taba
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**Çıktı**
+**Output**
 
 ```
 Base Method One: Method One
