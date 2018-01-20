@@ -1,12 +1,8 @@
 ---
 title: "Dinamik dil çalışma zamanına genel bakış | Microsoft Docs"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 *Dinamik dil çalışma zamanı* (DLR) olan hizmetleri dinamik diller için bir dizi ortak dil çalışma zamanı (CLR) ekler bir çalışma zamanı ortamı. DLR, .NET Framework üzerinde çalıştırmak için ve statik olarak yazılan diller için dinamik özellik eklemek için dinamik dilleri geliştirmek kolaylaştırır.  
@@ -52,10 +48,10 @@ ms.lasthandoff: 12/22/2017
   
  `scriptobj.Count += 1;`  
   
- CLR gibi DLR .NET Framework'ün bir parçası ve .NET Framework ve Visual Studio yükleme paketleri sağlanır. DLR açık kaynak sürümü indirmek için de kullanılabilir [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web sitesi.  
+ CLR gibi DLR .NET Framework'ün bir parçası ve .NET Framework ve Visual Studio yükleme paketleri sağlanır. DLR açık kaynak sürümü indirmek için de kullanılabilir [IronLanguages/dlr](https://github.com/IronLanguages/dlr) bağlantıların github'da.  
   
 > [!NOTE]
->  DLR açık kaynak sürümü Visual Studio ve .NET Framework dahil DLR tüm özelliklerini sahiptir. Dil uygulayıcılar için ek destek de sağlar. Daha fazla bilgi için belgelere bakın [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web sitesi.  
+>  DLR açık kaynak sürümü Visual Studio ve .NET Framework dahil DLR tüm özelliklerini sahiptir. Dil uygulayıcılar için ek destek de sağlar. Daha fazla bilgi için belgelere bakın [IronLanguages/dlr](https://github.com/IronLanguages/dlr) bağlantıların github'da. 
   
  DLR kullanılarak geliştirilmiş dilleri örnekleri şunlardır:  
   
@@ -98,7 +94,7 @@ DLR mimarisi
  Yalnızca .NET Framework ile ancak diğer altyapılar ve Silverlight ve com gibi hizmetler ile iletişim kurmak için çağrı siteler DLR bağlayıcıları kullanır Bağlayıcıları bir dil semantiği şifreleyebilir ve ifade ağaçları kullanarak bir çağrı sitede işlemlerini gerçekleştirmek nasıl belirtin. Bu dinamik sağlar ve statik olarak DLR kitaplıkları paylaşma ve DLR destekleyen tüm teknolojileri erişmek için kullandığınız dilleri belirtilmiş.  
   
 ## <a name="dlr-documentation"></a>DLR belgeleri  
- DLR açık kaynak sürümü dinamik davranışı için bir dil eklemek için nasıl kullanılacağı hakkında ya da .NET Framework ile dinamik dil kullanımını etkinleştirme hakkında daha fazla bilgi için belgelere bakın [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) Web sitesi.  
+ DLR açık kaynak sürümü dinamik davranışı için bir dil eklemek için nasıl kullanılacağı hakkında ya da .NET Framework ile dinamik dil kullanımını etkinleştirme hakkında daha fazla bilgi için belgelere bakın [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) bağlantıların github'da.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Dynamic.ExpandoObject>  

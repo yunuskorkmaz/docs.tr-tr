@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 Genel bir sınıf tanımladığınızda, sınıfını başlattığında, istemci kodu tür bağımsız değişkenleri için kullanabileceğiniz türü tür kısıtlamaları uygulayabilirsiniz. İstemci kodu kısıtlaması tarafından izin verilmeyen bir türünü kullanarak, sınıfının örneği çalışırsa, bir derleme zamanı hatası sonucudur. Bu kısıtlamalar kısıtlamaları denir. Kısıtlamaları belirtilen kullanarak `where` bağlamsal anahtar sözcüğü. Aşağıdaki tabloda kısıtlamaları altı türlerini listeler:  
   
 |Kısıtlama|Açıklama|  
 |----------------|-----------------|  
-|Burada T: yapısı|Tür bağımsız değişkeni bir değer türü olmalıdır. Herhangi bir değer türü dışında <xref:System.Nullable> belirtilebilir. Bkz: [kullanarak boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) daha fazla bilgi için.|  
-|Burada T: sınıfı|Tür bağımsız değişkeni bir başvuru türü olmalıdır; Bu aynı zamanda herhangi sınıfı, arabirim, temsilci veya dizi türü için geçerlidir.|  
-|Burada T: new()|Tür bağımsız değişkeni genel bir parametresiz oluşturucuya sahip olmalıdır. Diğer kısıtlamalar ile birlikte kullanıldığında `new()` kısıtlaması son belirtilmelidir.|  
-|Burada T: \<temel sınıf adı >|Tür bağımsız değişkeni, olabilir veya belirtilen temel sınıfından türetilir.|  
-|Burada T: \<arabirim adı >|Tür bağımsız değişkeni olabilir veya belirtilen arabirimini uygulaması gerekir. Birden çok arabirim kısıtlamaları belirtilebilir. Kısıtlayan arabirimi genel olabilir.|  
-|Burada T: U|T olması veya u için sağlanan bağımsız değişken öğesinden türetilen için sağlanan tür bağımsız değişkeni|  
+|`where T: struct`|Tür bağımsız değişkeni bir değer türü olmalıdır. Herhangi bir değer türü dışında <xref:System.Nullable> belirtilebilir. Bkz: [kullanarak boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) daha fazla bilgi için.|  
+|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır; Bu aynı zamanda herhangi sınıfı, arabirim, temsilci veya dizi türü için geçerlidir.|  
+|`where T : new()`|Tür bağımsız değişkeni genel bir parametresiz oluşturucuya sahip olmalıdır. Diğer kısıtlamalar ile birlikte kullanıldığında `new()` kısıtlaması son belirtilmelidir.|  
+|`where T : `*\<taban sınıf adı >*|Tür bağımsız değişkeni, olabilir veya belirtilen temel sınıfından türetilir.|  
+|`where T : `*\<Arabirim adı >*|Tür bağımsız değişkeni olabilir veya belirtilen arabirimini uygulaması gerekir. Birden çok arabirim kısıtlamaları belirtilebilir. Kısıtlayan arabirimi genel olabilir.|  
+|`where T : U`|T olması veya u için sağlanan bağımsız değişken öğesinden türetilen için sağlanan tür bağımsız değişkeni|  
   
 ## <a name="why-use-constraints"></a>Kısıtlamaları neden kullanılır?  
  Geçerli olup olmadığını belirlemek için veya başka bir öğe karşılaştırmak için genel bir listedeki bir öğe incelemek isterseniz, derleyicinin bazı istemci ortak tarafından belirtilen tür bağımsız değişkeni tarafından işleci veya yöntem çağrılacak olan desteklenecek garanti olmalıdır de. Bu garantisi, genel bir sınıf tanımı için bir veya daha fazla kısıtlamaları uygulayarak elde edilir. Örneğin, taban sınıf kısıtlaması bu tür nesneler yalnızca derleyici söyler veya öğesinden türetilmiş türü tür bağımsız değişkenleri kullanılır. Derleyici bu garantisi sonra genel sınıfında çağrılacak türü yöntemleri izin verebilirsiniz. Bağlamsal anahtar sözcüğünü kullanarak kısıtlamalar uygulanır `where`. Aşağıdaki kod örneği için ekleyebilirsiniz biz işlevini gösterir `GenericList<T>` sınıfı (içinde [genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)) bir taban sınıf kısıtlaması uygulayarak.  
@@ -79,7 +79,7 @@ Genel bir sınıf tanımladığınızda, sınıfını başlattığında, istemci
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Genel sınıflar](../../../csharp/programming-guide/generics/generic-classes.md)  
- [New kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [Genel Sınıflar](../../../csharp/programming-guide/generics/generic-classes.md)  
+ [new Kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)

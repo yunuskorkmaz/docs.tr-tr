@@ -1,20 +1,20 @@
 ---
 title: ".NET Core Linux önkoşulları"
 description: "Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux makinelerde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıkları."
-keywords: .NET, .NET core, Linux, debian, ubuntu, RHEL, centOS,
+keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload: dotnetcore
-ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -37,13 +37,13 @@ NET çekirdek 2.x, aşağıdaki Linux 64-bit desteklenir (`x86_64` veya `amd64`)
  * Fedora 25, Fedora 26
  * Debian 8,7 veya sonraki sürümleri 
  * Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04
- * Linux Naneli 18, Linux Naneli 17
+ * Linux Mint 18, Linux Mint 17
  * openSUSE 42,2 veya sonraki sürümler
  * SUSE Enterprise Linux (SLES) 12 SP2 veya sonraki sürümler
 
 Bkz: [.NET Core 2.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için 2.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantıları dışında.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 .NET core 1.x aşağıdaki Linux 64-bit desteklenir (`x86_64` veya `amd64`) dağıtımları/sürümleri:
 
@@ -70,11 +70,11 @@ Aşağıdaki örnekler olacak şekilde tasarlanmıştır. Tam sürümünü ve ad
 Ubuntu dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
-* libkrb5
+* libkrb5-3
 * zlib1g
 * libicu52 (için 14.X)
 * libicu55 (için 16.X)
@@ -85,13 +85,13 @@ Ubuntu dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 CentOS dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
 * libunwind
-* lttng hakkınızın
+* lttng-ust
 * libcurl
 * openssl kitaplıklar
 * libuuid
 * krb5 kitaplıklar
 * libicu
-* Zlib
+* zlib
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz: [Self-contained Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
@@ -158,7 +158,7 @@ Yükleyici bash betik Otomasyon senaryoları ve yönetici olmayan yüklemeleri k
    scl enable rh-dotnet20 bash
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **.NET core 1.1**
 
@@ -225,14 +225,14 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    sudo apt-get update
    ```
 
-   **Ubuntu 16.04 / Linux Naneli 18**
+   **Ubuntu 16.04 / Linux Mint 18**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
 
-   **Ubuntu 14.04 / Linux Naneli 17**
+   **Ubuntu 14.04 / Linux Mint 17**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -251,7 +251,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    dotnet --version
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Akış istediğiniz sürümü konak paketini ayarlayın.
 
@@ -263,7 +263,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    sudo apt-get update
    ```
 
-  **Ubuntu 16.04 / Linux Naneli 18**
+  **Ubuntu 16.04 / Linux Mint 18**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -271,7 +271,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    sudo apt-get update
    ```
     
-   **Ubuntu 14.04 / Linux Naneli 17**
+   **Ubuntu 14.04 / Linux Mint 17**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -352,7 +352,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    ```   
   
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Önkoşullar alın.
 
@@ -425,7 +425,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **Fedora 24**
 
@@ -498,7 +498,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Önkoşullar alın.
 
@@ -602,7 +602,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Önkoşullar alın.
 

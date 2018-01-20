@@ -4,16 +4,16 @@ description: "C# sayısal türler, özellikleri ve yöntemleri keşfetme öğren
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: f275f157d9a9e41407be0beac83c337c7706a95d
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="numbers-in-c-quick-start"></a>C# hızlı başlangıç numaraları #
 
@@ -278,7 +278,7 @@ Console.WriteLine(third);
 
 Bunu biliyor `0.3` yinelenen tam olarak aynı olup `1/3`.
 
-***Sınama***
+***Challenge***
 
 Büyük sayılar, küçük sayılar, çarpma ve bölme kullanarak diğer hesaplamalarla deneyin `double` türü.  Daha karmaşık hesaplamalar deneyin.
 
@@ -310,7 +310,7 @@ Console.WriteLine(c / d);
 
 Decimal türü kullanarak matematik ondalık konumun sağında daha fazla basamağa sahip olmadığına dikkat edin. 
 
-***Sınama***
+***Challenge***
 
 Farklı sayısal türler gördüğünüze göre 2.50 inç, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
 
@@ -327,5 +327,5 @@ Aşağıdaki konularda C# numaraları hakkında daha fazla bilgi edinebilirsiniz
 [Kayan nokta türleri tablosu](../language-reference/keywords/floating-point-types-table.md)   
 [Yerleşik türler tablosu](../language-reference/keywords/built-in-types-table.md)   
 [Örtük sayısal dönüşümler tablosu](../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Açık sayısal dönüşümler tablosu](../language-reference/keywords/explicit-numeric-conversions-table.md)
+[Açık Sayısal Dönüştürmeler Tablosu](../language-reference/keywords/explicit-numeric-conversions-table.md)
 

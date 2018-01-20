@@ -4,7 +4,7 @@ description: "C# ve .NET temellerini öğrenin. C# dili ve .NET ekosistemi özet
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.topic: article
+ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
@@ -12,11 +12,11 @@ ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 C# dildir ve geliştiricilerin çeşitli çalıştırmak güvenli ve sağlam uygulamalar oluşturmasına olanak sağlayan bir zarif ve tür kullanımı uyumlu nesne yönelimli [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamalarını, veritabanı uygulamaları ve çok daha fazla oluşturmak için C# kullanabilirsiniz. Sağlayan Visual C# Gelişmiş kod düzenleyici, uygun kullanıcı arabirimi tasarımcıları, tümleşik hata ayıklayıcı ve diğer birçok Araçlar C# diline uygulama geliştirmeyi kolaylaştırmak için ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
