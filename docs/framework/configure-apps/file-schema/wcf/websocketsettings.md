@@ -14,20 +14,20 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltwebsocketsettingsgt"></a><span data-ttu-id="1d3ba-102">&lt;webSocketSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="1d3ba-102">&lt;webSocketSettings&gt;</span></span>
-<span data-ttu-id="1d3ba-103">Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-103">A configuration element used to specify Web Socket settings.</span></span>  
+# <a name="ltwebsocketsettingsgt"></a><span data-ttu-id="3139b-102">&lt;webSocketSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="3139b-102">&lt;webSocketSettings&gt;</span></span>
+<span data-ttu-id="3139b-103">Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="3139b-103">A configuration element used to specify Web Socket settings.</span></span>  
   
-<span data-ttu-id="1d3ba-104">\<Sistem. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1d3ba-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="1d3ba-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="1d3ba-105">\<bindings></span></span>  
-<span data-ttu-id="1d3ba-106">\<netHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1d3ba-106">\<netHttpBinding></span></span>  
+<span data-ttu-id="3139b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="3139b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3139b-105">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="3139b-105">\<bindings></span></span>  
+<span data-ttu-id="3139b-106">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="3139b-106">\<netHttpBinding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d3ba-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1d3ba-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3139b-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3139b-107">Syntax</span></span>  
   
 ```xml  
 <netHttpBinding>  
@@ -44,41 +44,41 @@ ms.lasthandoff: 12/22/2017
 </netHttpBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1d3ba-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="1d3ba-108">Attributes and Elements</span></span>  
- <span data-ttu-id="1d3ba-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3139b-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3139b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="3139b-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3139b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1d3ba-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="1d3ba-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3139b-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3139b-110">Attributes</span></span>  
   
-|<span data-ttu-id="1d3ba-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="1d3ba-111">Attribute</span></span>|<span data-ttu-id="1d3ba-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1d3ba-112">Description</span></span>|  
+|<span data-ttu-id="3139b-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="3139b-111">Attribute</span></span>|<span data-ttu-id="3139b-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3139b-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="1d3ba-113">createNotificationOnConnection</span><span class="sxs-lookup"><span data-stu-id="1d3ba-113">createNotificationOnConnection</span></span>|<span data-ttu-id="1d3ba-114">Bağlantıda bir bildirim gönderilip gönderilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-114">Specifies whether a notification is sent upon connection.</span></span>|  
-|<span data-ttu-id="1d3ba-115">disablePayloadMasking</span><span class="sxs-lookup"><span data-stu-id="1d3ba-115">disablePayloadMasking</span></span>|<span data-ttu-id="1d3ba-116">Web yuvasını maskeleme etkinleştirilip etkinleştirilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-116">Specifies whether Web Socket masking is disabled.</span></span>|  
-|<span data-ttu-id="1d3ba-117">KeepAliveInterval</span><span class="sxs-lookup"><span data-stu-id="1d3ba-117">keepAliveInterval</span></span>|<span data-ttu-id="1d3ba-118">Canlı tutma aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-118">Specifies the keep alive interval.</span></span>|  
-|<span data-ttu-id="1d3ba-119">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="1d3ba-119">maxPendingConnections</span></span>|<span data-ttu-id="1d3ba-120">Gönderme hizmeti üzerinde bekleyen bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-120">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
-|<span data-ttu-id="1d3ba-121">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="1d3ba-121">receiveBufferSize</span></span>|<span data-ttu-id="1d3ba-122">Alış arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-122">Specifies the size of the receive buffer.</span></span>|  
-|<span data-ttu-id="1d3ba-123">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="1d3ba-123">sendBufferSize</span></span>|<span data-ttu-id="1d3ba-124">Gönderme arabellek boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-124">Specifies the size of the send buffer.</span></span>|  
-|<span data-ttu-id="1d3ba-125">subProtocol</span><span class="sxs-lookup"><span data-stu-id="1d3ba-125">subProtocol</span></span>|<span data-ttu-id="1d3ba-126">Web yuvasını subprotocol belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-126">Specifies the Web Socket subprotocol.</span></span>|  
-|<span data-ttu-id="1d3ba-127">transportUsage</span><span class="sxs-lookup"><span data-stu-id="1d3ba-127">transportUsage</span></span>|<span data-ttu-id="1d3ba-128">Ne zaman Web yuvalarını kullanılacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-128">Specifies when to use Web Sockets.</span></span>|  
+|<span data-ttu-id="3139b-113">createNotificationOnConnection</span><span class="sxs-lookup"><span data-stu-id="3139b-113">createNotificationOnConnection</span></span>|<span data-ttu-id="3139b-114">Bağlantıda bir bildirim gönderilip gönderilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-114">Specifies whether a notification is sent upon connection.</span></span>|  
+|<span data-ttu-id="3139b-115">disablePayloadMasking</span><span class="sxs-lookup"><span data-stu-id="3139b-115">disablePayloadMasking</span></span>|<span data-ttu-id="3139b-116">Web yuvasını maskeleme etkinleştirilip etkinleştirilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-116">Specifies whether Web Socket masking is disabled.</span></span>|  
+|<span data-ttu-id="3139b-117">keepAliveInterval</span><span class="sxs-lookup"><span data-stu-id="3139b-117">keepAliveInterval</span></span>|<span data-ttu-id="3139b-118">Canlı tutma aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-118">Specifies the keep alive interval.</span></span>|  
+|<span data-ttu-id="3139b-119">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="3139b-119">maxPendingConnections</span></span>|<span data-ttu-id="3139b-120">Gönderme hizmeti üzerinde bekleyen bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-120">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
+|<span data-ttu-id="3139b-121">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="3139b-121">receiveBufferSize</span></span>|<span data-ttu-id="3139b-122">Alış arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-122">Specifies the size of the receive buffer.</span></span>|  
+|<span data-ttu-id="3139b-123">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="3139b-123">sendBufferSize</span></span>|<span data-ttu-id="3139b-124">Gönderme arabellek boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-124">Specifies the size of the send buffer.</span></span>|  
+|<span data-ttu-id="3139b-125">subProtocol</span><span class="sxs-lookup"><span data-stu-id="3139b-125">subProtocol</span></span>|<span data-ttu-id="3139b-126">Web yuvasını subprotocol belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-126">Specifies the Web Socket subprotocol.</span></span>|  
+|<span data-ttu-id="3139b-127">transportUsage</span><span class="sxs-lookup"><span data-stu-id="3139b-127">transportUsage</span></span>|<span data-ttu-id="3139b-128">Ne zaman Web yuvalarını kullanılacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3139b-128">Specifies when to use Web Sockets.</span></span>|  
   
-## <a name="transportusage-attribute"></a><span data-ttu-id="1d3ba-129">transportUsage özniteliği</span><span class="sxs-lookup"><span data-stu-id="1d3ba-129">transportUsage Attribute</span></span>  
+## <a name="transportusage-attribute"></a><span data-ttu-id="3139b-129">transportUsage özniteliği</span><span class="sxs-lookup"><span data-stu-id="3139b-129">transportUsage Attribute</span></span>  
   
-|<span data-ttu-id="1d3ba-130">Değer</span><span class="sxs-lookup"><span data-stu-id="1d3ba-130">Value</span></span>|<span data-ttu-id="1d3ba-131">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1d3ba-131">Description</span></span>|  
+|<span data-ttu-id="3139b-130">Değer</span><span class="sxs-lookup"><span data-stu-id="3139b-130">Value</span></span>|<span data-ttu-id="3139b-131">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3139b-131">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="1d3ba-132">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="1d3ba-132">WhenDuplex</span></span>|<span data-ttu-id="1d3ba-133">Sözleşme çift yönlü olduğunda Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-133">Use the Web Socket protocol when the contract is duplex.</span></span>|  
-|<span data-ttu-id="1d3ba-134">Her zaman</span><span class="sxs-lookup"><span data-stu-id="1d3ba-134">Always</span></span>|<span data-ttu-id="1d3ba-135">Her zaman sözleşme bağımsız olarak Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-135">Always use the Web Socket protocol regardless of the contract.</span></span>|  
-|<span data-ttu-id="1d3ba-136">Hiçbir zaman</span><span class="sxs-lookup"><span data-stu-id="1d3ba-136">Never</span></span>|<span data-ttu-id="1d3ba-137">Hiçbir zaman Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-137">Never use the Web Socket protocol.</span></span>|  
+|<span data-ttu-id="3139b-132">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="3139b-132">WhenDuplex</span></span>|<span data-ttu-id="3139b-133">Sözleşme çift yönlü olduğunda Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="3139b-133">Use the Web Socket protocol when the contract is duplex.</span></span>|  
+|<span data-ttu-id="3139b-134">Her zaman</span><span class="sxs-lookup"><span data-stu-id="3139b-134">Always</span></span>|<span data-ttu-id="3139b-135">Her zaman sözleşme bağımsız olarak Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="3139b-135">Always use the Web Socket protocol regardless of the contract.</span></span>|  
+|<span data-ttu-id="3139b-136">Hiçbir zaman</span><span class="sxs-lookup"><span data-stu-id="3139b-136">Never</span></span>|<span data-ttu-id="3139b-137">Hiçbir zaman Web yuvasını protokolünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="3139b-137">Never use the Web Socket protocol.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1d3ba-138">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="1d3ba-138">Child Elements</span></span>  
- <span data-ttu-id="1d3ba-139">Yok.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-139">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3139b-138">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3139b-138">Child Elements</span></span>  
+ <span data-ttu-id="3139b-139">Yok.</span><span class="sxs-lookup"><span data-stu-id="3139b-139">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1d3ba-140">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="1d3ba-140">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3139b-140">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3139b-140">Parent Elements</span></span>  
   
-|<span data-ttu-id="1d3ba-141">Öğe</span><span class="sxs-lookup"><span data-stu-id="1d3ba-141">Element</span></span>|<span data-ttu-id="1d3ba-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1d3ba-142">Description</span></span>|  
+|<span data-ttu-id="3139b-141">Öğe</span><span class="sxs-lookup"><span data-stu-id="3139b-141">Element</span></span>|<span data-ttu-id="3139b-142">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3139b-142">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1d3ba-143">\<netHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1d3ba-143">\<netHttpBinding></span></span>|<span data-ttu-id="1d3ba-144">NetHttpBinding belirtir</span><span class="sxs-lookup"><span data-stu-id="1d3ba-144">Specifies the NetHttpBinding</span></span>|  
+|<span data-ttu-id="3139b-143">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="3139b-143">\<netHttpBinding></span></span>|<span data-ttu-id="3139b-144">NetHttpBinding belirtir</span><span class="sxs-lookup"><span data-stu-id="3139b-144">Specifies the NetHttpBinding</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="1d3ba-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="1d3ba-145">Example</span></span>  
- <span data-ttu-id="1d3ba-146">Aşağıdaki örnekte nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-146">The following example shows how to use the \<webSocketSettings> element.</span></span>  
+## <a name="example"></a><span data-ttu-id="3139b-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="3139b-145">Example</span></span>  
+ <span data-ttu-id="3139b-146">Aşağıdaki örnekte nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.</span><span class="sxs-lookup"><span data-stu-id="3139b-146">The following example shows how to use the \<webSocketSettings> element.</span></span>  
   
 ```xml  
 <netHttpBinding>  
@@ -96,12 +96,12 @@ ms.lasthandoff: 12/22/2017
       </netHttpBinding>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1d3ba-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1d3ba-147">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3139b-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3139b-147">See Also</span></span>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [<span data-ttu-id="1d3ba-148">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="1d3ba-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="1d3ba-149">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="1d3ba-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="1d3ba-150">Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma</span><span class="sxs-lookup"><span data-stu-id="1d3ba-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="1d3ba-151">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="1d3ba-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="3139b-148">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="3139b-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="3139b-149">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="3139b-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="3139b-150">Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma</span><span class="sxs-lookup"><span data-stu-id="3139b-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="3139b-151">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="3139b-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
