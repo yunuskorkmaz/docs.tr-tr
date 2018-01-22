@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 83022c879abe324287d821cec90f65f1865f8281
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Komut dosyası stil XSLT kullanarak &lt;msxsl: Script&gt;
 <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış komut dosyası `script` öğesi.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/23/2017
   
  Kanıt, derlemesinden almak için `this.GetType().Assembly.Evidence`. Bir Tekdüzen Kaynak Tanımlayıcısı (URI) gelen kanıt almak için `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, güvenlik bölgesi derleme için varsayılan olarak tam güven. Daha fazla bilgi için bkz: <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Kullanırsanız <xref:System.Xml.Xsl.XslTransform.Load%2A> ele yöntemleri bir <xref:System.Xml.XmlResolver> ancak hiçbir `Evidence`, güvenlik bölgesi derleme için varsayılan olarak tam güven. Daha fazla bilgi için bkz: <xref:System.Security.SecurityZone> ve [adlandırılmış izin kümeleri](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  İşlevler içinde bildirilebilir `msxsl:script` öğesi. Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanlarını gösterir. Listelenen ad alanlarını dışında sınıflarını kullanabilirsiniz. Ancak, bu sınıfların tam olarak nitelenmiş olmalıdır.  
   
@@ -177,7 +177,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>Giriş  
- Number.XML  
+ number.xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -191,7 +191,7 @@ public class Sample
 </data>  
 ```  
   
- CALC.xsl  
+ calc.xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  

@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
-Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  
+Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  
   
 -   Implements <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik
  İşiniz bittiğinde, görürsünüz **araç** oluşturduğunuz bir bileşen ile doldurulur.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım, projeyi oluşturmak ve formu ayarlamak için ' dir.  
@@ -58,11 +58,11 @@ Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik
   
 1.  Adlı bir Windows tabanlı bir uygulama projesi oluşturun `ToolboxExample`.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Yeni bir bileşen projeye ekleyin. Bu çağrı `DemoComponent`.  
   
-     Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Projeyi oluşturun.  
   
@@ -93,7 +93,7 @@ Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik
   
 1.  Çözüm projeden kaldırın.  
   
-     Yüklemeyi kaldırma projeler hakkında daha fazla bilgi için bkz: [NIB: nasıl yapılır: Unload ve yeniden projeleri](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmek için istenirse, seçin **Evet**.  
+     Yüklemeyi kaldırma projeler hakkında daha fazla bilgi için bkz: [NIB: nasıl yapılır: Unload ve yeniden projeleri](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmek için istenirse, seçin **Evet**.  
   
 2.  Yeni bir ekleme **Windows uygulaması** çözüme proje. Formunda açmak **Tasarımcısı**.  
   
@@ -107,7 +107,7 @@ Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik
  Bu anlatımda gösterilir **araç kutusu** hesap bir projenin bileşenlerinin alır ancak **araç** ayrıca alır denetimleri hesabıdır. Ekleyerek ve denetim projeleri çözümünüzden kaldırılması, kendi özel denetimler ile deneyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Nasıl yapılır: araç kutusu sekmeleri işlemek](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Nasıl yapılır: araç kutusu sekmeleri işlemek](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

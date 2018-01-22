@@ -9,11 +9,11 @@ ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f51ba41f39f16f3429796f15533a6fb2a0049d45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 151b7434ab38f9a17344f15f0f0abef83f78e8cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>Kayıt defteri anahtarı &#39; &lt;keyname&gt;&#39; oluşturulamadı
 Belirtilen kayıt defteri anahtarı, büyük olasılıkla yetersiz güvenlik izinlerinden nedeniyle oluşturulamadı.  
@@ -23,5 +23,5 @@ Belirtilen kayıt defteri anahtarı, büyük olasılıkla yetersiz güvenlik izi
 -   Anahtara erişmek için yeterli güvenlik izinleri olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kayıt defteri özeti](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [Visual Basic .NET kayıt erişim değişikliklerini](http://msdn.microsoft.com/en-us/b58f7687-f4db-448a-a865-07f62fd16fb2)
+ [Kayıt Defteri Özeti](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [Visual Basic .NET kayıt erişim değişikliklerini](http://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)

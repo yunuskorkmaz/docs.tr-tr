@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı güvenlik mekanizmaları anlamak zorunda. Diğer özellikler veya uygulamanızın içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  
@@ -35,7 +35,7 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|En iyi güvenlik uygulamaları ve bağlantı dizeleri şifrelemek için korumalı yapılandırmayı kullanarak gibi bağlantı bilgileri, koruma teknikleri açıklar.|  
-|[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
+|[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
 |[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Kullanıcı girişi bağlantı dizeleri çalışma zamanında nasıl oluşturulacağını açıklar.|  
 |[SQL Server Güvenliğine Genel Bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
   
@@ -89,7 +89,7 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[COM + rol tabanlı güvenlik ve .NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Yönetilen kod COM + Güvenlik Hizmetleri ile tümleştirmek nasıl ele alınmaktadır.|  
+|[COM + rol tabanlı güvenlik ve .NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Yönetilen kod COM + Güvenlik Hizmetleri ile tümleştirmek nasıl ele alınmaktadır.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen Kod ile Birlikte Çalışma  
  COM bileşenleri, COM + Hizmetleri, dış tür kitaplıklarını ve birçok işletim sistemi Hizmetleri dahil olmak üzere, yönetilmeyen kod ile etkileşim için .NET Framework sağlar. Yönetilmeyen kod ile çalışmayı yönetilen kod için güvenlik çevre dışına gitmesini gerektirir. Hem kodunuz hem de çağırır herhangi bir kod kod izni yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağı belirtilmiş). Yönetilmeyen kod uygulamanıza istenmeyen güvenlik açıklarını ortaya çıkarabilir. Bu nedenle, kesinlikle gerekli olmadığı sürece yönetilmeyen kod ile birlikte çalışma kaçınmalısınız.  
@@ -99,12 +99,12 @@ Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı 
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te kullanıma etme ve .NET Framework bileşenlerini com kullanıma açıklayan konuları içerir|  
-|[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Birincil birlikte çalışma derlemeleri, iş parçacığı oluşturma ve özel hazırlama gibi gelişmiş konular içerir.|  
+|[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Birincil birlikte çalışma derlemeleri, iş parçacığı oluşturma ve özel hazırlama gibi gelişmiş konular içerir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

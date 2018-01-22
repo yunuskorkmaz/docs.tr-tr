@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programlama deneyimine. Bu konunun sonundaki listesi sırasına göre tamamlanması için tasarlanmıştır. Bu öğreticide, bir giriş anlayış oluşturmak için gerekli adımları verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları. Bir hizmet bir veya daha fazla uç noktalar, her biri bir veya daha fazla hizmet işlemini kullanıma sunar, kullanıma sunar. *Endpoint* Hizmetin nerede hizmet bulunabilir, bir adresi nasıl bir istemci hizmeti ve işlevselliği tanımlayan bir sözleşme ile iletişim kurması gereken açıklayan bilgileri içeren bir bağlama belirtir hizmet tarafından istemcilerine sağlanan.  
@@ -36,7 +36,7 @@ Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLU
 > [!NOTE]
 >  Çalıştırıyorsanız, [!INCLUDE[wv](../../../includes/wv-md.md)] veya Windows işletim sisteminin sonraki sürümlerini, başlamalı [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] Başlat menüsüne giderek ve Visual Studio 2011 sağ tıklayarak ve seçerek **yönetici olarak çalıştır**. Her zaman, bir kısayol oluşturun, kısa kesme sağ tıklayın, seçin özellikleri, bir yönetici olarak Visual Studio 2011 başlatmak için **Uyumluluk** sekmesini tıklatın ve denetleme **yöneticiolarakbuprogramıçalıştır** onay kutusu. Visual Studio 2011 bu kısayol ile başlattığınızda, her zaman yönetici olarak çalıştırılır.  
   
- Sabit diskinize indirilebilir ve çalıştırmak, konulara bakın örnek uygulamaları için [Windows Communication Foundation örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Bu konu, bakın, özellikle için [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Sabit diskinize indirilebilir ve çalıştırmak, konulara bakın örnek uygulamaları için [Windows Communication Foundation örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Bu konu, bakın, özellikle için [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Hizmetler ve istemcileri oluşturma hakkında daha ayrıntılı bilgi için bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Bu bölümdeki konularda hızlı maruz sağlamak için tasarlanmıştır [!INCLU
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 .NET Framework Yapılandırma dosyalarınızda geliştiricilerinin ve yöneticilerinin denetim sağlar ve esneklik şekilde uygulamalar üzerinde çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Yönetici, bir uygulama korumalı hangi kaynaklara erişebilir, derlemeler hangi sürümlerinin bir uygulama kullanacak ve uzak uygulamalar ve nesneleri bulunduğu kontrol edebilirsiniz. Geliştiriciler, bir ayarı her değiştirildiğinde bir uygulamayı yeniden derlemenize gereğini ortadan ayarları yapılandırma dosyalarında koyabilirsiniz. Bu bölümde ne yapılandırılabilir ve neden bir uygulama yapılandırma yararlı olabilecek açıklanmaktadır.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="machine-configuration-files"></a>Makine Yapılandırma Dosyaları  
- Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizini. Machine.config makine genelinde derleme için yapılandırma ayarlarını içeren bağlama, yerleşik [uzaktan iletişim kanalları](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)ve ASP.NET.  
+ Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizini. Machine.config makine genelinde derleme için yapılandırma ayarlarını içeren bağlama, yerleşik [uzaktan iletişim kanalları](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)ve ASP.NET.  
   
  Yapılandırma sistemi ilk makine yapılandırma dosyası arar [  **\<appSettings >** öğesi](~/docs/framework/configure-apps/file-schema/appsettings/index.md) ve geliştirici tanımlayabilir diğer yapılandırma bölümlerinin. Ardından uygulama yapılandırma dosyasına bakar. Makine yapılandırma dosyasını yönetilebilir tutmak için, bu ayarları uygulama yapılandırma dosyasında tutmak en iyisidir. Ancak, ayarları makine yapılandırma dosyasına koymak sisteminizi daha sürdürülebilir yapabilir. Örneğin, eğer hem istemci hem de sunucu uygulamanızın kullandığı bir üçüncü parti bileşeniniz varsa, o bileşen için ayarları tek bir yere koymak daha kolaydır. Bu durumda, aynı ayarları iki farklı dosyada tutmak yerine makine yapılandırma dosyasında tutmak daha uygundur.  
   
@@ -86,13 +86,13 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET tarafından barındırılan uygulama  
   
-     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz: [ASP.NET yapılandırma ayarları](http://msdn.microsoft.com/en-us/116608f3-c03d-4413-9fc7-978703e18b0f)  
+     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz: [ASP.NET yapılandırma ayarları](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f)  
   
 -   Internet Explorer tarafından barındırılan uygulama  
   
      Internet Explorer'da barındırılan bir uygulamanın bir yapılandırma dosyası varsa, bu dosyanın konumunu belirtilen bir `<link>` aşağıdaki söz dizimini etiketi:  
   
-     \<İlişki bağlantı = "*ConfigurationFileName*" href = "*konumu*" >  
+     \<link rel="*ConfigurationFileName*" href="*location*">  
   
      Bu etiketinde `location` yapılandırma dosyası için bir URL. Bu, uygulama temel dizinini ayarlar. Yapılandırma dosyası uygulamayla aynı web sitesinde yer almalıdır.  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 12/22/2017
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Yapılandırma dosyalarını kullanarak uzak nesneleri kaydetme](http://msdn.microsoft.com/en-us/bc503ee1-c811-4f82-9525-470343326adc)  
+ [Yapılandırma dosyalarını kullanarak uzak nesneleri kaydetme](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
  [ASP.NET Web sitesi yönetimi](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [NIB: Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Uzak nesneleri](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)
+ [Uzak nesneleri](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09bf16127a52c7aad28c9461d3dd5fb2e0a35dd0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8c41350431f49b638c4353e68c9bacded947a1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Nasıl yapılır: Dizeden Karakterleri Okuma
 Aşağıdaki kod örnekleri, bir dizeden karakterleri zaman uyumlu ve zaman uyumsuz olarak okumak gösterilmektedir.  
@@ -52,7 +52,7 @@ Aşağıdaki kod örnekleri, bir dizeden karakterleri zaman uyumlu ve zaman uyum
  <xref:System.IO.StringReader>  
  <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
  [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [NIB: Nasıl yapılır: bir dizin listesi oluşturma](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
  [Nasıl yapılır: Dosyadan Metin Okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 18e8be0668fa13c43f31d5314cacf91165ba8519
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79112878141fd791c2fba183d2d1fec9f1b7044
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz işlemleri (WCF Veri Hizmetleri)
 Web uygulamaları, iç ağlar içinde çalışan uygulamalar daha yüksek gecikme süreleri istemci ve sunucu arasındaki uyum gerekir. Uygulamanızın performansı ve kullanıcı deneyimini iyileştirmek için zaman uyumsuz yöntemleri kullanmanızı öneririz <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfları erişirken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Web üzerinden sunucuları.  
@@ -45,7 +45,7 @@ Web uygulamaları, iç ağlar içinde çalışan uygulamalar daha yüksek gecikm
 |Nesneleri için değişiklikler kaydediliyor<xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Zaman uyumsuz işlemleri için ilgili önemli noktalar iş parçacığı oluşturma  
- Çok iş parçacıklı uygulamada, zaman uyumsuz işlemi için bir geri çağırma olarak kayıtlı temsilci değil mutlaka çağrılır çağırmak için kullanılan aynı iş parçacığı üzerinde *başlamak* ilk isteği oluşturur yöntemi. Burada geri çağırma gerekir çağrılabilir belirli bir iş parçacığı üzerinde bir uygulamada, açıkça yürütülmesi sıralamanız gerekir *son* yanıt, istenen iş parçacığı işleme yöntemi. Örneğin, Windows Presentation Foundation WPF tabanlı uygulamalar ve Silverlight tabanlı uygulamalar, yanıt geri UI kullanarak iş parçacığına gereken <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> yöntemi <xref:System.Windows.Threading.Dispatcher> nesnesi. Daha fazla bilgi için bkz: [veri hizmeti (WCF Veri Hizmetleri/Silverlight) sorgulama](http://msdn.microsoft.com/en-us/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
+ Çok iş parçacıklı uygulamada, zaman uyumsuz işlemi için bir geri çağırma olarak kayıtlı temsilci değil mutlaka çağrılır çağırmak için kullanılan aynı iş parçacığı üzerinde *başlamak* ilk isteği oluşturur yöntemi. Burada geri çağırma gerekir çağrılabilir belirli bir iş parçacığı üzerinde bir uygulamada, açıkça yürütülmesi sıralamanız gerekir *son* yanıt, istenen iş parçacığı işleme yöntemi. Örneğin, Windows Presentation Foundation WPF tabanlı uygulamalar ve Silverlight tabanlı uygulamalar, yanıt geri UI kullanarak iş parçacığına gereken <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> yöntemi <xref:System.Windows.Threading.Dispatcher> nesnesi. Daha fazla bilgi için bkz: [veri hizmeti (WCF Veri Hizmetleri/Silverlight) sorgulama](http://msdn.microsoft.com/library/3a7cdc07-c37e-4da2-b98b-c3763fd0970b).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

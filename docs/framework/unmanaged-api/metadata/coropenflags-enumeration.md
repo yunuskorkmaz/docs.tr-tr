@@ -20,11 +20,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 39645de71913baeaa39524e1cae081de9cac3442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4447f648277576169c9004d1880283728639c8f3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
 Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerleri içerir.  
@@ -62,7 +62,7 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
 |`ofManifestMetadata`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
 |`ofReadOnly`|Dosya okuma ve, açılmalı gösteren bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.|  
-|`ofTakeOwnership`|Bellek için bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](http://msdn.microsoft.com/en-us/c4cb588d-9482-4f90-a92e-75b604540d5c) ve meta verileri ile serbest.|  
+|`ofTakeOwnership`|Bellek için bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) ve meta verileri ile serbest.|  
 |`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
 |`ofNoTransform`|.Winmd dosyaların otomatik Dönüşümlerin devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için bkz: [altındaki başlık .NET ve Windows çalışma zamanı ile](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|İç kullanım için ayrılmıştır.|  

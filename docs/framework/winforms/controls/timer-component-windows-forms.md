@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2e78ce6b61ed1c6755072729b08a76d402e021b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cdb8d96b6d58afa86463243a385799950fb0fda0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="timer-component-windows-forms"></a>Süreölçer Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olay başlatır bir bileşenidir. Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır.  
@@ -48,5 +48,5 @@ Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olay b
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.  
   
- [Visual Basic 6.0 kullanıcıları için Zamanlayıcı denetimi](http://msdn.microsoft.com/en-us/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Visual Basic 6.0 kullanıcıları için Zamanlayıcı denetimi](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  Zamanlayıcı işlevselliği önceki sürümlere kıyasla Visual Basic'te nasıl değiştiğini açıklar.

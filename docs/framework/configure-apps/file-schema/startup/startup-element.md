@@ -21,17 +21,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;Başlangıç&gt; öğesi
 Ortak dil çalışma zamanı başlangıç bilgileri belirtir.  
   
  \<Yapılandırma >  
-\<Başlangıç >  
+\<startup>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -70,7 +70,7 @@ Ortak dil çalışma zamanı başlangıç bilgileri belirtir.
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
-  **\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır  **\<requiredRuntime >** öğesi.  
+ **\<SupportedRuntime >** öğesi sürüm 1.1 veya üstünün çalışma zamanının kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır  **\<requiredRuntime >** öğesi.  
   
  Microsoft Internet Explorer'da barındırılan bir uygulama için başlangıç kodu yoksayar  **\<başlangıç >** öğesi ve kendi alt öğelerini.  
   
@@ -78,7 +78,7 @@ Ortak dil çalışma zamanı başlangıç bilgileri belirtir.
  Bu öznitelik, uygulamanız eski etkinleştirme yolları gibi kullanıyorsa yararlıdır [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), ve önceki bir sürümünü yerine CLR sürüm 4 etkinleştirmek için bu yollar istediğiniz veya uygulamanız ise ile oluşturulan [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ancak bir bağımlılığa sahip .NET Framework'ün önceki bir sürümüyle oluşturulmuş bir karma mod derleme üzerinde. Bu senaryolarda, öznitelik kümesine `true`.  
   
 > [!NOTE]
->  Öznitelik ayarını `true` CLR sürüm 1.1 veya CLR Version 2.0 sürümü aynı işlemine etkili bir şekilde işlem içi yan yana özelliğini devre dışı bırakma yüklenmesini engeller (bkz [COM birlikte çalışma için yan yana yürütme](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Öznitelik ayarını `true` CLR sürüm 1.1 veya CLR Version 2.0 sürümü aynı işlemine etkili bir şekilde işlem içi yan yana özelliğini devre dışı bırakma yüklenmesini engeller (bkz [COM birlikte çalışma için yan yana yürütme](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek çalışma zamanı sürümü bir yapılandırma dosyası belirtmek nasıl gösterir.  
@@ -102,6 +102,6 @@ Ortak dil çalışma zamanı başlangıç bilgileri belirtir.
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [COM birlikte çalışma için yan yana yürütme](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [COM birlikte çalışma için yan yana yürütme](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [İşlem İçi Yan Yana Yürütme](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

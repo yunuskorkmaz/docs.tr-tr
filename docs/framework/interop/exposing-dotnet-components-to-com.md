@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
 .NET türü yazma ve bu tür yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir. Bu bölümde COM istemcileri ile birlikte çalışan yönetilen kod yazma için birkaç ipuçları açıklanmaktadır:  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/22/2017
   
      Aynı araçları ve bugün kullandıkları teknikleri kullanarak derlemedeki türleri COM geliştiriciler başvurabilirsiniz.  
   
-3.  [Bir .NET nesnesini çağıran](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
+3.  [Bir .NET nesnesini çağıran](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
   
      COM geliştiriciler, bunlar üzerinde herhangi bir yönetilmeyen türü yöntemlerini çağıran aynı şekilde .NET nesnesinde yöntemleri çağırabilir. Örneğin, COM **CoCreateInstance** API'si, .NET nesneleri etkinleştirir.  
   
-4.  [COM erişim için bir uygulamayı dağıtmak](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).  
+4.  [COM erişim için bir uygulamayı dağıtmak](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce).  
   
      Tanımlayıcı adlı bir derleme genel derleme önbelleğinde yüklenebilir ve yayımcısını imzadan gerektirir. İstemci uygulama dizininde değil tanımlayıcı adlı derlemeler yüklenmesi gerekir.  
   

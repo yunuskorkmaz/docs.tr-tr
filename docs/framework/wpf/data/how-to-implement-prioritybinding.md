@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>Nasıl yapılır: PriorityBinding Uygulama
 <xref:System.Windows.Data.PriorityBinding>içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bağlamaların listesini belirterek çalışır. Bağlama Listesi en yüksek öncelikli olandan en düşük önceliği sıralanır. Yüksek önceliği olan bağlama bir değer döndürürse başarıyla işlendiğinde yoktur hiçbir zaman listedeki diğer bağlamaları işlem gerekmez. En yüksek öncelik bağlama değerlendirilmesi uzun süren durum olabilir, bir daha yüksek bir öncelik değeri başarıyla döndürünceye kadar başarılı bir şekilde bir değer döndüren bir sonraki en yüksek öncelikli kullanılır.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Get erişimcisine `SlowestDP` değerini dönmeden önce 5 saniye bekler `_slowestDP` veri üyesi.  
   
 > [!NOTE]
->  Bu örnek, yalnızca tanıtım amacıyla kullanılır. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Yönergeleri büyüklük alan kümesinden daha yavaş olan özellikleri tanımlamaya karşı önerilir. Daha fazla bilgi için bkz: [NIB: seçme arasında özellikleri ve yöntemleri](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Bu örnek, yalnızca tanıtım amacıyla kullanılır. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Yönergeleri büyüklük alan kümesinden daha yavaş olan özellikleri tanımlamaya karşı önerilir. Daha fazla bilgi için bkz: [NIB: seçme arasında özellikleri ve yöntemleri](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

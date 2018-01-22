@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 065a3bcd64500323de7bc37c5896b13acb459fb1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 75d78c505c81ce688e0ba0110c76712c71db1c4f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET uygulamalarının güvenliğini sağlama
 Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulama değil gibi ortak kodlama Tuzaklar önleme içerir. Verilere erişen bir uygulama birçok olası bir saldırganın alınamıyor, değiştirmek veya hassas verilere zarar yararlanabilir hata noktalarını sahiptir. Bu nedenle, güvenlik, uygulamanızın son dağıtım ve devam eden bakım tasarım aşamasında modelleme tehdit işleminden tüm yönlerini anlamak önemlidir.  
@@ -53,10 +53,10 @@ Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulam
  [Güvenlik](../../../../docs/standard/security/index.md)  
  .NET Framework güvenliği tüm yönleriyle açıklayan konulara bağlantılar içerir.  
   
- [Güvenlik araçları](http://msdn.microsoft.com/en-us/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Güvenlik araçları](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Güvenlik İlkesi'ni yönetme ve güvenliğini sağlamak için .NET framework Araçları'nı tıklatın.  
   
- [Güvenli uygulamalar oluşturmak için kaynaklar](http://msdn.microsoft.com/en-us/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Güvenli uygulamalar oluşturmak için kaynaklar](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Güvenli uygulamalar oluşturmak için konulara bağlantılar sağlar.  
   
  [Güvenlik Kaynakçası](/visualstudio/ide/security-bibliography)  

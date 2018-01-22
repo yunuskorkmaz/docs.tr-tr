@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya içinde desteklenmeyen dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçleri birçoğu, tamsayı bağımsız değişken kabul aşırı yüklenmiş bir sürümüne sahipsiniz. Tamsayı bağımsız değişkeni sıfır tabanlı dizin üzerinde çalıştırıldığı sırada karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş LINQ standart sorgu işleçleri sürümleri desteklenmez ve bunları kullanmaya çalışırken bir özel durum oluşturur.  
@@ -156,7 +156,7 @@ Bu bölümde desteklenen veya içinde desteklenmeyen dil ile tümleşik sorgu (L
 |<xref:System.Linq.Queryable.Sum%2A>|Desteklenmez|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Tür yöntemleri  
- CLR tür dönüştürmeleri ve test LINQ standart sorgu işleçleri desteklenen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Yalnızca kavramsal model türlerine eşlenir CLR türleri, LINQ to Entities içinde desteklenir. Kavramsal model türlerinin listesi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). Aşağıdaki tabloda desteklenen ve desteklenmeyen tür yöntemleri listelenmiştir.  
+ CLR tür dönüştürmeleri ve test LINQ standart sorgu işleçleri desteklenen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Yalnızca kavramsal model türlerine eşlenir CLR türleri, LINQ to Entities içinde desteklenir. Kavramsal model türlerinin listesi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Aşağıdaki tabloda desteklenen ve desteklenmeyen tür yöntemleri listelenmiştir.  
   
 |Yöntem|Destek|Visual Basic işlev imzası|C# yöntem imzası|  
 |------------|-------------|-------------------------------------|--------------------------|  

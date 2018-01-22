@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti bir yapılandırma dosyası ile tasarım zamanında yerine dağıtım noktasında uç noktası ve hizmet davranışı verileri sağlayan esnekliği sağlar. Bu konu, birincil teknikleri özetler.  
@@ -101,7 +101,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
   
 -   `contract`. Sözleşmesini tanımlayan arabirimi belirtir. Bu tarafından belirtilen ortak dil çalışma zamanı (CLR) türüne uygulanan arabirimidir `name` özniteliği `service` öğesi.  
   
--   [\<uç noktası > öğesi başvurusu](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<uç noktası > öğesi başvurusu](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<Bağlamaları > öğesi  
  `bindings` Öğesi içinde herhangi bir hizmeti tanımlanan herhangi bir uç nokta tarafından kullanılan tüm bağlamaları özelliklerini içerir.  
@@ -111,7 +111,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
 ### <a name="the-binding-element"></a>\<Bağlama > öğesi  
  `binding` İçindeki öğe `bindings` öğesi, sistem tarafından sağlanan bağlamalar birini olabilir (bakın [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md)) veya özel bağlama (bkz [özel bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` Öğeye sahip bir `name` belirtilen uç noktası ile bağlama karşılık gelen öznitelik `bindingConfiguration` özniteliği `endpoint` öğesi. Bu bağlama, bağlama türü varsayılan olarak karşılık gelen sonra ad belirtilmezse.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Hizmetler ve istemcileri yapılandırmak, bkz: [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]Hizmetler ve istemcileri yapılandırmak, bkz: [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<bağlama >](../../../docs/framework/misc/binding.md)  
   
@@ -123,7 +123,7 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
 ### <a name="the-behavior-element"></a>\<Davranışı > öğesi  
  Her `behavior` öğesi tarafından tanımlanan bir `name` özniteliği ve ya da bir sistem tarafından sağlanan davranışı gibi sağlar <`throttling`>, veya özel bir davranış. Ad belirtilmezse bu davranışı öğesi varsayılan hizmet veya uç noktası davranışı karşılık gelir.  
   
- [\<davranışı >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Bağlama ve davranış yapılandırmalarını kullanma  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]yapılandırmaları başvuru sistemi yapılandırmayla uç noktalar arasında paylaşmak kolaylaştırır. Yapılandırma değerlerini bir bitiş noktasına doğrudan atamak yerine, bağlama ile ilgili yapılandırma değerlerini gruplandırılmıştır `bindingConfiguration` öğelerinde `<binding>` bölümü. Bağlama yapılandırması, bir bağlama ayarlarını adlandırılmış grubudur. Uç noktalar sonra başvuru `bindingConfiguration` ada göre.  
@@ -274,6 +274,6 @@ Yapılandırma bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmeti 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<bağlama >](../../../docs/framework/misc/binding.md)

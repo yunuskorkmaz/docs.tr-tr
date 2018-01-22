@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21d4a39b9cbd2ee563edd22818630c18658e1d6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d11c559679b67c22eeed87893bf2e362084034c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Nasıl yapılır: Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme
 Bu örnek film şeridi animasyonları arasında iletim davranışı belirtmek nasıl gösterir. <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Özelliği <xref:System.Windows.Media.Animation.BeginStoryboard> nasıl yeni bir animasyon belirtir bir özelliğe uygulanmış olan tüm varolanları etkileşim.  
@@ -35,5 +35,5 @@ Bu örnek film şeridi animasyonları arasında iletim davranışı belirtmek na
  <xref:System.Windows.Media.Animation.BeginStoryboard>  
  <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>  
  [Animasyona Genel bakış](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animasyon ve zamanlama](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animasyon ve zamanlama](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Nasıl Yapılır Konuları](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

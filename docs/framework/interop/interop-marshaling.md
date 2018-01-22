@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 <a name="top"></a>Birlikte çalışma hazırlama veri çağrı sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir. Birlikte çalışma hazırlama ortak dil çalışma zamanı 's hazırlama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.  
@@ -105,7 +105,7 @@ Bir .NET istemcisi ve COM nesnesi arasında çapraz grup çağrısı
     > [!NOTE]
     >  Bir C# istemci iş parçacığı için STA ayarladıktan sonra geçici grup hazırlama MTA COM bileşenleri çağrıları gerektirir.  
   
- Açıkça bir apartman modeli seçme ile ilgili yönergeler için bkz: [yönetilen ve yönetilmeyen iş parçacığı oluşturma](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Açıkça bir apartman modeli seçme ile ilgili yönergeler için bkz: [yönetilen ve yönetilmeyen iş parçacığı oluşturma](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
   
  [Başa dön](#top)  
   
@@ -145,7 +145,7 @@ Bir .NET istemcisi ve COM nesnesi arasında çapraz grup çağrısı
  ![SOAP veya TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar  
   
- Yönetilmeyen bazı çağrıları SOAP arasındaki çağrıları gibi channeled [bileşenleri hizmet](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) ve COM  
+ Yönetilmeyen bazı çağrıları SOAP arasındaki çağrıları gibi channeled [bileşenleri hizmet](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) ve COM  
   
  [Başa dön](#top)  
   
@@ -159,10 +159,10 @@ Güvenlik duvarları SOAP veya TcpChannel sınıfı kullanarak uzak çağrılar
 |[COM Birlikte Çalışma ile Verileri Hazırlama](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Hazırlama davranışı değiştirmek için COM sarmalayıcıları özelleştirmeyi açıklar.|  
 |[Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM'dan WCF'ye geçirme açıklar.|  
 |[Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|HRESULTs için özel durumları eşleme açıklar ve .NET Framework kendi karşılaştırılabilir özel durum sınıfına her HRESULT tam eşleme sağlar.|  
-|[Genel türler kullanma birlikte çalışma](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Genel türler COM birlikte çalışabilirlik için kullanılırken hangi eylemleri desteklenen açıklar.|  
+|[Genel türler kullanma birlikte çalışma](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Genel türler COM birlikte çalışabilirlik için kullanılırken hangi eylemleri desteklenen açıklar.|  
 |[Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)|Ortak dil çalışma zamanı tarafından sağlanan birlikte çalışabilirlik hizmetlerini açıklar.|  
-|[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|COM bileşenlerini .NET Framework uygulamasına ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
-|[Birlikte çalışma için tasarım konuları](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Tümleşik COM bileşenlerini yazmak için ipuçları verilmektedir.|  
+|[Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|COM bileşenlerini .NET Framework uygulamasına ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|  
+|[Birlikte çalışma için tasarım konuları](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Tümleşik COM bileşenlerini yazmak için ipuçları verilmektedir.|  
   
  [Başa dön](#top)  
   

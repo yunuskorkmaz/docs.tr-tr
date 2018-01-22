@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumunu belirten URI), oluşur. Uç nokta adresi temsil edilen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programlama modeli tarafından <xref:System.ServiceModel.EndpointAddress> isteğe bağlı bir içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası ile ileti değiş tokuşu diğer uç noktaları tarafından kimlik doğrulamasını etkinleştirir özelliği ve İsteğe bağlı kümesi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gerekli diğer SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üstbilgi ek sağlar ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşim kurmak için adresleme bilgi. Bir uç nokta adresi kablo WS adresleme uç noktası başvuru olarak (EPR) gösterilir.  
@@ -36,7 +36,7 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
   
 -   (isteğe bağlı) Bağlantı noktası: 322  
   
--   Yol: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Bir hizmet için bir adres tanımlama  
  Bir hizmet uç noktası adresi ya da imperatively kodu veya bildirimli olarak ile yapılandırma kullanılarak belirtilebilir. Bağlamalar ve dağıtılmış bir hizmet için adresleri hizmet geliştirildiği sırada kullanılan olanlardan genellikle farklı olduğu için uç noktalar kodda tanımlama genellikle pratik değildir. Genellikle, kod yerine Yapılandırması kullanılarak hizmet uç noktaları tanımlamak daha pratik olur. Bağlama tutulması ve adresleme bilgilerini kodu dışında yeniden derleyin veya uygulamayı yeniden dağıtmak zorunda kalmadan değiştirmek için bunları sağlar.  
@@ -67,9 +67,9 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
   
  Örneğin, bir site aşağıdaki temel adresler içerebilir:  
   
--   http://Payroll.myOrg.com/Service.svc  
+-   http://payroll.myorg.com/Service.svc  
   
--   http://shipping.myOrg.com/Service.svc  
+-   http://shipping.myorg.com/Service.svc  
   
  İle [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], yapılandırma dosyasında bir önek filtre AppDomain düzeyinde belirtin. Bunu ile [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) öneklerinin bir listesini içeren öğe. IIS tarafından sağlanan gelen temel adresler, isteğe bağlı önek listesi göre filtrelenir. Bir önek belirtilmediğinde, varsayılan olarak, tüm adresleri üzerinden geçirilir. Önek sonuçları yalnızca eşleşen taban adresi üzerinden iletilecek bu düzeni için belirterek.  
   
@@ -130,7 +130,7 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
   
 -   Kullanarak kod içinde özel adres üstbilgileri oluşturma <xref:System.ServiceModel.Channels.AddressHeader> sınıfı ve yapımı içinde kullanılan bir <xref:System.ServiceModel.EndpointAddress>.  
   
--   Yapılandırmada, özel [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) alt olarak belirtilen [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+-   Yapılandırmada, özel [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) alt olarak belirtilen [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
   
  Dağıtımdan sonra üstbilgileri değiştirmenize izin verdiğinden yapılandırma kod, genellikle tercih edilir.  
   
@@ -141,7 +141,7 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
   
 -   Kodda ekleyerek özel dinleme adresi belirtin. bir <xref:System.ServiceModel.Description.ClientViaBehavior> uç noktanın davranış koleksiyonu sınıfı.  
   
--   Özel bir dinleme adresiyle Yapılandırması'nda belirtin `ListenUri` özniteliği hizmetinin [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+-   Özel bir dinleme adresiyle Yapılandırması'nda belirtin `ListenUri` özniteliği hizmetinin [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
   
 ### <a name="custom-soap-address-filter"></a>Özel SOAP adresi filtresi  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Herhangi ile birlikte kullanılan <xref:System.ServiceModel.EndpointAddress.Headers%2A> bir uç noktanın SOAP adresi filtresi tanımlamak için özelliği (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Varsayılan olarak, bu filtre gelen iletiyi sahip olduğunu doğrular bir `To` uç noktayla eşleşen ileti üstbilgisi kullanıcının URI ve tüm gerekli uç nokta üstbilgilerinin iletide.  

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme
 Bu kılavuzda, bir SQL Server veritabanından veri almak ve bu verileri görüntüleyen bir <xref:System.Windows.Controls.DataGrid> denetim. ADO.NET Entity Framework verileri temsil eder ve LINQ varlık sınıfından belirtilen verileri alan bir sorgu yazmak için kullanabileceğiniz varlık sınıfları oluşturmak için kullanın.  
@@ -88,7 +88,7 @@ Bu kılavuzda, bir SQL Server veritabanından veri almak ve bu verileri görünt
   
 4.  Seçin <xref:System.Windows.Window>.  
   
-5.  Özellikler penceresini veya XAML Düzenleyicisi'ni kullanarak oluşturmak için bir olay işleyicisi <xref:System.Windows.Window> adlı `Window_Loaded` için <xref:System.Windows.FrameworkElement.Loaded> olay. Daha fazla bilgi için bkz: [nasıl yapılır: basit bir olay işleyicisi oluşturun](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  Özellikler penceresini veya XAML Düzenleyicisi'ni kullanarak oluşturmak için bir olay işleyicisi <xref:System.Windows.Window> adlı `Window_Loaded` için <xref:System.Windows.FrameworkElement.Loaded> olay. Daha fazla bilgi için bkz: [nasıl yapılır: basit bir olay işleyicisi oluşturun](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
      Aşağıdaki XAML için MainWindow.xaml gösterir.  
   

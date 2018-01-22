@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: cad98ab0df372b19efcf102cce3f80e3f7b0632f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
 Bu örnek bir hizmeti meta veri olmayan exchange bağlamaları birini kullanan bir güvenli meta veri uç noktası ile uygulama ve nasıl yapılandırılacağı gösterilmektedir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) veya fetch istemcileri Bu tür bir meta veri uç noktasından meta veriler. İki sistem tarafından sağlanan bağlamalar meta veri uç noktalarını gösterme için kullanılabilir: mexHttpBinding ve mexHttpsBinding. mexHttpBinding meta veri uç noktasına HTTP üzerinden güvenli olmayan bir biçimde göstermek için kullanılır. mexHttpsBinding meta veri uç noktasına HTTPS üzerinden güvenli bir şekilde kullanıma sunmak için kullanılır. Bu örnek, güvenli meta veri kullanan uç noktasını kullanıma sunmak verilmektedir <xref:System.ServiceModel.WSHttpBinding>. Bağlama üzerinde güvenlik ayarlarını değiştirmek istediğiniz ancak HTTPS kullanmak istemediğiniz durumlarda yapmak istiyor. MexHttpsBinding kullanırsanız, meta veri uç noktası güvenli olacaktır, ancak bağlama ayarlarını değiştirmek için bir yolu yoktur.  
@@ -92,7 +92,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- "http" ve sözleşme adlı uç noktası için görünüyor `IMetadataExchange` meta veri uç noktası ile bağlama ve iletişim exchange davranışını yapılandırmak için. Örnek Svcutil.exe.config dosyasında kalan bağlama yapılandırması ve meta veri uç noktasının sunucunun yapılandırma ile eşleşmesi için davranış kimlik bilgilerini belirtir.  
+ "http" ve sözleşme adlı uç noktası için görünüyor `IMetadataExchange` meta veri uç noktası ile bağlama ve iletişim exchange davranışını yapılandırmak için. The rest of the Svcutil.exe.config file in the sample specifies the binding configuration and behavior credentials to match the server's configuration of the metadata endpoint.  
   
  Sırayla Svcutil.exe Svcutil.exe.config yapılandırmasında alması için Svcutil.exe yapılandırma dosyası ile aynı dizinde olmalıdır. Sonuç olarak, yükleme konumundan Svcutil.exe Svcutil.exe.config dosyasını içeren dizine kopyalamalısınız. Ardından bu dizininden aşağıdaki komutu çalıştırın:  
   
@@ -153,7 +153,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  İstemci uygulaması \MetadataResolverClient\bin veya \SvcutilClient\bin çalıştırın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
-3.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 4.  Sertifikaları örnekle tamamladığınızda Cleanup.bat çalıştırarak kaldırın. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
   
@@ -179,7 +179,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. İstemci makinesinde MetadataResolverClient veya SvcutilClient VS'den çalıştırın.  
   
-    1.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
   

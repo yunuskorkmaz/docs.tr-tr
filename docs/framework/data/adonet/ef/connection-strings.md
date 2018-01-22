@@ -14,18 +14,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c83c1883d00db1da8f0e7945d9cda5f2eb3f56a0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings"></a>Bağlantı dizeleri
 Bir bağlantı dizesi, parametre olarak bir veri kaynağına veri sağlayıcıdan geçen başlatma bilgileri içerir. Sözdizimi veri sağlayıcısına bağlıdır ve bağlantı dizesini bir bağlantı açmak için girişimi sırasında ayrıştırılır. Entity Framework tarafından kullanılan bağlantı dizeleri Entity Framework destekleyen temel ADO.NET veri sağlayıcısına bağlanmak için kullanılan bilgileri içerir. Ayrıca gerekli modeli ve eşleme dosyaları hakkındaki bilgileri içerir.  
   
  Bağlantı dizesi modeli ve eşleme meta veri erişirken EntityClient sağlayıcı tarafından kullanılır ve veri kaynağına bağlanma. Bağlantı dizesi erişilen veya aracılığıyla ayarlanabilir <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfı, programlı olarak oluşturmanıza veya bağlantı dizesi parametrelerinde erişmek için kullanılabilir. Daha fazla bilgi için bkz: [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- [Varlık veri modeli Araçları](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bağlantı dizesi oluşturun. <xref:System.Data.Objects.ObjectContext>Bu bağlantı bilgisini nesne sorgular oluştururken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir gelen <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için bkz: [bağlantıları yönetme ve işlemleri](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ [Varlık veri modeli Araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) uygulamanın yapılandırma dosyasında depolanan bağlantı dizesi oluşturun. <xref:System.Data.Objects.ObjectContext>Bu bağlantı bilgisini nesne sorgular oluştururken otomatik olarak alır. <xref:System.Data.EntityClient.EntityConnection> Tarafından kullanılan bir <xref:System.Data.Objects.ObjectContext> örneği erişilebilir gelen <xref:System.Data.Objects.ObjectContext.Connection%2A> özelliği. Daha fazla bilgi için bkz: [bağlantıları yönetme ve işlemleri](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
 ## <a name="connection-string-parameters"></a>Bağlantı dizesi parametreleri  
  Bir bağlantı dizesi biçimi anahtar/değer parametresi çifti noktalı virgülle ayrılmış bir listesi verilmiştir:  
@@ -41,7 +41,7 @@ Bir bağlantı dizesi, parametre olarak bir veri kaynağına veri sağlayıcıda
 |`Metadata`|Gerekli olursa `Name` anahtar sözcüğü belirtilmedi. Dizinleri, dosyaları ve ilgili meta verileri ve eşleme bilgilerini aramak üzere kaynak konumları kanal ayrılmış listesi. Bir örnek verilmiştir:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Kanal ayırıcı her iki tarafında boş alanları göz ardı edilir.<br /><br /> Bu anahtar sözcüğü ile birbirini dışlayan `Name` anahtar sözcüğü.|  
 |`Name`|Uygulama, isteğe bağlı olarak gerekli anahtar/değer bağlantı dizesi değerleri sağlayan bir uygulama yapılandırma dosyasında bağlantı adı belirtebilirsiniz. Bu durumda, bunları doğrudan bağlantı dizesinde sağlayamazsınız. `Name` Anahtar sözcüğü bir yapılandırma dosyasında izin verilmez.<br /><br /> Zaman `Name` bağlantı dizesinde anahtar sözcüğü dahil değildir, sağlayıcı anahtar sözcüğü gereklidir boş olmayan değerler.<br /><br /> Bu anahtar sözcük tüm diğer bağlantı dizesi anahtar ile karşılıklı olarak birbirini dışlar.|  
   
- Bir bağlantı dizesi örneği verilmiştir [AdventureWorks satış modeli](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) uygulama yapılandırma dosyasında depolanır:  
+ Bir bağlantı dizesi örneği verilmiştir [AdventureWorks satış modeli](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) uygulama yapılandırma dosyasında depolanır:  
   
   
   
@@ -121,5 +121,5 @@ Metadata=.\
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Bağlantılarını yönetme ve işlemler](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Bağlantılarını yönetme ve işlemler](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)

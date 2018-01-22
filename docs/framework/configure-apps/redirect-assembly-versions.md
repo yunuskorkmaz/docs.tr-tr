@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 .NET Framework derlemeleri, üçüncü taraf derlemeleri ya da kendi uygulamanın derlemelerini derleme zamanı bağlama başvuruları yönlendirebilirsiniz. Çeşitli yollarla bütünleştirilmiş farklı bir sürümünü kullanmak için uygulamanızı yeniden yönlendirebilirsiniz: Yayımcı ilkesi, bir uygulama yapılandırma dosyası; aracılığıyla aracılığıyla makine yapılandırma dosyası aracılığıyla veya. Bu makalede, .NET Framework Derleme bağlama nasıl çalıştığını ve nasıl yapılandırılması anlatılmaktadır.  
@@ -164,13 +164,13 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [\<bindingRedirect > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
+ [\<bindingRedirect> Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
  [Bütünleştirilmiş Kod Bağlama Yönlendirmesi Güvenlik İzni](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  
  [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)  
- [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [.NET Framework uygulamaları yapılandırma](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Nasıl yapılır: Yayımcı İlkesi Oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

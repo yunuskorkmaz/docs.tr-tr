@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>Denetim Türü Önerileri
 .NET Framework verir geliştirmek ve yeni denetimler uygulamak için güç. Tanıdık kullanıcı denetimi yanı sıra kendi boyama gerçekleştirmek ve devralma yoluyla mevcut denetimleri işlevselliğini genişletmek bile mümkün olan özel denetimler yazabilmesi şimdi bulacaksınız. Karar denetimi oluşturmak için hangi tür kafa karıştırıcı olabilir. Bu bölüm, çeşitli içinden denetimleri arasındaki devrettiği ve projeniz için göz önünde bulundurularak seçmek için türü verir farklılıkları vurgular.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [İzlenecek yol: Visual C# ile beraber Windows Forms Denetimi'nden Devralma](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

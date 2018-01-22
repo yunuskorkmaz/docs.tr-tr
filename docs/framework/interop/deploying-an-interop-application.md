@@ -26,18 +26,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0682fd149134531781346d21245a0b1fd3fc4d43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ed41692cd78b61bb53f7cdb360329fbe4133102
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
 Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir, ayrı COM temsil eden bir veya daha fazla birlikte çalışma derlemeleri tür kitaplıkları ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] almak ve birlikte çalışabilirlik bütünleştirilmiş bir tür kitaplığı dönüştürmek için Araçlar'da anlatıldığı gibi sağlamak [tür kitaplığını derleme olarak içeri aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yol vardır:  
   
 -   Katıştırılmış birlikte çalışma türlerini kullanarak: itibaren [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yürütülebilir dosyanın birlikte çalışma derlemeye tür bilgilerini katıştırma görevlendirin. Derleyici, uygulamanızın kullandığı türü bilgilerini katıştırır. Uygulamanız ile birlikte çalışma derlemeyi dağıtmanız gerekmez. Önerilen yöntem budur.  
   
--   Birlikte çalışma derlemeleri dağıtarak: birlikte çalışma derlemesi için standart bir başvuru oluşturabilirsiniz. Bu durumda, uygulamanız ile birlikte çalışma derlemesi dağıtılmalıdır. Bu yöntem uygulamadığınız ve özel bir COM bileşeni kullanmıyorsanız, her zaman yönetilen kodunuzda birleştirmek istiyorsanız COM bileşeni yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).  
+-   Birlikte çalışma derlemeleri dağıtarak: birlikte çalışma derlemesi için standart bir başvuru oluşturabilirsiniz. Bu durumda, uygulamanız ile birlikte çalışma derlemesi dağıtılmalıdır. Bu yöntem uygulamadığınız ve özel bir COM bileşeni kullanmıyorsanız, her zaman yönetilen kodunuzda birleştirmek istiyorsanız COM bileşeni yazarı tarafından yayımlanan birincil birlikte çalışma derlemesi (PIA) başvuru. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).  
   
  Katıştırılmış birlikte çalışma türlerini kullanın, dağıtım basit ve kolay olur. Yapmanız gereken özel bir şey yoktur. Bu makalenin geri kalanında uygulamanız ile birlikte çalışma derlemeleri dağıtma senaryoları açıklanmıştır.  
   
@@ -53,10 +53,10 @@ Birlikte çalışma uygulamasını genellikle bir .NET istemci derlemesi içerir
  Uygulama ile ilişkili tüm COM bileşenlerini Windows Kayıt Defteri'nde yüklenmesi gerekir. Client1.exe ve Client2.exe çizimdeki farklı bilgisayarlarda yüklü değilse, her iki bilgisayarda COM bileşenlerini kaydetmeniz gerekir.  
   
 ### <a name="shared-assemblies"></a>Paylaşılan derlemeler  
- Birden çok uygulama tarafından paylaşılan derlemeleri genel derleme önbelleğine merkezi bir depoda yüklü olmalıdır. .NET istemcileri imzalanmış ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi'nın aynı kopyasını erişebilir. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).  
+ Birden çok uygulama tarafından paylaşılan derlemeleri genel derleme önbelleğine merkezi bir depoda yüklü olmalıdır. .NET istemcileri imzalanmış ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi'nın aynı kopyasını erişebilir. Oluşturan ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz: [birincil birlikte çalışma derlemeleri](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)  
  [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [Yönetilen kodda COM türlerini kullanma](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Yönetilen kodda COM türlerini kullanma](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Birlikte Çalışma Projesi Derleme](../../../docs/framework/interop/compiling-an-interop-project.md)

@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 254cc241edf2d1c53ce9dd14eee41cd8bf6eaa76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2604b9dacf11b9971b10d23d9a807092ddf07830
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme
 
@@ -32,7 +32,7 @@ Bu yordam, aşağıdaki üç anahtar görevleri oluşur:
 
 1. İstemci hizmetiyle kimlik doğrulaması için kullanması gereken istemci kimlik bilgisi türü belirtin.
 
-Uç nokta yapılandırma öğesi içerir ilk görevde önemli bir `bindingConfiguration` (Bu örnekte) adlı bir bağlama yapılandırması başvuran özniteliği `MessageSecurity`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi sonra ayarlayarak güvenilir oturumlar etkinleştirmek için bu ad başvuran `enabled` özniteliği [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) öğesine `true`. Sıralı teslim Güvenceleri güvenilir oturum içinde ayarlayarak kullanılabilir olmasını gerektiren `ordered` özniteliğini `true`.
+Uç nokta yapılandırma öğesi içerir ilk görevde önemli bir `bindingConfiguration` (Bu örnekte) adlı bir bağlama yapılandırması başvuran özniteliği `MessageSecurity`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi sonra ayarlayarak güvenilir oturumlar etkinleştirmek için bu ad başvuran `enabled` özniteliği [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) öğesine `true`. Sıralı teslim Güvenceleri güvenilir oturum içinde ayarlayarak kullanılabilir olmasını gerektiren `ordered` özniteliğini `true`.
 
 Bu yapılandırma yordamı temel örnek kaynak kopyası için bkz: [WS güvenilir oturum](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

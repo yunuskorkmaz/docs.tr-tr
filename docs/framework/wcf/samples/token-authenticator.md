@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. İçinde bir belirteç kimlik doğrulayıcısı [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] self tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama ileti ile kullanılan belirteci doğrulamak için kullanılır.  
@@ -350,7 +350,7 @@ static void DisplayIdentityInformation()
   
 3.  \Client\bin gelen Client.exe başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
@@ -372,7 +372,7 @@ static void DisplayIdentityInformation()
   
 9. İstemci bilgisayarda bir komut isteminden Client.exe başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
   

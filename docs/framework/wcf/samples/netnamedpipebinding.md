@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Bu örnek gösterilmektedir `netNamedPipeBinding` aynı makine üzerinde işlem içi iletişimi sağlayan bağlama. Adlandırılmış Kanallar makinelerde çalışmaz. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet.  
@@ -29,7 +29,7 @@ Bu örnek gösterilmektedir `netNamedPipeBinding` aynı makine üzerinde işlem 
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
- Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü belirtilen `binding` özniteliği[\<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnek yapılandırmada gösterildiği gibi öğe:  
+ Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü belirtilen `binding` özniteliği[\<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnek yapılandırmada gösterildiği gibi öğe:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Bir veri kümesini XML dosyası şuradan yükleniyor
 Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya belge oluşturulabilir. Ayrıca, .NET Framework ile büyük esneklik hangi bilgilerin, XML'den yüklenen elinizde ve nasıl şema veya ilişkisel yapısını <xref:System.Data.DataSet> oluşturulur.  
   
- Doldurmak için bir <xref:System.Data.DataSet> ile verileri XML kullanarak **ReadXml** yöntemi <xref:System.Data.DataSet> nesnesi. **ReadXml** yöntemi bir dosyadan bir akış okur veya bir **XmlReader**ve kaynak XML ve isteğe bağlı bir bağımsız değişken olarak alan **XmlReadMode** bağımsız değişkeni. (Hakkında daha fazla bilgi için **XmlReader**, bkz: [NIB: Okuma XML XmlTextReader verileriyle](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** yöntemi XML akışı veya belge ve yükleri içeriğini okur <xref:System.Data.DataSet> verilerle. İlişkisel şeması oluşturacak <xref:System.Data.DataSet> bağlı olarak **XmlReadMode** belirtilen ve desteklemediğini ilişkisel şema zaten mevcut.  
+ Doldurmak için bir <xref:System.Data.DataSet> ile verileri XML kullanarak **ReadXml** yöntemi <xref:System.Data.DataSet> nesnesi. **ReadXml** yöntemi bir dosyadan bir akış okur veya bir **XmlReader**ve kaynak XML ve isteğe bağlı bir bağımsız değişken olarak alan **XmlReadMode** bağımsız değişkeni. (Hakkında daha fazla bilgi için **XmlReader**, bkz: [NIB: Okuma XML XmlTextReader verileriyle](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** yöntemi XML akışı veya belge ve yükleri içeriğini okur <xref:System.Data.DataSet> verilerle. İlişkisel şeması oluşturacak <xref:System.Data.DataSet> bağlı olarak **XmlReadMode** belirtilen ve desteklemediğini ilişkisel şema zaten mevcut.  
   
  Aşağıdaki tabloda ilgili seçenekleri açıklar **XmlReadMode** bağımsız değişkeni.  
   

@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Nasıl yapılır: Windows Forms MonthCalendar denetimi &#39; Değiştir s görünümü
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim birçok yolla Takvim görünümünü özelleştirmenizi sağlar. Örneğin, renk düzenini ayarlama ve hafta numaralarını ve geçerli tarih görüntüleme veya gizleme seçin.  
@@ -53,7 +53,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim birçok yolla Ta
     ```  
   
     > [!NOTE]
-    >  Temanın bağlı olarak Windows Vista ile başlayarak, bazı özelliklerin ayarlanmasını Takvim görünümünü değişmeyebilir. Örneğin, Windows Aero teması kullanmak üzere ayarlanmışsa ayarlama <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, veya <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> özellikleri etkisi yoktur. Takvim güncelleştirilmiş bir sürümünü çalışma zamanında geçerli işletim sistemi temayı türetilmiş bir görünümü ile işlenen olmasıdır. Bu özellikleri kullanın ve Takvim önceki sürümünü etkinleştirmek istiyorsanız, uygulamanız için görsel stiller devre dışı bırakabilirsiniz. Görsel stiller devre dışı bırakma görünümü ve davranışı, uygulamanızdaki diğer denetimlerin etkileyebilir. Visual Basic'te görsel stiller devre dışı bırakmak için Proje Tasarımcısı'nı açın ve kutusunun işaretini kaldırın **etkinleştirmek XP görsel stilleri** onay kutusu. C# görsel stiller devre dışı bırakmak için Program.cs açın ve çıkışı açıklama `Application.EnableVisualStyles();`. Görsel stiller hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows XP görsel stilleri etkinleştir](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  Temanın bağlı olarak Windows Vista ile başlayarak, bazı özelliklerin ayarlanmasını Takvim görünümünü değişmeyebilir. Örneğin, Windows Aero teması kullanmak üzere ayarlanmışsa ayarlama <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, veya <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> özellikleri etkisi yoktur. Takvim güncelleştirilmiş bir sürümünü çalışma zamanında geçerli işletim sistemi temayı türetilmiş bir görünümü ile işlenen olmasıdır. Bu özellikleri kullanın ve Takvim önceki sürümünü etkinleştirmek istiyorsanız, uygulamanız için görsel stiller devre dışı bırakabilirsiniz. Görsel stiller devre dışı bırakma görünümü ve davranışı, uygulamanızdaki diğer denetimlerin etkileyebilir. Visual Basic'te görsel stiller devre dışı bırakmak için Proje Tasarımcısı'nı açın ve kutusunun işaretini kaldırın **etkinleştirmek XP görsel stilleri** onay kutusu. C# görsel stiller devre dışı bırakmak için Program.cs açın ve çıkışı açıklama `Application.EnableVisualStyles();`. Görsel stiller hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows XP görsel stilleri etkinleştir](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Geçerli tarih denetimi altında görüntülemek için  
   

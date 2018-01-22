@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a2fc73ee5e9f9e0a2f8351f8d38311801ebfb34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms'ta Olay İşleyicileri Oluşturma
 Olay işleyici hangi eylemlerin bir ileti sırası bir ileti alır veya bir olay oluşur, kullanıcı bir düğmesine tıkladığında gibi gerçekleştirilir belirler, kodunuzda bir yordamdır. Bir olay oluşturulduğunda, olay işleyicisi veya olay alırsınız işleyicileri yürütülür. Olaylar için birden çok işleyici atanabilir ve belirli olayları işlemek yöntemleri dinamik olarak değiştirilebilir. Windows Form Tasarımcısı, olay işleyicileri oluşturmak için de kullanabilirsiniz.  
@@ -45,7 +45,7 @@ Olay işleyici hangi eylemlerin bir ileti sırası bir ileti alır veya bir olay
  [Windows Forms'ta Olayların Sırası](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Windows Forms denetimlerindeki olaylar ortaya sırasını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak olay işleyicileri oluşturma](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Nasıl yapılır: Tasarımcı kullanarak olay işleyicileri oluşturma](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Windows Form Tasarımcısı olay işleyicileri oluşturmak için nasıl kullanılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

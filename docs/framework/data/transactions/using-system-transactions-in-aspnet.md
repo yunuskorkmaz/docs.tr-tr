@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>System.Transactions ASP.NET kullanma
 Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.  
@@ -50,7 +50,7 @@ Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:Sy
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] güvenlik ilkesine bakın [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] güvenlik ilkesine bakın [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
   
 ## <a name="dynamic-compilation"></a>Dinamik derleme  
  İçeri aktarma ve kullanmak istiyorsanız, <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] erişimi dinamik olarak derlenmiş olan uygulamayı bir başvuru yerleştirin <xref:System.Transactions> derleme yapılandırma dosyası. Özellikle, başvuru altında eklenmesi gereken **derleme**/**derlemeleri** varsayılan kök bölümünü **Web.config** yapılandırma dosyası veya bir Belirli Web uygulamasının yapılandırma dosyası. Aşağıdaki örnekte bu gösterir.  
@@ -67,9 +67,9 @@ Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:Sy
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][öğesi (ASP.NET Ayarlar Şeması) için derlemeleri add](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][öğesi (ASP.NET Ayarlar Şeması) için derlemeleri add](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ASP.NET güven düzeyleri ve ilke dosyaları](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [İşlem Yönetimi Yükseltme](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

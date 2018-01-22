@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek Yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim eklemek için sağlar. Bu kılavuzda temel form oluşturma ve bir sınıf kitaplığı'na derleyin. Bu sınıf kitaplığı başka bir projeye almak ve temel formundan devralan yeni bir form oluşturun. Bu gözden geçirme sırasında öğreneceksiniz nasıl yapılır:  
@@ -43,7 +43,7 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim 
  Sonuç olarak, bu kılavuzda devralınan bir form üzerinde özel ve korumalı denetimler arasındaki fark gösterilmektedir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 > [!CAUTION]
 >  Tüm denetimler temel bir formdan görsel devralma destekler. Bu kılavuzda açıklanan senaryo aşağıdaki denetimleri desteklenmez:  

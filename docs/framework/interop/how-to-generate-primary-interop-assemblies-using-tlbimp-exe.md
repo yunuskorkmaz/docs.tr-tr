@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolu vardır:  
@@ -55,7 +55,7 @@ Birincil birlikte çalışma derlemesi oluşturmak için iki yolu vardır:
   
  Bağımlı bir birincil birlikte çalışma derlemesi özgün tür kitaplığı farklı bir sürüm numarası geçerli dizinde yüklendiğinde bulunabilirlik değil. Windows Kayıt Defteri'nde bağımlı birincil birlikte çalışma derlemesini kaydetme veya kullanmak **/reference** seçeneği Tlbimp.exe bağımlı DLL bulduğundan emin olun.  
   
- Tür kitaplığı birden fazla sürümünü de kayabilir. Yönergeler için bkz: [nasıl yapılır: kaydırma birden çok sürümleri, tür kitaplıklarının](http://msdn.microsoft.com/en-us/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
+ Tür kitaplığı birden fazla sürümünü de kayabilir. Yönergeler için bkz: [nasıl yapılır: kaydırma birden çok sürümleri, tür kitaplıklarının](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek COM tür kitaplığı içeri aktarır `LibUtil.tlb` ve derleme imzalar `LibUtil.dll` anahtar dosyası kullanarak tanımlayıcı bir ad ile `CompanyA.snk`. Belirli bir ad alanı adı kaldırarak bu örnek varsayılan ad alanı üretir `LibUtil`.  

@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Verileri hazırlama, birlikte çalışabilirlik Sıralayıcı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını tek bir yerden bellek başka bir bellek konuma yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirildi.  
@@ -33,7 +33,7 @@ Değer ve başvuru tarafından geçirilen değer türleri
   
  Yöntem bağımsız değişkenleri değere göre geçirilen yönetilmeyen koda yığında değerleri olarak hazırlanırlar. Kopyalama doğrudan bir işlemdir. Başvuruya göre geçirilen bağımsız değişkenler işaretçileri yığında geçirilir. Başvuru türleri de değer ve başvuru tarafından geçirilir. Aşağıdaki çizimde gösterildiği gibi değeri tarafından geçirilen başvuru türleri kopyalanan sabitlenmiş ya.  
   
- ![COM birlikte çalışma](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![COM interop](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
 Değer ve başvuru tarafından geçirilen başvuru türleri  
   
  Bu nedenle ortak dil çalışma zamanındaki atık toplayıcısı tarafından yeniden konumlandırılmasını tutma geçerli bellek konumuna verileri geçici olarak sabitleme kilitler. Sıralayıcı kopyalama yükünü azaltmak ve performansı geliştirmek için veri sabitler. Veri türü kopyaladığınız veya Hazırlama işlemi sırasında sabitlenmiş olup olmadığını belirler.  Sabitleme otomatik olarak gerçekleştirilir gibi nesneler için sıralama sırasında <xref:System.String>, bellek kullanarak el ile de sabitleyebilirsiniz ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı.  
@@ -88,6 +88,6 @@ Değer ve başvuru tarafından geçirilen başvuru türleri
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Bellek yönetimi ile birlikte çalışma Sıralayıcı](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Bellek yönetimi ile birlikte çalışma Sıralayıcı](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e37714f2c317456935f7b8694a083468dfa43a72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 125e3f1c32c5186cce0b28aa3f8d1eff1ef95a09
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Formları için Denetimler Yazma
 Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlayın veya verileri işlemek, kullanıcı girişi kabul, olaylara yanıt veya herhangi bir sayıda kullanıcı ve uygulama bağlanan diğer işlevleri gerçekleştirmek. Bir denetim bir bileşen aslında bir grafik arabirimle olduğundan, bir bileşen yapar, yanı sıra kullanıcı etkileşimi sağlayan herhangi bir işlev görebilir. Denetimleri belirli amaçlara hizmet için oluşturulan ve denetimleri yazma başka bir programlama bir görevdir. Aklınızda aşağıdaki adımları işlem yazma denetimine genel bakış temsil eder. Bağlantılar tek tek adımları ek bilgi sağlar.  
@@ -30,7 +30,7 @@ Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil ed
 > [!NOTE]
 >  Web Forms kullanmak için bkz: özel bir denetim yazmak istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
 >   
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-author-a-control"></a>Bir denetim yazmak için  
   

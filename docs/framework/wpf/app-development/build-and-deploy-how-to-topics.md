@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c30c8e0399229cd58d09295e24258eb3e2275818
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26e506936bcc5097689f11f7693d1d35858dff0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Oluşturma ve Dağıtma ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular proje dosyalarının için çeşitli nasıl oluşturulacağını gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama türleri.  
@@ -40,6 +40,6 @@ Aşağıdaki konular proje dosyalarının için çeşitli nasıl oluşturulacağ
   
  [WPF Uygulaması Dağıtma](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
   
- [Nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [Nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
   
- [Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [Nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)

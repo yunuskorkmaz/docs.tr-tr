@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] gerçekten uygulamayı test amacıyla bir üretim ortamında dağıtmak için Test istemcisi. Son dağıtım plana yürütme önce kullanabileceğiniz [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] doğrulamak için Yayımlama hizmeti, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Dağıtım Hizmeti kitaplığı.  
   
- Bu hizmet şablonları seçerek bulabileceğiniz **dosya** -> **yeni proje** -> **Visual Basic** veya **Visual C#**  ->  **WCF**. (WCF iş akışı hizmeti uygulama ve WCF Hizmeti uygulama dahil) bu konumda diğer WCF şablonları kullanarak yayımlayabileceğiniz [tek tıklatmayla web uygulamaları için yayımlamayı](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Bu hizmet şablonları seçerek bulabileceğiniz **dosya** -> **yeni proje** -> **Visual Basic** veya **Visual C#**  ->  **WCF**. (WCF iş akışı hizmeti uygulama ve WCF Hizmeti uygulama dahil) bu konumda diğer WCF şablonları kullanarak yayımlayabileceğiniz [tek tıklatmayla web uygulamaları için yayımlamayı](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  Hizmet aşağıdaki hedef konumlara yayımlanabilir.  
   

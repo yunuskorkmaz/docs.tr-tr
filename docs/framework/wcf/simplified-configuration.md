@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Yapılandırma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman hangi ayarların gerekli olduğunu belirlemek kolay değildir. Yapılandırma dosyaları esnekliğini artırmak sırada [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetleri de oldukları sorunları bulmak sabit sayıda kaynağı. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]Bu sorunu giderir ve boyutunu ve hizmet yapılandırmasını karmaşıklığını azaltmak için bir yol sağlar.  
@@ -126,5 +126,5 @@ Yapılandırma [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hizmetleri, 
  [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Windows Communication Foundation uygulamaları yapılandırma](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

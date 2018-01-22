@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0d060e0b511f17a68edb013ae7241e1accbc7dcf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görüntü alanından daha büyüktür. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin kaydırma etkinleştirmek için kullanışlı bir yöntem sunar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve birkaç kullanım örnekleri sağlar.  
@@ -42,7 +42,7 @@ Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görün
 ## <a name="physical-vs-logical-scrolling"></a>Fiziksel vs. Mantıksal kaydırma  
  Fiziksel kaydırma içeriği kaydırmak için önceden belirlenmiş fiziksel artışla genellikle piksel cinsinden bildirilmiş bir değer tarafından kullanılır. Mantıksal kaydırma mantıksal ağacının bir sonraki öğeye kaydırmak için kullanılır. Fiziksel kaydırma olan çoğu için varsayılan kaydırma davranışını <xref:System.Windows.Controls.Panel> öğeleri. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Her iki tür kaydırma destekler.  
   
-#### <a name="the-iscrollinfo-interface"></a>IScrollInfo arabirimi  
+#### <a name="the-iscrollinfo-interface"></a>The IScrollInfo Interface  
  <xref:System.Windows.Controls.Primitives.IScrollInfo> Arabirimi ana kaydırma bölgesini temsil eden bir <xref:System.Windows.Controls.ScrollViewer> veya denetim türetilmiş. Kayan özellikleri ve yöntemleri tarafından uygulanan arabirimi tanımlar <xref:System.Windows.Controls.Panel> mantıksal birim yerine fiziksel bir artış kaydırma gerektiren öğeler. Örneği atama <xref:System.Windows.Controls.Primitives.IScrollInfo> türetilmiş için <xref:System.Windows.Controls.Panel> ve kaydırma yöntemlerini kullanarak bir alt koleksiyona yerine piksel artış sonraki mantıksal birime kaydırmak için kullanışlı bir yol sağlar. Varsayılan olarak, <xref:System.Windows.Controls.ScrollViewer> denetimi, fiziksel birimlerle kaydırmayı destekler.  
   
  <xref:System.Windows.Controls.StackPanel>ve <xref:System.Windows.Controls.VirtualizingStackPanel> her ikisini de uygulamak <xref:System.Windows.Controls.Primitives.IScrollInfo> ve mantıksal kaydırmayı yerel olarak destekler. Bu yerel destek mantıksal kaydırma düzen denetimleri için halen fiziksel ana bilgisayar kaydırma tarafından kaydırma elde edebilirsiniz <xref:System.Windows.Controls.Panel> öğesinde bir <xref:System.Windows.Controls.ScrollViewer> ve ayarı <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> özelliğine `false`.  
@@ -75,7 +75,7 @@ Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görün
  <xref:System.Windows.Controls.ScrollViewer>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [Bir kaydırma Görüntüleyicisi oluşturma](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
+ [Bir kaydırma Görüntüleyicisi oluşturma](http://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
  [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [Denetimler](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

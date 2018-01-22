@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fcd56e1563b1fcd400d3c1d68b2675efaac3200
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Aşağıdaki kod örneğinde elde etme gösteren bir <xref:System.Windows.Automation.AutomationElement> satır ve sütun dizinleri, satır ve sütun yayılma ve satır ve sütun üst bilgileri gibi hücre özellikleri de alınan; tablo hücresi içeriğini temsil eden. Bu örnek bir odak değişiklik olay işleyicisi uygulayan bir tablo denetim klavye geçişi benzetimini yapmak için kullanır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Her bir tablo öğesi için bilgi odak değişiklik olayda açıktır.  
   
 > [!NOTE]
->  Odak Genel Masaüstü olayları olduğundan, tablo dışından odak değişikliği olayları filtrelenmelidir. Bkz: [TrackFocus örnek](http://msdn.microsoft.com/en-us/4a91c0af-6bb5-4d38-a743-cf136f268fc9) ilgili uygulaması için.  
+>  Odak Genel Masaüstü olayları olduğundan, tablo dışından odak değişikliği olayları filtrelenmelidir. Bkz: [TrackFocus örnek](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) ilgili uygulaması için.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

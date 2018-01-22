@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
 İzlenecek yollar ortak senaryolar için adım adım yönergeler sağlar. Bu ürün veya belirli bir özellik alanı öğrenmeye başlamak için iyi bir yer sağlar.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[İzlenecek yol: WPF Tasarımcısı ile Basit WPF uygulaması oluşturma](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|İle basit bir WPF uygulamasının nasıl oluşturulacağını gösteren [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[İzlenecek yol: dinamik düzen oluşturma](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Dinamik düzen kullanarak oluşturmayı gösterir bir <xref:System.Windows.Controls.Grid> panel denetimi.|  
-|[İzlenecek yol: WPF Tasarımcısı'nı kullanarak yeniden boyutlandırılabilir bir uygulama oluşturma](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Çalışma zamanında kullanıcı tarafından yeniden boyutlandırılabilir pencere düzenlerini oluşturma gösterilmektedir.|  
-|[İzlenecek yol: bir veri WPF Tasarımcısı'nı kullanarak bağlama oluşturma](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Nasıl kullanılacağı ortaya [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] veri denetime bağlayan veri bağlamaları oluşturmak için.|  
-|[İzlenecek yol: veri Tasarımcısı'nda bağlamak için bir DesignInstance kullanma](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|Nasıl kullanılacağı ortaya [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] çalışma zamanında atanan bir veri bağlamı için tasarım zamanında veri bağlamaları oluşturmak için.|  
+|[İzlenecek yol: WPF Tasarımcısı ile Basit WPF uygulaması oluşturma](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|İle basit bir WPF uygulamasının nasıl oluşturulacağını gösteren [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
+|[İzlenecek yol: dinamik düzen oluşturma](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Dinamik düzen kullanarak oluşturmayı gösterir bir <xref:System.Windows.Controls.Grid> panel denetimi.|  
+|[İzlenecek yol: WPF Tasarımcısı'nı kullanarak yeniden boyutlandırılabilir bir uygulama oluşturma](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Çalışma zamanında kullanıcı tarafından yeniden boyutlandırılabilir pencere düzenlerini oluşturma gösterilmektedir.|  
+|[İzlenecek yol: bir veri WPF Tasarımcısı'nı kullanarak bağlama oluşturma](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Nasıl kullanılacağı ortaya [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] veri denetime bağlayan veri bağlamaları oluşturmak için.|  
+|[İzlenecek yol: veri Tasarımcısı'nda bağlamak için bir DesignInstance kullanma](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|Nasıl kullanılacağı ortaya [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] çalışma zamanında atanan bir veri bağlamı için tasarım zamanında veri bağlamaları oluşturmak için.|  
   
 ## <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar  
   
@@ -61,4 +61,4 @@ ms.lasthandoff: 12/22/2017
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Visual Studio izlenecek yollar](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio'da programlama tüm alanlar için izlenecek yollar ilgili bir listesi verilmektedir.|
+|[Visual Studio izlenecek yollar](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Visual Studio'da programlama tüm alanlar için izlenecek yollar ilgili bir listesi verilmektedir.|

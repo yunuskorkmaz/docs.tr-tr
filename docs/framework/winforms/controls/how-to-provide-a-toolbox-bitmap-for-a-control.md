@@ -21,14 +21,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 446e0f830e916e7f4118a7374c66f238a60fda02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama
-Sahip olmak istiyorsanız denetlemek için özel bir simgesi görünür **araç**, kullanarak belirli bir görüntü belirtebilirsiniz <xref:System.Drawing.ToolboxBitmapAttribute>. Bu sınıf, bir *özniteliği*, özel türde bir sınıfı diğer sınıfların iliştirebilirsiniz. Öznitelikler hakkında daha fazla bilgi için bkz: [NOT ın yapı: Visual Basic'te öznitelikler genel bakış](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) için [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] ve [öznitelikleri](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) için [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
+Sahip olmak istiyorsanız denetlemek için özel bir simgesi görünür **araç**, kullanarak belirli bir görüntü belirtebilirsiniz <xref:System.Drawing.ToolboxBitmapAttribute>. Bu sınıf, bir *özniteliği*, özel türde bir sınıfı diğer sınıfların iliştirebilirsiniz. Öznitelikler hakkında daha fazla bilgi için bkz: [NOT ın yapı: Visual Basic'te öznitelikler genel bakış](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) için [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] ve [öznitelikleri](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) için [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
   
  Kullanarak <xref:System.Drawing.ToolboxBitmapAttribute>, 16 x 16 piksel bit eşlem için yolu ve dosya adını belirten bir dize belirtin. Bu bit eşlemi eklendiğinde, Denetim yanındaki sonra görünür **araç**. Ayrıca belirtebilirsiniz bir <xref:System.Type>, o türü ile ilişkili bit eşlem; bu durumda yüklenir. Her ikisini de belirtirseniz bir <xref:System.Type> ve tarafından belirtilen türünü içeren bütünleştirilmiş dizesi parametresi tarafından belirtilen ada sahip bir görüntü kaynağı için bir dize denetimi arar <xref:System.Type> parametresi.  
   

@@ -1,5 +1,5 @@
 ---
-title: WCF Veri Hizmetleri 4.5
+title: WCF Data Services 4.5
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
@@ -17,13 +17,13 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
+# <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](eski adıyla "ADO.NET Veri Hizmetleri") kullanan hizmetler oluşturmanızı sağlayan .NET Framework'ün bir bileşen olan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için [temsili durum Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Veri URI tarafından adreslenebilir kaynakları olarak kullanıma sunar. Veriler erişilen ve GET, PUT, POST ve DELETE standart HTTP fiillerini kullanarak değiştirildi. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynaklara göre ilişkileri ilişkili varlık kümesi olarak kullanıma sunmak için.  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] adresleme ve kaynakları güncelleştirmek için protokol. Bu şekilde, bu hizmetleri destekleyen herhangi bir istemciden erişebilirsiniz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]İstek ve bilinen aktarımı biçimlerini kullanarak veri kaynaklarına yazma sağlar: Atom, değişim ve verileri XML ve JavaScript nesne gösterimi (JSON) güncelleştirme standartlarını kümesi AJAX uygulamada yaygın olarak kullanılan metin tabanlı veri exchange biçimi.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/22/2017
  [Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Özellikleri ve işlevleri kullanılabilen genel bir bakış sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [WCF Veri Hizmetleri yenilikleri](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [WCF Veri Hizmetleri yenilikleri](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
  Yeni işlevsellik açıklanmaktadır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve yeni desteği [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] özellikleri.  
   
  [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

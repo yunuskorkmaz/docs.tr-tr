@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]güvenlik ayarları uygulamanız farklı bir kısmi güven ortamında yerel bilgisayarınızda çalışmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve başka şeylerin yönetilmeyen API'ler kritik gibi yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları Microsoft Win32 API veya diğer güvenlik sistemi tarafından doğrulanıp doğrulanamadığını API'larını çağırma yeteneği etkiler. Güvenlik, dosya ve veri erişim dahil olmak üzere ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişim hakkında daha fazla bilgi için bkz: [daha fazla güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz: [daha fazla Güvenli Yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|Pano bazı kısıtlamalar ile kullanılabilir. Veri (kopyalama veya kesme komutu işlemleri) Pano'ya yerleştir olanağı kısıtlanır. Pano verilerini yapıştırma gibi bir metin kutusu kabul iç denetimleri kabul edebilir, ancak kullanıcı denetimlerini programlı olarak panodan okunamıyor.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|Pano kullanılamaz.|  
   
- Varsayılan olarak, yerel Intranet bölgesine alır <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> erişim ve Internet bölgesi alan <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> erişim. Bu uygulamanın veri panoya kopyalayabilirsiniz, ancak uygulama olamaz program aracılığıyla için yapıştırın veya panodan okuma anlamına gelir. Bu kısıtlamalar başka bir uygulama tarafından panoya kopyalandı programların okuma içerik tam güven olmadan engelleyin. Uygulamanızı tam Pano erişimi gerektirir, ancak izinlere sahip değil, uygulamanızın izinlerini yükseltmesine gerekecektir. Yükseltme yaptığınıza izinleri hakkında daha fazla bilgi için bkz: [Genel Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Varsayılan olarak, yerel Intranet bölgesine alır <xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard> erişim ve Internet bölgesi alan <xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard> erişim. Bu uygulamanın veri panoya kopyalayabilirsiniz, ancak uygulama olamaz program aracılığıyla için yapıştırın veya panodan okuma anlamına gelir. Bu kısıtlamalar başka bir uygulama tarafından panoya kopyalandı programların okuma içerik tam güven olmadan engelleyin. Uygulamanızı tam Pano erişimi gerektirir, ancak izinlere sahip değil, uygulamanızın izinlerini yükseltmesine gerekecektir. Yükseltme yaptığınıza izinleri hakkında daha fazla bilgi için bkz: [Genel Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
 ## <a name="window-manipulation"></a>Pencere işleme  
  <xref:System.Security.Permissions.UIPermission> Sınıfı ayrıca penceresi işleme ve diğer kullanıcı Arabirimi ile ilgili eylemler ve ilişkili gerçekleştirme izni denetler <xref:System.Security.Permissions.UIPermissionWindow> numaralandırma değeri erişim düzeyini belirtir. Aşağıdaki tabloda olası izin düzeyleri gösterilmektedir.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  Uygulamanızı yönetilmeyen kodu çağırma izni yoksa, uygulamanız istemelidir <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> izni veya özelliklerini uygulama alternatif yöntemler düşünmeniz gerekir; çoğu durumda, Windows Forms Win32 API yönetilen bir alternatif sunar. İşlevler. Mevcut hiçbir alternatif anlamına gelir ve uygulama yönetilmeyen kod erişmeniz gerekiyorsa, uygulama izinlerini yükseltmesine gerekecektir.  
   
- Yönetilmeyen kodu çağırma izni en herhangi bir şey gerçekleştirmek bir uygulama sağlar. Bu nedenle, yönetilmeyen kodu çağırma izni yalnızca güvenilen bir kaynaktan geliyor uygulamalar için verilmiş olmalıdır. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yaparsa uygulama işlevselliği parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinleri hakkında daha fazla bilgi için bkz: [NIB: Genel Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Yönetilmeyen kodu çağırma izni en herhangi bir şey gerçekleştirmek bir uygulama sağlar. Bu nedenle, yönetilmeyen kodu çağırma izni yalnızca güvenilen bir kaynaktan geliyor uygulamalar için verilmiş olmalıdır. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yaparsa uygulama işlevselliği parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinleri hakkında daha fazla bilgi için bkz: [NIB: Genel Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  

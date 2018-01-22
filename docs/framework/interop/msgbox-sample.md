@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d5dcabfadae35cad980d210806c47dab3f5a0082
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b14ee9c435d36e8d6a49cbfb29a57365bcd42d6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="msgbox-sample"></a>MsgBox Örneği
 Bu örnek parametreleri olduğu gibi değeriyle dize türleri geçirmek nasıl ve ne zaman kullanılacağı gösterilmektedir <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanları.  
@@ -55,7 +55,7 @@ Bu örnek parametreleri olduğu gibi değeriyle dize türleri geçirmek nasıl v
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dizeleri Hazırlama](../../../docs/framework/interop/marshaling-strings.md)  
- [Platform çağırma veri türleri](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Platform çağırma veri türleri](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Dizeler için Varsayılan Hazırlama](../../../docs/framework/interop/default-marshaling-for-strings.md)  
  [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)

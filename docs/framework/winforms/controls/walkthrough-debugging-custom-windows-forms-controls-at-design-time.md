@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>İzlenecek yol: Tasarım Zamanında Özel Windows Formları Denetimleri Hatalarını Ayıklama
 Özel bir denetim oluşturduğunuzda, genellikle bu tasarım zamanı davranışını hata ayıklamak gerekli bulacaksınız. Özel denetim için özel bir tasarımcı yazıyorsanız bu özellikle doğrudur. Ayrıntılar için bkz [izlenecek yol: bir Windows Forms denetimi, geçen avantajı, Visual Studio tasarım-zamanı özellikleri oluşturma](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -55,14 +55,14 @@ ms.lasthandoff: 12/22/2017
  İşiniz bittiğinde, özel bir denetim tasarım zamanı davranışını hata ayıklama için gereken görevleri anlaşılması gerekir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
  İlk adım, uygulama projesi oluşturmaktır. Özel denetim barındıran uygulama oluşturmak için bu proje kullanır.  
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
--   "DebuggingExample" adlı bir Windows uygulaması projesi oluşturun. Ayrıntılar için bkz [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   "DebuggingExample" adlı bir Windows uygulaması projesi oluşturun. Ayrıntılar için bkz [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Bir denetim kitaplığı projesi oluşturma  
  Sonraki adım, denetim kitaplığı projesi oluşturun ve özel denetimin ayarlamaktır.  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  Ekleme bir **Windows Denetim Kitaplığı** çözüme proje.  
   
-2.  Yeni bir ekleme **UserControl** DebugControlLibrary proje öğesi. Ayrıntılar için bkz [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Yeni kaynak dosyası "DebugControl", temel bir ad verin.  
+2.  Yeni bir ekleme **UserControl** DebugControlLibrary proje öğesi. Ayrıntılar için bkz [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Yeni kaynak dosyası "DebugControl", temel bir ad verin.  
   
-3.  Kullanarak **Çözüm Gezgini**, bir taban adı ile kod dosyası tarafından projenin varsayılan denetim silindiğinde "`UserControl1`". Ayrıntılar için bkz [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Kullanarak **Çözüm Gezgini**, bir taban adı ile kod dosyası tarafından projenin varsayılan denetim silindiğinde "`UserControl1`". Ayrıntılar için bkz [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Çözümü oluşturun.  
   

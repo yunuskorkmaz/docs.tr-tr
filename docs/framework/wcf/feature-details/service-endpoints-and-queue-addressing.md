@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı Klasik aşağıda gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uygulama dağıtımı sıraya alındı.  
@@ -57,7 +57,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
   
  Sıra adresi dinleme URI olarak dinleyicisi tarafından alınan iletileri okumak için kullanılır. Diğer bir deyişle, sıra adres için dinleme bağlantı noktası TCP yuvası eşdeğerdir.  
   
- Bir kuyruktaki iletileri okur bir uç nokta ServiceHost açılırken daha önce belirtilen aynı düzeni kullanarak sıraya adresini belirtmeniz gerekir. Örnekler için bkz: [ağ MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md) ve [Message Queuing tümleştirme bağlama örnekleri](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Bir kuyruktaki iletileri okur bir uç nokta ServiceHost açılırken daha önce belirtilen aynı düzeni kullanarak sıraya adresini belirtmeniz gerekir. Örnekler için bkz: [ağ MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md) ve [Message Queuing tümleştirme bağlama örnekleri](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Bir kuyruktaki birden fazla sözleşme  
  Sıradaki iletileri farklı sözleşmeleri uygulayabilirsiniz. Bu durumda, aşağıdakilerden birini başarıyla okumak ve tüm iletileri işlemek için true değerine ayarlandığını önemlidir:  
@@ -105,7 +105,7 @@ Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizm
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve hizmet adresleme  
  `MsmqIntegrationBinding` Geleneksel MSMQ uygulamaları ile iletişim için kullanılır. Varolan bir MSMQ uygulaması ile birlikte çalışma kolaylaştırmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler yalnızca biçim adı adresleme. Bu nedenle, bu bağlama kullanılarak gönderilen iletileri için kullanılacak URI düzeni uygun olmalıdır:  
   
- MSMQ.FormatName:\<*MSMQ biçim adı*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  MSMQ biçim adı MSMQ tarafından belirtilen biçimde olduğundan [hakkında Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   

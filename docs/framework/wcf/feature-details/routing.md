@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>Yönlendirme
 Bu bölümdeki konular, yönlendirme hizmeti kapsar. Yönlendirme içerik tabanlı yönlendirme, Protokolü köprüleme yukarı ayarlamak yapılandırmanıza olanak iletişim hataları işlemek ve yönlendirme mantığı çalışma zamanında dinamik olarak güncelleştir bir genel yapılandırılabilir SOAP aracıyı hizmetidir.  
@@ -31,7 +31,7 @@ Bu bölümdeki konular, yönlendirme hizmeti kapsar. Yönlendirme içerik tabanl
  [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Yönlendirme hizmeti özelliklerine genel bakış sağlar.  
   
- [Yönlendirme Hizmeti](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Yönlendirme Hizmeti](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  Yönlendirme Hizmeti özelliklerini açıklar.  
   
  [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

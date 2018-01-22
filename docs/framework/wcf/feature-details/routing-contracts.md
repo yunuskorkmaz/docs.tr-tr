@@ -14,11 +14,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c026c57129672eb25bb244a4fc928b827398e08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
 Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebilir ileti desenleri tanımlayın.  Her sözleşme yazısız ve ileti Şeması veya eylem bilgisine olmadan bir ileti almak hizmet sağlar. Bu genel yönlendirilen temel alınan iletilerin özellikleri için ek yapılandırma olmadan iletileri yönlendirmek yönlendirme hizmeti sağlar.  
@@ -32,11 +32,11 @@ Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebilir ileti desenleri ta
   
 |Daralma|Şekil|Kanal şekli|  
 |--------------|-----------|-------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode SessionMode.Allowed =<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true|IInputChannel IOutputChannel ->|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode SessionMode.Required =<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true|IInputSessionChannel IOutputSessionChannel ->|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode SessionMode.Allowed =<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true|IInputChannel -> IOutputChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode SessionMode.Required =<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true|IInputSessionChannel -> IOutputSessionChannel|  
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode SessionMode.Allowed =<br /><br /> Başlatıcıda = true|IReplyChannel IRequestChannel ->|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|Da IDuplexSessionChannel öğelerini da IDuplexSessionChannel öğelerini ->|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> Başlatıcıda = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönlendirme Hizmeti](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Yönlendirme Hizmeti](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

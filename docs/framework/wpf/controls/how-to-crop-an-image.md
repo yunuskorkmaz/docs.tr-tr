@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 084e3dc7fad2bcb3b7ab787302f55c824ff3739d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11f5b280635d2fe7b83d8c4496606ed02bc44149
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-crop-an-image"></a>Nasıl yapılır: Görüntü Kırpma
 Bu örnek kullanarak bir görüntü kırpma gösterilmektedir <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>öncelikle bir resim kırpılmış bir sürümünü kodlarken çıkışı bir dosyaya kaydetmek için kullanılır. Görüntü görüntüleme amacıyla bakın kırpma için [kırpma bölgesi oluşturma](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376) konu.  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap>öncelikle bir resim kırpılmış bir sürümünü kodlarken çıkışı bir dosyaya kaydetmek için kullanılır. Görüntü görüntüleme amacıyla bakın kırpma için [kırpma bölgesi oluşturma](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) konu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örneklerin içinde kullanılan kaynakları tanımlar.  
@@ -51,4 +51,4 @@ Bu örnek kullanarak bir görüntü kırpma gösterilmektedir <xref:System.Windo
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kırpma bölgesi oluşturma](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+ [Kırpma bölgesi oluşturma](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)

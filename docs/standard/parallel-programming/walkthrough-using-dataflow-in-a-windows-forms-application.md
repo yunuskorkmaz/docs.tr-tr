@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e5389b1a9d608ad8aae002f3ef9b00420f998b76
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek veri akışı bloklarının bir ağ oluşturmak gösterilmiştir.  
@@ -87,7 +87,7 @@ Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# sürümü `CreateCompositeBitmap` yöntemi verimli işlenmesini etkinleştirmek için işaretçileri kullanır <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri. Bu nedenle, etkinleştirmeniz gerekir **güvenli olmayan kod izin** kullanmak için seçenek projenizdeki [güvensiz](~/docs/csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü. Güvenli olmayan kod içinde etkinleştirme hakkında daha fazla bilgi için bir [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] [sayfası, Proje Tasarımcısı (C#) yapı] bkz proje https://msdn.microsoft.com/library/kb4wyys2).  
+    >  C# sürümü `CreateCompositeBitmap` yöntemi verimli işlenmesini etkinleştirmek için işaretçileri kullanır <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri. Bu nedenle, etkinleştirmeniz gerekir **güvenli olmayan kod izin** kullanmak için seçenek projenizdeki [güvensiz](~/docs/csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü. Güvenli olmayan kod içinde etkinleştirme hakkında daha fazla bilgi için bir [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] proje için bkz: [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Aşağıdaki tabloda ağ üyeleri açıklanmaktadır.  
   

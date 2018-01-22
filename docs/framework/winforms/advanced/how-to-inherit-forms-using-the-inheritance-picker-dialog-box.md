@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b330e84c14fa528fb84489e8fec16544144cf731
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya başka bir nesneye devralmak için en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümleri önceden oluşturduğunuz kod veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirler.  
@@ -30,7 +30,7 @@ Bir form veya başka bir nesneye devralmak için en kolay yolu kullanmaktır **d
 > [!NOTE]
 >  Bir formla devralınmalıdır için **devralma Seçici** iletişim kutusunda, bu formu içeren projeyi gerekir yerleşik bir yürütülebilir dosya veya DLL'e. Projeyi oluşturmak için tercih **yapı çözümü** gelen **yapı** menüsü.  
 >   
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Varolan bir formdan devralma Seçici kullanarak devralınan bir Windows Form oluşturmak için  
   

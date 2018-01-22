@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3481d0f0be5a52b33125e2a92849f402cce82d93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e8bbf6d72e07820256f69a06020354ef3ba3977
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Bir ASP.NET uygulamasında SqlDependency
 Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.SqlClient.SqlDependency> ASP.NET yararlanarak dolaylı olarak <xref:System.Web.Caching.SqlCacheDependency> nesnesi. <xref:System.Web.Caching.SqlCacheDependency> Nesne kullanan bir <xref:System.Data.SqlClient.SqlDependency> bildirimleri için dinleme ve doğru önbelleğini güncelleştirin.  
@@ -58,7 +58,7 @@ Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.Sql
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  İki yardımcı yöntem ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamanız gerekir örnek veritabanı **AdventureWorks**, etkin bildirimleri sahiptir. Daha fazla bilgi için bkz: [özel dikkat edilecek noktalar kullanarak sorgu bildirimleri](http://msdn.microsoft.com/en-us/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  İki yardımcı yöntem ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamanız gerekir örnek veritabanı **AdventureWorks**, etkin bildirimleri sahiptir. Daha fazla bilgi için bkz: [özel dikkat edilecek noktalar kullanarak sorgu bildirimleri](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

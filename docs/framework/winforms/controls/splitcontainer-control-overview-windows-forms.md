@@ -16,11 +16,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> kontrol zorlayıcı bileşik olarak; iki bölme taşınabilir bir çubukla ayrılan değer. Fare işaretçisini çubuğu üzerine olduğunda çubuğu taşınabilir olduğunu göstermek için Şekil işaretçi.  
@@ -61,4 +61,4 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> kontrol zorlayıcı bil
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer Denetimi](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer denetimi örnek](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)
+ [SplitContainer denetimi örnek](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

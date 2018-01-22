@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf894239db623b34d23757edd1c39d3652a7e0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Güvenilen olabiliyorsa sınıfı, derleme veya türetilmiş sınıflar için erişilebilirlik kapsamını sınırlandırabilirsiniz. Yöntem erişimi sınırlamak için en basit yolu budur. Bazı durumlarda üst sınıfın kimliğini paylaştıkları karşın, genel olarak, türetilmiş sınıfları unutmayın bunlar, türetilen sınıf daha az güvenli olabilir. Güven from anahtar sözcüğü özel olarak Infer değil **korumalı**, değil mutlaka kullanılan güvenlik bağlamı.  
   
--   Belirli bir kimlik--esas olarak, tüm belirli arayanlar yöntemi erişimi sınırlamak [kanıt](http://msdn.microsoft.com/en-us/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (tanımlayıcı ad, yayımcı, bölge vb.), seçin.  
+-   Belirli bir kimlik--esas olarak, tüm belirli arayanlar yöntemi erişimi sınırlamak [kanıt](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (tanımlayıcı ad, yayımcı, bölge vb.), seçin.  
   
 -   Seçtiğiniz hangi izinlere sahip arayanlara yöntemi erişimi sınırlayın.  
   

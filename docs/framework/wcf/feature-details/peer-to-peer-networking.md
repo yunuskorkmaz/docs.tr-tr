@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 496c1191ebb55181ddb999a5a4327d5ff699828c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-to-peer-networking"></a>Eşler Arası Ağ
 Eş kanal, çok taraflı, eşler arası (P2P) iletişim teknolojisinde [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Bu uygulama geliştiricileri için bir güvenli ve ölçeklenebilir ileti tabanlı P2P iletişim kanalını sağlar. Bir ortak eş kanaldan yararlanabilir taraflı bir uygulama gibi sohbet, ortak bir uygulama sunucuları olmadan bir eşler arası şekilde birbiriyle kişiler sohbet birtakım burada örnektir. Eş kanal P2P işbirliği, içerik dağıtımı, Yük Dengeleme sağlar ve tüketici ve kurumsal senaryoları için işleme dağıtılmış.  
@@ -35,7 +35,7 @@ Eş kanal, çok taraflı, eşler arası (P2P) iletişim teknolojisinde [!INCLUDE
  [Eş kanal uygulaması oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md): Eş kanalı uygulamalarını geliştirmeye rehberlik sağlar.  
   
 ## <a name="peer-channel-code-examples"></a>Eş kanal kod örnekleri  
- [Eş kanal özel eş Çözümleyicisi](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
+ [Eş kanal özel eş Çözümleyicisi](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Eş kanal ekip blogu  
  [Eş kanal ekip blogu](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)

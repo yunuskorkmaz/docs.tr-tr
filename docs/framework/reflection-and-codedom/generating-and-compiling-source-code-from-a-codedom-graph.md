@@ -38,11 +38,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b99dacb5a30cd7b12a5a5dd96bf9fe25b32ab984
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
 <xref:System.CodeDom.Compiler> Ad alanı, CodeDOM nesne grafikleri gelen kaynak kodu oluşturma ve derleme desteklenen derleyicileri ile yönetme için arabirim sağlar. Kod sağlayıcının belirli bir programlama dili CodeDOM grafiğe göre kaynak kodunda üretebilir. Öğesinden türeyen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> yöntemler kodu oluşturma ve dil sağlayıcısı Desteler derleme için genellikle sağlayabilir.  
@@ -106,4 +106,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.CodeDom>  
  <xref:System.CodeDom.Compiler>  
  [Dinamik Kaynak Kodu Oluşturma ve Derleme](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- [CodeDOM hızlı başvuru](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+ [CodeDOM hızlı başvuru](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

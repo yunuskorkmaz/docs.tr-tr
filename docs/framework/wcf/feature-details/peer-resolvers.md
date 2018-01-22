@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerektirmez. IP adreslerini kafes kimliği alır ve bu belirli kafes kimliği ile kayıtlı düğümler için karşılık gelen adresleri listesi döndüren bir çözümleyici hizmeti ile iletişim kurarak elde edilir Çözümleyici hizmete kaydolmak her düğümünde kafes sağlayarak oluşturur kayıtlı adreslerinin bir listesini tutar.  
@@ -43,7 +43,7 @@ Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerek
 > [!NOTE]
 >  Yerel ve hazırlıksız ağlar özel çözümleyici ile kullanırken, kullanarak veya bağlantı-yerel veya hazırlıksız ağı destekleyen uygulamalar bağlanırken kullanılacak tek bir bağlantı-yerel adresi seçer mantığı dahil önerilir. Bu, birden çok bağlantı-yerel adresleri bilgisayarlarla olası nedeni Karışıklıktan engeller. Buna uygun olarak, eş kanalı yalnızca tek bir bağlantı-yerel adresi herhangi bir zamanda kullanılmasını destekler. Bu adresle belirtebilir `ListenIpAddress` özelliği <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Özel Çözücü uygulamak nasıl tanıtımı için bkz: [eş kanalı özel eş çözümleyici](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Özel Çözücü uygulamak nasıl tanıtımı için bkz: [eş kanalı özel eş çözümleyici](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CustomPeerResolverService İçinde: İstemci Kayıtları](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8f8de04f9674e67bf1498fb8f25f2b3c61fec438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 Hem <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları, benzer hazırlama davranışı sahiptir.  
@@ -273,5 +273,5 @@ public class Window {
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)

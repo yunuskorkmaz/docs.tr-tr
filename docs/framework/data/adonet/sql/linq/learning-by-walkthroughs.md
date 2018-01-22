@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 56852fece0ca1f2dbb70b1bb29c09205b97faf56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Öğrenme tarafından izlenecek yollar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeleri, birkaç izlenecek yollar sağlar. Bu konuda (sorun giderme dahil) bazı genel izlenecek sorunları giderir ve hakkında bilgi almak için birkaç adım talimatlara bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar genellikle Northwind örnek veritabanı gerektirir. Daha fazla bilgi için bkz: [örnek veritabanları yükleme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   İletişim kutuları ve menü komutlarını izlenecek yollarda gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza bağlı olarak farklı olabilir veya [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] sürümü. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   İletişim kutuları ve menü komutlarını izlenecek yollarda gördüğünüz açıklanana Yardım'da, etkin ayarlarınıza bağlı olarak farklı olabilir veya [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] sürümü. Ayarlarınızı değiştirmek için tıklatın. **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Çok katmanlı senaryoları adres izlenecek yollar için bir sunucu geliştirme bilgisayardan ayrı olan bir bilgisayarda bulunması gerekir ve sunucuya erişmek için uygun izinlere sahip olmalıdır.  
   

@@ -18,17 +18,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8585840f57d75220d9c616eee1e90006f604adf4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="panel-how-to-topics"></a>Panel ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Panel> öğesi ve ilgili [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir öğeye LayoutTransform Uygula](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [Nasıl yapılır: bir öğeye LayoutTransform Uygula](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Özel Panel Öğesi Oluşturma](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Panel OnRender Yöntemini Geçersiz Kılma](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Öğenin Yükseklik Özelliklerini Ayarlama](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

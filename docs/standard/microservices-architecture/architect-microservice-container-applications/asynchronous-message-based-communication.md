@@ -1,7 +1,7 @@
 ---
 title: "Zaman uyumsuz ileti tabanlı iletişim"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Zaman uyumsuz ileti tabanlı iletişim"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ed0f12c5eca1ed45dabe94661f84216e07476ebd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -83,7 +83,7 @@ Resiliently kendi ilgili tümleştirme olay şekilde göre olay veri yolu içine
 
 -   Kullanarak [işlem oturum araştırma](http://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Tam kullanarak [olay kaynak Hizmeti'nden](https://msdn.microsoft.com/en-us/library/dn589792.aspx) düzeni.
+-   Tam kullanarak [olay kaynak Hizmeti'nden](https://msdn.microsoft.com/library/dn589792.aspx) düzeni.
 
 -   Kullanarak [Giden kutusu düzeni](http://gistlabs.com/2014/05/the-outbox/): bir işlemsel veritabanı tablosu olay oluşturun ve yayımlamadan bir olayı oluşturan bileşen temeli olacak bir ileti sırası olarak.
 
@@ -97,7 +97,7 @@ Zaman uyumsuz iletişim kullanırken dikkate alınması gereken ek ileti idempot
 -   **Kanal yayımlama/abonelik**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **UDI Dahan. Açıklığa kavuşturuldu CQRS**
+-   **Udi Dahan. Açıklığa kavuşturuldu CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **Komut ve sorgu sorumluluk ayrımı (CQRS)**

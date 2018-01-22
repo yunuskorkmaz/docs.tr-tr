@@ -20,17 +20,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7cbca79cd3541df1db7ace3a7d5f67bf3f2b2ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bdc4a5c7f721fd350f5c604d4529f05afd62a42c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Nasıl yapılır: Denetim Sınıfından Devralma
 Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiyorsanız, gelen alması gerektiğini <xref:System.Windows.Forms.Control> sınıfı. İçinden devralma sırasında <xref:System.Windows.Forms.Control> sınıfı gerektirir daha fazla planlama ve uygulama gerçekleştirmek, ayrıca, en büyük çeşitli seçenekler ile sağlar. İçinden devralma zaman <xref:System.Windows.Forms.Control>, iş denetimleri yapar çok temel işlevleri devralır. Ndaki işlevselliği <xref:System.Windows.Forms.Control> sınıfı klavye ve fare kullanıcı girişini işleme, denetimin boyutunu ve sınırlarını tanımlar, bir windows tanıtıcı sağlar ve ileti işleme ve güvenlik sağlar. Bu durumda grafik arabiriminin denetiminin gerçek işleme olduğu, tüm boyama dahil değildir ve herhangi belirli kullanıcı etkileşimi işlevselliği dahil etmez. Tüm özel kod aracılığıyla bu yönlerinin sağlamanız gerekir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-custom-control"></a>Özel bir denetim oluşturmak için  
   

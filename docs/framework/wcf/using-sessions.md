@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulamalar, bir *oturum* iletileri bir grup konuşma karşılık gelen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]oturumları bulunan oturum nesnesi farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışlar desteklemek ve farklı şekillerde denetlenir. Bu konu içinde oturumları etkinleştir özellikleri açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları ve bunların nasıl kullanılacağını.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/22/2017
  Arasında bir etkileşim yoktur <xref:System.ServiceModel.SessionMode> bir sözleşme numaralandırmada ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> kanalları belirli hizmet nesneleri arasındaki ilişki denetimleri özelliği. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Oturumlar, örnek oluşturma ve eşzamanlılık](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext nesneleri paylaşımı  
- Hangi oturum tabanlı kanalı kontrol edebilirsiniz veya çağrı, kendisiyle ilişkilendirilmiş <xref:System.ServiceModel.InstanceContext> kendiniz bu ilişkiyi gerçekleştirerek nesnesi. Tam bir örnek için bkz: [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Hangi oturum tabanlı kanalı kontrol edebilirsiniz veya çağrı, kendisiyle ilişkilendirilmiş <xref:System.ServiceModel.InstanceContext> kendiniz bu ilişkiyi gerçekleştirerek nesnesi. Tam bir örnek için bkz: [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Oturumlar ve akış  
  Büyük miktarda veri aktarmak için akış aktarım modunda olduğunda [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] arabelleğe alma ve tamamen bellekte iletileri işleme varsayılan davranışı için uygun bir alternatiftir. Oturum tabanlı bir bağlamayla çağrıları akış sırasında beklenmeyen bir davranış elde edebilirsiniz. Tüm akış çağrılar kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, oturumlar desteklemeyen bir tek kanalı (veri birimi kanalı) yapılır. Birden çok istemci aynı hizmet nesnesi akış çağrıları üzerinden oturum tabanlı bağlama yapmak ve hizmet nesnenin eşzamanlılık modu tek ve onun örnek bağlamı modu ayarlanırsa ayarlamak `PerSession`, tüm çağrıları veri birimi kanalı ve bunu gitmeniz gerekir yalnızca bir çağrı aynı anda işlenir. Bir veya daha fazla istemciler daha sonra zaman aşımına olabilir. Her iki hizmet nesnenin ayarlayarak bu sorunun geçici çözümü `InstanceContextMode` için `PerCall` veya birden çok eşzamanlılık.  

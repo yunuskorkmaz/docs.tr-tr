@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 502fb9ae0c488f5f3e438a3ae0a7087538183f1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamaları dokunma yanıtlamak için etkinleştirir. Örneğin, birini kullanarak bir uygulama ile etkileşim kurabilir veya dokunmatik aygıtta, bu kılavuzda taşımak kullanıcı sağlayan bir uygulama oluşturur dokunmatik gibi daha fazla parmakları yeniden boyutlandırın veya touch kullanarak tek bir nesneyi döndürme.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-application"></a>Uygulama oluşturmak için  
   
-1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `BasicManipulation`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `BasicManipulation`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  MainWindow.xaml içeriğini aşağıdaki XAML ile değiştirin.  
   

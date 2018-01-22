@@ -1,7 +1,7 @@
 ---
 title: ".NET taşınabilirlik Çözümleyicisi - .NET"
-description: "Çeşitli .NET uygulamalarını arasında nasıl taşınabilir kodunuz: değerlendirilecek .NET taşınabilirlik Çözümleyicisi aracını kullanmayı öğrenin."
-keywords: .NET, .NET core
+description: ".NET Core, .NET standart, UWP ve Xamarin dahil olmak üzere çeşitli .NET uygulamaları arasında nasıl taşınabilir kodunuz: değerlendirilecek .NET taşınabilirlik Çözümleyicisi aracını kullanmayı öğrenin."
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/26/2017
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fef0ddb05cd95c2db5492004c46951bb69ea01d8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
-Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar iş uygulamanızın diğer .NET uygulamaları ile uyumlu hale getirmek için gereken görmek mi istiyorsunuz? [.NET taşınabilirlik Çözümleyicisi](http://go.microsoft.com/fwlink/?LinkID=507467) nasıl programınızı .NET uygulamaları arasında derlemeleri çözümleyerek esnektir üzerinde ayrıntılı bir rapor sağlayan bir araçtır. Taşınabilirlik Çözümleyicisi Visual Studio uzantısı ve bir konsol uygulaması olarak sunulur.
+Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar işin uygulamanızın diğer .NET uygulamaları ve .NET Core, .NET standart, UWP ve Xamarin iOS, Android ve Mac için dahil olmak üzere profillerini uyumlu hale getirmek için gerekli olduğunu görmek mi istiyorsunuz? [.NET taşınabilirlik Çözümleyicisi](http://go.microsoft.com/fwlink/?LinkID=507467) nasıl programınızı .NET uygulamaları arasında derlemeleri çözümleyerek esnektir üzerinde ayrıntılı bir rapor sağlayan bir araçtır. Taşınabilirlik Çözümleyicisi Visual Studio uzantısı ve bir konsol uygulaması olarak sunulur.
 
 ## <a name="new-targets"></a>Yeni hedefler
 

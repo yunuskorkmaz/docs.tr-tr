@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
 Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilirsiniz Yükleme bileşenleri gelir. Yükleme bileşenleri bireysel bir hizmet olarak yüklendiği ve Hizmet Denetim Yöneticisi'nin hizmetinin var olduğunu bilmek istiyorum sistemdeki kaydedin. Bir hizmet uygulaması ile çalışırken, bağlantı otomatik olarak uygun yükleyicileri projenize eklemek için Özellikler penceresini seçebilirsiniz.  
@@ -39,7 +39,7 @@ Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilirsini
  Hizmetlerinizin düzgün yüklenmesi yapmak için yükleyiciler içinde özel hiçbir kodlama yapmak gerekmez. Ancak, bazen yükleme işlemine özel işlevsellik eklemeniz gerekiyorsa yükleyicileri içeriğini değiştirmeniz gerekebilir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Hizmet uygulamasına yükleyiciler eklemek için  
   

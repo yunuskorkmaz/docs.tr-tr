@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fcc672dea63bc74980b4829129f530de9cc72ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Sabitleme
 Çalışma zamanında kullanıcı genişletebilir bir form tasarlarken, form üzerinde denetimleri yeniden boyutlandırma ve düzgün bir şekilde yeniden konumlandırmak gerekir. Denetimleri form ile dinamik olarak yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.Control.Anchor%2A> Windows Forms denetimleri özelliği. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği denetimi için bir yer işareti konumunun tanımlar. Forma Denetim bağlantılı ve formu yeniden boyutlandırılabilir denetimi denetimi ve bağlantı konumlar arasındaki uzaklığı korur. Örneğin, bir <xref:System.Windows.Forms.TextBox> formun boyutlandırıldığında sol, sağ ve form alt kenarlarını bağlantılı denetim <xref:System.Windows.Forms.TextBox> denetimi yeniden boyutlandırır yatay böylece form sağ ve sol yanlarından aynı uzaklığı korur. Konumuna her zaman formun kenar aynı mesafe böylece ek olarak, Denetim kendisini dikey olarak yerleştirir. Bir denetim yok bağlantılı ve formu yeniden boyutlandırılabilir, denetimin formun kenarları göreli konumunu değiştirilir.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği etkileşime <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği. Daha fazla bilgi için bkz: [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Formdaki bir denetime bağlamak için  
   

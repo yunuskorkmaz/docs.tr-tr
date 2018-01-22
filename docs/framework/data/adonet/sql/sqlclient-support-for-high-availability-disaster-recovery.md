@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma SqlClient desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları.  AlwaysOn Kullanılabilirlik grupları özelliği eklenmiş [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için bkz: [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.  
@@ -41,6 +41,9 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Ayarı `MultiSubnetFailover` için `true` ile gerekli değildir [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) veya sonraki sürümler.
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover ile bağlanma  
  Her zaman belirtmeniz `MultiSubnetFailover=True` bağlanırken bir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 kullanılabilirlik grubu dinleyicisi veya [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 yük devretme kümesi örneği. `MultiSubnetFailover`Yük devretme kümesi örneği ve tüm kullanılabilirlik grupları için daha hızlı yük devretmeyi etkinleştirir [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 ve tek ve birden çok alt ağ AlwaysOn Topolojileri için yük devretme süresi önemli ölçüde azaltır. Birden çok alt ağ yük devretme sırasında istemci bağlantıları paralel çalışacak. Bir alt ağ yük devretme sırasında titizlikle TCP bağlantısı yeniden deneyecek.  

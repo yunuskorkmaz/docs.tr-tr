@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uygulamaları büyük .NET Framework uygulamaları veya performansını iyileştirmek için ipuçları verilmektedir. C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma bu ipuçlarını gelir ve bu makale, C# Derleyici birkaç gerçek örneklerinden içermektedir.  
@@ -47,7 +47,7 @@ Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uy
  Anahtar müşteri için performans hedeflerini deneyimleri veya senaryolar uygulamanızı ayarlama ve performansını ölçmek için testleri yazmak gerekir.  Başarısız olan testleri bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size yol, ne sorun olabilir, hypothesize ve varsayımınızın bir denemeyi ile test veya kod değişikliği.  Performans gerileme neden değişiklikleri yalıtabilirsiniz şekilde normal test ile zamanla temel performans ölçümleri oluşturun.  Sıkı bir şekilde performans iş yaklaşan tarafından gerekmeyen kod güncelleştirmeleriyle zaman kaçının.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi araçları tüm fark kolaylaştırır.  
- Hızlı bir şekilde büyük performans sorunlarını (CPU, bellek veya disk) ve bu performans sorunu neden kodu bulun Yardım ayrıntıya iyi araçları sağlar.  Microsoft çeşitli performans araçları gibi birlikte gelen [Visual Studio profil oluşturucu](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone çözümleme aracı](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Hızlı bir şekilde büyük performans sorunlarını (CPU, bellek veya disk) ve bu performans sorunu neden kodu bulun Yardım ayrıntıya iyi araçları sağlar.  Microsoft çeşitli performans araçları gibi birlikte gelen [Visual Studio profil oluşturucu](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone çözümleme aracı](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView disk g/ç gibi ayrıntılı sorunları odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve son derece güçlü bir araçtır.  Performansla ilgili yakalayabilirsiniz [Windows için olay izleme](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünüm kolayca uygulama başına, işlem başına, yığın başına ve başına iş parçacığı bilgileri.  PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınları ne kadar bellek ayırmaları katkıda ne kadar ve ne tür gösterir. Ayrıntılar için bkz: zengin Yardım konuları, gösterileri ve aracıyla dahil videoları (gibi [PerfView öğreticileri](http://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9).  
   

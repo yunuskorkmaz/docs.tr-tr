@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>ToolTip Genel Bakışı
 Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu zaman görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>. Bu konu, araç ipucu tanıtır ve nasıl oluşturulacağı ve araç ipucu içeriğini özelleştirmek açıklanır.  
@@ -78,7 +78,7 @@ Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu 
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Araç İpucu servisi zaman aralığı özelliklerini kullanma  
  <xref:System.Windows.Controls.ToolTipService> Sınıfı sağlar, araç ipucu ayarlamak aşağıdaki özellikleri görüntüleme zamanlarını: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Kullanım <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> bir gecikme belirtmek için özellikleri önce genellikle kısa bir <xref:System.Windows.Controls.ToolTip> görünür ve ayrıca ne kadar süreyle belirtmek için bir <xref:System.Windows.Controls.ToolTip> görünür kalır. Daha fazla bilgi için bkz: [nasıl yapılır: araç ipucu görüntüsünü gecikme](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Kullanım <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> bir gecikme belirtmek için özellikleri önce genellikle kısa bir <xref:System.Windows.Controls.ToolTip> görünür ve ayrıca ne kadar süreyle belirtmek için bir <xref:System.Windows.Controls.ToolTip> görünür kalır. Daha fazla bilgi için bkz: [nasıl yapılır: araç ipucu görüntüsünü gecikme](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Özelliği, fare işaretçisini hızla arasında taşıdığınızda farklı denetimler için araç ipuçları ilk gecikme olmadan görünür olmadığını belirler. Hakkında daha fazla bilgi için <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> özelliği, bkz: [BetweenShowDelay özelliğini kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

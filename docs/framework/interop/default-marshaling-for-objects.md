@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Nesneler için Varsayılan Hazırlama
 Parametreler ve alanlar olarak yazılan <xref:System.Object?displayProperty=nameWithType> yönetilmeyen kod için şu türlerden biri olarak gösterilebilir:  
@@ -272,7 +272,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |----------------------|-----------------|  
 |**VT_EMPTY**|Null Nesne başvurusu (**hiçbir şey** Visual Basic'te).|  
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|  
-|**VT_DISPATCH**|**System.__ComObject** ya da null ise (pdispVal null ==)|  
+|**VT_DISPATCH**|**System.__ComObject** or null if (pdispVal == null)|  
 |**VT_UNKNOWN**|**System.__ComObject** ya da null ise (punkVal null ==)|  
 |**VT_ERROR**|<xref:System.UInt32?displayProperty=nameWithType>|  
 |**VT_BOOL**|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -332,15 +332,15 @@ Değer ve başvuru tarafından geçirilen çeşitleri
   
 |Başlangıç|Bitiş|Geri yayılma değişiklikleri|  
 |----------|--------|-----------------------------|  
-|**Değişken***v* |**Nesne***o* |Hiçbir zaman|  
-|**Nesne***o* |**Değişken***v* |Hiçbir zaman|  
-|**Değişken*****\*****pv* |**Ref nesne***o* |Her zaman|  
-|**Ref nesne***o* |**Değişken*****\*****pv* |Her zaman|  
-|**Değişken***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Nesne***o* |Hiçbir zaman|  
-|**Değişken***v* **(VT_BYREF** *&#124;* **VT_)** |**Ref nesne***o* |Yalnızca türü değişmemişse.|  
+|**Değişken***v* |**Object**  *o*|Hiçbir zaman|  
+|**Object**  *o*|**Değişken***v* |Hiçbir zaman|  
+|**Değişken*****\*****pv* |**Ref Object**  *o*|Her zaman|  
+|**Ref object**  *o*|**Değişken*****\*****pv* |Her zaman|  
+|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Object**  *o*|Hiçbir zaman|  
+|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object**  *o*|Yalnızca türü değişmemişse.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Tek yönlü öznitelikleri](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Tek yönlü öznitelikleri](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Kopyalama ve Sabitleme](../../../docs/framework/interop/copying-and-pinning.md)

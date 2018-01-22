@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Bu işlev tüm işlem yapar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-kullanan, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına gelir. İçinde [vurgulama örnek](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), örneği için Vurgu dikdörtgeni dört windows alınan fiziksel koordinatları adresindedir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], mantıksal koordinatları. Örnek olsalar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aklınızda Vurgu mantıksal koordinatlarda yanlış yerleştirme içinde-96 olmayan bir sonuçlanacaktır masaüstünde çizilmesi [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ortamı.  
+     Bu işlev tüm işlem yapar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-kullanan, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına gelir. İçinde [vurgulama örnek](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), örneği için Vurgu dikdörtgeni dört windows alınan fiziksel koordinatları adresindedir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], mantıksal koordinatları. Örnek olsalar [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aklınızda Vurgu mantıksal koordinatlarda yanlış yerleştirme içinde-96 olmayan bir sonuçlanacaktır masaüstünde çizilmesi [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] ortamı.  
   
 2.  İmleç koordinatları almak için arama [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `GetPhysicalCursorPos`. Aşağıdaki örnek, bildirme ve bu işlevi kullanın gösterilmektedir.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Uygulamanız ile olmayan doğrudan işlem içi iletişimi gerçekleştirir, [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-kullanan uygulamalar, sahip dönüştürmeniz kullanarak mantıksal ve fiziksel koordinatları arasında [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevleri `PhysicalToLogicalPoint` ve `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Vurgulama örnek](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Vurgulama örnek](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

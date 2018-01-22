@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91edecf9b500c316b915e908bbbd412a47d86dac
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Veri Hizmeti istemci uygulamasında (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlayarak akış. Bir kaynak adres URI sağlar ve istek iletilerini erişmek veya kaynak temsil eden temel alınan veri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu verdiğinde ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -56,7 +56,7 @@ Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../
  İleti biçimi yükün HTTP istek iletisinin başlığında istendi. Daha fazla bilgi için bkz: [OData: işlemleri](http://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Verilere erişme ve istemci kitaplıkları kullanarak verileri değiştirme  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]daha kolayca kullanmalarını sağlayan istemci kitaplıklarını içerir bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight tabanlı istemci uygulamalardan akış. Bu kitaplıklar, HTTP ileti gönderme ve alma basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri içine ileti yükü çevir. İstemci kitaplıkları iki çekirdek sınıfları özellik <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıfları, veri hizmeti sorgulamak ve CLR nesneler olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) ve [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]daha kolayca kullanmalarını sağlayan istemci kitaplıklarını içerir bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight tabanlı istemci uygulamalardan akış. Bu kitaplıklar, HTTP ileti gönderme ve alma basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri içine ileti yükü çevir. İstemci kitaplıkları iki çekirdek sınıfları özellik <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıfları, veri hizmeti sorgulamak ve CLR nesneler olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) ve [WCF Veri Hizmetleri (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
   
  Kullanabileceğiniz **hizmet Başvurusu Ekle** veri hizmeti için bir başvuru eklemek için Visual Studio'da iletişim kutusu. Bu araç başvurulan veri hizmetinden veri hizmeti meta veri isteklerini ve oluşturur <xref:System.Data.Services.Client.DataServiceContext> , veri hizmeti temsil eden yanı sıra varlıkları temsil istemci veri hizmeti sınıfları oluşturur. Daha fazla bilgi için bkz: [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
   

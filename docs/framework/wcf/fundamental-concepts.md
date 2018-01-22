@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge üst düzey bir görünümünü sağlar [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] mimarisi. Temel kavramları ve onların birlikte nasıl uyduğunu açıklamak üzere tasarlanmıştır. En basit sürümü oluşturma bir öğretici için bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci, bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). Bilgi edinmek için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programlama, bkz: [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -103,7 +103,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  hizmet işlemi  
  Bir işlem işlevselliğini hayata geçiren bir hizmetin kodda tanımlanan bir yordamdır. Bu işlem, üzerinde yöntemleri olarak istemcilerine sunulur bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci. Yöntemi bir değer döndürmesi ve isteğe bağlı bir bağımsız değişken sayısı ayırın veya bağımsız değişkenler almayan ve hiçbir yanıt döndürür. Örneğin, bir basit "Hello"ifadesini işlev bir işlem bir bildirim bir istemcinin varlık ve işlemleri, bir dizi başlamak için kullanılabilir.  
   
- Hizmet Sözleşmesi  
+ service contract  
  Tek bir işlev birime birden fazla ilgili işlemleri birbirine bağlar. Sözleşme ad alanı hizmeti, karşılık gelen bir geri çağırma sözleşme ve diğer tür ayarları gibi hizmet düzeyi ayarlarını tanımlayabilirsiniz. Çoğu durumda, sözleşmenin tercih ettiğiniz programlama dilinde bir arabirim oluşturma ve uygulama tarafından tanımlanan <xref:System.ServiceModel.ServiceContractAttribute> özniteliği için arabirim. Arabirimi uygulama tarafından gerçek hizmet kod sonuçları.  
   
  işlem Sözleşmesi  
@@ -166,4 +166,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)  
- [Güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

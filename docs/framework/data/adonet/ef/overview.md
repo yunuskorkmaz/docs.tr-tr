@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET Veri odaklı yazılım uygulamaları geliştirme desteği teknolojileri kümesidir. İki çok farklı hedeflerine ulaşmasına gerek mimarları ve geliştiricileri veri odaklı uygulamalar zorlandığınız. Varlıklar, ilişkileri ve iş sorunlarını çözme mantığını model gerekir ve depolamak ve verileri almak için kullanılan veri yapısıyla de çalışması gerekir. Veriler birden çok depolama sistemleri, her biri kendi protokollerle yayılabilir; tek bir depolama sistemiyle çalışacak bile uygulamaları verimli ve sürdürülebilir uygulama kodu yazarken gereksinimleri karşı depolama sistem gereksinimlerini dengelemeniz gerekir.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  Aşağıdaki konular hakkında daha fazla bilgi sağlayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
  [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Alma hakkında bilgi sağlar ve hızlı şekilde kullanmaya çalışıyor [Hızlı Başlangıç](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), basit bir oluşturulacağını gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
+ Alma hakkında bilgi sağlar ve hızlı şekilde kullanmaya çalışıyor [Hızlı Başlangıç](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), basit bir oluşturulacağını gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
   
  [Entity Framework Terimleri](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Çoğu varlık veri modeli tarafından sunulan koşullarını tanımlar ve [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve içinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri.  

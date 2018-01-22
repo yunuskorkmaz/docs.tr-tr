@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1473fa07b57dcd19ea192db6cdb0a395f119b159
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
 Adlı bir komut satırı aracını çalıştırabilirsiniz [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) kaydetmek veya com ile kullanmak için bir derleme kaydını kaldırma COM istemcileri .NET Framework sınıf şeffaf bir şekilde kullanabilmeniz için Regasm.exe Sistem kayıt defterine sınıfı hakkında bilgi ekler. <xref:System.Runtime.InteropServices.RegistrationServices> Sınıfı eşdeğer işlevsellik sağlar.  
@@ -32,10 +32,10 @@ Adlı bir komut satırı aracını çalıştırabilirsiniz [derleme Kayıt Arac�
   
 |GUID|Açıklama|Kayıt defteri anahtarı|  
 |----------|-----------------|------------------|  
-|CLSID|Sınıf tanımlayıcısı|HKEY_CLASSES_ROOT\CLSID\\{000... 000}|  
-|IID|Arabirim tanımlayıcısı|HKEY_CLASSES_ROOT\Interface\\{000... 000}|  
-|KİTAPLIK KİMLİĞİ|Tür kitaplığı tanımlayıcısı|HKEY_CLASSES_ROOT\TypeLib\\{000... 000}|  
-|ProgID|Program tanımlayıcısı|HKEY_CLASSES_ROOT\000... 000|  
+|CLSID|Sınıf tanımlayıcısı|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
+|IID|Arabirim tanımlayıcısı|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
+|LIBID|Tür kitaplığı tanımlayıcısı|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
+|ProgID|Program tanımlayıcısı|HKEY_CLASSES_ROOT\000…000|  
   
  HKCR\CLSID altında\\{0000... 0000} anahtarı, varsayılan değer sınıfı ProgID için ayarlanır ve iki yeni adlandırılmış değerler, sınıf ve derlemeyi eklenir. Çalışma zamanı derlemesi değerini kayıt defterinden okur ve çalışma zamanı derlemesi çözümleyicisini açın geçirir. Derleme Çözümleyicisi ad ve sürüm numarası gibi derleme bilgilere dayalı derleme bulmayı dener. Derleme Çözümleyicisi bütünleştirilmiş bulmak derleme aşağıdaki konumlardan birinde olması gerekir:  
   
@@ -55,5 +55,5 @@ Adlı bir komut satırı aracını çalıştırabilirsiniz [derleme Kayıt Arac�
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [Bir .NET nesnesini çağırma](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [COM erişim için bir uygulama dağıtma](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+ [Bir .NET nesnesini çağırma](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [COM erişim için bir uygulama dağıtma](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)

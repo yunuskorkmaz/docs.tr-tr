@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: f5ade1db39431d99f10eb6967f02335123b83d34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="records"></a>Kayıtlar
 
@@ -123,12 +123,12 @@ Sınıfları içeren aynı kodu yazarsanız, iki sınıf nesnelerine çünkü ik
 Eşitlik kayıtları için referans olursa öznitelik Ekle `[<ReferenceEquality>]` kaydı üstünde.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # türleri](fsharp-types.md)
+[F# Türleri](fsharp-types.md)
 
-[Sınıfları](classes.md)
+[Sınıflar](classes.md)
 
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Başvuru eşitliği](https://msdn.microsoft.com/en-us/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+[Başvuru eşitliği](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 
-[Desen eşleştirme](pattern-matching.md)
+[Desen Eşleştirme](pattern-matching.md)

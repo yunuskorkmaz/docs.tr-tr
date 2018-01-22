@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 İle tüm iletişimin bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] hizmet kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   (İsteğe bağlı) Bağlantı noktası: 322  
   
--   Yol: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
  Her bitiş noktası başvurusu fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir EPR modelin parçası olur. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu başvuru parametreleri örnekleri olarak Modellenen <xref:System.ServiceModel.Channels.AddressHeader> sınıfı.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  IIS ile barındırdığında değil yönettiğiniz <xref:System.ServiceModel.ServiceHost> kendiniz örneği. Temel adres, her zaman IIS'de barındırdığında hizmeti .svc dosyasında belirtilen adrestir. Bu nedenle, göreli uç nokta adresleri IIS tarafından barındırılan hizmet uç noktaları için kullanmanız gerekir. Tam uç noktası adresi biri hizmet dağıtımı hatalara yol açabilir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Bir Internet Information Services tarafından barındırılan bir WCF Hizmeti dağıtma](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Uç nokta adresleri yapılandırmasında tanımlama  
- Bir yapılandırma dosyasında bir uç nokta tanımlamak için [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
+ Bir yapılandırma dosyasında bir uç nokta tanımlamak için [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

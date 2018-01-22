@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç içe geçmiş varlık SQL sorguları oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir zengin işlevsel dilidir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler. İfade bir değer parametreli veya diğer bazı ifadesi oluşur.  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Aşağıdaki örnek düzgün ifadelerinde iç içe gösterilmiştir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: birleşim, iki sorguları sipariş](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).  
+ Aşağıdaki örnek düzgün ifadelerinde iç içe gösterilmiştir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: birleşim, iki sorguları sipariş](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>İç içe yerleştirilmiş sorguda projeksiyon  
  Proje yan tümcesi iç içe geçmiş sorguları Kartezyen ürün sorguları sunucuda içine çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucularında, bu sunucu performansını olumsuz yönde etkilenebilir çok büyük almak TempDB tablo neden olabilir.  

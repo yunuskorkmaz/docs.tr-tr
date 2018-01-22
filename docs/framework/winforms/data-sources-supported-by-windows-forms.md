@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalardan veritabanlarında depolanan verileri yararlanmak için kullanılmış. Belirli en düşük gereksinimleri karşıladığınızdan sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diziler ve koleksiyonlar, gibi diğer yapıları verilerde verilere erişebilir.  
@@ -48,7 +48,7 @@ Geleneksel olarak, veri bağlama uygulamalardan veritabanlarında depolanan veri
  Windows Forms veri bağlama denetimi özellikleri genel özelliklerine kullanarak bir nesnenin örneğinde destekleyen <xref:System.Windows.Forms.Binding> türü. Windows Forms de destekler bağlama dayalı liste denetimleri gibi bir <xref:System.Windows.Forms.ListControl> nesneye örnek bir <xref:System.Windows.Forms.BindingSource> kullanılır.  
   
  dizi ya da koleksiyonu  
- Bir veri kaynağı olarak görev yapması için bir liste uygulamalıdır <xref:System.Collections.IList> arabirimi; bir örnek örneği olan bir dizi olacaktır <xref:System.Array> sınıfı. Dizileri hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir dizi nesnelerin (Visual Basic) oluşturma](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Bir veri kaynağı olarak görev yapması için bir liste uygulamalıdır <xref:System.Collections.IList> arabirimi; bir örnek örneği olan bir dizi olacaktır <xref:System.Array> sınıfı. Dizileri hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir dizi nesnelerin (Visual Basic) oluşturma](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  Genel olarak, kullanmanız gereken <xref:System.ComponentModel.BindingList%601> veri bağlama için nesneleri listesi oluşturduğunuzda. <xref:System.ComponentModel.BindingList%601>Genel bir sürümü <xref:System.ComponentModel.IBindingList> arabirimi. <xref:System.ComponentModel.IBindingList> Arabirimi genişletiyor <xref:System.Collections.IList> özellikleri, yöntemleri ve iki yönlü veri bağlaması için gerekli olayları ekleyerek arabirimi.  
   

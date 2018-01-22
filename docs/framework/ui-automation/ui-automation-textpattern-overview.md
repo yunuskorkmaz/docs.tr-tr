@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI Otomasyon TextPattern Öğesine Genel Bakış
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  Denetim metin içeriğini gösterme kullanılarak gerçekleştirilir <xref:System.Windows.Automation.TextPattern> metin kapsayıcı olarak bir metin akış içeriğini temsil eden denetim düzeni. Buna karşılık, <xref:System.Windows.Automation.TextPattern> desteği gerektiren <xref:System.Windows.Automation.Text.TextPatternRange> biçimi ve stil öznitelikleri kullanıma sunmak için sınıf. <xref:System.Windows.Automation.Text.TextPatternRange>destekleyen <xref:System.Windows.Automation.TextPattern> bitişik temsil eden tarafından veya birden çok, metin yayılma koleksiyonuyla metin kapsayıcısında ayrık <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları. <xref:System.Windows.Automation.Text.TextPatternRange>Seçimi, karşılaştırma, alma ve çapraz geçişi gibi işlevselliği destekler.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> Sınıfları eklemek veya metin değiştirmek için bir yol sağlamaz. Ancak, denetimin bağlı olarak bu tarafından gerçekleştirilmesi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> veya doğrudan klavye girdisi aracılığıyla. Bkz: [TextPattern Ekle metin örnek](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) bir örnek.  
+>  <xref:System.Windows.Automation.TextPattern> Sınıfları eklemek veya metin değiştirmek için bir yol sağlamaz. Ancak, denetimin bağlı olarak bu tarafından gerçekleştirilmesi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> veya doğrudan klavye girdisi aracılığıyla. Bkz: [TextPattern Ekle metin örnek](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) bir örnek.  
   
  Bu genel bakışta açıklanan işlevselliği yardımcı teknoloji satıcılar ve kendi son kullanıcıları için önemlidir. Yardımcı teknolojiler kullanabileceğiniz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tam metin biçimlendirme kullanıcı için bilgileri toplamak ve programlama gezinme ve seçim tarafından metnin sağlamak için <xref:System.Windows.Automation.Text.TextUnit> (karakter, word, satır veya paragraf).  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/22/2017
  **Bozuk aralığı**  
  Bozuk bir boş veya sıfır karakterlik metin aralığını aralıktır. TextPattern denetim düzeni amaçları doğrultusunda, metin ekleme noktasını (veya sistem şapka) bozuk bir aralık olarak kabul edilir. Metin seçtiyseniz <xref:System.Windows.Automation.TextPattern.GetSelection%2A> metin ekleme noktasını bozuk bir aralığa döndürür ve <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> bozuk bir aralık, başlangıç uç noktasında olarak döndürür. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>ve <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> metin sağlayıcısı verilen koşulu sağlayan tüm metin aralıkları bulamadığında bozuk aralıkları döndürebilir. Bozuk bu aralık, başlangıç bir uç nokta metin sağlayıcısı içinde olarak kullanılabilir. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A>ve <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null bir başvuru döndürür (`Nothing` içinde [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]) bozuk bir aralık karşı bulunan aralığıyla Karışıklığı önlemek için.  
   
- **Katıştırılmış nesne**  
+ **Embedded Object**  
  Katıştırılmış nesneler iki tür vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] metin modeli. Metin tabanlı içerik öğeleri Köprüler veya tablolar gibi ve görüntüleri ve düğmeleri gibi denetim öğeleri oluşur. Daha ayrıntılı bilgi için bkz: [erişim katıştırılmış nesneler kullanarak UI Otomasyonu](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
   
  **Uç nokta**  

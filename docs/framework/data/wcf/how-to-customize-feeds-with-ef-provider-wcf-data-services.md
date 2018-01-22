@@ -17,16 +17,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72c26f6c86187579bc8af4dde034cba30fb6a90b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 276aea81716f58ed4a0d6ba8e1f8e2bcdbedb908
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Nasıl yapılır: Entity Framework sağlayıcısı (WCF Veri Hizmetleri) ile akışları özelleştirme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]bir varlığın özelliklerini AtomPub protokolünde tanımlanan kullanılmayan öğeleri eşlenebilir böylece bir veri hizmeti yanıtında Atom serileştirme özelleştirmenize olanak tanır. Bu konu, Entity Framework sağlayıcısı kullanarak bir .edmx dosyasında tanımlanan bir veri modeli varlık türlerine eşleme öznitelikleri tanımlamak gösterilmiştir. Daha fazla bilgi için bkz: [akış özelleştirme](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
- Bu konuda veri modeli içeriyor aracı tarafından oluşturulan .edmx dosyasının el ile değiştirir. Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için dosyayı el ile değiştirmeniz gerekir. Varlık veri modeli araçları oluşturmak .edmx dosyasının hakkında daha fazla bilgi için bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4). Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konuda veri modeli içeriyor aracı tarafından oluşturulan .edmx dosyasının el ile değiştirir. Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için dosyayı el ile değiştirmeniz gerekir. Varlık veri modeli araçları oluşturmak .edmx dosyasının hakkında daha fazla bilgi için bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4). Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Akış özelleştirme öznitelikler eklemek için Northwind.edmx dosyasını el ile değiştirme  
   

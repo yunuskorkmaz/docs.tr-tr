@@ -18,16 +18,16 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: eedb351e5651ffc2637c413450db40ff5a59d516
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma
 Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci manager ile tümleştirerek gösterilmektedir. Bir güvenlik belirteci kimlik doğrulayıcı gelen ileti ile sağlanan bir güvenlik belirteci içeriğini doğrular. Doğrulama başarılı olursa, Doğrulayıcı koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> , değerlendirildiğinde, örnekler talep kümesini döndürür.  
   
- İçinde bir özel güvenlik belirteci kimlik doğrulayıcı kullanmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], önce özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir. Özel kimlik bilgileri ve bir güvenlik belirteci yöneticisi oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f).  
+ İçinde bir özel güvenlik belirteci kimlik doğrulayıcı kullanmak için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], önce özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir. Özel kimlik bilgileri ve bir güvenlik belirteci yöneticisi oluşturma hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Kimlik bilgileri, güvenlik belirteci yöneticisi ve sağlayıcı ve Doğrulayıcı sınıfları hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Yordamlar  
   
@@ -75,4 +75,4 @@ Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir 
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
  [İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Güvenlik mimarisi](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

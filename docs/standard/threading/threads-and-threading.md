@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 91db5cf75053f7a9b343036345a97d8084ae38fb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 114fb704a622d92ab8e92fa866fa0fc9bebf4e58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturma
 İşletim sistemleri işlemleri yürütülmekte olduğunu farklı uygulamaları ayırmak için kullanır. İş parçacığı bir işletim sistemi işlemci zamanı tarafından ayrılan temel birimi olan ve birden çok iş parçacığı işlem içinde kod yürütme. Her iş parçacığı, özel durum işleyicileri, bir zamanlama önceliği ve sistem zamanlandığı süreye kadar iş parçacığı içeriği kaydetmek için kullandığı yapıları kümesi tutar. İş parçacığı bağlamını sorunsuz bir şekilde yürütme iş parçacığının ana bilgisayar işlemi adres alanında CPU kaydeder ve yığını, iş parçacığının kümesi de dahil olmak üzere, devam etmek için iş parçacığı gereken tüm bilgileri içerir.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
  Zaman dilimi uzunluğu işletim sistemi ve işlemci bağlıdır. Her zaman dilimi küçük olduğundan, sadece bir işlemci olsa bile birden çok iş parçacığı aynı anda yürütülen görünür. Bu gerçekten çok işlemcili sistemlerde yürütülebilir iş parçacıkları arasında kullanılabilir işlemci dağıtıldığı bir durumdur.  
   
 ## <a name="when-to-use-multiple-threads"></a>Birden çok iş parçacığı kullanma zamanı  
- Kullanıcı etkileşimi gerektiren yazılım, kullanıcının etkinlikler için zengin bir kullanıcı deneyimi sağlamak için mümkün olduğunca hızlı bir şekilde tepki gerekir. Aynı anda ancak bunu kadar hızlı kullanıcıya verileri sunmak gerekli hesaplama yapmanız gerekir. Uygulamanızı yürütme yalnızca bir iş parçacığı kullanıyorsa, birleştirebilirsiniz [zaman uyumsuz programlama](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) ile[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) veya [XML Web Hizmetleri](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) ASP kullanılarak oluşturulan Diğer bilgisayarların işleme süresi ek olarak, artırmak için kendi yanıtlama hızı azaltma, uygulamanızın veri işleme süresini ve kullanıcı için kullanılacak .NET. Yoğun giriş/çıkış iş yapıyorsanız, g/ç tamamlama bağlantı noktaları, uygulamanızın yanıt hızını artırmak için kullanabilirsiniz.  
+ Kullanıcı etkileşimi gerektiren yazılım, kullanıcının etkinlikler için zengin bir kullanıcı deneyimi sağlamak için mümkün olduğunca hızlı bir şekilde tepki gerekir. Aynı anda ancak bunu kadar hızlı kullanıcıya verileri sunmak gerekli hesaplama yapmanız gerekir. Uygulamanızı yürütme yalnızca bir iş parçacığı kullanıyorsa, birleştirebilirsiniz [zaman uyumsuz programlama](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) ile[.NET Framework remoting](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) veya [XML Web Hizmetleri](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) ASP kullanılarak oluşturulan Diğer bilgisayarların işleme süresi ek olarak, artırmak için kendi yanıtlama hızı azaltma, uygulamanızın veri işleme süresini ve kullanıcı için kullanılacak .NET. Yoğun giriş/çıkış iş yapıyorsanız, g/ç tamamlama bağlantı noktaları, uygulamanızın yanıt hızını artırmak için kullanabilirsiniz.  
   
 ### <a name="advantages-of-multiple-threads"></a>Birden çok iş parçacığı avantajları  
  Birden çok iş parçacığı kullanan, ancak en güçlü kullanıcı yanıt verme hızını artırmak ve neredeyse aynı anda işin tamamlanması gereken verileri işlemek kullanılabilir tekniğidir. Bir işlemciye sahip bir bilgisayar üzerinde birden çok iş parçacığı arka planda verileri işlemek için kullanıcı olaylarını Between kısa sürelerle yararlanarak, bu etkiyi oluşturabilirsiniz. Örneğin, başka bir iş parçacığı aynı uygulama içinde elektronik tablo diğer bölümleri yeniden hesaplama sırasında bir kullanıcı bir elektronik tablo düzenleyebilirsiniz.  

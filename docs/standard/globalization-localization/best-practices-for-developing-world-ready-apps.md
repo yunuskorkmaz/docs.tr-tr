@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 367da11fd0af9673a60d9acff20aef5969c98aae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Dünyaya Hazır Uygulamalar Geliştirmek için En İyi Yöntemler
 Bu bölümde, dünya çapında kullanılmaya hazır uygulamalar geliştirirken izlemek için en iyi uygulamaları açıklar.  
@@ -102,7 +102,7 @@ Bu bölümde, dünya çapında kullanılmaya hazır uygulamalar geliştirirken i
   
 4.  Bir ASP.NET uygulamasında aşağıdaki üç yerde requestEncoding, responseEncoding, fileEncoding, kültür ve UICulture öznitelikleri için değerleri belirtin:  
   
-    -   Web.config dosyasının Genelleştirme bölümünde. Bu ASP.NET uygulamasını dış dosyasıdır. Daha fazla bilgi için bkz: [ \<Genelleştirme > öğesi](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Web.config dosyasının Genelleştirme bölümünde. Bu ASP.NET uygulamasını dış dosyasıdır. Daha fazla bilgi için bkz: [ \<Genelleştirme > öğesi](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   Bir sayfa yönergesinde. Bir uygulama içinde bir sayfa olduğunda, dosyanın daha önce Okunmuş, unutmayın. Bu nedenle, bu çok geç fileEncoding ve requestEncoding belirtmektir. Yalnızca UICulture, kültür ve responseEncoding bir sayfa yönergesinde belirtilebilir.  
   

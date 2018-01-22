@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 25abf45cd0c78b8872da3c953f29843ef0b67cda
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f2da3e1ecfb9018adf7827aad6a569cd057c59eb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama, bir dizi eşzamanlı koleksiyon sınıfları, basit eşitleme temelleri ve türleri geç başlatma için de dahil olmak üzere kullanışlı olan birkaç yeni türleri tanıtır. Görev paralel kitaplığı ve PLINQ'da dahil olmak üzere tüm birden çok iş parçacıklı ile uygulama kodu, bu tür kullanabilirsiniz.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/23/2017
  Daha fazla bilgi için bkz: [geç başlatma](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Birleşik özel durumlar  
- <xref:System.AggregateException?displayProperty=nameWithType> Türü, aynı anda ayrı iş parçacıklarına oluşturulur ve tek bir özel durum olarak katılan iş parçacığına döndürün birden çok özel durumları yakalamak için kullanılabilir. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> türleri ve PLINQ kullanmak <xref:System.AggregateException> kapsamlı olarak bu amaçla. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: görevler tarafından özel durum işleme](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) ve [nasıl yapılır: PLINQ sorgusunda özel durumları işlemek](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ <xref:System.AggregateException?displayProperty=nameWithType> Türü, aynı anda ayrı iş parçacıklarına oluşturulur ve tek bir özel durum olarak katılan iş parçacığına döndürün birden çok özel durumları yakalamak için kullanılabilir. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> türleri ve PLINQ kullanmak <xref:System.AggregateException> kapsamlı olarak bu amaçla. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: görevler tarafından özel durum işleme](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) ve [nasıl yapılır: PLINQ sorgusunda özel durumları işlemek](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

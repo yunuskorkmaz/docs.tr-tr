@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: bc2e179109a8015a16684c20e3a1ef46b781b8f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a89839294f74d733ec7f607a0afda53148fbd57
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği, bir hizmetin kimliğini ayarlamak gösterilmiştir. Tasarım zamanında bir istemci hizmetin meta verileri kullanarak kimlik alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci gelen kimliği doğrulanmamış çağrıları koruma işlemlerinden birini çağırmadan önce bir hizmetin kimliğini doğrulamak bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet ayrıca bir istemcinin kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.  
@@ -137,7 +137,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Client.exe \client\bin dizinden veya derlemek ve çalıştırmak için Visual Studio'da F5'e basarak başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
   
-5.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
@@ -161,7 +161,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. Hizmet bilgisayarda komut isteminden Service.exe başlatın.  
   
-11. İstemci bilgisayarda bir komut isteminden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. İstemci bilgisayarda bir komut isteminden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
   

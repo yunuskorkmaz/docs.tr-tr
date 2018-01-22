@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 97c0ad9c64046e9c93ce8690016f71d0950fb2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1c30ba2995a0f8768292dd71733d3e6f4c3799f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt; &lt;iletisi&gt; öğesi
 İleti düzeyi güvenlik ayarlarını tanımlar [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğesi.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<bağlamaları >  
-\<ws2007FederationHttpBinding >  
+\<ws2007FederationHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
 \<İleti >  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`algorithmSuite`|İsteğe bağlı. İleti şifreleme, imza ve anahtar-wrap algoritmaları ayarlar. Algoritmaları ve anahtar boyutları tarafından belirlenen <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> sınıfı. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen eşlenir.<br /><br /> Olası değerler için aşağıdaki tabloya bakın. Basic256 varsayılan değerdir.|  
-|`issuedKeyType`|Kesilecek anahtar türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> SymmetricKey varsayılandır. Bu öznitelik türünde <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedKeyType`|Kesilecek anahtar türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> SymmetricKey varsayılandır. Bu öznitelik türünde <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|Kesilecek Belirtecin türü belirtir URI. Varsayılan, `null` değeridir.|  
 |`negotiateServiceCredential`|Hizmet kimlik bilgilerini anlaşmasının bir parçası değiştirilen veya bant dışı kullanılabilir olup olmadığını belirten bir değer. Varsayılan değer `true`, hizmet kimlik bilgilerini anlaşılmadan anlamına gelir.|  
   
@@ -128,10 +128,10 @@ ms.lasthandoff: 12/22/2017
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türleri koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<veren >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Bir güvenlik belirteci verir bir uç nokta belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<İssuedtokenparameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Uç nokta adresi verenin belirtir.|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri topluluğu. Her bir XML öğesi parametresidir.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türleri koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Bir güvenlik belirteci verir bir uç nokta belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Uç nokta adresi verenin belirtir.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri topluluğu. Her bir XML öğesi parametresidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -146,5 +146,5 @@ ms.lasthandoff: 12/22/2017
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Hizmetler ve istemcileri güvenli hale getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

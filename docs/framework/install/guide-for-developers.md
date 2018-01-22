@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -74,8 +74,6 @@ Geliştirici paketi için .NET Framework 4.5.1 veya hedefleme 4.5.2 paketi [!INC
 - [Microsoft .NET Framework 4.7.1 Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Microsoft .NET Framework 4.7 Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Microsoft .NET Framework 4.6.2 Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
 - [Microsoft .NET Framework 4.6.2 Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
@@ -187,21 +185,21 @@ Aşağıdaki tabloda, desteklenen dilleri listeler.
 | Arapça                | ar      |
 | Çekçe                 | cs      |
 | Danca                | da      |
-| Hollanda dili                 | NL      |
-| Fince               | Fi      |
-| Fransızca                | FR      |
-| Almanca                | Gizle      |
+| Hollanda dili                 | nl      |
+| Fince               | fi      |
+| Fransızca                | fr      |
+| Almanca                | de      |
 | Yunanca                 | el      |
 | İbranice                | Müşterinizle      |
 | Macarca             | hu      |
-| İtalyanca               | Bunu      |
+| İtalyanca               | it      |
 | Japonca              | ja      |
 | Kore Dili                | Ko      |
 | Norveççe             | Yok      |
-| Lehçe                | PL      |
+| Lehçe                | pl      |
 | Portekizce (Brezilya)   | pt-BR   |
 | Portekizce (Portekiz) | pt-PT   |
-| Rusça               | RU      |
+| Rusça               | ru      |
 | Basitleştirilmiş Çince    | zh-CHS  |
 | İspanyolca               | ES      |
 | İsveç dili               | sv      |

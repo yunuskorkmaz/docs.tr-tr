@@ -1,18 +1,18 @@
 ---
 title: Docker nedir?
 description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e84e12d57aab853645297db84953160c4ee1141
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -28,13 +28,13 @@ Geliştiriciler, geliştirme ortamları Windows, Linux veya macOS kullanabilir. 
 
 Geliştirme ortamlarında kapsayıcıları barındırmak ve ek geliştirici araçları sağlamak için Docker gelir [Docker Community Edition (CE)](https://www.docker.com/community-edition) macOS veya Windows için. Bu ürünler gerekli VM (kapsayıcıları barındırmak için Docker ana bilgisayarı) yükleyin. Docker de kullanılabilir hale getirir [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), Kurumsal geliştirme için tasarlanmıştır ve yapı BT ekipleri tarafından kullanılan, sevk ve büyük iş açısından kritik uygulamalar üretimde çalıştırın.
 
-Çalıştırmak için [Windows kapsayıcıları](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), çalışma zamanları iki tür vardır:
+Çalıştırmak için [Windows kapsayıcıları](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview), çalışma zamanları iki tür vardır:
 
 -   **Windows Server kapsayıcı** bu çalışma zamanı işlemi ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Bir Windows Server kapsayıcı bir çekirdek ana bilgisayarda çalışan tüm kapsayıcıları ve kapsayıcı ana bilgisayar ile paylaşır.
 
 -   **Hyper-V kapsayıcı** bu her kapsayıcı yüksek oranda iyileştirilmiş bir VM'de çalıştıran Windows Server kapsayıcıları tarafından sağlanan yalıtımı genişletir. Bu yapılandırmada, çekirdek kapsayıcı konağının Hyper-V daha iyi yalıtım sağlayan kapsayıcıları ile paylaşılmaz.
 
-Bu kapsayıcılar görüntülerinin aynı şekilde oluşturulur ve aynı işlevi. Kapsayıcı görüntüden nasıl oluşturulduğunu farktır — bir Hyper-V kapsayıcı çalıştıran ek bir parametre gerektirir. Ayrıntılar için bkz [Hyper-V kapsayıcıları](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+Bu kapsayıcılar görüntülerinin aynı şekilde oluşturulur ve aynı işlevi. Kapsayıcı görüntüden nasıl oluşturulduğunu farktır — bir Hyper-V kapsayıcı çalıştıran ek bir parametre gerektirir. Ayrıntılar için bkz [Hyper-V kapsayıcıları](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).
 
 ## <a name="comparing-docker-containers-with-vms"></a>Docker kapsayıcılarını VM'ler ile karşılaştırma
 

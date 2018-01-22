@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>İzlenecek yol: Profesyonel Stilde ToolStrip Denetimi Oluşturma
 Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> türetilmiş kendi sınıfı yazarak profesyonel görünümünü ve davranışını denetler <xref:System.Windows.Forms.ToolStripProfessionalRenderer> türü.  
@@ -44,7 +44,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> türetilmi�
  Bu konuda tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: bir profesyonel stilde ToolStrip denetimi oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu kılavuzu tamamlamak için gerekir:  
@@ -60,7 +60,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> türetilmi�
   
 2.  İçinde **Çözüm Gezgini**, projenin varsayılan denetim seçim dilinizi bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosya silerek silin.  
   
-     Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Kaldır, silme ve dışlama öğeleri](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Yeni bir ekleme <xref:System.Windows.Forms.UserControl> öğesinin **StackViewLibrary** projesi. Yeni kaynak dosyasını, temel bir ad verin `StackView`.  
   
@@ -132,7 +132,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> türetilmi�
   
 8.  Yeniden Adlandır `mailStackButton_Click` olay işleyicisine `stackButton_Click`.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: bir tanımlayıcı (Visual Basic) yeniden adlandırmak](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Daha fazla bilgi için bkz: [nasıl yapılır: bir tanımlayıcı (Visual Basic) yeniden adlandırmak](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Aşağıdaki kodu ekleyin `stackButton_Click` olay işleyicisi.  
   
@@ -146,7 +146,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> türetilmi�
 12. 10 ve 11. adımları tekrarlayarak `contactsStackButton` ve `tasksStackButton` kontrol eder.  
   
 ## <a name="defining-icons"></a>Simgeler tanımlama  
- Her `StackView` düğmesi ilişkili bir simge bulunur. Kolaylık olması için her bir simgeyi Base64 ile kodlanmış bir dize hangi önce seri temsil edilen bir <xref:System.Drawing.Bitmap> buradan oluşturulur. Bir üretim ortamında, bir kaynak olarak bit eşlem verileri depolamak ve Windows Forms Tasarımcısı'nda, simgeler görünür. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms için arka plan görüntüleri ekleme](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Her `StackView` düğmesi ilişkili bir simge bulunur. Kolaylık olması için her bir simgeyi Base64 ile kodlanmış bir dize hangi önce seri temsil edilen bir <xref:System.Drawing.Bitmap> buradan oluşturulur. Bir üretim ortamında, bir kaynak olarak bit eşlem verileri depolamak ve Windows Forms Tasarımcısı'nda, simgeler görünür. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms için arka plan görüntüleri ekleme](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Simgeler tanımlamak için  
   

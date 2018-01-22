@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 COM istemcisi .NET nesnesi aradığında, ortak dil çalışma zamanı yönetilen nesneyi ve nesne için bir COM aranabilir sarmalayıcısı (saat) oluşturur. Bir .NET nesnesine başvuru için doğrudan COM istemcileri saatin tersi YÖNDE bir proxy olarak yönetilen nesne için kullanın.  
@@ -58,11 +58,11 @@ COM arabirimleri ve COM aranabilir sarmalayıcısı
   
 |Arabirim|Açıklama|  
 |---------------|-----------------|  
-|**IDispatch**|Geç bağlama türü bir mekanizma sağlar.|  
+|**Idispatch**|Geç bağlama türü bir mekanizma sağlar.|  
 |**IerrorInfo**|Hata, kaynağı, bir Yardım dosyası, Yardım içeriği ve hata tanımlı arabirimi GUID metinsel açıklaması sağlar (her zaman **GUID_NULL** .NET sınıfları için).|  
-|**IProvideClassInfo'yu**|Erişim kazanmak COM istemcilerinde etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|  
+|**IprovideClassInfo**|Erişim kazanmak COM istemcilerinde etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|  
 |**IsupportErrorInfo**|Yönetilen Nesne destekleyip desteklemediğini belirlemek bir COM istemcisi sağlar **IErrorInfo** arabirimi. Bu durumda, son özel durum nesnesi için bir işaretçi almak istemci sağlar. Tüm yönetilen türleri Destek **IErrorInfo** arabirimi.|  
-|**ITypeInfo**|Tlbexp.exe tarafından üretilen türü bilgileri tam olarak aynıdır bir sınıf için tür bilgiler sağlar.|  
+|**ItypeInfo**|Tlbexp.exe tarafından üretilen türü bilgileri tam olarak aynıdır bir sınıf için tür bilgiler sağlar.|  
 |**IUnknown**|Standart uygulamasını sağlar **IUnknown** hangi COM istemcisi saatin tersi YÖNDE ömrü yönetir ve türü zorlama sağlar arabirimi.|  
   
  Yönetilen bir sınıf, aşağıdaki tabloda açıklanan COM arabirimleri de sağlayabilirsiniz.  
@@ -71,7 +71,7 @@ COM arabirimleri ve COM aranabilir sarmalayıcısı
 |---------------|-----------------|  
 |(_*Classname*) sınıf arabirimi|Çalışma zamanı tarafından kullanıma sunulan ve açıkça tanımlanmış arabirimi, tüm ortak arabirimleri, yöntemler, özellikler ve yönetilen bir nesne üzerinde açıkça gösterilen alanları kullanıma sunar.|  
 |**IConnectionPoint** ve **IConnectionPointContainer**|Temsilci tabanlı olaylar (olay aboneleri kaydettirmek için bir arabirim) kaynak nesneler için arabirim.|  
-|**Idispatchex**|Sınıf uyguluyorsa çalışma zamanı tarafından sağlanan arabirim **IExpando**. **Idispatchex** arabirimi uzantısıdır **IDispatch** aksine, arabirim **IDispatch**, numaralandırma, ekleme, silme, sağlar ve büyük küçük harfe duyarlı üyeleri çağrılıyor.|  
+|**IdispatchEx**|Sınıf uyguluyorsa çalışma zamanı tarafından sağlanan arabirim **IExpando**. **Idispatchex** arabirimi uzantısıdır **IDispatch** aksine, arabirim **IDispatch**, numaralandırma, ekleme, silme, sağlar ve büyük küçük harfe duyarlı üyeleri çağrılıyor.|  
 |**IEnumVARIANT**|Arabirim koleksiyon türü sınıfları için sınıf uyguluyorsa, koleksiyonundaki nesneleri numaralandırır **IEnumerable**.|  
   
 ## <a name="introducing-the-class-interface"></a>Sınıf arabirimi Tanıtımı  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)  
  [COM Sarmalayıcıları](../../../docs/framework/interop/com-wrappers.md)  
  [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Benzetirme COM arabirimleri](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Benzetirme COM arabirimleri](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)

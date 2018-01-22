@@ -9,11 +9,11 @@ ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd05a066befd779163e5d6971d9e5fa2729cadfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 88d68c81a016882f06cf729947d78939a882273b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>Ayrılmış alanlar sınırlayıcıları olduğu için hiçbir şey okunamıyor veya boş
 `TextFieldParser` Dosyasından çünkü okuyamıyor `Delimiters` özelliği ayarlanmış `Nothing` veya boş.  
@@ -23,8 +23,8 @@ ms.lasthandoff: 11/21/2017
 -   İçin geçerli bir değer sağlamanız `Delimiters`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [TextFieldParser.SetDelimiters yöntemi](http://msdn.microsoft.com/en-us/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)  
- [TextFieldParser.Delimiters özelliği](http://msdn.microsoft.com/en-us/4eb18f4d-3011-40a9-b668-be93eed0444f)  
- [Nasıl yapılır: virgülle ayrılmış metin dosyalarını okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- [TextFieldParser nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
- [TextFieldParser nesnesiyle metin dosyalarını ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+ [TextFieldParser.SetDelimiters yöntemi](http://msdn.microsoft.com/library/21fa40ec-5866-4d0e-9fd9-c708a190dcc9)  
+ [TextFieldParser.Delimiters Property](http://msdn.microsoft.com/library/4eb18f4d-3011-40a9-b668-be93eed0444f)  
+ [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [TextFieldParser Nesnesi](../../visual-basic/language-reference/objects/textfieldparser-object.md)  
+ [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

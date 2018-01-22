@@ -1,5 +1,5 @@
 ---
-title: '&lt;NET.TCP&gt;'
+title: '&lt;net.tcp&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3d22b6feef80dbff8c7f20b130ce2b0f9702c9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61b799afa1761e59c5cedf5b14eadcaf6fcaada0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
+# <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Ağ Yapılandırması ayarlarını belirtir. TCP bağlantı noktası paylaşımı aynı TCP bağlantı noktasını paylaşmak birden çok işlemlerinin sağlayan hizmet.  
   
- \<system.serviceModel.activation >  
-\<NET.TCP >  
+ \<system.serviceModel.activation>  
+\<net.tcp>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -79,12 +79,12 @@ Ağ Yapılandırması ayarlarını belirtir. TCP bağlantı noktası paylaşım�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
+|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağlantı noktası paylaşma hakkında daha fazla bilgi için bkz: [Net.TCP bağlantı noktası paylaşma](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded). Paylaşım Hizmeti bağlantı noktasını yapılandırmak nasıl anlamak için bkz: [Net.TCP bağlantı noktası Paylaşımı hizmeti yapılandırma](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Bağlantı noktası paylaşma hakkında daha fazla bilgi için bkz: [Net.TCP bağlantı noktası paylaşma](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Paylaşım Hizmeti bağlantı noktasını yapılandırmak nasıl anlamak için bkz: [Net.TCP bağlantı noktası Paylaşımı hizmeti yapılandırma](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Net.TCP Bağlantı Noktası Paylaşımı](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Net.TCP Bağlantı Noktası Paylaşımı](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 İçinde [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], istemciler için güvenlik gereksinimlerini hizmet belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. güvenli bir hizmet oluşturma [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- Yapılandırmada istemci kimlik bilgilerini ayarlamak için ekleme bir [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) yapılandırma dosyası öğesi. Ayrıca, hizmetin uç noktasına eklenen davranışı öğesi bağlanmalıdır kullanarak `behaviorConfiguration` özniteliği [ \<uç noktası >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnekte gösterildiği gibi öğesi. Değeri `behaviorConfiguration` özniteliği davranışı değerini eşleşmelidir `name` özniteliği.  
+ Yapılandırmada istemci kimlik bilgilerini ayarlamak için ekleme bir [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) yapılandırma dosyası öğesi. Ayrıca, hizmetin uç noktasına eklenen davranışı öğesi bağlanmalıdır kullanarak `behaviorConfiguration` özniteliği [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) aşağıdaki örnekte gösterildiği gibi öğesi. Değeri `behaviorConfiguration` özniteliği davranışı değerini eşleşmelidir `name` özniteliği.  
   
  `<configuration>`  
   

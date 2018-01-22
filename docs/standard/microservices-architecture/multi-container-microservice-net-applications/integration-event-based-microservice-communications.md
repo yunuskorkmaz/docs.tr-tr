@@ -1,7 +1,7 @@
 ---
 title: "Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bfa7a3b732c67b568f0d68b1811a1ce9bb336a7e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 50ab0be6b92304eee4bc46643c867ee2827fc805
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
 
@@ -82,7 +82,7 @@ Olay bus gözlemci deseni ve yayımlama ile ilgili-düzeni abone olun.
 
 ### <a name="publish-subscribe-pubsub-pattern"></a>Yayımlama-abone olma (Pub/alt) düzeni 
 
-Amacı [Pub/alt düzeni](https://msdn.microsoft.com/en-us/library/ff649664.aspx) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetler bildirmek istediğiniz. Ancak gözlemci ve Pub/alt desenleri arasında önemli bir fark yoktur. Bunlar "birbirine bilmesi" gözlemci deseninde yayın gözlemcilerin için doğrudan observable gerçekleştirilir. Ancak Pub/alt düzeni kullanırken yayımcı ve abone tarafından bilinen aracısı veya ileti aracısı veya olay veri yolu, adlı üçüncü bir bileşen yok. Bu nedenle, Pub/alt düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılır.
+Amacı [Pub/alt düzeni](https://msdn.microsoft.com/library/ff649664.aspx) gözlemci deseni ile aynıdır: belirli olaylar gerçekleştiğinde diğer hizmetler bildirmek istediğiniz. Ancak gözlemci ve Pub/alt desenleri arasında önemli bir fark yoktur. Bunlar "birbirine bilmesi" gözlemci deseninde yayın gözlemcilerin için doğrudan observable gerçekleştirilir. Ancak Pub/alt düzeni kullanırken yayımcı ve abone tarafından bilinen aracısı veya ileti aracısı veya olay veri yolu, adlı üçüncü bir bileşen yok. Bu nedenle, Pub/alt düzeni kullanırken, yayımcı ve aboneleri tam olarak belirtilen olay veri yolu veya ileti Aracısı sayesinde birbirinden ayrılır.
 
 ### <a name="the-middleman-or-event-bus"></a>Middleman veya olay veri yolu 
 

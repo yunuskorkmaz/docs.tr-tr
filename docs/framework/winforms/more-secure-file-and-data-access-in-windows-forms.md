@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  
@@ -362,7 +362,7 @@ public void Write()
 ## <a name="database-access"></a>Veritabanı erişimi  
  Bir veritabanına erişmek için gerekli izinleri veritabanı sağlayıcısı bağlı olarak farklılık; Ancak, uygun izinlerle çalışmakta olan uygulamalar bir veritabanı bir veri bağlantısı üzerinden erişebilirsiniz. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişim güvenliği ve ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Kısmi güvende çalıştırmak için uygulamanızın istediğinden doğrudan bir veritabanı erişemiyorsanız, verilerinize erişmek bir alternatif anlamına gelir gibi bir Web hizmetini kullanabilirsiniz. Bir Web hizmeti, bir ağ üzerinden programlı olarak erişilebilir yazılım parçasıdır. Web Hizmetleri ile uygulamaları kodu Grup dilimlerinde veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgeleri uygulamalarda sitelerinin bunları aynı sunucu üzerinde barındırılan bir Web hizmetini çağırmak etkinleştirir kaynak erişim hakkı verilir. Daha fazla bilgi için bkz: [ASP.NET AJAX Web hizmetlerinde](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Kısmi güvende çalıştırmak için uygulamanızın istediğinden doğrudan bir veritabanı erişemiyorsanız, verilerinize erişmek bir alternatif anlamına gelir gibi bir Web hizmetini kullanabilirsiniz. Bir Web hizmeti, bir ağ üzerinden programlı olarak erişilebilir yazılım parçasıdır. Web Hizmetleri ile uygulamaları kodu Grup dilimlerinde veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgeleri uygulamalarda sitelerinin bunları aynı sunucu üzerinde barındırılan bir Web hizmetini çağırmak etkinleştirir kaynak erişim hakkı verilir. Daha fazla bilgi için bkz: [ASP.NET AJAX Web hizmetlerinde](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Kayıt defteri erişimi  
  <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sisteminin kayıt defterine erişim denetler. Varsayılan olarak, yerel olarak çalışan yalnızca uygulamaları kayıt erişebilir.  <xref:System.Security.Permissions.RegistryPermission>yalnızca bir uygulama kayıt defteri erişimi deneyin hakkı verir; işletim sistemi hala kayıt defterindeki güvenlik zorladığından, erişim başarılı olur, garanti etmez.  

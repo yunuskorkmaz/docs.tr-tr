@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 75723b03468c2e7aeda765f2dabfc30e394c8c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] şablonlarıdır içinde kullanabileceğiniz önceden tanımlanmış proje ve öğe şablonları [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hızlı bir şekilde oluşturmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetler ve çevresindeki uygulamalar.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  Var olan bir Web projesi projesiyse hizmet ana bilgisayar dosyası (service1.svc) da oluşturulur.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmet proje ve öğe şablonu.  
- Bu şablonlar oluşturma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erişilebilir bir iş akışı olan bir iş akışı hizmeti, barındırma hizmetleri web hizmeti ister. Ayrı şablonları XAML veya kesinlik temelli programlama modelleri için mevcut. Şablonları kullanarak sıralı ya da Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation öğreticileri](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. iş akışı projeleri oluşturma, [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Bu şablonlar oluşturma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] erişilebilir bir iş akışı olan bir iş akışı hizmeti, barındırma hizmetleri web hizmeti ister. Ayrı şablonları XAML veya kesinlik temelli programlama modelleri için mevcut. Şablonları kullanarak sıralı ya da Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz: [Windows Workflow Foundation öğreticileri](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz. iş akışı projeleri oluşturma, [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]İş akışları kullanılan XOML türü yerine kodunu olanları temel Tasarımcısı daha iyi yanıt olur. XOML iş akışı oluşturulması için varsayılan iş akışı türüdür.  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6adbaafe170cf3f5398677d5df3b3d2ff0a95abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72b75451d69e107b78152b301027f902ff77a25d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma
 Arabirimini uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [OData: hizmeti meta veri belgesi](http://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Kullandığınızda, bu aracı tarafından döndürülen meta veriler için bir başvuru eklemek için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projede akış, aşağıdaki eylemleri gerçekleştirir:  
@@ -32,7 +32,7 @@ Arabirimini uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includ
     > [!NOTE]
     >  Döndürülen meta veri istemci projesinde bir .edmx dosyası olarak depolanır. Entity Framework tarafından kullanılan bir .edmx dosyasının biçimlendirmek aynı olmadığı için varlık veri modeli Tasarımcısı'nı kullanarak bu .edmx dosyasının açılamaz. Bu meta veri dosyası, herhangi bir metin düzenleyicisi veya XML düzenleyicisi kullanarak görüntüleyebilirsiniz. Daha fazla bilgi için bkz: [ \[MC EDMX\]: Varlık veri modeli için Veri Hizmetleri paketleme biçimi](http://go.microsoft.com/fwlink/?LinkID=178833) belirtimi  
   
--   Hizmet bir gösterimini devralan bir varlık kapsayıcı sınıfı olarak oluşturur <xref:System.Data.Services.Client.DataServiceContext>. Bu oluşturulan varlık kapsayıcı sınıfı varlık veri modeli araçları varlık kapsayıcıya benzer. Daha fazla bilgi için bkz: [nesne Hizmetleri'ne Genel Bakış (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
+-   Hizmet bir gösterimini devralan bir varlık kapsayıcı sınıfı olarak oluşturur <xref:System.Data.Services.Client.DataServiceContext>. Bu oluşturulan varlık kapsayıcı sınıfı varlık veri modeli araçları varlık kapsayıcıya benzer. Daha fazla bilgi için bkz: [nesne Hizmetleri'ne Genel Bakış (Entity Framework)](http://msdn.microsoft.com/library/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 -   Hizmet meta verilerde bulduğu veri modeli türleri için veri sınıfları oluşturur.  
   

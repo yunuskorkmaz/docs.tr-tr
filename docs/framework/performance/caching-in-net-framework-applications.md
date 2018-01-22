@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynağından veri almak yerine önbellekten veri alabilirsiniz. Bu, performans ve ölçeklenebilirlik iyileştirebilir. Ayrıca, veri kaynağı geçici olarak devre dışı olduğunda kullanılabilir hale getirir verileri önbelleğe alma.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 >  Yeni uygulamaları geliştirirken kullanmanız önerilir <xref:System.Runtime.Caching.MemoryCache> sınıfı. Sağlanan API <xref:System.Runtime.Caching> ad alanı içinde sağlanan API benzer <xref:System.Web.Caching.Cache> ad alanı. Bu nedenle, API ASP.NET önceki sürümlerinin önbelleğe alınmasını kullandıysanız tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe almayı kullanmak üzere nasıl bir örnek için bkz: [izlenecek yol: uygulama veri önbelleğe alma ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Çıktı önbelleği  
- Önbellek uygulama verileri için el ile kullandığınız <xref:System.Runtime.Caching.MemoryCache> ASP.NET sınıfta. ASP.NET ayrıca çıktı önbelleği, sayfalar, denetimleri ve HTTP yanıtlarını oluşturulan çıktısını bellekte depolayan destekler. Bir ASP.NET Web sayfası veya Web.config dosyasında ayarlarını kullanarak bildirimli olarak çıktı önbelleği yapılandırabilirsiniz. Daha fazla bilgi için bkz: [(ASP.NET Ayarlar Şeması) önbelleğe alma için outputCache Ögesi](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Önbellek uygulama verileri için el ile kullandığınız <xref:System.Runtime.Caching.MemoryCache> ASP.NET sınıfta. ASP.NET ayrıca çıktı önbelleği, sayfalar, denetimleri ve HTTP yanıtlarını oluşturulan çıktısını bellekte depolayan destekler. Bir ASP.NET Web sayfası veya Web.config dosyasında ayarlarını kullanarak bildirimli olarak çıktı önbelleği yapılandırabilirsiniz. Daha fazla bilgi için bkz: [(ASP.NET Ayarlar Şeması) önbelleğe alma için outputCache Ögesi](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  ASP.NET çıktı önbelleğine sağlayıcılar oluşturarak çıktı önbelleği genişletmenizi sağlar. Özel sağlayıcılar kullanarak, diskleri, bulut depolama ve dağıtılmış önbellek motorları gibi diğer depolama aygıtlarını kullanarak önbelleğe alınmış içeriği depolayabilirsiniz. Özel çıkış önbelleği sağlayıcısı oluşturmak için türeyen bir sınıf oluşturun. <xref:System.Web.Caching.OutputCacheProvider> sınıfı ve uygulamayı özel çıkış önbelleği sağlayıcısı kullanacak şekilde yapılandırın.  
   

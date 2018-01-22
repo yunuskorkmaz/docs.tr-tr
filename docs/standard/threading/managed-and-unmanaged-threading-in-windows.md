@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 56d094e3b5a834b77cce58f1f554e4e2871e3e46
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
-Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kod yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı kodu yönetilen yürütme ortamını içinde hiç yürütülen tüm iş parçacıkları, işlemindeki izler. Başka bir iş parçacığı izlemez. İş parçacığı, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamı girebilirsiniz, (çalışma zamanı yönetilen nesneler olarak yönetilmeyen world COM nesnelerine kullanıma sunar nedeniyle), COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) işlevi ve platform çağırma.  
+Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kod yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı kodu yönetilen yürütme ortamını içinde hiç yürütülen tüm iş parçacıkları, işlemindeki izler. Başka bir iş parçacığı izlemez. İş parçacığı, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamı girebilirsiniz, (çalışma zamanı yönetilen nesneler olarak yönetilmeyen world COM nesnelerine kullanıma sunar nedeniyle), COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) işlevi ve platform çağırma.  
   
  Yönetilmeyen bir iş parçacığı aracılığıyla çalışma zamanı girdiğinde, COM aranabilir sarmalayıcısı o iş parçacığı bir iç yönetilen aramak için iş parçacığı yerel deposu sistem örneğin denetler <xref:System.Threading.Thread> nesnesi. Çalışma zamanı, zaten bulunması durumunda, bu iş parçacığı bilmez. Ancak, bir bulamıyorsanız, çalışma zamanı yeni yapılar <xref:System.Threading.Thread> nesne ve o iş parçacığı iş parçacığı yerel depolama alanına yükler.  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a25b0dc81a6511698394eb86343f09051befc87f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee932e7cb4a3333ac56242e281ec64d3016746f9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Windows Formları Denetimini bir Türe Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen bir nesne yerine bir tür bir denetimi bağlamak gerekir. Genellikle bir denetim tasarım zamanında ne zaman veri kullanılamıyor olabilir, ancak hala bir türün ortak arabirimi verileri görüntülemek için veri bağlama denetimleri istediğiniz bir türe bağlama gerekir. Aşağıdaki yordamlarda yeni bir oluşturma gösterilmektedir <xref:System.Windows.Forms.BindingSource> diğer bir deyişle bir tür için sınır ve ardından tür özelliklerinden biri nasıl bağlanacağı <xref:System.Windows.Forms.TextBox.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox>.  
@@ -31,7 +31,7 @@ Verilerle etkileşimli denetimleri oluştururken, bazen bir nesne yerine bir tü
   
 1.  Bir Windows Forms projesi oluşturun.  
   
-     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  İçinde **tasarım** görüntülemek için sürükleyin bir <xref:System.Windows.Forms.BindingSource> forma bileşen.  
   

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Çoğu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] örnekleri Internet Information Services (IIS) barındırılan ve bir ortak sanal dizinden çalıştırın. Bu bir kerelik Kurulum prosedürü disk üzerinde bir klasör oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Varsa [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yüklü değil ve işletim sisteminizi Windows Server 2008 SP2 değil ya da yüklemeyi daha sonra [düzeltme 251798](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Aşağıdaki komutları çalıştırın. Neden bu komutları çalıştırmanız gerekir hakkında daha fazla bilgi için bkz: [IIS barındırılan hizmet başarısız](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Aşağıdaki komutları çalıştırın. Neden bu komutları çalıştırmanız gerekir hakkında daha fazla bilgi için bkz: [IIS barındırılan hizmet başarısız](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  IIS yeniden yüklenirse, aşağıdaki komutları yeniden çalıştırılması gerekir.  

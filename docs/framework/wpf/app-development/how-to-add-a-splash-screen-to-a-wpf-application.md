@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Nasıl yapılır: WPF Uygulamasına Giriş Ekranı Ekleme
 Bu konuda bir başlangıç penceresi eklemeyi gösterir veya *ekranı*, bir Windows Presentation Foundation (WPF) uygulaması için.  
@@ -32,7 +32,7 @@ Bu konuda bir başlangıç penceresi eklemeyi gösterir veya *ekranı*, bir Wind
   
 1.  Oluşturun veya ekranı için kullanmak istediğiniz görüntü bulun. Windows görüntüleme bileşeni (WIC) tarafından desteklenen herhangi bir resim biçimi kullanabilirsiniz. Örneğin, BMP, GIF, JPEG, PNG veya TIFF biçimini kullanabilirsiniz.  
   
-2.  Görüntü dosyası WPF uygulaması projesine ekleyin. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2.  Görüntü dosyası WPF uygulaması projesine ekleyin. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 3.  Çözüm Gezgini'nde, görüntüyü seçin.  
   
@@ -61,4 +61,4 @@ Bu konuda bir başlangıç penceresi eklemeyi gösterir veya *ekranı*, bir Wind
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.SplashScreen>  
- [NIB: nasıl yapılır: Varolan öğeleri için bir proje ekleyin](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB: nasıl yapılır: Varolan öğeleri için bir proje ekleyin](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

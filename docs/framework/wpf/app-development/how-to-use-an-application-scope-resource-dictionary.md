@@ -21,17 +21,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Nasıl yapılır: Uygulama Kapsamı Kaynak Sözlüğü Kullanma
 Bu örnek bir uygulama kapsamlı özel kaynak sözlüğü tanımlayın ve nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Application>Paylaşılan kaynaklar için bir uygulama kapsamı deposu gösterir: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> özelliği olan bir örneğine ilk <xref:System.Windows.ResourceDictionary> türü. Alma ve ayarlama kullanarak uygulama kapsamı özelliklerini olduğunda bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: almak ve bir uygulama kapsamı kaynak ayarlamak](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application>Paylaşılan kaynaklar için bir uygulama kapsamı deposu gösterir: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> özelliği olan bir örneğine ilk <xref:System.Windows.ResourceDictionary> türü. Alma ve ayarlama kullanarak uygulama kapsamı özelliklerini olduğunda bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: almak ve bir uygulama kapsamı kaynak ayarlamak](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Kullanılarak ayarlanan birden çok kaynaklarınız varsa <xref:System.Windows.Application.Resources%2A>, bunun yerine özel bir kaynak sözlüğü bu kaynakları depolamak ve ayarlamak için kullanabileceğiniz <xref:System.Windows.Application.Resources%2A> onunla yerine. XAML kullanarak özel bir kaynak sözlüğü bildirme nasıl gösterir.
   

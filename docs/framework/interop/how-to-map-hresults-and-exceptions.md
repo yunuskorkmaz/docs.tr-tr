@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı iki arasında geçiş işler. .NET Framework'teki her özel durum sınıfı bir HRESULT eşler.  
@@ -91,10 +91,10 @@ CMyClass::MethodThatThrows
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
 |**COR_E_INVALIDCAST veya E_NOINTERFACE**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
-|**COR_E_INVALIDFILTERCRITERIA**|**Invalidfiltercriteriaexception**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
-|**COR_E_IO**|**Ioexception**|  
+|**COR_E_IO**|**IOException**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
 |**COR_E_METHODACCESS**|**MethodAccessException**|  
 |**COR_E_MISSINGFIELD**|**MissingFieldException**|  
@@ -122,7 +122,7 @@ CMyClass::MethodThatThrows
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
 |**COR_E_THREADABORTED**|**ThreadAbortException**|  
-|**COR_E_THREADINTERRUPTED**|**Threadınterruptedexception**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
 |**COR_E_THREADSTATE**|**ThreadStateException**|  
 |**COR_E_THREADSTOP**|**ThreadStopException**|  
 |**COR_E_TYPELOAD**|**TypeLoadException**|  
@@ -146,10 +146,10 @@ CMyClass::MethodThatThrows
 |**İleti**|Döndürülen dize **IErrorInfo -> GetDescription**.|  
 |**Kaynak**|Döndürülen dize **IErrorInfo -> GetSource**.|  
 |**StackTrace**|Yığın izleme.|  
-|**TARGETSITE**|Başarısız olan döndürülen yöntemin adını HRESULT.|  
+|**TargetSite**|Başarısız olan döndürülen yöntemin adını HRESULT.|  
   
  Özel alanlar, gibi **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Gelişmiş COM birlikte çalışabilirliği](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Özel Durumlar](../../../docs/standard/exceptions/index.md)

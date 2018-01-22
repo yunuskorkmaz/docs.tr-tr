@@ -1,7 +1,7 @@
 ---
 title: "Kısmi hata işleme stratejileri"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Kısmi hata işleme stratejileri"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86b8ccc467128970b60ba37f890057654ce682ef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Kısmi hata işleme stratejileri
 
@@ -39,10 +39,10 @@ Kısmi hatalar postalarla stratejileri arasında şunlar yer alır.
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Esnekliği ekleme ve performansı en iyi duruma getirme**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
 -   **Bulkhead.** GitHub depo. Uygulama Polly ilkesiyle. \
-    [*https://github.com/App-vNext/Polly/Wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 -   **Azure için esnek uygulamalar tasarlama**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)

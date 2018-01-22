@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür ortaya çıkarır tahmin etmek mümkün olduğundan, bir uygulamanın tüm saldırılarına karşı güvenli olduğu garanti edebilir noktası olacaktır. Buna karşılık, yalnızca hiç kimse olduğundan henüz bulunan (veya yayımlanmış) güvenlik açıkları sistemindeki gelmez hiçbiri mevcut veya mevcut. Yanı sıra güvenlik için proje tasarım aşamasında planlama güvenlik uygulama ömrü boyunca nasıl sürdürüleceği planlamak gerekir.  
@@ -78,7 +78,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilen ortamlar arasındaki etkileşimler açıklanmaktadır.|  
-|[Kod erişimi güvenliği](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework CA'LARDA açıklayan ek konulara bağlantılar içerir.|  
+|[Kod erişimi güvenliği](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|.NET Framework CA'LARDA açıklayan ek konulara bağlantılar içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
  En az ayrıcalık prensibi veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  
@@ -100,7 +100,7 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server'ı hedefleyen güvenli ADO.NET uygulamaları oluşturmak için kılavuzluk uygulama senaryoları ile SQL Server güvenlik genel bir bakış sağlar.|  
-|[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
+|[Veri erişim stratejileri için öneriler](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Verilere erişme ve veritabanı işlemleri için öneriler sağlar.|  
   
 ## <a name="security-policy-and-administration"></a>Güvenlik İlkesi ve yönetim  
  Yanlış kod erişim güvenliği (CAS) ilkesi yönetme, olası güvenlik zayıf oluşturabilirsiniz. Uygulama dağıtıldığında, güvenlik izleme teknikleri kullanılmalıdır ve yeni tehditleri değerlendirilen riskleri ortaya çıkan.  
@@ -109,11 +109,11 @@ Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bi
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[NIB: Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Oluşturma ve Güvenlik İlkesi'ni yönetme hakkında bilgi sağlar.|  
-|[NIB: İlke en iyi güvenlik uygulamaları](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
+|[NIB: Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Oluşturma ve Güvenlik İlkesi'ni yönetme hakkında bilgi sağlar.|  
+|[NIB: İlke en iyi güvenlik uygulamaları](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

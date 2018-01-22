@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7c3e34c2ceaf01f89c1e54f930991ee7e0a2b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
@@ -59,16 +59,16 @@ ms.lasthandoff: 12/22/2017
 |**/appdir:** *yolu*|Uygulamanın kök dizinini belirtir.|  
 |**Appname:** *applicationName*|Bulunacak veya oluşturulacak COM+ uygulamasının adını belirtir.|  
 |**/c**|Hedef uygulamayı oluşturur.|  
-|**/ componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
+|**/componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
 |**/exapp**|Varolan bir uygulamayı beklemek üzere aracı belirtir.|  
 |**/extlb**|Varolan bir tür kitaplığını kullanır.|  
-|**/FC**|Hedef uygulamayı bulur veya oluşturur.|  
+|**/fc**|Hedef uygulamayı bulur veya oluşturur.|  
 |**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/noreconfig**|Varolan bir hedef uygulamayı yeniden yapılandırmaz.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/parname:** *adı*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
 |**/reconfig**|Varolan bir hedef uygulamayı yeniden yapılandırır. Bu varsayılandır.|  
-|**TLB:** *typelibraryfile*|Yüklenecek tür kitaplığı dosyasını belirtir.|  
+|**/tlb:** *typelibraryfile*|Yüklenecek tür kitaplığı dosyasını belirtir.|  
 |**/u**|Hedef uygulamayı kaldırır.|  
 |**/quiet**|Sessiz modu belirtir; logo ve başarı iletisi görüntüsünü bastırır.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>Açıklamalar  
  Regsvcs.exe tarafından belirtilen kaynak derleme dosyası gerektirir *assemblyFile.dll*. Bu derlemenin tanımlayıcı ad ile imzalanması gerekir. Güçlü ad imzalama hakkında daha fazla bilgi için bkz: [bir derlemeyi tanımlayıcı adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Hedef uygulamanın ve tür kitaplığı dosyasının adları isteğe bağlıdır. *ApplicationName* bağımsız değişkeni kaynak derleme dosyasından oluşturulabilir ve Regsvcs.exe tarafından zaten yoksa, oluşturulur. *Typelibraryfile* bağımsız değişkeni bir tür kitaplığı adı belirtebilirsiniz. Bir tür kitaplığı adı belirtmezseniz, Regsvcs.exe derleme adını varsayılan olarak kullanır.  
   
- Regsvcs.exe bir bileşenin yöntemleri kaydettiğinde tabi olan [taleplerini](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) ve [bağlantı talepleri](../../../docs/framework/misc/link-demands.md) bu yöntemleri. Araç tam olarak güvenilen bir ortamda yürütüldüğünden, izin taleplerinin çoğu başarılı olur. Ancak, Regsvcs.exe bileşenleri için isteğe bağlı veya bağlantı bir istek tarafından korunan yöntemleriyle kaydı yapılamıyor <xref:System.Security.Permissions.StrongNameIdentityPermission> veya <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Regsvcs.exe bir bileşenin yöntemleri kaydettiğinde tabi olan [taleplerini](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) ve [bağlantı talepleri](../../../docs/framework/misc/link-demands.md) bu yöntemleri. Araç tam olarak güvenilen bir ortamda yürütüldüğünden, izin taleplerinin çoğu başarılı olur. Ancak, Regsvcs.exe bileşenleri için isteğe bağlı veya bağlantı bir istek tarafından korunan yöntemleriyle kaydı yapılamıyor <xref:System.Security.Permissions.StrongNameIdentityPermission> veya <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Regsvcs.exe'yi kullanmak için yerel bilgisayarda yönetici ayrıcalıklarına sahip olmanız gerekir.  
   

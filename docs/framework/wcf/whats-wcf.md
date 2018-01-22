@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], verileri zaman uyumsuz ileti bir hizmet uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya bir uygulamada barındırılan bir hizmete olabilir. Bir uç nokta veri Hizmeti uç noktasından ister bir hizmetin istemci olabilir. İletileri tek karakter veya XML olarak gönderilen sözcük kadar basit ya da bir ikili veri akışı kadar karmaşık olabilir. Bazı örnek senaryolar şunlardır:  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
      İletiler birkaç desenleri birinde değiştirilir. En yaygın düzeni, burada bir uç nokta verileri ikinci uç noktasından ister istek/yanıt Düzen yöneliktir. İkinci uç nokta yanıtlar. Tek bir uç nokta herhangi bir yanıt beklentisi olmadan bir ileti gönderir tek yönlü bir ileti gibi diğer düzenleri vardır. Daha karmaşık bir desen burada iki uç nokta bağlantı kurmak ve veri geri ve ileri bir anlık ileti programı benzer göndermek çift yönlü değişim deseni ' dir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]farklı ileti exchange uygulama düzenleri kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bkz [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).  
   
--   **Hizmet meta verileri**  
+-   **Service Metadata**  
   
      [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Hizmet meta verilerini WSDL, XML şeması ve WS-Policy gibi endüstri standartları belirtilen biçimlerini kullanarak yayımlamayı destekler. Bu meta veriler otomatik olarak oluşturmak ve erişmek için istemcileri yapılandırmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. Meta veriler, HTTP ve HTTPS yayımlanabilir veya Web hizmeti meta veri değişimi standart kullanma. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).  
   
@@ -111,4 +111,4 @@ ms.lasthandoff: 12/22/2017
  [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Belgeler için Kılavuz](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Windows Communication Foundation Örnekleri](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

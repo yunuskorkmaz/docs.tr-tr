@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama
 Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı davranışını sınama gerekir. Ayrı Windows tabanlı uygulama projesi oluşturun ve test form üzerindeki denetiminizi yerleştirin, ancak bu yordam, kullanışsız kullanılır. Daha hızlı ve kolay bir yolu kullanmaktır **UserControl Test kapsayıcısı** Visual Studio tarafından sağlanan. Bu test kapsayıcısı doğrudan Windows Denetim Kitaplığı projenizden başlatır.  
@@ -33,14 +33,14 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
 >  Yüklemek test kapsayıcısı için <xref:System.Windows.Forms.UserControl>, Denetim en az bir public oluşturucuya sahip olmalıdır.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 > [!NOTE]
 >  Kullanarak bir Visual C++ denetimi sınanamıyor **UserControl Test kapsayıcısı**.  
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Bir UserControl denetiminin çalışma zamanı davranışını sınamak için  
   
-1.  Adlı Windows Denetim Kitaplığı projesi oluşturma **TestContainerExample**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Adlı Windows Denetim Kitaplığı projesi oluşturma **TestContainerExample**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Label> gelen denetim **araç** denetimin tasarım yüzeyine.  
   
@@ -52,7 +52,7 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
   
 6.  Test kapsayıcısı kapatın.  
   
-7.  Başka bir kullanıcı denetimi Ekle **TestContainerExample** projesi. Ayrıntılar için bkz [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Başka bir kullanıcı denetimi Ekle **TestContainerExample** projesi. Ayrıntılar için bkz [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Button> gelen denetim **araç** denetimin tasarım yüzeyine.  
   
@@ -65,7 +65,7 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
   
 #### <a name="to-test-user-controls-from-another-project"></a>Test kullanıcısı için başka bir projeden denetler.  
   
-1.  Adlı Windows Denetim Kitaplığı projesi oluşturma **TestContainerExample2**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Adlı Windows Denetim Kitaplığı projesi oluşturma **TestContainerExample2**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.RadioButton> gelen denetim **araç** denetimin tasarım yüzeyine.  
   
@@ -82,4 +82,4 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
  [Nasıl yapılır: Bileşik Denetimler Yazma](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [İzlenecek yol: Visual C# İle Bileşik Denetim Yazma](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Kullanıcı denetimi Tasarımcısı](http://msdn.microsoft.com/en-us/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+ [Kullanıcı denetimi Tasarımcısı](http://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

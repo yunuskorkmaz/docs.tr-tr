@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Kalıcı bir yol için önceden tanımlanmış bir AutomationElement döndürmek için kullanın  
   
--   İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir sınama komut dosyaları gibi bir dosya iletişim kutusu veya menü öğesini açın ve bu nedenle UI Otomasyonu ağacında yok, şu anda, örneği oluşturulmadan değil öğelere erişim gerektirebilir. Bu öğeler yalnızca örneği yeniden oluşturma, veya "tekrar oynatma", belirli bir dizi tarafından [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] eylemleri kullanılarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Automationıd, Denetim desenleri ve olay dinleyicileri gibi özellikleri. Bkz: [Test komut Oluşturucu örnek](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) kullanan bir örnek [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ile kullanıcı etkileşimi dayalı test komut dosyaları oluşturmak için [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir sınama komut dosyaları gibi bir dosya iletişim kutusu veya menü öğesini açın ve bu nedenle UI Otomasyonu ağacında yok, şu anda, örneği oluşturulmadan değil öğelere erişim gerektirebilir. Bu öğeler yalnızca örneği yeniden oluşturma, veya "tekrar oynatma", belirli bir dizi tarafından [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] eylemleri kullanılarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Automationıd, Denetim desenleri ve olay dinleyicileri gibi özellikleri. Bkz: [Test komut Oluşturucu örnek](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) kullanan bir örnek [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ile kullanıcı etkileşimi dayalı test komut dosyaları oluşturmak için [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

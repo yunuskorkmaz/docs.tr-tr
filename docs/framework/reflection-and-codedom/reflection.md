@@ -33,14 +33,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b131b8b66315ffbb769eab059142f729cfaf2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
-Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirmeniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve bunların içinde gibi tanımlanan türleri [sınıfları](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [arabirimleri](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5), ve [değer türleri](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturmak ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönlerini ilgili konular için bkz: [ilgili konular](#related_topics) bu genel bakışta, sonunda.  
+Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirmeniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve bunların içinde gibi tanımlanan türleri [sınıfları](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [arabirimleri](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), ve [değer türleri](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturmak ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönlerini ilgili konular için bkz: [ilgili konular](#related_topics) bu genel bakışta, sonunda.  
   
  [Ortak dil çalışma zamanı](../../../docs/standard/clr.md) yükleyicisi yönetir [uygulama etki alanları](../../../docs/framework/app-domains/application-domains.md), aynı uygulama kapsama sahip nesneleri etrafında sınırlar tanımlanan hangi oluşturur. Bu yönetim uygun uygulama etki alanına her derlemesi yüklenirken ve her derleme içinde tür hiyerarşisini bellek düzenini denetleme içerir.  
   

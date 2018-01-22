@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67451a30e5681718e5b9cdd07468ac5bf20322bc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 41a17644d2d89b83822e64d48a6a12d0dccfc2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML şema tanımı aracı ve XML serileştirme
 XML şema tanımı Aracı'nı ([XML şema tanımı aracını (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) yanı sıra .NET Framework Araçları Windows® Yazılım Geliştirme Seti (SDK), bir parçası olarak yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
@@ -43,4 +43,4 @@ XML şema tanımı Aracı'nı ([XML şema tanımı aracını (XSD.exe'nin)](../.
  [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  [Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
- [.NET Framework Destek bağlama XML Şeması](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
+ [.NET Framework Destek bağlama XML Şeması](http://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

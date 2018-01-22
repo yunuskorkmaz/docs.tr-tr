@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik konuları açıklanmaktadır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Öneriler güvenli oluşturmak için izlemeniz gereken [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -109,7 +109,7 @@ Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik ko
   
      SQL ekleme saldırıları yapılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] kötü amaçlı bir sorgu koşulu ve parametre adları kullanılan değerleri giriş sağlayarak. SQL ekleme riskini önlemek için hiç kullanıcı girişi ile birleştirmelisiniz [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut metni.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)]Sorgu parametreleri değişmez değerleri kabul edildiğini her yerde kabul eder. Sorguyu doğrudan bir dış aracının injecting değişmez değerler yerine parametreli sorgular kullanmanız gerekir. Güvenli bir şekilde oluşturmak için Sorgu Oluşturucu yöntemleri kullanarak de dikkate almalısınız [varlık SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]Sorgu parametreleri değişmez değerleri kabul edildiğini her yerde kabul eder. Sorguyu doğrudan bir dış aracının injecting değişmez değerler yerine parametreli sorgular kullanmanız gerekir. Güvenli bir şekilde oluşturmak için Sorgu Oluşturucu yöntemleri kullanarak de dikkate almalısınız [varlık SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]ekleme saldırıları:  
   
@@ -143,7 +143,7 @@ Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik ko
  Aşağıdaki güvenlik hususlarını oluşturma ve varlık türleri ile çalışma olduğunda geçerlidir.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Bir ObjectContext uygulama etki alanları arasında paylaşmayın.  
- Paylaşımı bir <xref:System.Data.Objects.ObjectContext> ile birden fazla uygulama etki alanı bilgileri bağlantı dizesinde getirebilir. Bunun yerine, serileştirilmiş nesneler veya nesne grafiklerinin diğer uygulama etki alanı denetleyicisine aktarmak ve ardından bu nesnelerle ekleyin bir <xref:System.Data.Objects.ObjectContext> bu uygulama etki alanındaki. Daha fazla bilgi için bkz: [seri hale getirme nesnelerini](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Paylaşımı bir <xref:System.Data.Objects.ObjectContext> ile birden fazla uygulama etki alanı bilgileri bağlantı dizesinde getirebilir. Bunun yerine, serileştirilmiş nesneler veya nesne grafiklerinin diğer uygulama etki alanı denetleyicisine aktarmak ve ardından bu nesnelerle ekleyin bir <xref:System.Data.Objects.ObjectContext> bu uygulama etki alanındaki. Daha fazla bilgi için bkz: [seri hale getirme nesnelerini](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Tür güvenlik ihlallerini engeller.  
  Tür güvenliği ihlal edilirse [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nesnelerindeki veri bütünlüğünü garanti edemez. Güvenilmeyen uygulamaların tam güven kod erişim güvenliği ile çalışmasına izin ver tür güvenlik ihlallerini oluşabilir.  

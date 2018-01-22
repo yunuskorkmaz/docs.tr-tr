@@ -1,7 +1,7 @@
 ---
 title: "Altyapı saklama katmanını tasarlama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Altyapı saklama katmanını tasarlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9fd09ad4e9ff36e8ab2478ff3e1d5226974a4d17
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Altyapı saklama katmanını tasarlama
 
@@ -142,7 +142,7 @@ Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle u
      [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Depo düzeni**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
 -   **Depo düzeni: Bir veri Kalıcılık özeti**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)

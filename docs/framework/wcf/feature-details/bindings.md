@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir uygulama için yazılım nasıl onu diğer yazılımlarla iletişim kurduğu gelen nasıl yazılmış ayırır. Bağlamaları Aktarım, kodlama ve istemcileri ve Hizmetleri birbirleri ile iletişim kurması gereken protokol ayrıntılarını belirtmek için kullanılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]temel alınan hat gösterimine uç noktanın bağlama ayrıntıları çoğunu iletişim kuran tarafların üzerinde anlaşmaya varılan gerekir böylece oluşturmak için bağlamaları kullanır. Bunu elde etmenin en kolay yolu, bir hizmet bağlaması aynı hizmet kullandığı için uç nokta kullanmak istemcileri içindir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bunu yapmak için bkz: nasıl [kullanarak bağlamaları yapılandırma Windows Communication Foundation Hizmetleri ve istemcilere](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir uygulama için yazılım nasıl onu diğer yazılımlarla iletişim kurduğu gelen nasıl yazılmış ayırır. Bağlamaları Aktarım, kodlama ve istemcileri ve Hizmetleri birbirleri ile iletişim kurması gereken protokol ayrıntılarını belirtmek için kullanılır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]temel alınan hat gösterimine uç noktanın bağlama ayrıntıları çoğunu iletişim kuran tarafların üzerinde anlaşmaya varılan gerekir böylece oluşturmak için bağlamaları kullanır. Bunu elde etmenin en kolay yolu, bir hizmet bağlaması aynı hizmet kullandığı için uç nokta kullanmak istemcileri içindir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bunu yapmak için bkz: nasıl [kullanarak bağlamaları yapılandırma Windows Communication Foundation Hizmetleri ve istemcilere](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Bir bağlama bağlama öğelerinin koleksiyonu yapılır. Her uç nokta istemcileri ile nasıl iletişim kurduğu, bazı yönlerinin açıklar. Bir bağlama en az bir aktarım bağlama öğesi, (sağlayabilen aktarım bağlama öğesi varsayılan olarak) en az bir ileti kodlama bağlama öğesi içermelidir ve diğer herhangi bir sayıda Protokolü bağlama öğeleri. Bu açıklama dışında bir çalışma zamanı derlemeleri işlem kodu, çalışma zamanının katkıda bulunmak her bağlama öğesi sağlar.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  Kullanın ve bağlamaları değiştirmek açıklar, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] senaryoları desteklemek için sağlar.  
   
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  Nasıl tanımlanacağını açıklar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hizmetler ve istemcileri imperatively kodu ve bildirimli olarak Yapılandırması'nı kullanarak bağlamaları.  
   
  [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  

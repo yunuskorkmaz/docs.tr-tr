@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express kullanıcı örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) yalnızca SQL Server için .NET Framework veri sağlayıcısı kullanarak olduğunda kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri ekleyin ve SQL Server Express veritabanlarına bağlanmak için yerel bilgisayarlarında yönetici olmayan kullanıcıların verin. Her bir örnek tek kullanıcı, kullanıcı başına tek örnek olarak, güvenlik bağlamı altında çalışır.  
@@ -157,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   Herhangi bir tek kullanıcı uygulama burada veri paylaşımı gerekli değildir.  
   
--   ClickOnce dağıtımı. .NET Framework 2.0 (veya üstü) ve SQL Server Express hedef bilgisayarda zaten yüklü değilse, bir ClickOnce eylem sonucu olarak karşıdan yükleme paketi yüklü ve yönetici olmayan kullanıcılar tarafından kullanılır. Kurulumun bir parçası ise, yönetici SQL Server Express yüklemeniz gerektiğini unutmayın. Daha fazla bilgi için bkz: [Windows Forms uygulamaları için ClickOnce dağıtım](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   ClickOnce dağıtımı. .NET Framework 2.0 (veya üstü) ve SQL Server Express hedef bilgisayarda zaten yüklü değilse, bir ClickOnce eylem sonucu olarak karşıdan yükleme paketi yüklü ve yönetici olmayan kullanıcılar tarafından kullanılır. Kurulumun bir parçası ise, yönetici SQL Server Express yüklemeniz gerektiğini unutmayın. Daha fazla bilgi için bkz: [Windows Forms uygulamaları için ClickOnce dağıtım](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   Windows kimlik doğrulaması kullanarak ASP.NET barındıran ayrılmış. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulama, kimliğe bürünme kullanmayan ASPNET Windows hesabını kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaştığınız ve artık birbirinden yalıtılmış kalarak senaryolarında için kullanılmamalıdır.  
   

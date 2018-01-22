@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 402568a78ccb2f56c6adb108536edfb121440642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları açmadan bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
   
- Ayrıca yazdırabilirsiniz [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] çok kullanarak dosyaları <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerini <xref:System.Windows.Xps.XpsDocumentWriter>. Bu hakkında daha fazla bilgi için [XPS Belge yazdırma](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
+ Ayrıca yazdırabilirsiniz [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] çok kullanarak dosyaları <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerini <xref:System.Windows.Xps.XpsDocumentWriter>. Bu hakkında daha fazla bilgi için [XPS Belge yazdırma](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c).  
   
  Başka bir yolu yazdırma [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] kullanmaktır <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> veya <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> yöntemlerinin <xref:System.Windows.Controls.PrintDialog> denetim. Bkz: [yazdırma iletişim çağırma](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
   
@@ -61,7 +61,7 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
   
  Başlangıçta olacağından az XPSDrv kullanılabilir hemen yayımlandıktan sonra [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] ve [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], XPSDrv yazıcısı XPSDrv yazıcısı olarak gönderimi gerekebilir. Bunu yapmak için uygulamanızı çalıştıran bilgisayar aşağıdaki kayıt defteri anahtarında dosyaların listesini Pipelineconfig.xml'i ekleyin:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter >*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
   
  Burada  *\<PseudoXPSPrinter >* herhangi bir yazdırma sırasıdır. Makinenin daha sonra yeniden başlatılması gerekiyor.  
   
@@ -75,8 +75,8 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [XPS Belge yazdırma](http://msdn.microsoft.com/en-us/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [XPS Belge yazdırma](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
+ [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [isXPS.exe (isXPS uyumluluk aracı)](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
  [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)

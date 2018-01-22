@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cecb38e13a9539dcf92f1dcc7eecbd35c493a3f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cebd146505cd714a77c30cffe8fd3440c2d9f3cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET veri erişim hizmetleri .NET Framework programcıları için kullanıma sınıflar kümesidir. ADO.NET, dağıtılmış, veri paylaşımı uygulamaları oluşturmak için zengin bir bileşen kümesi sağlar. İlişkisel erişimi, XML ve uygulama verileri sağlayan, .NET Framework ayrılmaz bir parçasıdır. ADO.NET geliştirme gereksinimi, ön uç veritabanı istemciler ve uygulamalar, Araçlar, dilleri veya Internet tarayıcıları tarafından kullanılan orta katman iş nesneleri oluşturulmasını da dahil olmak üzere çeşitli destekler.  
@@ -55,7 +55,7 @@ ADO.NET veri erişim hizmetleri .NET Framework programcıları için kullanıma 
  Özellikler ve Oracle için .NET Framework veri sağlayıcısı için belirli davranışları açıklanmaktadır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Yerel Güvenlik ve .NET Framework kodu PAVE](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  Visual Studio, .NET Framework ve şifreleme için güvenlik konuları için bağlantılar sağlar.  
   
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

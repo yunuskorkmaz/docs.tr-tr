@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: aad62d8532fff09157d53f8307fb2b9dcd506cd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
 
 Bu konuda bu tür bir oturum desteği sistem tarafından sağlanan bağlamalar, ancak varsayılan kullanarak bir güvenilir oturum etkinleştirmek için gereken adımlar açıklanır. İmperatively kod kullanarak bir güvenilir oturum etkinleştirmek veya bildirimli olarak yapılandırma dosyanızda. Bu yordam, güvenli oturum etkinleştirmek ve iletiler içinde gönderildikleri sırayla geldiğinde ilkelerde izni belirtmek için istemci ve hizmet yapılandırma dosyalarını kullanır.
 
-Uç nokta yapılandırma öğesi içeren bu yordamı anahtar parçası olan bir `bindingConfiguration` adlı bir bağlama yapılandırması başvuran özniteliği `Binding1`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesine başvuruyor ayarlayarak güvenilir oturumlar etkinleştirmek için bu ad `enabled` özniteliği [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) öğesine `true`. Ayarlayarak güvenilir oturum için belirttiğiniz sıralı teslim Güvenceleri `ordered` özniteliğini `true`.
+Uç nokta yapılandırma öğesi içeren bu yordamı anahtar parçası olan bir `bindingConfiguration` adlı bir bağlama yapılandırması başvuran özniteliği `Binding1`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesine başvuruyor ayarlayarak güvenilir oturumlar etkinleştirmek için bu ad `enabled` özniteliği [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) öğesine `true`. Ayarlayarak güvenilir oturum için belirttiğiniz sıralı teslim Güvenceleri `ordered` özniteliğini `true`.
 
 Bu örnekte kaynak kopyası için bkz: [WS güvenilir oturum](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

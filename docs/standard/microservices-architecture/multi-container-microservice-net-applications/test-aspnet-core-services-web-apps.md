@@ -1,7 +1,7 @@
 ---
 title: "ASP.NET Core services ve web uygulamaları test etme"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | ASP.NET Core services ve web uygulamaları test etme"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b2e9bdb08d4b1607dfea34babbe7fd14627decff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core services ve web uygulamaları test etme
 
@@ -113,7 +113,7 @@ public class PrimeWebDefaultRequestShould
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
 -   **Birim testi temelleri. ** 
-     [ *https://msdn.microsoft.com/en-us/library/hh694602.aspx*](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+     [ *https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. GitHub depo.
     [*https://github.com/moq/moq*](https://github.com/moq/moq)

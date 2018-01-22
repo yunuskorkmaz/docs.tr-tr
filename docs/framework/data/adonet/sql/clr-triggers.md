@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d64f873a8cbdd76ac25ae8f16b02f10de568fe02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d1630226701dae8ddb51f939cebb38bf04f524c2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="clr-triggers"></a>CLR Tetikleyiciler
 Bir tetikleyici bir dil olayı yürüttüğünde otomatik olarak çalıştırılan saklı yordamı özel bir türde değil. .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme nedeniyle CLR Tetikleyiciler oluşturmak için herhangi bir .NET Framework dil kullanabilirsiniz.  
@@ -30,5 +30,5 @@ Bir tetikleyici bir dil olayı yürüttüğünde otomatik olarak çalıştırıl
 1.  [CLR Tetikleyicileri](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen kodda SQL Server 2005'te nesneleri oluşturma](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Yönetilen kodda SQL Server 2005'te nesneleri oluşturma](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

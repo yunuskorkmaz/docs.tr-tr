@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Etiketle
 <xref:System.Windows.Controls.Label>denetimleri genellikle sağladığı bilgileri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Tarihsel olarak, bir <xref:System.Windows.Controls.Label> yalnızca metin içermiştir ancak çünkü <xref:System.Windows.Controls.Label> ile birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olan bir <xref:System.Windows.Controls.ContentControl>, ya da metin içerebilir veya <xref:System.Windows.UIElement>.  
   
  A <xref:System.Windows.Controls.Label> erişim tuşları için görsel ve işlevsel destek sağlar. Hızlı Klavye erişimi denetimleri gibi etkinleştirmek için sık kullanılan bir <xref:System.Windows.Controls.TextBox>. Atamak için bir <xref:System.Windows.Controls.Label> için bir <xref:System.Windows.Controls.Control>ayarlayın <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> kullanıcı erişim tuşuna bastığında odağı alması gereken denetime özellik.  
   
- Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Controls.Label> "hedefler Temalar" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcı bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için bkz: [nasıl yapılır: bir etiket için Target özelliği ayarlamak](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ Aşağıdaki resimde gösterildiği bir <xref:System.Windows.Controls.Label> "hedefler Temalar" bir <xref:System.Windows.Controls.ComboBox>.  Kullanıcı bastığında <xref:System.Windows.Controls.ComboBox> odağı alır.  Daha fazla bilgi için bkz: [nasıl yapılır: bir etiket için Target özelliği ayarlamak](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Görüntü özellikleri kullanıma göre etiketlenmiş](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: bir etiket için Target özelliği ayarlama](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Nasıl yapılır: bir etiket için Target özelliği ayarlama](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Label>

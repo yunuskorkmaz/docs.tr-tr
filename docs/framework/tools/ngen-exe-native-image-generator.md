@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -57,12 +57,12 @@ Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performans�
   
 -   Görüntü geçersiz kılmanın bazı nedenleri kaldırıldı.  
   
- Windows 8'de bkz [yerel görüntü görev](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
+ Windows 8'de bkz [yerel görüntü görev](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
   
  Ngen.exe ve yerel görüntü hizmetini kullanma hakkında ek bilgi için bkz: [yerel görüntü hizmeti][Native Image Service].  
   
 > [!NOTE]
->  Ngen.exe sözdizimi sürüm 1.0 ve 1.1 .NET Framework'ün bulunabilir [yerel Görüntü Oluşturucu (Ngen.exe) eski sözdizimi](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
+>  Ngen.exe sözdizimi sürüm 1.0 ve 1.1 .NET Framework'ün bulunabilir [yerel Görüntü Oluşturucu (Ngen.exe) eski sözdizimi](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Yerel görüntü hizmetle ilgili örnekler için bkz: [yerel görüntü hizmeti][Native Image Service].  
   
 ## <a name="native-image-task"></a>Yerel Görüntü Görevi  
- Yerel görüntü görev oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görev oluşturur ve yerel görüntüler desteklenen senaryolar için otomatik olarak geri kazanır. (Bkz [yerel görüntü oluşturma](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Ayrıca kullanmak yükleyiciler sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturmak ve yerel görüntüler ertelenmiş aynı anda güncelleştirmek için.  
+ Yerel görüntü görev oluşturur ve yerel görüntüler tutar Windows bir görevdir. Yerel görüntü görev oluşturur ve yerel görüntüler desteklenen senaryolar için otomatik olarak geri kazanır. (Bkz [yerel görüntü oluşturma](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Ayrıca kullanmak yükleyiciler sağlar [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) oluşturmak ve yerel görüntüler ertelenmiş aynı anda güncelleştirmek için.  
   
  Yerel görüntü görev her CPU mimarisi hedefleyen uygulamalar için derleme izin vermek için bilgisayarda her mimari desteklenen bir kez kaydedilir:  
   

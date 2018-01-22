@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 91edc97794f66edd3a3db7892d57ef5f0c8265c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 723f724663cb7f08814327a04193f96db7f02ed0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta veri verme aracı (Winmdexp.exe) içeren bir dosyayı bir .NET Framework modül dönüştüren [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçimi kullanın, .NET Framework derlemeleri olarak otomatik olarak kullanılabilir olmadığını anlamına gelir meta verileri tabloların içeriğini farklılıklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . .NET Framework modüle kapatma işlemi bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen olarak adlandırılır *dışarı aktarma*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta ortaya çıkan Windows Meta veriler (.winmd) dosya meta verileri ve uygulama içerir.  
@@ -63,4 +63,4 @@ winmdexp [options] winmdmodule
  [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Winmdexp.exe Hata İletileri](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [Yapı, dağıtım ve yapılandırma araçları (.NET Framework)](http://msdn.microsoft.com/en-us/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+ [Yapı, dağıtım ve yapılandırma araçları (.NET Framework)](http://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)

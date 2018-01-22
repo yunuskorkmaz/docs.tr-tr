@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3b9bc281127213a81d39a6e82c35afcb684a2f25
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 964e2de7258f4849de01e4fbeae330d009710289
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Çok sınıftan geçirme
 XSLT mimari olarak tasarlandığından [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] serbest bırakın. <xref:System.Xml.Xsl.XslTransform> Sınıfı tarafından değiştirildi <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
@@ -119,11 +119,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>MSXML işlevleri  
  Ek MSXML işlevleri için eklenene desteği <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Aşağıdaki listede, yeni veya geliştirilmiş işlevselliği açıklanmaktadır:  
   
--   msxsl:node-ayarlayın: <xref:System.Xml.Xsl.XslTransform> bağımsız değişkeni gerekli [düğüm kümesi işlevi](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) işlevi sonuç ağacı parçası olabilir. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı bu gereksinime sahip değil.  
+-   msxsl:node-ayarlayın: <xref:System.Xml.Xsl.XslTransform> bağımsız değişkeni gerekli [düğüm kümesi işlevi](http://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) işlevi sonuç ağacı parçası olabilir. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı bu gereksinime sahip değil.  
   
 -   msxsl:Version: Bu işlev desteklenir <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   XPath uzantı işlevleri: [ms:string-compare işlevi](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc işlevi](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-URI işlevi](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-işleviadı](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number işlevi](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-işlevi tarih](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5), ve [ms:format-işlevi zaman](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) işlevleri artık desteklenmektedir.  
+-   XPath uzantı işlevleri: [ms:string-compare işlevi](http://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc işlevi](http://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-URI işlevi](http://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-işleviadı](http://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number işlevi](http://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-işlevi tarih](http://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5), ve [ms:format-işlevi zaman](http://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) işlevleri artık desteklenmektedir.  
   
 -   Şema ilgili XPath uzantısı işlevleri: Bu işlevler tarafından yerel olarak desteklenmeyen <xref:System.Xml.Xsl.XslCompiledTransform>. Ancak, uzantı işlevleri uygulanabilir.  
   

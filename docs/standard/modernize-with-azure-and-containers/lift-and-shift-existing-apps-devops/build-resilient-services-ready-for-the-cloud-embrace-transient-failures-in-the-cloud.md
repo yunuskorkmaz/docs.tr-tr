@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 779981c2145f98cf383799f1894e161f4d64cc1e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır dayanıklı Hizmetleri yapı: çekirdeğin bulutta geçici hataları 
 
@@ -47,17 +47,17 @@ Bulutta kısmi hataları işlemek için stratejilerini uygulamak üzere öğrenm
 
 -   **Kısmi hata işlemek için esnek iletişimi uygulama**
 
-    [https://docs.microsoft.com/dotnet/Standard/microservices-Architecture/implement-resilient-Applications/partial-failure-Strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
 
 -   **Entity Framework bağlantı dayanıklılık ve yeniden deneme mantığı (sürüm 6 ve üzeri)**
 
-    [https://msdn.microsoft.com/en-us/library/dn456835 (v=vs.113).aspx](https://msdn.microsoft.com/en-us/library/dn456835(v=vs.113).aspx)
+    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **Geçici hata işleme uygulama bloğu**
 
 <!-- -->
 
--   [https://msdn.microsoft.com/en-us/library/hh680934 (v=pandp.50).aspx](https://msdn.microsoft.com/en-us/library/hh680934(v=pandp.50).aspx)
+-   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
 -   **Esnek HTTP iletişimi için Polly kitaplığı**
 

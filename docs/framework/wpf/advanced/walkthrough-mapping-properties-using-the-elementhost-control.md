@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0db7b9677b5c8c415b6d0b3f49bd149c06843a33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030183e77a141036416a3bcb8a4c4018df0a7e65
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme
 Bu kılavuz size nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> eşlemek için özellik [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] özellikleri barındırılan karşılık gelen özelliklere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesi.  
@@ -52,7 +52,7 @@ Bu kılavuz size nasıl kullanılacağını gösterir <xref:System.Windows.Forms
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Oluşturma bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] adlı uygulama projesi `PropertyMappingWithElementHost`. Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Oluşturma bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] adlı uygulama projesi `PropertyMappingWithElementHost`. Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 2.  Çözüm Gezgini'nde, aşağıdaki başvurular ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler.  
   
@@ -71,7 +71,7 @@ Bu kılavuz size nasıl kullanılacağını gösterir <xref:System.Windows.Forms
   
 4.  Açık `Form1` Windows Forms Tasarımcısı'nda. Bir olay işleyicisi eklemek için form çift <xref:System.Windows.Forms.Form.Load> olay.  
   
-5.  Dönmek için Windows Form Tasarımcısı ve form için bir olay işleyicisi ekleme <xref:System.Windows.Forms.Control.Resize> olay. Daha fazla bilgi için bkz: [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2).  
+5.  Dönmek için Windows Form Tasarımcısı ve form için bir olay işleyicisi ekleme <xref:System.Windows.Forms.Control.Resize> olay. Daha fazla bilgi için bkz: [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 6.  Bildirme bir <xref:System.Windows.Forms.Integration.ElementHost> alanındaki `Form1` sınıfı.  
   
@@ -153,5 +153,5 @@ Bu kılavuz size nasıl kullanılacağını gösterir <xref:System.Windows.Forms
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Windows Forms ve WPF Özelliğini Eşleme](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [WPF Tasarımcısı](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
