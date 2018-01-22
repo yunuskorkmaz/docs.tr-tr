@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4375803ab51b139a66ac789f0670fce1e5f64682
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="2d8fb-102">RichTextBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2d8fb-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="2d8fb-103">Bu bölümde kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir örnekler <xref:System.Windows.Controls.RichTextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="2d8fb-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="6e138-102">RichTextBox Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6e138-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="6e138-103">Bu bölümde kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir örnekler <xref:System.Windows.Controls.RichTextBox> denetim.</span><span class="sxs-lookup"><span data-stu-id="6e138-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2d8fb-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2d8fb-104">In This Section</span></span>  
- [<span data-ttu-id="2d8fb-105">RichTextBox'dan Metin İçeriği Ayıklama</span><span class="sxs-lookup"><span data-stu-id="2d8fb-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="2d8fb-106">RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme</span><span class="sxs-lookup"><span data-stu-id="2d8fb-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="2d8fb-107">RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma</span><span class="sxs-lookup"><span data-stu-id="2d8fb-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="2d8fb-108">RichTextBox İçinde Özel Açılır Menü Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="2d8fb-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [<span data-ttu-id="2d8fb-109">Nasıl yapılır: RichTextBox için varsayılan içerik konağını değiştirme</span><span class="sxs-lookup"><span data-stu-id="2d8fb-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+## <a name="in-this-section"></a><span data-ttu-id="6e138-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6e138-104">In This Section</span></span>  
+ [<span data-ttu-id="6e138-105">RichTextBox'dan Metin İçeriği Ayıklama</span><span class="sxs-lookup"><span data-stu-id="6e138-105">Extract the Text Content from a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="6e138-106">RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme</span><span class="sxs-lookup"><span data-stu-id="6e138-106">Change Selection in a RichTextBox Programmatically</span></span>](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="6e138-107">RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma</span><span class="sxs-lookup"><span data-stu-id="6e138-107">Save, Load, and Print RichTextBox Content</span></span>](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="6e138-108">RichTextBox İçinde Özel Açılır Menü Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="6e138-108">Position a Custom Context Menu in a RichTextBox</span></span>](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [<span data-ttu-id="6e138-109">Nasıl yapılır: RichTextBox için varsayılan içerik konağını değiştirme</span><span class="sxs-lookup"><span data-stu-id="6e138-109">How to: Replace the Default Content Host for a RichTextBox</span></span>](http://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a><span data-ttu-id="2d8fb-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2d8fb-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6e138-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6e138-110">See Also</span></span>  
  <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="2d8fb-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="2d8fb-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="2d8fb-112">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2d8fb-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="6e138-111">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="6e138-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="6e138-112">Akış Belgesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6e138-112">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

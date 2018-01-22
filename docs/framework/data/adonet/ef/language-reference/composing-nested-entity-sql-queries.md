@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="46de3-102">İç içe geçmiş varlık SQL sorguları oluşturma</span><span class="sxs-lookup"><span data-stu-id="46de3-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="46de3-103">bir zengin işlevsel dilidir.</span><span class="sxs-lookup"><span data-stu-id="46de3-103"> is a rich functional language.</span></span> <span data-ttu-id="46de3-104">Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir.</span><span class="sxs-lookup"><span data-stu-id="46de3-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="46de3-105">Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler.</span><span class="sxs-lookup"><span data-stu-id="46de3-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="46de3-106">İfade bir değer parametreli veya diğer bazı ifadesi oluşur.</span><span class="sxs-lookup"><span data-stu-id="46de3-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="fadb7-102">İç içe geçmiş varlık SQL sorguları oluşturma</span><span class="sxs-lookup"><span data-stu-id="fadb7-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fadb7-103">bir zengin işlevsel dilidir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-103"> is a rich functional language.</span></span> <span data-ttu-id="fadb7-104">Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="fadb7-105">Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir tablo sonuç kümesi sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş ifadeler olabilir karmaşık ifadeler oluşturmayı destekler.</span><span class="sxs-lookup"><span data-stu-id="fadb7-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="fadb7-106">İfade bir değer parametreli veya diğer bazı ifadesi oluşur.</span><span class="sxs-lookup"><span data-stu-id="fadb7-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="46de3-107">İç içe geçmiş ifadeler</span><span class="sxs-lookup"><span data-stu-id="46de3-107">Nested Expressions</span></span>  
- <span data-ttu-id="46de3-108">İç içe geçmiş bir ifade, kabul edilen döndürür türünde bir değer herhangi bir yere yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="46de3-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="46de3-109">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="46de3-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="fadb7-107">İç içe geçmiş ifadeler</span><span class="sxs-lookup"><span data-stu-id="fadb7-107">Nested Expressions</span></span>  
+ <span data-ttu-id="fadb7-108">İç içe geçmiş bir ifade, kabul edilen döndürür türünde bir değer herhangi bir yere yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="fadb7-109">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="fadb7-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -36,7 +36,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="46de3-110">İç içe bir sorgu projeksiyon yan tümcesinde yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="46de3-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="46de3-111">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="46de3-111">For example:</span></span>  
+ <span data-ttu-id="fadb7-110">İç içe bir sorgu projeksiyon yan tümcesinde yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="fadb7-111">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="fadb7-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="46de3-112">İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)], iç içe geçmiş sorgular parantez içinde her zaman alınmalıdır:</span><span class="sxs-lookup"><span data-stu-id="46de3-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="fadb7-112">İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)], iç içe geçmiş sorgular parantez içinde her zaman alınmalıdır:</span><span class="sxs-lookup"><span data-stu-id="fadb7-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -57,19 +57,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="46de3-113">Aşağıdaki örnek düzgün ifadelerinde iç içe gösterilmiştir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: birleşim, iki sorguları sipariş](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span><span class="sxs-lookup"><span data-stu-id="46de3-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span></span>  
+ <span data-ttu-id="fadb7-113">Aşağıdaki örnek düzgün ifadelerinde iç içe gösterilmiştir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: birleşim, iki sorguları sipariş](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span><span class="sxs-lookup"><span data-stu-id="fadb7-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="46de3-114">İç içe yerleştirilmiş sorguda projeksiyon</span><span class="sxs-lookup"><span data-stu-id="46de3-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="46de3-115">Proje yan tümcesi iç içe geçmiş sorguları Kartezyen ürün sorguları sunucuda içine çevrilmiş.</span><span class="sxs-lookup"><span data-stu-id="46de3-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="46de3-116">SQL Server dahil olmak üzere bazı arka uç sunucularında, bu sunucu performansını olumsuz yönde etkilenebilir çok büyük almak TempDB tablo neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="46de3-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="fadb7-114">İç içe yerleştirilmiş sorguda projeksiyon</span><span class="sxs-lookup"><span data-stu-id="fadb7-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="fadb7-115">Proje yan tümcesi iç içe geçmiş sorguları Kartezyen ürün sorguları sunucuda içine çevrilmiş.</span><span class="sxs-lookup"><span data-stu-id="fadb7-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="fadb7-116">SQL Server dahil olmak üzere bazı arka uç sunucularında, bu sunucu performansını olumsuz yönde etkilenebilir çok büyük almak TempDB tablo neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="46de3-117">Bu tür bir sorgunun bir örnek verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="46de3-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="fadb7-117">Bu tür bir sorgunun bir örnek verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="fadb7-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="46de3-118">İç içe geçmiş sorgular sıralama</span><span class="sxs-lookup"><span data-stu-id="46de3-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="46de3-119">Entity Framework iç içe geçmiş bir ifade herhangi bir yere sorguda yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="46de3-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="46de3-120">Varlık SQL sorguları yazma büyük esneklik izin verdiğinden, bir iç içe geçmiş sorguları sıralama içeren bir sorgu yazmak mümkündür.</span><span class="sxs-lookup"><span data-stu-id="46de3-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="46de3-121">Ancak, iç içe bir sorgu sırası korunmaz.</span><span class="sxs-lookup"><span data-stu-id="46de3-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="fadb7-118">İç içe geçmiş sorgular sıralama</span><span class="sxs-lookup"><span data-stu-id="fadb7-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="fadb7-119">Entity Framework iç içe geçmiş bir ifade herhangi bir yere sorguda yerleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fadb7-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="fadb7-120">Varlık SQL sorguları yazma büyük esneklik izin verdiğinden, bir iç içe geçmiş sorguları sıralama içeren bir sorgu yazmak mümkündür.</span><span class="sxs-lookup"><span data-stu-id="fadb7-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="fadb7-121">Ancak, iç içe bir sorgu sırası korunmaz.</span><span class="sxs-lookup"><span data-stu-id="fadb7-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -86,5 +86,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="46de3-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="46de3-122">See Also</span></span>  
- [<span data-ttu-id="46de3-123">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="46de3-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fadb7-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fadb7-122">See Also</span></span>  
+ [<span data-ttu-id="fadb7-123">Entity SQL’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="fadb7-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

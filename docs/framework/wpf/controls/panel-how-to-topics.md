@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8585840f57d75220d9c616eee1e90006f604adf4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="dac5d-102">Panel ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="dac5d-102">Panel How-to Topics</span></span>
-<span data-ttu-id="dac5d-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Panel> öğesi ve ilgili [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dac5d-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="81dab-102">Panel ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="81dab-102">Panel How-to Topics</span></span>
+<span data-ttu-id="81dab-103">Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.Panel> öğesi ve ilgili [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="81dab-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dac5d-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="dac5d-104">In This Section</span></span>  
- [<span data-ttu-id="dac5d-105">Nasıl yapılır: bir öğeye LayoutTransform Uygula</span><span class="sxs-lookup"><span data-stu-id="dac5d-105">How to: Apply a LayoutTransform to an Element</span></span>](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [<span data-ttu-id="dac5d-106">Özel Panel Öğesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="dac5d-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="dac5d-107">Panel OnRender Yöntemini Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="dac5d-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="dac5d-108">Öğenin Yükseklik Özelliklerini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="dac5d-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="dac5d-109">Öğenin Genişlik Özelliklerini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="dac5d-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="81dab-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="81dab-104">In This Section</span></span>  
+ [<span data-ttu-id="81dab-105">Nasıl yapılır: bir öğeye LayoutTransform Uygula</span><span class="sxs-lookup"><span data-stu-id="81dab-105">How to: Apply a LayoutTransform to an Element</span></span>](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [<span data-ttu-id="81dab-106">Özel Panel Öğesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="81dab-106">Create a Custom Panel Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="81dab-107">Panel OnRender Yöntemini Geçersiz Kılma</span><span class="sxs-lookup"><span data-stu-id="81dab-107">Override the Panel OnRender Method</span></span>](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="81dab-108">Öğenin Yükseklik Özelliklerini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="81dab-108">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="81dab-109">Öğenin Genişlik Özelliklerini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="81dab-109">Set the Width Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="dac5d-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="dac5d-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="81dab-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="81dab-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="dac5d-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="dac5d-111">Related Sections</span></span>  
- [<span data-ttu-id="dac5d-112">Düzen</span><span class="sxs-lookup"><span data-stu-id="dac5d-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="81dab-111">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="81dab-111">Related Sections</span></span>  
+ [<span data-ttu-id="81dab-112">Düzen</span><span class="sxs-lookup"><span data-stu-id="81dab-112">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="dac5d-113">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="dac5d-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="81dab-113">İzlenecek Yol: İlk WPF masaüstü uygulamam</span><span class="sxs-lookup"><span data-stu-id="81dab-113">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="dac5d-114">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="dac5d-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="81dab-114">ScrollViewer Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="81dab-114">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -19,29 +19,29 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4f1f0658b90989dadc0371b88b4a7287988fb9d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e2f459ac023c429559394c8352457f922a12f8e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a><span data-ttu-id="c51bf-102">Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir Windows Formları ToolStrip Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c51bf-102">How to: Create a Basic Windows Forms ToolStrip with Standard Items Using the Designer</span></span>
-<span data-ttu-id="c51bf-103">Aşağıdaki yordam nasıl oluşturulduğunu gösteren bir <xref:System.Windows.Forms.ToolStrip> ve yedi ekleyin <xref:System.Windows.Forms.ToolStripButton> tipik görevler temsil denetimleri.</span><span class="sxs-lookup"><span data-stu-id="c51bf-103">The following procedure demonstrates how to create a <xref:System.Windows.Forms.ToolStrip> and add seven <xref:System.Windows.Forms.ToolStripButton> controls that represent typical tasks.</span></span>  
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a><span data-ttu-id="13743-102">Nasıl yapılır: Tasarımcı Kullanarak Standart Öğelerle Temel bir Windows Formları ToolStrip Oluşturma</span><span class="sxs-lookup"><span data-stu-id="13743-102">How to: Create a Basic Windows Forms ToolStrip with Standard Items Using the Designer</span></span>
+<span data-ttu-id="13743-103">Aşağıdaki yordam nasıl oluşturulduğunu gösteren bir <xref:System.Windows.Forms.ToolStrip> ve yedi ekleyin <xref:System.Windows.Forms.ToolStripButton> tipik görevler temsil denetimleri.</span><span class="sxs-lookup"><span data-stu-id="13743-103">The following procedure demonstrates how to create a <xref:System.Windows.Forms.ToolStrip> and add seven <xref:System.Windows.Forms.ToolStripButton> controls that represent typical tasks.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c51bf-104">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="c51bf-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c51bf-105">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="c51bf-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c51bf-106">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="c51bf-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="13743-104">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="13743-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="13743-105">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="13743-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="13743-106">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="13743-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-add-standard-items-in-the-designer"></a><span data-ttu-id="c51bf-107">Tasarımcıda standart öğeler eklemek için</span><span class="sxs-lookup"><span data-stu-id="c51bf-107">To add standard items in the designer</span></span>  
+### <a name="to-add-standard-items-in-the-designer"></a><span data-ttu-id="13743-107">Tasarımcıda standart öğeler eklemek için</span><span class="sxs-lookup"><span data-stu-id="13743-107">To add standard items in the designer</span></span>  
   
-1.  <span data-ttu-id="c51bf-108">Oluşturma bir <xref:System.Windows.Forms.ToolStrip> denetim.</span><span class="sxs-lookup"><span data-stu-id="c51bf-108">Create a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
+1.  <span data-ttu-id="13743-108">Oluşturma bir <xref:System.Windows.Forms.ToolStrip> denetim.</span><span class="sxs-lookup"><span data-stu-id="13743-108">Create a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
-2.  <span data-ttu-id="c51bf-109">Sağ üst köşesindeki içinde <xref:System.Windows.Forms.ToolStrip>, görüntülemek için akıllı görev oku **ToolStrip görevleri** bölmesi.</span><span class="sxs-lookup"><span data-stu-id="c51bf-109">In the upper right corner of the <xref:System.Windows.Forms.ToolStrip>, click the smart task arrow to display the **ToolStrip Tasks** pane.</span></span>  
+2.  <span data-ttu-id="13743-109">Sağ üst köşesindeki içinde <xref:System.Windows.Forms.ToolStrip>, görüntülemek için akıllı görev oku **ToolStrip görevleri** bölmesi.</span><span class="sxs-lookup"><span data-stu-id="13743-109">In the upper right corner of the <xref:System.Windows.Forms.ToolStrip>, click the smart task arrow to display the **ToolStrip Tasks** pane.</span></span>  
   
-3.  <span data-ttu-id="c51bf-110">İçinde **ToolStrip görevleri** bölmesinde seçin **standart öğeleri Ekle**.</span><span class="sxs-lookup"><span data-stu-id="c51bf-110">In the **ToolStrip Tasks** pane, choose **Insert Standard Items**.</span></span>  
+3.  <span data-ttu-id="13743-110">İçinde **ToolStrip görevleri** bölmesinde seçin **standart öğeleri Ekle**.</span><span class="sxs-lookup"><span data-stu-id="13743-110">In the **ToolStrip Tasks** pane, choose **Insert Standard Items**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c51bf-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c51bf-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="13743-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="13743-111">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStrip>  
- [<span data-ttu-id="c51bf-112">ToolStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="c51bf-112">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [<span data-ttu-id="c51bf-113">ToolStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="c51bf-113">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [<span data-ttu-id="c51bf-114">ToolStrip Denetim, Mimarisi</span><span class="sxs-lookup"><span data-stu-id="c51bf-114">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [<span data-ttu-id="c51bf-115">ToolStrip Teknoloji Özeti</span><span class="sxs-lookup"><span data-stu-id="c51bf-115">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [<span data-ttu-id="13743-112">ToolStrip Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="13743-112">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="13743-113">ToolStrip Denetimi</span><span class="sxs-lookup"><span data-stu-id="13743-113">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [<span data-ttu-id="13743-114">ToolStrip Denetim, Mimarisi</span><span class="sxs-lookup"><span data-stu-id="13743-114">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="13743-115">ToolStrip Teknoloji Özeti</span><span class="sxs-lookup"><span data-stu-id="13743-115">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
