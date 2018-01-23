@@ -1,7 +1,7 @@
 ---
 title: Olaylara abone olma
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olaylara abone olma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 97035f297743626c5d9b306712cefdbd8a086c51
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -110,7 +110,7 @@ Mikro tabanlı mimari, kullanılabilirlik ve dayanıklılık seçmeniz gerekir v
 
 Mimari bölümünde daha önce belirtildiği gibi bu sorunla ilgili çeşitli yaklaşımlar sahip olabilir:
 
--   Tam kullanarak [olay kaynak Hizmeti'nden düzeni](https://msdn.microsoft.com/en-us/library/dn589792.aspx).
+-   Tam kullanarak [olay kaynak Hizmeti'nden düzeni](https://msdn.microsoft.com/library/dn589792.aspx).
 
 -   Kullanarak [işlem oturum araştırma](http://www.scoop.it/t/sql-server-transaction-log-mining).
 
@@ -302,7 +302,7 @@ Bazı ileti kendiliğinden ıdempotent işlemesidir. Bir sistem görüntüsü k�
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **İleti benzersizlik uygularken** (Bu sayfadaki alt başlık) [ *https://msdn.microsoft.com/en-us/library/jj591565.aspx*](https://msdn.microsoft.com/en-us/library/jj591565.aspx)
+-   **İleti benzersizlik uygularken** (Bu sayfadaki alt başlık) [ *https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Yinelenenleri tümleştirme olay iletileri
 
@@ -343,10 +343,10 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Elmas kahverengi. Tümleştirme stratejileri ilişkisindeki bağlamları**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Uludağ. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
+-   **Chris Richardson. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Uludağ. Olay Sourcing düzeni**
+-   **Chris Richardson. Olay Sourcing düzeni**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Olay kaynak Hizmeti'nden Tanıtımı**
@@ -375,7 +375,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 
 -   **Dış (DTC) işlemlere katılan** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure hizmet veri yolu. Aracılı mesajlaşmayı: Yinelenen algılama**
+-   **Azure Service Bus. Aracılı mesajlaşmayı: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
 -   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [ *https://www.rabbitmq.com/reliability.html\#tüketici*](https://www.rabbitmq.com/reliability.html%23consumer)
