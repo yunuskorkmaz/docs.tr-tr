@@ -13,11 +13,11 @@ ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
 caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir listesi için bkz: [C# derleyici seçenekleri listelenen kategoriye göre](../../../csharp/language-reference/compiler-options/listed-by-category.md).  
@@ -28,10 +28,10 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Stdout kullanım iletisini görüntüler.|  
 |-additionalfile|Kod oluşturma doğrudan etkilemez ancak çözümleyicileri tarafından hatalar veya uyarılar üretmek için kullanılabilir başka dosya adları.|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Belirtilen modülleri bu derlemeye bağlar|  
-|-Çözümleyicisi|Bu derlemedeki çözümleyiciler çalıştırın (kısa form: / a)|  
+|-Çözümleyicisi|Bu derlemedeki çözümleyiciler çalıştırın (kısa form: - a)|  
 |[-appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Derleme bağlama zamanında app.config konumunu belirtir.|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Oluşturulacak kitaplığın temel adresini belirtir.|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|'Hata raporu' dosyası oluşturur. /Errorreport:prompt veya /errorreport:send kullandıysanız, bu dosyayı herhangi çökmesi bilgi ile birlikte gönderilir.|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|'Hata raporu' dosyası oluşturur. -Errorreport ile kullandıysanız, bu dosyayı herhangi çökmesi bilgi ile birlikte gönderilir: istemi veya - errorreport: gönderin.|  
 |[-checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Derleyicinin taşma denetimleri oluşturmasına neden olur.|  
 |-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritması belirtin.  Desteklenen değerler: SHA1 (varsayılan) veya SHA256.|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Kaynak dosyalar açılırken kullanılacak kod sayfasını belirtir.|  

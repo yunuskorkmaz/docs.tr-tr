@@ -16,11 +16,11 @@ ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c20de499ae0fd5f8869c9b6e78a308fde9787ef9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a305f98b09d390afbeba7b55ab44ff09abc74617
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# Derleyici Seçenekleri)
 Belirtilen kaynak çıkış dosyası içine katıştırır.  
@@ -42,7 +42,7 @@ Belirtilen kaynak çıkış dosyası içine katıştırır.
  Kaynak erişilebilirliğini: genel veya özel. Ortak varsayılandır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) bir derlemeye bir kaynak bağlayın ve kaynak dosyası çıktı dosyasına ekleme.  
+ Kullanım [- linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) bir derlemeye bir kaynak bağlayın ve kaynak dosyası çıktı dosyasına ekleme.  
   
  C# Derleyici kullanılarak oluşturulduğunda varsayılan olarak, derlemede ortak kaynaklardır. Kaynakları özel hale getirmek için belirtmeniz `private` olarak erişim değiştiricisi. Dışındaki bir erişilebilirliğe `public` veya `private` izin verilir.  
   

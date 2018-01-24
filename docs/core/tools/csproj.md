@@ -1,5 +1,5 @@
 ---
-title: "csproj başvurusu"
+title: ".NET Core csproj biçimine eklemeler"
 description: "Varolan ve .NET Core csproj dosyaları arasındaki farklar hakkında bilgi edinin"
 keywords: "başvuru, csproj, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload: dotnetcore
-ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -53,9 +53,9 @@ Aşağıdaki tabloda hangi öğesi ve hangi gösterilmektedir [globs](https://en
 
 | Öğe           | Glob içerir                              | Glob Dışla                                                  | Glob Kaldır                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.kullanıcı;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Yok                        |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.kullanıcı; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | Yok                        |
-| Yok.              | \*\*/\*                                   | \*\*/\*.kullanıcı; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \* \* / \*.resx |
+| Derleme           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | Yok                        |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Yok                        |
+| Yok.              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 Projenizde globs varsa ve en yeni SDK kullanarak oluşturmak denerseniz, aşağıdaki hata iletisi alırsınız:
 
@@ -190,7 +190,7 @@ Proje dolu olup olmadığını belirten bir Boole değeri. Varsayılan değer `t
 ### <a name="packageversion"></a>PackageVersion
 Sonuçta elde edilen paket olacaktır sürümünü belirtir. NuGet sürüm dizesi biçimlerinin kabul eder. Varsayılan değer değerini `$(Version)`, diğer bir deyişle, özelliğin `Version` projesinde. 
 
-### <a name="packageid"></a>Paket kimliği
+### <a name="packageid"></a>PackageId
 Sonuçta elde edilen paket adını belirtir. Belirtilmezse, `pack` işlemi varsayılan olarak kullanmaya `AssemblyName` veya dizin adıyla paketin adı. 
 
 ### <a name="title"></a>Başlık

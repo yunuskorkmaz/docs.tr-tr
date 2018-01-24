@@ -13,11 +13,11 @@ ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: be1b6379080b2af799990c43e5339a9a548eb067
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d67d53e679a2d1255e87cfa426bf844089481061
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# Derleyici Seçenekleri)
 **-Debug** seçeneği hata ayıklama bilgileri oluşturmak ve çıktı dosyası veya dosyaları yerleştirmek derleyicinin neden olur.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
  Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz: [bir görüntü Debug kolaylaştırma](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- .Pdb dosyasının konumunu değiştirmek için bkz: [/pdb (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
+ .Pdb dosyasının konumunu değiştirmek için bkz: [- pdb (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   

@@ -1,7 +1,7 @@
 ---
 title: ".NET Core kullanarak bir REST istemcisi oluşturma"
 description: "Bu öğretici bir dizi özellik .NET Core ve C# dili öğretir."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc74b644f432071dc2483e8df3e0938c9e9ee025
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 6b0f3acc3a6dbed4f44497d92d3c518ee5a5d2a7
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -95,12 +95,30 @@ public static void Main(string[] args)
 }
 ```
 
-Artık, hiçbir şey yapmaz ancak zaman uyumsuz olarak mevcut bir program var. Geri dönelim `ProcessRepositories` yöntemi ve ilk sürümü doldurun:
+Artık, hiçbir şey yapmaz ancak zaman uyumsuz olarak mevcut bir program var. Şimdi geliştirin.
+
+İlk web üzerinden veri almak yeteneğine sahip bir nesne gerekir; kullanabileceğiniz bir <xref:System.Net.Http.HttpClient> Bunu yapmak için. Bu nesne, istek ve yanıt işler. Bu türde tek bir örneğini `Program` sınıf Program.cs dosyasının içinde.
+
+```csharp
+namespace WebAPIClient
+{
+    class Program
+    {
+        private static readonly HttpClient client = new HttpClient();
+
+        static void Main(string[] args)
+        {
+            //...
+        }
+    }
+}
+```
+
+ Geri dönelim `ProcessRepositories` yöntemi ve ilk sürümü doldurun:
 
 ```csharp
 private static async Task ProcessRepositories()
 {
-    var client = new HttpClient();
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
@@ -120,7 +138,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-Bu ilk sürüm dotnet foundation kuruluş altındaki tüm depoları listesi okumak için web isteği yapar. (GitHub .NET Foundation için 'dotnet' kimliğidir). İlk olarak, yeni oluşturduğunuz <xref:System.Net.Http.HttpClient>. Bu nesne, istek ve yanıt işler. Sonraki birkaç satır ayarlamak <xref:System.Net.Http.HttpClient> bu istek için. İlk olarak, GitHub JSON yanıtları kabul edecek şekilde yapılandırılır.
+Bu ilk sürüm dotnet foundation kuruluş altındaki tüm depoları listesi okumak için web isteği yapar. (GitHub .NET Foundation için 'dotnet' kimliğidir). İlk birkaç satırı ayarlamak <xref:System.Net.Http.HttpClient> bu istek için. İlk olarak, GitHub JSON yanıtları kabul edecek şekilde yapılandırılır.
 Yalnızca JSON biçimidir. Sonraki satıra bir kullanıcı aracısı üstbilgisi tüm istekler bu nesneden ekler. Bu iki üstbilgileri GitHub sunucu kodu tarafından denetlenir ve Github'dan bilgileri almak gereklidir.
 
 Sonra yapılandırdığınız <xref:System.Net.Http.HttpClient>, istek ve yanıt almak web olun. Bu ilk sürümünde kullandığınız <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> kolaylık yöntemi. Bu kolaylık metodunun web istekte bir görev başlatır ve ardından istek geri döndüğünde, yanıt akışına okur ve akış içeriği ayıklar. Yanıt gövdesi olarak döndürülür bir <xref:System.String>. Görev tamamlandığında kullanılabilir bir dizedir. 

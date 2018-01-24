@@ -13,11 +13,11 @@ ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 74cd4caaa134f881297134867018346c323deeab
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a931dccb2aebd2c898b55f0a007d9fac8da42f2e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# Derleyici Seçenekleri)
 Bu seçenek, böylece bir dijital imza daha sonra eklenebilir çıktı dosyasında yer ayırmak için derleyici neden olur.  
@@ -33,7 +33,7 @@ Bu seçenek, böylece bir dijital imza daha sonra eklenebilir çıktı dosyasın
  Kullanım **- delaysign-** tam imzalı bir derleme istiyorsanız. Kullanım **- delaysign +** yalnızca ortak anahtar derlemede yerleştirmek istiyorsanız. Varsayılan değer **- delaysign-**.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **- Delaysign** seçeneği hiçbir etkisi ile kullanılmadığı sürece [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) veya [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
+ **- Delaysign** seçeneği hiçbir etkisi ile kullanılmadığı sürece [- keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) veya [- keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
   
  Tam imzalı bir derleme istediğinde bildirimi (derleme meta verilerini) içeren ve karmayı özel anahtarıyla imzalar dosyayı derleyici karma hale getirir. Elde edilen dijital imza, bildirimi içeren dosyada depolanır. Bir derlemeyi imzalı gecikme olduğunda derleyici işlem değil ve daha sonra imzanın eklenmesi için imza ancak yer ayırır dosyasında depolamak.  
   
