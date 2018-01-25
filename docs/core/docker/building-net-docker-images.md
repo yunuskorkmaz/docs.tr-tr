@@ -1,7 +1,7 @@
 ---
 title: ".NET Core Docker görüntülerinizi oluşturmak"
 description: "Docker görüntüler ve .NET Core anlama"
-keywords: .NET, .NET core, Docker
+keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -13,11 +13,11 @@ ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
 
@@ -101,21 +101,21 @@ Kullandığı [Docker çok aşama yapı özelliği](https://docs.docker.com/engi
 * bağlı bir kapsayıcıdaki örneği oluşturmak **büyük** ASP.NET Core yapı Docker temel görüntüsü 
 * temel bir Docker görüntüye son derleme sonucu kopyalar **küçük** ASP.NET çekirdeği Docker çalışma zamanı temel görüntüsü
 
-> [!Note]
+> [!NOTE]
 > Yapı görüntüsü çalışma zamanı görüntü çalışmazken uygulamaları geliştirmek için gerekli araçları içerir.
 
 ### <a name="prerequisites"></a>Önkoşullar
 
 Derlemek ve çalıştırmak için aşağıdaki öğeleri yükleyin:
 
-#### <a name="net-core-20-sdk"></a>.NET core 2.0 SDK'sı
+#### <a name="net-core-20-sdk"></a>.NET Core 2.0 SDK
 
 * Yükleme [.NET Core SDK 2.0](https://www.microsoft.com/net/core).
 
 * Henüz yapmadıysanız, sık kullanılan kod düzenleyicisinde yükleyin.
 
 > [!TIP]
-> Kod Düzenleyicisi yüklemeniz gerekiyor? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
+> Kod Düzenleyicisi yüklemeniz gerekiyor? Try [Visual Studio](https://visualstudio.com/downloads)!
 
 #### <a name="installing-docker-client"></a>Docker istemcisi yükleme
 
@@ -174,7 +174,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] `docker run` '-P' bağımsız değişkeni eşlemeleri bağlantı noktası 5000 kapsayıcının 80 numaralı bağlantı noktasına yerel makinenizde (bağlantı noktası eşleme form `host:container`). Daha fazla bilgi için bkz: [çalıştırmak docker](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri başvuru.
+> [!NOTE]
+> `docker run` '-P' bağımsız değişkeni eşlemeleri bağlantı noktası 5000 kapsayıcının 80 numaralı bağlantı noktasına yerel makinenizde (bağlantı noktası eşleme form `host:container`). Daha fazla bilgi için bkz: [çalıştırmak docker](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri başvuru.
 
 Uygulama başlatıldıktan sonra ziyaret **http://localhost: 5000** web tarayıcınızda.
 
@@ -196,7 +197,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Çalıştırma `docker exec aspnetcore_sample ipconfig`.
 * Kapsayıcı IP adresi kopyalayıp tarayıcınıza (örneğin, 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Docker exec adı ya da karma ile tanımlayıcı kapsayıcıları destekler. Bizim örneğimizde (aspnetcore_sample) adı kullanılır.
 
 Çalışan bir Windows kapsayıcısının IP adresini almak nasıl aşağıdaki örneğe bakın.
@@ -215,7 +216,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec çalışan bir kapsayıcıda yeni bir komut çalıştırır. Daha fazla bilgi için bkz: [docker exec başvuru](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri.
 
 Kullanarak yerel olarak üretime dağıtmaya hazır bir uygulama oluşturmak üzere [dotnet yayımlama](../tools/dotnet-publish.md) komutu.
@@ -224,7 +225,7 @@ Kullanarak yerel olarak üretime dağıtmaya hazır bir uygulama oluşturmak üz
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > -C yayın bağımsız değişkeni uygulama yayın modunda (hata ayıklama modu varsayılandır) oluşturur. Daha fazla bilgi için bkz: [dotnet çalıştırmak başvuru](../tools/dotnet-run.md) komut satırı parametreleri.
 
 Uygulamayı çalıştırmak **Windows** aşağıdaki komutu kullanarak.
@@ -265,5 +266,5 @@ Uygulayabileceğiniz bazı sonraki adımlar şunlardır:
 * [Ellere Visual Studio ile Mac, kapsayıcıları ve sunucusuz kodu bulutta hakkında alma](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Mac Laboratuvar için Docker ve Visual Studio ile çalışmaya başlama](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > Bir Azure aboneliğiniz yoksa [bugün kaydolun](https://azure.microsoft.com/free/?b=16.48) Ücretsiz 30 günlük hesabı ve Azure Hizmetleri herhangi bir bileşimini denemek için Azure KREDİLERİ 200 ABD Doları alın.

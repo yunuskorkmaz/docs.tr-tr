@@ -1,25 +1,20 @@
 ---
 title: "Genişletilebilen Nesneler"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>Genişletilebilen Nesneler
 Genişletilebilir object deseni ya da varolan çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya bir nesne için yeni durum eklemek için kullanılır. Genişletilebilen nesneler birine ekli uzantılar, paylaşılan durum ve bunlar erişebileceği bir ortak Genişletilebilir nesneye iliştirilmiş işlevlerine erişimini işleme çok farklı aşamalarında davranışları etkinleştirin.  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  Uzantı koleksiyona eklendiğinde <xref:System.ServiceModel.IExtension%601.Attach%2A> koleksiyona geçmeden önce çağrılır. Uzantı koleksiyonundan kaldırıldığında <xref:System.ServiceModel.IExtension%601.Detach%2A> kaldırılmadan sonra çağrılır. Anlamına gelir (uygun eşitleme varsayılarak) bir uzantı sayısı yalnızca, koleksiyonda bulunamadı budur arasında <xref:System.ServiceModel.IExtension%601.Attach%2A> ve <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
- Nesne geçirilen <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> veya <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> olmaması <xref:System.ServiceModel.IExtension%601> (örneğin, herhangi bir nesne geçirebilirsiniz), ancak döndürülen uzantısı bir <xref:System.ServiceModel.IExtension%601>.  
+ Nesne geçirilen <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> veya <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> olmaması <xref:System.ServiceModel.IExtension%601> (örneğin, herhangi bir nesne geçirebilirsiniz), ancak döndürülen uzantısı bir <xref:System.ServiceModel.IExtension%601>.  
   
- Koleksiyondaki hiçbir uzantı ise bir <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> null döndürür ve <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> boş bir koleksiyon döndürür. Birden çok uzantı uygularsanız <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> bunlardan birini döndürür. Döndürülen değer <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> bir anlık görüntüdür.  
+ Koleksiyondaki hiçbir uzantı ise bir <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> null döndürür ve <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> boş bir koleksiyon döndürür. Birden çok uzantı uygularsanız <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> bunlardan birini döndürür. Döndürülen değer <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> bir anlık görüntüdür.
   
  İki ana senaryo vardır. İlk senaryoda kullanır <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> özellik türü kullanılarak aramak başka bir bileşen etkinleştirmek için bir nesne üzerinde durumu eklemek için bir tür tabanlı sözlüğü olarak.  
   
  İkinci senaryo kullanan <xref:System.ServiceModel.IExtension%601.Attach%2A> ve <xref:System.ServiceModel.IExtension%601.Detach%2A> durumu geçişleri izleyen olaylar için kaydetme gibi özel davranış katılmak için bir nesne etkinleştirmek üzere özellikleri.  
   
- <xref:System.ServiceModel.IExtensionCollection%601> Arabirimidir koleksiyonu <xref:System.ServiceModel.IExtension%601> almak için izin nesneleri <xref:System.ServiceModel.IExtension%601> alt türe göre. <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType>döndürür en son eklenen nesne bir <xref:System.ServiceModel.IExtension%601> türü.  
+ <xref:System.ServiceModel.IExtensionCollection%601> Arabirimidir koleksiyonu <xref:System.ServiceModel.IExtension%601> almak için izin nesneleri <xref:System.ServiceModel.IExtension%601> alt türe göre. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>döndürür en son eklenen nesne bir <xref:System.ServiceModel.IExtension%601> türü.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation'da genişletilebilen nesneler  
  Dört Genişletilebilir nesneleri vardır [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
