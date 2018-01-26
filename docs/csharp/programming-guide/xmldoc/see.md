@@ -16,11 +16,11 @@ ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 065c85ba411794858c8c4d70de0ac1467da1fe56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 959da56269081ebee036c620e535185609c5bff3
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;bkz:&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,12 +36,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Açıklamalar  
  \<Bkz > etiketi metin içindeki bir bağlantıdan belirtmenize olanak sağlar. Kullanım [ \<seealso >](../../../csharp/programming-guide/xmldoc/seealso.md) metin bir Ayrıca bkz. bölümünde yerleştirilmesi gerektiğini belirtmek için. Kullanım [cref özniteliği](../../../csharp/programming-guide/xmldoc/cref-attribute.md) kod öğeleri için belgeleri sayfalara iç köprüler oluşturmak için.  
   
- İle derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
+ İle derleme [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
   
  Aşağıdaki örnekte gösterildiği bir \<bkz > Özet bölümü içindeki etiketi.  
   
  [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Belge Açıklamaları için Önerilen Etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

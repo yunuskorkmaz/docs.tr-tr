@@ -1,6 +1,6 @@
 ---
 title: "Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme"
-ms.date: 10/17/2017
+ms.date: 01/24/2018
 ms.prod: .net-framework
 ms.technology: dotnet-clr
 ms.topic: article
@@ -16,11 +16,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework Sürümlerinin Yüklü Olduğunu Belirleme
 Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sürümünü çalıştırın. Geliştirme ya da uygulamanızı dağıtma kullanıcının bilgisayarda hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir. .NET Framework sürümü tutulan ayrı ayrı olan iki ana bileşen içerdiğini unutmayın:  
@@ -87,6 +87,8 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
 
      Değeri `Release` DWORD gösterir .NET Framework'ün hangi sürümünün yüklü.
 
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
     |Yayın DWORD değeri|Sürüm|
     |--------------------------------|-------------|
     |378389|.NET Framework 4.5|
@@ -128,6 +130,8 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
 1. Varlığını `Release` DWORD .NET Framework 4.5 veya sonraki bir bilgisayarda yüklü olduğunu gösterir. Anahtar değeri yüklü olan sürümü gösterir. Bu anahtar sözcük denetlemek için kullanın <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> ve <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> yöntemlerinin <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> Windows kayıt defterinde HKEY_LOCAL_MACHINE altında Software\Microsoft\NET Framework Setup\NDP\v4\Full alt erişmek için sınıf.
 
 2. Değerini denetleyin `Release` yüklü olan sürümü belirlemek için anahtar sözcüğü. İleri uyumlu olması için tabloda listelenen değerleri eşit veya daha büyük bir değere denetleyebilirsiniz. .NET Framework sürümleri şunlardır ve ilişkili `Release` anahtar sözcükler.
+
+    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
     |Sürüm|Yayın DWORD değeri|
     |-------------|--------------------------------|

@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 .NET Framework Yapılandırma dosyalarınızda geliştiricilerinin ve yöneticilerinin denetim sağlar ve esneklik şekilde uygulamalar üzerinde çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Yönetici, bir uygulama korumalı hangi kaynaklara erişebilir, derlemeler hangi sürümlerinin bir uygulama kullanacak ve uzak uygulamalar ve nesneleri bulunduğu kontrol edebilirsiniz. Geliştiriciler, bir ayarı her değiştirildiğinde bir uygulamayı yeniden derlemenize gereğini ortadan ayarları yapılandırma dosyalarında koyabilirsiniz. Bu bölümde ne yapılandırılabilir ve neden bir uygulama yapılandırma yararlı olabilecek açıklanmaktadır.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  Bu konu yapılandırma dosyalarının söz dizimini açıklar ve üç tür yapılandırma dosyası hakkında bilgi sağlar: makine, uygulama ve güvenlik.  
   
 ## <a name="configuration-file-format"></a>Yapılandırma Dosyası Biçimi  
- Yapılandırma dosyaları, yapılandırma bilgisini ayarlayan mantıksal veri yapıları olan öğeleri içerir. Bir yapılandırma dosyası içine, bir öğenin başlangıç ve bitişini işaretlemek için etiketleri kullanırsınız. Örneğin, `<runtime>` öğesi oluşur `<runtime>` *alt öğelerini*`</runtime>`. Boş bir öğe olarak yazılacak `<runtime/>` veya `<runtime>``</runtime>`.  
+ Yapılandırma dosyaları, yapılandırma bilgisini ayarlayan mantıksal veri yapıları olan öğeleri içerir. Bir yapılandırma dosyası içine, bir öğenin başlangıç ve bitişini işaretlemek için etiketleri kullanırsınız. Örneğin, `<runtime>` öğesi oluşur `<runtime>` *alt öğelerini*`</runtime>`. Boş bir öğe olarak yazılacak `<runtime/>` veya `<runtime></runtime>`.  
   
  Tüm XML dosyalarında olduğu gibi, yapılandırma dosyalarındaki söz dizimi büyük küçük harfe duyarlıdır.  
   

@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML'ye Genel Bakış (WPF)
 Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konuda özellikle tarafından uygulanan XAML açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olduğu daha büyük bir dil kavram [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -56,7 +56,7 @@ Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanab
 ## <a name="xaml-syntax-in-brief"></a>Kısa XAML sözdizimi  
  Aşağıdaki bölümlerde, temel tür XAML sözdizimi açıklayan ve kısa biçimlendirme örneği verin. Bu bölümler bu yedekleme türü sistemindeki nasıl temsil edildiğini gibi her sözdizimi form hakkında tam bilgi sağlamak üzere tasarlanmamıştır. Daha fazla XAML sözdizimi hakkında bilgi için ayrıntıları her Bu konu başlığı altında tanıtılan sözdizimi için bkz [içinde XAML sözdizimi ayrıntı](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- Sonraki birkaç bölümlerde malzeme çoğunu XML dili önceki aşina varsa, başlangıç olacaktır. XAML temel tasarım ilkeleri birinin sonucu budur.  XAML XAML dil kavramları kendi tanımlar, ancak bu kavramlar çalışma içinde XML dil ve biçimlendirme formu.  
+ Sonraki birkaç bölümlerde malzeme çoğunu XML dili önceki aşina varsa, başlangıç olacaktır. XAML temel tasarım ilkeleri birinin sonucu budur.  XAML dil kavramları kendi tanımlar, ancak bu kavramlar çalışma içinde XML dil ve biçimlendirme formu.  
   
 ### <a name="xaml-object-elements"></a>XAML nesne öğeleri  
  Object öğesi, genellikle bir türünün bir örneği bildirir. Bu tür, XAML dili olarak kullanan bir teknoloji için Yedekleme türleri sağlayan derlemelerde tanımlanır.  
