@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 54d512261261eff0c09bb96fb963ea8b452ae77f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -241,7 +241,7 @@ Birden çok olay işleyicilerine olayları eşlemek için başka bir dinamik ola
 
 **Şekil 9-16**. Etki alanı olay dağıtıcısının IOC kullanma
 
-Tüm tesisat ve bu yaklaşımı kendiniz uygulamak için yapıları oluşturabilirsiniz. Ancak, aynı zamanda gibi kullanılabilir kitaplıkları kullanabilirsiniz [MediatR](https://github.com/jbogard/MediatR), perde altında kullanan IOT kapsayıcı. Bu nedenle doğrudan önceden tanımlanmış arabirimleri ve Dünyası nesnenin yayımlama/dağıtma yöntemleri kullanabilirsiniz.
+Tüm tesisat ve bu yaklaşımı kendiniz uygulamak için yapıları oluşturabilirsiniz. Ancak, aynı zamanda gibi kullanılabilir kitaplıkları kullanabilirsiniz [MediatR](https://github.com/jbogard/MediatR), perde altında kullanan IOC kapsayıcı. Bu nedenle doğrudan önceden tanımlanmış arabirimleri ve Dünyası nesnenin yayımlama/dağıtma yöntemleri kullanabilirsiniz.
 
 Kod içinde ilk olay işleyici türlerini, IOC kapsayıcısında kaydetmek aşağıdaki örnekte gösterildiği gibi ihtiyacınız [eShopOnContainers sıralama mikro hizmet](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 

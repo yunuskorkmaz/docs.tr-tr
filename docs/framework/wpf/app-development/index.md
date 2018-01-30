@@ -1,27 +1,29 @@
 ---
 title: "Uygulama Geliştirme"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/26/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a>
@@ -140,5 +142,5 @@ ms.lasthandoff: 12/22/2017
 |[Gezintiye Genel Bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Uygulamanızın sayfaları arasında gezinme yönetimine genel bir bakış sağlar.|  
 |[Barındırma](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Genel bir bakış sağlar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Derleme ve Dağıtma](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Derleme ve WPF uygulamanızı dağıtmak açıklar.|  
-|[Visual Studio 2015’te WPF’ye Giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
+|[Visual Studio'da WPF'ye giriş](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
 |[İzlenecek Yol: İlk WPF masaüstü uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Gösterir uygulamasını kullanarak bir WPF oluşturmak için sayfa nasıl gezinme, düzeni, denetimleri, görüntüler, stil bir gözden geçirme ve bağlama.|

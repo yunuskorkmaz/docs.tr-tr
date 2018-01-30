@@ -3,7 +3,8 @@ title: "Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrı�
 description: "String.Split sınırlayıcıları kümesinden bölünmüş bir dizeler dizisi döndürür. Dizeleri ayrıştırma kolay bir yoludur."
 ms.date: 01/03/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - splitting strings [C#]
@@ -14,18 +15,19 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: fc1032f2cdf6706ec933323643dbf6ecff3e9f6f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9dd5b1204986bd9b181c033d254bb41e8cc894da
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrıştırma
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> Yöntemi, bir veya daha fazla ayırıcıları temel giriş dizesi bölerek alt dizeler dizisi oluşturur. Bir dize word sınırlarındaki ayırmak için genellikle en kolay yoludur. Ayrıca, dizeleri diğer özel karakterler veya dizeleri bölme için de kullanılır.
 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+
 Aşağıdaki kodu her sözcüğün dizelerden oluşan bir dizi ortak bir deyim ayıran.
-Kendiniz tuşlarına basarak deneyin *çalıştırmak* düğmesi.
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 

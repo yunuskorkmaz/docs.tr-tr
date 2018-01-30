@@ -9,16 +9,16 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 18abca8ce8280ff1fa2b52650be57a59d1201fab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Mimari ilkeleri
+# <a name="architectural-principles"></a>Mimari ilkeleri
 
 > "Oluşturucular binalar oluşturulduysa program yolu programcıları yazdı ve ardından gelen boyunca ilk woodpecker civilization yok."  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>Özet
 
@@ -110,15 +110,15 @@ En azından, tek tek web uygulamaları kendi sınırlanmış bağlamla bir verit
 > <http://deviq.com/separation-of-concerns/>
 > - **Kapsülleme** <http://deviq.com/encapsulation/>
 > - **Bağımlılık tersine çevirme ilkesi**  
-> <http://deviq.com/Dependency-inversion-Principle/>
+> <http://deviq.com/dependency-inversion-principle/>
 > - **Açık bağımlılıkları İlkesi**  
-> <http://deviq.com/Explicit-Dependencies-Principle/>
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **Kendiniz yineleme**  
-> <http://deviq.com/Don-t-REPEAT-yourself/>
+> <http://deviq.com/don-t-repeat-yourself/>
 > - **Kalıcılık kullanmayan**  
 > <http://deviq.com/persistence-ignorance/>
 > - **Sınırlanmış bağlamı**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
 [Önceki] (choose-between-traditional-web-and-single-page-apps.md) [sonraki] (ortak-web-uygulama-architectures.md)
