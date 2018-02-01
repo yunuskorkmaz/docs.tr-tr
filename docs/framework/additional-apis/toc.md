@@ -4,8 +4,12 @@
 #### [m_WriteList Alanı](m_writelist.md)
 ### [ConnectionGroup Sınıfı](connectiongroup.md)
 #### [m_ConnectionList Alanı](m_connectionlist.md)
+### [CoreResponseData Class](coreresponsedata.md)
+#### [m_ResponseHeaders Field](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode Field](coreresponsedata_m_statuscode.md)
 ### HttpWebRequest Sınıfı
 #### [_AutoRedirects Alanı](_autoredirects.md)
+#### [_CoreResponse Field](httpwebrequest__coreresponse.md)
 #### [_HttpResponse Alanı](_httpresponse.md)
 ### ServicePoint Sınıfı
 #### [m_ConnectionGroupList Alanı](m_connectiongrouplist.md)
