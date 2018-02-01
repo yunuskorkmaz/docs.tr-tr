@@ -25,7 +25,9 @@
 ### [Sınıf Kitaplığına Genel Bakış](standard/class-library-overview.md)
 ### [Temel Türler](standard/base-types/)
 ## [.NET Sınıf kitaplıkları](standard/class-libraries.md)
-## [Taşınabilirlik Çözümleyicisi](standard/portability-analyzer.md)
+## Çözümleyiciler
+### [API Çözümleyicisi](standard/analyzers/api-analyzer.md) 
+### [Taşınabilirlik Çözümleyicisi](standard/analyzers/portability-analyzer.md)
 ## [Özel durumları işleme ve atma](standard/exceptions/)
 ## [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly-format.md)
 ## [Atık Toplama](standard/garbage-collection/)
@@ -262,6 +264,7 @@
 ### [Sürüm Oluşturma](csharp/versioning.md)
 ## [C# Kullanımı Hakkındaki Konular](csharp/how-to/index.md)
 ### [`String.Split` kullanarak dizeleri ayrıştırma](csharp/how-to/parse-strings-using-split.md)
+### [Dizeleri birleştirme](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK’sı (Roslyn API’leri)](csharp/roslyn-sdk/)
 ## [C# Programlama Kılavuzu](csharp/programming-guide/)
@@ -281,7 +284,6 @@
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Öğreticiler
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
-#### [F# Interactive Seçenekleri](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [Tür Sağlayıcıları](fsharp/tutorials/type-providers/index.md)
 #### [Tür Sağlayıcılarını Kullanarak SQL Veritabanına Erişim](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
 #### [Tür Sağlayıcılarını ve Varlıkları Kullanarak SQL Veritabanına Erişim](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
@@ -407,6 +409,7 @@
 ### [Fixed anahtar sözcüğü](fsharp/language-reference/fixed.md)
 ### [Derleyici Yönergeleri](fsharp/language-reference/compiler-directives.md)
 ### [Derleyici Seçenekleri](fsharp/language-reference/compiler-options.md)
+### [F# Interactive Seçenekleri](fsharp/language-reference/fsharp-interactive-options.md)
 ### [Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Çağıran Bilgileri](fsharp/language-reference/caller-information.md)
 ### [Ayrıntılı Söz Dizimi](fsharp/language-reference/verbose-syntax.md)
