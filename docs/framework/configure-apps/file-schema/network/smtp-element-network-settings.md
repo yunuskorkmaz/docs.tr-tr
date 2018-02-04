@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; öğesi (ağ ayarları)
-Teslim biçimi, teslim yöntemini yapılandırır ve e-postalar göndermek için adresinden.  
+Teslim biçimi, teslim yöntemini yapılandırır ve e-postaları göndermek için adresinden.  
   
  \<Yapılandırma >  
-\<System.NET >  
-\<mailSettings >  
-\<SMTP >  
+\<system.net>  
+\<mailSettings>  
+\<smtp>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,7 +57,7 @@ Teslim biçimi, teslim yöntemini yapılandırır ve e-postalar göndermek için
 |---------------|-----------------|  
 |`deliveryFormat`|Giden e-postalar için teslim biçimi belirtir. SevenBit ve uluslararası bunun kabul edilebilir değerlerdir.|  
 |`deliveryMethod`|E-postalar için teslim yöntemini belirtir. Ağ, pickupDirectoryFromIis ve specifiedPickupDirectory bunun kabul edilebilir değerlerdir.|  
-|`from`|Belirtir giden e-postalar için adresinden.|  
+|`from`|Belirtir giden e-posta adresinden.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

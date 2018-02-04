@@ -1,11 +1,13 @@
 ---
 title: "UInteger Veri Türü"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.uinteger
+f1_keywords:
+- vb.uinteger
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - UInteger data type
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
@@ -53,10 +54,18 @@ Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
+Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+
+```vb
+Dim number As UInteger = &H_0F8C_0326
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Sayısal değişmez değerleri de dahil edebilirsiniz `UI` veya `ui` [türü karakteri](../../programming-guide\language-features\data-types/type-characters.md) belirtmek için `UInteger` aşağıdaki örnekte gösterildiği gibi veri türü.
 
 ```vb
-Dim number = &H0FAC14D7ui
+Dim number = &H_0FAC_14D7ui
 ```
 
 ## <a name="programming-tips"></a>Programlama ipuçları
@@ -77,8 +86,8 @@ Dim number = &H0FAC14D7ui
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.UInt32>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Nasıl yapılır: imzalanmamış türler isteyen bir Windows işlevi çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

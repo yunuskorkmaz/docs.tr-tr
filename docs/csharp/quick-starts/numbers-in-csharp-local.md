@@ -1,5 +1,5 @@
 ---
-title: "Hızlı Başlangıç - C# numaraları - C# Kılavuzu"
+title: "C# Öğreticisi - C# yerel quickstarts numaraları"
 description: "C# sayısal türler, özellikleri ve yöntemleri keşfetme öğrenin."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>C# hızlı başlangıç numaraları #
+# <a name="numbers-in-c-quickstart"></a>C# hızlı başlangıç numaraları
 
-Bu hızlı başlangıç C# sayı türleri hakkında etkileşimli olarak öğretilmektedir. Küçük miktarda kod yazacaksınız sonra derlemek ve bu kodu çalıştırmak. Hızlı Başlangıç bir dizi numaraları ve C# matematik işlemleri keşfedin dersleri içerir. Bu derslerin C# dil temelleri öğretir.
+Bu hızlı başlangıç C# sayı türleri hakkında etkileşimli olarak öğretilmektedir. Küçük miktarda kod yazacaksınız sonra derlemek ve bu kodu çalıştırmak. Hızlı bir dizi numaraları ve C# matematik işlemleri keşfedin dersleri içerir. Bu derslerin C# dil temelleri öğretir.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel quickstarts giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="explore-integer-math"></a>Tamsayı matematik keşfedin
 

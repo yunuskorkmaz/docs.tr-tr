@@ -1,6 +1,6 @@
 ---
-title: "Hızlı Başlangıç - dallar ve döngüler - C# Kılavuzu"
-description: "Bu hızlı başlangıç bölümünde dallar ve döngüler hakkında koşullu dal ve art arda deyimlerini yürütmek için döngüler destekler dili sözdizimi keşfetmek için C# kod yazın."
+title: "Dal ve döngüler Öğreticisi - C# yerel quickstarts"
+description: "Bu hızlı başlangıcı dallar ve döngüler hakkında koşullu dal ve art arda deyimlerini yürütmek için döngüler destekler dili sözdizimi keşfetmek için C# kod yazın."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Dal ve döngüler
 
 Bu hızlı başlangıç değişkenlerini inceler ve bu değişkenleri esas alarak yürütme yolu değiştirir kodunun nasıl yazılacağını öğretir. C# kod yazma ve derleme ve onu çalıştırma sonuçları görüntüleyin. Hızlı Başlangıç dallanma ve döngü yapıları C# keşfedin dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel quickstarts giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Kullanarak kararlar `if` deyimi
 
-Adlı bir dizin oluşturun **dalları Hızlı Başlangıç**. Geçerli dizin çalıştırma yapıp `dotnet new console -n BranchesAndLoops -o .`. Bu komut, geçerli dizinde yeni bir .NET Core konsol uygulaması oluşturur. 
+Adlı bir dizin oluşturun **dalları Hızlı Başlangıç**. Geçerli dizin çalıştırma yapıp `dotnet new console -n BranchesAndLoops -o .`. Bu komut, geçerli dizinde yeni bir .NET Core konsol uygulaması oluşturur.
 
 Açık **Program.cs** sık kullanılan Düzenleyicisi ve Değiştir satır `Console.Writeline("Hello World!");` aşağıdaki kod ile:
 
@@ -45,12 +45,11 @@ int b = 3;
 Tür `dotnet run` yeniden. Yanıt 10'dan az olduğundan, hiçbir şey yazdırılır. **Koşulu** olduğunuz test değer false. Olası dallarını birini yalnızca yazdıktan çünkü yürütmek için herhangi bir kod olmayan bir `if` deyimi: true dal.
 
 > [!TIP]
-> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Yakından hata çıkış ve hata oluşturulan kod bakın. Compler hata genellikle sorun bulmanıza yardımcı olabilir. 
+> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Yakından hata çıkış ve hata oluşturulan kod bakın. Compler hata genellikle sorun bulmanıza yardımcı olabilir.
 
-Bu ilk örnek gücünü gösterir `if` ve Boolean türleri. A *Boolean* iki değerlerden birine sahip bir değişken: `true` veya `false`. C# özel türünü tanımlayan `bool` Boolean değişkenleri için. `if` Deyimi denetler değerini bir `bool`. Değer olduğunda `true`, aşağıdaki deyim `if` yürütür. Aksi takdirde atlanır. 
+Bu ilk örnek gücünü gösterir `if` ve Boolean türleri. A *Boolean* iki değerlerden birine sahip bir değişken: `true` veya `false`. C# özel türünü tanımlayan `bool` Boolean değişkenleri için. `if` Deyimi denetler değerini bir `bool`. Değer olduğunda `true`, aşağıdaki deyim `if` yürütür. Aksi takdirde atlanır.
 
 Bu işlem koşullar denetleniyor ve bu koşullara göre deyimleri yürütme çok güçlü bir özelliktir.
-
 
 ## <a name="make-if-and-else-work-together"></a>Olun ve başka birlikte çalışma
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Aynı iş olarak bunu yapar `while` döngü ve `do` zaten kullandığınız döngü. `for` Deyimi nasıl çalıştığını denetleyen üç bölümden sahiptir. 
+Aynı iş olarak bunu yapar `while` döngü ve `do` zaten kullandığınız döngü. `for` Deyimi nasıl çalıştığını denetleyen üç bölümden sahiptir.
 
 İlk bölümüdür **Başlatıcısı için**: `for index = 0;` bildiren `index` döngü değişkendir ve ilk değerini ayarlar `0`.
 
@@ -252,13 +251,13 @@ Gördüğünüz göre `if` deyimi ve C# dil döngü yapıları bkz tüm tamsayı
 
 Kendiniz deneyin. Ardından nasıl yaptığınız denetleyin. 63 için bir yanıt almanız gerekir. Tarafından bir olası yanıt görebilirsiniz [tamamlanan kodu Github'da görüntüleme](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
-"Dallandırır ve döngü" Hızlı Başlangıç tamamladınız.
+"Dallar ve döngüler" Hızlı Başlangıç tamamladınız.
 
 İle devam edebilirsiniz [Ara değerli dizeler](interpolated-strings-local.md) kendi geliştirme ortamında hızlı başlangıç.
 
 Bu konularda bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:
 
-[Varsa ve else deyimi](../language-reference/keywords/if-else.md)   
-[While deyimi](../language-reference/keywords/while.md)   
-[Do deyimi](../language-reference/keywords/do.md)   
-[For deyimi](../language-reference/keywords/for.md)   
+[Varsa ve else deyimi](../language-reference/keywords/if-else.md)  
+[While deyimi](../language-reference/keywords/while.md)  
+[Do deyimi](../language-reference/keywords/do.md)  
+[For deyimi](../language-reference/keywords/for.md)  

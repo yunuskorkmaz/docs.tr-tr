@@ -12,17 +12,17 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 112be2518ddfb396fce8a14c5056c16cce9f376d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET sözlüğü
 
 Birincil Bu sözlük anlamları seçili terimleri ve tanımları olmadan .NET belgelerinde sık görünen kısaltmalar açıklamak için hedefidir.
 
-## <a name="aot"></a>UYGULAMA NESNE AĞACI
+## <a name="aot"></a>AOT
 
 Zaman tamamlanan derleyicisi.
 
@@ -44,9 +44,9 @@ Bkz: [ASP.NET Core belgeleri](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>derleme
 
-A *.dll* uygulamaları veya diğer derlemelerden tarafından çağrılabilir API'leri koleksiyonunu içeren dosya.
+A *.dll*/*.exe* uygulamaları veya diğer derlemelerden tarafından çağrılabilir API'leri koleksiyonunu içeren dosya.
 
-Bir .NET derlemesi türleri koleksiyonudur. Bir derlemeyi arabirimleri, sınıflar, yapılar, numaralandırmalar ve temsilciler içerir.  Bir projenin derlemelerde *bin* klasörü bazen denir *ikili dosyaları*. Ayrıca bkz. [Kitaplığı](#library).
+Bir derlemeyi arabirimleri, sınıflar, yapılar, numaralandırmalar ve temsilciler gibi türlerini içerebilir. Bir projenin derlemelerde *bin* klasörü bazen denir *ikili dosyaları*. Ayrıca bkz. [Kitaplığı](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -164,13 +164,13 @@ Bkz: [.NET Kılavuzu](index.md)
 
 Bkz: [.NET Core](../core/index.md).
 
-## <a name="net-core-cli"></a>.NET core CLI
+## <a name="net-core-cli"></a>.NET Core CLI
 
 .NET Core uygulamaları geliştirmek için bir platformlar arası araç zinciri.
 
 Bkz: [.NET Core komut satırı arabirimi (CLI) araçları](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>.NET core SDK
+## <a name="net-core-sdk"></a>.NET Core SDK
 
 Kitaplıkları ve .NET Core uygulamaları ve kitaplıkları oluşturmak geliştiriciler izin araçlar kümesi. İçeren [.NET Core CLI](#net-core-cli) uygulamalar, .NET Core kitaplıkları ve oluşturmaya ve çalıştırmaya uygulamalar ve yürütülebilir dotnet için çalışma zamanı oluşturmak için (*dotnet.exe*), CLI komutları çalıştırır ve uygulamaları çalıştırır.
 
@@ -192,7 +192,7 @@ UWP .NET yerel tarafından desteklenen ilk uygulama çerçevesi oluştu. Artık,
 
 Bkz: [.NET yerel ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET standart
+## <a name="net-standard"></a>.NET Standard
 
 Her .NET uygulamasında kullanılabilen .NET API'lerini biçimsel belirtimini.
 
@@ -210,7 +210,7 @@ Bu teknoloji kalıcı bir JIT Derleyici düşünebilirsiniz. Genellikle, burada 
 
 Bir NuGet paketi &mdash; veya yeni bir paket &mdash; olan bir *.zip* yazar adı gibi ek meta verilerin yanı sıra aynı ada sahip bir veya daha fazla derlemeler ile dosya.
 
-*.Zip* dosya sahip bir *.nupkg* uzantısı ve varlıkları gibi içerebilir *.dll* dosyaları ve *.xml* birden fazla ile kullanmak için dosyaları çerçeveler ve sürümleri. Bir uygulama veya kitaplığa yüklendiğinde uygun varlıklar uygulama veya kitaplığı tarafından belirtilen hedef çerçevede göre seçilir. Arabirim tanımlayın varlıklar bulunan *ref* klasörü ve uygulama tanımlamak varlıklar olan *lib* klasör.
+*.Zip* dosya sahip bir *.nupkg* uzantısı ve varlıkları gibi içerebilir *.dll* dosyaları ve *.xml* dosyaları, birden çok hedef ile kullanmak için çerçeveler ve sürümleri. Bir uygulama veya kitaplığa yüklendiğinde uygun varlıklar uygulama veya kitaplığı tarafından belirtilen hedef çerçevede göre seçilir. Arabirim tanımlayın varlıklar bulunan *ref* klasörü ve uygulama tanımlamak varlıklar olan *lib* klasör.
 
 ## <a name="platform"></a>platform
 

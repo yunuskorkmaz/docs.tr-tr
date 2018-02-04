@@ -1,6 +1,6 @@
 ---
-title: "Hızlı Başlangıç - Ara değerli dizeler - C# Kılavuzu"
-description: "Ara değerli dizeler hakkında Hızlı Başlat bölümünde bu C# kodu daha büyük bir dize deyimde sonucunu incude için yazma."
+title: "Ara değerli dizeler Öğreticisi - C# yerel quickstarts"
+description: "Ara değerli dizeler hakkında bu quickstart incude büyük bir dizi deyimde sonucu için C# kod yazın."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Ara değerli dizeler
 
 Bu hızlı başlangıç Ara değerli dizeler C# dilinde bir tek çıkışına dizeye değerleri eklemek için nasıl kullanılacağını öğretir. C# kod yazma ve derleme ve onu çalıştırma sonuçları görüntüleyin. Hızlı başlangıç değerleri dizeleri eklemek ve bu değerler farklı şekillerde biçimlendirmek dersleri bir dizi içerir.
 
-Bu Hızlı Başlangıç, geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte. 
+Bu Hızlı Başlangıç, geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel quickstarts giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte. 
 
 ## <a name="create-an-interpolated-string"></a>Ara değerli bir dize oluşturma
 

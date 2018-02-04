@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>WIF talep programlama modeli
 ASP.NET ve Windows Communication Foundation (WCF) geliştiriciler kimlik ve IPrincipal arabirimleri kullanıcının kimlik bilgileri ile çalışmak için normalde kullanın. Talep şimdi her zaman aşağıdaki çizimde gösterildiği gibi herhangi bir asıl için mevcut olduğundan .NET 4.5, Windows Identity Foundation (WIF) entegre edilmiş:  
@@ -80,6 +82,6 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |TLSClient|`urn:ietf:rfc:2246`|  
 |X509|`urn:oasis:names:tc:SAML:1.0:am:X509-PKI`|  
 |PGP|`urn:oasis:names:tc:SAML:1.0:am:PGP`|  
-|Spkı|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
+|Spki|`urn:oasis:names:tc:SAML:1.0:am:SPKI`|  
 |XmlDSig|`urn:ietf:rfc:3075`|  
 |Belirtilmemiş|`urn:oasis:names:tc:SAML:1.0:am:unspecified`|

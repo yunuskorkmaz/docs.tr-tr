@@ -1,7 +1,7 @@
 ---
 title: "Ne zaman Docker kapsayıcıları için .NET Framework seçin"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Framework seçin"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aa072ca9aa1337bdae839749751c7faf7fc9b2a3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Framework seçin
 
@@ -33,7 +33,7 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core geçirmek 
 
 Ancak, bile bu olağanüstü progression ile .NET standart 2.0 ve .NET Core 2.0 itibaren olabilir durumlarda bazı NuGet paketleri çalıştırmak için Windows gerekiyor ve .NET Core desteklemeyebilir. Ardından bu paketleri, uygulamanız için kritik olan, .NET Framework Windows kapsayıcılarında kullanmanız gerekecektir.
 
-## <a name="usingnet-technologies-not-available-for-net-core"></a>Using.NET teknolojileri için .NET Core mevcut değil 
+## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılabilir değil .NET teknolojilerini kullanarak 
 
 Bazı .NET Framework teknolojiler .NET Core (sürüm 2.0 bu yazma itibariyle) geçerli sürümünde kullanılabilir değildir. Bazıları daha sonra .NET Core sürümlerde kullanılabilir olur (.NET Core 2.x), ancak diğer desenleri .NET Core tarafından hedeflenen ve hiçbir zaman kullanılabilir yeni uygulama için geçerli değildir.
 

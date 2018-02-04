@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Yükleme Aracı)
 Yükleyici aracı, yükleyici bileşenlerini belirli derlemelerde yürüterek sunucu kaynaklarını yüklemenize ve kaldırmanıza olanak tanıyan bir komut satırı aracıdır. Bu araç, sınıflar ile birlikte çalışır. <xref:System.Configuration.Install> ad alanı.  
@@ -57,7 +59,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> veya<br /><br /> `/?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/help`*derleme*<br /><br /> veya<br /><br /> `/?`*derleme*|InstallUtil.exe'ye ilişkin komut sözdizimi ve seçeneklerin yanı sıra, belirtilen derleme içinde tek tek yükleyiciler tarafından tanınan ek seçenekleri görüntüler. Bu seçenek her yükleyici bileşenin tarafından döndürülen metni ekler <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> InstallUtil.exe Yardım metni özelliğine.|  
-|`/AssemblyName`"*assemblyName*<br /><br /> , Sürüm =*major.minor.build.revision*<br /><br /> , Kültür =*yerel ayar*<br /><br /> PublicKeyToken =*publicKeyToken*"|Bir derlemenin, genel derleme önbelleğine kaydedilmesi gereken tanımlayıcı adını belirtir. Derleme adı, derlemenin sürüm, kültür ve genel anahtar belirteciyle birlikte belirtilmelidir. Tam olarak belirtilen ad, tırnak işareti içine alınmalıdır.<br /><br /> Örneğin, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" tam olaralk belirtilmiş bir derleme adıdır.|  
+|`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> , Kültür =*yerel ayar*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Bir derlemenin, genel derleme önbelleğine kaydedilmesi gereken tanımlayıcı adını belirtir. Derleme adı, derlemenin sürüm, kültür ve genel anahtar belirteciyle birlikte belirtilmelidir. Tam olarak belirtilen ad, tırnak işareti içine alınmalıdır.<br /><br /> Örneğin, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" tam olaralk belirtilmiş bir derleme adıdır.|  
 |`/InstallStateDir=[`*directoryName*`]`|Derlemeyi yüklemek için kullanılan verileri içeren .InstallState dosyasının dizinini içerir. Varsayılan değer, derlemeyi içeren dizindir.|  
 |`/LogFile=`[*filename*]|Yükleme ilerlemesinin kaydedildiği günlük dosyasının adını belirtir. Varsayılan olarak, varsa `/LogFile` seçeneği atlanırsa, adlı bir günlük dosyası *assemblyname*. InstallLog oluşturulur. Varsa *filename* olan atlanırsa, herhangi bir günlük dosyası oluşturulur.|  
 |`/LogToConsole`={`true`&#124;`false`}|Varsa `true`, konsola çıktı görüntüler. Varsa `false` (varsayılan), konsola çıktı gizler.|  

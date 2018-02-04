@@ -3,9 +3,11 @@ title: "SByte Veri Türü (Visual Basic)"
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte veri türü (Visual Basic)
 
@@ -51,6 +53,14 @@ Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
+Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Değişmez değer tamsayı aralığı dışında ise `SByte` (diğer bir deyişle, bu ise değerinden <xref:System.SByte.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.SByte.MaxValue?displayProperty=nameWithType>, derleme hatası oluşur. Hiçbir soneki değişmez değer bir tamsayı sahip olduğunda bir [tamsayı](integer-data-type.md) algılanır. Değişmez değer tamsayı aralığı dışında ise `Integer` türü, bir [uzun](long-data-type.md) algılanır. Bu, önceki örneklerde, sayısal değişmez değerleri anlamına `0x9A` ve `0b10011010` 32 bit imzalı tamsayılar aşıyor 156, değerini olarak yorumlanır <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Başarıyla bir ondalık olmayan tamsayıya atayan şöyle Kodu derlemek için bir `SByte`, aşağıdakilerden birini yapabilirsiniz:
 
 - Tamsayı sınırları denetimleri ile derleme tarafından devre dışı `/removeintchecks` derleyici anahtar.
@@ -72,10 +82,10 @@ Değişmez değer tamsayı aralığı dışında ise `SByte` (diğer bir deyişl
 ## <a name="see-also"></a>Ayrıca bkz.
 
  <xref:System.SByte?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short veri türü](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer veri türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long veri türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

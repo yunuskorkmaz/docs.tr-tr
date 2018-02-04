@@ -1,5 +1,5 @@
 ---
-title: Karakter .NET kodlama
+title: Character Encoding in .NET
 ms.custom: 
 ms.date: 12/22/2017
 ms.prod: .net
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bf07665f0f7e79affd0b34b8faba94a56dd7d1d2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="character-encoding-in-net"></a>Karakter .NET kodlama
+# <a name="character-encoding-in-net"></a>Character Encoding in .NET
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
   
 -   Bir karakter dizisini sayısal değerler dizisine (baytlara) çeviren bir kodlayıcı.  
@@ -56,7 +56,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
 -   [Özel bir geri dönüş stratejisi uygulama](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
-## <a name="encodings-in-net"></a>.NET kodlamaları  
+## <a name="encodings-in-net"></a>Encodings in .NET  
  .NET kodlama sınıflarda devralan tüm karakter <xref:System.Text.Encoding?displayProperty=nameWithType> tüm karakter kodlamaları ortak işlevselliği tanımlayan bir Özet sınıf sınıfı. .NET içinde uygulanan tek tek kodlama nesnelere erişmek için aşağıdakileri yapın:  
   
 -   Statik özelliklerini kullanmak <xref:System.Text.Encoding> nesneler döndürmeye sınıfı (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) .NET içinde kullanılabilir standart karakter kodlamaları temsil eder. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. (Daha fazla bilgi için bkz: [değiştirme geri dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement) bölümüne.)  
@@ -74,10 +74,10 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Çağırarak .NET içinde kullanılabilir tüm kodlamaları hakkında bilgi alabilir <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> yöntemi. .NET sistemleri aşağıdaki tabloda listelenen kodlama karakter destekler.  
   
-|Kodlama|örneği|Açıklama|Avantajlar/dezavantajlar|  
+|Encoding|örneği|Açıklama|Avantajlar/dezavantajlar|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar.|Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|  
-|UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta ve haber grubu protokolleri gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|  
+|UTF-7|<xref:System.Text.UTF7Encoding>|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir.|UTF-7, e-posta gibi protokoller ve haber protokollerini destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|  
 |UTF-8|<xref:System.Text.UTF8Encoding>|Her Unicode kod noktasını bir ile dört bayt arası bir dizi olarak temsil eder.|UTF-8, 8 bitlik veri boyutlarını destekler ve mevcut çoğu işletim sistemi ile çalışır. ASCII aralığındaki karakterler için, UTF-8 ASCII kodlaması ile aynıdır ve daha geniş bir karakter kümesi sağlar. Ancak, Çince-Japonca-Korece (CJK) betikleri için UTF-8, her karakter için üç bayt gerektirir ve UTF-16'dan daha büyük veri boyutlarına neden olabilir. Bazen HTML etiketleri gibi ASCII verilerinin miktarının, CJK aralığındaki artan boyutu haklı çıkarabilir, buna dikkat edin.|  
 |UTF-16|<xref:System.Text.UnicodeEncoding>|Her Unicode kod noktasını bir veya iki 16 bitlik tamsayı dizisi olarak temsil eder. En yaygın Unicode karakterleri yalnızca bir UTF-16 kod noktası gerektirir, ancak Unicode ek karakterleri (U+10000 ve daha üstü) iki UTF-16 yedek kod noktası gerektirir. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir.|UTF-16 kodlaması ortak dil çalışma zamanı tarafından <xref:System.Char> ve <xref:System.String> değerlerini ve Windows işletim sistemi tarafından `WCHAR` değerlerini temsil etmek için kullanılır.|  
 |UTF-32|<xref:System.Text.UTF32Encoding>|Her Unicode kod noktasını bir 32-bit tamsayı olarak temsil eder. Küçük endian ve büyük endian bayt sıralarının her ikisi de desteklenir.|UTF-32 kodlama, uygulamalar kodlama alanının çok önemli olduğu işletim sistemlerinde UTF-16 kodlama davranışının yedek kod noktası davranışından kaçınmak istediğinde kullanılır. Görüntü üzerinde işlenen tek simgeler hala birden fazla UTF-32 karakteriyle kodlanabilir.|  

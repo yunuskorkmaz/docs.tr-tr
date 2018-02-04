@@ -26,21 +26,21 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b9922576e4ef942e896f365c44cebec717abe3b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
-Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadelerin kapsamlı desen eşleştirme gösterimi; belirli karakter desenlerini bulmak için büyük miktarlarda metini hızlıca ayrıştırmanızı; önceden tanımlı bir desenle (örneğin bir e-posta adresi) eşleştiğinden emin olmak için metni doğrulamanızı; metin alt dizeleri ayıklamanızı, düzenlemenizi, değiştirmenizi veya silmenizi; ve bir rapor oluşturmak için ayıklanan dizeleri bir koleksiyona eklemenizi sağlar. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
+Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadeleri desen eşleştirme kapsamlı gösterimi, hızlı bir şekilde belirli karakter düzenleri bulmak için metin büyük miktarlarda ayrıştırılamıyor sağlar; önceden tanımlanmış bir desen (örneğin, bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklama, düzenleme, değiştirin veya metin silmek için alt dizeler; Ayıklanan dizelerin bir raporu oluşturmak için bir koleksiyona eklemek için ve. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  
   
 ## <a name="how-regular-expressions-work"></a>Normal İfadeler Nasıl Çalışır?  
  Normal ifadelerle işleme metnin bir merkez tarafından temsil edilen normal ifade altyapısı olan <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> .NET nesne. Metinleri normal ifadeler kullanarak işlemek için, normal ifade altyapısına en azından aşağıdaki iki bilgi öğesinin sağlanması gerekir:  

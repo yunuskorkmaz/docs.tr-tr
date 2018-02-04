@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
 title: "Dal ve döngüler"
 metadata:
-  title: "Dal ve döngüler"
-  description: "Bu hızlı başlangıç bölümünde dallar ve döngüler hakkında C# etkileşimli olarak öğrenmek için tarayıcınızın kullanacaksınız. C# kod yazmanız ve derleme ve kodunuzu doğrudan tarayıcıda çalışan sonuçlarını görebilirsiniz."
+  title: "Dal ve döngüler etkileşimli öğreticisini - C# quickstarts"
+  description: "Bu hızlı başlangıcı dallar ve döngüler hakkında C# etkileşimli olarak öğrenmek için tarayıcınızın kullanacaksınız. C# kod yazmanız ve derleme ve kodunuzu doğrudan tarayıcıda çalışan sonuçlarını görebilirsiniz."
   audience: Developer
   level: Beginner
   ms.custom: mvc
@@ -13,11 +13,11 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings
   nextTutorialTitle: "C# Ara değerli dizeler"
-  ms.openlocfilehash: 04fe3ae50791d3484f5f846a753aa55c6de1b01f
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 1fad5d5b205c9a02bbb00d3377e3cae59926faf9
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "Bu hızlı başlangıç değişkenlerini inceler ve bu değişkenleri esas alarak yürütme yolu değiştirir kodunun nasıl yazılacağını öğretir. C# etkileşimli olarak yazma ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanacaksınız. Bu hızlı başlangıç dallanma ve döngü yapıları C# keşfedin dersleri bir dizi içerir. Bu derslerin C# dil temelleri öğretir.\n"
@@ -38,4 +38,4 @@ items:
   content: "Gördüğünüz göre `if` deyimi ve C# dil döngü yapıları bkz tüm tamsayılar 1 ila 3 ile tam bölünebilir 20 toplamını bulmak için C# kod yazın.  Aşağıda, birkaç ipucu verilmiştir:\n\n- `%` İşleci, bir bölme işlemi geri kalanı verir.\n- `if` Deyimi, bir sayı toplamı parçası olup olmayacağını görmek için koşul verir.\n- `for` Döngü, 20'den sayılar 1 için bir dizi adımı yineleyin yardımcı olabilir.\n\nKendiniz deneyin. Ardından nasıl yaptığınız denetleyin. Bir ipucu olarak 63 için bir yanıt almanız gerekir.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
 - title: "Tam sınama"
   durationInMinutes: 1
-  content: "\"Dallandırır ve döngü\" Hızlı Başlangıç tamamladınız. \n\nBu hızlı başlangıçlar kendi geliştirme ortamında devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve Hızlı Başlangıç'ı seçin. Bu aynı alıştırma deneyin, doğrudan bir sonraki hızlı başlangıç taşımak veya yeniden ile başlangıç [C# numaraları](numbers-in-csharp-local.md) hızlı başlangıç.\n\nBu konularda bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n[Varsa ve else deyimi](../language-reference/keywords/if-else.md)   \n[While deyimi](../language-reference/keywords/while.md)   \n[Do deyimi](../language-reference/keywords/do.md)   \n[For deyimi](../language-reference/keywords/for.md)\0"
+  content: "\"Dallar ve döngüler\" Hızlı Başlangıç tamamladınız. \n\nBu hızlı başlangıç ipuçları kendi geliştirme ortamı devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve bir Hızlı Başlangıç'ı seçin. Bu aynı alıştırma deneyin, sonraki hızlı başlangıç doğrudan taşımak veya yeniden ile başlangıç [C# numaraları](numbers-in-csharp-local.md) hızlı başlangıç.\n\nBu konularda bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n[Varsa ve else deyimi](../language-reference/keywords/if-else.md)   \n[While deyimi](../language-reference/keywords/while.md)   \n[Do deyimi](../language-reference/keywords/do.md)   \n[For deyimi](../language-reference/keywords/for.md)\0"

@@ -2,7 +2,8 @@
 title: "Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
 Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikleri yeni bir tür olarak adlandırılan `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri başvuru parametrelere bağımsız değişkenleri geçirme özelliği.  
@@ -80,7 +81,7 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
 1.  Aşağıdaki yöntemi ekleyin `Program` bir Excel çalışma ayarlamak için sınıf.  
   
-     Yöntem [Ekle](http://go.microsoft.com/fwlink/?LinkId=210910) belirli bir şablon belirtmek için isteğe bağlı bir parametre içeriyor. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değerini kullanmak istiyorsanız, bu parametre için bağımsız değişken atlayın olanak sağlar. Bağımsız değişken aşağıdaki kodda gönderdiğinden `Add` yeni bir çalışma kitabı oluşturur ve varsayılan şablonu kullanır. Önceki sürümlerinde, C# eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     Yöntem [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) belirli bir şablon belirtmek için isteğe bağlı bir parametre içeriyor. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değerini kullanmak istiyorsanız, bu parametre için bağımsız değişken atlayın olanak sağlar. Bağımsız değişken aşağıdaki kodda gönderdiğinden `Add` yeni bir çalışma kitabı oluşturur ve varsayılan şablonu kullanır. Önceki sürümlerinde, C# eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -96,11 +97,11 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     Önceki sürümleri, C# çünkü bu açık atama bu işlemler için gerekli `ExcelApp.Columns[1]` döndüren bir `Object`, ve `AutoFit` bir Excel [aralığı](http://go.microsoft.com/fwlink/?LinkId=210911) yöntemi. Aşağıdaki satırları atama gösterir.  
+     Önceki sürümleri, C# çünkü bu açık atama bu işlemler için gerekli `ExcelApp.Columns[1]` döndüren bir `Object`, ve `AutoFit` bir Excel [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) yöntemi. Aşağıdaki satırları atama gösterir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]ve sonraki sürümlerinde, döndürülen dönüştürür `Object` için `dynamic` otomatik olarak derlemesi tarafından başvurulduğunda [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği veya eşdeğer, varsa Excel **birlikte çalışma türlerini katıştır** özelliği ayarlanmış true. Bu özellik için varsayılan değer doğrudur.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]ve sonraki sürümlerinde, döndürülen dönüştürür `Object` için `dynamic` otomatik olarak derlemesi tarafından başvurulduğunda [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği veya eşdeğer, varsa Excel **birlikte çalışma türlerini katıştır**özelliği ayarlanmış true. Bu özellik için varsayılan değer doğrudur.  
   
 ### <a name="to-run-the-project"></a>Projeyi çalıştırmak için  
   
@@ -116,7 +117,7 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
 1.  Ek yolla göstermeye [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]ve sonraki sürümlerinde, Office geliştirir programlama, aşağıdaki kod bir Word uygulamasını açar ve Excel çalışma bağlanan bir simge oluşturur.  
   
-     Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc`Yöntem çağrıları için karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan [Ekle](http://go.microsoft.com/fwlink/?LinkId=210937) ve [denetlemeye](http://go.microsoft.com/fwlink/?LinkId=147099). Sürümünde sunulan diğer iki yeni özellik bu çağrıları dahil [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] başvuru parametrelere sahip COM yöntemleri çağrıları basitleştirin. İlk olarak, değer parametreleri değilmiş gibi başvuru parametreleri bağımsız değişkenler gönderebilirsiniz. Diğer bir deyişle, her bir başvuru parametre için bir değişken oluşturmak zorunda kalmadan değerleri doğrudan gönderebilirsiniz. Derleyici bağımsız değişken değerleri tutmak için geçici değişkenleri oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.  
+     Yapıştırma yöntemi `CreateIconInWordDoc`, daha sonra bu adımda, sağlanan içine `Program` sınıfı. `CreateIconInWordDoc`Yöntem çağrıları için karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanan [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) ve [denetlemeye](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Sürümünde sunulan diğer iki yeni özellik bu çağrıları dahil [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] başvuru parametrelere sahip COM yöntemleri çağrıları basitleştirin. İlk olarak, değer parametreleri değilmiş gibi başvuru parametreleri bağımsız değişkenler gönderebilirsiniz. Diğer bir deyişle, her bir başvuru parametre için bir değişken oluşturmak zorunda kalmadan değerleri doğrudan gönderebilirsiniz. Derleyici bağımsız değişken değerleri tutmak için geçici değişkenleri oluşturur ve çağrısından döndüğünüzde değişkenleri atar. İkinci olarak, atlayabilirsiniz `ref` anahtar sözcüğü bağımsız değişken listesinde.  
   
      `Add` Yöntemi tümü isteğe bağlı dört başvuru parametre vardır. İçinde [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], veya sonraki sürümlerinde, çıkarın bağımsız değişkenleri herhangi parametrelerden biri veya tümü için varsayılan değerleri kullanmak istiyorsanız. İçinde [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ve önceki sürümleri, her parametre için bir bağımsız değişken sağlanmalıdır ve parametreleri başvuru parametreleri olduğundan bağımsız değişkeni bir değişken olmalıdır.  
   
@@ -162,11 +163,11 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     [Biçim](http://go.microsoft.com/fwlink/?LinkId=210948) yöntemi tümü isteğe bağlı yedi değer parametreleri sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler none, bazıları veya tümü için bağımsız değişkenler sağlamak etkinleştirin. Önceki deyiminde parametrelerden yalnızca birini kullanmak için bir bağımsız değişken sağlanan `Format`. Çünkü `Format` ilk parametre parametre listesinde parametre adı sağlamanız gerekmez. Ancak, deyim parametre adı, aşağıdaki kodda gösterildiği gibi dahil olup olmadığını anlamak daha kolay olabilir.  
+     [Biçim](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) yöntemi tümü isteğe bağlı yedi değer parametreleri sahiptir. Adlandırılmış ve isteğe bağlı bağımsız değişkenler none, bazıları veya tümü için bağımsız değişkenler sağlamak etkinleştirin. Önceki deyiminde parametrelerden yalnızca birini kullanmak için bir bağımsız değişken sağlanan `Format`. Çünkü `Format` ilk parametre parametre listesinde parametre adı sağlamanız gerekmez. Ancak, deyim parametre adı, aşağıdaki kodda gösterildiği gibi dahil olup olmadığını anlamak daha kolay olabilir.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Sonuç görmek için CTRL + F5 tuşuna basın. Diğer biçimlere listelenen [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967) numaralandırması.  
+2.  Sonuç görmek için CTRL + F5 tuşuna basın. Diğer biçimlere listelenen [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx) numaralandırması.  
   
 3.  1. adım gerekli bağımsız değişkenlerle gösterilir aşağıdaki kod ile deyiminde karşılaştırmak [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] veya önceki sürümleri.  
   
@@ -179,7 +180,7 @@ Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. A
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Type.Missing?displayProperty=nameWithType>  
- [dinamik](../../../csharp/language-reference/keywords/dynamic.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Nasıl yapılır: Office Programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+ [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

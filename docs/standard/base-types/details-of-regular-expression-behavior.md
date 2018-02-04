@@ -15,18 +15,18 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c875fee667639923faf44c79afd6488cfc205e20
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici sınırlı Automaton (NFA) altyapısı içerir kırıntıları oluşturma bir normal ifade Eşleştirici altyapısıdır. Bu ondan daha hızlı ve daha kısıtlı, saf normal ifade belirleyici sınırlı Automaton (DFA) altyapılarını awk, egrep veya lex bulunanlar gibi ancak ayırır. Bu ayrıca, standartlaştırılmış, ancak daha yavaş, ayırt POSIX NFAs. Aşağıdaki bölümde normal ifade motorları üç tür ve geleneksel NFA altyapısını kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/23/2017
     |-------------|-----------------|  
     |`^`|Eşleşme dizenin başında başlar.|  
     |`[A-Z0-9]`|Sayısal veya alfasayısal bir karakterle eşleşmesi. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
-    |`([-!#$%&'.*+/=?^`{} &#124; ~\w]) *'|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, ', {,}, &#124; veya ~.|  
+    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, ', {,}, &#124; veya ~.|  
     |`(?<=[A-Z0-9])`|Arkasında sayısal veya alfasayısal olmalıdır bir önceki karakteri arayın. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
     |`$`|Son dizenin sonunda eşleşmiyor.|  
   

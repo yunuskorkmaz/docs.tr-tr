@@ -1,22 +1,24 @@
 ---
 title: "Byte Veri Türü (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Byte
+f1_keywords:
+- vb.Byte
 helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8 bit (1-bayt) tamsayıları tutar.
@@ -42,6 +44,14 @@ Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
+Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+
+```vb
+Dim number As Byte = &H_6A
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 ## <a name="programming-tips"></a>Programlama ipuçları
 
 -   **Negatif sayılar.** Çünkü `Byte` imzasız bir tür negatif bir sayı temsil edilemez. Tekli eksi kullanıyorsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `Byte`, Visual Basic ifade dönüştürür `Short` ilk.
@@ -63,7 +73,7 @@ Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`
 ## <a name="see-also"></a>Ayrıca Bkz.
 
  <xref:System.Byte?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

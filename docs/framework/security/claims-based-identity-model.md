@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Talep tabanlı kimlik modeli
-Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, diğeri ise e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
+Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adını olabilir, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
   
  Bu modelde, çoklu oturum açma daha kolay bir şekilde gerçekleştirilir ve uygulamanız artık aşağıdakilerden sorumlu olmaz:  
   
@@ -49,7 +51,7 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
  Windows Identity Foundation (WIF) programlama modeli açıklayan amacıyla, bir kullanıcı veya başka bir varlık korumak istediğiniz bir sistemde açıklayan öznitelikler kümesi temsil etmek için "kimlik" terimi kullanacağız.  
   
 ### <a name="claim"></a>Talep  
- Talebi ad, e-posta adresi, yaş, Satış rolünde üyelik gibi kimlik bilgisi olarak düşünebilirsiniz. Uygulamanız ne kadar çok talep alırsa, kullanıcınız hakkında o kadar çok bilginiz olur. Neden bu kurumsal dizinleri tanımlamak için sık kullanılan olarak "öznitelikleri" yerine "talepler," denir merak ediyor olabilirsiniz. Bunun dağıtım yöntemiyle bir ilgisi yoktur. Bu modelde, uygulamanız bir dizinde kullanıcı özniteliklerini aramaz. Bunun yerine, kullanıcı talepleri uygulamanıza dağıtır ve uygulamanız bunları inceler. Her talep veren kişi tarafından yapılır ve talebe veren kişiye güvendiğiniz kadar güvenirsiniz. Örneğin, şirketinizin etki alanı denetleyicisi tarafından yapılan bir talebe kullanıcının kendisi tarafından yapılan bir talebe göre daha fazla güvenirsiniz. WIF içeren talepleri temsil eden bir <xref:System.Security.Claims.Claim> olan türü, bir <xref:System.Security.Claims.Claim.Issuer%2A> kimin Talep veren çıkışı bulmak izin veren özellik.  
+ Talep kimlik bilgilerini adı, e-posta adresi, geçerlilik süresi, Satış rolü üyeliği gibi bir parçası olarak düşünün. Uygulamanız ne kadar çok talep alırsa, kullanıcınız hakkında o kadar çok bilginiz olur. Neden bu kurumsal dizinleri tanımlamak için sık kullanılan olarak "öznitelikleri" yerine "talepler," denir merak ediyor olabilirsiniz. Bunun dağıtım yöntemiyle bir ilgisi yoktur. Bu modelde, uygulamanız bir dizinde kullanıcı özniteliklerini aramaz. Bunun yerine, kullanıcı talepleri uygulamanıza dağıtır ve uygulamanız bunları inceler. Her talep veren kişi tarafından yapılır ve talebe veren kişiye güvendiğiniz kadar güvenirsiniz. Örneğin, şirketinizin etki alanı denetleyicisi tarafından yapılan bir talebe kullanıcının kendisi tarafından yapılan bir talebe göre daha fazla güvenirsiniz. WIF içeren talepleri temsil eden bir <xref:System.Security.Claims.Claim> olan türü, bir <xref:System.Security.Claims.Claim.Issuer%2A> kimin Talep veren çıkışı bulmak izin veren özellik.  
   
 ### <a name="security-token"></a>Güvenlik Belirteci  
  Kullanıcı uygulamanıza istekle birlikte talepler kümesi dağıtır. Web hizmetinde, bu talepler SOAP zarfının güvenlik üstbilgisinde taşınır. Tarayıcı tabanlı bir Web uygulamasında, talepler kullanıcının tarayıcısından HTTP POST ile gelir ve oturum istenirse daha sonra tanımlama bilgisinde önbelleğe alınabilir. Bu talepler, nasıl geldiklerine bakılmaksızın güvenlik belirteçlerinin geldiği yerde seri hale getirilmelidir. Bir güvenlik belirteci, veren yetkili tarafından dijital olarak imzalanan seri hale getirilmiş bir talepler kümesidir. İmza önemlidir: kullanıcının yalnızca birkaç talep oluşturup size göndermediğinden emin olmanızı sağlar. Şifrelemenin gerekli olmadığı veya istenmediği düşük güvenlik düzeyine sahip durumlarda, imzalanmamış belirteçler kullanabilirsiniz, ancak bu senaryo bu konuda açıklanmamaktadır.  

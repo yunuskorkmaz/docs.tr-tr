@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  
   
 ## <a name="basic-considerations"></a>Temel konuları  
  İçin aşağıdaki bilgileri hakkında bilgiler sağlamak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu bölümde bazı genel sorunları ve Kodlamalar, ikili veri değerlendirmeleri vurgular ve, genellikle akış bağlı sistemler altyapıları için geçerlidir.  
@@ -69,10 +71,10 @@ ms.lasthandoff: 12/22/2017
   
  Büyük miktarlarda verinin gönderirken ayarlamanız gerekir `maxAllowedContentLength` IIS ayarını (daha fazla bilgi için bkz: [yapılandırma IIS istek sınırları](http://go.microsoft.com/fwlink/?LinkId=253165)) ve `maxReceivedMessageSize` ayarı bağlama (örneğin [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` 28.6 M özelliği varsayılanlara ve `maxReceivedMessageSize` özellik varsayılanlarını 64 KB.  
   
-## <a name="encodings"></a>Kodlamaları  
+## <a name="encodings"></a>Encodings  
  Bir *kodlama* kablo iletileri sunmak nasıl hakkında kurallar kümesini tanımlar. Bir *Kodlayıcı* böyle bir kodlama uygulayan ve dönüş için Gönderen tarafında sorumlu olduğu bir <xref:System.ServiceModel.Channels.Message> bellek içi iletisine bayt akışı veya ağ üzerinden gönderilen bayt arabellek. Alıcı tarafında bir bayt dizisi bir bellek içi iletisine Kodlayıcı etkinleştirir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]üç kodlayıcılar içerir ve gerekirse, yazma ve kendi kodlayıcılara takın olanak sağlar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üç kodlayıcılar içerir ve gerekirse, yazma ve kendi kodlayıcılara takın olanak sağlar.  
   
  Her standart bağlamaları yapabildiği Net * önek bağlamalarla kullanmak ikili kodlama önceden yapılandırılmış bir kodlayıcı içerir (ekleyerek <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> sınıfı) sırada <xref:System.ServiceModel.BasicHttpBinding> ve <xref:System.ServiceModel.WSHttpBinding> sınıflarını kullanın (tarafından metin ileti kodlayıcı <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı) varsayılan olarak.  
   

@@ -1,13 +1,15 @@
 ---
 title: "Short Veri Türü (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-f1_keywords: vb.Short
+f1_keywords:
+- vb.Short
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -21,11 +23,11 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: fef948debed69cf9fb7b0e6bb65eb0ddbe497a92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c9869d4fb84cd013b22bc791bd31fad745f3d3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="short-data-type-visual-basic"></a>Short veri türü (Visual Basic)
 Ayrı tutma 32,768 değeri ile 32.767 aralığı 16-bit (2-bayt) tamsayılar imzalanmış.  
@@ -50,10 +52,18 @@ Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
+Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+
+```vb
+Dim number As Short = &H_3264
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Sayısal değişmez değerleri de dahil edebilirsiniz `S` [türü karakteri](../../programming-guide\language-features\data-types/type-characters.md) belirtmek için `Short` aşağıdaki örnekte gösterildiği gibi veri türü.
 
 ```vb
-Dim number = &H0326S
+Dim number = &H_3264S
 ```
 
 ## <a name="programming-tips"></a>Programlama ipuçları
@@ -67,9 +77,9 @@ Dim number = &H0326S
 ## <a name="see-also"></a>Ayrıca bkz.
 
  <xref:System.Int16?displayProperty=nameWithType>  
- [Veri türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Tür dönüşüm işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Dönüştürme özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Integer veri türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long veri türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Veri türlerinin etkili kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

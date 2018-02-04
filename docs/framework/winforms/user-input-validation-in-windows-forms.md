@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcılar uygulamanıza veri girdiğinizde, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, sıfır uzunluk, alan bir telefon numarası veya diğer iyi biçimlendirilmiş bir veri türü olarak biçimlendirilmiş olması ya da bir dizeyi bir veritabanı güvenliğinizi aşmaya kullanılabilecek herhangi güvenli olmayan karakterleri içeremez gerektirebilir. Windows Forms, uygulamanızdaki giriş doğrulamak çeşitli yöntemler sağlar.  
@@ -46,7 +48,7 @@ Kullanıcılar uygulamanıza veri girdiğinizde, uygulamanızın kullandığı �
   
  <xref:System.Windows.Forms.Control.Validating> Olay sağlanmaktadır türünde bir nesne <xref:System.ComponentModel.CancelEventArgs>. Denetimin veri geçersiz karar verirseniz, iptal edebilirsiniz <xref:System.Windows.Forms.Control.Validating> bu nesnenin ayarlayarak olay <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğine `true`. Ayarlanmamış ise <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği, Windows Forms, doğrulama için bu denetim başarılı varsayar ve yükseltmek <xref:System.Windows.Forms.Control.Validated> olay.  
   
- Bir e-posta adresini doğrular bir kod örneği için bir <xref:System.Windows.Controls.TextBox>, bkz: <xref:System.Windows.Forms.Control.Validating>.  
+ Bir e-posta adresi doğrulayan kod örneği için bir <xref:System.Windows.Controls.TextBox>, bkz: <xref:System.Windows.Forms.Control.Validating>.  
   
 ### <a name="data-binding-and-event-driven-validation"></a>Veri bağlama ve olay denetimli doğrulama  
  Bir veritabanı tablosu gibi bir veri kaynağına denetimlerinizi bağladıktan doğrulama oldukça yararlıdır. Doğrulama, kullanarak emin olun, veri kaynağı tarafından gerekli olan biçime denetiminizin veri karşılayan ve onu değil tırnak işaretleri gibi özel karakterler içeren ve geri olduğunu, Yatık çizgi güvensiz olabilir.  

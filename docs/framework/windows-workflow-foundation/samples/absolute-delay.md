@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Mutlak gecikmesi
 Bu örnek için ana senaryo belirtilen kadar gecikme olduğunu <xref:System.DateTime> dayanıklı zamanlayıcılar bir iş akışı uygulamasında kullanma. Bu, yerleşik kullanmaktan farklı değildir <xref:System.Activities.Statements.Delay> gibi bu etkinlik yalnızca izni verdiği için gecikme bir verilen <xref:System.TimeSpan> (veya dakika/saniye).  
@@ -49,7 +50,7 @@ Bu örnek için ana senaryo belirtilen kadar gecikme olduğunu <xref:System.Date
   
  Bu örnek ayrıca kalıcılığını etkinleştirmek nasıl gösteren bir <xref:System.Activities.WorkflowApplication>. Bu belirli bir örnek için biz, iş akışı veri kalıcılığı veritabanına süresi dolacak şekilde Zamanlayıcı için beklenirken boşta kalma süresi sırasında bellekten kaldırılacak dayanıklı zamanlayıcılar kullanılarak. Bu uygulama, diğer Kalıcılık eylemler için de kullanılabilir. Bu örnek, iş akışı örnekleri için veri kalıcı hale getirmek için örnek deposuna oluşturma ve SQL Server ile kalıcılığı bağlantı dizesini ayarlamak nasıl gösterir. Mantığı, iş akışı örneği runnable sağlayan bir olay tetiklenir sonra iş akışını sürdürmek nasıl sağlanır.  
   
- Bu örnek adım gibi yerleşik gecikme başlar ve tamamlar, hangi sırayla zaman gönderilecek e-posta iletisine neden olacak görürsünüz. Buradan, AbsoluteDelay etkinlik belirtilen kadar durdurulur <xref:System.DateTime> (veya 0 saniye varsa <xref:System.DateTime> süresi doldu) hangi sırayla gönderecek sona erme bağlı bir e-posta çıkışı. Bu iki farklı kullanım yerleşik gösterir <xref:System.Activities.Statements.Delay> AbsoluteDelay aktivite kullanarak karşı işlevselliği.  
+ Bu örnek adım gibi yerleşik gecikme başlar ve tamamlar, hangi sırayla zaman bir e-posta gönderilmesine neden olur görürsünüz. Buradan, AbsoluteDelay etkinlik belirtilen kadar durdurulur <xref:System.DateTime> (veya 0 saniye varsa <xref:System.DateTime> süresi doldu) hangi sırayla gönderecek sona erme bağlı bir e-posta çıkışı. Bu iki farklı kullanım yerleşik gösterir <xref:System.Activities.Statements.Delay> AbsoluteDelay aktivite kullanarak karşı işlevselliği.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   

@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
@@ -28,22 +30,22 @@ ms.lasthandoff: 12/22/2017
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|SOAP 1.1 HTTP bağlama|http://www.w3.org/TR/2000/Note-SOAP-20000508/, Bölüm 7|  
+|SOAP 1.1 HTTP bağlama|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Section 7|  
 |SOAP 1.2 HTTP bağlama|http://www.w3.org/TR/soap12-part2/, Bölüm 7|  
   
  Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntıları aşağıdaki protokoller için <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanın.  
   
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
-|XML|http://www.w3.org/TR/rec-XML|  
-|SOAP 1.1|http://www.w3.org/TR/2000/Note-SOAP-20000508/|  
+|XML|http://www.w3.org/TR/REC-xml|  
+|SOAP 1.1|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/|  
 |SOAP 1.2 Çekirdek|http://www.w3.org/TR/soap12-part1/|  
-|WS-adresleme 2004/08|http://www.w3.org/Submission/2004/SUBM-WS-Addressing-20040810/|  
-|Adresleme 1.0 - çekirdek W3C Web Hizmetleri|http://www.w3.org/TR/2006/rec-ws-addr-Core-20060509|  
-|Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri|http://www.w3.org/TR/2006/rec-ws-addr-SOAP-20060509|  
-|Adresleme 1.0 - WSDL bağlama W3C Web Hizmetleri|http://www.w3.org/TR/2006/CR-ws-addr-WSDL-20060529/|  
+|WS-adresleme 2004/08|http://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/|  
+|Adresleme 1.0 - çekirdek W3C Web Hizmetleri|http://www.w3.org/TR/2006/REC-ws-addr-core-20060509|  
+|Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri|http://www.w3.org/TR/2006/REC-ws-addr-soap-20060509|  
+|Adresleme 1.0 - WSDL bağlama W3C Web Hizmetleri|http://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/|  
 W3C Web adresleme 1.0 - meta veri Hizmetleri|http://www.w3.org/TR/ws-addr-metadata/|  
-|WSDL SOAP1.1 bağlama|http://www.w3.org/TR/WSDL/|  
+|WSDL SOAP1.1 bağlama|http://www.w3.org/TR/wsdl/|  
 |WSDL SOAP1.2 bağlama|http://www.w3.org/Submission/wsdl11soap12/|  
   
  Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntıları aşağıdaki protokoller için <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanır.  
@@ -51,34 +53,34 @@ W3C Web adresleme 1.0 - meta veri Hizmetleri|http://www.w3.org/TR/ws-addr-metada
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
 |XOP|http://www.w3.org/TR/xop10/|  
-|MTOM + SOAP 1.2 bağlama|http://www.w3.org/TR/soap12-MTOM/|  
+|MTOM + SOAP 1.2 bağlama|http://www.w3.org/TR/soap12-mtom/|  
 |MTOM SOAP 1.1 bağlama|http://www.w3.org/Submission/soap11mtom10/|  
-|MTOM WS-Policy onaylama|http://www.w3.org/Submission/2006/SUBM-ws-MTOMPolicy-20061101/.|  
+|MTOM WS-Policy onaylama|http://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/.|  
   
  Aşağıdaki XML ad alanları ve ilişkili önekleri bu konu boyunca kullanılır.  
   
 |önek|Namespace Tekdüzen Kaynak Tanımlayıcısı (URI)|  
 |------------|---------------------------------------------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/Envelope|  
-|s12|http://www.w3.org/2003/05/SOAP-Envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
-|wsam|http://www.w3.org/2007/05/Addressing/metadata|  
-|wsap|http://schemas.xmlsoap.org/ws/2004/09/Policy/Addressing|  
-|wsa10|http://www.w3.org/2005/08/Addressing|  
-|wsaw10|http://www.w3.org/2006/05/Addressing/WSDL|  
-|XOP|http://www.w3.org/2004/08/XOP/include|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|s12|http://www.w3.org/2003/05/soap-envelope|  
+|wsa|http://www.w3.org/2004/08/addressing|  
+|wsam|http://www.w3.org/2007/05/addressing/metadata|  
+|wsap|http://schemas.xmlsoap.org/ws/2004/09/policy/addressing|  
+|wsa10|http://www.w3.org/2005/08/addressing|  
+|wsaw10|http://www.w3.org/2006/05/addressing/wsdl|  
+|XOP|http://www.w3.org/2004/08/xop/include|  
 |xmime|http://www.w3.org/2004/06/xmlmime<br /><br /> http://www.w3.org/2005/05/xmlmime|  
-dp|http://schemas.microsoft.com/NET/2006/06/Duplex|  
+dp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 ve SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Zarf ve Model işleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Temel Profil 1.1 (BP11) ve temel Profil 1.0 (SSBP10) aşağıdaki SOAP 1.1 Zarf işleme uygular. SOAP 1.2 Zarf SOAP12 bölüm 1 aşağıdaki işlem uygulanır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Temel Profil 1.1 (BP11) ve temel Profil 1.0 (SSBP10) aşağıdaki SOAP 1.1 Zarf işleme uygular. SOAP 1.2 Zarf SOAP12 bölüm 1 aşağıdaki işlem uygulanır.  
   
  Bu bölümde tarafından gerçekleştirilecek belirli uygulama seçimler açıklanmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] BP11 ve SOAP12 bölüm 1 sabittir.  
   
 #### <a name="mandatory-header-processing"></a>Zorunlu üstbilgiyi işleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]üstbilgiler işleniyor işaretlenmiş için kurallara `mustUnderstand` SOAP 1.1 ve SOAP 1.2 belirtimlere, aşağıdaki farklılıkları açıklanan.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üstbilgiler işleniyor işaretlenmiş için kurallara `mustUnderstand` SOAP 1.1 ve SOAP 1.2 belirtimlere, aşağıdaki farklılıkları açıklanan.  
   
  Girer bir ileti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal yığını ilişkili bağlama öğeleri tarafından örneğin yapılandırılmış tek tek kanalları, ileti metin kodlaması, güvenlik, güvenilir Mesajlaşma ve işlemler tarafından işlenir. Her bir kanala ilişkili ad alanından üstbilgileri tanır ve anladım olarak işaretler. Bir ileti dağıtıcısı girdikten sonra karşılık gelen ileti işlem başına Sözleşme ve bunları anladım işaretleri tarafından beklenen üstbilgileri işlemini biçimlendiricisi okur. Dağıtıcı kalan tüm üstbilgileri değil anladı ancak olarak işaretlenmiş olup olmadığını doğrular sonra `mustUnderstand` ve bir özel durum oluşturur. İçeren iletileri `mustUnderstand` recipient öğesinde hedeflenen üstbilgileri alıcı uygulama kodu tarafından işlenmedi.  
   
@@ -100,14 +102,14 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
 ### <a name="http-binding"></a>HTTP bağlama  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP bağlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Temel Profil 1.1 belirtimini aşağıdaki açıklamalar 3.4 bölümle aşağıdaki SOAP1.1 HTTP bağlaması uygular:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Temel Profil 1.1 belirtimini aşağıdaki açıklamalar 3.4 bölümle aşağıdaki SOAP1.1 HTTP bağlaması uygular:  
   
 -   B2211: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, HTTP POST isteklerini yeniden yönlendirilmesini uygulamıyor.  
   
 -   B2212: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcileri 3.4.8 uygun olarak HTTP tanımlama bilgilerini destekleyen.  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP bağlama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]SOAP 1.2 HTTP bağlaması SOAP 1.2 bölümü 2 (SOAP12Part2) belirtimiyle aşağıdaki açıklamalar bölümünde açıklandığı gibi uygular.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.2 HTTP bağlaması SOAP 1.2 bölümü 2 (SOAP12Part2) belirtimiyle aşağıdaki açıklamalar bölümünde açıklandığı gibi uygular.  
   
  SOAP 1.2 sunulan bir isteğe bağlı eylem parametresi için `application/soap+xml` medya türü. Bu parametre WS adresleme kullanılmadığı SOAP ileti gövdesini ayrıştırılması gerek kalmadan ileti gönderme en iyi duruma getirmek kullanışlıdır.  
   
@@ -118,7 +120,7 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
  WS-adresleme devre dışıdır ve gelen istek bir eylem parametresinin içermediğinden, ileti `Action` belirtilen olarak sayılmaz.  
   
 ## <a name="ws-addressing"></a>WS-adresleme  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WS-adresleme 3 sürümlerini uygular:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme 3 sürümlerini uygular:  
   
 -   WS-adresleme 2004/08  
   
@@ -130,7 +132,7 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
  WS-adresleme'nin tüm sürümleri, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulayan uç noktaları tanımlamak için uç nokta başvuruları kullanın.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Uç nokta başvuruları ve WS adresleme sürümleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WS-adresleme kullanan altyapı protokolleri ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme kullanan altyapı protokolleri ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
   
  R3111, ad alanı için `EndpointReference` öğesi veya türü ile değiştirilen iletilerin kullanılan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç nokta WS adresleme-bu bitiş noktası tarafından uygulanan sürümü aynı olmalıdır.  
   
@@ -174,7 +176,7 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
  Etkileşim uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar, bu ileti üstbilgilerini ekleyebilir ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] buna uygun olarak işleyecek.  
   
 #### <a name="reference-parameters-and-properties"></a>Başvuru parametreleri ve özellikleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uç nokta başvuru parametreleri ve başvuru p Implements işlenmesini  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç nokta başvuru parametreleri ve başvuru p Implements işlenmesini  
   
  ilgili belirtimlerine uygun olarak özellikleri.  
   
@@ -232,7 +234,7 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 bağlama ve WS-ilke onaylamalarını  
   
 #### <a name="indicating-use-of-ws-addressing"></a>WS-adresleme kullanımını gösteren  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]özel bir WS adresleme sürüm için uç nokta destek belirtmek için ilke onaylamalarını kullanır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bir WS adresleme sürüm için uç nokta destek belirtmek için ilke onaylamalarını kullanır.  
   
  Aşağıdaki ilke onaylama uç nokta İlkesi konu [WS-PA] ve gönderilen ve uç noktasından alınan iletileri WS adresleme 2004/08 kullanmalısınız gösterir.  
   
@@ -276,7 +278,7 @@ dp|http://schemas.microsoft.com/NET/2006/06/Duplex|
   
  Ancak, istek sahibinin ve Yanıtlayıcı Yanıtlayıcı tarafından gönderilen Örneğin, istenmeyen tek yönlü iletileri arasında kurulan iki bağımsız ters HTTP bağlantılarını kalmaktan fayda ileti exchange desenleri vardır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]iki temel taşıma kanalları burada bir kanal giriş iletileri için kullanılır ve çıktı iletiler için kullanılan başka bir bileşik çift yönlü kanal kurabilir bir özellik sunar. HTTP taşıma söz konusu olduğunda, bileşik çift yönlü iki ters HTTP bağlantılarını sağlar. Yanıtlayıcı iletileri göndermek için bir bağlantı istek sahibinin kullanır ve Yanıtlayıcı diğer iletiler istemciye geri gönderilecek kullanır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki temel taşıma kanalları burada bir kanal giriş iletileri için kullanılır ve çıktı iletiler için kullanılan başka bir bileşik çift yönlü kanal kurabilir bir özellik sunar. HTTP taşıma söz konusu olduğunda, bileşik çift yönlü iki ters HTTP bağlantılarını sağlar. Yanıtlayıcı iletileri göndermek için bir bağlantı istek sahibinin kullanır ve Yanıtlayıcı diğer iletiler istemciye geri gönderilecek kullanır.  
   
  Ayrı http istekleri üzerinden gönderilen yanıtlar için ws-am onayı ifade eder  
   
@@ -574,7 +576,7 @@ mail-address   =     id-left "@" id-right
  A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MTOM kullanmak üzere yapılandırılmış uç nokta her zaman MTOM olarak kodlanmış iletileri gönder. Hiçbir bölümleri gereken ölçütleri karşılayan olsa bile, ileti (SOAP Zarfı içeren tek bir MIME bölümü ile bir MIME paketi olarak serileştirilmiş) hala MTOM kodlanır.  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM WS-Policy onaylama  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]MTOM kullanım bitiş noktası tarafından belirtmek için aşağıdaki ilke onaylama kullanır:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MTOM kullanım bitiş noktası tarafından belirtmek için aşağıdaki ilke onaylama kullanır:  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  

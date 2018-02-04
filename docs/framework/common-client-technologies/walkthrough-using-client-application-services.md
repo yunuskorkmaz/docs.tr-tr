@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma
 Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulamasının nasıl oluşturulacağını açıklar.  
@@ -48,7 +50,7 @@ Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve aya
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenler gerekir:  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]biçimindeki telefon numarasıdır.  
   
 ## <a name="creating-the-client-application"></a>İstemci Uygulamasını Oluşturma  
  Ne yapacağını ilk şey, bir Windows Forms projesi oluşturun. Bu kılavuzda Windows Forms kullanır, çünkü daha fazla kişinin ile sahibiyseniz, ancak Windows Presentation Foundation (WPF) projeleri için benzer bir işlemdir.  

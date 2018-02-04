@@ -22,18 +22,18 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 16837a310eabf881da8c88c9192264b918592929
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a>Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür bir eşleşme kendi arayın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 -   [İç içe geçmiş isteğe bağlı nicelik ile geri dönüş](#backtracking_with_nested_optional_quantifiers)  
   
--   [Geri dönüş denetleme](#controlling_backtracking)  
+-   [Controlling Backtracking](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Geri İzleme Olmadan Doğrusal Karşılaştırma  
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/23/2017
   
  `(?<=`*alt* `)` geçerli konumu eşleşmelidir önce pozitif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. `(?<!`*alt* `)` geçerli konumu değil eşleşmelidir önce negatif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. Her iki pozitif ve negatif geriye ilerleme onaylar ne zaman en yararlı *alt* önceki alt alt kümesidir.  
   
- Aşağıdaki örnekte, bir e-posta adresindeki kullanıcı adını doğrulayan iki denk normal ifade deseni kullanılmaktadır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar belirleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Yürütme süresini örneğin çıktısını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
+ Aşağıdaki örnek, bir e-posta adresi kullanıcı adı doğrulama iki eşdeğer normal ifade modeli kullanır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar belirleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Yürütme süresini örneğin çıktısını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  

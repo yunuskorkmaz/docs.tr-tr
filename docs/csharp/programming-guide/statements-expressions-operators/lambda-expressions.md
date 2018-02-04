@@ -2,7 +2,8 @@
 title: "Lambda İfadeleri (C# Programlama Kılavuzu)"
 ms.date: 03/03/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda İfadeleri (C# Programlama Kılavuzu)
 Lambda ifadesi bir [anonim işlevi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) oluşturmak için kullanabileceğiniz [Temsilciler](../../../csharp/programming-guide/delegates/using-delegates.md) veya [ifade ağacına](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) türleri. Lambda ifadeleri kullanarak, bağımsız değişken yerine geçebilecek veya işlev çağrılarının değeri olarak döndürülebilecek, yerel işlevler yazabilirsiniz. Lambda ifadeleri LINQ sorgu ifadeleri yazmak için özellikle yararlıdır.  
@@ -274,13 +275,13 @@ class Test
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Özel Kitap Bölümü  
- [Temsilciler ve olaylar Lambda ifadeleri](http://go.microsoft.com/fwlink/?LinkId=195395) içinde [C# 3.0 Kılavuzu, üçüncü baskı: C# 3.0 programcıları için 250'den fazla çözüm](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Temsilciler ve olaylar Lambda ifadeleri](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) içinde [C# 3.0 Kılavuzu, üçüncü baskı: C# 3.0 programcıları için 250'den fazla çözüm](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [Anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [değil](../../../csharp/language-reference/keywords/is.md)  
- [İfade ağaçları](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [LINQ (dil ile tümleşik sorgu)](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [İfade Ağaçları](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [Visual Studio 2008 C# örnekleri (bkz: LINQ örnek sorgular dosyaları ve XQuery program)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Özyinelemeli lambda ifadeleri](http://go.microsoft.com/fwlink/?LinkId=112395)
+ [Özyinelemeli lambda ifadeleri](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

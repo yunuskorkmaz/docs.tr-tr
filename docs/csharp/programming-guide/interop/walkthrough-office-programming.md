@@ -2,7 +2,8 @@
 title: "İzlenecek yol: Office Programlama (C# ve Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 862f445107e0f58e8e00fba1708156c747165def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 Visual Studio, Microsoft Office programlama artıran C# ve Visual Basic özellikleri sunar. Yararlı C# özelliklerini adlandırılmış ve isteğe bağlı bağımsız değişkenler içerir ve dönüş türü değerleri `dynamic`. COM programlamada, atlayabilirsiniz `ref` Dizinli Özellikler anahtar sözcüğü ve kazanç erişim. Visual Basic'de özellikler lambda ifadeleri ve koleksiyon başlatıcıları deyimlerinde otomatik uygulanan özellikler içerir.
@@ -98,11 +99,11 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
   
      İki yeni C# özelliklerini Bu yöntemde kullanılır. Bu özelliklerin her ikisi de, Visual Basic'te zaten mevcut.  
   
-    -   Yöntem [Ekle](http://go.microsoft.com/fwlink/?LinkId=210910) sahip bir *isteğe bağlı bir parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değerini kullanmak istiyorsanız, bu parametre için bağımsız değişken atlayın olanak sağlar. Önceki örnekte, bağımsız değişken gönderdiğinden `Add` yeni bir çalışma kitabı oluşturur ve varsayılan şablonu kullanır. Önceki sürümlerinde, C# eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Yöntem [Ekle](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) sahip bir *isteğe bağlı bir parametre* belirli bir şablon belirtmek için. İsteğe bağlı parametreler, yeni [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], parametrenin varsayılan değerini kullanmak istiyorsanız, bu parametre için bağımsız değişken atlayın olanak sağlar. Önceki örnekte, bağımsız değişken gönderdiğinden `Add` yeni bir çalışma kitabı oluşturur ve varsayılan şablonu kullanır. Önceki sürümlerinde, C# eşdeğer deyimi bir yer tutucu bağımsız değişken gerektiriyor: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Daha fazla bilgi için bkz: [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   `Range` Ve `Offset` özelliklerini [aralığı](http://go.microsoft.com/fwlink/?LinkId=210911) nesne kullanım *özellikleri dizine* özelliği. Bu özellik aşağıdaki tipik C# sözdizimi kullanarak COM türlerinden bu özellikleri kullanmasına olanak sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan nesne `Value2` özelliği. `Value` Özelliği dizine ancak dizini isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.  
+    -   `Range` Ve `Offset` özelliklerini [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) nesne kullanım *özellikleri dizine* özelliği. Bu özellik aşağıdaki tipik C# sözdizimi kullanarak COM türlerinden bu özellikleri kullanmasına olanak sağlar. Dizinli Özellikler de etkinleştirmeniz kullanmanızı `Value` özelliği `Range` kullanma gereksinimini ortadan nesne `Value2` özelliği. `Value` Özelliği dizine ancak dizini isteğe bağlıdır. İsteğe bağlı bağımsız değişkenler ve dizinli özellikler aşağıdaki örnekte birlikte çalışır.  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -122,7 +123,7 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
   
      C# başka bir özelliği bu eklemeleri göstermek: değerlendirmesini `Object` döndürülen COM konakları Office gibi türüne sahipse gibi [dinamik](../../../csharp/language-reference/keywords/dynamic.md). Bu otomatik olarak gerçekleşir, **birlikte çalışma türlerini katıştır** , varsayılan değer olarak ayarlı `True`, ya da eşdeğer, ne zaman derlemesi tarafından başvurulan [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği. Tür `dynamic` geç bağlama zaten Visual Basic'te kullanılabilir sağlar ve Visual C# 2008 ve önceki sürümlerinde dilin gerekli açık atamadan kaçınan.  
   
-     Örneğin, `excelApp.Columns[1]` döndüren bir `Object`, ve `AutoFit` bir Excel [aralığı](http://go.microsoft.com/fwlink/?LinkId=210911) yöntemi. Olmadan `dynamic`, tarafından döndürülen nesne cast `excelApp.Columns[1]` örneği olarak `Range` önce yöntemi çağırmadan `AutoFit`.  
+     Örneğin, `excelApp.Columns[1]` döndüren bir `Object`, ve `AutoFit` bir Excel [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) yöntemi. Olmadan `dynamic`, tarafından döndürülen nesne cast `excelApp.Columns[1]` örneği olarak `Range` önce yöntemi çağırmadan `AutoFit`.  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -196,21 +197,21 @@ Bu kılavuzu tamamlamak için Microsoft Office Excel ve Microsoft Office Word'ü
 8.  Visual Studio'da sırasıyla **temiz çözüm** üzerinde **yapı** tamamlanmış projeyi temizlemek için menüsü.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Otomatik uygulanan özellikler](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Otomatik uygulanan özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
- [Koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Nesne ve koleksiyon başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [İsteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Bağımsız değişkenleri konuma göre ve ada göre geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
- [Adlandırılmış ve isteğe bağlı bağımsız değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dinamik](../../../csharp/language-reference/keywords/dynamic.md)  
+ [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+ [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+ [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Nasıl yapılır: Dizin oluşturulmuş özellikleri COM birlikte çalışma programlamada kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [İzlenecek yol: Microsoft Office derlemelerinden tür bilgilerini katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [İzlenecek yol: Yönetilen derlemelerden türler katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [İzlenecek yol: Excel için ilk VSTO eklentinizi oluşturma](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [İzlenecek yol: Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
+ [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)

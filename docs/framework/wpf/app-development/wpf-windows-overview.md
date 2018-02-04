@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,16 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
@@ -120,7 +122,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Pencere tanım MSBuild için yapılandırma  
  Pencerenizi nasıl uygulayacağınıza nasıl için yapılandırıldığını belirler [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Her ikisi de kullanılarak tanımlanan bir pencere için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme ve arka plan kodu:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Biçimlendirme dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Biçimlendirme dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri.  
   
 -   Arka plan kod dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` öğeleri.  
   

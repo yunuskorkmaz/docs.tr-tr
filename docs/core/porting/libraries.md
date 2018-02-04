@@ -1,7 +1,7 @@
 ---
 title: ".NET Core - kitaplıkları taşıma"
 description: ".NET Framework kitaplığı projelerden .NET Core için bağlantı noktası öğrenin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core - kitaplıkları taşıma
 
@@ -78,7 +79,7 @@ Benzer CA'lar için güvenlik saydamlık korumalı kod güvenlik kritik kodundan
 
 En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanın ayrıcalık kümesi.
 
-### <a name="globaljson"></a>Global.JSON
+### <a name="globaljson"></a>global.json
 
 *Global.json* bir projenin .NET Core araçları sürümünü ayarlamanıza olanak tanır isteğe bağlı bir dosya bir dosyadır. .NET Core gecelik derlemelerini kullanıyorsanız ve SDK'ın belirli bir sürüm belirtmek istiyorsanız, sürümüyle belirtin bir *global.json* dosya. Genellikle geçerli çalışma dizini veya üst dizinleri birinde yer alıyor. 
 
@@ -123,7 +124,7 @@ Projelerinizi artık hedef .NET Framework 4.6.2 nedeni, .NET Framework sürümü
 
 Sonraki adım, API taşınabilirlik Çözümleyicisi çözümleme için taşınabilirlik rapor oluşturmak için (ApiPort) çalıştırmaktır.
 
-Anladığınızdan emin olun [API taşınabilirlik Çözümleyicisi (ApiPort)](~/docs/standard/portability-analyzer.md) ve .NET Core hedefleme için taşınabilirlik raporlar üretmek nasıl. Bu büyük olasılıkla nasıl yapacağınız gereksinimlerinize ve kişisel zevki göre değişir. Hangi aşağıdaki birkaç farklı yaklaşımlara ' dir. Kendinizi kodunuzu nasıl yapılandırıldığını bağlı olarak Bu yaklaşımlardan adımları karıştırma bulabilirsiniz.
+Anladığınızdan emin olun [API taşınabilirlik Çözümleyicisi (ApiPort)](../../standard/analyzers/portability-analyzer.md) ve .NET Core hedefleme için taşınabilirlik raporlar üretmek nasıl. Bu büyük olasılıkla nasıl yapacağınız gereksinimlerinize ve kişisel zevki göre değişir. Hangi aşağıdaki birkaç farklı yaklaşımlara ' dir. Kendinizi kodunuzu nasıl yapılandırıldığını bağlı olarak Bu yaklaşımlardan adımları karıştırma bulabilirsiniz.
 
 ### <a name="dealing-primarily-with-the-compiler"></a>Derleyici öncelikle postalarla
 
@@ -184,7 +185,7 @@ Kodunuzu bağlantı noktalı zaman her şeyi çalıştığından emin olmak içi
 - [NUnit](http://www.nunit.org/)
   * [Başlarken](https://github.com/nunit/docs/wiki/Installation)
   * [Blog yayını için NUnit mstest'i geçirme hakkında](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-- [Mstest'i](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
+- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Taşıma için önerilen yaklaşım
 

@@ -1,5 +1,5 @@
 ---
-title: "Hızlı Başlangıçlar - sınıfları giriş - C# Kılavuzu"
+title: "Sınıfları Öğreticisi - C# yerel quickstarts giriş"
 description: "İlk C# programınızı oluşturma ve nesne yönelimli kavramlarını inceleyin"
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>Giriş sınıfları
 
-Bu Hızlı Başlangıç, geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
+Bu Hızlı Başlangıç, geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel quickstarts giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
 ## <a name="create-your-application"></a>Uygulamanızı oluşturun
 
@@ -38,9 +38,9 @@ namespace classes
 }
 ```
 
-Bu Hızlı Başlangıç, banka hesabı temsil eden yeni türlerin oluşturacağız. Genellikle geliştiriciler, farklı bir metin dosyasında her sınıfını tanımlar. Bu, bir program boyutu büyüdükçe yönetmenizi kolaylaştırır.  Adlı yeni bir dosya oluşturun **BankAccount.cs** içinde **sınıfları** dizin. 
+Bu hızlı başlangıç banka hesabı temsil eden yeni türlerin oluşturacağız. Genellikle geliştiriciler, farklı bir metin dosyasında her sınıfını tanımlar. Bu, bir program boyutu büyüdükçe yönetmenizi kolaylaştırır.  Adlı yeni bir dosya oluşturun **BankAccount.cs** içinde **sınıfları** dizin. 
 
-Bu dosya tanımını içerecek bir ***banka hesabı***. Oriented programlama kodu biçiminde türleri oluşturarak düzenler nesne ***sınıfları***. Bu sınıfları, belirli bir varlık gösteren kodu içerir. `BankAccount` Sınıfı, bir banka hesabı temsil eder. Kod yöntemleri ve özellikleri aracılığıyla belirli işlemlerini uygular. Bu Hızlı Başlangıç, banka hesabı bu davranış destekler:
+Bu dosya tanımını içerecek bir ***banka hesabı***. Oriented programlama kodu biçiminde türleri oluşturarak düzenler nesne ***sınıfları***. Bu sınıfları, belirli bir varlık gösteren kodu içerir. `BankAccount` Sınıfı, bir banka hesabı temsil eder. Kod yöntemleri ve özellikleri aracılığıyla belirli işlemlerini uygular. Bu hızlı başlangıç banka hesabı bu davranış destekler:
 
 1. Banka hesabı benzersiz olarak tanıtan 10 basamaklı bir sayı sahiptir.
 1. Ad veya adlar sahiplerinin depolayan bir dize içeriyor.
@@ -203,7 +203,7 @@ Bu hızlı başlangıç tamamlamak için yazabilirsiniz `GetAccountHistory` olu�
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-Bu kullanır <xref:System.Text.StringBuilder> her işlem için bir satır içeren bir dize biçimlendirmek için sınıf. Bu hızlı başlangıçlar önceki kodda biçimlendirme dizesi gördünüz. Yeni bir karakter `\t`. Bu çıktı biçimlendirmek için bir sekmesi ekler.
+Bu kullanır <xref:System.Text.StringBuilder> her işlem için bir satır içeren bir dize biçimlendirmek için sınıf. Bu hızlı başlangıç ipuçları önceki kodda biçimlendirme dizesi gördünüz. Yeni bir karakter `\t`. Bu çıktı biçimlendirmek için bir sekmesi ekler.
 
 Bunu test etmek için bu satırı ekleyin **Program.cs**:
 
@@ -217,4 +217,4 @@ Tür `dotnet run` sonuçları görüntüleyin.
 
 Takılmış, bu hızlı başlangıç kaynağı görebilirsiniz [bizim GitHub depodaki](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
 
-Tebrikler, tüm bizim hızlı başlangıç işlemini tamamladınız. Daha fazla bilgi gezinebileceğinizi, deneyin bizim [öğreticileri](../tutorials/index.md)
+Tebrikler, bizim Quickstarts tamamladınız. Daha fazla bilgi gezinebileceğinizi, deneyin bizim [öğreticileri](../tutorials/index.md)

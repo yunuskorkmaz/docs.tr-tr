@@ -1,7 +1,7 @@
 ---
 title: "LINQ ile çalışma"
 description: "Bu öğretici LINQ sıralarıyla oluşturmak, kullanım için yöntemleri LINQ sorguları yazma ve istekli ve geç değerlendirme arasında ayrım öğretir."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/28/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -329,6 +329,6 @@ Derleme ve yeniden çalıştırın. Çıktı biraz temizleyici ve kod biraz daha
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu örnek, LINQ kullanılan yöntemlerin bazıları gösterdi, kodu LINQ ile kolayca kullanılacak kendi yöntemleri oluşturmak nasıl etkinleştirildi. Bu ayrıca, yavaş ve istekli değerlendirme karar performans üzerinde olabilir etkileyen arasındaki farkları gösterilmiştir.
+Bu örnek, LINQ kullanılan yöntemlerin bazıları gösterdi, kodu LINQ ile kolayca kullanılacak kendi yöntemleri oluşturmak nasıl etkinleştirildi. Bu ayrıca, yavaş ve istekli değerlendirme karar performans üzerinde olabilir etkisi arasındaki farkları gösterilmiştir.
 
 Bir bit hakkında bir magician'ın tekniği de öğrendiniz. Burada, her kartı deste taşır kontrol sağladığından magicians faro karışık kullanın. Bazı ipuçlarını magician deste en üstünde bir kart yerleştirin bir izleyici üyenin ve burada bu kartı gider bilerek birkaç kez seçimdeki. Belirli bir yolla deste ayarlamak diğer İllüzyonları gerektirir. Bir magician eli gerçekleştirmeden önce deste ayarlar. Ardından aynen 5 kez iç karışık kullanarak deste karışık. Aşama üzerinde aynen rastgele deste gibi göründüğünü göster, 3 kez daha karışık ve tam olarak nasıl istediği ayarlamak deste sahip.

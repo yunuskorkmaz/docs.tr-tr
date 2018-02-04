@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
 *Kimlik bilgileri* verileri [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir talep kimliği veya özellikleri kurmak için kullanır. Örneğin, passport bir kamu sorunlarını vatandaşlığa benzer bir ülke veya bölgedeki kanıtlamak için bir kimlik bilgisi ' dir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kimlik bilgileri, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms alabilir. Kimlik bilgileri, bu konuda ele alınmıştır, nasıl kullanıldıkları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve uygulamanız için doğru kimlik bilgilerini seçme.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |Yok.|İstemci kimlik sunmak gerekmez belirtir. Anonim istemci için çevirir.|  
 |Temel|Temel kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Özet|Özet kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkID=88313).|  
-|NTLM|NT LAN Yöneticisi (NTLM) kimlik doğrulamasını belirtir. Bu, Kerberos kimlik doğrulaması için herhangi bir nedenle kullanılamaz olduğunda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false`, hangi nedenler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
+|Ntlm|NT LAN Yöneticisi (NTLM) kimlik doğrulamasını belirtir. Bu, Kerberos kimlik doğrulaması için herhangi bir nedenle kullanılamaz olduğunda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false`, hangi nedenler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] NTLM kullanılırsa, bir özel durum için bir en iyi çaba yapma. Bu özelliği ayarlamak Not `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyebilir değil.|  
 |Windows|Windows kimlik doğrulaması belirtir. Bir Windows etki alanında yalnızca Kerberos protokolünü belirtmek için ayarlayın <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğine `false` (varsayılan `true`).|  
 |Sertifika|Bir X.509 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
 |Parola|Kullanıcı, bir kullanıcı adı ve parola girmeniz gerekir. Windows kimlik doğrulaması veya başka bir özel çözüm kullanarak kullanıcı adı/parola çifti doğrulayın.|  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  Ne zaman kimliğini döndürülemez farkında olması için bir durum yok (diğer bir deyişle, ne zaman güvenliğini sağlayın bağlamı, varsayılan davranış olduğu). İkinci bir hizmeti ile iletişim kuran bir hizmet oluşturursanız, kimlik açmak için kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ikinci hizmet istemciye değiştirilemez. Bu bir sorun birden çok istemci ilk hizmetin kullanmasına izin verilen ve ikinci hizmet erişirken istemcilere hizmet taklit haline gelir. Aynı istemci tüm çağıranlar için hizmeti yeniden kullanır, ikinci hizmet tüm çağrıları ikinci hizmet İstemcisi'ni açmak için kullanılan ilk arayan kimliği altında yapılır. Diğer bir deyişle, hizmet ikinci hizmetiyle iletişim kurmak için tüm istemciler için ilk istemci kimliğini kullanır. Bu ayrıcalık yükselmesine yol açabilir. İstenen davranışı hizmetinizin bu değilse, her çağıran izlemek ve yeni bir istemci için her ayrı çağıran ikinci hizmetini oluşturun ve hizmet ikinci hizmetiyle iletişim kurmak için doğru çağıran için yalnızca doğru istemci kullanır olmanız gerekir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]kimlik bilgileri ve güvenli oturumlar bkz [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] kimlik bilgileri ve güvenli oturumlar bkz [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

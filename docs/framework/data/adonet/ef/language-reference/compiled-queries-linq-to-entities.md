@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c13450a7f05efd188607c80b920616f532f745d4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cdea4d0ca5a8f7b829b9d0a99a6097d164bbf21
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş sorgu (LINQ to Entities)
 Entity Framework içinde birçok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, bir kez sorgu derleme ve farklı parametrelerle birkaç kez yürütme tarafından sık performansını artırabilirsiniz. Örneğin, belirli bir şehirde tüm müşteriler almak bir uygulama olabilir; Şehir çalışma zamanında bir form kullanıcı tarafından belirtilir. LINQ to Entities bu amaç için derlenmiş sorgularını kullanarak destekler.  

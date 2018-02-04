@@ -1,6 +1,6 @@
 ---
-title: "Hızlı Başlangıç - yerel ortam - C# Kılavuzu"
-description: "Bu hızlı başlangıç hızlı başlangıçlar yerel olarak çalıştırmak için temel bilgileri sağlar."
+title: "Yerel ortamdaki Öğreticisi - C# yerel quickstarts"
+description: "Bu hızlı başlangıç quickstarts yerel olarak çalıştırmak için temel bilgileri sağlar."
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,15 +8,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="local-environment"></a>Yerel ortamı
 
-Hızlı Başlangıç yerel olarak çalışırken ilk adım, yerel makinenizde bir geliştirme ortamı Kurulumu olması önerilir.
+Yerel olarak bir hızlı başlangıç çalışırken ilk adımı, yerel makinenizde bir geliştirme ortamı Kurulum olmaktır.
 .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir.
 
 Alternatif olarak, yükleme [.NET Core SDK](http://dot.net/core) ve [Visual Studio Code](https://code.visualstudio.com/).
@@ -29,7 +29,7 @@ Kullandığınız diğer komutlar [ `dotnet build` ](../../core/tools/dotnet-bui
 
 ## <a name="pick-your-quickstart"></a>Hızlı Başlangıç seçin
 
-Aşağıdaki hızlı başlangıçlar birini başlatabilirsiniz:
+Aşağıdaki quickstarts birini başlatabilirsiniz:
 
 ## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C# numaraları](numbers-in-csharp-local.md)
 
@@ -47,7 +47,7 @@ Bu başlangıç Ders tamamladıktan olduğunu varsayar [Hello World](hello-world
 
 [Listesinde koleksiyonu](arrays-and-collections.md) Ders veri dizisini depolar liste koleksiyon türü turu sağlar. Ekleme ve öğeleri kaldırma, öğeleri aramak ve listeleri sıralama öğreneceksiniz. Farklı türde listeleri ele alacağız. 
 
-Bu başlangıç hızlı başlangıç, yukarıda listelenen hızlı başlangıçlar bitirdikten varsayar.
+Bu başlangıç hızlı başlangıç, yukarıda listelenen quickstarts bitirdikten varsayar.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Sınıflara giriş](introduction-to-classes.md)
 

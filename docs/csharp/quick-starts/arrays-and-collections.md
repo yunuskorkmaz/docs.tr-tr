@@ -1,7 +1,6 @@
 ---
-title: "Hızlı Başlangıç - koleksiyonlar - C# Kılavuzu"
-description: "C# bu hızlı başlangıç listesi koleksiyonunda inceleyerek öğrenin."
-keywords: "C#, Get Started, öğretici, koleksiyonları listesi"
+title: "Koleksiyonları Öğreticisi - C# yerel quickstarts"
+description: "C# bu öğreticideki liste koleksiyonu inceleyerek öğrenin."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,25 +9,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>C# hızlı başlangıç: koleksiyonları #
+# <a name="c-quickstart-collections"></a>C# hızlı başlangıç: koleksiyonları
 
 Bu hızlı başlangıç C# dili ve temel bilgileri tanıtılmaktadır <xref:System.Collections.Generic.List%601> sınıfı.
 
-Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel hızlı başlangıçlar giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
+Bu hızlı başlangıç geliştirme için kullanabileceğiniz bir makine olmasını bekler. .NET konu [Get Started 10 dakika içinde](https://www.microsoft.com/net/core) Mac, PC ya da Linux yerel geliştirme ortamınızı ayarlamak için yönergeler içerir. Hızlı bir genel bakış kullandığınız komutların bulunduğu [yerel quickstarts giriş](local-environment.md) daha fazla bilgi için bağlantılar ile birlikte.
 
-## <a name="a-basic-list-example"></a>Basit liste örnek.
+## <a name="a-basic-list-example"></a>Temel listesi örneği
 
 Adlı bir dizin oluşturun **listesi Hızlı Başlangıç**. Geçerli dizin çalıştırma yapıp `dotnet new console`.
 
 > [!NOTE]
 > Yalnızca tamamladıysanız [10 dakika içinde .NET ile çalışmaya başlama](https://www.microsoft.com/net), az önce oluşturduğunuz Uygulamam uygulamayı kullanmaya devam.
- 
+
 Açık **Program.cs** sık kullanılan Düzenleyicisi ve var olan kodu aşağıdakilerle değiştirin:
 
 ```csharp
@@ -53,16 +52,16 @@ namespace list_quickstart
 
 Değiştir `<name>` adıyla. Kaydet **Program.cs**. Tür `dotnet run` , konsol penceresinde deneyin.
 
-Yalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü içinde daha önce hızlı başlatır, öğrendiğinize kavramları kullanıyorsunuz.
+Yalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü önceki quickstarts içinde öğrendiğinize kavramları kullanıyorsunuz.
 
 Adlarını görüntülemek için kod kullanır **Ara değerli dizeler**.  Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.
 
 Şimdi keşfetme tutun.
-    
+
 ## <a name="modify-list-contents"></a>Liste içeriklerini değiştirme
 
 Kullandığı oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçları arasında öğelerin türü belirtin.
-    
+
 Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür onu büyütür veya böylelikle küçültür, ekleme veya öğeleri kaldırma olanak sağlar. Bu kodu kapatmadan önce ekleyin `}` içinde `Main` yöntemi:
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 İki daha fazla ad listesinin sonuna ekledik. Ayrıca bir de kaldırdınız. Dosya ve türü Kaydet `dotnet run` denemek üzere.
-    
+
 <xref:System.Collections.Generic.List%601> Tarafından ayrı öğeleri başvuru sağlar **dizin** de. Dizin arasında yerleştirin `[` ve `]` listesi adından belirteçleri. C# 0 ilk dizini kullanır. Bu kodu eklediğiniz kodun hemen altına ekleyin ve deneyin:
 
 ```csharp
@@ -91,9 +90,10 @@ Bir dizin listesi ötesinde erişemiyor. Bu nedenle en büyük geçerli dizin bi
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-Dosya ve türü Kaydet `dotnet run` yeniden sonuçları görüntüleyin.    
+Dosya ve türü Kaydet `dotnet run` yeniden sonuçları görüntüleyin.
 
 ## <a name="search-and-sort-lists"></a>Arama ve sıralama listeler
+
 Bizim örneklerimizi görece küçük listeleri kullanın, ancak uygulamalarınızı genellikle bazen binlerce numaralandırma pek çok daha fazla öğe ile listeleri oluşturabilirsiniz. Bu büyük koleksiyonlarda öğeleri bulmak için farklı öğeleri listede arama gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi için bir öğe arar ve öğenin dizinini döndürür. Bu kodu altına ekleyin, `Main` yöntemi:
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>Diğer türleri listesi
 
-Kullanmakta olduğunuz `string` kadarki listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> farklı türü kullanıyor. Şimdi bir sayı kümesi oluşturun. 
+Kullanmakta olduğunuz `string` kadarki listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> farklı türü kullanıyor. Şimdi bir sayı kümesi oluşturun.
 
 Aşağıdaki yeni altına ekleyin `Main` yöntemi:
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-Dosyayı kaydedip türü `dotnet run` sonuçları görüntüleyin. 
+Dosyayı kaydedip türü `dotnet run` sonuçları görüntüleyin.
 
 > [!TIP]
-> Bu bölüm yalnızca yoğunlaşmak için çağıran kodu yorum yapabileceği `WorkingWithStrings();`. Yalnızca iki put `/` bu gibi karakterler çağrı önünde: `// WorkingWithStrings();`. 
+> Bu bölüm yalnızca yoğunlaşmak için çağıran kodu yorum yapabileceği `WorkingWithStrings();`. Yalnızca iki put `/` bu gibi karakterler çağrı önünde: `// WorkingWithStrings();`.
 
 ## <a name="challenge"></a>sınama
+
 Birlikte koyabilirsiniz varsa bkz bazı kavramlar bu ve önceki sürümleri dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. İlk 20 sayıları sırayla oluşturmak için kod yazmayı deneyin. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)
 
 ## <a name="complete-challenge"></a>Tam sınama

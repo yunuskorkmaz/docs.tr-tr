@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interactive-programming-with-f"></a>İle F # Etkileşimli programlama #
 
@@ -26,7 +26,7 @@ API başvuru bağlantısı sizi MSDN'ye götürür.  Docs.microsoft.com API Baş
 
 F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için kullanılır. Diğer bir deyişle, F # Etkileşimli REPL (oku, değerlendir, yazdırma döngü) F # dili için yürütür.
 
-F # Etkileşimli Konsolu'ndan çalıştırmak için fsi.exe çalıştırın.  İçinde fsi.exe bulacaksınız "c:\Program dosyaları (x86) \Microsoft SDKs\F#\<sürüm > \Framework\<sürüm >\". Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz: [F # Etkileşimli Seçenekleri](fsharp-interactive-options.md).
+F # Etkileşimli Konsolu'ndan çalıştırmak için fsi.exe çalıştırın.  İçinde fsi.exe bulacaksınız "c:\Program dosyaları (x86) \Microsoft SDKs\F#\<sürüm > \Framework\<sürüm >\". Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz: [F # Etkileşimli Seçenekleri](../../language-reference/fsharp-interactive-options.md).
 
 F # Etkileşimli aracılığıyla Visual Studio çalıştırmak için etiketli uygun araç çubuğu düğmesini tıklatabilirsiniz **F # Etkileşimli**, veya tuşlarını **Ctrl + Alt + F**. Bunun yapılması, etkileşimli bir pencere, F # Etkileşimli oturum çalıştıran bir araç penceresi açılır. Tuş bileşimine basın ve etkileşimli pencerede çalıştırmak istediğiniz bazı kodu da seçebilirsiniz **ALT + ENTER**. F # Etkileşimli başlar etiketli araç penceresinde **F # Etkileşimli**. Bu tuş bileşimini kullandığınızda Düzenleyicisi penceresini odağa sahip olduğundan emin olun.
 
@@ -59,7 +59,7 @@ F # derleyici yürütülürken bulunmayan etkileşimli komut yürütülürken ba
 |**#load**|Bir kaynak dosyasını okur, derlendiğinden ve çalıştırır.|
 |**#quit**|F # Etkileşimli oturum sona erer.|
 |**#r**|Bir derlemeye başvurur.|
-|**#time ["" &#124;" off"]**|Kendi kendine **#time** performans bilgileri görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F # Etkileşimli gerçek zamanlı, CPU süresi ve atık toplama bilgi yorumlanır ve yürütülen kod her bölüm için ölçer.|
+|**#time ["on"&#124;"off"]**|Kendi kendine **#time** performans bilgileri görüntülenip görüntülenmeyeceğini değiştirir. Etkinleştirildiğinde, F # Etkileşimli gerçek zamanlı, CPU süresi ve atık toplama bilgi yorumlanır ve yürütülen kod her bölüm için ölçer.|
 
 Dosyaları veya yolları F # Etkileşimli'de belirttiğiniz zaman, bir dize sabit değeri bekleniyordu. Bu nedenle, dosyaları ve yolları tırnak işaretleri içinde olmalıdır ve her zamanki kaçış karakterleri uygulayın. Ayrıca, kullanabileceğiniz @ karakteri F # yol verbatim bir dize olarak içeren bir dize yorumlamaya etkileşimli neden olacak. F # herhangi bir kaçış karakteri yoksaymak etkileşimli neden olur.
 
@@ -98,5 +98,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F # Etkileşimli Seçenekleri](fsharp-interactive-options.md)|Komut satırı sözdizimi ve F # Etkileşimli için seçenekleri açıklar fsi.exe.|
+|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı sözdizimi ve F # Etkileşimli için seçenekleri açıklar fsi.exe.|
 |[F # Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kullanılabilir kitaplık işlevlerini kod F # Etkileşimli yürütülürken açıklar.|
