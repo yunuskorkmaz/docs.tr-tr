@@ -5,22 +5,23 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a6bfa60cce332deef2a72da836f96dbe37e65d2a
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Nasıl yapılır: Office Açık XML belgesi (C#) değiştirme
 Bu konuda, kaydeder Office Açık XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  
   
- Office Açık XML hakkında daha fazla bilgi için bkz: [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Office Açık XML hakkında daha fazla bilgi için bkz: [açık XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, belgede ilk paragraf öğesini bulur. Paragrafın metni alır ve ardından siler tüm metni paragrafta çalıştırır. Büyük harfe dönüştürülmüş ilk paragraf metni oluşan çalıştırmak bir yeni metin oluşturur. Open XML pakete değiştirilen XML serileştirir ve kapatılır.  

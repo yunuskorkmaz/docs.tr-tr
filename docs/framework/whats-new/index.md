@@ -3,22 +3,25 @@ title: .NET Framework'teki yenilikler
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -80,15 +83,15 @@ Yapılandırma oluşturucular ekleme ve uygulamalar için yapılandırma ayarlar
 
 **Çalışma zamanı özelliği algılama**
 
-<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> Sınıfı bir mekanizma sağlar önceden tanımlanmış bir özellik belirli bir .NET uygulama derleme zamanında ya da çalışma zamanında desteklenip desteklenmediğini belirlemek için. Derleme zamanında bir derleyici belirtilen alan özellik desteklenip desteklenmediğini belirlemek için mevcut olup olmadığını kontrol edebilirsiniz; Öyleyse, bu özellik yararlanan kod yayma. Çalışma zamanında uygulama çağırabilirsiniz <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> çalışma zamanında kod yayma önce yöntemi. Daha fazla bilgi için bkz: [çalışma zamanı tarafından desteklenen özellikler açıklamak için yardımcı yöntemi ekleyin](https://github.com/dotnet/corefx/issues/17116).
+<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> Sınıfı bir mekanizma sağlar önceden tanımlanmış bir özellik belirli bir .NET uygulama derleme zamanında ya da çalışma zamanında desteklenip desteklenmediğini belirlemek için. Derleme zamanında bir derleyici belirtilen alan özellik desteklenip desteklenmediğini belirlemek için mevcut olup olmadığını kontrol edebilirsiniz; Öyleyse, bu özellik yararlanan kod yayma. Çalışma zamanında uygulama çağırabilirsiniz <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> çalışma zamanında kod yayma önce yöntemi. Daha fazla bilgi için bkz: [çalışma zamanı tarafından desteklenen özellikler açıklamak için yardımcı yöntemi ekleyin](https://github.com/dotnet/corefx/issues/17116).
 
 **Tuple türlerin seri hale getirilebilir**
 
-4.7.1, .NET Framework ile başlayan <xref:System.ValueTuple?displayProperty=fullName> ve onun ilişkili genel türleri olarak işaretlenmiş [Serializable](xref:System.SerializableAttribute), ikili seri hale getirme izin verir. Bu geçirme tanımlama grubu türleri gibi olmalısınız <xref:System.Tuple%603> ve <xref:System.Tuple%604>, değer tanımlama grubu türlerine daha kolay. Daha fazla bilgi için "Derleyici--ValueTuple olduğundan seri hale getirilebilir" bölümüne bakın [4.7.1 .NET Framework çalışma zamanının ve derleyici özellikleri](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog postası.
+4.7.1, .NET Framework ile başlayan <xref:System.ValueTuple?displayProperty=nameWithType> ve onun ilişkili genel türleri olarak işaretlenmiş [Serializable](xref:System.SerializableAttribute), ikili seri hale getirme izin verir. Bu geçirme tanımlama grubu türleri gibi olmalısınız <xref:System.Tuple%603> ve <xref:System.Tuple%604>, değer tanımlama grubu türlerine daha kolay. Daha fazla bilgi için "Derleyici--ValueTuple olduğundan seri hale getirilebilir" bölümüne bakın [4.7.1 .NET Framework çalışma zamanının ve derleyici özellikleri](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog postası.
 
 **Salt okunur başvurular için destek**
 
-.NET Framework 4.7.1 ekler <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>. Bu öznitelik dil derleyicileri tarafından salt okunur ref dönüş türleri veya parametreleri sahip üyeler işaretlemek için kullanılır. Daha fazla bilgi için bkz: "Derleyici--desteği için ReadOnlyReferences" [4.7.1 .NET Framework çalışma zamanının ve derleyici özellikleri](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog postası. Ref dönüş değerleri hakkında daha fazla bilgi için bkz: [Ref Yereller (C# Kılavuzu) dönüş değerleri ve ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) ve [Ref dönüş değerleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET Framework 4.7.1 ekler <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Bu öznitelik dil derleyicileri tarafından salt okunur ref dönüş türleri veya parametreleri sahip üyeler işaretlemek için kullanılır. Daha fazla bilgi için bkz: "Derleyici--desteği için ReadOnlyReferences" [4.7.1 .NET Framework çalışma zamanının ve derleyici özellikleri](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) blog postası. Ref dönüş değerleri hakkında daha fazla bilgi için bkz: [Ref Yereller (C# Kılavuzu) dönüş değerleri ve ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) ve [Ref dönüş değerleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Ortak dil çalışma zamanı (CLR)
@@ -1446,7 +1449,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]Uygulamalar belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin güç yararlanın. Bir alt kümesini [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya 4.5.1 için yapı kullanılabilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C# veya Visual Basic kullanarak Windows için uygulamalar. Bu alt adlı [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] ve içinde ele alınmıştır bir [genel bakış](http://go.microsoft.com/fwlink/?LinkId=228491) Windows geliştirme Merkezi'ndeki.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Uygulamalar belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin güç yararlanın. Bir alt kümesini [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya 4.5.1 için yapı kullanılabilir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C# veya Visual Basic kullanarak Windows için uygulamalar. Bu alt adlı [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] ve içinde ele alınmıştır bir [genel bakış](http://go.microsoft.com/fwlink/?LinkId=228491) Windows geliştirme Merkezi'ndeki.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Taşınabilir sınıf kitaplıkları

@@ -3,7 +3,8 @@ title: "Geliştiriciler için .NET framework Dağıtım Kılavuzu"
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
@@ -12,12 +13,13 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4a67df0729a85149984f0a72be668cdcee30216
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarını ile.
@@ -28,11 +30,11 @@ Yükleme bağlantıları için bakın [yeniden dağıtılabilir paketleri](#redi
 
 - Tüm işletim sistemleri için .NET framework 4.7 ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=528232))
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] tüm işletim sistemleri için ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=528232))
 
 - Tüm işletim sistemleri için .NET framework 4.5.2 ([web yükleyicisi](http://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](http://go.microsoft.com/fwlink/p/?LinkId=397706))
 
@@ -77,10 +79,10 @@ Yükleme bağlantıları için bakın [yeniden dağıtılabilir paketleri](#redi
 
 ||Web yükleyicisi|Çevrimdışı yükleyici|
 |-|-------------------|-----------------------|
-|Dosya indirme|.NET framework 4.7.1: <br/>[NDP471 KB4033344 Web.exe](http://go.microsoft.com/fwlin/?LinkId=852092)<br/><br/>.NET framework 4.7: <br />[NDP47 KB3186500 Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462 KB3151802 Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461 KB3102438 Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46 KB3045560 Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET framework 4.5.2: <br />[NDP452 KB2901954 Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451 KB2859818 Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|Dosya indirme|.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |Internet bağlantısı gerekiyor?|Evet|Hayır|
 |İndirme boyutu|Küçük (yalnızca hedef platform için yükleyiciyi içerir) *|Daha büyük *|
-|Dil paketleri|Dahil edilen **|Olmalıdır [ayrı ayrı yüklenmiş](#chain_langpack), tüm işletim sistemleri hedefler paket kullanmadığınız sürece|
+|Dil paketleri|Included**|Olmalıdır [ayrı ayrı yüklenmiş](#chain_langpack), tüm işletim sistemleri hedefler paket kullanmadığınız sürece|
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|
 |ClickOnce dağıtımı için yükleme konumu|Microsoft İndirme Merkezi:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuzu veya Microsoft Download Center:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
@@ -253,15 +255,15 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |.NET framework Windows 10 sonbaharda oluşturucuları güncelleştirme dışındaki tüm işletim sistemi sürümleri yüklü 4.7.1|461310|
 |.NET framework Windows 10 oluşturucuları Update'te yüklü 4.7|460798|
 |.NET framework Windows 10 oluşturucuları güncelleştirme dışındaki tüm işletim sistemi sürümleri yüklü 4.7|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]Windows 10 Anniversary Edition üzerinde yüklü|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]Windows 10 Anniversary Edition dışında tüm işletim sistemi sürümleri yüklü|394806|
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]Windows 10 Kasım Update'te yüklü|394254|
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]Windows 10 Kasım güncelleştirme dışındaki tüm işletim sistemi sürümleri yüklü|394271|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]Windows 10 yüklü|393295|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]Windows 10 dışında tüm işletim sistemi sürümleri yüklü|393297|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Anniversary Edition üzerinde yüklü|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows 10 Anniversary Edition dışında tüm işletim sistemi sürümleri yüklü|394806|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 Kasım Update'te yüklü|394254|
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Windows 10 Kasım güncelleştirme dışındaki tüm işletim sistemi sürümleri yüklü|394271|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10 yüklü|393295|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] Windows 10 dışında tüm işletim sistemi sürümleri yüklü|393297|
 |.NET Framework 4.5.2|379893|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]ile yüklenen [!INCLUDE[win81](../../../includes/win81-md.md)] veya Windows Server 2012 R2|378675|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]yüklü [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ile yüklenen [!INCLUDE[win81](../../../includes/win81-md.md)] veya Windows Server 2012 R2|378675|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] yüklü [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
 |[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
 
 ### <a name="detecting-the-language-packs"></a>Dil paketlerini algılama
@@ -355,15 +357,15 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/ CEIPConsent**|Varsayılan davranışı geçersiz kılar ve gelecekteki dağıtımı deneyimlerini geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca onay için Kurulum programı istenirse, ve kullanıcı için Microsoft anonim görüş göndermeyi izin verirse kullanılabilir.|
+|**/CEIPConsent**|Varsayılan davranışı geçersiz kılar ve gelecekteki dağıtımı deneyimlerini geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca onay için Kurulum programı istenirse, ve kullanıcı için Microsoft anonim görüş göndermeyi izin verirse kullanılabilir.|
 |**/chainingpackage**`packageName`|Zincirleme yaptığını yürütülebilir dosyanın adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş karşılaştığında gibi bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretleri sınırlayıcı olarak alın; Örneğin: **/chainingpackage "Bellek yayımlama"**. Zincirleme paketi örneği için bkz: [ilerleme durumu bilgileri alınırken bir yükleme paketi](http://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
-|**/ LCID**  `LCID`<br /><br /> Burada `LCID` yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Belirtilen dil paketi yükler `LCID` Sessiz modu ayarlanmadığı sürece bu dilde gösterilmesini görüntülenen UI zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-Web dil paketi yükler. **Not:** yalnızca web Yükleyicisi ile bu seçeneği kullanın.|
-|**/ log** `file` &#124;`folder`|Günlük dosyasının konumunu belirtir. İşlem için geçici bir klasör varsayılandır ve varsayılan dosya adı paketi dayanır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı veya hiçbir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
+|**/LCID**  `LCID`<br /><br /> Burada `LCID` yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Belirtilen dil paketi yükler `LCID` Sessiz modu ayarlanmadığı sürece bu dilde gösterilmesini görüntülenen UI zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-Web dil paketi yükler. **Not:** yalnızca web Yükleyicisi ile bu seçeneği kullanın.|
+|**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. İşlem için geçici bir klasör varsayılandır ve varsayılan dosya adı paketi dayanır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı veya hiçbir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"`.|
 |**/ norestart**|Kurulum programı otomatik olarak yeniden başlatılmasını engeller. Bu seçeneği kullanırsanız, dönüş kodu yakalamak ve yeniden işlemek zincirleme uygulama vardır (bkz [ilerleme durumu bilgileri alınırken bir yükleme paketi](http://go.microsoft.com/fwlink/?LinkId=179606) MSDN Kitaplığı'nda).|
 |**/ Pasif**|Ayarlar Pasif modu. Yükleme devam ediyor, ancak herhangi bir komut istemlerini veya hata iletileri için kullanıcı görüntülemez belirtmek için ilerleme çubuğu görüntüler. Bu modda, bir Kurulum programı tarafından zincirleme olduğunda zincirleme paket işlemelidir [dönüş kodları](#return-codes).|
 |**/pipe**|İlerleme durumunu almak zincirleme bir paket için bir iletişim kanalı oluşturur.|
-|**/ promptrestart**|Kurulum programı bir yeniden başlatma gerektiriyorsa yalnızca Pasif modu, kullanıcıya sorar. Bu seçenek, bir yeniden başlatma gerekirse kullanıcı etkileşimi gerektirir.|
+|**/promptrestart**|Kurulum programı bir yeniden başlatma gerektiriyorsa yalnızca Pasif modu, kullanıcıya sorar. Bu seçenek, bir yeniden başlatma gerekirse kullanıcı etkileşimi gerektirir.|
 |**/q**|Sessiz modu ayarlar.|
 |**Repair**|Onar işlevi tetikler.|
 |**/serialdownload**|Yalnızca paket yüklendikten sonra gerçekleşecek şekilde yükleme zorlar.|
@@ -380,23 +382,23 @@ Aşağıdaki tabloda kullanılabilir .NET Framework dil paketlerini listeler [!I
 |1028|Geleneksel Çince –|zh-Hant|
 |1029|Çekçe|cs|
 |1030|Danca|da|
-|1031|Almanca – Almanya|Gizle|
+|1031|Almanca – Almanya|de|
 |1032|Yunanca|el|
-|1035|Fince|Fi|
-|1036|Fransızca – Fransa|FR|
+|1035|Fince|fi|
+|1036|Fransızca – Fransa|fr|
 |1037|İbranice|Müşterinizle|
 |1038|Macarca|hu|
-|1040|İtalyanca-İtalya|Bunu|
+|1040|İtalyanca-İtalya|it|
 |1041|Japonca|ja|
 |1042|Kore Dili|Ko|
-|1043|Felemenkçe-Hollanda|NL|
+|1043|Felemenkçe-Hollanda|nl|
 |1044|Norveççe (Bokmål)|Yok|
-|1045|Lehçe|PL|
+|1045|Lehçe|pl|
 |1046|Portekizce-Brezilya|pt-BR|
-|1049|Rusça|RU|
+|1049|Rusça|ru|
 |1053|İsveç dili|sv|
 |1055|Türkçe|tr|
-|2052|Basitleştirilmiş Çince –|zh-atanır|
+|2052|Basitleştirilmiş Çince –|zh-Hans|
 |2070|Portekizce-Portekiz|pt-PT|
 |3082|İspanyolca - İspanya (Modern sıralama)|ES|
 
