@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>Örnekler ve öğreticiler
 
-.NET belgelerine örnekleri ve .NET hakkında öğretmek öğreticileri kümesi içerir. Bu konu, Bul, görüntülemek ve .NET Core, ASP.NET Core ve C# örnekleri ve öğreticiler indirme açıklar. F # programlama dili hakkında bilgi edinmek için kaynakları bulmak [F # Foundation'ın site](http://fsharp.org/learn.html). Bir çevrimiçi kod düzenleyicisini kullanarak C# keşfetme içinde düşünüyorsanız şunları deneyin [etkileşimli öğreticileri](http://go.microsoft.com/fwlink/p/?LinkId=817234). Görüntüleme ve örnek kod karşıdan yükleme hakkında daha fazla yönerge için bkz: [görüntüleme ve örneklerini indirerek](#viewing-and-downloading-samples) bölümü.
+.NET belgelerine örnekleri ve .NET hakkında öğretmek öğreticileri kümesi içerir. Bu konu, Bul, görüntülemek ve .NET Core, ASP.NET Core ve C# örnekleri ve öğreticiler indirme açıklar. F # programlama dili hakkında bilgi edinmek için kaynakları bulmak [F # Foundation'ın site](http://fsharp.org/learn.html). Bir çevrimiçi kod düzenleyicisini kullanarak C# keşfetme de ilginizi çekiyorsa başlayın [bu etkileşimli öğreticisini](https://www.microsoft.com/net/learn/in-browser-tutorial/1) ve devam et [C# etkileşimli quickstarts](../csharp/quick-starts/index.md). Görüntüleme ve örnek kod karşıdan yükleme hakkında daha fazla yönerge için bkz: [görüntüleme ve örneklerini indirerek](#viewing-and-downloading-samples) bölümü.
 
 ## <a name="net-core"></a>.NET Core
 
@@ -37,7 +37,7 @@ Bu kılavuz .NET Core konsol platformlar arası uygulamalar oluşturmak için to
 
 Bu örnek için platformlar arası CLI araçlarını kullanarak .NET kitaplıkları yazma alınmaktadır. Bu araçlar herhangi desteklenen bir işletim sistemi üzerinde çalışan bir verimli ve alt düzey deneyimi sağlar. [Tamamlanan örnek](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) github'da dotnet/docs Havuzda kullanılabilir.
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 Bkz: [ASP.NET Core öğreticileri](/aspnet/core/tutorials/). ASP.NET Core belgelerinde birçok makaleleri için yazılmış örnekleri bağlantılar sahip.
 
@@ -49,7 +49,7 @@ Bkz: [ASP.NET Core öğreticileri](/aspnet/core/tutorials/). ASP.NET Core belgel
 
 Bu örnek, sözdizimi ve oluşturma ve C# yineleyiciler tüketen özellikleri gösterir. [Tamamlanan örnek](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) github'da dotnet/docs Havuzda kullanılabilir.
 
-**[Dizin oluşturucular](../csharp/indexers.md)**
+**[Indexers](../csharp/indexers.md)**
 
 Bu örnek, sözdizimi ve C# dizin oluşturucular için özellikleri gösterir. [Tamamlanan örnek](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) github'da dotnet/docs Havuzda kullanılabilir.
 

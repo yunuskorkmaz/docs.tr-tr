@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.workload: dotnetcore
-ms.openlocfilehash: 66ad63f0b2a2f62f34f0784b236d242f1d92066a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>.NET core CLI araçlarını telemetri
 
@@ -91,7 +92,7 @@ Yayımlanan verileri üç aylık olarak kullanılabilir ve adresinde listelenmi�
 
 | zaman damgası      | Yineleme | Komut | coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | çalıştırma     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>Veri kümeleri
 
@@ -133,5 +134,5 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Ne biz .NET Core SDK Telemetri öğrendiniz](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Telemetri başvuru kaynağı (dotnet/CLI depodaki; release/2.0.0 dalı)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
+[Telemetri başvuru kaynağı (dotnet/CLI depodaki; release/2.0.0 dalı)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
 [.NET core SDK kullanım verileri](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

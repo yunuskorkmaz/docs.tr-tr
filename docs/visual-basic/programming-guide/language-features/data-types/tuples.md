@@ -5,17 +5,19 @@ ms.date: 04/23/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: tuples [Visual Basic]
+helpviewer_keywords:
+- tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be50b22e9acca9ff8cfbde798d78869ee1c72634
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tuples-visual-basic"></a>Diziler (Visual Basic)
 
@@ -44,58 +46,87 @@ Demete ait alanları için varsayılan adlar kullanmak yerine, bir örneğini ol
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
-## <a name="tuples-versus-structures"></a>Yapılar ve diziler
+## <a name="inferred-tuple-element-names"></a>Çıkarsanan tanımlama grubu öğe adları
 
-Visual Basic tanımlama grubu birini örneği olan bir değer türü olan bir **System.ValueTuple** genel türler. Örneğin, `holiday` tanımlama grubu önceki örnekte tanımlanan bir örneğidir <xref:System.ValueTuple%603> yapısı. Veriler için basit bir kapsayıcı olacak şekilde tasarlanmıştır. Birden çok veri öğeleri ile bir nesne oluşturmayı kolaylaştırmak için tanımlama grubu amaçlar olduğundan, özel bir yapıya sahip özelliklerden bazıları eksik. Bu güncelleştirmeler şunlardır:
+Visual Basic, Visual Basic 15.3 ile başlayarak, başlığın öğeleri adlarının çıkarımını; açıkça atamak gerekmez. Çıkarsanan tanımlama grubu adları değişkenleri kümesinden bir tanımlama grubu başlatmak ve tanımlama grubu öğe adı değişken adı ile aynı olacak şekilde istediğinizde faydalıdır. 
 
-- Müşteri üyeleri. Kendi özellikleri, yöntemleri ya da bir tanımlama grubu için olayları tanımlayamazsınız.
+Aşağıdaki örnekte bir `stateInfo` üç açıkça içeren tanımlama grubu adlı öğeleri `state`, `stateName`, ve `capital`. Öğeleri adlandırmada tanımlama grubu başlatma deyimi yalnızca adlandırılmış öğeleri aynı adlı değişkenlerin değerleri atar, unutmayın.
 
-- Doğrulama. Alanlarına atanan veri doğrulanamıyor.
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
+ 
+Visual Basic derleyici öğeleri ve değişkenleri aynı ada sahip olduğundan, aşağıdaki örnekte gösterildiği gibi alanların adlarını çıkarımını.
 
-- Girişi. Visual Basic diziler değişebilir. Değişebilir veya sabit bir örneği olup olmadığını buna karşılık, özel bir yapı denetlemenize izin verir.
+[!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Özel üye, özellik ve alan doğrulama veya girişi önemliyse, Visual Basic kullanması gereken [yapısı](../../../language-reference/statements/structure-statement.md) deyimi bir özel değer türünü tanımlayın.
+İnterred tanımlama grubu öğe adları etkinleştirmek için Visual Basic projesinde kullanmak için Visual Basic derleyici sürümünü tanımlama (\*.vbproj) dosyası: 
 
-Visual Basic tanımlama grubu üyelerinin devralmıyor kendi **ValueTuple** türü. Kendi alanlara ek olarak, bunlar aşağıdaki yöntemler şunlardır:
+```xml 
+<PropertyGroup> 
+  <LangVersion>15.3</LangVersion> 
+</PropertyGroup> 
 
-| Üye | Açıklama |
+The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+
+In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+
+- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+
+- The candidate name is duplicated in the tuple.
+ 
+When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+  
+## Tuples versus structures
+
+A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+
+- Customer members. You cannot define your own properties, methods, or events for a tuple.
+
+- Validation. You cannot validate the data assigned to fields.
+
+- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+
+If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+
+A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+
+| Member | Description |
 | ---|---|
-| CompareTo | Geçerli tanımlama grubu için başka bir tanımlama grubu aynı sayıda öğe ile karşılaştırır. |
-| Eşittir | Geçerli tanımlama grubu başka bir tanımlama grubu veya nesneye eşit olup olmadığını belirler. |
-| GetHashCode | Geçerli örneğe ilişkin karma kodu hesaplar. |
-| ToString | Formundadır bu tanımlama grubu dize gösterimini döndürür `(Item1, Item2...)`, burada `Item1` ve `Item2` demete ait alanların değerlerini temsil eder. |
+| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
+| Equals | Determines whether the current tuple is equal to another tuple or object. |
+| GetHashCode | Calculates the hash code for the current instance. |
+| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
 
-Ayrıca, **ValueTuple** türleri uygulayan <xref:System.Collections.IStructuralComparable> ve <xref:System.Collections.IStructuralEquatable> müşteri comparers tanımlamanıza izin arabirimleri.
+In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
 
-## <a name="assignment-and-tuples"></a>Atama ve diziler
+## Assignment and tuples
 
-Visual Basic atama alanları aynı sayıda tanımlama grubu türleri arasındaki destekler. Aşağıdakilerden biri doğruysa alan türleri dönüştürülebilir:
+Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
 
-- Kaynak ve hedef alan aynı türde olan.
+- The source and target field are of the same type.
 
-- Kaynak türü hedef türü için bir genişletme (ya da örtük) dönüştürme tanımlanır. 
+- A widening (or implicit) conversion of the source type to the target type is defined. 
 
-- `Option Strict`olan `On`, ve bir kaynak türü daraltma (veya açık) dönüştürülmesi hedef türü için tanımlanır. Kaynak değerin hedef türü aralık dışında ise bu dönüştürme bir özel durum.
+- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
 
-Diğer dönüştürme atamaları dikkate alınmaz. Dizi türleri arasında izin atamalarını türlerini bakalım.
+Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
 
-Aşağıdaki örneklerde kullanılan bu değişkenleri göz önünde bulundurun:
+Consider these variables used in the following examples:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-İlk iki değişkenleri `unnamed` ve `anonymous`, alanlar için sağlanan anlamsal adları yok. Varsayılan alan adları olan `Item1` ve `Item2`. Son iki değişken `named` ve `differentName` anlamsal alan adları içeriyor. Bu iki başlığın alanları için farklı adlar gerektiğini unutmayın.
+The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
 
-Dört Bu başlık aynı sayıda alanlar ('parametre' adlandırılır) sahip ve bu alan türlerini aynıdır. Bu nedenle, tüm bu atamaları çalışır:
+All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Diziler adları atanmamıştır dikkat edin. Tanımlama grubundaki alanların sırasını aşağıdaki alanların değerlerini atanır.
+Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
 
-Son olarak, biz atayabilirsiniz dikkat edin `named` tanımlama grubu için `conversion` başlığın olsa bile ilk alanını `named` olan bir `Integer`ve ilk alanını `conversion` olan bir `Long`. Dönüştürme çünkü bu ataması başarılı bir `Integer` için bir `Long` genişletme dönüştürme değildir.
+Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Diziler farklı sayıda alana sahip atanabilir değil:
+Tuples with different numbers of fields are not assignable:
 
 ```vb
 ' Does not compile.

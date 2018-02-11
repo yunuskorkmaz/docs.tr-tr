@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -100,12 +100,6 @@ Yapılandırma oluşturucular ekleme ve uygulamalar için yapılandırma ayarlar
 
 Çöp toplama (GC) .NET Framework 4.7.1 yapılan değişiklikler özellikle büyük nesne yığın (LOH) ayırmaları için genel performansı iyileştirir. .NET Framework 4.7.1'da, arka plan GC (BGC) SOH yerleştirmez ortaya çıkması LOH ayırmaları sağlayan küçük nesne yığın (SOH) ve LOH ayırmalarının ayrı kilitleri kullanılır. Sonuç olarak, çok sayıda LOH ayırmaları uygulamalar ayırma kilit çakışması ve iyileştirilmiş performans azalmasına görmeniz gerekir. Daha fazla bilgi için "Çalışma zamanı--GC performans iyileştirmeleri" bölümüne bakın [4.7.1 .NET Framework çalışma zamanının ve derleyici özellikleri](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) blog postası. 
 
-**Taşınabilir pdb desteği**
-
-.NET Framework 4.7.1 sürümünden başlayarak, taşınabilir pdb destekler. Standart PDB dosyaları yalnızca Windows, taşınabilir açıkken PDB dosyaları oluşturulur ve tüm platformlarda okuyun. Çoğu durumda, dosya biçimi belirli bir .NET uygulama üzerinde çalışan bir uygulama için saydamdır. Bir özel bir derlemeyi çalışma zamanında dinamik olarak gösterdiği bir uygulamadır; Bu durumda, taşınabilir PDB yayma olanağı performans iyileştirmesi sunar ve uygulamanın bellek alanını azaltır. 
-
-Çalışma zamanında taşınabilir pdb geçerli .NET uygulaması üzerinde "PortablePdb" dizesi geçirerek desteklenen olup olmadığını belirlemek <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> derleme yayma önce yöntemi.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>Ağ Oluşturma
 
