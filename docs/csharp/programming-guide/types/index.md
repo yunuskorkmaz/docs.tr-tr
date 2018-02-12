@@ -2,7 +2,8 @@
 title: "Türler (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - value types [C#]
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1352d817241ad4dd42747dcd3a6bfbaf71f9cf25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9fe933760fd1ff0d730bf142707f03cf85b886b2
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 ## <a name="types-variables-and-values"></a>Türleri, değişkenler ve değerleri  
- C# bir kesin türü belirtilmiş bir dildir. Bir değer veren her ifade yaptığı gibi her değişken ve sabit bir türe sahip. Her yöntem imzası her giriş parametre ve dönüş değeri için bir türünü belirtir. .NET Framework sınıf kitaplığı çok çeşitli dosya sistemi, ağ bağlantıları, koleksiyonları ve nesneleri ve tarihleri dizileri gibi mantıksal yapıları temsil eden daha karmaşık türlerin yanı sıra yerleşik sayısal türler kümesini tanımlar. Tipik bir C# programı sınıf kitaplığı türlerinden yanı sıra kullanıcı tanımlı türler, programın sorunu etki alanına özgü kavramları modeli kullanır.  
+ C# bir kesin türü belirtilmiş bir dildir. Bir değer veren her ifade yaptığı gibi her değişken ve sabit bir türe sahip. Her yöntem imzası her giriş parametre ve dönüş değeri için bir türünü belirtir. .NET sınıf kitaplığı çok çeşitli dosya sistemi, ağ bağlantıları, koleksiyonları ve nesneleri ve tarihleri dizileri gibi mantıksal yapıları temsil eden daha karmaşık türlerin yanı sıra yerleşik sayısal türler kümesini tanımlar. Tipik bir C# programı sınıf kitaplığı türlerinden yanı sıra kullanıcı tanımlı türler, programın sorunu etki alanına özgü kavramları modeli kullanır.  
   
  Bir tür depolanan bilgileri aşağıdakileri içerebilir:  
   
@@ -67,14 +68,14 @@ ms.lasthandoff: 11/21/2017
  C# tamsayı, kayan nokta değerleri, Boole ifadeleri, metin karakterler, ondalık değerleri temsil etmek için yerleşik sayısal türler ve diğer veri türleri standart kümesi sağlar. Ayrıca vardır yerleşik `string` ve `object` türleri. Bu, tüm C# programında kullanmanız için kullanılabilir. Yerleşik türleri hakkında daha fazla bilgi için bkz: [türler için başvuru tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md).  
   
 ## <a name="custom-types"></a>Özel türler  
- Kullandığınız [yapısı](../../../csharp/language-reference/keywords/struct.md), [sınıfı](../../../csharp/language-reference/keywords/class.md), [arabirimi](../../../csharp/language-reference/keywords/interface.md), ve [enum](../../../csharp/language-reference/keywords/enum.md) yapıları kendi özel türleri oluşturmak için. .NET Framework sınıf kitaplığı kendisi, kendi uygulamalarında kullanabileceğiniz Microsoft tarafından sağlanan özel türler koleksiyonudur. Varsayılan olarak, en sık kullanılan türleri sınıf kitaplığı'nda tüm C# programı içinde kullanılabilir. Yalnızca açıkça tanımlanmış derleme proje başvurusu eklediğinizde diğerleri kullanılabilir hale gelir. Derleyici derlemesine başvuru sahip olduktan sonra değişkenlerin (ve sabitleri) türleri bu derleme kaynak kodunda bildirilen bildirebilirsiniz. Daha fazla bilgi için bkz: [.NET Framework sınıf kitaplığı](http://go.microsoft.com/fwlink/?LinkID=217856).  
+ Kullandığınız [yapısı](../../../csharp/language-reference/keywords/struct.md), [sınıfı](../../../csharp/language-reference/keywords/class.md), [arabirimi](../../../csharp/language-reference/keywords/interface.md), ve [enum](../../../csharp/language-reference/keywords/enum.md) yapıları kendi özel türleri oluşturmak için. .NET sınıf kitaplığı kendisi, kendi uygulamalarında kullanabileceğiniz Microsoft tarafından sağlanan özel türler koleksiyonudur. Varsayılan olarak, en sık kullanılan türleri sınıf kitaplığı'nda tüm C# programı içinde kullanılabilir. Yalnızca açıkça tanımlanmış derleme proje başvurusu eklediğinizde diğerleri kullanılabilir hale gelir. Derleyici derlemesine başvuru sahip olduktan sonra değişkenlerin (ve sabitleri) türleri bu derleme kaynak kodunda bildirilen bildirebilirsiniz. Daha fazla bilgi için bkz: [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).  
   
 ## <a name="the-common-type-system"></a>Ortak tür sistemi  
- İki temel noktaları türü sistemde hakkında anlamak önemlidir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]:  
+ İki temel noktaları .NET türü sistemde hakkında anlamak önemlidir:  
   
 -   Devralma ilkesini destekler. Türler adlı diğer türlerinden türetmek *temel türleri*. Türetilmiş bir tür (bazı sınırlamalarla birlikte) yöntemler, özellikler ve diğer temel türün üyeleri devralır. Temel türü sırayla çalışması türetilmiş bir tür devralma hiyerarşisi içinde her iki temel tür üyeleri devralır başka türü, türetilen. Yerleşik sayısal türler gibi dahil tüm türleri <xref:System.Int32?displayProperty=nameWithType> (C# anahtar sözcüğü: [int](../../../csharp/language-reference/keywords/int.md)), türetilen sonuçta tek taban türünden olduğu <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcüğü: [nesne](../../../csharp/language-reference/keywords/object.md)). Bu birleşik türü hiyerarşi adı verilen [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (CTS). C# devralma hakkında daha fazla bilgi için bkz: [devralma](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
--   Her türde CTS olarak tanımlanan bir *değer türü* veya *başvuru türüne*. Bu, .NET Framework sınıf kitaplığı yanı sıra kendi kullanıcı tanımlı türler tüm özel türler içerir. Kullanarak tanımladığınız türleri [yapısı](../../../csharp/language-reference/keywords/struct.md) anahtar değer türleri; tüm yerleşik sayısal türler `structs`. Kullanarak tanımladığınız türleri [sınıfı](../../../csharp/language-reference/keywords/class.md) bir anahtar sözcüktür başvuru türleri. Başvuru türleri ve değer türleri farklı derleme zamanı kurallar ve farklı bir çalışma zamanı davranışı sahiptir.  
+-   Her türde CTS olarak tanımlanan bir *değer türü* veya *başvuru türüne*. Bu, .NET sınıf kitaplığı'nda tüm özel türler ve ayrıca kendi kullanıcı tanımlı türler içerir. Kullanarak tanımladığınız türleri [yapısı](../../../csharp/language-reference/keywords/struct.md) anahtar değer türleri; tüm yerleşik sayısal türler `structs`. Kullanarak tanımladığınız türleri [sınıfı](../../../csharp/language-reference/keywords/class.md) bir anahtar sözcüktür başvuru türleri. Başvuru türleri ve değer türleri farklı derleme zamanı kurallar ve farklı bir çalışma zamanı davranışı sahiptir.  
   
  Aşağıdaki çizimde CTS değer türleri ve başvuru türleri arasındaki ilişkiyi gösterir.  
   
@@ -110,9 +111,9 @@ char c = 'Z';
   
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
   
- Yapılar hakkında daha fazla bilgi için bkz: [yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md). Değer türleri hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bkz: [ortak tür sistemi](../../../standard/base-types/common-type-system.md).  
+ Yapılar hakkında daha fazla bilgi için bkz: [yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md). .NET içinde değer türleri hakkında daha fazla bilgi için bkz: [değer türleri](../../../csharp/language-reference/keywords/value-types.md).  
   
- Değer türleri diğer kategori [enum](../../../csharp/language-reference/keywords/enum.md). Enum adlandırılmış tamsayı sabitleri kümesini tanımlar. Örneğin, <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırma .NET Framework Sınıf Kitaplığı'nda nasıl bir dosyanın açılması belirtin sabit tamsayılar adlı bir kümesini içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanır:  
+ Değer türleri diğer kategori [enum](../../../csharp/language-reference/keywords/enum.md). Enum adlandırılmış tamsayı sabitleri kümesini tanımlar. Örneğin, <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırma .NET sınıf kitaplığı'nda nasıl bir dosyanın açılması belirtin sabit tamsayılar adlı bir kümesini içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanır:  
  
  [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
@@ -121,7 +122,7 @@ char c = 'Z';
  Tüm numaralandırmaları devralınmalıdır <xref:System.Enum?displayProperty=nameWithType>, devralan <xref:System.ValueType?displayProperty=nameWithType>. Yapılar için geçerli olan tüm kurallar numaralandırmalar için de geçerlidir. Numaralandırmalar hakkında daha fazla bilgi için bkz: [Numaralandırma türleri](../../../csharp/programming-guide/enumeration-types.md).  
   
 ### <a name="reference-types"></a>Başvuru Türleri  
- Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), dizi veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) olan bir *başvuru türüne*. Ne zaman bildirdiğiniz başvuru türünde bir değişken, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak nesnesinin örneğini oluşturma kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci, veya bir nesne atama oluşturulan başka bir yerde kullanarak `new`, aşağıdaki örnekte gösterildiği gibi:
+ Olarak tanımlanan bir tür bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [temsilci](../../../csharp/language-reference/keywords/delegate.md), dizi veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) olan bir *başvuru türüne*. Ne zaman bildirdiğiniz başvuru türünde bir değişken, çalışma zamanında değişken değeri içeren [null](../../../csharp/language-reference/keywords/null.md) açıkça kullanarak bir nesne oluşturma kadar [yeni](../../../csharp/language-reference/keywords/new.md) işleci veya daha eski bir nesne atama başka bir yerde kullanılarak oluşturulan `new`, aşağıdaki örnekte gösterildiği gibi:
   
 ```csharp  
 MyClass mc = new MyClass();  
@@ -149,7 +150,7 @@ IMyInterface iface = new MyClass();
  [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
   
 ## <a name="generic-types"></a>Genel türler  
- Bir veya daha fazla ile bir türü bildirilebilir *tür parametrelerindeki* , gerçek tür için bir yer tutucu olarak hizmet verir ( *somut türü*) türünün bir örneğini oluşturduğunda, istemci kodu sağlayacaktır. Bu tür türleri olarak adlandırılır *genel türler*. Örneğin, .NET Framework türü <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> , kural tarafından adı verilen bir tür parametresi sahip *T*. Türünün bir örneği oluşturduğunuzda, bu liste, örneğin, dize içerir nesnelerin türünü belirtin:  
+ Bir veya daha fazla ile bir türü bildirilebilir *tür parametrelerindeki* , gerçek tür için bir yer tutucu olarak hizmet verir ( *somut türü*) türünün bir örneğini oluşturduğunda, istemci kodu sağlayacaktır. Bu tür türleri olarak adlandırılır *genel türler*. Örneğin, .NET türü <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> , kural tarafından adı verilen bir tür parametresi sahip *T*. Türünün bir örneği oluşturduğunuzda, bu liste, örneğin, dize içerir nesnelerin türünü belirtin:  
  
 ```csharp
 List<string> stringList = new List<string>();
@@ -157,7 +158,7 @@ stringList.Add("String example");
 // compile time error adding a type other than a string:
 stringList.Add(4);
 ```
- Tür parametresi kullanımını her öğeye Dönüştür gerek kalmadan herhangi bir türde öğe tutmak için aynı sınıfı yeniden mümkün kılar [nesne](../../../csharp/language-reference/keywords/object.md). Genel koleksiyon sınıfları çağrılır *kesin türü belirtilmiş koleksiyonları* derleyici koleksiyonun öğelerini belirli türünü bilir ve neden olabilir, derleme zamanı IF sırasında bir hata olduğundan, örneğin, bir tamsayı eklemeyideneyin`strings` önceki örnekte nesnesi. Daha fazla bilgi için bkz: [genel türler](../../../csharp/programming-guide/generics/index.md).  
+ Tür parametresi kullanımını her öğeye Dönüştür gerek kalmadan herhangi bir türde öğe tutmak için aynı sınıfı yeniden mümkün kılar [nesne](../../../csharp/language-reference/keywords/object.md). Genel koleksiyon sınıfları çağrılır *kesin türü belirtilmiş koleksiyonları* derleyici koleksiyonun öğelerini belirli türünü bilir ve neden olabilir, derleme zamanı IF sırasında bir hata olduğundan, örneğin, bir tamsayı eklemeyideneyin`stringList` önceki örnekte nesnesi. Daha fazla bilgi için bkz: [genel türler](../../../csharp/programming-guide/generics/index.md).  
   
 ## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Örtük türleri, anonim türler ve boş değer atanabilir türler  
  Daha önce belirtildiği gibi örtük olarak yerel bir değişken (ancak sınıf üyeleri) kullanarak yazabilirsiniz [var](../../../csharp/language-reference/keywords/var.md) anahtar sözcüğü. Değişkeni derleme zamanında hala bir türü alır, ancak türü derleyici tarafından sağlanır. Daha fazla bilgi için bkz: [örtük olarak yazılan yerel değişkenler](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
@@ -169,27 +170,27 @@ stringList.Add(4);
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+-   [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+-   [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
   
 -   [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)  
   
--   [Değer türleri](../../../csharp/language-reference/keywords/value-types.md)  
+-   [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
   
--   [Başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+-   [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Sınıflar ve yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
+-   [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
--   [Anonim türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+-   [Anonim Tipler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
--   [Genel türler](../../../csharp/programming-guide/generics/index.md)  
+-   [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [XML veri türlerini dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [Tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+ [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
