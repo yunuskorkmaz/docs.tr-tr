@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F # kullanarak Azure Blob storage'ı kullanmaya başlama #
 
@@ -242,12 +242,13 @@ Blob storage'nın öğrendiğinize göre daha fazla bilgi için aşağıdaki ba�
 
 ### <a name="blob-storage-reference"></a>BLOB Depolama başvurusu
 
-- [.NET başvurusu için depolama istemci kitaplığı](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [REST API Başvurusu](http://msdn.microsoft.com/library/azure/dd179355)
+- [.NET için Azure depolama API'leri](/dotnet/api/overview/azure/storage)
+- [Azure Storage Hizmetleri REST API Başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>İlgili kılavuzları
 
 - [Azure Blob Depolama C# kullanmaya Başlarken](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [AzCopy komut satırı yardımcı programı ile veri aktarımı](/azure/storage/storage-use-azcopy)
-- [Bağlantı dizeleri yapılandırma](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [Windows üzerinde AzCopy komut satırı yardımcı programı ile veri aktarımı](/azure/storage/common/storage-use-azcopy)
+- [Linux'ta AzCopy komut satırı yardımcı programı ile veri aktarımı](/azure/storage/common/storage-use-azcopy-linux)
+- [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)

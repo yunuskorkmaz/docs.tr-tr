@@ -9,13 +9,16 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile Mimarı Modern Web uygulamaları
+
+![kapak resmi](./media/cover.jpg)
+
 
 .NET core ve ASP.NET Core geleneksel .NET geliştirme birkaç avantaj sunar. Aşağıdaki tümünün veya uygulamanızın başarısı için önemli olan ise, sunucu uygulamaları için .NET Core kullanmanız gerekir:
 
@@ -53,9 +56,9 @@ Bu kılavuz için tamamlayıcı "*Architecting ve geliştirme kapsayıcılı ve 
 
 > ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>Mimariden ve kapsayıcılı mikro hizmet geliştirirken .NET uygulamalarında dayalı
 > - **e-kitap**  
-> <http://aka.MS/MicroservicesEbook>
+> <http://aka.ms/MicroservicesEbook>
 > - **Örnek uygulama**  
-> <http://aka.MS/microservicesarchitecture>
+> <http://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuz kullanan
 
@@ -71,7 +74,7 @@ Bu konuları ve fırsatlar genel olarak anlaşılmasını sağlamak için bu kı
 
 ## <a name="references"></a>Referanslar
 - **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
-<https://docs.microsoft.com/dotnet/articles/Standard/choosing-Core-Framework-Server>
+<https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [Sonraki] (modern-web-uygulamalar-characteristics.md)

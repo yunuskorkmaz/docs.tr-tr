@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.workload: dotnetcore
-ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="name"></a>Ad
 
-`dotnet new`-Yeni Proje, yapılandırma dosyası veya belirtilen şablona dayalı çözüm oluşturur.
+`dotnet new` -Yeni Proje, yapılandırma dosyası veya belirtilen şablona dayalı çözüm oluşturur.
 
 ## <a name="synopsis"></a>Özet
 
@@ -76,7 +77,7 @@ Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -l` 
 | Web yapılandırma                                   | `webconfig`   |               |
 | Çözüm dosyası                                | `sln`         |               |
 | Razor sayfası                                   | `page`        |               |
-| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewImports                              | `viewimports` |               |
 | MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -178,103 +179,103 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 **konsolunda, Açısal, tepki, reactredux**
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`-Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp2.0` .NET çekirdek sınıf kitaplığı oluşturmak için veya `netstandard2.0` .NET standart sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
+`-f|--framework <FRAMEWORK>` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp2.0` .NET çekirdek sınıf kitaplığı oluşturmak için veya `netstandard2.0` .NET standart sınıf kitaplığı oluşturmak için. Varsayılan değer `netstandard2.0` şeklindedir.
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **mstest, xunit**
 
-`-p|--enable-pack`-Proje kullanma paketleme sağlar [dotnet paketi](dotnet-pack.md).
+`-p|--enable-pack` -Proje kullanma paketleme sağlar [dotnet paketi](dotnet-pack.md).
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **globaljson**
 
-`--sdk-version <VERSION_NUMBER>`-Kullanmak için .NET Core SDK sürümünü belirtir *global.json* dosya.
+`--sdk-version <VERSION_NUMBER>` -Kullanmak için .NET Core SDK sürümünü belirtir *global.json* dosya.
 
 **web**
 
-`--use-launch-settings`-İçeren *launchSettings.json* oluşturulan şablon çıkışı.
+`--use-launch-settings` -İçeren *launchSettings.json* oluşturulan şablon çıkışı.
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **webapi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>` -Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulama yok (varsayılan).
-- `IndividualB2C`-Azure AD B2C ile tek tek kimlik doğrulaması.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-- `Windows`-Windows kimlik doğrulaması.
+- `None` -Kimlik doğrulama yok (varsayılan).
+- `IndividualB2C` -Azure AD B2C ile tek tek kimlik doğrulaması.
+- `SingleOrg` -Tek bir kiracı için kuruluş kimlik doğrulaması.
+- `Windows` -Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanmak için Azure Active Directory B2C örnek. İle kullandığınız `IndividualB2C` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
+`--aad-b2c-instance <INSTANCE>` -Bağlanmak için Azure Active Directory B2C örnek. İle kullandığınız `IndividualB2C` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/tfp/` şeklindedir.
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
+`-ssp|--susi-policy-id <ID>` -Bu proje için oturum açma ve kaydolma ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
 
-`--aad-instance <INSTANCE>`-Bağlanmak için Azure Active Directory örneği. İle kullandığınız `SingleOrg` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>` -Bağlanmak için Azure Active Directory örneği. İle kullandığınız `SingleOrg` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu proje için istemci kimliği. İle kullandığınız `IndividualB2C` veya `SingleOrg` kimlik doğrulaması. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>` -Bu proje için istemci kimliği. İle kullandığınız `IndividualB2C` veya `SingleOrg` kimlik doğrulaması. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Etki alanı için dizin Kiracı. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması. Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>` -Etki alanı için dizin Kiracı. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması. Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Tenantıd bağlanmak için kimliği dizini. İle kullandığınız `SingleOrg` kimlik doğrulaması. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>` -Tenantıd bağlanmak için kimliği dizini. İle kullandığınız `SingleOrg` kimlik doğrulaması. Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca uygular `SingleOrg` veya `MultiOrg` kimlik doğrulaması.
+`-r|--org-read-access` -Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca uygular `SingleOrg` veya `MultiOrg` kimlik doğrulaması.
 
-`--use-launch-settings`-İçeren *launchSettings.json* oluşturulan şablon çıkışı.
+`--use-launch-settings` -İçeren *launchSettings.json* oluşturulan şablon çıkışı.
 
-`-uld|--use-local-db`-Yerel veritabanı yerine SQLite kullanılması gerektiğini belirtir. Yalnızca uygular `Individual` veya `IndividualB2C` kimlik doğrulaması.
+`-uld|--use-local-db` -Yerel veritabanı yerine SQLite kullanılması gerektiğini belirtir. Yalnızca uygular `Individual` veya `IndividualB2C` kimlik doğrulaması.
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **mvc, razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`-Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
+`-au|--auth <AUTHENTICATION_TYPE>` -Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
 
-- `None`-Kimlik doğrulama yok (varsayılan).
-- `Individual`-Tek tek kimlik doğrulaması.
-- `IndividualB2C`-Azure AD B2C ile tek tek kimlik doğrulaması.
-- `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-- `MultiOrg`-Birden çok Kiracı için kuruluş kimlik doğrulaması.
-- `Windows`-Windows kimlik doğrulaması.
+- `None` -Kimlik doğrulama yok (varsayılan).
+- `Individual` -Tek tek kimlik doğrulaması.
+- `IndividualB2C` -Azure AD B2C ile tek tek kimlik doğrulaması.
+- `SingleOrg` -Tek bir kiracı için kuruluş kimlik doğrulaması.
+- `MultiOrg` -Birden çok Kiracı için kuruluş kimlik doğrulaması.
+- `Windows` -Windows kimlik doğrulaması.
 
-`--aad-b2c-instance <INSTANCE>`-Bağlanmak için Azure Active Directory B2C örnek. İle kullandığınız `IndividualB2C` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/tfp/` .
+`--aad-b2c-instance <INSTANCE>` -Bağlanmak için Azure Active Directory B2C örnek. İle kullandığınız `IndividualB2C` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/tfp/` .
 
-`-ssp|--susi-policy-id <ID>`-Bu proje için oturum açma ve kaydolma ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
+`-ssp|--susi-policy-id <ID>` -Bu proje için oturum açma ve kaydolma ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
 
-`-rp|--reset-password-policy-id <ID>`-Bu proje için reset parola ilkesi kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
+`-rp|--reset-password-policy-id <ID>` -Bu proje için reset parola ilkesi kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
 
-`-ep|--edit-profile-policy-id <ID>`-Bu proje için Düzenle profili ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
+`-ep|--edit-profile-policy-id <ID>` -Bu proje için Düzenle profili ilke kimliği. İle kullandığınız `IndividualB2C` kimlik doğrulaması.
 
-`--aad-instance <INSTANCE>`-Bağlanmak için Azure Active Directory örneği. İle kullandığınız `SingleOrg` veya `MultiOrg` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
+`--aad-instance <INSTANCE>` -Bağlanmak için Azure Active Directory örneği. İle kullandığınız `SingleOrg` veya `MultiOrg` kimlik doğrulaması. Varsayılan değer `https://login.microsoftonline.com/` şeklindedir.
 
-`--client-id <ID>`-Bu proje için istemci kimliği. İle kullandığınız `IndividualB2C`, `SingleOrg`, veya `MultiOrg` kimlik doğrulaması. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
+`--client-id <ID>` -Bu proje için istemci kimliği. İle kullandığınız `IndividualB2C`, `SingleOrg`, veya `MultiOrg` kimlik doğrulaması. Varsayılan değer `11111111-1111-1111-11111111111111111` şeklindedir.
 
-`--domain <DOMAIN>`-Etki alanı için dizin Kiracı. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması... Varsayılan değer `qualified.domain.name` şeklindedir.
+`--domain <DOMAIN>` -Etki alanı için dizin Kiracı. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması... Varsayılan değer `qualified.domain.name` şeklindedir.
 
-`--tenant-id <ID>`-Tenantıd bağlanmak için kimliği dizini. İle kullandığınız `SingleOrg` kimlik doğrulaması... Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
+`--tenant-id <ID>` -Tenantıd bağlanmak için kimliği dizini. İle kullandığınız `SingleOrg` kimlik doğrulaması... Varsayılan değer `22222222-2222-2222-2222-222222222222` şeklindedir.
 
-`--callback-path <PATH>`-Yeniden yönlendirme URI'si, uygulamanın taban yolu içindeki istek yolu. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması... Varsayılan değer `/signin-oidc` şeklindedir.
+`--callback-path <PATH>` -Yeniden yönlendirme URI'si, uygulamanın taban yolu içindeki istek yolu. İle kullandığınız `SingleOrg` veya `IndividualB2C` kimlik doğrulaması... Varsayılan değer `/signin-oidc` şeklindedir.
 
-`-r|--org-read-access`-Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca uygular `SingleOrg` veya `MultiOrg` kimlik doğrulaması.
+`-r|--org-read-access` -Bu uygulamanın dizine okuma erişimi sağlar. Yalnızca uygular `SingleOrg` veya `MultiOrg` kimlik doğrulaması.
 
-`--use-launch-settings`-İçeren *launchSettings.json* oluşturulan şablon çıkışı.
+`--use-launch-settings` -İçeren *launchSettings.json* oluşturulan şablon çıkışı.
 
-`--use-browserlink`-BrowserLink projede içerir.
+`--use-browserlink` -BrowserLink projede içerir.
 
-`-uld|--use-local-db`-Yerel veritabanı yerine SQLite kullanılması gerektiğini belirtir. Yalnızca uygular `Individual` veya `IndividualB2C` kimlik doğrulaması.
+`-uld|--use-local-db` -Yerel veritabanı yerine SQLite kullanılması gerektiğini belirtir. Yalnızca uygular `Individual` veya `IndividualB2C` kimlik doğrulaması.
 
-`--no-restore`-Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **Sayfa**
 
 `-na|--namespace <NAMESPACE_NAME>`-Namespace üretilen kod için. Varsayılan değer `MyApp.Namespace` şeklindedir.
 
-`-np|--no-pagemodel`-Bir PageModel olmadan sayfası oluşturur.
+`-np|--no-pagemodel` -Bir PageModel olmadan sayfası oluşturur.
 
 **viewimports**
 
@@ -284,19 +285,19 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 **Konsolu, xunit, mstest'i, web, webapı**
 
-`-f|--framework`-Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
+`-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
 **classlib**
 
-`-f|--framework`-Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0`, `netcoreapp1.1`, veya `netstandard1.0` için `netstandard1.6`. Varsayılan değer `netstandard1.4` şeklindedir.
+`-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0`, `netcoreapp1.1`, veya `netstandard1.0` için `netstandard1.6`. Varsayılan değer `netstandard1.4` şeklindedir.
 
 **mvc**
 
-`-f|--framework`-Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
+`-f|--framework` -Belirtir [framework](../../standard/frameworks.md) hedef. Değerler: `netcoreapp1.0` veya `netcoreapp1.1`. Varsayılan değer `netcoreapp1.0` şeklindedir.
 
-`-au|--auth`-Kullanılacak kimlik doğrulama türü. Değerler: `None` veya `Individual`. Varsayılan değer `None` şeklindedir.
+`-au|--auth` -Kullanılacak kimlik doğrulama türü. Değerler: `None` veya `Individual`. Varsayılan değer `None` şeklindedir.
 
-`-uld|--use-local-db`-Yerel veritabanı yerine SQLite kullanılıp kullanılmayacağını belirtir. Değerler: `true` veya `false`. Varsayılan değer `false` şeklindedir.
+`-uld|--use-local-db` -Yerel veritabanı yerine SQLite kullanılıp kullanılmayacağını belirtir. Değerler: `true` veya `false`. Varsayılan değer `false` şeklindedir.
 
 ---
 

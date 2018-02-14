@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F # kullanarak Azure kuyruk depolamaya başlayın #
 
@@ -142,8 +142,8 @@ Bir kuyruk ve içerdiği tüm iletileri silmek için arama `Delete` nesnesinde y
 
 Kuyruk depolamanın temellerini öğrendiğinize göre daha karmaşık depolama görevleri hakkında bilgi edinmek için aşağıdaki bağlantıları izleyin.
 
-- [.NET başvurusu için depolama istemci kitaplığı](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [.NET için Azure depolama API'leri](/dotnet/api/overview/azure/storage)
 - [Azure depolama türü sağlayıcısı](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Bağlantı dizeleri yapılandırma](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [REST API Başvurusu](http://msdn.microsoft.com/library/azure/dd179355)
+- [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
+- [Azure Storage Hizmetleri REST API Başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>İzlenecek yol: Tür Sağlayıcılarını ve Varlıkları Kullanarak SQL Veritabanına Erişim
 
@@ -66,7 +66,7 @@ School veritabanını SQL Server çalıştıran ve yönetimsel erişiminiz olan 
 3. Yeni bağlantı düğümü için kısayol menüsünü açın ve ardından **yeni sorgu**.
 <br />
 
-4. Açık [Okul örnek veritabanı oluşturma](http://go.microsoft.com/fwlink/?LinkID=237278) Microsoft Web sitesine gidin ve ardından Kopyala ve Yapıştır üzerinde veritabanı betiği öğrenci veritabanı Düzenleyicisi penceresine oluşturur.
+4. Açık [Okul örnek veritabanı oluşturma](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) Microsoft Web sitesine gidin ve ardından Kopyala ve Yapıştır üzerinde veritabanı betiği Okul Veritabanı Düzenleyicisi penceresine oluşturur.
 <br />
 
 
@@ -240,14 +240,9 @@ Kullanılabilir sorgu işleçleri gözden geçirerek diğer sorgu seçeneklerini
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Tür sağlayıcıları](index.md)
-
-[SqlEntityConnection türü sağlayıcısı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[İzlenecek yol: EDMX şema dosyasından F # türleri oluşturma](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[.edmx dosyasının genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM Oluşturucu &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Tür Sağlayıcıları](index.md)  
+[SqlEntityConnection Type Provider](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[İzlenecek yol: EDMX şema dosyasından F # türleri oluşturma](generating-fsharp-types-from-edmx.md)  
+[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)  
+[.edmx dosyasının genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM Oluşturucu &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  
