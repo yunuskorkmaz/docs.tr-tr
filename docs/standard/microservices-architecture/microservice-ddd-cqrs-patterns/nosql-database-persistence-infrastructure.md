@@ -1,7 +1,7 @@
 ---
 title: "NoSQL veritabanı olarak Kalıcılık altyapısı kullanma"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | NoSQL veritabanı olarak Kalıcılık altyapısı kullanma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9cb9cc231396f9de5fba0e04d1671865ea645873
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanı olarak Kalıcılık altyapısı kullanma
 
@@ -62,7 +62,7 @@ Ne zaman için NoSQL taşıma etki alanı modelinizi toplamalarda, tasarım ve t
 
 [Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction) görev açısından kritik uygulamalar için Microsoft'un Genel dağıtılmış veritabanı hizmetidir. Azure Cosmos DB sağlar [anahtar teslim genel dağıtım](https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally), [üretilen iş ve depolama esnek ölçeklendirme](https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data) 99, dünya çapında, tek basamaklı milisaniyelik gecikme [beş iyi tanımlanmış tutarlılık düzeylerini](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels), yüksek oranda kullanılabilirlik, tarafından yedeklenen tüm garanti [endüstri lideri SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/). Azure Cosmos DB [verileri otomatik olarak dizinler](http://www.vldb.org/pvldb/vol8/p1668-shukla.pdf) gerektirmeden şema ve dizin yönetimi ile ilgilidir. Birden çok model ve belge, anahtar-değer, grafik ve sütunlu veri modelleri destekler.
 
-![](./media/image19.1.png)Şekil 9-19. Azure Cosmos DB genel dağıtım
+![](./media/image19.1.png) Şekil 9-19. Azure Cosmos DB genel dağıtım
 
 Bir C kullandığınızda\# Azure Cosmos DB API'si tarafından toplama kullanılacak toplama uygulamak için model C benzer olabilir\# EF çekirdek ile kullanılan POCO sınıflar. Aşağıdaki kod olduğu gibi uygulama ve altyapı katmanlardan kullanılacakları şekilde fark vardır:
 
@@ -111,7 +111,7 @@ orderAggregate.AddOrderItem(orderItem2);
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
-await client.CreateDocumentAsync(collectionUri, order);
+await client.CreateDocumentAsync(collectionUri, orderAggregate);
 
 // As your app evolves, let's say your object has a new schema. You can insert
 // OrderV2 objects without any changes to the database tier.
@@ -139,13 +139,13 @@ Ayrıca bu öykünücüsü Docker, ancak yalnızca Windows kapsayıcıları çal
 
 Cosmos DB veritabanları yerel MongoDB kablo protokolü yanı sıra .NET API MongoDB destekler. MongoDB için yazılmış uygulamanızı mevcut sürücüleri kullanarak artık Cosmos DB ile iletişim kurmak ve Cosmos DB veritabanları MongoDB veritabanı yerine, Şekil 9-20'de gösterildiği gibi kullanın. Bu anlamına gelir.
 
-![](./media/image19.2.png)Şekil 9-20. MongoDB API ve protokolü kullanarak Azure Cosmos DB erişmek için
+![](./media/image19.2.png) Şekil 9-20. MongoDB API ve protokolü kullanarak Azure Cosmos DB erişmek için
 
 Bunun nedeni Linux kapsayıcılarla Docker ortamlarda kavramları kanıtı için çok uygun bir yaklaşım, [MongoDB Docker görüntü](https://hub.docker.com/r/_/mongo/) Docker Linux kapsayıcıları ve Docker Windows kapsayıcıları destekler çok yay bir görüntü.
 
 9-21, görüntüde gösterildiği gibi MongoDB API'sini kullanarak eShopOnContainers yerel geliştirme ortamı için MongoDB Linux ve Windows kapsayıcıları destekler, ancak daha sonra bir biçimde ölçeklendirilebilir, taşıyabilirsiniz PaaS çözümü olarak Azure Cosmos DB tarafından yalnızca bulut [değiştirme Azure Cosmos Veritabanına işaret edecek şekilde MongoDB bağlantı dizesi](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account). 
 
-![](./media/image20-bis.png)Şekil 9-21. eShopOnContainers üretim için geliştirme env ya da Azure Cosmos DB için MongoDB kapsayıcıları kullanma
+![](./media/image20-bis.png) Şekil 9-21. eShopOnContainers üretim için geliştirme env ya da Azure Cosmos DB için MongoDB kapsayıcıları kullanma
 
 Üretim Azure Cosmos DB Azure'un bulutta bir PaaS ve ölçeklenebilir hizmet olarak çalışır.
 
@@ -170,7 +170,7 @@ Temel olarak, yalnızca Linux kapsayıcıları için kullanışlı bir seçim ol
 
 .NET için API MongoDB Şekil 9-22'de gösterilen Locations.API gibi projelerinizi eklemeniz gerekir NuGet paketlerini temel alır.
 
-![](./media/image21-bis.png)Şekil 9-22. .NET Core projede başvuruları MongoDB API NuGet paketleri
+![](./media/image21-bis.png) Şekil 9-22. .NET Core projede başvuruları MongoDB API NuGet paketleri
 
 Şimdi aşağıdaki bölümlerde kodda araştırın.
 

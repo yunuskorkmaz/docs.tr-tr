@@ -2,22 +2,24 @@
 title: Windows Communication Foundation
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7ef1702718d24580694a3d0d4c72e41dc314b4
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>WCF ile Hizmet Odaklı Uygulamalar Geliştirme
 Bu bölümde belgelerin hakkında Windows Communication Foundation (hangi hizmet odaklı uygulamalar oluşturmaya yönelik bir programlama modelidir WCF), bilgi sağlar. Geliştiricilerin platformlarla tümleştirilen ve Yatırımlar ile birlikte çalışmak güvenli, güvenilir ve işlenen çözümleri oluşturmasına olanak sağlar.
@@ -44,7 +46,7 @@ Bu bölümde belgelerin hakkında Windows Communication Foundation (hangi hizmet
  [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)  
  Konular, seçtiğiniz olanak sağlayan gösterir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanımlar için gereken özellikleri.  
   
- [WCF'yi Genişletme](../../../docs/framework/wcf/extending/extending-wcf.md)  
+ [WCF'yi Genişletme](../../../docs/framework/wcf/extending/index.md)  
  WCF çalışma zamanı bileşenleri genişletmek ve değiştirmek açıklar  
   
  [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
@@ -75,7 +77,7 @@ Bu bölümde belgelerin hakkında Windows Communication Foundation (hangi hizmet
  Windows Communication Foundation çeşitli yönlerini yönerge sağlayan örnekleri  
   
  [Windows Communication Foundation Sözlüğü](../../../docs/framework/wcf/glossary.md)  
- Terimlerin bir listesi için belirli gösterir[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ Terimlerin bir listesi için belirli gösterir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
   
  [Genel Başvuru](../../../docs/framework/wcf/general-reference.md)  
  Bölüm Windows Communication Foundation istemcileri ve hizmetleri yapılandırmak için kullanılan öğeleri açıklar.  

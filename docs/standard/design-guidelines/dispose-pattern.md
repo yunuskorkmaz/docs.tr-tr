@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Desen dispose
 Tüm Programlar bir veya daha fazla sistem kaynakları, bellek, sistem tanıtıcıları veya veritabanı bağlantıları gibi kendi yürütme sürecinde alın. Geliştiriciler alınan ve kullanılan sonra bunlar serbest gerekir çünkü bu tür sistem kaynaklarını kullanırken dikkatli olmanız gerekir.  
@@ -35,7 +35,7 @@ Tüm Programlar bir veya daha fazla sistem kaynakları, bellek, sistem tanıtıc
   
  Ne yazık ki, yönetilen bellek yalnızca sistem kaynaklarını birçok türdeki biridir. Yönetilen bellek dışındaki kaynaklar hala açıkça yayımlanması gerekir ve yönetilmeyen kaynaklar olarak adlandırılır. GC yönetilmeyen gibi kaynakları yönetmek için yönetilmeyen kaynakları yönetmek için sorumluluk geliştiriciler elinizde arasındadır yani tasarlanmamıştır özellikle.  
   
- CLR yönetilmeyen kaynakları serbest bırakma bazı Yardım sağlar. <xref:System.Object?displayProperty=nameWithType>sanal bir yöntem bildirir <xref:System.Object.Finalize%2A> (sonlandırıcıyı olarak da bilinir) çağrılan tarafından GC önce nesnenin bellek tarafından GC iadesi ve yönetilmeyen kaynakları serbest bırakmak için geçersiz kılınabilir. Sonlandırıcıyı geçersiz türleri sonlandırılabilir türleri olarak adlandırılır.  
+ CLR yönetilmeyen kaynakları serbest bırakma bazı Yardım sağlar. <xref:System.Object?displayProperty=nameWithType> sanal bir yöntem bildirir <xref:System.Object.Finalize%2A> (sonlandırıcıyı olarak da bilinir) çağrılan tarafından GC önce nesnenin bellek tarafından GC iadesi ve yönetilmeyen kaynakları serbest bırakmak için geçersiz kılınabilir. Sonlandırıcıyı geçersiz türleri sonlandırılabilir türleri olarak adlandırılır.  
   
  Sonlandırıcılar bazı temizleme senaryolarda etkili olsa da, bunlar iki önemli sakıncaları vardır:  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Ayrıca, bu bölümde, zaten Dispose düzeni uygulamıyor bir taban sınıflarıyla uygular. Zaten deseni uygulayan bir sınıftan devralmayı, yalnızca geçersiz kılma `Dispose(bool)` yöntemi ek kaynak temizleme mantığı sağlar.  
   
- **✓ YAPMAK** korumalı sanal void bildirme `Dispose(bool disposing)` tüm mantığı merkezileştirmek yöntemi ilgili yönetilmeyen kaynakları serbest bırakma için.  
+ **✓ YAPMAK** bildirme bir `protected virtual void Dispose(bool disposing)` tüm mantığı merkezileştirmek yöntemi ilgili yönetilmeyen kaynakları serbest bırakma için.  
   
  Tüm kaynak temizleme Bu yöntemde olmalıdır. Yöntem sonlandırıcıyı çağrılır ve `IDisposable.Dispose` yöntemi. Parametre bir sonlandırıcı içinde çağrılan varsa false olur. Sonlandırma sırasında çalıştıran herhangi bir kod sonlandırılabilir diğer nesneleri erişilmemesi emin olmak için kullanılmalıdır. Sonlandırıcılar uygulama ayrıntılarını sonraki bölümde açıklanmaktadır.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X yok** hiçbir aşırı bildirme `Dispose` yöntemi dışında `Dispose()` ve `Dispose(bool)`.  
   
- `Dispose`Bu desen kod oluşturma ve uygulayıcılar, kullanıcılar ve derleyicileri arasında Karışıklığı önlemek için ayrılmış bir sözcük dikkate alınmalıdır. Bazı diller belirli türlerinde bu deseni otomatik olarak uygulamak seçebilirsiniz.  
+ `Dispose` Bu desen kod oluşturma ve uygulayıcılar, kullanıcılar ve derleyicileri arasında Karışıklığı önlemek için ayrılmış bir sözcük dikkate alınmalıdır. Bazı diller belirli türlerinde bu deseni otomatik olarak uygulamak seçebilirsiniz.  
   
  **✓ YAPMAK** izin `Dispose(bool)` birden çok kez çağrılacak yöntem. Yöntemi, hiçbir şey ilk çağrısından sonra yapmayı seçebilirsiniz.  
   

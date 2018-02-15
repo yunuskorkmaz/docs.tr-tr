@@ -1,73 +1,99 @@
 ---
-title: "#<a name=\"if-c-reference\"></a>varsa (C# Başvurusu)"
-ms.date: 07/20/2015
+title: "#varsa önişlemci yönergesi (C# Başvurusu)"
+ms.date: 02/13/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '#if'
-helpviewer_keywords: '#if directive [C#]'
+f1_keywords:
+- '#if'
+helpviewer_keywords:
+- '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
-C# Derleyici karşılaştığında bir `#if` yönergesi, ardından sonunda göre bir [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) yalnızca belirtilen simgeyi tanımlanırsa yönerge, bu kod yönergeleri arasında derlenir.  C ve C++ aksine, bir simgeye sayısal bir değer atayamazsınız; C# #if ifade Boolean ve yalnızca simgenin veya tanımlanmış olup olmadığını sınar. Örneğin,  
-  
+
+C# Derleyici karşılaştığında bir `#if` yönergesi, ardından sonunda göre bir [#endif](preprocessor-endif.md) yalnızca belirtilen simgeyi tanımlanırsa yönerge, bu yönergeleri arasında yer alan kodunu derler. C ve C++ aksine, bir simgeye sayısal bir değer atayamazsınız. C# #if ifade Boolean ve yalnızca simgenin veya tanımlanmış olup olmadığını sınar. Örneğin:
+
 ```csharp
-#define DEBUG  
-// ...  
-#if DEBUG  
-    Console.WriteLine("Debug version");  
-#endif  
-```  
-  
- İşleçleri kullanabilirsiniz [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) (eşitlik) [! =](../../../csharp/language-reference/operators/not-equal-operator.md) (yalnızca sınamak için eşitsizlik) [true](../../../csharp/language-reference/keywords/true.md) veya [false](../../../csharp/language-reference/keywords/false.md) . TRUE simgenin tanımlanan anlamına gelir. Deyim `#if DEBUG` aynı anlamı taşır `#if (DEBUG == true)`. İşleçleri kullanabilirsiniz [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) (ve) [&#124; &#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (veya) ve [!](../../../csharp/language-reference/operators/logical-negation-operator.md) (birden çok simgeleri tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve parantez işleçlerle de gruplandırabilirsiniz.  
-  
-## <a name="remarks"></a>Açıklamalar  
- `#if`, birlikte [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), ve [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) yönergeleri sağlar içerebilir veya bir veya daha fazla simgeleri varlığını göre kod dışlayabilirsiniz. Hata ayıklama derlemesi kodunu derlerken veya belirli bir yapılandırma için derleme sırasında bu yararlı olabilir.  
-  
- Koşullu bir yönerge başlayarak bir `#if` yönergesi açıkça bitirilmelidir ile bir `#endif` yönergesi.  
-  
- `#define`ifade olarak simgesi kullanarak geçirilecek şekilde bir simge tanımlamanıza olanak tanır `#if` ifade için yönerge, değerlendirecek `true`.  
-  
- Ayrıca, bir simge ile tanımlayabilirsiniz [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) derleyici seçeneği. İle bir simge tanımlarını Kaldır [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
-  
- İle tanımlayan bir sembol `/define` veya `#define` aynı ada sahip bir değişken çakışmayan. Diğer bir deyişle, önişlemci yönergesi için bir değişken adı geçirilmemelidir ve bir simge yalnızca önişlemci yönergesi değerlendirilebilir.  
-  
- İle oluşturulmuş bir simge kapsamını `#define` onu tanımlandığı dosyasıdır.  
-  
-## <a name="example"></a>Örnek  
-  
+#if DEBUG
+    Console.WriteLine("Debug version");
+#endif
+```
+
+İşleçleri kullanabilirsiniz [ == ](../operators/equality-comparison-operator.md) (eşitlik) ve [! =](../operators/not-equal-operator.md) (yalnızca sınamak için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). TRUE simgenin tanımlanan anlamına gelir. Deyim `#if DEBUG` aynı anlamı taşır `#if (DEBUG == true)`. İşleçleri kullanabilirsiniz [ && ](../operators/conditional-and-operator.md) (ve) [&#124; &#124;](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden çok simgeleri tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve parantez işleçlerle de gruplandırabilirsiniz.
+
+## <a name="remarks"></a>Açıklamalar
+
+`#if`, birlikte [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md), ve [#undef](preprocessor-undef.md) yönergeleri sağlar içerebilir veya bir veya daha fazla simgeleri varlığını göre kod dışlayabilirsiniz. Hata ayıklama derlemesi kodunu derlerken veya belirli bir yapılandırma için derleme sırasında bu yararlı olabilir.
+
+Koşullu bir yönerge başlayarak bir `#if` yönergesi açıkça bitirilmelidir ile bir `#endif` yönergesi.
+
+`#define` bir simge tanımlamanıza olanak sağlar. Geçirilen ifade olarak simgesini kullanarak tarafından `#if` için yönerge, ifadeyi hesaplar `true`.
+
+Ayrıca, bir simge ile tanımlayabilirsiniz [/ define](../compiler-options/define-compiler-option.md) derleyici seçeneği. İle bir simge tanımlarını Kaldır [#undef](preprocessor-undef.md).
+
+İle tanımlayan bir sembol `/define` veya `#define` aynı ada sahip bir değişken çakışan değil. Diğer bir deyişle, önişlemci yönergesi için bir değişken adı geçirilmemelidir ve bir simge yalnızca önişlemci yönergesi değerlendirilebilir.
+
+İle oluşturulmuş bir simge kapsamını `#define` onu tanımlandığı dosyasıdır.
+
+Derleme Sistemi aynı zamanda farklı temsil eden önceden tanımlanmış önişlemci simgeleri bilmez [hedef çerçeveler](../../../standard/frameworks.md). Birden fazla .NET uygulama veya sürüm hedefleyebilirsiniz uygulamaları oluştururken yararlı oldukları.
+
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+Diğer önceden tanımlanmış semboller hata ayıklama ve izleme sabitleri içerir. Proje kullanmak için ayarlanan değerlerle geçersiz kılabilirsiniz `#define`. Hata ayıklama simgesi, örneğin, yapı yapılandırma özelliklerini ("Hata ayıklama" veya "Yayın" modu) bağlı olarak otomatik olarak ayarlanır.
+
+## <a name="examples"></a>Örnekler
+
+Aşağıdaki örnekte bir dosyada MYTEST sembolünü tanımlayın ve MYTEST ve hata ayıklama simgeleri değerlerini test gösterilmektedir. Bu örnek çıktı projenin hata ayıklama veya yayın yapılandırma modunu olup yerleşik bağlıdır.
+
 ```csharp
-// preprocessor_if.cs  
-#define DEBUG
-#define MYTEST  
-using System;  
-public class MyClass   
-{  
-    static void Main()   
-    {  
-#if (DEBUG && !MYTEST)  
-        Console.WriteLine("DEBUG is defined");  
-#elif (!DEBUG && MYTEST)  
-        Console.WriteLine("MYTEST is defined");  
-#elif (DEBUG && MYTEST)  
+#define MYTEST
+using System;
+public class MyClass
+{
+    static void Main()
+    {
+#if (DEBUG && !MYTEST)
+        Console.WriteLine("DEBUG is defined");
+#elif (!DEBUG && MYTEST)
+        Console.WriteLine("MYTEST is defined");
+#elif (DEBUG && MYTEST)
         Console.WriteLine("DEBUG and MYTEST are defined");  
-#else  
-        Console.WriteLine("DEBUG and MYTEST are not defined");  
-#endif  
-    }  
-}  
-```  
-  
- **Hata ayıklama ve MYTEST tanımlanır**  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# önişlemci yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+#else
+        Console.WriteLine("DEBUG and MYTEST are not defined");
+#endif
+    }
+}
+```
+
+Aşağıdaki örnek, mümkün olduğunda yeni API'lerini kullanabilmek için farklı bir hedef çerçeveyi test etme gösterir:
+
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        WebClient _client = new WebClient();
+#else
+        HttpClient _client = new HttpClient();
+#endif
+    }
+    //...
+}
+```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[C# başvurusu](../../../csharp/language-reference/index.md)  
+[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+[C# Ön İşlemci Yönergeleri](index.md)  
+[Nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

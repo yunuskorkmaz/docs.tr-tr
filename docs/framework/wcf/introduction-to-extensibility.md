@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Uygulama modeli herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
@@ -41,27 +43,27 @@ ms.lasthandoff: 12/22/2017
   
  Bir istemci için hedefleyen veri ya da siz veya müşteriniz oluşturduğu hizmeti işlemi uygulama iletileri içerir. Bu iletiler, uygulama düzeyi uzantı sistemi gereksinimlerinize bağlı olarak, ileti ya da nesne formunda için kullanılabilir.  
   
- Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sisteminden uygulamasına geçirilir. Yeni kanal düzeyi işlevselliğe oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevselliğe oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). [!INCLUDE[crabout](../../../includes/crabout-md.md)]bkz: uygulama çalışma zamanı genişletme [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Tüm iletileri kanal sistem üzerinden geçirin; yalnızca uygulama iletileri kanal sisteminden uygulamasına geçirilir. Yeni kanal düzeyi işlevselliğe oluşturmak için kanal sistem genişletmeniz gerekir. Yeni uygulama düzeyi işlevselliğe oluşturmak için hizmet veya istemci çalışma zamanı genişletmeniz gerekir (Dağıtıcıları ve kanal fabrikaları sırasıyla). [!INCLUDE[crabout](../../../includes/crabout-md.md)] bkz: uygulama çalışma zamanı genişletme [genişletme ServiceHost ve hizmet modeli katmanını](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Güvenliği Genişletme  
- Belirteçleri ve kimlik bilgileri gibi özel güvenlik mekanizmaları oluşturmak için bir güvenlik sistemi genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Güvenliği genişletme](../../../docs/framework/wcf/extending/extending-security.md).  
+ Belirteçleri ve kimlik bilgileri gibi özel güvenlik mekanizmaları oluşturmak için bir güvenlik sistemi genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Güvenliği genişletme](../../../docs/framework/wcf/extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Meta verileri genişletme  
- Meta verilerde varsayılandan farklı bir şekilde kullanıma sunmak için meta veri sistemi genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Meta veri sistemini genişletme](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Meta verilerde varsayılandan farklı bir şekilde kullanıma sunmak için meta veri sistemi genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Meta veri sistemini genişletme](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 #### <a name="extending-serialization"></a>Seri hale getirme genişletme  
- Özel kodlayıcılar yapı, veri yedekleri veya özelleştirme aktarılan verileri ile ilgili diğer işleri sağlamak için seri hale getirme sistem genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Kodlayıcılar ve serileştiricileri genişletme](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+ Özel kodlayıcılar yapı, veri yedekleri veya özelleştirme aktarılan verileri ile ilgili diğer işleri sağlamak için seri hale getirme sistem genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Kodlayıcılar ve serileştiricileri genişletme](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Bağlamaları Genişletme  
- Taşıma veya protokolü kanalı uygulama katmanı ile ilişkilendirmek için bağlama sistem genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Bağlamaları genişletme](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Taşıma veya protokolü kanalı uygulama katmanı ile ilişkilendirmek için bağlama sistem genişletmeniz gerekir. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Bağlamaları genişletme](../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 ### <a name="extending-the-channel-system"></a>Kanal sistemini genişletme  
  Destek özel taşımaları veya protokol işlevselliği kanallar oluşturmak için bkz: [kanal katmanını genişletme](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ### <a name="extending-the-service-hosting-system"></a>Sistem barındırma hizmeti genişletme  
- Hizmet geneli uygulama modeli değiştirmek için genişletmelidir <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][ServiceHost ve hizmet modeli katmanını genişletme](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Hizmet geneli uygulama modeli değiştirmek için genişletmelidir <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [ServiceHost ve hizmet modeli katmanını genişletme](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Barındırma uygulama etki alanı ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][ServiceHostFactory kullanarak barındırmayı genişletme](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Barındırma uygulama etki alanı ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [ServiceHostFactory kullanarak barındırmayı genişletme](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [WCF'yi Genişletme](../../../docs/framework/wcf/extending/extending-wcf.md)
+ [WCF'yi Genişletme](../../../docs/framework/wcf/extending/index.md)

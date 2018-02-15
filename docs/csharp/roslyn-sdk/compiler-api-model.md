@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 65a4695c6f4e5268582d83452246ed8262d6fe2f
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET derleme Platform SDK modelini anlama
 
@@ -34,7 +34,7 @@ Her Bu aşamalar karşılık gelen, .NET derleme Platform SDK'sı bu aşamada bi
 
 Her derleyici bu bileşenlerin birlikte tek bir uçtan uca bütün olarak birleştirir.
 
-Bu API'leri Visual Studio tarafından kullanılan aynıdır. Örneği için anahat oluşturma ve biçimlendirme özellikleri kodu sözdizimi ağaçları kullanın, Nesne Tarayıcısı ve gezinti özellikleri yapan yeniden düzenlemeler simge tablosunu kullanmak ve tanımı Git anlam modeli kullanın ve Düzenle ve devam et kullanır yayma API dahil bunların tümü. 
+Bu API, Visual Studio tarafından kullanılan aynı olanlardır. Örneği için anahat oluşturma ve biçimlendirme özellikleri kodu sözdizimi ağaçları kullanın, Nesne Tarayıcısı ve gezinti özellikleri yapan yeniden düzenlemeler simge tablosunu kullanmak ve tanımı Git anlam modeli kullanın ve Düzenle ve devam et kullanır yayma API dahil bunların tümü. 
 
 ## <a name="api-layers"></a>API katmanları
 
