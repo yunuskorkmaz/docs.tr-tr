@@ -1,4 +1,4 @@
-# [WCF'yi Genişletme](extending-wcf.md)
+# [WCF'yi Genişletme](index.md)
 ## [ServiceHost ve Hizmet Modeli Katmanını Genişletme](extending-servicehost-and-the-service-model-layer.md)
 ### [İstemcileri Genişletme](extending-clients.md)
 #### [Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme](how-to-inspect-or-modify-messages-on-the-client.md)
