@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -242,7 +243,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 4. .NET Core yükleyin.
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.1.3
+   sudo apt-get install dotnet-sdk-2.1.4
    ```
 
 4. Çalıştırma `dotnet --version` başarılı yükleme kanıtlamak için komutu.
@@ -320,7 +321,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
    
 4. Microsoft Product akışı kaydedin.
 
-   **Debian 9 (Esnetme)**
+   Debian 9 (Esnetme)
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'

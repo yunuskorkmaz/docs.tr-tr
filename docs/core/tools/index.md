@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 6dbbc2e95c613d468c7d8c7b0dc15c85849f79dc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d1bb4eb3b18fe08f38c2cf99a642afb516a797ff
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçları
 
@@ -37,22 +38,22 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
-* [derleme](dotnet-build.md)
+* [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [çalıştırma](dotnet-run.md)
+* [run](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
-* [geçirme](dotnet-migrate.md)
+* [Geçirme](dotnet-migrate.md)
 * [Temizleme](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 * [Yardım](dotnet-help.md)
-* [Depolama](dotnet-store.md)
+* [store](dotnet-store.md)
 
 **Proje değişikliği komutları**
 
 * [Paket ekleme](dotnet-add-package.md)
-* [başvuru ekleme](dotnet-add-reference.md)
+* [Başvuru ekleme](dotnet-add-reference.md)
 * [paketi kaldırma](dotnet-remove-package.md)
 * [başvurusunu kaldırın](dotnet-remove-reference.md)
 * [listesi başvurusu](dotnet-list-reference.md)
@@ -65,26 +66,26 @@ Aşağıdaki komutlar, varsayılan olarak yüklenir:
 * [MSBuild](dotnet-msbuild.md)
 * [DotNet yükleme betiği](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **Temel komutları**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
-* [derleme](dotnet-build.md)
+* [Derleme](dotnet-build.md)
 * [Yayımlama](dotnet-publish.md)
-* [çalıştırma](dotnet-run.md)
+* [run](dotnet-run.md)
 * [test etme](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
-* [geçirme](dotnet-migrate.md)
+* [Geçirme](dotnet-migrate.md)
 * [Temizleme](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 
 **Proje değişikliği komutları**
 
 * [Paket ekleme](dotnet-add-package.md)
-* [başvuru ekleme](dotnet-add-reference.md)
+* [Başvuru ekleme](dotnet-add-reference.md)
 * [paketi kaldırma](dotnet-remove-package.md)
 * [başvurusunu kaldırın](dotnet-remove-reference.md)
 * [listesi başvurusu](dotnet-list-reference.md)
@@ -113,7 +114,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -135,7 +136,7 @@ Sürücü için bir komut sağladığında `dotnet.exe` CLI komutu yürütme iş
 
 ### <a name="command-verb"></a>Komut ("eylem")
 
-Komut (veya "eylem"), bir eylem gerçekleştiren yalnızca bir komuttur. Örneğin, `dotnet build` kodunuzu oluşturur. `dotnet publish`kodunuzu yayımlar. Komutlar bir konsol uygulaması kullanarak olarak uygulanan bir `dotnet {verb}` kuralı.
+Komut (veya "eylem"), bir eylem gerçekleştiren yalnızca bir komuttur. Örneğin, `dotnet build` kodunuzu oluşturur. `dotnet publish` kodunuzu yayımlar. Komutlar bir konsol uygulaması kullanarak olarak uygulanan bir `dotnet {verb}` kuralı.
 
 ### <a name="arguments"></a>Arguments
 
@@ -145,7 +146,7 @@ Komut satırında geçirdiğiniz bağımsız çağrılan komut için bağımsız
 
 Komut satırında geçirdiğiniz çağrılan komut seçenekleri seçeneklerdir. Örneğin, yürütülürken `dotnet publish --output /build_output`, `--output` seçeneği ve değerini için geçirilir `publish` komutu. 
 
-## <a name="migration-from-projectjson"></a>Project.json geçiş
+## <a name="migration-from-projectjson"></a>Migration from project.json
 
 Önizleme üretmek için tooling 2 kullandıysanız *project.json*-tabanlı projeler başvurun [dotnet geçirmek](dotnet-migrate.md) projeniz için MSBuild geçirme hakkında bilgi için konu /*.csproj*yayın araçları ile kullanım için. .NET Core Preview 2 araç sürümünden önce ya da el ile oluşturulan projeleri yer alan yönergeleri izleyerek proje güncelleştirme [.NET Core CLI (project.json) DNX geçiş](../migration/from-dnx.md) ve sonra da `dotnet migrate` veya doğrudan yükseltme projelerinizi.
 
