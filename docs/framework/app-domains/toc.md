@@ -10,7 +10,7 @@
 ### [Bütünleştirilmiş Kodlar ve Yan Yana Yürütme](assemblies-and-side-by-side-execution.md)
 ## [Uygulama Etki Alanları](application-domains.md)
 ## [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](application-domains-and-assemblies-how-to-topics.md)
-## [Uygulama Etki Alanlarını Kullanma](application-domains.md)
+## [Uygulama Etki Alanlarını Kullanma](use.md)
 ### [Nasıl yapılır: Uygulama Etki Alanı Oluşturma](how-to-create-an-application-domain.md)
 ### [Nasıl yapılır: Uygulama Etki Alanını Boşaltma](how-to-unload-an-application-domain.md)
 ### [Nasıl yapılır: Uygulama Etki Alanını Yapılandırma](how-to-configure-an-application-domain.md)

@@ -1,5 +1,4 @@
 # [Dizeler](index.md)
-## [Nasıl yapılır: Birden Çok Dizeyi Birleştirme](how-to-concatenate-multiple-strings.md)
 ## [Nasıl yapılır: Dize İçeriklerini Değiştirme](how-to-modify-string-contents.md)
 ## [Nasıl yapılır: Dizeleri Karşılaştırma](how-to-compare-strings.md)
 ## [Nasıl yapılır: Dize Yöntemlerini Kullanarak Dizeleri Arama](how-to-search-strings-using-string-methods.md)
