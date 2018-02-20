@@ -25,7 +25,7 @@ Kullanabileceğiniz [Azure App Service geçiş Yardımcısı](https://www.migrat
 
 Azure uygulama hizmeti geçiş Yardımcısı buluta Windows Server'da çalışan IIS geçiş destekler. Uygulama hizmeti, Windows Server 2003 ve sonraki sürümleri destekler.
 
-> ![https://www.migratetoazure.NET/Images/ImageCanvas.PNG](./media/image5.png)
+> ![https://www.migratetoazure.net/Images/ImageCanvas.png](./media/image5.png)
 >
 > **Şekil 4-5.** Azure uygulama hizmeti geçiş Yardımcısını kullanma
 
@@ -39,7 +39,7 @@ Uygulama hizmeti geçiş aracı, Web sitelerinizi çözümleyebilir ve App Servi
 
 -   **Azure uygulama hizmeti geçiş Yardımcısı**
 
-    [https://www.migratetoazure.NET/](https://www.migratetoazure.net/)
+    [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 
 >[!div class="step-by-step"]
 [Önceki](what-about-cloud-optimized-applications.md)

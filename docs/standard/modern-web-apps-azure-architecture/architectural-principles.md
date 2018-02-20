@@ -106,7 +106,7 @@ Sınıfları yukarıdaki özellikleri veya davranışları hiçbirini sahip gere
 En azından, tek tek web uygulamaları kendi sınırlanmış bağlamla bir veritabanını başka uygulamalarla paylaşma yerine kendi iş modeli için kendi Kalıcılık deposu olması olmaya çabalar. Sınırlanmış bağlamları arasındaki iletişim için iş mantığı sağlayan bir paylaşılan veritabanı yerine programlama arabirimleri aracılığıyla oluşur ve gerçekleşmesi değişikliklere yanıt almak için olayları yerleştirir. Bağlamları harita yakından, ayrıca tek tek kendi sınırlanmış bağlamları ideal olarak uygulanan mikro ilişkisindeki.
 
 > ### <a name="references--modern-web-applications"></a>Başvuruları – Modern Web uygulamaları
-> - **Sorunları ayrılması**  
+> - Sorunları ayrılması  
 > <http://deviq.com/separation-of-concerns/>
 > - **Kapsülleme** <http://deviq.com/encapsulation/>
 > - **Bağımlılık tersine çevirme ilkesi**  
@@ -115,7 +115,7 @@ En azından, tek tek web uygulamaları kendi sınırlanmış bağlamla bir verit
 > <http://deviq.com/explicit-dependencies-principle/>
 > - **Kendiniz yineleme**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - **Kalıcılık kullanmayan**  
+> - Kalıcılık kullanmayan  
 > <http://deviq.com/persistence-ignorance/>
 > - **Sınırlanmış bağlamı**  
 > <https://martinfowler.com/bliki/BoundedContext.html>

@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
 
 > "Atwood'ın Yasası:, JavaScript'te yazılmış herhangi bir uygulama içinde JavaScript sonunda yazılır."  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>Özet
 
@@ -78,7 +78,7 @@ SPAs yazma, JavaScript ve/veya TypeScript ve istemci tarafı programlama teknikl
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **4 popüler JavaScript çerçeveleri karşılaştırması**  
-> <https://www.developereconomics.com/Feature-Comparison-of-4-popular-js-MV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **Zaten bir API uygulamanızın diğer (dahili veya genel) istemcileri için kullanıma gerekir**
 
@@ -90,10 +90,10 @@ Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seç
 
   | **Faktörü** | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
   |---|---|---|
-  | JavaScript/TypeScript gerekli takım aşina | **En az** | **Gerekli** |
-  | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |
-  | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Gereğinden fazla** |
-  | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Sınırlı** | **Oldukça uygun** |
+  | JavaScript/TypeScript gerekli takım aşina | **en az** | **Gerekli** |
+  | Komut dosyası olmadan tarayıcılar destekler | Desteklenen | **Desteklenmiyor** |
+  | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Overkill** |
+  | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Limited** | **Oldukça uygun** |
 
 >[!div class="step-by-step"]
 [Önceki] (modern-web-uygulamalar-characteristics.md) [sonraki](architectural-principles.md)

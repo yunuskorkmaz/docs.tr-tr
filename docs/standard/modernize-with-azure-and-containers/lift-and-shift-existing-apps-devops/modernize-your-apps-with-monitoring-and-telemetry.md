@@ -71,31 +71,31 @@ Günlük analizi kapsayıcı izleme çözümü kullanabilirsiniz:
 
 -   **Microsoft Azure'da izleme genel bakış**
 
-[https://docs.microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
 
 -   **Application Insights nedir?**
 
-[https://docs.microsoft.com/Azure/Application-insights/App-insights-Overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
 -   **Günlük analizi nedir?**
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-Overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
--   **Kapsayıcı izleme çözümüne günlük analizi**
+-   Kapsayıcı izleme çözümüne günlük analizi
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-Containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
 -   **Azure İzleyicisi'ne genel bakış**
 
-[https://docs.microsoft.com/Azure/Monitoring-and-Diagnostics/Monitoring-Overview-Azure-Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
 
 -   **Operations Management Suite (OMS) nedir?**
 
-[https://docs.microsoft.com/Azure/Operations-Management-Suite/Operations-Management-Suite-Overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
 
 -   **Service Fabric OMS ile Windows Server kapsayıcıları izleme**
 
-[https://docs.microsoft.com/Azure/Service-fabric/Service-fabric-Diagnostics-Containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
 [Önceki](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

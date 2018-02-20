@@ -1,7 +1,7 @@
 ---
-title: .NET Framework'teki Genel Koleksiyonlar
+title: ".NET içinde genel koleksiyonlar"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,32 +13,30 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>.NET Framework'teki Genel Koleksiyonlar
-Bu konu genel koleksiyon sınıfları ve diğer genel türleri .NET Framework'teki genel bakış sağlar.  
-  
-## <a name="generic-collections-in-the-net-framework"></a>.NET Framework'teki Genel Koleksiyonlar  
- .NET Framework sınıf kitaplığı bir genel koleksiyon sınıfları sağlar <xref:System.Collections.Generic> ve <xref:System.Collections.ObjectModel> ad alanları. Bu sınıfları hakkında daha fazla bilgi için bkz: [yaygın olarak kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md).  
+# <a name="generic-collections-in-net"></a>.NET içinde genel koleksiyonlar
+
+ Genel koleksiyon sınıfları birkaç .NET sınıf kitaplığı sağlar <xref:System.Collections.Generic> ve <xref:System.Collections.ObjectModel> ad alanları. Bu sınıfları hakkında daha ayrıntılı bilgi için bkz: [yaygın olarak kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
- Çoğu genel koleksiyon türleri benzerlikler türlere bulunur. <xref:System.Collections.Generic.Dictionary%602>Genel bir sürümü <xref:System.Collections.Hashtable>; genel yapısı kullanır <xref:System.Collections.Generic.KeyValuePair%602> yerine numaralandırması için <xref:System.Collections.DictionaryEntry>.  
+ Çoğu genel koleksiyon türleri benzerlikler türlere bulunur. <xref:System.Collections.Generic.Dictionary%602> Genel bir sürümü <xref:System.Collections.Hashtable>; genel yapısı kullanır <xref:System.Collections.Generic.KeyValuePair%602> yerine numaralandırması için <xref:System.Collections.DictionaryEntry>.  
   
- <xref:System.Collections.Generic.List%601>Genel bir sürümü <xref:System.Collections.ArrayList>. Vardır genel <xref:System.Collections.Generic.Queue%601> ve <xref:System.Collections.Generic.Stack%601> nongeneric sürümüne karşılık gelen sınıfları.  
+ <xref:System.Collections.Generic.List%601> Genel bir sürümü <xref:System.Collections.ArrayList>. Vardır genel <xref:System.Collections.Generic.Queue%601> ve <xref:System.Collections.Generic.Stack%601> nongeneric sürümüne karşılık gelen sınıfları.  
   
  Genel ve nongeneric sürümü vardır <xref:System.Collections.Generic.SortedList%602>. Her iki sürümleridir sınıflarınızın bir karmasını bir sözlük ve bir listesi. <xref:System.Collections.Generic.SortedDictionary%602> Genel sınıfı saf bir sözlük ve hiçbir nongeneric karşılığı vardır.  
   
@@ -51,7 +49,7 @@ Bu konu genel koleksiyon sınıfları ve diğer genel türleri .NET Framework'te
  <xref:System.Nullable%601> Genel yapısı sanki bunlar atanabilir değer türlerinin kullanmanıza olanak verir `null`. Burada, değer türleri içeren alanlar eksik olabilir veritabanı sorguları ile çalışırken, bu yararlı olabilir. Genel tür parametresi herhangi bir değer türü olabilir.  
   
 > [!NOTE]
->  C# ile kullanmak ise gerekli değildir <xref:System.Nullable%601> açıkça dili sözdizimi boş değer atanabilir türler için sahip olduğu.  
+>  C# ve Visual Basic kullanmak ise gerekli değildir <xref:System.Nullable%601> açıkça dili sözdizimi boş değer atanabilir türler için sahip olduğu. Bkz: [boş değer atanabilir türler (C# programlama Kılavuzu)](../../csharp/programming-guide/nullable-types/index.md) ve [boş değer atanabilen değer türleri (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  <xref:System.ArraySegment%601> Genel yapısı içinde herhangi bir türde tek boyutlu, sıfır tabanlı bir dizi öğelerin bir dizi sınırlandırmak için bir yol sağlar. Genel tür parametresi dizi öğeleri türüdür.  
   

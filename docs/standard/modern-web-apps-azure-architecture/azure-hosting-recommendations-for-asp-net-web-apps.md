@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için öneriler barındırma azure
 
 > "İş kılavuzları her yerde bulut (diğer adıyla SaaS) uygulamaları almak için BT departmanları atlayarak ve Dergi aboneliğinin gibi bunlar için ödeme. Ve hizmet artık gerekli olmadığında abonelik sol üst köşedeki kullanılmayan hiçbir donanım ile iptal."  
-> _\-Daryl Plummer, Gartner analisti_
+> _\- Daryl Plummer, Gartner analisti_
 
 ## <a name="summary"></a>Özet
 
@@ -118,16 +118,16 @@ Uygulamanızın gereksinimlerine mimarisinin dikte. Birçok farklı Azure Hizmet
 **Başvuruları – Azure önerileri barındırma**
 
 -   Azure çözüm Architectures\
-    <https://Azure.microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Azure Geliştirici Guide\
-    <https://Azure.microsoft.com/Campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Azure uygulama hizmeti nedir? \
-    <https://docs.microsoft.com/Azure/App-Service/App-Service-Value-prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Azure uygulama hizmeti, sanal makineleri, Service Fabric ve Cloud Services Comparison\
-    <https://docs.microsoft.com/Azure/App-Service-Web/Choose-Web-site-cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
 [Önceki] (geliştirme-işlem-için-azure.md)

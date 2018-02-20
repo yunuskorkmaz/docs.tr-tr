@@ -1,7 +1,7 @@
 ---
 title: "Docker uygulama için dış döngü DevOps iş akışı adımları"
 description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

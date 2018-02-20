@@ -258,7 +258,7 @@ Node.js ve .NET Core kapsayıcıları gibi diğer platformlarda kullanıyorsanı
 
 Ayrıca Docker .NET Core kapsayıcılarında Visual Studio kullanırken bir sonraki bölümde açıklandığı gibi ayıklayabilirsiniz.
 
-**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [https://blogs.msdn.microsoft.com/ \ kullanıcı\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [https://blogs.msdn.microsoft.com/ \ Kullanıcı\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

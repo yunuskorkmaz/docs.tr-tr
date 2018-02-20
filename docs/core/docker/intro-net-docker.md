@@ -1,7 +1,7 @@
 ---
 title: ".NET ve Docker giriş"
 description: Anlama Docker ve .NET Core
-keywords: .NET, .NET core, Docker
+keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.workload: dotnetcore
-ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e538cb541ee2c59caf1feba4a31f86118c42c3ca
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker giriş
 
@@ -37,7 +38,7 @@ Oluşturabilir ya da kendi [görüntüleri katmanlı](https://docs.docker.com/en
 
 * [Windows tabanlı kapsayıcıları: Kurumsal düzeyde denetim ile Modern uygulama geliştirme.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Docker genel bakış](https://docs.docker.com/engine/docker-overview/)
-* [Windows kapsayıcılarında Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
+* [Windows kapsayıcılarında Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Dockerfiles yazmak için en iyi uygulamalar](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
 * [.NET Core uygulamaları için yapı Docker görüntüleri](../docker/building-net-docker-images.md)
 
@@ -102,15 +103,15 @@ Docker ve .NET uygulamaları kullanmak için en bariz yatay Üretim dağıtımı
 
 Bu depodaki çeşitli .NET Framework Docker yapılandırmaları gösteren örnekleri içerir. Bu görüntüler, kendi Docker görüntülerinizi temel olarak kullanabilirsiniz.
 
-**.NET framework 4.7**
+.NET framework 4.7
 
 [Dotnet-framework: 4.7 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) temel "hello world" kullanımını gösteren [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.7 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
-**.NET framework 4.6.2**
+**.NET Framework 4.6.2**
 
 [Dotnet-framework: 4.6.2 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) temel "hello world" kullanımını gösteren [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Size nasıl derleme ve güvenmek uygulama dağıtma gösterir [.NET Framework 4.6.2 docker görüntü](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2).
 
-**.NET framework 3.5**
+**.NET Framework 3.5**
 
  [Dotnet-framework: 3.5 örnek](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) temel "hello world" kullanımını gösteren [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5). Size nasıl derleme ve .NET Framework 3. 5'Docker ' bağlı olan bir proje dağıtma gösterir.
 

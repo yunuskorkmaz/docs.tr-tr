@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.workload: wiwagn
-ms.openlocfilehash: 60c25de889e5055241486078baf46657b6870afd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- wiwagn
+ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak kodunuz temel belirli kurallarında izleyerek bazen yürütme hızını artırabilir. Bazı programlarda kodu yakından inceleyin ve mümkün olduğunca hızlı çalıştığından emin olmak için profil oluşturucular kullanmak önemlidir. Diğer programlarda hızlı yazılan kod çalışarak çalıştığından gibi en iyi duruma getirme gerçekleştirmek zorunda değildir. Bu makalede, bazı ortak burada performans olumsuz etkilenebilir alanları ve bunun yanı sıra ek performans konulara bağlantılar geliştirme ipuçları listelenmektedir. Planlama ve performans için ölçme hakkında daha fazla bilgi için bkz: [performans](../../../docs/framework/performance/index.md)  
@@ -32,7 +34,7 @@ Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak 
  En iyi değer kullanmaktan kaçınmak için bunlar burada olmalıdır durumlarda türleri çok sayıda kez, örneğin genel olmayan koleksiyon sınıfları gibi Kutulu <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Genel koleksiyonlar gibi kullanarak değer türleri kutulama önleyebilirsiniz <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Kutulama ve kutudan çıkarma pkı'ya pahalı işlemlerdir. Değer türü Kutulu, tamamen yeni bir nesne oluşturulması gerekir. Basit başvuru atama en çok 20 kez daha uzun sürer. Kutudan çıkarma, atama işleminin atama dört kez daha uzun sürebilir. Daha fazla bilgi için bkz: [kutulama ve kutudan çıkarma](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Dizeler  
- Çok sayıda dize değişkenleri birleştirmek, örneğin sıkı bir döngüde kullanın <xref:System.Text.StringBuilder?displayProperty=nameWithType> yerine C# [+ işleci](~/docs/csharp/language-reference/operators/addition-operator.md) veya Visual Basic [birleştirme işleçleri](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Daha fazla bilgi için bkz: [nasıl yapılır: birden çok dizeyi birleştirme](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) ve [Visual Basic'de birleştirme işleçleri](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Çok sayıda dize değişkenleri birleştirmek, örneğin sıkı bir döngüde kullanın <xref:System.Text.StringBuilder?displayProperty=nameWithType> yerine C# [+ işleci](~/docs/csharp/language-reference/operators/addition-operator.md) veya Visual Basic [birleştirme işleçleri](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Daha fazla bilgi için bkz: [nasıl yapılır: birden çok dizeyi birleştirme](../../csharp/how-to/concatenate-multiple-strings.md) ve [Visual Basic'de birleştirme işleçleri](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Yıkıcılar  
  Boş Yıkıcılar kullanılmamalıdır. Bir sınıf bir yıkıcı içeriyorsa, bir giriş Finalize sıraya oluşturulur. Yok Edicisi çağrıldığında atık toplayıcı sırasını işlemek üzere çağrılır. Yıkıcı boşsa, bu yalnızca bir performans kaybı ile sonuçlanır. Daha fazla bilgi için bkz: [Yıkıcılar](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) ve [nesne ömrü: nesneleri oluşturma ve Destroyed şeklini](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  

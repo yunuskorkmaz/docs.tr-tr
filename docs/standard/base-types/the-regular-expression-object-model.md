@@ -41,21 +41,21 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
-<a name="introduction"></a>Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar. Aşağıdaki bölümleri içerir:  
+<a name="introduction"></a> Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar. Aşağıdaki bölümleri içerir:  
   
 -   [Normal ifade altyapısı](#Engine)  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="the_match_collection"></a>   
 ### <a name="the-match-collection"></a>Eşleşme koleksiyonu  
- <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Yöntemi döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> içeren nesne <xref:System.Text.RegularExpressions.Match> giriş dizesini oluşma sırasına normal ifade altyapısı bulunan tüm eşleşmeleri temsil eden nesne. Herhangi bir eşleşme varsa vardır, yöntem döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi ile üye yok. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> Özelliği sağlar, tek tek üyelerine erişme toplama dizini tarafından gelen sıfır bir değerinden daha az <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliği. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>koleksiyonun oluşturucuda (C#) ve varsayılan özelliği (Visual Basic) olur.  
+ <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Yöntemi döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> içeren nesne <xref:System.Text.RegularExpressions.Match> giriş dizesini oluşma sırasına normal ifade altyapısı bulunan tüm eşleşmeleri temsil eden nesne. Herhangi bir eşleşme varsa vardır, yöntem döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi ile üye yok. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> Özelliği sağlar, tek tek üyelerine erişme toplama dizini tarafından gelen sıfır bir değerinden daha az <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliği. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> koleksiyonun oluşturucuda (C#) ve varsayılan özelliği (Visual Basic) olur.  
   
  Varsayılan olarak, çağrısı <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi doldurmak için geç değerlendirme kullanan <xref:System.Text.RegularExpressions.MatchCollection> nesnesi. Tam olarak doldurulan bir koleksiyon gibi gereken özelliklerine erişimi <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özellikleri, performans cezası gerektirebilir. Sonuç olarak, koleksiyon kullanarak erişim öneririz <xref:System.Collections.IEnumerator> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> yöntemi. Tek tek diller sağlayan yapıları gibi `For``Each` Visual Basic'te ve `foreach` C# ' ta, sarmalama koleksiyonunun <xref:System.Collections.IEnumerator> arabirimi.  
   

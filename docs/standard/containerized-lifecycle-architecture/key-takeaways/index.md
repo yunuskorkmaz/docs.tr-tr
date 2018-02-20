@@ -1,7 +1,7 @@
 ---
 title: Anahtar paketler
 description: "Microsoft Platformu ve Araçları (e-kitap) _v1.1 kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

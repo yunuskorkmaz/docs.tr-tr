@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
 > "… uygun tasarımıyla özellikleri ailenin gelir. Bu yaklaşım arduous, ancak başarılı olması devam ediyor."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Özet
 
@@ -26,7 +26,7 @@ Modern web uygulamaları daha yüksek kullanıcı beklentilerini ve büyük tale
 
 ASP.NET Core modern web uygulamaları ve bulut tabanlı barındırma senaryoları için optimize edilmiştir. Modüler tasarımı uygulamaların yalnızca gerçekten, uygulama güvenliği ve barındırma kaynak gereksinimlerini azaltırken performansı artırma kullandıkları özelliklerine bağlıdır olanak sağlar.
 
-## <a name="reference-application-eshoponweb"></a>Başvuru uygulama: eShopOnWeb
+## <a name="reference-application-eshoponweb"></a>Reference Application: eShopOnWeb
 
 Bu kılavuz bir başvuru uygulaması içeren *eShopOnWeb*, bazı prensipler ve öneriler gösterir. Gömlekler, kahve bardaklar ve pazarlama diğer öğeler bir katalog tarama destekleyen basit bir çevrimiçi mağaza uygulamasıdır. Başvuru uygulaması anlaşılması kolay hale getirmek için kasıtlı olarak basit bir işlemdir.
 
@@ -74,11 +74,11 @@ Ek olarak ASP.NET Core, geleneksel ASP.NET web uygulamaları oluşturmak için g
 
 > ### <a name="references--modern-web-applications"></a>Başvuruları – Modern Web uygulamaları
 > - **ASP.NET Core giriş**  
-> <https://docs.microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Altı anahtar avantajları, ASP.NET farklı ve daha iyi oluşturan çekirdek**  
-> <https://blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-which-Make-it-Different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **ASP.NET çekirdek test etme**  
-> <https://docs.microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Önceki] (index.md) [sonraki] (choose-between-traditional-web-and-single-page-apps.md)

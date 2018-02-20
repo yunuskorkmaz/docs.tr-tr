@@ -1,21 +1,22 @@
 ---
 title: "Dil ile tümleşik sorgu (LINQ) (C#)"
 ms.custom: 
-ms.date: 02-02-2017
+ms.date: 02/02/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 40567576716b5ae665f176677fc877db38370a9c
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 0a721bba36eb1ed4ae94b99e25a1dcce33faef6e
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ)
 
@@ -43,7 +44,7 @@ Aşağıdaki örnekte, tam bir sorgu işlemi gösterilmektedir. Veri kaynağı o
   
 -   Bazı sorgu işlemleri gibi <xref:System.Linq.Enumerable.Count%2A> veya <xref:System.Linq.Enumerable.Max%2A>, hiçbir eşdeğer sorgu ifadesi yan tümcesi varsa ve bu nedenle bir yöntem çağrısı ifade edilmesi gerekir. Çeşitli şekillerde sorgu sözdizimi ile yöntem sözdizimi birleştirilebilir. Daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](query-syntax-and-method-syntax-in-linq.md).  
   
--   Sorgu ifadeleri ifade ağaçları veya sorgu uygulandığı türüne bağlı olarak temsilciler derlenebilir. <xref:System.Collections.Generic.IEnumerable%601>sorguları temsilcileri derlenir. <xref:System.Linq.IQueryable>ve <xref:System.Linq.IQueryable%601> sorgular için ifade ağaçları derlenir. Daha fazla bilgi için bkz: [ifade ağaçları](../../../expression-trees.md).  
+-   Sorgu ifadeleri ifade ağaçları veya sorgu uygulandığı türüne bağlı olarak temsilciler derlenebilir. <xref:System.Collections.Generic.IEnumerable%601> sorguları temsilcileri derlenir. <xref:System.Linq.IQueryable> ve <xref:System.Linq.IQueryable%601> sorgular için ifade ağaçları derlenir. Daha fazla bilgi için bkz: [ifade ağaçları](../../../expression-trees.md).  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

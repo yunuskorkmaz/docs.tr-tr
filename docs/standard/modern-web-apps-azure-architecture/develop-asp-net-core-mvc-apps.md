@@ -282,13 +282,13 @@ Daha fazla bilgiyi filtreleri uygulama ve çalışma örnek MSDN makalesinden in
 
 > ### <a name="references--structuring-applications"></a>Başvuruları – uygulamaları yapılandırma
 > - **Alanlar**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN – ASP.NET Core MVC özelliği dilimleri**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtreler**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – gerçek dünya ASP.NET Core MVC filtreleri**  
-> <https://msdn.microsoft.com/Magazine/mt767699.aspx>
+> <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Güvenlik
 
@@ -388,15 +388,15 @@ Bu ilke ile sonra kullanılabilir \[Authorize\] herhangi bir denetleyici ve/veya
 
 > ### <a name="references--security"></a>Başvuruları – güvenlik
 > - **Güvenlik belgeleri genel bakış**  
-> https://docs.microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Bir ASP.NET Core uygulamasında SSL zorlama**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Kimliğe giriş**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authentication/identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Yetkilendirme giriş**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authorization/introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Kimlik doğrulama ve yetkilendirme Azure uygulama hizmetinde API uygulamaları için**  
-> <https://docs.microsoft.com/Azure/App-Service-api/App-Service-api-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>İstemci iletişimi
 
@@ -455,9 +455,9 @@ Uygulamalarınızı doğrudan istemci uygulamaları ile iletişim kurmak ve ger�
 
 > ### <a name="references--client-communication"></a>Başvuruları – istemci iletişimi
 > - **ASP.NET Core SignalR**  
-> <https://github.com/ASPNET/SignalR>
+> <https://github.com/aspnet/SignalR>
 > - **WebSocket Yöneticisi**  
-> https://github.com/radu-matei/websocket-Manager
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Etki alanı tabanlı tasarım – bu uygulamalıdır?
 
@@ -505,7 +505,7 @@ Karma bir yaklaşım, yalnızca GGG uygulamanın işlem ya da daha karmaşık al
 
 > ### <a name="references--domain-driven-design"></a>Başvuruları – etki alanı Odaklı Tasarım
 > - **Düz İngilizce (StackOverflow yanıt) DDD**  
-> <https://StackOverflow.com/Questions/1222392/CAN-someone-Explain-Domain-driven-Design-ddd-in-plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Dağıtım
 
@@ -547,13 +547,13 @@ Uygulamanızı Azure üzerinde koyduysanız birkaç hizmetleri sağlamak için a
 
 > ### <a name="references--deployment"></a>Başvuruları – dağıtım
 > - **Barındırma ve dağıtımına genel bakış**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Ters proxy ile Kestrel kullanma zamanı**  
-> <https://docs.microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-use-kestrel-with-a-reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Docker ana ASP.NET Core uygulamaları**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Azure uygulama ağ geçidi Tanıtımı**  
-> <https://docs.microsoft.com/Azure/Application-Gateway/Application-Gateway-introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Önceki] (ortak-istemci-tarafı-web-technologies.md) [sonraki] (work-with-data-in-asp-net-core-apps.md)

@@ -1,23 +1,25 @@
 ---
 title: Visual Basic for yenilikler nelerdir?
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic for yenilikler nelerdir?
 
@@ -25,10 +27,13 @@ Bu konu, her sürümüyle Visual Basic Dil en son sürümündeki yeni ve gelişt
   
 ## <a name="current-version"></a>Geçerli Sürüm
 
-Visual Basic / Visual Studio .NET 2017   
-Yeni özellikler için bkz: [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 15,5   
+Yeni özellikler için bkz: [Visual Basic 15,5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Önceki sürümler
+
+Visual Basic 15.3   
+Yeni özellikler için bkz: [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic / Visual Studio .NET 2015   
 Yeni özellikler için bkz: [Visual Basic 14](#visual-basic-14)
@@ -37,7 +42,7 @@ Visual Basic / Visual Studio .NET 2013
 .NET derleme Platformu ("Roslyn") teknolojisi önizlemeleri
 
 Visual Basic / Visual Studio .NET 2012   
-`Async`ve `await` anahtar sözcükler, yineleyiciler, arayan bilgileri öznitelikleri
+`Async` ve `await` anahtar sözcükler, yineleyiciler, arayan bilgileri öznitelikleri
 
 Visual Basic, Visual Studio .NET 2010   
 Otomatik uygulanan özellikler, koleksiyon başlatıcıları, örtük satır devamlılığı, dinamik, genel co/karşıt fark, genel ad alanı erişim
@@ -54,9 +59,44 @@ Bit kaydırma işleçleri, döngü değişken bildirimi
 Visual Basic / Visual Studio .NET 2002   
 Visual Basic .NET'in ilk sürümü
 
+## <a name="visual-basic-155"></a>Visual Basic 15,5
+
+[Olmayan sondaki-adlandırılmış bağımsız değişkenler](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+Bağımsız değişkenler hem konuma ve ada göre bir yöntem çağrısı dahil olduğunda Visual Basic 15.3 ve önceki sürümlerinde konumsal bağımsız değişkenleri adlandırılmış bağımsız değişkenler koyun gerekiyordu. Visual Basic 15,5 ile başlayarak, doğru konumda son konumsal bağımsız değişken kadar tüm bağımsız değişkenler sürece konumsal ve adlandırılmış bağımsız değişkenler herhangi bir sırada görünebilir. Adlandırılmış bağımsız değişkenler kodunu daha okunabilir hale getirmek için kullanıldığında, bu seçenek özellikle yararlıdır.
+
+Örneğin, aşağıdaki yöntem çağrısı adlandırılmış bir bağımsız değişken arasında iki konumsal bağımsız değişkenlere sahiptir. Adlandırılmış bağımsız değişkeni temizleyin 19 değeri temsil eden bir yaş kolaylaştırır.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Önde gelen onaltılık/ikili/sekizli ayırıcı**
+
+Visual Basic 2017 alt çizgi karakteri desteği eklendi (`_`) basamak ayırıcı olarak. Visual Basic 15,5 ile başlayarak, önek ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak alt çizgi karakterini kullanabilirsiniz. Aşağıdaki örnek başında basamak ayırıcı 3,271,948,384 onaltılık bir sayı olarak tanımlamak için kullanır:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Kullanılacak başında ayırıcı olarak puan karakterin altında Visual Basic proje (*.vbproj) dosyanıza aşağıdaki öğeyi eklemeniz gerekir:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[Adlandırılmış tanımlama grubu çıkarımı](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+Başlığın öğeleri değerini değişkenlerinden atadığınızda, Visual Basic karşılık gelen değişken adları tanımlama grubu öğelerinden adını oluşturur; açıkça bir tanımlama grubu öğe adı gerekmez. Aşağıdaki örnek, üç adlı öğeye sahip bir tanımlama grubu oluşturmak için çıkarım kullanır `state`, `stateName`, ve `capital`.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Diziler](../programming-guide/language-features/data-types/tuples.md)
+[Demetler](../programming-guide/language-features/data-types/tuples.md)
 
 Diziler olan basit bir veri yapısı en yaygın olarak tek bir yöntem çağrısından birden çok değer döndürmek için kullanılır. Normalde, bir yöntemin birden çok değer döndürmek için aşağıdakilerden birini yapmanız gerekir:
 
@@ -107,14 +147,14 @@ Daha fazla bilgi için bkz: [başvuru dönüş değerleri](../programming-guide/
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Bir dize sabit kodlama olmadan bir hata iletisi kullanmak için bir tür veya üye nitelenmemiş dize adını elde edebilirsiniz.  Bu, kodunuzu yeniden düzenleme, doğru kalmasını sağlar.  Bu özellik ayrıca model-view-controller MVC bağlantıları takma ve özellik değişti olayları tetikleme için yararlıdır.  
   
-[Dize ilişkilendirme](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Dize İlişkilendirme](../../csharp/language-reference/keywords/interpolated-strings.md)  
  Dize ilişkilendirme ifadeler dizeleri oluşturmak için kullanabilirsiniz.  Ara değerli dize ifadesi ifadeleri içeren bir şablon dize gibi görünüyor.  Ara değerli bir dize bağımsız değişkenleri göre anlamak daha kolay [bileşik biçimlendirme](../../standard/base-types/composite-format.md).  
   
 [Null-conditional üye erişimi ve dizin oluşturma](../../csharp/language-reference/operators/null-conditional-operators.md)  
 Null üye erişimi gerçekleştirmeden önce çok açık bir söz dizim şekilde test edebilirsiniz (`?.`) veya dizin (`?[]`) işlemi.  Bu işleçleri özellikle veri yapılara azalan düzen için null işlemek için daha az kod denetler yazmanıza yardımcı olur.  Sol işleneni veya nesne başvurusu null ise, işlemler null döndürür.  
   
 [Çok satırlı dize değişmez değerleri](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Dize değişmez değerleri yeni satır dizileri içerebilir.  Artık eski kullanarak çözmek`<xml><![CDATA[...text with newlines...]]></xml>.Value`  
+ Dize değişmez değerleri yeni satır dizileri içerebilir.  Artık eski kullanarak çözmek `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
   
 Açıklamalar  
 Örtük satır devamlılıklar, başlatıcı ifadeleri içinde ve arasında LINQ ifadesi koşulları sonra açıklama koyabilirsiniz.  

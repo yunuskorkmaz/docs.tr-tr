@@ -30,21 +30,21 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
-<a name="top"></a>Değerine sahip olabilir, olası değerleri aralığı ayrılmış alanı miktarı gibi öznitelikleri tanımlar bir ilişkili türü, her bir değeri yok ve üyeleri olan kullanılabilir hale getirir. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
+<a name="top"></a> Değerine sahip olabilir, olası değerleri aralığı ayrılmış alanı miktarı gibi öznitelikleri tanımlar bir ilişkili türü, her bir değeri yok ve üyeleri olan kullanılabilir hale getirir. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  
   
  .NET Framework otomatik olarak aşağıdaki dönüşümleri destekler:  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/23/2017
   
 -   <xref:System.IConvertible> Dönüştürmeleri temel .NET Framework veri türlerinin her biri için tanımlar arabirimi. Daha fazla bilgi için bkz: [IConvertible arabirimi](#the_iconvertible_interface) bölümü.  
   
--   <xref:System.Convert> Yöntemleri uygulamak yöntemler kümesi sağlar sınıfı <xref:System.IConvertible> arabirimi. Daha fazla bilgi için bkz:[Dönüştür sınıfı](#Convert) bölümü.  
+-   <xref:System.Convert> Yöntemleri uygulamak yöntemler kümesi sağlar sınıfı <xref:System.IConvertible> arabirimi. Daha fazla bilgi için bkz: [Dönüştür sınıfı](#Convert) bölümü.  
   
 -   <xref:System.ComponentModel.TypeConverter> Herhangi bir türü belirtilen bir türün dönüştürme desteklemek için genişletilmiş bir taban sınıf sınıfı. Daha fazla bilgi için bkz: [Typeconverter'a sınıfı](#the_typeconverter_class) bölümü.  
   
@@ -103,9 +103,9 @@ ms.lasthandoff: 12/23/2017
   
 |Tür|Int32 aralığıyla karşılaştırma|  
 |----------|------------------------------------|  
-|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType>Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>, ve <xref:System.Int64.MinValue?displayProperty=nameWithType> küçüktür (büyük negatif aralığından daha vardır) <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
-|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
-|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
+|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>, ve <xref:System.Int64.MinValue?displayProperty=nameWithType> küçüktür (büyük negatif aralığından daha vardır) <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
+|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
+|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> Daha fazla <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
  Bu tür daraltma dönüşümleri işlemek için [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tanımlamak türlerine izin verir bir `Explicit` işleci. Ayrı dil derleyicileri sonra kendi söz dizimi ya da bir üyesi kullanarak bu işleci uygulamak <xref:System.Convert> sınıfı, dönüştürme gerçekleştirmek için çağrılabilir. (Hakkında daha fazla bilgi için <xref:System.Convert> sınıfı için bkz: [Dönüştür sınıfı](#Convert) bu konunun devamındaki.) Aşağıdaki örnekte bu büyük olasılıkla çıkış aralığın tamsayı değerleri açık dönüştürme işlemek için dile özellikleri kullanımını göstermektedir <xref:System.Int32> değerleri.  
   

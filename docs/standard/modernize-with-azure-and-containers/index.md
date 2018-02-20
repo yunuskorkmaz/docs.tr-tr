@@ -29,7 +29,7 @@ Tüm hakları saklıdır. Bu kitap içeriğini hiçbir bölümü herhangi bir bi
 
 Bu kitap gibi ücretsiz bir elektronik defteri (e-kitap) Microsoft'taki birden çok kanallar aracılığıyla kullanılabilen form kullanılabilir <http://dot.net/architecture>
 
-Bu kitap, e-posta ile ilgili sorularınız varsa[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Bu kitap, e-posta ile ilgili sorularınız varsa [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
 Bu kitap sağlanan "olarak-olan" ve yazar görünümler ve görüşlerini ifade eder. Görünümler, görüşlerini ve URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu Defteri'nde ifade bilgileri bildirilmeksizin değiştirilebilir.
 
@@ -102,7 +102,7 @@ Tablo 1-1 ana avantajları ve her geçiş veya modernization yaklaşım seçme n
 > | SQL veya herhangi bir VM üzerinde ilişkisel veritabanı | Azure SQL veritabanı yönetilen örneği | Azure SQL Database, Azure Cosmos DB veya diğer NoSQL |
 > | **Avantajlar**|
 > | <li>Hiçbir mimarisinin yeniden düzenlenmesinden yeni bir kod <li> Hızlı geçiş için en az çaba <li> Azure'da desteklenen en küçük ortak paydası <li> Temel kullanılabilirliği garanti altına alır. <li> Buluta taşıdıktan sonra bunu daha da modernize kolaydır | <li>Hiçbir mimarisinin yeniden düzenlenmesinden yeni bir kod <li> Kapsayıcıları artımlı çaba VM'ler sunar. <li> Gelişmiş Dağıtım ve DevOps kapsayıcıları nedeniyle yayın becerisi <li> Yoğunluğu ve daha düşük bir dağıtım maliyeti <li> Uygulamalar ve bağımlılıklarını taşınabilirliği <li> Azure kapsayıcı hizmeti (veya Kubernetes) ile ve Azure Service Fabric, yüksek kullanılabilirlik ve orchestration sağlar <li> Service Fabric düğümleri/VM düzeltme eki uygulama <li> Ana bilgisayar hedefleri esnekliğini: Azure sanal makineleri veya VM ölçek ayarlar, Azure kapsayıcı hizmeti (veya Kubernetes) Service Fabric ve gelecekteki kapsayıcı tabanlı seçimi | <li>Bulut, düzenleme, gereken yeni kod Mimarı <li> Mikro bulut yerel yaklaşımlar <li> Yeni web uygulamaları, tek yapılı, N katmanlı, bulut dayanıklı ve bulut için iyileştirilmiş <li> Tam olarak yönetilen hizmetler <li> Otomatik düzeltme eki uygulama <li> Ölçek için en iyi duruma getirilmiş <li> Alt sistemi tarafından otonom Çeviklik için en iyi duruma getirilmiş <li> Dağıtım ve DevOps yerleşik <li> Yuvalar ve dağıtım stratejileri gibi gelişmiş DevOps <li> PaaS ve orchestrator hedefleri: Azure App Service, Azure kapsayıcı hizmeti (veya Kubernetes), Azure Service Fabric ve gelecekteki kapsayıcı tabanlı PaaS |
-> | **Zorlukları** |
+> | Zorlukları |
 > | <li> Harcama işletim ya da veri merkezleri kapatma shift dışında küçük bulut değeri <li> Çok az yönetilir: Hayır işletim sistemi veya ara yazılım düzeltme eki uygulama; Terraform, Spinnaker veya Puppet gibi kaybolabileceğini altyapı çözümleri | <li> Containerizing öğrenme eğrisi içinde ek bir adım gerektir değişmez değil | <li> Yeniden düzenleme veya (artan zaman ve bütçe) yeniden yazma işlemi önemli kodu gerektirebilir |
 >> **Tablo 1-1.** Avantajları ve mevcut .NET uygulamaları ve Hizmetleri için modernization yollarını zorlukları
 

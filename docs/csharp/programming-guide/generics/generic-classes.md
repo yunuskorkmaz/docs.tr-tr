@@ -2,25 +2,26 @@
 title: "Genel Sınıflar (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>Genel Sınıflar (C# Programlama Kılavuzu)
 Genel sınıflar belirli veri türüne özgü olmayan işlemler kapsüller. Bağlantılı listeleri, karma tabloları, yığınları, kuyruklar, ağaçlar ve benzeri gibi koleksiyonlarıyla genel sınıfları için en yaygın kullanımı içindir. Öğeler ekleme ve koleksiyondan kaldırma gibi işlemleri temelde aynı şekilde depolanmasını veri türü bağımsız olarak gerçekleştirilir.  
   
- Koleksiyon sınıfları gerektiren çoğu senaryolar için .NET Framework Sınıf Kitaplığı'nda sağlanan olanları kullanmak önerilen yaklaşımdır. Bu sınıfları kullanma hakkında daha fazla bilgi için bkz: [.NET Framework Sınıf Kitaplığı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+ Koleksiyon sınıfları gerektiren çoğu senaryolar için .NET sınıf kitaplığı'nda sağlanan olanları kullanmak önerilen yaklaşımdır. Bu sınıfları kullanma hakkında daha fazla bilgi için bkz: [.NET içinde genel koleksiyonlar](../../../standard/generics/collections.md).  
   
  Genellikle, varolan bir somut sınıfı ile başlatarak ve en iyi dengeyi Genelleştirme ve kullanılabilirlik ulaşana kadar aynı anda bir tür parametreleri türlerini değiştirme genel sınıflar oluşturun. Genel sınıflarınızı oluştururken, önemli noktalar şunlardır:  
   
@@ -72,7 +73,7 @@ Genel sınıflar belirli veri türüne özgü olmayan işlemler kapsüller. Bağ
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türler](../../../csharp/programming-guide/generics/index.md)  
- [Numaralandırmalar durumunu kaydetme](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [Bir devralma Bulmacanın bölüm bir](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
+ [Numaralandırmalar durumunu kaydetme](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+ [Bir devralma Bulmacanın bölüm bir](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

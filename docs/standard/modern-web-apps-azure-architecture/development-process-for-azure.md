@@ -102,7 +102,7 @@ Paylaşılan uygulama kodu depoya yeni bir yürütme yapıldığında yeni bir y
 
 Bir kez bir yapı başarılı olarak üretilen derleme yapıları CD işlemi seçer. Bu web içerecektir paketini dağıtabilirsiniz. Yapı sunucunun bu paket Azure App Service, herhangi bir varolan hizmeti ile yeni oluşturulan bir değiştirme dağıtır. Bu adımı hazırlama ortamında genellikle hedefler, ancak doğrudan bir CD işlemle üretim için bazı uygulamaları dağıtın.
 
-#### <a name="step-5-azure-app-service-web-app"></a>5. adım. Azure uygulama hizmeti. Web uygulaması.
+#### <a name="step-5-azure-app-service-web-app"></a>5. adım. Azure App Service. Web App.
 
 ASP.NET Core uygulama dağıtıldığında, Azure App Service Web uygulaması bağlamında çalışır. Bu Web uygulaması izlenebilir ve daha fazla Azure Portalı'nı kullanarak yapılandırılır.
 
@@ -113,7 +113,7 @@ Web uygulaması çalışırken, uygulama durumunu izlemenize ve tanılama ve kul
 ## <a name="references"></a>Referanslar
 
 **Derleme ve ASP.NET Core uygulamanızı Azure'a dağıtma**  
-<https://www.VisualStudio.com/docs/Build/Apps/ASPNET/aspnetcore-to-Azure>
+<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
 
 
 >[!div class="step-by-step"]

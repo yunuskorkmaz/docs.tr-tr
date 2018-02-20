@@ -219,11 +219,11 @@ Tek yapılı uygulamaları Docker, ölçeklendirilebilir, alt sistemlerini tek y
 
 > ### <a name="references--common-web-architectures"></a>Başvuruları – ortak Web mimariler
 > - **Temiz mimarisi**  
-> <https://8thlight.com/blog/Uncle-Bob/2012/08/13/the-Clean-Architecture.HTML>
+> <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Çoklu kare mimarisi**  
-> <http://jeffreypalermo.com/blog/the-onion-Architecture-Part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Depo düzeni**  
-> <http://deviq.com/Repository-pattern/>
+> <http://deviq.com/repository-pattern/>
 > - **Temiz mimarisi çözümü örneği**  
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Mikro e-kitap mimariden** <http://aka.ms/MicroservicesEbook>

@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 02d06401f16c6205a88a42e7624b8e39ac6473cc
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>Ara değerli dizeler
 
@@ -100,7 +100,7 @@ Ara değerli ifade bir iki nokta üst üste ve biçim dizesi ile izleyerek bir b
 
 .NET standart kitaplıkları türlerinde bir dizi önceden tanımlanmış bir biçim dizeleri kümesini destekler. Bu, tüm sayısal türler ve tarih ve saat türleri içerir. Biçim dizeleri destekleyen türler tam bir listesi için bkz: [biçim dizeleri ve .NET sınıf kitaplığı türleri](../../standard/base-types/formatting-types.md#stringRef) içinde [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) makalesi. Herhangi bir tür biçim dizeleri kümesi destekleyebilir ve varolan türleri için özel biçimlendirme sağlayan özel biçimlendirme uzantıları da geliştirebilirsiniz. Özel biçimlendirme sağlayarak hakkında bilgi için bir <xref:System.ICustomFormatter> uygulama, bkz: [özel biçimlendirme ICustomFormatter ile](../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) içinde [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) makale.
 
-Değiştirmeyi deneyin, metin düzenleyici ve, tarih ve saat ile sayısal değerin biçimlendirme değişikliklerin nasıl etkilediğini görmek için programı yeniden çalıştırın, bir değişiklik yaptığınız her saat biçim dizeleri. "D" değiştirmek `{date:d}` "(kısa saat biçimine görüntülemek için) t", "(yıl ve ay görüntülemek için) y" ve "yyyy" (yılı dört basamaklı bir sayı görüntülemek için). "C2" değiştirmek `{price:C2}` "e" (üstel gösterimde) ve (için ondalık ayırıcıdan sonra üç basamaklı sayısal bir değer) "F3".
+Biçim dizeleri, metin düzenleyici ve, tarih ve saat ile sayısal değerin biçimlendirme değişikliklerin nasıl etkilediğini görmek için programı yeniden çalıştırın, bir değişiklik yaptığınızda değiştirmeyi deneyin. "D" değiştirmek `{date:d}` "(kısa saat biçimine görüntülemek için) t", "(yıl ve ay görüntülemek için) y" ve "yyyy" (yılı dört basamaklı bir sayı görüntülemek için). "C2" değiştirmek `{price:C2}` "e" (üstel gösterimde) ve (için ondalık ayırıcıdan sonra üç basamaklı sayısal bir değer) "F3".
 
 Biçimlendirme denetleme ek olarak, bir ara değerli ifadesi tarafından döndürülen dize hizalamasını ve alan genişliği de denetleyebilirsiniz. Sonraki bölümde, bunun nasıl yapılacağı öğreneceksiniz.
 

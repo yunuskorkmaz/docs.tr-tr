@@ -1,7 +1,7 @@
 ---
 title: "Microsoft araçları ile docker uygulama devops iş akışı"
 description: "Microsoft araçları ile Microsoft Platformu ve Toolsdevops akışıyla kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -16,7 +16,7 @@ ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulama DevOps iş akışı
 
-Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server ve Application Insights geliştirme ve takım projeleri yönetme ve hızlı bir şekilde derleme, test ve dağıtmak için Araçlar verir BT işlemleri için kapsamlı bir ekosistem sağlayın Kapsayıcılı uygulamalar.
+Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server, and Application Insights provide a comprehensive ecosystem for development and IT operations that give your team the tools to manage projects and rapidly build, test, and deploy containerized applications.
 
 Visual Studio ve Team Foundation Server şirket yanı sıra bulut Visual Studio Team Services ile geliştirme ekipleri üretken derleme, test ve herhangi bir platformda doğru (Windows veya Linux) yönlendirilmiş kapsayıcılı uygulamaları bırakın.
 

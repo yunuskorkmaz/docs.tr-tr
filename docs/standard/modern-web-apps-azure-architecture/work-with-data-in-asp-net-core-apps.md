@@ -202,11 +202,11 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>Başvuruları – Entity Framework Çekirdek
 > - **EF Core belgeleri**  
-> <https://docs.microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF Çekirdek: İlgili veriler**  
-> <https://docs.microsoft.com/EF/Core/Querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **ASP.NET uygulamalarında yavaş yükleniyor varlıklar kaçının**  
-> <http://ardalis.com/avoid-Lazy-loading-entities-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF çekirdek veya mikro ORM?
 
@@ -286,7 +286,7 @@ DocumentDB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bi
 **Başvuruları – DocumentDB**
 
 -   DocumentDB Introduction\
-    <https://docs.microsoft.com/Azure/documentdb/documentdb-introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Diğer Kalıcılık seçenekleri
 
@@ -303,7 +303,7 @@ DocumentDB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçlü bi
 **Başvuruları – Azure depolama**
 
 -   Azure depolama Introduction\
-    <https://docs.microsoft.com/Azure/Storage/Storage-introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Önbelleğe alma
 

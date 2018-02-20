@@ -10,17 +10,17 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-architectural-components"></a>.NET Mimari Bileşenleri
 
 .NET uygulaması için geliştirilen ve bir veya daha fazla çalışan *.NET uygulamalarında*.  .NET uygulamaları, .NET Framework, .NET Core ve Mono içerir. Tüm .NET standardını çağırdı .NET uygulamaları için ortak API belirtimine yoktur. Bu makalede her Bu kavramlar kısa bir giriş sağlar.
 
-## <a name="net-standard"></a>.NET standart
+## <a name="net-standard"></a>.NET Standard
 
 .NET standart bir .NET uygulaması temel sınıf kitaplığı tarafından uygulanan API kümesidir. Daha resmi olarak karşı kodunuzu derleyin sözleşmeleri Tekdüzen kümesini oluşturan .NET API'lerini belirtimi değil. Bu sözleşmeler, her .NET uygulamasında uygulanır. Bu, etkili bir şekilde kodunuzun her yerde çalışmasına izin vererek farklı .NET uygulamaları arasında taşınabilirlik sağlar.
 
@@ -53,7 +53,7 @@ Microsoft etkin olarak geliştirir ve tutar dört birincil .NET uygulamaları va
 
 ### <a name="mono"></a>Mono
 
-Mono küçük bir çalışma zamanı gerekli olduğunda, genel olarak kullanılan bir .NET uygulamasıdır. Bu, Android, Mac, iOS, tvOS ve watchOS Xamarin uygulamalarını çalıştırır ve öncelikle küçük bir yer üzerinde odaklanmıştır çalışma zamanı gösterir.
+Mono küçük bir çalışma zamanı gerekli olduğunda, genel olarak kullanılan bir .NET uygulamasıdır. Bu, Android, Mac, iOS, tvOS ve watchOS Xamarin uygulamalarını çalıştırır ve öncelikle küçük bir yer üzerinde odaklanmıştır çalışma zamanı gösterir. Mono ayrıca Unity altyapısı kullanılarak oluşturulan oyunlar çalıştırır.
 
 Şu anda yayımlanan .NET standart sürümlerin tümünü destekler.
 

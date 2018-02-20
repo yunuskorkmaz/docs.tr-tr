@@ -1,7 +1,7 @@
 ---
 title: "Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma"
 description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -38,7 +38,7 @@ Docker için Visual Studio Araçları geliştirmek ve yerel olarak Linux Docker 
 
 Tek bir kapsayıcı kullanıyorsanız, .NET Core projenize Docker desteğini etkinleştirmek için başlamak için gereken ilk şey olur. Bunu yapmak için Şekil 4-25 gösterildiği gibi proje dosyasını sağ tıklatın.
 
-![https://i1.visualstudiogallery.msdn.s-MSFT.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/File/205468/1/Add-docker-support.PNG](./media/image31.png)
+![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
 Şekil 4-25: açma, Visual Studio projesi için Docker desteği
 

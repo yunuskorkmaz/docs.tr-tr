@@ -95,17 +95,17 @@ Linux için kullanılabilir ve desteklenen (Debian gibi) resmi .NET Docker gör�
 
 Görüntü adı Dockerfile dosyanızı eklediğinizde, .NET Framework tabanlı Windows kapsayıcı görüntüleri ilişkin aşağıdaki örneklerde olduğu gibi bir etiket kullanarak işletim sistemi ve sürümü seçebilirsiniz:
 
-> | **Etiket** | **Sistemi ve sürümü** |
+> | Etiket | **Sistemi ve sürümü** |
 > |---|---|
-> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Sunucu Çekirdeği |
-> | **aspnet:4.x/Microsoft-windowsservercore** | .NET framework 4.x ile Windows Server Core üzerinde ek ASP.NET özelleştirme |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Sunucu Çekirdeği |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x ile Windows Server Core üzerinde ek ASP.NET özelleştirme |
 
 .NET Core (platformlar arası Linux ve Windows için) etiketleri şöyle olabilir:
 
-> | **Etiket** | **Sistemi ve sürümü**
+> | Etiket | **Sistemi ve sürümü**
 > |---|---|
-> | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 Linux'ta salt çalışma zamanı |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 Windows Nano Server salt çalışma zamanı |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 Linux'ta salt çalışma zamanı |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 Windows Nano Server salt çalışma zamanı |
 
 ### <a name="multi-arch-images"></a>Birden çok yay görüntüleri
 
@@ -127,15 +127,15 @@ Bir kapsayıcı ile veya Hyper-V yalıtım olmadan Windows üzerinde çalışan 
 
 -   **Windows kapsayıcıları belgeleri**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
 
 -   **Windows kapsayıcıları temelleri**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/About/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
 
 -   **Bilgi grafiği: Microsoft ve kapsayıcıları**
 
-    [https://info.microsoft.com/RS/157-GQE-382/images/Container%20infographic%201.4.17.PDF](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
 >[!div class="step-by-step"]
 [Önceki](how-to-deploy-existing-net-apps-to-azure-app-service.md)

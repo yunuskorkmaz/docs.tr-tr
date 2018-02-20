@@ -1,7 +1,7 @@
 ---
 title: "Mikro hizmet etki alanı modeli .NET Core ile uygulama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı modeli .NET Core ile uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Mikro hizmet etki alanı modeli .NET Core ile uygulama 
 
@@ -181,7 +181,7 @@ Sütunları alanlarına eşlemek için özellikle EF çekirdek 1.1 veya sonraki 
 -   **Julie Lerman. Etki alanı Odaklı Tasarım kodlama: Veri odaklı Devs için ipuçları**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **UDI Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
+-   **Udi Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 

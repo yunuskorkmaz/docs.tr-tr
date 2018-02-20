@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları sınama
 
 > _"Birim testi ürününüzü hoşlanmıyorsanız, büyük olasılıkla müşterilerinizin, ya da test etmek gibi olmaz."_
-> _ - Anonim -
+> _- Anonymous-
 
 ## <a name="summary"></a>Özet
 

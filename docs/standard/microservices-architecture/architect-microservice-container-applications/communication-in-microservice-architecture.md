@@ -1,7 +1,7 @@
 ---
 title: "Mikro hizmet mimarisi iletişimi"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet mimarisi mimarileri iletişimi"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f373119f4d221745063688a9a5211d5ae11598b7
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisi iletişimi
 
-Tek bir işlem üzerinde çalışan tek yapılı bir uygulamada birbirine dil düzeyi yöntemi veya işlev çağrılarını kullanarak bileşenleri çağırma. Nesneleri koduyla oluşturuyorsanız, bu kesinlikle eşleştirilmek (örneğin, `new ClassName()`), veya somut nesne örneklerini yerine soyutlamalar başvurarak bağımlılık ekleme kullanıyorsanız, ayrılmış bir şekilde çağrılabilir. Her iki durumda da nesneleri aynı işlem içinde çalışır. Mikro tabanlı bir uygulama için tek yapılı bir uygulamadan değiştirirken en büyük zorluk iletişim mekanizması değiştirme arasındadır. RPC çağrıları hizmetlerine işlemdeki yöntemi çağrılarını doğrudan dönüştürme bir chatty neden olur ve ortamlar da buna gerçekleştirmez değil verimli iletişimi dağıtılır. Dağıtılmış Sistem düzgün tasarlama zorluklar olduğunu bile olarak bilinen bir canon yeterince iyi bilinen [dağıtılmış bilgi işlem fallacies](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) geliştiriciler genellikle geçiş yapmak varsayımlar listeler Dağıtılmış tasarımları için tek yapılı.
+Tek bir işlem üzerinde çalışan tek yapılı bir uygulamada birbirine dil düzeyi yöntemi veya işlev çağrılarını kullanarak bileşenleri çağırma. Nesneleri koduyla oluşturuyorsanız, bu kesinlikle eşleştirilmek (örneğin, `new ClassName()`), veya somut nesne örneklerini yerine soyutlamalar başvurarak bağımlılık ekleme kullanıyorsanız, ayrılmış bir şekilde çağrılabilir. Her iki durumda da nesneleri aynı işlem içinde çalışır. Mikro tabanlı bir uygulama için tek yapılı bir uygulamadan değiştirirken en büyük zorluk iletişim mekanizması değiştirme arasındadır. RPC çağrıları hizmetlerine işlemdeki yöntemi çağrılarını doğrudan dönüştürme bir chatty neden olur ve ortamlar da buna gerçekleştirmez değil verimli iletişimi dağıtılır. Dağıtılmış Sistem düzgün tasarlama zorluklar olduğunu bile olarak bilinen bir canon yeterince iyi bilinen [dağıtılmış bilgi işlem Fallacies](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) geliştiriciler genellikle gelen tek yapılı taşırken olun varsayımlar listeler Dağıtılmış tasarımları için.
 
 Bir çözüm değildir, ancak birkaç yoktur. Bir çözüm, mümkün olduğunca iş mikro yalıtma içerir. Ardından iç mikro arasındaki zaman uyumsuz iletişim kullanın ve düzey kaba iletişimde nesneler arasındaki işlem içi iletişimi normal hassas iletişimi değiştirin. Çağrıları gruplandırma ve istemci için birden çok dahili çağrı sonuçları toplar veri döndüren bunu yapabilirsiniz.
 
@@ -96,7 +96,7 @@ HTTP REST Hizmetleri arabirim tanımı diliniz kullanılırken ek değer yoktur.
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Martin Fowler. Uludağ olgunluk modeli.** REST modelin açıklaması.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.HTML*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Resmi sitesi.
     [*http://swagger.io/*](http://swagger.io/)

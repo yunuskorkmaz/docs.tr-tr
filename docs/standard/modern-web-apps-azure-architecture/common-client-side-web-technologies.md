@@ -70,14 +70,14 @@ Eski JavaScript framework standartları tarafından rağmen jQuery HTML/CSS ile 
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs SPA çerçevesi
 
-| **Faktörü** | **jQuery** | **Açısal**|
+| **Faktörü** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| DOM soyutlar | **Evet** | **Evet** |
-| AJAX desteği | **Evet** | **Evet** |
-| Bildirim temelli veri bağlama | **Yok** | **Evet** |
-| MVC stili yönlendirme | **Yok** | **Evet** |
-| Şablon oluşturma | **Yok** | **Evet** |
-| Ayrıntılı bağlantı Yönlendirme | **Yok** | **Evet** |
+| DOM soyutlar | Evet | Evet |
+| AJAX desteği | Evet | Evet |
+| Bildirim temelli veri bağlama | Yok | Evet |
+| MVC stili yönlendirme | Yok | Evet |
+| Şablon oluşturma | Yok | Evet |
+| Ayrıntılı bağlantı Yönlendirme | Yok | Evet |
 
 JQuery doğası gereği eksik özelliklerin çoğunu diğer kitaplıkları eklenmesiyle eklenebilir. Ancak, bunu, tümünü başından aklınızda tasarlandığından SPA framework Angular gibi bu özellikleri daha tümleşik bir şekilde sağlar. Ayrıca, jQuery jQuery ile bir şey yapmanız için jQuery işlevleri çağırmak ihtiyacınız anlamı çok kesinlik temelli bir kitaplığı vardır. SPA çerçeveleri sağlayan işlevselliği ve iş çoğunu, yazılacak gerçek bir kod gerektiren bildirimli olarak, yapılabilir.
 
@@ -148,27 +148,27 @@ JavaScript çerçeveler breakneck hızıyla gelişmeye devam edin. Bağımlı ol
 
 > ### <a name="references--client-web-technologies"></a>Başvuruları – istemci Web teknolojileri
 > - **HTML ve CSS**  
-> <https://www.w3.org/Standards/webdesign/htmlcss>
+> <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass vs. DAHA AZ**  
-> <https://www.keycdn.com/blog/sass-VS-less/>
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **ASP.NET Core uygulamaları ile küçük, Sass ve yazı tipi harika stil oluşturma**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-Side/less-sass-FA>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **ASP.NET Core istemci-tarafı geliştirme**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
-> <https://JQuery.com/>
+> <https://jquery.com/>
 > - **jQuery vs AngularJS**  
-> <https://www.airpair.com/angularjs/posts/JQuery-angularjs-Comparison-Migration-Walkthrough>
-> - **Açısal**  
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
+> - **Angular**  
 > <https://angular.io/>
-> - **Tepki**  
+> - tepki  
 > <https://facebook.github.io/react/>
 > - **Slingshot tepki**  
 > <https://github.com/coryhouse/react-slingshot>
 > - **VS Açısal 2 karşılaştırma tepki**  
-> <https://www.codementor.io/codementorteam/react-VS-angular-2-Comparison-beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **2017 en iyi 5 JavaScript çerçeveleri**  
-> <https://hackernoon.com/5-Best-JavaScript-Frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
 [Önceki] (ortak-web-uygulama-architectures.md) [sonraki] (develop-asp-net-core-mvc-apps.md)

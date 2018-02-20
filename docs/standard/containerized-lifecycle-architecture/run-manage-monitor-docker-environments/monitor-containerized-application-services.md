@@ -1,7 +1,7 @@
 ---
 title: "Kapsayıcılı İzleyici uygulama hizmetleri"
 description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -45,13 +45,13 @@ Application Insights kaynağı oluşturmak için aşağıdaki listeden sunulan m
 -   **Application ınsights'ta Docker uygulamaları izleme:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Uygulama Öngörüler Docker görüntüsü Docker hub'a ve Github:**  
-[https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) ve <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) and <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **ASP.NET için Application Insights'ı ayarlayın:**  
-[https://docs.microsoft.com/Azure/Application-insights/App-insights-ASP-NET](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
 
 -   **Web sayfaları için Application Insights:**  
-<https://docs.microsoft.com/Azure/Application-insights/App-insights-JavaScript>
+<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
 ## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
@@ -91,13 +91,13 @@ Operations Management Suite kapsayıcı çözümünü kullanarak, aşağıdakile
 
 Sorgu türü gibi çalıştırarak performans bilgileri görebilirsiniz Perf, Şekil 6-3'te gösterildiği gibi =.
 
-![DockerPerfMetricsView](./media/image3.png){width = "5.78625 in" yükseklik = "3,25 inç"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Şekil 6-3: performans ölçümleri Operations Management Suite tarafından gösterilen Docker ana bilgisayarları
 
 Ayrıca bir standart Operations Management Suite özelliğidir ve yardımcı olabilir sorguları kaydetme yararlı buldunuz ve sisteminizdeki eğilimleri bulmak sorguları tutun.
 
-**Daha fazla bilgi** kapsayıcı çözümde yükleme ve Docker yapılandırma hakkında bilgi bulmak için [Operations Management Suite](http://microsoft.com/oms)gidin <https://docs.microsoft.com/azure/ Günlük-analytics/günlük-analytics-kapsayıcıları>.
+**Daha fazla bilgi** kapsayıcı çözümde yükleme ve Docker yapılandırma hakkında bilgi bulmak için [Operations Management Suite](http://microsoft.com/oms)gidin <https://docs.microsoft.com/azure/log-analytics /log-Analytics-Containers>.
 
 >[!div class="step-by-step"]
 [Önceki] (yönetme-üretim-docker-environments.md) [sonraki] (.. /Key-takeaways/index.MD)

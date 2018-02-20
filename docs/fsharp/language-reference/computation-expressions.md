@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: 15ba2e167efc1d295d81439dcf85bc7272e05265
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -47,9 +47,9 @@ Aşağıdaki tabloda, bir iş akışı Oluşturucu sınıfta kullanılabilir yö
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Hesaplama ifadesi bir işlevi olarak sarmalar.|
 |`Return`|`'T -> M<'T>`|İçin adlı `return` hesaplama ifadelerde.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|İçin adlı `return!` hesaplama ifadelerde.|
-|`Run`|`M<'T> -> M<'T>`veya<br /><br />`M<'T> -> 'T`|Hesaplama ifadesi yürütür.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>`veya<br /><br />`M<unit> * M<'T> -> M<'T>`|Hesaplama ifadeleri sıralaması için çağrılır.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`veya<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|İçin adlı `for...do` hesaplama ifadeleri ifadelerinde.|
+|`Run`|`M<'T> -> M<'T>` Veya<br /><br />`M<'T> -> 'T`|Hesaplama ifadesi yürütür.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` Veya<br /><br />`M<unit> * M<'T> -> M<'T>`|Hesaplama ifadeleri sıralaması için çağrılır.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` Veya<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|İçin adlı `for...do` hesaplama ifadeleri ifadelerinde.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|İçin adlı `try...finally` hesaplama ifadeleri ifadelerinde.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|İçin adlı `try...with` hesaplama ifadeleri ifadelerinde.|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|İçin adlı `use` hesaplama ifadeleri bağlama.|
@@ -76,7 +76,7 @@ Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu 
 |<code>{&#124; do! expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun () -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; yield expr &#124;}</code>|`builder.Yield(expr)`|
 |<code>{&#124; yield! expr &#124;}</code>|`builder.YieldFrom(expr)`|
-|<code>{&#124; return expr &#124;}<code>|`builder.Return(expr)`|
+|<code>{&#124; return expr &#124;}</code>|`builder.Return(expr)`|
 |<code>{&#124; return! expr &#124;}</code>|`builder.ReturnFrom(expr)`|
 |<code>{&#124; use pattern = expr in cexpr &#124;}</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; use! value = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> {&#124; cexpr &#124;}))))</code>|
@@ -84,7 +84,7 @@ Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu 
 |<code>{&#124; if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then {&#124; cexpr0 &#124;} else {&#124; cexpr1 &#124;}</code>|
 |<code>{&#124; match expr with &#124; pattern_i -> cexpr_i &#124;}</code>|<code>match expr with &#124; pattern_i -> {&#124; cexpr_i &#124;}</code>|
 |<code>{&#124; for pattern in expr do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}<code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
+|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr), builder.Delay({&#124;cexpr &#124;})</code>|
 |<code>{&#124; try cexpr with &#124; pattern_i -> expr_i &#124;}</code>|<code>builder.TryWith(builder.Delay({&#124; cexpr &#124;}), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
 |<code>{&#124; try cexpr finally expr &#124;}</code>|<code>builder.TryFinally(builder.Delay( {&#124; cexpr &#124;}), (fun () -> expr))</code>|
@@ -227,10 +227,10 @@ Bir hesaplama ifadesi ifade döndürür bir temel türe sahip. Temel alınan tü
 Hesaplama ifadesi üzerinde özel bir işlemi tanımlamak ve bir işleç bir hesaplama ifadesinde olarak özel bir işlemi kullanın. Örneğin, sorgu ifadesinde bir sorgu işleci içerebilir. Özel bir işlemi tanımladığınızda, verim tanımlamanız gerekir ve hesaplama ifadesi yöntemleri için. Özel bir işlemi tanımlamak için hesaplama ifadesi Oluşturucu sınıfında koyabilir ve ardından uygulama [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Bu öznitelik, bir özel işleminde kullanılacak adı bir bağımsız değişken olarak bir dize alır. Bu ad büyük ayracını hesaplama ifadesi başlangıcında kapsam içine gelir. Bu nedenle, bu bloğa özel bir işlemi ile aynı ada sahip tanımlayıcıları kullanmamalısınız. Örneğin, tanımlayıcılar gibi kullanmaktan kaçının `all` veya `last` sorgu ifadelerinde.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Zaman uyumsuz iş akışları](asynchronous-workflows.md)
+[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)
 
-[Dizileri](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+[Diziler](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
 
-[Sorgu ifadeleri](query-expressions.md)
+[Sorgu İfadeleri](query-expressions.md)

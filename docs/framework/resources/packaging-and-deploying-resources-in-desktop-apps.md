@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Paketleme ve Dağıtma Kaynakları
 Uygulamaları kullanan üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi, <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynaklar almak için sınıf. Kaynak Yöneticisi'ni bir hub ve bağlı bileşen modeli paketini ve kaynakları dağıtmak için kullanıldığını varsayar. Hub nonlocalizable yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; Bu kültürdür yerelleştirilmiş kaynaklar bulunamazsa, kaynakları kullanılır. Her bağlı bileşen tek bir kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır.  
@@ -129,7 +131,7 @@ Uygulamaları kullanan üzerinde .NET Framework kaynak tarafından temsil edilen
 </configuration>  
 ```  
   
- Uydu derlemeleri için en iyi duruma getirilmiş araştırma, bir katılımı özelliğidir. Diğer bir deyişle, çalışma zamanı konusunda belgelenen adımları izler [kaynak geri dönüş işlem](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) sürece [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesidir uygulamanın içinde mevcut yapılandırma dosyası ve onun `enabled` özniteliği `true`. Bu durumda, uydu derlemesi için yoklama işlemi şu şekilde değiştirilir:  
+ Uydu derlemeleri için en iyi duruma getirilmiş araştırma, bir katılımı özelliğidir. Diğer bir deyişle, çalışma zamanı konusunda belgelenen adımları izler [kaynak geri dönüş işlem](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) sürece [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesidir uygulamanın yapılandırma dosyasındaki mevcut Dosya ve kendi `enabled` özniteliği `true`. Bu durumda, uydu derlemesi için yoklama işlemi şu şekilde değiştirilir:  
   
 -   Çalışma zamanı üst kod derleme konumunu uydu derlemesi için araştırma için kullanır. Ana derleme genel derleme önbelleğinde yüklüyse, çalışma zamanı önbelleğinde ancak uygulama dizinindeki araştırmaları. Ana derleme bir uygulama dizininde yüklüyse, çalışma zamanı uygulama dizinindeki ancak genel derleme önbelleğinde araştırmaları.  
   
@@ -154,19 +156,19 @@ Greeting=Добрый день
   
  Bu iki dosyayı .resources dosyaları çalıştırarak derlenen [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) komut satırından.  Fransızca Dil kaynağı için bir komut şöyledir:  
   
- **Resgen.exe resources.fr.txt**  
+ **resgen.exe resources.fr.txt**  
   
  Rusça Dil kaynağı için bir komut şöyledir:  
   
- **Resgen.exe resources.ru.txt**  
+ **resgen.exe resources.ru.txt**  
   
  .Resources dosyaları çalıştırarak dinamik bağlantı kitaplıkları katıştırılan [derleme bağlayıcı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) komuttan satır Fransızca Dil kaynağı için şu şekilde:  
   
- **Al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
+ **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
   
  ve aşağıdaki gibi Rusça Dil kaynak için:  
   
- **Al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
+ **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
   
  Uygulama kaynak koduna Example1.cs veya Example1.vb adındaki bir dosyada yer alıyor. İçerdiği <xref:System.Resources.NeutralResourcesLanguageAttribute> varsayılan uygulama kaynağı fr alt dizinindeki olduğunu belirtmek için öznitelik. Kaynak Yöneticisi'ni başlatır, değerini alır `Greeting` kaynak ve konsola görüntüler.  
   
@@ -179,7 +181,7 @@ Greeting=Добрый день
   
  Visual Basic derleyici komut çok benzer:  
   
- **Vbc Example1.vb**  
+ **vbc Example1.vb**  
   
  Ana derlemede katıştırılmış kaynak olduğundan, kullanarak derleme gerekmez `/resource` geçin.  
   

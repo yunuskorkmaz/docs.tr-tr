@@ -23,7 +23,7 @@ Güvenlik geldiğinde, yönetim ve güvenlik, karma bulut merkezileştirebilirsi
 
 Son olarak, dağıtmak ve sorunsuz bir şekilde verileri çözümlemek, Bulut ve şirket içi varlıklar için sorgu dillerini kullanın ve analizi ve kaynağına bakılmaksızın, verilerinizi zenginleştirmek için azure'da öğrenme derin uygulanır.
 
-## <a name="azure-stack"></a>Azure yığını
+## <a name="azure-stack"></a>Azure Stack
 
 Azure yığın kuruluşunuzun veri merkezinden Azure Hizmetleri sunmanıza olanak sağlayan bir karma bulut platformudur. Azure yığın kenar ve bağlantısız ortamlarda veya toplantı belirli güvenlik ve uyumluluk gereksinimleri gibi anahtar senaryolarda modern, uygulamalarınız için yeni seçenekler destekleyecek şekilde tasarlanmıştır.
 
@@ -53,21 +53,21 @@ Microsoft Azure yığın Geliştirme Seti değerlendirmek ve Azure yığın hakk
 
     [https://www.microsoft.com/cloud-Platform/Hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure yığını**
+-   **Azure Stack**
 
-    [https://Azure.microsoft.com/Overview/Azure-Stack/](https://azure.microsoft.com/overview/azure-stack/)
+    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
 -   **Windows kapsayıcıları için Active Directory hizmet hesapları**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/Manage-Containers/Manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
 -   **Active Directory desteği olan bir kapsayıcı oluşturma**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/Create-a-Container-With-Active-Directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
 -   **Azure karma avantajı lisanslama**
 
-    [https://Azure.microsoft.com/pricing/Hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
 [Önceki](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

@@ -118,7 +118,7 @@ Uygulama hizmeti yeni web uygulamaları için en iyi seçim olabilir, ancak yaln
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Azure App Service için Uyumluluk analizi**  
-[https://www.migratetoazure.NET/Resources](https://www.migratetoazure.net/Resources)
+[https://www.migratetoazure.net/Resources](https://www.migratetoazure.net/Resources)
 
 
 ### <a name="benefits-of-moving-to-windows-containers"></a>Windows kapsayıcılara taşıma avantajları

@@ -1,7 +1,7 @@
 ---
 title: "Mikro ve yüksek ölçeklenebilirlik ve kullanılabilirlik multicontainer uygulamaları yönetme"
 description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
@@ -42,10 +42,10 @@ Tablo 4-1: yazılım platformlarının kapsayıcı kümeleme, düzenleme ve zama
 
 | Platform | Açıklama |
 |---|---|
-| Docker Swarm<br/> ![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/images/swarm.PNG?v=2016-07-10-AM](./media/image7.png) | Docker Swarm kümesi ve Docker kapsayıcıları zamanlama olanağı sağlar. Swarm kullanarak, bir tek, sanal Docker ana bilgisayara bir havuzu Docker ana bilgisayarları kapatabilirsiniz. İstemcileri API istekleri Swarm için Swarm ölçeklendirmek üzere uygulamalar için birden çok ana bilgisayar için kolaylaştırır, anlamı konaklarına aynı şekilde yapabilirsiniz. <br /><br /> Docker Swarm, Docker, şirket gelen bir üründür. <br /><br /> Docker v1.12 veya daha sonra yerel ve yerleşik Swarm modu çalıştırabilirsiniz. |
-| Mesosphere DC/OS<br/>![https://mesosphere.com/WP-Content/uploads/2016/04/logo-Horizontal-styled.PNG](./media/image8.png) |  Kurumsal DC/OS mesosphere (üzerinde Apache Mesos bağlı olarak) kapsayıcıları ve dağıtılmış uygulamaları çalıştırmak için bir üretime hazır platformudur. <br /><br /> DC/OS kümesinde kullanılabilir kaynaklar koleksiyonu özetleyen ve bu kaynakları üstünde derlendikten bileşenleri için kullanılabilir hale getirme çalışır. Marathon genellikle DC/OS ile tümleşik bir zamanlayıcı olarak kullanılır. |
-| Google Kubernetes<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes küme altyapısı ve yönetme olanağı zamanlama kapsayıcı aralıkları işlevselliği sağlayan bir açık kaynaklı üründür. Bununla, ana bilgisayar kümelerinde dağıtım, ölçeklendirme ve uygulama kapsayıcıları işlemlerini otomatikleştirebilirsiniz. <br /><br /> Kubernetes kolay yönetim ve bulma için mantıksal birimler halinde uygulama kapsayıcıları grupları kapsayıcı merkezli bir altyapı sağlar. |
-| Azure Service Fabric<br />![https://Azure.microsoft.com/svghandler/Service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmak için bir Microsoft mikro platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Varsayılan olarak, Service Fabric dağıtır ve Hizmetleri işlemler olarak etkinleştirir, ancak Service Fabric Hizmetleri Docker kapsayıcısı görüntülerinde dağıtabilirsiniz. Daha da önemlisi, aynı uygulama kapsayıcılardaki hizmetleriyle işlemleri Hizmetleri'nde karıştırabilirsiniz. <br /><br /> Mayıs 2017 itibariyle Önizleme durumda Docker kapsayıcı olarak dağıtma hizmetlerini destekleyen bir Service Fabric özelliğidir. <br /><br /> Service Fabric Hizmetleri kullanarak birçok yolla geliştirebilirsiniz [Service Fabric modellerini programlama](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) dağıtma [Konuk yürütülebilir dosyalar](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) kapsayıcıları yanı sıra. Service Fabric destekleyen Düzenleyici uygulama modelleri gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Docker Swarm<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker Swarm kümesi ve Docker kapsayıcıları zamanlama olanağı sağlar. Swarm kullanarak, bir tek, sanal Docker ana bilgisayara bir havuzu Docker ana bilgisayarları kapatabilirsiniz. İstemcileri API istekleri Swarm için Swarm ölçeklendirmek üzere uygulamalar için birden çok ana bilgisayar için kolaylaştırır, anlamı konaklarına aynı şekilde yapabilirsiniz. <br /><br /> Docker Swarm, Docker, şirket gelen bir üründür. <br /><br /> Docker v1.12 veya daha sonra yerel ve yerleşik Swarm modu çalıştırabilirsiniz. |
+| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Kurumsal DC/OS mesosphere (üzerinde Apache Mesos bağlı olarak) kapsayıcıları ve dağıtılmış uygulamaları çalıştırmak için bir üretime hazır platformudur. <br /><br /> DC/OS kümesinde kullanılabilir kaynaklar koleksiyonu özetleyen ve bu kaynakları üstünde derlendikten bileşenleri için kullanılabilir hale getirme çalışır. Marathon genellikle DC/OS ile tümleşik bir zamanlayıcı olarak kullanılır. |
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes küme altyapısı ve yönetme olanağı zamanlama kapsayıcı aralıkları işlevselliği sağlayan bir açık kaynaklı üründür. Bununla, ana bilgisayar kümelerinde dağıtım, ölçeklendirme ve uygulama kapsayıcıları işlemlerini otomatikleştirebilirsiniz. <br /><br /> Kubernetes kolay yönetim ve bulma için mantıksal birimler halinde uygulama kapsayıcıları grupları kapsayıcı merkezli bir altyapı sağlar. |
+| Azure Service Fabric<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) uygulamaları oluşturmak için bir Microsoft mikro platformudur. Bu bir [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) , hizmetleri ve makine kümeleri oluşturur. Varsayılan olarak, Service Fabric dağıtır ve Hizmetleri işlemler olarak etkinleştirir, ancak Service Fabric Hizmetleri Docker kapsayıcısı görüntülerinde dağıtabilirsiniz. Daha da önemlisi, aynı uygulama kapsayıcılardaki hizmetleriyle işlemleri Hizmetleri'nde karıştırabilirsiniz. <br /><br /> Mayıs 2017 itibariyle Önizleme durumda Docker kapsayıcı olarak dağıtma hizmetlerini destekleyen bir Service Fabric özelliğidir. <br /><br /> Service Fabric Hizmetleri kullanarak birçok yolla geliştirebilirsiniz [Service Fabric modellerini programlama](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) dağıtma [Konuk yürütülebilir dosyalar](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) kapsayıcıları yanı sıra. Service Fabric destekleyen Düzenleyici uygulama modelleri gibi [durum bilgisi olan hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) ve [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure kapsayıcı tabanlı orchestrators kullanma
 
@@ -92,16 +92,16 @@ Kapsayıcı hizmeti şu anda standart A, D, DS, G ve GS serisi Linux VM'ler içi
 Burada bulabilirsiniz ek bilgi konumları şunlardır:
 
 -   Kapsayıcı hizmeti çözümleriyle barındırma Docker kapsayıcısı giriş:  
-    https://docs.microsoft.com/Azure/Container-Service/kubernetes/Container-Service-intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Docker Swarm genel bakış:  
-    <https://docs.docker.com/swarm/Overview/>
+    <https://docs.docker.com/swarm/overview/>
 
 -   Swarm moduna genel bakış:  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Mesosphere DC/OS genel bakış:    
-    <https://docs.mesosphere.com/1.7/Overview/>
+    <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (resmi site):  
     <http://kubernetes.io/>

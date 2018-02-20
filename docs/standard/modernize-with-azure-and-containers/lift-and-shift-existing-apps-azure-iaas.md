@@ -87,7 +87,7 @@ Kısmen özellikle karma ortamlar için Site Recovery yapılan ayrıca şirket i
 
 -   **Azure veri geçirme**
 
-    [https://aka.MS/azuremigration\_veri sayfası](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
 -   **Azure geçirme**
 
@@ -95,15 +95,15 @@ Kısmen özellikle karma ortamlar için Site Recovery yapılan ayrıca şirket i
 
 -   **Site Recovery ile azure'a geçirme**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-Migrate-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
 -   **Azure Site Recovery hizmetine genel bakış**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-Overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
 -   **Azure VM'ler için aws'deki geçirme VM'ler**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-Migrate-aws-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 
 >[!div class="step-by-step"]
 [Önceki](index.md)

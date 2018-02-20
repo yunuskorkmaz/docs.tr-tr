@@ -39,7 +39,7 @@ Ek değil desteklenen senaryolar ve topluluk gelen istekleri için UserVoice For
 
 -   **Sanal makineler ve Azure kapsayıcı**
 
-    [https://docs.microsoft.com/Azure/Virtual-Machines/Windows/Containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
+    [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
 [Önceki](deploy-existing-net-apps-as-windows-containers.md)
