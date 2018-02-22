@@ -6,7 +6,7 @@
       tocHref: /dotnet/
       topicHref: /dotnet/index
       items:
-        - name: API başvurusu
+        - name: .NET API Tarayıcısı
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
         - name: .NET Kılavuzu
