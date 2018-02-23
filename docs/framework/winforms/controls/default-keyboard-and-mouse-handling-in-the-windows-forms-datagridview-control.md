@@ -1,12 +1,9 @@
 ---
-title: "Windows Forms DataGridView Denetiminde Varsayılan Klavye ve Fare Kullanımı"
-ms.custom: 
-ms.date: 03/30/2017
+title: "Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme"
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Varsayılan Klavye ve Fare Kullanımı
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Varsayılan klavye ve fare Windows Forms DataGridView denetiminde işleme
+
 Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine açıklamaktadır <xref:System.Windows.Forms.DataGridView> denetim klavye ve fare aracılığıyla.  
   
 > [!NOTE]
@@ -54,9 +52,10 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 |CTRL + SHIFT + SEKME|Varsa <xref:System.Windows.Forms.DataGridView.StandardTab%2A> özellik değeri `false`, üst öğe kapsayıcısı sekme sırasını, önceki denetimi odağı taşır.<br /><br /> Varsa <xref:System.Windows.Forms.DataGridView.StandardTab%2A> özellik değeri `true`, önceki hücrenin geçerli satırda odağı taşır. Odağı satırın ilk hücreye ise, önceki satırdaki son hücreye odağı taşır. Odağı denetimi ilk hücresinde ise, üst öğe kapsayıcısı sekme sırasını, önceki denetimi odağı taşır.|  
 |CTRL + OK|Ok yönünü en uzak hücreye odağı taşır.|  
 |CTRL + HOME|Odağı denetimi ilk hücreye taşır.|  
-|CTRL + END|Odağı denetimi son hücreye taşır.|  
+|CTRL+END|Odağı denetimi son hücreye taşır.|  
 |CTRL + PAGE DOWN/YUKARI|PAGE DOWN veya PAGE UP aynıdır.|  
-|F2|Geçerli hücreyi hücre düzenleme moduna koyar <xref:System.Windows.Forms.DataGridView.EditMode%2A> özellik değeri <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> veya <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|  
+|F2|Geçerli hücreyi hücre düzenleme moduna koyar <xref:System.Windows.Forms.DataGridView.EditMode%2A> özellik değeri <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> veya <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>.|
+|F3|Varsa geçerli sütun sıralar <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> özellik değeri <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. Geçerli sütun başlığını tıklatarak ile aynıdır. .NET Framework 4.7.2 sürümünden itibaren kullanılabilir. Bu özelliği etkinleştirmek için uygulamaları .NET Framework 4.7.2 veya sonraki sürümlerini hedefleyen veya açıkça AppContext anahtarları kullanılarak erişilebilirlik artışlarını opt gerekir.|  
 |F4|Geçerli hücreyi ise bir <xref:System.Windows.Forms.DataGridViewComboBoxCell>, hücre düzenleme moduna geçer ve aşağı açılan listede görüntülenir.|  
 |ALT + YUKARI/AŞAĞI OK|Geçerli hücreyi ise bir <xref:System.Windows.Forms.DataGridViewComboBoxCell>, hücre düzenleme moduna geçer ve aşağı açılan listede görüntülenir.|  
 |ALANI|Geçerli hücreyi ise bir <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, veya <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, başlatır <xref:System.Windows.Forms.DataGridView.CellClick> ve <xref:System.Windows.Forms.DataGridView.CellContentClick> olaylar. Geçerli hücreyi ise bir <xref:System.Windows.Forms.DataGridViewButtonCell>, ayrıca düğmesine basarsa. Geçerli hücreyi ise bir <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, ayrıca onay durumunu değiştirir.|  
@@ -65,9 +64,10 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 |GERİ AL|Bir hücre düzenleme ekleme noktasını önceki karakteri siler.|  
 |DELETE|Karakter, bir hücre düzenleme yaparken sonra ekleme noktasını siler.|  
 |CTRL + ENTER|Herhangi bir değişiklik odağı taşımadan geçerli hücreyi kaydeder. Ayrıca ile denetimi düzenleme veya sanal modunu destekleyen bir veri kaynağına bağlıysa geçerli satır yapılan değişiklikler uygulandıktan işlemeleri satır yürütme kapsam düzeyi.|  
-|CTRL + 0|Girer bir <xref:System.DBNull.Value?displayProperty=nameWithType> hücre düzenlenebiliyorsa geçerli hücreye değer. Varsayılan olarak, görüntüleme değeri için bir <xref:System.DBNull> hücre değerdir değerini <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellStyle> geçerli hücreyi için etkin.|  
+|CTRL+0|Girer bir <xref:System.DBNull.Value?displayProperty=nameWithType> hücre düzenlenebiliyorsa geçerli hücreye değer. Varsayılan olarak, görüntüleme değeri için bir <xref:System.DBNull> hücre değerdir değerini <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellStyle> geçerli hücreyi için etkin.|  
   
-### <a name="selection-keys"></a>Seçim anahtarları  
+### <a name="selection-keys"></a>Seçim anahtarları
+
  Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliği ayarlanmış `false` ve <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliği ayarlanmış <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, geçerli hücreyi Gezinti anahtarları kullanılarak değiştirildiğinde, yeni hücreye seçimi değişir. Kaydırma, CTRL ve ALT anahtarları bu davranışını etkilemez.  
   
  Varsa <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ayarlanır <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> veya <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>, aynı davranış gerçekleşir, ancak aşağıdaki eklemelerle.  
@@ -83,9 +83,9 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
   
  Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ayarlanır `true` ve <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ayarlanır <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> veya <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, geçerli hücreyi ve Hücre tutturma davranışını aynıdır, ancak yalnızca tam satır veya sütun haline seçili veya seçilmemiş.  
   
-## <a name="default-mouse-handling"></a>Varsayılan fare işleme  
+## <a name="default-mouse-handling"></a>Varsayılan fare işleme
   
-### <a name="basic-mouse-handling"></a>Temel Fare işleme  
+### <a name="basic-mouse-handling"></a>Temel Fare işleme
   
 > [!NOTE]
 >  Her zaman bir hücre sol fare düğmesini tıklatarak geçerli hücreyi değiştirir. Biri kullanılabilir olduğunda bir hücre farenin sağ düğmesiyle tıklatarak bir kısayol menüsü açılır.  
@@ -97,7 +97,8 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
 |Sol fare düğmesini tıklatın|Başlatır <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> ve <xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType> olayları|  
 |Sol fare düğmesini basılı ve sütun üst bilgi hücresini üzerinde sürükleyin|Varsa <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> özelliği `true`, sütun taşır, böylece yeni bir konuma bırakılabilir.|  
   
-### <a name="mouse-selection"></a>Fare seçimi  
+### <a name="mouse-selection"></a>Fare seçimi
+
  Orta fare düğmesini veya fare tekerleği ile ilişkili hiçbir seçim davranıştır.  
   
  Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> özelliği ayarlanmış `false` ve <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliği ayarlanmış <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>, aşağıdaki davranış oluşur.  
@@ -121,6 +122,7 @@ Aşağıdaki tablolar ile kullanıcıların nasıl etkileşim kurabileceğine a�
   
  Varsa <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> ayarlanır `true` ve <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> ayarlanır <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> veya <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, SHIFT veya CTRL tuşuna basarak çalışırken bir hücreyi tıklatın, yalnızca tam satır dışında aynı şekilde davranır ve sütunları etkilenmedi.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>Ayrıca bkz.
+
+<xref:System.Windows.Forms.DataGridView>  
  [DataGridView Denetimi](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

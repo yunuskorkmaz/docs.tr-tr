@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c503eb3300aba4a44c5a013c62942e7a171ae96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 00fc64938e6a063ffbda77961f967e08c169ebd7
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Nasıl yapılır: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
 Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynak güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> denetim bir örnek olarak.  
@@ -33,9 +35,9 @@ Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding
 ## <a name="example"></a>Örnek  
  <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Özelliğine sahip bir varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerini <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Bu bir uygulama olup olmadığını anlamına gelir. bir <xref:System.Windows.Controls.TextBox> veri bağlama ile <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> özelliği, yazdığınız içine metin <xref:System.Windows.Controls.TextBox> kadar kaynak güncelleştirmez <xref:System.Windows.Controls.TextBox> odağı kaybettiğinde (örneğin, tıkladığınızda çıktığınızda <xref:System.Windows.Controls.TextBox>).  
   
- Kaynak olarak güncelleştirilmesini istiyorsanız yazıyorsanız, Ayarla <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamanın <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Aşağıdaki örnekte, `Text` her ikisi de özelliklerini <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBlock> aynı kaynak özelliğe bağlıdır. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği <xref:System.Windows.Controls.TextBox> bağlama ayarlanmış <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
+ Siz yazarken güncelleştirilmesi kaynak istiyorsanız ayarlayın <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> bağlamanın <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Aşağıdaki örnekte, kod vurgulanan satırlar, Göster `Text` her ikisi de özelliklerini <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBlock> aynı kaynak özelliğe bağlıdır. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği <xref:System.Windows.Controls.TextBox> bağlama ayarlanmış <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
- [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#usthowto)]  
+ [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
  Sonuç olarak, <xref:System.Windows.Controls.TextBlock> (kaynak değiştiğinden) metne kullanıcının girdiği aynı metni gösterir <xref:System.Windows.Controls.TextBox>örnek aşağıdaki ekran görüntüsü tarafından gösterildiği gibi:  
   

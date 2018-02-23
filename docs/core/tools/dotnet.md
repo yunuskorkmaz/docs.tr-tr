@@ -3,17 +3,17 @@ title: DotNet command - .NET Core CLI
 description: "Dotnet komutu (.NET Core CLI araçlarını genel sürücüsü) ve kullanımı hakkında bilgi edinin."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="name"></a>Ad
 
-`dotnet`-Komut satırı komutlarını çalıştırmak için genel sürücüsü.
+`dotnet` -Komut satırı komutlarını çalıştırmak için genel sürücüsü.
 
 ## <a name="synopsis"></a>Özet
 
@@ -37,7 +37,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>Açıklama
 
-`dotnet`Komut satırı arabirimi (CLI) zincirinin için genel bir sürücüsüdür. Kendi kendine çağrılan kısa kullanım yönergeleri sağlar.
+`dotnet` Komut satırı arabirimi (CLI) zincirinin için genel bir sürücüsüdür. Kendi kendine çağrılan kısa kullanım yönergeleri sağlar.
 
 Her belirli bir özellik, bir komut olarak uygulanır. Bu özelliği kullanmak için komut sonra belirtilen `dotnet`, gibi [ `dotnet build` ](dotnet-build.md). Tüm komut aşağıdaki bağımsız değişkenleri, kendi bağımsız değişkenler.
 
@@ -200,6 +200,8 @@ Adlı framework bağımlı uygulamayı çalıştırma `myapp.dll`:
 
 ## <a name="environment-variables"></a>Ortam değişkenleri
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 Birincil paketi önbelleği. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%HOME%\NuGet\Packages` Windows.
@@ -211,3 +213,23 @@ Birincil paketi önbelleği. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/pac
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 .NET Core araçları kullanımıyla ilgili veriler toplanır ve Microsoft'a gönderilen olup olmadığını belirtir. Kümesine `true` telemetri özelliğini çevirin için (değerleri `true`, `1`, veya `yes` kabul) Aksi takdirde ayarlanmış `false` katılımı telemetri özellikleri için (değerleri `false`, `0`, veya `no` kabul). Ayarlanmadı, Varsayılanları olup olmadığını `false`, ve telemetri özellik etkindir.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+.NET çekirdeği çalışma zamanı, paylaşılan framework veya SDK olmadığını çözümlenmiş genel konumu belirtir. Ayarlanmazsa, varsayılan olarak, `true`. Kümesine `false` değil genel konumdan çözmek ve .NET çekirdeği yüklemeleri buluncaya (değerleri `0` veya `false` kabul edilir). Birden çok düzeyli arama hakkında daha fazla bilgi için bkz: [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+Birincil paketi önbelleği. Ayarlanmazsa, varsayılan olarak, `$HOME/.nuget/packages` UNIX üzerinde veya `%HOME%\NuGet\Packages` Windows.
+
+`DOTNET_SERVICING`
+
+Çalışma zamanı yüklerken paylaşılan ana bilgisayar tarafından kullanılacak hizmet dizin konumunu belirtir.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+.NET Core araçları kullanımıyla ilgili veriler toplanır ve Microsoft'a gönderilen olup olmadığını belirtir. Kümesine `true` telemetri özelliğini çevirin için (değerleri `true`, `1`, veya `yes` kabul) Aksi takdirde ayarlanmış `false` katılımı telemetri özellikleri için (değerleri `false`, `0`, veya `no` kabul). Ayarlanmadı, Varsayılanları olup olmadığını `false`, ve telemetri özellik etkindir.
+
+---

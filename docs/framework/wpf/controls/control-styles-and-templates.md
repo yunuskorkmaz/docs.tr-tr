@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Denetim Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) denetimleriniz bir <xref:System.Windows.Controls.ControlTemplate> bu denetimin görsel ağaç içerir. Değişiklik yaparak yapısı ve denetiminin görünümünü değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> bu denetimin. Bir denetimin görsel ağaç yalnızca bir bölümünü değiştirmek için bir yolu yoktur; görsel ağaç ayarlamalısınız denetimi değiştirmek için <xref:System.Windows.Controls.Control.Template%2A> yeni ve tam denetim özelliği <xref:System.Windows.Controls.ControlTemplate>.  
@@ -53,7 +53,7 @@ Windows Presentation Foundation (WPF) denetimleriniz bir <xref:System.Windows.Co
  [ComboBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
  [ContextMenu Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
  [DataGrid Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker Syles ve şablonları](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
+ [DatePicker Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
  [DocumentViewer Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
  [Genişletici Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
  [Çerçeve Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
@@ -63,18 +63,18 @@ Windows Presentation Foundation (WPF) denetimleriniz bir <xref:System.Windows.Co
  [ListView Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Menü Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox stilleri ve şablonları](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton stilleri ve şablonları](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Kaydırıcı Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [StatusBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Parmak Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Kaydırma kutusu stilleri ve şablonları](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton stilleri ve şablonları](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView Stilleri ve Şablonları](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

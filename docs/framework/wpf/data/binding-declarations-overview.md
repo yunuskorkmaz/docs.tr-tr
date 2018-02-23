@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>Bağlama Bildirimlerine Genel Bakış
 Bu konuda bir bağlama bildirebilir farklı yolları açıklanmaktadır.  
@@ -47,11 +49,11 @@ Bu konuda bir bağlama bildirebilir farklı yolları açıklanmaktadır.
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Biçimlendirme uzantısı kullanımı  
- <xref:System.Windows.Data.Binding>bir biçimlendirme uzantısıdır. Bir bağlama bildirmek için bağlama uzantısı kullandığınızda, aşağıdaki yan tümceleri bir dizi bildirimi oluşur `Binding` anahtar sözcüğü ve virgülle (,) ayırarak. Bağlama bildirimindeki yan tümceleri herhangi bir sırada olabilir ve birçok olası birleşimler vardır. Yan tümceleri olan *adı*=*değeri* çiftleri nerede *adı* adı <xref:System.Windows.Data.Binding> özelliği ve *değeri* olduğu özelliği için ayar değeri.  
+ <xref:System.Windows.Data.Binding> bir biçimlendirme uzantısıdır. Bir bağlama bildirmek için bağlama uzantısı kullandığınızda, aşağıdaki yan tümceleri bir dizi bildirimi oluşur `Binding` anahtar sözcüğü ve virgülle (,) ayırarak. Bağlama bildirimindeki yan tümceleri herhangi bir sırada olabilir ve birçok olası birleşimler vardır. Yan tümceleri olan *adı*=*değeri* çiftleri nerede *adı* adı <xref:System.Windows.Data.Binding> özelliği ve *değeri* olduğu özelliği için ayar değeri.  
   
  Bağlama bildirimi dizeleri biçimlendirmede oluştururken, hedef nesnenin belirli bağımlılık özelliği eklenmelidir. Aşağıdaki örnekte nasıl bağlanacağını gösterir <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> bağlama uzantısını kullanarak, belirtme özelliği <xref:System.Windows.Data.Binding.Source%2A> ve <xref:System.Windows.Data.Binding.Path%2A> özellikleri.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  Özelliklerinin çoğu belirtebilirsiniz <xref:System.Windows.Data.Binding> bu şekilde sınıfı. Bağlama uzantısı bir listesi için de hakkında daha fazla bilgi için <xref:System.Windows.Data.Binding> bağlama uzantısı kullanarak ayarlanamaz özelliklerine bakın [bağlama biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) genel bakış.  
   
@@ -69,7 +71,7 @@ Bu konuda bir bağlama bildirebilir farklı yolları açıklanmaktadır.
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding ve PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>ve <xref:System.Windows.Data.PriorityBinding> XAML uzantısı sözdizimini desteklemez. Bu nedenle, bildirdiğiniz, nesne öğesi sözdizimini kullanmanız gerekir bir <xref:System.Windows.Data.MultiBinding> veya <xref:System.Windows.Data.PriorityBinding> XAML'de.  
+ <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding> XAML uzantısı sözdizimini desteklemez. Bu nedenle, bildirdiğiniz, nesne öğesi sözdizimini kullanmanız gerekir bir <xref:System.Windows.Data.MultiBinding> veya <xref:System.Windows.Data.PriorityBinding> XAML'de.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Kod içinde bir bağlama oluşturma  
@@ -77,8 +79,6 @@ Bu konuda bir bağlama bildirebilir farklı yolları açıklanmaktadır.
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  Bağladığınız nesne ise bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> çağırabilirsiniz `SetBinding` yöntemi kullanmak yerine doğrudan nesneniz üzerinde <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Bir örnek için bkz: [kod içinde bir bağlaması oluşturma](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   
@@ -94,7 +94,7 @@ Bu konuda bir bağlama bildirebilir farklı yolları açıklanmaktadır.
   
 -   Dizin oluşturucular bir özelliğin özellik adı dizin oluşturucu burada uygulanan aşağıdaki köşeli ayraç içinde belirtilebilir. Örneğin, yan tümcesi `Path=ShoppingCart[0]` , özelliğin iç dizininin "0" sabit dizesini nasıl işlediğini karşılık gelen dizine bağlamayı ayarlar. İç içe dizin oluşturucular da desteklenir.  
   
--   İçinde dizin oluşturucular ve alt karışabilir bir `Path` yan tümcesi; Örneğin,`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   İçinde dizin oluşturucular ve alt karışabilir bir `Path` yan tümcesi; Örneğin, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Dizin oluşturucular içinde virgülle (,) ayırarak birden çok dizin oluşturucu parametresi olabilir. Her parametre türü parantezler ile belirtilebilir. Örneğin, sahip `Path="[(sys:Int32)42,(sys:Int32)24]"`, burada `sys` eşlenmiş `System` ad alanı.  
   

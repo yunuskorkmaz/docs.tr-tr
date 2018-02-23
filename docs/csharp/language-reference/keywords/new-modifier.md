@@ -2,18 +2,20 @@
 title: "new Değiştiricisi (C# Başvurusu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new Değiştiricisi (C# Başvurusu)
 Bir bildirim değiştirici kullanıldığında `new` anahtar sözcüğü bir taban sınıftan devralınan üye açıkça gizler. Devralınmış bir üyeyi gizleme, üye türetilmiş sürümünü temel sınıf sürümü değiştirir. Kullanmadan üyeleri gizleyebilirsiniz rağmen `new` değiştiricisi, derleyici uyarısı alırsınız. Kullanırsanız `new` açıkça üyesi gizlemek için bu uyarıyı bastırır.  
@@ -26,7 +28,7 @@ Bir bildirim değiştirici kullanıldığında `new` anahtar sözcüğü bir tab
   
  Devralma yoluyla gizleme adı aşağıdaki biçimlerden birini alır:  
   
--   Genellikle, sabit, alan, özelliği veya bir sınıf veya yapı biriminde sunulan türü adını paylaşan tüm taban sınıfı üyeleri gizler.  Özel durumlar vardır.  Örneğin, yeni bir ad alanıyla bildirirseniz `N` invocable olmayan bir türü ve bir taban türü bildirir `N` bir yöntemi olması için yeni alan çağırma söz dizimi temel bildiriminde gizlemez.  Bkz: [5.0 C# dil belirtimi](http://go.microsoft.com/fwlink/?LinkId=199552) için ayrıntıları ("İfadeleri" bölümünde "Üye araması" bölümüne bakın).  
+-   Genellikle, sabit, alan, özelliği veya bir sınıf veya yapı biriminde sunulan türü adını paylaşan tüm taban sınıfı üyeleri gizler.  Özel durumlar vardır.  Örneğin, yeni bir ad alanıyla bildirirseniz `N` invocable olmayan bir türü ve bir taban türü bildirir `N` bir yöntemi olması için yeni alan çağırma söz dizimi temel bildiriminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("İfadeleri" bölümünde "Üye araması" bölümüne bakın).  
   
 -   Sınıfta veya yapı biriminde sunulan bir yöntemi, özellikleri, alanları ve temel sınıfı ad paylaşmak türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıf yöntemlerini gizler.  
   
@@ -57,9 +59,9 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [İşleç anahtar sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [İşleç Anahtar Sözcükleri](../../../csharp/language-reference/keywords/operator-keywords.md)  
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
- [Geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [Geçersiz kılma ve yeni anahtar sözcüklerin ne zaman kullanılacağını bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)
+ [Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+ [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

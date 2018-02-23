@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -68,7 +68,7 @@ Bir nesne farklı bir türe dönüştürmeniz gerekebilir.
 
 - [Bir dizeyi bir sayı temsil edip etmediğini belirlemek](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Onaltılık sayıları temsil eden dizeleri ve sayı arasında dönüştürme](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
-- [Bir dizeye dönüştürme bir <xref:System.DateTime> ](../programming-guide/strings/how-to-convert-a-string-to-a-datetime.md).
+- [Bir dizeye dönüştürme bir `DateTime` ](../../standard/base-types/parsing-datetime.md).
 - [Bir bayt dizisi int'e dönüştürme](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Bir dizeyi sayıya dönüştürme](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Kullanım `as` ve `is` farklı bir türe güvenli bir şekilde atama için](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
