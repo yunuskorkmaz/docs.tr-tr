@@ -6,12 +6,13 @@ ms.author: mairaw
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: ca56bfb37cee60ab014dada7b5d72b74b375dd7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>.NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yükleme
 
@@ -39,4 +40,4 @@ Windows 10, Windows 8.1 ve Windows 8 uygulama çalıştırmak için .NET Framewo
 
 Yükleme sırasında hata 0x800f0906, 0x800f0907, 0x800f081f veya 0x800F0922 bakın; bu durumda, karşılaşabileceğiniz [.NET Framework 3.5 yükleme hatası: 0x800f0906, 0x800f0907 veya 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) bunları gidermek nasıl görmek için sorunları.
 
-Önceki makalede açıklanan yöntemlerden herhangi birini başarısız olursa veya bir Internet bağlantısı yoksa, Windows yükleme medyasını kullanmak gereklidir. Daha fazla bilgi için bkz: [Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) kullanarak .NET Framework 3.5 dağıtmak](https://technet.microsoft.com/library/Dn482069.aspx). Yükleme medyasının yoksa bkz [yükleme medyasını oluşturmak için Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Önceki makalede açıklanan yöntemlerden herhangi birini başarısız olursa veya bir Internet bağlantısı yoksa, Windows yükleme medyasını kullanmak gereklidir. Daha fazla bilgi için bkz: [Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) kullanarak .NET Framework 3.5 dağıtmak](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Yükleme medyasının yoksa bkz [yükleme medyasını oluşturmak için Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

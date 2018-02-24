@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 20312b58a24dc991791edad4bb92d3a8ca6d501a
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 5aa097c19a86e9ae62a37d91fb1b54067280286d
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Lambda ifadeleri karşılaştırma yerel işlevler
 
@@ -38,19 +38,19 @@ Kesin atama kurallarının yerel işlevi veya lamdba epression tarafından yakal
 Üçüncü derleyici kesinlikle yakalanan değişkenleri çevreleyen kapsamdaki atamak yerel işlevler sağlayan statik çözümleme gerçekleştirebilirsiniz. Bu örneği göz önünde bulundurun:
 
 ```csharp
-bool M()
+int M()
 {
     int y;
-    Local();
+    LocalFunction();
     return y;
 
-    void Local() => y = 0;
+    void LocalFunction() => y = 0;
 }
 ```
 
-Derleyici, belirleyebilirsiniz `Local` kesinlikle atar `y` çağrıldığında. Çünkü `Local` önce adlı `return` deyimi, `y` definitiely atanmıştır `return` deyimi.
+Derleyici, belirleyebilirsiniz `LocalFunction` kesinlikle atar `y` çağrıldığında. Çünkü `LocalFunction` önce adlı `return` deyimi, `y` definitiely atanmıştır `return` deyimi.
 
-Bu analizi sağlar analiz dördüncü fark sağlar.
+Örnek analiz etkinleştirir analiz dördüncü fark sağlar.
 Kullanımlarını bağlı olarak, her zaman lambda ifadeleri için gerekli olan yığın ayırmaları yerel işlevler önleyebilirsiniz. Yerel bir işlev hiçbir zaman bir temsilciye dönüştürülür ve yerel işlevi tarafından yakalanan değişkenleri hiçbiri diğer Lambda'lar veya temsilcileri dönüştürülür yerel işlevler tarafından yakalanır, derleyici yığın ayırmaları önleyebilirsiniz. 
 
 Bu zaman uyumsuz örneği göz önünde bulundurun:

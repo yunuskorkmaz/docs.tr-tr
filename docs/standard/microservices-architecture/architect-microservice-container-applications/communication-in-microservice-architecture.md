@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f373119f4d221745063688a9a5211d5ae11598b7
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisi iletişimi
 
@@ -47,7 +47,7 @@ Tek bir alıcı veya birden çok alıcı iletişimi varsa, ikinci eksen tanımla
 
 Mikro hizmet tabanlı bir uygulama, genellikle bu iletişim stilleri bileşimini kullanır. En yaygın tür tek alıcı HTTP/HTTPS gibi zaman uyumlu bir protokolle normal bir Web API HTTP hizmeti başlatılırken iletişimidir. Mikro de genellikle mikro arasında zaman uyumsuz iletişim için Mesajlaşma protokolleri kullanır.
 
-Bu eksenler daha anlaşılır olması olası iletişim mekanizmalarına sahip, ancak bunlar önemli sorunları mikro oluştururken değil şekilde bilmek iyi. Seçili Protokolü istemci iş parçacığı yürütmesi bile zaman uyumsuz yapısı zaman uyumsuz yapısını bazı önemli noktalar mikro tümleştirme. Ne *olan* önemli, mikro zaman uyumsuz olarak mikro, bağımsızlığı korurken aşağıdaki bölümde açıklandığı gibi tümleştirebilir yapılıyor.
+Bu eksenler daha anlaşılır olması olası iletişim mekanizmalarına sahip, ancak bunlar önemli sorunları mikro oluştururken değil şekilde bilmek iyi. Ne istemci iş parçacığı yürütme zaman uyumsuz yapısını ve seçilen protokol zaman uyumsuz yapısını mikro tümleştirdiğinizde önemli noktaları değildir. Ne *olan* önemli, mikro zaman uyumsuz olarak mikro, bağımsızlığı korurken aşağıdaki bölümde açıklandığı gibi tümleştirebilir yapılıyor.
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>Zaman uyumsuz mikro hizmet tümleştirme mikro'nın otonomisi zorlar
 

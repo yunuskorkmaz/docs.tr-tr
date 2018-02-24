@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e074874a539d1dd52901ff6a5841b5a501b5b5af
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Nasıl yapılır: Task.WhenAll (C#) kullanarak tarafından izlenecek zaman uyumsuz genişletme
 Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri koleksiyonu temsil edilir birden çok zaman uyumsuz işlemleri bekler.  
@@ -25,7 +26,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kull
  Uyguladığınız `Task.WhenAll` yöntemine görevleri koleksiyonu. Uygulamayı `WhenAll` koleksiyondaki her görev tamamlanana kadar tamamlanmadıysa tek bir görev döndürür. Paralel olarak çalıştırmak için görevler görüntülenir, ancak hiçbir ek iş parçacığı oluşturulur. Herhangi bir sırada görevleri gerçekleştirebilirsiniz.  
   
 > [!IMPORTANT]
->  Aşağıdaki yordamlar uzantıları da geliştirilmiş zaman uyumsuz uygulamalara açıklar [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Kılavuzu tamamladıktan veya koddan indirme uygulamaları geliştirmek [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=255191).  
+>  Aşağıdaki yordamlar uzantıları da geliştirilmiş zaman uyumsuz uygulamalara açıklar [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Kılavuzu tamamladıktan veya koddan indirme uygulamaları geliştirmek [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
 >   
 >  Örneği çalıştırmak için Visual Studio 2012 veya daha sonra bilgisayarınıza yüklenmiş olmalıdır.  
   
@@ -33,7 +34,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kull
   
 1.  Ekleme `ProcessURLAsync` da geliştirilmiş ilk uygulamaya yöntemi [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.cs dosyasına kayıt yapar.  
+    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.cs dosyasına kayıt yapar.  
   
     -   Kod gözden geçirme tamamlayarak geliştirdiyseniz eklemek `ProcessURLAsync` içeren uygulamaya `GetURLContentsAsync` yöntemi. İlk örnek "Tam kod örnekleri gelen izlenecek yolu" bölümünde bu uygulama için MainWindow.xaml.cs dosyasıdır.  
   
@@ -82,7 +83,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kull
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll`görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
+4.  Uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll` görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
   
      Aşağıdaki örnekte, `await` ifade tek tamamlanmasını bekler, görev `WhenAll` döndürür. Dizisi her tamsayı indirilen bir Web sitesi uzunluğu olduğu, için ifadeyi hesaplar. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
   
@@ -105,7 +106,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kull
   
 1.  Aşağıdaki sürümü eklemek `ProcessURLAsync` da geliştirilmiş ikinci uygulamaya [izlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough_HttpClient projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.cs dosyasına kayıt yapar.  
+    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.cs dosyasına kayıt yapar.  
   
     -   Kod gözden geçirme tamamlayarak geliştirdiyseniz eklemek `ProcessURLAsync` kullanan uygulama için `HttpClient.GetByteArrayAsync` yöntemi. Bu uygulama için MainWindow.xaml.cs "Tam kod örnekleri gelen izlenecek yolu" bölümündeki ikinci örneğe dosyasıdır.  
   
@@ -157,7 +158,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: async kull
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Ardından, uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll`görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
+4.  Ardından, uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll` görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
   
      Aşağıdaki örnekte, `await` ifade tek tamamlanmasını bekler, görev `WhenAll` döndürür. Tamamlandığında, `await` dizisi her tamsayı indirilen bir Web sitesi uzunluğu olduğu, için ifadeyi hesaplar. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
   

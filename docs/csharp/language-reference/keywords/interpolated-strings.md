@@ -2,17 +2,18 @@
 title: "Ara değerli dizeler (C#)"
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Ara değerli dizeler (C# Başvurusu)
 
@@ -23,7 +24,7 @@ Ara değerli bir dize bağımsız değişkenleri daha anlamak daha kolay bir [bi
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-'{name}', iki ara değerli ifadeleri içerir ve '{saat: ss}'. Eşdeğer bileşik biçim dizesi şöyledir:
+'{name}', iki ara değerli ifadeleri içerir ve '{saatleri: ss}'. Eşdeğer bileşik biçim dizesi şöyledir:
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -80,7 +81,7 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
 
    Ara değerli dize yalnızca yansıma kullanarak Denetlenmekte olduğunu unutmayın. Yöntemi, aşağıdaki gibi biçimlendirme dizeye geçip geçmediğini <xref:System.Console.WriteLine(System.String)>biçimi öğelerinden çözümlendiği ve sonucu dize döndürdü. 
 
-3. Ara değerli bir dizeye dönüştürme bir <xref:System.FormattableString> bileşik biçim dizesi gösteren değişkeni. Bileşik biçim dizesi ve nasıl dizeyi sonucunda işler İnceleme Örneğin, bir sorgu oluşturuyorsanız ekleme saldırılara karşı korunmaya yardımcı olabilir. <xref:System.FormattableString>Ayrıca içerir <xref:System.FormattableString.ToString> olanak tanıyan aşırı üretmek için sonuç dizeleri <xref:System.Globalization.CultureInfo.InvariantCulture> ve <xref:System.Globalization.CultureInfo.CurrentCulture>.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), format kadar çift süslü ayraçlar kalır.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
+3. Ara değerli bir dizeye dönüştürme bir <xref:System.FormattableString> bileşik biçim dizesi gösteren değişkeni. Bileşik biçim dizesi ve nasıl dizeyi sonucunda işler İnceleme Örneğin, bir sorgu oluşturuyorsanız ekleme saldırılara karşı korunmaya yardımcı olabilir. <xref:System.FormattableString> Ayrıca içerir <xref:System.FormattableString.ToString> olanak tanıyan aşırı üretmek için sonuç dizeleri <xref:System.Globalization.CultureInfo.InvariantCulture> ve <xref:System.Globalization.CultureInfo.CurrentCulture>.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), format kadar çift süslü ayraçlar kalır.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
 
    [!code-csharp[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 
@@ -91,4 +92,4 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
