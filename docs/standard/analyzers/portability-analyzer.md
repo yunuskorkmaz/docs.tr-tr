@@ -13,11 +13,11 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -25,8 +25,8 @@ Birden çok platform Kitaplıklarınızı olmak istersiniz? Ne kadar işin uygul
 
 ## <a name="new-targets"></a>Yeni hedefler
 
-* [.NET core](https://dotnetfoundation.org/net-core): modüler bir tasarıma sahiptir, yan yana uygular ve platformlar arası senaryolar hedefler. Yan yana diğer uygulamalar bozmadan yeni .NET Core sürümleri benimsemesini sağlar.
-* [ASP.NET Core](https://dotnetfoundation.org/asp-net-core): bir çerçevedir modern web-böylece geliştiriciler aynı avantajları vermiş .NET Core üzerinde oluşturulmuştur.
+* [.NET core](../../core/index.md): modüler bir tasarıma sahiptir, yan yana uygular ve platformlar arası senaryolar hedefler. Yan yana diğer uygulamalar bozmadan yeni .NET Core sürümleri benimsemesini sağlar.
+* [ASP.NET Core](/aspnet/core): bir çerçevedir modern web-böylece geliştiriciler aynı avantajları vermiş .NET Core üzerinde oluşturulmuştur.
 * [Evrensel Windows platformu](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): x64 ve ARM makineler .NET yerel'ın statik derleme kullanarak çalışan Windows mağazası uygulamalarınızı performansını artırma. 
 * .NET core + Platform uzantıları: .NET ekosistemi WCF ve ASP.NET Core, FSharp ve Azure gibi diğer API'lerin yanı sıra .NET Core API'ları içerir.
 * .NET standart + Platform uzantıları: WCF ve ASP.NET Core, FSharp ve Azure gibi diğer .NET ekosistemi yanı sıra .NET standart API'lerini içerir.
@@ -47,8 +47,8 @@ Analiz çalıştırdıktan sonra .NET taşınabilirlik raporunuzu görürsünüz
 
 Visual Studio kullanmak istemiyor musunuz? Komut isteminden taşınabilirlik Çözümleyicisi'ni de kullanabilirsiniz. Yalnızca karşıdan [API taşınabilirlik Çözümleyicisi](http://www.microsoft.com/download/details.aspx?id=42678).
 
-*   Geçerli dizin çözümlemek için aşağıdaki komutu yazın:`\...\ApiPort.exe analyze -f .`
-*   Belirli bir .dll dosyaları listesini çözümlemek için aşağıdaki komutu yazın:`\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+*   Geçerli dizin çözümlemek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f .`
+*   Belirli bir .dll dosyaları listesini çözümlemek için aşağıdaki komutu yazın: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET taşınabilirlik raporunuzu bir Excel dosyası olarak kaydedilir (*.xlsx*) geçerli dizininizde. **Ayrıntıları** Excel çalışma kitabı sekmesi daha fazla bilgi içerir.
 

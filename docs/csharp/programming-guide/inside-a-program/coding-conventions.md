@@ -2,25 +2,24 @@
 title: "C# Kodlama Kuralları (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
-[C# dil belirtimi](http://go.microsoft.com/fwlink/?LinkId=199552) kodlama standart tanımlamıyor. Ancak, bu konudaki yönergeleri, örnekler ve belgeler geliştirmek için Microsoft tarafından kullanılır.  
-  
  Kodlama kuralları aşağıdaki amaca hizmet eder:  
   
 -   Okuyucular içeriğine değil düzeni odaklanabilmeniz bunlar kodu tutarlı bir görünüm oluşturur.  
@@ -30,6 +29,8 @@ ms.lasthandoff: 11/21/2017
 -   Bunlar, kopyalama, değiştirme ve kod bakımı kolaylaştırır.  
   
 -   Bunlar, C# en iyi uygulamaları gösterir.  
+
+ Bu konudaki yönergeleri, örnekler ve belgeler geliştirmek için Microsoft tarafından kullanılır.  
   
 ## <a name="naming-conventions"></a>Adlandırma kuralları  
   
@@ -202,4 +203,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic kodlama kuralları](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
- [Güvenli kodlama yönergeleri](../../../standard/security/secure-coding-guidelines.md)
+ [Güvenli Kodlama Yönergeleri](../../../standard/security/secure-coding-guidelines.md)

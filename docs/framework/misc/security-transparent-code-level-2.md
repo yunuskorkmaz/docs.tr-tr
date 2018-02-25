@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba7b6bca4618b8de7c1b5ce2ef45b8455ee71c5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 66d3611117c02b60bcf4b3713cd2b5bd79856add
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 <a name="top"></a>
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `SecurityCritical`: Bu derlemedeki türleri tarafından sunulan tüm kod önemlidir; diğer tüm kod saydamdır. Bu senaryoda, tüm öznitelikleri değil belirtme benzer; Ancak, ortak dil çalışma zamanı saydamlık kuralları otomatik olarak belirlemez. Örneğin, bir sanal veya soyut yöntemi geçersiz kılma veya arabirim yöntemi, varsayılan olarak uygulamak, bu yöntem saydamdır. Açıkça yöntemi olarak ek açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`; Aksi halde, bir <xref:System.TypeLoadException> yükleme zamanında oluşturulur. Bu kural, ayrıca hem temel sınıfını hem de türetilmiş bir sınıf aynı bütünleştirilmiş kodda olduğunda geçerlidir.  
   
--   `AllowPartiallyTrustedCallers`(Düzey 2 yalnızca): tüm varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.  
+-   `AllowPartiallyTrustedCallers` (Düzey 2 yalnızca): tüm varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.  
   
  Aşağıdaki tabloda, Düzey 2 Düzey 1 için derleme düzeyi davranışı karşılaştırır.  
   

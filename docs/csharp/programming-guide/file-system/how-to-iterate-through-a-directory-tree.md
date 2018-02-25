@@ -2,20 +2,21 @@
 title: "Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)
 Her iç içe alt herhangi bir derinliğe bir belirtilen kök klasörü altında her dosyaya erişmek deyimi "dizin ağacı yinelemek" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Dosya veya alt dizini olarak adını alıp bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Bellek veya disk üzerindeki bir dizin ağacında içeriğini depolamanız gerekir, yalnızca depolamak için en iyi seçenek olan <xref:System.IO.FileSystemInfo.FullName%2A> özelliği (tür `string`) her dosya için. Yeni bir oluşturmak için bu dizeyi ardından kullanabilirsiniz <xref:System.IO.FileInfo> veya <xref:System.IO.DirectoryInfo> nesne gerektiğinde veya ek işleme gerektiren herhangi bir dosyayı açın.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Sağlam dosya yineleme kodu dosya sisteminin birçok karmaşıklık dikkate almanız gerekir. Daha fazla bilgi için bkz: [NTFS teknik başvuru](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ Sağlam dosya yineleme kodu dosya sisteminin birçok karmaşıklık dikkate almanız gerekir. Windows dosya sistemi ile ilgili daha fazla bilgi için bkz: [NTFS teknik başvuru](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IO>  
- [LINQ ve dosya dizinleri](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ ve Dosya Dizinleri](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Dosya sistemi ve kayıt defteri (C# programlama Kılavuzu)](../../../csharp/programming-guide/file-system/index.md)

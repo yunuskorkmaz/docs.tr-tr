@@ -2,21 +2,22 @@
 title: "Olaylar (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ab40de46bf198cf683ec4847a42d88b3d4807e0
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 72563b9e37c26257a2bf5939f63ece050ec003ab
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya diğer bildirmek için nesne sınıfları nesneleri çeken bir şey olduğunda. Gönderir sınıfı (veya *başlatır*) olay çağrılır *yayımcı* ve alma sınıfları (veya *işlemek*) olay çağrılır *aboneleri* .  
@@ -41,31 +42,31 @@ Olayları etkinleştir bir [sınıfı](../../../csharp/language-reference/keywor
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  
   
--   [Nasıl yapılır: abone olaylara ve aboneliği kaldırma](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
+-   [Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
   
--   [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+-   [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
   
--   [Nasıl yapılır: türetilmiş sınıflarda temel sınıf olayları oluşturma](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
+-   [Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 -   [Nasıl yapılır: arabirim olaylarını uygulama](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
   
--   [İş parçacığı eşitleme](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+-   [İş Parçacığı Eşitleme](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
   
--   [Nasıl yapılır: olay örneklerini depolamak için Sözlük kullanma](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
+-   [Nasıl yapılır: Olay Örneklerini Depolamak için Sözlük Kullanma](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
--   [Nasıl yapılır: özel olay erişimcilerini uygulama](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
+-   [Nasıl yapılır: Özel Olay Erişimcilerini Uygulama](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapters"></a>Özel Kitap Bölümleri  
- [Temsilciler ve olaylar Lambda ifadeleri](http://go.microsoft.com/fwlink/?LinkId=195395) içinde [C# 3.0 Kılavuzu, üçüncü baskı: C# 3.0 programcıları için 250'den fazla çözüm](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Temsilciler ve olaylar Lambda ifadeleri](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) içinde [C# 3.0 Kılavuzu, üçüncü baskı: C# 3.0 programcıları için 250'den fazla çözüm](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
- [Temsilciler ve olaylar](http://go.microsoft.com/fwlink/?LinkId=195418) içinde [öğrenme C# 3.0: C# 3.0 ile ilgili temel bilgileri Yöneticisi](http://go.microsoft.com/fwlink/?LinkId=195412)  
+ [Temsilciler ve olaylar](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) içinde [öğrenme C# 3.0: C# 3.0 ile ilgili temel bilgileri Yöneticisi](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.EventHandler>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Windows Forms'ta olay işleyicileri oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Olay tabanlı zaman uyumsuz desen ile birden çok iş parçacıklı programlama](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+ [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
