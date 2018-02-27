@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 .NET Framework bağımsız dilidir. Bir geliştirici olarak size .NET Framework, C#, C + gibi hedef birçok dilde birinde geliştirebilirsiniz, yani +/ CLI, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türleri ve sınıf kitaplıkları için .NET Framework, bunlar ilk olarak yazılmış içinde dili bilmenize gerek kalmadan ve özgün dil kuralları birini izleyin gerek kalmadan geliştirilen üyeleri erişebilir. Bileşen geliştiriciyseniz bileşeniniz dili bağımsız olarak herhangi bir .NET Framework uygulama tarafından erişilebilir.  
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/23/2017
 |Aşırı Yükleme|[Overloads](#overloads)|Yalnızca özelliklerini ve yöntemlerini aşırı yüklenmiş.|37|  
 |Aşırı Yükleme|[Overloads](#overloads)|Özellikleri ve yöntemleri aşırı yüklenebilir yalnızca sayısı ve türleri adlı dönüşüm işleçleri dışında kendi parametreleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
 |Aşırı Yükleme|--|Tür tarafından bildirilen iki veya daha fazla CLS uyumlu yöntemler türü örneklemesi, belirli bir dizi için aynı sistemine varsa aynı parametre ve dönüş türleri, thenall bu yöntemler bu tür örneklemesi anlam olarak eşdeğer olacaktır.|48|  
-|Türler|[Ve üye imzaları yazın.](#Types)|<xref:System.Object?displayProperty=nameWithType>CLS uyumlu değil. CLS uyumlu herhangi bir sınıf CLS uyumlu bir sınıftan devralınan.|23|  
+|Türler|[Ve üye imzaları yazın.](#Types)|<xref:System.Object?displayProperty=nameWithType> CLS uyumlu değil. CLS uyumlu herhangi bir sınıf CLS uyumlu bir sınıftan devralınan.|23|  
 |Özellikler|[Özellikler](#properties)|Bir özellik shallbe'Set ' yordamı yöntemleri uygulamak yöntemleri işaretlenmiş `SpecialName` meta veriler.|24|  
 |Özellikler|[Özellikler](#properties)|Bir özelliğin erişimciler tüm statik olacaktır, tüm sanal veya tüm örneği olmalıdır.|26|  
 |Özellikler|[Özellikler](#properties)|Bir özelliğin türünü alıcı dönüş türü ve kurucu son bağımsız değişkeni tür olacaktır. Özelliğin parametre türlerini alıcı ve tüm türleri parametreleri ancak kurucu son parametre türleri olacaktır. Tüm bu tür CLS uyumlu olacaktır ve yönetilen işaretçileri tutulamaz (yani, başvuruya göre geçirilmesi değil).|27|  
@@ -187,7 +187,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Int64>|64 bit işaretli tamsayıyı|  
 |<xref:System.Single>|Tek duyarlıklı kayan noktalı değeri|  
 |<xref:System.Double>|Çift duyarlıklı kayan noktalı değeri|  
-|<xref:System.Boolean>|`true`veya `false` değer türü|  
+|<xref:System.Boolean>|`true` veya `false` değer türü|  
 |<xref:System.Char>|UTF-16 kodlu kod birimi|  
 |<xref:System.Decimal>|Olmayan kayan noktalı ondalık sayı|  
 |<xref:System.IntPtr>|İşaretçi veya platform tarafından tanımlanan bir boyut tanıtıcısı|  
@@ -201,7 +201,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.TypedReference>|Bir nesne ve çalışma zamanı türü işaretçi|Yok.|  
 |<xref:System.UInt16>|16 bit işaretsiz tamsayıyı|<xref:System.Int32>|  
 |<xref:System.UInt32>|32 bit işaretsiz tamsayıyı|<xref:System.Int64>|  
-|<xref:System.UInt64>|64 bit işaretsiz tamsayıyı|<xref:System.Int64>(taşma), <xref:System.Numerics.BigInteger>, veya<xref:System.Double>|  
+|<xref:System.UInt64>|64 bit işaretsiz tamsayıyı|<xref:System.Int64> (taşma), <xref:System.Numerics.BigInteger>, veya <xref:System.Double>|  
 |<xref:System.UIntPtr>|İmzasız işaretçi veya tanıtıcısı|<xref:System.IntPtr>|  
   
  .NET Framework sınıf kitaplığı veya başka bir sınıf kitaplığı CLS ile uyumlu olmayan diğer türleri içerebilir; Örneğin:  
@@ -391,7 +391,7 @@ ms.lasthandoff: 12/23/2017
   
  Ortak dil belirtimi, iç içe geçmiş türler için koruyucu örneklemesi başına modeli uygular ve korumalı üyeler. Açık genel türler alanları veya iç içe geçmiş, korumalı bir genel türü belirli bir örnek oluşturma içeren imzaları üyeleriyle gösteremez. Belirli bir örnek oluşturma genel temel sınıf veya arabirim genişletmek olmayan genel türleri, alanlar veya iç içe geçmiş, korumalı bir genel türü farklı bir örnek oluşturma içeren imzaları üyeleriyle gösteremez.  
   
- Aşağıdaki örnek, genel bir tür tanımlar `C1<T>` (veya `C1(Of T)` Visual Basic'te) ve korumalı bir sınıf `C1<T>.N` (veya `C1(Of T).N` Visual Basic'te). `C1<T>`iki yöntemi vardır `M1` ve `M2`. Ancak, `M1` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) C1 nesnesinden\<T > (veya `C1(Of T)`). İkinci sınıfı `C2`, türetildiği `C1<long>` (veya `C1(Of Long)`). İki yöntemi vardır `M3` ve `M4`. `M3`döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) öğesinin bir alt nesne `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğini unutmayın. Derlemeye çalıştığında bu örnekte, Visual Basic hata görüntüler. `M4`.  
+ Aşağıdaki örnek, genel bir tür tanımlar `C1<T>` (veya `C1(Of T)` Visual Basic'te) ve korumalı bir sınıf `C1<T>.N` (veya `C1(Of T).N` Visual Basic'te). `C1<T>` iki yöntemi vardır `M1` ve `M2`. Ancak, `M1` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) C1 nesnesinden\<T > (veya `C1(Of T)`). İkinci sınıfı `C2`, türetildiği `C1<long>` (veya `C1(Of Long)`). İki yöntemi vardır `M3` ve `M4`. `M3` döndürmeye çalışır CLS uyumlu olmadığından bir `C1<int>.N` (veya `C1(Of Integer).N`) öğesinin bir alt nesne `C1<long>`. Dil derleyicileri daha kısıtlayıcı olabileceğini unutmayın. Derlemeye çalıştığında bu örnekte, Visual Basic hata görüntüler. `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  

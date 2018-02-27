@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Denetim akışı zaman uyumsuz programlarda (C#)
 Yazma ve kullanarak zaman uyumsuz programlar daha kolay korumak `async` ve `await` anahtar sözcükler. Programınızı nasıl çalıştığını anlamak yoktur, ancak, sonuçlar beklenmedik. Bu konu izlemeler her zaman bir yönteminden denetimi başka hangi bilgileri taşır göstermek için bir basit zaman uyumsuz program aracılığıyla denetim akışı aktarılır.  
@@ -29,7 +30,7 @@ Yazma ve kullanarak zaman uyumsuz programlar daha kolay korumak `async` ve `awai
   
 -   `startButton_Click`, hangi çağrıları `AccessTheWebAsync` ve sonucu görüntüler.  
   
--   `AccessTheWebAsync`, bir dize olarak bir Web sitesi içeriğini indirir ve dize uzunluğu döndürür. `AccessTheWebAsync`zaman uyumsuz bir kullanan <xref:System.Net.Http.HttpClient> yöntemi, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, içerik indirilemedi.  
+-   `AccessTheWebAsync`, bir dize olarak bir Web sitesi içeriğini indirir ve dize uzunluğu döndürür. `AccessTheWebAsync` zaman uyumsuz bir kullanan <xref:System.Net.Http.HttpClient> yöntemi, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, içerik indirilemedi.  
   
  Program nasıl çalışacağını anlamanıza yardımcı olması için ve işaretlenmiş her noktada ne olacağını açıklamak için program boyunca stratejik noktalarda çizgiler görünür görüntü numaralı. Görüntü satırları "Bir"ile "altı." etiketli Etiketlerin program bu kod satırları ulaştığında sipariş temsil eder.  
   
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  Örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınızda yüklü olmalıdır.  
   
 ### <a name="download-the-program"></a>Programı indir  
- Uygulama için bu konudan indirebilirsiniz [zaman uyumsuz örnek: zaman uyumsuz programlarda denetim akışı](http://go.microsoft.com/fwlink/?LinkId=255285). Aşağıdaki adımları açın ve programı çalıştırın.  
+ Uygulama için bu konudan indirebilirsiniz [zaman uyumsuz örnek: zaman uyumsuz programlarda denetim akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımları açın ve programı çalıştırın.  
   
 1.  İndirilen dosyanın sıkıştırmasını açın ve ardından Visual Studio'yu başlatın.  
   
@@ -316,7 +317,7 @@ string urlContents = await getStringTask;
  Bekleme ifade askıya `AccessTheWebAsync` kadar `client.GetStringAsync` döndürür. Bu arada, Denetim çağırana döndürür `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  Genellikle, zaman uyumsuz bir yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturur ve ardından bekler önceki kod değiştirme `getStringTask`:`string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`  
+>  Genellikle, zaman uyumsuz bir yöntem çağrısı hemen bekler. Örneğin, aşağıdaki atama oluşturur ve ardından bekler önceki kod değiştirme `getStringTask`: `string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`  
 >   
 >  Bu konuda, bekleme işleci programı aracılığıyla denetim akışı işaretlemek çıktı satırları uyum sağlamak için daha sonra uygulanır.  
   
@@ -363,7 +364,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![BEŞ adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace beş")  
   
- `AccessTheWebAsync`Tamamlama ve denetim çalışır döner `startButton_Click`, tamamlanması bekleniyor.  
+ `AccessTheWebAsync` Tamamlama ve denetim çalışır döner `startButton_Click`, tamamlanması bekleniyor.  
   
 ### <a name="step-six"></a>Adım 6  
  Zaman `AccessTheWebAsync` işleme tam sinyalleri bekleme deyiminde geçmiş devam edebilir `startButton_Async`. Aslında, programın başka bir şey yapmak için vardır.  
@@ -391,4 +392,4 @@ int contentLength = await getLengthTask;
  [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [İzlenecek yol: async kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Zaman uyumsuz örnek: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Zaman uyumsuz örnek: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

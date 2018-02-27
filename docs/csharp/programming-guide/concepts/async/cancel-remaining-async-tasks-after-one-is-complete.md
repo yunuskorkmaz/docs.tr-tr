@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe65f81af28509c577e014353c43b72d34375459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e1a899223d0f6d15e6851c9320275bafe876118
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Tam (C#) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
 Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi ile birlikte bir <xref:System.Threading.CancellationToken>, bir görev tamamlandığında, kalan tüm görevler iptal edebilirsiniz. `WhenAny` Yöntemi görevleri koleksiyonu olmayan bir bağımsız değişken alır. Bu yöntem, tüm görevleri başlatır ve tek bir görev döndürür. Koleksiyondaki herhangi bir görev tamamlandığında, tek bir görev tamamlanır.  
@@ -26,7 +27,7 @@ Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
 >  Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 olmalıdır veya daha yeni bilgisayarınızda yüklü.  
   
 ## <a name="downloading-the-example"></a>Örnek indirme  
- Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046) ve ardından aşağıdaki adımları izleyin.  
+ Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve ardından aşağıdaki adımları izleyin.  
   
 1.  İndirdiğiniz dosyanın sıkıştırmasını ve Visual Studio'yu başlatın.  
   
@@ -86,7 +87,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Çağrı `WhenAny` görevleri koleksiyonu. `WhenAny`döndüren bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` tek bir değerlendiren bir görev döndürür `Task(Of Integer)` veya `Task<int>` zaman beklemenin. Bu tek ilk görevi tamamlamak için koleksiyondaki bir görevdir. İlk tamamlandı görev atandığı `firstFinishedTask`. Türü `firstFinishedTask` olan <xref:System.Threading.Tasks.Task%601> nerede `TResult` , dönüş türü tamsayı olmadığından `ProcessURLAsync`.  
+4.  Çağrı `WhenAny` görevleri koleksiyonu. `WhenAny` döndüren bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` tek bir değerlendiren bir görev döndürür `Task(Of Integer)` veya `Task<int>` zaman beklemenin. Bu tek ilk görevi tamamlamak için koleksiyondaki bir görevdir. İlk tamamlandı görev atandığı `firstFinishedTask`. Türü `firstFinishedTask` olan <xref:System.Threading.Tasks.Task%601> nerede `TResult` , dönüş türü tamsayı olmadığından `ProcessURLAsync`.  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -115,7 +116,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  İçin bir başvuru eklemeniz gerekir fark <xref:System.Net.Http>.  
   
- Projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -269,4 +270,4 @@ namespace CancelAfterOneTask
  <xref:System.Threading.Tasks.Task.WhenAny%2A>  
  [(C#) Async uygulamanızda hassas ayar yapma](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

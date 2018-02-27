@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11b6fef5356f97c53dc973b13eb5f1e8c31dbe72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 509f9e690a5157c2d80ba9726354ce57a9d7ff26
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Nasıl yapılır: birden çok Web isteğini paralel olarak zaman uyumsuz kullanarak ve olun await (C#)
 Bir zaman uyumsuz yönteminde oluşturuldukları görevleri başlatılır. [Await](../../../../csharp/language-reference/keywords/await.md) işleci, burada işleme devam edemiyor görevi tamamlanana kadar yöntemi bir noktada göreve uygulanır. Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklemenin.  
@@ -47,7 +48,7 @@ var result = await myTask;
   
  Aynı anda birden çok görevi başlatan başka bir örnek için bkz: [nasıl yapılır: Task.WhenAll kullanarak (C#) tarafından izlenecek zaman uyumsuz genişletmek](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Bu örnekte kodunu indirebilirsiniz [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Bu örnekte kodunu indirebilirsiniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Projeyi ayarlamak için  
   
@@ -75,9 +76,9 @@ var result = await myTask;
   
 3.  Aşağıdaki destek yöntemlerden projenize ekleyin:  
   
-    -   `ProcessURLAsync`kullanan bir <xref:System.Net.Http.HttpClient> bir bayt dizisi olarak bir Web sitesi içeriğini indirmek için yöntem. Destek yöntemi `ProcessURLAsync` ardından görüntüler ve dizi uzunluğu döndürür.  
+    -   `ProcessURLAsync` kullanan bir <xref:System.Net.Http.HttpClient> bir bayt dizisi olarak bir Web sitesi içeriğini indirmek için yöntem. Destek yöntemi `ProcessURLAsync` ardından görüntüler ve dizi uzunluğu döndürür.  
   
-    -   `DisplayResults`bayt sayısını bayt dizisi, her URL için görüntüler. Bu görüntüler gösterir indirme her görev tamamlandığında.  
+    -   `DisplayResults` bayt sayısını bayt dizisi, her URL için görüntüler. Bu görüntüler gösterir indirme her görev tamamlandığında.  
   
      Aşağıdaki yöntemlerden kopyalayabilir ve sonra yapıştırabilirsiniz `startButton_Click` MainWindow.xaml.cs olay işleyicisi.  
   
