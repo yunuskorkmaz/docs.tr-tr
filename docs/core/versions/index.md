@@ -3,17 +3,18 @@ title: ".NET core sürüm oluşturma"
 description: ".NET Core sürüm nasıl çalıştığını anlayın."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>.NET core sürüm oluşturma
 
@@ -21,11 +22,15 @@ ms.lasthandoff: 12/23/2017
 
 Bu makalede, .NET Core SDK ve çalışma zamanı nasıl belirlendiği açıklığa kavuşturan en amaçlar.
 
-Vardır hareketli parça çok sayıda sürümünün bağımsız olarak .NET Core. Ancak, .NET Core 2.0 ile başlayarak, yoktur herkes olmasını anlar en üst düzey sürüm numarası anlamak kolay bir *bir* bütün olarak ".NET Core" sürümü. Bu belgenin kalan tüm parçaları sürüm ayrıntıları gider. Bu ayrıntılar, örneğin bir paket Yöneticisi iseniz önemli olabilir.
+Vardır hareketli parça çok sayıda sürümünün bağımsız olarak .NET Core. Ancak, .NET Core 2.0 ile başlayarak, yoktur herkes olmasını anlar en üst düzey sürüm numarası anlamak kolay bir *bütün* olarak ".NET Core" sürümü. Bu belgenin kalan tüm parçaları sürüm ayrıntıları gider. Bu ayrıntılar, örneğin bir paket Yöneticisi iseniz önemli olabilir.
+
+> [!IMPORTANT]
+> Bu konuda açıklanan sürüm ayrıntıları .NET Core SDK ve çalışma zamanı geçerli sürümüne uygulanmaz.
+> Sürüm düzeni gelecek sürümlerde değiştiriyor. Konumundaki geçerli teklifini görebilirsiniz [dotnet/tasarımları](https://github.com/dotnet/designs/pull/29) deposu.
 
 ## <a name="versioning-details"></a>Sürüm oluşturma ayrıntıları
 
-.NET Core 2.0 ile başlayarak, indirmeler dosya adında tek sürüm numarasını gösterir. Aşağıdaki sürüm numaralarını birleşik:
+.NET Core 2.0 ile yüklemeler dosya adında tek sürüm numarasını gösterir. Aşağıdaki sürüm numaralarını birleşik:
 
 * Paylaşılan framework ve ilişkili çalışma zamanı.
 * .NET Core SDK ve ilişkili .NET Core CLI.
@@ -35,8 +40,8 @@ Bir üretim ortamı sağlamak için zamanı geldiğinde tek sürüm numarası ya
 
 ### <a name="installers"></a>Yükleyicileri
 
-.NET Core 2.0 ile başlayarak, için yüklemeler bizim [günlük derlemeler](https://github.com/dotnet/core-setup#daily-builds) ve [bizim sürümleri](https://www.microsoft.com/net/download/core) anlamak daha kolay olan yeni bir adlandırma şeması için uygun.
-Bu indirmeleri UI yükleyicisinde ayrıca değiştiren açıkça adları ve yüklenen bileşenlerin sürümlerini sunmak için. Özellikle, başlıkları şimdi indirme ait dosya adı aynı sürüm numarasını gösterir.
+İçin .NET Core 2.0 ile yüklemeler [günlük derlemeler](https://github.com/dotnet/core-setup#daily-builds) ve [serbest](https://www.microsoft.com/net/download/core) anlamak daha kolay olan yeni bir adlandırma şeması için uygun.
+Bu indirmeleri UI yükleyicisinde açıkça adları ve yüklenen bileşenlerin sürümlerini sunmak için de değiştirildi. Özellikle, başlıkları şimdi indirme ait dosya adı aynı sürüm numarasını gösterir.
 
 #### <a name="file-name-format"></a>Dosya adı biçimi
 
@@ -70,14 +75,14 @@ Tüm web sitesi açıklamaları ve yükleyicileri UI dizelerde tutarlı, doğru 
 
 | Installer | Pencere Başlığı                                    | Yükleyici diğer içeriği        | Yüklenenler                                                   |
 | :--       | :--                                             | :--                               | :--                                                                 |
-| SDK       | .NET core 2.0 Preview 1 (x 64) SDK'sı yükleyicisi     | .NET core 2.0.0 Önizleme 1 SDK'sı     | .NET core 2.0.0 Preview 1 araçları + .NET Core 2.0.0 1 çalışma zamanı Önizleme |
+| SDK       | .NET core 2.0 Preview 1 (x 64) SDK'sı yükleyicisi     | .NET Core 2.0.0 Preview 1 SDK     | .NET core 2.0.0 Preview 1 araçları + .NET Core 2.0.0 1 çalışma zamanı Önizleme |
 | Çalışma zamanı   | .NET core 2.0 Preview 1 çalışma zamanı (x64) Yükleyici | .NET core 2.0.0 Preview 1 çalışma zamanı | .NET core 2.0.0 Preview 1 çalışma zamanı                                   |
 
 SDK sürüm çalışma zamanı birden fazla sürümünü içeren oluşabilir. Bu durum oluştuğunda yükleyici UX aşağıdaki gibi yalnızca (SDK sürüm gösterilir ve yüklü çalışma zamanı sürümleri, Windows ve Mac üzerinde yükleme işleminin sonunda Özet sayfasında gösterilir) görünür:
 
 | Installer | Pencere Başlığı                      | Yükleyici diğer içeriği                                   | Yüklenenler                                                         |
 | :--       | :--                               | :--                                                          | :--                                                                       |
-| SDK       | .NET core 2.1 (x 64) SDK'sı yükleyicisi | .NET core 2.1.1 SDK <br> .NET core 2.1.1 çalışma zamanı <br> .NET core 2.0.6 çalışma zamanı | .NET core 2.1.1 araçları, .NET Core 2.1.1 çalışma zamanı + .NET Core 2.0.6 çalışma zamanı |
+| SDK       | .NET core 2.1 (x 64) SDK'sı yükleyicisi | .NET Core 2.1.1 SDK <br> .NET core 2.1.1 çalışma zamanı <br> .NET core 2.0.6 çalışma zamanı | .NET core 2.1.1 araçları, .NET Core 2.1.1 çalışma zamanı + .NET Core 2.0.6 çalışma zamanı |
 
 .NET Core Araçları çalışma zamanı değişiklikleri güncelleştirilmesi gerektiğini mümkündür. Bu durumda (örneğin, 2.1.2) SDK sürümü artırılır ve sonra çalışma zamanı sonraki zaman onu gelir (örneğin, hem çalışma zamanı ve SDK 2.1.3 sonraki sürede gönderilen) yakalar.
 
@@ -88,10 +93,10 @@ SDK sürüm çalışma zamanı birden fazla sürümünü içeren oluşabilir. Bu
 #### <a name="minimum-package-set"></a>Minimum paket ayarlama
 
 * `dotnet-runtime-[major].[minor]`: bir çalışma zamanı (yalnızca en son düzeltme eki sürümü için belirtilen ana + ikincil birlikte olmalıdır Paket Yöneticisi'nde kullanılabilir) belirtilen sürüme sahip. Yeni düzeltme eki sürümleri güncelleştirme paketi, ancak yeni sürümleri küçük veya büyük ayrı paketlerdir.
- 
-  **Bağımlılıklar**:`dotnet-host`
 
-* `dotnet-sdk`: en yeni SDK'ya. `update`dökümünü ana, ikincil, iletme ve sürümleri düzeltme eki.
+  **Bağımlılıklar**: `dotnet-host`
+
+* `dotnet-sdk`: en yeni SDK'ya. `update` dökümünü ana, ikincil, iletme ve sürümleri düzeltme eki.
 
   **Bağımlılıklar**: en son `dotnet-sdk-[major].[minor]`.
 
@@ -110,15 +115,15 @@ Paket maintainers Önizleme sürümleri çalışma zamanı ve SDK'sını içerec
 Adlandırma genel bir Docker etiketi bileşen adı önce sürüm numarası yerleştirmektir. Bu kural, kullanılacak devam edebilir. Geçerli etiketler yalnızca çalışma zamanı sürümü aşağıdaki şekilde ekleyin.
 
 * 1.0.8-Runtime
-* 1.0.8-SDK
+* 1.0.8-sdk
 * 2.0.4-Runtime
-* 2.0.4-SDK
+* 2.0.4-sdk
 * 2.1.1-Runtime
-* 2.1.1-SDK
+* 2.1.1-sdk
 
 Çalışma zamanı yerine SDK sürümü temsil etmek için SDK etiketleri güncelleştirilmesi gerekir.
 
-.NET Core araçları düzeltme ancak var olan bir çalışma zamanı reship ihtiyacımız mümkündür. Bu durumda (örneğin, 2.1.2) SDK sürümü artırılır ve sonra çalışma zamanı sonraki zaman onu gelir (örneğin, hem çalışma zamanı ve SDK 2.1.3 Aşağıdaki sürede gönderilen) yakalar.
+(SDK'ın dahil) .NET Core CLI araçlarını var olan bir çalışma zamanı reship ancak düzeltilen mümkündür. Bu durumda (örneğin, 2.1.2) SDK sürümü artırılır ve sonra çalışma zamanı sonraki zaman onu gelir (örneğin, hem çalışma zamanı ve SDK 2.1.3 Aşağıdaki sürede gönderilen) yakalar.
 
 ## <a name="semantic-versioning"></a>Anlamsal sürüm oluşturma
 
@@ -128,26 +133,29 @@ Adlandırma genel bir Docker etiketi bileşen adı önce sürüm numarası yerle
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-İsteğe bağlı `PRERELEASE` ve `BUILDNUMBER` bölümleri hiçbir zaman desteklenen sürümleri bir parçası olması ve yalnızca yerel olarak kaynak hedeflerden yerleşik gecelik derlemeleri mevcut ve desteklenmeyen Önizleme serbest bırakır.
+İsteğe bağlı `PRERELEASE` ve `BUILDNUMBER` bölümleri desteklenen sürümleri hiçbir zaman parçasıdır ve yalnızca her gece derlemeleri, kaynak hedefleri, yerel yapılar mevcut ve desteklenmeyen Önizleme serbest bırakır.
 
 ### <a name="how-version-numbers-are-incremented"></a>Sürüm numaraları nasıl artırılır?
 
-`MAJOR`ne zaman artırılır:
-  - Eski bir sürümü artık desteklenmiyor.
-  - Daha yeni bir `MAJOR` mevcut bir bağımlılık sürümü benimsenen.
-  - Bir uyumluluk quirk varsayılan değerini "kapalı." değiştirildi
+`MAJOR` ne zaman artırılır:
 
-`MINOR`ne zaman artırılır:
-  - Genel API yüzey alanını eklenir.
-  - Yeni bir davranış eklenir.
-  - Daha yeni bir `MINOR` mevcut bir bağımlılık sürümü benimsenen.
-  - Yeni bir bağımlılık sunulmuştur.
-  
-`PATCH`ne zaman artırılır:
-  - Hata düzeltmeleri yapılır.
-  - Daha yeni bir platform desteği eklendi.
-  - Daha yeni bir `PATCH` mevcut bir bağımlılık sürümü benimsenen.
-  - Bir önceki örneklerinin uymayan diğer değişiklikleri.
+- Eski bir sürümü artık desteklenmiyor.
+- Daha yeni bir `MAJOR` mevcut bir bağımlılık sürümü benimsenen.
+- Bir uyumluluk quirk varsayılan değerini "kapalı." değiştirildi
+
+`MINOR` ne zaman artırılır:
+
+- Genel API yüzey alanını eklenir.
+- Yeni bir davranış eklenir.
+- Daha yeni bir `MINOR` mevcut bir bağımlılık sürümü benimsenen.
+- Yeni bir bağımlılık sunulmuştur.
+
+`PATCH` ne zaman artırılır:
+
+- Hata düzeltmeleri yapılır.
+- Daha yeni bir platform desteği eklendi.
+- Daha yeni bir `PATCH` mevcut bir bağımlılık sürümü benimsenen.
+- Herhangi bir değişiklik önceki durumlarda birini uygun değil.
 
 Birden fazla değişiklik olduğunda, tek tek değişikliklerinden etkilenen yüksek öğesi artırılır ve aşağıdaki olanları sıfırlanır. Örneğin, `MAJOR` artırılır, `MINOR` ve `PATCH` sıfırlanır. Zaman `MINOR` artırılır, `PATCH` sıfır while sıfırlama `MAJOR` dokunulmadan değil.
 
@@ -176,7 +184,7 @@ Daha fazla bilgi için bkz: [.NET Core destek yaşam döngüsü olgu sayfası](h
 
 .NET core aşağıdaki bölümleri yapılır:
 
-- Ana bilgisayar (Karıştırıcı olarak da bilinir): `dotnet.exe` ile `hostfxr` İlkesi kitaplıkları.
+- Bir ana bilgisayar: ya da *dotnet.exe* framework bağımlı uygulamalar için veya  *\<uygulamaadı > .exe* kendi içinde bulunan uygulamalar için.
 - Bir SDK (araçları gerekli bir geliştiricinin makinede, ancak üretim kümesi).
 - Bir çalışma zamanı.
 - Paketler olarak dağıtılmış bir paylaşılan framework uygulaması. Her bağımsız olarak, özellikle düzeltme eki sürüm oluşturma için sürümü tutulan paketidir.
@@ -184,9 +192,9 @@ Daha fazla bilgi için bkz: [.NET Core destek yaşam döngüsü olgu sayfası](h
 
 .NET core ayrıca hedef çerçeve kümesini içerir (örneğin, `netstandard` veya `netcoreapp`) giderek daha büyük bir API kümesini temsil eden sürüm numaralarını artırılır gibi.
 
-### <a name="net-standard"></a>.NET standart
+### <a name="net-standard"></a>.NET Standard
 
-.NET standart kullanarak bir `MAJOR.MINOR` sürüm düzeni. `PATCH`Düzey standart .NET için yararlı değildir üzerinde daha az sıklıkta yinelendiğinde ve sürüm oluşturma için gerçek uygulaması ile aynı gereksinimlerini sunmak değil sözleşmeleri kümesini ifade eder.
+.NET standart kullanarak bir `MAJOR.MINOR` sürüm düzeni. `PATCH` Düzey standart .NET için yararlı değildir üzerinde daha az sıklıkta yinelendiğinde ve sürüm oluşturma için gerçek uygulaması ile aynı gereksinimlerini sunmak değil sözleşmeleri kümesini ifade eder.
 
 .NET standart ve .NET Core sürümleri arasında gerçek hiçbir ilişki yok: .NET Core 2.0 gerçekleşir .NET standart 2.0 uygulamak için ancak, .NET Core gelecek sürümlerinde aynı .NET standart sürüme eşler garantisi yoktur. .NET core standart .NET tanımlı değil ve yeni sürümler yeni bir .NET standart gerek kalmadan, bu nedenle sevk API'leri gönderebilirsiniz. .NET Core ile çakıştığı için en başından oldu olsa bile .NET standart de .NET Framework veya Mono, gibi diğer hedefler için geçerli bir kavramdır.
 
@@ -196,7 +204,7 @@ Kitaplık paketleri gelişmesi ve sürüm bağımsız olarak. .NET Framework sis
 
 Tarafından açıklanan paketleri [ `NETStandard.Library` ](https://www.nuget.org/packages/NETStandard.Library) özel platform tabanına olması nedeniyle kabul edilir.
 
-`NETStandard.Library`Uygulama düzeyi bağımlılıkları aralarında olduğundan paketler, genellikle sürüm bir küme olarak görüntüler.
+`NETStandard.Library` Uygulama düzeyi bağımlılıkları aralarında olduğundan paketler, genellikle sürüm bir küme olarak görüntüler.
 
 ### <a name="metapackages"></a>Metapackages
 
@@ -204,7 +212,7 @@ Sürüm oluşturma için .NET Core metapackages bir parçası olan .NET Core sü
 
 Örneğin, .NET Core 2.1.3 içinde metapackages tüm 2.1 olarak sahip gerekir kendi `MAJOR` ve `MINOR` sürüm numaraları.
 
-Başvurulan bir paket her güncelleştirildiğinde metapackage için düzeltme eki sürümü artırılır. Düzeltme eki sürümleri güncelleştirilmiş framework sürümü dahil etmeyin. Kendi sürüm düzenini temel alınan paketler, ancak öncelikle API düzeyini değiştirme derecesini temsil etmez çünkü sonuç olarak, metapackages kesinlikle SemVer uyumlu değil. 
+Başvurulan bir paket her güncelleştirildiğinde metapackage için düzeltme eki sürümü artırılır. Düzeltme eki sürümleri güncelleştirilmiş framework sürümü dahil etmeyin. Kendi sürüm düzenini temel alınan paketler değişiklik, ancak öncelikle API düzeyini derece temsil etmez çünkü sonuç olarak, metapackages kesinlikle SemVer uyumlu değil.
 
 Şu anda .NET Core için iki birincil metapackages vardır:
 
@@ -218,7 +226,7 @@ Not: [ `Microsoft.NETCore.Portable.Compatibility` ](https://www.nuget.org/packag
 
 **NETStandard.Library**
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library)parçası olan kitaplıkları açıklar [.NET standart](../../standard/library.md). .NET standart, .NET Framework, .NET Core ve Mono gibi destek tüm .NET uygulamaları için geçerlidir.
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) parçası olan kitaplıkları açıklar [.NET standart](../../standard/library.md). .NET standart, .NET Framework, .NET Core ve Mono gibi destek tüm .NET uygulamaları için geçerlidir.
 
 ### <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -226,7 +234,7 @@ Yeni API eklendiğinde hedef framework sürümlerini güncelleştirilir. API şe
 
 ## <a name="versioning-in-practice"></a>Uygulamada sürüm oluşturma
 
-.NET Core yüklediğinizde karşıdan dosya adını sürüm, örneğin, taşır `dotnet-sdk-2.0.4-win10-x64.exe`.
+.NET Core yüklediğinizde, indirilen dosya adını sürüm, örneğin, izleme `dotnet-sdk-2.0.4-win10-x64.exe`.
 
 İşlemeleri vardır ve her gün, .NET Core depoları github'da üzerinde çekme istekleri yeni sonuçta birçok kitaplıklarının oluşturur. Yeni ortak sürümlerini .NET Core her değişiklik oluşturmak mümkün değil. Bunun yerine, değişiklikleri bir belirlenmemiş süre boyunca yeni bir ortak kararlı .NET Core sürüm yapmadan önce (örneğin, hafta veya ay) toplanır.
 
@@ -251,7 +259,8 @@ Yeni API eklendiğinde hedef framework sürümlerini güncelleştirilir. API şe
 Çeşitli metapackages güncelleştirilmiş .NET Core kitaplığı paketleri başvurmak için güncelleştirilmiştir. [ `Microsoft.NETCore.App` ](https://www.nuget.org/packages/Microsoft.NETCore.App) Metapackage ve `netcore` hedef çerçeve olarak eşleşen önemli güncelleştirme sürümü tutulan `MAJOR` yeni sürümünün sürüm numarası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Hedef Çerçeve](../../standard/frameworks.md)   
-[.NET core dağıtım paketleme](../build/distribution-packaging.md)   
-[.NET core destek yaşam döngüsü olgu sayfası](https://www.microsoft.com/net/core/support)   
-[.NET core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)   
+
+[Hedef çerçeveler](../../standard/frameworks.md)  
+[.NET Core dağıtımı paketleme](../build/distribution-packaging.md)  
+[.NET core destek yaşam döngüsü olgu sayfası](https://www.microsoft.com/net/core/support)  
+[.NET core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)  
