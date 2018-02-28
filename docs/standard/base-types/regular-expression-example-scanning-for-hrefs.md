@@ -19,18 +19,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
 Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değerlerini ve konumlarına dize.  
@@ -54,7 +54,7 @@ Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değer
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
 |`=`|Eşittir işareti ile aynı.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Aşağıdakilerden birini yakalanan bir gruba sonucu atamadan eşleştir:<br /><br /> -Bir tırnak işareti veya tırnak işareti veya kesme işareti, bir tırnak işareti veya kesme işareti gelmelidir dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı ve ardından kesme işareti. Adlı grup `1` bu modelinde eklenmiştir.<br />-Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` bu modelinde eklenmiştir.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Aşağıdakilerden birini yakalanan bir gruba sonucu atamadan eşleştir:<br /> <ul><li><p>Tırnak işareti veya tırnak işareti veya kesme işareti, bir tırnak işareti veya kesme işareti gelmelidir dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı ve ardından kesme işareti. Adlı grup `1` bu modelinde eklenmiştir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` bu modelinde eklenmiştir.</p></li></ul>|  
 |`(?<1>[^"']*)`|Tırnak işareti veya kesme işareti dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı adlı yakalama grubuna atayın `1`.|  
 |`"(?<1>\S+)`|Bir veya daha fazla boşluk olmayan karakter adlı yakalama grubuna atayın `1`.|  
   

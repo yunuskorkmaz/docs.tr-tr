@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
 
-Dize ilişkilendirme bir dize yer tutucuları bir dize değişkeni değeriyle değiştirilir yoludur. Bunu yapmanın yolu olan C# 6'dan önce `System.String.Format`. Bu Tamam çalışır, ancak numaralı yer tutucuları kullandığından, okumak daha zor ve daha ayrıntılı olabilir.
+Dize ilişkilendirme bir dize yer tutucuları bir dize değişkeni değeriyle değiştirilir yoludur. Bunu yapmanın yolu olan C# 6'dan önce <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu Tamam çalışır, ancak numaralı yer tutucuları kullandığından, okumak daha zor ve daha ayrıntılı olabilir.
 
 Diğer programlama dilleri dize ilişkilendirme dilinde yerleşik bir süre beklendiğinden. Örneğin, PHP ile:
 
@@ -42,7 +42,7 @@ Tüm Araçlar yüklediniz, yeni bir .NET Core uygulaması oluşturun. Komut sat�
 dotnet new console
 ```
 
-Bu komutu proje dosyasıyla birlikte bir temel .NET core projesi oluşturacaksınız *interpolated.csproj*ve kaynak kodu dosyasının *Program.cs*. Yürütme gerekecek `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.
+Bu komut, bir proje dosyası ile bir temel .NET Core projesi oluşturur *interpolated.csproj*ve kaynak kodu dosyasının *Program.cs*. Yürütme gerekecek `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Programı çalıştırmak üzere kullanmadan `dotnet run`. "Hello, World" çık�
 
 ## <a name="intro-to-string-interpolation"></a>İlişkilendirme dize giriş
 
-İle `System.String.Format`, "yer tutucuları" dizesini izleyen parametreleri tarafından değiştirilen bir dize belirtin. Örneğin:
+İle <xref:System.String.Format%2A?displayProperty=nameWithType>, "yer tutucuları" dizesini izleyen bağımsız değişkenleri tarafından değiştirilen bir dize belirtin. Örneğin:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Dize ilişkilendirme nasıl çalışır?
 
-Arka planda Bu dize ilişkilendirme sözdizimi derleyici tarafından String.Format çevrilir. Bu nedenle, yapabileceğiniz [aynı türde öğe işiniz önce String.Format ile](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+Arka planda Bu dize ilişkilendirme sözdizimi veri dönüştürülür `String.Format` derleyici tarafından. Bu nedenle, yapabileceğiniz [aynı türde öğe işiniz önce ile `String.Format` ](../../standard/base-types/formatting-types.md).
 
 Örneğin, doldurma ve sayısal biçimlendirme ekleyebilirsiniz:
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-Bu derleme hataları alırsınız:
+Bu derleme, hataları alırsınız:
  
-* `Cannot use local variable 'adj' before it is declared`- `adj` değildi değişkeni bildirilen kadar *sonra* Ara değerli dize.
-* `The name 'otheranimal' does not exist in the current context`-bir değişken adı verilen `otheranimal` hiçbir zaman bile bildirildi
+* `Cannot use local variable 'adj' before it is declared` - `adj` değildi değişkeni bildirilen kadar *sonra* Ara değerli dize.
+* `The name 'otheranimal' does not exist in the current context` -bir değişken adı verilen `otheranimal` hiçbir zaman bile bildirildi
 
 ## <a name="localization-and-internationalization"></a>Yerelleştirme ve uluslararası hale getirme
 
-Ara değerli bir dize destekleyen `IFormattable` ve `FormattableString`, hangi uygulamalar için yararlı olabilir.
+Ara değerli bir dize destekleyen <xref:System.IFormattable?displayProperty=nameWithType> ve <xref:System.FormattableString?displayProperty=nameWithType>, hangi uygulamalar için yararlı olabilir.
 
-Varsayılan olarak, geçerli kültürü Ara değerli bir dize kullanır. Farklı bir kültür kullanmak için olarak cast`IFormattable`
-
-Örneğin:
+Varsayılan olarak, geçerli kültürü Ara değerli bir dize kullanır. Farklı bir kültür kullanmak için Ara değerli bir dize olarak cast `IFormattable`. Örneğin:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Sonuç 
 
-Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz. Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle daha gelişmiş kullanımları için bazı uyarılar.
+Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz. Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle bazı uyarılar için daha gelişmiş kullanır. Daha fazla bilgi için bkz: [Ara değerli dizeler](../../csharp//language-reference/keywords/interpolated-strings.md) konu.

@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici sınırlı Automaton (NFA) altyapısı içerir kırıntıları oluşturma bir normal ifade Eşleştirici altyapısıdır. Bu ondan daha hızlı ve daha kısıtlı, saf normal ifade belirleyici sınırlı Automaton (DFA) altyapılarını awk, egrep veya lex bulunanlar gibi ancak ayırır. Bu ayrıca, standartlaştırılmış, ancak daha yavaş, ayırt POSIX NFAs. Aşağıdaki bölümde normal ifade motorları üç tür ve geleneksel NFA altyapısını kullanarak .NET Framework normal ifadelerinde neden uygulanan açıklanmaktadır.  
@@ -57,8 +57,8 @@ ms.lasthandoff: 02/01/2018
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |`.+`(doyumsuz niceleyici)|En az bir geçişi herhangi bir karakter ile eşleşir. Bu normal ifade altyapısını tüm dizeyi eşleştir neden olur ve ardından olarak geri izlemeyi desen kalanı eşleşecek şekilde gerekiyordu.|  
-    |`.+?`(yavaş niceleyici)|En az bir geçişi herhangi bir karakter ile eşleşen ancak olabildiğince az eşleşmesi.|  
+    |`.+` (doyumsuz niceleyici)|En az bir geçişi herhangi bir karakter ile eşleşir. Bu normal ifade altyapısını tüm dizeyi eşleştir neden olur ve ardından olarak geri izlemeyi desen kalanı eşleşecek şekilde gerekiyordu.|  
+    |`.+?` (yavaş niceleyici)|En az bir geçişi herhangi bir karakter ile eşleşen ancak olabildiğince az eşleşmesi.|  
     |`(\d+)`|İlk yakalama grubuna atayın ve en az bir sayısal karakter eşleşmiyor.|  
     |`\.`|Bir süre aynı.|  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 02/01/2018
     |`^`|Eşleşen bir satır başında başlar.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Eşleşen dizenin sıfır veya bir örneğinin `<PRIVATE>` sonrasında bir boşluk karakteri. Eşleşen adlı bir yakalama grubuna atama `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Varsa `Pvt` Grup yakalama var, bir veya daha fazla tekrarı sıfır veya bir noktalama ayırıcı sonrasında bir boşluk karakteri ve ardından bir veya daha fazla sözcük karakterlerini eşleşmesi. Alt dizeyi ilk yakalama grubuna atayın.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Varsa `Pvt` Grup yakalama olmayabilir, eşleşecek ya da bir veya daha fazla sözcük karakterlerini birden fazla örneğini sonrasında bir boşluk karakteri sıfır veya bir noktalama ayırıcı ardında. Alt dizeyi üçüncü yakalama grubuna atayın.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Varsa `Pvt` Grup yakalama olmayabilir, eşleşecek ya da bir veya daha fazla sözcük karakterlerini birden fazla örneğini sonrasında bir boşluk karakteri sıfır veya bir noktalama ayırıcı ardında. Alt dizeyi üçüncü yakalama grubuna atayın.|  
     |`\r?$`|Eşleşen bir satır sonu veya dize sonu.|  
   
      Koşullu değerlendirme hakkında daha fazla bilgi için bkz: [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/01/2018
     |-------------|-----------------|  
     |`^`|Eşleşme dizenin başında başlar.|  
     |`[A-Z0-9]`|Sayısal veya alfasayısal bir karakterle eşleşmesi. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, ', {,}, &#124; veya ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Sıfır veya daha çok tekrarı herhangi bir sözcük karakteri veya şu karakterlerden herhangi birini eşleşen:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,}, &#124; veya ~.|  
     |`(?<=[A-Z0-9])`|Arkasında sayısal veya alfasayısal olmalıdır bir önceki karakteri arayın. (Karşılaştırma büyük küçük harfe duyarlıdır.)|  
     |`$`|Son dizenin sonunda eşleşmiyor.|  
   

@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 6b0f3acc3a6dbed4f44497d92d3c518ee5a5d2a7
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -89,7 +89,7 @@ Ardından, tanımlanan ad alanı yeniden adlandırma `namespace` varsayılan fro
 Ardından, güncelleştirme `Main` yöntemi bu yöntemi çağırın. `ProcessRepositories` Yöntemi bir görev döndürür ve bu görev tamamlanmadan önce programdan çıkmak döndürmemelidir. Bu nedenle, kullanmalısınız `Wait` engellemek ve görevin tamamlanmasını beklemek için yöntemi:
 
 ```csharp
-public static void Main(string[] args)
+static void Main(string[] args)
 {
     ProcessRepositories().Wait();
 }
@@ -190,7 +190,7 @@ var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 
 Kullanmakta olduğunuz bildirim <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> yerine <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>. Seri hale getirici bir akış yerine bir dize, kaynağı olarak kullanır. Şimdi, yukarıdaki ikinci satırda kullanılmakta olan birkaç C# dil özellikleri açıklanmaktadır. Bağımsız değişkeni <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> olan bir `await` ifade. Await ifadeleri görünebilir neredeyse her yerden, kodunuzda şimdi kadar yalnızca bunları Atama ifadesinin bir parçası olarak gördüğünüz olsa bile.
 
-İkincisi, `as` işleci dönüştürür derleme zamanı türünden `object` için `List<repo>`. Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> türünde bir nesne döndürür bildirir <xref:System.Object?displayProperty=nameWithType>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)>Bu oluşturulan, belirttiğiniz türü döndürür (`List<repo>` bu öğreticideki). Dönüştürme başarılı olmazsa, `as` işleci hesaplar için `null`, bir özel durum atma yerine.
+İkincisi, `as` işleci dönüştürür derleme zamanı türünden `object` için `List<repo>`. Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> türünde bir nesne döndürür bildirir <xref:System.Object?displayProperty=nameWithType>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> Bu oluşturulan, belirttiğiniz türü döndürür (`List<repo>` bu öğreticideki). Dönüştürme başarılı olmazsa, `as` işleci hesaplar için `null`, bir özel durum atma yerine.
 
 Bu bölümde ile bitmek üzere. C# nesnelerini JSON dönüştürdükten, şimdi her depo adını görüntüler. Okuma satırları değiştirin:
 

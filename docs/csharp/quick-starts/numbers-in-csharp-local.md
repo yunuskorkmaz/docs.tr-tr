@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C# hızlı başlangıç numaraları
 
@@ -38,9 +38,9 @@ Bu kodu yazarak çalıştırmak `dotnet run` , komut penceresinde.
 
 Temel matematik işlemlerden tamsayılı yalnızca gördünüz. `int` Yazın gösteren bir **tamsayı**, pozitif veya negatif bir tam sayı. Kullandığınız `+` toplama simgesi. Diğer yaygın matematiksel işlemler tamsayılar şunlardır:
 
-- `-`için çıkarma
-- `*`çarpma için
-- `/`bölme için
+- `-` için çıkarma
+- `*` çarpma için
+- `/` bölme için
 
 Bu farklı işlemler inceleyerek başlayın. Bu satırlar değerini yazan satırı sonra ekleyin `c`:
 
@@ -312,7 +312,7 @@ Decimal türü kullanarak matematik ondalık konumun sağında daha fazla basama
 
 ***Challenge***
 
-Farklı sayısal türler gördüğünüze göre 2.50 inç, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
+Farklı sayısal türler gördüğünüze göre 2.50 santimetreden, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
 
 19 ve 20 arasında bir yanıt almanız gerekir.
 Yanıtınız tarafından kontrol edebilirsiniz [Github'da tamamlanmış örnek kodu incelemeden](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)

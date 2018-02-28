@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Ara değerli dizeler (C# Başvurusu)
 
@@ -43,11 +43,11 @@ burada:
 - *Biçim dizesi* bir biçim dizesi biçimlendirilen nesne türü için uygundur. Örneğin, bir <xref:System.DateTime> değeri, bir standart tarih ve saat biçim dizesi "D" veya "d" gibi olabilir.
 
 > [!IMPORTANT]
-> Arasında bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması, derleme zamanı hata neden olur.
+> Arasında bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması, derleme zamanı hatasına neden olur.
 
  Ara değerli bir dize kullanabileceğiniz bir değişmez dize değeri her yerde kullanabilirsiniz.  Ara değerli dize ara değerli dizesiyle kodu yürütür her zaman değerlendirilir. Bu, tanım ve Ara değerli bir dize değerlendirmesine ayırmanıza olanak sağlar.  
   
- Süslü ayraç içerecek şekilde ("{" veya "}") iki süslü ayraçlar, bir ara değerli dizesinde kullanmak "{{" veya "}}".  Daha fazla ayrıntı için örtük dönüşümler bölümüne bakın.  
+ Süslü ayraç içerecek şekilde ("{" veya "}") iki süslü ayraçlar, bir ara değerli dizesinde kullanmak "{{" veya "}}".  Bkz: [örtük dönüşümler](#implicit-conversions) daha fazla ayrıntı için bölüm.  
 
 Ara değerli dize tırnak işareti ("), iki nokta üst üste (:) veya virgül (,) gibi ara değerli bir dize olarak özel bir anlamı olan diğer karakterler içeriyorsa, bunlar değişmez değer metinde oluşma ya da virgülle ayrılan bir ifadede eklenmelidir kaçış Dil öğeleri ara değerli bir ifadede dahil olmaları durumunda parantez. Aşağıdaki örnek sonuç dizesinde eklemek için tırnak işaretleri çıkışları ve ifade sınırlandırmak için parantez kullanır `(age == 1 ? "" : "s")` böylece iki nokta üst üste bir biçim dizesi başlayan olarak yorumlanır değil.
 
@@ -73,7 +73,7 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
 
    Bu dize yorumlama son sonucudur. Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}") için tek bir büyük ayraç dönüştürülür. 
 
-2. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak değişkeni dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, tek tek kültürler için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), açıkça veya örtük çağırarak biçim dizesi kadar çift ayraç kalır <xref:System.Object.ToString> yöntemi.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
+2. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak tanıyan bir değişken dizeler tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, tek tek kültürler için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), açıkça veya örtük çağırarak biçim dizesi kadar çift ayraç kalır <xref:System.Object.ToString> yöntemi.  {0}, {1} ve benzeri için tüm kapsanan ilişkilendirme ifadeleri dönüştürülür.  
 
    Aşağıdaki örnek, alan ve özellik değerlerini yanı sıra üyeleri görüntülemek için yansıma kullanır. bir <xref:System.IFormattable> Ara değerli bir dizeden oluşturulmuş değişkeni. Ayrıca geçirir <xref:System.IFormattable> değişkenini <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemi.
 
@@ -88,8 +88,11 @@ Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:
 ## <a name="language-specification"></a>Dil belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [C# dize ilişkilendirme](../../../csharp/tutorials/string-interpolation.md)  
+ [C# Ara değerli dizeler](../../../csharp/quick-starts/interpolated-strings.yml)  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

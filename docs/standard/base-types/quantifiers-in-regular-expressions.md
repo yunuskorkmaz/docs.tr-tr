@@ -20,18 +20,18 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
 Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğinin bulunması bir eşleşme için giriş bulunmalıdır belirtin.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik listeler.  
@@ -43,7 +43,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`?`|`??`|Sıfır veya bir kez eşleşir.|  
 |`{` *n* `}`|`{` *n* `}?`|Tam olarak eşleştiğinden  *n*  kez.|  
 |`{` *n* `,}`|`{` *n* `,}?`|En az eşleşen  *n*  kez.|  
-|`{` *n*  `,` *m*`}`|`{` *n*  `,` *m*`}?`|Gelen eşleşen  *n*  için *m* kez.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Gelen eşleşen  *n*  için *m* kez.|  
   
  Miktarları `n` ve `m` tamsayı sabittir. Normalde, nicelik doyumsuz; Bunlar, mümkün olduğunca belirli modelleri sayıda oluşumları eşleştirilecek normal ifade altyapısı neden. Sonuna ekleme `?` bir niceleyici karakter kılar yavaş; mümkün olduğunca en az yinelenme eşleştirilecek normal ifade alt neden olur. Doyumsuz ve yavaş miktar belirleyiciler arasındaki farkı tam bir açıklaması için bkz [Greedy ve yavaş miktar belirleyiciler](#Greedy) bu konuda daha sonra.  
   
@@ -57,7 +57,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 >  *, +,?, {, Ve} bir normal ifade deseni karakteri ile karşılaşıldı, yer alan sürece normal ifade altyapısı bunları nicelik veya niceleyici yapıları bir parçası olarak yorumlar bir [karakter sınıfı](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Bu karakter sınıf dışındaki değişmez karakter olarak yorumlamak için ters bölü işareti koyarak çıkış gerekir. Örneğin, dize `\*` bir normal ifade deseni değişmez değer bir yıldız işareti olarak yorumlanır ("\*") karakter.  
   
 ### <a name="match-zero-or-more-times-"></a>Eşleşen sıfır veya daha fazla kez: *  
- `*` Niceleyici önceki öğesi sıfır veya daha fazla kez eşleştirir. Eşdeğer olan `{0,}` niceleyici. `*`yavaş olan eşdeğerdir doyumsuz niceleyici olan `*?`.  
+ `*` Niceleyici önceki öğesi sıfır veya daha fazla kez eşleştirir. Eşdeğer olan `{0,}` niceleyici. `*` yavaş olan eşdeğerdir doyumsuz niceleyici olan `*?`.  
   
  Aşağıdaki örnek, bu normal ifade gösterilmektedir. Modeli ve dört giriş dizisinde dokuz basamak beş eşleşen (`95`, `929`, `9129`, ve `9919`) desteklemez.  
   
@@ -74,7 +74,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-one-or-more-times-"></a>Bir veya birden çok kez eşleşen: +  
- `+` Niceleyici önceki öğesi bir veya birden çok kez eşleştirir. Eşdeğer olan `{1,}`. `+`yavaş olan eşdeğerdir doyumsuz niceleyici olan `+?`.  
+ `+` Niceleyici önceki öğesi bir veya birden çok kez eşleştirir. Eşdeğer olan `{1,}`. `+` yavaş olan eşdeğerdir doyumsuz niceleyici olan `+?`.  
   
  Örneğin, normal ifade `\ban+\w*?\b` harfiyle başlayan tüm sözcükleri eşleştirmeyi dener `a` harf bir veya daha fazla örnekleri tarafından izlenen `n`. Aşağıdaki örnek, bu normal ifade gösterilmektedir. Sözcükleri normal ifadeyle eşleşen `an`, `annual`, `announcement`, ve `antique`ve eşleşecek şekilde doğru başarısız `autumn` ve `all`.  
   
@@ -91,7 +91,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-zero-or-one-time-"></a>Eşleşen sıfır veya bir kez:?  
- `?` Niceleyici önceki öğesi sıfır veya bir zaman eşleşir. Eşdeğer olan `{0,1}`. `?`yavaş olan eşdeğerdir doyumsuz niceleyici olan `??`.  
+ `?` Niceleyici önceki öğesi sıfır veya bir zaman eşleşir. Eşdeğer olan `{0,1}`. `?` yavaş olan eşdeğerdir doyumsuz niceleyici olan `??`.  
   
  Örneğin, normal ifade `\ban?\b` harfiyle başlayan tüm sözcükleri eşleştirmeyi dener `a` harf sıfır veya bir örnekleri tarafından izlenen `n`. Diğer bir deyişle, sözcükleri eşleştirmeye çalışır `a` ve `an`. Aşağıdaki örnek, bu normal ifade gösterilmektedir.  
   
@@ -107,7 +107,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-exactly-n-times-n"></a>Tam olarak n kez eşleşen: {n}  
- `{`  *n*  `}` Niceleyici önceki öğesi tam olarak eşleşen  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`}`yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
+ `{`  *n*  `}` Niceleyici önceki öğesi tam olarak eşleşen  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
   
  Örneğin, normal ifade `\b\d+\,\d{3}\b` word sınır tarafından izlenen üç ondalık basamak ve ardından bir veya daha fazla ondalık basamak arkasından bir word sınır eşleştirmeye çalışır. Aşağıdaki örnek, bu normal ifade gösterilmektedir.  
   
@@ -125,7 +125,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-at-least-n-times-n"></a>En az n kez eşleşen: {n}  
- `{`  *n*  `,}` Niceleyici eşleşen önceki öğesi en az  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`,}`yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
+ `{`  *n*  `,}` Niceleyici eşleşen önceki öğesi en az  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`,}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
   
  Örneğin, normal ifade `\b\d{2,}\b\D+` en az iki basamak ardından word sınır ve sayı olmayan karakter ve ardından word sınır eşleştirmeye çalışır. Aşağıdaki örnek, bu normal ifade gösterilmektedir. Tümcecik eşleştirilecek normal ifade başarısız `"7 days"` tek bir ondalık basamak içeriyor, ancak başarılı bir şekilde tümcecikleri eşleşen çünkü `"10 weeks and 300 years"`.  
   
@@ -273,7 +273,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`(a\1`|Ya da eşleşme ilk yakalanan grubunun değeri birlikte "a"...|  
-|`&#124;(?(1)`|… veya ilk yakalanan Grup tanımlı olup olmadığını test etme. (Unutmayın `(?(1)` yapı bir yakalama grubunu tanımlamak değil.)|  
+|<code>&#124;(?(1)</code>|… veya ilk yakalanan Grup tanımlı olup olmadığını test etme. (Unutmayın `(?(1)` yapı bir yakalama grubunu tanımlamak değil.)|  
 |`\1))`|İlk yakalanan grup varsa değerini eşleşmesi. Grup mevcut değilse Grup eşleşir <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  İlk normal ifade bu deseni ve iki kez arasındaki eşleştirmeyi dener; İkincisi, tam olarak iki kez. İlk desen yakalamaları ilk yakalanmasını ile en az sayıda ulaştığında çünkü <xref:System.String.Empty?displayProperty=nameWithType>, hiçbir zaman eşleşecek şekilde denemek için yinelenen `a\1`; `{0,2}` niceleyici son yinelemede yalnızca boş eşleşmeleri sağlar. Buna karşılık, ikinci normal ifadeyle eşleşir "a", değerlendirildiği `a\1` ikinci kez; yineleme, 2, en az sayıda sonra boş bir eşleşme yinelenecek altyapısı zorlar.  

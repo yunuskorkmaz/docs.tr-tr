@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Karakterlerini (Visual Basic)
 
@@ -88,7 +88,7 @@ Kodunuzda normalde göründüğü gibi bir hazır değer form veri türünü bel
 |Metin biçiminde değişmez değeri|Varsayılan veri türü|Örnek|  
 |-----------------------------|-----------------------|-------------|  
 |Sayısal, Hayır kesirli bölümü|`Integer`|`2147483647`|  
-|Sayısal, Hayır kesirli bölümü, için çok büyük`Integer`|`Long`|`2147483648`|  
+|Sayısal, Hayır kesirli bölümü, için çok büyük `Integer`|`Long`|`2147483648`|  
 |Sayısal, kesirli bölümü|`Double`|`1.2`|  
 |Çift tırnak işaretleri içine|`String`|`"A"`|  
 |İçinde sayı işaretleri arasına|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ Derleyici ondalık (10 tabanı) sayı sisteminde olacak şekilde bir tamsayı de
 |Temel numarası|önek|Geçerli basamaklı değerler|Örnek|
 |-----------------|------------|------------------------|-------------|
 |Onaltılı (16 tabanı)|`&H`|0-9 ve A-F|`&HFFFF`|
-|İkili (2 tabanı)|`0B`|0-1|`&B01111100`|
+|İkili (2 tabanı)|`&B`|0-1|`&B01111100`|
 |Octal (8 tabanı)|`&O`|0-7|`&O77`|
 
 Visual Basic 2017'dan başlayarak, alt çizgi karakterini kullanabilirsiniz (`_`) bir tam sayı sabit değeri okunabilirliğini artırmak için Grup ayırıcı olarak. Aşağıdaki örnek kullanır `_` karakter sabit değeri bir ikili 8 bit gruplar halinde gruplandırmak için:

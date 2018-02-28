@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
@@ -65,17 +65,17 @@ Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak 
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşleşme dizenin başında başlar.|  
-|`(?(")`|İlk karakteri bir tırnak işareti olup olmadığını belirler. `(?(")`bir değişim yapısıyla başlangıcıdır.|  
-|`(?("")("".+?(?<!\\)""@)`|İlk karakteri bir tırnak işareti ise, en az bir oluşumu bir bitiş tırnak işareti herhangi bir karakterin ardından bir başlangıç tırnağından eşleşmesi. Bitiş tırnağından ters eğik çizgi karakteriyle gelmemelidir (\\). `(?<!`Sıfır Genişlik negatif geriye ilerleme onaylama başlangıcıdır. Dize duymanıza neden bir at işareti (@).|  
-|`&#124;(([0-9a-z]`|İlk karakteri bir tırnak işareti yoksa, alfasayısal bir karakter gelen eşleşen bir-z veya A-Z (karşılaştırma büyük/küçük harfe duyarsız) veya sayısal bir karakterle 0 ile 9 arasında.|  
-|`(\.(?!\.))`|Sonraki karakteri bir nokta ise, aynı. Bir süre değilse, devam sonraki karaktere bakın ve eşleşme devam edin. `(?!\.)`bir e-posta adresi yerel bölümünde görünmesini art arda iki nokta engelleyen bir sıfır Genişlik negatif ileri yönlü onayı ifade eder.|  
-|``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Sonraki karakteri bir süre değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$%'*+=?^'{} &#124; ~.|  
-|``((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^`{}\&#124;~\w])*``|(Süre olmayan veya karakter sayısını biri tarafından izlenen bir dönemi) değişim deseni sıfır veya daha çok kez aynı.|  
+|`(?(")`|İlk karakteri bir tırnak işareti olup olmadığını belirler. `(?(")` bir değişim yapısıyla başlangıcıdır.|  
+|`(?("")("".+?(?<!\\)""@)`|İlk karakteri bir tırnak işareti ise, en az bir oluşumu bir bitiş tırnak işareti herhangi bir karakterin ardından bir başlangıç tırnağından eşleşmesi. Bitiş tırnağından ters eğik çizgi karakteriyle gelmemelidir (\\). `(?<!` Sıfır Genişlik negatif geriye ilerleme onaylama başlangıcıdır. Dize duymanıza neden bir at işareti (@).|  
+|<code>&#124;(([0-9a-z]</code>|İlk karakteri bir tırnak işareti yoksa, alfasayısal bir karakter gelen eşleşen bir-z veya A-Z (karşılaştırma büyük/küçük harfe duyarsız) veya sayısal bir karakterle 0 ile 9 arasında.|  
+|`(\.(?!\.))`|Sonraki karakteri bir nokta ise, aynı. Bir süre değilse, devam sonraki karaktere bakın ve eşleşme devam edin. `(?!\.)` bir e-posta adresi yerel bölümünde görünmesini art arda iki nokta engelleyen bir sıfır Genişlik negatif ileri yönlü onayı ifade eder.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Sonraki karakteri bir süre değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{} &#124; ~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|(Süre olmayan veya karakter sayısını biri tarafından izlenen bir dönemi) değişim deseni sıfır veya daha çok kez aynı.|  
 |`@`|Eşleşme @ karakteri.|  
 |`(?<=[0-9a-z])`|Karakter önceyse eşleşme devam A ile Z, A'dan Z'ye veya 0-9 arası karakterdir. `(?<=[0-9a-z])` Yapı Sıfır Genişlik pozitif geriye ilerleme onaylama tanımlar.|  
 |`(?(\[)`|@ İzleyen karakterin ayraç olup olmadığını denetleyin.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Bir açma ayracı ise, ardından bir IP adresi (virgülle ayrılmış her kümesiyle bir ile üç basamak dört ayarlar) ve bir kapanış ayracı ayraç eşleşmesi.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|@ İzleyen karakterin eşleşen bir alfasayısal karakter, A-z, bir değerle bir açılış ayracı değilse, a-z veya 0-9, bir tire sıfır veya daha çok tekrarı tarafından izlenen ve ardından sıfır veya bir alfasayısal bir karakterle değeri, A-Z, a-z veya 0-9 , ardından bir noktayla. Bu desen bir veya daha çok sayıda Tekrarlanmış ve ardından üst düzey etki alanı adı olmalıdır.|  
+|<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|@ İzleyen karakterin eşleşen bir alfasayısal karakter, A-z, bir değerle bir açılış ayracı değilse, a-z veya 0-9, bir tire sıfır veya daha çok tekrarı tarafından izlenen ve ardından sıfır veya bir alfasayısal bir karakterle değeri, A-Z, a-z veya 0-9 , ardından bir noktayla. Bu desen bir veya daha çok sayıda Tekrarlanmış ve ardından üst düzey etki alanı adı olmalıdır.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Üst düzey etki alanı ad başlamalı ve bitmelidir alfasayısal bir karakterle (a-z, A-Z ve 0-9). Ayrıca sıfır ya da olan 22 ASCII karakterleri içerebilir alfasayısal veya kısa çizgi.|  
 |`$`|Son dizenin sonunda eşleşmiyor.|  
   

@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 30b16ce5c263221fe917b3d6f289fea20d47b584
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrıştırma
 
@@ -39,7 +39,7 @@ Bu davranış biçimleri için tablo verileri temsil eden virgülle ayrılmış 
 
 İsteğe bağlı bir geçirebilirsiniz <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> herhangi boş dizeler döndürülen dizideki dışlamak için parametre. Döndürülen koleksiyon daha karmaşık işlenmesi için kullandığınız [LINQ](../programming-guide/concepts/linq/index.md) Sonuç dizisini denetlemek için.    
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>birden çok ayırıcı karakter kullanabilirsiniz. Aşağıdaki örnek, boşluk, virgül, nokta, iki nokta üst üste ve sekmeler, tüm bu karakterler için ayırma içeren bir dizi geçirilen kullanır <xref:System.String.Split%2A>.  Kod alt döngü her sözcüklerin döndürülen dizideki görüntüler.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> birden çok ayırıcı karakter kullanabilirsiniz. Aşağıdaki örnek, boşluk, virgül, nokta, iki nokta üst üste ve sekmeler, tüm bu karakterler için ayırma içeren bir dizi geçirilen kullanır <xref:System.String.Split%2A>.  Kod alt döngü her sözcüklerin döndürülen dizideki görüntüler.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -47,7 +47,7 @@ Tüm ayırıcı ardışık örnekleri çıkış dizisi boş dizesinde üretir:
 
 [!code-csharp-interactive[split strings using multiple consecutive separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#4)]
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>dizeler (tek karakter yerine hedef dizesini ayrıştırmak için ayırıcı olarak davranmak karakter sıraları) dizisi alabilir.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> dizeler (tek karakter yerine hedef dizesini ayrıştırmak için ayırıcı olarak davranmak karakter sıraları) dizisi alabilir.  
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
@@ -56,4 +56,4 @@ Kodda bakarak bu örnekleri deneyebilirsiniz bizim [GitHub deposunu](https://git
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Programlama Kılavuzu](../programming-guide/index.md)  
  [Dizeler](../programming-guide/strings/index.md)  
- [.NET framework normal ifadeleri](https://msdn.microsoft.com/library/hs600312)
+ [.NET normal ifadeler](../../standard/base-types/regular-expressions.md)

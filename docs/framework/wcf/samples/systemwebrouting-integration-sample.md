@@ -5,48 +5,53 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
-Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı izin doğrudan fiziksel bir kaynağa karşılık gelmeyen URL'leri kullanmak bir uygulama. Web yönlendirme kullanarak sağlar sonra geri gerçek eşlenen HTTP için sanal adres oluşturmak üzere Geliştirici [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Bu, bir WCF Hizmeti gerektirmeden fiziksel dosya veya kaynak barındırılan gerekir ya da hizmetleri .html veya .aspx gibi dosya içermediğini URL'ler ile erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösteren <xref:System.Web.Routing.RouteTable> sanal URI'ler global.asax dosyasında tanımlanmış hizmetlerini çalıştırmak için bu harita oluşturmak için sınıfı. Bu örnekte, WCF kullanılarak oluşturulan iki RSS akışları vardır: bir `movies` akış ve `channels` akış. Hizmetleri etkinleştirmek için URL'leri bir uzantıyı içermeyen ve kayıtlı `Application_Start` yöntemi `Global` türetilmiş sınıf <xref:System.Web.HttpApplication.Application_Start> sınıfı.  
-  
+Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı izin doğrudan fiziksel bir kaynağa karşılık gelmeyen URL'leri kullanmak bir uygulama. Web yönlendirme kullanarak sağlar sonra geri gerçek eşlenen HTTP için sanal adres oluşturmak üzere Geliştirici [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri. Bu, bir WCF Hizmeti gerektirmeden fiziksel dosya veya kaynak barındırılan gerekir ya da hizmetleri .html veya .aspx gibi dosya içermediğini URL'ler ile erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösteren <xref:System.Web.Routing.RouteTable> sanal URI'ler global.asax dosyasında tanımlanmış hizmetlerini çalıştırmak için bu harita oluşturmak için sınıfı. 
+
 > [!NOTE]
 >  Sınıflarda <xref:System.Web.Routing> ad alanı yalnızca çalışmak için HTTP üzerinden barındırılan hizmetleri.  
   
-> [!NOTE]
->  Bu örnek yalnızca çalışır [!INCLUDE[iisver](../../../../includes/iisver-md.md)], olarak [!INCLUDE[iis60](../../../../includes/iis60-md.md)] uzantısız URL'lerin desteklemek için farklı bir yöntem kullanır.  
+Bu örnek iki RSS akışları oluşturmak için WCF kullanır: bir `movies` akış ve `channels` akış. Hizmetleri etkinleştirmek için URL'leri bir uzantıyı içermeyen ve kayıtlı `Application_Start` yöntemi `Global` türetilmiş sınıf <xref:System.Web.HttpApplication> sınıfı.  
   
-> [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
+> [!NOTE]
+>  Bu örnek yalnızca Internet Information Services (IIS) 7.0 çalışır ve daha sonra IIS 6. 0 ' farklı bir yöntem uzantısız URL'lerin desteklemek için kullanır.  
+
+#### <a name="to-download-this-sample"></a>Bu örnek karşıdan yüklemek için
+  
+Bu örnek, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+   
+`<InstallDrive>:\WF_WCF_Samples`  
+   
+ Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+   
+`<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], WebRoutingIntegration.sln dosyasını açın.  
+1.  Visual Studio kullanarak WebRoutingIntegration.sln dosyasını açın.  
   
 2.  Çözümü çalıştırın ve Web geliştirme sunucusu başlatmak için F5 tuşuna basın.  
   
      Bir dizin için örnek listesi görüntülenir. Hiçbir dosya .svc dosya uzantısına sahip olduğuna dikkat edin.  
   
-3.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle olan okuma http://localhost: [bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
+3.  Adres çubuğunda eklemek `movies` URL'si, bu nedenle, BT'nin okur http://localhost: [bağlantı noktası] / filmler ve ENTER tuşuna BASIN.  
   
      Film akış tarayıcısında görüntülenir.  
   
@@ -60,7 +65,7 @@ Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:Sy
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS içinde barındırıldığında Bu örneği kullanmak için  
   
-1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], WebRoutingIntegration.sln dosyasını açın.  
+1.  Visual Studio kullanarak WebRoutingIntegration.sln dosyasını açın.  
   
 2.  CTRL + SHIFT + B tuşuna basarak projeyi oluşturun.  
   
@@ -89,7 +94,7 @@ Bu örnek sınıflar ile barındırma katmanın tümleştirme gösterir <xref:Sy
  Bu örnek barındırma katman içindeki sınıflarla oluşturma kapasitesine sahip olduğunu gösteren <xref:System.Web.Routing> HTTP üzerinden barındırılan hizmetleri istekleri yönlendirme için ad alanı.  
   
 > [!NOTE]
->  Lütfen varsayılan uygulama havuzunu sürüme güncelleştirin [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sürüm 2 ayarlarsanız.  
+>  Varsayılan uygulama havuzunu sürüme güncelleştirmelisiniz [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sürüm 2 ayarlarsanız.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)

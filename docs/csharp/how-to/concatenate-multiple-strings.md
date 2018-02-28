@@ -14,11 +14,11 @@ ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 978f631a130f9ec2d450779f2a6296a6ce3af356
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 60b36e0ef6bb6c16979c9f0b0e1407e0b4631a2f
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Nasıl yapılır: birden çok dizeyi (C# Kılavuzu) birleştirme
 
@@ -31,7 +31,7 @@ Aşağıdaki örnek, uzun bir dize sabit değeri küçük dizeleri kaynak kodund
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-Dize değişkenleri birleştirmek için kullanabileceğiniz `+` veya `+=` işleçleri [dize ilişkilendirme](../tutorials/string-interpolation.md) veya <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> yöntemleri. `+` İşleci kullanımı kolay ve sezgisel kodunu sağlar. Birkaç kullanmak olsa bile `+` bir deyim, içerik dizesi işleçleri yalnızca bir kez kopyalanır. Aşağıdaki kodu kullanarak, iki örnek gösterilmektedir `+` dizeyi birleştirmek için işleci:
+Dize değişkenleri birleştirmek için kullanabileceğiniz `+` veya `+=` işleçleri [dize ilişkilendirme](../tutorials/string-interpolation.md) veya <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> yöntemleri. `+` İşleci kullanımı kolay ve sezgisel kodunu sağlar. Birkaç kullanmak olsa bile `+` bir deyim, içerik dizesi işleçleri yalnızca bir kez kopyalanır. Aşağıdaki kod kullanma örnekleri gösterir `+` ve `+=` dizeyi birleştirmek için işleçler:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -42,7 +42,7 @@ Bazı ifadelerinde dize ilişkilendirme aşağıdaki kodu gösterildiği kullana
 > [!NOTE]
 >  Dize birleştirme işlemleri C# Derleyici boş bir dize aynı boş bir dize değerlendirir.
 
-Dizeyi birleştirmek için başka bir yöntem olduğu <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu yöntem, iyi bir dizeden bileşen dizeleri az sayıda oluştururken çalışır. Birleştirilmiş dizenizi yapın dize sayısı bildiğiniz durumlarda bu yöntem aynı zamanda harika bir seçim kullanılır.
+Dizeyi birleştirmek için başka bir yöntem olduğu <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu yöntem, iyi bir dizeden bileşen dizeleri az sayıda oluştururken çalışır.
 
 Diğer durumlarda burada birleştirme kaç kaynak dizeleri tanımadığınız ve kaynak dizeleri gerçek sayısını oldukça büyük bir Döngüdeki dizelerini birleştirme. <xref:System.Text.StringBuilder> Sınıfı bu senaryoları için tasarlanmıştır. Aşağıdaki kod <xref:System.Text.StringBuilder.Append%2A> yöntemi <xref:System.Text.StringBuilder> dizeyi birleştirmek için sınıf.  
   
@@ -50,7 +50,7 @@ Diğer durumlarda burada birleştirme kaç kaynak dizeleri tanımadığınız ve
 
 Daha fazla bilgi edinebilirsiniz [nedenleri dize birleştirme seçin veya `StringBuilder` sınıfı](xref:System.Text.StringBuilder#StringAndSB)
 
-Bir koleksiyon dizelerden katılmak için başka bir seçenek kullanmaktır <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemi. Kullanım <xref:System.String.Join%2A?displayProperty=nameWithType> dizeleri delimeter tarafından ayrılmış olması durumunda yöntemi. Aşağıdaki kod iki yöntemi kullanarak sözcükleri dizisi birleştirir:
+Bir koleksiyon dizelerden katılmak için başka bir seçenek kullanmaktır <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemi. Kullanım <xref:System.String.Join%2A?displayProperty=nameWithType> kaynak dizeleri delimeter tarafından ayrılmış olması durumunda yöntemi. Aşağıdaki kod iki yöntemi kullanarak sözcükleri dizisi birleştirir:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
