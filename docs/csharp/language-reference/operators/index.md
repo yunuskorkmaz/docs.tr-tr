@@ -2,9 +2,11 @@
 title: "C# İşleçleri"
 ms.date: 03/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.operators
+f1_keywords:
+- cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
@@ -90,12 +92,12 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="83089-144">[& x](../../../csharp/language-reference/operators/and-operator.md) – adresidir.</span><span class="sxs-lookup"><span data-stu-id="83089-144">[&x](../../../csharp/language-reference/operators/and-operator.md) – address of.</span></span>  
   
- <span data-ttu-id="83089-145">[* x](../../../csharp/language-reference/operators/multiplication-operator.md) – bilgileri başvuru kaldırma.</span><span class="sxs-lookup"><span data-stu-id="83089-145">[*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
+ <span data-ttu-id="83089-145">[\* x](../../../csharp/language-reference/operators/multiplication-operator.md) – bilgileri başvuru kaldırma.</span><span class="sxs-lookup"><span data-stu-id="83089-145">[\*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
   
 ## <a name="multiplicative-operators"></a><span data-ttu-id="83089-146">Çarpma İşleçleri</span><span class="sxs-lookup"><span data-stu-id="83089-146">Multiplicative Operators</span></span>  
  <span data-ttu-id="83089-147">Bu işleçlere sonraki bölümde daha yüksek öncelikli ve önceki bölümde düşük önceliğe sahip.</span><span class="sxs-lookup"><span data-stu-id="83089-147">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>  <span data-ttu-id="83089-148">Not: örnekler ayrıntılı sayfalarıyla Git işleçleri tıklatabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="83089-148">NOTE, you can click on the operators to go the detailed pages with examples.</span></span>  
   
- <span data-ttu-id="83089-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md) – çarpma.</span><span class="sxs-lookup"><span data-stu-id="83089-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
+ <span data-ttu-id="83089-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) – çarpma.</span><span class="sxs-lookup"><span data-stu-id="83089-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
   
  <span data-ttu-id="83089-150">[x / y](../../../csharp/language-reference/operators/division-operator.md) – bölme.</span><span class="sxs-lookup"><span data-stu-id="83089-150">[x / y](../../../csharp/language-reference/operators/division-operator.md) – division.</span></span>  <span data-ttu-id="83089-151">İşlenen tamsayılar olursa, sonuç sıfır kesilmiş bir tamsayıdır (örneğin, `-7 / 2 is -3`).</span><span class="sxs-lookup"><span data-stu-id="83089-151">If the operands are integers, the result is an integer truncated toward zero (for example, `-7 / 2 is -3`).</span></span>  
   
@@ -181,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="83089-227">[x-= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) – azaltma.</span><span class="sxs-lookup"><span data-stu-id="83089-227">[x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) – decrement.</span></span>  <span data-ttu-id="83089-228">Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="83089-228">Subtract the value of `y` from the value of `x`, store the result in `x`, and return the new value.</span></span>  <span data-ttu-id="83089-229">Varsa `x` atayan bir `event`, ardından `y` C# olay işleyici kaldırır uygun bir işlev olmalıdır</span><span class="sxs-lookup"><span data-stu-id="83089-229">If `x` designates an `event`, then `y` must be an appropriate function that C# removes as an event handler</span></span>  
   
- <span data-ttu-id="83089-230">[x * = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – çarpma atama.</span><span class="sxs-lookup"><span data-stu-id="83089-230">[x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="83089-231">Değerini Çarp `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="83089-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
+ <span data-ttu-id="83089-230">[x \* = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – çarpma atama.</span><span class="sxs-lookup"><span data-stu-id="83089-230">[x \*= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="83089-231">Değerini Çarp `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="83089-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
   
  <span data-ttu-id="83089-232">[x / y =](../../../csharp/language-reference/operators/division-assignment-operator.md) – bölme atama.</span><span class="sxs-lookup"><span data-stu-id="83089-232">[x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – division assignment.</span></span>  <span data-ttu-id="83089-233">Değerini bölmek `x` değeriyle `y`, sonuçta depolamak `x`ve yeni bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="83089-233">Divide the value of `x` by the value of `y`, store the result in `x`, and return the new value.</span></span>  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 11/21/2017
  <span data-ttu-id="83089-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md)– lambda bildirimi.</span><span class="sxs-lookup"><span data-stu-id="83089-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md) – lambda declaration.</span></span>  
   
 ## <a name="arithmetic-overflow"></a><span data-ttu-id="83089-247">Aritmetik Taşma</span><span class="sxs-lookup"><span data-stu-id="83089-247">Arithmetic Overflow</span></span>  
- <span data-ttu-id="83089-248">Aritmetik işleçler ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) olabilir söz konusu sayısal tür için olası değerler aralığının dışında olan sonuçlar.</span><span class="sxs-lookup"><span data-stu-id="83089-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="83089-249">Ayrıntılar için ancak genel olarak belirli bir işlecin bölümüne başvurun:</span><span class="sxs-lookup"><span data-stu-id="83089-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
+ <span data-ttu-id="83089-248">Aritmetik işleçler ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ \* ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) olabilir söz konusu sayısal tür için olası değerler aralığının dışında olan sonuçlar.</span><span class="sxs-lookup"><span data-stu-id="83089-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [\*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="83089-249">Ayrıntılar için ancak genel olarak belirli bir işlecin bölümüne başvurun:</span><span class="sxs-lookup"><span data-stu-id="83089-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
   
 - <span data-ttu-id="83089-250">Tamsayı aritmetik taşma ya da atar bir <xref:System.OverflowException> veya sonucunun en önemli BITS atar.</span><span class="sxs-lookup"><span data-stu-id="83089-250">Integer arithmetic overflow either throws an <xref:System.OverflowException> or discards the most significant bits of the result.</span></span> <span data-ttu-id="83089-251">Tamsayı bölme her zaman sıfır atar bir <xref:System.DivideByZeroException>.</span><span class="sxs-lookup"><span data-stu-id="83089-251">Integer division by zero always throws a <xref:System.DivideByZeroException>.</span></span>  
 

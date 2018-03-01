@@ -2,11 +2,13 @@
 title: "İşaretçi Dönüşümleri (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], conversions
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
@@ -22,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 |<span data-ttu-id="64441-106">Başlangıç</span><span class="sxs-lookup"><span data-stu-id="64441-106">From</span></span>|<span data-ttu-id="64441-107">Bitiş</span><span class="sxs-lookup"><span data-stu-id="64441-107">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="64441-108">Herhangi bir işaretçi türü</span><span class="sxs-lookup"><span data-stu-id="64441-108">Any pointer type</span></span>|<span data-ttu-id="64441-109">void *</span><span class="sxs-lookup"><span data-stu-id="64441-109">void*</span></span>|  
+|<span data-ttu-id="64441-108">Herhangi bir işaretçi türü</span><span class="sxs-lookup"><span data-stu-id="64441-108">Any pointer type</span></span>|<span data-ttu-id="64441-109">void \*</span><span class="sxs-lookup"><span data-stu-id="64441-109">void\*</span></span>|  
 |<span data-ttu-id="64441-110">null</span><span class="sxs-lookup"><span data-stu-id="64441-110">null</span></span>|<span data-ttu-id="64441-111">Herhangi bir işaretçi türü</span><span class="sxs-lookup"><span data-stu-id="64441-111">Any pointer type</span></span>|  
   
  <span data-ttu-id="64441-112">Açık işaretçi dönüştürme var olduğu örtük dönüştürme, bir cast ifadesi kullanarak dönüşümlerini gerçekleştirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="64441-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="64441-113">Aşağıdaki tabloda bu dönüşümleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="64441-113">The following table shows these conversions.</span></span>  

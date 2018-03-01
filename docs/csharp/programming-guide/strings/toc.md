@@ -1,6 +1,4 @@
 # [Dizeler](index.md)
 ## [Nasıl yapılır: Dize İçeriklerini Değiştirme](how-to-modify-string-contents.md)
 ## [Nasıl yapılır: Dizeleri Karşılaştırma](how-to-compare-strings.md)
-## [Nasıl yapılır: Dize Yöntemlerini Kullanarak Dizeleri Arama](how-to-search-strings-using-string-methods.md)
-## [Nasıl yapılır: Normal İfadeler Kullanarak Dizeleri Arama](how-to-search-strings-using-regular-expressions.md)
 ## [Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](how-to-determine-whether-a-string-represents-a-numeric-value.md)
