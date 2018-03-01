@@ -2,11 +2,13 @@
 title: "Bağımsız değişken &#39; Erişim &#39; geçerli değil. Çıktı modu için geçerli değerler şunlardır #39;OpenAccess.Write &#39; ve &#39;OpenAccess.Default &#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrFileSystem_IllegalOutputAccess
+f1_keywords:
+- vbrFileSystem_IllegalOutputAccess
 ms.assetid: 29a40d2d-10d7-476b-b7c5-d10ab6a3bcce
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 839ed4423245906b39d449c49ce000a5436f04e9
