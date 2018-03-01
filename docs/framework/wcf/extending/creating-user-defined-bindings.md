@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: user-defined bindings [WCF]
+helpviewer_keywords:
+- user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 |<span data-ttu-id="f5458-135">Güvenilirlik</span><span class="sxs-lookup"><span data-stu-id="f5458-135">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f5458-136">Hayır</span><span class="sxs-lookup"><span data-stu-id="f5458-136">No</span></span>|  
 |<span data-ttu-id="f5458-137">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="f5458-137">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f5458-138">Hayır</span><span class="sxs-lookup"><span data-stu-id="f5458-138">No</span></span>|  
 |<span data-ttu-id="f5458-139">Bileşik çift yönlü</span><span class="sxs-lookup"><span data-stu-id="f5458-139">Composite Duplex</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|<span data-ttu-id="f5458-140">Hayır</span><span class="sxs-lookup"><span data-stu-id="f5458-140">No</span></span>|  
-|<span data-ttu-id="f5458-141">Kodlama</span><span class="sxs-lookup"><span data-stu-id="f5458-141">Encoding</span></span>|<span data-ttu-id="f5458-142">İkili, MTOM, özel bir metin</span><span class="sxs-lookup"><span data-stu-id="f5458-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="f5458-143">Evet*</span><span class="sxs-lookup"><span data-stu-id="f5458-143">Yes*</span></span>|  
+|<span data-ttu-id="f5458-141">Kodlama</span><span class="sxs-lookup"><span data-stu-id="f5458-141">Encoding</span></span>|<span data-ttu-id="f5458-142">İkili, MTOM, özel bir metin</span><span class="sxs-lookup"><span data-stu-id="f5458-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="f5458-143">Evet\*</span><span class="sxs-lookup"><span data-stu-id="f5458-143">Yes\*</span></span>|  
 |<span data-ttu-id="f5458-144">Taşıma</span><span class="sxs-lookup"><span data-stu-id="f5458-144">Transport</span></span>|<span data-ttu-id="f5458-145">TCP ve adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel</span><span class="sxs-lookup"><span data-stu-id="f5458-145">TCP, Named Pipes, HTTP, HTTPS, MSMQ, Custom</span></span>|<span data-ttu-id="f5458-146">Evet</span><span class="sxs-lookup"><span data-stu-id="f5458-146">Yes</span></span>|  
   
- <span data-ttu-id="f5458-147">* Bir kodlama belirtilmezse, bir kodlama her bağlama için gerekli olduğu için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir varsayılan sizin için kodlama ekler.</span><span class="sxs-lookup"><span data-stu-id="f5458-147">*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="f5458-148">Text/XML ve ikili HTTP ve HTTPS aktarımları için aksi varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="f5458-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
+ <span data-ttu-id="f5458-147">\* Bir kodlama belirtilmezse, bir kodlama her bağlama için gerekli olduğu için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir varsayılan sizin için kodlama ekler.</span><span class="sxs-lookup"><span data-stu-id="f5458-147">\*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="f5458-148">Text/XML ve ikili HTTP ve HTTPS aktarımları için aksi varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="f5458-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
   
 ## <a name="creating-a-new-binding-element"></a><span data-ttu-id="f5458-149">Yeni bir bağlama öğesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="f5458-149">Creating a new Binding Element</span></span>  
  <span data-ttu-id="f5458-150">Türetilen türler yanı sıra <xref:System.ServiceModel.Channels.BindingElement> tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kendi bağlama öğeleri oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f5458-150">In addition to the types derived from <xref:System.ServiceModel.Channels.BindingElement> that are provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you can create your own binding elements.</span></span> <span data-ttu-id="f5458-151">Bu bağlamaları yığınını oluşturulur yolu ve içinde kendi oluşturarak Git bileşenleri özelleştirmenize olanak tanır <xref:System.ServiceModel.Channels.BindingElement> yığınında bir diğer sistem tarafından sağlanan türleri ile birleştirilebilen.</span><span class="sxs-lookup"><span data-stu-id="f5458-151">This lets you customize the way the stack of bindings is created and the components that go in it by creating your own <xref:System.ServiceModel.Channels.BindingElement> that can be composed with the other system-provided types in the stack.</span></span>  
