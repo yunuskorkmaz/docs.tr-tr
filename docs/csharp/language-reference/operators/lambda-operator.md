@@ -2,9 +2,11 @@
 title: "=&gt;İşleci (C# Başvurusu)"
 ms.date: 10/02/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: =>_CSharpKeyword
+f1_keywords:
+- =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]

@@ -2,11 +2,13 @@
 title: "İşleç türü &#39;için geçerli değil; &lt;typename&gt;&#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNoValidOperator_OneOperand
+f1_keywords:
+- vbrNoValidOperator_OneOperand
 ms.assetid: 9d5e01db-d3e7-446a-8d39-6600c73fea20
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 18d35140b10329232463211ced4b707f0a2f2c54
