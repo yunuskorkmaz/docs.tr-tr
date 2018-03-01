@@ -3,9 +3,11 @@ title: Visual Basic'de Diziler
 ms.custom: 
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
@@ -173,7 +175,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 ## <a name="array-size"></a><span data-ttu-id="c4b42-202">Dizi boyutu</span><span class="sxs-lookup"><span data-stu-id="c4b42-202">Array Size</span></span>  
 
- <span data-ttu-id="c4b42-203">Bir dizi tüm boyutlar uzunluklarının ürün boyutudur.</span><span class="sxs-lookup"><span data-stu-id="c4b42-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="c4b42-204">Şu anda dizisinde bulunan öğeleri toplam sayısını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c4b42-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="c4b42-205">Örneğin, aşağıdaki örnekte, her boyut dört öğelerle 2 boyutlu bir dizi bildirir.</span><span class="sxs-lookup"><span data-stu-id="c4b42-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="c4b42-206">Örneğin çıktısını gösterildiği gibi dizinin boyutu 16'dır (veya (3 + 1) * (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="c4b42-206">As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).</span></span>
+ <span data-ttu-id="c4b42-203">Bir dizi tüm boyutlar uzunluklarının ürün boyutudur.</span><span class="sxs-lookup"><span data-stu-id="c4b42-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="c4b42-204">Şu anda dizisinde bulunan öğeleri toplam sayısını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c4b42-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="c4b42-205">Örneğin, aşağıdaki örnekte, her boyut dört öğelerle 2 boyutlu bir dizi bildirir.</span><span class="sxs-lookup"><span data-stu-id="c4b42-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="c4b42-206">Örneğin çıktısını gösterildiği gibi dizinin boyutu 16'dır (veya (3 + 1) \* (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="c4b42-206">As the output from the example shows, the array's size is 16 (or (3 + 1) \* (3 + 1).</span></span>
 
  [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
 
