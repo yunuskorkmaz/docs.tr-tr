@@ -8,13 +8,15 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-dev_langs: vb
-ms.workload: dotnetcore
-ms.openlocfilehash: 058e8740ed523d606da0ad46e052f91f31b3b2d9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+dev_langs:
+- vb
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Visual Basic Hello World uygulamasının Visual Studio 2017 .NET çekirdek ile derleme
 
@@ -22,7 +24,7 @@ Bu konuda oluşturma, hata ayıklama ve Visual Basic Visual Studio 2017 kullanar
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[Visual Studio 2017](https://www.visualstudio.com/downloads/) yüklü ".NET Core platformlar arası geliştirme" iş yükü ile. .NET Core 2.0 ile uygulamanızı geliştirebilirsiniz.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) yüklü ".NET Core platformlar arası geliştirme" iş yükü ile. .NET Core 2.0 ile uygulamanızı geliştirebilirsiniz.
 
 Daha fazla bilgi için bkz: [.NET Core Windows önkoşulları](../../core/windows-prerequisites.md).
 
@@ -34,7 +36,7 @@ Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki
 
    ![Konsol seçilen uygulama ile yeni proje iletişim kutusu](./media/vb-with-visual-studio/new-project.png)
    
-1. Visual Studio projenizi oluşturmak için şablon kullanır. Visual Basic konsol uygulaması şablonu .NET Core için otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntem ile `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main`Uygulama giriş noktası, uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılan yöntemi niteliğindedir. Uygulama başlatıldığında sağlanan tüm komut satırı bağımsız değişkenleri kullanılabilir *args* dizi.
+1. Visual Studio projenizi oluşturmak için şablon kullanır. Visual Basic konsol uygulaması şablonu .NET Core için otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntem ile `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main` Uygulama giriş noktası, uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılan yöntemi niteliğindedir. Uygulama başlatıldığında sağlanan tüm komut satırı bağımsız değişkenleri kullanılabilir *args* dizi.
 
    ![Visual Studio ve yeni HelloWorld projesi](./media/vb-with-visual-studio/devenv.png)
 

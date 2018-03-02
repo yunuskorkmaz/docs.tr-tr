@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.workload: dotnetcore
-ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS üzerinde tam bir .NET Core çözümü oluşturma
 
@@ -33,7 +34,7 @@ Bu öğretici, bir arama sözcüğü ve kullanıcıdan bir metin dizesi kabul ed
 - [.NET core SDK 1.1 veya üstü](https://www.microsoft.com/net/core#macos)
 - [Mac için Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Önkoşullar hakkında daha fazla bilgi için bkz: [.NET Core Mac üzerinde önkoşulları](../../core/macos-prerequisites.md). Tam sistem gereksinimlerini Visual Studio 2017 için Mac için bkz: [Mac ürün ailesi sistem gereksinimleri için Visual Studio 2017](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac).
+Önkoşullar hakkında daha fazla bilgi için bkz: [.NET Core Mac üzerinde önkoşulları](../../core/macos-prerequisites.md). Tam sistem gereksinimlerini Visual Studio 2017 için Mac için bkz: [Mac ürün ailesi sistem gereksinimleri için Visual Studio 2017](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Bir kitaplığı oluşturma
 
@@ -169,7 +170,7 @@ Birim testleri, geliştirme sırasında sınama ve yayımlama otomatik yazılım
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. IDE yerine bir konsol penceresinde uygulamayı çalıştırmak için sağ `WordCounterApp` proje, select **seçenekleri**ve açın **varsayılan** düğümü altında **yapılandırmaları**. Onay kutusunu için **dış konsolda çalıştırmak**. Bırakın **duraklatma konsol çıktısı** iade seçeneği. Bu ayar için giriş yazabilirsiniz böylece bir konsol penceresi oluşturma uygulama neden `Console.ReadLine` deyimleri. IDE içinde çalıştırmak için uygulamayı değiştirmeden bırakırsanız, yalnızca çıktısını görebilirsiniz `Console.WriteLine` deyimleri. `Console.ReadLine`deyimleri IDE'nin içinde çalışmıyor **uygulama çıktısı** paneli.
+1. IDE yerine bir konsol penceresinde uygulamayı çalıştırmak için sağ `WordCounterApp` proje, select **seçenekleri**ve açın **varsayılan** düğümü altında **yapılandırmaları**. Onay kutusunu için **dış konsolda çalıştırmak**. Bırakın **duraklatma konsol çıktısı** iade seçeneği. Bu ayar için giriş yazabilirsiniz böylece bir konsol penceresi oluşturma uygulama neden `Console.ReadLine` deyimleri. IDE içinde çalıştırmak için uygulamayı değiştirmeden bırakırsanız, yalnızca çıktısını görebilirsiniz `Console.WriteLine` deyimleri. `Console.ReadLine` deyimleri IDE'nin içinde çalışmıyor **uygulama çıktısı** paneli.
 
    ![Proje Seçenekleri penceresi](./media/using-on-mac-vs-full-solution/vsmacfull13.png)
 
@@ -197,4 +198,4 @@ Birim testleri, geliştirme sırasında sınama ve yayımlama otomatik yazılım
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Studio 2017 Mac sürüm notları](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
+[Visual Studio 2017 Mac sürüm notları](/visualstudio/releasenotes/vs2017-mac-relnotes)

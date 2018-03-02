@@ -1,7 +1,7 @@
 ---
 title: ".NET Core'u kullanmaya başlama"
 description: "Windows, Linux ve macOS .NET Core uygulamalarının nasıl oluşturulacağını öğrenmek için kaynakları bulun."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>.NET Core'u kullanmaya başlama
 
@@ -30,8 +31,8 @@ Bu adım adım öğreticiler izleyerek .NET Core uygulamaları geliştirmeye ba�
 * [C# ve Visual Studio 2017 .NET çekirdek sınıf kitaplığı oluşturmak](./tutorials/library-with-visual-studio.md) -Visual Studio 2017 kullanarak C# içinde yazılmış bir sınıf kitaplığı oluşturmayı öğrenin.
 * [Visual Basic Hello World uygulamasının Visual Studio 2017 .NET çekirdek ile yapı](./tutorials/vb-with-visual-studio.md) -yapı, hata ayıklama ve Visual Basic ve Visual Studio 2017 kullanarak basit bir .NET Core konsol uygulaması yayımlama öğrenin. 
 * [Visual Basic ve Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı oluşturmak](./tutorials/vb-library-with-visual-studio.md) -Visual Studio 2017 kullanarak Visual Basic'te yazılmış bir sınıf kitaplığı oluşturmayı öğrenin.
-* [C# ve .NET Core üzerinde Windows kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://www.visualstudio.com/products/code-vs), Microsoft basit platformlar arası Kod düzenleyicisinde, .NET Core ilk Konsol uygulamanızı oluşturmak için.
-* [.NET Core ve Visual Studio 2017 kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio 2017](https://www.visualstudio.com/), Microsoft tam özellikli ilk oluşturmak için IDE platformlar arası konsol uygulamasındaki .NET Core.
+* [C# ve .NET Core üzerinde Windows kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft'un basit platformlar arası Kod düzenleyicisinde, .NET Core ilk Konsol uygulamanızı oluşturmak için.
+* [.NET Core ve Visual Studio 2017 kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft tam özellikli ilk oluşturmak için IDE platformlar arası konsol uygulamasındaki .NET Core.
 * [Komut satırı kullanarak .NET Core'u kullanmaya başlama](tutorials/using-with-xplat-cli.md) -herhangi bir kod düzenleyicisini ile [.NET Core platformlar arası komut satırı arabirimi (CLI)](tools/index.md).
 
 Bkz: [Önkoşullar için Windows geliştirme](windows-prerequisites.md) desteklenen Windows sürümlerinin bir listesi için konu.
@@ -43,7 +44,7 @@ Bkz: [Önkoşullar için Windows geliştirme](windows-prerequisites.md) destekle
 Bu adım adım öğreticiler izleyerek .NET Core uygulamaları geliştirmeye başlayabilirsiniz.
 
 * [Komut satırı kullanarak .NET Core'u kullanmaya başlama](tutorials/using-with-xplat-cli.md) -herhangi bir kod düzenleyicisini ile [.NET Core platformlar arası komut satırı arabirimi (CLI)](tools/index.md).
-* [C# ve .NET Core üzerinde Ubuntu kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft basit platformlar arası Kod düzenleyicisinde, .NET Core üzerinde Ubuntu 14.04 ilk Konsol uygulamanızı oluşturmak için.
+* [C# ve .NET Core üzerinde Ubuntu kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft'un basit platformlar arası Kod düzenleyicisinde, .NET Core üzerinde Ubuntu 14.04 ilk Konsol uygulamanızı oluşturmak için.
 
 Bkz: [Linux geliştirmesi için Önkoşullar](linux-prerequisites.md) desteklenen Linux distro'lar ve sürümlerin listesi için konu.
 

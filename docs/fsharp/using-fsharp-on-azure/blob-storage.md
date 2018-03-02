@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F # kullanarak Azure Blob storage'ı kullanmaya başlama #
 
@@ -236,7 +236,7 @@ Blob verilerini şifreleme hakkında daha fazla bilgi için bkz: [blob depolama 
 Blob storage'nın öğrendiğinize göre daha fazla bilgi için aşağıdaki bağlantıları izleyin.
 
 ### <a name="tools"></a>Araçlar
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) bir F # tür Blob, tablo ve kuyruk Azure depolama varlıklar keşfetmek ve bunları CRUD işlemleri kolayca uygulamak için kullanılan sağlayıcısı.
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) bir F # tür Blob, tablo ve kuyruk Azure depolama varlıklar keşfetmek ve bunları CRUD işlemleri kolayca uygulamak için kullanılan sağlayıcısı.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) bir F # Microsoft Azure Table Storage hizmeti kullandığınız için API
 - [Microsoft Azure Depolama Gezgini (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) görsel olarak Azure Storage ile Windows, OS X ve Linux üzerinde çalışmanıza olanak tanır Microsoft'tan ücretsiz, bir tek başına uygulamadır.
 
@@ -251,4 +251,4 @@ Blob storage'nın öğrendiğinize göre daha fazla bilgi için aşağıdaki ba�
 - [Windows üzerinde AzCopy komut satırı yardımcı programı ile veri aktarımı](/azure/storage/common/storage-use-azcopy)
 - [Linux'ta AzCopy komut satırı yardımcı programı ile veri aktarımı](/azure/storage/common/storage-use-azcopy-linux)
 - [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
-- [Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/windowsazurestorage/)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>İzlenecek yol: EDMX Şema Dosyasından F# Türleri Oluşturma
 
 > [!NOTE]
-Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](http://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
+Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](https://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
 
 > [!NOTE]
 API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
@@ -222,7 +222,7 @@ Bu yordamı yalnızca bir veritabanından tam bir Varlık Veri Modeli üretmeyi 
 1. Menü çubuğunda seçin **SQL**, **Transact-SQL Düzenleyicisi**, **yeni sorgu** bir veritabanı oluşturmak için. Eğer istenirse, veritabanı sunucunuzu ve örneğinizi belirtin.
 <br />
 
-2. Bölümünde açıklandığı gibi öğrenci veritabanı oluşturur veritabanı komut dosyasının içeriğini yapıştırın [Entity Framework belgelerine](http://msdn.microsoft.com/data/JJ614587.aspx) veri Geliştirici Merkezi'nde.
+2. Bölümünde açıklandığı gibi öğrenci veritabanı oluşturur veritabanı komut dosyasının içeriğini yapıştırın [Entity Framework belgelerine](https://msdn.microsoft.com/data/JJ614587.aspx) veri Geliştirici Merkezi'nde.
 <br />
 
 3. Üçgen simgesiyle araç çubuğu düğmesini seçerek veya Ctrl + Q anahtarları seçme SQL komut dosyasını çalıştırın.
@@ -269,13 +269,13 @@ Diğer sorgular içinde listelenen kullanılabilir sorgu işleçleri bakarak ke�
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Tür sağlayıcıları](index.md)
+[Tür Sağlayıcıları](index.md)
 
 [EdmxFile türü sağlayıcısı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/edmxfile-type-provider-%5bfsharp%5d)
 
 [İzlenecek yol: tür sağlayıcılarını ve varlıkları kullanarak SQL veritabanına erişme](accessing-a-sql-database-entities.md)
 
-[Varlık Çerçevesi](http://msdn.microsoft.com/data/ef)
+[Varlık Çerçevesi](https://msdn.microsoft.com/data/ef)
 
 [.edmx dosyasının genel bakış](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

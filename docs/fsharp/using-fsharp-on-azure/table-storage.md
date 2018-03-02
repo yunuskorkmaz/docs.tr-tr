@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>F # kullanarak Azure Table storage'ı kullanmaya başlama #
 
@@ -187,7 +187,7 @@ Bir depolama hesabından bir tablo silebilirsiniz. Silinmiş bir tablo silme iş
 Table Storage öğrendiğinize göre daha karmaşık depolama görevleri hakkında bilgi edinmek için aşağıdaki bağlantıları izleyin:
 
 - [.NET için Azure depolama API'leri](/dotnet/api/overview/azure/storage)
-- [Azure depolama türü sağlayıcısı](http://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure depolama ekibi blogu](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure depolama türü sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
 - [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [.NET içinde Azure tablo depolaması ile çalışmaya başlama](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

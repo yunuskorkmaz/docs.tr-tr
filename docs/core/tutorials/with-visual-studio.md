@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-ms.workload: dotnetcore
-ms.openlocfilehash: 06fea0118d70079a34a6954eae49ace344262ea5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Bir C# Hello World uygulamasının Visual Studio 2017 .NET çekirdek ile derleme
 
@@ -23,7 +24,7 @@ Bu konuda oluşturma, hata ayıklama ve C# Visual Studio 2017 kullanarak basit b
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[Visual Studio 2017](https://www.visualstudio.com/downloads/) yüklü ".NET Core platformlar arası geliştirme" iş yükü ile. .NET Core 1.1 veya .NET Core 2.0 ile uygulamanızı geliştirebilirsiniz.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) yüklü ".NET Core platformlar arası geliştirme" iş yükü ile. .NET Core 1.1 veya .NET Core 2.0 ile uygulamanızı geliştirebilirsiniz.
 
 Daha fazla bilgi için bkz: [.NET Core Windows önkoşulları](../../core/windows-prerequisites.md) konu.
 
@@ -35,7 +36,7 @@ Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki
 
    ![Konsol seçilen uygulama ile yeni proje iletişim kutusu](./media/with-visual-studio/newproject.png)
    
-1. Visual Studio projenizi oluşturmak için şablon kullanır. .NET Core için C# konsol uygulaması şablonu otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntem ile `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main`Uygulama giriş noktası, uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılan yöntemi niteliğindedir. Uygulama başlatıldığında sağlanan tüm komut satırı bağımsız değişkenleri kullanılabilir *args* dizi.
+1. Visual Studio projenizi oluşturmak için şablon kullanır. .NET Core için C# konsol uygulaması şablonu otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntem ile `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main` Uygulama giriş noktası, uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılan yöntemi niteliğindedir. Uygulama başlatıldığında sağlanan tüm komut satırı bağımsız değişkenleri kullanılabilir *args* dizi.
 
    ![Visual Studio ve yeni HelloWorld projesi](./media/with-visual-studio/devenv.png)
 

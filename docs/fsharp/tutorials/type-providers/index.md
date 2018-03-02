@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 
 > [!NOTE]
-Bu kılavuz, F # 3.0 uygulamasından yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](http://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
+Bu kılavuz, F # 3.0 uygulamasından yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](https://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
 
 Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları F# 3.0 bilgi zengin programlama desteğinin önemli bir parçasıdır. Bilgi zengin programlamanın anahtarı internette ve modern kurumsal ortamlarda bulunan çok çeşitli bilgi kaynakları ile çalışmadaki engelleri ortadan kaldırmaktır. Bir program içine bir bilgi kaynağını eklemekteki önemli engellerden biri bilgiyi programlama dili ortamında kullanmak için türler, özellikler ve yöntemler olarak temsil etme gereksinimidir. Bu türleri el ile yazmak çok zaman alıcıdır ve bakımı zordur. Yaygın bir alternatif projenize dosyalar ekleyen bir kod üretici kullanmaktır, ancak, kod üretiminin geleneksel türleri F# tarafından desteklenen keşifçi programlama modlarıyla iyi bir şekilde birleşemez çünkü üretilen kod her bir hizmet başvurusu değiştirildiğinde yenisiyle değiştirilmelidir.
 
@@ -45,9 +45,9 @@ Gerekten yerlerde, kendi özel tür sağlayıcılarınızı oluşturabilir, ya d
 |[İzlenecek yol: F &#35;oluşturma; EDMX şema dosyasından türleri](generating-fsharp-types-from-edmx.md)|Bir EDMX dosyasının Varlık Çerçevesi şema belirtimi vermesini temel alarak bir SQL veritabanının tablolarına ve depolanmış yordamlarına erişim için EdmxFile tür sağlayıcısının nasıl kullanıldığını anlatır.|
 |[Eğitmen: tür sağlayıcısı oluşturma](creating-a-type-provider.md)|Kendi özel tür sağlayıcılarınızı yazma konusu hakkında bilgi sağlar.|
 |[Tür sağlayıcısı güvenliği](type-provider-security.md)|Tür sağlayıcıları geliştirirken dikkat edilmesi gereken güvenlik konuları hakkında bilgi sağlar.|
-|[Tür sağlayıcıları sorunlarını giderme](troubleshooting-type-providers.md)|Tür sağlayıcıları ile çalışırken ortaya çıkabilen yaygın sorunlar ve çözümler için öneriler hakkında bilgi sağlar.|
+|[Tür Sağlayıcıları Sorunlarını Giderme](troubleshooting-type-providers.md)|Tür sağlayıcıları ile çalışırken ortaya çıkabilen yaygın sorunlar ve çözümler için öneriler hakkında bilgi sağlar.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](../../language-reference/index.md)
+[F# Dili Başvurusu](../../language-reference/index.md)
 
-[Visual F #](../../index.md)
+[Visual F#](../../index.md)

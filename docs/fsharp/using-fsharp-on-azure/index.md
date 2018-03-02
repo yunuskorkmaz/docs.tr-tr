@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 636604b1a0b645f13ac20d7ed85bde9abae3f9f6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-f-on-azure"></a>F # Azure üzerinde kullanma
 
@@ -40,7 +40,7 @@ Azure işlevleri F # olarak F # kodu verimli, geriye dönük, ölçeklenebilir y
 
 Azure işlevleri ve F # kullanma için diğer kaynaklar:
 
-* [F # Suave kullanarak Azure işlevleri ölçeklendirin](http://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [F # Suave kullanarak Azure işlevleri ölçeklendirin](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
 * [F #'de Azure işlevi oluşturma](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Azure türü sağlayıcısı ile Azure işlevlerini kullanma](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
@@ -48,10 +48,10 @@ Azure işlevleri ve F # kullanma için diğer kaynaklar:
 
 Azure depolama, depolama hizmetleri dayanıklılık, kullanılabilirlik ve ölçeklenebilirlik müşterilerin ihtiyaçlarını karşılamak üzere kullanan modern uygulamalar için temel bir katmanıdır. F # programları, doğrudan aşağıdaki makalelerde açıklanan techinques kullanarak Azure storage Hizmetleri ile etkileşim kurabilir.
 
-* [F # kullanarak Azure Blob storage'ı kullanmaya başlama](blob-storage.md)
-* [F # kullanarak Azure File storage'ı kullanmaya başlama](file-storage.md)
-* [F # kullanarak Azure kuyruk depolamaya başlayın](queue-storage.md)
-* [F # kullanarak Azure Table storage'ı kullanmaya başlama](table-storage.md)
+* [F# kullanarak Azure Blob depolama kullanmaya başlama](blob-storage.md)
+* [F# kullanarak Azure Dosya depolama kullanmaya başlama](file-storage.md)
+* [F# kullanarak Azure Kuyruk depolama kullanmaya başlama](queue-storage.md)
+* [F# kullanarak Azure Tablo depolama kullanmaya başlama](table-storage.md)
 
 Azure depolama, Azure işlevleri ile birlikte açık API çağrıları yerine bildirim temelli yapılandırma aracılığıyla da kullanılabilir. Bkz: [Azure işlevleri Tetikleyicileri ve bağlamaları için Azure Storage](/azure/azure-functions/functions-bindings-storage) F # örnekleri içerir.
 

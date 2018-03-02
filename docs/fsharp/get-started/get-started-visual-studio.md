@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 944bbbba6a26634ace269d86cbbdde9ef9de7bcd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>F # Visual Studio ile çalışmaya başlama
 
-F # ve Visual F # Araçları Visual Studio IDE içinde desteklenir.  Başlamak için aşağıdakileri yapmalısınız [Visual Studio indirme](https://www.visualstudio.com/downloads/download-visual-studio-vs), henüz yapmadıysanız.  Bu makalede Visual Studio 2017 Community Edition kullanır, ancak F # tercih ettiğiniz sürümüyle kullanabilirsiniz.
+F # ve Visual F # Araçları Visual Studio IDE içinde desteklenir.  Başlamak için aşağıdakileri yapmalısınız [Visual Studio indirme](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), henüz yapmadıysanız.  Bu makalede Visual Studio 2017 Community Edition kullanır, ancak F # tercih ettiğiniz sürümüyle kullanabilirsiniz.
 
 ## <a name="installing-f"></a>F # yükleme #
 
@@ -137,8 +137,8 @@ F # Etkileşimli ile neler yapabileceğinizi içine yalnızca bir bakışta budu
 Henüz yapmadıysanız, kullanıma [Tur, F #](../tour.md), hangi kapsayan F # dilinin temel özelliklerden bazıları.  Bu bazı F # özelliklerini genel bakış sağlar ve Visual Studio'ya kopyalama ve çalıştırma geniş kod örnekleri sağlar.  Ayrıca kullanabileceğiniz bazı harika dış kaynaklara vardır, showcased [F # Kılavuzu](../index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual F #](index.md)  
- [F # turu](../tour.md)  
+ [Visual F#](index.md)  
+ [F# Turu](../tour.md)  
  [F # dili başvurusu](../language-reference/index.md)  
  [Tür çıkarımı](../language-reference/type-inference.md)  
  [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)  

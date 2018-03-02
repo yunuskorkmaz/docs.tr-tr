@@ -1,7 +1,7 @@
 ---
 title: "Docker uygulamalar için geliştirme iş akışı"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docker uygulamalar için geliştirme iş akışı"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0f20e5b568a464b5c860e3da51e52d4f7d79972
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49cd0ade4586317158c901586f4dd9528760a9c4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamalar için geliştirme iş akışı
 
@@ -73,7 +73,7 @@ Docker uygulamanızda etkinleştirme ve dağıtma ve Docker içinde test önce b
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
 -   **Visual Studio 2017**
-    [*https://www.visualstudio.com/vs/visual-studio-2017/*](https://www.visualstudio.com/vs/visual-studio-2017/)
+    [*https://www.visualstudio.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![](./media/image4.png)
 
@@ -131,7 +131,7 @@ Ek yapılandırma ayarlarını dil ve kullandığınız framework bağlı olarak
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images)
 
 -   **Kendi görüntünüzü yapı**. Resmi Docker belgelerinde.
-    [*https://docs.docker.com/Engine/Tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
+    [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 ### <a name="using-multi-arch-image-repositories"></a>Birden çok yay görüntü depoları kullanma
 
@@ -139,17 +139,17 @@ Tek bir depodaki Linux görüntüsü ve bir Windows görüntüsü gibi platform 
 
 Açık bir platform desteği bir etiket belirtirseniz aşağıdaki durumlarda ister:
 
--   **Microsoft/aspnetcore:2.0.0-jessie**
+-   **microsoft/aspnetcore:2.0.0-jessie**
 
         .NET Core 2.0 runtime-only on Linux 
 
--   **Microsoft/aspnetcore:2.0.0-nanoserver**
+-   **microsoft/aspnetcore:2.0.0-nanoserver**
 
         .NET Core 2.0 runtime-only on Windows Nano Server
 
 Ancak ve belirtirseniz, bu yeni mid-2017 itibaren bile aynı etiketi ile aynı görüntü adı, Linux veya Windows sürümü dağıttığınız Docker ana bilgisayar işletim sistemi bağlı olarak yeni çok yay görüntüleri (gibi çok arch destekleyen aspnetcore görüntü) kullanır , aşağıdaki örnekte gösterildiği gibi:
 
--   **Microsoft / aspnetcore:2.0**
+-   **microsoft/aspnetcore:2.0**
 
         Multi-arch: .NET Core 2.0 runtime-only on Linux or Windows Nano Server depending on the Docker host OS
 
@@ -162,9 +162,9 @@ Kendi Docker temel görüntü sıfırdan oluşturabilir. Bu senaryo ile Docker b
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Birden çok yay .NET Core görüntüleri**.
-https://github.com/dotnet/Announcements/issues/14 
+https://github.com/dotnet/announcements/issues/14 
 -   **Temel görüntü oluşturma**. Resmi Docker belge.
-    [*https://docs.docker.com/Engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+    [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![](./media/image7.png)
 
@@ -381,7 +381,7 @@ Düzenleyici/CLI yaklaşımı kullanarak geliştiriyorsanız kapsayıcılarında
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 -   **Steve Lasker. Yapı, hata ayıklama, Docker ile ASP.NET Core uygulamaları dağıtma.** Video.
-    [*https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+    [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio ile kapsayıcıları geliştirirken Basitleştirilmiş iş akışı
 
@@ -398,7 +398,7 @@ Ayrıca, adım 2 (Docker destek eklenmesi projelerinize) yalnızca bir kez gerç
 -   **Steve Lasker. Visual Studio 2017 ile .NET docker geliştirme**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Gamze T. Fritz. Visual Studio için bir kapsayıcı yeni Docker araçları ile .NET Core uygulaması koymak**
+-   **Jeffrey T. Fritz. Visual Studio için bir kapsayıcı yeni Docker araçları ile .NET Core uygulaması koymak**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile PowerShell komutlarını kullanma 
@@ -423,8 +423,8 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET-docker/Dockerfile.** Windows özellikleri içerecek şekilde dockerfiles çalıştırmak için Powershell komutlarını örnek.
-    [*https://github.com/Microsoft/ASPNET-docker/BLOB/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
+-   **aspnet-docker/Dockerfile.** Windows özellikleri içerecek şekilde dockerfiles çalıştırmak için Powershell komutlarını örnek.
+    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
 [Önceki] (index.md) [sonraki] (.. / net-core-single-containers-linux-windows-server-hosts/index.md)

@@ -1,7 +1,7 @@
 ---
 title: 'F # zaman uyumsuz programlama'
 description: "F # zaman uyumsuz programlama kullanımı kolay ve doğal dil için bir dil düzeyi programlama modeli aracılığıyla nasıl yapıldığını öğrenin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9196bfc-b8a8-4d33-8b53-0dcbd58a69d8
-ms.openlocfilehash: 23528d84d0f28283868a1ea316953543d0fd566a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c3fde46e804b7acac78d3ce5454a3c6f806e24e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-programming-in-f"></a>F # zaman uyumsuz programlama #
 
@@ -44,7 +44,7 @@ let fetchHtmlAsync url =
         return html
     }
 
-let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 printfn "%s" html
 ```
 
@@ -52,11 +52,11 @@ Ve bu kadar! Kullanımını yanı sıra `async`, `let!`, ve `return`, yalnızca 
 
 Belirtmeye değer olan birkaç söz dizimi yapıları vardır:
 
-*   `let!`(başka bir bağlamda çalışır) bir zaman uyumsuz ifadesi sonucu bağlar.
-*   `use!`Works olduğu gibi `let!`, ancak kapsam dışına çıktığında, ilişkili kaynakları siler.
-*   `do!`herhangi bir şey döndürmez bir zaman uyumsuz iş akışı await.
-*   `return`yalnızca zaman uyumsuz ifadeden bir sonuç döndürür.
-*   `return!`başka bir zaman uyumsuz iş akışı çalıştırır ve sonuç olarak kendi dönüş değerini döndürür.
+*   `let!` (başka bir bağlamda çalışır) bir zaman uyumsuz ifadesi sonucu bağlar.
+*   `use!` Works olduğu gibi `let!`, ancak kapsam dışına çıktığında, ilişkili kaynakları siler.
+*   `do!` herhangi bir şey döndürmez bir zaman uyumsuz iş akışı await.
+*   `return` yalnızca zaman uyumsuz ifadeden bir sonuç döndürür.
+*   `return!` başka bir zaman uyumsuz iş akışı çalıştırır ve sonuç olarak kendi dönüş değerini döndürür.
 
 Ayrıca, normal `let`, `use`, ve `do` anahtar sözcükleri normal bir işlevde gibi zaman uyumsuz sürümlerini kullanılabilir.
 
@@ -64,7 +64,7 @@ Ayrıca, normal `let`, `use`, ve `do` anahtar sözcükleri normal bir işlevde g
 
 Daha önce belirtildiği gibi zaman uyumsuz açıkça başlatılması gereken başka bir bağlamda yapılacak işleri belirtimini kodudur. Bunu yapmanın iki birincil yollar şunlardır:
 
-1.  `Async.RunSynchronously`işlem başka bir iş parçacığında bir zaman uyumsuz iş akışını başlatmak ve sonucunu bekler.
+1.  `Async.RunSynchronously` işlem başka bir iş parçacığında bir zaman uyumsuz iş akışını başlatmak ve sonucunu bekler.
 
 ```fsharp
 open System
@@ -79,13 +79,13 @@ let fetchHtmlAsync url =
     }
 
  // Execution will pause until fetchHtmlAsync finishes
- let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
  // you actually have the result from fetchHtmlAsync now!
  printfn "%s" html
  ```
 
-2.  `Async.Start`başka bir iş parçacığında bir zaman uyumsuz iş akışını başlatmak ve olacak **değil** sonucunu bekler.
+2.  `Async.Start` başka bir iş parçacığında bir zaman uyumsuz iş akışını başlatmak ve olacak **değil** sonucunu bekler.
 
 ```fsharp
 open System
@@ -98,7 +98,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 // Execution will continue after calling this!
 Async.Start(workflow)
@@ -114,7 +114,7 @@ Bir zaman uyumsuz iş akışı daha belirli senaryolar için kullanılabilir ba�
 
 ## <a name="how-to-add-parallelism-to-async-code"></a>Zaman uyumsuz kodu paralellik ekleme
 
-Bazen, paralel olarak birden çok zaman uyumsuz işlerini gerçekleştirmek için kendi sonuçlarını toplamak ve bazı şekilde yorumlamaya. `Async.Parallel`Görev paralel coerce gerek içerir kitaplığı, kullanmaya gerek kalmadan bunu sayesinde `Task<'T>` ve `Async<'T>` türleri.
+Bazen, paralel olarak birden çok zaman uyumsuz işlerini gerçekleştirmek için kendi sonuçlarını toplamak ve bazı şekilde yorumlamaya. `Async.Parallel` Görev paralel coerce gerek içerir kitaplığı, kullanmaya gerek kalmadan bunu sayesinde `Task<'T>` ve `Async<'T>` türleri.
 
 Aşağıdaki örnek kullanacağı `Async.Parallel` paralel dört popüler sitelerinden HTML indirmek için bu görevin tamamlanmasını bekleyin ve sonra indirilen HTML yazdırın.
 
@@ -123,10 +123,10 @@ open System
 open System.Net
 
 let urlList = 
-    [ "http://www.microsoft.com"
-      "http://www.google.com"
-      "http://www.amazon.com"
-      "http://www.facebook.com" ]
+    [ "https://www.microsoft.com"
+      "https://www.google.com"
+      "https://www.amazon.com"
+      "https://www.facebook.com" ]
 
 let fetchHtmlAsync url = 
     async {
@@ -181,7 +181,7 @@ Diğer birkaç benzerlikler ve eşitlenmeyeceği farklar vardır.
 
 ### <a name="differences"></a>Farkları
 
-*   İç içe geçmiş `let!` değil izin, farklı olarak iç içe geçmiş`await`
+*   İç içe geçmiş `let!` değil izin, farklı olarak iç içe geçmiş `await`
 
  Farklı `await`, hangi iç içe geçirilemez süresiz olarak, `let!` olamaz ve içinde başka bir kullanmadan önce bağlı sonucu olmalıdır `let!`, `do!`, veya `use!`.
 
@@ -208,7 +208,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
 Async.Start (workflow, token)
@@ -222,5 +222,5 @@ Ve bu kadar!
 ## <a name="further-resources"></a>Ek kaynaklar:
 
 *   [MSDN'de zaman uyumsuz iş akışları](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [F # için zaman uyumsuz sıraları](http://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F # için zaman uyumsuz sıraları](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
 *   [F # veri HTTP yardımcı programları](https://fsharp.github.io/FSharp.Data/library/Http.html)

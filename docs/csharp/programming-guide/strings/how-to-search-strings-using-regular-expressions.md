@@ -2,20 +2,21 @@
 title: "Nasıl yapılır: Normal İfadeler Kullanarak Dizeleri Arama (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>Nasıl yapılır: Normal İfadeler Kullanarak Dizeleri Arama (C# Programlama Kılavuzu)
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> Sınıfı, dizeleri aramak için kullanılabilir. Bu aramalar, normal ifadeler tam kullanımını yapmak karmaşıklığı çok basit değişebilir. Kullanarak arama dizesi iki örnek verilmiştir <xref:System.Text.RegularExpressions.Regex> sınıfı. Daha fazla bilgi için bkz: [.NET Framework normal ifadeleri](https://msdn.microsoft.com/library/hs600312).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Dizeleri](../../../csharp/programming-guide/strings/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Dizeler](../../../csharp/programming-guide/strings/index.md)  
  [.NET framework normal ifadeleri](https://msdn.microsoft.com/library/hs600312)  
- [Normal ifade dili - hızlı başvuru](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c)
+ [Normal İfade Dili - Hızlı Başvuru](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c)

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>İzlenecek yol: DBML Dosyasından F# Türleri Oluşturma
 
 > [!NOTE]
-Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](http://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
+Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](https://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
 
 > [!NOTE]
 API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
@@ -157,10 +157,10 @@ Diğer sorgu ifadeleri kullanın veya bir veritabanı bağlantısı veri bağlam
 ## <a name="see-also"></a>Ayrıca Bkz.
 [DbmlFile türü sağlayıcısı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/dbmlfile-type-provider-%5bfsharp%5d)
 
-[Tür sağlayıcıları](index.md)
+[Tür Sağlayıcıları](index.md)
 
 [İzlenecek yol: tür sağlayıcılarını kullanarak SQL veritabanına erişme](accessing-a-sql-database.md)
 
 [SqlMetal.exe &#40; Kod oluşturma Aracı &#41;](https://msdn.microsoft.com/library/bb386987)
 
-[Sorgu ifadeleri](../../language-reference/query-expressions.md)
+[Sorgu İfadeleri](../../language-reference/query-expressions.md)

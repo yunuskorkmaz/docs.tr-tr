@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>İzlenecek yol: Tür Sağlayıcılarını Kullanarak SQL Veritabanına Erişme
 
 > [!NOTE]
-Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](http://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
+Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.  Bkz: [FSharp.Data](https://fsharp.github.io/FSharp.Data/) güncel, platformlar arası tür sağlayıcıları için.
 
 > [!NOTE]
 API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
@@ -96,7 +96,7 @@ Bu adımda, veritabanı şemanızı tür sağlayıcısı oluşturun.
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>Doğrudan veritabanı bağlantısı türü sağlayıcıdan ayarlamak için
 
-Kritik iki tür sağlayıcısı kullanarak bir SQL veritabanını sorgulamak için kullanabileceğiniz türleri oluşturmak için gereken kod satırı vardır. İlk olarak, tür sağlayıcısı örneği oluşturur. Bunu yapmak için oluşturmak için bir tür kısaltması nasıl göründüğünü bir `SqlDataConnection` bir statik genel parametresiyle. `SqlDataConnection`bir SQL türü sağlayıcısı ve ile karıştırılmamalıdır `SqlConnection` yazın ADO.NET programlamada kullanılır. Bağlanmak istediğiniz veritabanına sahip ve bir bağlantı dizesi varsa, tür sağlayıcısı çağırmak için aşağıdaki kodu kullanın. Verilen örnek dize için kendi bağlantı dizesini değiştirin. Örneğin, sunucunuz MYSERVER ve veritabanı örneği olan örneği, Veritabanım veritabanı adıdır ve veritabanını, sonra bağlantı dizesini erişmek için Windows kimlik doğrulaması kullanmak istediğiniz olarak olacaksa aşağıdaki örnek kodda verilir.
+Kritik iki tür sağlayıcısı kullanarak bir SQL veritabanını sorgulamak için kullanabileceğiniz türleri oluşturmak için gereken kod satırı vardır. İlk olarak, tür sağlayıcısı örneği oluşturur. Bunu yapmak için oluşturmak için bir tür kısaltması nasıl göründüğünü bir `SqlDataConnection` bir statik genel parametresiyle. `SqlDataConnection` bir SQL türü sağlayıcısı ve ile karıştırılmamalıdır `SqlConnection` yazın ADO.NET programlamada kullanılır. Bağlanmak istediğiniz veritabanına sahip ve bir bağlantı dizesi varsa, tür sağlayıcısı çağırmak için aşağıdaki kodu kullanın. Verilen örnek dize için kendi bağlantı dizesini değiştirin. Örneğin, sunucunuz MYSERVER ve veritabanı örneği olan örneği, Veritabanım veritabanı adıdır ve veritabanını, sonra bağlantı dizesini erişmek için Windows kimlik doğrulaması kullanmak istediğiniz olarak olacaksa aşağıdaki örnek kodda verilir.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">
@@ -450,14 +450,14 @@ INSERT INTO Table3 (Id, Name, Data)
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Tür sağlayıcıları](index.md)
+[Tür Sağlayıcıları](index.md)
 
 [SqlDataConnection türü sağlayıcısı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqldataconnection-type-provider-%5bfsharp%5d)
 
 [İzlenecek yol: DBML dosyasından F # türleri oluşturma](generating-fsharp-types-from-dbml.md)
 
-[Sorgu ifadeleri](../../language-reference/query-expressions.md)
+[Sorgu İfadeleri](../../language-reference/query-expressions.md)
 
-[LINQ-SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+[LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
 
 [SqlMetal.exe &#40; Kod oluşturma Aracı &#41;](https://msdn.microsoft.com/library/bb386987)

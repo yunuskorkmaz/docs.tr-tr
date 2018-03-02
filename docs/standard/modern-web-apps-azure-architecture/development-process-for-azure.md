@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -36,7 +36,7 @@ Microsoft, tam ve güçlü bir IDE ya da basit ve Çevik Düzenleyicisi tercih o
 
 **Şekil 10-1.** .NET Core iş yükü Visual Studio 2017 yükleniyor.
 
-[Visual Studio 2017 İndir](https://www.visualstudio.com/downloads/)
+[Visual Studio 2017 İndir](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code ve dotnet CLI** (Mac, Linux ve Windows için platformlar arası araçları). Herhangi bir geliştirme dili destekleyen bir basit ve platformlar arası Düzenleyicisi tercih ederseniz, Microsoft Visual Studio Code ve CLI dotnet kullanabilirsiniz. Bu ürünler Geliştirici iş akışı kolaylaştırır basit ancak güçlü bir deneyim sağlar. Ayrıca, Visual Studio Code uzantıları için C destekler\# ve web geliştirme, IntelliSense ve düzenleyici içindeki kısayol görevlere sağlama.
 
@@ -56,9 +56,9 @@ CI/CD kullanarak bir ASP.NET Core uygulama geliştirme ile çalışmaya başlama
 
 Uygulamanız için bir yayın işlem hattı oluşturmak için uygulama kodunuzun kaynak denetiminde olması gerekir. Bir yerel deposu ayarlama ve bir takım projesi uzak deponuza bağlayın. Bu yönergeleri izleyin:
 
--   [Kodunuzu paylaşımı Git ve Visual Studio](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) veya
+-   [Kodunuzu paylaşımı Git ve Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) veya
 
--   [Kodunuzu TFVC'yi ve Visual Studio ile paylaşma](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [Kodunuzu TFVC'yi ve Visual Studio ile paylaşma](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Bir Azure uygulama hizmeti uygulamanızı dağıtacağınız oluşturun. Azure Portal'da App Services dikey penceresine geri giderek bir Web uygulaması oluşturun. Tıklatın + Ekle, Web uygulaması şablonu seçin, Oluştur'u tıklatın ve bir ad ve diğer ayrıntıları sağlayın. Web uygulaması {adından} erişilebilir olacaktır. azurewebsites.net.
 
@@ -68,13 +68,13 @@ Bir Azure uygulama hizmeti uygulamanızı dağıtacağınız oluşturun. Azure P
 
 Yeni kod projenin kaynak denetimi deponuza kaydedilmiş olduğunda CI yapı işleminizin bir otomatik derleme gerçekleştirir. Bu kod derlemeler anında geri bildirim sağlar (ve, ideal olarak, otomatikleştirilmiş testleri geçirir) ve potansiyel olarak dağıtılabilir. Bu CI yapı web üretecektir paketi yapı dağıtmak ve CD işlem tarafından tüketim için yayımlayın.
 
-[CI derleme işlemi tanımlayın](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[CI derleme işlemi tanımlayın](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Birisi ekibinizin yeni kod uygulayan her sistemin bir yapıyı sıraya şekilde sürekli tümleştirme etkinleştirmeyi unutmayın. Yapı sınamak ve bir web oluşturan olduğunu doğrulayın paketini yapılarının biri olarak dağıtabilirsiniz.
 
 Bir yapı başarılı olduğunda, CD işlemi, Azure web uygulamanızın CI yapınızın sonuçlarını dağıtın. Bu yapılandırma için oluşturun ve yapılandırın bir *sürüm*, Azure uygulama hizmetiniz dağıttığınız.
 
-[CD yayın işlemi tanımlayın](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[CD yayın işlemi tanımlayın](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 CI/CD hattınızı yapılandırıldıktan sonra yalnızca web uygulamanız için güncelleştirmeler yapabilir ve bunları kaynak denetimine onlara dağıtılan uygulayın.
 
@@ -92,7 +92,7 @@ ASP.NET Core uygulamanızı azure'a geliştirme uygulamanızı aksi geliştirme 
 
 #### <a name="step-2-application-code-repository"></a>Adım 2. Uygulama kodu deposu
 
-Kodunuzu takımınızla paylaşmak için hazır olduğunda, ekibinizin paylaşılan kaynak deposu için yerel kaynak deposundan değişikliklerinizi gönderme. Özel bir şube çalışmakta, bu adım genellikle kodunuzu bir paylaşılan dala birleştirerek (belki de, bir [çekme isteği](https://www.visualstudio.com/docs/git/pull-requests)).
+Kodunuzu takımınızla paylaşmak için hazır olduğunda, ekibinizin paylaşılan kaynak deposu için yerel kaynak deposundan değişikliklerinizi gönderme. Özel bir şube çalışmakta, bu adım genellikle kodunuzu bir paylaşılan dala birleştirerek (belki de, bir [çekme isteği](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Adım 3. Yapılandırma sunucusu: Sürekli tümleştirme. Derleme, Test, paketi
 
@@ -113,7 +113,7 @@ Web uygulaması çalışırken, uygulama durumunu izlemenize ve tanılama ve kul
 ## <a name="references"></a>Referanslar
 
 **Derleme ve ASP.NET Core uygulamanızı Azure'a dağıtma**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

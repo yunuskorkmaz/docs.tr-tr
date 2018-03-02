@@ -1,7 +1,7 @@
 ---
 title: Zaman uyumsuz programlama
 description: ".NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz programlama modeli hakkında bilgi edinin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -95,7 +95,7 @@ Teorik olarak-inclined için bu bir uygulamasıdır [asynchrony Promise modelini
 *   Zaman uyumsuz kodu kullanan `Task<T>` ve `Task`, arka planda gerçekleştirilen modeli çalışmak için kullanılan yapılar olduğu.
 * `async` Anahtar sözcüğü bir yöntem kullanmanıza olanak sağlayan bir zaman uyumsuz yöntem kapatır `await` kendi gövdesindeki anahtar sözcüğü.
 *   Zaman `await` anahtar sözcüğü uygulandığında, çağrıyı yapan yöntemini askıya alır ve awaited görevi tamamlanana kadar geri çağırıcısına denetim verir.
-*   `await`yalnızca bir zaman uyumsuz yöntem içinde kullanılabilir.
+*   `await` yalnızca bir zaman uyumsuz yöntem içinde kullanılabilir.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>CPU bağımlı ve g/Ç-bağlı iş tanı
 
@@ -222,7 +222,7 @@ Daha az kod olmasına rağmen zaman uyumsuz koduyla LINQ karıştırma zaman dik
 
 Zaman uyumsuz programlama görece basit olsa da, bazı ayrıntılar beklenmeyen davranışları önleyebilir göz önünde bulundurmanız vardır.
 
-*  `async`**yöntemleri olması gerekir bir** `await` **kendi gövdesindeki anahtar sözcüğü veya hiçbir zaman sunacak!**
+*  `async` **yöntemleri olması gerekir bir** `await` **kendi gövdesindeki anahtar sözcüğü veya hiçbir zaman sunacak!**
 
 Bu, göz önünde bulundurmanız önemlidir.  Varsa `await` gövdesinde kullanılmayan bir `async` yöntemi, bir uyarı üretir C# Derleyici olacaktır, ancak derleme ve normal bir yöntem değilmiş gibi çalıştırma kodu olacaktır.  Async yöntemi için C# Derleyici tarafından oluşturulan Durum makinesi herhangi bir şey gerçekleştirmeye olabilir değil olarak bu de son derece verimli olacaktır.
 
@@ -230,13 +230,13 @@ Bu, göz önünde bulundurmanız önemlidir.  Varsa `await` gövdesinde kullanı
 
 Bu, .NET içinde daha kolayca zaman uyumlu ve zaman uyumsuz yöntemleri ayırdetmek için kullanılan kuraldır. Kodunuzu (örneğin, olay işleyicileri veya web denetleyicisi yöntemleri) tarafından açıkça çağrılan olmayan bazı yöntemleri mutlaka uygulanmaz unutmayın. Bunlar açıkça kodunuz tarafından adlandırılır değil çünkü bunların adlandırma hakkında açık olması önemli değildir.
 
-*   `async void`**olay işleyicileri yalnızca kullanılmalıdır.**
+*   `async void` **yalnızca olay işleyicileri için kullanılmalıdır.**
 
-`async void`olaylar, dönüş türleri olmadığı için çalışması zaman uyumsuz olay işleyicileri izin vermek için tek yolu (Bu nedenle yapılamıyor kullanımı `Task` ve `Task<T>`). Diğer bir kullanımını `async void` DOKUNUN model izlemez ve gibi kullanmak için zor olabilir:
+`async void` olaylar, dönüş türleri olmadığı için çalışması zaman uyumsuz olay işleyicileri izin vermek için tek yolu (Bu nedenle yapılamıyor kullanımı `Task` ve `Task<T>`). Diğer bir kullanımını `async void` DOKUNUN model izlemez ve gibi kullanmak için zor olabilir:
 
   *   Oluşturulan özel durumları bir `async void` yöntemi bu yöntemi dışında yakalanan olamaz.
-  *   `async void`test etmek oldukça zor yöntemleridir.
-  *   `async void`Arayan bunları zaman uyumsuz olarak bekleniyor değil, yöntemleri hatalı yan etkileri neden olabilir.
+  *   `async void` test etmek oldukça zor yöntemleridir.
+  *   `async void` Arayan bunları zaman uyumsuz olarak bekleniyor değil, yöntemleri hatalı yan etkileri neden olabilir.
 
 *   **Zaman uyumsuz Lambda'lar LINQ ifadelerinde kullanırken dikkatle tread**
 
@@ -248,7 +248,7 @@ Geçerli iş parçacığının beklemek için bir yol engelleme tamamlamak bir g
 
 | Bu kullan... | Bunun yerine... | Bunu yapmak isteyen olduğunda |
 | --- | --- | --- |
-| `await` | `Task.Wait`veya`Task.Result` | Bir arka plan görevi sonucunu alınıyor |
+| `await` | `Task.Wait` Veya `Task.Result` | Bir arka plan görevi sonucunu alınıyor |
 | `await Task.WhenAny` | `Task.WaitAny` | Tamamlamak herhangi bir görev için bekleniyor |
 | `await Task.WhenAll` | `Task.WaitAll` | Tüm görevlerin tamamlanması bekleniyor |
 | `await Task.Delay` | `Thread.Sleep` | Bir süre için bekleniyor |
@@ -269,4 +269,5 @@ Tam ya da yakın tamamlamak elde etmek için önerilen bir hedefi olan [başvuru
 ## <a name="other-resources"></a>Diğer Kaynaklar
 
 * [Zaman uyumsuz ayrıntılı](../standard/async-in-depth.md) görevlerin nasıl çalıştığı hakkında daha fazla bilgi sağlar.
+* [Zaman uyumsuz programlama ile async ve await (C#)](../csharp/programming-guide/concepts/async/index.md)
 * Lucian Wischik'ın [zaman uyumsuz altı önemli ipuçları](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) zaman uyumsuz programlama için harika bir kaynaktır

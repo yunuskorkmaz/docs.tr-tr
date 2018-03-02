@@ -6,19 +6,20 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: fdbba188cf939ce3eb969a1f780e086fcf17da13
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: cdef013adb55fcc52062a42f22f00b681004f7a8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>.NET Core Windows için Önkoşullar
 
 Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağımlılıkların gösterilmektedir. Desteklenen işletim sistemi sürümleri ve izleyin bağımlılıkları Windows .NET Core uygulamaları geliştirme üç yolu için geçerlidir:
 
 * [Komut satırı](tutorials/using-with-xplat-cli.md)
-* [Visual Studio 2017](https://www.visualstudio.com/downloads/)
+* [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ## <a name="net-core-supported-windows-versions"></a>.NET core desteklenen Windows sürümleri
@@ -31,7 +32,7 @@ Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağıml�
 * Windows Server 2008 R2 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 R2 (tam sunucu veya Sunucu Çekirdeği)
-* Windows Server 2016 (tam sunucu, Sunucu Çekirdeği veya Nano Server)
+* Windows Server 2016 (Full Server, Server Core, or Nano Server)
 
 Bkz: [.NET Core 2.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için desteklenen işletim sistemleri 2.x.
 
@@ -54,7 +55,7 @@ Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com
 
 .NET Core SDK'sını kullanarak .NET Core uygulamaları geliştirmek için herhangi bir Düzenleyicisi'ni kullanabilirsiniz.  [Visual Studio 2017](#visual-studio-2017) Windows .NET Core uygulamaları için bir tümleşik geliştirme ortamı sağlar.
 
-Daha fazla bilgiyi Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).
+Daha fazla bilgiyi Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
 Visual Studio 2017 .NET Core 2.x uygulamaları geliştirmek için:
@@ -77,7 +78,7 @@ Bir kez .NET Core 2.x SDK yüklü Visual Studio 2017 kullanan .NET Core SDK 2.x 
   * .NET Core 1.x projeleri .NET Core 2.x, derleme ve çalıştırma yeniden hedefleyin.
   * Yeni .NET Core 2.x projeler oluşturun.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 Visual Studio'da .NET Core 1.x uygulamaları geliştirmek için [yükleyip Visual Studio 2017 RTM (sürüm 15.0.26228.4) ya da daha yüksek](/visualstudio/install/install-visual-studio) ile **".NET Core platformlar arası geliştirme"** iş yükündeki (  **Diğer Toolsets** bölüm) seçili.
 ![Seçili ".NET Core platformlar arası geliştirme" iş yükü ile Visual Studio 2017 ekran yükleme](./media/windows-prerequisites/vs_workloads.jpg)
 > [!IMPORTANT]

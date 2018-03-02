@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Eğitmen: tür sağlayıcısı oluşturma
 
@@ -56,7 +56,7 @@ Tür sağlayıcıları şema çalışma zamanında ve derlenmiş kod kullanım �
 
 
 ## <a name="a-simple-type-provider"></a>Bir basit tür sağlayıcısı
-Bu örnek Samples.HelloWorldTypeProvider içinde olduğu `SampleProviders\Providers` dizininde [F # 3.0 örnek paketi](http://fsharp3sample.codeplex.com) Codeplex Web sitesinde. Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
+Bu örnek Samples.HelloWorldTypeProvider içinde olduğu `SampleProviders\Providers` dizininde [F # 3.0 örnek paketi](https://fsharp3sample.codeplex.com) Codeplex Web sitesinde. Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ Aşağıdaki noktalara dikkat edin:
 - Sağlanan özelliğinde her adlandırılmış grubu sonuçları ve özellik erişme sonuçlanıyor eşleşmeyi'nın bir dizin oluşturucu kullanımını `Groups` koleksiyonu.
 <br />
 
-Aşağıdaki kodu böyle bir sağlayıcı uygulamak için mantığı çekirdek ve bu örnek sağlanan türü için tüm üyelerinin eklenmesini atlar. Eklenen her üye hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerinde uygun bölümüne bakın. Tam kodunu örnekten karşıdan [F # 3.0 örnek paketi](http://fsharp3sample.codeplex.com) Codeplex Web sitesinde.
+Aşağıdaki kodu böyle bir sağlayıcı uygulamak için mantığı çekirdek ve bu örnek sağlanan türü için tüm üyelerinin eklenmesini atlar. Eklenen her üye hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerinde uygun bölümüne bakın. Tam kodunu örnekten karşıdan [F # 3.0 örnek paketi](https://fsharp3sample.codeplex.com) Codeplex Web sitesinde.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ Kendi tür sağlayıcıları yazdığınızda, aşağıdaki ek teknikler kullanm
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 sürümünün bir parçası olan ProvidedTypes 0.2 yardımcı kod yalnızca oluşturulan türleri sağlamak için destek sınırlıdır. Aşağıdaki deyimleri için oluşturulan tür tanımı doğru olması gerekir:
@@ -1196,10 +1196,10 @@ Tür sağlayıcıları yazdığınızda, aşağıdaki kurallar ve sınırlamalar
 Aşağıdaki ipuçları geliştirme sürecinde yararlı.
 
 
-- `Run Two Instances of Visual Studio.`Tür sağlayıcısı bir örneğinde geliştirmek ve test IDE yeniden oluşturulan tür sağlayıcısı engeller .dll dosyası üzerinde bir kilit sürer çünkü sağlayıcıyı diğer sınayın. Bu nedenle, Visual Studio ikinci bir örneğini sağlayıcı ilk örnekte yerleşik olarak bulunur ve daha sonra sağlayıcının oluşturulduktan sonra ikinci örneği yeniden açmanız gerekir kapatmanız gerekir.
+- `Run Two Instances of Visual Studio.` Tür sağlayıcısı bir örneğinde geliştirmek ve test IDE yeniden oluşturulan tür sağlayıcısı engeller .dll dosyası üzerinde bir kilit sürer çünkü sağlayıcıyı diğer sınayın. Bu nedenle, Visual Studio ikinci bir örneğini sağlayıcı ilk örnekte yerleşik olarak bulunur ve daha sonra sağlayıcının oluşturulduktan sonra ikinci örneği yeniden açmanız gerekir kapatmanız gerekir.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`Tür sağlayıcıları aşağıdaki araçları kullanarak çağırabilirsiniz:
+- `Debug type providers by using invocations of fsc.exe.` Tür sağlayıcıları aşağıdaki araçları kullanarak çağırabilirsiniz:
 <br />
   - fsc.exe (F # komut satırı derleyicisi)
 <br />
@@ -1207,7 +1207,7 @@ Aşağıdaki ipuçları geliştirme sürecinde yararlı.
   - fsi.exe (F # Etkileşimli derleyicisi)
 <br />
 
-  - Devenv.exe (Visual Studio)
+  - devenv.exe (Visual Studio)
 <br />
 
   Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe kullanarak, en kolay genellikle ayıklayabilirsiniz. Hata ayıklayıcı komut isteminden başlatabilirsiniz.
@@ -1222,4 +1222,4 @@ Aşağıdaki ipuçları geliştirme sürecinde yararlı.
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Tür sağlayıcıları](index.md)
+[Tür Sağlayıcıları](index.md)

@@ -2,7 +2,8 @@
 title: "ref (C# Başvurusu)"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -82,10 +83,10 @@ Bir başvuru dönüş değeri kullanılarak tanımlanmış `ref` anahtar sözcü
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- Her önce `return` yöntemi deyiminde. Örneğin:
+- Arasında `return` belirteci ve döndürülen değişken bir `return` yöntemi deyiminde. Örneğin:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
 Nesnenin durumu değiştirmek çağıran için sırayla başvuru dönüş değeri depolanan, olarak açıkça tanımlanmış bir değişken için bir [ref yerel](#ref-locals). 
@@ -94,7 +95,7 @@ Bir örnek için bkz: [bir başvuru döndürür ve ref Yereller örneği](#a-ref
 
 ## <a name="ref-locals"></a>Ref Yereller
 
-Ref yerel değişken değerleri kullanarak döndürülen başvurmak için kullanılan `ref return`.  Ref yerel değişken başlatılmalı ve ref dönüş değerine atanmış. Değer yapılan tüm değişiklikler yerel ref, değeri olan yöntemi döndürülen nesnenin durumda başvuruya göre yansıtılır.
+Ref yerel değişken değerleri kullanarak döndürülen başvurmak için kullanılan `return ref`.  Ref yerel değişken başlatılmalı ve ref dönüş değerine atanmış. Değer yapılan tüm değişiklikler yerel ref, değeri olan yöntemi döndürülen nesnenin durumda başvuruya göre yansıtılır.
 
 Kullanarak yerel bir ref tanımlayın `ref` değişken bildirimi önce yanı sıra hemen başvuruya göre değeri döndüren yöntemi çağırmadan önce anahtar sözcüğü. 
 
@@ -121,7 +122,7 @@ Ne zaman çağıran depolar tarafından döndürülen değer `GetBookByTitle` y�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Parametreleri geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Yöntem parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

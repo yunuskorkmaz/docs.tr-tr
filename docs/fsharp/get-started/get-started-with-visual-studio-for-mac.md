@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>F # Visual Studio için Mac kullanmaya başlama
 
-F # ve Visual F # Araçları Visual Studio'da Mac IDE için desteklenir.  Başlamak için aşağıdakileri yapmalısınız [Mac için Visual Studio indirme](https://www.visualstudio.com/downloads/download-visual-studio-vs), henüz yapmadıysanız.  Bu makalede, Mac için Visual Studio Community 2017 kullanır, ancak F # tercih ettiğiniz sürümüyle kullanabilirsiniz.
+F # ve Visual F # Araçları Visual Studio'da Mac IDE için desteklenir.  Başlamak için aşağıdakileri yapmalısınız [Mac için Visual Studio indirme](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), henüz yapmadıysanız.  Bu makalede, Mac için Visual Studio Community 2017 kullanır, ancak F # tercih ettiğiniz sürümüyle kullanabilirsiniz.
 
 ## <a name="installing-f"></a>F # yükleme #
 
@@ -38,8 +38,7 @@ Mac için Visual Studio en temel projeler konsol uygulaması biridir.  Bunun nas
 
 4. Projenizi adlandırın ve uygulama için istediğiniz seçenekleri seçin.  Bildirim, oluşturulacak dizin yapısını gösteren ekran tarafına önizleme bölmesinde seçilen seçeneklere dayalı.  
 
-5. 
-              **Oluştur**'u tıklatın.  F # projesinde Solution Explorer'da görmelisiniz.
+5. **Oluştur**'u tıklatın.  F # projesinde Solution Explorer'da görmelisiniz.
 
 ## <a name="writing-your-code"></a>Kod yazma
 
@@ -128,8 +127,8 @@ F # Etkileşimli ile neler yapabileceğinizi içine yalnızca bir bakışta budu
 Henüz yapmadıysanız, kullanıma [Tur, F #](../tour.md), hangi kapsayan F # dilinin temel özelliklerden bazıları.  Bunu genel bir bakış bazı F # özelliklerini verin ve Mac için Visual Studio'ya kopyalayıp çalıştırabilirsiniz geniş kod örnekleri sağlayın.  Ayrıca kullanabileceğiniz bazı harika dış kaynaklara vardır, showcased [F # Kılavuzu](../index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual F #](../index.md)  
- [F # turu](../tour.md)  
+ [Visual F#](../index.md)  
+ [F# Turu](../tour.md)  
  [F # dili başvurusu](../language-reference/index.md)  
  [Tür çıkarımı](../language-reference/type-inference.md)  
  [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)  

@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK'yı ve araçları sürekli tümleştirme (CI içinde) kullanma
 
@@ -44,7 +45,7 @@ Yükleyicisi betiği fetch ve SDK istenen sürümü yüklemek için yapı başla
 
 ## <a name="ci-setup-examples"></a>CI Kurulum örnekleri
 
-Bu bölümde, çeşitli yazılım açıklamasını hizmet (SaaS) CI çözümleri olarak birlikte PowerShell veya bash bir betik kullanarak el ile kuruluma açıklanmaktadır. Kapsanan SaaS CI çözümleri [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), ve [Visual Studio Team Services yapı](https://www.visualstudio.com/docs/build/overview).
+Bu bölümde, çeşitli yazılım açıklamasını hizmet (SaaS) CI çözümleri olarak birlikte PowerShell veya bash bir betik kullanarak el ile kuruluma açıklanmaktadır. Kapsanan SaaS CI çözümleri [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), ve [Visual Studio Team Services yapı](https://docs.microsoft.com/vsts/build-release/index).
 
 ### <a name="manual-setup"></a>El ile Kurulum
 
@@ -155,7 +156,7 @@ Visual Studio Team Services (Bu yaklaşımlardan birini kullanarak .NET Core pro
 1. Komut dosyasını çalıştırmak [el ile kuruluma adım](#manual-setup) , komutları kullanarak.
 1. .NET Core araçları kullanmak üzere yapılandırılmış birkaç VSTS yerleşik yapı görevlerin oluşan bir yapı oluşturun.
 
-Her iki çözüm de geçerlidir. El ile Kurulum betiği kullanarak, bunları derleme bir parçası olarak indirmek bu yana, aldığınız araçları sürümünü denetler. Yapı oluşturmanız gereken bir komut dosyasından çalıştırın. Bu konuda, yalnızca el ile seçeneği ele alınmaktadır. Derleme görevleri VSTS ile bir yapı oluşturma hakkında daha fazla bilgi için VSTS ziyaret [sürekli tümleştirme ve dağıtım](https://www.visualstudio.com/docs/build/overview) konu.
+Her iki çözüm de geçerlidir. El ile Kurulum betiği kullanarak, bunları derleme bir parçası olarak indirmek bu yana, aldığınız araçları sürümünü denetler. Yapı oluşturmanız gereken bir komut dosyasından çalıştırın. Bu konuda, yalnızca el ile seçeneği ele alınmaktadır. Derleme görevleri VSTS ile bir yapı oluşturma hakkında daha fazla bilgi için VSTS ziyaret [sürekli tümleştirme ve dağıtım](https://docs.microsoft.com/vsts/build-release/index) konu.
 
 VSTS içinde el ile Kurulum komut dosyası kullanmak için yeni bir derleme tanımı oluşturun ve derleme adımı için çalıştırılacak komut dosyasını belirtin. Bu, VSTS kullanıcı arabirimi kullanılarak gerçekleştirilir:
 
@@ -177,7 +178,7 @@ VSTS içinde el ile Kurulum komut dosyası kullanmak için yeni bir derleme tan�
 
 ## <a name="orchestrating-the-build"></a>Yapı yönetme
 
-Bu belge çoğunu açıklar .NET Core araçları edinin ve düzenlemek hakkında bilgi sağlamadan çeşitli CI Hizmetleri Yapılandırma veya *gerçekten yapı*, .NET Core kodunuzla. Yapı sürecini yapılandırma konusunda seçenekler burada genel hatlarıyla ele birçok faktöre bağlıdır. Belge kümeleri içinde sağlanan örnekleri ve kaynakları keşfetme [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), ve [VSTS](https://www.visualstudio.com/docs/build/overview) derlemeleriniz her yönetme hakkında daha fazla bilgi teknoloji.
+Bu belge çoğunu açıklar .NET Core araçları edinin ve düzenlemek hakkında bilgi sağlamadan çeşitli CI Hizmetleri Yapılandırma veya *gerçekten yapı*, .NET Core kodunuzla. Yapı sürecini yapılandırma konusunda seçenekler burada genel hatlarıyla ele birçok faktöre bağlıdır. Belge kümeleri içinde sağlanan örnekleri ve kaynakları keşfetme [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), ve [VSTS](https://docs.microsoft.com/vsts/build-release/index) derlemeleriniz her yönetme hakkında daha fazla bilgi teknoloji.
 
 .NET Core Araçları'nı kullanarak .NET Core kod derleme işlemi yapılandırılması ele iki genel yaklaşım kullanarak doğrudan MSBuild veya .NET Core komut satırı komutlarını kullanarak. Almanız gereken hangi yaklaşımın karmaşıklığı rahatlık düzeyinizi yaklaşımlar ve dengelemeler ile belirlenir. MSBuild hedefleri ve görevleri de yapı işleminizin express olanağı sağlar, ancak MSBuild proje dosyası sözdizimi öğrenme eklenen karmaşıklığını ile gelir. .NET Core komut satırı araçlarını kullanarak belki de daha basit olmakla birlikte, bir komut dosyası dili gibi orchestration mantığı yazmanızı gerektirir `bash` veya PowerShell.
 

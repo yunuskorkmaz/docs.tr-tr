@@ -1,7 +1,7 @@
 ---
 title: Zaman uyumsuz derinlemesine
 description: "Ne zaman uyumsuz g/Ç-bağlı ve CPU bağımlı kod yazma basit .NET görev tabanlı zaman uyumsuz modelini kullanarak olduğunu öğrenin."
-keywords: .NET, .NET core, .NET standart
+keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b23a90de991b31005ba5a07a959c717c24869ffb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b01aa5d0fade29d04313a9db2e44517b6512166b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz derinlemesine
 
@@ -27,8 +27,8 @@ G/ç ve CPU sınır yazmayı zaman uyumsuz basit .NET görev tabanlı zaman uyum
 
 Görevlerdir olarak bilinen uygulamak için kullanılan yapılar [, Promise modeli eşzamanlılık](https://en.wikipedia.org/wiki/Futures_and_promises).  Kısacası, bunlar sonraki bir noktada, "iş promise" tamamlanacak promise temiz bir API ile birlikte koordine imkan sağlar.
 
-*   `Task`bir değer döndürmüyor tek bir işlemde temsil eder.
-*   `Task<T>`türünde bir değer döndüren tek bir işlemi temsil eden `T`.
+*   `Task` bir değer döndürmüyor tek bir işlemde temsil eder.
+*   `Task<T>` türünde bir değer döndüren tek bir işlemi temsil eden `T`.
 
 Zaman uyumsuz olarak gerçekleştiği iş soyutlamalar görevler hakkında neden önemlidir ve *değil* iş parçacığı üzerinde bir Özet. Varsayılan olarak, işletim sistemine uygun şekilde geçerli iş parçacığı ve temsilci iş görevleri yürütün. İsteğe bağlı olarak, görevleri açıkça ayrı bir iş parçacığı çalıştırmayı istenebilir `Task.Run` API.
 
@@ -142,16 +142,17 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()`çağrıldı iş parçacığı üzerinde yürütür.  Bunu çağırdığında `Task.Run`, pahalı CPU bağımlı işlemi kuyruklar `DoExpensiveCalculation()`, iş parçacığı havuzu üzerinde ve alan bir `Task<int>` işlemek.  `DoExpensiveCalculation()`sonunda eşzamanlı olarak sonraki kullanılabilir iş parçacığı üzerinde başka bir CPU çekirdeği üzerinde büyük olasılıkla çalıştırılır.  Eşzamanlı iş çalışırken yapmak mümkündür `DoExpensiveCalculation()` başka bir iş parçacığı üzerinde meşgul olduğundan çağrılan iş parçacığı `CalculateResult()` yürütülmeye devam.
+`CalculateResult()` çağrıldı iş parçacığı üzerinde yürütür.  Bunu çağırdığında `Task.Run`, pahalı CPU bağımlı işlemi kuyruklar `DoExpensiveCalculation()`, iş parçacığı havuzu üzerinde ve alan bir `Task<int>` işlemek.  `DoExpensiveCalculation()` sonunda eşzamanlı olarak sonraki kullanılabilir iş parçacığı üzerinde başka bir CPU çekirdeği üzerinde büyük olasılıkla çalıştırılır.  Eşzamanlı iş çalışırken yapmak mümkündür `DoExpensiveCalculation()` başka bir iş parçacığı üzerinde meşgul olduğundan çağrılan iş parçacığı `CalculateResult()` yürütülmeye devam.
 
 Bir kez `await` karşılaşılırsa, yürütülmesi `CalculateResult()` sırasında geçerli iş parçacığı ile yapılacak diğer işleri izin vererek, arayana verdiğini `DoExpensiveCalculation()` bir sonuç fakat.  Tamamlandıktan sonra sonuç ana iş parçacığında çalıştırmak için sıraya alındı.  Sonuç olarak, ana iş parçacığı yürütülen döndürülecek `CalculateResult()`, bu noktada sonucu olacaktır `DoExpensiveCalculation()`.
 
 ### <a name="why-does-async-help-here"></a>Neden zaman uyumsuz burada yardımcı olur?
 
-`async`ve `await` en iyi uygulamadır yönetme CPU bağımlı iş yanıtlama gerektiğinde şunlardır. Zaman uyumsuz CPU bağımlı iş ile kullanmak için birden çok desenleri vardır. Async kullanma için küçük bir maliyeti yoktur ve sıkı döngüler için önerilmez dikkate almak önemlidir.  Bu size kodunuzu bu yeni özellik geçici yazma biçimini belirlemek için hazır.
+`async` ve `await` en iyi uygulamadır yönetme CPU bağımlı iş yanıtlama gerektiğinde şunlardır. Zaman uyumsuz CPU bağımlı iş ile kullanmak için birden çok desenleri vardır. Async kullanma için küçük bir maliyeti yoktur ve sıkı döngüler için önerilmez dikkate almak önemlidir.  Bu size kodunuzu bu yeni özellik geçici yazma biçimini belirlemek için hazır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [C# zaman uyumsuz programlama](~/docs/csharp/async.md)   
+[Zaman uyumsuz programlama ile async ve await (C#)](../csharp/programming-guide/concepts/async/index.md)  
 [F # zaman uyumsuz programlama](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

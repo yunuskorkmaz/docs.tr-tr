@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>.NET Core barındırma
 
@@ -26,7 +27,7 @@ Bu makalede .NET çekirdeği çalışma zamanı yerel koddan başlatmak için il
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Yerel uygulamalar konak olmadığından, Bu öğretici bir ana bilgisayara .NET Core C++ uygulaması oluşturma ele alınacaktır. C++ geliştirme ortamı gerekir (tarafından sağlanan gibi [Visual Studio](https://www.visualstudio.com/downloads/)).
+Yerel uygulamalar konak olmadığından, Bu öğretici bir ana bilgisayara .NET Core C++ uygulaması oluşturma ele alınacaktır. C++ geliştirme ortamı gerekir (tarafından sağlanan gibi [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
 Yüklemeniz gerekir böylece konak ile test etmek için basit bir .NET Core uygulaması da isteyeceksiniz [.NET Core SDK](https://www.microsoft.com/net/core) ve [küçük bir .NET Core test uygulaması oluşturma](../../core/tutorials/with-visual-studio.md) (örneğin, bir 'Hello World' uygulaması). Yeni .NET Core konsol proje şablonu tarafından oluşturulan 'Hello World' uygulaması yeterli olur.
 
@@ -82,12 +83,12 @@ Hangi kullanılacak AppDomain bayrakları karar sonra AppDomain özellikleri tan
 
 Ortak AppDomain özellikleri şunlardır:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`Derleme yolların listesini budur (ayrılmış Windows tarafından ';' ve ':' UNIX üzerinde) hangi AppDomain (kısmen güvenilen etki alanlarında çift için) yükleme ve verin tam güven öncelik vermeniz. Bu liste 'Framework' derlemeler ve diğer güvenilen modüller, .NET Framework senaryoları GAC'de benzer içerecek şekilde tasarlanmıştır. Bazı ana bilgisayarlar herhangi bir kitaplığı yanına sokar *coreclr.dll* bu listede, diğerleri sabit kodlanmış bildirimlerinin kendi amaçları için güvenilir derlemeler listesi vardır.
-* `APP_PATHS`Bu araştırma için derlemeyi'da güvenilir platform derlemeler (TPA) listesinde bulunamazsa yollarının listesidir. Bu yolları kullanıcıların derlemeleri bulunabileceği konumlarının olması amaçlanmıştır. Bir korumalı alan AppDomain içinde bu yolları yüklenen derlemeler yalnızca kısmi güven verilecektir. Ortak APP_PATH yolları, hedef uygulama yüklü değildi yolu veya burada kullanıcı varlıklar Canlı bilinen başka konumlara içerir.
-*  `APP_NI_PATHS`Yerel görüntüler için araştırılan yolları olma amacını bu listeyi APP_PATHS için çok benzerdir.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES`Bu özellik, yerel DLL'leri p/Invoke çağrıldığında yükleyicisi araştırma yolları listesidir.
-*  `PLATFORM_RESOURCE_ROOTS`Bu liste kaynak uydu derlemeleri (kültüre özgü alt dizinlerde) için araştırma yolları içerir.
-*  `AppDomainCompatSwitch`Bu dize, açık bir hedef Framework ad (derleme karşı çalıştırmak için tasarlanmıştır hangi Framework gösteren bir derleme düzeyi öznitelik) olmadan derlemeler için hangi uyumluluk quirks kullanılması gerektiğini belirtir. Genellikle, bu ayarlanmalı `"UseLatestBehaviorWhenTFMNotSpecified"` ancak bazı ana bilgisayarlar eski Silverlight veya Windows Phone uyumluluk quirks, bunun yerine almak isteyebilirsiniz.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Derleme yolların listesini budur (ayrılmış Windows tarafından ';' ve ':' UNIX üzerinde) hangi AppDomain (kısmen güvenilen etki alanlarında çift için) yükleme ve verin tam güven öncelik vermeniz. Bu liste 'Framework' derlemeler ve diğer güvenilen modüller, .NET Framework senaryoları GAC'de benzer içerecek şekilde tasarlanmıştır. Bazı ana bilgisayarlar herhangi bir kitaplığı yanına sokar *coreclr.dll* bu listede, diğerleri sabit kodlanmış bildirimlerinin kendi amaçları için güvenilir derlemeler listesi vardır.
+* `APP_PATHS` Bu araştırma için derlemeyi'da güvenilir platform derlemeler (TPA) listesinde bulunamazsa yollarının listesidir. Bu yolları kullanıcıların derlemeleri bulunabileceği konumlarının olması amaçlanmıştır. Bir korumalı alan AppDomain içinde bu yolları yüklenen derlemeler yalnızca kısmi güven verilecektir. Ortak APP_PATH yolları, hedef uygulama yüklü değildi yolu veya burada kullanıcı varlıklar Canlı bilinen başka konumlara içerir.
+*  `APP_NI_PATHS` Yerel görüntüler için araştırılan yolları olma amacını bu listeyi APP_PATHS için çok benzerdir.
+*  `NATIVE_DLL_SEARCH_DIRECTORIES` Bu özellik, yerel DLL'leri p/Invoke çağrıldığında yükleyicisi araştırma yolları listesidir.
+*  `PLATFORM_RESOURCE_ROOTS` Bu liste kaynak uydu derlemeleri (kültüre özgü alt dizinlerde) için araştırma yolları içerir.
+*  `AppDomainCompatSwitch` Bu dize, açık bir hedef Framework ad (derleme karşı çalıştırmak için tasarlanmıştır hangi Framework gösteren bir derleme düzeyi öznitelik) olmadan derlemeler için hangi uyumluluk quirks kullanılması gerektiğini belirtir. Genellikle, bu ayarlanmalı `"UseLatestBehaviorWhenTFMNotSpecified"` ancak bazı ana bilgisayarlar eski Silverlight veya Windows Phone uyumluluk quirks, bunun yerine almak isteyebilirsiniz.
 
 İçinde bizim [basit örnek konak](https://github.com/dotnet/docs/tree/master/samples/core/hosting), bu özellikleri şu şekilde ayarlanır:
 
@@ -132,7 +133,7 @@ Coreclrhost.h (yerine doğrudan mscoree.h) kullanarak bir örnek görülebilir [
 1. Yönetilen kod yürütmek için tanımlamak (komuttan parametreleri, örneğin satır). 
 2. CoreCLR kitaplığı yüklenemedi.
     1. `dlopen("./libcoreclr.so", RTLD_NOW | RTLD_LOCAL);` 
-3. İşlev işaretçileri CoreCLR için 's alma `coreclr_initialize`, `coreclr_create_delegate`, `coreclr_execute_assembly`, ve `coreclr_shutdown` kullanarak işlevleri`dlsym`
+3. İşlev işaretçileri CoreCLR için 's alma `coreclr_initialize`, `coreclr_create_delegate`, `coreclr_execute_assembly`, ve `coreclr_shutdown` kullanarak işlevleri `dlsym`
     1. `coreclr_initialize_ptr coreclr_initialize = (coreclr_initialize_ptr)dlsym(coreclrLib, "coreclr_initialize");`
 4. AppDomain özellikleri (örneğin, TPA listesi) ayarlayın. Bu adım 5 mscoree akışından yukarıda aynıdır.
 5. Kullanım `coreclr_initialize` çalışma zamanı başlamak ve AppDomain oluşturmak için. Bu ayrıca oluşturacak bir `hostHandle` gelecekte çağrıları barındırma kullanılacak işaretçi.

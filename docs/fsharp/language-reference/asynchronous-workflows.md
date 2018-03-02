@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>Zaman Uyumsuz İş Akışları
 
@@ -52,11 +52,11 @@ Ek olarak `let!`, kullanabileceğiniz `use!` zaman uyumsuz bağlamaları gerçek
 
 ## <a name="asynchronous-primitives"></a>Zaman uyumsuz temelleri
 
-Tek bir zaman uyumsuz görevi gerçekleştirir ve sonuç döndüren bir yöntem olarak adlandırılan bir *zaman uyumsuz ilkel*, ve bunlar ile kullanılmak üzere özel olarak tasarlanmıştır `let!`. Birkaç zaman uyumsuz temelleri F # core Kitaplığı'nda tanımlanır. Web uygulamaları için iki tür yöntem modülde tanımlanan [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) ve [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Her iki temelleri veri Web bir URL bir sayfasından indirin. `AsyncGetResponse`üreten bir `System.Net.WebResponse` nesnesi ve `AsyncDownloadString` bir Web sayfasının HTML temsil eden bir dize oluşturur.
+Tek bir zaman uyumsuz görevi gerçekleştirir ve sonuç döndüren bir yöntem olarak adlandırılan bir *zaman uyumsuz ilkel*, ve bunlar ile kullanılmak üzere özel olarak tasarlanmıştır `let!`. Birkaç zaman uyumsuz temelleri F # core Kitaplığı'nda tanımlanır. Web uygulamaları için iki tür yöntem modülde tanımlanan [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) ve [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Her iki temelleri veri Web bir URL bir sayfasından indirin. `AsyncGetResponse` üreten bir `System.Net.WebResponse` nesnesi ve `AsyncDownloadString` bir Web sayfasının HTML temsil eden bir dize oluşturur.
 
 Birkaç temel öğeler zaman uyumsuz g/ç işlemleri dahil edilen [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) modülü. Bu uzantı yöntemleri `System.IO.Stream` sınıfı olan [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) ve [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
-Ek zaman uyumsuz temelleri kullanılabilir [F # PowerTools](http://fsprojects.github.io/VisualFSharpPowerTools/). Zaman uyumsuz kendi temelleri, tam gövdesi bir zaman uyumsuz bloğunda içine bir işlev tanımlayarak de yazabilirsiniz.
+Ek zaman uyumsuz temelleri kullanılabilir [F # PowerTools](https://fsprojects.github.io/VisualFSharpPowerTools/). Zaman uyumsuz kendi temelleri, tam gövdesi bir zaman uyumsuz bloğunda içine bir işlev tanımlayarak de yazabilirsiniz.
 
 F # zaman uyumsuz programlama modeli ile diğer zaman uyumsuz modeller için tasarlanmış .NET Framework zaman uyumsuz yöntemleri kullanmak için bir F # döndüren bir işlev oluşturun. `Async` nesnesi. F # kitaplığı bunu yapmak kolaylaştırmak işlevi vardır.
 
@@ -74,8 +74,8 @@ Aşağıdaki kod örneğinde, bir işlev `fetchAsync` HTML metin Web isteğinden
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[Hesaplama ifadeleri](computation-expressions.md)
+[Hesaplama İfadeleri](computation-expressions.md)
 
 [Control.Async sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
