@@ -9,7 +9,6 @@
 ### [.NET Standard’daki Yenilikler](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [Hedef Framework’ler](standard/frameworks.md)
 ## [.NET Sözlüğü](standard/glossary.md)
-## [Mdoc ile belge derleme](standard/mdoc/index.md)
 ## [Mimari Rehberi](standard/guidance-architecture.md)
 ### [ASP.NET Core ve Microsoft Azure ile modern web uygulamaları tasarlama](standard/modern-web-apps-azure-architecture/)
 ### [Azure bulutu ve Windows Kapsayıcıları ile Mevcut .NET Uygulamalarını modernleştirme](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [Sınıf Kitaplığına Genel Bakış](standard/class-library-overview.md)
 ### [Temel Türler](standard/base-types/)
 ## [.NET Sınıf kitaplıkları](standard/class-libraries.md)
-## Çözümleyiciler
+## [Çözümleyiciler](standard/analyzers/index.md)
 ### [API Çözümleyicisi](standard/analyzers/api-analyzer.md) 
 ### [Taşınabilirlik Çözümleyicisi](standard/analyzers/portability-analyzer.md)
+### [Framework Çözümleyicisi](standard/analyzers/framework-analyzer.md)
 ## [Özel durumları işleme ve atma](standard/exceptions/)
 ## [.NET Bütünleştirilmiş Kodu Dosya Biçimi](standard/assembly-format.md)
 ## [Atık Toplama](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [`String.Split` kullanarak dizeleri ayrıştırma](csharp/how-to/parse-strings-using-split.md)
 ### [Dizeleri birleştirme](csharp/how-to/concatenate-multiple-strings.md)
 ### [Nasıl yapılır bir Dizeyi DateTime Olarak Dönüştürme](standard/base-types/parsing-datetime.md)
+### [Dizeleri arama](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK’sı (Roslyn API’leri)](csharp/roslyn-sdk/)
 ## [C# Programlama Kılavuzu](csharp/programming-guide/)
