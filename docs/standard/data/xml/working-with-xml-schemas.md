@@ -9,23 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1cfac14f934efb22f7cd39faceb232cc819b540e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="working-with-xml-schemas"></a>XML şemaları ile çalışma
 Bir XML belgesi yanı sıra kendi öğesi ilişkileri, veri türleri ve içerik kısıtlamaları yapısını tanımlamak için bir belge türü tanımı (DTD) veya XML Şeması Tanım Dili (XSD) şeması kullanın. Bir XML belgesi World Wide Web Konsorsiyumu (W3C) Genişletilebilir İşaretleme Dili (XML) 1.0 önerisi tarafından tanımlanan tüm söz dizimi gereksinimleri karşılıyorsa doğru biçimlendirilmiş olarak kabul edilir olsa da her ikisini de olmadığı sürece, geçerli doğru biçimlendirilmiş olarak kabul edilmez ve kendi DTD ya da şema tarafından tanımlanmış kısıtlamalar için uygundur. Bu nedenle, tüm geçerli XML belgeleri doğru biçimlendirilmiş olsa da, tüm doğru biçimlendirilmiş XML belgeleri geçerli değil.  
   
- XML hakkında daha fazla bilgi için bkz: [W3C XML 1.0 öneri](http://go.microsoft.com/fwlink/?linkid=7269). XML şeması hakkında daha fazla bilgi için bkz: [W3C XML Şeması Kısım 1: yapıları öneri](http://go.microsoft.com/fwlink/?linkid=48881) ve [W3C XML Şeması Kısım 2: veri türleri öneri](http://go.microsoft.com/fwlink/?linkid=17392) öneriler.  
+ XML hakkında daha fazla bilgi için bkz: [W3C XML 1.0 öneri](https://www.w3.org/TR/REC-xml/). XML şeması hakkında daha fazla bilgi için bkz: [W3C XML Şeması Kısım 1: yapıları öneri](https://www.w3.org/TR/xmlschema-1/) ve [W3C XML Şeması Kısım 2: veri türleri öneri](https://www.w3.org/TR/xmlschema-2/) öneriler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  

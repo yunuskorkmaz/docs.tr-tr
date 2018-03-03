@@ -2,7 +2,8 @@
 title: "Nasıl yapılır: hangi .NET Framework sürümlerinin yüklü olduğunu belirleme"
 ms.date: 01/24/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,12 +16,13 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0a25ba2d72588dddf0ac1f88d4de59c623e31ff6
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework Sürümlerinin Yüklü Olduğunu Belirleme
 Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sürümünü çalıştırın. Geliştirme ya da uygulamanızı dağıtma kullanıcının bilgisayarda hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir. .NET Framework sürümü tutulan ayrı ayrı olan iki ana bileşen içerdiğini unutmayın:  
@@ -131,7 +133,7 @@ Kullanıcılar, yükleyin ve bilgisayarlarında birden çok .NET Framework sür�
 
 2. Değerini denetleyin `Release` yüklü olan sürümü belirlemek için anahtar sözcüğü. İleri uyumlu olması için tabloda listelenen değerleri eşit veya daha büyük bir değere denetleyebilirsiniz. .NET Framework sürümleri şunlardır ve ilişkili `Release` anahtar sözcükler.
 
-    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
     |Sürüm|Yayın DWORD değeri|
     |-------------|--------------------------------|

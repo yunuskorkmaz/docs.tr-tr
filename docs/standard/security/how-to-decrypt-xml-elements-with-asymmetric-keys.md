@@ -18,21 +18,21 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 099937fe113c39c717b4c9fcba2042115b9105e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 698a542765cf8599a2f07e747669893502b75045
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Nasıl yapılır: XML Öğelerinin Şifresini Asimetrik Anahtarlarla Çözme
-Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelemek ve şifresini çözmek bir XML belgesi içindeki bir öğe için ad alanı.  XML şifrelemesi, exchange veya kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  World Wide Web Konsorsiyumu (W3C) öneri XML şifreleme standardı hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](http://go.microsoft.com/fwlink/?LinkID=136777).  
+Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> şifrelemek ve şifresini çözmek bir XML belgesi içindeki bir öğe için ad alanı.  XML şifrelemesi, exchange veya kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verileri depolamak için standart bir yoludur.  World Wide Web Konsorsiyumu (W3C) öneri XML şifreleme standardı hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](https://www.w3.org/TR/xmldsig-core/).  
   
  Bu yordamı örnekte açıklanan yöntemleri kullanılarak şifrelenmiş bir XML öğesi şifresini çözer [nasıl yapılır: XML öğelerini asimetrik anahtarlarla şifreleme](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Bulduğu bir <`EncryptedData`> öğesi, öğenin şifresini çözer ve özgün düz metin XML öğesi ile öğenin yerini alır.  
   

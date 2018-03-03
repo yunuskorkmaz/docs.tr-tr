@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -146,7 +146,7 @@ Denetim akışı hakkında daha fazla bilgi için bkz: [(C#) zaman uyumsuz progr
 ##  <a name="BKMK_APIAsyncMethods"></a> API zaman uyumsuz yöntemleri  
  Yöntemleri gibi nerede bulacağını merak ediyor olabilirsiniz `GetStringAsync` Bu destek zaman uyumsuz programlama. .NET Core ve .NET Framework 4.5 veya üstü çalışmak çok sayıda üye içeren `async` ve `await`. Bunları kendi dönüş türü ve üye ada eklenir "Zaman uyumsuz" soneki tarafından tanıyabilmesi <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Örneğin, `System.IO.Stream` sınıfı yöntemleri gibi içerir <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A>, ve <xref:System.IO.Stream.WriteAsync%2A> zaman uyumlu yöntemleri yanında <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A>, ve <xref:System.IO.Stream.Write%2A>.  
   
- Windows çalışma zamanı ile birlikte kullanabileceğiniz birçok yöntem de içeren `async` ve `await` Windows uygulamalarında. Daha fazla bilgi için bkz: [parçacıkları ve zaman uyumsuz programlama](/windows/uwp/threading-async/) UWP geliştirme ve [zaman uyumsuz programlama (Windows mağazası uygulamaları)](/previous-versions/windows/apps/hh464924(v=win.10)) ve [hızlı başlangıç: bekleme işleci için kullanma zaman uyumsuz programlama](/previous-versions/windows/apps/hh452713(v=win.10)) Windows çalışma zamanı'nın önceki sürümlerini kullanır.  
+ Windows çalışma zamanı ile birlikte kullanabileceğiniz birçok yöntem de içeren `async` ve `await` Windows uygulamalarında. Daha fazla bilgi için bkz: [parçacıkları ve zaman uyumsuz programlama](/windows/uwp/threading-async/) UWP geliştirme ve [zaman uyumsuz programlama (Windows mağazası uygulamaları)](/previous-versions/windows/apps/hh464924(v=win.10)) ve [hızlı başlangıç: zaman uyumsuz API'ları C# ' ta çağırma veya Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)) Windows çalışma zamanı'nın önceki sürümlerini kullanır.  
   
 ##  <a name="BKMK_Threads"></a> İş parçacıkları  
 Zaman uyumsuz yöntemlerin engelleyici olmayan işlemler olmaları amaçlanmıştır. Bir `await` awaited Görev yürütülürken, bir zaman uyumsuz yöntem ifadesinde geçerli iş parçacığının engelleme değil. Bunun yerine ifade, yöntemin geri kalanını yöntemin devamı olarak imzalar ve denetimi zaman uyumsuz yöntemi arayan kişiye verir.  

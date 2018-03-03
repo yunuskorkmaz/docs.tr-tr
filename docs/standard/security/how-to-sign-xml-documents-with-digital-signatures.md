@@ -20,21 +20,21 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 95f610922126074017802ef53670b26b3596e17c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8835bd09e041ce8bb36c09951ea5526d42ff0c3c
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama
-Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi veya bir XML belgesi bir dijital imza ile parçası imzalamak için ad alanı.  XML dijital imzaları (XMLDSIG) imzalandığından sonra veri değiştirildiği değil olduğunu doğrulamanızı sağlar.  World Wide Web Konsorsiyumu (W3C) öneri XMLDSIG standart hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](http://go.microsoft.com/fwlink/?LinkID=136777).  
+Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi veya bir XML belgesi bir dijital imza ile parçası imzalamak için ad alanı.  XML dijital imzaları (XMLDSIG) imzalandığından sonra veri değiştirildiği değil olduğunu doğrulamanızı sağlar.  World Wide Web Konsorsiyumu (W3C) öneri XMLDSIG standart hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](https://www.w3.org/TR/xmldsig-core/).  
   
  Bu yordamı kod örneğinde dijital olarak tüm XML belgesi imzalamak ve imza belgede ekleme gösterilmiştir bir <`Signature`> öğesi.  Örnek bir RSA imzalama anahtarı oluşturur, güvenli bir anahtar kapsayıcısı anahtar ekler ve bir XML belgesi dijital olarak imzalamak için anahtar kullanır.  Anahtarı XML dijital imzayı doğrulamak alınabilir veya başka bir XML belgesi imzalamak için kullanılan.  
   

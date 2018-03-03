@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -39,15 +39,15 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Yaygın olarak kullanılan bazı dosya ve dizin sınıfları şunlardır:  
   
--   <xref:System.IO.File>-oluşturma, kopyalama, silme, taşıma ve dosyaları açma için statik yöntemler sağlar ve oluşturmaya yardımcı olan bir <xref:System.IO.FileStream> nesnesi.  
+-   <xref:System.IO.File> -oluşturma, kopyalama, silme, taşıma ve dosyaları açma için statik yöntemler sağlar ve oluşturmaya yardımcı olan bir <xref:System.IO.FileStream> nesnesi.  
   
--   <xref:System.IO.FileInfo>-oluşturma, kopyalama, silme, taşıma ve dosyaları açma için örnek yöntemleri sağlar ve oluşturmaya yardımcı olan bir <xref:System.IO.FileStream> nesnesi.  
+-   <xref:System.IO.FileInfo> -oluşturma, kopyalama, silme, taşıma ve dosyaları açma için örnek yöntemleri sağlar ve oluşturmaya yardımcı olan bir <xref:System.IO.FileStream> nesnesi.  
   
--   <xref:System.IO.Directory>-oluşturma, taşıma ve dizin ve alt dizinlere numaralandırma için statik yöntemler sağlar.  
+-   <xref:System.IO.Directory> -oluşturma, taşıma ve dizin ve alt dizinlere numaralandırma için statik yöntemler sağlar.  
   
--   <xref:System.IO.DirectoryInfo>-oluşturma, taşıma ve dizin ve alt dizinlere numaralandırma için örnek yöntemleri sağlar.  
+-   <xref:System.IO.DirectoryInfo> -oluşturma, taşıma ve dizin ve alt dizinlere numaralandırma için örnek yöntemleri sağlar.  
   
--   <xref:System.IO.Path>-Dizin dizeleri bir platformlar arası şekilde işlemek için yöntemleri ve özellikleri sağlar.  
+-   <xref:System.IO.Path> -Dizin dizeleri bir platformlar arası şekilde işlemek için yöntemleri ve özellikleri sağlar.  
   
  Bu sınıfların kullanarak ek olarak, Visual Basic kullanıcılar tarafından sağlanan özellikleri ve yöntemleri kullanabilir <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> dosya g/ç için sınıf.  
   
@@ -68,19 +68,19 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Bazı yaygın olarak kullanılan akış sınıfları şunlardır:  
   
--   <xref:System.IO.FileStream>– Okuma ve bir dosyaya yazmak için.  
+-   <xref:System.IO.FileStream> – Okuma ve bir dosyaya yazmak için.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>– Okuma ve yalıtılmış depolama dosyasında yazma.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Okuma ve yalıtılmış depolama dosyasında yazma.  
   
--   <xref:System.IO.MemoryStream>– Okuma ve bellek yedekleme deposu olarak yazma.  
+-   <xref:System.IO.MemoryStream> – Okuma ve bellek yedekleme deposu olarak yazma.  
   
--   <xref:System.IO.BufferedStream>– okuma performansı artırmak için ve yazma işlemleri.  
+-   <xref:System.IO.BufferedStream> – okuma performansı artırmak için ve yazma işlemleri.  
   
--   <xref:System.Net.Sockets.NetworkStream>– Okuma ve yazma ağ yuva için.  
+-   <xref:System.Net.Sockets.NetworkStream> – Okuma ve yazma ağ yuva için.  
   
--   <xref:System.IO.Pipes.PipeStream>– Okuma ve yazma adsız ve Adlandırılmış Kanallar üzerinden için.  
+-   <xref:System.IO.Pipes.PipeStream> – Okuma ve yazma adsız ve Adlandırılmış Kanallar üzerinden için.  
   
--   <xref:System.Security.Cryptography.CryptoStream>– veri akışları için şifreleme dönüştürmeleri bağlama.  
+-   <xref:System.Security.Cryptography.CryptoStream> – veri akışları için şifreleme dönüştürmeleri bağlama.  
   
  Akışlarla zaman uyumsuz olarak çalışan bir örnek için bkz: [zaman uyumsuz dosya g/ç](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
@@ -89,13 +89,13 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Bazı yaygın olarak kullanılan okuyucu ve yazıcı sınıfları şunlardır:  
   
--   <xref:System.IO.BinaryReader>ve <xref:System.IO.BinaryWriter> – okuma ve yazma temel veri türleri olarak ikili değerler için.  
+-   <xref:System.IO.BinaryReader> ve <xref:System.IO.BinaryWriter> – okuma ve yazma temel veri türleri olarak ikili değerler için.  
   
--   <xref:System.IO.StreamReader>ve <xref:System.IO.StreamWriter> – okuma ve karakterleri dönüştürmek için bir kodlama değerini kullanarak karakterleri yazma bayt sayısı.  
+-   <xref:System.IO.StreamReader> ve <xref:System.IO.StreamWriter> – okuma ve karakterleri dönüştürmek için bir kodlama değerini kullanarak karakterleri yazma bayt sayısı.  
   
--   <xref:System.IO.StringReader>ve <xref:System.IO.StringWriter> – okuma ve yazma için ve karakter dizelerden için.  
+-   <xref:System.IO.StringReader> ve <xref:System.IO.StringWriter> – okuma ve yazma için ve karakter dizelerden için.  
   
--   <xref:System.IO.TextReader>ve <xref:System.IO.TextWriter> – soyut taban sınıfları diğer okuyucuların ve okuma ve yazma karakterler ve dizeleri ancak ikili olmayan veriler yazarları için hizmet.  
+-   <xref:System.IO.TextReader> ve <xref:System.IO.TextWriter> – soyut taban sınıfları diğer okuyucuların ve okuma ve yazma karakterler ve dizeleri ancak ikili olmayan veriler yazarları için hizmet.  
   
  Bkz: [nasıl yapılır: dosyadan metin okuma](../../../docs/standard/io/how-to-read-text-from-a-file.md), [nasıl yapılır: bir dosyaya metin yazma](../../../docs/standard/io/how-to-write-text-to-a-file.md), [nasıl yapılır: bir dizeden karakterleri okuma](../../../docs/standard/io/how-to-read-characters-from-a-string.md), ve [nasıl yapılır:dizeyekarakteryazma](../../../docs/standard/io/how-to-write-characters-to-a-string.md).  
   
@@ -111,17 +111,17 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Aşağıdaki sınıflar, dosya ve akışları sıkıştırma ve açma işlemi olurken sıkça kullanılır.  
   
--   <xref:System.IO.Compression.ZipArchive>– oluşturma ve zip arşivini girişleri alınıyor.  
+-   <xref:System.IO.Compression.ZipArchive> – oluşturma ve zip arşivini girişleri alınıyor.  
   
--   <xref:System.IO.Compression.ZipArchiveEntry>– sıkıştırılmış bir dosyayı temsil etmek için.  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – sıkıştırılmış bir dosyayı temsil etmek için.  
   
--   <xref:System.IO.Compression.ZipFile>– oluşturma, ayıklanması ve bir sıkıştırılmış paket açma.  
+-   <xref:System.IO.Compression.ZipFile> – oluşturma, ayıklanması ve bir sıkıştırılmış paket açma.  
   
--   <xref:System.IO.Compression.ZipFileExtensions>– oluşturma ve bir sıkıştırılmış paket girişlerinde ayıklanıyor.  
+-   <xref:System.IO.Compression.ZipFileExtensions> – oluşturma ve bir sıkıştırılmış paket girişlerinde ayıklanıyor.  
   
--   <xref:System.IO.Compression.DeflateStream>– sıkıştırma ve Deflate algoritmasını kullanarak akışları boyutunda.  
+-   <xref:System.IO.Compression.DeflateStream> – sıkıştırma ve Deflate algoritmasını kullanarak akışları boyutunda.  
   
--   <xref:System.IO.Compression.GZipStream>– sıkıştırma ve gzip veri biçimi akış boyutunda.  
+-   <xref:System.IO.Compression.GZipStream> – sıkıştırma ve gzip veri biçimi akış boyutunda.  
   
  Bkz: [nasıl yapılır: dosya sıkıştırma ve çıkarma](../../../docs/standard/io/how-to-compress-and-extract-files.md).  
   
@@ -132,11 +132,11 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Aşağıdaki sınıflar yalıtılmış depolama uygularken sık kullanılır:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorage>– yalıtılmış depolama uygulamaları için temel sınıf sağlar.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> – yalıtılmış depolama uygulamaları için temel sınıf sağlar.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile>– dosyaları ve dizinleri içeren bir yalıtılmış depolama alanı sağlar.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – dosyaları ve dizinleri içeren bir yalıtılmış depolama alanı sağlar.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Yalıtılmış Depolama dosyasında kullanıma sunar.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> -Yalıtılmış Depolama dosyasında kullanıma sunar.  
   
  Bkz: [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md).  
   
@@ -155,7 +155,7 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
  Gerekirse, .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüşüm yapabilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework akışları arasında dönüştürme ve Windows çalışma zamanı akışları](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) veya [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- G/ç işlemleri hakkında daha fazla bilgi için bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, bkz: [hızlı başlangıç: Okuma ve bir dosyaya yazmayı](http://go.microsoft.com/fwlink/p/?LinkId=243072) Windows geliştirme Merkezi'ndeki.  
+ G/ç işlemleri hakkında daha fazla bilgi için bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulama, bkz: [hızlı başlangıç: Okuma ve dosyalara yazma](/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>G/Ç ve Güvenlik  
  Sınıflarda kullandığınızda <xref:System.IO?displayProperty=nameWithType> ad alanı, dosyalar ve dizinler erişimi denetlemek için erişim denetim listelerini (ACL'ler) gibi işletim sistemi güvenlik gereksinimleri izlemelidir. Bu gereksinim yanı sıra olan <xref:System.Security.Permissions.FileIOPermission> gereksinimleri. ACL'leri program aracılığıyla yönetebilirsiniz. Daha fazla bilgi için bkz: [nasıl yapılır: erişim denetimi listesi girdileri ekleyip](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  

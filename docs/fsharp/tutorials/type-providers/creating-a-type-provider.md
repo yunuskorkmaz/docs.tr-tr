@@ -10,25 +10,31 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Eğitmen: tür sağlayıcısı oluşturma
 
-> [!NOTE]
-Bu kılavuz, F # 3.0 için yazılmıştır ve güncelleştirilir.
+Türü sağlayıcısı F # kendi bilgi zengin programlama desteği için önemli bir bölümü mekanizmadır. Bu öğretici, temel kavramları göstermek için birkaç basit tür sağlayıcıları geliştirme adım adım ilerlemenizi sağlayarak kendi tür sağlayıcıları oluşturma açıklanmaktadır. F # tür sağlayıcısı mekanizması hakkında daha fazla bilgi için bkz: [tür sağlayıcıları](index.md).
 
-F # 3.0 türü sağlayıcısı yönteminde kendi bilgi zengin programlama desteği önemli bir parçasıdır. Bu öğretici, temel kavramları göstermek için birkaç basit tür sağlayıcıları geliştirme adım adım ilerlemenizi sağlayarak kendi tür sağlayıcıları oluşturma açıklanmaktadır. F # tür sağlayıcısı mekanizması hakkında daha fazla bilgi için bkz: [tür sağlayıcıları](index.md).
+F # ekosistemi tür sağlayıcıları yaygın olarak kullanılan Internet ve kurumsal veri hizmetleri için bir aralığı içerir. Örneğin:
 
-F # 3.0 yaygın olarak kullanılan Internet ve kurumsal veri hizmetleri için birkaç yerleşik türü sağlayıcıları içerir. Bu tür sağlayıcıları basit ve normal ilişkisel veritabanlarının ve ağ tabanlı OData ve WSDL hizmetlere erişmenizi. Bu sağlayıcılar de F # LINQ sorguları bu veri kaynaklarının kullanımını destekler.
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) biçimleri JSON, XML, CSV ve HTML belge türü sağlayıcıları içerir
+
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) bu veri kaynaklarının sorguları bir nesne eşleme ve F # LINQ üzerinden SQL veritabanlarını kesin türü belirtilmiş erişmenizi sağlar.
+
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) bir ayarlanmış com için tür sağlayıcıları küme-başlatılmasında T-SQL F # katıştırma
+
+- [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) kullanmak için tür sağlayıcıları ile SQL, Entity Framework, OData ve WSDL Veri Hizmetleri erişmek için yalnızca .NET Framework programlama daha eski bir kümesidir.
 
 Gerektiğinde özel tür sağlayıcıları oluşturabilir veya başkalarının oluşturmuş olduğunuz tür sağlayıcıları başvuruda bulunabilir. Örneğin, kuruluşunuzun büyük ve artan çeşitli adlandırılmış veri kümeleri, her biri kendi kararlı veri sağlayan veri hizmeti olabilir. Şemalar okuyan ve geçerli veri kümeleri için programcı kesin türü belirtilmiş şekilde sunan bir tür sağlayıcısı oluşturabilirsiniz.
 
 
 ## <a name="before-you-start"></a>Başlamadan önce
+
 Türü sağlayıcısı mekanizması öncelikle kararlı veri ve hizmet bilgi alanları F programlama deneyimine # diline injecting için tasarlanmıştır.
 
 Bu mekanizma program mantığı için uygun olan şekilde program yürütme sırasında şema değişiklikleri bilgi alanları injecting için tasarlanmış değil. Ayrıca, bazı geçerli kullanımlarını o etki alanını içeren olsa bile mekanizması içi dil için meta programlama tasarlanmış değil. Burada tür sağlayıcısı geliştirme çok yüksek bir değer verir ve bu düzenek yalnızca gerekli olduğunda kullanmalısınız.
@@ -36,7 +42,6 @@ Bu mekanizma program mantığı için uygun olan şekilde program yürütme sır
 Burada bir şema kullanılamaz tür sağlayıcısı yazma kaçınmalısınız. Benzer şekilde, tür sağlayıcısı sıradan (veya hatta var olan yerlerde) yazma kaçınmalısınız .NET kitaplığı yeterli.
 
 Başlamadan önce aşağıdaki soruları sormaya:
-
 
 - Bilgi kaynağınız için bir şema var mı? Bu durumda, F # ve .NET tür sistemi eşlemeye nedir?
 
@@ -56,7 +61,8 @@ Tür sağlayıcıları şema çalışma zamanında ve derlenmiş kod kullanım �
 
 
 ## <a name="a-simple-type-provider"></a>Bir basit tür sağlayıcısı
-Bu örnek Samples.HelloWorldTypeProvider içinde olduğu `SampleProviders\Providers` dizininde [F # 3.0 örnek paketi](https://fsharp3sample.codeplex.com) Codeplex Web sitesinde. Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
+
+Bu örnek Samples.HelloWorldTypeProvider örneklerinde benzer olduğunu `examples` dizininde [F # tür sağlayıcısı SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -97,16 +103,16 @@ Dizi türleri ve sağlanan üyeleri statik olarak bilinen unutmayın. Bu örnek 
 
 
 >[!WARNING] 
-Bu kod ve çevrimiçi örnekleri arasında bazı küçük adlandırma farklar olabilir.
+Bu kod ve çevrimiçi Örnekler arasındaki farklar olabilir.
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
 
 open System
 open System.Reflection
-open Samples.FSharp.ProvidedTypes
-open Microsoft.FSharp.Core.CompilerServices
-open Microsoft.FSharp.Quotations
+open ProviderImplementation.ProvidedTypes
+open FSharp.Core.CompilerServices
+open FSharp.Quotations
 
 // This type defines the type provider. When compiled to a DLL, it can be added
 // as a reference to an F# command-line compilation, script, or project.
@@ -115,7 +121,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 
   // Inheriting from this type provides implementations of ITypeProvider 
   // in terms of the provided types below.
-  inherit TypeProviderForNamespaces()
+  inherit TypeProviderForNamespaces(config)
 
   let namespaceName = "Samples.HelloWorldTypeProvider"
   let thisAssembly = Assembly.GetExecutingAssembly()
@@ -173,6 +179,7 @@ Oluşturulan kod hataları daha iyi tanımlamak için hata ayıklama sadece kend
 
 
 ### <a name="implementation-of-the-type-provider"></a>Uygulama türü sağlayıcısı
+
 Bu bölümde tür sağlayıcısı uygulamasının asıl bölümleri anlatılmaktadır. İlk olarak, özel tür sağlayıcısı için kendisini türünü tanımlayın:
 
 ```fsharp
@@ -185,7 +192,7 @@ Bu tür genel olmalıdır ve onunla işaretlemelisiniz [TypeProvider](https://ms
 Ardından, uygulamanız [Itypeprovider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) arabirimi. Bu durumda, kullandığınız `TypeProviderForNamespaces` gelen yazın `ProvidedTypes` bir taban türü olarak API. Ad alanları, her biri doğrudan sınırlı sayıda sabit içeren, isteğini önleyebiliriz sağlanan türleri sağlanan bu yardımcı türü sınırlı koleksiyonu isteğini önleyebiliriz sağlayabilir. Sağlayıcı bu bağlamda *isteğini önleyebiliriz* kullanılan gerekli veya değil olsa bile türleri oluşturur.
 
 ```fsharp
-inherit TypeProviderForNamespaces()
+inherit TypeProviderForNamespaces(config)
 ```
 
 Ardından, sağlanan türleri için ad alanı belirtin yerel özel değerleri tanımlayın ve türü sağlayıcı derlemesi kendisini bulun. Bu derleme daha sonra sağlanan silinen türleri mantıksal üst türü olarak kullanılır.
@@ -221,6 +228,7 @@ do()
 ```
 
 ### <a name="providing-one-type-and-its-members"></a>Tür ve üyelerini sağlama
+
 `makeOneProvidedType` İşlevi türlerinden birini sağlama gerçek iş yapar.
 
 ```fsharp
@@ -233,19 +241,16 @@ Bu adım, bu işlev uygulaması açıklanmaktadır. İlk olarak, sağlanan tür�
 ```fsharp
 // This is the provided type. It is an erased provided type and, in compiled code, 
 // will appear as type 'obj'.
-let t = ProvidedTypeDefinition(thisAssembly,namespaceName,
-"Type" + string n,
-baseType = Some typeof<obj>)
+let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
+                               "Type" + string n,
+                               baseType = Some typeof<obj>)
 ```
 
 Aşağıdaki noktalara dikkat edin:
 
-
 - Bu tür silebilmeniz sağlanır.  Temel türü olduğunu belirtmek için `obj`, örnekleri, tür değerleri olarak görünür [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) derlenmiş kod.
-<br />
 
 - Bir iç içe olmayan türü belirttiğinizde, derleme ve ad alanı belirtmeniz gerekir. Silinen türleri için derleme türü sağlayıcı derlemesi kendisi olmalıdır.
-<br />
 
 Ardından, XML belgeleri türüne ekleyin. Bu belge, yani ertelendi, ana bilgisayar derleyici gerekiyorsa isteğe bağlı hesaplanır.
 
@@ -257,9 +262,9 @@ Sonraki türü için sağlanan bir statik özellik ekleyin:
 
 ```fsharp
 let staticProp = ProvidedProperty(propertyName = "StaticProperty", 
-propertyType = typeof<string>, 
-IsStatic=true,
-GetterCode= (fun args -> <@@ "Hello!" @@>))
+                                  propertyType = typeof<string>, 
+                                  isStatic = true,
+                                  getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
 Bu özellik alma dizesi "Hello!" her zaman değerlendirir. `GetterCode` Özelliği almak için konak derleyici oluşturur kodunu temsil eden bir F # tırnak, özelliğini kullanır. Teklifleri hakkında daha fazla bilgi için bkz: [kod tırnak işaretleri (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
@@ -280,7 +285,7 @@ t.AddMember staticProp
 
 ```fsharp
 let ctor = ProvidedConstructor(parameters = [ ], 
-InvokeCode= (fun args -> <@@ "The object data" :> obj @@>))
+                               invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
 `InvokeCode` Oluşturucusu Oluşturucu çağrıldığında, ana bilgisayar derleyici oluşturan kodu temsil eden bir F # tırnak, döndürür. Örneğin, aşağıdaki oluşturucuyu kullanabilirsiniz:
@@ -304,7 +309,7 @@ Bir parametre alan ikinci bir sağlanan Oluşturucusu oluşturun:
 ```fsharp
 let ctor2 = 
 ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ], 
-InvokeCode= (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
+                    invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
 `InvokeCode` Oluşturucusu konak derleyici yöntemine bir çağrı için oluşturulan kodu temsil eden bir F # tırnak, yeniden döndürür. Örneğin, aşağıdaki oluşturucuyu kullanabilirsiniz:
@@ -317,10 +322,10 @@ Sağlanan türünün bir örneği temel alınan verilerle "on" oluşturulur. Zat
 
 ```fsharp
 let instanceProp = 
-ProvidedProperty(propertyName = "InstanceProperty", 
-propertyType = typeof<int>, 
-GetterCode= (fun args -> 
-<@@ ((%%(args.[0]) : obj) :?> string).Length @@>))
+    ProvidedProperty(propertyName = "InstanceProperty", 
+                     propertyType = typeof<int>, 
+                     getterCode= (fun args -> 
+                        <@@ ((%%(args.[0]) : obj) :?> string).Length @@>))
 instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
@@ -329,11 +334,11 @@ Bu özellik alma gösterimi nesne dize uzunluğunu döndürür. `GetterCode` Öz
 
 ```fsharp
 let instanceMeth = 
-ProvidedMethod(methodName = "InstanceMethod", 
-parameters = [ProvidedParameter("x",typeof<int>)], 
-returnType = typeof<char>, 
-InvokeCode = (fun args -> 
-<@@ ((%%(args.[0]) : obj) :?> string).Chars(%%(args.[1]) : int) @@>))
+    ProvidedMethod(methodName = "InstanceMethod", 
+                   parameters = [ProvidedParameter("x",typeof<int>)], 
+                   returnType = typeof<char>, 
+                   invokeCode = (fun args -> 
+                       <@@ ((%%(args.[0]) : obj) :?> string).Chars(%%(args.[1]) : int) @@>))
 
 instanceMeth.AddXmlDocDelayed(fun () -> "This is an instance method")
 // Add the instance method to the type.
@@ -344,100 +349,86 @@ Son olarak, 100 iç içe özellikler içeren bir iç içe geçmiş türü oluşt
 
 ```fsharp
 t.AddMembersDelayed(fun () -> 
-let nestedType = ProvidedTypeDefinition("NestedType",
-Some typeof<obj>
+  let nestedType = ProvidedTypeDefinition("NestedType", Some typeof<obj>)
 
-)
+  nestedType.AddMembersDelayed (fun () -> 
+    let staticPropsInNestedType = 
+      [ for i in 1 .. 100 do
+          let valueOfTheProperty = "I am string "  + string i
 
-nestedType.AddMembersDelayed (fun () -> 
-let staticPropsInNestedType = 
-[ for i in 1 .. 100 do
-let valueOfTheProperty = "I am string "  + string i
+          let p = 
+            ProvidedProperty(propertyName = "StaticProperty" + string i, 
+              propertyType = typeof<string>, 
+              isStatic = true,
+              getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
-let p = ProvidedProperty(propertyName = "StaticProperty" + string i, 
-propertyType = typeof<string>, 
-IsStatic=true,
-GetterCode= (fun args -> <@@ valueOfTheProperty @@>))
+          p.AddXmlDocDelayed(fun () -> 
+              sprintf "This is StaticProperty%d on NestedType" i)
 
-p.AddXmlDocDelayed(fun () -> 
-sprintf "This is StaticProperty%d on NestedType" i)
+          yield p ]
 
-yield p ]
-staticPropsInNestedType)
+    staticPropsInNestedType)
 
-[nestedType])
-
-// The result of makeOneProvidedType is the type.
-t
+  [nestedType])
 ```
 
 ### <a name="details-about-erased-provided-types"></a>Silinen sağlanan türleri hakkında ayrıntılar
+
 Bu bölümdeki örnek yalnızca sağlar *sağlanan türleri silinmesi*, aşağıdaki durumlarda özellikle yararlı olan:
 
-
 - Ne zaman yalnızca veri ve yöntemleri içeren bir bilgi alanı için bir sağlayıcı yazıyorsanız.
-<br />
 
 - Ne zaman burada doğru çalışma zamanı türü anlamları bilgi alanı pratik kullanım için kritik olmayan bir sağlayıcı yazıyorsanız.
-<br />
 
 - Ne zaman büyük ve birbirine bağlı bilgi alanı için gerçek .NET türleri oluşturmak için teknik olarak uygun olmayan bir bilgi alanı için bir sağlayıcı yazıyorsanız.
-<br />
 
 Bu örnekte, her tür yazmak için silinir sağlanan `obj`, ve türü tüm kullanımlarını türü olarak görünür `obj` derlenmiş kod. Aslında, arka plandaki nesneleri bu örneklerde dizelerdir, ancak türü olarak görünür `System.Object` .NET derlenmiş kod. Türü silinme tüm kullanıcılarına açık kutulama kullanabileceğiniz gibi kutudan çıkarma ve atama bozmaya için türleri silinebilir. Bu durumda, nesne kullanıldığında, geçerli olmayan bir yayın özel durumu neden olabilir. Bir sağlayıcı çalışma zamanı false ifadeleri karşı korunmasına yardımcı olmak için kendi özel gösterim türü tanımlayabilirsiniz. F # içinde kendisi silinen türleri tanımlayamazsınız. Yalnızca sağlanan türleri silinebilir. Hem pratik ayrımlar anlamanız gerekir ve anlam ya da kullanmanın silinen türleri, tür sağlayıcısı veya sağlayan bir sağlayıcı için türleri silinebilir. Silinen bir türü gerçek .NET tür yok. Bu nedenle, doğru yansıma türü üzerinden yapamayacağı ve çalışma zamanı atamalar ve üzerinde tam çalışma zamanı türü anlamları kullanan başka teknikler kullanırsanız, silinen türleri bozmaya. Silinen türlerinin alt sürüme cast türü özel durumları çalışma zamanında sık sonuçlanır.
 
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Sağlanan türleri Beyanları silebilmeniz için seçme
+
 Bazı silinen sağlananlardan kullanımları hiçbir gösterimi gereklidir. Örneğin, silinen türü yalnızca statik özellikler ve üyeleri ve oluşturucu yok içerebilir ve yöntemleri ya da özellikleri türünün bir örneği döndürecektir sağlanan. Tür sağlanan bir silinen örneklerini erişebiliyorsa, aşağıdaki soruları göz önünde bulundurmalısınız:
 
+**Sağlanan tür silinmesini nedir?**
 
-- Sağlanan tür silinmesini nedir?
-<br />
-  - Sağlanan tür silinmesini türü derlenmiş .NET kodunda görünme ' dir.
-<br />
+- Sağlanan tür silinmesini türü derlenmiş .NET kodunda görünme ' dir.
 
-  - Sağlanan silinen sınıf türü silinme her zaman ilk silinmesi olmayan türün temel türünü devralma zincirinde ' dir.
-<br />
+- Sağlanan silinen sınıf türü silinme her zaman ilk silinmesi olmayan türün temel türünü devralma zincirinde ' dir.
 
-  - Sağlanan silinen arabirim türü silinmesini her zaman olduğu `System.Object`.
-<br />
+- Sağlanan silinen arabirim türü silinmesini her zaman olduğu `System.Object`.
 
-- Sağlanan tür gösterimlerini nelerdir?
-<br />
-  - Bir silinen tür sağlanan için olası nesne kümesini kendi Beyanları çağrılır. Bu belgedeki örnekte tüm silinen sağlanan gösterimlerini türleri `Type1..Type100` her zaman dize nesneleridir.
-<br />
+**Sağlanan tür gösterimlerini nelerdir?**
+
+- Bir silinen tür sağlanan için olası nesne kümesini kendi Beyanları çağrılır. Bu belgedeki örnekte tüm silinen sağlanan gösterimlerini türleri `Type1..Type100` her zaman dize nesneleridir.
 
 Sağlanan bir türdeki tüm Beyanları sağlanan türü silinme ile uyumlu olması gerekir. (Aksi halde, F # derleyici hata türü sağlayıcısı için bir kullanım alır ya da geçersiz doğrulanamayan .NET kodu oluşturulur. Tür sağlayıcısı geçersiz bir gösterimi verir kodu döndürmesi durumunda geçerli değil.)
 
 Her ikisi de çok yaygın aşağıdaki yaklaşımlardan birini kullanarak sağlanan nesneleri temsili seçebilirsiniz:
 
-
 - Varolan bir .NET türünü yalnızca kesin türü belirtilmiş bir sarmalayıcı sağlıyorsanız, genellikle o türüne silme, bu türdeki örneklerin Beyanları veya her ikisini de olarak kullanmak türünüz için mantıklıdır. Bu türün varolan yöntemleri çoğunu hala kesin türü belirtilmiş sürümünü kullanırken anlamlı olduğunda bu uygun bir yaklaşımdır.
-<br />
 
 - Var olan tüm .NET API önemli ölçüde farklı bir API oluşturmak istiyorsanız, bu tür silinme ve Beyanları sağlanan türleri için çalışma zamanı türleri oluşturmak için anlamlıdır.
-<br />
 
 Bu belge örnekte dizelerini sağlanan nesneleri gösterimlerini kullanır. Genellikle, diğer nesneler için temsili kullanmak uygun olabilir. Örneğin, bir özellik paketi olarak bir sözlük kullanabilirsiniz:
 
 ```fsharp
 ProvidedConstructor(parameters = [], 
-InvokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
+    invokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
 ```
 
 Alternatif olarak, çalışma zamanında bir veya daha fazla çalışma zamanı işlemleri birlikte bir gösterim oluşturmak için kullanılan, tür sağlayıcısı tür tanımlama:
 
 ```fsharp
 type DataObject() =
-let data = Dictionary<string,obj>()
-member x.RuntimeOperation() = data.Count
+    let data = Dictionary<string,obj>()
+    member x.RuntimeOperation() = data.Count
 ```
 
 Sağlanan üyeleri, ardından bu nesne türü örnekleri oluşturabileceğiniz:
 
 ```fsharp
 ProvidedConstructor(parameters = [], 
-InvokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
+    invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
 Bu durumda, (isteğe bağlı) bu tür türü silinme bu türü olarak belirterek kullanabilirsiniz `baseType` oluşturulurken `ProvidedTypeDefinition`:
@@ -448,24 +439,23 @@ ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
 ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), …)
 ```
 
-`Key Lessons`
+### <a name="key-lessons"></a>Önemli dersleri
 
 Önceki bölümde bir dizi türleri, özellikleri ve yöntemleri sağlayan basit bir silme tür sağlayıcısı oluşturma açıklanmıştır. Bu bölümde ayrıca bazı avantajları ve dezavantajları türü sağlayıcıdan silinen türleri sağlama dahil olmak üzere türü silinme kavramı açıklandığı ve Silinen türleri gösterimlerini ele alınan.
 
 
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Statik parametreleri kullanan bir tür sağlayıcısı
+
 Tür sağlayıcıları tarafından statik verileri Parametreleştirme olanağı bile sağlayıcı yerel veya uzak verilere erişmek gerektiğinde değil durumlarda birçok ilginç senaryolara olanak sağlar. Bu bölümde, böyle bir sağlayıcı bir araya getirilmesi için bazı temel tekniklerini öğreneceksiniz.
 
 
 ### <a name="type-checked-regex-provider"></a>Regex sağlayıcısı türü işaretli
+
 .NET sarmalar türü sağlayıcısı normal ifadeler için uygulamak istediğiniz düşünün `System.Text.RegularExpressions.Regex` aşağıdaki derleme zamanı garanti sağlayan bir arabirimi kitaplıklarında:
 
-
 - Normal bir ifade geçerli olup olmadığını doğrulanıyor.
-<br />
 
 - Tüm grup adlarını normal ifadede dayalı eşleşmeler üzerinde adlandırılmış özelliklerinin sağlanması.
-<br />
 
 Bu bölümde tür sağlayıcıları oluşturmak için nasıl kullanılacağı gösterilmiştir bir `RegExProviderType` normal ifade deseni bu kazanımları sağlamak için parameterizes yazın. Derleyici, belirtilen desenle geçerli değil ve böylece eşleşmeleri özellikleri adlandırılmış kullanarak erişebilir türü sağlayıcısı düzeni grupları ayıklayabilirsiniz bir hata bildirir. Tür sağlayıcısı tasarlarken, sunulan API'si nasıl görünmelidir düşünmelisiniz son kullanıcılar ve bu tasarımı .NET kodu için nasıl çevirir. Aşağıdaki örnek, alan kodunu bileşenlerini almak için bu tür bir API kullanmak gösterilmektedir:
 
@@ -486,18 +476,13 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 Aşağıdaki noktalara dikkat edin:
 
-
 - Standart Regex türü parametreli temsil eden `RegexTyped` türü.
-<br />
 
 - `RegexTyped` Deseni için statik tür bağımsız değişkeni geçirme Regex Oluşturucusu çağrısına Oluşturucusu sonuçlanıyor.
-<br />
 
 - Sonuçlarını `Match` yöntemi Standart tarafından temsil edilen `System.Text.RegularExpressions.Match` türü.
-<br />
 
 - Sağlanan özelliğinde her adlandırılmış grubu sonuçları ve özellik erişme sonuçlanıyor eşleşmeyi'nın bir dizin oluşturucu kullanımını `Groups` koleksiyonu.
-<br />
 
 Aşağıdaki kodu böyle bir sağlayıcı uygulamak için mantığı çekirdek ve bu örnek sağlanan türü için tüm üyelerinin eklenmesini atlar. Eklenen her üye hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerinde uygun bölümüne bakın. Tam kodunu örnekten karşıdan [F # 3.0 örnek paketi](https://fsharp3sample.codeplex.com) Codeplex Web sitesinde.
 
@@ -511,43 +496,45 @@ open System.Text.RegularExpressions
 
 [<TypeProvider>]
 type public CheckedRegexProvider() as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces()
 
-// Get the assembly and namespace used to house the provided types
-let thisAssembly = Assembly.GetExecutingAssembly()
-let rootNamespace = "Samples.FSharp.RegexTypeProvider"
-let baseTy = typeof<obj>
-let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
+    // Get the assembly and namespace used to house the provided types
+    let thisAssembly = Assembly.GetExecutingAssembly()
+    let rootNamespace = "Samples.FSharp.RegexTypeProvider"
+    let baseTy = typeof<obj>
+    let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
 
-let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
+    let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
-do regexTy.DefineStaticParameters(
-parameters=staticParams, 
-instantiationFunction=(fun typeName parameterValues ->
+    do regexTy.DefineStaticParameters(
+        parameters=staticParams, 
+        instantiationFunction=(fun typeName parameterValues ->
 
-match parameterValues with 
-| [| :? string as pattern|] -> 
-// Create an instance of the regular expression. 
-//
-// This will fail with System.ArgumentException if the regular expression is not valid. 
-// The exception will escape the type provider and be reported in client code.
-let r = System.Text.RegularExpressions.Regex(pattern)            
+          match parameterValues with 
+          | [| :? string as pattern|] -> 
 
-// Declare the typed regex provided type.
-// The type erasure of this type is 'obj', even though the representation will always be a Regex
-// This, combined with hiding the object methods, makes the IntelliSense experience simpler.
-let ty = ProvidedTypeDefinition(
-thisAssembly, 
-rootNamespace, 
-typeName, 
-baseType = Some baseTy)
+            // Create an instance of the regular expression. 
+            //
+            // This will fail with System.ArgumentException if the regular expression is not valid. 
+            // The exception will escape the type provider and be reported in client code.
+            let r = System.Text.RegularExpressions.Regex(pattern)            
 
-...
+            // Declare the typed regex provided type.
+            // The type erasure of this type is 'obj', even though the representation will always be a Regex
+            // This, combined with hiding the object methods, makes the IntelliSense experience simpler.
+            let ty = 
+              ProvidedTypeDefinition(
+                thisAssembly, 
+                rootNamespace, 
+                typeName, 
+                baseType = Some baseTy)
 
-ty
-| _ -> failwith "unexpected parameter values")) 
+            ...
 
-do this.AddNamespace(rootNamespace, [regexTy])
+            ty
+          | _ -> failwith "unexpected parameter values")) 
+
+    do this.AddNamespace(rootNamespace, [regexTy])
 
 [<TypeProviderAssembly>]
 do ()
@@ -555,34 +542,28 @@ do ()
 
 Aşağıdaki noktalara dikkat edin:
 
-
 - Tür sağlayıcısı iki statik parametreleri alır: `pattern`, zorunlu olduğu ve `options`, hangi isteğe bağlı (varsayılan bir değer sağlandığı için).
-<br />
 
 - Statik bağımsız değişkenleri sağlanan sonra normal ifade örneği oluşturun. Bu örnek, Regex hatalı biçimlendirilmiş ise ve bu hata kullanıcılara bildirilecek bir özel durum oluşturur.
-<br />
 
 - İçinde `DefineStaticParameters` geri değişkenleri sağlanan sonra döndürülecek tür tanımlayın.
-<br />
 
 - Bu kod ayarlar `HideObjectMethods` IntelliSense deneyimi kolaylaştırılmış kalması true. Bu öznitelik neden `Equals`, `GetHashCode`, `Finalize`, ve `GetType` üyelerinin atlanması için sağlanan nesne için IntelliSense listelerden.
-<br />
 
 - Kullandığınız `obj` yöntemi, ancak temel türünü kullanacağınız gibi bir `Regex` nesnesi olarak sonraki örnekte gösterildiği gibi bu tür, çalışma zamanı gösterimi.
-<br />
 
 - Çağrı `Regex` Oluşturucusu oluşturur bir `System.ArgumentException` zaman normal bir ifade değil geçerli. Derleyici, bu özel durum yakalar ve derleme zamanında ya da Visual Studio düzenleyicisinde bir hata iletisi kullanıcıya bildirir. Bu özel bir uygulamayı çalıştırmadan doğrulanması normal ifadeler sağlar.
-<br />
 
 Herhangi bir anlamlı yöntemleri veya özellikleri içermediğinden yukarıda tanımlanan türü henüz yararlı olmaz. İlk olarak, statik ekleyin `IsMatch` yöntemi:
 
 ```fsharp
-let isMatch = ProvidedMethod(
-methodName = "IsMatch", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = typeof<bool>, 
-IsStaticMethod = true,
-InvokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+let isMatch = 
+    ProvidedMethod(
+        methodName = "IsMatch", 
+        parameters = [ProvidedParameter("input", typeof<string>)], 
+        returnType = typeof<bool>, 
+        isStatic = true,
+        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
 
 isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string." 
 ty.AddMember isMatch
@@ -593,10 +574,11 @@ ty.AddMember isMatch
 Ardından, bir örnek Match yöntemi ekler. Ancak, bu yöntem bir sağlanan değerini döndürmelidir `Match` grupları kesin türü belirtilmiş bir biçimde erişilebilir yazın. Bu nedenle, ilk bildirdiğiniz `Match` türü. Bu tür statik bir bağımsız değişken olarak sağlanan düzeni bağlı olduğundan, bu tür parametreli tür tanımı içinde iç içe gerekir:
 
 ```fsharp
-let matchTy = ProvidedTypeDefinition(
-"MatchType", 
-baseType = Some baseTy, 
-HideObjectMethods = true)
+let matchTy = 
+    ProvidedTypeDefinition(
+        "MatchType", 
+        baseType = Some baseTy, 
+        hideObjectMethods = true)
 
 ty.AddMember matchTy
 ```
@@ -605,14 +587,15 @@ Her grup için eşleşme türü için bir özellik ekleyin. Çalışma zamanınd
 
 ```fsharp
 for group in r.GetGroupNames() do
-// Ignore the group named 0, which represents all input.
-if group <> "0" then
-let prop = ProvidedProperty(
-propertyName = group, 
-propertyType = typeof<Group>, 
-GetterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
-matchTy.AddMember prop
+    // Ignore the group named 0, which represents all input.
+    if group <> "0" then
+    let prop = 
+      ProvidedProperty(
+        propertyName = group, 
+        propertyType = typeof<Group>, 
+        getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
+        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+    matchTy.AddMember prop
 ```
 
 Yeniden sağlanan özelliğine XML belgeleri eklediğiniz unutmayın. Ayrıca bir özellik varsa okunabilir Not bir `GetterCode` işlevi sağlanır ve özelliği, yazılabilir bir `SetterCode` işlevi sağlanır, sonuçta elde edilen özelliği salt okunur şekilde.
@@ -621,11 +604,12 @@ Bu değer döndüren bir örnek yöntemi oluşturabilirsiniz artık `Match` tür
 
 ```fsharp
 let matchMethod = 
-ProvidedMethod(
-methodName = "Match", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = matchTy, 
-InvokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+    ProvidedMethod(
+        methodName = "Match", 
+        parameters = [ProvidedParameter("input", typeof<string>)], 
+        returnType = matchTy, 
+        invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+
 matchMeth.AddXmlDoc "Searches the specified input string for the first ocurrence of this regular expression" 
 
 ty.AddMember matchMeth
@@ -636,9 +620,11 @@ ty.AddMember matchMeth
 Son olarak, belirtilen türdeki örneklerin oluşturulan bir oluşturucu sağlayın.
 
 ```fsharp
-let ctor = ProvidedConstructor(
-parameters = [], 
-InvokeCode = fun args -> <@@ Regex(pattern, options) :> obj @@>)
+let ctor = 
+    ProvidedConstructor(
+        parameters = [], 
+        invokeCode = fun args -> <@@ Regex(pattern, options) :> obj @@>)
+
 ctor.AddXmlDoc("Initializes a regular expression instance.")
 
 ty.AddMember ctor
@@ -656,136 +642,137 @@ open System.Text.RegularExpressions
 
 [<TypeProvider>]
 type public CheckedRegexProvider() as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces()
 
-// Get the assembly and namespace used to house the provided types.
-let thisAssembly = Assembly.GetExecutingAssembly()
-let rootNamespace = "Samples.FSharp.RegexTypeProvider"
-let baseTy = typeof<obj>
-let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
+    // Get the assembly and namespace used to house the provided types.
+    let thisAssembly = Assembly.GetExecutingAssembly()
+    let rootNamespace = "Samples.FSharp.RegexTypeProvider"
+    let baseTy = typeof<obj>
+    let staticParams = [ProvidedStaticParameter("pattern", typeof<string>)]
 
-let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
+    let regexTy = ProvidedTypeDefinition(thisAssembly, rootNamespace, "RegexTyped", Some baseTy)
 
-do regexTy.DefineStaticParameters(
-parameters=staticParams, 
-instantiationFunction=(fun typeName parameterValues ->
+    do regexTy.DefineStaticParameters(
+        parameters=staticParams, 
+        instantiationFunction=(fun typeName parameterValues ->
 
-match parameterValues with 
-| [| :? string as pattern|] -> 
-// Create an instance of the regular expression. 
+            match parameterValues with 
+            | [| :? string as pattern|] -> 
 
+                // Create an instance of the regular expression. 
 
+                let r = System.Text.RegularExpressions.Regex(pattern)            
 
+                // Declare the typed regex provided type.
 
-let r = System.Text.RegularExpressions.Regex(pattern)            
+                let ty = 
+                    ProvidedTypeDefinition(
+                        thisAssembly, 
+                        rootNamespace, 
+                        typeName, 
+                        baseType = Some baseTy)
 
-// Declare the typed regex provided type.
+                ty.AddXmlDoc "A strongly typed interface to the regular expression '%s'"
 
+                // Provide strongly typed version of Regex.IsMatch static method.
+                let isMatch = 
+                    ProvidedMethod(
+                        methodName = "IsMatch", 
+                        parameters = [ProvidedParameter("input", typeof<string>)], 
+                        returnType = typeof<bool>, 
+                        isStatic = true,
+                        invokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
 
+                isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string"
 
-let ty = ProvidedTypeDefinition(
-thisAssembly, 
-rootNamespace, 
-typeName, 
-baseType = Some baseTy)
+                ty.AddMember isMatch
 
-ty.AddXmlDoc "A strongly typed interface to the regular expression '%s'"
+                // Provided type for matches
+                // Again, erase to obj even though the representation will always be a Match
+                let matchTy = 
+                    ProvidedTypeDefinition(
+                        "MatchType", 
+                        baseType = Some baseTy, 
+                        hideObjectMethods = true)
 
-// Provide strongly typed version of Regex.IsMatch static method.
-let isMatch = ProvidedMethod(
-methodName = "IsMatch", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = typeof<bool>, 
-IsStaticMethod = true,
-InvokeCode = fun args -> <@@ Regex.IsMatch(%%args.[0], pattern) @@>) 
+                // Nest the match type within parameterized Regex type.
+                ty.AddMember matchTy
 
-isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the specified input string"
+                // Add group properties to match type
+                for group in r.GetGroupNames() do
+                    // Ignore the group named 0, which represents all input.
+                    if group <> "0" then
+                        let prop = 
+                          ProvidedProperty(
+                            propertyName = group, 
+                            propertyType = typeof<Group>, 
+                            getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
+                        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+                        matchTy.AddMember(prop)
 
-ty.AddMember isMatch
+                // Provide strongly typed version of Regex.Match instance method.
+                let matchMeth = 
+                  ProvidedMethod(
+                    methodName = "Match", 
+                    parameters = [ProvidedParameter("input", typeof<string>)], 
+                    returnType = matchTy, 
+                    invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
+                matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
 
-// Provided type for matches
-// Again, erase to obj even though the representation will always be a Match
-let matchTy = ProvidedTypeDefinition(
-"MatchType", 
-baseType = Some baseTy, 
-HideObjectMethods = true)
+                ty.AddMember matchMeth
 
-// Nest the match type within parameterized Regex type.
-ty.AddMember matchTy
+                // Declare a constructor.
+                let ctor = 
+                  ProvidedConstructor(
+                    parameters = [], 
+                    invokeCode = fun args -> <@@ Regex(pattern) :> obj @@>)
 
-// Add group properties to match type
-for group in r.GetGroupNames() do
-// Ignore the group named 0, which represents all input.
-if group <> "0" then
-let prop = ProvidedProperty(
-propertyName = group, 
-propertyType = typeof<Group>, 
-GetterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
-matchTy.AddMember(prop)
+                // Add documentation to the constructor.
+                ctor.AddXmlDoc "Initializes a regular expression instance"
 
-// Provide strongly typed version of Regex.Match instance method.
-let matchMeth = ProvidedMethod(
-methodName = "Match", 
-parameters = [ProvidedParameter("input", typeof<string>)], 
-returnType = matchTy, 
-InvokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
-matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
+                ty.AddMember ctor
 
-ty.AddMember matchMeth
+                ty
+            | _ -> failwith "unexpected parameter values")) 
 
-// Declare a constructor.
-let ctor = ProvidedConstructor(
-parameters = [], 
-InvokeCode = fun args -> <@@ Regex(pattern) :> obj @@>)
-
-// Add documentation to the constructor.
-ctor.AddXmlDoc "Initializes a regular expression instance"
-
-ty.AddMember ctor
-
-ty
-| _ -> failwith "unexpected parameter values")) 
-
-do this.AddNamespace(rootNamespace, [regexTy])
+    do this.AddNamespace(rootNamespace, [regexTy])
 
 [<TypeProviderAssembly>]
 do ()
 ```
 
-`Key Lessons`
+### <a name="key-lessons"></a>Önemli dersleri
 
 Bu bölümde statik parametrelerinin üzerinde çalıştığı bir tür sağlayıcısı oluşturma açıklanmıştır. Sağlayıcı statik parametresinin denetler ve onun değere göre işlemler sağlar.
 
 
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Yerel veri tarafından desteklenen bir tür sağlayıcısı
+
 Sık yalnızca statik parametreleri aynı zamanda yerel veya uzak sistemlerden bilgi göre API'leri sunmak için tür sağlayıcıları isteyebilirsiniz. Bu bölümde yerel veri dosyaları gibi yerel verileri esas alan tür sağlayıcıları anlatılmaktadır.
 
 
 ### <a name="simple-csv-file-provider"></a>Basit CSV dosya sağlayıcısı
+
 Basit bir örnek olarak, tür sağlayıcısı virgülle ayrılmış değer (CSV) biçiminde bilimsel verilerine erişmek için göz önünde bulundurun. Bu bölümde, aşağıdaki tabloda gösterildiği gibi CSV dosyaları kayan nokta verisi tarafından izlenen bir başlık satırı içerdiğini varsayar:
 
 
-
-|Uzaklık (ölçer)|Süresi (saniye)|
+```
+|Distance (meter)|Time (second)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
+```
+
 Bu bölümde satırlarla almak için kullanabileceğiniz bir türü sağlamak nasıl gösterilmiştir bir `Distance` türündeki özelliği `float<meter>` ve `Time` türündeki özelliği `float<second>`. Kolaylık olması için aşağıdaki varsayımlar oluşturulur:
 
-
 - Üstbilgi adlardır ya da birimi daha az veya "Ad (birim)" biçiminde olması ve virgül hiçbirini içeremez.
-<br />
 
 - Birimleridir tüm Systeme uluslararası (SI) birimi olarak [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Modülü (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) modülü tanımlar.
-<br />
 
 - Tüm basit birimler (örneğin, ölçüm) bileşik (örneğin, ölçüm/saniye) yerine.
-<br />
 
 - Kayan nokta verisi tüm sütunları içeriyor.
-<br />
 
 Daha eksiksiz bir sağlayıcı, bu kısıtlamalar çözmek.
 
@@ -814,122 +801,122 @@ Aşağıdaki kod uygulama çekirdek gösterir.
 ```fsharp
 // Simple type wrapping CSV data
 type CsvFile(filename) =
-// Cache the sequence of all data lines (all lines but the first)
-let data = 
-seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
-yield line.Split(',') |> Array.map float }
-|> Seq.cache
-member __.Data = data
+    // Cache the sequence of all data lines (all lines but the first)
+    let data = 
+        seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
+                 yield line.Split(',') |> Array.map float }
+        |> Seq.cache
+    member __.Data = data
 
 [<TypeProvider>]
 type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
-inherit TypeProviderForNamespaces()
+    inherit TypeProviderForNamespaces(cfg)
 
-// Get the assembly and namespace used to house the provided types.
-let asm = System.Reflection.Assembly.GetExecutingAssembly()
-let ns = "Samples.FSharp.MiniCsvProvider"
+    // Get the assembly and namespace used to house the provided types.
+    let asm = System.Reflection.Assembly.GetExecutingAssembly()
+    let ns = "Samples.FSharp.MiniCsvProvider"
 
-// Create the main provided type.
-let csvTy = ProvidedTypeDefinition(asm, ns, "MiniCsv", Some(typeof<obj>))
+    // Create the main provided type.
+    let csvTy = ProvidedTypeDefinition(asm, ns, "MiniCsv", Some(typeof<obj>))
 
-// Parameterize the type by the file to use as a template.
-let filename = ProvidedStaticParameter("filename", typeof<string>)
-do csvTy.DefineStaticParameters([filename], fun tyName [| :? string as filename |] ->
+    // Parameterize the type by the file to use as a template.
+    let filename = ProvidedStaticParameter("filename", typeof<string>)
+    do csvTy.DefineStaticParameters([filename], fun tyName [| :? string as filename |] ->
+    
+        // Resolve the filename relative to the resolution folder.
+        let resolvedFilename = Path.Combine(cfg.ResolutionFolder, filename)
 
-// Resolve the filename relative to the resolution folder.
-let resolvedFilename = Path.Combine(cfg.ResolutionFolder, filename)
+        // Get the first line from the file.
+        let headerLine = File.ReadLines(resolvedFilename) |> Seq.head
 
-// Get the first line from the file.
-let headerLine = File.ReadLines(resolvedFilename) |> Seq.head
+        // Define a provided type for each row, erasing to a float[].
+        let rowTy = ProvidedTypeDefinition("Row", Some(typeof<float[]>))
 
-// Define a provided type for each row, erasing to a float[].
-let rowTy = ProvidedTypeDefinition("Row", Some(typeof<float[]>))
+        // Extract header names from the file, splitting on commas.
+        // use Regex matching to get the position in the row at which the field occurs
+        let headers = Regex.Matches(headerLine, "[^,]+")
 
-// Extract header names from the file, splitting on commas.
-// use Regex matching to get the position in the row at which the field occurs
-let headers = Regex.Matches(headerLine, "[^,]+")
+        // Add one property per CSV field.
+        for i in 0 .. headers.Count - 1 do
+            let headerText = headers.[i].Value
 
-// Add one property per CSV field.
-for i in 0 .. headers.Count - 1 do
-let headerText = headers.[i].Value
+            // Try to decompose this header into a name and unit.
+            let fieldName, fieldTy =
+                let m = Regex.Match(headerText, @"(?<field>.+) \((?<unit>.+)\)")
+                if m.Success then
 
-// Try to decompose this header into a name and unit.
-let fieldName, fieldTy =
-let m = Regex.Match(headerText, @"(?<field>.+) \((?<unit>.+)\)")
-if m.Success then
+                    let unitName = m.Groups.["unit"].Value
+                    let units = ProvidedMeasureBuilder.Default.SI unitName
+                    m.Groups.["field"].Value, ProvidedMeasureBuilder.Default.AnnotateType(typeof<float>,[units])
 
+                else
+                    // no units, just treat it as a normal float
+                    headerText, typeof<float>
 
-let unitName = m.Groups.["unit"].Value
-let units = ProvidedMeasureBuilder.Default.SI unitName
-m.Groups.["field"].Value, ProvidedMeasureBuilder.Default.AnnotateType(typeof<float>,[units])
+            let prop = 
+                ProvidedProperty(fieldName, fieldTy, 
+                    getterCode = fun [row] -> <@@ (%%row:float[]).[i] @@>)
 
+            // Add metadata that defines the property's location in the referenced file.
+            prop.AddDefinitionLocation(1, headers.[i].Index + 1, filename)
+            rowTy.AddMember(prop) 
 
-else
-// no units, just treat it as a normal float
-headerText, typeof<float>
+        // Define the provided type, erasing to CsvFile.
+        let ty = ProvidedTypeDefinition(asm, ns, tyName, Some(typeof<CsvFile>))
 
-let prop = ProvidedProperty(fieldName, fieldTy, 
-GetterCode = fun [row] -> <@@ (%%row:float[]).[i] @@>)
+        // Add a parameterless constructor that loads the file that was used to define the schema.
+        let ctor0 = 
+            ProvidedConstructor([], 
+                invokeCode = fun [] -> <@@ CsvFile(resolvedFilename) @@>)
+        ty.AddMember ctor0
 
-// Add metadata that defines the property's location in the referenced file.
-prop.AddDefinitionLocation(1, headers.[i].Index + 1, filename)
-rowTy.AddMember(prop) 
+        // Add a constructor that takes the file name to load.
+        let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)], 
+            invokeCode = fun [filename] -> <@@ CsvFile(%%filename) @@>)
+        ty.AddMember ctor1
 
-// Define the provided type, erasing to CsvFile.
-let ty = ProvidedTypeDefinition(asm, ns, tyName, Some(typeof<CsvFile>))
+        // Add a more strongly typed Data property, which uses the existing property at runtime.
+        let prop = 
+            ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy), 
+                getterCode = fun [csvFile] -> <@@ (%%csvFile:CsvFile).Data @@>)
+        ty.AddMember prop
 
-// Add a parameterless constructor that loads the file that was used to define the schema.
-let ctor0 = ProvidedConstructor([], 
-InvokeCode = fun [] -> <@@ CsvFile(resolvedFilename) @@>)
-ty.AddMember ctor0
+        // Add the row type as a nested type.
+        ty.AddMember rowTy
+        ty)
 
-// Add a constructor that takes the file name to load.
-let ctor1 = ProvidedConstructor([ProvidedParameter("filename", typeof<string>)], 
-InvokeCode = fun [filename] -> <@@ CsvFile(%%filename) @@>)
-ty.AddMember ctor1
-
-// Add a more strongly typed Data property, which uses the existing property at runtime.
-let prop = ProvidedProperty("Data", typedefof<seq<_>>.MakeGenericType(rowTy), 
-GetterCode = fun [csvFile] -> <@@ (%%csvFile:CsvFile).Data @@>)
-ty.AddMember prop
-
-// Add the row type as a nested type.
-ty.AddMember rowTy
-ty)
-
-// Add the type to the namespace.
-do this.AddNamespace(ns, [csvTy])
+    // Add the type to the namespace.
+    do this.AddNamespace(ns, [csvTy])
 ```
 
 Uygulanmasıyla ilgili aşağıdaki noktalara dikkat edin:
 
-
 - Aşırı yüklenmiş Oluşturucular, özgün dosya veya okumak için özdeş bir şema içeren izin verin. Bu deseni, yerel veya uzak veri kaynakları için bir tür sağlayıcısı yazma ve bu deseni için Uzak Veri şablon olarak kullanılacak yerel bir dosyaya verir yaygındır.
-<br />  Kullanabileceğiniz [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) göreli dosya adları çözümlemek için türü sağlayıcısı oluşturucuya geçirilen değer.
-<br />
+
+- Kullanabileceğiniz [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) göreli dosya adları çözümlemek için türü sağlayıcısı oluşturucuya geçirilen değer.
 
 - Kullanabileceğiniz `AddDefinitionLocation` sağlanan özellikler konumunu tanımlamak için yöntem. Bu nedenle, kullanırsanız `Go To Definition` sağlanan bir özellik, CSV dosyasını Visual Studio'da açın.
-<br />
 
 - Kullanabileceğiniz `ProvidedMeasureBuilder` türü SI birimler aramak için ve ilgili oluşturmak için `float<_>` türleri.
-<br />
 
-`Key Lessons`
+### <a name="key-lessons"></a>Önemli dersleri
 
 Bu bölüm veri kaynağındaki kendisini içeren basit bir şema ile yerel bir veri kaynağı için tür sağlayıcısı oluşturma açıklanmıştır.
 
 
 ## <a name="going-further"></a>Daha fazla işlenmesini
+
 Aşağıdaki bölümlerde daha ayrıntılı incelemesi için öneriler içerir.
 
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Silinen türleri için derlenmiş kod bakma
+
 Ne tür sağlayıcısı kullanımını yayılan koduna karşılık gelen bazı fikir vermek için aşağıdaki işlevini kullanarak araması `HelloWorldTypeProvider` bu konunun önceki kısımlarında kullanılır.
 
 ```fsharp
 let function1 () = 
-let obj1 = Samples.HelloWorldTypeProvider.Type1("some data")
-obj1.InstanceProperty
+    let obj1 = Samples.HelloWorldTypeProvider.Type1("some data")
+    obj1.InstanceProperty
 ```
 
 Görüntüyü ildasm.exe kullanarak decompiled sonuç kodunun şöyledir:
@@ -966,33 +953,26 @@ Türündeki tüm belirtilenlerden örnekte gösterildiği gibi `Type1` ve `Insta
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Tasarım ve tür sağlayıcıları için adlandırma kuralları
 Tür sağlayıcıları yazarken aşağıdaki kuralları inceleyin.
 
-
-- `Providers for Connectivity Protocols`
-<br />  Veri ve hizmet bağlantısı gibi protokoller için OData veya SQL bağlantıları, çoğu Sağlayıcı DLL adları genel olarak, bitmelidir `TypeProvider` veya `TypeProviders`. Örneğin, aşağıdaki dize şuna benzer bir DLL adı kullanın:
-<br />
+**Bağlantı protokolleri için sağlayıcıları** veri ve hizmet bağlantısı gibi protokoller için OData veya SQL bağlantıları, çoğu Sağlayıcı DLL adları genel olarak, bitmelidir `TypeProvider` veya `TypeProviders`. Örneğin, aşağıdaki dize şuna benzer bir DLL adı kullanın:
 
 ```
   Fabrikam.Management.BasicTypeProviders.dll
 ```
 
-  Sağlanan türleri karşılık gelen ad alanı üyesi olan ve sizin uygulanan bağlantı protokolü belirtmek emin olun:
-<br />
+Sağlanan türleri karşılık gelen ad alanı üyesi olan ve sizin uygulanan bağlantı protokolü belirtmek emin olun:
 
 ```
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-- `Utility Providers for General Coding`
-<br />  Yardımcı programı tür sağlayıcısı için gibi normal ifadeler için tür sağlayıcısı aşağıdaki örnekte gösterildiği gibi bir temel kitaplığı parçası olabilir:
-<br />
+**Genel kodlamak için yardımcı programı sağlayıcıları**.  Yardımcı programı tür sağlayıcısı için gibi normal ifadeler için tür sağlayıcısı aşağıdaki örnekte gösterildiği gibi bir temel kitaplığı parçası olabilir:
 
 ```fsharp
   #r "Fabrikam.Core.Text.Utilities.dll"
 ```
 
-  Bu durumda, sağlanan türü normal .NET tasarım kurallarına göre uygun bir noktada görünür:
-<br />
+Bu durumda, sağlanan türü normal .NET tasarım kurallarına göre uygun bir noktada görünür:
 
 ```fsharp
   open Fabrikam.Core.Text.RegexTyped
@@ -1000,21 +980,19 @@ Tür sağlayıcıları yazarken aşağıdaki kuralları inceleyin.
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-- `Singleton Data Sources`
-<br />  Bazı tür sağlayıcıları bir tek bir adanmış veri kaynağına bağlanmak ve yalnızca veriler sağlar. Bu durumda bırak `TypeProvider` sonek ve .NET adlandırma için normal kuralları kullanın:
-<br />
+**Singleton veri kaynaklarını**. Bazı tür sağlayıcıları bir tek bir adanmış veri kaynağına bağlanmak ve yalnızca veriler sağlar. Bu durumda bırak `TypeProvider` sonek ve .NET adlandırma için normal kuralları kullanın:
 
 ```fsharp
-  #r "Fabrikam.Data.Freebase.dll"
+#r "Fabrikam.Data.Freebase.dll"
   
-  let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
+let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-  Daha fazla bilgi için bkz: `GetConnection` tasarım bu konunun ilerleyen bölümlerinde açıklanan kuralı.
-<br />
+Daha fazla bilgi için bkz: `GetConnection` tasarım bu konunun ilerleyen bölümlerinde açıklanan kuralı.
 
 
 ### <a name="design-patterns-for-type-providers"></a>Tür sağlayıcıları için Tasarım desenleri
+
 Aşağıdaki bölümlerde tasarım desenleri tür sağlayıcıları yazarken kullanabileceğiniz açıklanmaktadır.
 
 
@@ -1032,54 +1010,48 @@ let data = connection.Astronomy.Asteroids
 ```
 
 #### <a name="type-providers-backed-by-remote-data-and-services"></a>Uzak Veri ve hizmetler tarafından desteklenen tür sağlayıcıları
+
 Uzak Veri ve hizmetler tarafından desteklenen bir tür sağlayıcısı oluşturmadan önce bir dizi bağlı programlamada devredilen sorunları dikkate almanız gerekir. Bu sorunları aşağıdaki konuları içerir:
 
-
 - Şema eşleme
-<br />
 
 - liveness ve şema değişikliği varlığında geçersiz kılma
-<br />
 
 - Şema önbelleğe alma
-<br />
 
 - Veri erişim işlemleri zaman uyumsuz uygulamaları
-<br />
 
 - LINQ sorguları da dahil, sorguların destekleme
-<br />
 
 - kimlik bilgileri ve kimlik doğrulama
-<br />
 
 Bu konu, bu sorunlar daha fazla keşfedin değil.
 
-
 ### <a name="additional-authoring-techniques"></a>Ek yazma teknikleri
+
 Kendi tür sağlayıcıları yazdığınızda, aşağıdaki ek teknikler kullanmak isteyebilirsiniz.
 
+### <a name="creating-types-and-members-on-demand"></a>Türleri ve üyeleri isteğe bağlı oluşturma
 
-- `Creating Types and Members On-Demand`
-<br />  ProvidedType API AddMember sürümleri Gecikmeli.
-<br />
+ProvidedType API AddMember sürümleri Gecikmeli.
 
 ```fsharp
   type ProvidedType =
-  member AddMemberDelayed  : (unit -> MemberInfo)      -> unit
-  member AddMembersDelayed : (unit -> MemberInfo list) -> unit
+      member AddMemberDelayed  : (unit -> MemberInfo)      -> unit
+      member AddMembersDelayed : (unit -> MemberInfo list) -> unit
 ```
 
-  Bu sürümleri, isteğe bağlı alanları türleri oluşturmak için kullanılır.
-<br />
+Bu sürümleri, isteğe bağlı alanları türleri oluşturmak için kullanılır.
 
-- `Providing Array, ByRef, and Pointer types`
-<br />  Normal kullanarak (dizi türleri, byref türleri ve genel türler işlemlerinden içerir, imzalar) sağlanan üyeleri yaptığınız `MakeArrayType`, `MakePointerType`, ve `MakeGenericType` System.Type, herhangi bir örneğinin üzerinde de dahil olmak üzere `ProvidedTypeDefinitions`.
-<br />
+### <a name="providing-array-types-and-generic-type-instantiations"></a>Dizi türleri ve genel türü örneklemesi sağlama
 
-- `Providing Unit of Measure Annotations`
-<br />  ProvidedTypes API ölçü ek açıklamaları sağlayan Yardımcıları sağlar. Örneğin, türü sağlamak için `float<kg>`, aşağıdaki kodu kullanın:
-<br />
+Normal kullanarak (dizi türleri, byref türleri ve genel türler işlemlerinden içerir, imzalar) sağlanan üyeleri yaptığınız `MakeArrayType`, `MakePointerType`, ve `MakeGenericType` System.Type, herhangi bir örneğinin üzerinde de dahil olmak üzere `ProvidedTypeDefinitions`.
+
+Not: Bazı durumlarda, yardımcı kullanmak zorunda kalabilirsiniz `ProvidedTypeBuilder.MakeGenericType`.  Daha fazla ayrıntı için türü sağlayıcısı SDK belgelerine bakın.
+
+### <a name="providing-unit-of-measure-annotations"></a>Ölçüm açıklamalarının birim sağlama
+
+ProvidedTypes API ölçü ek açıklamaları sağlayan Yardımcıları sağlar. Örneğin, türü sağlamak için `float<kg>`, aşağıdaki kodu kullanın:
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1089,7 +1061,6 @@ Kendi tür sağlayıcıları yazdığınızda, aşağıdaki ek teknikler kullanm
 ```
 
   Türü sağlamak için `Nullable<decimal<kg/m^2>>`, aşağıdaki kodu kullanın:
-<br />
 
 ```fsharp
   let kgpm2 = measures.Ratio(kg, measures.Square m)
@@ -1097,44 +1068,34 @@ Kendi tür sağlayıcıları yazdığınızda, aşağıdaki ek teknikler kullanm
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-- `Accessing Project-Local or Script-Local Resources`
-<br />  Her tür sağlayıcısı örneği verilen bir `TypeProviderConfig` oluşturma sırasında değeri. Bu değer "Çözümleme klasörü" sağlayıcısı (diğer bir deyişle, derleme veya bir komut dosyası içeren dizin için proje klasör), başvurulan bir derleme listesi ve diğer bilgileri içerir.
-<br />
+### <a name="accessing-project-local-or-script-local-resources"></a>Proje-yerel veya komut dosyası yerel kaynaklara erişme
 
-- `Invalidation`
-<br />  Sağlayıcıları şema varsayımlar değişmiş olabilir F # dili hizmet bildirmek için geçersiz kılma sinyalleri yükseltebilirsiniz. Geçersiz kılma ortaya çıktığında, sağlayıcı Visual Studio'da barındırılıyorsa bir typecheck alınabilir. Bu sinyal sağlayıcısı F # Etkileşimli veya F # derleyici (fsc.exe) tarafından barındırıldığında yoksayılacak.
-<br />
+Her tür sağlayıcısı örneği verilen bir `TypeProviderConfig` oluşturma sırasında değeri. Bu değer "Çözümleme klasörü" sağlayıcısı (diğer bir deyişle, derleme veya bir komut dosyası içeren dizin için proje klasör), başvurulan bir derleme listesi ve diğer bilgileri içerir.
 
-- `Caching Schema Information`
-<br />  Sağlayıcılar genellikle şema bilgilere erişimi önbelleğe gerekir. Statik bir parametre veya kullanıcı verisi olarak verilen bir dosya adı kullanarak önbelleğe alınan verilerin depolanması gerekir. Şema önbelleğe alma, bir örnek verilmiştir `LocalSchemaFile` türü sağlayıcıları parametresinde `FSharp.Data.TypeProviders` derleme. Bu sağlayıcılar uygulamasında statik Bu parametre ağ üzerinden veri kaynağına erişme yerine belirtilen yerel dosyasında şema bilgileri kullanmak için tür sağlayıcısı yönlendirir. Önbelleğe alınan şema bilgileri kullanmak için de statik parametresinin ayarlamalısınız `ForceUpdate` için `false`. Çevrimiçi ve çevrimdışı veri erişimi etkinleştirmek için benzer bir tekniği kullanabilirsiniz.
-<br />
+### <a name="invalidation"></a>Geçersiz kılma
 
-- `Backing Assembly`
-<br />  .Dll veya .exe dosyasının derlerken oluşturulan türleri için yedekleme .dll dosyası statik olarak elde edilen derlemeye bağlı. Bu bağlantı, Ara dile (IL) tür tanımları ve yönetilen kaynakları son derlemeyi yedekleme derlemeye kopyalayarak oluşturulur. F # Etkileşimli kullandığınızda, yedekleme .dll dosyasını kopyaladığınız değil ve bunun yerine doğrudan F # Etkileşimli işlemine yüklenir.
-<br />
+Sağlayıcıları şema varsayımlar değişmiş olabilir F # dili hizmet bildirmek için geçersiz kılma sinyalleri yükseltebilirsiniz. Geçersiz kılma ortaya çıktığında, sağlayıcı Visual Studio'da barındırılıyorsa bir typecheck alınabilir. Bu sinyal sağlayıcısı F # Etkileşimli veya F # derleyici (fsc.exe) tarafından barındırıldığında yoksayılacak.
 
-- `Exceptions and Diagnostics from Type Providers`
-<br />  Sağlanan türleri tüm üyelerinden tüm kullanımlarını özel durumlar oluşturma. Tür sağlayıcısı bir özel durum oluşturursa tüm durumlarda belirli tür sağlayıcısı için hata konak derleyici öznitelikleri.
-<br />
-  - Özel durumlar hiçbir zaman iç derleyici hatalarına neden sağlayıcı yazın.
-<br />
+### <a name="caching-schema-information"></a>Şema bilgileri önbelleğe alma
 
-  - Tür sağlayıcıları uyarıları raporlayamazsınız.
-<br />
+Sağlayıcılar genellikle şema bilgilere erişimi önbelleğe gerekir. Statik bir parametre veya kullanıcı verisi olarak verilen bir dosya adı kullanarak önbelleğe alınan verilerin depolanması gerekir. Şema önbelleğe alma, bir örnek verilmiştir `LocalSchemaFile` türü sağlayıcıları parametresinde `FSharp.Data.TypeProviders` derleme. Bu sağlayıcılar uygulamasında statik Bu parametre ağ üzerinden veri kaynağına erişme yerine belirtilen yerel dosyasında şema bilgileri kullanmak için tür sağlayıcısı yönlendirir. Önbelleğe alınan şema bilgileri kullanmak için de statik parametresinin ayarlamalısınız `ForceUpdate` için `false`. Çevrimiçi ve çevrimdışı veri erişimi etkinleştirmek için benzer bir tekniği kullanabilirsiniz.
 
-  - Tür sağlayıcısı F # derleyici, F # geliştirme ortamı ya da F # Etkileşimli içinde barındırıldığında, bu sağlayıcısından tüm özel durumları yakalanır. İleti özelliği her zaman hata metindir ve hiçbir yığın izlemesi görünür. Bir özel durum kullanacaksanız, aşağıdaki örneklerde atabilirsiniz:
-<br />
-    - `System.NotSupportedException`
-<br />
+### <a name="backing-assembly"></a>Derleme yedekleme
 
-    - `System.IO.IOException`
-<br />
+Olduğunda, derleme bir `.dll` veya `.exe` dosyası, yedekleme .dll dosyası oluşturulan türleri statik olarak bağlı elde edilen derlemeye. Bu bağlantı, Ara dile (IL) tür tanımları ve yönetilen kaynakları son derlemeyi yedekleme derlemeye kopyalayarak oluşturulur. F # Etkileşimli kullandığınızda, yedekleme .dll dosyasını kopyaladığınız değil ve bunun yerine doğrudan F # Etkileşimli işlemine yüklenir.
 
-    - `System.Exception`
-<br />
+### <a name="exceptions-and-diagnostics-from-type-providers"></a>Özel durum ve tanılama tür sağlayıcıları
 
+Sağlanan türleri tüm üyelerinden tüm kullanımlarını özel durumlar oluşturma. Tür sağlayıcısı bir özel durum oluşturursa tüm durumlarda belirli tür sağlayıcısı için hata konak derleyici öznitelikleri.
+
+- Özel durumlar hiçbir zaman iç derleyici hatalarına neden sağlayıcı yazın.
+
+- Tür sağlayıcıları uyarıları raporlayamazsınız.
+
+- Tür sağlayıcısı F # derleyici, F # geliştirme ortamı ya da F # Etkileşimli içinde barındırıldığında, bu sağlayıcısından tüm özel durumları yakalanır. İleti özelliği her zaman hata metindir ve hiçbir yığın izlemesi görünür. Bir özel durum kullanacaksanız, aşağıdaki örneklerde atabilirsiniz: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Oluşturulan türler sağlar
+
 Şu ana kadar bu belgede açıklanan nasıl silinen türler sağlar. Ayrıca türü sağlayıcısı mekanizması F #'de kullanıcıların programa gerçek .NET türü tanımları olarak eklenen oluşturulan türleri sağlamak için kullanabilirsiniz. Sizin için oluşturulan türleri bir tür tanımı kullanılarak sağlanan başvurmalıdır.
 
 ```fsharp
@@ -1145,81 +1106,62 @@ type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc
 
 F # 3.0 sürümünün bir parçası olan ProvidedTypes 0.2 yardımcı kod yalnızca oluşturulan türleri sağlamak için destek sınırlıdır. Aşağıdaki deyimleri için oluşturulan tür tanımı doğru olması gerekir:
 
+- `isErased` ayarlanmalıdır `false`.
 
-- IsErased ayarlanmalıdır `false`.
-<br />
+- Oluşturulan tür eklenmelidir yeni oluşturulan için `ProvidedAssembly()`, oluşturulan kod parçaları için bir kapsayıcıyı temsil eder.
 
 - Sağlayıcı gerçek destekleyen .NET .dll dosyasının disk üzerinde eşleşen bir .dll dosyası ile bir derlemeyi olması gerekir.
-<br />
-
-Ayrıca çağırmalısınız `ConvertToGenerated` , iç içe geçmiş türler form oluşturulan türleri kapalı kümesi sağlanan kök türünde. Bu çağrı verilen sağlanan tür tanımı ve kendi iç içe geçmiş tür tanımlarını bir derleme halinde yayar ve ayarlar `Assembly` bu derleme dönmek için tüm sağlanan tür tanımları özelliği. Yalnızca kök türündeki derleme özelliği ilk kez eriştiğinde derleme yayınlanır. Türü için generative türü bildirimi işlerken konak F # derleyici bu özellik erişin.
 
 
 ## <a name="rules-and-limitations"></a>Kurallar ve sınırlamalar
+
 Tür sağlayıcıları yazdığınızda, aşağıdaki kurallar ve sınırlamalar göz önünde bulundurun.
 
 
-- `Provided types must be reachable.`
-<br />  Tüm girildi. türleri iç içe olmayan türlerinden erişilebilir olmalıdır. İç içe olmayan türleri çağrısında verilir `TypeProviderForNamespaces` Oluşturucusu veya yapılan bir çağrı `AddNamespace`. Örneğin, bir tür sağlayıcısı sağlarsa, `StaticClass.P : T`, T yuvalanmış olmayan bir tür veya iç içe geçmiş altında bir olduğundan emin olmanız gerekir.
-<br />  Örneğin, bazı sağlayıcılar gibi statik sınıf sahip `DataTypes` bu içeren `T1, T2, T3, ...` türleri. Aksi halde, bir derlemede T türü bir başvuru bulundu, ancak bu derleme içinde tür bulunamadı hata söyler. Bu hata varsa, tüm alt sağlayıcı türlerinden erişilebildiğini doğrulayın. Not: Bu `T1, T2, T3...` türleri denir *üzerinde-çalışma sırasında* türleri. Erişilebilir bir ad alanı veya bir üst tür koyabilir unutmayın.
-<br />
+### <a name="provided-types-must-be-reachable"></a>Sağlanan türleri erişilebilir olması gerekir
 
-- `Limitations of the Type Provider Mechanism`
-<br />  F # tür sağlayıcısı mekanizması aşağıdaki sınırlamalara sahiptir:
-<br />
-  - Genel türleri veya genel yöntemler sağlanan sağlanan F # tür sağlayıcıları için temel altyapıyı desteklemiyor.
-<br />
+Tüm girildi. türleri iç içe olmayan türlerinden erişilebilir olmalıdır. İç içe olmayan türleri çağrısında verilir `TypeProviderForNamespaces` Oluşturucusu veya yapılan bir çağrı `AddNamespace`. Örneğin, bir tür sağlayıcısı sağlarsa, `StaticClass.P : T`, T yuvalanmış olmayan bir tür veya iç içe geçmiş altında bir olduğundan emin olmanız gerekir.
 
-  - Mekanizması statik parametrelerle iç içe geçmiş türler desteklemiyor.
-<br />
+Örneğin, bazı sağlayıcılar gibi statik sınıf sahip `DataTypes` bu içeren `T1, T2, T3, ...` türleri. Aksi halde, bir derlemede T türü bir başvuru bulundu, ancak bu derleme içinde tür bulunamadı hata söyler. Bu hata varsa, tüm alt sağlayıcı türlerinden erişilebildiğini doğrulayın. Not: Bu `T1, T2, T3...` türleri denir *üzerinde-çalışma sırasında* türleri. Erişilebilir bir ad alanı veya bir üst tür koyabilir unutmayın.
 
-- `Limitations of the ProvidedTypes Support Code`
-<br />  `ProvidedTypes` Destek kod, aşağıdaki kurallar ve sınırlamalar vardır:
-<br />
-  1. Dizinli alıcılar ve ayarlayıcılar ile sağlanan özellikler uygulanmadı.
-<br />
+### <a name="limitations-of-the-type-provider-mechanism"></a>Türü sağlayıcısı mekanizması sınırlamaları
 
-  2. Sağlanan olayları uygulanmadı.
-<br />
+F # tür sağlayıcısı mekanizması aşağıdaki sınırlamalara sahiptir:
 
-  3. Sağlanan türleri ve bilgi nesneleri, yalnızca F # tür sağlayıcısı mekanizması için kullanılmalıdır. Bunlar genellikle daha System.Type nesneler olarak kullanılabilir değil.
-<br />
+- Genel türleri veya genel yöntemler sağlanan sağlanan F # tür sağlayıcıları için temel altyapıyı desteklemiyor.
 
-  4. Yöntem uygulamalarını tanımlamak tırnak işaretleri kullanabilirsiniz yapıları birkaç sınırlamaları vardır. Kaynak koduna ProvidedTypes - için başvurabilirsiniz*sürüm* hangi yapıları tırnak işaretleri içinde desteklenen görmek için.
-<br />
-
-- `Type providers must generate output assemblies that are .dll files, not .exe files.`
-<br />
-
+- Mekanizması statik parametrelerle iç içe geçmiş türler desteklemiyor.
 
 ## <a name="development-tips"></a>Geliştirme İpuçları
+
 Aşağıdaki ipuçları geliştirme sürecinde yararlı.
 
+### <a name="run-two-instances-of-visual-studio"></a>Visual Studio iki örneklerinde Çalıştır
 
-- `Run Two Instances of Visual Studio.` Tür sağlayıcısı bir örneğinde geliştirmek ve test IDE yeniden oluşturulan tür sağlayıcısı engeller .dll dosyası üzerinde bir kilit sürer çünkü sağlayıcıyı diğer sınayın. Bu nedenle, Visual Studio ikinci bir örneğini sağlayıcı ilk örnekte yerleşik olarak bulunur ve daha sonra sağlayıcının oluşturulduktan sonra ikinci örneği yeniden açmanız gerekir kapatmanız gerekir.
-<br />
+Tür sağlayıcısı bir örneğinde geliştirmek ve test IDE yeniden oluşturulan tür sağlayıcısı engeller .dll dosyası üzerinde bir kilit sürer çünkü sağlayıcıyı diğer sınayın. Bu nedenle, Visual Studio ikinci bir örneğini sağlayıcı ilk örnekte yerleşik olarak bulunur ve daha sonra sağlayıcının oluşturulduktan sonra ikinci örneği yeniden açmanız gerekir kapatmanız gerekir.
 
-- `Debug type providers by using invocations of fsc.exe.` Tür sağlayıcıları aşağıdaki araçları kullanarak çağırabilirsiniz:
-<br />
-  - fsc.exe (F # komut satırı derleyicisi)
-<br />
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Tür sağlayıcıları fsc.exe çağrılarını kullanarak hata ayıklama
 
-  - fsi.exe (F # Etkileşimli derleyicisi)
-<br />
+Tür sağlayıcıları aşağıdaki araçları kullanarak çağırabilirsiniz:
 
-  - devenv.exe (Visual Studio)
-<br />
+- fsc.exe (F # komut satırı derleyicisi)
 
-  Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe kullanarak, en kolay genellikle ayıklayabilirsiniz. Hata ayıklayıcı komut isteminden başlatabilirsiniz.
-<br />
+- fsi.exe (F # Etkileşimli derleyicisi)
+
+- devenv.exe (Visual Studio)
+
+Tür sağlayıcıları test betiği (örneğin, script.fsx) üzerinde fsc.exe kullanarak, en kolay genellikle ayıklayabilirsiniz. Hata ayıklayıcı komut isteminden başlatabilirsiniz.
 
 ```
   devenv /debugexe fsc.exe script.fsx
 ```
 
   Yazdırma stdout günlüğünü kullanabilirsiniz.
-<br />
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Tür Sağlayıcıları](index.md)
+
+* [Tür Sağlayıcıları](index.md)
+
+* [SDK türü sağlayıcısı](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
+

@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 .NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıflar kapsamlı ve tümleşik bir dizi sağlar. Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verileri düzenleme yazmayı destekler.  
@@ -96,5 +96,3 @@ ms.lasthandoff: 12/23/2017
  [Güvenlik](../../../../docs/standard/security/index.md)  
  .NET Framework güvenlik sistemi genel bir bakış sağlar.  
   
- [XML Geliştirici Merkezi](http://go.microsoft.com/fwlink/?linkid=42458)  
- Ek teknik bilgiler, yüklemeleri, haber grupları ve diğer kaynakları XML geliştiriciler için sağlar.

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>SQL Server Security
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Güvenli veritabanı uygulamaları oluşturmak destekleyen birçok özelliğe sahiptir.  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Güvenli veritabanı uygulamaları oluşturmak destekleyen birçok özelliğe sahiptir.  
   
  Veri hırsızlığı veya vandalism, gibi genel güvenlik konuları sürümü bağımsız olarak geçerli [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] kullanmakta olduğunuz. Veri bütünlüğü bir güvenlik sorunu da dikkate alınmalıdır. Veri korumalı değilse, geçici veri işleme izin verilir ve verileri yanlışlıkla ise worthless hale gelebilir veya kötü amaçlı olarak yanlış değerlerle değiştirilmiş veya tamamen silinmiş olduğunu mümkündür. Ayrıca, genellikle, için gizli bilgileri doğru depolama gibi bağlı yasal gereksinimi vardır. Bazı tür kişisel veri depolama tamamen içinde belirli bir dairesi uygulamak yasalarına bağlı olarak proscribed.  
   
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  Güvenlik konuları açıklanmaktadır [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Güvenlik ve koruma (veritabanı altyapısı)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Books Online güvenlik konuları.  
-  
- [SQL Server için güvenlik konuları](http://go.microsoft.com/fwlink/?LinkId=98587)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Books Online güvenlik konuları.  
-  
+[SQL Server veritabanı altyapısı ve Azure SQL veritabanı için Güvenlik Merkezi](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+SQL Server ve Azure SQL veritabanı için güvenlik konuları açıklanmaktadır.
+
+[Bir SQL Server yüklemesi için güvenlik konuları](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+SQL Server yüklemeden önce dikkate alınması gereken güvenlik konuları açıklanmaktadır.
+
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

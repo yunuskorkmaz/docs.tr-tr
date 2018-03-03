@@ -15,21 +15,21 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
-Bellek eşlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu eşleme dosyası ve bellek alanı arasında okuyarak ve belleğe doğrudan yazma dosyasını değiştirmek birden çok işlemler de dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod açıklandığı gibi bellek eşlemeli dosyalar access bellek eşlemeli dosyalar, yerel Windows işlevlerine aynı şekilde erişmek için kullanabileceğiniz [Win32 Managing Memory-Mapped dosyalarında](http://go.microsoft.com/fwlink/?linkid=180801).  
+Bellek eşlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu eşleme dosyası ve bellek alanı arasında okuyarak ve belleğe doğrudan yazma dosyasını değiştirmek birden çok işlemler de dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod açıklandığı gibi bellek eşlemeli dosyalar access bellek eşlemeli dosyalar, yerel Windows işlevlerine aynı şekilde erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://msdn.microsoft.com/library/ms810613.aspx).  
   
  Bellek eşlemeli dosyalar iki tür vardır:  
   
@@ -62,13 +62,13 @@ Birden çok ve görünümler bellekle eşlenen bir dosyaya çakışan
   
 |Görev|Yöntemleri veya özellikleri kullanmak için|  
 |----------|----------------------------------|  
-|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> kalıcı bellekle eşlenen dosyası disk üzerindeki bir dosyadan temsil eden nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>yöntem.|  
-|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> (disk üzerindeki bir dosyayla ilişkili olmayan) bir kalıcı olmayan bellek eşlemeli dosyayı temsil eden nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>yöntem.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>yöntem.|  
-|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> nesne varolan bellekle eşlenen bir dosyanın (kalıcı veya kalıcı olmayan).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>yöntem.|  
-|Elde etmek için bir <xref:System.IO.UnmanagedMemoryStream> nesnesi için bellek eşlemeli dosyasına sırayla erişilen bir görünüm.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>yöntem.|  
-|Elde etmek için bir <xref:System.IO.UnmanagedMemoryAccessor> bellek eşlemeli için rasgele erişim görünümün lanı nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>yöntem.|  
-|Elde etmek için bir <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> yönetilmeyen kod ile kullanılacak nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>özellik.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>özellik.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>özellik.|  
-|Bir görünüm kadar bellek ayırma gecikme (yalnızca kalıcı olmayan dosyaları) oluşturulur.<br /><br /> (Geçerli sistem sayfa boyutu belirlemek için <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> özelliğini.)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>yöntemiyle <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> değeri.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>sahip yöntemleri bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> bir parametre olarak numaralandırması.|  
+|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> kalıcı bellekle eşlenen dosyası disk üzerindeki bir dosyadan temsil eden nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> yöntem.|  
+|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> (disk üzerindeki bir dosyayla ilişkili olmayan) bir kalıcı olmayan bellek eşlemeli dosyayı temsil eden nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> yöntem.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> yöntem.|  
+|Elde etmek için bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> nesne varolan bellekle eşlenen bir dosyanın (kalıcı veya kalıcı olmayan).|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType> yöntem.|  
+|Elde etmek için bir <xref:System.IO.UnmanagedMemoryStream> nesnesi için bellek eşlemeli dosyasına sırayla erişilen bir görünüm.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> yöntem.|  
+|Elde etmek için bir <xref:System.IO.UnmanagedMemoryAccessor> bellek eşlemeli için rasgele erişim görünümün lanı nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> yöntem.|  
+|Elde etmek için bir <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> yönetilmeyen kod ile kullanılacak nesne.|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> özellik.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> özellik.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> özellik.|  
+|Bir görünüm kadar bellek ayırma gecikme (yalnızca kalıcı olmayan dosyaları) oluşturulur.<br /><br /> (Geçerli sistem sayfa boyutu belirlemek için <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> özelliğini.)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> yöntemiyle <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> değeri.<br /><br /> - veya -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> sahip yöntemleri bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> bir parametre olarak numaralandırması.|  
   
 ### <a name="security"></a>Güvenlik  
  Ele aşağıdaki yöntemleri kullanarak bir bellek eşlemeli dosyası oluşturduğunuzda, erişim hakları uygulayabileceğiniz bir <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> sabit bir parametre olarak:  
@@ -105,13 +105,13 @@ Birden çok ve görünümler bellekle eşlenen bir dosyaya çakışan
   
  Boole değerleri bellekle eşlenen bir dosyaya yazmak üç ayrı işlemler (konsol uygulamaları), aşağıdaki örnekte oluşur. Aşağıdaki eylemler dizisi gerçekleşir:  
   
-1.  `Process A`bellek eşlemeli dosyası oluşturur ve bir değer yazar.  
+1.  `Process A` bellek eşlemeli dosyası oluşturur ve bir değer yazar.  
   
-2.  `Process B`bellek eşlemeli dosyayı açar ve bir değer yazar.  
+2.  `Process B` bellek eşlemeli dosyayı açar ve bir değer yazar.  
   
-3.  `Process C`bellek eşlemeli dosyayı açar ve bir değer yazar.  
+3.  `Process C` bellek eşlemeli dosyayı açar ve bir değer yazar.  
   
-4.  `Process A`okur ve bellekle eşlenen dosyasından değerleri görüntüler.  
+4.  `Process A` okur ve bellekle eşlenen dosyasından değerleri görüntüler.  
   
 5.  Sonra `Process A` tamamlandı bellekle eşlenen dosyasıyla dosya atık toplama tarafından hemen iadesi.  
   

@@ -9,23 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT derleyici (xsltc.exe)
 XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur. Derlenmiş stil sayfası ardından doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
   
- Visual Studio 2008'de bulunan xsltc.exe aracıdır. Daha fazla bilgi için bkz: [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=89463).  
+ Xsltc.exe aracı Visual Studio ile birlikte gelir. Daha fazla bilgi için bkz: [Visual Studio indirmeleri](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Hata ayıklama bilgilerini oluşturulup oluşturulmayacağını belirtir.<br /><br /> Belirtme `+` veya `/debug`, hata ayıklama bilgileri oluşturmak ve bir program veritabanı (PDB) dosyasında yerleştirin derleyicinin neden olur. Oluşturulan PDB dosyası adı `assemblyName`.pdb.<br /><br /> Belirtme `-`, hangi değil belirtirseniz yürürlükte olan `/debug`, hiçbir hata ayıklama bilgisi oluşturulmasına neden olur. Bir perakende derleme oluşturulur. **Not:** hata ayıklama modunda derleme etkileyebilecek XSLT performansı önemli ölçüde.|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/nologo`|Görüntülenmesini Derleyici telif hakkı iletisi gizler.|  
-|`/platform:``string`|Derleme çalıştırılabilir platformları belirtir. Geçerli platform değerleri açıklanmaktadır:<br /><br /> `x86`32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak derlemenizi<br /><br /> `x64`AMD64 veya EM64T yönerge kümesi destekleyen bir bilgisayarda 64-bit ortak dil çalışma zamanı tarafından çalıştırılacak derlemenizi birleştirir.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]derlemenizi olan bir bilgisayarda 64-bit ortak dil çalışma zamanı tarafından çalıştırılacak bir [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] işlemci.<br /><br /> `anycpu`herhangi bir platformda çalıştırılacak derlemenizi birleştirir. Bu varsayılandır.|  
+|`/platform:``string`|Derleme çalıştırılabilir platformları belirtir. Geçerli platform değerleri açıklanmaktadır:<br /><br /> `x86` 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak derlemenizi<br /><br /> `x64` AMD64 veya EM64T yönerge kümesi destekleyen bir bilgisayarda 64-bit ortak dil çalışma zamanı tarafından çalıştırılacak derlemenizi birleştirir.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] derlemenizi olan bir bilgisayarda 64-bit ortak dil çalışma zamanı tarafından çalıştırılacak bir [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] işlemci.<br /><br /> `anycpu` Herhangi bir platformda çalıştırılacak derlemenizi birleştirir. Bu varsayılandır.|  
 |`/out:``assemblyName`|Çıkış bütünleştirilmiş kodun adını belirtir. Birden çok stil sayfaları varsa ana stil sayfası veya ilk stil sayfası adını derleme adı varsayılan olarak ayarlanır.<br /><br /> Stil sayfası komut dosyaları içeriyorsa, komut dosyaları için ayrı bir derleme kaydedilir. Komut dosyası derleme adları ana derleme adından üretilir. Örneğin, CustOrders.dll için derleme adınızı belirttiyseniz, ilk komut dosyası derleme CustOrders_Script1.dll olarak adlandırılır.|  
 |`/settings:``document+-, script+-, DTD+-,`|İzin verilip verilmeyeceğini belirtir `document()` İşlevler, XSLT komut dosyası veya belge stil sayfanızda tanımı (DTD) yazın.<br /><br /> DTD desteği varsayılan davranışı devre dışı bırakır `document()` işlevi ve komut dosyası.|  
 |`@``file`|Derleyici seçenekleri içeren bir dosyayı belirtmenize olanak sağlar.|  
