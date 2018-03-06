@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
 Özellikle bir grup bazı ortak özelliğe sahip nesneleri yönetmek üzere tasarlanmış herhangi bir tür bir koleksiyon kabul edilebilir. Neredeyse her zaman böyle türleri uygulamak uygun olan <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>, bu bölümde biz yalnızca birini veya her ikisini bu arabirimleri uygulama türlerini koleksiyonları olması için göz önünde bulundurun.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/23/2017
   
  **X yok** kullanmak <xref:System.Collections.ArrayList> veya <xref:System.Collections.Generic.List%601> ortak API'lerde.  
   
- Bu ortak API'ler değil, iç uygulamasında kullanılmak üzere tasarlanmış veri yapılarını türleridir. `List<T>`Performans ve güç cleanness API'leri ve esnekliği artırılabilir için optimize edilmiştir. Örneğin, geri `List<T>`, size herhangi bir zamanda istemci kodu koleksiyonu değiştirdiğinde bildirimleri almak mümkün olmaz. Ayrıca, `List<T>` çok sayıda üye gibi sunan <xref:System.Collections.Generic.List%601.BinarySearch%2A>, olmayan kullanışlı veya birçok senaryoda uygulanabilir. Aşağıdaki iki bölümü özellikle ortak API'ler kullanılmak üzere tasarlanmış türleri (soyutlamalar) açıklanmaktadır.  
+ Bu ortak API'ler değil, iç uygulamasında kullanılmak üzere tasarlanmış veri yapılarını türleridir. `List<T>` Performans ve güç cleanness API'leri ve esnekliği artırılabilir için optimize edilmiştir. Örneğin, geri `List<T>`, size herhangi bir zamanda istemci kodu koleksiyonu değiştirdiğinde bildirimleri almak mümkün olmaz. Ayrıca, `List<T>` çok sayıda üye gibi sunan <xref:System.Collections.Generic.List%601.BinarySearch%2A>, olmayan kullanışlı veya birçok senaryoda uygulanabilir. Aşağıdaki iki bölümü özellikle ortak API'ler kullanılmak üzere tasarlanmış türleri (soyutlamalar) açıklanmaktadır.  
   
  **X yok** kullanmak `Hashtable` veya `Dictionary<TKey,TValue>` ortak API'lerde.  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ YAPMAK** kullanmak <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, öğesinin bir alt `ReadOnlyCollection<T>`, veya nadir durumlarda `IEnumerable<T>` özellikleri veya return temsil eden salt okunur koleksiyonlar değerler için.  
   
- Genel olarak, tercih `ReadOnlyCollection<T>`. Bazı gereksinimi karşılamıyorsa (örn., toplama olmayan uygulamalıdır `IList`), özel bir koleksiyona uygulayarak kullanmak `IEnumerable<T>`, `ICollection<T>`, veya `IList<T>`. Özel bir salt okunur koleksiyonun uygularsanız, uygulama `ICollection<T>.ReadOnly` false dönün.  
+ Genel olarak, tercih `ReadOnlyCollection<T>`. Bazı gereksinimi karşılamıyorsa (örn., toplama olmayan uygulamalıdır `IList`), özel bir koleksiyona uygulayarak kullanmak `IEnumerable<T>`, `ICollection<T>`, veya `IList<T>`. Özel bir salt okunur koleksiyonun uygularsanız, uygulama `ICollection<T>.IsReadOnly` döndürülecek `true`.  
   
  Herhangi bir zamanda istediğiniz desteklemek için tek senaryo yalnızca ileri yineleme emin olduğu durumlarda, yalnızca kullanabileceğiniz `IEnumerable<T>`.  
   
