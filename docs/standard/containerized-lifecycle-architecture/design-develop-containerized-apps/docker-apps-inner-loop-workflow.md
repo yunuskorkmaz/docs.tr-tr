@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -123,7 +123,7 @@ DockerFile içinde de (örneğin, bağlantı noktası 80) çalışma zamanında 
 
 Uygulamayı çalıştırmak nasıl Docker bilmesi için kullanmakta olduğunuz dil/framework bağlı olarak DockerFile ekleyebilirsiniz yapılandırmasının diğer satırlar vardır. ENTRYPOINT satırıyla örneği için ihtiyacınız \["dotnet", "MyCustomMicroservice.dll"\] oluşturup, hizmetinizi çalıştırmak için bir yaklaşım bağlı olarak birden çok çeşitleri sahip olabilirsiniz, ancak bir .NET Core uygulamayı çalıştırmak için. Derleme ve çalıştırma .NET uygulaması için SDK ve dotnet CLI kullanıyorsanız, biraz farklı olacaktır. ENTRYPOINT satır yanı sıra ek satırlar, uygulamanız için seçtiğiniz dil/platforma bağlı olarak farklı olacaktır alt çizgidir.
 
-**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntülerinizi oluşturmak hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Daha fazla bilgi** .NET Core uygulamaları için Docker görüntülerinizi oluşturmak hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [https://docs.docker.com/engine/ \öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ Node.js ve .NET Core kapsayıcıları gibi diğer platformlarda kullanıyorsanı
 
 Ayrıca Docker .NET Core kapsayıcılarında Visual Studio kullanırken bir sonraki bölümde açıklandığı gibi ayıklayabilirsiniz.
 
-**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [https://blogs.msdn.microsoft.com/ \ Kullanıcı\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Daha fazla bilgi:** Node.js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi için şuraya gidin <https://blog.docker.com/2016/07/live-debugging-docker/> ve [https://blogs.msdn.microsoft.com/ \ kullanıcı\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-node-js-Mono-More/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

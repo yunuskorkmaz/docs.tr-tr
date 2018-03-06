@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Kısmi hata işleme stratejileri
 
@@ -31,7 +31,7 @@ Kısmi hatalar postalarla stratejileri arasında şunlar yer alır.
 
 **Geri dönüşler sağlamak**. Önbelleğe alınan veriler veya varsayılan değeri döndüren gibi bir isteği başarısız olduğunda bu yaklaşım, geri dönüş mantığı istemci işlemini gerçekleştirir. Bu sorguları için uygun bir yaklaşım ve güncelleştirmeleri veya komutları için daha karmaşıktır.
 
-**Sıraya alınan istek sayısı sınırı**. İstemciler ayrıca bir istemci mikro hizmet belirli bir hizmet gönderebilirsiniz bekleyen istek sayısı üst sınırı zorunlu tuttukları. Sınıra ulaştıysanız ek istekler yapmasını büyük olasılıkla bir durum ve bu girişimler hemen başarısız olması. Uygulama, Polly açısından [Bulkhead yalıtım](https://github.com/App-vNext/Polly/wiki/Bulkhead) İlkesi, bu gereksinimi karşılamak için kullanılabilir. Bu yaklaşım temelde paralelleştirme azaltma ile olan [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) uygulaması olarak. Ayrıca, bulkhead dışında bir "sıra" verir. (Örneğin, kapasite tam kabul edilir çünkü) yürütmeden önce bile aşırı yük proaktif olarak shed. Bu yanıt belirli hata senaryoları için devre kesici hataları için bekleyeceği beri devre kesici olması durumuna göre hızlandırır. Polly BulkheadPolicy nesnesinde nasıl tam bulkhead gösterir ve sıra olan ve taşma teklifleri olaylarına bu nedenle de Otomatik yatay ölçekleme sürücü için kullanılabilir.
+**Sıraya alınan istek sayısı sınırı**. İstemciler ayrıca bir istemci mikro hizmet belirli bir hizmet gönderebilirsiniz bekleyen istek sayısı üst sınırı zorunlu tuttukları. Sınıra ulaştıysanız ek istekler yapmasını büyük olasılıkla bir durum ve bu girişimler hemen başarısız olması. Uygulama, Polly açısından [Bulkhead yalıtım](https://github.com/App-vNext/Polly/wiki/Bulkhead) İlkesi, bu gereksinimi karşılamak için kullanılabilir. Bu yaklaşım temelde paralelleştirme azaltma ile olan <xref:System.Threading.SemaphoreSlim> uygulaması olarak. Ayrıca, bulkhead dışında bir "sıra" verir. (Örneğin, kapasite tam kabul edilir çünkü) yürütmeden önce bile aşırı yük proaktif olarak shed. Bu yanıt belirli hata senaryoları için devre kesici hataları için bekleyeceği beri devre kesici olması durumuna göre hızlandırır. Polly BulkheadPolicy nesnesinde nasıl tam bulkhead gösterir ve sıra olan ve taşma teklifleri olaylarına bu nedenle de Otomatik yatay ölçekleme sürücü için kullanılabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

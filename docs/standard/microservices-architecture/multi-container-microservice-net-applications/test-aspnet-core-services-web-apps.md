@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core services ve web uygulamaları test etme
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Steve Smith. Test denetleyicileri** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Test denetleyicileri** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Tümleştirme sınaması** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Tümleştirme sınaması** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
 -   **Birim testi .NET kullanarak dotnet test çekirdek**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Resmi sitesi.
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 Birden çok kapsayıcı uygulamaları test ettiğinizde daha önce belirtildiği gibi tüm mikro Docker ana bilgisayar veya kapsayıcı küme içinde çalışıyor olması gerekir. Birkaç mikro içeren birden çok işlemleri içeren uçtan uca hizmet testleri gerektirir dağıtma ve docker çalıştırarak Docker ana tüm uygulama başlatma-oluşturan Yukarı (veya bir orchestrator kullanıyorsanız karşılaştırılabilir bir mekanizma). Tüm uygulama ve tüm hizmetlerinin çalıştığını sonra uçtan uca tümleştirme ve işlevsel testleri çalıştırabilirsiniz.
 
-Kullanabileceğiniz birkaç yaklaşım vardır. Uygulama (veya docker compose.ci.build.yml gibi benzer olanlar) dağıtmak için kullandığınız docker-compose.yml dosyası çözüm düzeyinde kullanmak için giriş noktası genişletebilirsiniz [dotnet test](https://docs.microsoft.com/dotnet/core/tools/dotnet-test). Ayrıca testleri, hedeflediğiniz görüntüde çalıştırırsınız: başka bir oluşturma dosyasını da kullanabilirsiniz. Mikro ve kapsayıcıları veritabanlarını içeren tümleştirme testleri için başka bir oluşturma dosyasını kullanarak, ilgili verileri her zaman özgün durumuna testleri çalıştırmadan önce sıfırlanacağını emin olabilirsiniz.
+Kullanabileceğiniz birkaç yaklaşım vardır. Uygulama (veya docker compose.ci.build.yml gibi benzer olanlar) dağıtmak için kullandığınız docker-compose.yml dosyası çözüm düzeyinde kullanmak için giriş noktası genişletebilirsiniz [dotnet test](../../../core/tools/dotnet-test.md). Ayrıca testleri, hedeflediğiniz görüntüde çalıştırırsınız: başka bir oluşturma dosyasını da kullanabilirsiniz. Mikro ve kapsayıcıları veritabanlarını içeren tümleştirme testleri için başka bir oluşturma dosyasını kullanarak, ilgili verileri her zaman özgün durumuna testleri çalıştırmadan önce sıfırlanacağını emin olabilirsiniz.
 
 Oluşturma uygulama hazır ve çalışır hale geldikten sonra Visual Studio çalıştırıyorsanız, kesme noktaları ve özel durumları yararlanabilirsiniz. Veya tümleştirme testleri otomatik olarak CI hattınızı Visual Studio Team Services veya Docker kapsayıcıları destekleyen herhangi bir CI/CD sistemi içinde çalıştırabilirsiniz.
 

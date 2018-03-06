@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>Tarih ve saat verilerini
 SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır. Yeni veri türleri, tarih ve saat için ayrı türleri ve büyük aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 hizmet paketi (SP) 1, SQL Server için .NET Framework veri sağlayıcısı başlatılıyor (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) bu yeni özellikleri ile SqlClient kullanılacak.  
@@ -60,7 +62,7 @@ SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır.
  SQL Server tarih ve saat verilerini yorumlaması hakkında daha fazla bilgi için bkz: [kullanarak tarih ve saat verilerini](http://go.microsoft.com/fwlink/?LinkID=98361) SQL Server 2008 Books Online.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tarih/saat veri türleri ve parametreleri  
- Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> birini kullanarak <xref:System.Data.SqlDbType> numaralandırmalar. Aşağıdaki sabit listeleri için eklenene <xref:System.Data.SqlDbType> yeni tarih ve saat veri türlerini desteklemek için.  
+ Aşağıdaki sabit listeleri için eklenene <xref:System.Data.SqlDbType> yeni tarih ve saat veri türlerini desteklemek için.  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır.
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> önceki birini kullanarak <xref:System.Data.SqlDbType> numaralandırmalar. 
+
+> [!NOTE]
+> Ayarlayamazsınız `DbType` özelliği bir `SqlParameter` için `SqlDbType.Date`.
+
  Ayrıca türünü belirtebilirsiniz bir <xref:System.Data.SqlClient.SqlParameter> ayarlayarak genel <xref:System.Data.SqlClient.SqlParameter.DbType%2A> özelliği bir `SqlParameter` belirli bir nesneye <xref:System.Data.DbType> numaralandırma değeri. Aşağıdaki numaralandırma değerleri için eklenene <xref:System.Data.DbType> desteklemek için `datetime2` ve `datetimeoffset` veri türleri:  
   
 -   DbType.DateTime2  

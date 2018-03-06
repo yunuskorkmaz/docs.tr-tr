@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49cd0ade4586317158c901586f4dd9528760a9c4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamalar için geliştirme iş akışı
 
@@ -128,7 +128,7 @@ Ek yapılandırma ayarlarını dil ve kullandığınız framework bağlı olarak
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **.NET Core uygulamaları için Docker görüntülerinizi oluşturmak**
-    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 -   **Kendi görüntünüzü yapı**. Resmi Docker belgelerinde.
     [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)

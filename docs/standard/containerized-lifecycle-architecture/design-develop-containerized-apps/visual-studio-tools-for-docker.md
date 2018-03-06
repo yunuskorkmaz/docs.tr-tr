@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma
 
@@ -28,7 +28,7 @@ Visual Studio 2015 kullanıyorsanız, güncelleştirme 3 veya sonraki bir sürü
 
 **Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [https://www.visualstudio.com/ \ ürünler/vs-2015-ürün-sürümleri](https://www.visualstudio.com/products/vs-2015-product-editions).
 
-Docker için Visual Studio araçlarını yükleme hakkında daha fazla bilgi görmek için Git <http://aka.ms/vstoolsfordocker> ve <https://docs.microsoft.com/dotnet/articles/core/docker/visual-studio-tools-for-docker>.
+Docker için Visual Studio araçlarını yükleme hakkında daha fazla bilgi görmek için Git <http://aka.ms/vstoolsfordocker> ve <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
 Visual Studio 2017 kullanıyorsanız, Docker destek zaten dahil edilmiştir.
 

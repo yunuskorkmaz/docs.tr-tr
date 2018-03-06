@@ -1,7 +1,7 @@
 ---
 title: "Ne zaman Docker kapsayıcıları için .NET Core seçin"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Core seçin"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5d809ecdbef465206015a103a14baab8dc0b49c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9489bca5ac69046818a1809b2f3082baea1eaa8
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Core seçin
 
@@ -35,7 +35,7 @@ Amacınız için .NET Framework yalnızca Windows desteklediğinden Açıkçası
 
 [Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/) bir IDE içinde macOS çalıştıran Xamarin Studio evrimi ve Docker mid-2017 bu yana destekler.
 
-Aynı zamanda [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows üzerinde. VS Code .NET Core ve hata ayıklama IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLI ile birlikte Mac kapsayıcılı uygulamaları geliştirmek için kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI) araçları](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x). Ayrıca, Sublime Text, Emacs, VI ve .NET dilleri için IntelliSense desteği sağlayan açık kaynak OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz. IDE ve düzenleyiciler ek olarak, .NET Core CLI desteklenen tüm platformlar için kullanabilirsiniz.
+Aynı zamanda [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows üzerinde. VS Code .NET Core ve hata ayıklama IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLI ile birlikte Mac kapsayıcılı uygulamaları geliştirmek için kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI) araçları](../../../core/tools/index.md). Ayrıca, Sublime Text, Emacs, VI ve .NET dilleri için IntelliSense desteği sağlayan açık kaynak OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz. IDE ve düzenleyiciler ek olarak, .NET Core CLI desteklenen tüm platformlar için kullanabilirsiniz.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Yeni ("alanı yeşil") projeler için kapsayıcıları kullanma
 

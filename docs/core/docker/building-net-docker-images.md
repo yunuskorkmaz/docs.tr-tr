@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
 
@@ -75,11 +76,11 @@ Görüntü çeşitleri altında sağladığımız yukarıdaki hedeflerinize ula�
 
 Geliştirme, derleme ve üretim en iyi duruma getirilmiş senaryolara ek olarak, ek görüntüleri sağlar:
 
-* `microsoft/dotnet:<version>-runtime-deps`**Çalışma zamanı deps** görüntü tüm .NET Core tarafından gerekli yerel bağımlılıklarını ile işletim sistemi içerir. Bu görüntü içindir [kendi içinde bulunan uygulamalar](https://docs.microsoft.com/dotnet/core/deploying/index).
+* `microsoft/dotnet:<version>-runtime-deps`**Çalışma zamanı deps** görüntü tüm .NET Core tarafından gerekli yerel bağımlılıklarını ile işletim sistemi içerir. Bu görüntü içindir [kendi içinde bulunan uygulamalar](../deploying/index.md).
 
 Her değişken en son sürümleri:
 
-* `microsoft/dotnet`veya `microsoft/dotnet:latest` (diğer ad SDK görüntüsü için)
+* `microsoft/dotnet` veya `microsoft/dotnet:latest` (diğer ad SDK görüntüsü için)
 * `microsoft/dotnet:sdk`
 * `microsoft/dotnet:runtime`
 * `microsoft/dotnet:runtime-deps`

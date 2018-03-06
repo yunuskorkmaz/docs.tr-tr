@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b10eeff18979674901197203716426af70433c46
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Değer nesnelerini uygulama
 
@@ -136,7 +136,7 @@ Yalnızca bir değer nesnesi, etki alanı modeli tanımlamak öğrendiniz. Ancak
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Arka plan ve eski yaklaşımlar EF çekirdek 1.1 kullanma
 
-Arka plan olarak EF çekirdek 1.0 ve 1.1 kullanırken bir sınırlama, kullanamazsınız edildi [karmaşık türler](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) EF içinde tanımlanan geleneksel .NET Framework'teki 6.x. Bu nedenle, EF çekirdek 1.0 veya 1.1 kullanıyorsanız, kimlik alanı EF varlıkla olarak değer nesnesi depolamak gerekli. Ardından, hiçbir kimliği ile bir değer nesnesi gibi daha fazla arama için değer nesne kimliğinin etki alanı modelinde önemli değildir netleştirmek için Kimliğini gizle. Kimliği olarak kullanarak bu kimliği Gizle bir [gölge özelliği](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Model kimliği gizlemek için bu yapılandırma EF altyapı düzeyinde ayarlandığından, etki alanı modeli için tür saydam olacaktır.
+Arka plan olarak EF çekirdek 1.0 ve 1.1 kullanırken bir sınırlama, kullanamazsınız edildi [karmaşık türler](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) EF içinde tanımlanan geleneksel .NET Framework'teki 6.x. Bu nedenle, EF çekirdek 1.0 veya 1.1 kullanıyorsanız, kimlik alanı EF varlıkla olarak değer nesnesi depolamak gerekli. Ardından, hiçbir kimliği ile bir değer nesnesi gibi daha fazla arama için değer nesne kimliğinin etki alanı modelinde önemli değildir netleştirmek için Kimliğini gizle. Kimliği olarak kullanarak bu kimliği Gizle bir [gölge özelliği](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Model kimliği gizlemek için bu yapılandırma EF altyapı düzeyinde ayarlandığından, etki alanı modeli için tür saydam olacaktır.
 
 EShopOnContainers (.NET Core 1.1) ilk sürümünde EF çekirdek altyapısı tarafından gerekli gizli kimliği DbContext düzeyi aşağıdaki yolla altyapı proje Fluent API kullanılarak uygulanmıştır. Bu nedenle, gizli açısından etki alanı modeli, ancak hala mevcut altyapısında kimliği.
 
@@ -168,7 +168,7 @@ Bir ait varlık türü, etki alanı model içinde tanımlanan kendi kimlik expli
 Tüm kimlik sahip değil yalnızca etki alanı modeli bakarak ait türü görülüyor.
 Kapak altında ait türleri kimliğe sahip, ancak, sahibi gezinti özelliği bu kimliğin bir parçasıdır.
 
-Kendi türlerin örnekleri kimliğini tamamen değil, kendi. Üç bileşenden oluşur: 
+Kendi türlerin örnekleri kimliğini tamamen değil, kendi. Üç bileşenden oluşur:
 
 - Sahibinin kimliği
 

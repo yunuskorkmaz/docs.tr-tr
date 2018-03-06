@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Framework seçin
 
@@ -29,7 +29,7 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core geçirmek 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Üçüncü taraf .NET kitaplıklarına veya NuGet paketlerini kullanılamaz .NET Core için kullanma
 
-Üçüncü taraf kitaplıklar hızla benimsemenin [.NET standart](https://docs.microsoft.com/dotnet/standard/net-standard), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kodu sağlar. API yüzeyi ötesinde .NET standart kitaplığı 2.0 ile uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve .NET Core 2. 0 ' uygulamaları doğrudan da var olan .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Üçüncü taraf kitaplıklar hızla benimsemenin [.NET standart](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kodu sağlar. API yüzeyi ötesinde .NET standart kitaplığı 2.0 ile uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve .NET Core 2. 0 ' uygulamaları doğrudan da var olan .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Ancak, bile bu olağanüstü progression ile .NET standart 2.0 ve .NET Core 2.0 itibaren olabilir durumlarda bazı NuGet paketleri çalıştırmak için Windows gerekiyor ve .NET Core desteklemeyebilir. Ardından bu paketleri, uygulamanız için kritik olan, .NET Framework Windows kapsayıcılarında kullanmanız gerekecektir.
 
@@ -56,16 +56,16 @@ Bu arada, herhangi bir platform veya Azure hizmetinde hala .NET Core kendi istem
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **.NET core Kılavuzu**
-    [*https://docs.microsoft.com/dotnet/core/index*](https://docs.microsoft.com/dotnet/core/index)
+    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
 -   **.NET Framework'teki .NET Core taşıma**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](https://docs.microsoft.com/dotnet/core/porting/index)
+    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
 -   **.NET framework Docker kılavuzu üzerinde**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](https://docs.microsoft.com/dotnet/framework/docker/)
+    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **.NET bileşenleri'ne genel bakış**
-    [*https://docs.microsoft.com/dotnet/standard/components*](https://docs.microsoft.com/dotnet/standard/components)
+    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 
 

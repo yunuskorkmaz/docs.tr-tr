@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamaları nasıldır?
 
@@ -41,7 +41,7 @@ Temel bulut iyileştirilmiş düzeyinde uygulamalarda uygulama mimarisinde farkt
 
 Mikro kullanmayan yeni uygulamalar oluşturma mantığı vardır. Mikro tabanlı bir yaklaşım gereksinimlerinizi aşabilir birçok yeni ve hala modern senaryo vardır. Bazı durumlarda, yalnızca daha basit bir tek yapılı web uygulaması oluşturun ya da parçalı Hizmetleri N katmanlı uygulamayı eklemek isteyebilirsiniz. Bu durumda, Azure App Service tarafından sunulan olanlar gibi PaaS yetenekleri bulut tam kullanımı hala yapabilirsiniz. Bakım iş hala sınırla azaltın.
 
-Ayrıca, yeni kodu geliştirmek için bulut iyileştirilmiş senaryolarda (tam bir uygulama veya kısmi alt sistemleri için), yeni kod oluşturduğunuzda, daha yeni sürümlerini .NET kullanması gereken ([.NET Core](https://docs.microsoft.com/dotnet/core/) ve [ASP.NET Core](https://docs.microsoft.com/aspnet/core/), özellikle). .NET Core yalın ve hızlı framework olduğundan mikro ve kapsayıcıları oluşturursanız, bu özellikle doğrudur. Küçük bellek kaplama alanı ve Hızlı Başlat kapsayıcılarında elde edersiniz ve uygulamalarınızı yüksek performanslı olacaktır. Bu yaklaşım mükemmel mikro ve kapsayıcıları gereksinimlerine en uygun ve bir platformlar arası framework-olma Linux, Windows Server ve Mac (Mac geliştirme ortamları için) aynı uygulamayı çalıştıramaz avantajları elde edin.
+Ayrıca, yeni kodu geliştirmek için bulut iyileştirilmiş senaryolarda (tam bir uygulama veya kısmi alt sistemleri için), yeni kod oluşturduğunuzda, daha yeni sürümlerini .NET kullanması gereken ([.NET Core](../../../core/index.md) ve [ASP.NET Core](/aspnet/core/), özellikle). .NET Core yalın ve hızlı framework olduğundan mikro ve kapsayıcıları oluşturursanız, bu özellikle doğrudur. Küçük bellek kaplama alanı ve Hızlı Başlat kapsayıcılarında elde edersiniz ve uygulamalarınızı yüksek performanslı olacaktır. Bu yaklaşım mükemmel mikro ve kapsayıcıları gereksinimlerine en uygun ve bir platformlar arası framework-olma Linux, Windows Server ve Mac (Mac geliştirme ortamları için) aynı uygulamayı çalıştıramaz avantajları elde edin.
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalarla bulut yerel uygulamalar
 
@@ -65,7 +65,7 @@ Ancak, mikro herhangi bir yeni ya da modern uygulama için zorunlu değildir. Mi
 
 Mikro mimarisi birden çok bağımsız alt sistemleri otonom Hizmetleri biçiminde dayalı dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen yaklaşım durumundadır. Mikro tabanlı bir mimari uygulamanın dağıtıldığı ve ölçeklendirilmiş bağımsız olarak geliştirilen, test edilmiş, sürümlü, olabilir hizmetler koleksiyonu yerleşik olarak bulunur. Bu, tüm ilgili, otonom veritabanı mikro hizmet başına içerebilir.
 
-İndirilebilir PDF e-kitap, .NET Core kullanarak uygulayabileceğiniz bir mikro mimarisi ayrıntılı bir bakış için bkz: [.NET mikro: mimarisi kapsayıcılı .NET uygulamaları için](https://aka.ms/microservicesebook). Kılavuzu da kullanılabilir [çevrimiçi](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).
+İndirilebilir PDF e-kitap, .NET Core kullanarak uygulayabileceğiniz bir mikro mimarisi ayrıntılı bir bakış için bkz: [.NET mikro: mimarisi kapsayıcılı .NET uygulamaları için](https://aka.ms/microservicesebook). Kılavuzu da kullanılabilir [çevrimiçi](../../microservices-architecture/index.md).
 
 Ancak, mikro hizmetler sunan güçlü özellikler bağımsız dağıtım, güçlü alt sınırlarını ve teknoloji seviyelerine senaryolarda bile-bunlar da birçok yeni zorluklar Yükselt. Sorunları, parçalanmış ve bağımsız veri modelleri gibi dağıtılmış uygulama geliştirme için ilişkili; mikro dayanıklı iletişimine elde; Nihai tutarlılık gereksinimini; ve işletim karmaşıklığını. Mikro karmaşıklık geleneksel tek yapılı uygulamalara kıyasla daha yüksek düzeyde tanıtır.
 

@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 1140a18aba685f3415d7c599d1b76648bf9924e7
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Azure ile Mimarı Modern Web uygulamaları
 
@@ -74,7 +74,7 @@ Bu konuları ve fırsatlar genel olarak anlaşılmasını sağlamak için bu kı
 
 ## <a name="references"></a>Referanslar
 - **Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**  
-<https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server>
+<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [Sonraki] (modern-web-uygulamalar-characteristics.md)
