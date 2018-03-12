@@ -1,17 +1,17 @@
 ---
 layout: ApiBrowserPage
-hide_bc: True
-title: ".NET API tarayıcı"
+hide_bc: 
+title: ".NET API Tarayıcısı"
 quickFilterColumn1: netframework-4.7.1,netcore-2.0,netstandard-2.0
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
 quickFilterColumn3: azure-dotnet,aspnetcore-2.0
 ms.topic: landing-page
-ms.openlocfilehash: 9d41c9b34b8371ed1a6b8395447925acf1075b21
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.openlocfilehash: 5e220ea0f29fbcafa01e7e1f0fb4f46a4c960a78
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="net-api-browser"></a><span data-ttu-id="aa9a1-102">.NET API tarayıcı</span><span class="sxs-lookup"><span data-stu-id="aa9a1-102">.NET API Browser</span></span>
+# <a name="net-api-browser"></a><span data-ttu-id="7f681-102">.NET API Tarayıcısı</span><span class="sxs-lookup"><span data-stu-id="7f681-102">.NET API Browser</span></span>
 
-<span data-ttu-id="aa9a1-103">.NET API tarayıcı – tek bir-Mağazanız tüm Hoş Geldiniz. NET tabanlı API'ler Microsoft'tan.</span><span class="sxs-lookup"><span data-stu-id="aa9a1-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="aa9a1-104">Tüm yönetilen API'ler kutusuna yazarak aramaya başlayın.</span><span class="sxs-lookup"><span data-stu-id="aa9a1-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="aa9a1-105">API tarayıcı hakkında daha fazla bilgiyi [bizim blog yayını içinde](https://aka.ms/apibrowser).</span><span class="sxs-lookup"><span data-stu-id="aa9a1-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="aa9a1-106">Herhangi bir Geribildiriminiz varsa kullanmak [UserVoice sitemizi](https://aka.ms/apibrowserfeedback).</span><span class="sxs-lookup"><span data-stu-id="aa9a1-106">If you have any feedback,  use [our UserVoice site](https://aka.ms/apibrowserfeedback).</span></span>
+<span data-ttu-id="7f681-103">.NET API tarayıcı – tek bir-Mağazanız tüm Hoş Geldiniz. NET tabanlı API'ler Microsoft'tan.</span><span class="sxs-lookup"><span data-stu-id="7f681-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="7f681-104">Tüm yönetilen API'ler kutusuna yazarak aramaya başlayın.</span><span class="sxs-lookup"><span data-stu-id="7f681-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="7f681-105">API tarayıcı hakkında daha fazla bilgiyi [bizim blog yayını içinde](https://aka.ms/apibrowser).</span><span class="sxs-lookup"><span data-stu-id="7f681-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="7f681-106">Herhangi bir Geribildiriminiz varsa, yeni bir sorun oluştur [MicrosoftDocs/geribildirim bağlantıların github'da](https://github.com/MicrosoftDocs/feedback/issues).</span><span class="sxs-lookup"><span data-stu-id="7f681-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span> 
