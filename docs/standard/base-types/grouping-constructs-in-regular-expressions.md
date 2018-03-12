@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Aşağıdakileri yapmak için gruplandırma yapıları kullanabilirsiniz:  
@@ -393,7 +393,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\d{2}`|İki ondalık basamak eşleşir.|  
-|`{?<=\b20)`|İki ondalık basamak word sınırında ondalık basamak "20" öncesinde eşleşme devam edin.|  
+|`(?<=\b20)`|İki ondalık basamak word sınırında ondalık basamak "20" öncesinde eşleşme devam edin.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
  Sıfır Genişlik pozitif geriye ilerleme onaylar, o grubun normal ifade ile eşleşen karakter kümesini son karakteri veya yakalanan grubu karakter olması gerektiğinde geri dönüş sınırlamak için de kullanılır. Örneğin, bir grup tüm ardışık sözcük karakterlerini yakalar, son karakter alfabetik gerektirecek şekilde Sıfır Genişlik pozitif geriye ilerleme onaylama kullanabilirsiniz.  

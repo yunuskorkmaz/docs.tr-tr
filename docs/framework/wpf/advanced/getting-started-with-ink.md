@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Mürekkep ile Çalışmaya Başlama
 Dijital Mürekkep uygulamalarınıza her zamankinden daha kolay olur. Mürekkep gelişen corollary içinde tam tümleştirmeyi programlamayı COM ve Windows Forms yöntemine olmaktan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ayrı SDK veya çalışma zamanı kitaplıkları yüklemeniz gerekmez.  
@@ -38,14 +40,14 @@ Dijital Mürekkep uygulamalarınıza her zamankinden daha kolay olur. Mürekkep 
 ## <a name="quick-start"></a>Hızlı Başlangıç  
  Bu bölüm, basit bir yazmanıza yardımcı olur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Mürekkep toplayan uygulama.  
   
- Zaten yapmadıysanız, Microsoft Visual Studio 2005 yükleyin ve [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar genellikle derlenmelidir bunları görüntüleyebilmeniz bunlar tamamen oluşur olsa bile [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Ancak, [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] uygulama hızlandırmak için tasarlanmış bir uygulama olan, XamlPad'i içeren bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-UI tabanlı. Bu uygulamayı görüntülemek ve bu belgedeki ilk birkaç örneği ile tamir etmek için kullanabilirsiniz. Oluşturma işlemi derlenmiş uygulamalardan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bu belgenin sonraki bölümlerinde ele alınmaktadır.  
+ Zaten yapmadıysanız, Microsoft Visual Studio 2005 yükleyin ve [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar genellikle derlenmelidir bunları görüntüleyebilmeniz bunlar tamamen oluşur olsa bile [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Ancak, [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] uygulama hızlandırmak için tasarlanmış bir uygulama olan, XamlPad'i içeren bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-UI tabanlı. Bu uygulamayı görüntülemek ve bu belgedeki ilk birkaç örneği ile tamir etmek için kullanabilirsiniz. Oluşturma işlemi derlenmiş uygulamalardan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bu belgenin sonraki bölümlerinde ele alınmaktadır.  
   
- XamlPad'i başlatmak için tıklatın **Başlat** menüsündeki **tüm programlar**, işaret **Microsoft Winndows SDK**, işaret **Araçları**ve'ı tıklatın **XAMLPad**. İşleme bölmesinde XAMLPad kod bölmesinde yazılan XAML kodu oluşturur. XAML kodunu düzenleyebilirsiniz ve değişiklikler hemen işleme bölmesinde görünür.  
+ XamlPad'i başlatmak için tıklatın **Başlat** menüsündeki **tüm programlar**, işaret **Microsoft Windows SDK'sı**, işaret **Araçları**ve'ı tıklatın **XAMLPad**. İşleme bölmesinde XAMLPad kod bölmesinde yazılan XAML kodu oluşturur. XAML kodunu düzenleyebilirsiniz ve değişiklikler hemen işleme bölmesinde görünür.  
   
 #### <a name="got-ink"></a>Mürekkep var mı?  
  İlk başlatmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Mürekkep destekleyen uygulama:  
   
-1.  Microsoft Visual Studio 2005 açın  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  Yeni bir **Windows uygulaması (WPF)**  
   

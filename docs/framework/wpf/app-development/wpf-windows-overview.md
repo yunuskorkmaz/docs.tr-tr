@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tek başına uygulamalar windows aracılığıyla. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  
@@ -106,7 +106,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 -   Kod arkasında, sınıf olmalıdır bir `partial` sınıfı tarafından belirtilen aynı ada sahip `x:Class` biçimlendirme ve bu içinde öznitelik öğesinden türetilmelidir <xref:System.Windows.Window>. Bu arka plan kodu ile ilişkili dosyaya verir `partial` uygulama yapılandırıldığında biçimlendirme dosyası için oluşturulan sınıf (bkz [WPF uygulaması oluşturma](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   Kod arka plan, <xref:System.Windows.Window> sınıfı, çağıran bir oluşturucu uygulanmalı `InitializeComponent` yöntemi. `InitializeComponent`uygulanan dosya biçimlendirme tarafından oluşturulan `partial` olaylarını kaydetmek ve biçimlendirme içinde tanımlanan özelliklerini ayarlamak için sınıf.  
+-   Kod arka plan, <xref:System.Windows.Window> sınıfı, çağıran bir oluşturucu uygulanmalı `InitializeComponent` yöntemi. `InitializeComponent` uygulanan dosya biçimlendirme tarafından oluşturulan `partial` olaylarını kaydetmek ve biçimlendirme içinde tanımlanan özelliklerini ayarlamak için sınıf.  
   
 > [!NOTE]
 >  Yeni bir eklediğinizde <xref:System.Windows.Window> kullanarak projenize [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> biçimlendirme ve arka plan kodu kullanılarak uygulanır ve işaretleme ve arka plan kod dosyaları arasındaki ilişki oluşturmak için gerekli yapılandırmayı içerir burada açıklanmıştır.  
@@ -164,7 +164,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Çağırarak açılan bir pencere <xref:System.Windows.Window.Show%2A> uygulama kullanıcıların diğer windows aynı uygulama etkinleştirmesine izin veren bir modda çalışır anlamı kalıcı olmayan bir penceredir.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>iletişim kutuları gibi Windows kalıcı olarak açmak için çağrılır. Bkz: [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) daha fazla bilgi için.  
+>  <xref:System.Windows.Window.ShowDialog%2A> iletişim kutuları gibi Windows kalıcı olarak açmak için çağrılır. Bkz: [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) daha fazla bilgi için.  
   
  Zaman <xref:System.Windows.Window.Show%2A> olan kullanıcı girişi almasına olanak veren altyapı kurmak için gösterilmeden önce adlı bir pencere başlatma çalışma gerçekleştirir. Pencerenin başlatıldığında <xref:System.Windows.Window.SourceInitialized> olayı oluşturulur ve penceresi gösterilir.  
   
@@ -267,7 +267,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
  Bir pencere kapatıldığında, iki olaylar oluşur: <xref:System.Windows.Window.Closing> ve <xref:System.Windows.Window.Closed>.  
   
- <xref:System.Windows.Window.Closing>penceresi kapanır ve hangi pencere tarafından kapatma engellenebilir bir mekanizma sağlar önce oluşturulur. Pencereyi kapatma önlemek için bir ortak pencere içeriğinin değiştirilen veri içerip içermediğini nedeni. Bu durumda, <xref:System.Windows.Window.Closing> veri kirli olup olmadığını ve bu durumda, kullanıcı ya da verileri kaydetmeden pencereyi devam mı, yoksa penceresini kapatma işlemini iptal için sormak için belirlemek için olay işlenebilir. Aşağıdaki örnek, işleme önemli yönlerini gösterir <xref:System.Windows.Window.Closing>.  
+ <xref:System.Windows.Window.Closing> penceresi kapanır ve hangi pencere tarafından kapatma engellenebilir bir mekanizma sağlar önce oluşturulur. Pencereyi kapatma önlemek için bir ortak pencere içeriğinin değiştirilen veri içerip içermediğini nedeni. Bu durumda, <xref:System.Windows.Window.Closing> veri kirli olup olmadığını ve bu durumda, kullanıcı ya da verileri kaydetmeden pencereyi devam mı, yoksa penceresini kapatma işlemini iptal için sormak için belirlemek için olay işlenebilir. Aşağıdaki örnek, işleme önemli yönlerini gösterir <xref:System.Windows.Window.Closing>.  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -288,7 +288,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 -   Ana uygulama penceresi kapatıldığında ve <xref:System.Windows.Application.ShutdownMode%2A> olan <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A>adı verilir.  
+-   <xref:System.Windows.Application.Shutdown%2A> adı verilir.  
   
 > [!NOTE]
 >  Kapatılan bir pencere açılamaz.  
@@ -301,7 +301,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
  Aşağıdaki çizimde asıl olayların sırası etkinleştirmesi olmadan gösterilen bir pencere ömrü gösterir (<xref:System.Windows.Window.ShowActivated%2A> ayarlanır `false` pencere gösterilmeden önce).  
   
- ![Pencere Ömrü &#40; Window.ShowActivated &#61; False &#41; ] (../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Pencere Ömrü &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Pencere konumu  
@@ -309,7 +309,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
  İlk konumunu belirtmek bir <xref:System.Windows.Window> zaman ilk göründüğü ayarlayarak <xref:System.Windows.Window.WindowStartupLocation%2A> aşağıdakilerden birini özelliğiyle <xref:System.Windows.WindowStartupLocation> numaralandırma değerlerinin:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner>(varsayılan)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (varsayılan)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -322,7 +322,6 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Bir x ve y konumunu, bir pencere de sahip olmanın yanı sıra diğer windows göre dikey konumunu belirler z boyutundaki bir konum vardır. Bu pencere z düzeni bilinir ve iki tür vardır: normal z düzenini ve en üstteki z düzeni. Bir pencerede konumunu *normal z düzenini* , şu anda etkin olup olmamasına göre belirlenir. Varsayılan olarak, bir pencereyi normal z-sırası içinde bulunur. Bir pencerede konumunu *en üstteki z düzenini* Ayrıca, şu anda etkin olup olmamasına göre belirlenir. Ayrıca, en üstteki z düzenini Windows'da her zaman normal z düzenini Windows'da yukarıda yer alır. Bir pencere ayarlayarak en üstteki z-sırası içinde bulunan kendi <xref:System.Windows.Window.Topmost%2A> özelliğine `true`.  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  Her z düzenini içinde şu anda etkin pencereyi yukarıdaki tüm diğer windows aynı z sırada görünür.  
   
@@ -333,12 +332,10 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, ve <xref:System.Windows.FrameworkElement.MaxWidth%2A> bir pencere yaşam süresi boyunca olabilir ve aşağıdaki örnekte gösterildiği gibi yapılandırıldığını genişlikleri aralığını yönetmek için kullanılır.  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  Pencere yüksekliği yönetilir <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.MaxHeight%2A>, aşağıdaki örnekte gösterildiği gibi yapılandırılır.  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  Çeşitli genişlik ve yükseklik değerleri her bir aralığı belirtmek için genişlik ve yükseklik ilgili boyutu için belirtilen aralık içinde herhangi bir yerde olması için yeniden boyutlandırılabilir penceresinin mümkündür. Geçerli genişlik ve yükseklik algılamak için incelemek <xref:System.Windows.FrameworkElement.ActualWidth%2A> ve <xref:System.Windows.FrameworkElement.ActualHeight%2A>sırasıyla.  
   
@@ -355,7 +352,6 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Aşağıdaki örnek bir pencere boyutları, içeriğinin dikey ve yatay olarak, ilk olarak gösterilen zaman sığması için otomatik olarak gösterir.  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.Window.SizeToContent%2A> özelliği bir pencere içeriğine uyacak şekilde nasıl boyutlandırılacağını belirtmek için kod.
   
@@ -401,7 +397,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
  Bir pencere durumunu ayarlanarak yapılandırılabilir kendi <xref:System.Windows.Window.WindowState%2A> şunlardan biri olabilir özelliği <xref:System.Windows.WindowState> numaralandırma değerlerinin:  
   
--   <xref:System.Windows.WindowState.Normal>(varsayılan)  
+-   <xref:System.Windows.WindowState.Normal> (varsayılan)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -410,7 +406,6 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Aşağıdaki örnek açıldığında tam ekran olarak gösterilen bir pencere oluşturulacağını gösterir.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  Genel olarak, ayarlamalısınız <xref:System.Windows.Window.WindowState%2A> bir pencere ilk durumunu yapılandırmak için. Yeniden boyutlandırılabilir penceresinde gösterilen sonra kullanıcılar simge durumuna küçült tuşuna basın, en üst düzeye çıkarmak ve pencere durumunu değiştirmek için pencerenin başlık çubuğunda düğmelerini geri yükleme.  
   
@@ -431,14 +426,13 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize>(varsayılan)  
+-   <xref:System.Windows.ResizeMode.CanResize> (varsayılan)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  İle <xref:System.Windows.Window.WindowStyle%2A>, büyük olasılıkla ondan ayarlamanız anlamına gelir, yaşam süresi sırasında değiştirmek bir pencere yeniden boyutlandırma modunu düşüktür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  Bir pencere ekranı olup olmadığını algılayan Not küçültülebilir ya da inceleyerek geri <xref:System.Windows.Window.WindowState%2A> özelliği.  
   
@@ -450,7 +444,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow>(varsayılan)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (varsayılan)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -463,7 +457,6 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Ayarlayabileceğiniz <xref:System.Windows.Window.WindowStyle%2A> kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işaretleme veya kod; bir pencere ömrü boyunca değiştirmek olası olduğundan, büyük olasılıkla kullanarak yapılandıracağınız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme.  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>Dikdörtgen olmayan pencere stili  
  Ayrıca burada kenarlık stilleri, durumlar vardır <xref:System.Windows.Window.WindowStyle%2A> sağlar, sağlamak için yeterli değil. Örneğin, gibi bir dikdörtgen olmayan kenarlık sahip bir uygulama oluşturmak isteyebilirsiniz [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] kullanır.  
@@ -475,7 +468,6 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Bu pencere türü ayarlayarak oluşturulabilir <xref:System.Windows.Window.WindowStyle%2A> özelliğine <xref:System.Windows.WindowStyle.None>ve özel kullanarak destekleyen <xref:System.Windows.Window> saydamlığını sahiptir.  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  Bu değerlerin birleşimini tamamen saydam işlemek için penceresini bildirir. Bu durumda pencerenin istemci dışı alan adornments (Kapat menüsü, simge durumuna küçült, Ekranı Kapla ve geri yükleme düğmeleri ve benzeri) kullanılamaz. Sonuç olarak, sağlamanız kendi gerekir.  
   
@@ -488,11 +480,10 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
  Görev çubuğu düğmesi, ileti kutuları ve iletişim kutuları gibi bazı windows türleri yok (bkz [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Bir pencere için görev çubuğu düğmesini ayarlayarak gösterilip gösterilmeyeceğini denetleyebilirsiniz <xref:System.Windows.Window.ShowInTaskbar%2A> özelliği (`true` varsayılan olarak).  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- <xref:System.Windows.Window>gerektirir `UnmanagedCode` örneğinin oluşturulması için güvenlik izni. Yüklü ve yerel makineden başlatılan uygulamalar için bu uygulama için verilen izinleri kümesinde döner.  
+ <xref:System.Windows.Window> gerektirir `UnmanagedCode` örneğinin oluşturulması için güvenlik izni. Yüklü ve yerel makineden başlatılan uygulamalar için bu uygulama için verilen izinleri kümesinde döner.  
   
  Ancak, bu Internet veya yerel intranet bölgesine kullanmaktan başlatılan uygulamalara izinler kümesi dışında kalan [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Sonuç olarak, kullanıcılar alacak bir [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] güvenlik uyarısı ve uygulama için tam güven izni yükseltmesine gerekir.  
   
@@ -500,7 +491,7 @@ Kullanıcıların etkileşimde [!INCLUDE[TLA#tla_wpf](../../../../includes/tlash
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Windows diğer türleri  
- <xref:System.Windows.Navigation.NavigationWindow>gezinebilir içeriği barındırmak için tasarlanmış bir penceredir. Daha fazla bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> gezinebilir içeriği barındırmak için tasarlanmış bir penceredir. Daha fazla bilgi için bkz: [Gezinti genel bakış](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
  İletişim kutusu, genellikle bir işlevi tamamlamak için bir kullanıcıdan bilgi toplamak için kullanılan windows vardır. Örneğin, ne zaman bir kullanıcının istediği bir dosyayı açmaya **Dosya Aç** iletişim kutusu kullanıcıdan dosya adını almak için bir uygulama tarafından genellikle görüntülenir. Daha fazla bilgi için bkz: [iletişim kutularına genel bakış](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   

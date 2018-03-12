@@ -4,14 +4,15 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Azur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Azure App Service'e varolan .NET uygulamalarını dağıtma 
 
@@ -37,7 +38,7 @@ Uygulama hizmeti geçiş aracı, Web sitelerinizi çözümleyebilir ve App Servi
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Azure uygulama hizmeti geçiş Yardımcısı**
+- **Azure uygulama hizmeti geçiş Yardımcısı**
 
     [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 

@@ -4,20 +4,21 @@ description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows kapsayıcılar olarak var olan .NET uygulamalarını dağıtma
 
 Windows kapsayıcılarında tabanlı dağıtımlar, bulut için iyileştirilmiş uygulamaları, bulut yerel uygulamaları ve bulut DevOps çapında kullanılmaya hazır uygulamalar için geçerlidir.
 
-Bu kılavuzdaki ve aşağıdaki bölümlerde Windows kapsayıcıları için kullanarak odaklanmak *buluta DevOps hazır* kaldırın ve mevcut .NET uygulamaları shift uygulamalar.
+İçin Windows kapsayıcılar kullanarak bu kılavuzdaki ve aşağıdaki bölümlerdeki odak noktasıdır *buluta DevOps hazır* kaldırın ve mevcut .NET uygulamaları shift uygulamalar.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Kapsayıcıları nelerdir? (Linux veya Windows)
 
@@ -41,7 +42,7 @@ Windows kapsayıcılarında uygulama Paketleme işlemini tamamen otomatik hale g
 
 Kuruluşlar, çok sayıda tek yapılı uygulamalarınız şu nedenlerden dolayı containerizing:
 
--   **Yayın geliştirilmiş dağıtım aracılığıyla çevikliği**. Kapsayıcıları geliştirme ve işlemler arasında tutarlı bir dağıtım sözleşme sunar. Kapsayıcıları kullandığınızda, söyleyin geliştiriciler duyduğunuz kalmaz, "Benim makinede neden üretimde çalıştığını?" Bunlar basitçe söyleyin, "üretimde çalıştırılabilmesi, bir kapsayıcı olarak çalışır, böylece." Paketlenen uygulamayı ile tüm bağımlılıkları, desteklenen tüm kapsayıcı tabanlı ortamda çalıştırılabilir. Tüm dağıtım hedefleri (geliştirme, QA, hazırlama, üretim) çalıştırmak için tasarlanmıştır şekilde çalışır. Dağıtım önemli ölçüde iyileştirir, sonraki bir aşamadan diğerine taşıdığınızda kapsayıcıları çoğu frictions ortadan kaldırabilir ve daha hızlı gönderebilirsiniz.
+-   **Yayın geliştirilmiş dağıtım aracılığıyla çevikliği**. Kapsayıcıları geliştirme ve işlemler arasında tutarlı bir dağıtım sözleşme sunar. Kapsayıcıları kullandığınızda, söyleyin geliştiriciler duyduğunuz kalmaz, "Benim makinede neden üretimde çalıştığını?" Bunlar basitçe söyleyin, "üretimde çalışacak şekilde, bir kapsayıcı olarak çalışır." Paketlenen uygulamayı ile tüm bağımlılıkları, desteklenen tüm kapsayıcı tabanlı ortamda çalıştırılabilir. Tüm dağıtım hedefleri (geliştirme, QA, hazırlama, üretim) çalıştırmak için tasarlanmıştır şekilde çalışır. Dağıtım önemli ölçüde iyileştirir, sonraki bir aşamadan diğerine taşıdığınızda kapsayıcıları çoğu frictions ortadan kaldırabilir ve daha hızlı gönderebilirsiniz.
 
 -   **Azaltması maliyet**. Kapsayıcıları, birleştirme ve temizleme mevcut donanım veya donanım birimi başına daha yüksek yoğunluk sırasında çalışan uygulamalar tarafından ya da maliyetlerine yol açar.
 
@@ -95,14 +96,14 @@ Linux için kullanılabilir ve desteklenen (Debian gibi) resmi .NET Docker gör�
 
 Görüntü adı Dockerfile dosyanızı eklediğinizde, .NET Framework tabanlı Windows kapsayıcı görüntüleri ilişkin aşağıdaki örneklerde olduğu gibi bir etiket kullanarak işletim sistemi ve sürümü seçebilirsiniz:
 
-> | Etiket | **Sistemi ve sürümü** |
+> | **Etiket** | **Sistemi ve sürümü** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Sunucu Çekirdeği |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x ile Windows Server Core üzerinde ek ASP.NET özelleştirme |
 
 .NET Core (platformlar arası Linux ve Windows için) etiketleri şöyle olabilir:
 
-> | Etiket | **Sistemi ve sürümü**
+> | **Etiket** | **Sistemi ve sürümü**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 Linux'ta salt çalışma zamanı |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 Windows Nano Server salt çalışma zamanı |

@@ -4,14 +4,15 @@ description: "Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Kaldırın ve mevcut uygulamalar Azure Iaas kaydırma
 
@@ -27,7 +28,7 @@ Analiz etmek için başka bir nokta *neden* saf Iaas bulutuna daha gelişmiş y�
 
 > **Şekil 2-1.** Bulut altyapısı çapında kullanılmaya hazır uygulamalar konumlandırma
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Neden Azure Iaas varolan .NET web uygulamalarını geçirme 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Neden Azure Iaas varolan .NET web uygulamalarını geçirme
 
 Maliyet azaltması elde etmek için bile, ilk bir Iaas düzeyinde buluta geçirmek için ana nedeni olmasıdır. Daha fazla yönetilen altyapı hizmetleri kullanarak, kuruluşunuz kendi donanım bakım, sunucu veya VM sağlama ve dağıtım ve altyapı Yönetimi yatırım düşürebilirsiniz.
 
@@ -39,7 +40,7 @@ Ayrıca korumalı uygulamaları modernize ve gelecekte zaten bulutta bile Iaas �
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Ne zaman yerine bir Iaas PaaS için geçirmek için
 
-Sonraki bölümlerde, çoğunlukla PaaS platformları ve Hizmetleri göre bulut DevOps çapında kullanılmaya hazır uygulamalar tartışın. Bu uygulamaları buluta geçiş çoğu avantajları verin.
+Sonraki bölümlerde PaaS platformları ve Hizmetleri çoğunlukla göre bulut DevOps çapında kullanılmaya hazır uygulamalar açıklanmaktadır. Bu uygulamaları buluta geçiş çoğu avantajları verin.
 
 Amacınız yalnızca uygulamalarınız buluta taşımak için ilk olarak, Azure App Service'te çalıştırmak için önemli değişiklik gerektiren uygulamalarınız belirlemek. Bu uygulamaları ilk adayları olmalıdır.
 
@@ -53,15 +54,15 @@ Buluta geçiş zor sahip değil. Ancak, çoğu kuruluş - ortam ve uygulamaları
 
 [Azure geçirme](https://aka.ms/azuremigrate) , Kılavuzu, Öngörüler ve Azure'a geçirme yardımcı olmak için gereken mekanizmaları sağlayan yeni bir hizmettir. Azure geçirme sağlar:
 
--   Bulma ve şirket içi sanal makineler için değerlendirme
+- Bulma ve şirket içi sanal makineler için değerlendirme
 
--   Çok katmanlı uygulamaları Yüksek Güvenilirlikli bulma için yerleşik bağımlılık eşleme
+- Çok katmanlı uygulamaları Yüksek Güvenilirlikli bulma için yerleşik bağımlılık eşleme
 
--   Azure sanal makineler için akıllı sağa boyutlandırma
+- Azure sanal makineler için akıllı sağa boyutlandırma
 
--   Uyumluluk kuralları düzelterek olası sorunlar için raporlama
+- Uyumluluk kuralları düzelterek olası sorunlar için raporlama
 
--   Veritabanı bulma ve geçiş için Azure veritabanı yönetim hizmeti ile tümleştirme
+- Veritabanı bulma ve geçiş için Azure veritabanı yönetim hizmeti ile tümleştirme
 
 Azure geçirme iş yüklerinizi iş için en az etkiyle geçirmek ve Azure'da beklendiği gibi çalışmazsa güven verir. Doğru Araçlar ve Kılavuzu, en çok önemli performans modemlerin sırasında yatırım getirisi elde edebilirsiniz ve güvenilirlik gereksinimlerini karşılıyor.
 
@@ -85,23 +86,23 @@ Kısmen özellikle karma ortamlar için Site Recovery yapılan ayrıca şirket i
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Azure veri geçirme**
+- **Azure veri geçirme**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure geçirme**
+- **Azure geçirme**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **Site Recovery ile azure'a geçirme**
+- **Site Recovery ile azure'a geçirme**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Azure Site Recovery hizmetine genel bakış**
+- **Azure Site Recovery hizmetine genel bakış**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **Azure VM'ler için aws'deki geçirme VM'ler**
+- **Azure VM'ler için aws'deki geçirme VM'ler**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 

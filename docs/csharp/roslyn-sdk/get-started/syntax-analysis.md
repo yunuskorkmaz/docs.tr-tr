@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Sözdizimi Analizi ile çalışmaya başlama
 
@@ -73,7 +73,7 @@ Herhangi bir şey sözdizimi API'lerini kullanarak bir kod dosyasında bulabilir
 
 ### <a name="manual-traversal"></a>El ile geçişi
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub örnekleri depomuzda](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Sözdizimi ağacı türleri devralma programı farklı konumlarda geçerli farklı söz dizimi öğeleri tanımlamak için kullanın. Genellikle bu API'leri kullanarak atama özellikleri veya belirli türetilmiş türler için koleksiyon üyeleri anlamına gelir. Aşağıdaki örneklerde, atama ve atamalar açıkça yazılan değişkenler kullanılarak ayrı deyim ' dir. Dönüş türleri API ve çalışma zamanı türü, döndürülen nesnelerin görmek için kodu okuyabilir. Uygulamada, incelenmesi nesnelerin türünü tanımlamak için API adları kullanır ve örtük olarak yazılan değişkenler kullanmak için daha yaygın bir durumdur.
@@ -103,7 +103,7 @@ Genellikle, kodu hakkında bilgi edinmek için ağacı gezme. Bu örnekte, API k
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-Bu üye olduğu bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Kapsamındaki her şeyi temsil eden `namespace Hello World` bildirimi. Hangi düğümleri içinde bildirilen incelemek için aşağıdaki kodu ekleyin `HelloWorld` ad alanı:
+Bu üye olduğu bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Kapsamındaki her şeyi temsil eden `namespace HelloWorld` bildirimi. Hangi düğümleri içinde bildirilen incelemek için aşağıdaki kodu ekleyin `HelloWorld` ad alanı:
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>Sorgu yöntemleri
 
-Ağaçları çapraz geçiş yapan yanı sıra üzerinde tanımlanan sorgu yöntemleri kullanarak sözdizimi ağacı de keşfedebilirsiniz <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Bu yöntemleri ile XPath tanıdık bir kişiye hemen bilgi sahibi olmanız gerekir. Hızlı bir şekilde bir ağaç öğeleri bulmak için bu yöntemleri LINQ ile kullanabilirsiniz. <xref:Microsoft.CodeAnalysis.SyntaxNode> Sorgu yöntemleri gibi sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes>.
+Ağaçları çapraz geçiş yapan yanı sıra üzerinde tanımlanan sorgu yöntemleri kullanarak sözdizimi ağacı de keşfedebilirsiniz <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>. Bu yöntemleri ile XPath tanıdık bir kişiye hemen bilgi sahibi olmanız gerekir. Hızlı bir şekilde bir ağaç öğeleri bulmak için bu yöntemleri LINQ ile kullanabilirsiniz. <xref:Microsoft.CodeAnalysis.SyntaxNode> Sorgu yöntemleri gibi sahip <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>.
 
 Bağımsız değişkeni bulmak için bu sorguyu yöntemleri kullanabilir `Main` ağaç gezinme alternatif olarak yöntemi. ' In altına aşağıdaki kodu ekleyin, `Main` yöntemi:
 
@@ -163,7 +163,7 @@ Bu örnek uygulayan bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 
 
 Yeni C# oluşturma **tek başına kod analizi aracı** proje; adlandırın "**SyntaxWalker**."
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart). Örnek github'daki Bu öğreticide açıklanan her iki proje içerir.
+Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Örnek github'daki Bu öğreticide açıklanan her iki proje içerir.
 
 Önceki örnekte olduğu gibi analiz etmeyi deneyeceğimiz program metnin tutmak için bir dize sabitine tanımlayabilirsiniz:
 
@@ -171,7 +171,7 @@ Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://git
 
 Bu kaynak metni içeren `using` yönergeleri dağılmış dört farklı konumlar arasında: dosya düzeyinde, en üst düzey ad ve iki iç içe geçmiş ad alanı. Bu örneği kullanmak için bir çekirdek senaryo vurgular <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sorgu koduna sınıfı. Her düğüm bildirimlerini kullanarak bulmak için kök sözdizimi ağacındaki ziyaret etmek için sıkıcı olabilir. Bunun yerine, türetilmiş bir sınıf oluşturun ve yalnızca geçerli düğüm ağacında kullanarak bir olduğunda çağrılan yöntemi yok sayın yönergesi. Başka bir düğüm türleri üzerinde herhangi bir iş, ziyaretçi yapmaz. Bu tek bir yöntem her biri inceler `using` deyimleri ve olmayan ad alanlarını koleksiyonu derlemeler `System` ad alanı. Oluşturacağınız bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> tüm inceler `using` ancak deyimleri `using` deyimleri.
 
-Olduğunuz tanımlamak, program metin oluşturmak gereken bir `SyntaxTree` ve o Ağaç kökü alın:
+Program metin tanımladığınız, oluşturmak gereken bir `SyntaxTree` ve o Ağaç kökü alın:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
@@ -198,23 +198,23 @@ Son olarak, iki oluşturmak için kod satırı eklemeniz gerekir `UsingCollector
 Derleme ve programı çalıştırın. Şu çıktı görmeniz gerekir:
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

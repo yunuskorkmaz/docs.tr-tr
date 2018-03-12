@@ -3,16 +3,16 @@ title: ".NET Core Windows için Önkoşullar"
 description: "Windows üzerinde gereken bağımlılıkları geliştirmek ve .NET Core uygulamaları çalıştırmak için makine öğrenin."
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>.NET Core Windows için Önkoşullar
 
@@ -100,5 +100,6 @@ Visual Studio'da .NET Core 1.x uygulamaları geliştirmek için [yükleyip Visua
 >
 > * Üzerinde **yardımcı** menüsünde seçin **Microsoft Visual Studio hakkında**.
 > * İçinde **Microsoft Visual Studio hakkında** iletişim kutusunda, sürüm numarasını doğrulayın.
->   * .NET Core 2.x uygulamaları, Visual Studio 2017 sürüm 15.3 (26730.01) ya da daha yüksek.
->   * .NET Core 1.x uygulamaları, Visual Studio 2017 sürüm 15.0 (26228.04) ya da daha yüksek.
+>   * .NET Core 2.1 Preview 1 uygulamalar, Visual Studio 2017 sürüm 15,6 için Önizleme 6 veya üstünü.
+>   * .NET Core 2.0 uygulamalar için Visual Studio 2017 15.3 veya daha yüksek bir sürümü.
+>   * .NET Core 1.x uygulamalar için Visual Studio 2017 15.0 veya daha yüksek bir sürümü.

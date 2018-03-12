@@ -4,36 +4,37 @@ description: "Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlatılan özeti 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlatılan özeti
 
-Bu e-kitap boyutunu sınırlamak için ek teknik belgeler ve tam yönergeler bulunan bir GitHub deposuna yaptık. Bu bölümde açıklanan izlenecek yollar çevrimiçi bir dizi adım adım kurulum Windows kapsayıcıları ve Azure dağıtımına dayalı birden çok ortamlarının kapsar.
+Bu e-kitap boyutunu sınırlamak için ek teknik belgeler ve tam izlenecek yollar GitHub deposunda kullanılabilir yapılmıştır. Bu bölümde açıklanan izlenecek yollar çevrimiçi bir dizi adım adım kurulum Windows kapsayıcıları ve Azure dağıtımına dayalı birden çok ortamlarının kapsar.
 
-Aşağıdaki bölümlerde, her gözden geçirme hakkında-ITS nedir açıklanır hedefleri, kendi üst düzey görme- ve ilgili olan görevleri diyagramı sağlar. İzlenecek yollar kendilerini alabilirsiniz içinde *eShopModernizing* uygulamaları GitHub deposuna wiki adresindeki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Aşağıdaki bölümlerde ne her gözden geçirme, hedefler ve üst düzey görme hakkında ve ilgili olan görevleri diyagramı sağlar açıklanmıştır. İzlenecek yollar kendilerini alabilirsiniz içinde *eShopModernizing* uygulamaları GitHub deposuna wiki adresindeki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-# <a name="technical-walkthrough-list"></a>Teknik kılavuz listesi
+## <a name="technical-walkthrough-list"></a>Teknik kılavuz listesi
 
 Aşağıdaki get-started izlenecek kaldırın ve kapsayıcılar kullanarak kaydırma ve Azure içinde birden çok dağıtım seçenekleri kullanarak Taşı örnek uygulamaları için tutarlı ve kapsamlı teknik Kılavuzu sağlamak.
 
 Her biri aşağıdaki izlenecek github'da kullanılabilir olan yeni örnek eShopLegacy ve eShopModernizing uygulamaları kullanır [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
--   **Elektronik Mağaza eski uygulamaları turu**
+- **Elektronik Mağaza eski uygulamaları turu**
 
--   **Var olan .NET uygulamalarınız Windows kapsayıcılarla containerize**
+- **Var olan .NET uygulamalarınız Windows kapsayıcılarla containerize**
 
--   **Azure VM'ler kapsayıcıları tabanlı Windows uygulamanızı dağıtma**
+- **Azure VM'ler kapsayıcıları tabanlı Windows uygulamanızı dağıtma**
 
--   **Azure kapsayıcı Hizmeti'nde Kubernetes Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma**
+- **Azure kapsayıcı Hizmeti'nde Kubernetes Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma**
 
--   **Azure Service Fabric Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma**
+- **Azure Service Fabric Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Gözden geçirme 1: Elektronik Mağaza eski uygulamaları turu
 
@@ -97,13 +98,13 @@ MVC, Web Forms veya WCF, üretim, geliştirme ve test ortamları için temel gel
 
 Bu kılavuzun amacı, var olan bir .NET Framework uygulamasını containerizing için çeşitli seçenekler göstermektir. Şunları yapabilirsiniz:
 
--   Uygulamanızı kullanarak containerize [Docker için Visual Studio 2017 Araçları](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 veya sonraki sürümler).
+- Uygulamanızı kullanarak containerize [Docker için Visual Studio 2017 Araçları](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 veya sonraki sürümler).
 
--   El ile ekleyerek uygulamanızı containerize bir [Dockerfile](https://docs.docker.com/engine/reference/builder/)ve ardından kullanarak [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
+- El ile ekleyerek uygulamanızı containerize bir [Dockerfile](https://docs.docker.com/engine/reference/builder/)ve ardından kullanarak [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
 
--   Uygulamanızı kullanarak containerize [Img2Docker](https://github.com/docker/communitytools-image2docker-win) Aracı (Docker açık kaynak aracından).
+- Uygulamanızı kullanarak containerize [Img2Docker](https://github.com/docker/communitytools-image2docker-win) Aracı (Docker açık kaynak aracından).
 
-Bu kılavuz Docker yaklaşım için Visual Studio 2017 araçları odaklanır, ancak diğer iki yaklaşım Dockerfiles kullanmanın bakımından oldukça benzer.
+Bu kılavuz Docker yaklaşım için Visual Studio 2017 araçları odaklanır, ancak diğer iki yaklaşım Dockerfiles kullanarak in regard to oldukça benzer.
 
 ### <a name="scenario"></a>Senaryo
 
@@ -137,7 +138,7 @@ Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
 
 ### <a name="overview"></a>Genel Bakış
 
-Bir Windows Server 2016 VM Azure Docker konakta dağıtma hızlı geliştirme/test/hazırlama ortamlarını ayarlama ayarlamanıza olanak tanır. Bu ayrıca sınayıcılar veya iş kullanıcıları uygulama doğrulamak ortak bir yer sağlar. Sanal makineleri aynı zamanda geçerli Iaas üretim ortamlarında olabilir.
+Docker ana bilgisayar üzerinde bir Windows Server 2016 sanal makine (VM) azure'a dağıtma hızlı geliştirme/test/hazırlama ortamlarını ayarlama ayarlamanıza olanak tanır. Bu ayrıca sınayıcılar veya iş kullanıcıları uygulama doğrulamak ortak bir yer sağlar. VM'ler, bir hizmet (Iaas) üretim ortamlarında geçerli alt yapı de olabilir.
 
 ### <a name="goals"></a>Hedefleri
 
@@ -167,13 +168,13 @@ Bazı senaryolarda bu kılavuzda ele alınmıştır.
 
 ### <a name="azure-vms-for-windows-containers"></a>Azure VM'ler Windows kapsayıcıları için
 
-Yalnızca Windows Server 2016, Windows 10 tabanlı VM'ler Azure VM'ler için Windows kapsayıcılar olan veya sonraki sürümleri, Docker altyapısına her ikisi de ayarlayın. Çoğu durumda, Windows Server 2016 Azure Vm'lerde kullanır.
+Azure VM'ler için Windows Windows Server 2016, Windows 10 veya sonraki sürümler göre VM'ler kapsayıcılardır, Docker altyapısına her ikisi de ayarlayın. Çoğu durumda, Windows Server 2016 Azure Vm'lerde kullanılır.
 
 Azure şu anda sağlar adlı bir VM'den **Windows Server 2016 kapsayıcılarla**. Bu VM, Windows Server Core veya Windows Nano Server ile yeni Windows Server kapsayıcı özelliği denemek için kullanabilirsiniz. Kapsayıcı işletim sistemi görüntüleri yüklenir ve ardından VM ile Docker kullanıma hazırdır.
 
 ### <a name="benefits"></a>Yararları
 
-Azure'a dağıtırken, şirket içi Windows Server 2016 VM'ler için Windows kapsayıcıları dağıtılabilir rağmen kullanıma hazır Windows Server kapsayıcı VM'ler ile çalışmaya başlamak için daha kolay bir yolu alın. Ayrıca Sınayıcılar ve otomatik ölçeklenebilirlik Azure VM ölçek kümesi aracılığıyla erişilebilen ortak bir çevrimiçi konuma elde edersiniz.
+Azure'a dağıtırken, şirket içi Windows Server 2016 VM'ler için Windows kapsayıcıları dağıtılabilir rağmen kullanıma hazır Windows Server kapsayıcı VM'ler ile çalışmaya başlamak için daha kolay bir yolu alın. Ayrıca Sınayıcılar ve Azure sanal makine ölçek kümeleri aracılığıyla otomatik ölçeklenebilirlik erişebileceği ortak bir çevrimiçi konumu elde edersiniz.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 
@@ -217,25 +218,25 @@ Kubernetes Windows kapsayıcı tabanlı bir uygulamaya dağıtma hakkında bilgi
 
 ### <a name="benefits"></a>Yararları
 
-Kubernetes bir kümede dağıtılması için birçok avantaj vardır. İçinde (varolan düğümleri iç ölçeklenebilirlik) kullanmak istiyorsanız ve sayısını düğümlerinin veya sanal makineleri küme (temel kapsayıcı örnek sayısına göre uygulama genişleme üretime hazır ortamı alma büyük avantaj olmalıdır Genel ölçeklenebilirlik kümenin).
+Kubernetes bir kümede dağıtılması için birçok avantaj vardır. En büyük (varolan düğümleri iç ölçeklenebilirlik) kullanmak istiyorsanız ve sayısını düğümlerinin veya sanal makineleri küme (temel kapsayıcı örnek sayısına göre uygulamanın içinde ölçeklenebilen bir üretime hazır ortamı alma avantajdır Genel ölçeklenebilirlik kümenin).
 
 Azure kapsayıcı hizmeti popüler açık kaynak Araçlar ve teknolojiler özellikle Azure için en iyi duruma getirir. Taşınabilirlik, kapsayıcılarınızı hem uygulama yapılandırmanızı sağlayan açık olan çözüm alın. Boyutu, ana bilgisayar sayısını seçin ve orchestrator araçları-kapsayıcı hizmeti şey işler.
 
 Kubernetes ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmekten aşağıdaki özellikleri, diğerlerinin yanı sıra kolaylaştıran kapsayıcı merkezli bir altyapı planlama için ilerleme:
 
--   Birden çok kapsayıcılara göre uygulamaları
+- Birden çok kapsayıcılara göre uygulamaları
 
--   Kapsayıcı örnekleri ve yatay otomatik ölçeklendirmeyi çoğaltma
+- Kapsayıcı örnekleri ve yatay otomatik ölçeklendirmeyi çoğaltma
 
--   Adlandırma ve (örneğin, iç DNS) bulma
+- Adlandırma ve (örneğin, iç DNS) bulma
 
--   Yükünü dengeleme
+- Yükünü dengeleme
 
--   Güncelleştirmeleri alınıyor
+- Güncelleştirmeleri alınıyor
 
--   Gizli dağıtma
+- Gizli dağıtma
 
--   Uygulama durumu denetimleri
+- Uygulama durumu denetimleri
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -251,7 +252,7 @@ Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
 
 ### <a name="overview"></a>Genel Bakış
 
-Windows kapsayıcılarında tabanlı bir uygulama hızlı bir şekilde daha uzakta Iaas Vm'lerden taşıma platformlarda kullanmaları gerekir. Bu kolayca yüksek ölçeklenebilirlik elde etmek için gereklidir ve daha iyi ölçeklenebilirlik otomatik ve önemli bir iyileştirme için dağıtımları ve sürüm oluşturma otomatik. Azure bulutta kullanılabilir, ancak şirket içi kullanmak de kullanılabilir olan, Azure Service Fabric orchestrator kullanarak veya farklı bir genel bulut bile, bu hedefleri elde edebilirsiniz.
+Windows kapsayıcılarında hızla tabanlı bir uygulama daha uzakta Iaas Vm'lerden taşıma platformları kullanması gerekir. Bu kolayca yüksek ölçeklenebilirlik elde etmek için gereklidir ve daha iyi ölçeklenebilirlik otomatik ve önemli bir iyileştirme için dağıtımları ve sürüm oluşturma otomatik. Azure bulutta kullanılabilir, ancak şirket içi kullanmak de kullanılabilir olan, Azure Service Fabric orchestrator kullanarak veya farklı bir genel bulut bile, bu hedefleri elde edebilirsiniz.
 
 ### <a name="goals"></a>Hedefleri
 
@@ -277,37 +278,37 @@ Bu kılavuzda Windows kapsayıcı tabanlı bir uygulama için Azure Service Fabr
 
 ## <a name="benefits"></a>Yararları
 
-Service Fabric, kümeye dağıtma avantajlarını Kubernetes kullanmanın avantajları için benzerdir. Tek fark, ancak Service Fabric erken kadar Windows kapsayıcıları için Önizleme'de 2017 kalan edildi Kubernetes karşılaştırıldığında Windows uygulamaları için çok olgun üretim ortamında olmasıdır. (Kubernetes daha da olgun için bir Linux ortamıdır). 
+Service Fabric, kümeye dağıtma avantajlarını Kubernetes kullanmanın avantajları için benzerdir. Tek fark, yine de olan Service Fabric Kubernetes sürüm 1.9 Windows kapsayıcı için bir beta aşamasında olan Kubernetes karşılaştırıldığında Windows uygulamaları için daha da olgun bir üretim ortamında olduğunu (aralık 2017). Kubernetes Linux daha da olgun bir ortamdır.
 
-İçinde (varolan düğümleri iç ölçeklenebilirlik) kullanmak istiyorsanız ve sayısına göre kapsayıcı örnek sayısına göre uygulama genişleme üretime hazır ortamı alma Azure Service Fabric kullanmanın ana avantajı olduğu düğümler ve (genel ölçeklenebilirlik kümenin) kümedeki sanal makineleri.
+Azure Service Fabric kullanmanın ana Avantajı (varolan düğümleri iç ölçeklenebilirlik) kullanmak istiyorsanız ve sayısına göre kapsayıcı örnek sayısına göre uygulamanın içinde ölçeklenebilen bir üretime hazır ortamı alma olduğu düğümler ve (genel ölçeklenebilirlik kümenin) kümedeki sanal makineleri.
 
 Azure Service Fabric taşınabilirlik kapsayıcılarınızı hem uygulama yapılandırmanızı sağlar. Azure'da küme ya da şirket içi, kendi veri merkezinizde yüklemeyi Service Fabric olabilir. Bile bir Service Fabric kümesi farklı bir buluta gibi yükleyebilirsiniz [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
 Service Fabric ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmekten aşağıdaki özellikleri, diğerlerinin yanı sıra kolaylaştıran kapsayıcı merkezli bir altyapı planlama için ilerleme:
 
--   Birden çok kapsayıcılara göre uygulamalar.
+- Birden çok kapsayıcılara göre uygulamalar.
 
--   Kapsayıcı örnekleri ve yatay otomatik ölçeklendirmeyi çoğaltılıyor.
+- Kapsayıcı örnekleri ve yatay otomatik ölçeklendirmeyi çoğaltılıyor.
 
--   Adlandırma ve (örneğin, iç DNS) bulma.
+- Adlandırma ve (örneğin, iç DNS) bulma.
 
--   Yükü Dengeleme.
+- Yükü Dengeleme.
 
--   Güncelleştirmeleri alınıyor.
+- Güncelleştirmeleri alınıyor.
 
--   Gizli dağıtma.
+- Gizli dağıtma.
 
--   Uygulama durumunu denetler.
+- Uygulama durumunu denetler.
 
 Aşağıdaki özellikleri Service Fabric (diğer orchestrators karşılaştırıldığında) de özeldir:
 
--   Güvenilir hizmetler uygulama modeli üzerinden durum bilgisi olan hizmetler yeteneği.
+- Güvenilir hizmetler uygulama modeli üzerinden durum bilgisi olan hizmetler yeteneği.
 
--   Reliable Actors uygulama modeli üzerinden aktörler deseni.
+- Reliable Actors uygulama modeli üzerinden aktörler deseni.
 
--   Windows veya Linux kapsayıcıları yanı sıra tam kemik işlemleri dağıtın.
+- Windows veya Linux kapsayıcıları yanı sıra tam kemik işlemleri dağıtın.
 
--   Gelişmiş çalışırken güncelleştirmeleri ve sistem durumu denetimleri.
+- Gelişmiş çalışırken güncelleştirmeleri ve sistem durumu denetimleri.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 

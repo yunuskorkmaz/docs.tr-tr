@@ -5,36 +5,38 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştirme ayarlarını belirtir.  
   
- \<Sistem. ServiceModel >  
+ \<system.ServiceModel>  
 \<davranışları >  
-\<serviceBehaviors >  
-\<davranışı >  
-\<serviceSecurityAudit >  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <serviceSecurityAudit   
    auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessAndFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessAndFailure"  
+   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
    suppressAuditFailure="Boolean"  
 />  
 ```  
@@ -48,8 +50,8 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 |---------------|-----------------|  
 |auditLogLocation|Denetim günlüğü konumunu belirtir. Geçerli değerler şunlardır:<br /><br /> -Varsayılan: Güvenlik olaylarını uygulama günlüğüne olay günlüğüne ve Windows XP, Windows Server 2003 ve Windows Vista yazılır.<br />-Uygulama: Denetim olayları uygulama olay günlüğüne yazılır.<br />-Güvenlik: Denetim olaylarını güvenlik olay günlüğüne yazılır.<br /><br /> Varsayılan değer varsayılandır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Denetim günlüğü yazma hataları gizleme için davranışını belirten bir Boole değeri.<br /><br /> Uygulamalar için Denetim günlüğü yazma hataları için bildirilmesi gerekir. Uygulamanızın denetim hataları işlemek üzere tasarlanmamıştır, Denetim günlüğü yazma hataları gizlemek için bu öznitelik kullanmanız gerekir.<br /><br /> Bu öznitelik değilse `true`, denetim olayları yazma girişimlerine karşı neden özel durumları OutOfMemoryException, StackOverFlowException, ThreadAbortException ve ArgumentException dışında sistem tarafından işlenir ve için yayılmaz uygulama. Bu öznitelik değilse `false`, denetim olayları yazmak için denemelerinden kaynaklanan tüm özel durumları uygulamaya geçirilir.<br /><br /> Varsayılan, `true` değeridir.|  
-|serviceAuthorizationAuditLevel|Denetim günlüğüne yetkilendirme olayları türlerini belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Hiçbir hizmet yetkilendirme olaylarının denetlenmesi gerçekleştirilir.<br />-BAŞARI: Yalnızca başarılı hizmet yetkilendirme olayları denetlenir.<br />-Hata: Yalnızca hatası hizmeti yetkilendirme olayları denetlenir.<br />-SuccessAndFailure: Hem başarı ve başarısızlık hizmeti yetkilendirme olayları denetlenir.<br /><br /> Varsayılan değer, Yok'tur. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|İleti kimlik doğrulama denetim olayları günlüğe türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Denetim olayları üretilir.<br />-BAŞARI: Yalnızca başarılı güvenlik (tam doğrulama ileti imzası doğrulama, şifreleme ve belirtecini doğrulama gibi) olaylar günlüğe kaydedilir.<br />-Hata: Yalnızca hatası olaylarının günlüğe kaydedilir.<br />-SuccessAndFailure: Hem başarılı ve başarısız olaylar günlüğe kaydedilir.<br /><br /> Varsayılan değer, Yok'tur. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLevel>.|  
+|serviceAuthorizationAuditLevel|Denetim günlüğüne yetkilendirme olayları türlerini belirtir. Geçerli değerler şunlardır:<br /><br /> -Yok: Hiçbir hizmet yetkilendirme olaylarının denetlenmesi gerçekleştirilir.<br />-BAŞARI: Yalnızca başarılı hizmet yetkilendirme olayları denetlenir.<br />-Hata: Yalnızca hatası hizmeti yetkilendirme olayları denetlenir.<br />-SuccessOrFailure: Hem başarı ve başarısızlık hizmeti yetkilendirme olayları denetlenir.<br /><br /> Varsayılan değer, Yok'tur. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|İleti kimlik doğrulama denetim olayları günlüğe türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -Hiçbiri: Denetim olayları üretilir.<br />-BAŞARI: Yalnızca başarılı güvenlik (tam doğrulama ileti imzası doğrulama, şifreleme ve belirtecini doğrulama gibi) olaylar günlüğe kaydedilir.<br />-Hata: Yalnızca hatası olaylarının günlüğe kaydedilir.<br />-SuccessOrFailure: Hem başarılı ve başarısız olaylar günlüğe kaydedilir.<br /><br /> Varsayılan değer, Yok'tur. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,7 +60,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yapılandırma öğesi denetlemek için kullanılan [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] kimlik doğrulama olayları. Denetim etkin olduğunda başarılı veya başarısız kimlik doğrulama girişimleri (ya da her ikisi de) denetlenebilir. Üç olay günlüklerini birine yazılır: uygulama, güvenlik veya işletim sistemi sürümü için varsayılan günlük. Olay günlüklerini tüm Windows Olay Görüntüleyicisi'ni kullanarak görüntülenebilir.  
@@ -71,7 +73,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
   
  İleti, ileti olup süresi doldu ve istemci hizmete olup doğrulanabilir müdahale olup olmadığını ileti kimlik doğrulama denetim olaylarını kapsar. Kimlik doğrulaması başarılı oldu veya istemci kimlik yanı sıra başarısız hakkında bilgi sağlar ve uç nokta ileti ileti ile ilişkili eylem birlikte gönderildi.  
   
- Hizmet yetkilendirme denetim olaylarını hizmet Yetkilendirme Yöneticisi tarafından yapılan yetkilendirme kararı kapsar. Bunlar olup yetkilendirme, istemci kimliği ile birlikte başarısız başarılı hakkında bilgi sağlar, uç nokta ileti, ileti, gelen oluşturulan yetkilendirme Bağlam tanıtıcısı ile ilişkili eylem gönderildi gelen ileti ve erişim kararı Yetkilendirme Yöneticisi'ni türü.  
+ Hizmet yetkilendirme denetim olaylarını hizmet Yetkilendirme Yöneticisi tarafından yapılan yetkilendirme kararı kapsar. Olup Yetkilendirme başarılı hakkında bilgi sağlamak veya istemci kimlikle birlikte başarısız oldu, uç nokta ileti, ileti, gelen oluşturulan yetkilendirme Bağlam tanıtıcısı ile ilişkili eylem gönderildi gelen ileti ve erişim kararı Yetkilendirme Yöneticisi'ni türü.  
   
 ## <a name="example"></a>Örnek  
   
