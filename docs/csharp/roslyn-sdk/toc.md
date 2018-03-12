@@ -6,7 +6,7 @@
 
 ## Hızlı başlangıçlar
 ### [Söz dizimi analizi](get-started/syntax-analysis.md)
-### [Anlam Analizi](get-started/semantic-analysis.md)
+### [Anlam analizi](get-started/semantic-analysis.md)
 
 <!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
