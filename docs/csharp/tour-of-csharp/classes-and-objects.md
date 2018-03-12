@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 97559a6e7b24f4a61b49dd4f050747a6d0ccbda0
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -74,7 +74,7 @@ Her bir sınıf üyesi üye erişebilen program metin bölümlerinin denetimleri
 * `private`
     - Bu sınıf için sınırlı erişim
 * `private protected`
-    - İçeren sınıf veya sınıfların sınırlı erişim aynı bütünleştirilmiş kodda içeren türü withing türetilmiş
+    - Aynı bütünleştirilmiş kod içinde içeren türde içeren sınıf veya sınıfların sınırlı erişim türetilmiş
 
 ## <a name="type-parameters"></a>Tür parametreleri
 

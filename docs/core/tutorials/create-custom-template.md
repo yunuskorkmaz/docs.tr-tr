@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Dotnet için özel bir şablon yeni oluştur
 
@@ -40,7 +41,7 @@ Bu öğreticiyi tam bir örnek üzerinden geçmek isterseniz, indirme [örnek pr
 
 ## <a name="create-a-template-from-a-project"></a>Bir şablonu bir proje oluşturun
 
-Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir konsol uygulama projesi için sabit diskinizde bir klasör oluşturun. Bu öğretici proje klasörünün adını olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *belgeler/şablonları* kullanıcının profilindeki. Eğitmen proje şablonu adı şu biçimdedir  *\<şirket adı >.\< Şablon türü >. \<Programlama dili >*, ancak proje ve şablonu istediğiniz herhangi bir şey adı boş.
+Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir konsol uygulama projesi için sabit diskinizde bir klasör oluşturun. Bu öğretici proje klasörünün adını olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *Documents\Templates* kullanıcının profilindeki. Eğitmen proje şablonu adı şu biçimdedir  *\<şirket adı >.\< Şablon türü >. \<Programlama dili >*, ancak proje ve şablonu istediğiniz herhangi bir şey adı boş.
 
 1. Adlı proje kök klasör ekleme *. template.config*.
 1. İçinde *. template.config* klasörü oluşturmak bir *template.json* şablonunuzu yapılandırmak için bir dosya. Daha fazla bilgi ve üye tanımları için *template.json* dosya için bkz: [yeni dotnet için özel şablonlar](../tools/custom-templates.md#templatejson) konu ve [ *template.json* JSON şeması depolama şema](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir k
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Şablon bir NuGet paketi
 
-1. NuGet paketi için bir klasör oluşturun. Öğretici, klasör adı için *GarciaSoftware.ConsoleTemplate.CSharp* kullanılan ve klasör içinde oluşturulan bir *belgeleri/NuGetTemplates* kullanıcının profilini klasöründe. Adlı bir klasör oluşturun *içerik* proje dosyalarını tutmak için yeni şablon klasörünü içinde.
+1. NuGet paketi için bir klasör oluşturun. Öğretici, klasör adı için *GarciaSoftware.ConsoleTemplate.CSharp* kullanılan ve klasör içinde oluşturulan bir *Documents\NuGetTemplates* kullanıcının profilini klasöründe. Adlı bir klasör oluşturun *içerik* proje dosyalarını tutmak için yeni şablon klasörünü içinde.
 1. İle birlikte proje klasörünüzdeki içeriğini kopyalayın, *.template.config/template.json* dosyası içine *içerik* oluşturduğunuz klasör.
 1. Yanına *içerik* klasörüne eklemek bir [ *nuspec* dosya](/nuget/create-packages/creating-a-package). Bir paketin içeriğini açıklayan ve NuGet paketi oluşturma işlemi sürücüleri bir XML bildirim dosyası nuspec dosyasıdır.
    
@@ -77,7 +78,7 @@ Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir k
    | ------------------ | ------ | ----------- |
    | **\<yazarları >**     | dize | Nuget.org profil adları eşleşen paketleri yazarlar, virgülle ayrılmış listesi. Yazarları nuget.org NuGet galerisinde görüntülenir ve paketleri çapraz başvuru yapmak için aynı yazarlar tarafından kullanılır. |
    | **\<Açıklama >** | dize | Paket UI görüntü için uzun bir açıklaması. |
-   | **\<Kimliği >**          | dize | Nuget.org ya da ihtiyacınız arasında benzersiz olması büyük küçük harf duyarsız paket tanımlayıcısı galeri paketi içindeki bulunacağı. Kimlikleri boşluk veya bir URL geçerli değil ve genellikle .NET ad alanı kurallarına karakter içerebilir. Bkz: [benzersiz paket tanımlayıcısı seçme ve sürüm numarasını ayarlama](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) Kılavuzu. |
+   | **\<id>**          | dize | Nuget.org ya da ihtiyacınız arasında benzersiz olması büyük küçük harf duyarsız paket tanımlayıcısı galeri paketi içindeki bulunacağı. Kimlikleri boşluk veya bir URL geçerli değil ve genellikle .NET ad alanı kurallarına karakter içerebilir. Bkz: [benzersiz paket tanımlayıcısı seçme ve sürüm numarasını ayarlama](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) Kılavuzu. |
    | **\<packageType >** | dize | Bu öğe içine yerleştirin bir  **\<packageTypes >** öğesi arasında  **\<meta verileri >** öğeleri. Ayarlama `name` özniteliği  **\<packageType >** öğesine `Template`. |
    | **\<Sürüm >**     | dize | Major.minor.patch desen aşağıdaki şekilde paketin sürümü. Sürüm numaraları, yayın öncesi soneki içerebilir, açıklandığı gibi [yayın öncesi sürümleri](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
@@ -102,10 +103,10 @@ Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir k
    </package>
    ```
 
-1. [Paket oluşturma](/nuget/create-packages/creating-a-package#creating-the-package) kullanarak `nuget pack <PATH_TO_NUSPEC_FILE>` komutu. Aşağıdaki komutu NuGet varlıklar tutan klasör konumunda varsayar *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*. Ancak klasörü, sisteminizde yerde yerleştirdiğiniz `nuget pack` komut yolu kabul *nuspec* dosyası:
+1. [Paket oluşturma](/nuget/create-packages/creating-a-package#creating-the-package) kullanarak `nuget pack <PATH_TO_NUSPEC_FILE>` komutu. Aşağıdaki komutu NuGet varlıklar tutan klasör konumunda varsayar * C:\Users\\\<kullanıcı > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. Ancak klasörü, sisteminizde yerde yerleştirdiğiniz `nuget pack` komut yolu kabul *nuspec* dosyası:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Paket için nuget.org yayımlama
@@ -119,7 +120,7 @@ Bir NuGet paketi yayımlamak için ' ndaki yönergeleri izleyin [oluşturma ve b
 Şablondan yüklemek için *nupkg* , üretilen, dosya kullanım `dotnet new` komutunu `-i|--install` seçeneği ve yolunu girin *nupkg* dosyası:
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Şablon nuget.org depolanan bir NuGet paketi yükleyin
@@ -187,14 +188,14 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp.1.0.0
 Proje şablonu depolanır öğretici varsayar *belgeler/şablonları* kullanıcının profilini klasörü. Aşağıdaki yerine komutu şablonunu bu konumdan yüklemek \<kullanıcı > kullanıcının profil adı ile:
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Bir proje şablonu oluşturma
 
 Şablon dosya sisteminden yüklendikten sonra şablonu yürüterek kullanmaya `dotnet new <TEMPLATE>` şablon motoru istediğiniz dizinin komutu animasyonun çıktı yerleştirilen (kullanmakta olduğunuz sürece `-o|--output` seçeneği belirli bir dizin belirtin). Daha fazla bilgi için bkz: [ `dotnet new` seçenekleri](~/docs/core/tools/dotnet-new.md#options). Şablonun kısa ad doğrudan tedarik `dotnet new` komutu.
 
-Öğesinde oluşturulan yeni bir proje klasöründeki *C:/Users/\<kullanıcı >/projeleri/belgeler/MyConsoleApp*, bir proje oluşturun `garciaconsole` şablonu:
+Öğesinde oluşturulan yeni bir proje klasöründeki *C:\Users\\\<kullanıcı > \Documents\Projects\MyConsoleApp*, bir proje oluşturun `garciaconsole` şablonu:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Şablon kaldırma
 
-Yerel dosya sistemine şablon oluşturduysanız *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, kendisiyle kaldırmak `-u|--uninstall` anahtarı ve şablonun yolunu klasörü:
+Yerel dosya sistemine şablon oluşturduysanız *C:\Users\\\<kullanıcı > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*, kendisiyle kaldırmak `-u|--uninstall` anahtar ve yolu Şablon klasör:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Şablon, yerel dosya sisteminden kaldırmak için yol tam olarak nitelemek gerekir. Örneğin, *C:/Users/\<kullanıcı > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak *./GarciaSoftware.ConsoleTemplate.CSharp* içeren gelen Klasör almayacak.
+> Şablon, yerel dosya sisteminden kaldırmak için yol tam olarak nitelemek gerekir. Örneğin, *C:\Users\\\<kullanıcı > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak *./GarciaSoftware.ConsoleTemplate.CSharp* kapsayan klasörden almayacak.
 > Ayrıca, şablonu yoldaki son sonlandırma dizin eğik çizgi eklemeyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.

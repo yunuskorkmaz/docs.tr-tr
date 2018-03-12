@@ -17,21 +17,21 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7536d06c971251fb857fabefc95a50ae4389f785
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
-<a name="top"></a>Kovaryans ve kontravaryans daha az kullanacak şekilde özelliği başvuran koşulları'nı (daha az belirli) türetilmiş veya daha fazla başlangıçta belirtilenden türü (daha fazla özel) türetilmiş markalarıdır. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Adlı bir temel sınıf örnekleri varsayın `Base` ve adlı türetilmiş bir sınıf `Derived`.  
+<a name="top"></a> Kovaryans ve kontravaryans (ayrıntılı) fazla türetilmiş bir tür veya başlangıçta belirtilenden daha az türetilmiş bir tür (daha az belirli) kullanacak şekilde özelliği başvuran terimler. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Adlı bir temel sınıf örnekleri varsayın `Base` ve adlı türetilmiş bir sınıf `Derived`.  
   
 -   `Covariance`  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Birlikte Değişen Tür Parametreleriyle Genel Arabirimler  
  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], birkaç genel arabirimler eşdeğişken türü parametrelerine sahip; örneğin: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, ve <xref:System.Linq.IGrouping%602>. Bu arabirimlerin tüm tür parametreleri birlikte değişen olduğundan, tür parametreleri yalnızca üyelerin dönüş türleri için kullanılır.  
   
- Aşağıdaki örnekte, birlikte değişen tür parametreleri gösterilmektedir. İki tür örnek tanımlar: `Base` sahip adlı bir statik yöntem `PrintBases` alan bir `IEnumerable<Base>` (`IEnumerable(Of Base)` Visual Basic'te) ve öğeleri yazdırır. `Derived`öğesinden devralınan `Base`. Boş bir örnek oluşturur `List<Derived>` (`List(Of Derived)` Visual Basic'te) ve bu tür için geçirilebileceği gösterilmektedir `PrintBases` ve türü değişkenine atanan `IEnumerable<Base>` atama olmadan. <xref:System.Collections.Generic.List%601>uygulayan <xref:System.Collections.Generic.IEnumerable%601>, tek bir eşdeğişken türü parametresine sahiptir. Eşdeğişken tür parametresi neden nedeni örneği `IEnumerable<Derived>` yerine kullanılan `IEnumerable<Base>`.  
+ Aşağıdaki örnekte, birlikte değişen tür parametreleri gösterilmektedir. İki tür örnek tanımlar: `Base` sahip adlı bir statik yöntem `PrintBases` alan bir `IEnumerable<Base>` (`IEnumerable(Of Base)` Visual Basic'te) ve öğeleri yazdırır. `Derived` öğesinden devralınan `Base`. Boş bir örnek oluşturur `List<Derived>` (`List(Of Derived)` Visual Basic'te) ve bu tür için geçirilebileceği gösterilmektedir `PrintBases` ve türü değişkenine atanan `IEnumerable<Base>` atama olmadan. <xref:System.Collections.Generic.List%601> uygulayan <xref:System.Collections.Generic.IEnumerable%601>, tek bir eşdeğişken türü parametresine sahiptir. Eşdeğişken tür parametresi neden nedeni örneği `IEnumerable<Derived>` yerine kullanılan `IEnumerable<Base>`.  
   
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
@@ -182,11 +182,11 @@ ms.lasthandoff: 12/23/2017
   
 |Tür|Birlikte değişken türde parametreler|Değişken karşıtı türde parametreler|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601>Hedef<xref:System.Action%6016>||Evet|  
+|<xref:System.Action%601> Hedef <xref:System.Action%6016>||Evet|  
 |<xref:System.Comparison%601>||Evet|  
 |<xref:System.Converter%602>|Evet|Evet|  
 |<xref:System.Func%601>|Evet||  
-|<xref:System.Func%602>Hedef<xref:System.Func%6017>|Evet|Evet|  
+|<xref:System.Func%602> Hedef <xref:System.Func%6017>|Evet|Evet|  
 |<xref:System.IComparable%601>||Evet|  
 |<xref:System.Predicate%601>||Evet|  
 |<xref:System.Collections.Generic.IComparer%601>||Evet|  

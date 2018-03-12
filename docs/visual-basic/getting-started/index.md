@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerin bu bölümde Visual Basic uygulama geliştirme ile çalışmaya başlamanıza yardımcı olur.  
@@ -46,9 +46,9 @@ Sık karşılaşılan sorunların yanıtlarını bulmanıza yardımcı olabilece
 
 ## <a name="see-also"></a>Ayrıca bkz.
  [Get Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Ücretsiz sürümleri de dahil olmak üzere, Visual basic desteği içeren Visual Studio sürümleri için indirme bağlantılar sağlar.  
+ Ücretsiz sürümleri de dahil olmak üzere, Visual Basic desteği içeren Visual Studio sürümleri için indirme bağlantılar sağlar.  
 
- [Yeni başlayanlar için Visual Basic temelleri](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
+ [Yeni başlayanlar için Visual Basic temelleri](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Visual Basic programlama temelleri öğretilmektedir Microsoft Virtual Academy indirmelere.
 
  [Nesne Odaklı Programlama](../programming-guide/concepts/object-oriented-programming.md)  

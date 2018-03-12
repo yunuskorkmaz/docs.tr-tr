@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>Nasıl yapılır: dizeleri arama
 
@@ -60,7 +60,7 @@ Arama deseni arama metni tanımlar. Aşağıdaki tabloda her öğeye arama desen
 
 ## <a name="does-a-string-follow-a-pattern"></a>Bir dizeyi bir desenle takip ediyor mu?
 
-Aşağıdaki kod, bir dizideki her dizesinin biçimi doğrulamak için normal ifadeler kullanır. Doğrulama her dize basamak üç grup çizgilerle ayrılır bir telefon numarası form sahip olmasını gerektirir, ilk iki grupları üç rakam ve dört basamak üçüncü grubunu içerir. Normal ifade arama deseni kullanır `^\\d{3}-\\d{3}-\\d{4}$`. Daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).
+Aşağıdaki kod, bir dizideki her dizesinin biçimi doğrulamak için normal ifadeler kullanır. Doğrulama her dize basamak üç grup çizgilerle ayrılır bir telefon numarası form sahip olmasını gerektirir, ilk iki grupları üç rakam ve dört basamak üçüncü grubunu içerir. Normal ifade arama deseni kullanır `^\\d{3}-\\d{3}-\\d{4}$`. Daha fazla bilgi için bkz: [normal ifade dili - hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 | deseni  | Açıklama                             |
 | -------- |-------------------------------------|

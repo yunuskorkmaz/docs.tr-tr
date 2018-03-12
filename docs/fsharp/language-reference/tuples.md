@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Demetler
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>C# başlıkları ile birlikte çalışma
 
-C# 7 Dil diziler kullanıma sunuldu.  C# ve bu yapılar ve F # yapısı diziler eşdeğer olan tanımlama grubu.  Birlikte çalışmanız gerekiyorsa, C# diziler kullanır, yapı dizilerini kullanmanız gerekir.
+C# 7 Dil diziler kullanıma sunuldu.  C# diziler yapılar ve F # yapısı diziler eşdeğerdir.  C# ile çalışmanız gerekiyorsa, yapı dizilerini kullanmanız gerekir.
 
 Bunu yapmak kolaydır.  Örneğin, C# sınıfına bir tanımlama grubu geçirmek ve aynı zamanda bir tanımlama grubu olan sonucunu kullanmak zorunda düşünün:
 
@@ -133,6 +133,6 @@ Diziler birkaç genel türlerden birinde, tüm adlandırılmış nesnelerine der
 Yapı diziler (örneğin, `struct (x, y)`), başvuru diziler temelde farklıdır.  İçine derlenmiş <xref:System.ValueTuple> parametre sayısı veya türü parametre sayısı aşırı türü.  Eşdeğer [C# 7 diziler](../../csharp/tuples.md) ve [Visual Basic 2017 diziler](../../visual-basic/programming-guide/language-features/data-types/tuples.md)ve çift yönlü onunla birlikte çalışamaz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
-[F # türleri](fsharp-types.md)
+[F# Türleri](fsharp-types.md)
