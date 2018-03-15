@@ -1,62 +1,85 @@
 ---
-title: "F # Kılavuzu"
-description: "F #, .NET çalıştıran işlevsel bir programlama dili hakkında bilgi edinin."
-keywords: .NET, .NET core
+title: "F# Kılavuzu"
+description: "Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar."
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="f-guide"></a><span data-ttu-id="0fda0-104">F # Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0fda0-104">F# Guide</span></span>
+# <a name="f-guide"></a><span data-ttu-id="0cf7d-103">F# Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0cf7d-103">F# Guide</span></span>
 
-<span data-ttu-id="0fda0-105">F # .NET üzerinde çalışan bir işlevsel programlama dilidir.</span><span class="sxs-lookup"><span data-stu-id="0fda0-105">F# is a functional programming language which runs on .NET.</span></span>  <span data-ttu-id="0fda0-106">Destek işlevsel programlama yapıları yanı sıra nesnesi programlama özellikleri de vardır.</span><span class="sxs-lookup"><span data-stu-id="0fda0-106">In addition to supporting functional programming constructs, it also has object programming capabilities.</span></span>  <span data-ttu-id="0fda0-107">Bu karma nesne yönelimli özellikleriyle işlevsel programlama F # herhangi bir görev karşılamak için kolay bir dil yapar.</span><span class="sxs-lookup"><span data-stu-id="0fda0-107">This hybrid of functional programming with object-oriented capabilities makes F# a pragmatic language for accomplishing any task.</span></span>
+<span data-ttu-id="0cf7d-104">F # .NET üzerinde çalışan bir işlevsel programlama dilidir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-104">F# is a functional programming language that runs on .NET.</span></span> <span data-ttu-id="0cf7d-105">Ayrıca karışım işlevsel ve herhangi bir sorun için kolay çözümleri için nesne programlama izin vererek nesneleri için tam destek içerir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-105">It also has full support for objects, letting you blend functional and object programming for pragmatic solutions to any problem.</span></span>
 
-## <a name="if-youre-new-to-f"></a><span data-ttu-id="0fda0-108">F # için yeni başladıysanız</span><span class="sxs-lookup"><span data-stu-id="0fda0-108">If You're New to F#</span></span> #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-<span data-ttu-id="0fda0-109">F # için yeni başladıysanız ile başlayan [Tur, F #](tour.md) dil genel bir bakış ve bazı programlama kavramları almak için.</span><span class="sxs-lookup"><span data-stu-id="0fda0-109">If you're new to F#, begin with the [Tour of F#](tour.md) to get an overview of the language and some of its programming concepts.</span></span>  <span data-ttu-id="0fda0-110">Visual Studio kullanıyorsanız, aynı içerik öğretici proje şablonu içerir.</span><span class="sxs-lookup"><span data-stu-id="0fda0-110">If you're using Visual Studio, the Tutorial project template contains the same content.</span></span>
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a><span data-ttu-id="0fda0-111">F # ile deneyimli varsa</span><span class="sxs-lookup"><span data-stu-id="0fda0-111">If You're Experienced with F#</span></span> #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-<span data-ttu-id="0fda0-112">F # yararlanabileceğinizi bilmek veya belirli bir dil yapısı hakkında daha fazla bilgi edinmek için bkz: [dil başvurusu](language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="0fda0-112">If you know your way around F#, or want to learn more about a specific language construct, see the [Language Reference](language-reference/index.md).</span></span>  <span data-ttu-id="0fda0-113">Tüm F # dili özelliklerinden kapsamlı bir kılavuzdur.</span><span class="sxs-lookup"><span data-stu-id="0fda0-113">It's a thorough guide of all F# language capabilities.</span></span>
+    0
+```
 
-<span data-ttu-id="0fda0-114">Ayrıca, [F # Core kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) FSharp.Core, bir parçası olan F # core kitaplık hakkında bilgi için mükemmel bir kaynaktır.</span><span class="sxs-lookup"><span data-stu-id="0fda0-114">Additionally, the [F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is a great resource for learning about FSharp.Core, the core library which is a part of F#.</span></span>
+<span data-ttu-id="0cf7d-106">F # kendi merkezinde üretkenlik hakkındadır.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-106">F# is about productivity at its heart.</span></span> <span data-ttu-id="0cf7d-107">F # için araç desteği her yerden ve Gelişmiş özelliklerin tam ' dir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-107">The tooling support for F# is ubiquitous and full of advanced features.</span></span>
 
-## <a name="the-f-software-foundation"></a><span data-ttu-id="0fda0-115">F # yazılım Foundation</span><span class="sxs-lookup"><span data-stu-id="0fda0-115">The F# Software Foundation</span></span>
+## <a name="learning-f"></a><span data-ttu-id="0cf7d-108">F # öğrenme</span><span class="sxs-lookup"><span data-stu-id="0cf7d-108">Learning F#</span></span> #
 
-<span data-ttu-id="0fda0-116">Microsoft birincil geliştirici F # dili ve kendi araç olsa da, F # Ayrıca, F # yazılım Foundation (FSSF) gibi bağımsız bir foundation tarafından desteklenir.</span><span class="sxs-lookup"><span data-stu-id="0fda0-116">Although Microsoft is the primary developer of the F# language and its tooling, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+<span data-ttu-id="0cf7d-109">[F # Turu](tour.md) kod örnekleri çok önemli dil özelliklerine genel bakış sağlar.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-109">[Tour of F#](tour.md) gives an overview of major language features with lots of code samples.</span></span> <span data-ttu-id="0cf7d-110">F # için yeni ve dilinin nasıl çalıştığını için bir fikir almak istiyorsanız bu önerilir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-110">This is recommended if you are new to F# and want to get a feel for how the language works.</span></span>
 
-<span data-ttu-id="0fda0-117">F # yazılım Foundation Görev yükseltmek, korumak ve F # programlama dilini ilerletmek için destek ve F # programcıları farklı ve uluslararası topluluğu büyümesini kolaylaştırmak sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="0fda0-117">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+<span data-ttu-id="0cf7d-111">[F # Visual Studio ile çalışmaya başlama](get-started/get-started-visual-studio.md) Windows olduğunuz ve tam Visual Studio IDE (Integraded geliştirme ortamı) deneyimi istiyor.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-111">[Get started with F# in Visual Studio](get-started/get-started-visual-studio.md) if you're on Windows and want the full Visual Studio IDE (Integraded Development Environment) experience.</span></span>
 
-<span data-ttu-id="0fda0-118">Daha fazla bilgi edinin ve söz konusu almak için kullanıma [fsharp.org](http://fsharp.org).</span><span class="sxs-lookup"><span data-stu-id="0fda0-118">To learn more and get involved, check out [fsharp.org](http://fsharp.org).</span></span>
+<span data-ttu-id="0cf7d-112">[F # Visual Studio için Mac kullanmaya başlama](get-started/get-started-with-visual-studio-for-mac.md) üzerinde macOS olduğunuz ve Visual Studio IDE kullanmak istiyorsanız.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-112">[Get started with F# in Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md) if you're on macOS and want to use a Visual Studio IDE.</span></span>
 
-## <a name="documentation"></a><span data-ttu-id="0fda0-119">Belgeler</span><span class="sxs-lookup"><span data-stu-id="0fda0-119">Documentation</span></span>
+<span data-ttu-id="0cf7d-113">[F # Visual Studio Code ile çalışmaya başlama](get-started/get-started-vscode.md) hafif, platformlar arası istediğiniz ve özellik dolu IDE deneyimi.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-113">[Get Started with F# in Visual Studio Code](get-started/get-started-vscode.md) if you want a lightweight, cross-platform, and feature-packed IDE experience.</span></span>
 
-* [<span data-ttu-id="0fda0-120">Öğreticiler</span><span class="sxs-lookup"><span data-stu-id="0fda0-120">Tutorials</span></span>](tutorials/getting-started/index.md)
-* <span data-ttu-id="0fda0-121">[İlk sınıf değerleri olarak işlevler](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span><span class="sxs-lookup"><span data-stu-id="0fda0-121">[Functions as First-Class Values](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span></span>
-* [<span data-ttu-id="0fda0-122">Dil Başvurusu</span><span class="sxs-lookup"><span data-stu-id="0fda0-122">Language Reference</span></span>](language-reference/index.md)
-* [<span data-ttu-id="0fda0-123">F # Core Kitaplık Başvurusu</span><span class="sxs-lookup"><span data-stu-id="0fda0-123">F# Core Library Reference</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
+<span data-ttu-id="0cf7d-114">[F # .NET Core CLI ile başlayın](get-started/get-started-command-line.md) komut satırı araçları kullanmak istiyorsanız.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-114">[Get started with F# with the .NET Core CLI](get-started/get-started-command-line.md) if you want to use command-line tools.</span></span>
 
-## <a name="online-reading-resources"></a><span data-ttu-id="0fda0-124">Çevrimiçi kaynaklar okuma</span><span class="sxs-lookup"><span data-stu-id="0fda0-124">Online Reading Resources</span></span>
+## <a name="references"></a><span data-ttu-id="0cf7d-115">Referanslar</span><span class="sxs-lookup"><span data-stu-id="0cf7d-115">References</span></span>
 
-* [<span data-ttu-id="0fda0-125">F # eğlenceli ve kar Gitbook için</span><span class="sxs-lookup"><span data-stu-id="0fda0-125">F# for Fun and Profit Gitbook</span></span>](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
-* [<span data-ttu-id="0fda0-126">F # programlama Wikibook</span><span class="sxs-lookup"><span data-stu-id="0fda0-126">F# Programming Wikibook</span></span>](https://en.wikibooks.org/wiki/F_Sharp_Programming)
+<span data-ttu-id="0cf7d-116">[F # dili başvurusu](language-reference/index.md) resmi, kapsamlı tüm F # dili özellikleri başvurudur.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-116">[F# Language Reference](language-reference/index.md) is the official, comprehensive reference for all F# language features.</span></span> <span data-ttu-id="0cf7d-117">Her makalede söz dizimi açıklanmıştır ve kod örnekleri gösterilir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-117">Each article explains the syntax and shows code samples.</span></span> <span data-ttu-id="0cf7d-118">Belirli makaleleri bulmak için içindekiler tablosunda filtre çubuğunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-118">You can use the filter bar in the table of contents to find specific articles.</span></span>
 
-## <a name="video-learning-resources"></a><span data-ttu-id="0fda0-127">Video öğrenme kaynakları</span><span class="sxs-lookup"><span data-stu-id="0fda0-127">Video Learning Resources</span></span>
+<span data-ttu-id="0cf7d-119">[F # Core kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) F # Core kitaplık için API Başvurusu değil.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-119">[F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is the API reference for the F# Core Library.</span></span>
 
-* [<span data-ttu-id="0fda0-128">F # serisi YouTube'da ile programlamaya giriş</span><span class="sxs-lookup"><span data-stu-id="0fda0-128">Introduction to Programming with F# series on YouTube</span></span>](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
-* [<span data-ttu-id="0fda0-129">F # FSharpTV seriyi giriş</span><span class="sxs-lookup"><span data-stu-id="0fda0-129">Introduction to F# series on FSharpTV</span></span>](https://fsharp.tv/courses/fsharp-programming-intro/)
+## <a name="additional-guides"></a><span data-ttu-id="0cf7d-120">Ek kılavuzları</span><span class="sxs-lookup"><span data-stu-id="0cf7d-120">Additional guides</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="0fda0-130">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="0fda0-130">Further Resources</span></span>
+<span data-ttu-id="0cf7d-121">[F # eğlenceli ve kar](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) F # öğrenme üzerinde kapsamlı ve çok ayrıntılı bir kitap.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-121">[F# for Fun and Profit](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) is a comprehensive and very detailed book on learning F#.</span></span> <span data-ttu-id="0cf7d-122">F # topluluk tarafından vaftizine içeriklerini ve yazar.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-122">Its contents and author are beloved by the F# community.</span></span> <span data-ttu-id="0cf7d-123">Hedef kitle öncelikle geliştiriciler nesne yönelimli programlama arka plana sahip olur.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-123">The target audience is primarily developers with an object oriented programming background.</span></span>
 
-* [<span data-ttu-id="0fda0-131">F # kaynaklar üzerinde fsharp.org öğrenme</span><span class="sxs-lookup"><span data-stu-id="0fda0-131">F# Learning Resources on fsharp.org</span></span>](http://fsharp.org/learn.html)
-* [<span data-ttu-id="0fda0-132">F # kod parçacıkları Web sitesi</span><span class="sxs-lookup"><span data-stu-id="0fda0-132">F# Snippets Website</span></span>](http://www.fssnip.net)
-* [<span data-ttu-id="0fda0-133">F # yazılım Foundation</span><span class="sxs-lookup"><span data-stu-id="0fda0-133">F# Software Foundation</span></span>](http://fsharp.org)
+<span data-ttu-id="0cf7d-124">[F # Wikibook programlama](https://en.wikibooks.org/wiki/F_Sharp_Programming) F # öğrenme hakkında bir wikibook değil.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-124">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) is a wikibook about learning F#.</span></span> <span data-ttu-id="0cf7d-125">F # topluluk, bir ürün de olabilir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-125">It is also a product of the F# community.</span></span> <span data-ttu-id="0cf7d-126">Hedef kitle yeni F #, biraz nesne yönelimli programlama arka plan ile birden çok kişi var.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-126">The target audience is people who are new to F#, with a little bit of object oriented programming background.</span></span>
+
+## <a name="learn-f-through-videos"></a><span data-ttu-id="0cf7d-127">F # videolar bilgi edinin</span><span class="sxs-lookup"><span data-stu-id="0cf7d-127">Learn F# through videos</span></span>
+
+<span data-ttu-id="0cf7d-128">[F # Öğreticisi YouTube'da](https://www.youtube.com/watch?v=c7eNDJN758U) harika bir F Visual Studio kullanarak, çok sayıda harika örnekler 1,5 saat boyunca gösteren # giriş yapılır.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-128">[F# tutorial on YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) is a great introduction to F# using Visual Studio, showing lots of great examples over the course of 1.5 hours.</span></span> <span data-ttu-id="0cf7d-129">Hedef kitle F # için yeni Visual Studio geliştiriciler ' dir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-129">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+<span data-ttu-id="0cf7d-130">[F # ile programlamaya giriş](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) ana düzenleyicisi olarak Visual Studio Code kullanan harika bir video serisidir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-130">[Introduction to Programming with F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) is a great video series that uses Visual Studio Code as the main editor.</span></span> <span data-ttu-id="0cf7d-131">Video serisi, herhangi bir şey başlar ve bir metin tabanlı RPG video oyun oluşturma ile biter.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-131">The video series starts from nothing and ends with building a text-based RPG video game.</span></span> <span data-ttu-id="0cf7d-132">Hedef kitle geliştiriciler Visual Studio Code'da (veya basit bir IDE) tercih ve F # için yeni ' dir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-132">The target audience is developers who prefer Visual Studio Code (or a lightweight IDE) and are new to F#.</span></span>
+
+<span data-ttu-id="0cf7d-133">[F # için geliştiriciler için Visual Studio 2017'de](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) yeni özelliklerden bazıları için F #'de Visual Studio 2017 gösteren bir video yol kullanmamaktır.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-133">[What's New in Visual Studio 2017 for F# For Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) is a video course that shows some of the newer features for F# in Visual Studio 2017.</span></span> <span data-ttu-id="0cf7d-134">Hedef kitle F # için yeni Visual Studio geliştiriciler ' dir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-134">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+## <a name="other-useful-resources"></a><span data-ttu-id="0cf7d-135">Diğer kullanışlı kaynaklar</span><span class="sxs-lookup"><span data-stu-id="0cf7d-135">Other useful resources</span></span>
+
+<span data-ttu-id="0cf7d-136">[F # kod parçacıkları Web sitesi](http://www.fssnip.net) nasıl F mutlak başlangıç için yüksek oranda Gelişmiş parçacıkları arasında değişen #, neredeyse her şeyi yapılacağını gösteren kod parçacıkları yoğun bir kümesini içerir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-136">The [F# Snippets Website](http://www.fssnip.net) contains a massive set of code snippets showing how to do just about anything in F#, ranging from absolute beginner to highly advanced snippets.</span></span>
+
+<span data-ttu-id="0cf7d-137">[F # yazılım Foundation kayma](http://fsharp.org/guides/slack/) yeni başlayanlar ve uzmanlar aynı şekilde, yüksek oranda active için harika bir yerdir ve dünyanın en iyi F # programcıları için Sohbet kullanılabilir bazıları vardır.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-137">The [F# Software Foundation Slack](http://fsharp.org/guides/slack/) is a great place for beginners and experts alike, is highly active, and has some of world's best F# programmers available for a chat.</span></span> <span data-ttu-id="0cf7d-138">Birleştirme öneririz.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-138">We highly recommend joining.</span></span>
+
+## <a name="the-f-software-foundation"></a><span data-ttu-id="0cf7d-139">F # yazılım Foundation</span><span class="sxs-lookup"><span data-stu-id="0cf7d-139">The F# Software Foundation</span></span>
+
+<span data-ttu-id="0cf7d-140">Microsoft, Visual Studio Araçları ile F # dili ve birincil geliştirici olsa da, F # Ayrıca, F # yazılım Foundation (FSSF) gibi bağımsız bir foundation tarafından desteklenir.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-140">Although Microsoft is the primary developer of the F# language and its tools in Visual Studio, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+
+<span data-ttu-id="0cf7d-141">F # yazılım Foundation Görev yükseltmek, korumak ve F # programlama dilini ilerletmek için destek ve F # programcıları farklı ve uluslararası topluluğu büyümesini kolaylaştırmak sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="0cf7d-141">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+
+<span data-ttu-id="0cf7d-142">Daha fazla bilgi edinin ve söz konusu almak için kullanıma [fsharp.org](http://fsharp.org). Katılmak ücretsizdir ve F # geliştiricileri Foundation'da ağ kaçırılması out için istemediğiniz bir şeydir!</span><span class="sxs-lookup"><span data-stu-id="0cf7d-142">To learn more and get involved, check out [fsharp.org](http://fsharp.org). It's free to join, and the network of F# developers in the foundation is something you don't want to miss out on!</span></span>
