@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Lambda ifadeleri #
 
@@ -36,7 +36,7 @@ Veya doğrudan bir yöntem bağımsız değişken olarak geçirebilirsiniz:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>İfade lambdas ##
+## <a name="expression-lambdas"></a>Expression lambdas ##
 
  Bir lambda ifadesi ile sağ tarafında bir ifade = > işleci adlı bir *lambda ifadesi*. İfade lambdas yaygın yapımı içinde kullanılan [ifade ağaçları](expression-trees.md). Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
 
@@ -96,7 +96,7 @@ C# diziler desteği hakkında daha fazla bilgi için bkz: [C# kayıt türlerinin
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile Lambdas ##
 
-Diğer uygulamalardan arasında nesnelere LINQ türü olan bir giriş parametresi vardır, <xref:System.Func%601> genel temsilciler ailesi. Bu temsilci tür parametreleri sayısı ve türü giriş parametreleri ve temsilci dönüş türünü tanımlamak için kullanın. `Func`Temsilciler kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadeleri kapsüllemek için çok kullanışlıdır. Örneğin, göz önünde bulundurun <xref:System.Func%601> temsilci, olan sözdizimi aşağıdaki gibidir:
+Diğer uygulamalardan arasında nesnelere LINQ türü olan bir giriş parametresi vardır, <xref:System.Func%601> genel temsilciler ailesi. Bu temsilci tür parametreleri sayısı ve türü giriş parametreleri ve temsilci dönüş türünü tanımlamak için kullanın. `Func` Temsilciler kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadeleri kapsüllemek için çok kullanışlıdır. Örneğin, göz önünde bulundurun <xref:System.Func%601> temsilci, olan sözdizimi aşağıdaki gibidir:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -150,7 +150,7 @@ Lambda'lar başvurabilir *dış değişkenleri* (bkz [anonim yöntemler](program
 
 - Bir lambda ifadesi içinde tanıtılan değişkenler, dış yöntemde görünmez.
 
-- Lambda ifadesi doğrudan yakalayamazsınız bir `ref` veya `out` kapsayan bir yöntem parametresi.
+- Lambda ifadesi doğrudan yakalayamazsınız bir `in`, `ref`, veya `out` kapsayan bir yöntem parametresi.
 
 - Lambda ifadesindeki bir dönüş ifadesi, kapsayan yöntemin döndürülmesine neden olmaz.
 

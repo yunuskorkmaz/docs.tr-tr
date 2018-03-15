@@ -1,90 +1,61 @@
 ---
-title: "F # Ionide ile Visual Studio Code ile çalışmaya başlama"
+title: "F # Visual Studio Code ile çalışmaya başlama"
 description: "F # Visual Studio Code ve Ionide eklentisi paketiyle nasıl kullanacağınızı öğrenin."
 keywords: "Visual f #, f #, işlev, .NET, Visual Studio Code vscode Ionide programlama"
 author: cartermp
 ms.author: phcart
-ms.date: 09/28/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>F # Ionide ile Visual Studio Code ile çalışmaya başlama
+# <a name="get-started-with-f-in-visual-studio-code"></a>F # Visual Studio Code ile çalışmaya başlama
 
-F # yazabileceğiniz [Visual Studio Code](https://code.visualstudio.com) ile [Ionide eklentisi](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), IntelliSense ve temel kod yapan yeniden düzenlemeler harika bir çapraz platform, basit IDE deneyimi alınamıyor.  Ziyaret [Ionide.io](https://ionide.io) eklentisi paketi hakkında daha fazla bilgi için.
+F # yazabileceğiniz [Visual Studio Code](https://code.visualstudio.com) ile [Ionide eklentisi](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), IntelliSense ve temel kodla harika bir çapraz platform, basit IDE (Integrade geliştirme Enivronment) deneyim almak için yapan yeniden düzenlemeler.  Ziyaret [Ionide.io](http://ionide.io) eklentisi paketi hakkında daha fazla bilgi için.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-F # 4.0 veya sonraki Ionide kullanmak için makinenizde yüklenmelidir.
+Sahip olmanız gerekir [yüklü git](https://git-scm.com/download) ve kullanılabilir yapmak için yolunda Ionide proje şablonlarını kullanabilirsiniz.  Bunu doğru şekilde yazarak yüklendiğini doğrulayabilirsiniz `git --version` bir komut istemi ve tuşlarına basarak **Enter**.
 
-Oluşturmuş olmanız da gerekir [yüklü git](https://git-scm.com/download) ve kullanılabilir yapmak için yolunda Ionide proje şablonlarını kullanabilirsiniz.  Bunu doğru şekilde yazarak yüklendiğini doğrulayabilirsiniz `git` komutu prompt.and tuşlarına basarak adresindeki **Enter**.
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-### <a name="windows"></a>Windows
-
-Windows üzerinde değilseniz, F # yüklemek için iki seçeneğiniz vardır.
-
-Visual Studio zaten yüklemiş olduğunuz ve F # yüklü değilse, yapabilecekleriniz [Visual F # Araçları'nı yükleme](get-started-visual-studio.md#installing-f).  Bu yazma, derlemek ve F # kod yürütmek için gerekli tüm bileşenleri yükler.
-
-Visual Studio yüklememeyi tercih ederseniz, aşağıdaki yönergeleri kullanın:
-
-1. Yükleme [.NET Framework 4.5 veya üstü](https://www.microsoft.com/en-US/download/details.aspx?id=30653) Windows 7 çalıştırıyorsanız.  Windows 8 veya üzeri kullanıyorsanız, bunu yapmak gerekmez.
-
-2. Windows SDK için işletim sistemi yükleyin:
-
-    * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
-
-3. Yükleme [Microsoft derleme araçları 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  Yüklemeniz gerekebilir [Microsoft derleme araçları 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
-
-4. Yükleme [Visual F # Araçları](https://www.microsoft.com/en-us/download/details.aspx?id=48179).
-
-64-bit Windows sürümlerinde derleyici ve araçları burada bulunur:
-
-```
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-32-bit Windows sürümlerinde derleyici araçları burada bulunur:
-
-```
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Ionide otomatik olarak algılar derleyici ve araçları, ancak herhangi bir nedenden dolayı olmazsa (örneğin, Visual F # Araçları farklı bir klasöre yüklenen), içeren klasörü el ile ekleyebilirsiniz (`...\Microsoft SDKs\F#\4.0`), yolu.
-
-### <a name="macos"></a>macOS
-
-MacOS üzerinde Ionide kullanan [Mono](https://www.mono-project.com).  Homebrew üzerinde macOS Mono yüklemek için en kolay yoludur.  Terminalinizde yalnızca aşağıdaki komutu yazın:
+Ionide kullanan [Mono](http://www.mono-project.com).  Homebrew üzerinde macOS Mono yüklemek için en kolay yoludur.  Terminalinizde yalnızca aşağıdaki komutu yazın:
 
 ```
 brew install mono
 ```
 
-### <a name="linux"></a>Linux
+Ayrıca yüklemelisiniz [.NET Core SDK](https://www.microsoft.com/net/download).
 
-Linux üzerinde Ionide de kullanır [Mono](https://www.mono-project.com).  Debian veya Ubuntu değilseniz, aşağıdakileri kullanabilirsiniz:
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+Linux üzerinde Ionide de kullanır [Mono](https://www.mono-project.com). Debian veya Ubuntu değilseniz, aşağıdakileri kullanabilirsiniz:
 
 ```
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
+Ayrıca yüklemelisiniz [.NET Core SDK](https://www.microsoft.com/net/download).
+
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+
+Windows üzerinde değilseniz, şunları yapmalısınız [F # desteği ile Visual Studio yükleme](get-started-visual-studio.md#installing-f). Bu, yazma, derlemek ve F # kod yürütmek için gerekli tüm bileşenleri yükler.
+
+Ayrıca yüklemelisiniz [.NET Core SDK](https://www.microsoft.com/net/download/).
+
+---
+
 ## <a name="installing-visual-studio-code-and-the-ionide-plugin"></a>Visual Studio Code ve Ionide eklentisini yükleme
 
-Visual Studio koddan yükleyebilirsiniz [code.visualstudio.com](https://code.visualstudio.com) Web sitesi.  Bundan sonra Ionide eklentisi bulmanın iki yolu vardır:
+Visual Studio koddan yükleyebilirsiniz [code.visualstudio.com](https://code.visualstudio.com) Web sitesi. Bundan sonra Ionide eklentisi bulmanın iki yolu vardır:
 
 1. Komut palet (Ctrl + Shift + P Windows, ⌘ + Shift + P macOS, Linux üzerinde Ctrl + Shift + P) kullanın ve aşağıdaki komutu yazın:
 
@@ -96,7 +67,7 @@ Visual Studio koddan yükleyebilirsiniz [code.visualstudio.com](https://code.vis
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-F # Visual Studio Code desteklenmediği için gereken tek eklentisi [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Ancak, aynı zamanda yükleyebilirsiniz [Ionide sahte](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) ve almak için [sahte](https://fake.build/) desteklemek ve [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) almak için [Paket](https://fsprojects.github.io/Paket/) destekler.  SAHTE ve Paket projeleri oluşturmak ve bağımlılıkları, sırasıyla yönetmek için ilave F # topluluk araçları.
+F # Visual Studio Code desteklenmediği için gereken tek eklentisi [Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Ancak, aynı zamanda yükleyebilirsiniz [Ionide sahte](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) ve almak için [sahte](https://fsharp.github.io/FAKE/) desteklemek ve [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) almak için [Paket](https://fsprojects.github.io/Paket/) destekler. SAHTE ve Paket projeleri oluşturmak ve bağımlılıkları, sırasıyla yönetmek için ilave F # topluluk araçları.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide ile ilk projenizi oluşturma
 
@@ -139,7 +110,7 @@ Bu şablon, yararlı bulabilirsiniz birkaç oluşturur:
 
 1. F # proje kendisini altındaki `ClassLibraryDemo` klasörü.
 2. Paketleri yoluyla eklemek için doğru dizin yapısını [ `Paket` ](https://fsprojects.github.io/Paket/).
-3. Çapraz platform komut dosyasıyla yapı [ `FAKE` ](https://fake.build/).
+3. Çapraz platform komut dosyasıyla yapı [ `FAKE` ](https://fsharp.github.io/FAKE/).
 4. `paket.exe` Fetch paketleri ve sizin için bağımlılıklar çözümlenmeye çalıştırılabilir.
 5. A `.gitignore` bu proje Git tabanlı bir kaynak denetimine eklemek isterseniz, dosya.
 

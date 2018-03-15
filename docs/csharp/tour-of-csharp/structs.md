@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="structs"></a>Yapılar
 
@@ -38,7 +38,7 @@ Sınıflar ile aynı nesneye başvurmak iki değişken için olası ve böylece 
 
 Varsa `Point` bir sınıf çıkış 20 çünkü bir ve b aynı nesne başvurusu. Noktası yapı çıktı 10 çünkü ise, atanması `a` için `b` değeri bir kopyasını oluşturur ve bu kopyayı sonraki atamayı tarafından etkilenmez `a.x`.
 
-Önceki örnekte iki yapılar sınırlamaları vurgular. İlk olarak, bir yapının tamamını kopyalama atama ve değerin parametre geçirme yapılar başvuru türleri ile birlikte daha pahalı olabilir bir nesne başvurusu kopyalama daha genellikle daha az verimlidir. İkinci dışında `ref` ve `out` parametreleri, bu kullanımları durumlarda çeşitli giden kuralları yapılar başvuruları oluşturmak mümkün değildir.
+Önceki örnekte iki yapılar sınırlamaları vurgular. İlk olarak, bir yapının tamamını kopyalama atama ve değerin parametre geçirme yapılar başvuru türleri ile birlikte daha pahalı olabilir bir nesne başvurusu kopyalama daha genellikle daha az verimlidir. İkinci dışında `in`, `ref`, ve `out` parametreleri, bu kullanımları durumlarda çeşitli giden kuralları yapılar başvuruları oluşturmak mümkün değildir.
 
 >[!div class="step-by-step"]
 [Önceki](classes-and-objects.md)

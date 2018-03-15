@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0a6ba6bd85d0bdfa7e98dd85886fee89527b59fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 585d1fc3ee6114532d7ddbfd30f5e09950d3b0b0
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Değişken genel arabirimler oluşturma (C#)
 Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan daha fazla türetilmiş arabirim yöntemleri sağlar. *Değişken karşıtı* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Eşdeğişken sahip genel arabirim veya karşıtı genel tür parametreleri çağrılır *değişken*.  
@@ -27,7 +28,7 @@ Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya 
  Değişken genel arabirimler kullanarak bildirebilirsiniz `in` ve `out` genel tür parametreleri için anahtar sözcükler.  
   
 > [!IMPORTANT]
->  `ref`ve `out` parametreleri C# değişken olamaz. Türlerin varyans da desteklemez.  
+>  `ref`, `in`, ve `out` parametreleri C# değişken olamaz. Türlerin varyans da desteklemez.  
   
  Genel tür parametresi eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü. Eşdeğişken türü aşağıdaki koşulları karşılaması gerekir:  
   

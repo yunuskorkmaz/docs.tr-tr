@@ -2,26 +2,27 @@
 title: "Özellikleri Kullanma (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler alanları ve yöntemleri yönlerini birleştirin. Bir nesne kullanıcıya bir özelliği bir alan görünüyor özelliği erişme aynı sözdizimini gerektirir. Bir sınıf uygulayan için temsil eden bir veya iki kod blokları bir özelliği olan bir [almak](../../../csharp/language-reference/keywords/get.md) erişimcisi ve/veya bir [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğunu `get` erişimci özelliği okunduğunda yürütüldüğünde; kodu engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütüldüğünde. Bir özelliği olmadan bir `set` erişimci salt okunur değerlendirilir. Bir özelliği olmadan bir `get` erişimci salt yazılır değerlendirilir. Her iki erişimciler sahip okuma-yazma özelliği değildir.  
   
- Alanlar özellikleri değişkenleri olarak sınıflandırılır değil. Bu nedenle, bir özellik olarak geçiremezsiniz bir [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) parametresi.  
+ Alanlar özellikleri değişkenleri olarak sınıflandırılır değil. Bu nedenle, bir özellik olarak geçiremezsiniz bir [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi.  
   
  Özelliklere sahip çok sayıda kullanır: bir değişiklik; izin vermeden önce verileri doğrulayabilir Saydam veri burada verileri gerçekte bir veritabanı gibi diğer bazı kaynak alınır bir sınıfını kullanıma; bir olay oluşturma veya diğer alanlar değerinin değiştirilmesi gibi veri değiştirildiğinde, bunlar bir eylemde bulunabilir.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [Arabirim Özellikleri](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
- [Otomatik uygulanan özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+ [Otomatik Uygulanan Özellikler](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

@@ -2,17 +2,18 @@
 title: Yineleyiciler (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>Yineleyiciler (C#)
 Bir *yineleyici* koleksiyonlarına listeler ve dizi gibi adım için kullanılabilir.  
@@ -65,7 +66,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 > [!NOTE]
 >  Bu konuda basit yineleyici örnek dışındaki tüm örnekler için dahil [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri için `System.Collections` ve `System.Collections.Generic` ad alanları.  
   
-##  <a name="BKMK_SimpleIterator"></a>Basit yineleyici  
+##  <a name="BKMK_SimpleIterator"></a> Basit yineleyici  
  Aşağıdaki örnek bir tek sahip `yield return` içinde deyimi bir [için](../../../csharp/language-reference/keywords/for.md) döngü. İçinde `Main`, her yinelemesinden `foreach` deyimi gövde oluşturur diğerine geçer yineleyici işlevi çağrısı `yield return` deyimi.  
   
 ```csharp  
@@ -93,7 +94,7 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a>Koleksiyon sınıfı oluşturma  
+##  <a name="BKMK_CollectionClass"></a> Koleksiyon sınıfı oluşturma  
  Aşağıdaki örnekte, `DaysOfTheWeek` uygulayan sınıf <xref:System.Collections.IEnumerable> gerektirir arabirimi bir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi. Derleyici örtülü olarak çağırır `GetEnumerator` döndürür yöntemi bir <xref:System.Collections.IEnumerator>.  
   
  `GetEnumerator` Yöntemi döndürür her dize aynı anda kullanarak `yield return` deyimi.  
@@ -222,7 +223,7 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <a name="BKMK_GenericList"></a>Yineleyiciler genel bir listesi ile kullanma  
+##  <a name="BKMK_GenericList"></a> Yineleyiciler genel bir listesi ile kullanma  
  Aşağıdaki örnekte, `Stack(Of T)` genel bir sınıf uygular <xref:System.Collections.Generic.IEnumerable%601> genel arabirim. `Push` Yöntemi atar değerleri türünde bir dizi `T`. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Yöntemi kullanarak dizi değerleri döndürür `yield return` deyimi.  
   
  Genel yanı sıra <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemi, genel olmayan <xref:System.Collections.IEnumerable.GetEnumerator%2A> gerekir ayrıca uygulanan yöntemi. Bunun nedeni, <xref:System.Collections.Generic.IEnumerable%601> devraldığı <xref:System.Collections.IEnumerable>. Genel olmayan uygulama genel uygulamasını erteler.  
@@ -339,16 +340,16 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a>Sözdizimi bilgileri  
+##  <a name="BKMK_SyntaxInformation"></a> Sözdizimi bilgileri  
  Yineleyici bir yöntem olarak oluşabilir veya `get` erişimcisi. Yineleyici bir olay, örnek oluşturucusu, statik Oluşturucusu veya statik sonlandırıcıyı gerçekleşemez.  
   
  Örtük bir dönüştürme ifadesi türden bulunmalıdır `yield return` yineleyici dönüş türü bildirimi.  
   
- C# ' ta yineleyici yöntemi içeremez `ref` veya `out` parametreleri.  
+ C# ' ta yineleyici yöntemi içeremez `in`, `ref`, veya `out` parametreleri.  
   
  C# ' ta, "Verim" ayrılmış bir sözcük değildir ve yalnızca önce kullanıldığında, özel bir anlamı olan bir `return` veya `break` anahtar sözcüğü.  
   
-##  <a name="BKMK_Technical"></a>Teknik uygulama  
+##  <a name="BKMK_Technical"></a> Teknik uygulama  
  Yineleyici bir yöntem olarak yazma rağmen derleyici, iç içe geçmiş sınıf diğer bir deyişle, etkin, Durum makinesi çevirir. Bu sınıf olarak uzun yineleyici konumunu izler `foreach` istemci kodu döngüde devam eder.  
   
  Derleyici yaptıklarını görmek için bir yineleyici yöntemi için oluşturulan Microsoft Ara dil kodu görüntülemek için Ildasm.exe Aracı'nı kullanabilirsiniz.  
@@ -361,7 +362,7 @@ public class Stack<T> : IEnumerable<T>
   
  Ek bilgi için bkz: [C# dil belirtimi](../../../csharp/language-reference/language-specification/index.md).  
   
-##  <a name="BKMK_UseOfIterators"></a>Yineleyiciler kullanımı  
+##  <a name="BKMK_UseOfIterators"></a> Yineleyiciler kullanımı  
  Yineleyiciler basitliği korumanıza olanak tanır bir `foreach` döngü listesi sırası doldurmak için karmaşık kodlar kullanmanız gerektiğinde. Aşağıdakileri yapmak istediğinizde bu yararlı olabilir:  
   
 -   Sonra ilk listesi değişiklik `foreach` döngü yineleme.  
@@ -373,7 +374,7 @@ public class Stack<T> : IEnumerable<T>
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [foreach,](../../../csharp/language-reference/keywords/foreach-in.md)  
- [uyarı simgesi](../../../csharp/language-reference/keywords/yield.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
  [Dizilerle foreach kullanma](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
- [Genel türler](../../../csharp/programming-guide/generics/index.md)
+ [Genel Türler](../../../csharp/programming-guide/generics/index.md)

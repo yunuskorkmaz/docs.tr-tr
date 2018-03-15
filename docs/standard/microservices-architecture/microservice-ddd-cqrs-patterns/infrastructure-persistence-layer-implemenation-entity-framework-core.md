@@ -1,7 +1,7 @@
 ---
 title: "Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama"
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Çekirdek altyapı Kalıcılık katmanla uygulama
 
@@ -34,13 +34,13 @@ EF çekirdek giriş zaten Microsoft belgelerinde mevcut olduğundan, burada yaln
 -   **Entity Framework Çekirdek**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **ASP.NET Core ve Entity Framework Visual Studio kullanarak çekirdek Başlarken**
+-   **ASP.NET Core ve Entity Framework Visual Studio kullanarak çekirdek ile çalışmaya başlama**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
 -   **DbContext sınıfı**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **EF çekirdek & EF6.x karşılaştırmak**
+-   **EF çekirdek & EF6.x karşılaştırma**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Entity Framework Çekirdek altyapısında DDD açısından
@@ -241,13 +241,13 @@ DbContext ayarlandığında depo için singleton ömrü kullanarak ciddi eşzama
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Bir ASP.NET MVC uygulamasındaki depo ve iş desenleri ölçü uygulama**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Depo için uygulama stratejileri desen ile Entity Framework, Dapper ve zincir**
+-   **Jonathan Allen. Depo düzeni Entity Framework, Dapper, uygulama stratejileri ve zinciri**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. ASP.NET Core IOC kapsayıcı hizmeti ömürleri Autofac IOC kapsayıcı örneği kapsamlarla karşılaştırma**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/ comparing-ASP-NET-Core-ioc-Service-Life-Times-and-autofac-ioc-instance-Scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **Cesar de la Torre. ASP.NET Core IOC kapsayıcı hizmeti ömürleri Autofac IOC kapsayıcı örneği kapsamları ile karşılaştırma**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Tablo eşlemesi
 
@@ -330,7 +330,7 @@ Aynı OnModelCreating metodunun içinde tüm Fluent API eşlemelerini ayarlayabi
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF çekirdek Hi/Lo algoritması
 
-Bir ilginç Yukarıdaki örnekteki kod bunu kullandığını yönüdür [Hi/Lo algoritması](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) anahtar oluşturma stratejisini olarak.
+Bir ilginç Yukarıdaki örnekteki kod bunu kullandığını yönüdür [Hi/Lo algoritması](https://vladmihalcea.com/the-hilo-algorithm/) anahtar oluşturma stratejisini olarak.
 
 Hi/Lo algoritması benzersiz anahtarlar gerektiğinde kullanışlıdır. Bir Özet, Hi-Aet.aet algoritması satır veritabanında hemen depolamayın sırada bağlı olarak tablo satırlarının benzersiz tanımlayıcıları atar. Bu, normal sıralı veritabanıyla kimlikleri olduğu sürece tanımlayıcıları hemen kullanmaya başlamak sağlar.
 
@@ -457,16 +457,16 @@ Biz Iqueryable bir depodan dönmek için önerilen yoktur ancak bunları deposu 
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Tablo eşleme**
+-   **Tablo eşlemesi**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Entity Framework Çekirdek ile anahtarları oluşturmak için HiLo kullanmak**
+-   **Entity Framework Çekirdek ile anahtarları oluşturmak için HiLo kullanın**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Alanları yedekleme**
+-   **Destekleyen alanlar**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Entity Framework Çekirdek koleksiyonlarda kapsüllenmiş**
+-   **Steve Smith. Entity Framework Çekirdek kapsüllenmiş koleksiyonları**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Gölge Özellikleri**

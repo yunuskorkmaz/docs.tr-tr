@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -29,11 +29,11 @@ F #'da kullanılabilir önişlemci yönergeleri aşağıdaki tabloda listelenmek
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#if`*simgesi*|Koşullu derleme destekler. Sonra bölümdeki kod `#if` dahil ise *simgesi* tanımlanır.|
+|`#if` *Simgesi*|Koşullu derleme destekler. Sonra bölümdeki kod `#if` dahil ise *simgesi* tanımlanır.|
 |`#else`|Koşullu derleme destekler. Simgenin önceki ile kullanılan eklenecek kodun bir bölümünü işaretler `#if` tanımlı değil.|
 |`#endif`|Koşullu derleme destekler. Koşullu bölümün kodun sonunu işaretler.|
 |`#`[satır] *int*,<br/>`#`[satır] *int* *dize*,<br/>`#`[satır] *int* *dize verbatim*|Hata ayıklama için orijinal kaynak kodu satır ve dosya adı gösterir. Bu özellik, F # kaynak kodu oluşturmak için araçları sağlanır.|
-|`#nowarn`*warningcode*|Derleyici Uyarısı veya uyarıları devre dışı bırakır. Bir uyarı devre dışı bırakmak için kendi Derleyici çıktısı numarasından bulun ve tırnak işaretleri içine alın. "FS" öneki atlayın. Aynı satıra birden çok uyarı numaralarını devre dışı bırakmak için her numarası tırnak işaretleri içine alın ve her dize boşlukla ayırın. Örneğin:
+|`#nowarn` *warningcode*|Derleyici Uyarısı veya uyarıları devre dışı bırakır. Bir uyarı devre dışı bırakmak için kendi Derleyici çıktısı numarasından bulun ve tırnak işaretleri içine alın. "FS" öneki atlayın. Aynı satıra birden çok uyarı numaralarını devre dışı bırakmak için her numarası tırnak işaretleri içine alın ve her dize boşlukla ayırın. Örneğin:
 
 `#nowarn "9" "40"`
 
@@ -75,12 +75,12 @@ Aşağıdaki tabloda, F #'da kullanılabilir derleyici yönergesi listeler.
 
 |Yönergesi|Açıklama|
 |---------|-----------|
-|`#light`["açık"|"kapalı"]|Etkinleştirir veya diğer ML sürümleri ile uyumluluk için basit sözdizimi devre dışı bırakır. Varsayılan olarak, basit sözdizimi etkindir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, basit sözdizimi ve ayrıntılı sözdizimi kullanabilirsiniz. Yönergesi `#light` tek başına eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgeleri sözdiziminde basit sözdizimi kullanmakta olduğunuz varsayılarak da sunulur. Daha fazla bilgi için bkz: [ayrıntılı sözdizimi](verbose-syntax.md).|
+|`#light` ["on"&#124;"off"]|Etkinleştirir veya diğer ML sürümleri ile uyumluluk için basit sözdizimi devre dışı bırakır. Varsayılan olarak, basit sözdizimi etkindir. Ayrıntılı sözdizimi her zaman etkindir. Bu nedenle, basit sözdizimi ve ayrıntılı sözdizimi kullanabilirsiniz. Yönergesi `#light` tek başına eşdeğer olan `#light "on"`. Belirtirseniz `#light "off"`, tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgeleri sözdiziminde basit sözdizimi kullanmakta olduğunuz varsayılarak da sunulur. Daha fazla bilgi için bkz: [ayrıntılı sözdizimi](verbose-syntax.md).|
 Yorumlayıcı (fsi.exe) yönergeleri için bkz: [etkileşimli programlama F # ile](../tutorials/fsharp-interactive/index.md).
 
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[F # dili başvurusu](index.md)
+[F# Dili Başvurusu](index.md)
 
 [Derleyici Seçenekleri](compiler-options.md)
 

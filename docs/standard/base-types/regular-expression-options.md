@@ -18,21 +18,21 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
-<a name="Top"></a>Varsayılan olarak, herhangi bir normal ifade deseni değişmez değer karakter ile giriş dizesi karşılaştırması büyük küçük harfe duyarlı olduğundan, normal ifade deseni boşluk değişmez değer boşluk karakterleri ve yakalama gruplarında normal bir ifade olarak yorumlanır açıkça örtük olarak da adlandırılır. Normal ifade seçenekleri belirterek bu ve diğer birkaç varsayılan normal ifade davranışının yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen, bu seçenekleri normal ifade deseni bir parçası olarak dahil edilen satır içi olabilir ya da için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusu veya statik desen eşleştirme yöntemi olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
+<a name="Top"></a> Varsayılan olarak, herhangi bir normal ifade deseni değişmez değer karakter ile giriş dizesi karşılaştırması büyük küçük harfe duyarlı olduğundan, normal ifade deseni boşluk değişmez değer boşluk karakterleri ve yakalama gruplarında normal bir ifade olarak yorumlanır açıkça örtük olarak da adlandırılır. Normal ifade seçenekleri belirterek bu ve diğer birkaç varsayılan normal ifade davranışının yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen, bu seçenekleri normal ifade deseni bir parçası olarak dahil edilen satır içi olabilir ya da için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusu veya statik desen eşleştirme yöntemi olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  
   
 |RegexOptions üyesi|Satır içi karakter|Efekt|  
 |-------------------------|----------------------|------------|  
@@ -281,11 +281,11 @@ ms.lasthandoff: 12/23/2017
   
 -   Sayı işareti (#) açıklama başlangıcını yerine harf karakter olarak yorumlanır. Tüm metin dizesi sonuna # karakter normal ifade deseni olarak bir açıklama olarak yorumlanır.  
   
- Kullansanız bile ancak, aşağıdaki durumlarda boşluk karakterlerini normal bir ifade, göz ardı olmayan <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> seçeneği:  
+ Kullansanız bile ancak, aşağıdaki durumlarda, normal bir ifade boşluk karakterleri, göz ardı olmayan <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> seçeneği:  
   
 -   Boşluk karakteri sınıfı içinde her zaman tam anlamıyla yorumlanır. Örneğin, normal ifade deseni `[ .,;:]` herhangi tek boşluk karakterini, nokta, virgül, noktalı virgül veya iki nokta üst üste ile eşleşir.  
   
--   Beyaz alan kullanılamaz köşeli parantez içindeki bir niceleyici içinde gibi `{`  *n*  `}`, `{`  *n*  `,}`ve `{`  *n*  `,` *m*`}`. Örneğin, normal ifade deseni `\d{1. 3}` bir boşluk karakteri içerdiğinden bir ile üç basamak basamaklarının herhangi bir dizisini eşleştirmek başarısız olur.  
+-   Beyaz alan kullanılamaz köşeli parantez içindeki bir niceleyici içinde gibi `{` *n*`}`, `{` *n*`,}`, ve `{` *n* `,` *m*`}`. Örneğin, normal ifade deseni `\d{1. 3}` bir boşluk karakteri içerdiğinden bir ile üç basamak basamaklarının herhangi bir dizisini eşleştirmek başarısız olur.  
   
 -   Beyaz alan language öğesi tanıtan bir karakter dizisi içinde izin verilmiyor. Örneğin:  
   
@@ -367,18 +367,18 @@ ms.lasthandoff: 12/23/2017
   
     |Desen|Açıklama|  
     |-------------|-----------------|  
-    |(bir +)|Harf "a" bir veya birden çok kez eşleşir. Bu ikinci yakalama grubudur.|  
+    |(a+)|Harf "a" bir veya birden çok kez eşleşir. Bu ikinci yakalama grubudur.|  
     |(\1)|İlk yakalama grubu tarafından yakalanan alt dize eşleşiyor. Bu, üçüncü yakalama grubudur.|  
     |?|Sıfır veya bir boşluk karakterleri eşleşmesi.|  
-    |((a+)(\1)?) +|Sıfır veya bir boşluk bırakarak ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla "a" karakter desen eşleştirme bir veya birden çok kez karakter. Bu ilk yakalama grubudur.|  
+    |((a+)(\1) ?)+|Sıfır veya bir boşluk bırakarak ilk yakalama grubuyla eşleşen bir dize tarafından izlenen bir veya daha fazla "a" karakter desen eşleştirme bir veya birden çok kez karakter. Bu ilk yakalama grubudur.|  
   
 -   Yeniden başvurular sekizli çıkışları arasındaki belirsizlikleri çözünürlüğü. Aşağıdaki tabloda farklar özetlenmektedir kurallı tarafından yeniden başvuru yorumunu ve ECMAScript normal ifadeler karşı sekizli.  
   
     |Normal ifade|Kurallı davranışı|ECMAScript davranışı|  
     |------------------------|------------------------|-------------------------|  
-    |`\0`0-2 sekizli basamak ile izlenen|Bir sekizli yorumlayın. Örneğin, `\044` her zaman bir sekizli değeri olarak yorumlanır ve "$" anlamına gelir.|Aynı davranışı.|  
-    |`\`bir sayı 1'den 9, hiçbir ek ondalık basamak ile izlenen ve ardından,|Yeniden başvuru yorumlayın. Örneğin, `\9` Grup yakalama dokuzuncu yok olsa bile her zaman yeniden başvuru 9, anlamına gelir. Yakalama grubu yok, normal ifade ayrıştırıcısının döndürürse bir <xref:System.ArgumentException>.|Tek bir ondalık basamak yakalama grubu varsa, bu sayı için yeniden başvuru. Aksi halde değer sabit değer olarak algılar.|  
-    |`\`Ek ondalık basamak ile izlenen 9 ' 1'den bir rakam ile izlenen|Basamaklı bir ondalık değer olarak algılar. Bu yakalama Grup zaten varsa, ifade bir yeniden başvuru olarak yorumlayın.<br /><br /> Aksi takdirde, baştaki sekizli basamak sekizli 377 kadar yorumlar; diğer bir deyişle, yalnızca düşük 8 bit değeri göz önünde bulundurun. Kalan basamaklar değişmez değerler yorumlayın. Örneğin, ifadede `\3000`, Grup 300 yakalama varsa, 300 yeniden başvuru yorumlanan; Grup 300 yakalama mevcut değilse, 0 ile izlenen sekizli 300 olarak yorumlar.|Yeniden başvuru yakalamaya başvurabilir ondalık bir değer mümkün olduğunca çok basamak dönüştürerek yorumlayın. Sekizlik 377 kadar başında sekizli basamak kullanarak hiç basamak dönüştürülebilir ise bir sekizli yorumlar; kalan basamaklar değişmez değerler yorumlayın.|  
+    |`\0` 0-2 sekizli basamak ile izlenen|Bir sekizli yorumlayın. Örneğin, `\044` her zaman bir sekizli değeri olarak yorumlanır ve "$" anlamına gelir.|Aynı davranışı.|  
+    |`\` bir sayı 1'den 9, hiçbir ek ondalık basamak ile izlenen ve ardından,|Yeniden başvuru yorumlayın. Örneğin, `\9` Grup yakalama dokuzuncu yok olsa bile her zaman yeniden başvuru 9, anlamına gelir. Yakalama grubu yok, normal ifade ayrıştırıcısının döndürürse bir <xref:System.ArgumentException>.|Tek bir ondalık basamak yakalama grubu varsa, bu sayı için yeniden başvuru. Aksi halde değer sabit değer olarak algılar.|  
+    |`\` Ek ondalık basamak ile izlenen 9 ' 1'den bir rakam ile izlenen|Basamaklı bir ondalık değer olarak algılar. Bu yakalama Grup zaten varsa, ifade bir yeniden başvuru olarak yorumlayın.<br /><br /> Aksi takdirde, baştaki sekizli basamak sekizli 377 kadar yorumlar; diğer bir deyişle, yalnızca düşük 8 bit değeri göz önünde bulundurun. Kalan basamaklar değişmez değerler yorumlayın. Örneğin, ifadede `\3000`, Grup 300 yakalama varsa, 300 yeniden başvuru yorumlanan; Grup 300 yakalama mevcut değilse, 0 ile izlenen sekizli 300 olarak yorumlar.|Yeniden başvuru yakalamaya başvurabilir ondalık bir değer mümkün olduğunca çok basamak dönüştürerek yorumlayın. Sekizlik 377 kadar başında sekizli basamak kullanarak hiç basamak dönüştürülebilir ise bir sekizli yorumlar; kalan basamaklar değişmez değerler yorumlayın.|  
   
  [Başa dön](#Top)  
   

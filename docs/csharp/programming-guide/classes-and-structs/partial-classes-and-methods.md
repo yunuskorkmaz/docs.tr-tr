@@ -2,21 +2,22 @@
 title: "Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md), bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) veya iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosya türü veya yöntemi tanımının bir bölüm içerir ve uygulamanın derlendiğinde tüm bölümleri birleştirilir.  
@@ -92,17 +93,17 @@ Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-referen
   
 -   Kısmi tür tanımı aşağıdaki anahtar sözcükler isteğe bağlıdır, ancak varsa bir kısmi tür tanımı, aynı türde başka bir kısmi tanımında belirtilen anahtar sözcükleri çakışmamalıdır:  
   
-    -   [Ortak](../../../csharp/language-reference/keywords/public.md)  
+    -   [public](../../../csharp/language-reference/keywords/public.md)  
   
-    -   [Özel](../../../csharp/language-reference/keywords/private.md)  
+    -   [private](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [korumalı](../../../csharp/language-reference/keywords/protected.md)  
+    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
   
-    -   [İç](../../../csharp/language-reference/keywords/internal.md)  
+    -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
-    -   [Özet](../../../csharp/language-reference/keywords/abstract.md)  
+    -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-    -   [korumalı](../../../csharp/language-reference/keywords/sealed.md)  
+    -   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
   
     -   taban sınıfı  
   
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Kısmi yöntem bildirimleri bağlamsal anahtar sözcüğü ile başlamalıdır [kısmi](../../../csharp/language-reference/keywords/partial-type.md) ve yöntem döndürmelidir [void](../../../csharp/language-reference/keywords/void.md).  
   
--   Kısmi yöntemler olabilir [ref](../../../csharp/language-reference/keywords/ref.md) ama [çıkışı](../../../csharp/language-reference/keywords/out.md) parametreleri.  
+-   Kısmi yöntemler olabilir [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md) veya [ref](../../../csharp/language-reference/keywords/ref.md) ama [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri.  
   
 -   Kısmi yöntemler şunlardır örtük olarak [özel](../../../csharp/language-reference/keywords/private.md), ve bu nedenle olamaz [sanal](../../../csharp/language-reference/keywords/virtual.md).  
   
@@ -166,8 +167,8 @@ partial void onNameChanged()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıfları](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)  
  [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [Arabirimleri](../../../csharp/programming-guide/interfaces/index.md)  
- [partial (tür)](../../../csharp/language-reference/keywords/partial-type.md)
+ [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)  
+ [partial (Tür)](../../../csharp/language-reference/keywords/partial-type.md)

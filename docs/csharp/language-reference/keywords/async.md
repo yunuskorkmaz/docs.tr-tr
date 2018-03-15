@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` belirtmek için değiştirici yöntemi, bir [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntemi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuz olarak çağrılır. Bir yöntem veya ifadesi bu değiştirici kullanıyorsanız, bunu olarak adlandırılır bir *async yöntemi*. Aşağıdaki örnek, adlandırılmış bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Async yöntemi, dönüş türleri aşağıdakilere sahip olabilir:
 - [void](../../../csharp/language-reference/keywords/void.md), hangi yalnızca kullanılmalıdır olay işleyicileri için.
 - C# 7, bir erişilebilir olan herhangi bir tür'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Bu tür bir uygulama türüdür. NuGet paketi ekleyerek kullanılabilir olur `System.Threading.Tasks.Extensions`. 
 
-Async yöntemi herhangi bildiremezsiniz [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) parametreleri ya da can sahip bir <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->başvuru dönüş değeri, ancak bu tür parametrelerine sahip yöntemleri çağırabilirsiniz.  
+Async yöntemi herhangi bildiremezsiniz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri ya da can sahip bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md), ancak yöntemleri çağırabilir Bu tür parametreler sahip.  
   
 Belirttiğiniz `Task<TResult>` bir zaman uyumsuz yönteminin dönüş türü olarak varsa [dönmek](../../../csharp/language-reference/keywords/return.md) yöntemin ifadesi işleneni türü belirtir `TResult`. Kullandığınız `Task` yöntemi tamamlandığında hiçbir anlamlı değeri döndürülür. Diğer bir deyişle, yöntemine bir çağrı döndürür bir `Task`, ancak ne zaman `Task` tamamlandığında, tüm `await` bekliyor ifade `Task` değerlendiren `void`.  
   
@@ -91,5 +91,5 @@ Daha fazla bilgi ve örnekler için bkz: [zaman uyumsuz dönüş türleri](../..
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
  [await](../../../csharp/language-reference/keywords/await.md)  
- [İzlenecek yol: Async kullanarak Web'e erişme ve bekler](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Zaman uyumsuz programlama ile zaman uyumsuz ve bekleme](../../../csharp/programming-guide/concepts/async/index.md)
+ [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)

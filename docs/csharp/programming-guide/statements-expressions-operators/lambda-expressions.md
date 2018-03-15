@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda İfadeleri (C# Programlama Kılavuzu)
 Lambda ifadesi bir [anonim işlevi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) oluşturmak için kullanabileceğiniz [Temsilciler](../../../csharp/programming-guide/delegates/using-delegates.md) veya [ifade ağacına](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) türleri. Lambda ifadeleri kullanarak, bağımsız değişken yerine geçebilecek veya işlev çağrılarının değeri olarak döndürülebilecek, yerel işlevler yazabilirsiniz. Lambda ifadeleri LINQ sorgu ifadeleri yazmak için özellikle yararlıdır.  
@@ -157,13 +157,13 @@ public partial class Form1 : Form
  Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz: [zaman uyumsuz programlama ile async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Standart Sorgu İşlevleriyle Lambda İfadeleri  
- Birçok standart sorgu işleçleri türü olan bir giriş parametresi vardır, <xref:System.Func%602> genel temsilciler ailesi. Bu temsilciler girdi parametrelerinin sayısını ve türünü ve temsilcinin döndürdüğü değerin türünü tanımlamak için tür parametreleri kullanır. `Func`Temsilciler kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadeleri kapsüllemek için çok kullanışlıdır. Örneğin, aşağıdaki temsilci türünü göz önünde bulundurun:  
+ Birçok standart sorgu işleçleri türü olan bir giriş parametresi vardır, <xref:System.Func%602> genel temsilciler ailesi. Bu temsilciler girdi parametrelerinin sayısını ve türünü ve temsilcinin döndürdüğü değerin türünü tanımlamak için tür parametreleri kullanır. `Func` Temsilciler kaynak veri kümesindeki her öğeye uygulanan kullanıcı tanımlı ifadeleri kapsüllemek için çok kullanışlıdır. Örneğin, aşağıdaki temsilci türünü göz önünde bulundurun:  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- Temsilci olarak oluşturulabilir `Func<int,bool> myFunc` nerede `int` giriş parametresidir ve `bool` dönüş değeri. Dönüş değeri her zaman son tür parametresinde belirtilir. `Func<int, string, bool>`iki girdi parametresi ile bir temsilci tanımlar `int` ve `string`ve dönüş türü `bool`. Aşağıdaki `Func` temsilci çağrıldığında, döndürecektir true veya false giriş parametresi 5'e eşit olup olmadığını belirtin:  
+ Temsilci olarak oluşturulabilir `Func<int,bool> myFunc` nerede `int` giriş parametresidir ve `bool` dönüş değeri. Dönüş değeri her zaman son tür parametresinde belirtilir. `Func<int, string, bool>` iki girdi parametresi ile bir temsilci tanımlar `int` ve `string`ve dönüş türü `bool`. Aşağıdaki `Func` temsilci çağrıldığında, döndürecektir true veya false giriş parametresi 5'e eşit olup olmadığını belirtin:  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
@@ -265,7 +265,7 @@ class Test
   
 -   Bir lambda ifadesi içinde tanıtılan değişkenler, dış yöntemde görünmez.  
   
--   Lambda ifadesi doğrudan yakalayamazsınız bir `ref` veya `out` kapsayan bir yöntem parametresi.  
+-   Lambda ifadesi doğrudan yakalayamazsınız bir `in`, `ref`, veya `out` kapsayan bir yöntem parametresi.  
   
 -   Lambda ifadesindeki bir dönüş ifadesi, kapsayan yöntemin döndürülmesine neden olmaz.  
   

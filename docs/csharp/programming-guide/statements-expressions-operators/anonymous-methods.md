@@ -2,21 +2,22 @@
 title: "Anonim Yöntemler (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4d942e0f3245f6404c896173b2c7ca6f1090a8c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e78257c5aab84562cd8cdb336bb5a91ba59534
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Anonim Yöntemler (C# Programlama Kılavuzu)
 Sürümlerinde C# 2.0, bildirmek için tek yolu önce bir [temsilci](../../../csharp/language-reference/keywords/delegate.md) kullanılmasıydır [yöntemleri adlı](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 anonim yöntemler açıklanmıştır ve C# 3.0 ve sonraki sürümlerinde, lambda ifadeleri anonim yöntemler satır içi kod yazmak için tercih edilen yol geçersiz kılar. Ancak, bu konudaki anonim yöntemler hakkında bilgi lambda ifadeleri için de geçerlidir. Adsız bir yöntem lambda ifadelerini bulunamadı işlevselliği sağlayan bir durumda değil. Anonim yöntemler parametre listesi atlamak etkinleştirin. Bu, adsız bir yöntem imzaları çeşitli temsilcilere dönüştürülebilir anlamına gelir. Bu lambda ifadeleri ile mümkün değildir. Lambda ifadeleri özellikle hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -44,7 +45,7 @@ Sürümlerinde C# 2.0, bildirmek için tek yolu önce bir [temsilci](../../../cs
   
  Dış değişken başvuru `n` olarak kabul edilir *yakalanan* temsilci oluşturulduğunda. Anonim yöntemler başvuru temsilcileri atık toplama için uygun olana kadar yerel değişkenler, yakalanan bir değişken ömrü genişletir.  
   
- Adsız bir yöntem erişemiyor [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) bir dış kapsam parametreleri.  
+ Adsız bir yöntem erişemiyor [içinde](../../../csharp/language-reference/keywords/in.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) bir dış kapsam parametreleri.  
   
  Güvenli olmayan kod içinde erişilebilir *yöntem bloğu anonim*.  
   
@@ -63,9 +64,9 @@ Sürümlerinde C# 2.0, bildirmek için tek yolu önce bir [temsilci](../../../cs
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Güvenli olmayan kod ve işaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [Yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Temsilciler adlandırılmış vs ile. Anonim yöntemler](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+ [Lambda İfadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Temsilcilerin Adlandırılmış ve Anonim Yöntemlerde Karşılaştırılması](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

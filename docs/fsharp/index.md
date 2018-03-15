@@ -1,62 +1,85 @@
 ---
-title: "F # Kılavuzu"
-description: "F #, .NET çalıştıran işlevsel bir programlama dili hakkında bilgi edinin."
-keywords: .NET, .NET core
+title: "F# Kılavuzu"
+description: "Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar."
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="f-guide"></a>F # Kılavuzu
+# <a name="f-guide"></a>F# Kılavuzu
 
-F # .NET üzerinde çalışan bir işlevsel programlama dilidir.  Destek işlevsel programlama yapıları yanı sıra nesnesi programlama özellikleri de vardır.  Bu karma nesne yönelimli özellikleriyle işlevsel programlama F # herhangi bir görev karşılamak için kolay bir dil yapar.
+F # .NET üzerinde çalışan bir işlevsel programlama dilidir. Ayrıca karışım işlevsel ve herhangi bir sorun için kolay çözümleri için nesne programlama izin vererek nesneleri için tam destek içerir.
 
-## <a name="if-youre-new-to-f"></a>F # için yeni başladıysanız #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-F # için yeni başladıysanız ile başlayan [Tur, F #](tour.md) dil genel bir bakış ve bazı programlama kavramları almak için.  Visual Studio kullanıyorsanız, aynı içerik öğretici proje şablonu içerir.
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a>F # ile deneyimli varsa #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-F # yararlanabileceğinizi bilmek veya belirli bir dil yapısı hakkında daha fazla bilgi edinmek için bkz: [dil başvurusu](language-reference/index.md).  Tüm F # dili özelliklerinden kapsamlı bir kılavuzdur.
+    0
+```
 
-Ayrıca, [F # Core kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) FSharp.Core, bir parçası olan F # core kitaplık hakkında bilgi için mükemmel bir kaynaktır.
+F # kendi merkezinde üretkenlik hakkındadır. F # için araç desteği her yerden ve Gelişmiş özelliklerin tam ' dir.
+
+## <a name="learning-f"></a>F # öğrenme #
+
+[F # Turu](tour.md) kod örnekleri çok önemli dil özelliklerine genel bakış sağlar. F # için yeni ve dilinin nasıl çalıştığını için bir fikir almak istiyorsanız bu önerilir.
+
+[F # Visual Studio ile çalışmaya başlama](get-started/get-started-visual-studio.md) Windows olduğunuz ve tam Visual Studio IDE (Integraded geliştirme ortamı) deneyimi istiyor.
+
+[F # Visual Studio için Mac kullanmaya başlama](get-started/get-started-with-visual-studio-for-mac.md) üzerinde macOS olduğunuz ve Visual Studio IDE kullanmak istiyorsanız.
+
+[F # Visual Studio Code ile çalışmaya başlama](get-started/get-started-vscode.md) hafif, platformlar arası istediğiniz ve özellik dolu IDE deneyimi.
+
+[F # .NET Core CLI ile başlayın](get-started/get-started-command-line.md) komut satırı araçları kullanmak istiyorsanız.
+
+## <a name="references"></a>Referanslar
+
+[F # dili başvurusu](language-reference/index.md) resmi, kapsamlı tüm F # dili özellikleri başvurudur. Her makalede söz dizimi açıklanmıştır ve kod örnekleri gösterilir. Belirli makaleleri bulmak için içindekiler tablosunda filtre çubuğunu kullanabilirsiniz.
+
+[F # Core kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) F # Core kitaplık için API Başvurusu değil.
+
+## <a name="additional-guides"></a>Ek kılavuzları
+
+[F # eğlenceli ve kar](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) F # öğrenme üzerinde kapsamlı ve çok ayrıntılı bir kitap. F # topluluk tarafından vaftizine içeriklerini ve yazar. Hedef kitle öncelikle geliştiriciler nesne yönelimli programlama arka plana sahip olur.
+
+[F # Wikibook programlama](https://en.wikibooks.org/wiki/F_Sharp_Programming) F # öğrenme hakkında bir wikibook değil. F # topluluk, bir ürün de olabilir. Hedef kitle yeni F #, biraz nesne yönelimli programlama arka plan ile birden çok kişi var.
+
+## <a name="learn-f-through-videos"></a>F # videolar bilgi edinin
+
+[F # Öğreticisi YouTube'da](https://www.youtube.com/watch?v=c7eNDJN758U) harika bir F Visual Studio kullanarak, çok sayıda harika örnekler 1,5 saat boyunca gösteren # giriş yapılır. Hedef kitle F # için yeni Visual Studio geliştiriciler ' dir.
+
+[F # ile programlamaya giriş](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) ana düzenleyicisi olarak Visual Studio Code kullanan harika bir video serisidir. Video serisi, herhangi bir şey başlar ve bir metin tabanlı RPG video oyun oluşturma ile biter. Hedef kitle geliştiriciler Visual Studio Code'da (veya basit bir IDE) tercih ve F # için yeni ' dir.
+
+[F # için geliştiriciler için Visual Studio 2017'de](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) yeni özelliklerden bazıları için F #'de Visual Studio 2017 gösteren bir video yol kullanmamaktır. Hedef kitle F # için yeni Visual Studio geliştiriciler ' dir.
+
+## <a name="other-useful-resources"></a>Diğer kullanışlı kaynaklar
+
+[F # kod parçacıkları Web sitesi](http://www.fssnip.net) nasıl F mutlak başlangıç için yüksek oranda Gelişmiş parçacıkları arasında değişen #, neredeyse her şeyi yapılacağını gösteren kod parçacıkları yoğun bir kümesini içerir.
+
+[F # yazılım Foundation kayma](http://fsharp.org/guides/slack/) yeni başlayanlar ve uzmanlar aynı şekilde, yüksek oranda active için harika bir yerdir ve dünyanın en iyi F # programcıları için Sohbet kullanılabilir bazıları vardır. Birleştirme öneririz.
 
 ## <a name="the-f-software-foundation"></a>F # yazılım Foundation
 
-Microsoft birincil geliştirici F # dili ve kendi araç olsa da, F # Ayrıca, F # yazılım Foundation (FSSF) gibi bağımsız bir foundation tarafından desteklenir.
+Microsoft, Visual Studio Araçları ile F # dili ve birincil geliştirici olsa da, F # Ayrıca, F # yazılım Foundation (FSSF) gibi bağımsız bir foundation tarafından desteklenir.
 
 F # yazılım Foundation Görev yükseltmek, korumak ve F # programlama dilini ilerletmek için destek ve F # programcıları farklı ve uluslararası topluluğu büyümesini kolaylaştırmak sağlamaktır.
 
-Daha fazla bilgi edinin ve söz konusu almak için kullanıma [fsharp.org](http://fsharp.org).
-
-## <a name="documentation"></a>Belgeler
-
-* [Öğreticiler](tutorials/getting-started/index.md)
-* [İlk sınıf değerleri olarak işlevler](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)-->
-* [Dil Başvurusu](language-reference/index.md)
-* [F # Core Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
-
-## <a name="online-reading-resources"></a>Çevrimiçi kaynaklar okuma
-
-* [F # eğlenceli ve kar Gitbook için](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
-* [F # programlama Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)
-
-## <a name="video-learning-resources"></a>Video öğrenme kaynakları
-
-* [F # serisi YouTube'da ile programlamaya giriş](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
-* [F # FSharpTV seriyi giriş](https://fsharp.tv/courses/fsharp-programming-intro/)
-
-## <a name="further-resources"></a>Ek kaynaklar
-
-* [F # kaynaklar üzerinde fsharp.org öğrenme](http://fsharp.org/learn.html)
-* [F # kod parçacıkları Web sitesi](http://www.fssnip.net)
-* [F # yazılım Foundation](http://fsharp.org)
+Daha fazla bilgi edinin ve söz konusu almak için kullanıma [fsharp.org](http://fsharp.org). Katılmak ücretsizdir ve F # geliştiricileri Foundation'da ağ kaçırılması out için istemediğiniz bir şeydir!

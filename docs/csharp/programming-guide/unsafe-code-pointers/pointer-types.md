@@ -2,20 +2,21 @@
 title: "İşaretçi türleri (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 Güvensiz bir bağlamda, bir işaretçi türü, bir değer türü veya bir başvuru türü bir tür olabilir. Bir işaretçi türü bildirimi, aşağıdaki biçimlerden birini alır:  
@@ -50,11 +51,11 @@ int *p1, *p2, *p3;   // Invalid in C#
   
 |Örnek|Açıklama|  
 |-------------|-----------------|  
-|`int* p`|`p`tamsayıya bir işaretçidir.|  
-|`int** p`|`p`tamsayı gösteren bir işaretçi bir işaretçi var.|  
-|`int*[] p`|`p`bir tek boyutlu tamsayı işaretçiler dizisidir.|  
-|`char* p`|`p`bir karakter için bir işaretçidir.|  
-|`void* p`|`p`Bilinmeyen bir tür için bir işaretçidir.|  
+|`int* p`|`p` tamsayıya bir işaretçidir.|  
+|`int** p`|`p` tamsayı gösteren bir işaretçi bir işaretçi var.|  
+|`int*[] p`|`p` bir tek boyutlu tamsayı işaretçiler dizisidir.|  
+|`char* p`|`p` bir karakter için bir işaretçidir.|  
+|`void* p`|`p` Bilinmeyen bir tür için bir işaretçidir.|  
   
  İşaretçi yöneltme işleci *, işaretçi değişkeninin işaret ettiği yerdeki içeriğe erişebilir. Örneğin, aşağıdaki bildirimi ele alalım:  
   
@@ -113,7 +114,7 @@ Console.ReadLine();
   
  Bir işaretçi olabilir `null`. Yönlendirme işlecini bir null işaretçiye uygulamak, uygulama tarafından tanımlanan bir davranışa neden olur.  
   
- İşaretçilerin yöntemler arasında aktarılmasının tanımlanmamış davranışa neden olabileceğini unutmayın. Örnekler, bir Out veya Ref parametresi üzerinden veya işlev sonucu olarak bir işaretçiyi bir yerel değişkene döndürüyor. İşaretçi sabit bir blokta ayarlandıysa, işaret ettiği değişken artık sabit olamaz.  
+ İşaretçilerin yöntemler arasında aktarılmasının tanımlanmamış davranışa neden olabileceğini unutmayın. Yerel bir değişken için bir işaretçi döndüren bir yöntem göz önünde bulundurun bir `in`, `out` veya `ref` parametresi ya da işlevin sonucu olarak. İşaretçi sabit bir blokta ayarlandıysa, işaret ettiği değişken artık sabit olamaz.  
   
  Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde işlem yapabilecek işleçler ve deyimler listelenmektedir:  
   
@@ -127,18 +128,18 @@ Console.ReadLine();
 |+ ve -|İşaretçi aritmetiği gerçekleştirir.|  
 |==,! =, \<, >, \<= ve > =|İşaretçileri karşılaştırır.|  
 |`stackalloc`|Yığında bellek ayırır.|  
-|`fixed`deyimi|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|  
+|`fixed` Deyimi|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Güvenli olmayan kod ve işaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [İşaretçi dönüşümleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
- [İşaretçi ifadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Güvenli Olmayan Kod ve İşaretçiler](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [İşaretçi Dönüştürmeler](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
+ [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [Türler](../../../csharp/language-reference/keywords/types.md)  
- [güvenli olmayan](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  
- [Kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+ [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

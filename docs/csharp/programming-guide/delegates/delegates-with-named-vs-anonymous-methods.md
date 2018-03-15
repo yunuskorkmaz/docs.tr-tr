@@ -2,20 +2,21 @@
 title: "Temsilciler adlandırılmış vs ile. Anonim Yöntemler (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 59317ad3cd9a5d360d0375bf46ff0c9f752a5944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d242f9ab1ecb1963f674d6094f05d78b77fbee9c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Temsilciler adlandırılmış vs ile. Anonim Yöntemler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandırılmış bir yöntem ile ilişkili olabilir. Adlandırılmış bir yöntemi kullanarak bir temsilci örneği, yöntemi bir parametre örneğin geçirilir:  
@@ -29,7 +30,7 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandır�
   
  Bir temsilci örneği ya da statik kapsülleyen veya yöntemi örneği olabilir.  
   
- Temsilci kullanabilirsiniz ancak bir [çıkışı](../../../csharp/language-reference/keywords/out.md) parametresi önerilmez kullanımı ile çok noktaya yayın olay temsilcileri hangi temsilcinin çağrılacağı bilemezsiniz olduğundan.  
+ Temsilci kullanabilirsiniz ancak bir [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi önerilmez kullanımı ile çok noktaya yayın olay temsilcileri hangi temsilcinin çağrılacağı bilemezsiniz olduğundan.  
   
 ## <a name="example-1"></a>Örnek 1  
  Bildirme ve bir temsilci kullanarak basit bir örnek verilmiştir. Dikkat hem temsilci `Del`ve ilişkili yöntemi `MultiplyNumbers`, aynı imzaya sahip  
@@ -42,8 +43,8 @@ A [temsilci](../../../csharp/language-reference/keywords/delegate.md) adlandır�
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Temsilciler](../../../csharp/programming-guide/delegates/index.md)  
- [Anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [Anonim Metotlar](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
  [Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
- [Olayları](../../../csharp/programming-guide/events/index.md)
+ [Olaylar](../../../csharp/programming-guide/events/index.md)

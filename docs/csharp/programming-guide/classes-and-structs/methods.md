@@ -2,20 +2,21 @@
 title: "Yöntemler (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyimi içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli yöntemi bağımsız değişkenleri belirtme yürütülecek deyimleri neden olur. C# ' ta yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve program başlatıldığında, ortak dil çalışma zamanı tarafından (CLR) adı verilir.  
@@ -124,13 +125,13 @@ static void Main(string[] args)
   
  Zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, ya da geçersiz. Dönüş türü void dönüş türü void gerekli olduğu öncelikle olay işleyicileri tanımlamak için kullanılır. Void döndüren bir zaman uyumsuz yöntem beklemenin ve void döndüren bir yöntem arayan yöntemi atar özel durumlarını yakalama olamaz.  
   
- Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601>. `DelayAsync`sahip bir `return` deyimi bir tamsayı döndürür. Bu nedenle yöntemi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task<int>`. Dönüş türü olduğundan `Task<int>`, değerlendirmesi `await` ifadesinde `DoSomethingAsync` aşağıdaki ifadeyi gösterdiği gibi bir tamsayı üretir: `int result = await delayTask`.  
+ Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `return` deyimi bir tamsayı döndürür. Bu nedenle yöntemi bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task<int>`. Dönüş türü olduğundan `Task<int>`, değerlendirmesi `await` ifadesinde `DoSomethingAsync` aşağıdaki ifadeyi gösterdiği gibi bir tamsayı üretir: `int result = await delayTask`.  
   
  `startButton_Click` Yöntemi geçersiz dönüş türüne sahip bir zaman uyumsuz yöntem örneğidir. Çünkü `DoSomethingAsync` bir zaman uyumsuz yöntem çağrısı için görev `DoSomethingAsync` , aşağıdaki deyimi gösterildiği beklemenin gerekir: `await DoSomethingAsync();`. `startButton_Click` Yöntemi ile tanımlanması gerekir `async` değiştirici yöntem sahip olduğu bir `await` ifade.  
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) parametreleri, ancak bu tür parametrelerine sahip yöntemleri çağırabilirsiniz.  
+ Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri, ancak bu tür parametrelerine sahip yöntemleri çağırabilirsiniz.  
   
  Zaman uyumsuz yöntemleri hakkında daha fazla bilgi için bkz [zaman uyumsuz programlama ile async ve await](../../../csharp/programming-guide/concepts/async/index.md), [akış denetimi zaman uyumsuz programlarda](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md), ve [zaman uyumsuz dönüş türleri](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
@@ -161,14 +162,14 @@ public Customer this[long id] => store.LookupCustomer(id);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Sınıflar ve yapılar](index.md)  
- [Erişim değiştiricileri](access-modifiers.md)  
- [Statik sınıflar ve statik sınıf üyeleri](static-classes-and-static-class-members.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Sınıflar ve Yapılar](index.md)  
+ [Erişim Değiştiricileri](access-modifiers.md)  
+ [Statik Sınıflar ve Statik Sınıf Üyeleri](static-classes-and-static-class-members.md)  
  [Devralma](inheritance.md)  
- [Soyut ve korumalı sınıflar ve sınıf üyeleri](abstract-and-sealed-classes-and-class-members.md)  
- [parametreleri](../../../csharp/language-reference/keywords/params.md)  
- [Döndür](../../../csharp/language-reference/keywords/return.md)  
- [çıkışı](../../../csharp/language-reference/keywords/out.md)  
- [Ref](../../../csharp/language-reference/keywords/ref.md)  
- [Parametreleri geçirme](passing-parameters.md)
+ [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](abstract-and-sealed-classes-and-class-members.md)  
+ [params](../../../csharp/language-reference/keywords/params.md)  
+ [return](../../../csharp/language-reference/keywords/return.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
+ [Parametreleri Geçirme](passing-parameters.md)

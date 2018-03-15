@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET derleme Platform SDK modelini anlama
 
@@ -24,7 +24,7 @@ Derleyicileri genellikle yolu insanlar farklı aşağıdaki yapılandırılmış
 
 ![nesne kodu kaynak koduna işleme derleyici ardışık adımları](media/compiler-pipeline.png)
 
-Bu ardışık düzen her bir aşaması ayrı bir bileşendir. İlk olarak, ayrıştırma aşaması tokenizes ve kaynak metin Dili Dilbilgisi izleyen sözdizimine ayrıştırır. İkinci bildirimi aşaması, kaynak ve simgeleri adlı formu içeri aktarılan meta verileri analiz eder. Sonraki bağlama aşaması simgeleri koda tanımlayıcılarının eşleşir. Son olarak, emit aşaması derleyicisi tarafından derlenen tüm bilgileri ile bir derlemeyi yayar.
+Bu ardışık düzen her bir aşaması ayrı bir bileşendir. İlk olarak, ayrıştırma aşaması tokenizes ve kaynak metin Dili Dilbilgisi izleyen sözdizimine ayrıştırır. İkinci olarak, kaynak ve içeri aktarılan meta veri simgeleri adlı forma bildirimi aşaması çözümler. Ardından, BIND aşaması simgeleri koda tanımlayıcılarının eşleşir. Son olarak, emit aşaması derleyicisi tarafından derlenen tüm bilgileri ile bir derlemeyi yayar.
 
 ![Derleyici ardışık düzen API derleyici pipelien parçası olan her adım erişim sağlar](media/compiler-pipeline-api.png)
 
@@ -48,7 +48,7 @@ Derleyici katman sözdizimsel ve anlamsal derleyici ardışık her aşamada sunu
 
 ### <a name="diagnostic-apis"></a>Tanılama API'leri
 
-Kendi analiz bir parçası olarak tanılama sözdizimi, semantik, öğrenerek ve çeşitli uyarılar ve bilgilendirici tanılama kesin atama hataları kapsayan bir dizi derleyici üretebilir. Tgizli derleyici API katmanı Tanılama kullanıcı tanımlı çözümleyiciler derleme işlemine takılı sağlayan genişletilebilir bir API aracılığıyla kullanıma sunar. Bu StyleCop veya FxCop, derleyici tanımlı tanılama üretilecek gibi araçları tarafından üretilen gibi kullanıcı tanımlı tanılama sağlar. Bu şekilde tanılama oluşturan doğal olarak MSBuild gibi araçları ile tümleştirme avantajına sahiptir ve bir yapı durdurma gibi deneyimleri için tanılama bağlı olan Visual Studio ilke ve canlı dalgalı çizgiler Düzenleyicisi'nde gösteren ve kod öneren göre giderir.
+Kendi analiz bir parçası olarak tanılama sözdizimi, semantik, öğrenerek ve çeşitli uyarılar ve bilgilendirici tanılama kesin atama hataları kapsayan bir dizi derleyici üretebilir. Derleyici API katmanı Tanılama kullanıcı tanımlı çözümleyiciler derleme işlemine takılı sağlayan genişletilebilir bir API aracılığıyla kullanıma sunar. Bu StyleCop veya FxCop, derleyici tanımlı tanılama üretilecek gibi araçları tarafından üretilen gibi kullanıcı tanımlı tanılama sağlar. Bu şekilde tanılama oluşturan doğal olarak MSBuild gibi araçları ile tümleştirme avantajına sahiptir ve bir yapı durdurma gibi deneyimleri için tanılama bağlı olan Visual Studio ilke ve canlı dalgalı çizgiler Düzenleyicisi'nde gösteren ve kod öneren göre giderir.
 
 ### <a name="scripting-apis"></a>Komut dosyası API'leri
 

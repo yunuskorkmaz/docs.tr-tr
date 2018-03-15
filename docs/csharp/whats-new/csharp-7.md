@@ -10,30 +10,30 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-7"></a>C# 7'deki yenilikler
 
 C# 7 C# dili için birtakım yeni özellikleri ekler:
-* [`out`değişkenleri](#out-variables)
+* [`out` değişkenleri](#out-variables)
     - Bildirebilirsiniz `out` bunlar burada kullanılır yöntemi bağımsız değişken olarak satır içi değerleri.
-* [Diziler](#tuples)
+* [Demetler](#tuples)
     - Birden çok genel alanlar içeren basit, adlandırılmamış türleri oluşturabilirsiniz. Bu tür semantiği derleyicileri ve IDE araçları anlayın.
-* [Atar](#discards)
+* [Atılanlar](#discards)
     - İptali atanan değer hakkında önemli değil atamalarını kullanılan geçici, yalnızca yazma değişkenlerdir. Tanımlama grupları ve kullanıcı tanımlı türler deconstructing zaman yanı sıra yöntemleri çağrılırken özellikle yararlı oldukları `out` parametreleri.
-* [Desen eşleştirme](#pattern-matching)
+* [Desen Eşleştirme](#pattern-matching)
     - Rastgele türler ve bu türlerde üyelerinin değerlerine dayalı dallandırma mantığını oluşturabilirsiniz.
-* [`ref`Yerel öğeler ve döndürür](#ref-locals-and-returns)
+* [`ref` Yerel öğeler ve döndürür](#ref-locals-and-returns)
     - Yöntem bağımsız değişkenleri ve yerel değişkenler diğer depolama başvurular olabilir.
 * [Yerel İşlevler](#local-functions)
     - Kendi kapsam ve görünürlük sınırlamak için diğer işlevleri iç işlevleri iç içe.
 * [Daha fazla ifade bodied üyeleri](#more-expression-bodied-members)
     - İfadeler kullanarak yazılabilir üyelerin listesi haline geldi.
-* [`throw`İfadeler](#throw-expressions)
+* [`throw` İfadeler](#throw-expressions)
     - Özel durumlar, daha önce olduğundan verilmez kod yapılardan throw `throw` bir ifadesi. 
 * [Genelleştirilmiş zaman uyumsuz dönüş türleri](#generalized-async-return-types)
     - Yöntemleri bildirilen ile `async` değiştiricisi ek olarak diğer türleri dönebilirsiniz `Task` ve `Task<T>`.
@@ -42,7 +42,7 @@ C# 7 C# dili için birtakım yeni özellikleri ekler:
 
 Bu konunun geri kalanında özelliklerin her biri açıklanmaktadır. Her bir özellik için bunun arkasındaki mantığı öğreneceksiniz. Sözdizimi öğreneceksiniz. Burada yeni özelliği kullanarak, bir uygulama geliştiricisi olarak daha verimli hale getirir bazı örnek senaryolar görürsünüz. 
 
-## <a name="out-variables"></a>`out`değişkenleri
+## <a name="out-variables"></a>`out` değişkenleri
 
 Destekleyen mevcut sözdizimi `out` parametreleri bu sürümde geliştirilmiştir.  
 
@@ -157,7 +157,7 @@ Olduğunda, genellikle bir tanımlama grubu deconstructing veya sahip bir yönte
 
 * Tanımlama grupları ve kullanıcı tanımlı türler deconstructing olduğunda.
 
-* Yöntemleri çağrılırken [çıkışı](../language-reference/keywords/out.md) parametreleri.
+* Yöntemleri çağrılırken [çıkışı](../language-reference/keywords/out-parameter-modifier.md) parametreleri.
 
 * İşlemi ile eşleşen bir düzende [olan](../language-reference/keywords/is.md) ve [geçiş](../language-reference/keywords/switch.md) deyimleri.
 
@@ -175,7 +175,7 @@ Daha fazla bilgi için bkz: [atar](../discards.md).
 
 Desen eşleştirme destekler `is` ifadeleri ve `switch` ifadeler. Her bir nesne ve söz konusu nesne Aranan düzeni karşılayan varsa belirlemek üzere özelliklerini inceleme sağlar. Kullandığınız `when` düzeni için ek kurallarını belirtmek için anahtar sözcüğü.
 
-### <a name="is-expression"></a>`is`ifade
+### <a name="is-expression"></a>`is` ifade
 
 `is` Düzeni ifade genişletir bilinen `is` bir nesne türünü ötesinde sorgu işleci.
 
@@ -191,7 +191,7 @@ Bazı dökümünü ile birden çok bölmek yapılan burada dökme dökümünü t
 
 Bu senaryolar genişletme tutmak gibi daha fazla yapı bulabilirsiniz `if` ve `else if` deyimleri. Yönetilmeleri olduktan sonra büyük olasılıkla geçiş yapmak istediğiniz `switch` ifadeleri desen.
 
-### <a name="switch-statement-updates"></a>`switch`deyim
+### <a name="switch-statement-updates"></a>`switch` deyim
 
 *İfade ile eşleşen* sahip dayalı bir bilinen sözdizimini `switch` deyimi C# dili zaten parçası. Şimdi yeni durumları eklemeden önce bir eşleşme ifadesi kullanmak için var olan kodu çevir: 
 
@@ -280,10 +280,10 @@ Yöntem matrisinde tamsayı değeri bir başvuru döndürür, burada adlı deği
 C# dili kötüye kullanmasının korumak diğer üç kurallarına sahiptir `ref` Yereller ve döndürür:
 
 * Bir standart yönteminin dönüş değeri atayamazsınız bir `ref` yerel değişken.
-    - Aşağıdaki gibi ifadeler izin vermez`ref int i = sequence.Count();`
+    - Aşağıdaki gibi ifadeler izin vermez `ref int i = sequence.Count();`
 * Geri dönemezsiniz bir `ref` bir değişkene, yaşam süresi yönteminin yürütülmesi genişletmek değil.
     - Yerel bir değişken ya da benzer bir kapsama sahip bir değişken başvuru döndüremez anlamına gelir.
-* `ref`Yerel öğeler ve döndürür zaman uyumsuz yöntemleri ile kullanılamaz.
+* `ref` Yerel öğeler ve döndürür zaman uyumsuz yöntemleri ile kullanılamaz.
     - Derleyici, zaman uyumsuz yöntem döndüğünde başvurulan değişken son değerine ayarlanmış olmadığını bilemezsiniz.
 
 Ref Yereller ve ref değerleri kopyalama veya birden çok kez bilgileri başvuru kaldırma işlemlerini gerçekleştirme kaçınarak daha verimlidir etkinleştir algoritmaları döndürür. 
@@ -359,7 +359,7 @@ Daha önce bu başlatmaları Oluşturucusu gövdesinde throw deyimleri ile bir o
 
 ## <a name="generalized-async-return-types"></a>Genelleştirilmiş zaman uyumsuz dönüş türleri
 
-Döndüren bir `Task` zaman uyumsuz yöntemleri bir nesneden performans sorunları belirli yollarda tanıtır. `Task`bir başvuru türü olduğundan, kullanmadan bir nesne ayırma anlamına gelir. Burada bir yöntem bildirilen ile durumlarda `async` değiştiricisi önbelleğe alınmış bir sonuç döndürür veya zaman uyumlu olarak tamamlar, fazladan ayırmaları önemli zaman Maliyet performans kritik kod bölümlerini hale gelebilir. Bu ayırmaları sıkı Döngülerde oluşursa çok yüksek maliyetli hale gelebilir.
+Döndüren bir `Task` zaman uyumsuz yöntemleri bir nesneden performans sorunları belirli yollarda tanıtır. `Task` bir başvuru türü olduğundan, kullanmadan bir nesne ayırma anlamına gelir. Burada bir yöntem bildirilen ile durumlarda `async` değiştiricisi önbelleğe alınmış bir sonuç döndürür veya zaman uyumlu olarak tamamlar, fazladan ayırmaları önemli zaman Maliyet performans kritik kod bölümlerini hale gelebilir. Bu ayırmaları sıkı Döngülerde oluşursa çok yüksek maliyetli hale gelebilir.
 
 Yeni dil zaman uyumsuz yöntemleri ek olarak diğer türleri döndürebilir özelliğin `Task`, `Task<T>` ve `void`. Döndürülen türü zaman uyumsuz desen karşılaması gerekir yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Somut bir örnek olarak `ValueTask` türü yapmak için .NET framework eklendi bu yeni dil özelliğini kullanın: 
 

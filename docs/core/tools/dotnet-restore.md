@@ -1,19 +1,20 @@
 ---
 title: DotNet restore komutu - .NET Core CLI
 description: "Bağımlılıklar ve projeye özgü araçları dotnet restore komutu ile geri yüklemeyi öğrenin."
-keywords: DotNet-restore, CLI, CLI komutu, .NET Core
+keywords: dotnet-restore, CLI, CLI command, .NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: dc93e0554d422ddf42ac54dd94223f0285451e85
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 50e8d5c335386c41e36a490263a4f4ebd2bd39ba
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-restore"></a>DotNet geri yükleme
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet restore`-Bir projenin araçları ve bağımlılıklar geri yükler.
+`dotnet restore` -Bir projenin araçları ve bağımlılıklar geri yükler.
 
 ## <a name="synopsis"></a>Özet
 
@@ -32,7 +33,7 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-
 dotnet restore [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
@@ -55,7 +56,7 @@ Projeye özgü araçları için `dotnet restore` önce aracı paketlenmiştir ve
 
 Davranışını `dotnet restore` komut ayarlarında bazıları tarafından etkilenir *Nuget.Config* varsa dosya. Örneğin, ayarlama `globalPackagesFolder` içinde *NuGet.Config* belirtilen klasörde geri yüklenen NuGet paketleri yerleştirir. Bu belirtme alternatiftir `--packages` seçeneği `dotnet restore` komutu. Daha fazla bilgi için bkz: [NuGet.Config başvuru](/nuget/schema/nuget-config-file).
 
-## <a name="implicit-dotnet-restore"></a>Örtük`dotnet restore`
+## <a name="implicit-dotnet-restore"></a>Örtük `dotnet restore`
 
 .NET Core 2. 0 ile başlayan `dotnet restore` aşağıdaki komutları kesilirken gerekirse örtük olarak çalıştırılır:
 
@@ -118,13 +119,13 @@ Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu çalışma zaman
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu belirtilen kaynakları tüm geçersiz kılmaları *NuGet.config* olmalıdır. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
+Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu belirtilen kaynakları tüm geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
 
 `--verbosity <LEVEL>`
 
 Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
 
@@ -160,7 +161,7 @@ Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu çalışma zaman
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu belirtilen kaynakları tüm geçersiz kılmaları *NuGet.config* olmalıdır. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
+Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu belirtilen kaynakları tüm geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
 
 `--verbosity <LEVEL>`
 

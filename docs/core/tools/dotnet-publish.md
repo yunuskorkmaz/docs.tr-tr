@@ -3,16 +3,17 @@ title: "DotNet command - .NET Core CLI yayımlama"
 description: "Dotnet yayımlama komutu .NET Core projenizi bir dizine yayımlar."
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: e29d5269ab5e9e2c9fd08811552c09ec1c95363d
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>DotNet yayımlama
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 01/11/2018
 
 ## <a name="name"></a>Ad
 
-`dotnet publish`-Dağıtım barındırma sistem için bir klasöre uygulamayı ve bağımlılıklarını paketler.
+`dotnet publish` -Dağıtım barındırma sistem için bir klasöre uygulamayı ve bağımlılıklarını paketler.
 
 ## <a name="synopsis"></a>Özet
 
@@ -31,7 +32,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
@@ -42,7 +43,7 @@ dotnet publish [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet publish`Uygulama derler, proje dosyasında belirtilen bağımlılıklarını aracılığıyla okur ve bir dizine dosyaları sonuç kümesini yayımlar. Çıktı aşağıdakileri içerir:
+`dotnet publish` Uygulama derler, proje dosyasında belirtilen bağımlılıklarını aracılığıyla okur ve bir dizine dosyaları sonuç kümesini yayımlar. Çıktı aşağıdakileri içerir:
 
 * Ara dil (IL) ile bir derlemeyi kodda bir *dll* uzantısı.
 * *. deps.json* tüm proje bağımlılıklarını içeren dosya.
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * Uygulama bağımlılıkları. Bunlar, NuGet önbellekten çıkış klasörüne kopyalanır.
 
 `dotnet publish` Komutunun çıktısını, dağıtım için bir barındırma sistemi hazır (örneğin, bir sunucu, PC, Mac, dizüstü) yürütme için ve yalnızca resmi olarak şekilde uygulama dağıtım için hazırlamak için desteklenir. Projeyi belirtir. Dağıtım türü, bağlı olarak ana bilgisayar sistemi olabilir veya .NET Core üzerinde yüklü çalışma zamanı paylaşılmayan sahip. Daha fazla bilgi için bkz: [.NET Core uygulama dağıtımı](../deploying/index.md). Yayımlanmış bir uygulama dizin yapısı için bkz: [dizin yapısını](/aspnet/core/hosting/directory-structure).
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Arguments
 
@@ -110,7 +113,7 @@ Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]
 
 Yıldız işareti değiştirmek için Sürüm soneki tanımlar (`*`) proje dosyasının sürüm alanında.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -156,16 +159,20 @@ Proje geçerli dizinde yayımlayın:
 Belirtilen proje dosyası kullanarak uygulama yayımlama:
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 Geçerli bir dizin içinde proje yayımlama `netcoreapp1.1` framework:
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 Geçerli kullanarak uygulamayı yayımlamak `netcoreapp1.1` framework ve Çalışma Zamanı Modülü `OS X 10.10` (proje dosyasında bu RID listelemeniz gerekir).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
+Geçerli uygulamayı yayımlamak, ancak proje proje (P2P) başvuruları, yalnızca kök proje (.NET Core SDK 2.0 ve sonraki sürümler) geri yükleme işlemi sırasında geri yüklemeyin:
+
+`dotnet publish --no-dependencies`
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Hedef Çerçeve](../../standard/frameworks.md)
+* [Hedef çerçeveler](../../standard/frameworks.md)
 * [Çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)

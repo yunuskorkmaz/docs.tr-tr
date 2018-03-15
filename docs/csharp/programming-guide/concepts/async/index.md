@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Zaman uyumsuz programlama ile async ve await (C#)
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -219,7 +219,7 @@ Async yöntemi de sahip olabilir bir `void` dönüş türü. Bu dönüş türü 
   
 İçeren bir zaman uyumsuz yöntem bir `void` türü olamaz beklemenin ve void döndüren bir yöntem arayan yöntemi atar tüm özel durumları yakalamak olamaz döndürür.  
   
-Async yöntemi bildiremezsiniz [ref](../../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../../csharp/language-reference/keywords/out.md) parametreleri, ancak yöntem bu tür parametrelerine sahip yöntemleri çağırabilirsiniz. Benzer şekilde, dönüş değerleri ref yöntemleriyle çağırabilirsiniz rağmen bir zaman uyumsuz yöntem başvuruya göre bir değer döndüremiyor. 
+Async yöntemi bildiremezsiniz [içinde](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri, ancak yöntem bu tür parametrelerine sahip yöntemleri çağırabilirsiniz. Benzer şekilde, dönüş değerleri ref yöntemleriyle çağırabilirsiniz rağmen bir zaman uyumsuz yöntem başvuruya göre bir değer döndüremiyor. 
   
 Daha fazla bilgi ve örnekler için bkz: [zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md). Zaman uyumsuz yöntemleri özel durumlarını yakalama hakkında daha fazla bilgi için bkz: [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
   

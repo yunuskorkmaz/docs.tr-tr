@@ -1,7 +1,7 @@
 ---
 title: "Yöntemler - C# Kılavuzu"
 description: "Yöntem, yöntem parametreleri ve dönüş değerleri yöntemi genel bakış"
-keywords: .NET, .NET core, C#
+keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/26/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>Yöntemler #
 
@@ -36,7 +36,7 @@ Bu konu aşağıdaki bölümleri içermektedir:
 - [Dönüş değerleri](#return)
 - [Genişletme yöntemleri](#extension)
 - [Zaman uyumsuz yöntemleri](#async)
-- [İfade bodied üyeleri](#expr)
+- [İfade gövdeli üyeler](#expr)
 - [Yineleyiciler](#iterators)
 
 <a name="signatures"></a>
@@ -118,7 +118,7 @@ Aşağıdaki örnek adında (bir başvuru türü olan) bir sınıfı tanımlar `
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Parametreleri başvuruya göre geçirme ###
 
-Bir yöntem bir bağımsız değişken değerini değiştirin ve bu değişiklik denetimi için arama yöntem döndüğünde refect istediğiniz istediğinizde başvuruya göre bir parametre geçirin. Başvuruya göre bir parametre geçirmek için kullandığınız `ref` veya `out` anahtar sözcüğü.
+Bir yöntem bir bağımsız değişken değerini değiştirin ve bu değişiklik denetimi için arama yöntem döndüğünde refect istediğiniz istediğinizde başvuruya göre bir parametre geçirin. Başvuruya göre bir parametre geçirmek için kullandığınız [ `ref` ](language-reference/keywords/ref.md) veya [ `out` ](language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Başvuruya göre kopyalama kaçının ancak hala kullanarak değişiklikleri önlemek için de bir değer geçirebilirsiniz [ `in` ](language-reference/keywords/in-parameter-modifier.md) anahtar sözcüğü.
 
 Başvuru tarafından geçirilen değer dışında aşağıdaki örnekte önceki birine aynıdır `ModifyValue` yöntemi. Parametresinin değeri değiştirildiği içinde `ModifyValue` yöntemi, değerindeki değişikliği denetim çağırana döndürdüğünde yansıtılır.
 
@@ -162,7 +162,7 @@ Aşağıdaki örnek, bir yöntem tanımlar `ExampleMethod`, bir gerekli ve iste�
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Birden çok isteğe bağlı bağımsız değişkenlere sahip bir yöntem kullanarak konumsal bağımsız değişkenlerine çağrılırsa, çağıran bir bağımsız değişken sağlanan sonuncu birinciye tüm isteğe bağlı parametreler için bağımsız değişken girmeniz gerekir. Durumunda `ExampleMethod` yöntemi, örneğin, çağıran bir bağımsız değişken sağlarsa `description` parametresi, onu gerekir ayrıca sağlamak için bir tane `optionalInt` parametresi. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`Geçerli yöntem çağırma olduğu; `opt.ExampleMethod(2, , "Addition of 2 and 0);` bir "bağımsız değişkeni eksik" oluşturur derleyici hatası.
+Birden çok isteğe bağlı bağımsız değişkenlere sahip bir yöntem kullanarak konumsal bağımsız değişkenlerine çağrılırsa, çağıran bir bağımsız değişken sağlanan sonuncu birinciye tüm isteğe bağlı parametreler için bağımsız değişken girmeniz gerekir. Durumunda `ExampleMethod` yöntemi, örneğin, çağıran bir bağımsız değişken sağlarsa `description` parametresi, onu gerekir ayrıca sağlamak için bir tane `optionalInt` parametresi. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` Geçerli yöntem çağırma olduğu; `opt.ExampleMethod(2, , "Addition of 2 and 0);` bir "bağımsız değişkeni eksik" oluşturur derleyici hatası.
 
 Adlandırılmış bağımsız değişkenler veya konumsal ve adlandırılmış bağımsız değişkenler bir birleşimini kullanarak bir yöntem çağrılırsa, çağıran yöntem çağrısı son konumsal değişkeninde izleyin herhangi bir bağımsız değişken atlayabilirsiniz.
 
@@ -269,7 +269,7 @@ Aşağıdaki örnekte, `DelayAsync` bir tamsayı döndürür bir dönüş ifades
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [ref](language-reference/keywords/ref.md) veya [çıkışı](language-reference/keywords/out.md) parametreleri, ancak bu tür parametrelerine sahip yöntemleri çağırabilirsiniz.
+Herhangi bir zaman uyumsuz yöntem bildiremezsiniz [içinde](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md), veya [çıkışı](language-reference/keywords/out-parameter-modifier.md) parametreleri, ancak bu tür parametrelerine sahip yöntemleri çağırabilirsiniz.
 
  Zaman uyumsuz yöntemleri hakkında daha fazla bilgi için bkz: [uyumsuz ve bekleme ile zaman uyumsuz programlama](async.md), [akış denetimi zaman uyumsuz programlarda](programming-guide/concepts/async/control-flow-in-async-programs.md), ve [zaman uyumsuz dönüş türleri](programming-guide/concepts/async/async-return-types.md).
 
@@ -304,7 +304,8 @@ Daha fazla bilgi için bkz: [yineleyiciler](programming-guide/concepts/iterators
 [Statik sınıflar ve statik sınıf üyeleri](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
 [Devralma](programming-guide/classes-and-structs/inheritance.md)   
 [Soyut ve korumalı sınıflar ve sınıf üyeleri](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[parametreleri](language-reference/keywords/params.md)   
-[çıkışı](language-reference/keywords/out.md)   
+[Parametreleri](language-reference/keywords/params.md)   
+[Çıkışı](language-reference/keywords/out-parameter-modifier.md)   
 [Ref](language-reference/keywords/ref.md)   
-[Parametreleri geçirme](programming-guide/classes-and-structs/passing-parameters.md)
+[İçinde](language-reference/keywords/in-parameter-modifier.md)   
+[Parametreleri Geçirme](programming-guide/classes-and-structs/passing-parameters.md)

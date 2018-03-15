@@ -46,7 +46,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A> Özellik koleksiyonu ilk öğe değerini erişmek kolaylaştırır <xref:System.Xml.Linq.XElement> nesneleri. Bu özellik ilk koleksiyon en az bir nesne içerip içermediğini denetler. Koleksiyon boş ise, bu özellik döndürür `Nothing`. Aksi takdirde, bu özellik değerini döndürür <xref:System.Xml.Linq.XElement.Value%2A> koleksiyondaki ilk öğesi özelliği.  
   
 > [!NOTE]
->  Bir XML özniteliği kullanılarak değerini eriştiğinizde ' @' tanımlayıcısı, öznitelik değeri olarak döndürülür bir `String` ve açıkça belirtmek gerekmez <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği.  
+>  Bir XML özniteliği kullanılarak değerini eriştiğinizde '@' tanımlayıcısı, öznitelik değeri olarak döndürülür bir `String` ve açıkça belirtmek gerekmez <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği.  
   
  Bir koleksiyondaki diğer öğeler erişmek için XML uzantı dizin oluşturucu özelliği kullanabilirsiniz. Daha fazla bilgi için bkz: [Extension Indexer özelliği](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   

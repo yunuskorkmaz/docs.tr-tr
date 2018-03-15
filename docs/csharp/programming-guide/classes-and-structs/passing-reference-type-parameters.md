@@ -2,23 +2,24 @@
 title: "Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 282929d82822f81f12dae91d2f422da51a0f43e5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Başvuru Türü Parametreleri Geçirme (C# Programlama Kılavuzu)
-Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verileri içermiyor doğrudan; verilerine bir başvuru içeriyor. Bir başvuru türü parametre değerine göre geçirdiğinizde, bir sınıf üyesi değerini gibi başvuru işaret verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştirilemiyor; diğer bir deyişle, aynı başvuru için yeni bir sınıf bellek ayırabilir ve onu dışında blok kalıcı olması için kullanamazsınız. Bunu yapmak için parametresini kullanarak geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
+Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywords/reference-types.md) verileri içermiyor doğrudan; verilerine bir başvuru içeriyor. Bir başvuru türü parametre değerine göre geçirdiğinizde, başvurulan nesne gibi bir sınıf üyesi değerini ait verileri değiştirmek mümkündür. Ancak, başvuru değeri değiştirilemiyor; Örneğin, aynı başvuru için yeni bir sınıf bellek ayırabilir ve olması dışında yöntem kalıcı hale getirmek için kullanamazsınız. Bunu yapmak için parametresini kullanarak geçirmek [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğü. Kolaylık olması için aşağıdaki örneklerde `ref`.  
   
 ## <a name="passing-reference-types-by-value"></a>Değere göre geçirme başvuru türleri  
  Aşağıdaki örnek, bir başvuru türü parametre geçirme gösterir `arr`, bir yönteme değeriyle `Change`. Parametresi için bir başvuru olduğundan `arr`, dizi öğelerinin değerlerini değiştirmek mümkündür. Ancak, parametre yalnızca farklı bellek konumuna yeniden denemesi yönteminin içinde çalışır ve özgün değişkeni etkilemez `arr`.  
@@ -44,8 +45,10 @@ Bir değişken bir [başvuru türüne](../../../csharp/language-reference/keywor
  Dizeleri hakkında daha fazla bilgi için bkz: [dize](../../../csharp/language-reference/keywords/string.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Parametreleri geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Dizileri kullanma ref ve out geçirme](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
- [Ref](../../../csharp/language-reference/keywords/ref.md)  
- [Başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
+ [ref ve out Kullanarak Dizileri Geçirme](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
+ [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)

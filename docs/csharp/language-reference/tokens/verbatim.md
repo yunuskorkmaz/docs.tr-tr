@@ -2,7 +2,8 @@
 title: "(, C# Başvurusu)"
 ms.date: 02/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
@@ -13,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30f937951557ba65971a752b414cce6b485149be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="-c-reference"></a>(, C# Başvurusu)
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Ad çakışması durumlarda özniteliklerini ayırt etmek derleyici etkinleştirmek için kullanılır. Türetilen bir tür bir özniteliktir <xref:System.Attribute>. Tür adı genellikle soneki içerir **özniteliği**, derleyici, bu kural zorlamaz rağmen. Öznitelik sonra başvurulabilir tam tür adını kullanarak ya da kod (örneğin, `[InfoAttribute]` veya kısaltılmış adı (örneğin, `[Info]`). İki kısaltılmış ancak, bir ad çakışması öznitelik türü adları aynıdır ve bir tür adını içeren saptanmışsa **özniteliği** soneki ancak diğer desteklemez. Örneğin, derleyici belirleyemediğinden derlemek aşağıdaki kodu başarısız olup olmadığını `Info` veya `InfoAttribute` özniteliği uygulanan `Main` yöntemi.
+1. Ad çakışması durumlarda özniteliklerini ayırt etmek derleyici etkinleştirmek için kullanılır. Türetilen bir tür bir özniteliktir <xref:System.Attribute>. Tür adı genellikle soneki içerir **özniteliği**, derleyici, bu kural zorlamaz rağmen. Öznitelik sonra başvurulabilir tam tür adını kullanarak ya da kod (örneğin, `[InfoAttribute]` veya kısaltılmış adı (örneğin, `[Info]`). İki kısaltılmış ancak, bir ad çakışması öznitelik türü adları aynıdır ve bir tür adını içeren saptanmışsa **özniteliği** soneki ancak diğer desteklemez. Örneğin, derleyici belirleyemediğinden derlemek aşağıdaki kodu başarısız olup olmadığını `Info` veya `InfoAttribute` özniteliği uygulanan `Example` sınıfı.
 
    ```csharp
    using System;
@@ -78,5 +79,5 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# özel karakterler](../../../csharp/language-reference/tokens/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Özel Karakterleri](../../../csharp/language-reference/tokens/index.md)

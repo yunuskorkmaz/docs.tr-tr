@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Başvuru semantiği ile değer türleri
 
@@ -46,7 +46,7 @@ Eklediğinizde `in` değiştiricisi başvuruya göre bağımsız değişken geç
 
 Her üç çiftleri içeren iki yapıları bağımsız değişkenler. Bir çift 8 bayt olduğundan, her bir bağımsız değişkeni 24 bayttır. Belirterek `in` değiştiricisi, geçirdiğiniz bu bağımsız değişkenlerden 4-bayt veya 8-bayt başvuru makine mimarisi bağlı olarak. Boyutu fark küçüktür, ancak uygulamanız bu yöntem birçok farklı değerleri kullanarak sıkı bir döngüde çağırdığında, hızlı bir şekilde ekleyebilirsiniz.
  
-`in` Değiştiricisi hazırlandı `out` ve `ref` başka yöntemler de. Yalnızca içinde varken, farklı bir yöntem aşırı oluşturulamıyor `in`, `out` veya `ref`. Bu yeni kurallar her zaman için tanımlanmış aynı davranışı genişletmek `out` ve `ref` parametreleri.
+`in` Değiştiricisi hazırlandı `out` ve `ref` başka yöntemler de. Yalnızca içinde varken, farklı bir yöntem aşırı oluşturulamıyor `in`, `out`, veya `ref`. Bu yeni kurallar her zaman için tanımlanmış aynı davranışı genişletmek `out` ve `ref` parametreleri.
 
 `in` Değiştiricisi parametreler isteyen herhangi bir üyesi için uygulanan: yöntemler, temsilciler, Lambda'lar, yerel İşlevler, dizin oluşturucular, işleçler.
 
@@ -61,7 +61,7 @@ Derleyici zorlar `in` olmayan bir salt okunur değişken bağımsız değişken.
 
 `in` Parametresi atamasını Ayrıca başvuru türleriyle kullanılan veya sayısal değerleri oluşturulmuş. Bununla birlikte, her iki durumda da avantajları en az, varsa.
 
-## <a name="ref-readonly-returns"></a>`ref readonly`döndürür
+## <a name="ref-readonly-returns"></a>`ref readonly` döndürür
 
 Başvuruya göre dönüş değeri türü, ancak bu değeri değiştirmeden gelen arayan engellemek isteyebilirsiniz. Kullanım `ref readonly` bu tasarım hedefi express değiştiricisi. Okuyucular, var olan verilere bir başvuru döndürüyor, ancak değişiklik sağlanmıyor olduğunu bildirir. 
 
@@ -80,7 +80,7 @@ Bir değişkene atadığınızda bir `ref readonly return`, ya da belirtebilirsi
 
 İlk atama önceki kodda bir kopyasını oluşturur `Origin` sabiti ve kopyalama atar. İkinci bir başvuru atar. Dikkat `readonly` değiştiricisi değişken bildirimi parçası olması gerekir. Başvurduğu başvurusu değiştirilemez. Bunu yapmak için deneme, bir derleme zamanı hatasına neden.
 
-## <a name="readonly-struct-type"></a>`readonly struct`türü
+## <a name="readonly-struct-type"></a>`readonly struct` Türü
 
 Uygulama `ref readonly` yapı yüksek trafik kullanımlar için yeterli olabilir.
 Diğer durumlarda, sabit bir yapı oluşturmak isteyebilirsiniz. Ardından readonly başvuruya göre geçirebilirsiniz. Alıştırma savunma kaldırır meydana yöntemleri olarak kullanılan bir yapı eriştiğinizde kopyalar bir `in` parametresi.
@@ -93,9 +93,9 @@ Son olarak, üyeleri çağırdığınızda derleyici daha verimli kodunu oluştu
 
 [!code-csharp[ReadonlyOnlyPoint3D](../../samples/csharp/reference-semantics/Point3D.cs#ReadonlyOnlyPoint3D "Defining an immutable structure")]
 
-## <a name="ref-struct-type"></a>`ref struct`türü
+## <a name="ref-struct-type"></a>`ref struct` Türü
 
-Başka bir ilgili dil yığını ayrılmış olması gereken değer türünü bildirmesine olanağı özelliğidir. Diğer bir deyişle, bu tür hiçbir zaman öbek üzerinde başka bir sınıf üyesi olarak oluşturulabilir. Bu özellik için birincil motivasyon oluştu <xref:System.Span%601> ve ilgili yapıları. <xref:System.Span%601>yönetilen bir işaretçi bir grubun üyeleri ve diğeri aralık uzunluğu olan içerebilir. C# güvenli olmayan bir bağlam dışında yönetilen bellek işaretçiler desteklemediğinden, aslında biraz farklı uygulanır. İşaretçinin ve uzunluk değişiklikleri yazma atomik değil. Yani bir <xref:System.Span%601> aralığı hataları dışında tabi olacaktır veya diğer tür güvenlik ihlallerini onu değil kısıtlı bir tek yığın çerçevesi olan. Ayrıca, yönetilen bir işaretçi GC yığınında genellikle koyma JIT zamanında çöküyor.
+Başka bir ilgili dil yığını ayrılmış olması gereken değer türünü bildirmesine olanağı özelliğidir. Diğer bir deyişle, bu tür hiçbir zaman öbek üzerinde başka bir sınıf üyesi olarak oluşturulabilir. Bu özellik için birincil motivasyon oluştu <xref:System.Span%601> ve ilgili yapıları. <xref:System.Span%601> yönetilen bir işaretçi bir grubun üyeleri ve diğeri aralık uzunluğu olan içerebilir. C# güvenli olmayan bir bağlam dışında yönetilen bellek işaretçiler desteklemediğinden, aslında biraz farklı uygulanır. İşaretçinin ve uzunluk değişiklikleri yazma atomik değil. Yani bir <xref:System.Span%601> aralığı hataları dışında tabi olacaktır veya diğer tür güvenlik ihlallerini onu değil kısıtlı bir tek yığın çerçevesi olan. Ayrıca, yönetilen bir işaretçi GC yığınında genellikle koyma JIT zamanında çöküyor.
 
 Kullanılarak oluşturulan bellekle çalışma benzer gereksinimleri olabilir [ `stackalloc` ](language-reference/keywords/stackalloc.md) veya birlikte çalışma API'leri bellekten kullanılırken. Kendi tanımlayabilirsiniz `ref struct` türleri bu ihtiyaçları için. Bu makalede, gördüğünüz kullanan örnekler `Span<T>` basitleştirmek için.
 

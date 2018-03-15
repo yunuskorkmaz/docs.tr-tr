@@ -13,11 +13,11 @@ ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ffaf8a8b5c52e793e08ab467621c42ec47b1a29c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f175d102fa8a05b7f8c0a787564b933ff81cdf6c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-warning-cs3024"></a>Derleyici Uyarısı CS3024
 Kısıtlama türü 'type' CLS uyumlu değil.  
@@ -31,7 +31,7 @@ Kısıtlama türü 'type' CLS uyumlu değil.
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, birkaç konumlarda CS3024 oluşturur:  
   
-```  
+```csharp  
 // cs3024.cs  
 // Compile with: /target:library  
  [assembly: System.CLSCompliant(true)]  
@@ -62,4 +62,4 @@ public class Test
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Tür parametrelerindeki kısıtlamalar](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+ [Tür Parametrelerindeki Kısıtlamalar](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

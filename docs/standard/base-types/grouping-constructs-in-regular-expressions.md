@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Aşağıdakileri yapmak için gruplandırma yapıları kullanabilirsiniz:  
@@ -301,7 +301,7 @@ Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giri�
   
  Grup seçenekleri yapı yakalama bir grup değil. Diğer bir deyişle, ancak herhangi bir kısmının tarafından yakalanan bir dize *alt* eklenmiştir eşlemesinde onu değil bir yakalanan grubunda yer alan ve doldurmak için kullanılan <xref:System.Text.RegularExpressions.GroupCollection> nesnesi.  
   
- Örneğin, normal ifade `\b(?ix: d \w+)\s` büyük küçük harf duyarsız eşleştirmeyi etkinleştir ve "d" harfiyle başlayan tüm sözcükleri tanımlayan içinde düzeni boşluk yoksaymak için aşağıdaki örnekte satır içi seçeneklerini bir gruplama yapısı kullanır. Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Örneğin, normal ifade `\b(?ix: d \w+)\s` büyük küçük harf duyarsız eşleştirmeyi etkinleştir ve desen "d" harfiyle başlayan tüm sözcükleri tanımlayan içinde boşluk yoksaymak için aşağıdaki örnekte satır içi seçeneklerini bir gruplama yapısı kullanır. Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  

@@ -11,11 +11,11 @@ ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Dizin Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Dizin oluşturucular oluşturmanıza olanak sağlayan bir söz dizimi kullanışlı olan bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapısı](../../../csharp/language-reference/keywords/struct.md), veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) istemci uygulamaları, bir dizi olarak erişebilir. Dizin oluşturucular en sık birincil amacı olan bir iç toplama veya dizi kapsülleyen türlerinde uygulanır. Örneğin, 24 saatlik bir dönemde 10 farklı saatlerinde kayıtlı olan Farenheit sıcaklık temsil eden TempRecord adlı bir sınıf olduğunu varsayalım. "Etme temsil etmek için temps" float türünde adlı bir dizi sınıf içerir ve bir <xref:System.DateTime> etme kaydedilen tarih temsil eder. Bu sınıf bir dizin oluşturucu uygulayarak istemcileri TempRecord örneğinde etme erişebilir `float temp = tr[4]` yerine olarak `float temp = tr.temps[4]`. Dizin Oluşturucu gösterimi yalnızca istemci uygulamaları için söz dizimi basitleştirir; Ayrıca sınıf ve amacı anlamak diğer geliştiriciler için daha sezgisel kılar.  
@@ -36,7 +36,7 @@ public int this[int index]    // Indexer declaration
   
  Bir dizin oluşturucu imza sayısı ve türleri resmi parametrelerinden oluşur. Dizin Oluşturucu türü veya biçimsel parametresi adları içermez. Aynı sınıf içinde birden çok dizin oluşturucu bildirirseniz farklı imzalar olması gerekir.  
   
- Bir dizin oluşturucu değeri bir değişken olarak sınıflandırılmış değil; Bu nedenle, bir dizin oluşturucu değeri olarak geçiremezsiniz bir [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out.md) parametresi.  
+ Bir dizin oluşturucu değeri bir değişken olarak sınıflandırılmış değil; Bu nedenle, bir dizin oluşturucu değeri olarak geçiremezsiniz bir [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi.  
   
  Dizin Oluşturucu, diğer diller kullanabileceği bir ad ile sağlamak için kullanın bir `name` öznitelik bildirimi. Örneğin:  
   
@@ -78,6 +78,6 @@ public int this [int index]   // Indexer declaration
 -   Erişilebilirliğini ayarlamak `get` ve [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimciler şüphelenilebilir olabildiğince kısıtlayıcı olun. Bu önemlidir `set` belirli erişimci. Daha fazla bilgi için bkz: [erişimci erişilebilirliğini kısıtlama](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
- [Özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)  
+ [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)

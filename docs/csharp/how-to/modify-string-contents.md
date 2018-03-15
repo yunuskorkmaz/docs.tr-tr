@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Nasıl yapılır: C# dize içeriklerini değiştirme #
 
 Bu makalede üretmek için çeşitli teknikler gösterilmektedir bir `string` varolan değiştirerek `string`. Tüm teknikler gösterilen dönüş yeni değişikliklerin sonucu `string` nesnesi. Açıkça bunu göstermek için tüm örnekler sonucu yeni bir değişkende saklayın. Her iki özgün sonra inceleyebilirsiniz `string` ve `string` her örnek çalıştırdığınızda değiştirilmeye karşı sonuçlanır.
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Bu makalede gösterilen bazı teknikler vardır. Varolan metni değiştirebilirsiniz. Desen aramak ve diğer metinle eşleşen metin. Bir karakter dizisi bir dize davranabilirsiniz. Beyaz alan kaldırmak kullanışlı yöntemler de kullanabilirsiniz. Senaryonuza en yakından eşleşen teknikleri seçmeniz gerekir.
 

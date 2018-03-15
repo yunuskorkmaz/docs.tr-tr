@@ -3,16 +3,17 @@ title: DotNet paketi command - .NET Core CLI
 description: "Dotnet paketi komut .NET Core projeniz için NuGet paketleri oluşturur."
 author: mairaw
 ms.author: mairaw
-ms.date: 12/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -20,18 +21,19 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet pack`-Kod bir NuGet paketi paketler.
+`dotnet pack` -Kod bir NuGet paketi paketler.
 
 ## <a name="synopsis"></a>Özet
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
 
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -48,6 +50,8 @@ Varsayılan olarak, `dotnet pack` projeyi ilk oluşturur. Bu davranışı önlem
 
 MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işleminin komutu. Daha fazla bilgi için bkz: [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm nasıl MSBuild /p anahtarını birkaç farklı senaryo için kullanılacağını gösterir.
 
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
 ## <a name="arguments"></a>Arguments
 
 `PROJECT`
@@ -62,7 +66,7 @@ Paketi projesi. Her iki yolu olan bir [csproj dosya](csproj.md) veya bir dizin. 
 
 Derleme yapılandırması tanımlar. Varsayılan değer `Debug` şeklindedir.
 
-`--force`Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu silme ile eşdeğerdir *project.assets.json* dosya.
+`--force` Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu silme ile eşdeğerdir *project.assets.json* dosya.
 
 `-h|--help`
 
@@ -108,7 +112,7 @@ Değerini tanımlayan `$(VersionSuffix)` projesinde MSBuild özelliği.
 
 Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -157,7 +161,7 @@ Proje geçerli dizinde paketi:
 Paketi `app1` proje:
 
 `dotnet pack ~/projects/app1/project.csproj`
-    
+
 Geçerli dizinde projenin Paketle ve sonuçta elde edilen paketlere yerleştirin `nupkgs` klasörü:
 
 `dotnet pack --output nupkgs`
@@ -177,3 +181,7 @@ Paket sürümü kümesine `2.1.0` ile `PackageVersion` MSBuild özelliği:
 Belirli bir projenin paketi [hedef framework](../../standard/frameworks.md):
 
 `dotnet pack /p:TargetFrameworks=net45`
+
+Proje paketi ve geri yükleme işlemi (.NET Core SDK 2.0 ve sonraki sürümler) belirli bir çalışma zamanı (Windows 10) kullanın:
+
+`dotnet pack --runtime win10-x64`
