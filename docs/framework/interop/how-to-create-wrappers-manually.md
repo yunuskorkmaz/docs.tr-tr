@@ -3,7 +3,6 @@ title: "Nasıl yapılır: Sarmalayıcıları Elle Oluşturma"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
@@ -12,43 +11,42 @@ ms.topic: article
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7ac7afdd85037d50bdda9fae0a33896dc441bce5
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="how-to-create-wrappers-manually"></a><span data-ttu-id="b18c0-102">Nasıl yapılır: Sarmalayıcıları Elle Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b18c0-102">How to: Create Wrappers Manually</span></span>
-<span data-ttu-id="b18c0-103">Yönetilen kaynak kodunda el ile COM türlerinizi karar verirseniz, başlatmak için en iyi varolan arabirimi tanım dili (IDL) dosyası ya da tür kitaplığı ile yerdir.</span><span class="sxs-lookup"><span data-stu-id="b18c0-103">If you decide to declare COM types manually in managed source code, the best place to start is with an existing Interface Definition Language (IDL) file or type library.</span></span> <span data-ttu-id="b18c0-104">IDL dosya yok veya bir tür kitaplığı dosya oluşturulamıyor, yönetilen bildirimleri oluşturarak COM türlerini benzetimini yapabilirsiniz ve sonuçta elde edilen derleme için bir tür kitaplığı dışarı aktarma.</span><span class="sxs-lookup"><span data-stu-id="b18c0-104">When you do not have the IDL file or cannot generate a type library file, you can simulate the COM types by creating managed declarations and exporting the resulting assembly to a type library.</span></span>  
+# <a name="how-to-create-wrappers-manually"></a><span data-ttu-id="4b756-102">Nasıl yapılır: Sarmalayıcıları Elle Oluşturma</span><span class="sxs-lookup"><span data-stu-id="4b756-102">How to: Create Wrappers Manually</span></span>
+<span data-ttu-id="4b756-103">Yönetilen kaynak kodunda el ile COM türlerinizi karar verirseniz, başlatmak için en iyi varolan arabirimi tanım dili (IDL) dosyası ya da tür kitaplığı ile yerdir.</span><span class="sxs-lookup"><span data-stu-id="4b756-103">If you decide to declare COM types manually in managed source code, the best place to start is with an existing Interface Definition Language (IDL) file or type library.</span></span> <span data-ttu-id="4b756-104">IDL dosya yok veya bir tür kitaplığı dosya oluşturulamıyor, yönetilen bildirimleri oluşturarak COM türlerini benzetimini yapabilirsiniz ve sonuçta elde edilen derleme için bir tür kitaplığı dışarı aktarma.</span><span class="sxs-lookup"><span data-stu-id="4b756-104">When you do not have the IDL file or cannot generate a type library file, you can simulate the COM types by creating managed declarations and exporting the resulting assembly to a type library.</span></span>  
   
-### <a name="to-simulate-com-types-from-managed-source"></a><span data-ttu-id="b18c0-105">Yönetilen kaynak COM türlerinden benzetimini yapmak için</span><span class="sxs-lookup"><span data-stu-id="b18c0-105">To simulate COM types from managed source</span></span>  
+### <a name="to-simulate-com-types-from-managed-source"></a><span data-ttu-id="4b756-105">Yönetilen kaynak COM türlerinden benzetimini yapmak için</span><span class="sxs-lookup"><span data-stu-id="4b756-105">To simulate COM types from managed source</span></span>  
   
-1.  <span data-ttu-id="b18c0-106">Ortak dil belirtimi (CLS) ile uyumlu olan bir dildeki türleri bildirme ve dosyasını derleyin.</span><span class="sxs-lookup"><span data-stu-id="b18c0-106">Declare the types in a language that is compliant with the Common Language Specification (CLS) and compile the file.</span></span>  
+1.  <span data-ttu-id="4b756-106">Ortak dil belirtimi (CLS) ile uyumlu olan bir dildeki türleri bildirme ve dosyasını derleyin.</span><span class="sxs-lookup"><span data-stu-id="4b756-106">Declare the types in a language that is compliant with the Common Language Specification (CLS) and compile the file.</span></span>  
   
-2.  <span data-ttu-id="b18c0-107">Türleriyle içeren derlemenin verme [tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="b18c0-107">Export the assembly containing the types with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
+2.  <span data-ttu-id="4b756-107">Türleriyle içeren derlemenin verme [tür kitaplığı dışarı Aktarıcı (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="4b756-107">Export the assembly containing the types with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
   
-3.  <span data-ttu-id="b18c0-108">Dışarı aktarılan COM tür kitaplığı yönetilen türleri COM odaklı bildirmek için temel olarak kullanın.</span><span class="sxs-lookup"><span data-stu-id="b18c0-108">Use the exported COM type library as a basis for declaring COM-oriented managed types.</span></span>  
+3.  <span data-ttu-id="4b756-108">Dışarı aktarılan COM tür kitaplığı yönetilen türleri COM odaklı bildirmek için temel olarak kullanın.</span><span class="sxs-lookup"><span data-stu-id="4b756-108">Use the exported COM type library as a basis for declaring COM-oriented managed types.</span></span>  
   
-### <a name="to-create-a-runtime-callable-wrapper-rcw"></a><span data-ttu-id="b18c0-109">Bir çalışma zamanı aranabilir sarmalayıcısı (RCW) oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b18c0-109">To create a runtime callable wrapper (RCW)</span></span>  
+### <a name="to-create-a-runtime-callable-wrapper-rcw"></a><span data-ttu-id="4b756-109">Bir çalışma zamanı aranabilir sarmalayıcısı (RCW) oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="4b756-109">To create a runtime callable wrapper (RCW)</span></span>  
   
-1.  <span data-ttu-id="b18c0-110">Bir IDL dosya veya türü kitaplık dosyası olmadığı varsayılarak, hangi sınıflar ve arabirimler özel RCW dahil etmek istediğiniz karar verin.</span><span class="sxs-lookup"><span data-stu-id="b18c0-110">Assuming that you have an IDL file or type library file, decide which classes and interfaces you want to include in the custom RCW.</span></span> <span data-ttu-id="b18c0-111">Doğrudan veya dolaylı olarak kullanmak için uygulamanızda düşünmüyorsanız türlerini hariç tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b18c0-111">You can exclude any types that you do not intend to use directly or indirectly in your application.</span></span>  
+1.  <span data-ttu-id="4b756-110">Bir IDL dosya veya türü kitaplık dosyası olmadığı varsayılarak, hangi sınıflar ve arabirimler özel RCW dahil etmek istediğiniz karar verin.</span><span class="sxs-lookup"><span data-stu-id="4b756-110">Assuming that you have an IDL file or type library file, decide which classes and interfaces you want to include in the custom RCW.</span></span> <span data-ttu-id="4b756-111">Doğrudan veya dolaylı olarak kullanmak için uygulamanızda düşünmüyorsanız türlerini hariç tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4b756-111">You can exclude any types that you do not intend to use directly or indirectly in your application.</span></span>  
   
-2.  <span data-ttu-id="b18c0-112">CLS uyumlu bir dilde kaynak dosyası oluşturma ve türleri bildirin.</span><span class="sxs-lookup"><span data-stu-id="b18c0-112">Create a source file in a CLS-compliant language and declare the types.</span></span> <span data-ttu-id="b18c0-113">Bkz: [derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) alma dönüştürme işlemini eksiksiz bir açıklaması.</span><span class="sxs-lookup"><span data-stu-id="b18c0-113">See [Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) for a complete description of the import conversion process.</span></span> <span data-ttu-id="b18c0-114">Özel RCW oluşturduğunuzda, etkili bir şekilde el ile tarafından sağlanan tür dönüştürme etkinliği gerçekleştirdiğiniz [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="b18c0-114">Effectively, when you create a custom RCW, you are manually performing the type conversion activity provided by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="b18c0-115">Sonraki bölümdeki örnek, bir IDL veya tür kitaplığı dosyasını ve bunların karşılık gelen türlerine C# kodunda türlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b18c0-115">The example in the next section shows types in an IDL or type library file and their corresponding types in C# code.</span></span>  
+2.  <span data-ttu-id="4b756-112">CLS uyumlu bir dilde kaynak dosyası oluşturma ve türleri bildirin.</span><span class="sxs-lookup"><span data-stu-id="4b756-112">Create a source file in a CLS-compliant language and declare the types.</span></span> <span data-ttu-id="4b756-113">Bkz: [derleme dönüştürme özeti için tür kitaplığı](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) alma dönüştürme işlemini eksiksiz bir açıklaması.</span><span class="sxs-lookup"><span data-stu-id="4b756-113">See [Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) for a complete description of the import conversion process.</span></span> <span data-ttu-id="4b756-114">Özel RCW oluşturduğunuzda, etkili bir şekilde el ile tarafından sağlanan tür dönüştürme etkinliği gerçekleştirdiğiniz [tür kitaplığı içeri Aktarıcı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="4b756-114">Effectively, when you create a custom RCW, you are manually performing the type conversion activity provided by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="4b756-115">Sonraki bölümdeki örnek, bir IDL veya tür kitaplığı dosyasını ve bunların karşılık gelen türlerine C# kodunda türlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="4b756-115">The example in the next section shows types in an IDL or type library file and their corresponding types in C# code.</span></span>  
   
-3.  <span data-ttu-id="b18c0-116">Bildirimleri tamamlandığı zaman, herhangi bir yönetilen kaynak kodu derleme gibi dosyasını derleyin.</span><span class="sxs-lookup"><span data-stu-id="b18c0-116">When the declarations are complete, compile the file as you compile any other managed source code.</span></span>  
+3.  <span data-ttu-id="4b756-116">Bildirimleri tamamlandığı zaman, herhangi bir yönetilen kaynak kodu derleme gibi dosyasını derleyin.</span><span class="sxs-lookup"><span data-stu-id="4b756-116">When the declarations are complete, compile the file as you compile any other managed source code.</span></span>  
   
-4.  <span data-ttu-id="b18c0-117">Türleriyle Tlbimp.exe ile içeri gibi bazı kodunuzu doğrudan ekleyebileceğiniz ek bilgi gerektirir.</span><span class="sxs-lookup"><span data-stu-id="b18c0-117">As with the types imported with Tlbimp.exe, some require additional information, which you can add directly to your code.</span></span> <span data-ttu-id="b18c0-118">Ayrıntılar için bkz [nasıl yapılır: Düzenle birlikte çalışma derlemeleri](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277).</span><span class="sxs-lookup"><span data-stu-id="b18c0-118">For details, see [How to: Edit Interop Assemblies](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277).</span></span>  
+4.  <span data-ttu-id="4b756-117">Türleriyle Tlbimp.exe ile içeri gibi bazı kodunuzu doğrudan ekleyebileceğiniz ek bilgi gerektirir.</span><span class="sxs-lookup"><span data-stu-id="4b756-117">As with the types imported with Tlbimp.exe, some require additional information, which you can add directly to your code.</span></span> <span data-ttu-id="4b756-118">Ayrıntılar için bkz [nasıl yapılır: Düzenle birlikte çalışma derlemeleri](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="4b756-118">For details, see [How to: Edit Interop Assemblies](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b18c0-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="b18c0-119">Example</span></span>  
- <span data-ttu-id="b18c0-120">Aşağıdaki kod örneği gösterilmektedir `ISATest` arabirimi ve `SATest` IDL sınıfında ve karşılık gelen türlerine C# kaynak kodu.</span><span class="sxs-lookup"><span data-stu-id="b18c0-120">The following code shows an example of the `ISATest` interface and `SATest` class in IDL and the corresponding types in C# source code.</span></span>  
+## <a name="example"></a><span data-ttu-id="4b756-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="4b756-119">Example</span></span>  
+ <span data-ttu-id="4b756-120">Aşağıdaki kod örneği gösterilmektedir `ISATest` arabirimi ve `SATest` IDL sınıfında ve karşılık gelen türlerine C# kaynak kodu.</span><span class="sxs-lookup"><span data-stu-id="4b756-120">The following code shows an example of the `ISATest` interface and `SATest` class in IDL and the corresponding types in C# source code.</span></span>  
   
- <span data-ttu-id="b18c0-121">**IDL veya türü kitaplık dosyası**</span><span class="sxs-lookup"><span data-stu-id="b18c0-121">**IDL or type library file**</span></span>  
+ <span data-ttu-id="4b756-121">**IDL veya türü kitaplık dosyası**</span><span class="sxs-lookup"><span data-stu-id="4b756-121">**IDL or type library file**</span></span>  
   
 ```  
  [  
@@ -73,7 +71,7 @@ coclass SATest
  };  
 ```  
   
- <span data-ttu-id="b18c0-122">**Yönetilen kaynak kodunda sarmalayıcı**</span><span class="sxs-lookup"><span data-stu-id="b18c0-122">**Wrapper in managed source code**</span></span>  
+ <span data-ttu-id="4b756-122">**Yönetilen kaynak kodunda sarmalayıcı**</span><span class="sxs-lookup"><span data-stu-id="4b756-122">**Wrapper in managed source code**</span></span>  
   
 ```csharp  
 using System;  
@@ -110,10 +108,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b18c0-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b18c0-123">See Also</span></span>  
- [<span data-ttu-id="b18c0-124">Çalışma zamanı aranabilir sarmalayıcıları özelleştirme</span><span class="sxs-lookup"><span data-stu-id="b18c0-124">Customizing Runtime Callable Wrappers</span></span>](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [<span data-ttu-id="b18c0-125">COM veri türleri</span><span class="sxs-lookup"><span data-stu-id="b18c0-125">COM Data Types</span></span>](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
- [<span data-ttu-id="b18c0-126">Nasıl yapılır: Düzenle birlikte çalışma derlemeleri</span><span class="sxs-lookup"><span data-stu-id="b18c0-126">How to: Edit Interop Assemblies</span></span>](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [<span data-ttu-id="b18c0-127">Derleme dönüştürme özeti için tür kitaplığı</span><span class="sxs-lookup"><span data-stu-id="b18c0-127">Type Library to Assembly Conversion Summary</span></span>](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [<span data-ttu-id="b18c0-128">Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="b18c0-128">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [<span data-ttu-id="b18c0-129">Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="b18c0-129">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+## <a name="see-also"></a><span data-ttu-id="4b756-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4b756-123">See Also</span></span>  
+ [<span data-ttu-id="4b756-124">Çalışma zamanı aranabilir sarmalayıcıları özelleştirme</span><span class="sxs-lookup"><span data-stu-id="4b756-124">Customizing Runtime Callable Wrappers</span></span>](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [<span data-ttu-id="4b756-125">COM veri türleri</span><span class="sxs-lookup"><span data-stu-id="4b756-125">COM Data Types</span></span>](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [<span data-ttu-id="4b756-126">Nasıl yapılır: Düzenle birlikte çalışma derlemeleri</span><span class="sxs-lookup"><span data-stu-id="4b756-126">How to: Edit Interop Assemblies</span></span>](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [<span data-ttu-id="4b756-127">Derleme dönüştürme özeti için tür kitaplığı</span><span class="sxs-lookup"><span data-stu-id="4b756-127">Type Library to Assembly Conversion Summary</span></span>](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [<span data-ttu-id="4b756-128">Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="4b756-128">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [<span data-ttu-id="4b756-129">Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)</span><span class="sxs-lookup"><span data-stu-id="4b756-129">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
