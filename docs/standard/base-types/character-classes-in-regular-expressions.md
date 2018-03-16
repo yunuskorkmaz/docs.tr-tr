@@ -17,21 +17,21 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
-<a name="Top"></a>Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
+<a name="Top"></a> Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
   
 -   Pozitif karakter grupları. Giriş dizesindeki bir karakter, belirli bir karakter kümesindekindeki karakterlerden biriyle eşleşmelidir. Daha fazla bilgi için bkz: [pozitif karakter grubu](#PositiveGroup).  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`[aeiou]`|Tüm sesli harflerle eşleş.|  
 |`[\p{P}\d]`|Tüm noktalama işaretleriyle ve ondalık basamak işaretleriyle eşleş.|  
-|`[\s\p{P}]`|Tüm boşluk ve noktalama işaretleriyle eşleş.|  
+|`[\s\p{P}]`|Tüm boşluk veya noktalama eşleşmesi.|  
   
  Aşağıdaki örnek "a" ve "e" karakterlerini içerek bir pozitif karakterler grubu tanımlar ve eşleşmenin gerçekleşmesi için giriş dizesinde "grey" veya "gray" sözcüklerinin ardından bir sözcük daha bulunmasını gerektirir.  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
  Karakterlerin tek tek bulunduğu bir listeyi belirtmek için kullanılan söz dizimi aşağıdaki gibidir:  
   
- [*^ character_group*]  
+ [*^character_group*]  
   
  Burada *character_group* başarılı olması bir eşleştirme için giriş dizesi görünemez karakterleri tek tek bir listesi verilmiştir. *character_group* bir veya daha fazla sabit karakterleri, herhangi bir birleşimini içerebilir [kaçış karakterleri](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), ya da karakter sınıfları.  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 01/09/2018
   
  Normal ifade yapısı  
   
- `\p{`*adı*`}`  
+ `\p{` *Adı* `}`  
   
  bir Unicode genel kategorisine veya adlandırılmış blok ait herhangi bir karakterle eşleşir nerede *adı* kategori kısaltması veya adlandırılmış blok adıdır. Kategori kısaltmalar listesi için bkz: [desteklenen Unicode genel kategorileri](#SupportedUnicodeGeneralCategories) bu konunun ilerleyen bölümlerinde. Adlandırılmış blokları listesi için bkz: [adlı blokları desteklenen](#SupportedNamedBlocks) bu konunun ilerleyen bölümlerinde.  
   
@@ -225,7 +225,7 @@ ms.lasthandoff: 01/09/2018
   
  Normal ifade yapısı  
   
- `\P{`*adı*`}`  
+ `\P{` *Adı* `}`  
   
  bir Unicode genel kategori veya adlandırılmış blok ait olmayan herhangi bir karakterle eşleşir nerede *adı* kategori kısaltması veya adlandırılmış blok adıdır. Kategori kısaltmalar listesi için bkz: [desteklenen Unicode genel kategorileri](#SupportedUnicodeGeneralCategories) bu konunun ilerleyen bölümlerinde. Adlandırılmış blokları listesi için bkz: [adlı blokları desteklenen](#SupportedNamedBlocks) bu konunun ilerleyen bölümlerinde.  
   
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Sözcük Karakteri: \w  
- `\w`herhangi bir sözcük karakterle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
+ `\w` herhangi bir sözcük karakterle eşleşir. Bir sözcük karakteri, aşağıdaki tabloda listelenen Unicode kategorilerinin herhangi birinin üyesidir.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -272,7 +272,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>Sözcük Olmayan Karakter: \W  
- `\W`herhangi bir sözcük dışı karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
+ `\W` herhangi bir sözcük dışı karakterle eşleşir. \W dil öğesi aşağıdaki karakter sınıfıyla eşdeğerdir:  
   
 ```  
 [^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
@@ -313,7 +313,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="WhitespaceCharacter"></a>   
 ## <a name="white-space-character-s"></a>Boşluk Karakteri: \s  
- `\s`herhangi bir boşluk karakteri ile eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
+ `\s` herhangi bir boşluk karakteri ile eşleşir. Aşağıdaki tabloda listelenen kaçış dizileri ve Unicode kategorileriyle eşdeğerdir.  
   
 |Kategori|Açıklama|  
 |--------------|-----------------|  
@@ -335,7 +335,7 @@ ms.lasthandoff: 01/09/2018
 |\w+|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |(e)?|Sıfır veya bir kez "e" ile eşleş.|  
 |s|Bir "s" ile eşleş.|  
-|(\s &#124; $)|Bir boşluk karakteri veya giriş dizesinin sonuyla eşleş.|  
+|(\s&#124;$)|Eşleşen bir boşluk karakteri veya giriş dize sonu.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
@@ -344,7 +344,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonWhitespaceCharacter"></a>   
 ## <a name="non-white-space-character-s"></a>Boşluk Olmayan Karakter: \S  
- `\S`herhangi bir boşluk olmayan karakterle eşleşir. Eşdeğer olan `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseni ya da eşdeğer olan normal ifade deseni karşıtı `\s`, boşluk karakterleri eşleştirir. Daha fazla bilgi için bkz: [boşluk karakteri: \s](#WhitespaceCharacter).  
+ `\S` herhangi bir boşluk olmayan karakterle eşleşir. Eşdeğer olan `[^\f\n\r\t\v\x85\p{Z}]` normal ifade deseni ya da eşdeğer olan normal ifade deseni karşıtı `\s`, boşluk karakterleri eşleştirir. Daha fazla bilgi için bkz: [boşluk karakteri: \s](#WhitespaceCharacter).  
   
  ECMAScript uyumlu davranış belirtilirse, `\S` eşdeğerdir `[^ \f\n\r\t\v]`. "ECMAScript eşleşen davranışı" bölümünde ECMAScript normal ifadeler hakkında daha fazla bilgi için bkz: [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -363,7 +363,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Ondalık Basamak Karakteri: \d  
- `\d`herhangi bir ondalık basamak eşleşir. Eşdeğer olan `\p{Nd}` standart ondalık basamak 0-9 ve bunun yanı sıra diğer karakter kümesi sayısı, ondalık basamak içeren normal ifade deseni.  
+ `\d` herhangi bir ondalık basamak eşleşir. Eşdeğer olan `\p{Nd}` standart ondalık basamak 0-9 ve bunun yanı sıra diğer karakter kümesi sayısı, ondalık basamak içeren normal ifade deseni.  
   
  ECMAScript uyumlu davranış belirtilirse, `\d` eşdeğerdir `[0-9]`. "ECMAScript eşleşen davranışı" bölümünde ECMAScript normal ifadeler hakkında daha fazla bilgi için bkz: [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -387,7 +387,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Rakam Olmayan Karakter: \D  
- `\D`herhangi bir rakam olmayan karakterle eşleşir. Eşdeğer olan `\P{Nd}` normal ifade deseni.  
+ `\D` herhangi bir rakam olmayan karakterle eşleşir. Eşdeğer olan `\P{Nd}` normal ifade deseni.  
   
  ECMAScript uyumlu davranış belirtilirse, `\D` eşdeğerdir `[^0-9]`. "ECMAScript eşleşen davranışı" bölümünde ECMAScript normal ifadeler hakkında daha fazla bilgi için bkz: [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -557,7 +557,7 @@ ms.lasthandoff: 01/09/2018
 |D800 - DB7F|`IsHighSurrogates`|  
 |DB80 - DBFF|`IsHighPrivateUseSurrogates`|  
 |DC00 - DFFF|`IsLowSurrogates`|  
-|E000 - F8FF|`IsPrivateUse`veya`IsPrivateUseArea`|  
+|E000 - F8FF|`IsPrivateUse` Veya `IsPrivateUseArea`|  
 |F900 - FAFF|`IsCJKCompatibilityIdeographs`|  
 |FB00 - FB4F|`IsAlphabeticPresentationForms`|  
 |FB50 - FDFF|`IsArabicPresentationForms-A`|  
@@ -577,7 +577,7 @@ ms.lasthandoff: 01/09/2018
   
  Bir karakter sınıfı çıkarma ifadesi aşağıdaki biçime sahiptir:  
   
- `[`*base_group* `-[` *excluded_group*`]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
  Köşeli ayraç (`[]`) ve tire (`-`) zorunludur. *Base_group* olan bir [pozitif karakter grubu](#PositiveGroup) veya [negatif karakter grubu](#NegativeGroup). *Excluded_group* bileşenidir başka bir olumlu veya olumsuz karakter grubu ya da başka bir karakter sınıfı çıkarma ifade (diğer bir deyişle, karakter sınıfı çıkarma ifadeleri geçirebilmenize).  
   

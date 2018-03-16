@@ -4,17 +4,17 @@ description: "F # kod örnekleriyle birlikte bu tur dilde programlama önemli ö
 keywords: "Visual f #, f # işlevsel programlama, .NET, turu"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>F # turu #
 
@@ -22,20 +22,13 @@ F # hakkında bilgi edinmek için en iyi okuma ve yazma F # kodu yoludur.  Bu ma
 
 İki birincil kavram vardır F #'ta: İşlevler ve türleri.  Bu tur, bu iki kavrama kalan dil özellikleri vurgulamak.
 
-## <a name="how-to-run-the-code-samples"></a>Kod örnekleri çalıştırma
-
->[!NOTE]
-Kod örnekleri çalıştırmak için iki seçenek olan [deneyin F #](http://www.tryfsharp.org/Create) (Silverlight gereklidir) ve [F # Azure dizüstü bilgisayarlar için](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) Microsoft Azure üzerinde.
-
-Bu kod örnekleri çalıştırmak için en hızlı yoludur kullanmaktır [F # Etkileşimli](tutorials/fsharp-interactive/index.md).  Yalnızca kopyalayıp yapıştırın kod örnekleri ve bunları orada çalıştırın.  Alternatif olarak, bir projeyi derlemek ve kod bir konsol uygulaması olarak çalıştırmak için ayarlayabilirsiniz.  Bkz: [Get Started](./get-started/index.md) daha fazla bilgi için bölüm.
-
 ## <a name="functions-and-modules"></a>İşlevler ve modülleri
 
 En temel herhangi bir F # programı parçalarıdır ***işlevleri*** halinde düzenlenmiştir ***modülleri***.  [İşlevler](language-reference/functions/index.md) çıkışları üretmek girişleri çalışma gerçekleştirme ve altında düzenlenmiştir [modülleri](language-reference/modules.md), F # şeyler grubunda birincil yol olduğu.  Kullanılarak tanımlanır [ `let` bağlama](language-reference/functions/let-bindings.md), işlevin bir ad verin ve bağımsız değişkenleri tanımlayın.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`bağlamaları de bir değer bir değişkende diğer diller için benzer bir ad için bağ nasıl değil.  `let`bağlamaları değil ***değişmez*** yerinde anlamına gelen bir değer veya işlevi için bir ad bağlandıktan sonra değiştirilemez, varsayılan olarak,.  Değişkenleri olan diğer dillerde aksine budur ***değişebilir***, değerlerine anlamı değiştirilebilir herhangi bir noktada süre.  Değişebilir bir bağlama gerektiriyorsa, kullanabileceğiniz `let mutable ...` sözdizimi.
+`let` bağlamaları de bir değer bir değişkende diğer diller için benzer bir ad için bağ nasıl değil.  `let` bağlamaları değil ***değişmez*** yerinde anlamına gelen bir değer veya işlevi için bir ad bağlandıktan sonra değiştirilemez, varsayılan olarak,.  Değişkenleri olan diğer dillerde aksine budur ***değişebilir***, değerlerine anlamı değiştirilebilir herhangi bir noktada süre.  Değişebilir bir bağlama gerektiriyorsa, kullanabileceğiniz `let mutable ...` sözdizimi.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
