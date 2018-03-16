@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Eğitmen: tür sağlayıcısı oluşturma
 
@@ -22,11 +22,11 @@ Türü sağlayıcısı F # kendi bilgi zengin programlama desteği için önemli
 
 F # ekosistemi tür sağlayıcıları yaygın olarak kullanılan Internet ve kurumsal veri hizmetleri için bir aralığı içerir. Örneğin:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) biçimleri JSON, XML, CSV ve HTML belge türü sağlayıcıları içerir
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) biçimleri JSON, XML, CSV ve HTML belge türü sağlayıcıları içerir.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) bu veri kaynaklarının sorguları bir nesne eşleme ve F # LINQ üzerinden SQL veritabanlarını kesin türü belirtilmiş erişmenizi sağlar.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) bir ayarlanmış com için tür sağlayıcıları küme-başlatılmasında T-SQL F # katıştırma
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) sahip bir derleme zamanı tür sağlayıcıları işaretli T-SQL F # katıştırma.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) kullanmak için tür sağlayıcıları ile SQL, Entity Framework, OData ve WSDL Veri Hizmetleri erişmek için yalnızca .NET Framework programlama daha eski bir kümesidir.
 
@@ -62,7 +62,7 @@ Tür sağlayıcıları şema çalışma zamanında ve derlenmiş kod kullanım �
 
 ## <a name="a-simple-type-provider"></a>Bir basit tür sağlayıcısı
 
-Bu örnek Samples.HelloWorldTypeProvider örneklerinde benzer olduğunu `examples` dizininde [F # tür sağlayıcısı SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
+Bu örnek Samples.HelloWorldTypeProvider, örnekleri benzer olduğunu `examples` dizininde [F # tür sağlayıcısı SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Sağlayıcısını 100 silinen türlerini F # imza sözdizimini kullanarak ve dışında tüm için ayrıntıları atlama aşağıdaki gösterildiği gibi kodu içeren bir "türü alanı" kullanılabilir hale getirir `Type1`. Silinen türleri hakkında daha fazla bilgi için bkz: [ayrıntılar hakkında silinmesi sağlanan türleri](#details-about-erased-provided-types) bu konuda daha sonra.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-Bu sağlayıcı kullanmak için Visual Studio 2012 ayrı bir örneği açın, F # komut dosyası oluşturabilir ve sonra aşağıdaki kodu gösterildiği gibi #r kullanarak kodunuzu sağlayıcı için bir başvuru ekleyin:
+Bu sağlayıcı kullanmak için Visual Studio ayrı bir örneği açın, F # komut dosyası oluşturabilir ve sonra aşağıdaki kodu gösterildiği gibi #r kullanarak kodunuzu sağlayıcı için bir başvuru ekleyin:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ Tür sağlayıcıları tarafından statik verileri Parametreleştirme olanağı 
 
 ### <a name="type-checked-regex-provider"></a>Regex sağlayıcısı türü işaretli
 
-.NET sarmalar türü sağlayıcısı normal ifadeler için uygulamak istediğiniz düşünün `System.Text.RegularExpressions.Regex` aşağıdaki derleme zamanı garanti sağlayan bir arabirimi kitaplıklarında:
+.NET sarmalar türü sağlayıcısı normal ifadeler için uygulamak istediğiniz düşünün <xref:System.Text.RegularExpressions.Regex> aşağıdaki derleme zamanı garanti sağlayan bir arabirimi kitaplıklarında:
 
 - Normal bir ifade geçerli olup olmadığını doğrulanıyor.
 
 - Tüm grup adlarını normal ifadede dayalı eşleşmeler üzerinde adlandırılmış özelliklerinin sağlanması.
 
-Bu bölümde tür sağlayıcıları oluşturmak için nasıl kullanılacağı gösterilmiştir bir `RegExProviderType` normal ifade deseni bu kazanımları sağlamak için parameterizes yazın. Derleyici, belirtilen desenle geçerli değil ve böylece eşleşmeleri özellikleri adlandırılmış kullanarak erişebilir türü sağlayıcısı düzeni grupları ayıklayabilirsiniz bir hata bildirir. Tür sağlayıcısı tasarlarken, sunulan API'si nasıl görünmelidir düşünmelisiniz son kullanıcılar ve bu tasarımı .NET kodu için nasıl çevirir. Aşağıdaki örnek, alan kodunu bileşenlerini almak için bu tür bir API kullanmak gösterilmektedir:
+Bu bölümde tür sağlayıcıları oluşturmak için nasıl kullanılacağı gösterilmiştir bir `RegexTyped` normal ifade deseni bu kazanımları sağlamak için parameterizes yazın. Derleyici, belirtilen desenle geçerli değil ve böylece eşleşmeleri özellikleri adlandırılmış kullanarak erişebilir türü sağlayıcısı düzeni grupları ayıklayabilirsiniz bir hata bildirir. Tür sağlayıcısı tasarlarken, sunulan API'si nasıl görünmelidir düşünmelisiniz son kullanıcılar ve bu tasarımı .NET kodu için nasıl çevirir. Aşağıdaki örnek, alan kodunu bileşenlerini almak için bu tür bir API kullanmak gösterilmektedir:
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ Aşağıdaki noktalara dikkat edin:
 
 - `RegexTyped` Deseni için statik tür bağımsız değişkeni geçirme Regex Oluşturucusu çağrısına Oluşturucusu sonuçlanıyor.
 
-- Sonuçlarını `Match` yöntemi Standart tarafından temsil edilen `System.Text.RegularExpressions.Match` türü.
+- Sonuçlarını `Match` yöntemi Standart tarafından temsil edilen <xref:System.Text.RegularExpressions.Match> türü.
 
 - Sağlanan özelliğinde her adlandırılmış grubu sonuçları ve özellik erişme sonuçlanıyor eşleşmeyi'nın bir dizin oluşturucu kullanımını `Groups` koleksiyonu.
 
@@ -552,7 +552,7 @@ Aşağıdaki noktalara dikkat edin:
 
 - Kullandığınız `obj` yöntemi, ancak temel türünü kullanacağınız gibi bir `Regex` nesnesi olarak sonraki örnekte gösterildiği gibi bu tür, çalışma zamanı gösterimi.
 
-- Çağrı `Regex` Oluşturucusu oluşturur bir `System.ArgumentException` zaman normal bir ifade değil geçerli. Derleyici, bu özel durum yakalar ve derleme zamanında ya da Visual Studio düzenleyicisinde bir hata iletisi kullanıcıya bildirir. Bu özel bir uygulamayı çalıştırmadan doğrulanması normal ifadeler sağlar.
+- Çağrı `Regex` Oluşturucusu oluşturur bir <xref:System.ArgumentException> zaman normal bir ifade değil geçerli. Derleyici, bu özel durum yakalar ve derleme zamanında ya da Visual Studio düzenleyicisinde bir hata iletisi kullanıcıya bildirir. Bu özel bir uygulamayı çalıştırmadan doğrulanması normal ifadeler sağlar.
 
 Herhangi bir anlamlı yöntemleri veya özellikleri içermediğinden yukarıda tanımlanan türü henüz yararlı olmaz. İlk olarak, statik ekleyin `IsMatch` yöntemi:
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-Her grup için eşleşme türü için bir özellik ekleyin. Çalışma zamanında bir eşleşme olarak temsil edilen bir `System.Text.RegularExpressions.Match` değer özelliği tanımlar tırnak kullanmalısınız `System.Text.RegularExpressions.Match.Groups` ilgili grup almak için özellik dizini.
+Her grup için eşleşme türü için bir özellik ekleyin. Çalışma zamanında bir eşleşme olarak temsil edilen bir <xref:System.Text.RegularExpressions.Match> değer özelliği tanımlar tırnak kullanmalısınız <xref:System.Text.RegularExpressions.Match.Groups> ilgili grup almak için özellik dizini.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ Sık yalnızca statik parametreleri aynı zamanda yerel veya uzak sistemlerden b
 Basit bir örnek olarak, tür sağlayıcısı virgülle ayrılmış değer (CSV) biçiminde bilimsel verilerine erişmek için göz önünde bulundurun. Bu bölümde, aşağıdaki tabloda gösterildiği gibi CSV dosyaları kayan nokta verisi tarafından izlenen bir başlık satırı içerdiğini varsayar:
 
 
-```
-|Distance (meter)|Time (second)|
+|Uzaklık (ölçer)|Süresi (saniye)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 Bu bölümde satırlarla almak için kullanabileceğiniz bir türü sağlamak nasıl gösterilmiştir bir `Distance` türündeki özelliği `float<meter>` ve `Time` türündeki özelliği `float<second>`. Kolaylık olması için aşağıdaki varsayımlar oluşturulur:
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 Bu durumda, derleyici bu çağrıları aşağıdaki örneğe benzer bir şey dönüştürmeniz:
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ Bu sürümleri, isteğe bağlı alanları türleri oluşturmak için kullanılı
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>Dizi türleri ve genel türü örneklemesi sağlama
 
-Normal kullanarak (dizi türleri, byref türleri ve genel türler işlemlerinden içerir, imzalar) sağlanan üyeleri yaptığınız `MakeArrayType`, `MakePointerType`, ve `MakeGenericType` System.Type, herhangi bir örneğinin üzerinde de dahil olmak üzere `ProvidedTypeDefinitions`.
+Normal kullanarak (dizi türleri, byref türleri ve genel türler işlemlerinden içerir, imzalar) sağlanan üyeleri yaptığınız `MakeArrayType`, `MakePointerType`, ve `MakeGenericType` herhangi bir örneğinin üzerinde <xref:System.Type>gibi `ProvidedTypeDefinitions`.
 
-Not: Bazı durumlarda, yardımcı kullanmak zorunda kalabilirsiniz `ProvidedTypeBuilder.MakeGenericType`.  Daha fazla ayrıntı için türü sağlayıcısı SDK belgelerine bakın.
+> [!NOTE]
+> Bazı durumlarda yardımcı kullanmak zorunda kalabilirsiniz `ProvidedTypeBuilder.MakeGenericType`.  Bkz: [türü sağlayıcısı SDK Belgeleri](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) daha fazla ayrıntı için.
 
 ### <a name="providing-unit-of-measure-annotations"></a>Ölçüm açıklamalarının birim sağlama
 
@@ -1096,12 +1095,12 @@ Sağlanan türleri tüm üyelerinden tüm kullanımlarını özel durumlar oluş
 
 #### <a name="providing-generated-types"></a>Oluşturulan türler sağlar
 
-Şu ana kadar bu belgede açıklanan nasıl silinen türler sağlar. Ayrıca türü sağlayıcısı mekanizması F #'de kullanıcıların programa gerçek .NET türü tanımları olarak eklenen oluşturulan türleri sağlamak için kullanabilirsiniz. Sizin için oluşturulan türleri bir tür tanımı kullanılarak sağlanan başvurmalıdır.
+Şu ana kadar bu belgede silinen türleri sağlamak nasıl açıklandığı. Ayrıca türü sağlayıcısı mekanizması F #'de kullanıcıların programa gerçek .NET türü tanımları olarak eklenen oluşturulan türleri sağlamak için kullanabilirsiniz. Sizin için oluşturulan türleri bir tür tanımı kullanılarak sağlanan başvurmalıdır.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 sürümünün bir parçası olan ProvidedTypes 0.2 yardımcı kod yalnızca oluşturulan türleri sağlamak için destek sınırlıdır. Aşağıdaki deyimleri için oluşturulan tür tanımı doğru olması gerekir:

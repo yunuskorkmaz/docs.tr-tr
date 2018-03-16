@@ -16,11 +16,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6a6759ae285f2dd101bddf71ea8e5ca792e87df
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Erişilebilirlik .NET Framework'teki yenilikler
 
@@ -112,7 +112,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 .NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimleri yüksek karşıtlıklı iyileştirmeler yapılmıştır. Şimdi ne zaman görünür oldukları <xref:System.Windows.SystemParameters.HighContrast%2A> tema ayarlanır. Bu güncelleştirmeler şunlardır:
 
-- <xref:System.Windows.Controls.Expander>denetimi
+- <xref:System.Windows.Controls.Expander> denetimi
 
     Görsel için odak <xref:System.Windows.Controls.Expander> denetimidir artık görünür. Klavye görsellerini <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, ve <xref:System.Windows.Controls.RadioButton> denetimleri görünür de. Örneğin:
 
@@ -124,7 +124,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Erişilebilirlik geliştirmeleri sonra odaklanılan genişletici denetimi](media/expander-after.png)
 
-- <xref:System.Windows.Controls.CheckBox>ve <xref:System.Windows.Controls.RadioButton> denetimleri
+- <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimleri
  
     Metin <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimleri yüksek karşıtlık Temalar seçildiğinde daha kolay şimdi. Örneğin:
 
@@ -136,7 +136,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Erişilebilirlik geliştirmeleri sonra odaklanılan yüksek karşıtlık radyo düğmesi](media/radio-button-after.png)
 
-- <xref:System.Windows.Controls.ComboBox>denetimi
+- <xref:System.Windows.Controls.ComboBox> denetimi
  
     .NET Framework ile 4.7.1, bir devre dışı kenarlık başlangıç <xref:System.Windows.Controls.ComboBox> denetimidir devre dışı bırakılmış metin olarak aynı rengi. Örneğin:
     
@@ -168,7 +168,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     ![Erişilebilirlik geliştirmeleri sonra Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
 
-- <xref:System.Windows.Controls.DataGrid>denetimi
+- <xref:System.Windows.Controls.DataGrid> denetimi
 
     .NET Framework 4.7.1, sıralama göstergesi oku başlayarak <xref:System.Windows.Controls.DataGrid> kullandığı Tema renkleri düzeltmek artık denetler. Örneğin:
 
@@ -201,7 +201,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 .NET Framework 4.7.1 ile başlayarak, çeşitli WinForms denetimleri işletim sistemi içinde kullanılabilir yüksek karşıtlık modda geliştirilmiş işleme sunar. Windows 10 bazı yüksek karşıtlık sistem renkleri değerlerini değişti ve Windows Forms Windows 10 Win32 Framework'te temel alır. En iyi deneyim için en son sürümünü çalıştırın ve en son işletim sistemi değişiklikleri aşağıdaki tanıyarak test uygulaması ve kaydını yorum Windows 10 app.manifest dosyasında OS satırını desteklenen ekleyerek kabul:
 
 ```xml
-<!– Windows 10 –>
+<!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
 Yüksek Karşıtlık değişiklikler bazı örnekleri şunlardır:

@@ -1,7 +1,7 @@
 ---
-title: "Paketler, Metapackages ve çerçeveleri"
+title: "Paketler, metapackages ve çerçeveleri"
 description: "Paketler, metapackages ve çerçeveleri terminolojisi öğrenin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,14 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Paketler, Metapackages ve çerçeveleri
+# <a name="packages-metapackages-and-frameworks"></a>Paketler, metapackages ve çerçeveleri
 
 .NET core NuGet paketlerini yapılan bir platformdur. Bazı Ürün Avantajı paketlerinden diğerlerinin parçalı, hassas tanımından karşılaşır. Bu duality uyum sağlamak için ürün paketleri hassas bir dizi dağıtılır ve ardından basit bir "metapackage" adlı bir paket türüyle kaba yığınlar halinde açıklanan.
 
@@ -76,7 +77,7 @@ Metapackages kullanmanın avantajları şunlardır:
 
 Anahtar .NET Core metapackages şunlardır:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) -.NET Core dağıtım parçası olan kitaplıkları açıklar. Kurar [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Bağımlı küçük üzerinde `NETStandard.Library`.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) -.NET Core dağıtım parçası olan kitaplıkları açıklar. Kurar [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Bağımlı küçük üzerinde `NETStandard.Library`.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) -mscorlib tabanlı taşınabilir sınıf kitaplıkları (.NET Core üzerinde çalıştırmak için PCLs) etkinleştirmek uyumluluk cepheleri kümesi.
 
 ## <a name="frameworks"></a>çerçeveler
@@ -85,7 +86,7 @@ Anahtar .NET Core metapackages şunlardır:
 
 Örneğin, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) aşağıdaki çerçevelerini destekler:
 
-- . NETFramework, sürüm 4.6 =
+- .NETFramework,Version=4.6
 - . NETStandard, sürüm = 1,3
 - 6 Xamarin platformları (örneğin, xamarinios10)
 
@@ -110,7 +111,7 @@ Yukarıdaki resimde bu ilişkiyi görebilirsiniz. *API* hedefler ve tanımlar *f
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET standart
+### <a name="net-standard"></a>.NET Standard
 
 .NET standart (hedef framework ad: `netstandard`) framework tarafından tanımlanan ve üstünde oluşturulmuş API'leri temsil eden [.NET standart](../standard/net-standard.md). Birden çok çalışma zamanları üzerinde çalıştırmak için tasarlanmıştır kitaplıkları bu framework hedeflemelidir. Üzerindeki tüm .NET standart uyumlu çalışma zamanı, .NET Core, .NET Framework ve Mono/Xamarin gibi desteklenecektir. Bu çalışma zamanları her bağlı olarak hangi API'leri uyguladıkları .NET standart sürümlerinin bir kümesini destekler.
 

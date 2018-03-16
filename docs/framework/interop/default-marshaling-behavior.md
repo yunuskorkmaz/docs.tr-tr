@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -33,7 +35,7 @@ Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek 
  Bu bölüm, hizmet hazırlama birlikte çalışabilirliği varsayılan davranış özelliklerini tanımlar. Diziler, Boolean türleri, karakter türleri, temsilciler, sınıflar, nesneler, dizeleri ve yapıları hazırlama hakkında ayrıntılı bilgi sunar.  
   
 > [!NOTE]
->  Genel türlerin hazırlama desteklenmiyor. Daha fazla bilgi için [birlikte kullanarak genel türler](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  Genel türlerin hazırlama desteklenmiyor. Daha fazla bilgi için [birlikte kullanarak genel türler](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Bellek yönetimi ile birlikte çalışma Sıralayıcı  
  Birlikte çalışma sıralayıcı tarafından yönetilmeyen kod ayrılan belleği boşaltmak her zaman çalışır. Bu davranış COM bellek yönetimi kurallarıyla uyumlu, ancak yerel C++ yöneten kurallarından farklıdır.  

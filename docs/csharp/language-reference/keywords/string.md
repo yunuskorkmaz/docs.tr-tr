@@ -2,7 +2,8 @@
 title: "string (C# Başvurusu)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (C# Başvurusu)
-`string` Türü sıfır veya daha fazla Unicode karakterler dizisini temsil eder. `string`bir diğer adı için <xref:System.String> .NET Framework'teki.  
+`string` Türü sıfır veya daha fazla Unicode karakterler dizisini temsil eder. `string` bir diğer adı için <xref:System.String> .NET içinde.  
   
  Ancak `string` bir başvuru türü eşitlik işleçleri (`==` ve `!=`) değerlerini karşılaştırmak için tanımlanan `string` nesneleri, değil başvuruyor. Bu, daha sezgisel dize eşitlik için test kolaylaştırır. Örneğin:  
   
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  Çıkış kodu `\udddd` (burada `dddd` dört basamaklı bir sayı değil) Unicode karakteri U + temsil eden`dddd`. Sekiz basamaklı Unicode çıkış kodları ayrıca tanınan: `\Udddddddd`.  
   
- Harfi harfine dize değişmez değerleri başlayın ve ayrıca çift tırnak işaretleri içine alınır. Örneğin:  
+ Harfi harfine dize değişmez değerleri başlayarak `@` ve ayrıca çift tırnak işaretleri içine alınır. Örneğin:  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Başka bir kullanımını kullanmak için @ sembolü başvurulan ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) C# anahtar sözcükler tanımlayıcıları.  
+ Diğer kullanımlar için `@` özel karakter bkz [@--verbatim tanımlayıcı](../tokens/verbatim.md).  
   
  C# dizeleri hakkında daha fazla bilgi için bkz: [dizeleri](../../../csharp/programming-guide/strings/index.md).  
   
@@ -106,12 +107,12 @@ Console.WriteLine(a);
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Dizeleri kullanmak için en iyi uygulamalar](../../../standard/base-types/best-practices-strings.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md)  
- [Değer türleri](../../../csharp/language-reference/keywords/value-types.md)  
- [Temel dize işlemleri](../../../standard/base-types/basic-string-operations.md)  
- [Yeni dizeler oluşturma](../../../standard/base-types/creating-new.md)  
- [Sayısal sonuçlar tablosunu biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)  
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
+ [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)  
+ [Yeni Dizeler Oluşturma](../../../standard/base-types/creating-new.md)  
+ [Sayısal Sonuçlar Tablosunu Biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>C# İşleçleri
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirmek için hangi işlemleri belirtin simgelerdir birçok işleçleri sağlar.  Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) kullanıcı tanımlı bir tür uygulandığında anlamları değiştirmek için çok sayıda işleci.  
@@ -49,7 +49,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
  
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) – işlev çağırma.  
   
- [bir &#91; x &#93; ](../../../csharp/language-reference/operators/index-operator.md) – toplama bir nesne dizin oluşturma.  
+ [bir&#91;x&#93; ](../../../csharp/language-reference/operators/index-operator.md) – toplama bir nesne dizin oluşturma.  
    
  [x ++](../../../csharp/language-reference/operators/increment-operator.md) – sonek artırma.  X değerini döndürür ve sonra depolama konumu büyük bir x değeri ile güncelleştirir (genellikle 1 tamsayı ekler).  
   
@@ -69,7 +69,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [sizeof](../../../csharp/language-reference/keywords/sizeof.md) – tür işleneni bayt cinsinden boyutu döndürür.  
   
- [->](../../../csharp/language-reference/operators/dereference-operator.md)– işaretçi başvurusunun kaldırılmasının birleştirilmiş üye erişimi ile.  
+ [->](../../../csharp/language-reference/operators/dereference-operator.md) – işaretçi başvurusunun kaldırılmasının birleştirilmiş üye erişimi ile.  
   
 ## <a name="unary-operators"></a>Birli İşleçler  
  Bu işleçlere sonraki bölümde daha yüksek öncelikli ve önceki bölümde düşük önceliğe sahip.  Not: örnekler ayrıntılı sayfalarıyla Git işleçleri tıklatabilirsiniz.  
@@ -78,7 +78,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) – sayısal değilleme.  
   
- [! x](../../../csharp/language-reference/operators/logical-negation-operator.md) – mantıksal değilleme.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) – mantıksal değilleme.  
   
  [~ x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) – bit düzeyinde tamamlama.  
   
@@ -191,7 +191,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [x & y =](../../../csharp/language-reference/operators/and-assignment-operator.md) – ve atama.  DEĞERİNİ `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.  
   
- [x &#124; y =](../../../csharp/language-reference/operators/or-assignment-operator.md) – OR ataması.  VEYA değerini `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.  
+ [x &#124;y =](../../../csharp/language-reference/operators/or-assignment-operator.md) – OR ataması.  VEYA değerini `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.  
   
  [x ^ = y](../../../csharp/language-reference/operators/xor-assignment-operator.md) – XOR atama.  XOR değeri, `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer döndürür.  
   
@@ -199,7 +199,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [x >> y =](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) – sağa kaydırma ataması.  Değerini kaydırma `x` sağ tarafından `y` bir yerde saklayın sonucunda `x`ve yeni bir değer döndürür.  
   
- [=>](../../../csharp/language-reference/operators/lambda-operator.md)– lambda bildirimi.  
+ [=>](../../../csharp/language-reference/operators/lambda-operator.md) – lambda bildirimi.  
   
 ## <a name="arithmetic-overflow"></a>Aritmetik Taşma  
  Aritmetik işleçler ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) olabilir söz konusu sayısal tür için olası değerler aralığının dışında olan sonuçlar. Ayrıntılar için ancak genel olarak belirli bir işlecin bölümüne başvurun:  
@@ -217,6 +217,6 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md) [fazla yüklenebilir işleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md)
+ [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

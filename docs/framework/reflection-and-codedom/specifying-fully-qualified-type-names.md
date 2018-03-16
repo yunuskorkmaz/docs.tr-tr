@@ -1,11 +1,12 @@
 ---
 title: "Tam Olarak Nitelenmiş Tür Adlarını Belirtme"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Tam Olarak Nitelenmiş Tür Adlarını Belirtme
 Tür adları çeşitli yansıma işlemleri için geçerli giriş belirtmeniz gerekir. Tam olarak nitelenmiş tür adını bir derleme adı belirtimi, bir ad alanı belirtimi ve tür adı oluşur. Tür adı belirtimleri kullanılan yöntemler tarafından gibi <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>Tür adları için Backus-Naur formu dilbilgisi  
- Backus-Naur formu (BNF) resmi diller sözdizimi tanımlar. Aşağıdaki tabloda, geçerli bir giriş tanımak nasıl açıklayan BNF sözcük kuralları listeler. Terminal (daha fazla reducible olmayan bu öğeleri) tüm büyük harflerle gösterilir. Terminal dışı (daha fazla reducible bu öğeleri) harf karışık veya tek tırnak içine alınmış dizeler gösterilir, ancak tek tırnak işareti (') sözdizimi bir parçası değil. Dikey çizgi karakterinden (&#124;) alt kurallar sahip kuralları gösterir.  
-  
-|BNF dilbilgisi tam olarak nitelenmiş tür adları|  
-|-----------------------------------------------|  
-|TypeSpec'te: ReferenceTypeSpec =<br /><br /> &#124;     SimpleTypeSpec|  
-|ReferenceTypeSpec: SimpleTypeSpec = '&'|  
-|SimpleTypeSpec: PointerTypeSpec =<br /><br /> &#124;     ArrayTypeSpec<br /><br /> &#124;     TypeName|  
-|PointerTypeSpec: SimpleTypeSpec = ' *'|  
-|ArrayTypeSpec: '[ReflectionDimension]' SimpleTypeSpec =<br /><br /> &#124;     SimpleTypeSpec [ReflectionEmitDimension]|  
-|ReflectionDimension: = ' *'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|ReflectionEmitDimension: = ' *'<br /><br /> &#124;     Sayı '..' Sayı<br /><br /> &#124;     Sayı '...'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|Sayı: = [0-9] +|  
-|TypeName: NamespaceTypeName =<br /><br /> &#124;     NamespaceTypeName ',' AssemblyNameSpec|  
-|NamespaceTypeName: NestedTypeName =<br /><br /> &#124;     NamespaceSpec '.' NestedTypeName|  
-|NestedTypeName: TANITICISI =<br /><br /> &#124;     NestedTypeName '+' TANIMLAYICISI|  
-|NamespaceSpec: TANITICISI =<br /><br /> &#124;     NamespaceSpec '.' TANIMLAYICI|  
-|AssemblyNameSpec: TANITICISI =<br /><br /> &#124;     TANIMLAYICI ',' AssemblyProperties|  
-|AssemblyProperties: AssemblyProperty =<br /><br /> &#124;     AssemblyProperties ',' AssemblyProperty|  
-|AssemblyProperty: AssemblyPropertyName '=' AssemblyPropertyValue =|  
-  
+## <a name="grammar-for-type-names"></a>Tür adları için dilbilgisi  
+ Dilbilgisi resmi diller sözdizimi tanımlar. Aşağıdaki tabloda, geçerli bir giriş tanımak açıklar sözcük kuralları listeler. Terminal (daha fazla reducible olmayan bu öğeleri) tüm büyük harflerle gösterilir. Terminal dışı (daha fazla reducible bu öğeleri) harf karışık veya tek tırnak içine alınmış dizeler gösterilir, ancak tek tırnak işareti (') sözdizimi bir parçası değil. Dikey çizgi karakterinden (&#124;) alt kurallar sahip kuralları gösterir.  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>Özel karakterler belirtme  
  Bir tür adı bir dil kuralları tarafından belirlenen geçerli bir ad tanımlayıcısıdır.  
   
@@ -139,17 +200,17 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  Diziler, dizi derecesini belirterek yansıma erişilen:  
   
--   `Type.GetType("MyArray[]")`0 alt sınır olan tek boyutlu dizi alır.  
+-   `Type.GetType("MyArray[]")` 0 alt sınır olan tek boyutlu dizi alır.  
   
--   `Type.GetType("MyArray[*]")`Bilinmeyen alt sınır olan tek boyutlu dizi alır.  
+-   `Type.GetType("MyArray[*]")` Bilinmeyen alt sınır olan tek boyutlu dizi alır.  
   
--   `Type.GetType("MyArray[][]")`iki boyutlu bir dizinin dizi alır.  
+-   `Type.GetType("MyArray[][]")` iki boyutlu bir dizinin dizi alır.  
   
--   `Type.GetType("MyArray[*,*]")`ve `Type.GetType("MyArray[,]")` dikdörtgen iki boyutlu bir dizi Bilinmeyen alt sınırlarını ile alır.  
+-   `Type.GetType("MyArray[*,*]")` ve `Type.GetType("MyArray[,]")` dikdörtgen iki boyutlu bir dizi Bilinmeyen alt sınırlarını ile alır.  
   
  Bir çalışma zamanı açısından bakıldığında, unutmayın `MyArray[] != MyArray[*]`, ancak çok boyutlu diziler için iki gösterimler eşdeğerdir. Diğer bir deyişle, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` değerlendiren **doğru**.  
   
- İçin **ModuleBuilder.GetType**, `MyArray[0..5]` boyutu 6, daha düşük olan tek boyutlu dizi bağlı 0 gösterir. `MyArray[4…]`Bilinmeyen boyutu ve alt sınır 4 tek boyutlu dizi gösterir.  
+ İçin **ModuleBuilder.GetType**, `MyArray[0..5]` boyutu 6, daha düşük olan tek boyutlu dizi bağlı 0 gösterir. `MyArray[4…]` Bilinmeyen boyutu ve alt sınır 4 tek boyutlu dizi gösterir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Reflection.AssemblyName>  
