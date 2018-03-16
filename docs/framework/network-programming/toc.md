@@ -66,6 +66,7 @@
 #### [Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme](how-to-customize-a-time-based-cache-policy.md)
 #### [Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama](how-to-set-cache-policy-for-a-request.md)
 ## [Ağ Programlama Güvenliği](security-in-network-programming.md)
+### [Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar](tls.md)
 ### [Güvenli Yuva Katmanı Kullanma](using-secure-sockets-layer.md)
 #### [Sertifika Seçimi ve Doğrulama](certificate-selection-and-validation.md)
 ### [İnternet Kimlik Doğrulaması](internet-authentication.md)
