@@ -9,7 +9,7 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML türü destek uygulama notları
 Bu konuda farkında olmasını istediğiniz bazı uygulama ayrıntıları açıklanmaktadır.  
@@ -37,14 +37,14 @@ Bu konuda farkında olmasını istediğiniz bazı uygulama ayrıntıları açık
  CLR türleri ve XML veri türleri arasında nasıl işleneceğini oluşabilir belirli uyuşmazlıkları açıklar.  
   
 > [!NOTE]
->  `xs` Http://www.w3.org/2001/XMLSchema ve ad alanı URI öneki eşlenmedi.  
+>  `xs` Öneki eşleştirilir http://www.w3.org/2001/XMLSchema ve ad alanı URI'si.  
   
-### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan ve xs: Duration  
+### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan and xs:duration  
  `xs:duration` Türü kısmen sipariş edilen, farklı belirli süre değer vardır ancak eşdeğer. Bunun için anlamı `xs:duration` türü değeri 1 ay (P1M) gibi 32 günden az (P32D) (P27D) 27 gün sayısından daha büyük olduğundan ve 28, 29 veya 30 gün olarak.  
   
  <xref:System.TimeSpan> Sınıfı Bu kısmi sıralanması desteklemez. Bunun yerine, belirli bir gün için 1 yıl 1 ay sayısı seçer; 365 gün ve 30 gün sırasıyla.  
   
- Daha fazla bilgi için `xs:duration` yazın, W3C XML Şeması Kısım 2 bkz: http://www.w3.org/TR/xmlschema-2/ adresindeki veri türleri öneri.  
+ Daha fazla bilgi için `xs:duration` yazın, W3C XML Şeması Kısım 2 bkz: veri türleri öneri adresindeki http://www.w3.org/TR/xmlschema-2/.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs: Time, Gregoryen tarih türleri ve System.DateTime  
  Zaman bir `xs:time` değeri eşleştirilir bir <xref:System.DateTime> nesnesi <xref:System.DateTime.MinValue> alan tarih özelliklerini başlatmak için kullanılan <xref:System.DateTime> nesne (gibi <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, ve <xref:System.DateTime.Day%2A>) en küçük olası <xref:System.DateTime> değeri.  

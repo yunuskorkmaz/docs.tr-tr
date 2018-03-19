@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="c-operators"></a>C# İşleçleri
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirmek için hangi işlemleri belirtin simgelerdir birçok işleçleri sağlar.  Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) kullanıcı tanımlı bir tür uygulandığında anlamları değiştirmek için çok sayıda işleci.  
@@ -84,7 +84,7 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
   
  [++ x](../../../csharp/language-reference/operators/increment-operator.md) – önek artırma.  Depolama konumu biridir x değerini güncelleştirdikten sonra x değerini büyük döndürür (genellikle 1 tamsayı ekler).  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) – azaltma önek.  Depolama konumu daha az biridir x değerini güncelleştirdikten sonra x değeri döndürür (genellikle 1 tamsayı ekler).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) – azaltma önek.  Depolama konumu daha az biridir x değerini güncelleştirdikten sonra x değeri döndürür (genellikle 1 tamsayı çıkarır).  
   
  [(T) x](../../../csharp/language-reference/operators/invocation-operator.md) – atama yazın.  
   

@@ -9,7 +9,7 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit türler çıkarımını yapma için kurallar
 Açıklar nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı öznitelikler ve öğeler için veri türünü oluşturur.  
@@ -75,7 +75,7 @@ Açıklar nasıl <xref:System.Xml.Schema.XmlSchemaInference> sınıfı özniteli
   
  Zaman ilk `attr2` değeri karşılaştı, türü `attr2` olarak algılanır `unsignedByte` değere göre `0`. Zaman ikinci `attr2` olan karşılaştı, türü için yükseltilir `string` şu anda oluşturulursa türüne göre `unsignedByte` geçerli değeri `true` çünkü <xref:System.Xml.Schema.XmlSchemaInference> yükseltirken, sınıf önceki değerleri düşünün tür çıkarımı yapılan. Ancak, her iki örneği `attr2` aynı XML belgesinde yer alan ve iki farklı XML belgeleri yukarıda gösterildiği gibi karşılaşıldı `attr2` olarak ortaya `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Http://www.w3.org/2001/XMLSchema-instance Namespace yoksayılan öznitelikleri  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Öznitelikleri göz ardı http://www.w3.org/2001/XMLSchema-instance Namespace  
  Aşağıdaki şema tanımlama sırasında şema çıkarım göz ardı edilir öznitelikleri.  
   
 |Öznitelik|Açıklama|  

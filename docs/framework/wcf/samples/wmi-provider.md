@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek veri toplamaya gösterilmiştir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Hizmetleri içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  
   
  WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz: [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]WMI sağlayıcısı, izleme çalışma zamanında bir WBEM uyumlu arabirimi aracılığıyla kullanıma sunan bir bileşen uygular. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI sağlayıcısı, izleme çalışma zamanında bir WBEM uyumlu arabirimi aracılığıyla kullanıma sunan bir bileşen uygular. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
   
  Yerleşik WMI sağlayıcısı, uygulama yapılandırma dosyasında etkinleştirilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma:  
   
@@ -136,7 +138,7 @@ cscript EnumerateCustomObjects.js
   
 2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  WMI hizmetleri şeması (InstallUtil.exe için varsayılan konumları olan "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") InstallUtil.exe çalıştırarak barındırma dizinindeki service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyaya yapılan değişiklikler olduğunda yürütülmesi gerekiyor. Sağlama yönetim bilgilerini düzenleme uygulamaları tarafından daha fazla bilgi için bkz: "Nasıl için: yayımlama düzeni için WMI için bir izleme eklenmiş uygulamayı" bölümündeki http://msdn2.microsoft.com/library/ms186147.aspx.  
+3.  WMI hizmetleri şeması (InstallUtil.exe için varsayılan konumları olan "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") InstallUtil.exe çalıştırarak barındırma dizinindeki service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyaya yapılan değişiklikler olduğunda yürütülmesi gerekiyor. Sağlama yönetim bilgilerini düzenleme uygulamaları tarafından daha fazla bilgi için bkz: http://msdn2.microsoft.com/library/ms186147.aspx "Nasıl için: yayımlama düzeni için WMI için bir izleme eklenmiş uygulamayı" bölümünde.  
   
 4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

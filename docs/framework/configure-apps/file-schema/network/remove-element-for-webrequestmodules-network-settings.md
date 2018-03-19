@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; öğesi webRequestModules (ağ ayarları) için
 Özel bir Web isteği modülü uygulamadan kaldırır.  
   
  \<Yapılandırma >  
-\<System.NET >  
-\<webRequestModules >  
+\<system.net>  
+\<webRequestModules>  
 \<kaldırma >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>Açıklamalar  
  `remove` Öğeyi belirtilen URI öneki için kayıtlı Web isteği modülü kaldırır.  
   
- Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http" veya "http://www.contoso.com" başında karakter olmalıdır.  
+ Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http", baştaki karakterleri olmalıdır veya "http://www.contoso.com".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  

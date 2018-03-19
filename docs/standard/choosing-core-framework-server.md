@@ -3,17 +3,17 @@ title: "Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim"
 description: "Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluştururken dikkate almanız gereken kılavuzu."
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -79,6 +79,7 @@ Farklı sürümlerini .NET bağımlılıkları olan uygulamalar yüklemek için 
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Üçüncü taraf .NET kitaplıklarına veya NuGet paketlerini kullanılamaz .NET Core için kullanılacak bir gereksinimi
 
 Kitaplıklar, .NET standart benimsemenin hızla. .NET standart paylaşım kod .NET Core dahil olmak üzere tüm .NET uygulamaları etkinleştirir. .NET standart 2.0 ile daha kolay şudur:
+
 - API yüzeyi çok daha büyük hale geldi. 
 - .NET Framework uyumluluk modu sunulmuştur. Bu uyumluluk modu, .NET Framework kitaplıkları başvurmak .NET standart/.NET Core projeleri sağlar. Uyumluluk modu hakkında daha fazla bilgi için bkz: [.NET standart 2.0 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
 
@@ -92,7 +93,7 @@ Bazı .NET Framework teknolojiler .NET Core kullanılamaz. Bunlardan bazıları 
 
 * ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil değildir. ASP.NET Core [Razor sayfalarının](/aspnet/core/mvc/razor-pages/) Web sayfalarıyla birçok benzerlikler vardır.
 
-* ASP.NET SignalR sunucu/istemci uygulaması. Şu anda, ASP.NET SignalR ASP.NET Core (istemci veya sunucu) için kullanılamaz. ASP.NET Core SignalR ASP.NET Core 2.1 için zamanlanır. Bkz: [ASP.NET Core zamanlama ve yol haritası](https://github.com/aspnet/Home/wiki/Roadmap). Önizleme durumu, şu adreste [sunucu tarafı](https://github.com/aspnet/SignalR-Server) ve [istemci Kitaplığı](https://github.com/aspnet/SignalR-Client-Net) GitHub depolarının.
+* ASP.NET SignalR sunucu/istemci uygulaması. Şu anda [ASP.NET SignalR](https://github.com/aspnet/SignalR) ASP.NET Core 2.1 ile önizleme modunda kullanılabilir.
 
 * WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerini kullanmak için WCF sunucu şu anda yalnızca .NET Framework kullanılabilir uygulamasıdır. Bu senaryo, .NET Core için geçerli planının bir parçası değil, ancak gelecek için kabul.
 
@@ -114,4 +115,4 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core desteklemez. Örne
  [.NET Core için .NET Framework'bağlantı noktası oluşturma](../core/porting/index.md)  
  [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
  [.NET bileşenleri'ne genel bakış](components.md)  
- [.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)
+ [.NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)

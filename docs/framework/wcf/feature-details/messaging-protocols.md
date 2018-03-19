@@ -17,10 +17,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
 |Belirtim/belgesi|Bağlantı|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|SOAP 1.1 HTTP bağlama|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Section 7|  
+|SOAP 1.1 HTTP bağlama|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Bölüm 7|  
 |SOAP 1.2 HTTP bağlama|http://www.w3.org/TR/soap12-part2/, Bölüm 7|  
   
  Bu konuda ele alınmaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntıları aşağıdaki protokoller için <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> kullanın.  
@@ -90,7 +90,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      `mustUnderstand` Üstbilgi değeri SOAP 1.1 ve SOAP 1.2 arasında farklılık gösterir. Temel Profil 1.1 gerektirir `mustUnderstand` değer 0 veya 1 SOAP 1.1 iletileri için olabilir. SOAP 1.2 sağlar 0, 1, `false`, ve `true` olarak değerleri ancak kurallı gösterimi yayma önerir `xs:boolean` değerleri (`false`, `true`).  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yayar `mustUnderstand` SOAP zarfının değerleri 0 ile 1 SOAP 1.1 ve SOAP 1.2 sürümleri için. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tüm değer alan kabul `xs:boolean` için `mustUnderstand` üstbilgi (0, 1, `false`, `true`)  
+-   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yayar `mustUnderstand` SOAP zarfının değerleri 0 ile 1 SOAP 1.1 ve SOAP 1.2 sürümleri için. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tüm değer alan kabul `xs:boolean` için `mustUnderstand` üstbilgi (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>SOAP hataları  
  Bir listesi aşağıda verilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-belirli bir SOAP hatası uygulamaları.  
@@ -132,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  WS-adresleme'nin tüm sürümleri, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulayan uç noktaları tanımlamak için uç nokta başvuruları kullanın.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Uç nokta başvuruları ve WS adresleme sürümleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme kullanan altyapı protokolleri ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-adresleme kullanan altyapı protokolleri ve belirli bir sayı uygulayan `EndpointReference` öğesi ve `W3C.WsAddressing.EndpointReferenceType` sınıfı (örneğin, WS-ReliableMessaging, WS-SecureConversation ve WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Her iki sürümü WS-adresleme diğer altyapı protokollerle kullanımını destekler. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları bir sürümü WS adresleme uç nokta başına destekler.  
   
  R3111, ad alanı için `EndpointReference` öğesi veya türü ile değiştirilen iletilerin kullanılan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç nokta WS adresleme-bu bitiş noktası tarafından uygulanan sürümü aynı olmalıdır.  
   
@@ -143,7 +143,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WS-MetadataExchange (MEX) belirtimi değere veya başvuruya göre meta veri uç noktası başvurular eklemek için Bölüm 6 açıklanan mekanizmaları uygular.  
   
- Bir senaryo düşünün burada bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti Belirteç Verenin http://sts.fabrikam123.com, tarafından verilmiş bir güvenlik onaylar biçimlendirme dili (SAML) belirteci kullanarak kimlik doğrulaması gerektirir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Endpoint kullanarak bu kimlik doğrulama gereksinimini açıklar `sp:IssuedToken` onaylama işlemi bir iç içe `sp:Issuer` Belirteç Verenin işaret eden onaylama. Erişim istemci uygulamaları `sp:Issuer` onaylama Belirteç Verenin bitiş noktası ile iletişim kurma bilmeniz gerekir. İstemcinin meta verileri Belirteç Verenin hakkında bilmek ister. MEX içinde tanımlanmış uç nokta başvuru meta veri uzantılarını kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Belirteç Verenin meta veriler için bir başvuru sağlar.  
+ Bir senaryo düşünün burada bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti belirteci veren tarafından verilmiş bir güvenlik onaylar biçimlendirme dili (SAML) belirteç kullanarak kimlik doğrulaması gerektirir http://sts.fabrikam123.com. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Endpoint kullanarak bu kimlik doğrulama gereksinimini açıklar `sp:IssuedToken` onaylama işlemi bir iç içe `sp:Issuer` Belirteç Verenin işaret eden onaylama. Erişim istemci uygulamaları `sp:Issuer` onaylama Belirteç Verenin bitiş noktası ile iletişim kurma bilmeniz gerekir. İstemcinin meta verileri Belirteç Verenin hakkında bilmek ister. MEX içinde tanımlanmış uç nokta başvuru meta veri uzantılarını kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Belirteç Verenin meta veriler için bir başvuru sağlar.  
   
 ```xml  
 <sp:IssuedToken>  
@@ -183,7 +183,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221: WS adresleme 2004/08 kullanmak üzere yapılandırıldığında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktalar değil ayırt başvuru özellikleri ve başvuru parametreleri işleme arasında.  
   
 ### <a name="message-exchange-patterns"></a>İleti Exchange desenleri  
- Web hizmeti işlemi çağırma yer alan iletileri dizisi olarak adlandırılır *ileti değişim deseni*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]tek yönlü destekler, istek-yanıt ve çift yönlü iletisi desenleri exchange. Bu bölümde kullanılan ileti değişim deseni bağlı olarak işleme iletideki WS adreslendirme gereksinimleri açıklar.  
+ Web hizmeti işlemi çağırma yer alan iletileri dizisi olarak adlandırılır *ileti değişim deseni*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tek yönlü destekler, istek-yanıt ve çift yönlü iletisi desenleri exchange. Bu bölümde kullanılan ileti değişim deseni bağlı olarak işleme iletideki WS adreslendirme gereksinimleri açıklar.  
   
  Bu bölümde genelinde istek sahibinin ilk ileti gönderir ve Yanıtlayıcı ilk iletiyi alır.  
   
@@ -207,7 +207,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3322: WS adresleme 2004/08 kullanıldığında `ReplyTo` istekte de eklenmelidir.  
   
--   R3323: WS adresleme 1.0 kullanıldığında ve `ReplyTo` olduğu istekte mevcut değil, varsayılan uç nokta başvuru "http://www.w3.org/2005/08/addressing/anonymous" eşit [address] özelliği ile kullanılır.  
+-   R3323: WS adresleme 1.0 kullanıldığında ve `ReplyTo` eşit [address] özelliğiyle varsayılan uç nokta başvuru isteğinde yok "http://www.w3.org/2005/08/addressing/anonymous" kullanılır.  
   
 -   R3324: İstek sahibinin içermelidir `wsa:To`, `wsa:Action`, ve `wsa:RelatesTo` yanıt iletisi üstbilgilerinde yanı sıra tüm başvuru parametreleri başvuru özellikler (veya her ikisi) tarafından belirtilen üstbilgilerini `ReplyTo` bitiş noktası başvurusu İstek.  
   
@@ -304,11 +304,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Önceki deyimi aşağıdaki gereksinimleri müşteri adayları `wsa:ReplyTo` başlığı istek iletileri için:  
   
--   R3514: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle `[address]` özelliği eşit değil "http://www.w3.org/2005/08/addressing/anonymous" uç nokta WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif ile varsa bir `wsap10:UsingAddressing` veya `wsap:UsingAddressing` onaylama eşleşmiş ile `cdp:CompositeDuplex` bağlı.  
+-   R3514: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle `[address]` özelliği eşit değil "http://www.w3.org/2005/08/addressing/anonymous" uç nokta WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif ile varsa bir `wsap10:UsingAddressing` veya `wsap:UsingAddressing` onaylama işlemi eşleşmiş ile `cdp:CompositeDuplex` bağlı.  
   
--   R3515: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle `[address]` özelliği eşit "http://www.w3.org/2005/08/addressing/anonymous" ya da yok bir `ReplyTo` tümü, uç nokta WSDL 1.1 kullanıyorsa, üst bilgisi SOAP 1.x HTTP bağlama ve bir ilke alternatif ile sahip `wsap10:UsingAddressing` onaylama ve Hayır `cdp:CompositeDuplex` bağlı onaylama.  
+-   R3515: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle `[address]` özelliği eşit "http://www.w3.org/2005/08/addressing/anonymous", veya bir `ReplyTo` tümü, uç nokta WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif varsa üst bilgisi ile `wsap10:UsingAddressing` onaylama ve Hayır `cdp:CompositeDuplex` bağlı onaylama.  
   
--   R3516: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle bir `[address]` özelliği "uç nokta WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif ilevarsahttp://www.w3.org/2005/08/addressing/anonymous"eşit`wsap:UsingAddressing` onaylama ve Hayır `cdp:CompositeDuplex` bağlı onaylama.  
+-   R3516: bir bitiş noktasına gönderilen iletileri olmalıdır istek bir `ReplyTo` üstbilgiyle bir `[address]` özelliği eşit "http://www.w3.org/2005/08/addressing/anonymous" uç nokta WSDL 1.1 SOAP 1.x HTTP bağlama kullanır ve bir ilke alternatif ile varsa `wsap:UsingAddressing` onaylama ve hiçbir `cdp:CompositeDuplex`bağlı onaylama.  
   
  Bir öğenin sunarak benzer protokolü bağlamaları tanımlamak WS adresleme WSDL belirtimi çalışır `<wsaw:Anonymous/>` değerlerle üzerinde gereksinimleri göstermek için üç metinsel (gerekli, isteğe bağlı ve yasaklanmış) `wsa:ReplyTo` üstbilgi (Bölüm 3.2). Ne yazık ki, bu tür bir öğe onayı ifade kullanarak alternatifleri kesişimi desteklemek için etki alanına özgü uzantılar gerektirdiğinden böyle öğesi tanımı bir onaylama WS-İlkesi ' nin bağlamında özellikle kullanılabilir değil. Bu tür öğesi tanımı değerini de gösterir `ReplyTo` HTTP aktarımı için belirli kolaylaştırır Tel üzerinde uç noktası davranışı aksine üstbilgi.  
   
@@ -324,7 +324,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan `wsaw10:Action` özniteliği `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` WS-ADDR10-belirlemek için WSDL içinde tanımlanan öğeleri `Action` bitiş noktası tarafından kullanılan WS adresleme sürümü yedeklemiş karşılık gelen iletiler için URI.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Kullanım uç noktası başvuru iç WSDL bağlantı noktası  
- WS ADDR10 WSDL bölüm 4.1 genişletir `wsdl:port` eklenecek öğe `<wsa10:EndpointReference…/>` uç nokta WS adresleme koşullarını tanımlamak için alt öğesi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu yardımcı program WS adresleme 2004/08 üzerinde genişletir izin vererek `<wsa:EndpointReference…/>` bir alt öğesi görüntülenmesini `wsdl:port`.  
+ WS ADDR10 WSDL bölüm 4.1 genişletir `wsdl:port` eklenecek öğe `<wsa10:EndpointReference…/>` uç nokta WS adresleme koşullarını tanımlamak için alt öğesi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu yardımcı program WS adresleme 2004/08 üzerinde genişletir izin vererek `<wsa:EndpointReference…/>` bir alt öğesi görüntülenmesini `wsdl:port`.  
   
 -   R3531: iliştirilmiş ilke alternatif bir uç nokta varsa, bir `<wsaw10:UsingAddressing/>` ilgili ilke onaylama `wsdl:port` öğesi bir alt öğesi içerebilir `<wsa10:EndpointReference …/>`.  
   
@@ -410,7 +410,7 @@ Content-Length: 0
   
  Aşağıdaki adımlar dizisini özel MTOM kodlama işlemi açıklanmaktadır:  
   
-1.  Kodlanacak SOAP Zarfı hiçbir öğe bilgi öğe ile içerdiğinden emin olun bir `[namespace name]` "http://www.w3.org/2004/08/xop/include" olarak ve bir `[local name]` , `Include`.  
+1.  Kodlanacak SOAP Zarfı hiçbir öğe bilgi öğe ile içerdiğinden emin olun bir `[namespace name]` , "http://www.w3.org/2004/08/xop/include" ve `[local name]` , `Include`.  
   
 2.  Boş bir MIME paketi oluşturun.  
   

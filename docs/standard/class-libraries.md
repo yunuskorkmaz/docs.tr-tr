@@ -1,7 +1,7 @@
 ---
 title: ".NET sınıf kitaplıkları"
 description: "Nasıl .NET sınıf kitaplıkları, Grup yararlı işlevi için birden çok uygulama tarafından kullanılan modüllere etkinleştirmek öğrenin."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
@@ -55,11 +55,16 @@ Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklar�
 
 .NET standart kitaplıkları aşağıdaki platformları destekler:
 
-*   .NET Core
-*   ASP.NET Core
-*   .NET framework 4.5 +
-*   Windows Mağazası Uygulamaları
-*   Windows Phone 8+
+* .NET Core
+* .NET Framework
+* Mono
+* Xamarin.iOS, Xamarin.Mac, Xamarin.Android
+* Evrensel Windows Platformu (UWP)
+* Windows
+* Windows Phone
+* Windows Phone Silverlight
+
+Daha fazla bilgi için bkz: [.NET standart](net-standard.md) konu.
 
 ### <a name="mono-class-libraries"></a>Mono sınıf kitaplıkları
 

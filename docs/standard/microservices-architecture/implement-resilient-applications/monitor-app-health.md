@@ -1,7 +1,7 @@
 ---
 title: Sistem durumu izleme
 description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sistem durumu izleme"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -37,7 +37,7 @@ Bu kitaplığı kullanmak için önce mikro kitaplıkta kullanmanız gerekebilir
 
 HealthChecks kitaplığı eShopOnContainers örnek uygulama nasıl kullanıldığını görebilirsiniz. Başlamak için her mikro hizmet durumu sağlıklı nelerin oluşturduğunu tanımlamanız gerekir. Örnek uygulama mikro API mikro HTTP ve ilgili SQL Server veritabanını da kullanılabilir olup olmadığını aracılığıyla erişilebilir olması durumunda iyi durumda.
 
-Gelecekte, bir NuGet paketi olarak HealthChecks Kitaplığı'nı yüklemek mümkün olacaktır. Ancak bu makalenin yazıldığı sırada indirmek ve çözümünüzün bir parçası olarak Kodu derlemek gerekir. Https://github.com/dotnet-architecture/HealthChecks kullanılabilir kodu kopyalayın ve aşağıdaki klasörler çözümünüze kopyalayın:
+Gelecekte, bir NuGet paketi olarak HealthChecks Kitaplığı'nı yüklemek mümkün olacaktır. Ancak bu makalenin yazıldığı sırada indirmek ve çözümünüzün bir parçası olarak Kodu derlemek gerekir. Adresinde kod kopyalama https://github.com/dotnet-architecture/HealthChecks ve aşağıdaki klasörler çözümünüze kopyalayın:
 
   - src/ortak
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,7 +190,7 @@ Tüm olay akışları depolanıyorsa son olarak, Microsoft Power BI veya bir ü�
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET Core HealthChecks** (ilk sürüm) [ *https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** (ilk sürüm) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
 -   **Service Fabric sistem durumu izlemeye giriş**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)

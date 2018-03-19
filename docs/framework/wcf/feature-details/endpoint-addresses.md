@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumunu belirten URI), oluşur. Uç nokta adresi temsil edilen [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programlama modeli tarafından <xref:System.ServiceModel.EndpointAddress> isteğe bağlı bir içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası ile ileti değiş tokuşu diğer uç noktaları tarafından kimlik doğrulamasını etkinleştirir özelliği ve İsteğe bağlı kümesi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gerekli diğer SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üstbilgi ek sağlar ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşim kurmak için adresleme bilgi. Bir uç nokta adresi kablo WS adresleme uç noktası başvuru olarak (EPR) gösterilir.  
   
 ## <a name="uri-structure-of-an-address"></a>Bir adresi URI yapısı  
- Çoğu taşıma için URI adresi dört bölümden oluşur. Örneğin, dört URI'SİNİN bölümlerini http://www.fabrikam.com:322/mathservice.svc/secureEndpoint gibi dökümü:  
+ Çoğu taşıma için URI adresi dört bölümden oluşur. Örneğin, dört bölümden URI'sinin http://www.fabrikam.com:322/mathservice.svc/secureEndpoint gibi listelenmektedir:  
   
 -   Düzen: http:  
   
@@ -86,7 +88,7 @@ Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adres
 </system.serviceModel>  
 ```  
   
- Önceki örnekte, net.tcp://payroll.myorg.com: 8000 ve http://shipping.myorg.com:8000 geçirilecek kendi ilgili şemaları için yalnızca temel adres.  
+ Önceki örnekte, net.tcp://payroll.myorg.com: 8000 ve http://shipping.myorg.com:8000 yalnızca temel, geçirilecek kendi ilgili şemaları için adresleridir.  
   
  `baseAddressPrefixFilter` Joker karakterleri desteklemez.  
   

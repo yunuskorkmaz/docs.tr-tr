@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
 Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlarda özetler. Bu örnekte, iletiler için bir hesap makinesi hizmetinin, regularCalc ve roundingCalc iki uygulamaları yönlendirilir. Her iki uygulamaları aynı işlemleri destekler; Ancak bir hizmet döndürmeden önce hesaplamalarının yakın tamsayı değere yuvarlar. Bir istemci uygulaması hizmetinin yuvarlama sürümü kullanılıp kullanılmayacağını belirtmek kurabilmesi gerekir; Hizmet tercih ifade, ileti iki hizmetleri arasında dengeli yoktur. Her iki Hizmetleri tarafından sunulan işlemleri şunlardır:  
@@ -124,7 +126,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
      Bu **MessageFilter** "yuvarlama" değeri içeren iletisini RoundingCalculator üstbilgisinde arar. Bu üst ileti roundingCalc hizmete yönlendirileceğini belirtmek için istemci tarafından ayarlanır.  
   
     > [!NOTE]
-    >  S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve "http://www.w3.org/2003/05/soap-envelope" ad alanı temsil eder.  
+    >  S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve ad alanını temsil "http://www.w3.org/2003/05/soap-envelope".  
   
 2.  Ayrıca iki sanal uç noktalarda alınan iletilerin Ara filtreleri tanımlamanız gerekir. İlk sanal uç nokta "normal/hesaplayıcı" uç noktadır. İstemci, ileti regularCalc hizmete yönlendirileceğini belirtmek için bu uç noktaya istekleri gönderebilirsiniz. Aşağıdaki yapılandırmayı kullanan bir filtre tanımlar <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> ileti filterData içinde belirtilen ada sahip bir uç noktası aracılığıyla ulaştığında, belirlemek için.  
   

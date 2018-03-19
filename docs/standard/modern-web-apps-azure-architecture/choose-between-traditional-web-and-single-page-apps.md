@@ -91,7 +91,7 @@ Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seç
   | **Faktörü** | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
   |---|---|---|
   | JavaScript/TypeScript gerekli takım aşina | **en az** | **Gerekli** |
-  | Komut dosyası olmadan tarayıcılar destekler | Desteklenen | **Desteklenmiyor** |
+  | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |
   | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Overkill** |
   | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Limited** | **Oldukça uygun** |
 

@@ -9,14 +9,14 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a622b2949c1d2277bb3e82617a5bc2d8cb432263
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="docker-terminology"></a>Docker terminolojisi
 
-Terimleri ve tanımları ile hale aşina Docker daha derin delving önce bu bölümde listelenmektedir (daha fazla tanımları için kapsamlı bakın [sözlüğü](https://docs.docker.com/glossary/) Docker tarafından sağlanan <https:// docs.docker.com/glossary/>:
+Terimleri ve tanımları ile hale aşina Docker daha derin delving önce bu bölümde listelenmektedir (daha fazla tanımları için kapsamlı bakın [sözlüğü](https://docs.docker.com/glossary/) Docker tarafından sağlanan <https://docs.docker.com/glossary/>:
 
 -   **Kapsayıcı görüntü** tüm bağımlılıkları ve bir kapsayıcı oluşturmak için gereken bilgileri olan bir paket. Görüntüyü tüm bağımlılıkları (örneğin, çerçeveler) yanı sıra dağıtım ve kapsayıcı çalışma zamanı tarafından kullanılacak yapılandırma içerir. Genellikle, görüntüyü birden fazla temel görüntülerden Katmanlar bir kapsayıcının dosya sistemi oluşturmak için diğer üzerinde yığılma türer. Oluşturulduktan sonra görüntüyü sabittir.
 
@@ -36,7 +36,7 @@ Terimleri ve tanımları ile hale aşina Docker daha derin delving önce bu böl
 
 -   **Azure kapsayıcı kayıt defteri** Docker görüntüler ve bileşenlerinin Azure ile çalışmak için genel kaynağı. Bu Azure dağıtımlarınızda yakın olan ve erişim için olası hale getirerek, denetime verir bir kayıt defteri sunar Azure Active Directory grupları ve izinleri kullanın.
 
--   **Docker güvenilen kayıt defteri (DTR)** yükleyebileceğiniz bir Docker kayıt Hizmeti'nden (Docker) şirket içi böylece kuruluşunuzun veri merkezi ve ağ içinde bulunur. Kuruluş içinde yönetilmelidir özel görüntüleri için uygundur. Docker güvenilen kayıt defteri Docker Datacenter ürününü bir parçası olarak dahil edilir. Daha fazla bilgi için Git [https://docs.docker.com/docker-trusted-registry/overview/](https://docs.docker.com/docker-trusted-registry/overview/).
+-   **Docker güvenilen kayıt defteri (DTR)** yükleyebileceğiniz bir Docker kayıt Hizmeti'nden (Docker) şirket içi böylece kuruluşunuzun veri merkezi ve ağ içinde bulunur. Kuruluş içinde yönetilmelidir özel görüntüleri için uygundur. Docker güvenilen kayıt defteri Docker Datacenter ürününü bir parçası olarak dahil edilir. Daha fazla bilgi için Git [ https://docs.docker.com/docker-trusted-registry/overview/ ](https://docs.docker.com/docker-trusted-registry/overview/).
 
 -   **Docker Community Edition (CE)** Windows ve oluşturmak, çalıştırmak ve kapsayıcıları yerel olarak test etme için macOS için geliştirme araçları. Windows CE docker, Linux ve Windows kapsayıcıları için geliştirme ortamları sağlar. Windows'da Linux Docker ana dayalı bir [Hyper-V](https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx) VM. Ana bilgisayar Windows kapsayıcıları için doğrudan Windows tabanlı. Mac için docker CE Apple hiper yönetici Framework'te temel alır ve [xhyve hiper yönetici](https://github.com/mist64/xhyve), Mac OS x Docker Windows CE ve Mac için Linux Docker ana VM sağlayan Oracle VirtualBox üzerinde temel Docker araç yerini alır.
 

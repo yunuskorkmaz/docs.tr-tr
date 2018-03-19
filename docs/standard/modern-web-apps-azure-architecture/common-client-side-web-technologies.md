@@ -72,12 +72,12 @@ Eski JavaScript framework standartları tarafından rağmen jQuery HTML/CSS ile 
 
 | **Faktörü** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| DOM soyutlar | Evet | Evet |
-| AJAX desteği | Evet | Evet |
-| Bildirim temelli veri bağlama | Yok | Evet |
-| MVC stili yönlendirme | Yok | Evet |
-| Şablon oluşturma | Yok | Evet |
-| Ayrıntılı bağlantı Yönlendirme | Yok | Evet |
+| DOM soyutlar | **Evet** | **Evet** |
+| AJAX desteği | **Evet** | **Evet** |
+| Bildirim temelli veri bağlama | **Yok** | **Evet** |
+| MVC stili yönlendirme | **Yok** | **Evet** |
+| Şablon oluşturma | **Yok** | **Evet** |
+| Ayrıntılı bağlantı Yönlendirme | **Yok** | **Evet** |
 
 JQuery doğası gereği eksik özelliklerin çoğunu diğer kitaplıkları eklenmesiyle eklenebilir. Ancak, bunu, tümünü başından aklınızda tasarlandığından SPA framework Angular gibi bu özellikleri daha tümleşik bir şekilde sağlar. Ayrıca, jQuery jQuery ile bir şey yapmanız için jQuery işlevleri çağırmak ihtiyacınız anlamı çok kesinlik temelli bir kitaplığı vardır. SPA çerçeveleri sağlayan işlevselliği ve iş çoğunu, yazılacak gerçek bir kod gerektiren bildirimli olarak, yapılabilir.
 
@@ -161,7 +161,7 @@ JavaScript çerçeveler breakneck hızıyla gelişmeye devam edin. Bağımlı ol
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
 > <https://angular.io/>
-> - tepki  
+> - **tepki**  
 > <https://facebook.github.io/react/>
 > - **Slingshot tepki**  
 > <https://github.com/coryhouse/react-slingshot>

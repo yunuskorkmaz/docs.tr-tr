@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML şema tanımı Aracı (XSD.exe'nin)
 XML şema tanımı (XSD.exe'nin) aracı XDR, XML ve XSD dosyalarından veya bir çalışma zamanı derleme sınıflarda XML Şeması veya ortak dil çalışma zamanı sınıflar oluşturur.  
@@ -40,14 +40,14 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*File.Extension*|Dönüştürülecek giriş dosyasını belirtir. Extensionas şunlardan birini belirtmeniz gerekir: .xdr, .xml, .xsd, .dll veya .exe.<br /><br /> XDR şema dosyası (.xdr uzantısı) belirtirseniz, xsd.exe'nin bir XSD şemasına XDR şeması dönüştürür. Çıkış dosyası XDR şeması, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML dosyası (.xml uzantısı) belirtirseniz, xsd.exe'nin veri dosyasındaki bir şema öğesinin ve bir XSD şeması üretir. Çıkış dosyası XML dosyası olarak, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML şema dosyası (.xsd uzantısı) belirtirseniz, xsd.exe'nin için XML Şeması karşılık gelen çalışma zamanı nesneler için kaynak kodu oluşturur.<br /><br /> Bir çalışma zamanı derleme dosyası (.exe veya .dll uzantısı) belirtirseniz, xsd.exe'nin şemaları bir veya daha fazla türleri için bu derlemede oluşturur. Kullanabilirsiniz `/type` şemaları oluşturulacak türlerini belirtmek için seçeneği. Çıkış şemaları schema0.xsd, schema1.xsd vb. adlandırılır. XSD.exe'nin üreten birden çok şema ad alanını kullanarak verilen türleri yalnızca belirtirseniz, `XMLRoot` özel öznitelik.|  
+|*file.extension*|Dönüştürülecek giriş dosyasını belirtir. Extensionas şunlardan birini belirtmeniz gerekir: .xdr, .xml, .xsd, .dll veya .exe.<br /><br /> XDR şema dosyası (.xdr uzantısı) belirtirseniz, xsd.exe'nin bir XSD şemasına XDR şeması dönüştürür. Çıkış dosyası XDR şeması, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML dosyası (.xml uzantısı) belirtirseniz, xsd.exe'nin veri dosyasındaki bir şema öğesinin ve bir XSD şeması üretir. Çıkış dosyası XML dosyası olarak, ancak .xsd uzantısı ile aynı ada sahip.<br /><br /> Bir XML şema dosyası (.xsd uzantısı) belirtirseniz, xsd.exe'nin için XML Şeması karşılık gelen çalışma zamanı nesneler için kaynak kodu oluşturur.<br /><br /> Bir çalışma zamanı derleme dosyası (.exe veya .dll uzantısı) belirtirseniz, xsd.exe'nin şemaları bir veya daha fazla türleri için bu derlemede oluşturur. Kullanabilirsiniz `/type` şemaları oluşturulacak türlerini belirtmek için seçeneği. Çıkış şemaları schema0.xsd, schema1.xsd vb. adlandırılır. XSD.exe'nin üreten birden çok şema ad alanını kullanarak verilen türleri yalnızca belirtirseniz, `XMLRoot` özel öznitelik.|  
   
 ## <a name="general-options"></a>Genel seçenekleri  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/h**[**ardım**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/o**[**utputdir**]**:***dizini*|Çıktı dosyaları dizinini belirtir. Bu bağımsız değişken yalnızca bir kez görünebilir. Geçerli dizin varsayılandır.|  
+|**/o**[**utputdir**] **: *** dizini*|Çıktı dosyaları dizinini belirtir. Bu bağımsız değişken yalnızca bir kez görünebilir. Geçerli dizin varsayılandır.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/P [parametreleri]:** *file.xml*|Çeşitli işlem modları için seçenekler belirtilen .xml dosyasından okuyun. Kısa form ' / p:'. Daha fazla bilgi için aşağıdaki Açıklamalar bölümüne bakın.|  
   
@@ -63,22 +63,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/e**[**öğesine**]**:***öğesi*|Öğe için kod oluşturmak için şema belirtir. Varsayılan olarak tüm öğeler yazılmalıdır. Bu bağımsız değişken birden çok kez belirtebilirsiniz.|  
+|**/e**[**öğesine**] **: *** öğesi*|Öğe için kod oluşturmak için şema belirtir. Varsayılan olarak tüm öğeler yazılmalıdır. Bu bağımsız değişken birden çok kez belirtebilirsiniz.|  
 |**/enableDataBinding**|Uygular <xref:System.ComponentModel.INotifyPropertyChanged> veri bağlama etkinleştirmek için oluşturulan tüm türleri arabirimi. Kısa form `/edb`.|  
 |**/enableLinqDataSet**|(Kısa form: `/eld`.) Oluşturulan veri kümesi LINQ to DataSet kullanarak karşı sorgulanabilir belirtir. Bu seçenek /dataset seçeneği de belirtildiğinde kullanılır. Daha fazla bilgi için bkz: [LINQ veri kümesi'ne genel bakış-](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) ve [yazılan veri kümeleri sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md). LINQ kullanma hakkında genel bilgi için bkz: [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**lanları**]|Alanları özellikleri yerine oluşturur. Varsayılan olarak, özellikleri üretilir.|  
-|**/l**[**dil**]**:***dili*|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**]**:***ad alanı*|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
+|**/l**[**dil**] **: *** dili*|Kullanmak için programlama dilini belirtir. Aralarından seçim `CS` (C varsayılan değer olan #), `VB` (Visual Basic) `JS` (JScript) veya `VJS` (Visual J#). Ayrıca bir sınıf uygulamak için tam bir ad belirtin<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**] **: *** ad alanı*|Oluşturulan türleri için çalışma zamanı ad alanını belirtir. Varsayılan ad alanı `Schemas`.|  
 |**/nologo**|Başlık göstermez.|  
 |**/ORDER**|Tüm parçacık üyeleri açık sipariş tanımlayıcılarını oluşturur.|  
 |**/o [ut]:** *directoryName*|Dosyalarında yerleştirmek için çıktı dizini belirtir. Geçerli dizin varsayılandır.|  
-|**/u**[**RI**]**:***URI*|Öğeler için URI için kod oluşturmak için şema belirtir. Bu URI varsa, ile belirtilen tüm öğelere uygulanır `/element` seçeneği.|  
+|**/u**[**RI**] **: *** URI*|Öğeler için URI için kod oluşturmak için şema belirtir. Bu URI varsa, ile belirtilen tüm öğelere uygulanır `/element` seçeneği.|  
   
 ## <a name="dll-and-exe-file-options"></a>DLL ve EXE dosya seçenekleri  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/t**[**türü**]**:***typename*|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. Varsa *typename* belirtilen türle tüm türleri bütünleştirilmiş kodunda XSD.exe'nin eşleşen bir ad alanı belirtmiyor. Varsa *typename* türü eşleştiğini bir ad alanı, yalnızca belirtir. Varsa *typename* bir yıldız işareti karakteri ile sona erer (\*), yukarıdaki dize ile başlayan tüm türleri aracı eşleştirir \*. Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|  
+|**/t**[**türü**] **: *** typename*|Şema için oluşturulacak tür adını belirtir. Birden çok tür bağımsız değişkeni belirtebilirsiniz. Varsa *typename* belirtilen türle tüm türleri bütünleştirilmiş kodunda XSD.exe'nin eşleşen bir ad alanı belirtmiyor. Varsa *typename* türü eşleştiğini bir ad alanı, yalnızca belirtir. Varsa *typename* bir yıldız işareti karakteri ile sona erer (\*), yukarıdaki dize ile başlayan tüm türleri aracı eşleştirir \*. Unutursanız, `/type` seçeneği XSD.exe'nin derlemesinde tüm türler için şemalar oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tablo operasyonları XSD.exe'nin gerçekleştireceğini gösterir.  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  XSD için sınıflar  
  Bir XML şeması bir türü veya türleri bir çalışma zamanı derleme dosyası oluşturur. Oluşturulan şema tarafından kullanılan XML biçiminde tanımlar `System.Xml.Serialization.XmlSerializer`.  
   
- XSD.exe'nin yalnızca World Wide Web Konsorsiyumu (W3C) tarafından önerilen XML şema tanımı (XSD) dil izleyin XML şemaları yönetmenize olanak sağlar. Http://w3.org XML şema tanımı teklif veya XML standart hakkında daha fazla bilgi için bkz.  
+ XSD.exe'nin yalnızca World Wide Web Konsorsiyumu (W3C) tarafından önerilen XML şema tanımı (XSD) dil izleyin XML şemaları yönetmenize olanak sağlar. XML şema tanımı teklifi veya XML standart hakkında daha fazla bilgi için bkz: http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Bir XML dosyası ile seçenekleri ayarlama  
  Kullanarak `/parameters` anahtarı, çeşitli seçenekleri ayarlar tek bir XML dosyası belirtebilirsiniz. Nasıl XSD.exe'nin aracını kullanarak ayarlayabilirsiniz seçenekler bağlıdır. Seçenekler şunlardır şemaları oluşturmak, kod dosyaları oluşturmak veya dahil kod dosyaları oluşturmak `DataSet` özellikleri. Örneğin, ayarlayabilirsiniz `<assembly\>` öğesi için bir yürütülebilir (.exe) veya bir şema oluşturulurken türü kitaplık (.dll) dosyası, ancak bir kod dosyası değil oluşturulurken adı. Aşağıdaki XML nasıl kullanılacağı gösterilmiştir `<generateSchemas\>` belirtilen yürütülebilir öğe:  
@@ -137,8 +137,8 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |-------------|-----------------|  
 |\<derleme >|Şema oluşturmak için bir derleme belirtir.|  
 |\<türü >|Bir türü için bir şema oluşturmak için bir derleme bulundu belirtir.|  
-|\<XML >|Bir XML dosyası için bir şema oluşturmak için belirtir.|  
-|\<XDR >|İçin bir şema oluşturmak için bir XDR dosyasını belirtir.|  
+|\<xml>|Bir XML dosyası için bir şema oluşturmak için belirtir.|  
+|\<xdr>|İçin bir şema oluşturmak için bir XDR dosyasını belirtir.|  
   
  Bir kod dosyası oluşturmak için kullanılan `<generateClasses\>` öğesi. Aşağıdaki örnek, bir kod dosyası oluşturur. Bu ad alanı oluşturulan dosyanın ve programlama dili ayarlamanıza olanak sağlar, iki öznitelik aynı zamanda gösterilir unutmayın.  
   
@@ -154,9 +154,9 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<Öğe >|Bir öğe için kod oluşturmak üzere .xsd dosyasını belirtir.|  
-|\<schemaImporterExtensions >|Türetilen bir türü belirtiyor. <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> sınıfı.|  
-|\<Şema >|Kodunu oluşturmak için bir XML şema dosyası belirtir.  Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
+|\<element>|Bir öğe için kod oluşturmak üzere .xsd dosyasını belirtir.|  
+|\<schemaImporterExtensions>|Türetilen bir türü belirtiyor. <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> sınıfı.|  
+|\<schema>|Kodunu oluşturmak için bir XML şema dosyası belirtir.  Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
   
  Aşağıdaki tablo ile de kullanılabilir öznitelikleri gösterir `<generateClasses\>` öğesi.  
   
@@ -180,7 +180,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<Şema >|Kodunu oluşturmak için bir XML şeması dosyasını belirtir. Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
+|\<schema>|Kodunu oluşturmak için bir XML şeması dosyasını belirtir. Birden çok XML şema dosyaları, birden çok kullanılarak belirtilebilir \<şema > öğeleri.|  
   
  Aşağıdaki tabloda kullanılabilir öznitelikleri gösterir `<generateDataSet\>` öğesi.  
   
@@ -236,7 +236,7 @@ xsd myAssembly.dll
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
- [Araçları](../../../docs/framework/tools/index.md)      
+ [Araçlar](../../../docs/framework/tools/index.md)      
  [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [LINQ to DataSet Genel Bakış](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [Türü Belirtilmiş DataSet’leri Sorgulama](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
