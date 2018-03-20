@@ -67,7 +67,7 @@ HRESULT SetPropertyProps (
  [in] Özelliğin varsayılan değeri.  
   
  `cchValue`  
- [in] (Unicode) sayısını karakterleri `pValue`.  
+ [in] \(Unicode) sayısını karakterleri `pValue`.  
   
  `mdSetter`  
  [in] Özellik değeri ayarlar yöntemi.  

@@ -77,7 +77,7 @@ HRESULT DefineField (
  [in] Alan için sabit bir değer.  
   
  `cchValue`  
- [in] (Unicode) karakter cinsinden boyutu `pValue`.  
+ [in] \(Unicode) karakter cinsinden boyutu `pValue`.  
   
  `pmd`  
  [out] `mdFieldDef` Atanan simgesi.  
