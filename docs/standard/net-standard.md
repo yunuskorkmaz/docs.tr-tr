@@ -1,7 +1,7 @@
 ---
-title: .NET standart
+title: .NET Standard
 description: ".NET standart, kendi sürümleri ve destekleyen .NET uygulamalar hakkında bilgi edinin."
-keywords: .NET standart, PCL, .NET
+keywords: .NET Standard, PCL, .NET
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
@@ -13,13 +13,13 @@ ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/20/2018
 ---
-# <a name="net-standard"></a>.NET standart
+# <a name="net-standard"></a>.NET Standard
 
 [.NET standart](https://github.com/dotnet/standard) tüm .NET uygulamalarında kullanılabilir olacak şekilde tasarlanmıştır .NET API'lerini resmi belirtimidir. .NET standart arkasında motivasyon büyük bütünlüğünü .NET ekosistemi saptamaktır. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) .NET uygulaması davranışı için bütünlüğünü kurmaya devam eder ancak hiçbir benzer spec .NET kitaplığı uygulamaları için .NET temel sınıf kitaplıkları (BCL) için. 
 
@@ -38,7 +38,7 @@ Aşağıdaki tabloda .NET standart ve desteklenen platformlar tüm sürümleri l
 [!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 .NET hedefleyen standart yüksek sürümünü bulmak için aşağıdakileri yapın:
-1. Çalıştırmak istediğiniz .NET uygulaması belirtmek satırını bulun.
+1. Çalıştırmak istediğiniz .NET uygulaması gösteren satırı bulur.
 2. Sağdan sola başlayarak sürümünüzü gösteren satırdaki sütun bulunamıyor.
 3. Sütun başlığına hedef destekleyen .NET standart sürümünü gösterir (ve tüm alt .NET standart sürümleri de bunu destekleyecek).
 4. Hedeflemek istediğiniz her platform için bu işlemi yineleyin. Birden fazla hedef platformu varsa, aralarında küçük sürümü seçmeniz gerekir. .NET Framework 4.5 ve .NET Core 1.0 çalıştırmak istiyorsanız, örneğin, kullanabileceğiniz en yüksek .NET standart .NET standart 1.1 sürümüdür.
@@ -128,11 +128,11 @@ API eklenen herhangi birine (örneğin, .NET Framework, .NET Core ve Mono) uygul
 
 Profil tabanlı PCL uyumluluk tarafından sağlanan [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet paketi. Bu bağımlılık profili tabanlı PCLs içeren NuGet paketlerini başvururken gereklidir.
 
-Profil tabanlı PCLs olarak paketlenmiş `netstandard` genellikle paketlenmiş profili tabanlı PCLs kullanmak daha kolaydır. `netstandard`paketleme, mevcut kullanıcıları ile uyumludur.
+Profil tabanlı PCLs olarak paketlenmiş `netstandard` genellikle paketlenmiş profili tabanlı PCLs kullanmak daha kolaydır. `netstandard` paketleme, mevcut kullanıcıları ile uyumludur.
 
 Standart .NET uyumlu PCL profilleri kümesine görebilirsiniz: 
 
-| PCL profili | .NET standart | PCL platformları
+| PCL profili | .NET Standard | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
