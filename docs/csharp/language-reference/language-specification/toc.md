@@ -1,4 +1,5 @@
 # [C# 6.0 taslak belirtimi](index.md)
+## [Giriş](../../../../_csharplang/spec/introduction.md)
 ## [Sözcük yapısı](../../../../_csharplang/spec/lexical-structure.md)
 ## [Temel kavramlar](../../../../_csharplang/spec/basic-concepts.md)
 ## [Türler](../../../../_csharplang/spec/types.md)
