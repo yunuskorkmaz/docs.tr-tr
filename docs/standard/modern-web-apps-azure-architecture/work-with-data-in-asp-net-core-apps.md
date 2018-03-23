@@ -1,6 +1,6 @@
 ---
-title: "ASP.NET Core uygulamalardaki verileri ile çalışma"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP verilerle çalışma"
+title: ASP.NET Core uygulamalardaki verileri ile çalışma
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP verilerle çalışma
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalardaki verileri ile çalışma
 
@@ -236,7 +236,7 @@ Dapper daha karmaşık nesne grafiklerle yapı gerekiyorsa, ilişkili sorgular (
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 

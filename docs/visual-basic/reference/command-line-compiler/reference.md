@@ -1,10 +1,10 @@
 ---
-title: /reference (Visual Basic)
-ms.date: 07/20/2015
+title: -başvuru (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+# <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
 Belirtilen derlemelerde türü bilgileri şu anda derlediğiniz proje kullanılabilir hale getirmek derleyici neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```  
-/reference:fileList  
+-reference:fileList  
 ' -or-  
-/r:fileList  
+-r:fileList  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -49,24 +48,24 @@ Belirtilen derlemelerde türü bilgileri şu anda derlediğiniz proje kullanıla
   
 -   Alan, özellik, olay veya b derlemesinden dönüş türü veya parametresi türü olan yöntemi çağrılır.  
   
- Kullanım [/Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) bir veya daha fazla derleme başvurularını bulunduğu dizini belirtmek için.  
+ Kullanım [- LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) bir veya daha fazla derleme başvurularını bulunduğu dizini belirtmek için.  
   
  Derleyicinin türü derlemedeki (modülü değil) tanımak bu türü çözümlemeye zorlanması gerekir. Türünün bir örneği tanımlamak için nasıl Bunu yapmak için bir örnek verilmiştir. Diğer yolları derleyici için derlemeyi türü adları çözümlemek kullanılabilir. Örneğin, bir derlemede türünden devralan, tür adı sonra derleyiciye bilinir.  
   
- Başvuruları yaygın olarak kullanılan Vbc.rsp yanıt dosyası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler, varsayılan olarak kullanılır. Kullanmak `/noconfig` derleyicinin Vbc.rsp kullanmasını istemiyorsanız.  
+ Başvuruları yaygın olarak kullanılan Vbc.rsp yanıt dosyası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler, varsayılan olarak kullanılır. Kullanmak `-noconfig` derleyicinin Vbc.rsp kullanmasını istemiyorsanız.  
   
- Kısa formunu `/reference` olan `/r`.  
+ Kısa formunu `-reference` olan `/r`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod kaynak dosyasını derler `Input.vb` ve başvuru derlemelerden `Metad1.dll` ve `Metad2.dll` üretmek için `Out.exe`.  
+ Aşağıdaki komutu kaynak dosyasını derler `Input.vb` ve başvuru derlemelerden `Metad1.dll` ve `Metad2.dll` üretmek için `Out.exe`.  
   
-```  
-vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
+```console
+vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [/ target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)  
- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

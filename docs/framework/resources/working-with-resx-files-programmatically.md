@@ -1,12 +1,13 @@
 ---
-title: "Program Aracılığıyla .resx Dosyalarıyla Çalışma"
-ms.custom: 
+title: Program Aracılığıyla .resx Dosyalarıyla Çalışma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Program Aracılığıyla .resx Dosyalarıyla Çalışma
 XML kaynak (.resx) dosyaları, ad/değer çiftleri verilerde ve ardından belirli bir şema izlemeniz gereken bir üstbilgi dahil olmak üzere iyi tanımlanmış XML oluşması gerekir çünkü bu dosyaları el ile oluşturma hataya yatkın olduğunu fark edebilirsiniz. Alternatif olarak, .resx dosyaları programlı olarak .NET Framework Sınıf Kitaplığı'nda türleri ve üyeleri kullanarak oluşturabilirsiniz. .NET Framework sınıf kitaplığı, .resx dosyasında depolanan kaynakları almak için de kullanabilirsiniz. Bu konu türleri ve üyeleri nasıl kullanabileceğinizi açıklar <xref:System.Resources> .resx dosyalarıyla çalışmak için ad alanı.  
@@ -83,15 +85,15 @@ XML kaynak (.resx) dosyaları, ad/değer çiftleri verilerde ve ardından belirl
   
  Kök dosya adıyla aynı .resx dosyası ve bir .resources dosya uzantısına sahip bir ikili kaynak dosya sonucudur. Bu dosya daha sonra bir yürütülebilir dosya veya bir kitaplığa derleme zamanında derlenebilir. Visual Basic derleyici kullanıyorsanız, uygulamanın yürütülebilir dosya .resources dosyası eklemek için aşağıdaki sözdizimini kullanın:  
   
- **Vbc** *filename* **.vb/Resource:** *.resourcesFilename*  
+ **Vbc** *filename* **.vb-kaynak:** *.resourcesFilename*  
   
  C# kullanıyorsanız söz dizimi aşağıdaki gibidir:  
   
- **CSC** *filename* **.cs/Resource:** *.resourcesFilename*  
+ **CSC** *filename* **.cs-kaynak:** *.resourcesFilename*  
   
  .Resources dosyası da bir uydu derlemede kullanarak katıştırılabilen [derleme bağlayıcı (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), aşağıdaki temel sözdizimi vardır:  
   
- **Al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **Al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

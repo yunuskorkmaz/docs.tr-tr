@@ -1,6 +1,6 @@
 ---
-title: "Docker uygulamalar için geliştirme iş akışı"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docker uygulamalar için geliştirme iş akışı"
+title: Docker uygulamalar için geliştirme iş akışı
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docker uygulamalar için geliştirme iş akışı
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamalar için geliştirme iş akışı
 
@@ -351,7 +351,7 @@ Docker-oluşturmanıza ve docker çalıştırma komutları (veya çalıştıran 
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6. adım. Yerel Docker ana bilgisayarınız kullanarak Docker uygulamanızı test etme
 
-Bu adımı uygulamanız yapılması bağlı olarak değişir. Bir tek kapsayıcı ya da hizmet olarak dağıtılan basit bir .NET Core Web uygulama, hizmet Docker ana bilgisayardaki bir tarayıcı açıp Şekil 5-13'te gösterildiği gibi bu siteye gezinme erişebilir. (Konak post Dockerfile yapılandırmasında bir bağlantı noktası 80'dışındaki herhangi bir ana bilgisayarda kapsayıcı eşlendiği, URL'de içerir.)
+Bu adımı uygulamanız yapılması bağlı olarak değişir. Bir tek kapsayıcı ya da hizmet olarak dağıtılan basit bir .NET Core Web uygulama, hizmet Docker ana bilgisayardaki bir tarayıcı açıp Şekil 5-13'te gösterildiği gibi bu siteye gezinme erişebilir. (Dockerfile yapılandırmasında bir bağlantı noktası 80'dışındaki herhangi bir ana bilgisayarda kapsayıcı eşlendiği, ana bilgisayar bağlantı noktası URL'de içerir.)
 
 ![](./media/image18.png)
 
@@ -398,7 +398,7 @@ Ayrıca, adım 2 (Docker destek eklenmesi projelerinize) yalnızca bir kez gerç
 -   **Steve Lasker. Visual Studio 2017 ile .NET docker geliştirme**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
--   **Jeffrey T. Fritz. Visual Studio için bir kapsayıcı yeni Docker araçları ile .NET Core uygulaması koymak**
+-   **Jeffrey T. Fritz. .NET Core uygulaması bir kapsayıcıda yeni Docker araçları ile Visual Studio için yerleştirin.**
     [*https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/*](https://blogs.msdn.microsoft.com/webdev/2016/11/16/new-docker-tools-for-visual-studio/)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile PowerShell komutlarını kullanma 

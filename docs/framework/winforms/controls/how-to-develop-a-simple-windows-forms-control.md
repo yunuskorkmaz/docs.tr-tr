@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme
 Bu bölüm, özel bir Windows Forms denetimi geliştirme için önemli adımlar anlatılmaktadır. Bu kılavuzda geliştirilmiş basit denetim hizalamasını sağlar, <xref:System.Windows.Forms.Control.Text%2A> değiştirilecek özelliği. Yükseltme değil veya olayları işlemek.  
@@ -50,7 +52,7 @@ Bu bölüm, özel bir Windows Forms denetimi geliştirme için önemli adımlar 
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Denetim görsel görünümünü değiştirir bir özellik ayarladığınızda, çağırmanız gerekir <xref:System.Windows.Forms.Control.Invalidate%2A> denetimi yeniden boyutlandırmaya yöntemi. <xref:System.Windows.Forms.Control.Invalidate%2A>taban sınıf içinde tanımlanan <xref:System.Windows.Forms.Control>.  
+     Denetim görsel görünümünü değiştirir bir özellik ayarladığınızda, çağırmanız gerekir <xref:System.Windows.Forms.Control.Invalidate%2A> denetimi yeniden boyutlandırmaya yöntemi. <xref:System.Windows.Forms.Control.Invalidate%2A> taban sınıf içinde tanımlanan <xref:System.Windows.Forms.Control>.  
   
 3.  Korumalı geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi devralınan <xref:System.Windows.Forms.Control> denetim işleme mantığı sağlamak için. Değil geçersiz kılarsanız <xref:System.Windows.Forms.Control.OnPaint%2A>, denetiminizi kendisini çizmek mümkün olmaz. Aşağıdaki kod parçası olarak <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi görüntüler <xref:System.Windows.Forms.Control.Text%2A> özelliği devralınan <xref:System.Windows.Forms.Control> tarafından belirtilen hizalama ile `alignmentValue` alan.  
   
@@ -70,12 +72,12 @@ Bu bölüm, özel bir Windows Forms denetimi geliştirme için önemli adımlar 
   
     2.  Bir derlemeye kaynak kodu derleme ve uygulamanızın dizinine kaydedin. Bunu başarmak için kaynak dosyasını içeren dizininden aşağıdaki komutu yürütün.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          `/t:library` Derleyici seçeneği derleyici oluşturmakta derleme kitaplık (ve bir yürütülebilir) olduğunu bildirir. `/out` Seçeneği derlemenin adını ve yolunu belirtir. `/r` Seçeneği kodunuz tarafından başvurulan bir derleme adı sağlar. Bu örnekte, yalnızca uygulamalarınızı kullanabileceğiniz özel bir derlemesi oluşturun. Bu nedenle, uygulamanızın dizininde kaydetmeniz gerekir. Paketleme ve dağıtım için bir denetim dağıtma hakkında daha fazla bilgi için bkz: [dağıtım](../../../../docs/framework/deployment/index.md).  
@@ -94,19 +96,19 @@ Bu bölüm, özel bir Windows Forms denetimi geliştirme için önemli adımlar 
   
 2.  Kaynak kodu kaynak dosyasını içeren dizininden aşağıdaki komutu çalıştırarak yürütülebilir bir derlemeye derleyin.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll olan sınıfı içeren bütünleştirilmiş kodun `FirstControl`. Bu derleme (SimpleForm.cs veya SimpleForms.vb) eriştiği form için kaynak dosyası ile aynı dizinde olmalıdır.  
   
 3.  Aşağıdaki komutu kullanarak SimpleForm.exe yürütün.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   

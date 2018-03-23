@@ -1,32 +1,31 @@
 ---
-title: /platform (Visual Basic)
-ms.date: 07/20/2015
+title: -platform (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 09c7d677e614186d26a2ff8a1ce2fe5213cf7799
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="platform-visual-basic"></a>/platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasını çalıştırıp belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```  
-/platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
+-platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -41,7 +40,7 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
 |`anycpu32bitpreferred`|Herhangi bir platformda çalıştırılacak derlemenizi birleştirir. Uygulama 32 bit uygulama olarak, Windows'un 32 bit ve 64 bit sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve gerektirir [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `/platform` seçeneği çıktı dosyası tarafından hedeflenen işlemci türünü belirtin.  
+ Kullanım `-platform` seçeneği çıktı dosyası tarafından hedeflenen işlemci türünü belirtin.  
   
  Genel olarak, Visual Basic'te yazılmış .NET Framework derlemeleri aynı platformdan bağımsız olarak çalışır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu ortak çalışmalarını şunlardır:  
   
@@ -55,7 +54,7 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
   
 -   Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.  
   
- **/Platform** kodunuzu çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, seçeneği bazı sorunları azaltmaya. Özellikle:  
+ **-Platform** kodunuzu çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, seçeneği bazı sorunları azaltmaya. Özellikle:  
   
 -   Bir 64-bit platformu hedefleyen karar ve uygulama 32-bit bir makineye çalıştırırsanız, hata iletisi çok daha önce gelen ve bu anahtar kullanmadan oluşan hatasından daha soruna daha yöneliktir.  
   
@@ -63,17 +62,17 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
   
  Bir 64-bit Windows işletim sisteminde:  
   
--   Derlenmiş derlemeler `/platform:x86` WOW64 altında çalışan 32 bit CLR üzerinde yürütülür.  
+-   Derlenmiş derlemeler `-platform:x86` WOW64 altında çalışan 32 bit CLR üzerinde yürütülür.  
   
--   Derlenmiş olan yürütülebilir dosyalar `/platform:anycpu` 64-bit CLR üzerinde yürütülür.  
+-   Derlenmiş olan yürütülebilir dosyalar `-platform:anycpu` 64-bit CLR üzerinde yürütülür.  
   
--   DLL ile derlenmiş `/platform:anycpu` içine yüklenen bir işlem olarak aynı CLR üzerinde yürütülür.  
+-   DLL ile derlenmiş `-platform:anycpu` içine yüklenen bir işlem olarak aynı CLR üzerinde yürütülür.  
   
--   İle derlenmiş yürütülebilir dosyalar `/platform:anycpu32bitpreferred` 32-bit CLR üzerinde yürütülür.  
+-   İle derlenmiş yürütülebilir dosyalar `-platform:anycpu32bitpreferred` 32-bit CLR üzerinde yürütülür.  
   
  Bir Windows 64-bit sürümü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz: [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set-platform-in-the-visual-studio-ide"></a>Visual Studio IDE içinde/Platform ayarlamak için  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Ayarlanacak - Visual Studio IDE içinde platformu  
   
 1.  İçinde **Çözüm Gezgini**, proje seçme açmak **proje** menüsüne ve ardından **özellikleri**.  
   
@@ -82,10 +81,10 @@ Ortak dil çalışma zamanı (CLR) hangi platformu sürümü çıktı dosyasın�
      Daha fazla bilgi için bkz: [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını anlatan `/platform` derleyici seçeneği.  
+ Aşağıdaki örnekte nasıl kullanılacağını anlatan `-platform` derleyici seçeneği.  
   
-```  
-vbc /platform:x86 myFile.vb  
+```console
+vbc -platform:x86 myFile.vb  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

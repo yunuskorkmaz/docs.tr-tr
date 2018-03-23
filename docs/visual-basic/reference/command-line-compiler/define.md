@@ -1,10 +1,10 @@
 ---
-title: /define (Visual Basic)
-ms.date: 07/20/2015
+title: -tanımlama (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="define-visual-basic"></a>/define (Visual Basic)
+# <a name="-define-visual-basic"></a>-tanımlama (Visual Basic)
 Koşullu derleme sabitleri tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```  
-/define:["]symbol[=value][,symbol[=value]]["]  
+-define:["]symbol[=value][,symbol[=value]]["]  
 ' -or-  
-/d:["]symbol[=value][,symbol[=value]]["]  
+-d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -42,13 +41,13 @@ Koşullu derleme sabitleri tanımlar.
 |`value`|İsteğe bağlı. Atanacak değer `symbol`. Varsa `value` bir dizedir ters eğik çizgi /-tırnağından sıraları ile alınmalıdır (\\") tırnak işareti yerine. Değer belirtilmedi sonra olması için geçen True.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `/define` Seçeneği bir etkisi kullanmaya benzer bir `#Const` ile tanımlanmış bu sabitleri dışında kaynak dosyanızdaki önişlemci yönergesi `/define` ortak ve projedeki tüm dosyalar için geçerlidir.  
+ `-define` Seçeneği bir etkisi kullanmaya benzer bir `#Const` ile tanımlanmış bu sabitleri dışında kaynak dosyanızdaki önişlemci yönergesi `-define` ortak ve projedeki tüm dosyalar için geçerlidir.  
   
  Bu seçenek ile tarafından oluşturulan simgeleri kullanabilirsiniz `#If`... `Then`... `#Else` kaynak dosyaları koşullu derleme yönergesi.  
   
- `/d`kısa biçimi olan `/define`.  
+ `-d` kısa biçimi olan `-define`.  
   
- Birden çok sembolleriyle tanımlayabilirsiniz `/define` simge tanımlarını ayırmak için virgül kullanarak.  
+ Birden çok sembolleriyle tanımlayabilirsiniz `-define` simge tanımlarını ayırmak için virgül kullanarak.  
   
 |Ayarlamak için Visual Studio tümleşik geliştirme ortamında tanımlayın|  
 |---|  

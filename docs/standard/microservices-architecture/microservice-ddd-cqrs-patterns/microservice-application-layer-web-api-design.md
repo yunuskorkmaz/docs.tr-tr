@@ -1,7 +1,7 @@
 ---
-title: "Mikro hizmet uygulama katmanı ve Web API tasarlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı ve Web API tasarlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Mikro hizmet uygulama katmanı ve Web API tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı ve Web API tasarlama
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API tasarlama
 
@@ -29,7 +29,7 @@ DÜZ ilkeleri mikro hizmet DDD desenlerle geliştirme gibi modern ve kritik bir 
 
 -   Liskov değiştirme İlkesi
 
--   Ters çevirmeyi arasında ayrım yapma İlkesi
+-   Arabirim arasında ayrım yapma İlkesi
 
 -   Bağımlılık tersine çevirme ilkesi
 
@@ -46,10 +46,10 @@ DÜZ ayrıntılı olarak ele için başka bir kılavuz kalırsınız. Bu nedenle
 -   **DÜZ: Temel OOP ilkeleri**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Denetimi kapsayıcıları ve bağımlılık ekleme düzeni ters çevirmeyi**
+-   **Ters çevirmeyi denetimi kapsayıcıları ve bağımlılık ekleme düzeni**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. Birleştirici yeni**
+-   **Steve Smith. Birleştirici yenilikler**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 
