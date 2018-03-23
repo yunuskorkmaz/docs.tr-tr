@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: değişiklik şifreleme sağlayıcısı için bir X.509 sertifikası &#39; s özel anahtarı"
-ms.custom: 
+title: 'Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtarı'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +16,19 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Nasıl yapılır: değişiklik şifreleme sağlayıcısı için bir X.509 sertifikası &#39; s özel anahtarı
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtarı
 Bu konuda bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve sağlayıcısını tümleştirme gösterilmektedir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security çerçevesi. Sertifika kullanma hakkında daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik framework açıklandığı gibi yeni güvenlik belirteci türleri tanıtmak için bir yöntem sunar [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Var olan sistem tarafından sağlanan belirteç türleri değiştirmek için özel bir belirteç kullanmak da mümkündür.  

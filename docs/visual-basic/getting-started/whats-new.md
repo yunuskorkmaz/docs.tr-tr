@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic for yenilikler nelerdir?
 
@@ -34,6 +34,9 @@ Yeni özellikler için bkz: [Visual Basic 15,5](#visual-basic-155)
 
 Visual Basic 15.3   
 Yeni özellikler için bkz: [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+Yeni özellikler için bkz: [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic / Visual Studio .NET 2015   
 Yeni özellikler için bkz: [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ Visual Basic 2017 alt çizgi karakteri desteği eklendi (`_`) basamak ayırıcı
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Kullanılacak başında ayırıcı olarak puan karakterin altında Visual Basic proje (*.vbproj) dosyanıza aşağıdaki öğeyi eklemeniz gerekir:
+Alt çizgi karakterini başında ayırıcı olarak kullanmak için aşağıdaki öğeyi Visual Basic projenize eklemeniz gerekir (\*.vbproj) dosyası:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Kullanılacak başında ayırıcı olarak puan karakterin altında Visual Basic 
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[Adlandırılmış tanımlama grubu çıkarımı](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Adlandırılmış tanımlama grubu çıkarımı**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Başlığın öğeleri değerini değişkenlerinden atadığınızda, Visual Basic karşılık gelen değişken adları tanımlama grubu öğelerinden adını oluşturur; açıkça bir tanımlama grubu öğe adı gerekmez. Aşağıdaki örnek, üç adlı öğeye sahip bir tanımlama grubu oluşturmak için çıkarım kullanır `state`, `stateName`, ve `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Ek derleyici anahtarları**  
+
+Komut satırı derleyicisi şimdi destekleyen Visual Basic [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) ve [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) çıktısını denetlemek için derleyici seçenekleri başvuru derlemeleri. **-refout** başvuru derlemenin çıktı dizinine tanımlar ve **- refonly** yalnızca bir referans derlemesini derleme çıktı olduğunu belirtir.
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[Demetler](../programming-guide/language-features/data-types/tuples.md)
+[**Diziler**](../programming-guide/language-features/data-types/tuples.md)
 
 Diziler olan basit bir veri yapısı en yaygın olarak tek bir yöntem çağrısından birden çok değer döndürmek için kullanılır. Normalde, bir yöntemin birden çok değer döndürmek için aşağıdakilerden birini yapmanız gerekir:
 

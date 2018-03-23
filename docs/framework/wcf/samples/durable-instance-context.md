@@ -1,24 +1,26 @@
 ---
-title: "Dayanıklı Örnek Bağlamı"
-ms.custom: 
+title: Dayanıklı Örnek Bağlamı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 Bu örnek nasıl özelleştirileceğini gösteren [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dayanıklı örnek bağlamı etkinleştirmek için çalışma zamanı. SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır. Ancak, özel depolama mekanizmaları erişmek için bir yol da sağlar.  
@@ -242,7 +244,7 @@ else
   
  Bu işlem ilk adım olarak geçerli InstanceContext kanal katmanını gelen bağlam Kimliğini kaydetmek sahibiz. InstanceContext arasında bağlantı gibi davranır bir çalışma zamanı bileşeni olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dağıtıcısı ve hizmet örneği. Ek durum ve hizmet örneğine davranışı sağlamak için kullanılabilir. Süre sonuyla iletişiminde bağlam Kimliğini yalnızca ilk iletinin gönderildiği için gereklidir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Yeni durum ve Genişletilebilir nesne modeli kullanarak davranışı ekleyerek kendi InstanceContext çalışma zamanı bileşeni genişletme sağlar. Genişletilebilir object deseni kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için. Genişletilebilir nesne modelinde - IExtensibleObject üç arabirimi olan\<T >, IExtension\<T > ve IExtensionCollection\<T >:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yeni durum ve Genişletilebilir nesne modeli kullanarak davranışı ekleyerek kendi InstanceContext çalışma zamanı bileşeni genişletme sağlar. Genişletilebilir object deseni kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için. Genişletilebilir nesne modelinde - IExtensibleObject üç arabirimi olan\<T >, IExtension\<T > ve IExtensionCollection\<T >:  
   
 -   IExtensibleObject\<T > arabirimini işlevleriyle özelleştirme uzantılarına izin ver nesneler tarafından gerçekleştirilir.  
   
@@ -290,7 +292,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  İçerik kimliği okuma daha önce açıklandığı gibi `Properties` koleksiyonu `Message` sınıfı ve uzantı sınıfı oluşturucuya geçirilen. Bu, tutarlı bir şekilde katmanlar arasında bilgi nasıl değiştirilebilir gösterir.  
   
- Önemli bir sonraki adım, hizmet örneği oluşturma işlemini geçersiz kılma. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Özel örneklemesi davranışları uygulama ve IInstanceProvider arabirimini kullanarak çalışma zamanı kadar takma sağlar. Yeni `InstanceProvider` sınıfı, bu işlemi yapmak için uygulanır. Oluşturucuda örneği Sağlayıcısı'ndan beklenen hizmet türünü kabul edilir. Daha sonra bu yeni örnekleri oluşturmak için kullanılır. İçinde `GetInstance` uygulama Depolama Yöneticisi örneği oluşturulur kalıcı bir örneğin aranıyor. Döndürürse `null` hizmet türü yeni bir örneğini örneği ve yapana.  
+ Önemli bir sonraki adım, hizmet örneği oluşturma işlemini geçersiz kılma. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Özel örneklemesi davranışları uygulama ve IInstanceProvider arabirimini kullanarak çalışma zamanı kadar takma sağlar. Yeni `InstanceProvider` sınıfı, bu işlemi yapmak için uygulanır. Oluşturucuda örneği Sağlayıcısı'ndan beklenen hizmet türünü kabul edilir. Daha sonra bu yeni örnekleri oluşturmak için kullanılır. İçinde `GetInstance` uygulama Depolama Yöneticisi örneği oluşturulur kalıcı bir örneğin aranıyor. Döndürürse `null` hizmet türü yeni bir örneğini örneği ve yapana.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  

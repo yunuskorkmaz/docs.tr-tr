@@ -1,24 +1,26 @@
 ---
-title: "|| (VEYA) (Varlık SQL)"
-ms.custom: 
+title: '|| (VEYA) (Varlık SQL)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="-or-entity-sql"></a>|| (VEYA) (Varlık SQL)
 İki birleştirir `Boolean` ifadeler.  
@@ -36,12 +38,12 @@ boolean_expression || boolean_expression
  Döndüren herhangi bir geçerli ifadeler bir `Boolean`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`koşullardan biri olduğunda `true`; Aksi halde, `false`.  
+ `true` koşullardan biri olduğunda `true`; Aksi halde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  VEYA bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] mantıksal işleç. İki koşul birleştirmek için kullanılır. Birden fazla mantıksal işleç bir deyimde kullanıldığında veya işleçler ve işleçler sonra değerlendirilir. Ancak, parantez kullanarak Değerlendirme sırasını değiştirebilirsiniz.  
   
- Çift dikey çubuk (&#124; &#124;) veya işlecini aynı işlevselliğe sahiptir.  
+ Çift dikey çubuk (&#124;&#124;) veya işlecini aynı işlevselliğe sahiptir.  
   
  Aşağıdaki tabloda olası giriş değerleri gösterir ve dönüş türleri.  
   

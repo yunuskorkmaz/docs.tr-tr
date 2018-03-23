@@ -1,34 +1,34 @@
 ---
-title: "Veri Sözleşmesi Şema Başvurusu"
-ms.custom: 
+title: Veri Sözleşmesi Şema Başvurusu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> ortak dil tanımlamak için XML serileştirmesi için çalışma zamanı (CLR) türleri.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer eşlemeleri  
- `DataContractSerializer` Gelen meta verileri verildiğinde CLR türleri için XSD eşleyen bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir meta veri uç noktası kullanarak hizmet veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Gelen meta verileri verildiğinde CLR türleri için XSD eşleyen bir [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bir meta veri uç noktası kullanarak hizmet veya [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Veri sözleşmesi seri hale getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` Ayrıca Web Hizmetleri Açıklama Dili (WSDL) veya XSD belgelere erişmek ve Hizmetleri veya istemciler için veri sözleşmeleri oluşturmak için Svcutil.exe kullanıldığında XSD CLR Türleri ile eşleştirir.  
   
@@ -60,25 +60,25 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`elementFormDefault`|Nitelenmiş olmalıdır. Tüm öğeleri tarafından desteklendiği bir şema için nitelenmelidir `DataContractSerializer`. Bu iki ayar tarafından gerçekleştirilebilir xs:schema/@elementFormDefault "tam" veya ayarlayarak xs:element/@form için "tam" her tek öğe bildiriminde.|  
 |`finalDefault`|Yoksayıldı.|  
 |`Id`|Yoksayıldı.|  
-|`targetNamespace`|Desteklenen ve veri sözleşmesi ad alanına eşlenir. Bu özniteliği belirtilmezse, boş ad alanı kullanılır. Ayrılmış ad http://schemas.microsoft.com/2003/10/Serialization/ olamaz.|  
+|`targetNamespace`|Desteklenen ve veri sözleşmesi ad alanına eşlenir. Bu özniteliği belirtilmezse, boş ad alanı kullanılır. Ayrılmış ad olamaz http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Yoksayıldı.|  
   
-### <a name="xsschema-contents"></a>\<xs: Schema >: içeriği  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
-|`include`|Desteklenen. `DataContractSerializer`Xs destekler: içerir ve xs:import. Ancak, Svcutil.exe kısıtlayan aşağıdaki `xs:include/@schemaLocation` ve `xs:import/@location` meta verileri yerel dosyadan yüklendiğinde başvuruyor. Şema dosyaların listesini bir bant dışı mekanizması aracılığıyla ve değil aracılığıyla geçirilmelidir `include` böyle bir durumda; `include`d şema belgeleri yok sayılır.|  
+|`include`|Desteklenen. `DataContractSerializer` Xs destekler: içerir ve xs:import. Ancak, Svcutil.exe kısıtlayan aşağıdaki `xs:include/@schemaLocation` ve `xs:import/@location` meta verileri yerel dosyadan yüklendiğinde başvuruyor. Şema dosyaların listesini bir bant dışı mekanizması aracılığıyla ve değil aracılığıyla geçirilmelidir `include` böyle bir durumda; `include`d şema belgeleri yok sayılır.|  
 |`redefine`|Alınamaz. Kullanımını `xs:redefine` tarafından yasaklanmış `DataContractSerializer` güvenlik nedenleriyle: `x:redefine` gerektirir `schemaLocation` izlemelidir. Bazı durumlarda DataContract kullanarak Svcutil.exe kullanımını sınırlar `schemaLocation`.|  
-|`import`|Desteklenen. `DataContractSerializer`destekleyen `xs:include` ve `xs:import`. Ancak, Svcutil.exe kısıtlayan aşağıdaki `xs:include/@schemaLocation` ve `xs:import/@location` meta verileri yerel dosyadan yüklendiğinde başvuruyor. Şema dosyaların listesini bir bant dışı mekanizması aracılığıyla ve değil aracılığıyla geçirilmelidir `include` böyle bir durumda; `include`d şema belgeleri yok sayılır.|  
+|`import`|Desteklenen. `DataContractSerializer` destekleyen `xs:include` ve `xs:import`. Ancak, Svcutil.exe kısıtlayan aşağıdaki `xs:include/@schemaLocation` ve `xs:import/@location` meta verileri yerel dosyadan yüklendiğinde başvuruyor. Şema dosyaların listesini bir bant dışı mekanizması aracılığıyla ve değil aracılığıyla geçirilmelidir `include` böyle bir durumda; `include`d şema belgeleri yok sayılır.|  
 |`simpleType`|Desteklenen. Bkz: `xs:simpleType` bölümü.|  
 |`complexType`|Desteklenen veri sözleşmeleri eşlenir. Bkz: `xs:complexType` bölümü.|  
-|`group`|Yoksayıldı. `DataContractSerializer`kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
-|`attributeGroup`|Yoksayıldı. `DataContractSerializer`kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
+|`group`|Yoksayıldı. `DataContractSerializer` kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
+|`attributeGroup`|Yoksayıldı. `DataContractSerializer` kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
 |`element`|Desteklenen. Genel bir öğe bildirimi (GED) konusuna bakın.|  
-|`attribute`|Yoksayıldı. `DataContractSerializer`kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
+|`attribute`|Yoksayıldı. `DataContractSerializer` kullanımını desteklemez `xs:group`, `xs:attributeGroup`, ve `xs:attribute`. Bu bildirimler alt olarak sayılır `xs:schema`, içinden başvurulamaz ancak `complexType` veya diğer desteklenen yapıları.|  
 |`notation`|Yoksayıldı.|  
   
-## <a name="complex-types--xscomplextype"></a>Karmaşık türler – \<xs:complexType >  
+## <a name="complex-types--xscomplextype"></a>Complex Types – \<xs:complexType>  
   
 ### <a name="general-information"></a>Genel bilgiler  
  Her karmaşık tür \<xs:complexType > bir veri sözleşmesine eşler.  
@@ -128,10 +128,10 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`any`|Alınamaz.|  
 |(boş)|Veri sözleşmesi hiçbir veri üyeleri ile eşlenir.|  
   
-## <a name="elements--xselement"></a>Öğeleri – \<xs:element >  
+## <a name="elements--xselement"></a>Elements – \<xs:element>  
   
 ### <a name="general-information"></a>Genel bilgiler  
- `<xs:element>`Aşağıdaki bağlamlarda oluşabilir:  
+ `<xs:element>` Aşağıdaki bağlamlarda oluşabilir:  
   
 -   İçinde oluşabilir bir `<xs:sequence>`, normal (toplama olmayan) veri sözleşmesi veri üyesi açıklar. Bu durumda, `maxOccurs` özniteliği 1 olmalıdır. (0 değerine izin verilmiyor).  
   
@@ -202,7 +202,7 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`substitutionGroup`|İçinde ilişkili GEDs alınamaz.|  
 |`type`|Desteklenen ve (anonim bir tür öğeyi içeren sürece) ilişkili türü için ilişkili GEDs eşleşmesi gerekir.|  
   
-### <a name="xselement-contents"></a>\<xs:Element >: içeriği  
+### <a name="xselement-contents"></a>\<xs:element>: contents  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
@@ -213,9 +213,9 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`keyref`|Yoksayıldı.|  
 |(boş)|Desteklenen.|  
   
- \*Kullanırken `simpleType` ve `complexType,` anonim türler için eşleme olduğundan, anonim olmayan türleri ile aynıdır, hiçbir anonim veri sözleşmeleri olmasını dışında ve bir adlandırılmış veri sözleşmesi öğesi adından türetilen oluşturulan bir ad ile oluşturulur. Anonim türler için kurallar aşağıdaki listede yer almaktadır:  
+ \* Kullanırken `simpleType` ve `complexType,` anonim türler için eşleme olduğundan, anonim olmayan türleri ile aynıdır, hiçbir anonim veri sözleşmeleri olmasını dışında ve bir adlandırılmış veri sözleşmesi öğesi adından türetilen oluşturulan bir ad ile oluşturulur. Anonim türler için kurallar aşağıdaki listede yer almaktadır:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uygulama ayrıntılarını: varsa `xs:element` adı nokta içeremez, dış veri sözleşmesi türü için bir iç türü anonim tür eşler. Nokta adı içeriyorsa, sonuçta ortaya çıkan veri sözleşmesi türü bağımsızdır (iç bir tür değil).  
+-   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama ayrıntılarını: varsa `xs:element` adı nokta içeremez, dış veri sözleşmesi türü için bir iç türü anonim tür eşler. Nokta adı içeriyorsa, sonuçta ortaya çıkan veri sözleşmesi türü bağımsızdır (iç bir tür değil).  
   
 -   İç türü üretilen veri sözleşme adı noktayla, öğeyi ve "Türü" dize adını ve ardından dış türü veri sözleşmesi adıdır.  
   
@@ -239,13 +239,13 @@ Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.R
 |`list`|Desteklenen. Numaralandırma veri sözleşmeleri bayrak eşler. Bkz: `xs:simpleType` bölümünde listelenmiştir.|  
 |`union`|Alınamaz.|  
   
-### <a name="xsrestriction"></a>\<xs:restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   Karmaşık tür kısıtlamaları yalnızca için temel desteklenen = "`xs:anyType`".  
   
 -   Basit türü kısıtlamalarını `xs:string` sahip olmayan bir kısıtlama modelleri dışında `xs:enumeration` numaralandırma veri sözleşmelerine eşlenir.  
   
--   Diğer tüm basit tür kısıtlamaları bunlar kısıtlama türlerine eşlenir. Örneğin, bir kısıtlaması `xs:int` gibi bir tamsayıya eşlemeleri `xs:int` kendisi yapar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]eşleme, ilkel türü türü/ilkel eşleme bakın.  
+-   Diğer tüm basit tür kısıtlamaları bunlar kısıtlama türlerine eşlenir. Örneğin, bir kısıtlaması `xs:int` gibi bir tamsayıya eşlemeleri `xs:int` kendisi yapar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] eşleme, ilkel türü türü/ilkel eşleme bakın.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: öznitelikleri  
   
@@ -342,8 +342,8 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list >  
- `DataContractSerializer`MAPS Numaralandırma türleri ile işaretlenen `System.FlagsAttribute` için `xs:list` türetilen `xs:string`. Başka `xs:list` Çeşitlemeler desteklenir.  
+### <a name="xslist"></a>\<xs:list>  
+ `DataContractSerializer` MAPS Numaralandırma türleri ile işaretlenen `System.FlagsAttribute` için `xs:list` türetilen `xs:string`. Başka `xs:list` Çeşitlemeler desteklenir.  
   
 ### <a name="xslist-attributes"></a>\<xs:list >: öznitelikleri  
   
@@ -450,28 +450,28 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent >: öznitelikleri  
+### <a name="xscomplexcontent-attributes"></a>\<xs:complexContent>: attributes  
   
 |Öznitelik|Şema|  
 |---------------|------------|  
 |`id`|Yoksayıldı.|  
 |`mixed`|False olmalıdır.|  
   
-### <a name="xscomplexcontent-contents"></a>\<xs:complexContent >: içeriği  
+### <a name="xscomplexcontent-contents"></a>\<xs:complexContent>: contents  
   
 |İçindekiler|Şema|  
 |--------------|------------|  
 |`restriction`|Yasak, temel dışında = "`xs:anyType`". İkinci içeriğini yerleştirmek için eşdeğer olan `xs:restriction` doğrudan kapsayıcısı altında `xs:complexContent`.|  
 |`extension`|Desteklenen. Veri sözleşmesi devralma eşlenir.|  
   
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:Extension > içinde \<xs:complexContent >: öznitelikleri  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension> in \<xs:complexContent>: attributes  
   
 |Öznitelik|Şema|  
 |---------------|------------|  
 |`id`|Yoksayıldı.|  
 |`base`|Desteklenen. Bu tür öğesinden devralınan eşlemeleri temel veri sözleşmesi yazın.|  
   
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:Extension > içinde \<xs:complexContent >: içeriği  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension> in \<xs:complexContent>: contents  
  Kuralları aynıdır `<xs:complexType>` içeriği.  
   
  Varsa bir `<xs:sequence>` sağlanır, kendi üyesi türetilmiş veri sözleşmede ek veri üyelerin eşlemeniz öğeleri.  
@@ -493,7 +493,7 @@ public class Employee : Person
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
 |`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|<xref:System.DateTime>ve <xref:System.TimeSpan> kaydırmanın. DateTimeOffset serileştirme aşağıya bakın.|  
+|`dateTimeOffset`|<xref:System.DateTime> ve <xref:System.TimeSpan> kaydırmanın. DateTimeOffset serileştirme aşağıya bakın.|  
 |`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
@@ -502,7 +502,7 @@ public class Employee : Person
 |`gDay`|<xref:System.String>.|  
 |`gMonth`|<xref:System.String>.|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte>dizi.|  
+|`base64Binary`|<xref:System.Byte> dizi.|  
 |`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Eşleme ISerializable türleri  
- İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, `ISerializable` Kalıcılık veya veri aktarımı için nesneleri serileştirmek için genel bir mekanizma olarak sunulmuştur. Vardır birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri uygulayan `ISerializable` ve uygulamalar arasında geçirilebilir. `DataContractSerializer`doğal olarak için destek sağlar `ISerializable` sınıfları. `DataContractSerializer` Eşlemeleri `ISerializable` yalnızca QName türü tarafından (tam adı) farklıdır ve etkili bir şekilde özellik koleksiyonları olan uygulama şema türü. Örneğin, `DataContractSerializer` eşlemeleri <xref:System.Exception> http://schemas.datacontract.org/2004/07/System ad alanında aşağıdaki XSD türü.  
+ İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, `ISerializable` Kalıcılık veya veri aktarımı için nesneleri serileştirmek için genel bir mekanizma olarak sunulmuştur. Vardır birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri uygulayan `ISerializable` ve uygulamalar arasında geçirilebilir. `DataContractSerializer` doğal olarak için destek sağlar `ISerializable` sınıfları. `DataContractSerializer` Eşlemeleri `ISerializable` yalnızca QName türü tarafından (tam adı) farklıdır ve etkili bir şekilde özellik koleksiyonları olan uygulama şema türü. Örneğin, `DataContractSerializer` eşlemeleri <xref:System.Exception> içinde aşağıdaki XSD türüne http://schemas.datacontract.org/2004/07/System ad alanı.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- İsteğe bağlı öznitelik `ser:FactoryType` veri sözleşmesi seri hale getirme içinde bildirilen şema türü seri durumdan bir Üreteç sınıfını başvuruyor. Fabrika sınıfı bilinen türleri koleksiyonunu bir parçası olması `DataContractSerializer` kullanılan örnek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ İsteğe bağlı öznitelik `ser:FactoryType` veri sözleşmesi seri hale getirme içinde bildirilen şema türü seri durumdan bir Üreteç sınıfını başvuruyor. Fabrika sınıfı bilinen türleri koleksiyonunu bir parçası olması `DataContractSerializer` kullanılan örnek. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bilinen türlerini, bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract seri hale getirme şeması  
  Bir dizi Şemaları dışarı tarafından `DataContractSerializer` türler, öğeleri ve özel bir veri sözleşmesi seri hale getirme ad alanındaki öznitelikler kullanın:  
@@ -623,14 +623,14 @@ public class Employee : Person
   
  Aşağıdakiler dikkate alınmalıdır:  
   
--   `ser:char`Unicode karakterler türü temsil etmek için sunulan <xref:System.Char>.  
+-   `ser:char` Unicode karakterler türü temsil etmek için sunulan <xref:System.Char>.  
   
 -   `valuespace` , `xs:duration` Sıralı kümesine daha az için eşlenebilir bir <xref:System.TimeSpan>.  
   
--   `FactoryType`türetilmiş türden dışarı şemalarında kullanılan <xref:System.Runtime.Serialization.ISerializable>.  
+-   `FactoryType` türetilmiş türden dışarı şemalarında kullanılan <xref:System.Runtime.Serialization.ISerializable>.  
   
 ## <a name="importing-non-datacontract-schemas"></a>DataContract olmayan şemalarını içeri aktarma  
- `DataContractSerializer`sahip `ImportXmlTypes` alma için uymayan şemaların izin vermek için seçeneği `DataContractSerializer` XSD profil (bkz: <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliği). Bu seçeneğin ayarlanması `true` uyumsuz şema türleri ve aşağıdaki uygulama için eşleme sağlar <xref:System.Xml.Serialization.IXmlSerializable> bir dizi kaydırma <xref:System.Xml.XmlNode> (yalnızca sınıf adını farklıdır).  
+ `DataContractSerializer` sahip `ImportXmlTypes` alma için uymayan şemaların izin vermek için seçeneği `DataContractSerializer` XSD profil (bkz: <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliği). Bu seçeneğin ayarlanması `true` uyumsuz şema türleri ve aşağıdaki uygulama için eşleme sağlar <xref:System.Xml.Serialization.IXmlSerializable> bir dizi kaydırma <xref:System.Xml.XmlNode> (yalnızca sınıf adını farklıdır).  
   
 ```  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  

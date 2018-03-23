@@ -1,26 +1,28 @@
 ---
-title: '&#39; teki ADO.NET''deki yenilikler'
-ms.custom: 
+title: Ne&#39;s ADO.NET'deki yenilikler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-adonet"></a>&#39; teki ADO.NET'deki yenilikler
+# <a name="what39s-new-in-adonet"></a>Ne&#39;s ADO.NET'deki yenilikler
 Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient veri sağlayıcısı  
@@ -52,9 +54,9 @@ Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado
   
 -   SqlClient LocalDB veritabanlarına bağlantılarını destekler. Daha fazla bilgi için bkz: [LocalDB SqlClient desteği](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;`geçirilecek yeni değer `Type System Version` bağlantı özelliği. `Type System Version=Latest;` Değer artık kullanımdan kalkmıştır ve eşdeğer yapılan `Type System Version=SQL Server 2008;`. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` geçirilecek yeni değer `Type System Version` bağlantı özelliği. `Type System Version=Latest;` Değer artık kullanımdan kalkmıştır ve eşdeğer yapılan `Type System Version=SQL Server 2008;`. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
--   SqlClient ek destek seyrek sütunlar için SQL Server 2008'de eklenen bir özelliği sağlar. Uygulama zaten bir seyrek sütun kullanan bir tablodaki verileri erişirse, performans artışı görmeniz gerekir. IsColumnSet sütunu <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> bir sütunu bir sütun kümesi üyesi olan bir seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>bir sütunu bir seyrek sütun olup olmadığını gösterir (bkz [SQL Server şeması koleksiyonları](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) daha fazla bilgi için). Seyrek sütun hakkında daha fazla bilgi için bkz: [kullanarak seyrek sütun](http://go.microsoft.com/fwlink/?LinkId=224244).  
+-   SqlClient ek destek seyrek sütunlar için SQL Server 2008'de eklenen bir özelliği sağlar. Uygulama zaten bir seyrek sütun kullanan bir tablodaki verileri erişirse, performans artışı görmeniz gerekir. IsColumnSet sütunu <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> bir sütunu bir sütun kümesi üyesi olan bir seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> bir sütunu bir seyrek sütun olup olmadığını gösterir (bkz [SQL Server şeması koleksiyonları](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) daha fazla bilgi için). Seyrek sütun hakkında daha fazla bilgi için bkz: [kullanarak seyrek sütun](http://go.microsoft.com/fwlink/?LinkId=224244).  
   
 -   Uzamsal veri türleri içeriyor, Microsoft.SqlServer.Types.dll derleme sürüm 11.0 10.0 sürümünden yükseltildi. Bu derleme başvurusu uygulamalar başarısız olabilir. Daha fazla bilgi için bkz: [son değişiklikler için veritabanı altyapısı özelliklere](http://go.microsoft.com/fwlink/?LinkId=224367).  
   

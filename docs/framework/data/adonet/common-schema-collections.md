@@ -1,24 +1,26 @@
 ---
-title: "Ortak şema koleksiyonları"
-ms.custom: 
+title: Ortak şema koleksiyonları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren. Bu koleksiyonları tüm gerekli sütunları açıklanmaktadır. Sağlayıcıları istediklerinde ek sütunlar eklemek boş. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyonuna ekleyin.  
@@ -41,7 +43,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
   
 |columnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "@&#124; \\." (for Oracle).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "@&#124; \\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
+|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "@&#124;\\." (for Oracle).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "@&#124;\\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
 |DataSourceProductName|dize|"Oracle" veya "SQLServer" gibi sağlayıcısı tarafından erişilen ürünün adı.|  
 |DataSourceProductVersion|dize|Veri kaynakları yerel biçiminde ve Microsoft biçiminde değil sağlayıcısı tarafından erişilen ürünün sürümünü gösterir.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda, bu her zaman aynı olacaktır.|  
 |DataSourceProductVersionNormalized|dize|Verileri için normalleştirilmiş bir sürümü kaynak ile karşılaştırılabilir şekilde `String.Compare()`. Bu sürüm 1 ve sürüm 2 arasında sıralamasını sürüm 10 önlemek için Sağlayıcı'nin tüm sürümleri için tutarlı biçimidir.<br /><br /> Örneğin, Oracle sağlayıcısı Oracle 8i veri kaynağı "08.01.07.04.01" döndürülecek neden olan kendi normalleştirilmiş sürümü için "nn.nn.nn.nn.nn" biçimini kullanır. SQL Server normal Microsoft "nn.nn.nnnn" biçimini kullanır.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda bu her zaman aynı olacaktır.|  
@@ -53,10 +55,10 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 |ParameterMarkerPattern|dize|Bir parametre işaretçisi eşleşen normal bir ifade. Varsa, parametre adı bir eşleşme değeri olur.<br /><br /> Örneğin, adlandırılmış parametreleri ile desteklenen bir ' @' eklenecek öncü karakter parametre adı bu olur: "(@[A-Za-z0-9_$ #] *)".<br /><br /> Ancak, adlandırılmış parametreleri ile destekleniyorsa, bir ':' parametre adı parçası öncü karakter ve değil gibi bu olur: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Elbette, veri kaynağı adlandırılmış parametreleri desteklemiyorsa, bu yalnızca olur "?".|  
 |ParameterNameMaxLength|int|Bir parametre adı karakter cinsinden en büyük uzunluğu. Visual Studio parametre adları destekleniyorsa, en fazla uzunluğu için en düşük değer 30 karakter olduğunu bekliyor.<br /><br /> Veri kaynağı adlandırılmış parametreleri desteklemiyorsa bu özellik sıfır döndürür.|  
 |ParameterNamePattern|dize|Geçerli parametre adları eşleşen normal bir ifade. Farklı veri kaynakları için parametre adları kullanılabilir karakterleri ilgili farklı kuralları vardır.<br /><br /> Visual Studio parametre adları destekleniyorsa, "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" karakterlerin en düşük desteklenen parametre adları için geçerli bir karakter kümesini olduğunu bekliyor.|  
-|QuotedIdentifierPattern|dize|Tırnak işaretli tanımlayıcısıyla eşleşip ve tırnak işaretleri olmadan tanımlayıcı kendisini eşleşme değerine sahip bir normal ifade. Örneğin, veri kaynağı çift tırnak tırnak işaretli tanımlayıcılar tanımlamak için kullanılan bu şöyle olur: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|dize|Tırnak işaretli tanımlayıcısıyla eşleşip ve tırnak işaretleri olmadan tanımlayıcı kendisini eşleşme değerine sahip bir normal ifade. Örneğin, veri kaynağı çift tırnak tırnak işaretli tanımlayıcılar tanımlamak için kullanılan bu şöyle olur: "(([^\\"]&#124;\\"\\") *) ".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Tırnak işaretli tanımlayıcılar olarak büyük küçük harfe duyarlı olmadığı kabul edilip edilmeyeceğini belirtir.|  
 |StatementSeparatorPattern|dize|Deyimi ayırıcı eşleşen normal bir ifade.|  
-|StringLiteralPattern|dize|Bir değişmez dize değeri ile eşleşen ve sabit bir eşleşme değerine sahip bir normal ifade. Örneğin, veri kaynağı tek tırnak işareti dizeleri tanımlamak için kullanılan bu şöyle olur: "('([^'] &#124;'') *')"'|  
+|StringLiteralPattern|dize|Bir değişmez dize değeri ile eşleşen ve sabit bir eşleşme değerine sahip bir normal ifade. Örneğin, veri kaynağı tek tırnak işareti dizeleri tanımlamak için kullanılan bu şöyle olur: "('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|SQL birleştirme deyimleri hangi türde veri kaynağı tarafından desteklenen belirtir.|  
   
 ## <a name="datatypes"></a>Veri türleri  

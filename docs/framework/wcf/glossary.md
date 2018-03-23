@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework 4.5 için Windows Communication Foundation Sözlüğü"
-ms.custom: 
+title: .NET Framework 4.5 için Windows Communication Foundation Sözlüğü
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], glossary
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
-caps.latest.revision: "243"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 için Windows Communication Foundation Sözlüğü
 Aşağıdaki terimler Windows Communication Foundation belgelerine tanımlanır.  
@@ -58,7 +60,7 @@ Aşağıdaki terimler Windows Communication Foundation belgelerine tanımlanır.
 |güvenlik|WCF güvenliğinde gizliliği (şifreleme gizlice Dinlemenin önlenmesi iletilerinin), bütünlük (anlamına gelir iletiyle oynama algılanamadı için), kimlik doğrulama (anlamına gelir sunucularını ve istemcilerini doğrulanması için) ve yetkilendirme (denetimi içerir kaynaklara erişim). Bu işlevler ya da yararlanmayı mevcut güvenlik mekanizmaları, HTTP (HTTPS olarak da bilinir) üzerinden TLS gibi veya bir veya daha fazlasını çeşitli WS - uygulama tarafından sağlanan * güvenlik özellikleri.|  
 |kendini barındıran hizmet|Kendini barındıran hizmet Geliştirici oluşturulan işlem uygulama içinde çalışan biridir. Geliştirici yaşam denetimleri, hizmet özelliklerini ayarlar, (dinleme moduna ayarlar) hizmetini açar ve hizmet kapatır.|  
 |hizmet|Bir program veya bir ya da daha fazla işlem gösterme her uç noktası ile bir veya daha fazla uç sunan işlemi.|  
-|Hizmet Sözleşmesi|Hizmet sözleşmesi birden fazla ilgili işlemlerini tek bir işlev birime birbirine bağlar. Sözleşme ad alanı hizmeti, karşılık gelen bir geri çağırma sözleşme ve diğer tür ayarları gibi hizmet düzeyi ayarlarını tanımlayabilirsiniz. Çoğu durumda, sözleşmenin tercih ettiğiniz programlama dilinde bir arabirim oluşturma ve T:System.ServiceModel.ServiceContractAttribute özniteliği arabirimine uygulama tarafından tanımlanır. Arabirimi uygulama tarafından gerçek hizmet kod sonuçları.|  
+|service contract|Hizmet sözleşmesi birden fazla ilgili işlemlerini tek bir işlev birime birbirine bağlar. Sözleşme ad alanı hizmeti, karşılık gelen bir geri çağırma sözleşme ve diğer tür ayarları gibi hizmet düzeyi ayarlarını tanımlayabilirsiniz. Çoğu durumda, sözleşmenin tercih ettiğiniz programlama dilinde bir arabirim oluşturma ve T:System.ServiceModel.ServiceContractAttribute özniteliği arabirimine uygulama tarafından tanımlanır. Arabirimi uygulama tarafından gerçek hizmet kod sonuçları.|  
 |hizmet işlemi|Bir hizmet işlemi, bir işlem işlevselliğini hayata geçiren bir hizmetin kodda tanımlanan bir yordamdır. Bu işlem, istemcilere bir WCF istemcisi yöntemi olarak sunulur. Yöntemi bir değer döndürmesi isteğe bağlı bir bağımsız değişken sayısı alın veya bağımsız değişkenler almayan ve bir yanıt döndürür. Örneğin, olarak işlev bir işlem bir &quot;Hello&quot; bildirim bir istemcinin varlık ve işlemleri, bir dizi başlamaya olarak kullanılabilir.|  
 |sistem tarafından sağlanan bağlamalar|WCF sistem tarafından sağlanan bağlamalar sayısını içerir. Bu bağlama belirli senaryolar için iyileştirilen öğelerinin koleksiyonlarıdır. Örneğin, T:System.ServiceModel.WSHttpBinding çeşitli WS - uygulama hizmetleri ile birlikte çalışabilirlik için tasarlanmış * belirtimleri. Bu bağlamaları, yalnızca belirli bir senaryoyu doğru uygulanabilir seçenekleri sunarak zaman kazandırır. Bu bağlamaların bir tanesini gereksinimlerinizi karşılamıyorsa, kendi özel bağlama oluşturabilirsiniz.|  
 |işlem sonlandırma|En son iletinin varolan bir oturumda adlı bir işlem. Hizmet ilişkili oturum kapatıldıktan sonra varsayılan durumda, WCF Hizmeti nesnesi ve onun bağlamı geri dönüştürür.|  

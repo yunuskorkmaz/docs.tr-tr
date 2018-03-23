@@ -1,24 +1,26 @@
 ---
-title: "Dayanıklı Çift Yönlü Bağıntı"
-ms.custom: 
+title: Dayanıklı Çift Yönlü Bağıntı
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-duplex-correlation"></a>Dayanıklı Çift Yönlü Bağıntı
 Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilinen bir iş akışı hizmeti ilk çağıran için bir geri çağırma göndermek için bir gereksinim olduğunda yararlıdır. WCF çift yönlü aksine geri çağırma herhangi bir zamanda gelecekte oluşabilir ve aynı kanalı veya kanal ömrü bağlı değildir; tek gereksinim çağıran bir etkin uç nokta için geri çağırma iletisi dinleme olmasıdır. Bu, uzun süre çalışan konuşmada iletişim kurmak iki iş akışı hizmetleri sağlar. Bu konu, dayanıklı çift yönlü bağıntı genel bir bakış sağlar.  
@@ -27,7 +29,7 @@ Dayanıklı çift yönlü bağıntı, geri çağırma bağıntı olarak da bilin
  Dayanıklı çift yönlü bağıntı kullanmak için iki hizmet, iki yönlü işlemleri gibi destekleyen bir bağlamı etkin bağlama kullanmalısınız <xref:System.ServiceModel.NetTcpContextBinding> veya <xref:System.ServiceModel.WSHttpContextBinding>. Arama hizmeti yazmaçlar bir <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> kendi istemci üzerinde istenen bağlama ile <xref:System.ServiceModel.Endpoint>. Alan hizmete ilk çağrıda bu verileri alır ve ardından, kendi kullanır <xref:System.ServiceModel.Endpoint> içinde <xref:System.ServiceModel.Activities.Send> çağrıda arama hizmeti etkinliği. Bu örnekte, iki hizmet birbirleri ile iletişim kurar. İlk hizmetin ikinci hizmetinde bir yöntemini çağırır ve yanıt için bekler. Geri çağırma yöntemi adını ikinci hizmet bilir, ancak bu yöntem uygulayan hizmet uç noktası tasarım zamanında bilinmiyor.  
   
 > [!NOTE]
->  Dayanıklı çift yönlü yalnızca olabilir kullanılır <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Değilse bir <xref:System.InvalidOperationException> aşağıdaki iletiyle özel durum: "iletisini bir uç nokta başvurusu olan bir geri çağırma içerik üstbilgisi için AddressingVersion değerini içeren ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/ http://schemas.xmlsoap.org/ws/2004/08/Addressing adresleme")'. AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, geri çağırma bağlamı yalnızca iletilebilir."  
+>  Dayanıklı çift yönlü yalnızca olabilir kullanılır <xref:System.ServiceModel.Channels.AddressingVersion> uç noktası ile yapılandırılmış <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Değilse sonra bir <xref:System.InvalidOperationException> aşağıdaki iletiyle özel durum: "ileti bir uç nokta başvurusu olan bir geri çağırma içerik üstbilgisi için AddressingVersion değerini içeriyor. ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'. AddressingVersion değerini 'WSAddressing10' ile yapılandırıldığında, geri çağırma bağlamı yalnızca iletilebilir."  
   
  Aşağıdaki örnekte, bir geri çağırma oluşturan bir iş akışı hizmeti barındırılan <xref:System.ServiceModel.Endpoint> kullanarak <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -212,4 +214,4 @@ WF1 - Items Received
  Bu örnekte, her iki iş akışları açıkça bağıntı kullanarak yönetebileceğiniz bir <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Bu örnek iş akışları, varsayılan olarak yalnızca tek bir bağıntı olduğundan <xref:System.ServiceModel.Activities.CorrelationHandle> yönetim olabilirdi yeterli.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Dayanıklı çift yönlü &#91; WF örnekleri &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [Dayanıklı çift yönlü &#91;WF örnekleri&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

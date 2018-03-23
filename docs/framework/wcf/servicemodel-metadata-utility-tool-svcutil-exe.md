@@ -1,12 +1,13 @@
 ---
-title: "ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)"
-ms.custom: 
+title: ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta veri belgelerini hizmet modeli kodundan hizmet modeli kodu oluşturmak için kullanılır.  
@@ -56,23 +58,23 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 ### <a name="accessing-wsdl-documents"></a>WSDL belgeleri erişme  
  Bir güvenlik belirteci hizmeti (STS) başvuruyor WSDL belgeye erişmek için Svcutil kullandığınızda Svcutil STS çağrısı bir WS-MetadataExchange yapar. Ancak, hizmet WS-MetadataExchange veya HTTP GET kullanarak kendi WSDL belgeleri getirebilir. Bu nedenle, STS yalnızca kullanıma sunulan, HTTP GET, yazılan bir istemci kullanarak WSDL belgesi [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] başarısız olur. Yazılan istemciler için [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], Svcutil hem WS-MetadataExchange kullanmak deneyecek ve HTTP GET STS WSDL elde edilir.  
   
-## <a name="using-svcutilexe"></a>SvcUtil.exe kullanma  
+## <a name="using-svcutilexe"></a>Using SvcUtil.exe  
   
 ### <a name="common-usages"></a>Ortak kullanımlar  
  Aşağıdaki tabloda bazı yaygın olarak bu araç için kullanılan seçenekler gösterilmektedir.  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|/ directory:\<dizin >|Dosyaları oluşturmak için dizin.<br /><br /> Varsayılan: Geçerli dizin.<br /><br /> Kısa biçimi:`/d`|  
-|/help|Araç için komut sözdizimini ve seçenekleri görüntüler.<br /><br /> Kısa biçimi:`/?`|  
-|/ nologo|Telif hakkı ve başlık iletisi engelleyin.|  
-|/svcutilConfig:\<configFile >|App.config dosyasında yerine kullanılacak özel bir yapılandırma dosyasına belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|  
-|/ target:\<çıktı türü >|Aracı tarafından oluşturulan çıkış belirtir.<br /><br /> Geçerli kod, meta verileri veya xmlSerializer değerleridir.<br /><br /> Kısa biçimi:`/t`|  
+|/ directory:\<dizin >|Dosyaları oluşturmak için dizin.<br /><br /> Varsayılan: Geçerli dizin.<br /><br /> Kısa biçimi: `/d`|  
+|/help|Araç için komut sözdizimini ve seçenekleri görüntüler.<br /><br /> Kısa biçimi: `/?`|  
+|/noLogo|Telif hakkı ve başlık iletisi engelleyin.|  
+|/svcutilConfig:\<configFile>|App.config dosyasında yerine kullanılacak özel bir yapılandırma dosyasına belirtir. Bu aracın yapılandırma dosyası değiştirmeden system.serviceModel uzantıları kaydetmek için kullanılabilir.|  
+|/ target:\<çıktı türü >|Aracı tarafından oluşturulan çıkış belirtir.<br /><br /> Geçerli kod, meta verileri veya xmlSerializer değerleridir.<br /><br /> Kısa biçimi: `/t`|  
   
 ### <a name="code-generation"></a>Kod Üretimi  
  Svcutil.exe meta verileri belgelerden Hizmet sözleşmeleri, istemciler ve veri türleri için kod oluşturabilirsiniz. Bu meta veri belgelerini dayanıklı bir depolama üzerinde olabilir ya da çevrimiçi alınmalıdır. İçin (ayrıntıları meta veri yükleme bölümüne bakın) WS-Metadata değişimi veya DISCO Protokolü ya da çevrimiçi alma izler.  
   
- Önceden tanımlanmış bir WSDL belgeyi temel alarak hizmeti ve veri sözleşmeleri oluşturmak için SvcUtil.exe aracını kullanabilirsiniz. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde indirilen bulunamadı veya değiştirilebilir URL veya dosya konumu belirtin. Bu, daha sonra uyumlu hizmet uygulamak için kullanılabilir WSDL belgesinde tanımlanan hizmeti ve veri sözleşmeleri oluşturur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Nasıl yapılır: meta verileri alma ve uyumlu bir hizmet ekleme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Önceden tanımlanmış bir WSDL belgeyi temel alarak hizmeti ve veri sözleşmeleri oluşturmak için SvcUtil.exe aracını kullanabilirsiniz. /ServiceContract anahtarını kullanın ve burada WSDL belgesinde indirilen bulunamadı veya değiştirilebilir URL veya dosya konumu belirtin. Bu, daha sonra uyumlu hizmet uygulamak için kullanılabilir WSDL belgesinde tanımlanan hizmeti ve veri sözleşmeleri oluşturur. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Nasıl yapılır: meta verileri alma ve uyumlu bir hizmet ekleme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  BasicHttpContextbinding uç noktası ile bir hizmet için Svcutil.exe BasicHttpBinding ile oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgileri kullandığında istemcide bağlam yönetmek istiyorsanız, bir bağlam bağlama kullanmak üzere yapılandırma el ile değiştirebilirsiniz.  
   
@@ -89,28 +91,28 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|/Async|Her iki zaman uyumlu ve zaman uyumsuz yöntem imzaları oluşturur.<br /><br /> Varsayılan: yalnızca zaman uyumlu yöntemi imzalar oluşturur.<br /><br /> Kısa biçimi:`/a`|  
-|/collectionType:\<türü >|Liste koleksiyonu türü WCF istemcisi için belirtir.<br/><br /> Varsayılan: Koleksiyon System.Array türüdür. <br /><br /> Kısa biçimi:`/ct`|  
-|/ config:\<configFile >|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
-|/dataContractOnly|Veri sözleşmesi yalnızca türleri için kod oluşturur. Hizmet sözleşmesi türleri oluşturulmaz.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi:`/dconly`|  
-|/enableDataBinding|Implements <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi veri bağlamasını etkinleştirmek için tüm veri sözleşmesi türler.<br /><br /> Kısa biçimi:`/edb`|  
-|/excludeType:\<türü >|Başvurulan sözleşme türlerinden çıkarılacak tam veya bütünleştirilmiş kod tam tür adını belirtir.<br /><br /> Bu anahtarı ile birlikte kullanırken `/r` ayrı DLL'lerden XSD sınıfın tam adını başvuruluyor.<br /><br /> Kısa biçimi:`/et`|  
+|/Async|Her iki zaman uyumlu ve zaman uyumsuz yöntem imzaları oluşturur.<br /><br /> Varsayılan: yalnızca zaman uyumlu yöntemi imzalar oluşturur.<br /><br /> Kısa biçimi: `/a`|  
+|/collectionType:\<türü >|Liste koleksiyonu türü WCF istemcisi için belirtir.<br/><br /> Varsayılan: Koleksiyon System.Array türüdür. <br /><br /> Kısa biçimi: `/ct`|  
+|/config:\<configFile>|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
+|/dataContractOnly|Veri sözleşmesi yalnızca türleri için kod oluşturur. Hizmet sözleşmesi türleri oluşturulmaz.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi: `/dconly`|  
+|/enableDataBinding|Implements <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi veri bağlamasını etkinleştirmek için tüm veri sözleşmesi türler.<br /><br /> Kısa biçimi: `/edb`|  
+|/excludeType:\<türü >|Başvurulan sözleşme türlerinden çıkarılacak tam veya bütünleştirilmiş kod tam tür adını belirtir.<br /><br /> Bu anahtarı ile birlikte kullanırken `/r` ayrı DLL'lerden XSD sınıfın tam adını başvuruluyor.<br /><br /> Kısa biçimi: `/et`|  
 |/importXmlTypes|Veri sözleşmesi türleri IXmlSerializable türleri olarak almak için veri sözleşmesi seri hale getirici yapılandırır.|  
-|/ İç|Dahili olarak işaretlenmiş sınıfları oluşturur. Varsayılan: yalnızca genel sınıfları oluşturur.<br /><br /> Kısa biçimi:`/i`|  
+|/ İç|Dahili olarak işaretlenmiş sınıfları oluşturur. Varsayılan: yalnızca genel sınıfları oluşturur.<br /><br /> Kısa biçimi: `/i`|  
 |/Language:\<dil >|Kod oluşturma için kullanılacak programlama dilini belirtir. Machine.config dosyasında kayıtlı bir dil adı veya öğesinden devralınan bir sınıf tam adı sağlamalıdır <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, visualbasic'tir, c ++, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa form: `/l` **Not:** anahtar yalnızca Visual Studio 2005 SP1 ile birlikte gelen kod sağlayıcısı için C++ destekler.|  
 |/mergeConfig|Varolan dosyanın üzerine yerine varolan bir dosyanın, üretilen yapılandırma birleştirir.|  
-|/messageContract|İleti sözleşmesi türleri oluşturur.<br /><br /> Kısa biçimi:`/mc`|  
+|/messageContract|İleti sözleşmesi türleri oluşturur.<br /><br /> Kısa biçimi: `/mc`|  
 |/ Namespace:\<dize, dize >|WSDL veya XML Şeması targetNamespace eşleme CLR ad belirtir. Kullanarak '\*' targetNamespace o CLR ad alanına açık bir eşleme olmadan tüm targetNamespaces eşler için.<br /><br /> İleti sözleşmesi adı işlemi adıyla birbiriyle çakışır değil, emin olmak için ya da türü başvurusuyla nitelemek `::`, veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: şema belgesi hedef ad alanından veri sözleşmeleri için türetilmiş. Varsayılan ad alanı diğer oluşturulan türleri için kullanılır.<br /><br /> Kısa süreli: `/n` **Not:** XmlSerializer ile kullanmak için türlerinden oluştururken, yalnızca tek bir ad eşlemesi desteklenir. Tüm oluşturulan türleri ya da varsayılan ad alanını veya tarafından belirtilen ad alanı olacak ' *'.|  
-|/ noconfig|Yapılandırma dosyaları oluşturmaz.|  
-|/ nostdlib|Standart kitaplıkları başvuruda bulunmayın.<br /><br /> Varsayılan: Mscorlib.dll ve System.servicemodel.dll başvurulur.|  
-|/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir.<br /><br /> Varsayılan: WSDL tanımı adından türetilen, WSDL hizmet adı veya ad alanı şemalardan birine hedefleyin.<br /><br /> Kısa biçimi:`/o`|  
-|/ reference:\<dosya yolu >|Belirtilen derleme başvuruları türleri. Ne zaman oluşturma istemciler, bu seçenek içeri aktarılan meta verileri temsil eden türleri içerebilir derlemeleri belirtmek için kullanın.<br /><br /> İleti sözleşmeleri belirtemezsiniz ve <xref:System.Xml.Serialization.XmlSerializer> bu anahtarı kullanarak türleri.<br /><br /> Varsa <xref:System.DateTimeOffset> başvurulan, bu türü yeni bir tür oluşturan yerine kullanılır. Uygulama kullanılarak yazılmışsa [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe başvuruları <xref:System.DateTimeOffset> otomatik olarak.<br /><br /> Kısa biçimi:`/r`|  
-|/ seri hale getirilebilir|Seri hale getirilebilir özniteliğiyle işaretlenmiş sınıfları oluşturur.<br /><br /> Kısa biçimi:`/s`|  
-|/serviceContract|Yalnızca hizmet sözleşmeleri için kod oluşturur. İstemci sınıfı ve yapılandırma oluşturulmaz<br /><br /> Kısa biçimi:`/sc`|  
-|/serializer:Auto|Otomatik olarak seri hale getirici seçin. Bu veri sözleşmesi seri hale getirici kullanmayı dener ve başarısız olursa XmlSerializer kullanır.<br /><br /> Kısa biçimi:`/ser`|  
-|/serializer:dataContractSerializer|Veri sözleşmesi seri hale getirici seri hale getirme ve seri durumundan çıkarma için kullandığınız veri türleri oluşturur.<br /><br /> Kısa biçimi:`/ser:DataContractSerializer`|  
-|/serializer:XmlSerializer|Kullandığınız veri türleri oluşturur <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme ve seri durumundan çıkarma için.<br /><br /> Kısa biçimi:`/ser:XmlSerializer`|  
-|/targetClientVersion|Hangi sürümünü belirtin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulama hedefleme. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçimi:`/tcv`<br /><br /> `Version30`: Kullanın `/tcv:Version30` kullanan istemciler için kod oluşturma, [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanın `/tcv:Version35` kullanan istemciler için kod oluşturma, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, hem olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemleri oluşturulur. Ayrıca, veri kümeleri için LINQ etkin destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|  
+|/noConfig|Yapılandırma dosyaları oluşturmaz.|  
+|/noStdLib|Standart kitaplıkları başvuruda bulunmayın.<br /><br /> Varsayılan: Mscorlib.dll ve System.servicemodel.dll başvurulur.|  
+|/ out:\<dosyası >|Oluşturulan kodun dosya adını belirtir.<br /><br /> Varsayılan: WSDL tanımı adından türetilen, WSDL hizmet adı veya ad alanı şemalardan birine hedefleyin.<br /><br /> Kısa biçimi: `/o`|  
+|/ reference:\<dosya yolu >|Belirtilen derleme başvuruları türleri. Ne zaman oluşturma istemciler, bu seçenek içeri aktarılan meta verileri temsil eden türleri içerebilir derlemeleri belirtmek için kullanın.<br /><br /> İleti sözleşmeleri belirtemezsiniz ve <xref:System.Xml.Serialization.XmlSerializer> bu anahtarı kullanarak türleri.<br /><br /> Varsa <xref:System.DateTimeOffset> başvurulan, bu türü yeni bir tür oluşturan yerine kullanılır. Uygulama kullanılarak yazılmışsa [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe başvuruları <xref:System.DateTimeOffset> otomatik olarak.<br /><br /> Kısa biçimi: `/r`|  
+|/ seri hale getirilebilir|Seri hale getirilebilir özniteliğiyle işaretlenmiş sınıfları oluşturur.<br /><br /> Kısa biçimi: `/s`|  
+|/serviceContract|Yalnızca hizmet sözleşmeleri için kod oluşturur. İstemci sınıfı ve yapılandırma oluşturulmaz<br /><br /> Kısa biçimi: `/sc`|  
+|/serializer:Auto|Otomatik olarak seri hale getirici seçin. Bu veri sözleşmesi seri hale getirici kullanmayı dener ve başarısız olursa XmlSerializer kullanır.<br /><br /> Kısa biçimi: `/ser`|  
+|/serializer:DataContractSerializer|Veri sözleşmesi seri hale getirici seri hale getirme ve seri durumundan çıkarma için kullandığınız veri türleri oluşturur.<br /><br /> Kısa biçimi: `/ser:DataContractSerializer`|  
+|/serializer:XmlSerializer|Kullandığınız veri türleri oluşturur <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme ve seri durumundan çıkarma için.<br /><br /> Kısa biçimi: `/ser:XmlSerializer`|  
+|/targetClientVersion|Hangi sürümünü belirtin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulama hedefleme. Geçerli değerler `Version30` ve `Version35`. Varsayılan değer `Version30` şeklindedir.<br /><br /> Kısa biçimi: `/tcv`<br /><br /> `Version30`: Kullanın `/tcv:Version30` kullanan istemciler için kod oluşturma, [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].<br /><br /> `Version35`: Kullanın `/tcv:Version35` kullanan istemciler için kod oluşturma, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Kullanırken `/tcv:Version35` ile `/async` geçin, hem olay tabanlı ve geri çağırma/temsilci tabanlı zaman uyumsuz yöntemleri oluşturulur. Ayrıca, veri kümeleri için LINQ etkin destekler ve <xref:System.DateTimeOffset> etkinleştirilir.|  
 |/ Sarmalanan|Özel büyük/küçük harf Sarmalanan parametrelerle belgeleri biçimlendirilmiş belge-sabit değer için kullanılıp kullanılmadığını denetler. Kullanım **/ Sarmalanan** anahtarı ile [hizmet Model meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) normal büyük/küçük harf belirtmek için aracı.|  
   
 > [!NOTE]
@@ -127,10 +129,10 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|/ServiceName:\<serviceConfigName >|Dışa aktarılacak bir hizmet yapılandırması adını belirtir. Bu seçenek kullanılırsa, ilişkili bir yapılandırma dosyası yürütülebilir bir derleme giriş olarak geçirilmelidir. Svcutil.exe hizmeti yapılandırması için tüm ilişkili yapılandırma dosyalarını arar. Yapılandırma dosyalarını herhangi bir uzantı türü içeriyorsa, bu tür içeren derlemeler ya da GAC içinde olmalıdır ya da açıkça kullanarak sağlanan `/reference` seçeneği.|  
-|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler. Dışarı aktarma veya kullanan bir hizmet doğrulama yapılandırmada 3. taraf uzantıları (davranışları, bağlamaları ve BindingElements) kayıtlı, GAC içinde olmayan uzantısı derlemeleri bulmak için bu seçeneği kullanın.<br /><br /> Kısa biçimi:`/r`|  
-|/dataContractOnly|Yalnızca sözleşme türleri veriler üzerinde çalışıyor. Hizmet sözleşmeleri işlenmez.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi:`/dconly`|  
-|/excludeType:\<türü >|Verme etki alanından çıkarılacak bir türün tam veya bütünleştirilmiş kod tam adını belirtir. Dışarı aktarılan türlerini dışarıda bırakmak bir dizi Hizmet sözleşmeleri veya bir hizmet için meta verileri dışarı aktarılırken bu seçeneği kullanılabilir. Bu seçenek ile birlikte kullanılamaz `/dconly` seçeneği.<br /><br /> Birden çok hizmetleri içeren tek bir derleme varsa ve her ayrı sınıf ile aynı XSD adı kullanır, bu anahtar için XSD sınıf adı yerine hizmet adı belirtmeniz gerekir.<br /><br /> XSD veya veri sözleşme türleri desteklenmez.<br /><br /> Kısa biçimi:`/et`|  
+|/serviceName:\<serviceConfigName>|Dışa aktarılacak bir hizmet yapılandırması adını belirtir. Bu seçenek kullanılırsa, ilişkili bir yapılandırma dosyası yürütülebilir bir derleme giriş olarak geçirilmelidir. Svcutil.exe hizmeti yapılandırması için tüm ilişkili yapılandırma dosyalarını arar. Yapılandırma dosyalarını herhangi bir uzantı türü içeriyorsa, bu tür içeren derlemeler ya da GAC içinde olmalıdır ya da açıkça kullanarak sağlanan `/reference` seçeneği.|  
+|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler. Dışarı aktarma veya kullanan bir hizmet doğrulama yapılandırmada 3. taraf uzantıları (davranışları, bağlamaları ve BindingElements) kayıtlı, GAC içinde olmayan uzantısı derlemeleri bulmak için bu seçeneği kullanın.<br /><br /> Kısa biçimi: `/r`|  
+|/dataContractOnly|Yalnızca sözleşme türleri veriler üzerinde çalışıyor. Hizmet sözleşmeleri işlenmez.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi: `/dconly`|  
+|/excludeType:\<türü >|Verme etki alanından çıkarılacak bir türün tam veya bütünleştirilmiş kod tam adını belirtir. Dışarı aktarılan türlerini dışarıda bırakmak bir dizi Hizmet sözleşmeleri veya bir hizmet için meta verileri dışarı aktarılırken bu seçeneği kullanılabilir. Bu seçenek ile birlikte kullanılamaz `/dconly` seçeneği.<br /><br /> Birden çok hizmetleri içeren tek bir derleme varsa ve her ayrı sınıf ile aynı XSD adı kullanır, bu anahtar için XSD sınıf adı yerine hizmet adı belirtmeniz gerekir.<br /><br /> XSD veya veri sözleşme türleri desteklenmez.<br /><br /> Kısa biçimi: `/et`|  
   
 ### <a name="service-validation"></a>Hizmet doğrulama  
  Doğrulama hataları barındırma hizmeti olmadan hizmet uygulamalarında algılamak için kullanılabilir. Kullanmalısınız `/serviceName` doğrulamak istediğiniz hizmetin belirtmek için seçenek.  
@@ -143,11 +145,11 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|/ Doğrula|Bir hizmet uygulaması tarafından belirtilen doğrular `/serviceName` seçeneği. Bu seçenek kullanılırsa, ilişkili bir yapılandırma dosyası yürütülebilir bir derleme giriş olarak geçirilmelidir.<br /><br /> Kısa biçimi:`/v`|  
-|/ServiceName:\<serviceConfigName >|Doğrulanacak hizmetin yapılandırma adını belirtir. Svcutil.exe hizmeti yapılandırması için tüm giriş derlemelerin tüm ilişkili yapılandırma dosyalarını arar. Yapılandırma dosyalarını herhangi bir uzantı türü içeriyorsa, bu tür içeren derlemeler ya da GAC içinde olmalıdır ya da açıkça kullanarak sağlanan `/reference` seçeneği.|  
-|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler. Dışarı aktarma veya kullanan bir hizmet doğrulama yapılandırmada 3. taraf uzantıları (davranışları, bağlamaları ve BindingElements) kayıtlı, GAC içinde olmayan uzantısı derlemeleri bulmak için bu seçeneği kullanın.<br /><br /> Kısa biçimi:`/r`|  
-|/dataContractOnly|Yalnızca sözleşme türleri veriler üzerinde çalışıyor. Hizmet sözleşmeleri işlenmez.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi:`/dconly`|  
-|/excludeType:\<türü >|Doğrulamanın dışında bırakılması için bir türü tam veya bütünleştirilmiş kod tam adını belirtir.<br /><br /> Kısa biçimi:`/et`|  
+|/ Doğrula|Bir hizmet uygulaması tarafından belirtilen doğrular `/serviceName` seçeneği. Bu seçenek kullanılırsa, ilişkili bir yapılandırma dosyası yürütülebilir bir derleme giriş olarak geçirilmelidir.<br /><br /> Kısa biçimi: `/v`|  
+|/serviceName:\<serviceConfigName>|Doğrulanacak hizmetin yapılandırma adını belirtir. Svcutil.exe hizmeti yapılandırması için tüm giriş derlemelerin tüm ilişkili yapılandırma dosyalarını arar. Yapılandırma dosyalarını herhangi bir uzantı türü içeriyorsa, bu tür içeren derlemeler ya da GAC içinde olmalıdır ya da açıkça kullanarak sağlanan `/reference` seçeneği.|  
+|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler. Dışarı aktarma veya kullanan bir hizmet doğrulama yapılandırmada 3. taraf uzantıları (davranışları, bağlamaları ve BindingElements) kayıtlı, GAC içinde olmayan uzantısı derlemeleri bulmak için bu seçeneği kullanın.<br /><br /> Kısa biçimi: `/r`|  
+|/dataContractOnly|Yalnızca sözleşme türleri veriler üzerinde çalışıyor. Hizmet sözleşmeleri işlenmez.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçimi: `/dconly`|  
+|/excludeType:\<türü >|Doğrulamanın dışında bırakılması için bir türü tam veya bütünleştirilmiş kod tam adını belirtir.<br /><br /> Kısa biçimi: `/et`|  
   
 ### <a name="metadata-download"></a>Meta veri yükleme  
  Svcutil.exe Hizmetleri çalıştıran meta verileri indirir ve yerel dosya meta verileri kaydetmek için kullanılabilir. Meta veri indirmek için belirtmelisiniz `/t:metadata` seçeneği. Aksi durumda, istemci kodu oluşturulur. HTTP ve HTTPS URL'si şemaları için Svcutil.exe WS-Metadata değişimi ve DISCO kullanarak meta verilerini almaya çalışır. Diğer tüm URL şemalarını için Svcutil.exe yalnızca WS-Metadata değişimi kullanır.  
@@ -188,10 +190,10 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler.<br /><br /> Kısa biçimi:`/r`|  
-|/excludeType:\<türü >|Dışarı aktarma veya doğrulama çıkarılacak bir türün tam veya bütünleştirilmiş kod tam adını belirtir.<br /><br /> Kısa biçimi:`/et`|  
-|/ out:\<dosyası >|Oluşturulan kod için dosya adını belirtir. Bu seçenek, aracı giriş olarak birden çok derleme geçirildiğinde yoksayılır.<br /><br /> Varsayılan: Derleme adından türetilmiş.<br /><br /> Kısa biçimi:`/o`|  
-|/ UseSerializerForFaults|Belirleyen <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` okuma ve yazma hataları, varsayılan yerine için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|/ reference:\<dosya yolu >|Belirtilen derleme, tür başvuruları çözümlemek için kullanılan derlemeler kümesini ekler.<br /><br /> Kısa biçimi: `/r`|  
+|/excludeType:\<türü >|Dışarı aktarma veya doğrulama çıkarılacak bir türün tam veya bütünleştirilmiş kod tam adını belirtir.<br /><br /> Kısa biçimi: `/et`|  
+|/ out:\<dosyası >|Oluşturulan kod için dosya adını belirtir. Bu seçenek, aracı giriş olarak birden çok derleme geçirildiğinde yoksayılır.<br /><br /> Varsayılan: Derleme adından türetilmiş.<br /><br /> Kısa biçimi: `/o`|  
+|/UseSerializerForFaults|Belirleyen <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` okuma ve yazma hataları, varsayılan yerine için kullanılması gereken <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, çalışan bir hizmeti veya çevrimiçi meta veri belgelerini istemci kodu oluşturur.  
