@@ -1,8 +1,9 @@
 ---
-title: "Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma"
-ms.date: 03/30/2017
+title: 'Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma'
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma
 Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlar açıklanmıştır. Visual Studio'da bu yordamları için kapsamlı destek yoktur.  Ayrıca bkz. [izlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -49,9 +49,9 @@ Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uyg
   
 4.  Ekleme bir `Main` sınıfına yöntemi.  
   
-    1.  Uygulama <xref:System.STAThreadAttribute> için `Main` Windows Forms uygulaması belirtmek için yöntemdir bir tek iş parçacıklı.  
+    1.  Uygulama <xref:System.STAThreadAttribute> C# `Main` Windows Forms uygulaması belirtmek için yöntemdir tek iş parçacıklı bölme. (Windows forms uygulamaları ile Visual Basic kullanmak üzere bir tek iş parçacıklı model varsayılan olarak geliştirilen beri öznitelik Visual Basic'te gerekli değildir.)  
   
-    2.  Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanız için bir Windows XP görünüm vermek için.  
+    2.  Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanız için işletim sistemi stilleri için.  
   
     3.  Form örneği oluşturun ve çalıştırın.  
   
@@ -64,13 +64,13 @@ Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uyg
   
 2.  Formun derleyin.  
   
-    -   C# kullanıyorsanız yazın:`csc form1.cs`  
+    -   C# kullanıyorsanız yazın: `csc form1.cs`  
   
          `-or-`  
   
-    -   Visual Basic kullanıyorsanız, yazın:`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Visual Basic kullanıyorsanız, yazın: `vbc form1.vb`  
   
-3.  Komut istemine yazın:`Form1.exe`  
+3.  Komut istemine yazın: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Denetim ekleme ve bir olay işleme  
  Önceki yordamdaki adımları yalnızca derler ve çalışan temel bir Windows formu oluşturma gösterilmektedir. Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olay işlemek nasıl yapacağınızı gösterir. Windows Forms'a ekleme yapabilir denetimler hakkında daha fazla bilgi için bkz: [Windows Forms denetimleri](../../../docs/framework/winforms/controls/index.md).  

@@ -1,22 +1,21 @@
 ---
-title: "Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma"
-ms.custom: 
-ms.date: 07/20/2015
+title: 'Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma'
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma
 Bir derlemeyi ya da dinamik bağlantı kitaplığı (DLL) programınıza çalışma zamanında bağlanır. Derleme ve DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
@@ -110,23 +109,23 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Dosyasını oluşturmak için `MathLibrary.DLL`, iki dosyalarını derlemek `Add` ve `Mult` aşağıdaki komut satırını kullanarak.  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) derleyici seçeneği bir EXE dosyası yerine bir DLL çıktısını almak için derleyici söyler. [/Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) dosya adından derleyici seçeneği DLL dosya adı belirtmek için kullanılır. Aksi durumda, ilk dosya derleyici kullanır (`Add.vb`) DLL adından farklı.  
+ [-Hedef (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) derleyici seçeneği bir EXE dosyası yerine bir DLL çıktısını almak için derleyici söyler. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) dosya adından derleyici seçeneği DLL dosya adı belirtmek için kullanılır. Aksi durumda, ilk dosya derleyici kullanır (`Add.vb`) DLL adından farklı.  
   
  Yürütülebilir dosyasını oluşturmak için `TestCode.exe`, aşağıdaki komut satırını kullanın:  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **/Out** derleyici seçeneği çıkış bir EXE dosyası bildirir ve çıktı dosyası adını belirtir (`TestCode.exe`). Bu derleyici seçeneği isteğe bağlıdır. [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) derleyici seçeneği DLL dosyası ya da, bu programın kullandığı dosyalarını belirtir.  
+ **-Out** derleyici seçeneği çıkış bir EXE dosyası bildirir ve çıktı dosyası adını belirtir (`TestCode.exe`). Bu derleyici seçeneği isteğe bağlıdır. [-Başvuru (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) derleyici seçeneği DLL dosyası ya da, bu programın kullandığı dosyalarını belirtir.  
   
  Komut satırından oluşturma hakkında daha fazla bilgi için bkz: ve [komut satırından derleme](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)  
  [Derlemeler ve Genel Derleme Önbelleği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [DLL işlevleri için bir sınıf oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+ [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
