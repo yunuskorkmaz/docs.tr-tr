@@ -1,1 +1,1 @@
-<span data-ttu-id="c8a5d-101">Dosya Gezgini</span><span class="sxs-lookup"><span data-stu-id="c8a5d-101">File Explorer</span></span>
+<span data-ttu-id="72552-101">Dosya Gezgini</span><span class="sxs-lookup"><span data-stu-id="72552-101">File Explorer</span></span>

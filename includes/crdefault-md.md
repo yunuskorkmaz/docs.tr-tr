@@ -1,1 +1,1 @@
-<span data-ttu-id="bb38d-101">Daha fazla bilgi için bkz.</span><span class="sxs-lookup"><span data-stu-id="bb38d-101">For more information, see</span></span>
+<span data-ttu-id="32e74-101">Daha fazla bilgi için bkz.</span><span class="sxs-lookup"><span data-stu-id="32e74-101">For more information, see</span></span>
