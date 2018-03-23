@@ -1,7 +1,7 @@
 ---
-title: ".NET core öğreticileri"
-description: "Mac, Linux ve Windows uygulamaları ve kitaplıkları oluşturmak için .NET Core öğrenme öğreticiler izleyin."
-keywords: .NET, .NET core
+title: .NET core öğreticileri
+description: Mac, Linux ve Windows uygulamaları ve kitaplıkları oluşturmak için .NET Core öğrenme öğreticiler izleyin.
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>.NET core öğreticileri
 
@@ -30,7 +31,7 @@ Aşağıdaki öğreticiler .NET Core hakkında bilgi almak için kullanılabilir
 - [Bir sınıf kitaplığı test etme](testing-library-with-visual-studio.md)
 - [Bir sınıf kitaplığı kullanma](consuming-library-with-visual-studio.md)
 - [Windows üzerinde tam bir C# .NET Core çözümü oluşturma](using-on-windows-full-solution.md)
-- [NoSQL Öğreticisi: DocumentDB C# .NET Core üzerinde konsol uygulaması oluşturma](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB: .NET Core ve SQL API'yi ile çalışmaya başlama](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code ile uygulamaları oluşturma
 

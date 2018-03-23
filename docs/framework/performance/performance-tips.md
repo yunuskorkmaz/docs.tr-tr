@@ -1,13 +1,13 @@
 ---
-title: ".NET Performans İpuçları"
-ms.custom: 
+title: .NET Performans İpuçları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C# language, performance
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload:
 - wiwagn
-ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: ac1f5b9e0897650751320a7f5a9290c378d428b6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak kodunuz temel belirli kurallarında izleyerek bazen yürütme hızını artırabilir. Bazı programlarda kodu yakından inceleyin ve mümkün olduğunca hızlı çalıştığından emin olmak için profil oluşturucular kullanmak önemlidir. Diğer programlarda hızlı yazılan kod çalışarak çalıştığından gibi en iyi duruma getirme gerçekleştirmek zorunda değildir. Bu makalede, bazı ortak burada performans olumsuz etkilenebilir alanları ve bunun yanı sıra ek performans konulara bağlantılar geliştirme ipuçları listelenmektedir. Planlama ve performans için ölçme hakkında daha fazla bilgi için bkz: [performans](../../../docs/framework/performance/index.md)  
@@ -48,10 +48,10 @@ Terim *performans* genellikle bir program yürütme hızını gösterir. Kaynak 
 -   [Çöp toplayıcı temel kavramları ve performans ipuçları](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
 -   [Performans İpuçları ve püf noktaları .NET uygulamalarında](http://go.microsoft.com/fwlink/?LinkId=99297)  
-  
--   [.NET için iç tanılama araçları](http://go.microsoft.com/fwlink/?LinkId=112407)  
-  
+
 -   [Riko Mariani'nın performans ipuçları](http://go.microsoft.com/fwlink/?LinkId=115679)  
+
+-   [Vance Morrison'ın blogu](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans](../../../docs/framework/performance/index.md)  

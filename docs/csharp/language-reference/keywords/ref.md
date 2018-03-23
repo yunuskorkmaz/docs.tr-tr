@@ -1,5 +1,5 @@
 ---
-title: "ref (C# Başvurusu)"
+title: ref (C# Başvurusu)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/15/2018
 
 - Başvuruya göre çağırana bir değer döndürmek için bir yöntem imza ile. Bkz: [başvuru dönüş değerleri](#reference-return-values) daha fazla bilgi için.
 
-- Bir başvuru dönüş değeri çağıran değiştirme amaçlayan bir başvuru olarak yerel olarak depolanan belirtmek için bir üye gövdesine. Bkz: [Ref Yereller](#ref-locals) daha fazla bilgi için.
+- Üye gövdesinde bir başvuru dönüş değeri çağıran değiştirme amaçlayan bir başvuru olarak yerel veya genel olarak, depolanan belirtmek için bir yerel değişken başka bir değer başvuruya göre erişir. Bkz: [Ref Yereller](#ref-locals) daha fazla bilgi için.
 
 ## <a name="passing-an-argument-by-reference"></a>Başvuruya göre bağımsız değişken geçirme
 
@@ -109,7 +109,13 @@ Kullanarak yerel bir ref tanımlayın `ref` değişken bildirimi önce yanı sı
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Unutmayın `ref` anahtar sözcüğü her iki yerde de kullanılmalıdır ya da derleyici hatası "değerine sahip bir başvuru tarafından değişken başlatılamıyor." CS8172 oluşturur 
+Başvuruya göre bir değer aynı şekilde erişebilirsiniz. Bazı durumlarda, bir değer başvuruya göre erişme, performans'potansiyel olarak pahalı kopyalama işlemi kaçınarak artırır. Örneğin, aşağıdaki deyim bir değer başvurmak için kullanılan bir ref yerel değerin nasıl tanımlayabilirsiniz gösterir.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Her iki örneklerde unutmayın `ref` anahtar sözcüğü her iki yerde de kullanılmalıdır ya da derleyici hatası "değerine sahip bir başvuru tarafından değişken başlatılamıyor." CS8172 oluşturur 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Bir başvuru döndürür ve ref Yereller örneği
 

@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Komut satırı derleyicisi programlardan derleme alternatif olarak sağlanır [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Bir listesi aşağıda verilmiştir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] alfabetik komut satırı derleyicisi seçenekleri.  
+Visual Basic komut satırı derleyicisi programlardan derleme alternatif olarak sağlanan [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Visual Basic komut satırı derleyicisi seçenekleri alfabetik listesi verilmiştir.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |Seçenek|Amaç|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Koşullu derleme simgelerini tanımlar.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Belge açıklamaları bir XML dosyasına işler.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Belirtir nasıl [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici iç derleyici hataları rapor.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic derleyici iç derleyici hataları nasıl bildirmelisiniz belirtir.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Çıkış dosyasının bölümlerinin hizalamak konumu belirtir.|  
-|[-Yardım](../../../visual-basic-reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut belirtme aynıdır `-?` seçeneği. Hiçbir derleme oluşur.|  
+|[-Yardım](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut belirtme aynıdır `-?` seçeneği. Hiçbir derleme oluşur.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Belirli bir yürütülebilir dosya yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini belirtir.|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Bir ad alanı belirtilen derlemesinden alır.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Bir derleme tanımlayıcı bir ad vermek bir anahtar çifti için bir anahtar kapsayıcı adı belirtir.|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Derleyici sözdizimi ile ilgili hatalar ve Uyarılar için kod görüntülenmesini engeller.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Alt dizinleri derlemek kaynak dosyaları için arar.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Bir derlemeye ait meta verileri alır.|  
+|[-refonly](refonly-compiler-option.md)|Yalnızca bir referans derlemesini çıkarır.|
+|[-refout](refout-compiler-option.md)|Bir başvuru derleme çıktı yolunu belirtir.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Tamsayı taşma denetimi devre dışı bırakır.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Yönetilen bir kaynağın bir derlemede katıştırır.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Tüm tür bildirimleri için bir ad alanını belirtir.|  

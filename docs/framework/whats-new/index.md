@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -946,9 +946,9 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
          Bir kitaplık tarafından kullanıma sunulan resmi bir sözleşme olduğundan anahtarları için tutarlı bir biçim kullanmak faydalıdır. Aşağıdaki iki belirgin biçimler geçerlidir.
 
-        - *Anahtar*.* ad alanı*.* backendswitch*
+        - *Anahtar*. *ad alanı*. *backendswitch*
 
-        - *Anahtar*.* Kitaplık*.* backendswitch*
+        - *Anahtar*. *Kitaplık*. *backendswitch*
 
     - **Görev tabanlı zaman uyumsuz desen (TAP) değişiklikleri**
 
@@ -1033,7 +1033,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
         - **Bir bağlantı grup adı ön eki kullanma**
 
-             Kullanıcılar bir önek elde gibi WCF bağlantısı grup adı için kullanacağı bir dize belirtebilirsiniz. Farklı öneklerle iki ileti farklı temel HTTP bağlantılarını kullanılarak gönderilir. İleti için bir anahtar/değer çifti ekleyerek öneki ayarlayın <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> özelliği. "HttpTransportConnectionGroupNamePrefix"; anahtarıdır istediğiniz önek değerdir.
+             Kullanıcılar, WCF bağlantısı grup adı için bir önek olarak kullanacağı bir dize belirtebilirsiniz. Farklı öneklerle iki ileti farklı temel HTTP bağlantılarını kullanılarak gönderilir. İleti için bir anahtar/değer çifti ekleyerek öneki ayarlayın <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> özelliği. "HttpTransportConnectionGroupNamePrefix"; anahtarıdır istediğiniz önek değerdir.
 
         - **Farklı bir kanal fabrikaları kullanma**
 

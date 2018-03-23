@@ -1,6 +1,6 @@
 ---
-title: "Başvuru semantiği ile değer türleri"
-description: "Kopyalama yapıları güvenle en aza dil özellikleri anlama"
+title: Başvuru semantiği ile değer türleri
+description: Kopyalama yapıları güvenle en aza dil özellikleri anlama
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Başvuru semantiği ile değer türleri
 
@@ -110,6 +110,22 @@ Tutma amacı bir `ref struct` yazın yığın ayırma değişkeni derleyici tüm
 - Yakalama yapılamaz `ref struct` lambda ifadeleri veya yerel işlevler değişkenlerinin.
 
 Bu kısıtlamalar değil yanlışlıkla kullandığınızdan emin olun bir `ref struct` Yönetilen yığın Yükselt bir şekilde.
+
+## <a name="readonly-ref-struct-type"></a>`readonly ref struct` Türü
+
+Yapı olarak bildirme `readonly ref` yararları ve kısıtlamaları birleştirir `ref struct` ve `readonly struct` delcarations. 
+
+Aşağıdaki örnek, bildirimi gösterir `readonly ref struct`.
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>Sonuçları
 

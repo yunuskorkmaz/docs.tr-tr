@@ -1,22 +1,19 @@
 ---
 title: DotNet yeni komutu - .NET Core CLI
-description: "Dotnet yeni komut belirtilen şablona dayalı yeni .NET Core projelerini oluşturur."
-keywords: dotnet-new, CLI, CLI command, .NET Core
+description: Dotnet yeni komut belirtilen şablona dayalı yeni .NET Core projelerini oluşturur.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>Özet
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ Komut çağrıları [şablon motoru](https://github.com/dotnet/templating) yapı
 
 Komutu çağrıldığında örneği oluşturmak için şablon. Her bir şablon geçirebilirsiniz belirli seçenekleri olabilir. Daha fazla bilgi için bkz: [şablon seçenekleri](#template-options).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -l` kullanılabilir şablonların listesini elde edilir. Aşağıdaki tabloda .NET Core 2.0 SDK ile birlikte önceden yüklenmiş olarak gelen şablonları gösterir. Şablon için varsayılan dili köşeli ayraçlar içinde gösterilmiştir.
 
@@ -101,7 +98,7 @@ Komut şablonlarının varsayılan listesini içerir. Kullanım `dotnet new -all
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ Komut için Yardım yazdırır. İçin çağrılabilir `dotnet new` kendisini ko
 
 `-i|--install <PATH|NUGET_ID>`
 
-Bir kaynak veya şablon paketinden yükler `PATH` veya `NUGET_ID` sağlanan. Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz: [yeni dotnet için özel şablonlar](custom-templates.md).
+Bir kaynak veya şablon paketinden yükler `PATH` veya `NUGET_ID` sağlanan. Bir şablon paketini bir ön sürümünü yüklemek istiyorsanız, sürüm biçiminde belirtmeniz gerekir `<package-name>::<package-version>`. Varsayılan olarak, `dotnet new` geçirir \* sürümü için temsil eden en son kararlı Paket sürümü. Bir örneğe bakın [örnekler](#examples) bölümü.
+
+Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz: [yeni dotnet için özel şablonlar](custom-templates.md).
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ Oluşturulan çıktı yerleştirileceği konum. Geçerli dizin varsayılandır.
 
 Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki ek seçeneklere sahip olursunuz:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **konsolunda, Açısal, tepki, reactredux**
 
-`--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
+  `--no-restore` -Proje oluşturma sırasında örtük bir geri yükleme yapın değil.
 
 **classlib**
 
@@ -322,6 +321,10 @@ Yeni bir ASP.NET Core C# MVC uygulama projesi geçerli dizinde kimlik doğrulama
 MVC için kullanılabilir tüm şablonları listeler:
 
 `dotnet new mvc -l`
+
+ASP.NET Core (komut seçeneği kullanılabilir .NET Core SDK 1.1 ve sonraki sürümler için) için tek sayfa uygulaması şablonlarının 2.0 sürümünü yükleyin:
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

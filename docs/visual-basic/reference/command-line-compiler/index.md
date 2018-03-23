@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic komut satırı derleyicisi"
+title: Visual Basic komut satırı derleyicisi
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 1a2f03a62488b746b623b7ead94c122b40178a97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic komut satırı derleyicisi
 
 Visual Basic komut satırı derleyicisi programlardan Visual Studio tümleşik geliştirme ortamı (IDE) içinde derleme için bir alternatif sunar. Bu bölümde Visual Basic derleyici seçenekleri açıklamalarını içerir.
 
-Her derleyici seçeneği iki biçimde sağlanır:-seçeneği ve/OPTION. Visual Basic belgelere yalnızca/OPTION form gösterilmektedir.
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>Bu bölümde
 

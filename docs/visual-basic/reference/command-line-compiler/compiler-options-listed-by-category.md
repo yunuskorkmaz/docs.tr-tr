@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Komut satırı derleyicisi programları içinden derleme alternatif olarak sağlanır [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Bir listesi aşağıda verilmiştir [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komut satırı derleyicisi seçenekleri işlevsel kategoriye göre sıralanır.  
+Visual Basic komut satırı derleyicisi programları içinden derleme alternatif olarak sağlanan [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). İşlev kategoriye göre sıralanmış Visual Basic komut satırı derleyicisi seçeneklerinin listesi verilmiştir.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>Derleyici çıktısı  
   
@@ -45,6 +47,8 @@ ms.lasthandoff: 03/22/2018
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Bir XML dosyasına işlem belgeleri açıklamaları.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Hedefe derleyici ayarlar [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Bir çıkış dosyasını belirtir.|  
+|[-refonly](refonly-compiler-option.md)|Yalnızca bir referans derlemesini çıkarır.|
+|[-refout](refout-compiler-option.md)|Bir başvuru derleme çıktı yolunu belirtir.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Çıkış biçimini belirtir.|  
   
 ## <a name="net-assemblies"></a>.NET derleme  
@@ -113,7 +117,7 @@ ms.lasthandoff: 03/22/2018
 |[@ (Yanıt Dosyasını Belirtin)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Bir yanıt dosyası belirtir.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Bir DLL'nin temel adresini belirtir.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanmak üzere kod sayfasını belirtir.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Belirtir nasıl [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] derleyici iç derleyici hataları rapor.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic derleyici iç derleyici hataları nasıl bildirmelisiniz belirtir.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Windows çekirdek, belirli bir yürütülebilir dosya yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini belirtir.|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|İçeren sınıf belirtir `Sub Main` yordamı başlangıçta kullanın.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp ile derleme değil|  
@@ -130,6 +134,6 @@ ms.lasthandoff: 03/22/2018
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Alfabetik listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Proje Tasarımcısı giriş](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Proje Tasarımcısı giriş](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -1,6 +1,6 @@
 ---
-title: "Ref dönüş değerleri ve ref Yereller (C# Kılavuzu)"
-description: "Ref dönüş ve ref yerel değerleri tanımlayın ve nasıl kullanılacağını öğrenin"
+title: Ref dönüş değerleri ve ref Yereller (C# Kılavuzu)
+description: Ref dönüş ve ref yerel değerleri tanımlayın ve nasıl kullanılacağını öğrenin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref döndürür ve ref Yereller
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 Sonraki kullanımını `p` tarafından döndürülen değişkenini kullanarak aynı `GetContactInformation` çünkü `p` Bu değişken için bir diğer ad değil. Değişikliklerini `p` döndürülen değişkeni aynı zamanda değiştirmeniz `GetContactInformation`.
 
-Unutmayın `ref` anahtar sözcüğü kullanılır hem yerel değişken bildirimi önce *ve* yöntemi çağırmadan önce. Her ikisi de dahil etmek için hata `ref` Değişken bildiriminde anahtar sözcükleri ve atama sonuçları derleyici hatası CS8172, "başlatamıyor bir başvuru tarafından değere sahip bir değişken." 
+Unutmayın `ref` anahtar sözcüğü kullanılır hem yerel değişken bildirimi önce *ve* yöntemi çağırmadan önce. 
+
+Başvuruya göre bir değer aynı şekilde erişebilirsiniz. Bazı durumlarda, bir değer başvuruya göre erişme, performans'potansiyel olarak pahalı kopyalama işlemi kaçınarak artırır. Örneğin, aşağıdaki deyim bir değer başvurmak için kullanılan bir ref yerel değerin nasıl tanımlayabilirsiniz gösterir.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Unutmayın `ref` anahtar sözcüğü kullanılır hem yerel değişken bildirimi önce *ve* değerin ikinci örnekte önce. Her ikisi de dahil etmek için hata `ref` Değişken bildiriminde anahtar sözcükleri ve atama derleyici hatası CS8172, her iki örnekler sonucu "başlatamıyor bir başvuru tarafından değere sahip bir değişken." 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref döndürür ve ref Yereller: örneği
 
@@ -101,4 +109,5 @@ Başvuru dönüş değerleri desteği, böyle bir işlem dizin değerini birlikt
  
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[ref keyword](../../language-reference/keywords/ref.md)
+[ref keyword](../../language-reference/keywords/ref.md)  
+[Başvuru semantiği ile değer türleri](../../../csharp/reference-semantics-with-value-types.md)

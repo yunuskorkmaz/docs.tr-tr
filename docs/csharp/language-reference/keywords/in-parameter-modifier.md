@@ -1,5 +1,5 @@
 ---
-title: "parametresi değiştiricisi (C# Başvurusu)"
+title: parametresi değiştiricisi (C# Başvurusu)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametresi değiştiricisi (C# Başvurusu)
 
@@ -60,7 +60,10 @@ Kullanamazsınız `in`, `ref`, ve `out` yöntemleri şu tür için anahtar sözc
   
 - Dahil yineleyici metotları bir [verim return](../../../csharp/language-reference/keywords/yield.md) veya `yield break` deyimi.  
 
-Genellikle bildirmelidir `in` bağımsız değişkenleri değere göre geçirme gerekli kopyalama işlemleri önlemek için bağımsız değişkenler. Bağımsız değişkenler yapıları veya yapıları dizileri olduğunda bu kullanışlıdır.
+Genellikle bildirmelidir `in` bağımsız değişkenleri değere göre geçirme gerekli kopyalama işlemleri önlemek için bağımsız değişkenler. Bağımsız değişkenler kopyalama işlemleri daha başvuruya göre geçirme daha pahalı olduğu değer türleri yapıları gibi olduğunda bu kullanışlıdır.
+
+> [!WARNING]
+>  `in` parametreler yanlış olmadığını daha pahalı olabilir. Derleyici üye yöntemleri yapısı durumunu değiştirirseniz bilemeyebilirsiniz. Derleyici nesne değiştirilmeyen garanti edemez her biçimde geliştirmelisiniz bir kopyasını oluşturur ve bu kopyayı kullanarak başvurular üye çağırır. Olası değişiklikler savunma bu kopyaya ' dir. Geçirmek için bu kopyaları önlemek için iki yol olan `in` parametre olarak `in` bağımsız değişken veya yapıları olarak tanımlamak için `readonly struct`.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ Genellikle bildirmelidir `in` bağımsız değişkenleri değere göre geçirme 
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Başvuru semantiği ile değer türleri](../../../csharp/reference-semantics-with-value-types.md)
