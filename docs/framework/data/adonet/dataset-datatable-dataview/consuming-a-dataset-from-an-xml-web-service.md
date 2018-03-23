@@ -1,27 +1,29 @@
 ---
-title: "XML Web hizmetinden veri kümesi kullanma"
-ms.custom: 
+title: XML Web hizmetinden veri kümesi kullanma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 <xref:System.Data.DataSet> Kısmen Kolay Aktarım verilerin Internet üzerinden kolaylaştırmak için bağlantısı kesik bir tasarım, tasarlanmış. **DataSet** bir girdi olarak belirtilebilir veya ek bir kodlama olmadan XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **DataSet** bir XML Web hizmeti bir istemci ve geri. **DataSet** biçimini kullanarak bir XML akışı örtük olarak dönüştürülen, ağ üzerinden gönderilen ve XML akışından yeniden bir **DataSet** alan uçta. Bu, çok basit ve esnek bir yöntemdir iletmek ve XML Web Hizmetleri ile ilişkisel veri döndürmek için sunar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/19/2018
  Aşağıdaki örnek bir XML Web hizmeti ve Kullan istemci nasıl oluşturulacağını gösterir **DataSet** (değiştirilen veriler dahil) ilişkisel veri taşıma ve herhangi bir güncelleştirme özgün veri kaynağına geri çözümlemek için.  
   
 > [!NOTE]
->  Her zaman güvenlik uygulamalarını XML Web Hizmetleri oluştururken ele almanızı öneririz. XML Web Hizmetleri güvenliğini sağlama konusunda daha fazla bilgi için bkz: [güvenli hale getirme XML Web Hizmetleri oluşturulan kullanarak ASP.NET](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Her zaman güvenlik uygulamalarını XML Web Hizmetleri oluştururken ele almanızı öneririz. XML Web Hizmetleri güvenliğini sağlama konusunda daha fazla bilgi için bkz: [güvenli hale getirme XML Web Hizmetleri oluşturulan kullanarak ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Bir veri kümesi kullanır ve döndüren bir XML Web hizmeti oluşturmak için  
   
@@ -176,33 +178,33 @@ ms.lasthandoff: 01/19/2018
   
      Bir proxy Web Hizmetleri Açıklama Dili aracını kullanarak oluşturulabilir. XML Web hizmeti URL'si http://myserver/data/DataSetSample.asmx açılırsa, örneğin, bir Visual Basic .NET proxy bir ad alanı oluşturmak için bir komut aşağıdaki gibi sorun **WebData.DSSample** ve dosyasında depolamak Sample.vb.  
   
-    ```  
-    wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
      Bir C# proxy dosya sample.cs oluşturmak için aşağıdaki komutu yürütün.  
   
-    ```  
-    wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl -l:CS -out:sample.cs http://myserver/data/DataSetSample.asmx -n:WebData.DSSample  
     ```  
   
      Proxy kitaplık olarak derlenmiş ve XML Web hizmeti istemcisine alındı. Sample.vb sample.dll olarak depolanan Visual Basic .NET proxy Kodu derlemek için aşağıdaki komutu yürütün.  
   
-    ```  
-    vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console  
+    vbc -t:library -out:sample.dll sample.vb -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
      C# proxy kodu sample.cs sample.dll olarak depolanan derlemek için aşağıdaki komutu yürütün.  
   
-    ```  
-    csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console
+    csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
 3.  XML Web hizmeti istemcisi oluşturun.  
   
      Visual Studio Web hizmeti proxy sınıfı oluşturmak istiyorsanız, yalnızca istemci projesi oluşturun ve Çözüm Gezgini penceresinde projesine sağ tıklayın, **Web Başvuru Ekle**, Web hizmetinden seçin Listenin kullanılabilir Web Hizmetleri (Web hizmeti geçerli çözümde ya da geçerli bilgisayarda kullanılabilir durumda olmazsa bu Web Hizmeti uç noktası adresi gerektirebilir.) Varsa XML Web hizmeti proxy'si kendiniz (önceki adımda açıklandığı gibi) oluşturmak, istemci kodunuza içeri aktarabilir ve XML Web hizmeti yöntemleri kullanabilir. Aşağıdaki örnek kod proxy Kitaplığı ' çağrıları alır **GetCustomers** müşteriler, listesini almak için yeni bir müşteri ve döndürür ekler bir **DataSet** Güncelleştirmeler ile **UpdateCustomers** .  
   
-     Örnek geçirir bildirimi **DataSet** tarafından döndürülen **DataSet.GetChanges** için **UpdateCustomers** yalnızca değiştirilen satırları geçirilecek gerektiğinden  **UpdateCustomers**. **UpdateCustomers** çözülmüş döndürür **DataSet**, hangi daha sonra **birleştirme** varolan içine **DataSet** çözülmüş değişikliklerin uygulanması için ve Güncelleştirme hiçbir satır hata bilgileri. Aşağıdaki kod Web başvurusu oluşturmak için Visual Studio'yu kullandınız ve DsSample içinde Web başvurusunu adlandırdınız varsayar **Web Başvuru Ekle** iletişim kutusu.  
+     Örnek geçirir bildirimi **DataSet** tarafından döndürülen **DataSet.GetChanges** için **UpdateCustomers** yalnızca değiştirilen satırları geçirilecek gerektiğinden  **UpdateCustomers**. **UpdateCustomers** çözülmüş döndürür **DataSet**, daha sonra **birleştirme** varolan içine **DataSet** çözümlenen değişiklikler ve tüm birleştirmek için Güncelleştirme satır hata bilgileri. Aşağıdaki kod Web başvurusu oluşturmak için Visual Studio'yu kullandınız ve DsSample içinde Web başvurusunu adlandırdınız varsayar **Web Başvuru Ekle** iletişim kutusu.  
   
     ```vb  
     Imports System  
@@ -260,14 +262,14 @@ ms.lasthandoff: 01/19/2018
   
      Proxy sınıfı kendiniz oluşturmanız karar verirseniz, aşağıdaki ek adımları izlemelisiniz. Örnek derlemek için (sample.dll) oluşturulmuş proxy kitaplığı ve ilgili .NET kitaplıklarına sağlayın. Dosya client.vb içinde depolanan örnek, Visual Basic .NET sürümü derlemek için aşağıdaki komutu yürütün.  
   
-    ```  
-    vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    vbc client.vb -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
      C# sürümü dosya client.cs içinde depolanan örnek derlemek için aşağıdaki komutu yürütün.  
   
-    ```  
-    csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
@@ -277,5 +279,5 @@ ms.lasthandoff: 01/19/2018
  [DataAdapter’dan bir DataSet Doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
