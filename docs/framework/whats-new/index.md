@@ -17,18 +17,18 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
  
 [.NET framework 4.7.1](#v471)    
 [.NET framework 4.7](#v47)   
-[.NET framework 4.6.2](#v462)   
+[.NET Framework 4.6.2](#v462)   
 [.NET framework 4.6.1](#v461)   
 [.NET 2015 ve .NET Framework 4.6](#v46)   
 [.NET framework 4.5.2](#v452)   
@@ -192,7 +192,7 @@ ASP.NET, .NET Framework 4.7 ile başlayarak, yeni bir bellekteki nesne önbelle�
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-Windows Communication Foundation (WFC), aşağıdaki özellikler ve değişiklikleri ekler:
+Windows Communication Foundation (WCF), aşağıdaki özellikler ve değişiklikleri ekler:
 
 **TLS 1.1 veya TLS 1.2 varsayılan ileti güvenlik ayarlarını yapılandırma yeteneği**
 
@@ -246,7 +246,7 @@ WPF API'leri yazdırma <xref:System.Printing.PrintQueue?displayProperty=nameWith
 
 - [Karakter kategorileri](#Strings)
 
-- [Şifreleme](#Crypto462)
+- [Cryptography](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -468,19 +468,19 @@ End Function
 
  Yeni eklenen `PoolBlockingPeriod` anahtar sözcüğü uygulamanız için en uygun engelleme süresi seçmenize olanak sağlar. Değerler şunlardır:
 
- `Auto`Bir Azure SQL veritabanına bağlanan bir uygulama için süresi engelleme bağlantı havuzu devre dışı bırakılır ve başka bir SQL Server örneğine bağlanan bir uygulama için süresi engelleme bağlantı havuzu etkindir. Varsayılan değer budur. Sunucu uç nokta adı aşağıdakilerden herhangi birini ile sona ererse, Azure SQL veritabanları değerlendirilir:
+ `Auto` Bir Azure SQL veritabanına bağlanan bir uygulama için süresi engelleme bağlantı havuzu devre dışı bırakılır ve başka bir SQL Server örneğine bağlanan bir uygulama için süresi engelleme bağlantı havuzu etkindir. Varsayılan değer budur. Sunucu uç nokta adı aşağıdakilerden herhangi birini ile sona ererse, Azure SQL veritabanları değerlendirilir:
 
-- . database.windows.net
+- .database.windows.net
 
-- . database.chinacloudapi.cn
+- .database.chinacloudapi.cn
 
-- . database.usgovcloudapi.net
+- .database.usgovcloudapi.net
 
-- . database.cloudapi.de
+- .database.cloudapi.de
 
- `AlwaysBlock`Bağlantı havuzu engelleme süresi her zaman etkindir.
+ `AlwaysBlock` Bağlantı havuzu engelleme süresi her zaman etkindir.
 
- `NeverBlock`Bağlantı havuzu engelleme süresi her zaman devre dışı bırakılır.
+ `NeverBlock` Bağlantı havuzu engelleme süresi her zaman devre dışı bırakılır.
 
  **Her zaman şifreli geliştirmelerine** SQLClient her zaman şifreli için iki geliştirmeleri sunar:
 
@@ -522,7 +522,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne kullanır <xref:System.TimeZoneInfo> yerine tür <xref:System.TimeZone> tarih ve saat verilerini seri durumdan çıkarılacak türü. <xref:System.TimeZoneInfo>birden çok ayarlama kuralları, geçmiş saat dilimi verilerle çalışmak mümkün destekler;   <xref:System.TimeZone> desteklemez.
+Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne kullanır <xref:System.TimeZoneInfo> yerine tür <xref:System.TimeZone> tarih ve saat verilerini seri durumdan çıkarılacak türü. <xref:System.TimeZoneInfo> birden çok ayarlama kuralları, geçmiş saat dilimi verilerle çalışmak mümkün destekler;   <xref:System.TimeZone> desteklemez.
 
 Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzeltmeleri, bkz: [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).
 
@@ -547,7 +547,7 @@ Sonuç serileştirilmiş zaman dizedir "03:00:00.0000000-08:00" sekiz saat gerid
 </runtime>
 ```
 
-Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne kullanır <xref:System.TimeZoneInfo> yerine tür <xref:System.TimeZone> tarih ve saat verilerini seri durumdan çıkarılacak türü. <xref:System.TimeZoneInfo>birden çok ayarlama kuralları, geçmiş saat dilimi verilerle çalışmak mümkün destekler;   <xref:System.TimeZone> desteklemez.
+Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne kullanır <xref:System.TimeZoneInfo> yerine tür <xref:System.TimeZone> tarih ve saat verilerini seri durumdan çıkarılacak türü. <xref:System.TimeZoneInfo> birden çok ayarlama kuralları, geçmiş saat dilimi verilerle çalışmak mümkün destekler;   <xref:System.TimeZone> desteklemez.
 
 Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzeltmeleri, bkz: [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).
 
@@ -626,7 +626,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
  **C# ifadeleri ve Re-hosted WF Tasarımcısı'nda IntelliSense desteği** başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF hem bir Visual Studio Tasarımcısı'nda ve kod iş akışlarında C# ifadeleri destekler. Re-hosted iş akışı Tasarımcısı Visual Studio'da (örneğin, WPF) dışında bir uygulamada olması iş akışı Tasarımcısı izin veren WF anahtar özelliğidir.  Windows Workflow Foundation C# ifadeleri ve IntelliSense Re-hosted iş akışı Tasarımcısı'nda destekleme özelliği sağlar. Daha fazla bilgi için bkz: [Windows Workflow Foundation blog](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
- `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`.NET Framework'den önceki sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Tasarımcısı IntelliSense olduğunda kopuk bir müşteri bir Visual Studio iş akışı projesinde yeniden oluşturur. Proje oluşturma işlemi başarılı olur, iş akışı türlerini designer'ı bulunamadı ve eksik iş akışı türü için IntelliSense gelen uyarılar görüntülenir **hata listesi** penceresi. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
+ `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework'den önceki sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Tasarımcısı IntelliSense olduğunda kopuk bir müşteri bir Visual Studio iş akışı projesinde yeniden oluşturur. Proje oluşturma işlemi başarılı olur, iş akışı türlerini designer'ı bulunamadı ve eksik iş akışı türü için IntelliSense gelen uyarılar görüntülenir **hata listesi** penceresi. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
 
  **Şimdi iş akışı izleme ile iş akışı V1 uygulamaları çalıştırmak FIPS modunda** FIPS uyumluluk modu etkin olan makineleri şimdi başarıyla çalıştırabilirsiniz sürüm 1 stili uygulama bir iş akışı iş akışı ile izleme. Bu senaryoyu etkinleştirmek için app.config dosyasına aşağıdaki değişiklik yapmanız gerekir:
 
@@ -664,7 +664,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 ## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 yenilikler
  [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
 
-- [Şifreleme](#Crypto)
+- [Cryptography](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -736,7 +736,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - Dosyaları bayt sırası işareti (BOM) ile başlayan UTF-16 LE düz metin olmalıdır.
 
-- Her satır bir sözcük (Word'ün eklenen ve dışlanan listelerinde) oluşmalıdır veya sözcükleri düzeltme çiftiyle dikey bir çubukla ayrılan ("&#124;") (otomatik düzeltme word listesinde).
+- Her satır bir sözcük (Word'ün eklenen ve dışlanan listelerinde) oluşmalıdır veya sözcükleri düzeltme çiftiyle dikey bir çubukla ayrılan ("&#124;") (listedeki düzeltme word).
 
 - Bu dosyalar salt okunur olarak kabul edilir ve sistem tarafından değiştirilemez.
 
@@ -946,9 +946,9 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
          Bir kitaplık tarafından kullanıma sunulan resmi bir sözleşme olduğundan anahtarları için tutarlı bir biçim kullanmak faydalıdır. Aşağıdaki iki belirgin biçimler geçerlidir.
 
-        - *Anahtar*. *ad alanı*. *backendswitch*
+        - *Anahtar*.* ad alanı*.* backendswitch*
 
-        - *Anahtar*. *Kitaplık*. *backendswitch*
+        - *Anahtar*.* Kitaplık*.* backendswitch*
 
     - **Görev tabanlı zaman uyumsuz desen (TAP) değişiklikleri**
 
@@ -1134,7 +1134,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - **Windows Forms denetimleri yeniden boyutlandırma.** Bu özellik genişletilmiştir. Sistem DPI ayarı şimdi bileşenleri aşağıdaki ek denetimleri (örneğin, birleşik giriş kutularında açılan ok) yeniden boyutlandırmak için de kullanabilirsiniz:
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      Bu bir katılımı özelliğidir. Etkinleştirmek için ayarlanmış `EnableWindowsFormsHighDpiAutoResizing` öğesine `true` uygulama yapılandırması (app.config) dosyasında:
 
@@ -1166,7 +1166,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - **Bir işlem yükseltme ve sağlam bir liste dönüştürme**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>Yeni bir API, .NET Framework 4.5.2 ve 4.6 eklenir:
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> Yeni bir API, .NET Framework 4.5.2 ve 4.6 eklenir:
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1196,7 +1196,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
      Bu değişiklikler hakkında daha fazla bilgi için bkz: [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- Şimdi .NET Framework belgelerine içeriği [!INCLUDE[net_native](../../../includes/net-native-md.md)], oluşturma ve Windows uygulamalarını dağıtmak için bir ön derleme teknoloji olduğu. [!INCLUDE[net_native](../../../includes/net-native-md.md)]uygulamalarınızı Ara dile (IL) yerine, doğrudan yerel kod için daha iyi performans için derler. Ayrıntılar için bkz [.NET yerel ile derleme uygulamaları](../../../docs/framework/net-native/index.md).
+- Şimdi .NET Framework belgelerine içeriği [!INCLUDE[net_native](../../../includes/net-native-md.md)], oluşturma ve Windows uygulamalarını dağıtmak için bir ön derleme teknoloji olduğu. [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamalarınızı Ara dile (IL) yerine, doğrudan yerel kod için daha iyi performans için derler. Ayrıntılar için bkz [.NET yerel ile derleme uygulamaları](../../../docs/framework/net-native/index.md).
 
 - [.NET Framework başvuru kaynağı](http://referencesource.microsoft.com/) yeni gözatma deneyimini ve gelişmiş işlevsellik sağlar. .NET Framework kaynak kodu çevrimiçi gözatabilirsiniz [başvurusunu karşıdan](http://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri dahil) kaynakları ilerleyebilirsiniz. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/).
 
@@ -1214,7 +1214,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - Windows Forms denetimleri yeniden boyutlandırma. Uygulamanız için uygulama yapılandırma dosyasına (app.config) bir giriş oturum kullanmama tarafından denetimleri (örneğin, bir özellik kılavuzunda görünmesini simgeleri) bileşenlerinin yeniden boyutlandırmak için sistem DPI ayarı kullanabilirsiniz. Bu özellik şu anda aşağıdaki Windows Forms denetimlerinde desteklenir:
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>Bazı yönlerini <xref:System.Windows.Forms.DataGridView> (bkz [4.5.2'deki yeni özellikler](#v452) desteklenen ek denetimler için)
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> Bazı yönlerini <xref:System.Windows.Forms.DataGridView> (bkz [4.5.2'deki yeni özellikler](#v452) desteklenen ek denetimler için)
 
      Bu özelliği etkinleştirmek için yeni bir ekleme \<appSettings > ayarlama ve yapılandırma dosyası (app.config) öğesine `EnableWindowsFormsHighDpiAutoResizing` öğesine `true`:
 
@@ -1228,7 +1228,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - Visual Studio Hata Ayıklayıcısı'ndaki dönüş değerleri. Yönetilen bir uygulamada hata ayıklama zaman, [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], türleri ve yöntemleri için değerleri otomatik değişkenler penceresi görüntüler döndürür. Bu bilgiler, masaüstü, Windows mağazası ve Windows Phone uygulamaları için kullanılabilir. Daha fazla bilgi için bkz: [inceleyin dönüş değerleri yöntem çağrılarının](http://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) MSDN Kitaplığı'nda.
 
-- Düzenle ve devam et 64-bit uygulamalar için. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]yönetilen uygulamaların Masaüstü, Windows mağazası ve Windows Phone için 64-bit Düzenle ve devam et özelliğini destekler. 32 bit ve 64-bit uygulamaları için mevcut kısıtlamaları yürürlükte kalır (son Kısım bkz [desteklenen kod değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makale).
+- Düzenle ve devam et 64-bit uygulamalar için. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] yönetilen uygulamaların Masaüstü, Windows mağazası ve Windows Phone için 64-bit Düzenle ve devam et özelliğini destekler. 32 bit ve 64-bit uygulamaları için mevcut kısıtlamaları yürürlükte kalır (son Kısım bkz [desteklenen kod değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makale).
 
 - Zaman uyumsuz algılayan hata ayıklama. Zaman uyumsuz uygulamalarda hata ayıklama kolaylaştırmak için [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]çağrı yığını zaman uyumsuz programlama desteği derleyicileri tarafından sağlanan altyapı kodu gizler ve aynı zamanda mantıksal izleyebilirsiniz şekilde mantıksal üst çerçeveler zincirde yürütme daha program açıkça. Görevleri penceresini Paralel Görevler penceresi değiştirir ve için belirli bir kesme noktası ile ilgili görevleri görüntüler ve ayrıca şu anda etkin ya da uygulama zamanlanmış diğer görevleri görüntüler. Bu özellik "zaman uyumsuz algılayan hata ayıklama" bölümündeki hakkında bilgi edinebilirsiniz [.NET Framework 4.5.1 duyuru](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
@@ -1377,7 +1377,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 
 - XML Düzenleyicisi araç ipuçları.
 
-- <xref:System.ServiceModel.ChannelFactory>Destek önbelleğe alma.
+- <xref:System.ServiceModel.ChannelFactory> Destek önbelleğe alma.
 
 - İkili kodlama sıkıştırma desteği.
 

@@ -1,12 +1,13 @@
 ---
-title: "Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme"
-ms.custom: 
+title: 'Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulama izleme özellikleri içerecek şekilde, Araçlı uygulamalarınızla derleme gerekir **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz, **izleme** yönerge, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kod dahil edilmez.  
@@ -59,9 +61,9 @@ Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı pencer
   
      Örneğin, komut satırına girilen aşağıdaki derleyici yönergeleri izleme kodunuzu derlenmiş bir yürütülebilir dosya içerir:  
   
-     Visual Basic: **vbc /r:System.dll /d:TRACE TRUE /d:DEBUG = FALSE MyApplication.vb =**  
+     Visual Basic: **vbc-r:System.dll -d: izleme TRUE -d =: hata ayıklama FALSE MyApplication.vb =**  
   
-     C# ' ta: **csc /r:System.dll /d:TRACE /d:DEBUG FALSE MyApplication.cs =**  
+     C# ' ta: **csc-r:System.dll -d: izleme -d: hata ayıklama FALSE MyApplication.cs =**  
   
     > [!TIP]
     >  Birden fazla uygulama dosyasını derleyin, dosya adları arasında Örneğin, bir boşluk bırakın **MyApplication1.vb MyApplication2.vb MyApplication3.vb** veya **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı pencer
     |---------------|-------------|  
     |`vbc`|Visual Basic derleyici|  
     |`csc`|C# Derleyici|  
-    |`/r:`|Dış bir derlemeye (EXE ya da DLL) başvurur|  
-    |`/d:`|Koşullu derleme simgesi tanımlar|  
+    |`-r:`|Dış bir derlemeye (EXE ya da DLL) başvurur|  
+    |`-d:`|Koşullu derleme simgesi tanımlar|  
   
     > [!NOTE]
     >  İzleme yazım veya büyük harfler ile hata ayıklama. Koşullu derleme komutları hakkında daha fazla bilgi için girin `vbc /?` (Visual Basic için) veya `csc /?` (C# için) komut isteminde. Daha fazla bilgi için bkz: [komut satırından derleme](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [komut satırı derleyicisini çağırma](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -88,21 +90,21 @@ Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı pencer
     ||**#CONST izleme = false**|İzleme devre dışı bırakır|  
     ||**#CONST DEBUG = true**|Hata ayıklamayı etkinleştirir|  
     ||**#CONST DEBUG = false**|Hata ayıklama devre dışı bırakır|  
-    |**C#**|**# İzleme define**|İzlemeyi etkinleştirir|  
-    ||**#undef izleme**|İzleme devre dışı bırakır|  
-    ||**# hata ayıklama define**|Hata ayıklamayı etkinleştirir|  
+    |**C#**|**#define TRACE**|İzlemeyi etkinleştirir|  
+    ||**#undef TRACE**|İzleme devre dışı bırakır|  
+    ||**#define DEBUG**|Hata ayıklamayı etkinleştirir|  
     ||**#undef hata ayıklama**|Hata ayıklama devre dışı bırakır|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>İzleme veya hata ayıklama devre dışı bırakmak için  
   
-1.  Derleyici yönergesi kaynak kodunuzdan silin.  
+Derleyici yönergesi kaynak kodunuzdan silin.  
   
-     \-veya -  
+\- veya -  
   
-2.  Out derleyici yönergesi açıklama.  
+Out derleyici yönergesi açıklama.  
   
-    > [!NOTE]
-    >  Derlemek hazır olduğunuzda, ya da seçebilirsiniz **yapı** gelen **yapı** menüsünde veya komut satırı yöntemini kullanır ancak olmadan yazarak **d:** koşullu tanımlamak için derleme simgeler.  
+> [!NOTE]
+>  Derlemek hazır olduğunuzda, ya da seçebilirsiniz **yapı** gelen **yapı** menüsünde veya komut satırı yöntemini kullanır ancak olmadan yazarak **d:** koşullu tanımlamak için derleme simgeler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
