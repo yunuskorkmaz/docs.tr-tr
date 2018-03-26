@@ -1,12 +1,12 @@
 ---
-title: "Normal İfadelerde Geri Dönüş"
-ms.custom: 
+title: Normal İfadelerde Geri Dönüş
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -30,13 +30,13 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
-<a name="top"></a>Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür bir eşleşme kendi arayın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
+<a name="top"></a> Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür, bir eşleşme için arama yapın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
   
 > [!NOTE]
 >  Genel olarak, belirleyici olmayan sınırlı Automaton (NFA) altyapısı .NET normal ifade altyapısı gibi geliştirici verimli, hızlı normal ifadeleri oluşturmak için sorumluluk yerleştirir.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Önceden kaydedilmiş eşleşme 3'ü döndürür. Ek bir yakalanan gruba atamak için iki ek "a" karakteri olduğunu belirler. Ancak, dize sonu sınaması başarısız olur. Ardından, eşleştirme 3'e geri döner ve yakalanan iki ek gruptaki iki ek "a" karakterini eşleştirmeyi dener. Dize sonu sınaması hala başarısız olur. Bu başarısız eşleştirmeler 12 karşılaştırma gerektirir. Şu ana kadar 25 karşılaştırmaları toplam gerçekleştirilmiş.  
   
- Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe geçmiş miktar belirleyiciler nedeniyle bu karşılaştırma O olduğu (2<sup>n</sup>) veya bir üstel işlem nerede  *n*  giriş dizedeki karakter sayısı. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir.  
+ Giriş dizesinin normal ifadeyle karşılaştırılması, normal ifade altyapısı tüm olası eşleştirme birleşimlerini deneyinceye kadar bu şekilde devam eder ve ardından eşleştirme olmadığı sonucuna ulaşır. İç içe geçmiş miktar belirleyiciler nedeniyle bu karşılaştırma O olduğu (2<sup>n</sup>) veya bir üstel işlem nerede *n* giriş dizedeki karakter sayısı. Bu, en kötü durumda, 30 karakterlik bir giriş dizesinin yaklaşık 1.073.741.824 karşılaştırma gerektirdiği ve 40 karakterlik bir giriş dizesinin yaklaşık 1,099,511,627,776 karşılaştırma gerektirdiği anlamına gelir. Bu uzunluklarda veya daha uzun dizeler kullanırsanız, normal ifade deseniyle eşleşmeyen giriş işlediklerinde, normal ifade yöntemlerinin tamamlanması çok uzun zaman alabilir.  
   
  [Başa dön](#top)  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="lookbehind-assertions"></a>Geriye Yönelik Onaylar  
  .NET içeren iki dil öğeleri `(?<=` *alt* `)` ve `(?<!` *alt*`)`, önceki karakterin veya karakter eşleşmesi Giriş dizesi içinde. Her iki dil öğeleri Sıfır Genişlik onayları; yine de uygun istiyor musunuz? diğer bir deyişle, bunlar karakter ya da geçerli karakteri hemen önünde karakterlerini tarafından eşleştirilir olup olmadığını belirlemek *alt*, ilerledikten veya geri dönüş olmadan.  
   
- `(?<=`*alt* `)` geçerli konumu eşleşmelidir önce pozitif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. `(?<!`*alt* `)` geçerli konumu değil eşleşmelidir önce negatif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. Her iki pozitif ve negatif geriye ilerleme onaylar ne zaman en yararlı *alt* önceki alt alt kümesidir.  
+ `(?<=` *alt* `)` geçerli konumu eşleşmelidir önce pozitif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. `(?<!`*alt* `)` geçerli konumu değil eşleşmelidir önce negatif geriye ilerleme onaylama; diğer bir deyişle, karakteri veya karakterleri olduğundan *alt*. Her iki pozitif ve negatif geriye ilerleme onaylar ne zaman en yararlı *alt* önceki alt alt kümesidir.  
   
  Aşağıdaki örnek, bir e-posta adresi kullanıcı adı doğrulama iki eşdeğer normal ifade modeli kullanır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkinci desen, iç içe bir miktar belirleyiciyi pozitif bir geriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Yürütme süresini örneğin çıktısını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="lookahead-assertions"></a>İleriye Yönelik Onaylar  
  .NET içeren iki dil öğeleri `(?=` *alt* `)` ve `(?!` *alt*`)`, sonraki karakter veya karakter eşleşmesi Giriş dizesi. Her iki dil öğeleri Sıfır Genişlik onayları; yine de uygun istiyor musunuz? diğer bir deyişle, bunlar karakter ya da hemen geçerli karakteri izleyin karakterlerini tarafından eşleştirilir olup olmadığını belirlemek *alt*, ilerledikten veya geri dönüş olmadan.  
   
- `(?=`*alt* `)` geçerli konumu eşleşmelidir sonra pozitif ileri yönlü onaylama; diğer bir deyişle, karakteri veya karakterleri olan *alt*. `(?!`*alt* `)` geçerli konumu değil eşleşmelidir sonra negatif ileri yönlü onaylama; diğer bir deyişle, karakteri veya karakterleri olan *alt*. Her iki pozitif ve negatif ileri yönlü onaylar ne zaman en yararlı *alt* sonraki alt alt kümesidir.  
+ `(?=` *alt* `)` geçerli konumu eşleşmelidir sonra pozitif ileri yönlü onaylama; diğer bir deyişle, karakteri veya karakterleri olan *alt*. `(?!`*alt* `)` geçerli konumu değil eşleşmelidir sonra negatif ileri yönlü onaylama; diğer bir deyişle, karakteri veya karakterleri olan *alt*. Her iki pozitif ve negatif ileri yönlü onaylar ne zaman en yararlı *alt* sonraki alt alt kümesidir.  
   
  Aşağıdaki örnekte, tam olarak belirtilen bir tür adını doğrulayan iki denk normal ifade deseni kullanılmaktadır. Birinci desen, aşırı geri izleme nedeniyle yetersiz performansa maruz kalır. İkincisi, iç içe bir miktar belirleyiciyi pozitif bir ileriye yönelik onayla değiştirerek birinci normal ifadeyi değiştirir. Yürütme süresini örneğin çıktısını görüntüler <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi.  
   
