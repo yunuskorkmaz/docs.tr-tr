@@ -1,12 +1,13 @@
 ---
-title: "Sürükleme ve Bırakmaya Genel Bakış"
-ms.custom: 
+title: Sürükleme ve Bırakmaya Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme aygıtı) bir veya daha fazla nesne seçmek için bu nesneleri sürükleyerek bazı istenilen bırakma hedefi üzerinden kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve bunları bırakma.  
@@ -66,7 +68,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
  Kaynak ve hedef bir Sürükle ve bırak işlemi, kullanıcı Arabirimi öğeleri olan; Ancak, aslında genellikle aktarıldığı veri görsel gösterimi yok. Sürüklenen, Windows Gezgini'ndeki dosyaları sürükleme gibi oluşur verileri görsel gösterimi sağlamak üzere kod yazabilirsiniz. Varsayılan olarak, geri bildirim kullanıcıya sürükle ve bırak işlemi verileri üzerinde gibi olacaktır etkisi temsil etmek için imleci değiştirerek verileri taşınamaz veya kopyalanamaz sağlanır.  
   
 ### <a name="drag-and-drop-effects"></a>Sürükle ve bırak etkileri  
- Sürükle ve bırak işlemleri aktarılan verileri farklı etkileri olabilir. Örneğin, veri kopyalayabilir veya veri taşıyabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tanımlayan bir <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi etkisini belirlemek için kullanabileceğiniz numaralandırması. Sürükleme kaynağında kaynak izin veren etkilerini belirtebilirsiniz <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi, hedef oranla etkisi belirtebilirsiniz <xref:System.Windows.DragEventArgs.Effects%2A> özelliği <xref:System.Windows.DragEventArgs> sınıfı. Bırakma hedefi hedeflenen etkisini belirttiğinde <xref:System.Windows.DragDrop.DragOver> bilgi geri sürükleyin kaynağında geçirilen olay <xref:System.Windows.DragDrop.GiveFeedback> olay. Sürükleme kaynağı bu bilgileri bırakma hedefi verilere sahip amaçlayan hangi etkisi kullanıcıyı bilgilendirmek üzere kullanır. Veri bırakıldığında bırakma hedefi gerçek etkisini belirtir <xref:System.Windows.DragDrop.Drop> olay. Bilgi sürükleme kaynağına geri dönüş değeri olarak geçirilir <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi Sürükle kaynakları listesinde değil efekt döndürürse `allowedEffects`, oluşan herhangi bir veri aktarımı sürükle ve bırak işlemi iptal edildi.  
+ Sürükle ve bırak işlemleri aktarılan verileri farklı etkileri olabilir. Örneğin, veri kopyalayabilir veya veri taşıyabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tanımlayan bir <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi etkisini belirlemek için kullanabileceğiniz numaralandırması. Sürükleme kaynağında kaynak izin veren etkilerini belirtebilirsiniz <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi, hedef oranla etkisi belirtebilirsiniz <xref:System.Windows.DragEventArgs.Effects%2A> özelliği <xref:System.Windows.DragEventArgs> sınıfı. Bırakma hedefi hedeflenen etkisini belirttiğinde <xref:System.Windows.DragDrop.DragOver> bilgi geri sürükleyin kaynağında geçirilen olay <xref:System.Windows.DragDrop.GiveFeedback> olay. Sürükleme kaynağı bu bilgileri bırakma hedefi verilere sahip amaçlayan hangi etkisi kullanıcıyı bilgilendirmek üzere kullanır. Veri bırakıldığında bırakma hedefi gerçek etkisini belirtir <xref:System.Windows.DragDrop.Drop> olay. Bilgi sürükleme kaynağına geri dönüş değeri olarak geçirilir <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Bırakma hedefi Sürükle kaynakları listesinde değil efekt döndürürse `allowedEffects`, oluşan herhangi bir veri aktarımı sürükle ve bırak işlemi iptal edildi.  
   
  Sisteminde unutulmaması önemlidir; [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.DragDropEffects> değerleri yalnızca sürükleme kaynağı sürükle ve bırak işlemi etkilerini ilgili bırakma hedefi arasındaki iletişimi sağlamak için kullanılır. Sürükle ve bırak işlemi gerçek etkisi, uygun kodu, uygulamanızda yazmanızı bağlıdır.  
   
@@ -158,11 +160,11 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  İçinde <xref:System.Windows.UIElement.MouseMove> olay işleyicisi, çağrı <xref:System.Windows.DragDrop.DoDragDrop%2A> sürükle ve bırak işlemi başlatmak için yöntem. <xref:System.Windows.DragDrop.DoDragDrop%2A> Yöntemi üç parametreleri alır:  
   
--   `dragSource`– Aktarılan veri kaynağı bağımlılık nesnesi bir başvuru; Bu genellikle kaynağıdır <xref:System.Windows.UIElement.MouseMove> olay.  
+-   `dragSource` – Aktarılan veri kaynağı bağımlılık nesnesi bir başvuru; Bu genellikle kaynağıdır <xref:System.Windows.UIElement.MouseMove> olay.  
   
--   `data`-Sarmalanmış aktarılan verileri içeren bir nesne bir <xref:System.Windows.DataObject>.  
+-   `data` -Sarmalanmış aktarılan verileri içeren bir nesne bir <xref:System.Windows.DataObject>.  
   
--   `allowedEffects`-Biri <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi izin verilen etkilerini belirten numaralandırma değerlerinin.  
+-   `allowedEffects` -Biri <xref:System.Windows.DragDropEffects> sürükle ve bırak işlemi izin verilen etkilerini belirten numaralandırma değerlerinin.  
   
  Herhangi bir seri hale getirilebilir nesnesi geçirilebilir `data` parametresi. Veri içinde zaten sarmalanmamış varsa bir <xref:System.Windows.DataObject>, onu otomatik olarak yeni bir sarılır <xref:System.Windows.DataObject>. Birden çok veri öğeleri geçirmek için oluşturmalısınız <xref:System.Windows.DataObject> kendiniz ve ona geçirin <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi. Daha fazla bilgi için bkz: [veri ve veri nesneleri](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
   
@@ -197,7 +199,7 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
 2.  <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave>veya<xref:System.Windows.DragDrop.Drop>  
+3.  <xref:System.Windows.DragDrop.DragLeave> Veya <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> Veri bırakma hedefinin sınırları içine sürüklendiğinde olayı oluşur. Uygulamanız için uygun şekilde, genellikle bir Sürükle ve bırak işlemi etkilerini önizlemesini sağlamak için bu olayı işleyin. Ayarlamayın <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> özelliğinde <xref:System.Windows.DragDrop.DragEnter> şekliyle olay yazılır <xref:System.Windows.DragDrop.DragOver> olay.  
   

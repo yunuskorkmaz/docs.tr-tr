@@ -1,24 +1,26 @@
 ---
-title: "Araçlar"
-ms.custom: 
+title: Araçlar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Araçlar
 Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] araçları.  
@@ -28,7 +30,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |Kaynak kodu|Kaynak dizesi|  
 |-------------------|---------------------|  
 |ParametersTarget|\<Enum >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Belirtilen geçersiz bir yol değil. Belirtilen bağımsız değişken denetleyin.|  
 |ParametersReference|\<dosya yolu >|  
 |WrnCannotLoadConfigFileForValidation|Yapılandırma dosyası işleme belirtilen konumdan yüklenirken bir hata oluştu. Bu yapılandırma dosyasında tanımlanan Hizmetleri doğrulanamıyor.|  
@@ -62,7 +64,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrCannotCreateDirectory|Belirtilen dizin oluşturulamıyor.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Belirtilen derlemedeki herhangi bir türü yüklenemiyor.|  
 |ErrUnknownSwitch|Belirtilen anahtarı tanınmayan bir seçenek değil.|  
-|logosu|Aracı logosu "Microsoft® hizmet modeli meta verileri" sürümüyle aracıdır.|  
+|Logo|Aracı logosu "Microsoft® hizmet modeli meta verileri" sürümüyle aracıdır.|  
 |NoCodeWasGenerated|Hiçbir kod oluşturuldu.<br /><br /> Bir istemci oluşturmaya çalışıyorsanız, meta veri belgelerini herhangi bir geçerli sözleşme veya Hizmetleri içermiyordu olmasından kaynaklanabilir<br /><br /> veya tüm sözleşmeleri/Hizmetleri başvuru derlemelerde mevcut bulunan olduğundan. Tüm meta veri belgelerini aracına geçirilen doğrulayın.|  
 |WrnUnableToLoadContractForSGen|Bir sözleşme türü yüklenirken bir hata oluştu. Bu sözleşme XmlSerializer türü üretilemiyor. Türünü ve ayrıntılarını belirtilir.|  
 |WrnOptionConflictsWithInput|Belirtilen seçenek birden çok giriş derlemeleri ile kullanılamaz. Belirtilen seçenek göz ardı edilir.|  
@@ -98,7 +100,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrDirectoryNotFound|Belirtilen dizin bulunamıyor. Dizinin var olduğunu ve okumak için uygun izinlere sahip olduğunu doğrulayın.|  
 |ErrUnableToLoadFile|Belirtilen dosya okunamıyor.|  
 |ErrNoFilesFound|Belirtilen giriş yol mevcut dosyaların başvurmak için görünmez.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Belirtilen giriş yol bir dizin gibi görünüyor. Giriş URL'leri veya dosya yolları olmalıdır.|  
 |HelpConfig|Sağlanan adda bir yapılandırma dosyası oluşturmak için Araçlar bildirir. Varsayılan: output.config.|  
 |ErrSingleUseSwitch|Belirtilen seçenek birden çok kez belirtilemez.|  
@@ -123,7 +125,7 @@ Bu konu tarafından oluşturulan tüm özel durumları listeler [!INCLUDE[indigo
 |ErrInvalidTarget|Belirtilen hedef belirtilen seçeneği kullanılarak belirtildiğinde geçersiz. Desteklenen hedefleri belirtilir.|  
 |ErrPathTooLong|Sonuç yolu çok uzun. Belirtilen bağımsız değişkenler gözden geçirin.|  
 |HelpCommonOptionsCategory|-= ORTAK SEÇENEKLERİ =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Belirtilen geçerli bir giriş dosyası. Meta veri belgelerini ya da derleme dosyalarını belirtin.|  
 |ParametersLanguage|\<Dil >|  
 |ErrUnableToLoadMetadataDocument|Yüklenen belgeler birinden meta veriler okunurken bir hata oluştu. Belge tanımlayıcısı belirtildi.|  

@@ -1,12 +1,13 @@
 ---
-title: "Ngen.exe (Yerel Görüntü Oluşturucu)"
-ms.custom: 
+title: Ngen.exe (Yerel Görüntü Oluşturucu)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: "57"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -287,7 +289,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Bir bağımlılık için bağlama ipucu belirtme  
- Uygulama <xref:System.Runtime.CompilerServices.DependencyAttribute> belirtilen bağımlılık yüklenecek olasılığını belirtmek için bir derleme. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>Sabit bağlama uygun olduğunu gösteren <xref:System.Runtime.CompilerServices.LoadHint.Default> varsayılan bağımlılık için kullanılması gereken, gösterir ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sabit bağlama uygun olmadığını gösterir.  
+ Uygulama <xref:System.Runtime.CompilerServices.DependencyAttribute> belirtilen bağımlılık yüklenecek olasılığını belirtmek için bir derleme. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> Sabit bağlama uygun olduğunu gösteren <xref:System.Runtime.CompilerServices.LoadHint.Default> varsayılan bağımlılık için kullanılması gereken, gösterir ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sabit bağlama uygun olmadığını gösterir.  
   
  Aşağıdaki kod, iki bağlılığı olan bir derlemenin özniteliklerini gösterir. İlk bağımlılık (Assembly1) sıkı bağlama için uygun bir adaydır ve ikinci bağımlılık (Assembly2) değildir.  
   
@@ -501,7 +503,7 @@ ngen uninstall ClientApp /debug
 ```  
   
 > [!NOTE]
->  Kaldırma `/debug` senaryoları her ikisini de içeren bir senaryo kaldırmaz `/profile` ve`/debug.`  
+>  Kaldırma `/debug` senaryoları her ikisini de içeren bir senaryo kaldırmaz `/profile` ve `/debug.`  
   
  Tüm senaryolarda belirli bir sürümü için aşağıdaki komutu kaldırır `ClientApp.exe`:  
   
@@ -571,7 +573,7 @@ ngen update /queue
   
  `update` Eylem yeniden oluşturur, geçersiz kılındı, tüm yerel görüntüler yalnızca kullananlar `MyComponent`.  
   
- Uygulamanız birçok kökleri oluşuyorsa, ertelenmiş Eylemler önceliğini kontrol edebilirsiniz. Aşağıdaki komutları üç kökleri yükleme sırası. `Assembly1`boşta kalma süresini beklemeden önce yüklenir. `Assembly2`bekleme boşta kalma süresi, ancak tüm öncelik 1 eylemleri tamamladıktan sonra olmadan da yüklenir. `Assembly3`Hizmet bilgisayar boştayken algıladığında yüklenir.  
+ Uygulamanız birçok kökleri oluşuyorsa, ertelenmiş Eylemler önceliğini kontrol edebilirsiniz. Aşağıdaki komutları üç kökleri yükleme sırası. `Assembly1` boşta kalma süresini beklemeden önce yüklenir. `Assembly2` bekleme boşta kalma süresi, ancak tüm öncelik 1 eylemleri tamamladıktan sonra olmadan da yüklenir. `Assembly3` Hizmet bilgisayar boştayken algıladığında yüklenir.  
   
 ```  
 ngen install Assembly1 /queue:1  

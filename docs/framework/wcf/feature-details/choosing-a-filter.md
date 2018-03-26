@@ -1,24 +1,26 @@
 ---
-title: "Filtre Seçme"
-ms.custom: 
+title: Filtre Seçme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları aldığınız iletileri karşı tam eşleşme yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtre kendi eşleşmeleri aşırı geniş kapsamlı veya yanlış yapılandırılmış iletiler yanlış yönlendirilir. Filtreler çok kısıtlayıcı olması durumunda, kullanılabilir tüm geçerli yollar bazı iletilerinizin olmayabilir.  
@@ -142,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Bu filtre, aldığınız iletileri belirli bir değer içeren biliyorsanız yararlıdır. Örneğin, hizmetinin daha yeni sürümünü gönderilen iletiler özel üstbilgisinde benzersiz bir değer içermesi bildiğiniz iki sürümü aynı hizmet barındırma bu başlığı gitmek için XPath kullanır ve değer pres karşılaştırır bir filtresi oluşturabilirsiniz başka bir filtre eşleşip eşleşmediğini belirlemek için filtre yapılandırmada verilen üstbilgisinde ent.  
   
- XPath sorguları genellikle uzun benzersiz ad alanları genellikle içerir veya karmaşık dize değerlerini XPath filtresi ad alanı tablosu, ad alanları için benzersiz önekleri belirlemek için kullanılır olanak tanıyan çünkü. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ad alanı tablo bkz [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ XPath sorguları genellikle uzun benzersiz ad alanları genellikle içerir veya karmaşık dize değerlerini XPath filtresi ad alanı tablosu, ad alanları için benzersiz önekleri belirlemek için kullanılır olanak tanıyan çünkü. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ad alanı tablo bkz [ileti filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]XPath sorguları tasarlama, bkz: [XPath sözdizimi](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] XPath sorguları tasarlama, bkz: [XPath sözdizimi](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  

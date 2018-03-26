@@ -1,27 +1,29 @@
 ---
 title: UriTemplate ve UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
-Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate>ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Geliştiriciler kendi URI'ler üzerinde denetime iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısında temelini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu sınıfların de kendi izin geliştiricilere şablonları ve URI eşleme mekanizması uygulamadan yararlanmak için kullanılabilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
   
 ## <a name="templates"></a>Şablonlar  
  Bir şablon göreli URI'ler kümesini tanımlamak için bir yoldur. Aşağıdaki tabloda URI şablonları kümesini çeşitli hava durumu bilgi türlerini alır. bir sistem nasıl tanımlanabilir gösterir.  
@@ -36,32 +38,32 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
  Bu tablo bir yapısal olarak benzer URI'ler açıklar. Her girişin bir URI şablonudur. Süslü ayraçlar segmentlerinde değişkenleri tanımlayın. Süslü ayraçlar içinde değil kesimleri değişmez değer dizeleri açıklanmaktadır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Şablon sınıfları, örneğin, "/ hava durumu/wa/seattle/dönüşüm", bir gelen URI alıp, açıklayan bir şablona eşleşen bir geliştirici izin ver "/weather/ {state} / {Şehir} / {etkinlik}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate>bir URI şablonu kapsülleyen bir sınıftır. Oluşturucusu şablon tanımlayan bir dize parametresi alan. Bu dize sonraki bölümde açıklanan biçimde şablonu içerir. <xref:System.UriTemplate> Sınıfı sağlar izin yöntemleri eşleşen bir şablon için gelen bir URI, bir şablondan bir URI oluşturmayı, şablonda kullanılan değişken adları topluluğu almak, iki şablonları eşdeğerdir ve şablonun dönüş olup olmadığını belirler dize.  
+ <xref:System.UriTemplate> bir URI şablonu kapsülleyen bir sınıftır. Oluşturucusu şablon tanımlayan bir dize parametresi alan. Bu dize sonraki bölümde açıklanan biçimde şablonu içerir. <xref:System.UriTemplate> Sınıfı sağlar izin yöntemleri eşleşen bir şablon için gelen bir URI, bir şablondan bir URI oluşturmayı, şablonda kullanılan değişken adları topluluğu almak, iki şablonları eşdeğerdir ve şablonun dönüş olup olmadığını belirler dize.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>taban adresi ve bir aday URI ve şablona URI'si eşleştirmeyi dener alır. Eşleşme başarılı olursa bir <xref:System.UriTemplateMatch> örneği döndürülür. <xref:System.UriTemplateMatch> Nesnesini içeren temel bir URI, URI sorgu parametreleri, göreli yol kesimleri dizisi, bir ad/değer koleksiyonu eşleştirildiklerinden, değişkenlerin ad/değer koleksiyonu adayı <xref:System.UriTemplate> eşleştirme gerçekleştirmek için kullanılan örneği , URI (şablon bir joker karakter olduğunda kullanılır) adayı eşleşmeyen herhangi bir bölümünü içeren bir dize ve şablonuyla ilişkili bir nesne.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> taban adresi ve bir aday URI ve şablona URI'si eşleştirmeyi dener alır. Eşleşme başarılı olursa bir <xref:System.UriTemplateMatch> örneği döndürülür. <xref:System.UriTemplateMatch> Nesnesini içeren temel bir URI, URI sorgu parametreleri, göreli yol kesimleri dizisi, bir ad/değer koleksiyonu eşleştirildiklerinden, değişkenlerin ad/değer koleksiyonu adayı <xref:System.UriTemplate> eşleştirme gerçekleştirmek için kullanılan örneği , URI (şablon bir joker karakter olduğunda kullanılır) adayı eşleşmeyen herhangi bir bölümünü içeren bir dize ve şablonuyla ilişkili bir nesne.  
   
 > [!NOTE]
 >  <xref:System.UriTemplate> Sınıfı bir şablona URI'si aday eşleştirirken düzeni ve bağlantı noktası numarası yok sayar.  
   
- Bir şablondan bir URI oluşturmayı sağlayan iki yöntem vardır <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> ve <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>Temel adres ve parametreleri ad/değer koleksiyonunu alır. Şablon bağlandığında bu parametreler için değişkenleri yerine kullanılır. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>ad/değer çiftlerini alır ve bunları soldan sağa değiştirir.  
+ Bir şablondan bir URI oluşturmayı sağlayan iki yöntem vardır <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> ve <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> Temel adres ve parametreleri ad/değer koleksiyonunu alır. Şablon bağlandığında bu parametreler için değişkenleri yerine kullanılır. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> ad/değer çiftlerini alır ve bunları soldan sağa değiştirir.  
   
- <xref:System.UriTemplate.ToString>Şablon dizesini döndürür.  
+ <xref:System.UriTemplate.ToString> Şablon dizesini döndürür.  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> Özellik adları şablon dizesinde yol kesimleri içinde kullanılan değişkenlerinin koleksiyonunu içerir.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>alan bir <xref:System.UriTemplate> bir parametre olarak ve iki şablonları eşdeğer olup olmadığını belirten bir Boole değeri döndürür. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]Bu konunun ilerleyen bölümlerinde şablon eşdeğer bölümü.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> alan bir <xref:System.UriTemplate> bir parametre olarak ve iki şablonları eşdeğer olup olmadığını belirten bir Boole değeri döndürür. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] Bu konunun ilerleyen bölümlerinde şablon eşdeğer bölümü.  
   
- <xref:System.UriTemplate>HTTP URI dilbilgisi uyan herhangi bir URI şeması ile çalışmak üzere tasarlanmıştır. Desteklenen URI şemaları örnekleri verilmiştir.  
+ <xref:System.UriTemplate> HTTP URI dilbilgisi uyan herhangi bir URI şeması ile çalışmak üzere tasarlanmıştır. Desteklenen URI şemaları örnekleri verilmiştir.  
   
 -   http://  
   
 -   https://  
   
--   NET.TCP://  
+-   net.tcp://  
   
--   NET.pipe://  
+-   net.pipe://  
   
--   SB: / /  
+-   sb://  
   
  Düzenleri gibi file:// ve urn: / / değil HTTP URI dilbilgisi uygun ve URI şablonları ile kullanıldığında öngörülemeyen sonuçlara neden.  
   
@@ -98,15 +100,15 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
 -   "ayakkabı / {bot} / *"  
   
--   "ayakkabı/bot? x 2 ="  
+-   "shoe/boat?x=2"  
   
--   "ayakkabı / {bot}? x = {yatak}"  
+-   "shoe/{boat}?x={bed}"  
   
 -   "ayakkabı / {bot}? = {yatak} & y x bant ="  
   
--   "? x = {ayakkabı}"  
+-   "?x={shoe}"  
   
--   "ayakkabı? x 3 & y = {var} =  
+-   "shoe?x=3&y={var}  
   
  Geçersiz şablon dizesi örnekleri:  
   
@@ -129,7 +131,7 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
   
 -   /{filename}.jpg/  
   
--   / {filename}. {ext} /  
+-   /{filename}.{ext}/  
   
 -   / {a}. {b}someLiteral{c}({d}) /  
   
@@ -140,7 +142,7 @@ Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak i
 -   / {ayakkabı} {bot} - değişkenleri bir hazır değer ile ayrılmalıdır.  
   
 ### <a name="matching-and-compound-path-segments"></a>Eşleşen ve bileşik yol kesimleri  
- Bileşik yol kesimleri, tek bir yol kesimi içinde birden çok değişkenleri olan bir UriTemplate tanımlamanıza olanak sağlar. Örneğin, aşağıdaki şablonu dizesinde: "adresleri / {state}. {Şehir} "(durumu ve şehir) iki değişken aynı kesim içinde tanımlanmıştır. Bu şablon "http://example.com/Washington.Redmond" gibi bir URL eşleşir, ancak aynı zamanda "http://example.com/Washington.Redmond.Microsoft" gibi bir URL ile eşleşir. İkinci durumda, "Washington" durumu değişkenini içerir ve şehir değişkeni "Redmond.Microsoft" içerir. Bu durumda herhangi bir metin (dışında '/') {Şehir} değişkeni ile eşleşir. "Ek" metin eşleşmez bir şablon istiyorsanız, değişkeni ayrı bir şablon kesimdeki örneğin koyun: "adresleri / {state} / {şehir}.  
+ Bileşik yol kesimleri, tek bir yol kesimi içinde birden çok değişkenleri olan bir UriTemplate tanımlamanıza olanak sağlar. Örneğin, aşağıdaki şablonu dizesinde: "adresleri / {state}. {Şehir} "(durumu ve şehir) iki değişken aynı kesim içinde tanımlanmıştır. Bu şablon bir URL gibi eşleşir "http://example.com/Washington.Redmond"ancak bir URL gibi eşleşir"http://example.com/Washington.Redmond.Microsoft". İkinci durumda, "Washington" durumu değişkenini içerir ve şehir değişkeni "Redmond.Microsoft" içerir. Bu durumda herhangi bir metin (dışında '/') {Şehir} değişkeni ile eşleşir. "Ek" metin eşleşmez bir şablon istiyorsanız, değişkeni ayrı bir şablon kesimdeki örneğin koyun: "adresleri / {state} / {şehir}.  
   
 ### <a name="named-wildcard-segments"></a>Adlandırılmış joker parçaları  
  Değişken adı joker karakteriyle başlayan yol değişken kesimi adlandırılmış joker kesimi ise ' *'. Aşağıdaki şablonu dizesi "ayakkabı" adlı bir adlandırılmış joker karakter kesiminin içerir.  
@@ -257,11 +259,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>Şablon eşdeğer  
  İki şablonları olmasını denirse *yapısal olarak eşdeğer* zaman tüm şablonları değişmez değerleri eşleşmesi ve aynı segmentlerinde değişkenleriniz. Örneğin aşağıdaki şablonlardan yapısal olarak eşdeğerdir:  
   
--   /b b /a/ {var1} / {var2}? x = 1 & y = 2  
+-   /a/{var1}/b b/{var2}?x=1&y=2  
   
--   a/{x}/b%20b/{var1}?y=2 & x = 1  
+-   a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2 & x = 1  
+-   a/{y}/B%20B/{z}/?y=2&x=1  
   
  Fark edilecek bazı noktalar:  
   
@@ -288,57 +290,57 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  Aşağıdaki sorgu dizeleri kendilerini içinde anlaşılır şunlardır:  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x 2 =  
+-   ?x=2  
   
--   ? x 3 =  
+-   ?x=3  
   
--   ? x = 1 & y = {var}  
+-   ?x=1&y={var}  
   
--   ? x 2 & z = {var} =  
+-   ?x=2&z={var}  
   
--   ? x 3 =  
+-   ?x=3  
   
--   ? x = 1  
-  
--   ?  
-  
--   ? x = {var}  
+-   ?x=1  
   
 -   ?  
   
--   ? m = get & c = rss  
+-   ? x={var}  
   
--   ? m = put & c = rss  
+-   ?  
   
--   ? m = get & c atom =  
+-   ?m=get&c=rss  
   
--   ? m put & c = atom =  
+-   ?m=put&c=rss  
+  
+-   ?m=get&c=atom  
+  
+-   ?m=put&c=atom  
   
  Aşağıdaki sorgu dizesi şablonları kendilerini içinde belirsiz şunlardır:  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? = {var} x  
+-   ?x={var}  
   
  "x 1 ="-iki şablonları ile eşleşir.  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? y = 2  
+-   ?y=2  
   
  "x 1 & y = 2 =" her iki şablonları ile eşleşir. Eşleşen şablonu sonra daha fazla sorgu dizesi değişkenlerinin bir sorgu dizesi içerebilir olmasıdır.  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x = 1 & y = {var}  
+-   ?x=1&y={var}  
   
  "x 1 & y = 3 =" her iki şablonları ile eşleşir.  
   
--   ? x 3 & y = 4 =  
+-   ?x=3&y=4  
   
--   ? x 3 & z = 5 =  
+-   ?x=3&z=5  
   
 > [!NOTE]
 >  Karakter á ve Á bir URI yolu bir parçası olarak görüntülendiğinde farklı karakter olduğu kabul edilir veya <xref:System.UriTemplate> yol kesimi değişmez değer (ancak karakterler a ve A aynı olduğu varsayılır). Karakter á ve Á bir parçası olarak görüntülendiğinde aynı karakterler olduğu kabul edilir <xref:System.UriTemplate> {variableName} veya bir sorgu dizesi (ve a ve bir de değerlendirilir aynı karakter olmalı).  

@@ -1,24 +1,26 @@
 ---
-title: "ServiceDescription ve WSDL Başvurusu"
-ms.custom: 
+title: ServiceDescription ve WSDL Başvurusu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription ve WSDL Başvurusu
 Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web Hizmetleri Açıklama Dili (WSDL) belgeleri ve ondan eşlemeleri <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  
@@ -70,10 +72,10 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
  <xref:System.ServiceModel.Channels.TransportBindingElement> SOAP bağlama için Tekdüzen Kaynak Tanımlayıcısı (URI) aktarım bağlama belirler.  
   
 #### <a name="addressingversion"></a>AddressingVersion değerini  
- `AddressingVersion` Bağlamada eşler sürüme kullanılan adresleme `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]SOAP 1.1 ve SOAP 1.2 adresleri ve WS adresleme destekleyen 08/2004 ve WS adresleme 1.0 uç nokta başvuruları.  
+ `AddressingVersion` Bağlamada eşler sürüme kullanılan adresleme `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.1 ve SOAP 1.2 adresleri ve WS adresleme destekleyen 08/2004 ve WS adresleme 1.0 uç nokta başvuruları.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- `EnvelopeVersion` SOAP sürümünü eşlenir bağlamada kullanılan `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]SOAP 1.1 ve SOAP 1.2 bağlamaları destekler.  
+ `EnvelopeVersion` SOAP sürümünü eşlenir bağlamada kullanılan `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.1 ve SOAP 1.2 bağlamaları destekler.  
   
 ### <a name="contracts"></a>Sözleşmeler  
  <xref:System.ServiceModel.Description.ContractDescription> İçin örnek bir `ServiceEndpoint` örneği eşlendiğini bir `wsdl:portType`. A `ContractDescription` örneği tüm verilen sözleşme işlemlerini açıklar.  
@@ -100,14 +102,14 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault` İşlemi için tanımlar.|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` Ve `XmlSerializerOperationBehavior` işlemi bağlama ve işlem iletileri ile ilgilidir.|  
   
-#### <a name="the-datacontractserializeroperationbehavior"></a>DataContractSerializerOperationBehavior  
+#### <a name="the-datacontractserializeroperationbehavior"></a>The DataContractSerializerOperationBehavior  
  `DataContractSerializerOperationBehavior` Bir işlem için bir `IWsdlExportExtension` WSDL iletileri ve bu işlem için bağlama aktarır uygulama. XML Şeması türleri kullanılarak verilmiş `XsdDataContractExporter`. `DataContractSerializerOperationBehavior` Kullanın, stil ve şema dışarı aktarma ve alma için bu işlemi kullanmak için de belirler.  
   
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
 |`DataContractFormatAttribute`|`Style` Bu öznitelik için özellik eşlemeleri için `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style işlemi için değer.<br /><br /> `DataContractSerializerOperationBehavior` WSDL içinde şema türleri yalnızca değişmez değer kullanımını destekler.|  
   
-#### <a name="the-xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior  
+#### <a name="the-xmlserializeroperationbehavior"></a>The XmlSerializerOperationBehavior  
  `XmlSerializerOperationBehavior` Bir işlem için bir `IWsdlExportExtension` WSDL iletileri ve bu işlem için bağlama aktarır uygulama. XML Şeması türleri kullanılarak verilmiş `XmlSchemaExporter`. `XmlSerializerOperationBehavior` Kullanın, stil ve şema dışarı aktarma ve alma için bu işlemi kullanmak için de belirler.  
   
 |Özellikler|WSDL eşleme|  
@@ -120,7 +122,7 @@ Bu konuda açıklanmaktadır nasıl [!INCLUDE[indigo1](../../../../includes/indi
 |Özellikler|WSDL eşleme|  
 |----------------|------------------|  
 |`Action`|İletinin SOAP veya WS adresleme eylem.<br /><br /> Not eylem dizesi kullanan bu işlemler "*" WSDL içinde temsil edilmez.|  
-|`Direction`|`MessageDirection.Input`eşlendiği `wsdl:input`.<br /><br /> `MessageDirection.Output`eşlendiği `wsdl:output`.|  
+|`Direction`|`MessageDirection.Input` eşlendiği `wsdl:input`.<br /><br /> `MessageDirection.Output` eşlendiği `wsdl:output`.|  
 |`ProtectionLevel`|Güvenlik İlkesi'nde koruma onaylar iliştirilmiş `wsdl:message` bu ileti tanımı.|  
 |`Body`|İleti için ileti gövdesi.|  
 |`Headers`|İleti için üstbilgiler.|  

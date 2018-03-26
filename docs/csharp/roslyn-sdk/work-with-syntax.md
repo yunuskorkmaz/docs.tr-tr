@@ -1,6 +1,6 @@
 ---
-title: ".NET derleme Platform SDK sözdizimi modelini kullanın"
-description: "Bu genel bakışta anlamak ve sözdizimi düğümleri yönetmek için kullandığınız türleri bir anlayış sağlar."
+title: .NET derleme Platform SDK sözdizimi modelini kullanın
+description: Bu genel bakışta anlamak ve sözdizimi düğümleri yönetmek için kullandığınız türleri bir anlayış sağlar.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Sözdizimi ile çalışma
 
@@ -69,7 +69,7 @@ Sözdizimi düğümleri ve belirteçleri aksine, sözdizimi trivia üst öğeler
 
 Her düğüm, belirteç veya trivia kaynak metni ve oluşur karakter sayısı içindeki konumuna bilir. Bir metin konumu bir sıfır tabanlı olduğundan ve 32 bit tamsayı olarak temsil edilir `char` dizini. A <xref:Microsoft.CodeAnalysis.Text.TextSpan> nesnesidir başlangıç konumu ve karakter sayısını, her ikisi de tamsayı olarak temsil. Varsa <xref:Microsoft.CodeAnalysis.Text.TextSpan> bir sıfır uzunlukta olan iki karakter arasında bir konuma başvuruyor.
 
-Her düğümü iki sahip <xref:Microsoft.CodeAnalysis.Text.TextSpan> özellikleri: < xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> ve < xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Her düğümü iki sahip <xref:Microsoft.CodeAnalysis.Text.TextSpan> özellikleri: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> ve <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> Düğümün alt ağaç ilk belirteç başından metin aralık son belirteç sonuna bir özelliktir. Bu aralık, başında veya sonunda trivia içermez.
 
@@ -89,7 +89,7 @@ Bloktaki deyimi düğüm tek dikey çubuk (|) tarafından gösterilen bir aralı
 
 ## <a name="kinds"></a>Tür
 
-Her düğüm, belirteç veya trivia sahip bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> türünde özellik <xref:System.Int32?displayProperty=nameWithType>, gösterilen söz dizimi öğesi tanımlar. Bu değer için dile özgü numaralandırması çevirebilirsiniz; tek bir C# veya VB, her dil sahip `SyntaxKind` numaralandırması (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> ve <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>sırasıyla) tüm olası düğümleri, belirteçleri ve trivia öğeleri dilbilgisi listeler. Bu dönüştürme erişerek otomatik olarak yapılabilir < xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*? displayProperty nameWithType = > veya < xref: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*? displayProperty nameWithType = > genişletme yöntemleri.
+Her düğüm, belirteç veya trivia sahip bir <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> türünde özellik <xref:System.Int32?displayProperty=nameWithType>, gösterilen söz dizimi öğesi tanımlar. Bu değer için dile özgü numaralandırması çevirebilirsiniz; tek bir C# veya VB, her dil sahip `SyntaxKind` numaralandırması (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> ve <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>sırasıyla) tüm olası düğümleri, belirteçleri ve trivia öğeleri dilbilgisi listeler. Bu dönüştürme erişerek otomatik olarak yapılabilir <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> veya <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> genişletme yöntemleri.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Özelliği için aynı düğüm sınıfı paylaşmak sözdizimi düğüm türü kolay Kesinleştirme izin verir. Belirteçleri ve trivia için bu özellik bir öğe türü diğerinden ayırt etmek için tek yoludur. 
 

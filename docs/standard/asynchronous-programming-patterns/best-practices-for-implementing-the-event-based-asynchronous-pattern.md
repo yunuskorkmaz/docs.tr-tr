@@ -1,12 +1,12 @@
 ---
-title: "Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler"
-ms.custom: 
+title: Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen ve semantiği temsilci sınıflarıyla tanıdık olay zaman uyumsuz davranışı kullanıma sunmak için etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay tabanlı zaman uyumsuz deseni izler bir sınıf uygulama dikkate almanız yönergeler açıklanmaktadır.  
@@ -132,9 +132,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>Parçacıkları ve bağlamları  
  Sınıfınızın doğru çalışması için istemcinin olay işleyicileri uygun iş parçacığı veya belirtilen uygulama modeli bağlamının çağrılır kritik dahil olmak üzere [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ve Windows Forms uygulamaları. Zaman uyumsuz sınıfınız altında herhangi bir uygulama modeli düzgün şekilde davranan emin olmak için iki önemli yardımcı sınıfları sağlanır: <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager>.  
   
- <xref:System.ComponentModel.AsyncOperationManager>bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, döndüren bir <xref:System.ComponentModel.AsyncOperation>. *MethodName *** zaman uyumsuz** yöntem çağrılarını <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız döndürülen kullanır <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görev ömrü izlemek için.  
+ <xref:System.ComponentModel.AsyncOperationManager> bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, döndüren bir <xref:System.ComponentModel.AsyncOperation>. *MethodName *** zaman uyumsuz** yöntem çağrılarını <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız döndürülen kullanır <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görev ömrü izlemek için.  
   
- İlerleme durumunu, artımlı sonuçları ve istemciye tamamlama bildirmek için arama <xref:System.ComponentModel.AsyncOperation.Post%2A> ve <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> yöntemlere <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation>istemcinin olay işleyicilerine uygun iş parçacığı veya bağlam çağrıları hazırlama için sorumludur.  
+ İlerleme durumunu, artımlı sonuçları ve istemciye tamamlama bildirmek için arama <xref:System.ComponentModel.AsyncOperation.Post%2A> ve <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> yöntemlere <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation> istemcinin olay işleyicilerine uygun iş parçacığı veya bağlam çağrıları hazırlama için sorumludur.  
   
 > [!NOTE]
 >  Açıkça uygulama modeli ilkesini karşı gitmek istiyorsanız, ancak hala olay tabanlı zaman uyumsuz desen kullanmanın diğer avantajları yararlanan bu kurallar atlayabilir. Örneğin, boş olması için Windows Forms'ta işletim bir sınıf akıtılan isteyebilirsiniz. Geliştiriciler zımni sınırlamaları anlayın sürece, ücretsiz iş parçacıklı sınıfı oluşturabilirsiniz. Konsol uygulamaları yürütülmesi senkronize değil <xref:System.ComponentModel.AsyncOperation.Post%2A> çağrıları. Bu neden `ProgressChanged` sıralama dışında çıkarılmasına olaylar. Yürütülmesi serileştirilmiş isterseniz, <xref:System.ComponentModel.AsyncOperation.Post%2A> çağrıları, uygulamak ve yükleme bir <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> sınıfı.  

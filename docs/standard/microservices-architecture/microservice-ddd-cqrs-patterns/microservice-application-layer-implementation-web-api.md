@@ -1,6 +1,6 @@
 ---
-title: "Mikro hizmet uygulama katmanı Web API kullanarak uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı Web API kullanarak uygulama"
+title: Mikro hizmet uygulama katmanı Web API kullanarak uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet uygulama katmanı Web API kullanarak uygulama
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Mikro hizmet uygulama katmanı Web API kullanarak uygulama
 
@@ -117,7 +117,7 @@ DI .NET Core kullanırken, bir derlemeyi tarayın ve türlerinden kurala göre o
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Matthew King. Hizmetleri ile Scrutor kaydediliyor**
+-   **Matthew King. Hizmetleri Scrutor ile kaydediliyor**
     [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
 
 <!-- -->
@@ -176,10 +176,10 @@ Bir örneği aynı hizmet veya bağımlılık istekler arasında nasıl paylaş�
     [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 -   **Autofac.** Resmi belge.
-    [*http://docs.autofac.org/en/Latest/*](http://docs.autofac.org/en/latest/)
+    [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **ASP.NET Core IOC kapsayıcı hizmeti ömürleri Autofac IOC kapsayıcı örneği kapsamlarla - Cesar de la Torre karşılaştırma. ** 
-     [ *https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **ASP.NET Core IOC kapsayıcı hizmeti ömürleri Autofac IOC kapsayıcı örneği kapsamlarla - Cesar de la Torre karşılaştırma.**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implementing-the-command-and-command-handler-patterns"></a>Komut ve komut işleyici desenleri uygulama
 
@@ -399,13 +399,13 @@ Bir komut işleyici gerçekleştirmeniz ek adımlar şunlardır:
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **İşareti Seemann. Değil nesne odaklı uygulamalar sınırlarında**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries, ApplicationsareNotObject odaklı /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries, ApplicationsareNotObject dayalı /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 -   **Komutlar ve olayları**
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **Bir komut işleyici ne yapar? ** 
-     [ *http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+-   **Bir komut işleyici ne yapar?**
+    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
 -   **Jimmy Bogard. Etki alanı komutu desenleri – işleyicileri**
     [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
@@ -849,10 +849,10 @@ Benzer şekilde, ek unsurları veya bunları işlerken komutları uygulamak iste
 -   **MediatR ve AutoMapper CQRS**
     [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Üzerinde bir Diyet denetleyicilerinizi put: gönderileri ve komutları. ** 
-     [ *https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+-   **Üzerinde bir Diyet denetleyicilerinizi put: gönderileri ve komutları.**
+    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Çapraz kesme sorunları Dünyası ardışık düzen ile tackling**
+-   **Dünyası ardışık düzen ile kuruluşlarda arası kesme sorunları**
     [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
 -   **CQRS ve REST: mükemmel**
@@ -861,8 +861,8 @@ Benzer şekilde, ek unsurları veya bunları işlerken komutları uygulamak iste
 -   **MediatR ardışık örnekler**
     [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Dikey dilim Test armatürleri MediatR ve ASP.NET Core**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>*
+-   **Dikey dilim Test Mobilyalar MediatR ve ASP.NET Core için**
+    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
 
 -   **İçin yayımlanan Microsoft bağımlılık ekleme MediatR uzantıları**
     [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)

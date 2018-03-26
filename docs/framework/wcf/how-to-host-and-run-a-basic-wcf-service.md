@@ -1,8 +1,9 @@
 ---
-title: "Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma"
+title: 'Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,12 +15,13 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
 Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] uygulama. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
@@ -157,10 +159,10 @@ Bu üçüncü altı görev oluşturmak için gerekli olan bir [!INCLUDE[indigo1]
   
     2.  Adım 2 – bir örnek oluşturur / <xref:System.ServiceModel.ServiceHost> hizmet barındırmak için sınıf. Oluşturucusu iki parametre, hizmet sözleşmesi uygulayan sınıf türü ve hizmetin taban adresi alır.  
   
-    3.  Adım 3 – oluşturur bir <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesini oluşur. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bir bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlı ve hizmet türü uygulayın. Bu örnekte kullanılan bağlama <xref:System.ServiceModel.WSHttpBinding> WS - için uygun Uç noktalara bağlanmak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../docs/framework/wcf/bindings-overview.md). Adres uç noktayı tanımlamak için taban adresi eklenir. Uç nokta için tam adresi "CalculatorService" Bu kodda belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"` .NET Framework 4.0 kullanırken, isteğe bağlı ya da daha yeni bir hizmet uç noktası ekleniyor. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Adım 3 – oluşturur bir <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesini oluşur. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bir bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlı ve hizmet türü uygulayın. Bu örnekte kullanılan bağlama <xref:System.ServiceModel.WSHttpBinding> WS - için uygun Uç noktalara bağlanmak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../docs/framework/wcf/bindings-overview.md). Adres uç noktayı tanımlamak için taban adresi eklenir. Uç nokta için tam adresi "CalculatorService" Bu kodda belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"` .NET Framework 4.0 kullanırken, isteğe bağlı ya da daha yeni bir hizmet uç noktası ekleniyor. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
         > [!IMPORTANT]
-        >  Hizmet uç noktası ekleme, .NET Framework 4 kullanırken, isteğe bağlı veya üzeri. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  Hizmet uç noktası ekleme, .NET Framework 4 kullanırken, isteğe bağlı veya üzeri. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Varsayılan uç noktalar, bağlamaları ve davranışları, bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
     4.  4. adım – etkinleştir meta veri değişimi. İstemciler, hizmet işlemlerini çağırma için kullanılacak proxy oluşturmak için meta veri değişimi kullanır. Etkinleştirmek için meta verileri exchange oluşturması bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örneği, ayarlayın 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğine `true`ve davranış eklemek <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` koleksiyonu <xref:System.ServiceModel.ServiceHost> örneği.  
   
@@ -422,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Bunun gibi hizmetleri HTTP adreslerini dinleme için makinede Kaydet izni gerektirir. Yönetici hesapları, bu izne sahip, ancak yönetici olmayan bir hesap HTTP ad alanları için izin verilmelidir. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ad alanı ayırmaları yapılandırma hakkında [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Altında çalışırken [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
+>  Bunun gibi hizmetleri HTTP adreslerini dinleme için makinede Kaydet izni gerektirir. Yönetici hesapları, bu izne sahip, ancak yönetici olmayan bir hesap HTTP ad alanları için izin verilmelidir. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ad alanı ayırmaları yapılandırma hakkında [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Altında çalışırken [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
   
  Şimdi hizmeti çalışıyor. İle devam [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

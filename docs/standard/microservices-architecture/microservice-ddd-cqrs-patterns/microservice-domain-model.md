@@ -1,6 +1,6 @@
 ---
-title: "Mikro hizmet etki alanı model tasarlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı model tasarlama"
+title: Mikro hizmet etki alanı model tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı model tasarlama
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Mikro hizmet etki alanı model tasarlama
 
@@ -87,7 +87,7 @@ Değer belgede uygulamak ve kullanmak daha kolay veritabanlarına yönelik ancak
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Martin Fowler. Değer nesnesi düzenini**
+-   **Martin Fowler. Değer nesnesi düzeni**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Değer nesnesi**
@@ -96,7 +96,7 @@ Değer belgede uygulamak ve kullanmak daha kolay veritabanlarına yönelik ancak
 -   **Değer Test-Driven geliştirme nesneleri**
     [*https://leanpub.com/tdd-ebook/read\#leanpub otomatik değeri nesneleri*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; değer nesnelerini tartışması içerir) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; değer nesnelerini tartışması içerir) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Toplama düzeni
 
@@ -140,21 +140,21 @@ Tanımlama ve toplamalar ile çalışma araştırma ve deneyimi gerektirir. Daha
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Vaughn Vernon. Etkin Toplama tasarımı - bölümü I: tek bir toplama modelleme**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_TOPLULUK\_özellik\_ TOPLAMALAR\_bölümü\_1. pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_TOPLULUK\_özellik\_TOPLAMALAR\_bölümü \_1. pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. Etkin Toplama tasarımı - Bölüm II: Yapma toplamalar iş birlikte**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon. Etkili toplama tasarım - bölüm III: Bulma aracılığıyla Insight sağlamasını**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+-   **Vaughn Vernon. Etkili toplama tasarım - bölüm III: Bulma aracılığıyla sağlamasını Insight**
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
 -   **Sergey Grybniak. DDD Taktik tasarım desenleri**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Toplamalar kullanarak işlem mikro geliştirme**
+-   **Chris Richardson. İşlem mikro toplamalar kullanarak geliştirme**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Birleşik düzenin**
+-   **DevIQ. Toplama düzeni**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

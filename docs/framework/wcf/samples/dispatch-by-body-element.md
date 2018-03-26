@@ -1,24 +1,26 @@
 ---
-title: "Gövde Öğesine göre Dağıt"
-ms.custom: 
+title: Gövde Öğesine göre Dağıt
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="dispatch-by-body-element"></a>Gövde Öğesine göre Dağıt
 Bu örnek, gelen iletileri işlemlerine izin atamak için alternatif bir algoritma uygulamak gösterilmiştir.  
@@ -44,7 +46,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
     }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>uygulamaları arabirimde tek bir yöntem olarak oluşturmak çok basit: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Bu yöntemin iş gelen iletiyi incelemek için bir hizmet sözleşmesi yöntemi geçerli uç nokta adına eşit bir dize döndürecek şekilde ise.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> uygulamaları arabirimde tek bir yöntem olarak oluşturmak çok basit: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Bu yöntemin iş gelen iletiyi incelemek için bir hizmet sözleşmesi yöntemi geçerli uç nokta adına eşit bir dize döndürecek şekilde ise.  
   
  Bu örnekte, işlem Seçici edinir bir <xref:System.Xml.XmlDictionaryReader> gelen ileti gövdesi kullanarak kullanıcının <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Bu yöntem okuyucu böylece geçerli öğenin adını ve ad alanı URI'si almak ve bunları birleştirmek yeterli iletinin gövdesi ilk alt zaten yerleştirir. bir `XmlQualifiedName` sonra kullanılan karşılık gelen işlemi bakmak işlem Seçici tarafından tutulan sözlük.  
   

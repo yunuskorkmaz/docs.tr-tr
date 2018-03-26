@@ -1,24 +1,26 @@
 ---
-title: "İleti Dağıtımını Sınırlandırma"
-ms.custom: 
+title: İleti Dağıtımını Sınırlandırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Bununla birlikte, birçok uygulamanın ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almak istiyorsa, örneğin, bu istek kafes her üyesine taşan olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları yakınında sınırlı olabilir. İletileri kafes tek tek bir düğümde yeniden gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçimi için genel yönergeler sağlar.  
@@ -31,9 +33,9 @@ Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes
 -   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>İleti yayma filtresi  
- `MessagePropagationFilter`özellikle ileti veya diğer belirli senaryolar içeriğini karar verirken yayma ileti, taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre düğümünden geçirir her ileti yayma kararlarını verir. Bu, başka bir yerde düğümünüz uygulamanız tarafından oluşturulan iletiler yanı sıra aldı kafes kaynaklanan iletileri için geçerlidir. Filtre ileti ve onun oluşturulma erişim sahiptir, bu nedenle iletme veya ileti siliniyor hakkında kararlar kullanılabilir tam bilgilerine dayalı.  
+ `MessagePropagationFilter` özellikle ileti veya diğer belirli senaryolar içeriğini karar verirken yayma ileti, taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre düğümünden geçirir her ileti yayma kararlarını verir. Bu, başka bir yerde düğümünüz uygulamanız tarafından oluşturulan iletiler yanı sıra aldı kafes kaynaklanan iletileri için geçerlidir. Filtre ileti ve onun oluşturulma erişim sahiptir, bu nedenle iletme veya ileti siliniyor hakkında kararlar kullanılabilir tam bilgilerine dayalı.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter>tek bir işlevi ile temel bir Özet sınıf <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Yöntem çağrısının ilk bağımsız değişkeni ileti tam bir kopyasını geçirir. İletiye yapılan değişiklikler gerçek ileti etkilemez. Yöntem çağrısının son bağımsız değişkeni iletinin kaynağını tanımlar (`PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote`). Bu yöntem, somut uygulamalarını içinden bir sabit döndürmelidir <xref:System.ServiceModel.PeerMessagePropagation> numaralandırma ileti yerel uygulama iletilecek olduğunu belirten (`Local`), uzak istemcilere iletilen (`Remote`), her iki (`LocalAndRemote`), veya hiçbiri (`None`). Bu filtre, karşılık gelen erişerek uygulanabilir `PeerNode` nesne ve türetilen yayma örneği belirterek filtre sınıfında `PeerNode.MessagePropagationFilter` özelliği. Eş kanal açmadan önce yayma filtre bağlı olduğundan emin olun.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> tek bir işlevi ile temel bir Özet sınıf <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Yöntem çağrısının ilk bağımsız değişkeni ileti tam bir kopyasını geçirir. İletiye yapılan değişiklikler gerçek ileti etkilemez. Yöntem çağrısının son bağımsız değişkeni iletinin kaynağını tanımlar (`PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote`). Bu yöntem, somut uygulamalarını içinden bir sabit döndürmelidir <xref:System.ServiceModel.PeerMessagePropagation> numaralandırma ileti yerel uygulama iletilecek olduğunu belirten (`Local`), uzak istemcilere iletilen (`Remote`), her iki (`LocalAndRemote`), veya hiçbiri (`None`). Bu filtre, karşılık gelen erişerek uygulanabilir `PeerNode` nesne ve türetilen yayma örneği belirterek filtre sınıfında `PeerNode.MessagePropagationFilter` özelliği. Eş kanal açmadan önce yayma filtre bağlı olduğundan emin olun.  
   
 -   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
   

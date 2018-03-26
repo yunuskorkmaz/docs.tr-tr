@@ -1,24 +1,26 @@
 ---
-title: "Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme"
-ms.custom: 
+title: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
 Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmeleri tasarlanmış ya da Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve geliştirici sağlanan sözleşme ile uyumlu bir hizmet uygulamalıdır. Varolan bir hizmete geçirmek isteyebilirsiniz [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ancak kablo biçimini korumak. Ayrıca, çift yönlü sözleşmeler da bir geri çağırma sözleşmesini uygulama arayanlar gerektirir.  

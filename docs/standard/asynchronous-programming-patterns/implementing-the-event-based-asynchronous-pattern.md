@@ -1,12 +1,12 @@
 ---
-title: "Olay Tabanlı Zaman Uyumsuz Deseni Uygulama"
-ms.custom: 
+title: Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -31,10 +31,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 4c503b89c63d976fe6304291aa1157765fa5c6f7
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsanız uygulayarak zaman uyumsuz işlevselliği vermiş göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -172,7 +172,7 @@ Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsa
   
 -   Bu olay şu şekilde ad:  
   
-    -   `ProgressChanged`sınıfın birden çok zaman uyumsuz işlemler vardır (veya birden çok zaman uyumsuz işlemleri gelecek sürümlerde içerecek şekilde ulaşması için beklenen);  
+    -   `ProgressChanged` sınıfın birden çok zaman uyumsuz işlemler vardır (veya birden çok zaman uyumsuz işlemleri gelecek sürümlerde içerecek şekilde ulaşması için beklenen);  
   
     -   *MethodName *** ProgressChanged** sınıfın tek bir zaman uyumsuz işlemi varsa.  
   
@@ -217,9 +217,9 @@ Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsa
   
  Zaman uyumlu yöntemi verilen *MethodName*:  
   
--   `out`parametreleri *MethodName* parçası olmamalıdır *MethodName ***zaman uyumsuz**. Bunun yerine, bir parçası olmalıdır *MethodName *** CompletedEventArgs**  , parametre olarak eşdeğer olarak aynı ada sahip *MethodName* (daha uygun bir ad olmadıkça).  
+-   `out` parametreleri *MethodName* parçası olmamalıdır *MethodName ***zaman uyumsuz**. Bunun yerine, bir parçası olmalıdır *MethodName *** CompletedEventArgs**  , parametre olarak eşdeğer olarak aynı ada sahip *MethodName* (daha uygun bir ad olmadıkça).  
   
--   `ref`parametreleri *MethodName* parçası olarak görünmesi gereken *MethodName ***zaman uyumsuz**ve bir parçası olarak *MethodName *** CompletedEventArgs**  eşdeğer olarak, parametre olarak aynı ada sahip *MethodName* (daha uygun bir ad olmadıkça).  
+-   `ref` parametreleri *MethodName* parçası olarak görünmesi gereken *MethodName ***zaman uyumsuz**ve bir parçası olarak *MethodName *** CompletedEventArgs**  eşdeğer olarak, parametre olarak aynı ada sahip *MethodName* (daha uygun bir ad olmadıkça).  
   
  Örneğin, verilen:  
   

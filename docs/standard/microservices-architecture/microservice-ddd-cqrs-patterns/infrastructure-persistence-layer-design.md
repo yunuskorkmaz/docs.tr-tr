@@ -1,6 +1,6 @@
 ---
-title: "Altyapı saklama katmanını tasarlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Altyapı saklama katmanını tasarlama"
+title: Altyapı saklama katmanını tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Altyapı saklama katmanını tasarlama
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Altyapı saklama katmanını tasarlama
 
@@ -138,8 +138,8 @@ Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle u
 
 ### <a name="the-repository-pattern"></a>Depo düzeni
 
--   **Edward Hieatt ve Ramiz bana. Depo düzeni. ** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt ve Ramiz bana. Depo düzeni.**
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Depo düzeni**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
@@ -147,22 +147,22 @@ Yaklaşan bölümlerde nasıl Entity Framework Çekirdek 2.0 belirtimi desenle u
 -   **Depo düzeni: Bir veri Kalıcılık özeti**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; havuz deseni tartışması içerir) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; havuz deseni tartışması içerir) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Çalışma deseni birimi
 
--   **Martin Fowler. Çalışma deseni birimidir. ** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Çalışma deseni birimidir.**
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
 -   **Bir ASP.NET MVC uygulamasındaki depo ve iş desenleri ölçü uygulama**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Belirtimi düzeni
 
--   **Belirtimi deseni. ** 
-     [ *http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+-   **Belirtimi deseni.**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Tasarım güdümlü bir etki alanı. Addison-Wesley. p. 224.**
 

@@ -1,7 +1,7 @@
 ---
-title: ".NET Core CLI DNX geçirme"
-description: ".NET Core CLI araç tooling DNX kullanarak geçirin."
-keywords: .NET, .NET core
+title: .NET Core CLI DNX geçirme
+description: .NET Core CLI araç tooling DNX kullanarak geçirin.
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>.NET Core CLI (project.json) DNX geçirme
 
@@ -123,10 +124,10 @@ Bu işlemleri tamamladıktan sonra uygulama için istediğiniz taşınabilirlik 
 
 İstediğiniz taşınabilirlik ne tür bir çağrı yaptıktan sonra hedeflenen framework(s) değiştirmek gerekir. Uygulamalar için .NET Core yazıyorsanız, büyük olasılıkla kullanmakta olduğunuz `dnxcore50` hedef çerçeveyi olarak. CLI ve değişiklikleri, yeni [.NET standart](../../standard/net-standard.md) alınırsa, framework şunlardan biri olması gerekir:
 
-1. `netcoreapp1.0`-uygulamalar (ASP.NET Core uygulamaları dahil) .NET Core üzerinde yazıyorsanız,
-2. `netstandard1.6`-sınıf kitaplıkları için .NET Core yazıyorsanız
+1. `netcoreapp1.0` -uygulamalar (ASP.NET Core uygulamaları dahil) .NET Core üzerinde yazıyorsanız,
+2. `netstandard1.6` -sınıf kitaplıkları için .NET Core yazıyorsanız
 
-Diğer kullanıyorsanız `dnx` gibi hedefler `dnx451` olanlar da değiştirmeniz gerekir. `dnx451`değiştirilmelidir `net451`. Lütfen [.NET standart](../../standard/net-standard.md) konusuna bakın. 
+Diğer kullanıyorsanız `dnx` gibi hedefler `dnx451` olanlar da değiştirmeniz gerekir. `dnx451` değiştirilmelidir `net451`. Lütfen [.NET standart](../../standard/net-standard.md) konusuna bakın. 
 
 `project.json` Artık çoğunlukla hazırdır. Özellikle ASP.NET Core bağımlılıkları kullanıyorsanız bağımlılıkları listenize gidin ve bağımlılıklarını daha yeni sürümlerine güncelleştirmek gerekir. BCL API'leri için ayrı paketleri kullanıyorsanız, çalışma zamanı paketi açıklandığı gibi kullanabileceğiniz [uygulama taşınabilirliği türü](../deploying/index.md) belge. 
 

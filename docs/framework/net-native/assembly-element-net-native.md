@@ -1,24 +1,26 @@
 ---
-title: "&lt;Assembly&gt; Öğesi (.NET Yerel)"
-ms.custom: 
+title: '&lt;Assembly&gt; Öğesi (.NET Yerel)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltassemblygt-element-net-native"></a>&lt;Assembly&gt; Öğesi (.NET Yerel)
 Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke uygulanır.  
@@ -62,7 +64,7 @@ Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*assembly_name*|Derlemenin dosya uzantısı olmadan basit adı. Bu özniteliğe karşılık gelen <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> özelliği. Örneğin, Extensions.dll adlı bir derleme "Uzantılarla" adıdır.<br /><br /> Değişmez değer dize de belirtebilirsiniz `*Application*` bu derlemeler yüklü olsun olmasın tüm derlemelerde uygulama paketi, ilkeyi uygulamak için. `*Application*`hiç ilke .NET Framework derlemeler için geçerlidir.|  
+|*assembly_name*|Derlemenin dosya uzantısı olmadan basit adı. Bu özniteliğe karşılık gelen <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> özelliği. Örneğin, Extensions.dll adlı bir derleme "Uzantılarla" adıdır.<br /><br /> Değişmez değer dize de belirtebilirsiniz `*Application*` bu derlemeler yüklü olsun olmasın tüm derlemelerde uygulama paketi, ilkeyi uygulamak için. `*Application*` hiç ilke .NET Framework derlemeler için geçerlidir.|  
   
 ## <a name="all-other-attributes"></a>Tüm diğer özniteliklerle  
   
@@ -75,7 +77,7 @@ Belirtilen derleme içindeki tüm türler için çalışma zamanı yansıma ilke
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Bir alt ad alanındaki tüm türleri yansıma ilke uygulanır.|  
-|[\<Türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü için geçerlidir.|  
+|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilke türü için geçerlidir.|  
 |[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma ilke oluşturulan genel bir tür için geçerlidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

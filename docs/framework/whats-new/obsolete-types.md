@@ -1,31 +1,33 @@
 ---
-title: ".NET Framework'teki eski türler"
-ms.custom: 
+title: .NET Framework'teki eski türler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
-<a name="introduction"></a>Bu makaledeki tablolar'te eski türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenir. Eski türler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri aynı zamanda artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz: [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md).  
+<a name="introduction"></a> Bu makaledeki tablolar'te eski türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenir. Eski türler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri aynı zamanda artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz: [eski üyeler](../../../docs/framework/whats-new/obsolete-members.md).  
   
 -   [Sistem derlemelerde eski türler](#obsolete_types_in_system_assemblies)  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  Aşağıdaki tablolarda sistem derlemelerde artık kullanılmayan bildirilen türleri listelenmektedir. Bu derlemeler için genel kullanılan\-amaçla .NET Framework hedefleyen uygulama geliştirme.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>Derleme: mscorlib.dll  
+### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -140,8 +142,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> kullanın.|  
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> kullanın.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> kullanın.|  
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>yalnızca .NET 2.0 saydamlık uyumluluk için kullanılır.|  
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>yalnızca .NET 2.0 saydamlık uyumluluk için kullanılır. Lütfen kullanın <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> yerine.|  
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> yalnızca .NET 2.0 saydamlık uyumluluk için kullanılır.|  
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> yalnızca .NET 2.0 saydamlık uyumluluk için kullanılır. Lütfen kullanın <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> yerine.|  
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework'ün bir sonraki sürümde kaldırılacak.|  
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Derleme düzeyi bildirim temelli güvenlik kullanımdan kalkmıştır ve artık CLR tarafından varsayılan olarak uygulanır.|  
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework'ün bir sonraki sürümde kaldırılacak.|  
@@ -162,26 +164,26 @@ ms.lasthandoff: 12/22/2017
   
 |Tür|İleti|  
 |----------|-------------|  
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute>kullanım dışıdır.|  
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes>kullanım dışıdır.|  
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> kullanım dışıdır.|  
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> kullanım dışıdır.|  
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator> Sınıfı bir sonraki sürümde kaldırılacak. Lütfen kullanın <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> System.Design.dll içinde.|  
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument> Sınıfı bir sonraki sürümde kaldırılacak.|  
   
  [Başa dön](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>Derleme: System.Data.OracleClient.dll  
+### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission>kullanım dışıdır.|  
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> kullanım dışıdır.|  
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> kullanım dışıdır.|  
   
  [Başa dön](#introduction)  
   
@@ -223,7 +225,7 @@ ms.lasthandoff: 12/22/2017
  [Başa dön](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>Derleme: System.EnterpriseServices.dll  
+### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -286,7 +288,7 @@ ms.lasthandoff: 12/22/2017
  [Başa dön](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>Derleme: System.Web.Mobile.dll  
+### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -503,9 +505,9 @@ ms.lasthandoff: 12/22/2017
   
 |Tür|İleti|  
 |----------|-------------|  
-|İçindeki tüm türler <xref:System.Workflow.ComponentModel> ad alanı dışında <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> ve<xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
-|İçindeki tüm türler <xref:System.Workflow.ComponentModel.Compiler> ad alanı dışında <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> ve<xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
-|İçindeki tüm türler <xref:System.Workflow.ComponentModel.Design> dışında ad alanı<xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
+|İçindeki tüm türler <xref:System.Workflow.ComponentModel> ad alanı dışında <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> ve <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
+|İçindeki tüm türler <xref:System.Workflow.ComponentModel.Compiler> ad alanı dışında <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> ve <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
+|İçindeki tüm türler <xref:System.Workflow.ComponentModel.Design> dışında ad alanı <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
@@ -525,8 +527,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br />Workflow Foundation 3.0 türleri kullanım dışı bırakılmıştır. Bunun yerine, Workflow 4.0 türlerinden kullanın <xref:System.Activities>.\*.|   
 |İçindeki tüm türler <xref:System.Workflow.Runtime> ad alanı|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
 |İçindeki tüm türler <xref:System.Workflow.Runtime.Configuration> ad alanı|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
-|İçindeki tüm türler <xref:System.Workflow.Runtime.DebugEngine> dışında ad alanı<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
-|İçindeki tüm türler <xref:System.Workflow.Runtime.Hosting> dışında ad alanı<xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
+|İçindeki tüm türler <xref:System.Workflow.Runtime.DebugEngine> dışında ad alanı <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
+|İçindeki tüm türler <xref:System.Workflow.Runtime.Hosting> dışında ad alanı <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
 |İçindeki tüm türler <xref:System.Workflow.Runtime.Tracking> ad alanı|Önce .NET Framework 4. 5 ' kullanım dışı.<br /><br /> System.Workflow. \* türleri dışıdır. Bunun yerine, Lütfen yeni türlerinden kullanın <xref:System.Activities>.\*.|  
   
  [Başa dön](#introduction)  
@@ -561,7 +563,7 @@ ms.lasthandoff: 12/22/2017
  [Başa dön](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>Derleme: System.Xaml.dll  
+### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
@@ -583,11 +585,11 @@ ms.lasthandoff: 12/22/2017
  [Başa dön](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>Derleme: WindowsBase.dll  
+### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll  
   
 |Tür|İleti|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>kullanım dışıdır. Bu arabirim artık kullanımda.|  
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> kullanım dışıdır. Bu arabirim artık kullanımda.|  
   
  [Başa dön](#introduction)  
   

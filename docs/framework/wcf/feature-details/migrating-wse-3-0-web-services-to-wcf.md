@@ -1,24 +1,26 @@
 ---
-title: "WSE 3.0 Web Hizmetlerini WCF'ye Taşıma"
-ms.custom: 
+title: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Gelişmiş performans ve ek taşımalar, ek güvenlik senaryoları ve WS - desteği dahil * belirtimleri. WSE 3.0 geçirilmiş bir Web hizmeti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en fazla 200-% 400 performans iyileştirmesi yaşayabilirsiniz. Tarafından desteklenen aktarmalar hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Tarafından desteklenen senaryolarla listesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [ortak güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Tarafından desteklenen belirtimleri listesi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: [Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -36,7 +38,7 @@ Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../incl
 ## <a name="security"></a>Güvenlik  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>Bir ilke dosyası kullanılarak güvenlik altına WSE 3.0 Web Hizmetleri  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu mekanizma WSE 3.0 ilke dosyasına benzer ve Hizmetleri bir hizmeti güvenli hale getirmek için bir yapılandırma dosyası kullanabilirsiniz. WSE bir ilke dosyası kullanarak bir Web hizmeti güvenli hale getirirken 3.0 bir anahtar teslimi güvenlik onaylama işlemi ya da bir özel ilke onaylama kullanın. Anahtar teslimi güvenlik onaylar eşleme yakından kimlik doğrulama modu için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik bağlama öğesi. Değil yalnızca [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modları ve WSE 3.0 anahtar teslimi güvenlik onaylar adlı aynı veya benzer şekilde, bunlar aynı kimlik bilgisi türlerini kullanarak iletileri güvenli. Örneğin, `usernameForCertificate` anahtar teslimi güvenlik onaylama işlemi WSE 3.0 eşlendiğini `UsernameForCertificate` kimlik doğrulama modunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aşağıdaki kod örnekleri kullanan en az bir ilke nasıl göstermek `usernameForCertificate` anahtar teslimi güvenlik onaylama işlemi WSE 3.0 eşlendiğini bir `UsernameForCertificate` kimlik doğrulama modunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bağlama içinde.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu mekanizma WSE 3.0 ilke dosyasına benzer ve Hizmetleri bir hizmeti güvenli hale getirmek için bir yapılandırma dosyası kullanabilirsiniz. WSE bir ilke dosyası kullanarak bir Web hizmeti güvenli hale getirirken 3.0 bir anahtar teslimi güvenlik onaylama işlemi ya da bir özel ilke onaylama kullanın. Anahtar teslimi güvenlik onaylar eşleme yakından kimlik doğrulama modu için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik bağlama öğesi. Değil yalnızca [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modları ve WSE 3.0 anahtar teslimi güvenlik onaylar adlı aynı veya benzer şekilde, bunlar aynı kimlik bilgisi türlerini kullanarak iletileri güvenli. Örneğin, `usernameForCertificate` anahtar teslimi güvenlik onaylama işlemi WSE 3.0 eşlendiğini `UsernameForCertificate` kimlik doğrulama modunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aşağıdaki kod örnekleri kullanan en az bir ilke nasıl göstermek `usernameForCertificate` anahtar teslimi güvenlik onaylama işlemi WSE 3.0 eşlendiğini bir `UsernameForCertificate` kimlik doğrulama modunda [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bağlama içinde.  
   
  **WSE 3.0**  
   
@@ -69,9 +71,9 @@ Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../incl
 |----------------------------------------|--------------------------------------|  
 |\<usernameOverTransportSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate10Security / >|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<usernameForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<anonymousForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<kerberosSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<kerberosSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate11Security / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
  WCF'de özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -82,7 +84,7 @@ Geçirme WSE 3.0 Web hizmetlerini yararları [!INCLUDE[indigo1](../../../../incl
 ### <a name="wse-30-custom-policy-assertion"></a>WSE 3.0 özel ilkesini onaylama  
  WSE 3.0 özel ilke onaylamalarını iki tür vardır: da güvenli bir SOAP iletisi ve, bir SOAP iletisi güvenli değil. SOAP iletilerine güvenli ilke onaylamalarını WSE 3.0 türetilen `SecurityPolicyAssertion` sınıfı ve kavramsal eşdeğer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olan <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   
- Dikkat edilecek önemli bir WSE 3.0 anahtar teslimi güvenlik onaylar alt kümesi olan noktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modu. Bir özel ilke onaylama WSE 3.0 oluşturduysanız, eşdeğer bir olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modu. Örneğin, WSE 3.0 eşdeğeridir bir CertificateOverTransport güvenlik onaylama işlemi sağlamaz `UsernameOverTransport` anahtar teslimi güvenlik onaylama işlemi, ancak istemci kimlik doğrulama amacıyla bir X.509 sertifikası kullanır. Bu senaryo için kendi özel ilke onaylama tanımladıysanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geçişi basitleştirir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Bu senaryo için bir kimlik doğrulama modu, statik kimlik doğrulama modunu yapılandırmak için yardımcı yöntemler yararlanabilir şekilde tanımlayan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+ Dikkat edilecek önemli bir WSE 3.0 anahtar teslimi güvenlik onaylar alt kümesi olan noktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modu. Bir özel ilke onaylama WSE 3.0 oluşturduysanız, eşdeğer bir olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kimlik doğrulama modu. Örneğin, WSE 3.0 eşdeğeridir bir CertificateOverTransport güvenlik onaylama işlemi sağlamaz `UsernameOverTransport` anahtar teslimi güvenlik onaylama işlemi, ancak istemci kimlik doğrulama amacıyla bir X.509 sertifikası kullanır. Bu senaryo için kendi özel ilke onaylama tanımladıysanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geçişi basitleştirir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu senaryo için bir kimlik doğrulama modu, statik kimlik doğrulama modunu yapılandırmak için yardımcı yöntemler yararlanabilir şekilde tanımlayan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
  Olmadığında bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP iletileri güvenli hale getiren bir özel ilke onaylama eşdeğer olan kimlik doğrulama modu türetilen bir sınıftan <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sınıfları ve eşdeğer bağlama belirtme öğesi. Daha fazla ayrıntı için bkz: [nasıl yapılır: SecurityBindingElement oluşturma bağlama kullanarak bir özel](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   

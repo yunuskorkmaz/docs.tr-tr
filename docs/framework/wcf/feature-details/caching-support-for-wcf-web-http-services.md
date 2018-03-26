@@ -1,32 +1,34 @@
 ---
-title: "WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği"
-ms.custom: 
+title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF Web HTTP hizmetlerinizi ASP.NET zaten mevcut bir bildirim temelli önbelleğe alma mekanizması kullanmanıza olanak sağlar. Bu, önbelleği yanıtlarını WCF Web HTTP hizmeti işlemlerinden sağlar. Bir kullanıcı bir HTTP GET hizmetinize önbelleğe alma işlemi için yapılandırılmış gönderdiğinde, ASP.NET önbelleğe alınmış bir yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbellek, bir kullanıcı bir HTTP GET gönderir sonraki süresi dolduğunda, hizmeti yöntemi olarak adlandırılır ve yanıt yine önbelleğe alınır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bkz: ASP.NET önbelleğe alma, [ASP.NET önbelleğe alma genel bakış](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF Web HTTP hizmetlerinizi ASP.NET zaten mevcut bir bildirim temelli önbelleğe alma mekanizması kullanmanıza olanak sağlar. Bu, önbelleği yanıtlarını WCF Web HTTP hizmeti işlemlerinden sağlar. Bir kullanıcı bir HTTP GET hizmetinize önbelleğe alma işlemi için yapılandırılmış gönderdiğinde, ASP.NET önbelleğe alınmış bir yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbellek, bir kullanıcı bir HTTP GET gönderir sonraki süresi dolduğunda, hizmeti yöntemi olarak adlandırılır ve yanıt yine önbelleğe alınır. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bkz: ASP.NET önbelleğe alma, [ASP.NET önbelleğe alma genel bakış](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Temel Web HTTP hizmeti önbelleğe alma  
  WEB HTTP etkinleştirmek için önbelleğe alma hizmeti ilk ASP.NET uyumluluğu uygulayarak etkinleştirmelisiniz <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> hizmet ayarına <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> için <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]adlı yeni bir öznitelik tanıtır <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> önbellek profili adını belirtmenize olanak verir. Bu öznitelik, bir hizmet işlemi uygulanır. Aşağıdaki örnek uygular <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ASP.NET uyumluluğu sağlamak için bir hizmet ve yapılandırır `GetCustomer` önbelleğe alma işlemi. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Özniteliği kullanılacak önbellek ayarları içeren bir önbellek profili belirtir.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] adlı yeni bir öznitelik tanıtır <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> önbellek profili adını belirtmenize olanak verir. Bu öznitelik, bir hizmet işlemi uygulanır. Aşağıdaki örnek uygular <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ASP.NET uyumluluğu sağlamak için bir hizmet ve yapılandırır `GetCustomer` önbelleğe alma işlemi. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Özniteliği kullanılacak önbellek ayarları içeren bir önbellek profili belirtir.  
   
 ```csharp
 [ServiceContract] 
@@ -69,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- ASP.NET uygulamaları için kullanılabilir aynı yapılandırma öğesi budur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bkz: ASP.NET önbellek profilleri <xref:System.Web.Configuration.OutputCacheProfile>. Web HTTP Hizmetleri için önbellek profili en önemli öznitelikleri şunlardır: `cacheDuration` ve `varyByParam`. Bu öznitelikler her ikisi de gereklidir. `cacheDuration`saniye cinsinden bir yanıt önbelleğe alınması gereken süre miktarını ayarlar. `varyByParam`Önbellek yanıtlar için kullanılan sorgu dizesi parametresi belirtmenize olanak tanır. Farklı sorgu dizesi parametre değerleri ile yapılan tüm istekleri ayrı ayrı önbelleğe alınır. Http://MyServer/MyHttpService/MyOperation?param=10 için ilk istek yapıldığında (önbellek süresi değil geçti sürece) Örneğin, aynı URI ile yapılan tüm sonraki istekleri önbelleğe alınan yanıtın döndürülür. Yanıtlar aynıdır, ancak parametre sorgu dizesi parametresi için farklı bir değere sahip benzer bir istek için ayrı olarak önbelleğe alınır. Bu ayrı önbelleğe alma davranışını istemiyorsanız ayarlamak `varyByParam` "none".  
+ ASP.NET uygulamaları için kullanılabilir aynı yapılandırma öğesi budur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bkz: ASP.NET önbellek profilleri <xref:System.Web.Configuration.OutputCacheProfile>. Web HTTP Hizmetleri için önbellek profili en önemli öznitelikleri şunlardır: `cacheDuration` ve `varyByParam`. Bu öznitelikler her ikisi de gereklidir. `cacheDuration` saniye cinsinden bir yanıt önbelleğe alınması gereken süre miktarını ayarlar. `varyByParam` Önbellek yanıtlar için kullanılan sorgu dizesi parametresi belirtmenize olanak tanır. Farklı sorgu dizesi parametre değerleri ile yapılan tüm istekleri ayrı ayrı önbelleğe alınır. Http://MyServer/MyHttpService/MyOperation?param=10 için ilk istek yapıldığında (önbellek süresi değil geçti sürece) Örneğin, aynı URI ile yapılan tüm sonraki istekleri önbelleğe alınan yanıtın döndürülür. Yanıtlar aynıdır, ancak parametre sorgu dizesi parametresi için farklı bir değere sahip benzer bir istek için ayrı olarak önbelleğe alınır. Bu ayrı önbelleğe alma davranışını istemiyorsanız ayarlamak `varyByParam` "none".  
   
 ## <a name="sql-cache-dependency"></a>SQL önbellek bağımlılığı  
  Web HTTP hizmeti yanıtlar ile SQL önbellek bağımlılığı önbelleğe alınabilir. Bir SQL veritabanında depolanan veriler, WCF Web HTTP hizmeti bağlıdır, hizmetin yanıt önbelleğe alma ve verileri SQL veritabanı tablosu değişiklikleri zaman önbelleğe alınan yanıtın geçersiz kılmak isteyebilirsiniz. Bu davranış, Web.config dosyasında tamamen yapılandırılır. Bir bağlantı dizesi ilk tanımlamanız gerekir <`connectionStrings`> öğesi.  
@@ -133,7 +135,7 @@ public class Service
  Önbellek süresi 60 saniye için burada ayarlanan `varyByParam` none olarak ayarlanmış ve `sqlDependency` noktalı virgülle ayrılmış listesini virgüllerle ayrılmış veritabanı adı/tablo çiftleri için ayarlanır. Zaman içinde veri `MyTable` önbelleğe alınan yanıtın hizmet işlemi kaldırılır ve işlem çağrıldığında yeni bir yanıt (hizmet işlemi çağırarak) oluşturulur, önbelleğe alınan ve istemciye döndürülen değiştirilir.  
   
 > [!IMPORTANT]
->  Bir SQL veritabanına erişmek ASP.NET ile ilgili kullanmalısınız [ASP.NET SQL Server kayıt aracı](http://go.microsoft.com/fwlink/?LinkId=152536). Ayrıca veritabanı ve tablo uygun kullanıcı hesabı erişimi izni vermelidir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SQL Server'a bir Web uygulamasından erişmek](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Bir SQL veritabanına erişmek ASP.NET ile ilgili kullanmalısınız [ASP.NET SQL Server kayıt aracı](http://go.microsoft.com/fwlink/?LinkId=152536). Ayrıca veritabanı ve tablo uygun kullanıcı hesabı erişimi izni vermelidir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Bir Web uygulamasından SQL Server'a erişmek](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Koşullu HTTP tabanlı önbelleğe alma  
  Web HTTP senaryolarda koşullu bir HTTP GET genellikle Hizmetleri tarafından akıllı HTTP önbelleğe alma açıklandığı gibi uygulamak için kullanılan [HTTP belirtimi](http://go.microsoft.com/fwlink/?LinkId=165800). Bu hizmet yapmak için ETag üstbilgi değerini HTTP yanıt olarak ayarlamanız gerekir. If-None-Match üst bilgisinde belirtilen ETag hiçbirini eşleşip eşleşmediğini geçerli ETag görmek için HTTP isteği da işaretlemeleri gerekir.  

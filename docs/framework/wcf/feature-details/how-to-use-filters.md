@@ -1,16 +1,16 @@
 ---
-title: "Nasıl yapılır: Filtreleri Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Filtreleri Kullanma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
@@ -145,7 +145,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     "Http://localhost/routingservice/router/rounding/" ile başlayan adreste bir ileti alındığında sonra bu filtresinin **doğru**. Bu yapılandırma tarafından kullanılan temel adres "http://localhost/routingservice/router" ve roundingEndpoint için belirtilen adresi "yuvarlama/hesaplayıcı" olduğundan bu bitiş noktası ile iletişim kurmak için kullanılan tam "http://localhost/ adresidir routingservice/yönlendirici/yuvarlama/Bu filtre ile eşleşen hesaplayıcı".  
+     "http://localhost/routingservice/router/rounding/" ile başlayan adreste bir ileti alındığında sonra bu filtresinin **doğru**. Bu yapılandırma tarafından kullanılan temel adres "http://localhost/routingservice/router" ve roundingEndpoint için belirtilen adresi "yuvarlama/hesaplayıcı" olduğundan bu bitiş noktası ile iletişim kurmak için kullanılan tam "http://localhost/ adresidir routingservice/yönlendirici/yuvarlama/Bu filtre ile eşleşen hesaplayıcı".  
   
     > [!NOTE]
     >  PrefixEndpointAddress filtre ana bilgisayar adı, tek bir ana bilgisayar için tüm olabilir ana bilgisayar adlarını çeşitli kullanarak başvurulabilir olduğundan bir eşleşme gerçekleştirme konağa istemci uygulamasından başvuran geçerli yolu kullanırken değerlendirmez. Örneğin, aşağıdakilerin tümü aynı ana bilgisayarına başvurabilir:  

@@ -1,12 +1,12 @@
 ---
-title: "Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma"
-ms.custom: 
+title: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -31,10 +31,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma
 Yalıtılmış Depolama dizinde aramak için kullanın <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, bir arama deseniyle temsil eden bir dize alır. Tek karakter (?) ve çok karakter (*) kullanabilirsiniz joker karakter arama deseni, ancak joker karakterler adının son bölümü görünmesi gerekir. Örneğin, `directory1/*ect*` geçerli bir arama dizesi ancak `*ect*/directory2` değil.  

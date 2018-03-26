@@ -1,12 +1,13 @@
 ---
-title: "Biçimlendirme Uzantıları ve WPF XAML"
-ms.custom: 
+title: Biçimlendirme Uzantıları ve WPF XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sınıfı nesne modeli de dahil olmak üzere XAML, biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve XAML Hizmetleri .NET uygulaması genel özelliğidir. Bu konuda özellikle kullanımda WPF XAML işaretleme uzantılarına ayrıntılarını verir.  
@@ -53,13 +55,13 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
 ## <a name="xaml-defined-markup-extensions"></a>XAML tanımlanan biçimlendirme uzantıları  
  Birçok biçimlendirme uzantıları XAML WPF uygulaması özel değildir ancak bunun yerine iç bilgileri uygulamalarında veya XAML dili olarak özelliklerini olan mevcut. Bu biçimlendirme uzantıları System.Xaml derleme genel .NET Framework XAML Hizmetleri bir parçası olarak uygulanır ve XAML dili XAML ad içinde. Ortak biçimlendirme kullanımı açısından bu biçimlendirme uzantıları tarafından tanımlanabilen genellikle `x:` kullanımı öneki. <xref:System.Windows.Markup.MarkupExtension> (System.Xaml ayrıca tanımlanmıştır) temel sınıf tüm biçimlendirme uzantıları XAML okuyucuları ve WPF XAML dahil olmak üzere XAML yazıcılarının desteklenmesi için kullanması gereken desen sağlar.  
   
--   `x:Type`sağladığı <xref:System.Type> adlandırılmış türü için nesnesi. Bu özellik, stil ve şablonlar en sık kullanılır. Ayrıntılar için bkz [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+-   `x:Type` sağladığı <xref:System.Type> adlandırılmış türü için nesnesi. Bu özellik, stil ve şablonlar en sık kullanılır. Ayrıntılar için bkz [x: Type işaretleme uzantısı](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
   
--   `x:Static`statik değer oluşturur. Değerleri doğrudan hedef özelliğin değeri türü olmayan değer türü kodu varlıklardan gelir, ancak bu tür değerlendirilebilir. Ayrıntılar için bkz [x: Static işaretleme uzantısı](../../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+-   `x:Static` statik değer oluşturur. Değerleri doğrudan hedef özelliğin değeri türü olmayan değer türü kodu varlıklardan gelir, ancak bu tür değerlendirilebilir. Ayrıntılar için bkz [x: Static işaretleme uzantısı](../../../../docs/framework/xaml-services/x-static-markup-extension.md).  
   
--   `x:Null`belirtir `null` bir özellik için bir değer olarak ve öznitelikler veya özellik öğesi değerleri için kullanılabilir. Ayrıntılar için bkz [x: Null işaretleme uzantısı](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+-   `x:Null` belirtir `null` bir özellik için bir değer olarak ve öznitelikler veya özellik öğesi değerleri için kullanılabilir. Ayrıntılar için bkz [x: Null işaretleme uzantısı](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
   
--   `x:Array`XAML sözdizimi, durumlarda koleksiyonu desteği WPF temel öğeleri tarafından sağlanan ve denetim modelleri kasıtlı olarak kullanılmaz genel dizilerde oluşturulması için destek sağlar. Ayrıntılar için bkz [x: Array işaretleme uzantısı](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+-   `x:Array` XAML sözdizimi, durumlarda koleksiyonu desteği WPF temel öğeleri tarafından sağlanan ve denetim modelleri kasıtlı olarak kullanılmaz genel dizilerde oluşturulması için destek sağlar. Ayrıntılar için bkz [x: Array işaretleme uzantısı](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  `x:` Öneki, XAML dili ön tanımlı bir XAML dosyası veya üretim kök öğesinin tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] WPF uygulamaları için şablonlar başlatmak bunu kullanan XAML dosyası `x:` eşleme. Kendi XAML ad alanı eşlemesi farklı önek belirteci seçebilir, ancak bu belgeleri varsayılan varsayacak `x:` XAML ad uzayı XAML dili için tanımlanmış bir parçası olan bu varlıkların aygıtlardır tanımlamanın bir araç olarak eşleme WPF ile varsayılan ad alanı veya diğer XAML ad uzayları belirli bir framework ilişkili değil.  
@@ -68,19 +70,19 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
 ## <a name="wpf-specific-markup-extensions"></a>WPF özgü biçimlendirme uzantıları  
  Kaynak başvuruları destekleyen WPF programlamada kullanılan en yaygın biçimlendirme uzantıları dosyalardır (`StaticResource` ve `DynamicResource`), veri bağlamayı destekleyen (`Binding`).  
   
--   `StaticResource`önceden tanımlanan bir kaynağa değerini getirilmesiyle bir özellik için bir değer sağlar. A `StaticResource` değerlendirme sonuçta XAML yükleme sırasında yaptığı ve çalışma zamanında nesne grafiğinin erişimi yok. Ayrıntılar için bkz [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   `StaticResource` önceden tanımlanan bir kaynağa değerini getirilmesiyle bir özellik için bir değer sağlar. A `StaticResource` değerlendirme sonuçta XAML yükleme sırasında yaptığı ve çalışma zamanında nesne grafiğinin erişimi yok. Ayrıntılar için bkz [StaticResource biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
   
--   `DynamicResource`bir değer özelliği için bir kaynak için çalışma zamanı başvuru olması için bu değeri ertelemeyi tarafından sağlar. Dinamik kaynak başvurusu yeni bir arama her zaman böyle bir kaynak erişilir ve çalışma zamanında nesne grafiğinin erişimi zorlar. Bu erişim alabilmek için `DynamicResource` kavram WPF özellik sistemindeki bağımlılık özellikleri tarafından desteklenir ve ifadeler değerlendirilir. Bu nedenle yalnızca kullanabilirsiniz `DynamicResource` bir bağımlılık özelliği hedef için. Ayrıntılar için bkz [DynamicResource Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+-   `DynamicResource` bir değer özelliği için bir kaynak için çalışma zamanı başvuru olması için bu değeri ertelemeyi tarafından sağlar. Dinamik kaynak başvurusu yeni bir arama her zaman böyle bir kaynak erişilir ve çalışma zamanında nesne grafiğinin erişimi zorlar. Bu erişim alabilmek için `DynamicResource` kavram WPF özellik sistemindeki bağımlılık özellikleri tarafından desteklenir ve ifadeler değerlendirilir. Bu nedenle yalnızca kullanabilirsiniz `DynamicResource` bir bağımlılık özelliği hedef için. Ayrıntılar için bkz [DynamicResource Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
   
--   `Binding`Çalışma zamanında üst nesne için geçerli veri bağlamı kullanarak bir özellik için değer veri bağlı sağlar. Veri bağlama belirtmek için önemli satır içi sözdizimi sağladığından bu biçimlendirme uzantısı oldukça karmaşıktır. Ayrıntılar için bkz [biçimlendirme uzantısı bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
+-   `Binding` Çalışma zamanında üst nesne için geçerli veri bağlamı kullanarak bir özellik için değer veri bağlı sağlar. Veri bağlama belirtmek için önemli satır içi sözdizimi sağladığından bu biçimlendirme uzantısı oldukça karmaşıktır. Ayrıntılar için bkz [biçimlendirme uzantısı bağlama](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`ait kaynak bilgileri sağlayan bir <xref:System.Windows.Data.Binding> birkaç olası çalışma zamanı nesne ağacına ilişkilerde gezinme. Bu, çok kullanım şablonlarında oluşturulan veya çevresindeki nesne ağacının hakkında tam bilgi olmadan kod oluşturulan bağlamaları için özel kaynak sağlar. Ayrıntılar için bkz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` ait kaynak bilgileri sağlayan bir <xref:System.Windows.Data.Binding> birkaç olası çalışma zamanı nesne ağacına ilişkilerde gezinme. Bu, çok kullanım şablonlarında oluşturulan veya çevresindeki nesne ağacının hakkında tam bilgi olmadan kod oluşturulan bağlamaları için özel kaynak sağlar. Ayrıntılar için bkz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding`Şablon kullanacağınız sınıfının nesne modeli tanımlanan özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak bir denetim şablonu sağlar. Diğer bir deyişle, şablon tanımının içinde özelliği şablon uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stil oluşturma](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` Şablon kullanacağınız sınıfının nesne modeli tanımlanan özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak bir denetim şablonu sağlar. Diğer bir deyişle, şablon tanımının içinde özelliği şablon uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stil oluşturma](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
--   `ColorConvertedBitmap`göreceli olarak gelişmiş bir görüntü senaryoyu destekler. Ayrıntılar için bkz [ColorConvertedBitmap biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
+-   `ColorConvertedBitmap` göreceli olarak gelişmiş bir görüntü senaryoyu destekler. Ayrıntılar için bkz [ColorConvertedBitmap biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey`ve `ThemeDictionary` özellikle kaynakları ve özel denetimler ile paketlenmiştir Temalar için kaynak arama özelliklerini destekler. Daha fazla bilgi için bkz: [ComponentResourceKey Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md), [ThemeDictionary biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md), veya [denetimine genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+-   `ComponentResourceKey` ve `ThemeDictionary` özellikle kaynakları ve özel denetimler ile paketlenmiştir Temalar için kaynak arama özelliklerini destekler. Daha fazla bilgi için bkz: [ComponentResourceKey Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md), [ThemeDictionary biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md), veya [denetimine genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>* Uzantısı sınıfları  

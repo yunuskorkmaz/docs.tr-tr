@@ -1,28 +1,30 @@
 ---
 title: "Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring apps to support .NET Framework 4
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma
 Ortak dil çalışma zamanı (CLR) barındıran tüm uygulamalar başlatmanız gerekir veya *etkinleştirme*, yönetilen kod çalıştırmak için CLR. Genellikle bir .NET Framework uygulaması üzerinde derlendiği CLR sürümünde çalışır, ancak bir uygulama yapılandırma dosyası (bazen app.config dosyası olarak da anılır) kullanarak bu davranışı masaüstü uygulamalar için değiştirebilirsiniz. Ancak bir uygulama yapılandırma dosyası Windows Mağazası uygulamaları ya da Windows Phone uygulamaları için varsayılan etkinleştirme davranışını değiştiremezsiniz. Bu makale, masaüstü uygulamanızın .NET Framework'ün başka bir sürümünde çalışmasının nasıl sağlanacağını açıklamakta ve 4 veya 4.5 sürümünün nasıl hedefleneceğine bir örnek vermektedir.  
@@ -88,7 +90,7 @@ Ortak dil çalışma zamanı (CLR) barındıran tüm uygulamalar başlatmanız g
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|3.5 üzerinde çalışır|4 veya 4.5 üzerinde çalışır|4 veya 4.5 üzerinde çalışır|  
 |`<supportedRuntime version="v4.0"/>`|Kullanıcının doğru sürümü* yüklemesini isteyen hata iletisini görüntüler|4 veya 4.5 üzerinde çalışır|4 veya 4.5 üzerinde çalışır|  
   
- \*Bu hata iletisi ve bunu önlemenin yolu hakkında daha fazla bilgi için bkz: [.NET Framework başlatma hataları: kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
+ \* Bu hata iletisi ve bunu önlemenin yolu hakkında daha fazla bilgi için bkz: [.NET Framework başlatma hataları: kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET Framework 1.1'den Geçiş](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  

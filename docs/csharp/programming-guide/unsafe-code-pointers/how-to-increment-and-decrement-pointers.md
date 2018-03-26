@@ -1,21 +1,22 @@
 ---
-title: "Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 2c8efc6d0844d867ad6eebccf3bb22c03e6d5020
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Nasıl yapılır: İşaretçileri Artırma ve Azaltma (C# Programlama Kılavuzu)
 Artırma ve azaltma işleçleri kullanmak `++` ve `--`, işaretçi konuma göre değiştirmek için [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) için bir işaretçi türü işaretçinin-türü *. Artırma ve azaltma ifadeleri aşağıdaki biçimde alın:  
@@ -48,12 +49,12 @@ p--;
 **Değer: 3 @ adresi: 12860284**  
 **Değer: 4 @ adresi: 12860288**   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [İşaretçi ifadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [C# işleçleri](../../../csharp/language-reference/operators/index.md)  
- [İşaretçileri işleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [İşaretçi İfadeleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [C# İşleçleri](../../../csharp/language-reference/operators/index.md)  
+ [İşaretçileri İşleme](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
  [İşaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [Türler](../../../csharp/language-reference/keywords/types.md)  
- [güvenli olmayan](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed Deyimi](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

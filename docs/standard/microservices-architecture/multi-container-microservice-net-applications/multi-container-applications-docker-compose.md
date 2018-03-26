@@ -1,7 +1,7 @@
 ---
-title: "Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama 
 
@@ -434,7 +434,7 @@ Docker compose'u bekliyor biçiminde bir .env dosyasındaki her satırın &lt;de
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Docker genel bakış oluşturan**
+-   **Docker genel bakış oluşturma**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
 -   **Birden çok oluşturma dosyaları**
@@ -468,7 +468,7 @@ Kapsayıcı ve mikro modeli sürekli kapsayıcıları başlıyor. Kapsayıcı at
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Yapı en iyi duruma getirilmiş ASP.NET Core Docker görüntülerle**
+-   **Yapı ASP.NET Core Docker görüntülerle en iyi duruma getirilmiş**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>Derleme (CI) kapsayıcısından uygulaması oluşturma
@@ -550,7 +550,7 @@ Burada genel takeway aynı şekilde CI/CD hattınızı yapı, uygulamanızı mü
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Bir kapsayıcı bitten oluşturma: bir Windows CLI ortamında (dotnet CLI, Docker CLI ve VS Code) eShopOnContainers çözümü kurma**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/ 03.-Setting-the-eShopOnContainers-Solution-Up-in-a-Windows-CLI-Environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- ve -VS-kodu)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

@@ -1,24 +1,26 @@
 ---
-title: "Zehirli İleti İşleme"
-ms.custom: 
+title: Zehirli İleti İşleme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisidir. Sıra tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletilerini alır. İleti altında yeni bir işlem denenir kuyruğa alınan iletinin alındığı işlem durduruluyor iletinin kuyrukta bırakır, böylece. İptal etmek işlem neden olan sorunu düzeltilmezse alma işlemini yapan uygulamanın alma ve teslim deneme sayısı aşıldı kadar aynı iletiyi durduruluyor döngü ve zehir iletisi sonuçları takılı.  
@@ -32,9 +34,9 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
   
 -   `ReceiveRetryCount`. Bir iletinin teslimini uygulama sırasından uygulamaya yeniden deneneceğini maksimum sayısını gösterir. bir tamsayı değeri. Varsayılan değer 5'tir. Bu, burada hemen bir yeniden deneme sorun gibi bir veritabanı üzerinde geçici bir kilitlenme ile giderir durumda yeterlidir.  
   
--   `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Bir ileti uygulama sırasından yeniden deneme iletiler alt kuyruğuna ve yeniden deneme alt sırasına geri uygulama kuyruğuna teslim yeniden çalıştırmayı deneyin gelen yapılandırılabilir bir gecikmeden sonra aktarma bir yeniden deneme döngüsü oluşur. Varsayılan değer 2'dir. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], ileti denenir en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) kez. `MaxRetryCycles`üzerinde göz ardı [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Bir ileti uygulama sırasından yeniden deneme iletiler alt kuyruğuna ve yeniden deneme alt sırasına geri uygulama kuyruğuna teslim yeniden çalıştırmayı deneyin gelen yapılandırılabilir bir gecikmeden sonra aktarma bir yeniden deneme döngüsü oluşur. Varsayılan değer 2'dir. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], ileti denenir en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) kez. `MaxRetryCycles` üzerinde göz ardı [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Gecikme süresi arasında döngüleri yeniden deneyin. Varsayılan değer 30 dakikadır. `MaxRetryCycles`ve `RetryCycleDelay` birlikte burada düzenli bir gecikmeden sonra bir yeniden deneme giderir sorun sorunu gidermek için bir mekanizma sağlar. Örneğin, bu işlem yürütme bekleme SQL Server'da ayarlanan kilitli bir satır işler.  
+-   `RetryCycleDelay`. Gecikme süresi arasında döngüleri yeniden deneyin. Varsayılan değer 30 dakikadır. `MaxRetryCycles` ve `RetryCycleDelay` birlikte burada düzenli bir gecikmeden sonra bir yeniden deneme giderir sorun sorunu gidermek için bir mekanizma sağlar. Örneğin, bu işlem yürütme bekleme SQL Server'da ayarlanan kilitli bir satır işler.  
   
 -   `ReceiveErrorHandling`. En fazla yeniden deneme sayısı çalıştı sonra teslim başarısız oldu bir ileti için gerçekleştirilecek eylemi belirtir numaralandırması. Değerleri hataya, Drop Reddet olabilir ve taşıyın. Hata varsayılan seçenektir.  
   
@@ -61,7 +63,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]iki standart sıraya alınan bağlamaları sağlar:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki standart sıraya alınan bağlamaları sağlar:  
   
 -   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bağlama sırası tabanlı iletişim diğer gerçekleştirmek için uygun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları.  
   
@@ -73,7 +75,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>En iyi yöntem: MsmqPoisonMessageException işleme  
  Hizmet bir ileti zararlı olduğunu belirlediğinde, sıraya alınan aktarım oluşturur bir <xref:System.ServiceModel.MsmqPoisonMessageException> içeren `LookupId` zehirli ileti.  
   
- Alıcı uygulamanın uygulayabilirsiniz <xref:System.ServiceModel.Dispatcher.IErrorHandler> uygulama gerektiriyor hataları işlemek için arabirim. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Üzerinden hata işleme ve bildirme denetimini genişletme](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Alıcı uygulamanın uygulayabilirsiniz <xref:System.ServiceModel.Dispatcher.IErrorHandler> uygulama gerektiriyor hataları işlemek için arabirim. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Üzerinden hata işleme ve bildirme denetimini genişletme](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Uygulama hizmeti sıradaki iletileri kalan erişebilmesi için bir zehirli ileti sırası zarar iletileri taşır otomatik zehirli ileti işleme çeşit gerektirebilir. Poison ileti özel durumlarını dinlemek için hata işleyicisine mekanizmasını kullanarak olduğu tek senaryo olduğunda <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> ayar <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Message Queuing 3.0 poison ileti örnek bu davranış gösterir. Aşağıda, en iyi uygulamalar dahil olmak üzere zarar iletileri işlemek için uygulanması gereken adımlar açıklanmaktadır:  
   
@@ -102,10 +104,10 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
  Bir oturum tek bir ileti aynı yeniden deneme ve poison ileti işleme yordamları uğradığında. Zehirli ileti için daha önce listelenen özellikleri tüm oturum için geçerlidir. Bu, tüm oturum yeniden denenir ve ileti reddedilirse son poison ileti sırası veya gönderenin sahipsiz sırayı giden anlamına gelir.  
   
 ## <a name="batching-and-poison-messages"></a>Toplu işleme ve zarar iletileri  
- Bir ileti zararlı bir ileti olur ve bir toplu iş parçası ise, toplu işin tamamını geri alınır ve aynı anda tek bir ileti okuma kanal döndürür. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Toplu işleme, bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Bir ileti zararlı bir ileti olur ve bir toplu iş parçası ise, toplu işin tamamını geri alınır ve aynı anda tek bir ileti okuma kanal döndürür. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Toplu işleme, bkz: [bir işlemde toplu ileti](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Poison ileti zararlı sıradaki iletiler için işleme  
- Bir ileti poison ileti sıraya yerleştirildiğinde poison ileti işleme bitmez. Poison ileti sıradaki iletiler hala okuyun ve işlenmiş. Son zarar alt sırasına iletileri okunurken poison ileti işleme ayarların bir alt kümesini kullanabilirsiniz. Geçerli ayarları `ReceiveRetryCount` ve `ReceiveErrorHandling`. Ayarlayabileceğiniz `ReceiveErrorHandling` , reddetme, bırakma veya hata. `MaxRetryCycles`göz ardı edilir ve varsa bir özel durum `ReceiveErrorHandling` taşımak için ayarlanır.  
+ Bir ileti poison ileti sıraya yerleştirildiğinde poison ileti işleme bitmez. Poison ileti sıradaki iletiler hala okuyun ve işlenmiş. Son zarar alt sırasına iletileri okunurken poison ileti işleme ayarların bir alt kümesini kullanabilirsiniz. Geçerli ayarları `ReceiveRetryCount` ve `ReceiveErrorHandling`. Ayarlayabileceğiniz `ReceiveErrorHandling` , reddetme, bırakma veya hata. `MaxRetryCycles` göz ardı edilir ve varsa bir özel durum `ReceiveErrorHandling` taşımak için ayarlanır.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 ve Windows XP farkları  
  Daha önce belirtildiği gibi tüm poison ileti işleme ayarlarının uygulanacağı [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Aşağıdaki anahtarı Message Queuing arasındaki farklar hakkında [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)], ve [!INCLUDE[wv](../../../../includes/wv-md.md)] poison ileti işleme için uygundur:  
@@ -114,7 +116,7 @@ A *zehir iletisi* uygulama Teslim girişimleri üst sınırını aştı iletisid
   
 -   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] destekler negatif bildirim, sırada [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] desteklemez. Olumsuz bildirim alma sıra Yöneticisi'nden sahipsiz sıraya reddedilen ileti yerleştirmek gönderme sıra Yöneticisi neden olur. Bu nedenle, `ReceiveErrorHandling.Reject` ile izin verilmiyor [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi kaç kez sayısını tutar bir ileti özelliği denemesi destekler. Bu iptal sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]aynı iletiyi birden fazla tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkün olacak şekilde durdurma sayısı bellekte saklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] grubunda hizmet.  
+-   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi kaç kez sayısını tutar bir ileti özelliği denemesi destekler. Bu iptal sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aynı iletiyi birden fazla tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkün olacak şekilde durdurma sayısı bellekte saklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] grubunda hizmet.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

@@ -1,28 +1,30 @@
 ---
-title: "DataGrid Denetimindeki Boyutlandırma Seçenekleri"
-ms.custom: 
+title: DataGrid Denetimindeki Boyutlandırma Seçenekleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid Denetimindeki Boyutlandırma Seçenekleri
 Çeşitli seçenekleri denetlemek için kullanılabilen nasıl <xref:System.Windows.Controls.DataGrid> kendisini boyutları. <xref:System.Windows.Controls.DataGrid>Ve tek tek satır ve sütun <xref:System.Windows.Controls.DataGrid>, otomatik olarak içeriklerini için boyut için ayarlayabilirsiniz veya belirli değerler için ayarlanabilir. Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> büyür ve içeriğinin boyutuna uyacak şekilde daraltma.  

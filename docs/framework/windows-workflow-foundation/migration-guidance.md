@@ -1,26 +1,27 @@
 ---
-title: "Geçiş Kılavuzu"
-ms.custom: 
+title: Geçiş Kılavuzu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migration-guidance"></a>Geçiş Kılavuzu
-İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ikinci ana sürümüne yönelik Microsoft serbest bırakma [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)]içinde yayımlanan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; şimdi WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yanı sıra yeni iş akışı teknolojisi vardır (System.Activities. türlerinde\* ad alanları; için WF4 adlandırılır). WF4 benimsemek ne zaman değerlendirirken zamanlamasını denetlemek ilk bilmek önemlidir.  
+İçinde [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ikinci ana sürümüne yönelik Microsoft serbest bırakma [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)] içinde yayımlanan [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (Bu System.Workflow.* ad alanlarında türleri dahil; şimdi WF3 adlandırılır) ve geliştirilmiş içinde [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 olduğu da parçası [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ancak yanı sıra yeni iş akışı teknolojisi vardır (System.Activities. türlerinde\* ad alanları; için WF4 adlandırılır). WF4 benimsemek ne zaman değerlendirirken zamanlamasını denetlemek ilk bilmek önemlidir.  
   
 -   WF3 tam olarak desteklenen bir parçası olan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/19/2018
  [WF Kılavuzu: Durum makinesi](http://go.microsoft.com/fwlink/?LinkId=153855)  
  Durum makinesinin Etkinlik olmaması durumunda modelleme WF4 denetim akışı açıklanır.  
   
- Bu kılavuz yalnızca .NET Framework 4 hedefleyen iş akışı projeler için geçerlidir. Durum makinesi iş akışları .NET 4.0.1 Platform güncelleştirme 1'in çıkışıyla eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Durum makinesi .NET 4.0.1 - 4.0.3 ve .NET Framework 4.5, iş akışlarında bkz [4.0.1 Microsoft .NET Framework 4 özellikleri için güncelleştirme](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) ve [durumu makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Bu kılavuz yalnızca .NET Framework 4 hedefleyen iş akışı projeler için geçerlidir. Durum makinesi iş akışları .NET 4.0.1 Platform güncelleştirme 1'in çıkışıyla eklenmiştir ve .NET Framework 4. 5 ' bir parçası olarak dahil. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Durum makinesi .NET 4.0.1 - 4.0.3 ve .NET Framework 4.5, iş akışlarında bkz [4.0.1 Microsoft .NET Framework 4 özellikleri için güncelleştirme](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) ve [durumu makine iş akışları](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF Geçiş Kılavuzu: Özel etkinlikler](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Örnekler ve WF4 WF3 özel etkinlikleri yeniden için yönergeler sağlar.  

@@ -1,12 +1,13 @@
 ---
-title: "Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)"
-ms.custom: 
+title: Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permission sets, modifying security policy
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -60,7 +62,7 @@ caspol [options]
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> veya<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Kod grubu hiyerarşisine yeni bir kod grubu ekler. Ya da belirtebilirsiniz *parent_label* veya *parent_name*. *Parent_label* bağımsız değişkeni (örneğin, 1 etiket belirtir. veya 1.1.) eklenen kod grubunun üst kod grubudur. *Parent_name* bağımsız değişkeni eklenen kod grubunun üst kod grubun adını belirtir. Çünkü *parent_label* ve *parent_name* olabilir birbirinin yerine kullanılan Caspol.exe bunları ayırt etmenize kurabilmesi gerekir. Bu nedenle, *parent_name* bir rakamla başlayamaz. Ayrıca, *parent_name* yalnızca A-Z, 0-9 ve alt çizgi karakterini içerebilir.<br /><br /> *Mship* bağımsız değişkeni için yeni kod grubunda üyelik koşulu belirtir. Daha fazla bilgi için tablosuna bakın *mship* bu bölümün sonraki kısımlarında bağımsız değişkenler.<br /><br /> *Pset_name* bağımsız değişkeni yeni kod grubuyla ilişkilendirilecek izin kümesi adıdır. Bir veya daha fazla de ayarlayabilirsiniz *bayrakları* yeni grup için. Tablonun daha fazla bilgi için bkz: *bayrakları* bu bölümün sonraki kısımlarında bağımsız değişkenler.|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> veya<br /><br /> **-ap** {*adlı*_*psfile* &#124; *psfile* *pset_name*}|İlkeye yeni bir adlandırılmış izin kümesi ekler. İzin kümesi XML'de yazılmış ve bir .xml dosyasında depolanmış olmalıdır. XML dosyası iznin adını içeriyorsa ayarlamak, yalnızca bu dosyanın (*psfile*) belirtilir. XML dosyasını izin kümesi adı içermiyorsa, hem XML dosya adı belirtmeniz gerekir (*psfile*) ve izin kümesi adı (*pset_name*).<br /><br /> Bir izin kümesinde kullanılan tüm izinlerin genel derleme önbelleğinde bulunan derlemelerde tanımlanması gerektiğini unutmayın.|  
 |**-a**[**ll**]|Bunu izleyen tüm seçeneklerin makineye, kullanıcıya ve kuruluş ilkelerine uygulanacağını belirtir. **-Tüm** seçenek her zaman şu anda oturum açmış kullanıcı ilkesi için başvuruyor. Bkz: **- customall** seçeneği geçerli kullanıcı dışındaki bir kullanıcının kullanıcı ilkesine bakın.|  
-|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *bayrakları*`}`<br /><br /> veya<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *bayrakları*`}`|Bir kod grubun üyelik koşulu, izin kümesi veya ayarlarını değiştirir **özel**, **levelfinal**, **adı**, veya **açıklama**bayrakları. Ya da belirtebilirsiniz *etiket* veya *adı*. *Etiket* bağımsız değişkeni (örneğin, 1 etiket belirtir. veya 1.1.) kod grubudur. *Adı* bağımsız değişkeni değiştirmek için kod grubunun adını belirtir. Çünkü *etiket* ve *adı* olabilir birbirinin yerine kullanılan Caspol.exe bunları ayırt etmenize kurabilmesi gerekir. Bu nedenle, *adı* bir rakamla başlayamaz. Ayrıca, *adı* yalnızca A-Z, 0-9 ve alt çizgi karakterini içerebilir.<br /><br /> *Pset_name* bağımsız değişkeni kod grubuyla ilişkilendirilecek izni adını belirtir. Daha sonra bu bölümdeki tablolarda, bilgi bakın *mship* ve *bayrakları* bağımsız değişkenler.|  
+|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *Bayrakları* `}`<br /><br /> veya<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *Bayrakları* `}`|Bir kod grubun üyelik koşulu, izin kümesi veya ayarlarını değiştirir **özel**, **levelfinal**, **adı**, veya **açıklama**bayrakları. Ya da belirtebilirsiniz *etiket* veya *adı*. *Etiket* bağımsız değişkeni (örneğin, 1 etiket belirtir. veya 1.1.) kod grubudur. *Adı* bağımsız değişkeni değiştirmek için kod grubunun adını belirtir. Çünkü *etiket* ve *adı* olabilir birbirinin yerine kullanılan Caspol.exe bunları ayırt etmenize kurabilmesi gerekir. Bu nedenle, *adı* bir rakamla başlayamaz. Ayrıca, *adı* yalnızca A-Z, 0-9 ve alt çizgi karakterini içerebilir.<br /><br /> *Pset_name* bağımsız değişkeni kod grubuyla ilişkilendirilecek izni adını belirtir. Daha sonra bu bölümdeki tablolarda, bilgi bakın *mship* ve *bayrakları* bağımsız değişkenler.|  
 |**-chgpset***psfile pset_name* <br /><br /> veya<br /><br /> **-cp** *psfile pset_name*|Adlandırılmış bir izin kümesini değiştirir. *Psfile* bağımsız değişkeni sağlayan yeni tanımı izin kümesi için; serileştirilmiş izin kümesi dosyası XML biçiminde değil. *Pset_name* bağımsız değişkeni değiştirmek istediğiniz izin kümesi adını belirtir.|  
 |**-customall***yolu* <br /><br /> veya<br /><br /> **-ca**  *path*|Bunu izleyen tüm seçeneklerin makineye, kuruluşa ve belirtilen özel kullanıcı ilkelerine uygulanacağını belirtir. Özel kullanıcının güvenlik yapılandırma dosyası konumunu belirtmelisiniz *yolu* bağımsız değişkeni.|  
 |**-cu**[**stomuser**] *path*|Adına Caspol.exe çalışmakta olan bir kullanıcıya ait olmayan özel bir kullanıcı ilkesinin yönetilmesine olanak verir. Özel kullanıcının güvenlik yapılandırma dosyası konumunu belirtmelisiniz *yolu* bağımsız değişkeni.|  
@@ -96,7 +98,7 @@ caspol [options]
 |**-appdir**|Uygulama dizini belirtir. Belirtirseniz **– appdir** üyelik koşulu kod URL kanıtı uygulama dizin kanıtı bu kodu ile karşılaştırılır. Her iki kanıt değeri de aynıysa, bu üyelik koşulu gerçekleşmiş demektir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
 |**-custom**  *xmlfile*|Özel üyelik koşulu ekler. Zorunlu *xmldosyası* bağımsız değişken özel üyelik koşulu XML serileştirilmesi içeren .xml dosyasını belirtir.|  
 |**-karma** *KarmaAlgoritma* {**-onaltılık** *hashValue* &#124; **-dosya** *assembly_file* }|Belirtilen derleme karmasına sahip kodu belirtir. Bir karmayı kod grubu üyelik koşulu olarak kullanmak için, karma değerini ya da derleme dosyasını belirtmelisiniz. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***hex_string* }|Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.PublisherMembershipCondition>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-Dosya** *signed_file_name* &#124; **-onaltılık***hex_string* }  |Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.PublisherMembershipCondition>.|  
 |**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örneğin:<br /><br /> **-site** www.proseware.com<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.SiteMembershipCondition>.|  
 |**-strong - dosya** *dosya_adı* {*adı* &#124; **- noname**} {*sürüm* &#124; **- noversion**}|Dosya adı, derleme adı olarak bir dize ve derleme sürümü tarafından belirlenen olarak belirli bir tanımlayıcı adı biçiminde olan kod belirtir *ana*. *küçük*. *Yapı*. *Düzeltme*. Örneğin:<br /><br /> **-strong - dosya** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
 |**-url** *URL'si*|Belirtilen URL'den kaynaklanan kodu belirtir. URL'de http:// veya ftp:// gibi bir protokol bulunmalıdır. Ayrıca, bir joker karakter (\*) belirli bir URL birden çok derlemelerden belirtmek için kullanılır. **Not:** bir URL birden çok ad kullanılarak tanımlanabilir olduğundan, üyelik koşulu kod kimliğini onaylaması için güvenli bir şekilde olmadığı bir URL kullanarak. Mümkün olan yerlerde, bir tanımlayıcı ad üyelik koşulu, bir yayımcı üyelik koşulu veya karma üyelik koşulu kullanın. <br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz: <xref:System.Security.Policy.UrlMembershipCondition>.|  
@@ -122,7 +124,7 @@ caspol [options]
  Adlandırılmış izin kümelerine, adlarına göre başvuru yapılır. **– Listesi** seçeneği adlandırılmış izin listesi tarafından izlenen kod gruplarının listesini bu ilkedeki kullanılabilir ayarlar görüntüler.  
   
 ## <a name="caspolexe-behavior"></a>Caspol.exe Davranışı  
- Dışındaki tüm seçenekleri **-s**[**ik**] {**üzerinde** &#124; **kapalı**} Caspol.exe ile yüklenmiş .NET Framework sürümü kullanın. Sürümü ile yüklü Caspol.exe çalıştırırsanız *X* çalışma zamanı, değişiklikler yalnızca bu sürümü için uygulanır. Çalışma zamanının, diğer yan yana yüklemeleri varsa etkilenmez. Komut satırından, belirli çalışma zamanı sürümü dizininde olmaksızın Caspol.exe çalıştırırsanız, araç o yoldaki ilk çalışma zamanı sürümü dizininden (genellikle yüklü en son çalışma zamanı sürümü) yürütülür.  
+ Dışındaki tüm seçenekleri **-s**[**ik**] {**üzerinde** &#124; **kapalı**} Caspol.exe yüklendiğini .NET Framework sürümü kullanın ile. Sürümü ile yüklü Caspol.exe çalıştırırsanız *X* çalışma zamanı, değişiklikler yalnızca bu sürümü için uygulanır. Çalışma zamanının, diğer yan yana yüklemeleri varsa etkilenmez. Komut satırından, belirli çalışma zamanı sürümü dizininde olmaksızın Caspol.exe çalıştırırsanız, araç o yoldaki ilk çalışma zamanı sürümü dizininden (genellikle yüklü en son çalışma zamanı sürümü) yürütülür.  
   
  **-S**[**ik**] {**üzerinde** &#124; **kapalı**} bilgisayar genelinde işlemi bir seçenektir. Kod erişim güvenliği devre dışı bırakmak bilgisayarda tüm kullanıcılar için ve yönetilen tüm kodlar için güvenlik kontrollerini sonlandırır. Yan yana .NET Framework sürümleri yüklüyse, bu komut bilgisayarda yüklü her sürüm için güvenliği kapatır. Ancak **-liste** seçenek gösterir güvenlik kapalıdır, hiçbir şey açıkça güvenlik devre dışı diğer kullanıcılar için gösterir.  
   

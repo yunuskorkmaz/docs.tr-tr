@@ -1,12 +1,12 @@
 ---
-title: "Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış"
-ms.custom: 
+title: Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -30,10 +30,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda birçok görevi gerçekleştirmenize henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, yüksek performanslı birden çok iş parçacıklı uygulamalar oluşturmak için gerekli araçları sağlar, ancak bu araçlarla etkili bir şekilde birden çok iş parçacıklı yazılım mühendislik önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalar için olay tabanlı zaman uyumsuz desen eklenecek bir sınıf uygulayın.  
@@ -50,7 +50,7 @@ Aynı anda birçok görevi gerçekleştirmenize henüz kullanıcı etkileşimine
   
  Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır *MethodName ***zaman uyumsuz**. Bu yöntemler, geçerli iş parçacığı üzerinde aynı işlemi zaman uyumlu sürümleri yansıtma. Sınıf de olabilen bir *MethodName *** tamamlandı**  olay ve olabilir bir *MethodName *** AsyncCancel** (ya da yalnızca **CancelAsync**) yöntemi.  
   
- <xref:System.Windows.Forms.PictureBox>Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak bir görüntü zaman uyumlu olarak indirebilirsiniz kendi <xref:System.Windows.Forms.PictureBox.Load%2A> yöntemi, ancak büyük görüntüdür veya ağ bağlantısı yavaş ise, yükleme işlemi tamamlanana kadar uygulamanızın ("askıda") durdurur ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
+ <xref:System.Windows.Forms.PictureBox> Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak bir görüntü zaman uyumlu olarak indirebilirsiniz kendi <xref:System.Windows.Forms.PictureBox.Load%2A> yöntemi, ancak büyük görüntüdür veya ağ bağlantısı yavaş ise, yükleme işlemi tamamlanana kadar uygulamanızın ("askıda") durdurur ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
   
  Uygulamanızın istiyorsanız görüntünün sırasında çalıştırmaya devam etmesine yüklenirken, çağırabilirsiniz <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi ve tanıtıcı <xref:System.Windows.Forms.PictureBox.LoadCompleted> olay, başka bir olay işleme gibi. Çağırdığınızda <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi, uygulamanız ("arka planda") ayrı bir iş parçacığı üzerinde indirme devam ederken çalışmaya devam edecek. Olay işleyicisi resim yükleme işlemi tamamlandığında ve olay işleyicisi inceleyebilirsiniz çağrılacağı <xref:System.ComponentModel.AsyncCompletedEventArgs> indirme işlemini başarıyla tamamladığını belirlemek için parametre.  
   
@@ -132,7 +132,7 @@ public class AsyncExample
 ### <a name="canceling-pending-operations"></a>Bekleyen işlemler iptal etme  
  Zaman uyumsuz işlemleri, tamamlanmadan önce herhangi bir zamanda iptal edebilmek önemlidir. Olay tabanlı zaman uyumsuz desen uygulayan sınıflar sahip olacak bir `CancelAsync` (yalnızca bir zaman uyumsuz yöntem varsa) yöntemi veya *MethodName *** AsyncCancel** (birden çok zaman uyumsuz yöntemleri varsa) yöntemi.  
   
- Birden çok çağrılarına izin yöntemlerini ele bir `userState` her görev ömrü izlemek için kullanılan parametre. `CancelAsync`alan bir `userState` iptal etmek belirli görevler bekleyen sağlar parametresi.  
+ Birden çok çağrılarına izin yöntemlerini ele bir `userState` her görev ömrü izlemek için kullanılan parametre. `CancelAsync` alan bir `userState` iptal etmek belirli görevler bekleyen sağlar parametresi.  
   
  Yalnızca tek bir işlem aynı anda bekleyen gibi destek yöntemleri `Method1Async(string param)`, iptal edilebilen değildir.  
   

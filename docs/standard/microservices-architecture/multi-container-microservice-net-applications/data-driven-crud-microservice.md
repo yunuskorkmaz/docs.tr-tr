@@ -1,7 +1,7 @@
 ---
-title: "Bir basit veri güdümlü CRUD mikro hizmet oluşturma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir basit veri güdümlü CRUD mikro hizmet oluşturma"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Bir basit veri güdümlü CRUD mikro hizmet oluşturma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir basit veri güdümlü CRUD mikro hizmet oluşturma
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -293,7 +293,7 @@ Bu sürüm oluşturma mekanizması basittir ve uygun uç noktasına istek yönle
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API'si sürüm kolaylaştırılmış**
+-   **Scott Hanselman. Kolay ASP.NET Core RESTful Web API'si sürüm oluşturma**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 -   **Sürüm oluşturma bir RESTful web API'si**
@@ -320,7 +320,7 @@ API için Swagger meta verileri oluşturmak için nedenler şunlardır:
 
 -   [AutoRest](https://github.com/Azure/AutoRest). .NET istemci sınıfları Swagger çağırmak için otomatik olarak oluşturabilir. CLI üzerinden bu aracı kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirir.
 
--   [Microsoft Akış](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
+-   [Microsoft Flow](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
 
 -   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Otomatik olarak API öğesinden tüketebileceği [PowerApps mobil uygulamaları](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) ile oluşturulan [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), gerekli hiçbir programlama becerilerine sahip.
 
@@ -415,7 +415,7 @@ Bu basit bir işlemdir. Ve otomatik olarak oluşturulduğundan, API için daha f
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET Web API Yardım Swagger sayfalarını kullanarak**
+-   **ASP.NET Web API Yardım Swagger kullanarak sayfaları**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

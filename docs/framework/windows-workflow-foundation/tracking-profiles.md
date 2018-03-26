@@ -1,23 +1,24 @@
 ---
 title: Profillerini izleme
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a3b1e96451eb89544d0902a1f3498263dec981a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tracking-profiles"></a>Profillerini izleme
 İzleme profilleri çalışma zamanında bir iş akışı örneğinin durumu değiştiğinde, gösterilen iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir.  
@@ -117,7 +118,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ### <a name="tracking-profile-query-types"></a>İzleme profili sorgu türleri  
  İzleme profilleri belirli izleme kayıtları için iş akışı çalışma zamanı sorgu izin kayıtları izleme için bildirim temelli abonelikler olarak yapılandırılmıştır. Farklı sınıflardaki abone izin birkaç sorgu türleri vardır <xref:System.Activities.Tracking.TrackingRecord> nesneleri. Profilleri izleme yapılandırmasında veya kod aracılığıyla belirtilebilir. En yaygın sorgu türleri şunlardır:  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Daha önce gösterildiği gibi iş akışı örneği yaşam döngüsü değişiklikleri izlemek için bunu kullanın `Started` ve `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:  
+-   <xref:System.Activities.Tracking.WorkflowInstanceQuery> -Daha önce gösterildiği gibi iş akışı örneği yaşam döngüsü değişiklikleri izlemek için bunu kullanın `Started` ve `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Aşağıdaki abone olmak için kullanılan <xref:System.Activities.Tracking.TrackingRecord> nesneleri:  
   
     -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -157,7 +158,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.ActivityStateQuery>-Bir iş akışı örneği olun etkinliklerin ömrünü değişiklikleri izlemek için bunu kullanın. Örneğin, bir iş akışı örneği içinde "E-posta Gönder" etkinlik tamamlandıktan her zaman izlemek isteyebilirsiniz. Bu sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityStateRecord> nesneleri. Abone olmak için kullanılabilir durumları belirtilen <xref:System.Activities.Tracking.ActivityStates>.  
+-   <xref:System.Activities.Tracking.ActivityStateQuery> -Bir iş akışı örneği olun etkinliklerin ömrünü değişiklikleri izlemek için bunu kullanın. Örneğin, bir iş akışı örneği içinde "E-posta Gönder" etkinlik tamamlandıktan her zaman izlemek isteyebilirsiniz. Bu sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityStateRecord> nesneleri. Abone olmak için kullanılabilir durumları belirtilen <xref:System.Activities.Tracking.ActivityStates>.  
   
      Yapılandırma ve kullanma etkinlik durumu izleme kayıtları abone olmak için kullanılan kod <xref:System.Activities.Tracking.ActivityStateQuery> için `SendEmailActivity` etkinlik, aşağıdaki örnekte gösterilir.  
   
@@ -189,7 +190,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     > [!NOTE]
     >  Birden çok activityStateQuery öğeleri aynı ada sahipse, yalnızca son öğesinde durumları izleme profili kullanılır.  
   
--   <xref:System.Activities.Tracking.ActivityScheduledQuery>-Bu sorgu, çalıştırılmak üzere zamanlanmış bir etkinlik üst etkinliği tarafından izlemenize olanak sağlar. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityScheduledRecord> nesneleri.  
+-   <xref:System.Activities.Tracking.ActivityScheduledQuery> -Bu sorgu, çalıştırılmak üzere zamanlanmış bir etkinlik üst etkinliği tarafından izlemenize olanak sağlar. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.ActivityScheduledRecord> nesneleri.  
   
      Kayıtlara abone olmak için kullanılan kod ve yapılandırma ile ilgili `SendEmailActivity` alt etkinlik kullanarak zamanlanma <xref:System.Activities.Tracking.ActivityScheduledQuery> aşağıdaki örnekte gösterilen.  
   
@@ -214,7 +215,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.FaultPropagationQuery>-İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.FaultPropagationRecord> nesneleri.  
+-   <xref:System.Activities.Tracking.FaultPropagationQuery> -İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.FaultPropagationRecord> nesneleri.  
   
      Yapılandırma ve kayıtlara abone olmak için kullanılan kod ilgili yayma hataya kullanmaya <xref:System.Activities.Tracking.FaultPropagationQuery> aşağıdaki örnekte gösterilir.  
   
@@ -239,7 +240,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CancelRequestedQuery>-Alt etkinliği üst etkinlik tarafından iptal etme istekleri izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CancelRequestedRecord> nesneleri.  
+-   <xref:System.Activities.Tracking.CancelRequestedQuery> -Alt etkinliği üst etkinlik tarafından iptal etme istekleri izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CancelRequestedRecord> nesneleri.  
   
      Yapılandırma ve kayıtlara abone olmak için kullanılan kod ilgili iptal etkinlik kullanmaya <xref:System.Activities.Tracking.CancelRequestedQuery> aşağıdaki örnekte gösterilir.  
   
@@ -264,7 +265,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CustomTrackingQuery>-Kod etkinliklerinizi tanımladığınız olaylarını izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CustomTrackingRecord> nesneleri.  
+-   <xref:System.Activities.Tracking.CustomTrackingQuery> -Kod etkinliklerinizi tanımladığınız olaylarını izlemek için bunu kullanın. Sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.CustomTrackingRecord> nesneleri.  
   
      Yapılandırma ve kayıtlara abone olmak için kullanılan kod ilgili kullanarak özel izleme kayıtları <xref:System.Activities.Tracking.CustomTrackingQuery> aşağıdaki örnekte gösterilir.  
   
@@ -289,7 +290,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.BookmarkResumptionQuery>-Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için bunu kullanın. Bu sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.BookmarkResumptionRecord> nesneleri.  
+-   <xref:System.Activities.Tracking.BookmarkResumptionQuery> -Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için bunu kullanın. Bu sorgu için gerekli olan bir <xref:System.Activities.Tracking.TrackingParticipant> abone olmak için <xref:System.Activities.Tracking.BookmarkResumptionRecord> nesneleri.  
   
      Yapılandırma ve kayıtlara abone olmak için kullanılan kod ilgili sürdürme yer işareti kullanmaya <xref:System.Activities.Tracking.BookmarkResumptionQuery> aşağıdaki örnekte gösterilir.  
   

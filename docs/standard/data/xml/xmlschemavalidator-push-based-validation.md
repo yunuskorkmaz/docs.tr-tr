@@ -1,18 +1,18 @@
 ---
-title: "XmlSchemaValidator gönderim tabanlı doğrulama"
-ms.custom: 
+title: XmlSchemaValidator gönderim tabanlı doğrulama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -20,10 +20,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator gönderim tabanlı doğrulama
 <xref:System.Xml.Schema.XmlSchemaValidator> Sınıfı bir gönderim tabanlı şekilde XML şemaları karşı XML verileri doğrulamak için verimli, yüksek performanslı bir mekanizma sağlar. Örneğin, <xref:System.Xml.Schema.XmlSchemaValidator> sınıfı bir XML belgesi olarak serileştirir ve bir doğrulama XML okuyucusu kullanarak belgeyi yeniden ayrıştırma zorunda kalmadan bir XML bilgi yerinde doğrulamanıza olanak verir.  
@@ -446,10 +446,10 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
 |Durum|geçiş|  
 |-----------|----------------|  
-|Doğrula|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>(<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*)<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
-|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Öğesi|  
-|Öğe|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> İçerik\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> \* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> İçerik\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
-|İçerik|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Öğesi|  
+|Doğrula|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel *) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
+|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Öğesi|  
+|Öğe|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> İçerik\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
+|İçerik|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Öğesi|  
   
 > [!NOTE]
 >  Bir <xref:System.InvalidOperationException> geçerli durumuna göre yanlış sırayla yöntemi çağrısı yapıldığında, yukarıdaki tabloda yöntemlerin her biri tarafından oluşturulan bir <xref:System.Xml.Schema.XmlSchemaValidator> nesnesi.  
@@ -476,11 +476,11 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>|Varsa varsayılan <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> yöntemi çağrıldığında, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> tüm genel öğeleri içeren bir dizi döndürür.<br /><br /> Varsa aşırı yüklenmiş <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> yönteminin alan bir <xref:System.Xml.Schema.XmlSchemaObject> bir öğenin kısmi doğrulama başlatmak için bir parametre denir <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> yalnızca öğesi döndüğü <xref:System.Xml.Schema.XmlSchemaValidator> nesnesi başlatılmadı.|Varsa varsayılan <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> yöntemi çağrıldığında, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir dizi döndürür.<br /><br /> Varsa aşırı yüklemesini <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> yönteminin alan bir <xref:System.Xml.Schema.XmlSchemaObject> bir özniteliğin kısmi doğrulama başlatmak için bir parametre adıyla <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> yalnızca öznitelik döndüren <xref:System.Xml.Schema.XmlSchemaValidator> nesnesi başlatılmadı.|Şemaya ekler <xref:System.Xml.Schema.XmlSchemaSet> , <xref:System.Xml.Schema.XmlSchemaValidator> önişlem hata olup olmadığını nesne.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Bağlam öğesi geçerliyse, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> bağlam öğesinin alt öğesi olarak beklenen öğe dizisi döndürür.<br /><br /> Bağlam öğesi geçersizse <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> boş bir dizi döndürür.|Bağlam öğesi geçerli olup olmadığını ve hiçbir çağrısına varsa <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> daha önce yapılmış, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> bağlamı öğesinde tanımlanan tüm öznitelikler listesi döndürür.<br /><br /> Bazı öznitelikler zaten doğrulandı, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> doğrulanacak kalan öznitelikler listesi döndürür.<br /><br /> Bağlam öğesi geçersizse <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir dizi döndürür.|Yukarıdaki ile aynı.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Context özniteliği bir üst düzey özniteliği ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> boş bir dizi döndürür.<br /><br /> Aksi takdirde <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> bağlam öğesinin ilk alt olarak beklenen öğe dizisi döndürür.|Context özniteliği bir üst düzey özniteliği ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir dizi döndürür.<br /><br /> Aksi takdirde <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> doğrulanacak kalan öznitelikler listesi döndürür.|Yukarıdaki ile aynı.|  
-|<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>bağlam öğesinin ilk alt olarak beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>henüz için bağlam öğesi doğrulanması için gerekli ve isteğe bağlı öznitelikleri listesi döndürür.|Yukarıdaki ile aynı.|  
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>bağlam öğesinin ilk alt olarak beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>boş bir dizi döndürür.|Yukarıdaki ile aynı.|  
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Bağlam öğenin contentType farklıysa, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sonraki konumu beklenen öğe dizisi döndürür.<br /><br /> Bağlam öğenin contentType TextOnly ya da boş, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> boş bir dizi döndürür.<br /><br /> Bağlam öğenin contentType ElementOnly, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sonraki konuma ancak bir doğrulama hatası beklenen öğe dizisi zaten oluştu döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>bağlam öğenin doğrulanmamış öznitelikler listesi döndürür.|Yukarıdaki ile aynı.|  
+|<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> bağlam öğesinin ilk alt olarak beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> henüz için bağlam öğesi doğrulanması için gerekli ve isteğe bağlı öznitelikleri listesi döndürür.|Yukarıdaki ile aynı.|  
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> bağlam öğesinin ilk alt olarak beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> Boş bir dizi döndürür.|Yukarıdaki ile aynı.|  
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Bağlam öğenin contentType farklıysa, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sonraki konumu beklenen öğe dizisi döndürür.<br /><br /> Bağlam öğenin contentType TextOnly ya da boş, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> boş bir dizi döndürür.<br /><br /> Bağlam öğenin contentType ElementOnly, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> sonraki konuma ancak bir doğrulama hatası beklenen öğe dizisi zaten oluştu döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> bağlam öğenin doğrulanmamış öznitelikler listesi döndürür.|Yukarıdaki ile aynı.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Bağlam boşluk üst düzey boşluk, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> boş bir dizi döndürür.<br /><br /> Aksi takdirde <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> yöntemin davranıştır de aynı <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Bağlam boşluk üst düzey boşluk, ise <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir dizi döndürür.<br /><br /> Aksi takdirde <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> yöntemin davranıştır de aynı <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Yukarıdaki ile aynı.|  
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>bağlam öğesi (olası eşdüzey) sonra beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>bağlam öğenin doğrulanmamış öznitelikler listesi döndürür.<br /><br /> Bağlam öğesi üst öğeye sahipse <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir liste döndürür (geçerli öğede üst bağlam öğedir <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> olarak adlandırılıyordu).|Yukarıdaki ile aynı.|  
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> bağlam öğesi (olası eşdüzey) sonra beklenen öğe dizisi döndürür.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> bağlam öğenin doğrulanmamış öznitelikler listesi döndürür.<br /><br /> Bağlam öğesi üst öğeye sahipse <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> boş bir liste döndürür (geçerli öğede üst bağlam öğedir <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> olarak adlandırılıyordu).|Yukarıdaki ile aynı.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Aynı <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Aynı <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Yukarıdaki ile aynı.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Boş bir dizi döndürür.|Boş bir dizi döndürür.|Yukarıdaki ile aynı.|  
   

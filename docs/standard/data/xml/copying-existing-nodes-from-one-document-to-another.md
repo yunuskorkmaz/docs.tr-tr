@@ -1,15 +1,15 @@
 ---
-title: "Varolan düğümleri bir belgeden kopyalama"
-ms.custom: 
+title: Varolan düğümleri bir belgeden kopyalama
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Varolan düğümleri bir belgeden kopyalama
 **ImportNode** yöntemi olarak bir düğüm veya tüm düğüm alt ağacı kopyalanır birinden mekanizmasıdır **XmlDocument** başka bir. Çağrısından döndürülen düğümü, öznitelik değerleri, düğüm adı, düğüm türü ve tüm ad alanı ilgili öznitelikleri öneki, yerel ad ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI) gibi dahil olmak üzere kaynak belge düğümden kopyasıdır. Kaynak belge değiştirilmez. Düğüm içe aktardıktan sonra hala düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağacına eklemeniz gerekir.  

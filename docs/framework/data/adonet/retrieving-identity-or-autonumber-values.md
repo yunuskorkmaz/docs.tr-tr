@@ -1,27 +1,29 @@
 ---
-title: "Kimliği veya sayı değerlerini alma"
-ms.custom: 
+title: Kimliği veya sayı değerlerini alma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Kimliği veya sayı değerlerini alma
 İlişkisel bir veritabanındaki bir birincil anahtar sütunlarının her zaman benzersiz değerler içeren bir sütun veya ' dir. Birincil anahtar değerine bilerek içerdiği satırı bulun olanak tanır. SQL Server, Oracle ve Microsoft Access/Jet gibi ilişkisel veritabanı motoru birincil anahtarlar olarak belirlenebilir sütunları otomatik olarak artırma oluşturulmasını destekler. Tabloya satır eklendikçe bu değerleri sunucu tarafından üretilir. SQL Server'daki bir sütunun kimliğini özelliğini ayarlayın, Oracle bir dizisi oluşturma ve Microsoft Access içinde bir sayı sütun oluşturun.  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
  Microsoft Access Jet veritabanı altyapısı gibi bazı veritabanı motoru çıkış parametreleri desteklemez ve tek bir toplu iş birden fazla deyime işleyemiyor. Jet veritabanı altyapısı ile çalışırken, bir olay işleyicisi için ayrı bir SELECT komutu yürüterek eklenmiş bir satır için oluşturulan yeni sayı değeri alabilir `RowUpdated` olayı `DataAdapter`.  
   
 > [!NOTE]
->  Bir otomatik artan değeri kullanmaya alternatif kullanmaktır <xref:System.Guid.NewGuid%2A> yöntemi bir <xref:System.Guid> bir GUID veya eklenen her yeni satırın sunucuya kopyalanabilmesi için istemci bilgisayar üzerinde genel benzersiz tanımlayıcısını oluşturulacak nesne. `NewGuid` Yöntemi, hiçbir değer çoğaltılır yüksek olasılık sağlayan bir algoritma kullanarak oluşturduğunuz 16 bayt ikili bir değer oluşturur. Bir SQL Server veritabanında bir GUID depolanan bir `uniqueidentifier` SQL Server Transact-SQL kullanarak otomatik olarak oluşturabilir sütun `NEWID()` işlevi. Birincil anahtarı olarak bir GUID kullanarak performansı olumsuz etkileyebilir. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]için destek sağlar `NEWSEQUENTIALID()` , garanti edilmez genel olarak benzersiz olmalıdır, ancak, dizini daha verimli bir şekilde sıralı bir GUID oluşturur işlevi.  
+>  Bir otomatik artan değeri kullanmaya alternatif kullanmaktır <xref:System.Guid.NewGuid%2A> yöntemi bir <xref:System.Guid> bir GUID veya eklenen her yeni satırın sunucuya kopyalanabilmesi için istemci bilgisayar üzerinde genel benzersiz tanımlayıcısını oluşturulacak nesne. `NewGuid` Yöntemi, hiçbir değer çoğaltılır yüksek olasılık sağlayan bir algoritma kullanarak oluşturduğunuz 16 bayt ikili bir değer oluşturur. Bir SQL Server veritabanında bir GUID depolanan bir `uniqueidentifier` SQL Server Transact-SQL kullanarak otomatik olarak oluşturabilir sütun `NEWID()` işlevi. Birincil anahtarı olarak bir GUID kullanarak performansı olumsuz etkileyebilir. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] için destek sağlar `NEWSEQUENTIALID()` , garanti edilmez genel olarak benzersiz olmalıdır, ancak, dizini daha verimli bir şekilde sıralı bir GUID oluşturur işlevi.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>SQL Server kimlik sütunu değerlerini alma  
  Microsoft SQL Server ile çalışırken, eklenen satır kimlik değeri döndürmek için çıktı parametresi ile bir saklı yordam oluşturabilirsiniz. Aşağıdaki tabloda, üç kimlik sütun değerleri almak için kullanılan SQL Server Transact-SQL işlevleri açıklanmaktadır.  
@@ -79,10 +81,10 @@ SET @Identity = SCOPE_IDENTITY()
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges`denir ve her ikisi de parametre değerlerini çıkış ve/veya herhangi bir döndürülen sonuç kümesi ilk satır değerleri yerleştirilir `DataRow` güncelleştiriliyor. Uygulamak için hiçbir değer `RowState` olacaktır <xref:System.Data.DataRowState.Unchanged>.|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` denir ve her ikisi de parametre değerlerini çıkış ve/veya herhangi bir döndürülen sonuç kümesi ilk satır değerleri yerleştirilir `DataRow` güncelleştiriliyor. Uygulamak için hiçbir değer `RowState` olacaktır <xref:System.Data.DataRowState.Unchanged>.|  
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Bir satır döndürülürse `AcceptChanges` olarak adlandırılır ve satır değiştirilen satıra eşlendi `DataTable`, ayar `RowState` için `Modified`. Satır, ardından döndürülürse `AcceptChanges` çağrılmaz ve `RowState` kalır `Added`.|  
 |<xref:System.Data.UpdateRowSource.None>|Herhangi bir döndürülen parametreleri veya satırlar yok sayılır. Hiçbir çağrısı yok `AcceptChanges` ve `RowState` kalır `Added`.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges`olarak adlandırılır ve çıktı parametreleri değiştirilen satıra eşlendi `DataTable`, ayar `RowState` için `Modified`. Hiçbir çıktı parametresi varsa `RowState` olacaktır `Unchanged`.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` olarak adlandırılır ve çıktı parametreleri değiştirilen satıra eşlendi `DataTable`, ayar `RowState` için `Modified`. Hiçbir çıktı parametresi varsa `RowState` olacaktır `Unchanged`.|  
   
 ### <a name="example"></a>Örnek  
  Bu örnek, değiştirilen satırları ayıklanıyor gösterir bir `DataTable` ve kullanarak bir <xref:System.Data.SqlClient.SqlDataAdapter> veri kaynağını güncelleştirmek ve yeni bir kimlik sütunu değer almak için. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> İki Transact-SQL deyimi yürütür; ilk INSERT deyiminin ve ikinci bir kimlik değeri almak için SCOPE_IDENTITY işlevi kullanan bir SELECT deyimi.  

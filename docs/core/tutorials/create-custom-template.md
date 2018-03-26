@@ -1,7 +1,7 @@
 ---
-title: "Dotnet için özel bir şablon yeni oluştur"
-description: "Bu eğlenceli dotnet yeni komutu için özel bir şablon oluşturmayı öğrenin öğretici."
-keywords: ".NET, .NET core şablonu, şablon, öğretici, dotnet yeni"
+title: Dotnet için özel bir şablon yeni oluştur
+description: Bu eğlenceli dotnet yeni komutu için özel bir şablon oluşturmayı öğrenin öğretici.
+keywords: .NET, .NET core şablonu, şablon, öğretici, dotnet yeni
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
@@ -12,10 +12,10 @@ ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
 ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Dotnet için özel bir şablon yeni oluştur
 
@@ -41,7 +41,7 @@ Bu öğreticiyi tam bir örnek üzerinden geçmek isterseniz, indirme [örnek pr
 
 ## <a name="create-a-template-from-a-project"></a>Bir şablonu bir proje oluşturun
 
-Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir konsol uygulama projesi için sabit diskinizde bir klasör oluşturun. Bu öğretici proje klasörünün adını olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *Documents\Templates* kullanıcının profilindeki. Eğitmen proje şablonu adı şu biçimdedir  *\<şirket adı >.\< Şablon türü >. \<Programlama dili >*, ancak proje ve şablonu istediğiniz herhangi bir şey adı boş.
+Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir konsol uygulama projesi için sabit diskinizde bir klasör oluşturun. Bu öğretici proje klasörünün adını olduğunu varsayar *GarciaSoftware.ConsoleTemplate.CSharp* depolandığı *Documents\Templates* kullanıcının profilindeki. Eğitmen proje şablonu adı şu biçimdedir * \<şirket adı >.\< Şablon türü >. \<Programlama dili >*, ancak proje ve şablonu istediğiniz herhangi bir şey adı boş.
 
 1. Adlı proje kök klasör ekleme *. template.config*.
 1. İçinde *. template.config* klasörü oluşturmak bir *template.json* şablonunuzu yapılandırmak için bir dosya. Daha fazla bilgi ve üye tanımları için *template.json* dosya için bkz: [yeni dotnet için özel şablonlar](../tools/custom-templates.md#templatejson) konu ve [ *template.json* JSON şeması depolama şema](http://json.schemastore.org/template).
@@ -72,14 +72,14 @@ Kullanım onaylanıp var olan bir proje derler ve çalıştıran veya yeni bir k
    
    ![NuGet paketi düzenini gösteren dizin yapısı](./media/create-custom-template/nugetdirectorylayout.png)
 
-1. İçinde bir  **\<packageTypes >** öğesinde *nuspec* içeriyor, dosya bir  **\<packageType >** öğesi ile bir `name` öznitelik değeri `Template`. Her iki *içerik* klasör ve *nuspec* dosya aynı dizinde bulunması. En düşük tablo gösterir *nuspec* dosya şablon bir NuGet paketi olarak üretmek için gereken öğeler.
+1. İçinde bir ** \<packageTypes >** öğesinde *nuspec* içeriyor, dosya bir ** \<packageType >** öğesi ile bir `name` öznitelik değeri `Template`. Her iki *içerik* klasör ve *nuspec* dosya aynı dizinde bulunması. En düşük tablo gösterir *nuspec* dosya şablon bir NuGet paketi olarak üretmek için gereken öğeler.
 
    | Öğe            | Tür   | Açıklama |
    | ------------------ | ------ | ----------- |
    | **\<yazarları >**     | dize | Nuget.org profil adları eşleşen paketleri yazarlar, virgülle ayrılmış listesi. Yazarları nuget.org NuGet galerisinde görüntülenir ve paketleri çapraz başvuru yapmak için aynı yazarlar tarafından kullanılır. |
    | **\<Açıklama >** | dize | Paket UI görüntü için uzun bir açıklaması. |
    | **\<id>**          | dize | Nuget.org ya da ihtiyacınız arasında benzersiz olması büyük küçük harf duyarsız paket tanımlayıcısı galeri paketi içindeki bulunacağı. Kimlikleri boşluk veya bir URL geçerli değil ve genellikle .NET ad alanı kurallarına karakter içerebilir. Bkz: [benzersiz paket tanımlayıcısı seçme ve sürüm numarasını ayarlama](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) Kılavuzu. |
-   | **\<packageType >** | dize | Bu öğe içine yerleştirin bir  **\<packageTypes >** öğesi arasında  **\<meta verileri >** öğeleri. Ayarlama `name` özniteliği  **\<packageType >** öğesine `Template`. |
+   | **\<packageType >** | dize | Bu öğe içine yerleştirin bir ** \<packageTypes >** öğesi arasında ** \<meta verileri >** öğeleri. Ayarlama `name` özniteliği ** \<packageType >** öğesine `Template`. |
    | **\<Sürüm >**     | dize | Major.minor.patch desen aşağıdaki şekilde paketin sürümü. Sürüm numaraları, yayın öncesi soneki içerebilir, açıklandığı gibi [yayın öncesi sürümleri](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
    Bkz: [.nuspec başvuru](/nuget/schema/nuspec) tam için *nuspec* dosyası şeması.

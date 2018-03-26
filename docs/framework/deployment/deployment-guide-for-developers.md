@@ -1,5 +1,5 @@
 ---
-title: "Geliştiriciler için .NET framework Dağıtım Kılavuzu"
+title: Geliştiriciler için .NET framework Dağıtım Kılavuzu
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
@@ -16,10 +16,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarını ile.
@@ -86,7 +86,7 @@ Yükleme bağlantıları için bakın [yeniden dağıtılabilir paketleri](#redi
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|
 |ClickOnce dağıtımı için yükleme konumu|Microsoft İndirme Merkezi:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuzu veya Microsoft Download Center:<br /><br /> - [.NET framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \*Çevrimdışı Yükleyici daha büyük olduğundan tüm hedef platformlar için bileşenleri içerir. Kur'u çalıştırmayı tamamladığınızda, Windows işletim sisteminin kullanılan yükleyici önbelleğe alır. Çevrimdışı Yükleyici yükleme sonrasında silinirse, kullanılan disk alanı web yükleyici tarafından kullanılan aynıdır. Aracı kullanıyorsanız (örneğin, [InstallAware](#installaware-deployment) veya [InstallShield](#installshield-deployment)), uygulamanızın Kurulum programı oluşturmak için yüklemeden sonra kaldırılmadan bir kurulum dosyası sağlar, çevrimdışı yükleyici olabilir Kurulum klasörüne yerleştirme tarafından otomatik olarak silinir.
+ \* Çevrimdışı Yükleyici daha büyük olduğundan tüm hedef platformlar için bileşenleri içerir. Kur'u çalıştırmayı tamamladığınızda, Windows işletim sisteminin kullanılan yükleyici önbelleğe alır. Çevrimdışı Yükleyici yükleme sonrasında silinirse, kullanılan disk alanı web yükleyici tarafından kullanılan aynıdır. Aracı kullanıyorsanız (örneğin, [InstallAware](#installaware-deployment) veya [InstallShield](#installshield-deployment)), uygulamanızın Kurulum programı oluşturmak için yüklemeden sonra kaldırılmadan bir kurulum dosyası sağlar, çevrimdışı yükleyici olabilir Kurulum klasörüne yerleştirme tarafından otomatik olarak silinir.
 
  ** Web yükleyicisi özel kurulum ile kullanıyorsanız, kullanıcının çok dilde kullanıcı arabirimi (MUI) ayarına göre varsayılan dil ayarlarını kullanmak, veya başka bir dil paketini kullanarak belirtin `/LCID` komut satırı seçeneği. Bölümüne bakın [varsayılan .NET Framework UI kullanarak zincirleme](#chaining_default) örnekleri için.
 
@@ -358,7 +358,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/CEIPConsent**|Varsayılan davranışı geçersiz kılar ve gelecekteki dağıtımı deneyimlerini geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca onay için Kurulum programı istenirse, ve kullanıcı için Microsoft anonim görüş göndermeyi izin verirse kullanılabilir.|
-|**/chainingpackage**`packageName`|Zincirleme yaptığını yürütülebilir dosyanın adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş karşılaştığında gibi bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretleri sınırlayıcı olarak alın; Örneğin: **/chainingpackage "Bellek yayımlama"**. Zincirleme paketi örneği için bkz: [ilerleme durumu bilgileri alınırken bir yükleme paketi](http://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
+|**/chainingpackage** `packageName`|Zincirleme yaptığını yürütülebilir dosyanın adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş karşılaştığında gibi bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretleri sınırlayıcı olarak alın; Örneğin: **/chainingpackage "Bellek yayımlama"**. Zincirleme paketi örneği için bkz: [ilerleme durumu bilgileri alınırken bir yükleme paketi](http://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
 |**/LCID**  `LCID`<br /><br /> Burada `LCID` yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Belirtilen dil paketi yükler `LCID` Sessiz modu ayarlanmadığı sürece bu dilde gösterilmesini görüntülenen UI zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-Web dil paketi yükler. **Not:** yalnızca web Yükleyicisi ile bu seçeneği kullanın.|
 |**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. İşlem için geçici bir klasör varsayılandır ve varsayılan dosya adı paketi dayanır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı veya hiçbir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"`.|

@@ -1,27 +1,29 @@
 ---
-title: "ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma"
-ms.custom: 
+title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]etkinleştirmek için bir ASP.NET uyumluluk modu seçeneği sahip [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlanmış ve yapılandırılmış olması uygulamalar gibi ASP.NET Web Hizmetleri ve davranışlarını taklit etmek. Aşağıdaki bölümlerde ASP.NET Web Hizmetleri karşılaştırın ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne iki teknolojiyi kullanarak uygulamaları geliştirmek için gerekli olduğuna bağlı olarak.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] etkinleştirmek için bir ASP.NET uyumluluk modu seçeneği sahip [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlanmış ve yapılandırılmış olması uygulamalar gibi ASP.NET Web Hizmetleri ve davranışlarını taklit etmek. Aşağıdaki bölümlerde ASP.NET Web Hizmetleri karşılaştırın ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne iki teknolojiyi kullanarak uygulamaları geliştirmek için gerekli olduğuna bağlı olarak.  
   
 ## <a name="data-representation"></a>Veri temsili  
  ASP.NET Web hizmetiyle geliştirme genellikle hizmet kullanmaktır herhangi karmaşık veri türlerini tanımlama ile başlar. ASP.NET kullanır <xref:System.Xml.Serialization.XmlSerializer> iletim ya da hizmet için XML ve .NET Framework türleri tarafından gösterilen veriler Çevir ve .NET Framework nesnelerini XML olarak alınan veriler çevir. ASP.NET hizmeti kullanmaktır karmaşık veri türlerini tanımlama gerektiren .NET Framework'ün tanımı sınıfları <xref:System.Xml.Serialization.XmlSerializer> XML gelen ve giden seri hale getirebilir. Bu tür sınıflar el ile yazılmış veya komut satırı XML şemaları/veri türleri destek yardımcı programı kullanarak XML şemasındaki türlerinin tanımlarını üretilen XSD.exe'nin.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Çoğu öznitelik türlerinde mükemmel <xref:System.Xml.Serialization> ad alanı .NET Framework sınıf ve üyeleri sınıfın örnekleri, XML'de nasıl temsil edildiğini denetlemek için eklenebilir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uygulama geliştirme de genellikle karmaşık türler tanımıyla başlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ASP.NET Web Hizmetleri olarak aynı .NET Framework türlerini kullanmak için yapılabilir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama geliştirme de genellikle karmaşık türler tanımıyla başlar. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET Web Hizmetleri olarak aynı .NET Framework türlerini kullanmak için yapılabilir.  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> türdeki örneklerin XML ve hangi belirli alanlar veya türünün özelliklerini serileştirilmesi için aşağıdaki örnekte gösterildiği gibi içine serileştirilecek olduğunu belirtmek için .NET Framework türleri eklenebilir kod.  
   
@@ -326,7 +328,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  Bazı davranışları ister <xref:System.ServiceModel.ServiceBehaviorAttribute>, öznitelikler. Diğer yöneticiler ayarlamak için istediğiniz özelliklere sahip olanları uygulama yapılandırmasında değiştirilebilir.  
   
- Hizmet türlerini programlama sık kullanılan olarak yapılan <xref:System.ServiceModel.OperationContext> sınıfı. Kendi statik <xref:System.ServiceModel.OperationContext.Current%2A> özelliği bir işlem çalıştığından bağlamı ile ilgili bilgilere erişim sağlar. <xref:System.ServiceModel.OperationContext>her ikisi de benzer <xref:System.Web.HttpContext> ve <xref:System.EnterpriseServices.ContextUtil> sınıfları.  
+ Hizmet türlerini programlama sık kullanılan olarak yapılan <xref:System.ServiceModel.OperationContext> sınıfı. Kendi statik <xref:System.ServiceModel.OperationContext.Current%2A> özelliği bir işlem çalıştığından bağlamı ile ilgili bilgilere erişim sağlar. <xref:System.ServiceModel.OperationContext> her ikisi de benzer <xref:System.Web.HttpContext> ve <xref:System.EnterpriseServices.ContextUtil> sınıfları.  
   
 ## <a name="hosting"></a>Barındırma  
  ASP.NET Web Hizmetleri, bir sınıf kitaplığı derlemeye derlenir. Hizmet dosyası adlı bir dosya uzantısı .asmx sahip ve içeren koşuluyla olan bir `@ WebService` hizmeti ve onu bulunduğu derleme kodunu içeren sınıf tanımlar yönergesi.  
@@ -337,7 +339,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
   
  Hizmet dosyası, ASP.NET uygulama kökü Internet Information Services (IIS) kopyalanır ve derleme o uygulama kökü \bin alt kopyalanır. Uygulama sonra Tekdüzen Kaynak Konum Belirleyicisi (URL)'uygulama kök hizmet dosyasının kullanılarak erişilebilir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]IIS 5.1 veya 6.0, Windows İşlem Etkinleştirme Hizmeti (IIS 7. 0'da, bir parçası olarak sağlanan WAS) içinde ve herhangi bir .NET uygulama içinde Hizmetleri taşımalarına barındırılabilir. IIS 5.1 veya 6.0 hizmetinde barındırmak için hizmet iletişimleri Aktarım Protokolü olarak HTTP kullanmanız gerekir.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] IIS 5.1 veya 6.0, Windows İşlem Etkinleştirme Hizmeti (IIS 7. 0'da, bir parçası olarak sağlanan WAS) içinde ve herhangi bir .NET uygulama içinde Hizmetleri taşımalarına barındırılabilir. IIS 5.1 veya 6.0 hizmetinde barındırmak için hizmet iletişimleri Aktarım Protokolü olarak HTTP kullanmanız gerekir.  
   
  Bir hizmet WAS veya IIS 5.1, 6.0 içinde barındırmak için aşağıdaki adımları kullanın:  
   
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  Bu örnek, bir veya daha fazla aktarım protokolleri için adresleri oluşturma işlemi belirtilen nasıl gösterir bir <xref:System.ServiceModel.ServiceHost>. Bu adresler temel adresleri olarak adlandırılır.  
   
- İçin herhangi bir uç nokta sağlanan adresi bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet uç noktanın ana bilgisayarın bir taban adresi göreli bir adresidir. Konağın her iletişim Aktarım Protokolü için bir taban adresi olabilir. Önceki yapılandırma dosyasında örnek yapılandırmasında <xref:System.ServiceModel.BasicHttpBinding> HTTP uç noktası kullanımları Aktarım Protokolü olarak şekilde uç noktası adresi seçili `EchoService`, ana bilgisayarın HTTP temel göre adresidir. Önceki örnekte konak söz konusu olduğunda HTTP temel http://www.contoso.com:8000 adresidir /. IIS ya da WAS içinde barındırılan bir hizmet için taban adresi hizmetin hizmet dosyasının URL'dir.  
+ İçin herhangi bir uç nokta sağlanan adresi bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet uç noktanın ana bilgisayarın bir taban adresi göreli bir adresidir. Konağın her iletişim Aktarım Protokolü için bir taban adresi olabilir. Önceki yapılandırma dosyasında örnek yapılandırmasında <xref:System.ServiceModel.BasicHttpBinding> HTTP uç noktası kullanımları Aktarım Protokolü olarak şekilde uç noktası adresi seçili `EchoService`, ana bilgisayarın HTTP temel göre adresidir. Ana bilgisayarın söz konusu olduğunda önceki örnekte, HTTP temel adresi olduğunu http://www.contoso.com:8000/. IIS ya da WAS içinde barındırılan bir hizmet için taban adresi hizmetin hizmet dosyasının URL'dir.  
   
  Yalnızca IIS veya WAS ve hangi HTTP ile Aktarım Protokolü olarak yalnızca, yapılandırılmış barındırılan hizmetleri, kullanılacak yapılabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET uyumluluk modu seçeneği. Bu seçenek açma aşağıdaki adımları gerektirir.  
   
@@ -405,7 +407,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
     </configuration>  
     ```  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uygulamaları, kendi hizmet dosyalarda .svc yerine .asmx uzantısı olarak kullanmak için de yapılandırılabilir.  
+     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamaları, kendi hizmet dosyalarda .svc yerine .asmx uzantısı olarak kullanmak için de yapılandırılabilir.  
   
     ```xml  
     <system.web>  
@@ -636,7 +638,7 @@ public class Service : WebService, IEcho
   
  ASP.NET, burada oturum durum bilgisi oturum özelliği kullanılarak önemli ölçüde denetim sağlar <xref:System.Web.HttpContext> gerçekten depolanır. Tanımlama bilgileri, bir veritabanı, geçerli sunucunun bellek veya atanmış bir sunucu bellek depolanabilir. Seçimi hizmetin yapılandırma dosyasında yapılır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Genişletilebilen nesneler için durum yönetimini sağlar. Genişletilebilir nesneleridir uygulayan nesneler <xref:System.ServiceModel.IExtensibleObject%601>. En önemli Genişletilebilir nesneler <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase`tüm hizmet örneklerinin yazdığı aynı konakta durumu erişebilir, sağlamanıza olanak tanır ancak `InstanceContext` içinde bir hizmet türü'nın aynı örneğini çalıştıran herhangi bir kod tarafından erişilebilecek durumu korumanıza olanak sağlar.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Genişletilebilen nesneler için durum yönetimini sağlar. Genişletilebilir nesneleridir uygulayan nesneler <xref:System.ServiceModel.IExtensibleObject%601>. En önemli Genişletilebilir nesneler <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase` tüm hizmet örneklerinin yazdığı aynı konakta durumu erişebilir, sağlamanıza olanak tanır ancak `InstanceContext` içinde bir hizmet türü'nın aynı örneğini çalıştıran herhangi bir kod tarafından erişilebilecek durumu korumanıza olanak sağlar.  
   
  Burada, hizmet türü `TradingSystem`, sahip bir <xref:System.ServiceModel.ServiceBehaviorAttribute> belirtir tüm çağırdığı aynı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci örneği, hizmet türü'nın aynı örneğinin yönlendirilir.  
   
@@ -751,7 +753,7 @@ public void Receive(Message input)
 </behaviors>  
 ```  
   
- Talep tabanlı yetkilendirme çalıştırmak için kullanılan sınıfları öğesinden türetilmelidir <xref:System.ServiceModel.ServiceAuthorizationManager>, geçersiz kılmak için yalnızca bir yöntemi olan `AccessCheck()`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Hizmet işlemini çağrılır ve sağlar, bu yöntemi çağırır bir <xref:System.ServiceModel.OperationContext> kullanıcı talebini sahip nesne, kendi `ServiceSecurityContext.AuthorizationContext` özelliği. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]hangi güvenlik belirteci kullanıcı hakkında talepleri atayarak iş bırakır kimlik doğrulaması için sağlanan kullanıcı mu bu talep ilgili işlem için yeterli olup olmadığını değerlendirmek, görev.  
+ Talep tabanlı yetkilendirme çalıştırmak için kullanılan sınıfları öğesinden türetilmelidir <xref:System.ServiceModel.ServiceAuthorizationManager>, geçersiz kılmak için yalnızca bir yöntemi olan `AccessCheck()`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet işlemini çağrılır ve sağlar, bu yöntemi çağırır bir <xref:System.ServiceModel.OperationContext> kullanıcı talebini sahip nesne, kendi `ServiceSecurityContext.AuthorizationContext` özelliği. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hangi güvenlik belirteci kullanıcı hakkında talepleri atayarak iş bırakır kimlik doğrulaması için sağlanan kullanıcı mu bu talep ilgili işlem için yeterli olup olmadığını değerlendirmek, görev.  
   
  Olduğunu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] talep otomatik olarak derler talep tabanlı yetkilendirme kodu kimlik doğrulama mekanizmasını tamamen bağımsız yaptığından güvenlik herhangi bir tür yüksek oranda önemli bir yenilik belirtecidir. Bunun aksine, ACL'ler ya da roller ASP.NET kullanarak yetkilendirmeyi yakından Windows kimlik doğrulaması olarak bağlıdır.  
   
