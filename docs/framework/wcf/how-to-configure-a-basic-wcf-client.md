@@ -61,7 +61,7 @@ Temel bir oluşturmak için gereken altı görevleri beşinci budur [!INCLUDE[in
     </configuration>   
     ```  
   
-     Bu örnek istemcinin şu adresten bulunduğu hizmete erişmek için kullandığı uç nokta yapılandırır: 8000/ServiceModelSamples/Service/CalculatorService  
+     Bu örnek istemcinin şu adresten bulunduğu hizmete erişmek için kullandığı uç nokta yapılandırır: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
   
      Uç nokta öğesi belirleyen `ServiceReference1.ICalculator` hizmet sözleşmesini WCF İstemcisi hizmeti arasındaki iletişimi için kullanılır. WCF kanalı sistem tarafından sağlanan ile yapılandırılmış <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>. Bu sözleşme, Visual Studio'da hizmet Başvurusu Ekle kullanılarak oluşturuldu. Bu temelde GettingStartedLib proje tanımlanan sözleşme bir kopyasıdır. <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> Bağlama HTTP taşıma, birlikte çalışabilen güvenlik ve diğer yapılandırma ayrıntılarını belirtir.  
   
