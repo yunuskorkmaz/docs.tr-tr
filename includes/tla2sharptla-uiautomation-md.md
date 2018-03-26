@@ -1,1 +1,1 @@
-<span data-ttu-id="db937-101">UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="db937-101">UI Automation</span></span>
+<span data-ttu-id="a636c-101">UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="a636c-101">UI Automation</span></span>

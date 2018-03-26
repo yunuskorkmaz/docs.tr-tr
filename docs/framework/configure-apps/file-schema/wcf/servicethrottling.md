@@ -1,35 +1,37 @@
 ---
 title: '&lt;serviceThrottling&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a059684967af26c72aca48a3fa6bb10c2f26b0c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="ltservicethrottlinggt"></a><span data-ttu-id="f1e16-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="f1e16-102">&lt;serviceThrottling&gt;</span></span>
-<span data-ttu-id="f1e16-103">Windows Communication Foundation (WCF) hizmetini azaltma mekanizmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  
+# <a name="ltservicethrottlinggt"></a><span data-ttu-id="69f81-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="69f81-102">&lt;serviceThrottling&gt;</span></span>
+<span data-ttu-id="69f81-103">Windows Communication Foundation (WCF) hizmetini azaltma mekanizmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="69f81-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  
   
- <span data-ttu-id="f1e16-104">\<Sistem. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="f1e16-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="f1e16-105">\<davranışları ></span><span class="sxs-lookup"><span data-stu-id="f1e16-105">\<behaviors></span></span>  
-<span data-ttu-id="f1e16-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="f1e16-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="f1e16-107">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="f1e16-107">\<behavior></span></span>  
-<span data-ttu-id="f1e16-108">\<serviceThrottling ></span><span class="sxs-lookup"><span data-stu-id="f1e16-108">\<serviceThrottling></span></span>  
+ <span data-ttu-id="69f81-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="69f81-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="69f81-105">\<davranışları ></span><span class="sxs-lookup"><span data-stu-id="69f81-105">\<behaviors></span></span>  
+<span data-ttu-id="69f81-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="69f81-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="69f81-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="69f81-107">\<behavior></span></span>  
+<span data-ttu-id="69f81-108">\<serviceThrottling></span><span class="sxs-lookup"><span data-stu-id="69f81-108">\<serviceThrottling></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1e16-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f1e16-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="69f81-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="69f81-109">Syntax</span></span>  
   
 ```xml  
 <serviceThrottling maxConcurrentCalls="Integer"  
@@ -37,33 +39,33 @@ ms.lasthandoff: 12/22/2017
     maxConcurrentSessions="Integer" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f1e16-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="f1e16-110">Attributes and Elements</span></span>  
- <span data-ttu-id="f1e16-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f1e16-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="69f81-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="69f81-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="69f81-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="69f81-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f1e16-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f1e16-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="69f81-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="69f81-112">Attributes</span></span>  
   
-|<span data-ttu-id="f1e16-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="f1e16-113">Attribute</span></span>|<span data-ttu-id="f1e16-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1e16-114">Description</span></span>|  
+|<span data-ttu-id="69f81-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="69f81-113">Attribute</span></span>|<span data-ttu-id="69f81-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="69f81-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="f1e16-115">maxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="f1e16-115">maxConcurrentCalls</span></span>|<span data-ttu-id="f1e16-116">Şu anda arasında işlem iletilerinin sayısını sınırlar pozitif bir tamsayı bir <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="f1e16-116">A positive integer that limits the number of messages that currently process across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="f1e16-117">Sınırı aşan çağrıları kuyruğa alınır.</span><span class="sxs-lookup"><span data-stu-id="f1e16-117">Calls in excess of the limit are queued.</span></span> <span data-ttu-id="f1e16-118">Bu değerin 0 olarak ayarlanması, Int32.MaxValue olarak ayarlamaya eşittir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-118">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="f1e16-119">16 varsayılandır * işlemci sayısı.</span><span class="sxs-lookup"><span data-stu-id="f1e16-119">The default is 16 * processor count.</span></span>|  
-|<span data-ttu-id="f1e16-120">MaxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="f1e16-120">maxConcurrentInstances</span></span>|<span data-ttu-id="f1e16-121">Sayısını sınırlayan bir pozitif tamsayı <xref:System.ServiceModel.InstanceContext> arasında aynı anda yürütme nesneleri bir <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="f1e16-121">A positive integer that limits the number of <xref:System.ServiceModel.InstanceContext> objects that execute at one time across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="f1e16-122">Ek örnekleri oluşturmak için istekler kuyruğa alınır ve sınırın altındaki bir yuva kullanılabilir hale geldiğinde tamamlayın.</span><span class="sxs-lookup"><span data-stu-id="f1e16-122">Requests to create additional instances are queued and complete when a slot below the limit becomes available.</span></span> <span data-ttu-id="f1e16-123">Varsayılan maxConcurrentSessions ve MaxConcurrentCalls toplamıdır</span><span class="sxs-lookup"><span data-stu-id="f1e16-123">The default is the sum of maxConcurrentSessions and MaxConcurrentCalls</span></span>|  
-|<span data-ttu-id="f1e16-124">MaxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="f1e16-124">maxConcurrentSessions</span></span>|<span data-ttu-id="f1e16-125">Oturum sayısını sınırlar pozitif bir tamsayı bir <xref:System.ServiceModel.ServiceHost> nesnesini kabul edebilir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-125">A positive integer that limits the number of sessions a <xref:System.ServiceModel.ServiceHost> object can accept.</span></span><br /><br /> <span data-ttu-id="f1e16-126">Hizmet sınırı aşan bağlantılarını kabul eder, ancak yalnızca sınırın altındaki kanalları etkin (kanaldan iletiler okunur).</span><span class="sxs-lookup"><span data-stu-id="f1e16-126">The service will accept connections in excess of the limit, but only the channels below the limit are active (messages are read from the channel).</span></span> <span data-ttu-id="f1e16-127">Bu değerin 0 olarak ayarlanması, Int32.MaxValue olarak ayarlamaya eşittir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-127">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="f1e16-128">Varsayılan değer 100'dür * işlemci sayısı.</span><span class="sxs-lookup"><span data-stu-id="f1e16-128">The default is 100 * processor count.</span></span>|  
+|<span data-ttu-id="69f81-115">maxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="69f81-115">maxConcurrentCalls</span></span>|<span data-ttu-id="69f81-116">Şu anda arasında işlem iletilerinin sayısını sınırlar pozitif bir tamsayı bir <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="69f81-116">A positive integer that limits the number of messages that currently process across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="69f81-117">Sınırı aşan çağrıları kuyruğa alınır.</span><span class="sxs-lookup"><span data-stu-id="69f81-117">Calls in excess of the limit are queued.</span></span> <span data-ttu-id="69f81-118">Bu değerin 0 olarak ayarlanması, Int32.MaxValue olarak ayarlamaya eşittir.</span><span class="sxs-lookup"><span data-stu-id="69f81-118">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="69f81-119">16 varsayılandır \* işlemci sayısı.</span><span class="sxs-lookup"><span data-stu-id="69f81-119">The default is 16 \* processor count.</span></span>|  
+|<span data-ttu-id="69f81-120">maxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="69f81-120">maxConcurrentInstances</span></span>|<span data-ttu-id="69f81-121">Sayısını sınırlayan bir pozitif tamsayı <xref:System.ServiceModel.InstanceContext> arasında aynı anda yürütme nesneleri bir <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="69f81-121">A positive integer that limits the number of <xref:System.ServiceModel.InstanceContext> objects that execute at one time across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="69f81-122">Ek örnekleri oluşturmak için istekler kuyruğa alınır ve sınırın altındaki bir yuva kullanılabilir hale geldiğinde tamamlayın.</span><span class="sxs-lookup"><span data-stu-id="69f81-122">Requests to create additional instances are queued and complete when a slot below the limit becomes available.</span></span> <span data-ttu-id="69f81-123">Varsayılan maxConcurrentSessions ve MaxConcurrentCalls toplamıdır</span><span class="sxs-lookup"><span data-stu-id="69f81-123">The default is the sum of maxConcurrentSessions and MaxConcurrentCalls</span></span>|  
+|<span data-ttu-id="69f81-124">maxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="69f81-124">maxConcurrentSessions</span></span>|<span data-ttu-id="69f81-125">Oturum sayısını sınırlar pozitif bir tamsayı bir <xref:System.ServiceModel.ServiceHost> nesnesini kabul edebilir.</span><span class="sxs-lookup"><span data-stu-id="69f81-125">A positive integer that limits the number of sessions a <xref:System.ServiceModel.ServiceHost> object can accept.</span></span><br /><br /> <span data-ttu-id="69f81-126">Hizmet sınırı aşan bağlantılarını kabul eder, ancak yalnızca sınırın altındaki kanalları etkin (kanaldan iletiler okunur).</span><span class="sxs-lookup"><span data-stu-id="69f81-126">The service will accept connections in excess of the limit, but only the channels below the limit are active (messages are read from the channel).</span></span> <span data-ttu-id="69f81-127">Bu değerin 0 olarak ayarlanması, Int32.MaxValue olarak ayarlamaya eşittir.</span><span class="sxs-lookup"><span data-stu-id="69f81-127">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="69f81-128">Varsayılan değer 100'dür \* işlemci sayısı.</span><span class="sxs-lookup"><span data-stu-id="69f81-128">The default is 100 \* processor count.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f1e16-129">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="f1e16-129">Child Elements</span></span>  
- <span data-ttu-id="f1e16-130">Yok.</span><span class="sxs-lookup"><span data-stu-id="f1e16-130">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="69f81-129">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="69f81-129">Child Elements</span></span>  
+ <span data-ttu-id="69f81-130">Yok.</span><span class="sxs-lookup"><span data-stu-id="69f81-130">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f1e16-131">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="f1e16-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="69f81-131">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="69f81-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="f1e16-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="f1e16-132">Element</span></span>|<span data-ttu-id="f1e16-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f1e16-133">Description</span></span>|  
+|<span data-ttu-id="69f81-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="69f81-132">Element</span></span>|<span data-ttu-id="69f81-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="69f81-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="f1e16-134">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="f1e16-134">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="f1e16-135">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-135">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="69f81-134">\<behavior></span><span class="sxs-lookup"><span data-stu-id="69f81-134">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="69f81-135">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="69f81-135">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1e16-136">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f1e16-136">Remarks</span></span>  
- <span data-ttu-id="f1e16-137">Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örneği veya oturumları atlayarak kaynaklarının kullanımını engellemek için sayısına yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="f1e16-137">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69f81-136">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="69f81-136">Remarks</span></span>  
+ <span data-ttu-id="69f81-137">Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örneği veya oturumları atlayarak kaynaklarının kullanımını engellemek için sayısına yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="69f81-137">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span>  
   
- <span data-ttu-id="f1e16-138">Özniteliklerin değeri ulaşıldığında her zaman bir izleme yazılır.</span><span class="sxs-lookup"><span data-stu-id="f1e16-138">A trace is written every time the value of attributes is reached.</span></span> <span data-ttu-id="f1e16-139">İlk izleme uyarı olarak yazılır.</span><span class="sxs-lookup"><span data-stu-id="f1e16-139">The first trace is written as a warning.</span></span>  
+ <span data-ttu-id="69f81-138">Özniteliklerin değeri ulaşıldığında her zaman bir izleme yazılır.</span><span class="sxs-lookup"><span data-stu-id="69f81-138">A trace is written every time the value of attributes is reached.</span></span> <span data-ttu-id="69f81-139">İlk izleme uyarı olarak yazılır.</span><span class="sxs-lookup"><span data-stu-id="69f81-139">The first trace is written as a warning.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1e16-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="f1e16-140">Example</span></span>  
- <span data-ttu-id="f1e16-141">Aşağıdaki yapılandırma örneği hizmet 2 ile 10 eşzamanlı örnek sayısı maksimum eşzamanlı çağrı sınırları belirtir.</span><span class="sxs-lookup"><span data-stu-id="f1e16-141">The following configuration example specifies that the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span> <span data-ttu-id="f1e16-142">Bu örnekte çalışan ayrıntılı örnek için bkz: [azaltma](../../../../../docs/framework/wcf/samples/throttling.md).</span><span class="sxs-lookup"><span data-stu-id="f1e16-142">For a detailed example of running this example, see [Throttling](../../../../../docs/framework/wcf/samples/throttling.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="69f81-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="69f81-140">Example</span></span>  
+ <span data-ttu-id="69f81-141">Aşağıdaki yapılandırma örneği hizmet 2 ile 10 eşzamanlı örnek sayısı maksimum eşzamanlı çağrı sınırları belirtir.</span><span class="sxs-lookup"><span data-stu-id="69f81-141">The following configuration example specifies that the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span> <span data-ttu-id="69f81-142">Bu örnekte çalışan ayrıntılı örnek için bkz: [azaltma](../../../../../docs/framework/wcf/samples/throttling.md).</span><span class="sxs-lookup"><span data-stu-id="69f81-142">For a detailed example of running this example, see [Throttling](../../../../../docs/framework/wcf/samples/throttling.md).</span></span>  
   
 ```xml  
 <behaviors>   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1e16-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1e16-143">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="69f81-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="69f81-143">See Also</span></span>  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
  <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [<span data-ttu-id="f1e16-144">WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma</span><span class="sxs-lookup"><span data-stu-id="f1e16-144">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+ [<span data-ttu-id="69f81-144">WCF Hizmet Performansını Denetlemek için ServiceThrottlingBehavior Kullanma</span><span class="sxs-lookup"><span data-stu-id="69f81-144">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

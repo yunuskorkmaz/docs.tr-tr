@@ -1,1 +1,1 @@
-<span data-ttu-id="748da-101">.NET Framework 4.6.1</span><span class="sxs-lookup"><span data-stu-id="748da-101">.NET Framework 4.6.1</span></span>
+<span data-ttu-id="3fc31-101">.NET Framework 4.6.1</span><span class="sxs-lookup"><span data-stu-id="3fc31-101">.NET Framework 4.6.1</span></span>
