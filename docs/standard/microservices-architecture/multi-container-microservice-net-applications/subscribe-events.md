@@ -1,6 +1,6 @@
 ---
 title: Olaylara abone olma
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olaylara abone olma"
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olaylara abone olma
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -302,7 +302,7 @@ Bazı ileti kendiliğinden ıdempotent işlemesidir. Bir sistem görüntüsü k�
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **İleti benzersizlik uygularken** (Bu sayfadaki alt başlık) [ *https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **İleti benzersizlik uygularken** (Bu sayfadaki alt başlık) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Yinelenenleri tümleştirme olay iletileri
 
@@ -322,7 +322,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Çatallanmış NServiceBus (belirli yazılım) kullanarak eShopOnContainers**
+-   **Çatallanmış eShopOnContainers NServiceBus (belirli yazılım) kullanma**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
 -   **Olay tabanlı Mesajlaşma**
@@ -331,7 +331,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Bağlantı değerlendirme**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Yayımlama-abone olma kanal**
+-   **Kanal yayımlama-abone olma**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Sınırlanmış bağlamları arasında iletişim**
@@ -340,7 +340,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Nihai tutarlılık**
     [*https://en.wikipedia.org/wiki/Eventual\_tutarlılık*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Elmas kahverengi. Tümleştirme stratejileri ilişkisindeki bağlamları**
+-   **Elmas kahverengi. Tümleştirme stratejileri bağlamları sınırlanmış**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
 -   **Chris Richardson. Toplamalar, olay kaynak belirleme ve CQRS - bölüm 2 kullanarak işlem mikro geliştirme**
@@ -355,14 +355,14 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Olay deposu veritabanı**. Resmi sitesi.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Can Nommensen. Olay kaynaklı mikro hizmetler için veri yönetimi**
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1>*
+-   **Can Nommensen. Mikro için olay denetimli veri yönetimi**
+    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **CAP Teoremi**
     [*https://en.wikipedia.org/wiki/CAP\_Teoremi*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **CAP Teoremi nedir? ** 
-     [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
+-   **CAP Teoremi nedir?**
+    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Veri tutarlılığı Primer**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
@@ -373,12 +373,12 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Eric Brewer. CAP üzeri on iki yıllık: "Kurallar" nasıl değiştiğini**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Dış (DTC) işlemlere katılan** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Dış (DTC) işlemlere katılan** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Aracılı mesajlaşmayı: Yinelenen algılama**
+-   **Azure Service Bus. Aracılı Mesajlaşma: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [ *https://www.rabbitmq.com/reliability.html\#tüketici*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [  *https://www.rabbitmq.com/reliability.html \#tüketici*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

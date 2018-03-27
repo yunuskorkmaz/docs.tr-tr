@@ -1,12 +1,12 @@
 ---
-title: "Normal İfadelerdeki Karakter Çıkışları"
-ms.custom: 
+title: Normal İfadelerdeki Karakter Çıkışları
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -28,10 +28,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 Ters eğik çizgi (\\) normal ifadede aşağıdakilerden birini gösterir:  
@@ -57,10 +57,10 @@ Ters eğik çizgi (\\) normal ifadede aşağıdakilerden birini gösterir:
 |`\f`|Form besleme, eşleşen `\u000C`.|  
 |`\n`|Yeni bir satırla eşleşen `\u000A`.|  
 |`\e`|Bir kaçış eşleşen `\u001B`.|  
-|`\` *nnn*|ASCII karakter eşleşme nerede  *nnn*  sekizli karakter kodunu temsil eden iki veya üç basamak oluşur. Örneğin, `\040` bir boşluk karakteri temsil eder. Yalnızca bir basamak varsa, bu yapıyı yeniden başvuru yorumlanır (örneğin, `\2`) veya yakalamayla grup sayısı karşılık gelir. (Bkz [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
-|`\x` *nn*|ASCII karakter eşleşme nerede  *nn*  iki basamaklı onaltılı karakter kodu.|  
-|`\c`*X*|Denetim karakteri Harf X, ASCII denetim karakterle eşleşir. Örneğin, `\cC` CTRL-c|  
-|`\u` *nnnn*|Değeri UTF-16 kod birimi eşleşen  *nnnn*  onaltılık. **Not:** Unicode belirtmek için kullanılan Perl 5 karakteri kaçış .NET tarafından desteklenmiyor. Perl 5 karakteri kaçış bir biçime sahip `\x{`  *####*  `…}`, burada  *####*  `…` onaltılık basamak dizisidir. Bunun yerine, kullanın `\u`  *nnnn* .|  
+|`\` *nnn*|ASCII karakter eşleşme nerede *nnn* sekizli karakter kodunu temsil eden iki veya üç basamak oluşur. Örneğin, `\040` bir boşluk karakteri temsil eder. Yalnızca bir basamak varsa, bu yapıyı yeniden başvuru yorumlanır (örneğin, `\2`) veya yakalamayla grup sayısı karşılık gelir. (Bkz [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
+|`\x` *nn*|ASCII karakter eşleşme nerede *nn* iki basamaklı onaltılı karakter kodu.|  
+|`\c` *X*|Denetim karakteri Harf X, ASCII denetim karakterle eşleşir. Örneğin, `\cC` CTRL-c|  
+|`\u` *nnnn*|Değeri UTF-16 kod birimi eşleşen *nnnn* onaltılık. **Not:** Unicode belirtmek için kullanılan Perl 5 karakteri kaçış .NET tarafından desteklenmiyor. Perl 5 karakteri kaçış bir biçime sahip `\x{` *####* `…}`, burada *####* `…` onaltılık basamak dizisidir. Bunun yerine, kullanın `\u` *nnnn*.|  
 |`\`|Kaçış karakterli bir karakter olarak tanınmıyor bir karakter ve ardından, bu karakterle eşleşir. Örneğin, `\*` bir yıldız işareti (*) ile eşleşen ve aynı `\x2A`.|  
   
 ## <a name="an-example"></a>Bir Örnek  

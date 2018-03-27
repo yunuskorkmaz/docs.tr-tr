@@ -1,12 +1,13 @@
 ---
-title: "Yol Biçimlendirme Sözdizimi"
-ms.custom: 
+title: Yol Biçimlendirme Sözdizimi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak, bu konuda yolunu belirtmek için kullanabileceğiniz güçlü ve karmaşık Mini dili ayrıntılı olarak açıklanmaktadır. geometri kullanarak daha sıkı şekilde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ve PathFigureCollection Mini dilleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Geometrik yolları açıklamak için mini-diller sağlayan iki sınıfı sağlar: <xref:System.Windows.Media.StreamGeometry> ve <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Geometrik yolları açıklamak için mini-diller sağlayan iki sınıfı sağlar: <xref:System.Windows.Media.StreamGeometry> ve <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Kullandığınız <xref:System.Windows.Media.StreamGeometry> türünde bir özellik ayarlarken mini dil <xref:System.Windows.Media.Geometry>, gibi <xref:System.Windows.UIElement.Clip%2A> özelliği bir <xref:System.Windows.UIElement> veya <xref:System.Windows.Shapes.Path.Data%2A> özelliği bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnek oluşturmak için öznitelik sözdizimini kullanır bir <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
   
 |StreamGeometry XAML öznitelik kullanımı|  
 |-----------------------------------------|  
-|`<`*nesne* *özelliği* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Öznitelik kullanım sözdizimi için bir <xref:System.Windows.Media.PathFigureCollection> bir veya daha fazla şekil açıklamalarını oluşur.  
   
 |PathFigureCollection XAML öznitelik kullanımı|  
 |-----------------------------------------------|  
-|`<`*nesne* *özelliği* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Belirtir olup olmadığını <xref:System.Windows.Media.StreamGeometry> kullanan <xref:System.Windows.Media.FillRule.EvenOdd> veya <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`belirtir <xref:System.Windows.Media.FillRule.EvenOdd> dolgu kuralı.<br />-   `F1`belirtir <xref:System.Windows.Media.FillRule.Nonzero> dolgu kuralı.<br /><br /> Bu komut atlarsanız, alt yolu olan varsayılan davranışı kullanacağını <xref:System.Windows.Media.FillRule.EvenOdd>. Bu komut belirtirseniz, bu ilk yerleştirmeniz gerekir.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Belirtir olup olmadığını <xref:System.Windows.Media.StreamGeometry> kullanan <xref:System.Windows.Media.FillRule.EvenOdd> veya <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` belirtir <xref:System.Windows.Media.FillRule.EvenOdd> dolgu kuralı.<br />-   `F1` belirtir <xref:System.Windows.Media.FillRule.Nonzero> dolgu kuralı.<br /><br /> Bu komut atlarsanız, alt yolu olan varsayılan davranışı kullanacağını <xref:System.Windows.Media.FillRule.EvenOdd>. Bu komut belirtirseniz, bu ilk yerleştirmeniz gerekir.|  
 |*figureDescription*|Bir taşı komutu, oluşan bir şekil komutlar ve isteğe bağlı bir Kapat komutunu çizin.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Şekil başlangıç noktasını belirtir taşıma komutu. Bkz: [Taşı komutunu](#themovecommand) bölümü.|  
 |*drawCommands*|Şekil 's içeriğini açıklayan bir veya daha fazla çizim komutları. Bkz: [çizim komutları](#drawcommands) bölümü.|  
@@ -80,7 +82,7 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
   
 |Sözdizimi|  
 |------------|  
-|`M`*startPoint*<br /><br /> - veya -<br /><br /> `m`*startPoint*|  
+|`M` *startPoint*<br /><br /> - veya -<br /><br /> `m` *startPoint*|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -95,20 +97,20 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
  Bir büyük veya küçük harf kullanarak her komutu girin: büyük harfler mutlak değerler belirtmek ve küçük harfler göreli değerlerini göstermek: denetim Bu kesimin göre uç noktası önceki örnekte noktalarıdır. Aynı türde birden fazla komut sırayla girerken, yinelenen komut girişini atlayabilirsiniz; Örneğin, `L 100,200 300,400` eşdeğerdir `L 100,200 L 300,400`. Aşağıdaki tabloda açıklanmaktadır **taşıma** ve **çizin** komutları.  
   
 ### <a name="line-command"></a>Komut satırı  
- Güncel nokta ve belirtilen bitiş noktası arasında düz bir çizgi oluşturur. `l 20 30`ve `L 20,30` geçerli örnekleri **satır** komutları.  
+ Güncel nokta ve belirtilen bitiş noktası arasında düz bir çizgi oluşturur. `l 20 30` ve `L 20,30` geçerli örnekleri **satır** komutları.  
   
 |Sözdizimi|  
 |------------|  
-|`L`*uç noktası*<br /><br /> - veya -<br /><br /> `l`*uç noktası*|  
+|`L` *endPoint*<br /><br /> - veya -<br /><br /> `l` *endPoint*|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*uç noktası*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Çizginin bitiş noktası.|  
+|*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Çizginin bitiş noktası.|  
 
 Büyük harf `L` belirten `endPoint` mutlak bir değer; olan küçük harf `l` belirten `endPoint` önceki noktasına bir uzaklık ya da (yoksa 0,0).
 
 ### <a name="horizontal-line-command"></a>Yatay çizgi komutu  
- Belirtilen x koordinatını geçerli noktası arasındaki yatay çizgi oluşturur. `H 90`Geçerli bir yatay çizgi komutu örneğidir.
+ Belirtilen x koordinatını geçerli noktası arasındaki yatay çizgi oluşturur. `H 90` Geçerli bir yatay çizgi komutu örneğidir.
 
   
 |Sözdizimi|  
@@ -122,7 +124,7 @@ Büyük harf `L` belirten `endPoint` mutlak bir değer; olan küçük harf `l` b
 Büyük harf `H` belirten `x` mutlak bir değer; olan küçük harf `h` belirten `x` önceki noktasına bir uzaklık ya da (yoksa 0,0).
   
 ### <a name="vertical-line-command"></a>Dikey çizgi komutu  
- Güncel nokta ve belirtilen y koordinatını arasında dikey çizgi oluşturur. `v 90`Geçerli bir dikey çizgi komutu örneğidir.
+ Güncel nokta ve belirtilen y koordinatını arasında dikey çizgi oluşturur. `v 90` Geçerli bir dikey çizgi komutu örneğidir.
 
   
 |Sözdizimi|  
@@ -135,8 +137,8 @@ Büyük harf `H` belirten `x` mutlak bir değer; olan küçük harf `h` belirten
 
 Büyük harf `V` belirten `y` mutlak bir değer; olan küçük harf `v` belirten `y` önceki noktasına bir uzaklık ya da (yoksa 0,0).  
     
-### <a name="cubic-bezier-curve-command"></a>Küp Bezier eğrisi komutu  
- İki belirtilen denetim noktalarını kullanarak güncel nokta ve belirtilen bitiş noktası arasında bir küp Bezier eğrisi oluşturur (`controlPoint`1 ve `controlPoint`2). `C 100,200 200,400 300,200`Geçerli bir eğri komutu örneğidir.  
+### <a name="cubic-bezier-curve-command"></a>Cubic Bezier Curve Command  
+ İki belirtilen denetim noktalarını kullanarak güncel nokta ve belirtilen bitiş noktası arasında bir küp Bezier eğrisi oluşturur (`controlPoint`1 ve `controlPoint`2). `C 100,200 200,400 300,200` Geçerli bir eğri komutu örneğidir.  
   
 |Sözdizimi|  
 |------------|  
@@ -148,8 +150,8 @@ Büyük harf `V` belirten `y` mutlak bir değer; olan küçük harf `v` belirten
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Eğriyi bitiş tanjantını belirleyen eğrinin ikinci denetim noktası.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Noktası çizilen eğri.|  
   
-### <a name="quadratic-bezier-curve-command"></a>İkinci dereceden Bezier eğrisi komutu  
- Belirtilen denetim noktasını kullanarak güncel nokta ve belirtilen bitiş noktası arasında ikinci dereceden Bezier eğrisi oluşturur (`controlPoint`). `q 100,200 300,200`Geçerli bir ikinci dereceden Bezier eğrisi komutu örneğidir.  
+### <a name="quadratic-bezier-curve-command"></a>Quadratic Bezier Curve Command  
+ Belirtilen denetim noktasını kullanarak güncel nokta ve belirtilen bitiş noktası arasında ikinci dereceden Bezier eğrisi oluşturur (`controlPoint`). `q 100,200 300,200` Geçerli bir ikinci dereceden Bezier eğrisi komutu örneğidir.  
   
 |Sözdizimi|  
 |------------|  
