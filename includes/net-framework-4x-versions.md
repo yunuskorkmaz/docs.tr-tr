@@ -1,0 +1,9 @@
+
+> [!IMPORTANT]
+> <span data-ttu-id="69ce9-101">.NET Framework 4 yerinde güncelleştirmelerinin olduğundan, tüm .NET Framework sürümleri, bu nedenle yalnızca bir tek 4.x sürümü bir sistemde mevcut olabilir.</span><span class="sxs-lookup"><span data-stu-id="69ce9-101">All .NET Framework versions since .NET Framework 4 are in-place updates, so only a single 4.x version can be present on a system.</span></span> <span data-ttu-id="69ce9-102">Ayrıca, .NET Framework'ün belirli sürümlerini bazı Windows işletim sistemi sürümlerinde önceden yüklenmiş.</span><span class="sxs-lookup"><span data-stu-id="69ce9-102">In addition, particular versions of the .NET Framework are pre-installed on some versions of the Windows operating system.</span></span> <span data-ttu-id="69ce9-103">Bunun anlamı:</span><span class="sxs-lookup"><span data-stu-id="69ce9-103">This means that:</span></span>
+>
+> - <span data-ttu-id="69ce9-104">Bir sonraki 4.x sürümünü makinede zaten yüklü ise, bir önceki 4.x sürümünü yükleyemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="69ce9-104">If there's a later 4.x version installed on the machine already, you can't install a previous 4.x version.</span></span>
+> - <span data-ttu-id="69ce9-105">İşletim sistemi ile belirli bir .NET Framework sürümü önceden yüklenmiş geliyorsa, aynı makinede bir önceki 4.x sürümünü yükleyemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="69ce9-105">If the OS comes pre-installed with a particular .NET Framework version, you can't install a previous 4.x version on the same machine.</span></span>
+> - <span data-ttu-id="69ce9-106">Sonraki bir sürümünü yüklerseniz, önce önceki sürümü kaldırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="69ce9-106">If you install a later version, you don't have to first uninstall the previous version.</span></span>
+
+
