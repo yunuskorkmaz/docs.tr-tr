@@ -1,5 +1,5 @@
 ---
-title: "Dizeler (C# Programlama Kılavuzu)"
+title: Dizeler (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> değeri metindir. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizesi sonunda hiçbir null sonlandırma karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda katıştırılmış boş karakterler ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliği sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını değil nesneleri. Bir dizede tek tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesnesi.  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |Konu|Açıklama|  
 |-----------|-----------------|  
 |[Nasıl yapılır: Dize İçeriklerini Değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizeleri içeriğini değiştirmek için teknikleri göstermektedir.|  
-|[Nasıl yapılır: Birden Çok Dizeyi Birleştirme](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Derleme zamanında bir dizeye birden çok dizeyi birleştirme ve çalışma zamanı teknikleri göstermektedir.|  
-|[Nasıl yapılır: Dizeleri Karşılaştırma](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Dizeleri sıralı karşılaştırmaları gerçekleştirir gösterilmektedir.|  
+|[Nasıl yapılır: Dizeleri Karşılaştırma](../../how-to/compare-strings.md)|Sıralı gerçekleştirme ve kültür belirli karşılaştırmaları dizisini gösterir.|  
 |[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma ](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını anlatan bir kod örneği içeren `String.Split` dizeleri ayrıştırma yöntemi.|  
 |[Nasıl yapılır: dizeleri arama](../../how-to/search-strings.md)|Belirli bir metin veya desenler için arama dizelerini kullanımı açıklanmaktadır.|  
 |[Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizesi ayrıştırılamıyor gösterilmiştir.|  

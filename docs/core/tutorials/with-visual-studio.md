@@ -1,7 +1,7 @@
 ---
-title: ".NET Core ve C# Visual Studio 2017'Hello World uygulaması oluşturma"
-description: "Basit bir .NET Core konsol uygulaması Visual Studio 2017 kullanarak C# ile oluşturmayı öğrenin."
-keywords: ".NET core, .NET Core konsol uygulaması, Visual Studio 2017"
+title: .NET Core ve C# Visual Studio 2017'Hello World uygulaması oluşturma
+description: Basit bir .NET Core konsol uygulaması Visual Studio 2017 kullanarak C# ile oluşturmayı öğrenin.
+keywords: .NET core, .NET Core konsol uygulaması, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
@@ -12,11 +12,11 @@ ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Bir C# Hello World uygulamasının Visual Studio 2017 .NET çekirdek ile derleme
 
@@ -70,7 +70,7 @@ Kullanıcıdan adına ve tarih ve saati ile birlikte görüntülemek için uygul
 
    ![Visual Studio Program c-sharp dosyasını güncelleştirilmiş Main yöntemi](./media/with-visual-studio/codewindow.png)
 
-   Bu kodu ", adı nedir?" görüntüler Kullanıcı kadar bekler ve konsol penceresi Enter tuşuna bir dize girer. Bu dize adlı bir değişkende depolar `name`. Ayrıca değerini alır <xref:System.DateTime.Now?displayProperty=nameWithType> geçerli yerel saat içeren ve adlı bir değişkene atar özelliği `date`. Son olarak, kullanan bir [Ara değerli dize](../../csharp/language-reference/keywords/interpolated-strings.md) konsol penceresinde bu değerleri görüntülemek için.
+   Bu kodu ", adı nedir?" görüntüler Kullanıcı kadar bekler ve konsol penceresi Enter tuşuna bir dize girer. Bu dize adlı bir değişkende depolar `name`. Ayrıca değerini alır <xref:System.DateTime.Now?displayProperty=nameWithType> geçerli yerel saat içeren ve adlı bir değişkene atar özelliği `date`. Son olarak, kullanan bir [Ara değerli dize](../../csharp/language-reference/tokens/interpolated.md) konsol penceresinde bu değerleri görüntülemek için.
 
 1. Program seçerek derleme **yapı** > **yapı çözümü**.
 

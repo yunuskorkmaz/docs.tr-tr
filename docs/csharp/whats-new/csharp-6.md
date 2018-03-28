@@ -1,7 +1,7 @@
 ---
-title: "C# 6 - C# Kılavuzu yenilikler nelerdir?"
-description: "C# sürüm 6'deki yeni özelliklerin öğrenin"
-keywords: .NET, .NET core
+title: C# 6 - C# Kılavuzu yenilikler nelerdir?
+description: C# sürüm 6'deki yeni özelliklerin öğrenin
+keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikler nelerdir?
 
@@ -215,11 +215,11 @@ Konumsal parametreler gibi bir yöntem kullanmak için gereken geleneksel olarak
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-C# 6 ile yeni dize ilişkilendirme özellik Biçim dizesinde ifade katıştırma olanak tanır. Basit yazdığınızdan dizesiyle `$`:
+C# 6, yeni [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği Biçim dizesinde ifade katıştırma olanak sağlar. Yalnızca dizesiyle yazdığınızdan `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Bu ilk örnek değiştirilen ifadeler için değişken ifadeleri kullanılır. Herhangi bir ifade kullanmak için bu sözdizimini genişletebilirsiniz. Örneğin, öğrencinin Not noktası ortalaması ilişkilendirme bir parçası olarak işlem:
+Bu ilk örnek özellik ifadeleri değiştirilen ifadeleri için kullanır. Herhangi bir ifade kullanmak için bu sözdizimini genişletebilirsiniz. Örneğin, öğrencinin Not noktası ortalaması ilişkilendirme bir parçası olarak işlem:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -249,22 +249,17 @@ Bunun yerine, yalnızca tanım özellik derecesini. Ara değerli bir dize süsl�
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Dize ilişkilendirme ve belirli kültürler
 
-Önceki bölümde gösterilen tüm örnekler burada kodu yürütür makinede dil ve geçerli kültürü kullanarak dizeleri biçimlendirir. Genellikle bir kültürü kullanarak üretilen dize biçiminde gerekebilir.
-Bir dize ilişkilendirme üretilen nesne ya da örtük bir dönüştürme sahip türüdür <xref:System.String> veya <xref:System.FormattableString>.
+Önceki bölümde gösterilen tüm örnekler burada kodu yürütür makinede dil ve geçerli kültürü kullanarak dizeleri biçimlendirin. Genellikle bir kültürü kullanarak üretilen dize biçiminde gerekebilir.
+Bunu yapmak için dize ilişkilendirme tarafından üretilen nesnesi örtük olarak dönüştürülebilir olgu kullanın <xref:System.FormattableString>.
 
-<xref:System.FormattableString> Türü biçim dizesi ve bağımsız değişkenler dizeleri dönüştürme önce değerlendirme sonuçlarını içerir. Ortak yöntemlerini kullanabilirsiniz <xref:System.FormattableString> bir dize biçimlendirme sırasında kültür belirtmek için. Örneğin, aşağıdaki Almanca dil ve kültür kullanarak bir dize oluşturur. (İçin ondalık ayırıcı, ',' karakterini kullanır ve '.' karakteri olarak binlik ayırıcı.)
+<xref:System.FormattableString> Örnek biçim dizesi ve dizeleri dönüştürme önce ifadeleri değerlendirme sonuçlarını içerir. Ortak yöntemlerini kullanabilirsiniz <xref:System.FormattableString> bir dize biçimlendirme sırasında kültür belirtmek için. Örneğin, aşağıdaki örnekte, Almanca kültürü kullanarak bir dize oluşturur. (İçin ondalık ayırıcı, ',' karakterini kullanır ve '.' karakteri olarak binlik ayırıcı.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> Önceki örnekte 1.0.1 .NET Core sürümünde desteklenmiyor. Yalnızca .NET Framework de desteklenir.
-
-Genel olarak, dize ilişkilendirme ifadeler dizeleri kendi çıktı olarak üretir. Bununla birlikte, dize biçimlendirmek için kullanılan kültür üzerinde daha fazla denetim istediğinizde, belirli bir çıkış belirtebilirsiniz.  Genellikle gereken bir özellik varsa, kolay belirli kültür biçimlendirme etkinleştirmek için genişletme yöntemleri olarak kullanışlı yöntemler oluşturabilirsiniz.
+Daha fazla bilgi için bkz: [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu.
 
 ## <a name="exception-filters"></a>Özel durum filtreleri
 
@@ -314,7 +309,7 @@ Böylece yalnızca bir hata ayıklayıcısı değil iliştirildiğinde herhangi 
 Bu kodda ekledikten sonra tüm işlenmeyen özel durumlarını ayırmak için hata ayıklayıcı ayarlayın. Hata ayıklayıcı altında programını çalıştırın ve hata ayıklayıcısı sonları her `PerformFailingOperation()` oluşturur bir `RecoverableException`.
 Catch yan tümcesi nedeniyle false döndüren özel durum filtresi yürütülen olmaz çünkü hata ayıklayıcı programınızın keser.
 
-## <a name="nameof-expressions"></a>`nameof`İfadeler
+## <a name="nameof-expressions"></a>`nameof` İfadeler
 
 `nameof` Bir simge adı için ifadeyi hesaplar. Bir değişken, bir özellik veya bir üye alanı adını ihtiyaç duyduğunuzda çalışma araçları almak için harika bir yoludur.
 

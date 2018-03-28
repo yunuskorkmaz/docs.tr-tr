@@ -1,5 +1,5 @@
 ---
-title: "Standart Sayısal Biçim Dizeleri"
+title: Standart Sayısal Biçim Dizeleri
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,18 +24,18 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart sayısal biçim dizesi biçimi alır `Axx`, burada:  
   
--   `A`tek bir alfasayısal karakter adlı *belirticisi biçimlendirmek*. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz: [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+-   `A` tek bir alfasayısal karakter adlı *belirticisi biçimlendirmek*. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz: [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx`İsteğe bağlı bir tamsayı olarak adlandırılan *duyarlık Belirleyicisi*. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Not duyarlık Belirleyicisi birkaç dize gösterimini basamak sayısını denetler. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemi.  
+-   `xx` İsteğe bağlı bir tamsayı olarak adlandırılan *duyarlık Belirleyicisi*. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Not duyarlık Belirleyicisi birkaç dize gösterimini basamak sayısını denetler. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemi.  
   
      Zaman *duyarlık Belirleyicisi* sayısını kontrol sonuç dizesinde kesir basamakları sıfırdan uzağa doğru yuvarlanan sayıları sonuç dizeleri yansıtacak (diğer bir deyişle, kullanarak <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
   
@@ -48,24 +48,24 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  
 - .NET [bileşik biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md), kullanılan bazı tarafından `Write` ve `WriteLine` yöntemlerinin <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıfları <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi. Bileşik biçimlendirme özelliğini tek bir dizede, alan genişliği belirtmek ve alanına sayı hizalamak için birden çok veri öğeleri dize gösterimini eklemenizi sağlar. Daha fazla bilgi için bkz: [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Ara değerli dizeler](../../csharp/language-reference/keywords/interpolated-strings.md) , C# ve Visual Basic sağlayan bileşik biçim dizeleri karşılaştırıldığında basitleştirilmiş bir sözdizimi.
+- [Ara değerli dizeler](../../csharp/language-reference/tokens/interpolated.md) , C# ve Visual Basic sağlayan bileşik biçim dizeleri karşılaştırıldığında basitleştirilmiş bir sözdizimi.
  
 > [!TIP]
 >  İndirebilirsiniz [biçimlendirme yardımcı programı](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), biçimi uygulamanıza olanak sağlayan bir uygulama dizeleri sayısal veya tarih ve saat değerleri ve sonuç dizesini görüntüler.  
   
-<a name="table"></a>Aşağıdaki tabloda standart sayısal biçim belirticileri açıklar ve her biçim belirticisi tarafından üretilen örnek çıktı görüntüler. Bkz: [notları](#NotesStandardFormatting) bölüm standart sayısal biçim dizeleri kullanma hakkında ek bilgi için ve [örnek](#example) kullanımlarını kapsamlı bir çizimi için bölüm.  
+<a name="table"></a> Aşağıdaki tabloda standart sayısal biçim belirticileri açıklar ve her biçim belirticisi tarafından üretilen örnek çıktı görüntüler. Bkz: [notları](#NotesStandardFormatting) bölüm standart sayısal biçim dizeleri kullanma hakkında ek bilgi için ve [örnek](#example) kullanımlarını kapsamlı bir çizimi için bölüm.  
   
 |Biçim belirteci|Ad|Açıklama|Örnekler|  
 |----------------------|----------|-----------------|--------------|  
 |"C" ya da "c"|Para Birimi|Sonuç: Bir para birimi değeri.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [para birimi ("C") biçim belirticisi](#CFormatString).|123.456 ("C" en-US) $123.46 -><br /><br /> 123.456 ("C", fr-FR) 123,46 -> €<br /><br /> 123.456 ("C", ja-JP) ¥ 123 -><br /><br /> -123.456 ("C3", en-US) ($123.456) -><br /><br /> -123.456 ("C3", fr-FR)-123,456 € -><br /><br /> -123.456 ("C3", ja-JP) ->-¥ 123.456|  
-|"D" veya "d"|Ondalık|Sonuç: İsteğe bağlı eksi işaretli tamsayı basamaklar.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Minimum basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: En az gereken basamak sayısı.<br /><br /> Daha fazla bilgi: [Decimal("D") biçim belirticisi](#DFormatString).|1234 ("D") 1234 -><br /><br /> -1234 ("D6")-001234 ->|  
-|"E" ya da "e"|Üstsel (bilimsel)|Sonuç: Üstel simgeleme.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: 6.<br /><br /> Daha fazla bilgi: [üstel ("E") biçim belirticisi](#EFormatString).|1052.0329112756 ("E" en-US) 1.052033E + 003 -><br /><br /> 1052.0329112756 ("e", fr-FR), 1, 052033e -> + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> - 1.05e + 003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
-|"F" ya da "f"|Sabit nokta|Sonuç: İsteğe bağlı eksi işaretli tamsayı ve ondalık basamaklar.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sabit noktalı ("F") biçim belirticisi](#FFormatString).|1234.567 ("F" en-US) 1234.57 -><br /><br /> 1234.567 ("F", de-DE) 1234,57 -><br /><br /> 1234 ("F1" en-US) 1234.0 -><br /><br /> 1234 ("F1", de-DE) 1234,0 -><br /><br /> -1234.56 ("F4", en-US)-1234.5600 -><br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
-|"G" ya da "g"|Genel|Sonuç: Daha fazla sabit noktalı ya da bilimsel gösterim sıkıştırın.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Anlamlı basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Sayısal türe bağlıdır.<br /><br /> Daha fazla bilgi: [genel ("G") biçim belirticisi](#GFormatString).|-123.456 ("G", en-US)-123.456 -><br /><br /> -123.456 ("G", sv-SE)-123,456 -><br /><br /> 123.4546 ("G4" en-US) 123.5 -><br /><br /> 123.4546 ("G4" sv-SE) 123,5 -><br /><br /> -1.234567890e-25 ("G", en-US) -> - 1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -1, 23456789E 25->|  
-|"N" ya da "n"|Sayı|Sonuç: Integral ve ondalık basamaklar, grup ayırıcılar ve isteğe bağlı eksi işaretli ondalık ayırıcı.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sayısal ("N") biçim belirticisi](#NFormatString).|1234.567 ("N" en-US) 1,234.57 -><br /><br /> 1234.567 ("N", ru-RU) 1 234,57 -><br /><br /> 1234 ("N1" en-US) 1,234.0 -><br /><br /> 1234 ("N1" ru-RU) 1 234,0 -><br /><br /> -1234.56 ("N3", en-US)-1,234.560 -><br /><br /> -1 234,560-1234.56 ("N3", ru-RU) ->|  
+|"D" veya "d"|Ondalık|Sonuç: İsteğe bağlı eksi işaretli tamsayı basamaklar.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Minimum basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: En az gereken basamak sayısı.<br /><br /> Daha fazla bilgi: [Decimal("D") biçim belirticisi](#DFormatString).|1234 ("D") 1234 -&GT;<br /><br /> -1234 ("D6") -> -001234|  
+|"E" ya da "e"|Üstsel (bilimsel)|Sonuç: Üstel simgeleme.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: 6.<br /><br /> Daha fazla bilgi: [üstel ("E") biçim belirticisi](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR), 1, 052033e -> + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
+|"F" ya da "f"|Sabit nokta|Sonuç: İsteğe bağlı eksi işaretli tamsayı ve ondalık basamaklar.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sabit noktalı ("F") biçim belirticisi](#FFormatString).|1234.567 ("F" en-US) 1234.57 -><br /><br /> 1234.567 ("F", de-DE) 1234,57 -><br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US)-1234.5600 -><br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
+|"G" ya da "g"|Genel|Sonuç: Daha fazla sabit noktalı ya da bilimsel gösterim sıkıştırın.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Anlamlı basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Sayısal türe bağlıdır.<br /><br /> Daha fazla bilgi: [genel ("G") biçim belirticisi](#GFormatString).|-123.456 ("G", en-US)-123.456 -><br /><br /> -123.456 ("G", sv-SE)-123,456 -><br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4" sv-SE) 123,5 -><br /><br /> -1.234567890e-25 ("G", en-US) -> - 1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -1, 23456789E 25->|  
+|"N" ya da "n"|Sayı|Sonuç: Integral ve ondalık basamaklar, grup ayırıcılar ve isteğe bağlı eksi işaretli ondalık ayırıcı.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sayısal ("N") biçim belirticisi](#NFormatString).|1234.567 ("N" en-US) 1,234.57 -><br /><br /> 1234.567 ("N", ru-RU) 1 234,57 -><br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" ya da "p"|Yüzde|Sonuç: Sayı 100 ile çarpılır ve yüzde simgesi ile görüntülenir.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık Belirleyicisi: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [yüzde ("P") biçim belirticisi](#PFormatString).|1 ("P" en-US) %100,00 -><br /><br /> 1 ("P", fr-FR) 100,00 -> %<br /><br /> -0.39678 ("P1", en-US)-39.7 -> %<br /><br /> -0.39678 ("P1", fr-FR) -> - %39,7|  
-|"R" ya da "r"|Gidiş|Sonuç: Aynı numaraya gidiş dönüş yapabilen bir dize.<br /><br /> Tarafından desteklenen: <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger>.<br /><br /> Not: önerilen <xref:System.Numerics.BigInteger> yalnızca yazın. İçin <xref:System.Double> türlerini kullanan "G17" için; <xref:System.Single> türleri, "G9" kullanın. </br> Duyarlık belirtici: Yoksayıldı.<br /><br /> Daha fazla bilgi: [gidiş ("R") biçim belirticisi](#RFormatString).|123456789.12345678 ("R") 123456789.12345678 -><br /><br /> -1234567890.12345678 ("R")-1234567890.1234567 ->|  
-|"X" ya da "x"|Onaltılık|Sonuç: Bir onaltılık dize.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Sonuç dizesindeki basamak sayısı.<br /><br /> Daha fazla bilgi: [onaltılık ("X") biçim belirticisi](#XFormatString).|255 ("X") FF -><br /><br /> -1 ("x") ff -><br /><br /> 255 ("x4") 00ff -><br /><br /> -1 ("X4") 00FF ->|  
+|"R" ya da "r"|Gidiş|Sonuç: Aynı numaraya gidiş dönüş yapabilen bir dize.<br /><br /> Tarafından desteklenen: <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger>.<br /><br /> Not: önerilen <xref:System.Numerics.BigInteger> yalnızca yazın. İçin <xref:System.Double> türlerini kullanan "G17" için; <xref:System.Single> türleri, "G9" kullanın. </br> Duyarlık belirtici: Yoksayıldı.<br /><br /> Daha fazla bilgi: [gidiş ("R") biçim belirticisi](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R")-1234567890.1234567 -&GT;|  
+|"X" ya da "x"|Onaltılık|Sonuç: Bir onaltılık dize.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Sonuç dizesindeki basamak sayısı.<br /><br /> Daha fazla bilgi: [onaltılık ("X") biçim belirticisi](#XFormatString).|255 ("X") FF -&GT;<br /><br /> -1 ("x") ff -><br /><br /> 255 ("x4") 00ff -><br /><br /> -1 ("X4") -> 00FF|  
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı|Sonuç: Oluşturur bir <xref:System.FormatException> çalışma zamanında.||  
   
 <a name="Using"></a>   
@@ -89,6 +89,8 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Olarak sağlanabilir `formatString` Ara değerli ifade öğeyi Ara değerli bir dize bağımsız değişkeni. Daha fazla bilgi için bkz: [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) C# Başvurusu'nda başlığı veya [Ara değerli dizeler](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) Visual Basic Başvurusu'nda başlığı.  
   
  Aşağıdaki bölümlerde her standart sayısal biçim dizesi hakkında ayrıntılı bilgi sağlanmaktadır.  
   
@@ -191,9 +193,9 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
   
 |Sayısal tür|Varsayılan duyarlık|  
 |------------------|-----------------------|  
-|<xref:System.Byte>veya<xref:System.SByte>|3 basamak|  
-|<xref:System.Int16>veya<xref:System.UInt16>|5 rakamlı|  
-|<xref:System.Int32>veya<xref:System.UInt32>|10 rakam|  
+|<xref:System.Byte> Veya <xref:System.SByte>|3 basamak|  
+|<xref:System.Int16> Veya <xref:System.UInt16>|5 rakamlı|  
+|<xref:System.Int32> Veya <xref:System.UInt32>|10 rakam|  
 |<xref:System.Int64>|19 basamak|  
 |<xref:System.UInt64>|20 basamak|  
 |<xref:System.Numerics.BigInteger>|Sınırsız (aynı ["R"](#RFormatString))|  

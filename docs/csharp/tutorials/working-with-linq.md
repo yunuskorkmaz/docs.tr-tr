@@ -1,6 +1,6 @@
 ---
-title: "LINQ ile çalışma"
-description: "Bu öğretici LINQ sıralarıyla oluşturmak, kullanım için yöntemleri LINQ sorguları yazma ve istekli ve geç değerlendirme arasında ayrım öğretir."
+title: LINQ ile çalışma
+description: Bu öğretici LINQ sıralarıyla oluşturmak, kullanım için yöntemleri LINQ sorguları yazma ve istekli ve geç değerlendirme arasında ayrım öğretir.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -313,7 +313,7 @@ Bir son temizleme anonim bir tür kalmak yerine, kartı temsil etmek için bir t
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Bu tür kullanır *otomatik uygulanan salt okunur özellikler* oluşturucuda ayarlayın ve sonra değiştirilemez. Bu ayrıca yeni kullanır *dize ilişkilendirme* biçim dizesi çıkışı kolaylaştırır özelliği.
+Bu tür kullanır *otomatik uygulanan salt okunur özellikler* oluşturucuda ayarlayın ve sonra değiştirilemez. Bunu yapar kullanımını da [dize ilişkilendirme](../language-reference/tokens/interpolated.md) biçim dizesi çıkışı kolaylaştırır özelliği.
 
 Yeni türünü kullanmak için başlangıç deste üreten sorgu güncelleştirin:
 

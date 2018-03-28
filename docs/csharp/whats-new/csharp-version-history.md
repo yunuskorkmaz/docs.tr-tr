@@ -1,7 +1,7 @@
 ---
-title: "C# - C# Kılavuzu geçmişi"
-description: "Ne dil görünüm erken sürümlerde düşüncelerinizi ve nasıl itibaren gelişmiştir?"
-keywords: "Yenilikler, C#, .NET, .NET Core, C# geçmişi"
+title: C# - C# Kılavuzu geçmişi
+description: Ne dil görünüm erken sürümlerde düşüncelerinizi ve nasıl itibaren gelişmiştir?
+keywords: Yenilikler, C#, .NET, .NET Core, C# geçmişi
 author: erikdietrich
 ms.author: wiwagn
 ms.date: 09/20/2017
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 207c97c5dd7e04f815da61bff7f44393aea86222
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -31,7 +31,7 @@ C# sürüm 1.0 için bugün karşılaştırıldığında özelliklerinin kırpı
 
 Şimdi ilginç almak şeyler başlatın. Bir C# 2005, Visual Studio 2005 ile birlikte yayımlanan 2.0, önemli özelliklerinden bazıları bakalım:
 
-- [Genel türler](../programming-guide/generics/index.md)
+- [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim yöntemler](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Boş değer atanabilir türler](../programming-guide/nullable-types/index.md)
@@ -53,7 +53,7 @@ Dil özelliklerinin tam bot gerçekte C# ile sürüm 3.5 gelecektir rağmen C# 3
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [Lambda ifadesi](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
+- [Lambda expression](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [İfade ağaçları](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Genişletme yöntemleri](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 
@@ -102,7 +102,7 @@ Ancak `async` ve `await` bu sürümü gerçek yıldız şunlardır. 2012'de bu �
 - [Özellik başlatıcıları](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
 - [İfade bodied üyeleri](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
 - [Null yayılması](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [Dize ilişkilendirme](../language-reference/keywords/interpolated-strings.md)
+- [Dize ilişkilendirme](../language-reference/tokens/interpolated.md)
 - [nameof işleci](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [Sözlük Başlatıcı](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
 
@@ -117,7 +117,7 @@ C# sürüm 7.0 son ana sürümle olur. Bu sürüm bazı Açılım ve seyrek eri�
 - [Değişkenleri](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Diziler ve deconstruction](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Desen eşleştirme](./csharp-7.md#pattern-matching)
-- [Yerel İşlevler](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Yerel işlevler](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Genişletilmiş ifade bodied üyeleri](./csharp-7.md#more-expression-bodied-members)
 - [Ref Yereller ve döndürür](./csharp-7.md#ref-locals-and-returns)
 

@@ -1,7 +1,7 @@
 ---
-title: "Özellikler"
-description: "Bilgi C# hakkında değerleri, geç değerlendirme doğrulama için özellikler, Özellikler hesaplanır ve özelliği bildirimleri değiştirildi."
-keywords: .NET, .NET core
+title: Özellikler
+description: Bilgi C# hakkında değerleri, geç değerlendirme doğrulama için özellikler, Özellikler hesaplanır ve özelliği bildirimleri değiştirildi.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Özellikler
 
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-Kullandığı Yukarıdaki örnek *dize ilişkilendirme* biçimlendirilmiş dize tam adı oluşturmak için sözdizimi.
+Kullandığı Yukarıdaki örnek [dize ilişkilendirme](../csharp/language-reference/tokens/interpolated.md) biçimlendirilmiş dize tam adı oluşturmak için özellik.
 
 De kullanabilirsiniz *ifade bodied üyeleri*, hesaplanan oluşturmak için daha kısa bir yol sağlayan `FullName` özelliği:
 
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-*İfade-bodied üyeleri* kullanmak *lambda ifadesi* tek bir ifade içeren bir yöntemi tanımlamak için sözdizimi. Burada, bu ifade kişi nesnesi tam adını döndürür.
+*İfade bodied üyeleri* kullanmak *lambda ifadesi* tek bir ifade içeren bir yöntemi tanımlamak için sözdizimi. Burada, bu ifade kişi nesnesi tam adını döndürür.
 
 ### <a name="lazy-evaluated-properties"></a>Yavaş değerlendirilen Özellikler
 

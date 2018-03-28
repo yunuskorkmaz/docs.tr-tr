@@ -1,6 +1,6 @@
 ---
-title: "Dize ilişkilendirme - C#"
-description: "C# 6'dizesi ilişkilendirme nasıl çalıştığını öğrenin"
+title: Dize ilişkilendirme - C#
+description: C# 6'dizesi ilişkilendirme nasıl çalıştığını öğrenin
 keywords: .NET, .NET core, C#, dize
 author: mgroves
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
 
@@ -122,4 +122,4 @@ Varsayılan olarak, geçerli kültürü Ara değerli bir dize kullanır. Farklı
 
 ## <a name="conclusion"></a>Sonuç 
 
-Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz. Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle bazı uyarılar için daha gelişmiş kullanır. Daha fazla bilgi için bkz: [Ara değerli dizeler](../../csharp//language-reference/keywords/interpolated-strings.md) konu.
+Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz. Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle bazı uyarılar için daha gelişmiş kullanır. Daha fazla bilgi için bkz: [dize ilişkilendirme](../../csharp//language-reference/tokens/interpolated.md) konu.

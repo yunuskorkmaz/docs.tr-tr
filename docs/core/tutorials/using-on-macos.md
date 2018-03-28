@@ -1,6 +1,6 @@
 ---
-title: "MacOS üzerinde .NET Core'u kullanmaya başlama"
-description: "Bu belge, .NET Core Visual Studio kod kullanarak bir çözüm oluşturmak için iş akışı ve adımları sağlar."
+title: MacOS üzerinde .NET Core'u kullanmaya başlama
+description: Bu belge, .NET Core Visual Studio kod kullanarak bir çözüm oluşturmak için iş akışı ve adımları sağlar.
 keywords: .NET, .NET core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core'u kullanmaya başlama
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-`Thing` Sınıfı içeren bir genel yöntem `Get`, iki toplamını numaraları ancak bunu toplamı bir dizeye dönüştürme ve tamsayı seri durumdan desteklemez döndürür. Bu kullanır modern C# özellikleri, bir dizi gibi [ `using static` yönergeleri](../../csharp/language-reference/keywords/using-static.md), [ifade bodied üyeleri](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), ve [Ara değerli dizeler](../../csharp/language-reference/keywords/interpolated-strings.md).
+`Thing` Sınıfı içeren bir genel yöntem `Get`, iki toplamını numaraları ancak bunu toplamı bir dizeye dönüştürme ve tamsayı seri durumdan desteklemez döndürür. Bu kullanır modern C# özellikleri, bir dizi gibi [ `using static` yönergeleri](../../csharp/language-reference/keywords/using-static.md), [ifade bodied üyeleri](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), ve [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md).
 
 Kitaplıkla yapı [ `dotnet build` ](../tools/dotnet-build.md) komutu. Bu üreten bir *library.dll* altında dosya *golden/library/bin/Debug/netstandard1.4*:
 
@@ -220,7 +221,7 @@ Konumunda bir kesme noktası belirleyerek `WriteLine` deyiminde `Main` yöntemi.
 
 Visual Studio Code araç çubuğunda, hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın seçme **Görünüm > hata ayıklama** menü çubuğunda veya klavye kısayolunu kullanarak <kbd>CTRL</kbd> + <kbd> SHIFT</kbd>+<kbd>D</kbd>:
 
-![Visual Studio kod hata ayıklayıcı](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code Debugger](./media/using-on-macos/vscodedebugger.png)
 
 Hata ayıklayıcı altında uygulamayı başlatmak için YÜRÜT düğmesine basın. Uygulama yürütme başlar ve burada durdurur kesme noktasına çalışır. Adımla `Get` yöntemi ve doğru bağımsız değişken geçirilen emin olun. Yanıt 42 olduğunu doğrulayın.
 

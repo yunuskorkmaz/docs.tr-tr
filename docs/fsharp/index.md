@@ -1,6 +1,6 @@
 ---
-title: "F# Kılavuzu"
-description: "Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar."
+title: F# Kılavuzu
+description: 'Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar.'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>F# Kılavuzu
 
@@ -54,11 +54,14 @@ F # kendi merkezinde üretkenlik hakkındadır. F # için araç desteği her yer
 
 [F # .NET Core CLI ile başlayın](get-started/get-started-command-line.md) komut satırı araçları kullanmak istiyorsanız.
 
+[F # ve Xamarin kullanmaya başlama](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) mobil programlama ile F # için.
+
 ## <a name="references"></a>Referanslar
 
 [F # dili başvurusu](language-reference/index.md) resmi, kapsamlı tüm F # dili özellikleri başvurudur. Her makalede söz dizimi açıklanmıştır ve kod örnekleri gösterilir. Belirli makaleleri bulmak için içindekiler tablosunda filtre çubuğunu kullanabilirsiniz.
 
 [F # Core kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) F # Core kitaplık için API Başvurusu değil.
+
 
 ## <a name="additional-guides"></a>Ek kılavuzları
 

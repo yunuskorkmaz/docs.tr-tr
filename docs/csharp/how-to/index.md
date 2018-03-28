@@ -1,17 +1,17 @@
 ---
-title: "Nasıl yapılır makaleleri (C# Kılavuzu)"
-description: "Hızlı ipuçları ve kısa, odaklanmış kod örnekleri topluluğu"
+title: Nasıl yapılır makaleleri (C# Kılavuzu)
+description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri topluluğu
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -54,7 +54,7 @@ Bu makaleler, veri toplulukları ile çalışmanıza yardımcı.
 
 Görüntülemek veya metin işlemek için kullanılan temel bir veri türü dizelerdir. Bu makaleler dizeler yönelik yaygın yöntemleri gösterir.
 
-- [Dizeleri karşılaştırmak](../programming-guide/strings/how-to-compare-strings.md).
+- [Dizeleri karşılaştırmak](compare-strings.md).
 - [Bir dize içeriklerini değiştirme](modify-string-contents.md).
 - [Bir dizeyi bir sayı temsil edip etmediğini belirlemek](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Kullanım `String.Split` dizeleri ayırmak için](parse-strings-using-split.md).

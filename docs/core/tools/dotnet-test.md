@@ -1,18 +1,19 @@
 ---
 title: DotNet test command - .NET Core CLI
-description: "Dotnet test komutu, belirli bir proje ile birim testleri yürütmek için kullanılır."
+description: Dotnet test komutu, belirli bir proje ile birim testleri yürütmek için kullanılır.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6102281c4daf149f31e65ef8360831fe9e0ef4f6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dotnet-test"></a>DotNet test
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet test`-.NET birim testleri çalıştırmak için kullanılan sürücü sınayın.
+`dotnet test` -.NET birim testleri çalıştırmak için kullanılan sürücü sınayın.
 
 ## <a name="synopsis"></a>Özet
 
@@ -32,7 +33,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -42,9 +43,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet test` Komutu, belirli bir proje ile birim testleri çalıştırmak için kullanılır. Birim testleri, bağımlılıkları biriminde konsol uygulaması projeleri test framework (örneğin, mstest'i, NUnit veya xUnit) ve birim testi çerçevesi için dotnet test Çalıştırıcısı ' dir. Bunlar NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılıklar olarak geri yüklenir.
+`dotnet test` Komutu, belirli bir proje ile birim testleri çalıştırmak için kullanılır. `dotnet test` Komutu proje için belirtilen test Çalıştırıcısı konsol uygulaması başlatır. Sınama Çalıştırıcısı birim test çerçevesi (örneğin, mstest'i, NUnit veya xUnit) için tanımlanan testleri yürütür ve başarı veya başarısızlık her sınamanın raporlar. Sınama Çalıştırıcısı ve birim testi kitaplığı NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılıklar olarak geri yüklenir.
 
-Test projeleri da test Çalıştırıcısı belirtmeniz gerekir. Bu sıradan kullanılarak belirtilir `<PackageReference>` aşağıdaki örnek proje dosyasında görülen öğe:
+Test projeleri belirtin sıradan kullanarak test Çalıştırıcısı `<PackageReference>` aşağıdaki örnek proje dosyasında görülen öğe:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
@@ -118,7 +119,7 @@ Tüm geçerli projede bulunan testleri listeler.
 
 Komutun ayrıntı düzeyi ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -184,14 +185,14 @@ Testleri çalıştırmak `test1` proje:
 
 `--filter <EXPRESSION>`
 
-`<Expression>`biçimdedir `<property><operator><value>[|&<Expression>]`.
+`<Expression>` biçimdedir `<property><operator><value>[|&<Expression>]`.
 
-`<property>`bir özniteliği olan `Test Case`. Popüler birim test çerçevelerini tarafından desteklenen özellikler şunlardır:
+`<property>` bir özniteliği olan `Test Case`. Popüler birim test çerçevelerini tarafından desteklenen özellikler şunlardır:
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>Karşılık gelen fullyqualifiedname öğesi</li><li>Ad</li><li>className</li><li>Öncelik</li><li>TestCategory</li></ul> |
-| xunit          | <ul><li>Karşılık gelen fullyqualifiedname öğesi</li><li>Görünen adı</li><li>Özellikleri</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>className</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>Görünen adı</li><li>Özellikleri</li></ul>                                   |
 
 `<operator>` Özellik ve değer arasındaki ilişkiyi açıklar:
 
@@ -201,7 +202,7 @@ Testleri çalıştırmak `test1` proje:
 | `!=`     | Değil tam eşleşme |
 | `~`      | İçerir        |
 
-`<value>`bir dizedir. Tüm arama büyük/küçük harfe duyarsızdır.
+`<value>` bir dizedir. Tüm arama büyük/küçük harfe duyarsızdır.
 
 Bir ifade olmadan bir `<operator>` otomatik olarak kabul bir `contains` üzerinde `FullyQualifiedName` özelliği (örneğin, `dotnet test --filter xyz` aynı `dotnet test --filter FullyQualifiedName~xyz`).
 

@@ -1,6 +1,6 @@
 ---
-title: "Sözdizimi analiz (Roslyn API) ile çalışmaya başlama"
-description: "Çapraz geçiş yapma, sorgulama ve sözdizimi ağaçları taramasını giriş."
+title: Sözdizimi analiz (Roslyn API) ile çalışmaya başlama
+description: Çapraz geçiş yapma, sorgulama ve sözdizimi ağaçları taramasını giriş.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Sözdizimi Analizi ile çalışmaya başlama
 
@@ -43,6 +43,10 @@ Sözdizimi API derleme birimini temsil eden kök ile bir ağaç yapısı oluştu
 
 Bu kısa bir açıklama tür bilgileri sözdizimi API'si kullanılarak erişilebilir genel bir bakış sağlar. Sözdizimi API tanıdık kodu tanımlayan bir resmi API yapıları fazlasını C# ' dan bilmeniz doğrudur. Özelliklerinin kodu satır sonları, boşluk ve girintileme dahil olmak üzere nasıl biçimlendirilmiş hakkında bilgi içerir. Bu bilgileri kullanarak, yazılı kod ve İnsan programlayıcıların okuma veya Derleyici tam olarak gösterebilir. Bu yapı kullanarak iç anlamlı bir düzeyde kaynak kodu ile etkileşim sağlar. Artık metin dizelerini, ancak bir C# programı yapısını temsil eden veri değil.
 
+Başlamak için yüklemek gerekecektir **.NET derleyici Platform SDK**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Sözdizimi ağacı anlama
 
 C# kod yapısını herhangi analize sözdizimi API kullanın. **Sözdizimi API** ayrıştırıcıları, sözdizimi ağaçları ve analiz etme ve sözdizimi ağaçları oluşturmak için utilities kullanıma sunar. Nasıl belirli söz dizimi öğeleri için kod arama veya bir programın kodunu okuma değil.
@@ -67,9 +71,6 @@ Herhangi bir şey sözdizimi API'lerini kullanarak bir kod dosyasında bulabilir
 ## <a name="traversing-trees"></a>Ağaçlarında geçiş yapma
 
 İki yolla bir sözdizimi ağacında düğümlerin inceleyebilirsiniz. Her düğüm incelemek için ağacı gezme veya belirli öğeleri veya düğümler için sorgulayabilirsiniz.
-
-> [!IMPORTANT]
-> Aşağıdaki örnekler gerektiren **.NET derleyici Platform SDK** Visual Studio 2017 bir parçası olarak yüklenir. Altında listelenen son isteğe bağlı bileşen olarak .NET derleyici SDK bulabilirsiniz **Visual Studio uzantısı geliştirme** iş yükü. Şablonlar bu bileşeni yüklü değil.
 
 ### <a name="manual-traversal"></a>El ile geçişi
 

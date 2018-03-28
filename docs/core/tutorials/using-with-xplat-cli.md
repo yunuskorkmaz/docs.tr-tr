@@ -1,7 +1,7 @@
 ---
-title: "CLI kullanarak .NET Core'u kullanmaya başlama"
-description: "Windows, Linux veya .NET Core komut satırı arabirimi (CLI) kullanarak macOS .NET Core kullanmaya başlamak nasıl gösteren adım adım öğretici."
-keywords: .NET core, CLI
+title: CLI kullanarak .NET Core'u kullanmaya başlama
+description: Windows, Linux veya .NET Core komut satırı arabirimi (CLI) kullanarak macOS .NET Core kullanmaya başlamak nasıl gösteren adım adım öğretici.
+keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.workload: dotnetcore
-ms.openlocfilehash: 544274783e8a77f55c8ec7e1da0069bf8bdf7b0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS komut satırını kullanarak .NET Çekirdeğinde ile çalışmaya başlama
 
@@ -44,7 +45,7 @@ $ dotnet run
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md)güncel bir oluşturur `Hello.csproj` bir konsol uygulaması oluşturmak için gereken bağımlılıkları olan proje dosyası.  Ayrıca oluşturur bir `Program.cs`, uygulama için giriş noktası içeren temel bir dosya.
+   [`dotnet new`](../tools/dotnet-new.md) güncel bir oluşturur `Hello.csproj` bir konsol uygulaması oluşturmak için gereken bağımlılıkları olan proje dosyası.  Ayrıca oluşturur bir `Program.cs`, uygulama için giriş noktası içeren temel bir dosya.
    
    `Hello.csproj`:
 
@@ -53,7 +54,7 @@ $ dotnet run
    Proje dosyası bağımlılıkları geri yükleyin ve programı oluşturmak için gerekli olan her şeyi belirtir.
 
    * `OutputType` Etiketi bir yürütülebilir dosya, diğer bir deyişle bir konsol uygulaması oluşturduğunuz belirtir.
-   * `TargetFramework` Etiketi hedefleme hangi .NET uygulaması belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeveyi belirtin ve tüm yapı tek bir işlem de. Bu öğreticide, biz yalnızca .NET çekirdeği 1.0 için yapı takılıyor.
+   * `TargetFramework` Etiketi hedefleme hangi .NET uygulaması belirtir. Gelişmiş bir senaryo da birden çok hedef çerçeveyi belirtin ve tüm yapı tek bir işlem de. Bu öğreticide, biz yalnızca .NET çekirdeği 1.0 için yapı takılıyor.
 
    `Program.cs`:
 
@@ -67,13 +68,13 @@ $ dotnet run
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md)içine çağırır [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında belirtilen bağımlılıkları indirir (veya bunları makinenizde önbellekten alan) ve Yazar *obj/project.assets.json* dosya.  *Project.assets.json* derlemek ve çalıştırmak dosya gereklidir.
+   [`dotnet restore`](../tools/dotnet-restore.md) içine çağırır [NuGet](https://www.nuget.org/) (bağımlılıkları ağacının geri yüklemek için Paket Yöneticisi .NET). NuGet çözümler *Hello.csproj* dosya, dosyasında belirtilen bağımlılıkları indirir (veya bunları makinenizde önbellekten alan) ve Yazar *obj/project.assets.json* dosya.  *Project.assets.json* derlemek ve çalıştırmak dosya gereklidir.
    
    *Project.assets.json* NuGet bağımlılıklar ve bir uygulamayı açıklayan diğer bilgi grafiği kalıcı ve eksiksiz bir kümesini bir dosyadır.  Bu dosyayı gibi diğer araçları tarafından okuma [ `dotnet build` ](../tools/dotnet-build.md) ve [ `dotnet run` ](../tools/dotnet-run.md), bunları işleme NuGet bağımlılıkları doğru kümesiyle kaynak kodu etkinleştirme ve bağlama çözümler.
    
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md)çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri yerleşik yapı ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
+   [`dotnet run`](../tools/dotnet-run.md) çağrıları [ `dotnet build` ](../tools/dotnet-build.md) hedefleri yerleşik yapı ve çağrıları emin olmak için `dotnet <assembly.dll>` hedef uygulamayı çalıştırın.
    
     ```
     $ dotnet run

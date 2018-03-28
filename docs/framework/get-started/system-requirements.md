@@ -1,6 +1,6 @@
 ---
 title: .NET framework sistem gereksinimleri
-description: "Donanım, işletim sistemi ve .NET Framework 4.5 ve sonraki sürümlerini yüklemek için yazılım gereksinimleri ne olduğunu bulabilirsiniz."
+description: Donanım, işletim sistemi ve .NET Framework 4.5 ve sonraki sürümlerini yüklemek için yazılım gereksinimleri ne olduğunu bulabilirsiniz.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>.NET framework sistem gereksinimleri
 
@@ -35,13 +35,7 @@ Bu konudaki tablolar donanım, işletim sistemi ve yazılım gereksinimleri aşa
 
 .NET Framework uygulamaları geliştirmek etkinleştirmeniz geliştirme ortamlarını ayrı dizi gereksinim mevcuttur.
 
-> [!IMPORTANT]
-> .NET Framework 4 yerinde güncelleştirmelerinin olduğundan, tüm .NET Framework sürümleri, bu nedenle yalnızca bir tek 4.x sürümü bir sistemde mevcut olabilir.
-> Ayrıca, .NET Framework'ün belirli sürümlerini bazı Windows işletim sistemi sürümlerinde önceden yüklenmiş. Bunun anlamı:
->
-> * Sonraki bir sürümü bilgisayarda zaten yüklü ise, bir önceki 4.x sürümünü yükleyemezsiniz.
-> * İşletim sistemi ile belirli bir .NET sürüm önceden yüklenmiş geliyorsa, aynı makinede bir önceki 4.x sürümünü yükleyemezsiniz.
-> * Sonraki bir sürümünü yüklerseniz, önce önceki sürümü kaldırmanız gerekmez.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 İndirme bilgileri ve bağlantılar için bkz: [geliştiriciler için .NET Framework'ü yüklemek](../../../docs/framework/install/guide-for-developers.md).
 

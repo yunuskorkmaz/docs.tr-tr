@@ -1,7 +1,7 @@
 ---
-title: ".NET Core csproj biçimine eklemeler"
-description: "Varolan ve .NET Core csproj dosyaları arasındaki farklar hakkında bilgi edinin"
-keywords: "başvuru, csproj, .NET Core"
+title: .NET Core csproj biçimine eklemeler
+description: Varolan ve .NET Core csproj dosyaları arasındaki farklar hakkında bilgi edinin
+keywords: başvuru, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -9,19 +9,20 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.workload: dotnetcore
-ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
 Bu belge için proje dosyalarını taşımak bir parçası olarak eklenen değişiklikleri özetlenmektedir *project.json* için *csproj* ve [MSBuild](https://github.com/Microsoft/MSBuild). Genel proje dosyasının söz dizimi ve başvuru hakkında daha fazla bilgi için bkz: [MSBuild proje dosyası](/visualstudio/msbuild/msbuild-project-file-schema-reference) belgeleri.  
 
 ## <a name="implicit-package-references"></a>Örtük paket başvuruları
-Metapackages örtük olarak başvuru belirtilen hedef framework(s) göre `<TargetFramework>` veya `<TargetFrameworks>` proje dosyanızın özelliği. `<TargetFrameworks>`yoksayılır `<TargetFramework>` olduğu belirtildiğinde, sipariş bağımsızdır.
+Metapackages örtük olarak başvuru belirtilen hedef framework(s) göre `<TargetFramework>` veya `<TargetFrameworks>` proje dosyanızın özelliği. `<TargetFrameworks>` yoksayılır `<TargetFramework>` olduğu belirtildiğinde, sipariş bağımsızdır.
 
 ```xml
  <PropertyGroup>
@@ -72,7 +73,7 @@ Bu özelliği ayarlamak `false` örtük ekleme geçersiz kılar ve davranışı 
 
 Bu değişiklik ana değiştirmez, diğer mekanizması içerir. Örneğin, uygulamanız ile yayımlanan için bazı dosyaları belirlemek istiyorsanız, ancak içinde bilinen mekanizmaları kullanmaya devam edebilirsiniz *csproj* söz konusu (örneğin, `<Content>` öğesi).
 
-`<EnableDefaultCompileItems>`yalnızca devre dışı bırakır `Compile` globs örtük gibi diğer globs etkilemez ancak `None` için de geçerlidir glob \*.cs öğeleri. Nedeniyle **Çözüm Gezgini** Göster devam edecek \*.cs öğeleri olarak eklenen projenin bir parçası olarak `None` öğeleri. Benzer şekilde, kullandığınız `<EnableDefaultNoneItems>` örtük devre dışı bırakmak için `None` glob.
+`<EnableDefaultCompileItems>` yalnızca devre dışı bırakır `Compile` globs örtük gibi diğer globs etkilemez ancak `None` için de geçerlidir glob \*.cs öğeleri. Nedeniyle **Çözüm Gezgini** Göster devam edecek \*.cs öğeleri olarak eklenen projenin bir parçası olarak `None` öğeleri. Benzer şekilde, kullandığınız `<EnableDefaultNoneItems>` örtük devre dışı bırakmak için `None` glob.
 
 Devre dışı bırakmak için **tüm örtük globs**, ayarlayabileceğiniz `<EnableDefaultItems>` özelliğine `false` aşağıdaki örnekteki gibi:
 ```xml
@@ -97,10 +98,10 @@ Projenin birden çok hedef çerçeveyi varsa, komutun sonuçlarını yalnızca b
 ## <a name="additions"></a>Eklemeler
 
 ### <a name="sdk-attribute"></a>SDK özniteliği 
-`<Project>` Öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk`SDK olacağı belirtir projesi tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kodu oluşturabilir. İki ana SDK'ları ile .NET Core araçları gönderdiğimiz:
+`<Project>` Öğesinin *.csproj* dosya adlı yeni bir öznitelik sahip `Sdk`. `Sdk` SDK olacağı belirtir projesi tarafından kullanılan. SDK'sı olarak [katmanlama belge](cli-msbuild-architecture.md) açıklar, MSBuild kümesidir [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) .NET Core kodu oluşturabilir. İki ana SDK'ları ile .NET Core araçları gönderdiğimiz:
 
-1. .NET Core SDK kimliği`Microsoft.NET.Sdk`
-2. .NET Core web SDK kimliği`Microsoft.NET.Sdk.Web`
+1. .NET Core SDK kimliği `Microsoft.NET.Sdk`
+2. .NET Core web SDK kimliği `Microsoft.NET.Sdk.Web`
 
 Olmasına gerek `Sdk` özniteliği bu kimlikleri birine üzerinde `<Project>` .NET Core araçlarını kullanın ve kodunuzu oluşturmak için öğesi. 
 
@@ -112,41 +113,41 @@ Olmasına gerek `Sdk` özniteliği bu kimlikleri birine üzerinde `<Project>` .N
 ```
 
 #### <a name="version"></a>Sürüm
-`Version`geri yüklemek için paketin sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterime eşdeğerdir `[1.2.3]` tam 1.2.3 için paketin sürümü.
+`Version` geri yüklemek için paketin sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterime eşdeğerdir `[1.2.3]` tam 1.2.3 için paketin sürümü.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets ve PrivateAssets
-`IncludeAssets`özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` kullanılması. 
+`IncludeAssets` özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` kullanılması. 
 
-`ExcludeAssets`özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` değil kullanılması.
+`ExcludeAssets` özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` değil kullanılması.
 
-`PrivateAssets`özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` bunlar sonraki projeye akış değil ancak bu kullanılması. 
+`PrivateAssets` özniteliği belirtir. pakete ait varlıklar tarafından belirtilen `<PackageReference>` bunlar sonraki projeye akış değil ancak bu kullanılması. 
 
 > [!NOTE]
-> `PrivateAssets`eşdeğer olan *project.json*/*xproj* `SuppressParent` öğesi.
+> `PrivateAssets` eşdeğer olan *project.json*/*xproj* `SuppressParent` öğesi.
 
 Bu öznitelik, bir veya daha fazla aşağıdaki öğeleri içerebilir:
 
-* `Compile`– lib klasörünün içeriğini karşı derlemek kullanılabilir.
-* `Runtime`– çalışma zamanı klasörünün içeriğini dağıtılır.
-* `ContentFiles`– içeriği *Content dosyaları* klasörü kullanılır.
-* `Build`– özellik/hedefleri oluşturma klasöründe kullanılır.
-* `Native`– içeriği yerel varlıklar çalışma zamanı için çıkış klasörüne kopyalanır.
-* `Analyzers`– Çözümleyiciler kullanılır.
+* `Compile` – lib klasörünün içeriğini karşı derlemek kullanılabilir.
+* `Runtime` – çalışma zamanı klasörünün içeriğini dağıtılır.
+* `ContentFiles` – içeriği *Content dosyaları* klasörü kullanılır.
+* `Build` – özellik/hedefleri oluşturma klasöründe kullanılır.
+* `Native` – içeriği yerel varlıklar çalışma zamanı için çıkış klasörüne kopyalanır.
+* `Analyzers` – Çözümleyiciler kullanılır.
 
 Alternatif olarak, öznitelik içerebilir:
 
-* `None`– varlıklar hiçbiri kullanılır.
-* `All`– Tüm varlıklar kullanılır.
+* `None` – varlıklar hiçbiri kullanılır.
+* `All` – Tüm varlıklar kullanılır.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
-`<DotNetCliToolReference>`öğe unsuru, proje bağlamında geri yüklemek için kullanıcının istediği CLI aracı belirtir. Bir yerini alır `tools` düğümünde *project.json*. 
+`<DotNetCliToolReference>` öğe unsuru, proje bağlamında geri yüklemek için kullanıcının istediği CLI aracı belirtir. Bir yerini alır `tools` düğümünde *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Sürüm
-`Version`geri yüklemek için paketin sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterime eşdeğerdir `[1.2.3]` tam 1.2.3 için paketin sürümü.
+`Version` geri yüklemek için paketin sürümünü belirtir. Öznitelik kurallarına uyar [NuGet sürüm](/nuget/create-packages/dependency-versions#version-ranges) düzeni. Bir tam sürüm eşleşiyorsa varsayılan davranıştır. Örneğin, belirten `Version="1.2.3"` NuGet gösterime eşdeğerdir `[1.2.3]` tam 1.2.3 için paketin sürümü.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 `<RuntimeIdentifiers>` Öğesi noktalı virgülle ayrılmış bir listesini belirtmenize olanak sağlar [çalışma zamanı tanımlayıcıları (RID)](../rid-catalog.md) projesi için. RID müstakil dağıtımları yayımlamayı etkinleştirin. 
@@ -254,7 +255,7 @@ Bu Boole değerleri belirtir yapı çıktı derlemeler halinde dolu olup olmadı
 Bu Boole değeri tüm öğeler, bir tür sahip olup olmadığını belirtir `Content` elde edilen paketinde otomatik olarak eklenecektir. Varsayılan, `true` değeridir. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
-Klasörü çıktı derlemelerinin nereye yerleştireceğinizi belirtir... Çıktı derlemelerinin (ve diğer çıktı dosyaları) ilgili framework klasörlerine kopyalanır.
+Çıktı derlemelerinin nereye yerleştireceğinizi klasörü belirtir. Çıktı derlemelerinin (ve diğer çıktı dosyaları) ilgili framework klasörlerine kopyalanır.
 
 ### <a name="contenttargetfolders"></a>ContentTargetFolders
 Bu özellik, tüm içerik dosyalarının nerede tamamlamalıdır, varsayılan konumu belirtir `PackagePath` kendileri için belirtilmemiş. Varsayılan değer "içerik; Content dosyaları".

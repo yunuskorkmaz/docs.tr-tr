@@ -1,6 +1,6 @@
 ---
-title: "Koleksiyonları Öğreticisi - C# yerel quickstarts"
-description: "C# bu öğreticideki liste koleksiyonu inceleyerek öğrenin."
+title: Koleksiyonları Öğreticisi - C# yerel quickstarts
+description: C# bu öğreticideki liste koleksiyonu inceleyerek öğrenin.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C# hızlı başlangıç: koleksiyonları
 
@@ -54,7 +54,7 @@ Değiştir `<name>` adıyla. Kaydet **Program.cs**. Tür `dotnet run` , konsol p
 
 Yalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü önceki quickstarts içinde öğrendiğinize kavramları kullanıyorsunuz.
 
-Adlarını görüntülemek için kod kullanır **Ara değerli dizeler**.  Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.
+Adlarını görüntülemek için kod kullanır [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği.  Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.
 
 Şimdi keşfetme tutun.
 

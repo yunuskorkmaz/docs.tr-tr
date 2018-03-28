@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic for yenilikler nelerdir?
 
@@ -154,7 +154,7 @@ Daha fazla bilgi için bkz: [başvuru dönüş değerleri](../programming-guide/
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Bir dize sabit kodlama olmadan bir hata iletisi kullanmak için bir tür veya üye nitelenmemiş dize adını elde edebilirsiniz.  Bu, kodunuzu yeniden düzenleme, doğru kalmasını sağlar.  Bu özellik ayrıca model-view-controller MVC bağlantıları takma ve özellik değişti olayları tetikleme için yararlıdır.  
   
-[Dize İlişkilendirme](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Dize İlişkilendirme](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Dize ilişkilendirme ifadeler dizeleri oluşturmak için kullanabilirsiniz.  Ara değerli dize ifadesi ifadeleri içeren bir şablon dize gibi görünüyor.  Ara değerli bir dize bağımsız değişkenleri göre anlamak daha kolay [bileşik biçimlendirme](../../standard/base-types/composite-format.md).  
   
 [Null-conditional üye erişimi ve dizin oluşturma](../../csharp/language-reference/operators/null-conditional-operators.md)  

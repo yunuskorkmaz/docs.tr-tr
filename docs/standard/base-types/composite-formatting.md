@@ -1,12 +1,12 @@
 ---
-title: "Bileşik Biçimlendirme"
-ms.custom: 
+title: Bileşik Biçimlendirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
-.NET Framework içindeki bileşik biçimlendirme özelliği, giriş olarak bir nesne listesi ve bir bileşik biçimlendirme dizesi alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
+.NET bileşik biçimlendirme özelliği nesneleri ve bir bileşik biçim dizesi listesini girdi olarak alır. Bir bileşik biçimlendirme dizesi, sabit metinle karışık bir şekilde listedeki nesnelere karşılık gelen, biçim öğeleri adı verilen dizinli yer tutuculardan oluşur. Biçimlendirme işlemi sonuç olarak, orijinal sabit metin ve listedeki nesnelerin dize temsillerinin karışımından oluşan bir dize oluşturur.  
   
  Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından desteklenir:  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="format-item-syntax"></a>Biçim Öğesi Sözdizimi  
  Her biçim öğesi aşağıdaki biçimi alır ve aşağıdaki bileşenlerden oluşur:  
   
- `{`*dizin*[`,`*hizalama*] [`:`*formatString*]`}`  
+ `{` *Dizin*[`,`*hizalama*] [`:`*formatString*]`}`  
   
  Eşleşen ayraçlar ("{" ve "}") gereklidir.  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/23/2017
   
  Geçerli gün Perşembe May içinde olduğu varsayılarak, önceki örnekte her iki dize değeri `Thursday May` ABD İngilizce kültür.  
   
- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>ile aynı işlevselliği sunar <xref:System.String.Format%2A?displayProperty=nameWithType>. İki yöntem arasındaki tek fark <xref:System.String.Format%2A?displayProperty=nameWithType> sonuç bir dize olarak döndürür sırada <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> çıkış akışı sonucu ilişkili yazma <xref:System.Console> nesnesi. Aşağıdaki örnek kullanır <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> değerini biçimlendirmek için yöntemi `MyInt` para birimi değeri.  
+ <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ile aynı işlevselliği sunar <xref:System.String.Format%2A?displayProperty=nameWithType>. İki yöntem arasındaki tek fark <xref:System.String.Format%2A?displayProperty=nameWithType> sonuç bir dize olarak döndürür sırada <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> çıkış akışı sonucu ilişkili yazma <xref:System.Console> nesnesi. Aşağıdaki örnek kullanır <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> değerini biçimlendirmek için yöntemi `MyInt` para birimi değeri.  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- Aşağıdaki örnek biçimlendirmede hizalama kullanımını gösterir. Biçimlendirilmiş bağımsız değişkenler, dikey çubuk karakterleri (&#124; arasında) sonuçta elde edilen hizalama vurgulamak için yerleştirilir.  
+ Aşağıdaki örnek biçimlendirmede hizalama kullanımını gösterir. Biçimlendirilmiş bağımsız değişkenleri dikey çubuk karakter arasında yerleştirilir (&#124;) sonuçta elde edilen hizalama vurgulayın.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
@@ -169,6 +169,8 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Dize ilişkilendirme (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [Dize ilişkilendirme (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
  [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

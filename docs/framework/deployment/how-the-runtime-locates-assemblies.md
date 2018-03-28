@@ -1,12 +1,13 @@
 ---
-title: "Çalışma Zamanının Derlemelerin Konumunu Bulması"
-ms.custom: 
+title: Çalışma Zamanının Derlemelerin Konumunu Bulması
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanız başarıyla dağıtmak için ortak dil çalışma zamanı nasıl bulur ve uygulamayı oluşturan derlemeler bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı, uygulama ile oluşturulmuş bir derlemenin tam sürümü ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarları tarafından geçersiz kılınabilir.  
@@ -129,7 +131,7 @@ ms.lasthandoff: 12/22/2017
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0  
 ```  
   
- `compatkey.dat`Güçlü ad anahtar dosyası değil. Bu komut, genel derleme önbelleğinde yerleştirebilirsiniz tanımlayıcı adlı bir derleme oluşturur.  
+ `compatkey.dat` Güçlü ad anahtar dosyası değil. Bu komut, genel derleme önbelleğinde yerleştirebilirsiniz tanımlayıcı adlı bir derleme oluşturur.  
   
 > [!NOTE]
 >  Yayımcı ilkesi paylaşılan bir bileşen kullanan tüm uygulamaları etkiler.  
@@ -139,7 +141,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Yayımcı ilke dosyasını paylaşılan bir bileşen güncelleştirilir ve bu bileşen kullanan tüm uygulamalar tarafından çekilmesi gereken paylaşılan bileşen yeni sürümü olduğunda kullanılır. Uygulama yapılandırma dosyası güvenli mod zorlar sürece Yayımcı ilkesi dosyasındaki ayarları uygulama yapılandırma dosyasında ayarları geçersiz kılar.  
   
 #### <a name="safe-mode"></a>Güvenli mod  
- Yayımcı ilke dosyaları genellikle açıkça bir hizmet paketi veya program güncelleştirmesi bir parçası olarak yüklenir. Yükseltilen paylaşılan bileşeni ile herhangi bir sorun varsa, güvenli mod ile Yayımcı ilkesi dosyasında geçersiz kılmaları yoksayabilirsiniz. Güvenli mod belirlenir  **\<publisherPolicy uygulamak = "yes**&#124; **Hayır "/ >** öğesi, yalnızca uygulama yapılandırma dosyasında bulunur. Yayımcı ilkesi yapılandırma bilgilerini bağlama işleminden kaldırılması gerekip gerekmediğini belirtir.  
+ Yayımcı ilke dosyaları genellikle açıkça bir hizmet paketi veya program güncelleştirmesi bir parçası olarak yüklenir. Yükseltilen paylaşılan bileşeni ile herhangi bir sorun varsa, güvenli mod ile Yayımcı ilkesi dosyasında geçersiz kılmaları yoksayabilirsiniz. Güvenli mod belirlenir  **\<publisherPolicy uygulamak = "Evet**&#124;**yok" / >** öğesi, yalnızca uygulama yapılandırma dosyasında bulunur. Yayımcı ilkesi yapılandırma bilgilerini bağlama işleminden kaldırılması gerekip gerekmediğini belirtir.  
   
  Güvenli mod, tüm uygulama veya seçili derlemeler için ayarlanabilir. Diğer bir deyişle, uygulamayı oluşturan tüm derlemeler için ilke devre dışı bırakma ya da bazı derlemeleri ancak diğer açın. Bir uygulamayı oluşturan derlemeler seçerek Yayımcı ilkesi uygulamak için ayarlanmış  **\<publisherPolicy uygulamak\=hiçbir / >** ve istediğiniz kullanarak etkilenecek hangi derlemelerin belirtin \< **dependentAssembly**> öğesi. Uygulamayı oluşturan tüm derlemelerde Yayımcı ilkesi uygulamak için ayarlanmış  **\<publisherPolicy uygulamak\=hiçbir / >** bağımlı derlemenin öğe ile. Yapılandırması hakkında daha fazla bilgi için bkz: [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md).  
   
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Adı, başvurulan derlemeyi adıdır.  
   
--   `privatePath` Özniteliği [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) kök konumu dizinler kullanıcı tanımlı listesi öğesi. Bu konum uygulama yapılandırma dosyasında ve yönetilen kod kullanarak belirtilen <xref:System.AppDomain.AppendPrivatePath%2A> özelliği için uygulama etki alanı. Yönetilen kod, yönetilen kod belirtildiğinde `privatePath` ilk araştırılan, uygulama yapılandırma dosyasında belirtilen yol arkasından.  
+-   `privatePath` Özniteliği [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) kök konumu dizinler kullanıcı tanımlı listesi öğesi. Bu konum uygulama yapılandırma dosyasında ve yönetilen kod kullanarak belirtilen <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> özelliği için uygulama etki alanı. Yönetilen kod, yönetilen kod belirtildiğinde `privatePath` ilk araştırılan, uygulama yapılandırma dosyasında belirtilen yol arkasından.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Uygulama temel ve kültür dizinleri yoklama  
  Çalışma zamanı her zaman bir URL veya uygulamanızın kök dizininde bir bilgisayarda olabilir uygulamanın Base yoklama başlar. Başvurulan derlemeyi uygulama temel bulunamadı ve kültür bilgilerini sağlanan, çalışma zamanı derleme adı ile herhangi bir alt dizine arar. Araştırılan dizinleri şunları içerir:  
@@ -232,13 +234,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Çalışma zamanı aşağıdaki URL'ler yoklamaları:  
   
- http://www.Code.microsoft.com/de/myAssembly.dll  
+ http://www.code.microsoft.com/de/myAssembly.dll  
   
- http://www.Code.microsoft.com/de/myAssembly/myAssembly.dll  
+ http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
   
- http://www.Code.microsoft.com/bin/de/myAssembly.dll  
+ http://www.code.microsoft.com/bin/de/myAssembly.dll  
   
- http://www.Code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>Aynı ada sahip birden çok derleme  
  Aşağıdaki örnek, aynı ada sahip birden çok derleme yapılandırma gösterilmektedir.  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Araştırılan diğer konumları  
  Derleme konumu, geçerli bağlama bağlamını kullanarak da belirlenebilir. Bu en sık oluşur, <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi kullanılır ve COM birlikte çalışma senaryolarda. Bir derlemeyi kullanıyorsa <xref:System.Reflection.Assembly.LoadFrom%2A> başka bir derleme başvurusu yöntemi çağırma derlemenin konumunu başvurulan derlemeyi nerede bulacağını hakkında ipucu olarak kabul edilir. Bir eşleşme bulunursa, o derleme yüklenir. Eşleşme bulunamazsa, çalışma zamanı kendi arama semantiği ile devam eder ve derleme sağlamak için Windows Installer sorgular. Derleme bağlama isteği ile eşleşen sağlanan ise, bir özel durum oluşur. Bu özel durum bir <xref:System.TypeLoadException> türü başvuruldu, yönetilen kodda veya <xref:System.IO.FileNotFoundException> yüklenen bir derleme bulunamazsa.  
   
- Örneğin, Assembly2 Assembly1 başvuruyor ve Assembly1 http://www.code.microsoft.com/utils indirilen, bu konuma Assembly2.dll nerede bulacağını hakkında ipucu olarak değerlendirilir. Çalışma zamanı sonra http://www.code.microsoft.com/utils/Assembly2.dll ve http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll derlemede araştırmaları. Çalışma zamanı Assembly2 da bu konumların bulunmazsa, Windows Installer sorgular.  
+ Assembly1 Assembly2 ve Assembly1 başvuruyorsa Örneğin, gelen indirilen http://www.code.microsoft.com/utils, konumu Assembly2.dll nerede bulacağını hakkında ipucu olarak değerlendirilir. Çalışma zamanı sonra derlemede araştırmalar http://www.code.microsoft.com/utils/Assembly2.dll ve http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Çalışma zamanı Assembly2 da bu konumların bulunmazsa, Windows Installer sorgular.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

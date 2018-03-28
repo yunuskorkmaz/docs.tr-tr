@@ -1,6 +1,6 @@
 ---
-title: "Anlam Analizi ile çalışmaya başlama"
-description: "Bu öğreticide, .NET derleme SDK'sını kullanarak anlamsal Analizi ile çalışma genel bir bakış sağlar."
+title: Anlam Analizi ile çalışmaya başlama
+description: Bu öğreticide, .NET derleme SDK'sını kullanarak anlamsal Analizi ile çalışma genel bir bakış sağlar.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlam Analizi ile çalışmaya başlama
 
 Bu öğretici sözdizimi API ile tanıdık varsayar. [Sözdizimi Analizi ile çalışmaya başlama](syntax-analysis.md) makale yeterli giriş sağlar.
 
 Bu öğreticide, keşfedin **simgesi** ve **bağlama API'leri**. Bu API'ları hakkında bilgi sağlamak _anlamsal anlamı_ bir programın. İsteyin ve programınızdaki herhangi bir simge ile temsil edilen türleri hakkında sorularını olanak sağlar.
+
+Yüklemeniz gerekir **.NET derleyici Platform SDK**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Anlama derlemeleri ve simgeler
 
@@ -31,9 +35,6 @@ Gibi <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 ## <a name="querying-symbols"></a>Simgeler sorgulama
 
 Bu öğreticide, "Hello World" programı yeniden bakın. Bu süre, programın ne bu simgeleri göstermek türlerini anlamak için sembolleri sorgu. Bir ad alanındaki türler için sorgular ve bir türünde kullanılabilen yöntemler bulmayı öğrenin.
-
-> [!IMPORTANT]
-> Aşağıdaki örnekler gerektiren **.NET derleyici SDK** Visual Studio 2017 bir parçası olarak yüklenir. Altında listelenen son isteğe bağlı bileşen olarak .NET derleyici SDK bulabilirsiniz **Visual Studio uzantısı geliştirme** iş yükü. Şablonlar bu bileşeni yüklü değil.
 
 Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

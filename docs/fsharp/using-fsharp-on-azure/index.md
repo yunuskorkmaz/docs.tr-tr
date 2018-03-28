@@ -1,6 +1,6 @@
 ---
-title: "F # Azure üzerinde kullanma"
-description: "F # ile Azure hizmetlerini kullanmaya Kılavuzu"
+title: 'F # Azure üzerinde kullanma'
+description: 'F # ile Azure hizmetlerini kullanmaya Kılavuzu'
 keywords: "Azure, bulut, visual f #, f #'ta, .NET, .NET Core işlevsel programlama"
 author: sylvanc
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>F # Azure üzerinde kullanma
 
@@ -69,14 +69,14 @@ Azure depolama, Azure işlevleri ile birlikte açık API çağrıları yerine bi
 * [F # Mobius kullanarak uygulama Spark uygulamaları](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
 * [Örnek F # Spark Mobius kullanan uygulamalar](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>Azure DocumentDB F # ile kullanma #
+## <a name="using-azure-cosmos-db-with-f"></a>Azure Cosmos DB F # ile kullanma #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) yüksek oranda kullanılabilir, genel olarak dağıtılmış uygulamalar için bir NoSQL hizmetidir.
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db) yüksek oranda kullanılabilir, genel olarak dağıtılmış uygulamalar için bir NoSQL hizmetidir.
 
-Azure DocumentDB F # ile iki şekilde kullanılabilir:
+Azure Cosmos DB F # ile iki şekilde kullanılabilir:
 
-1. F # Azure işlevleri oluşturulmasını aracılığıyla hangi tepki veya DocumentDB koleksiyonlarda yapılan değişiklikler neden olabilir. Bkz: [Azure DocumentDB için Tetikleyiciler](/azure/azure-functions/functions-bindings-documentdb), veya
-2. Kullanarak [için Azure .NET SDK'sı](/azure/documentdb/documentdb-get-started-quickstart). Bu örnekler C# dilinde olduğunu unutmayın.
+1. F # Azure işlevleri oluşturulmasını aracılığıyla hangi tepki veya Azure Cosmos DB koleksiyonlarda yapılan değişiklikler neden olabilir. Bkz: [Azure işlevleri için Azure Cosmos DB bağlamaları](/azure/azure-functions/functions-bindings-cosmosdb), veya
+2. Kullanarak [SQL API için Azure Cosmos DB .NET SDK](/azure/cosmos-db/sql-api-sdk-dotnet). İlgili C# ' ta örneklerdir.
 
 ## <a name="using-azure-event-hubs-with-f"></a>Azure Event Hubs'a F # ile kullanma #
 
@@ -119,7 +119,7 @@ Zamanlayıcılar F # içinde uygulanan ve Azure üzerinde barındırılan bir [A
 
 Azure VM'ler programlı olarak dağıtılan ve F # komut dosyalarından Microsoft.Azure.Management paketleri ve API'leri kullanılarak yönetilen. Örneğin, [.NET için yönetim kitaplıkları ile çalışmaya başlama](https://msdn.microsoft.com/library/dn722415.aspx) ve [kullanarak Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Benzer şekilde, diğer Azure kaynaklarına de dağıtılan ve aynı Bileşenleri'ni kullanarak F # betiklerinden yönetilen. Örneğin, depolama hesabı oluşturma, Azure bulut Hizmetleri dağıtma, Azure DocumentDB örneği oluşturabilir ve Azure gönderemedi hub F # komut dosyalarından programlı olarak yönetmek.
+Benzer şekilde, diğer Azure kaynaklarına de dağıtılan ve aynı Bileşenleri'ni kullanarak F # betiklerinden yönetilen. Örneğin, depolama hesapları, Azure bulut Hizmetleri dağıtma, Azure Cosmos DB örnekleri oluşturmak oluşturup Azure gönderemedi hub'ları programlı olarak F # komut dosyalarından yönetebilirsiniz.
 
 Dağıtmak ve kaynakları yönetmek için F # komut dosyalarını kullanarak normal şekilde gerekli değildir. Örneğin, Azure kaynaklarını parametreli olabilir JSON şablonu açıklamaları gelen dağıtılan directy olabilir. Bkz: [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) örnekler gibi dahil [Azure hızlı başlangıç şablonlarını](https://azure.microsoft.com/documentation/templates/).
 
