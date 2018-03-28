@@ -179,7 +179,7 @@ ms.lasthandoff: 03/23/2018
 |`[-.\w]*`|Bir kısa çizgi, nokta veya sözcük karakterinin sıfır, bir veya daha fazla örneğini eşleştirin.|  
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin|  
 |`([-.\w]*[0-9A-Z])*`|Ardından alfasayısal bir karakter gelen sıfır veya daha fazla kısa çizgi, nokta veya sözcük karakteri birleşiminin sıfır veya daha fazla örneğini eşleştirin. Bu ilk yakalama grubudur.|  
-|`@`|Bir at işaretini ("@") eşleştirin.|  
+|`@`|Bir at işaretini ("\@") eşleştirin.|  
   
  İkinci normal ifade deseni `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, pozitif geriye ilerleme onaylama işlemi kullanır. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 03/23/2018
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Bu karşılaştırma büyük küçük harf duyarsız, çünkü <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi ile çağrılır <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçeneği.|  
 |`[-.\w]*`|Bir kısa çizgi, nokta veya sözcük karakterinin sıfır, bir veya daha fazla örneğini eşleştirin.|  
 |`(?<=[0-9A-Z])`|Son eşleşen karaktere geriye doğru bakın ve alfasayısal ise eşleştirmeyi devam ettirin. Alfasayısal karakterlerin, nokta, kısa çizgi ve tüm sözcük karakterlerinden oluşan kümenin bir alt kümesi olduğunu unutmayın.|  
-|`@`|Bir at işaretini ("@") eşleştirin.|  
+|`@`|Bir at işaretini ("\@") eşleştirin.|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>İleriye Yönelik Onaylar  
