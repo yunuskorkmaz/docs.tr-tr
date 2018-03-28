@@ -145,7 +145,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     "http://localhost/routingservice/router/rounding/" ile başlayan adreste bir ileti alındığında sonra bu filtresinin **doğru**. Bu yapılandırma tarafından kullanılan temel adres "http://localhost/routingservice/router" ve roundingEndpoint için belirtilen adresi "yuvarlama/hesaplayıcı" olduğundan bu bitiş noktası ile iletişim kurmak için kullanılan tam "http://localhost/ adresidir routingservice/yönlendirici/yuvarlama/Bu filtre ile eşleşen hesaplayıcı".  
+     "http://localhost/routingservice/router/rounding/" ile başlayan adreste bir ileti alındığında sonra bu filtresinin **doğru**. Bu yapılandırma tarafından kullanılan temel adres "http://localhost/routingservice/router" ve roundingEndpoint için belirtilen adresi "yuvarlama/hesaplayıcı" olduğundan bu bitiş noktası ile iletişim kurmak için kullanılan tam "http://localhost/routingservice/router/rounding/calculator" adresidir Bu filtre ile eşleşen hesaplayıcı.  
   
     > [!NOTE]
     >  PrefixEndpointAddress filtre ana bilgisayar adı, tek bir ana bilgisayar için tüm olabilir ana bilgisayar adlarını çeşitli kullanarak başvurulabilir olduğundan bir eşleşme gerçekleştirme konağa istemci uygulamasından başvuran geçerli yolu kullanırken değerlendirmez. Örneğin, aşağıdakilerin tümü aynı ana bilgisayarına başvurabilir:  
