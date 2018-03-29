@@ -23,7 +23,6 @@
 #### [interface](interface.md)
 #### [object](object.md)
 #### [string](string.md)
-#### [Ara Değerli Dizeler](interpolated-strings.md)
 ### [void](void.md)
 ### [var](var.md)
 ### [Türler için Başvuru Tabloları](reference-tables-for-types.md)
