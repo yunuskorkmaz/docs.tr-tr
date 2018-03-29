@@ -3,8 +3,8 @@
 ## [Söz dizimi ile çalışma](work-with-syntax.md)
 ## [Semantik ile çalışma](work-with-semantics.md)
 ## [Bir çalışma alanı ile çalışma](work-with-workspace.md)
-
-## Hızlı başlangıçlar
+## [Söz dizimi görselleştiricisi ile kod bulma](syntax-visualizer.md)
+## Hızlı Başlangıçlar
 ### [Söz dizimi analizi](get-started/syntax-analysis.md)
 ### [Anlam analizi](get-started/semantic-analysis.md)
 

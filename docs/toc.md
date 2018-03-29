@@ -265,9 +265,10 @@
 ## [C# Kullanımı Hakkındaki Konular](csharp/how-to/index.md)
 ### [`String.Split` kullanarak dizeleri ayrıştırma](csharp/how-to/parse-strings-using-split.md)
 ### [Dizeleri birleştirme](csharp/how-to/concatenate-multiple-strings.md)
-### [Nasıl yapılır bir Dizeyi DateTime Olarak Dönüştürme](standard/base-types/parsing-datetime.md)
+### [Bir dizeyi DateTime olarak dönüştürme](standard/base-types/parsing-datetime.md)
 ### [Dizeleri arama](csharp/how-to/search-strings.md)
 ### [Dize içeriklerini değiştirme](csharp/how-to/modify-string-contents.md)
+### [Dizeleri karşılaştırma](csharp/how-to/compare-strings.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK’sı (Roslyn API’leri)](csharp/roslyn-sdk/)
 ## [C# Programlama Kılavuzu](csharp/programming-guide/)
