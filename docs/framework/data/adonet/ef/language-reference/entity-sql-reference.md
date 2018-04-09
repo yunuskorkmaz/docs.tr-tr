@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -63,7 +63,7 @@ Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başv
 |[< (Küçüktür)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Sol ifade sağ ifade'den küçük bir değer olup olmadığını belirlemek için iki ifadeye karşılaştırır.|  
 |[<= (Küçüktür veya Eşittir)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Sol ifade bir değere eşit veya sağ ifade için olup olmadığını belirlemek için iki ifadeye karşılaştırır.|  
 |[&AMP;#91;DEĞİL&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Belirtilen aralıktaki bir değere bir ifade sonucu olup olmadığını belirler.|  
-|[!= (Eşit Değildir)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Sol ifade sağ ifade eşit olup olmadığını belirlemek için iki ifadeye karşılaştırır.|  
+|[\!= (Eşit Değildir)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Sol ifade sağ ifade eşit olup olmadığını belirlemek için iki ifadeye karşılaştırır.|  
 |[&AMP;#91;DEĞİL&AMP;#93; GİBİ](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Bir özel karakter dizesi belirtilen desenle eşleşip eşleşmediğini belirler.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Mantıksal ve büyük/küçük harfe ifade işleçleri  
@@ -72,7 +72,7 @@ Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başv
 |İşleç|Açıklama|  
 |--------------|-----------------|  
 |[& & (Mantıksal ve)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|Mantıksal and|  
-|[! (Mantıksal değil)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|Mantıksal değil.|  
+|[\! (Mantıksal değil)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|Mantıksal değil.|  
 |[&#124;&#124;(Mantıksal OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Mantıksal OR.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Boole ifadeleri sonucu belirlemek için bir dizi değerlendirir.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Sonucunu bir [zaman](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) doğru olarak değerlendirildiğinde yan tümcesi.|  
