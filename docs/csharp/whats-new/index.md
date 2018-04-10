@@ -1,7 +1,7 @@
 ---
-title: "C# ' - yenilikler C# Kılavuzu"
-description: "C# dili nasıl gelişen"
-keywords: "C#, yenilikler, en son özellikleri Roslyn"
+title: C# ' - yenilikler C# Kılavuzu
+description: C# dili nasıl gelişen
+keywords: C#, yenilikler, en son özellikleri Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

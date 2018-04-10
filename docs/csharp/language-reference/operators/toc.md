@@ -2,6 +2,7 @@
 ## [[] İşleci](index-operator.md)
 ## [() İşleci](invocation-operator.md)
 ## [. İşleç](member-access-operator.md)
+## [?. and ?[] İşleçleri](null-conditional-operators.md)
 ## [:: İşleci](namespace-alias-qualifer.md)
 ## [+ İşleci](addition-operator.md)
 ## [- İşleci](subtraction-operator.md)
@@ -40,4 +41,3 @@
 ## [-> İşleci](dereference-operator.md)
 ## [?? İşleç](null-conditional-operator.md)
 ## [=> İşleci](lambda-operator.md)
-## [Null koşullu İşleçler](null-conditional-operators.md)

@@ -1,6 +1,6 @@
 ---
 title: Visual Basic'de XML
-description: "XML ve LINQ için XML özellikleri, Visual Basic kodundaki nasıl kullanılacağını öğrenin."
+description: XML ve LINQ için XML özellikleri, Visual Basic kodundaki nasıl kullanılacağını öğrenin.
 ms.date: 10/20/2017
 ms.prod: .net
 ms.technology:

@@ -1,7 +1,7 @@
 ---
-title: ".NET mikro ve Web uygulamalarının güvenliğini sağlama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | .NET mikro ve Web uygulamalarının güvenliğini sağlama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: .NET mikro ve Web uygulamalarının güvenliğini sağlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | .NET mikro ve Web uygulamalarının güvenliğini sağlama
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017

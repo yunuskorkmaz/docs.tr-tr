@@ -1,6 +1,6 @@
 ---
-title: "Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize"
-description: "Kaldırın ve mevcut uygulamalar Azure Bulutu ve bu e-kitap ile kapsayıcıları için shift hakkında bilgi edinme."
+title: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize
+description: Kaldırın ve mevcut uygulamalar Azure Bulutu ve bu e-kitap ile kapsayıcıları için shift hakkında bilgi edinme.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

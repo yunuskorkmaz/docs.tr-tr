@@ -1,6 +1,6 @@
 ---
-title: ".NET core sürüm oluşturma"
-description: ".NET Core sürüm nasıl çalıştığını anlayın."
+title: .NET core sürüm oluşturma
+description: .NET Core sürüm nasıl çalıştığını anlayın.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

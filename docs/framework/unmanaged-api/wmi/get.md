@@ -1,6 +1,6 @@
 ---
-title: "Get işlevi (yönetilmeyen API Başvurusu)"
-description: "Get işlevi, belirtilen özellik değerini alır."
+title: Get işlevi (yönetilmeyen API Başvurusu)
+description: Get işlevi, belirtilen özellik değerini alır.
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:

@@ -1,7 +1,7 @@
 ---
-title: "F# Etkileşimli (fsi.exe) Başvurusu"
-description: "Nasıl F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak için veya F # betiklerini yürütmek için kullanılan öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: F# Etkileşimli (fsi.exe) Başvurusu
+description: 'Nasıl F # Etkileşimli (fsi.exe) konsolda F # kodunu etkileşimli olarak çalıştırmak için veya F # betiklerini yürütmek için kullanılan öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

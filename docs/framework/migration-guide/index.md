@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4.7, 4.6 ve 4.5 Geçiş Kılavuzu "
+title: '.NET Framework 4.7, 4.6 ve 4.5 Geçiş Kılavuzu '
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework

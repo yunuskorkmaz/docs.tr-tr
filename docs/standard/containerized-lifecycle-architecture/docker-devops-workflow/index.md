@@ -1,6 +1,6 @@
 ---
-title: "Microsoft araçları ile docker uygulama devops iş akışı"
-description: "Microsoft araçları ile Microsoft Platformu ve Toolsdevops akışıyla kapsayıcılı Docker uygulama yaşam döngüsü"
+title: Microsoft araçları ile docker uygulama devops iş akışı
+description: Microsoft araçları ile Microsoft Platformu ve Toolsdevops akışıyla kapsayıcılı Docker uygulama yaşam döngüsü
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

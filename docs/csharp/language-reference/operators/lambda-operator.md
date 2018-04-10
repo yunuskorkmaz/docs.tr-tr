@@ -1,5 +1,5 @@
 ---
-title: "=&gt;İşleci (C# Başvurusu)"
+title: =&gt;İşleci (C# Başvurusu)
 ms.date: 10/02/2017
 ms.prod: .net
 ms.technology:

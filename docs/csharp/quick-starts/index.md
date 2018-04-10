@@ -1,7 +1,7 @@
 ---
-title: "C# etkileşimli öğreticileri - C# quickstarts"
-description: "C# tarayıcınızda öğrenin ve kendi geliştirme ortamı ile çalışmaya başlama"
-keywords: "C# ' ta, Başlarken, dersler, etkileşimli"
+title: C# etkileşimli öğreticileri - C# quickstarts
+description: C# tarayıcınızda öğrenin ve kendi geliştirme ortamı ile çalışmaya başlama
+keywords: C# ' ta, Başlarken, dersler, etkileşimli
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

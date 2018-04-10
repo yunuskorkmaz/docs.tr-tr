@@ -1,6 +1,6 @@
 ---
-title: "Birim testi .NET çekirdek"
-description: "Birim testi hiç daha kolay olmamıştı. Birim testi .NET Core ve .NET standart projelerinde kullanma konusuna bakın."
+title: Birim testi .NET çekirdek
+description: Birim testi hiç daha kolay olmamıştı. Birim testi .NET Core ve .NET standart projelerinde kullanma konusuna bakın.
 keywords: .NET, .NET core, .NET standart birim testi
 author: ardalis
 ms.author: wiwagn
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: cb78a66a3a6a7158a86a76d62e5230c75b51a416
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT

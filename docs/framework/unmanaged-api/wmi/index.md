@@ -1,6 +1,6 @@
 ---
-title: "WMI ve performans sayaçları (yönetilmeyen API Başvurusu)"
-description: ".NET Framework özetler yönetilmeyen API için WMI ve performans sayacı bilgileri."
+title: WMI ve performans sayaçları (yönetilmeyen API Başvurusu)
+description: .NET Framework özetler yönetilmeyen API için WMI ve performans sayacı bilgileri.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

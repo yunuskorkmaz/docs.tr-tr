@@ -1,7 +1,7 @@
 ---
-title: "Esnek uygulamaları uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Esnek uygulamaları uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Esnek uygulamaları uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Esnek uygulamaları uygulama
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

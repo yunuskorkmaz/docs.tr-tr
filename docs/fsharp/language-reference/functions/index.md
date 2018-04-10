@@ -1,7 +1,7 @@
 ---
-title: "İşlevler (F#)"
-description: "F # ve nasıl F # ortak işlevsel programlama yapılarını destekler işlevleri hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: İşlevler (F#)
+description: 'F # ve nasıl F # ortak işlevsel programlama yapılarını destekler işlevleri hakkında bilgi edinin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

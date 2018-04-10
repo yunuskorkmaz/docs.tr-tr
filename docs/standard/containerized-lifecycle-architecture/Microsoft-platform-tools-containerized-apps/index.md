@@ -1,6 +1,6 @@
 ---
-title: "Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
+title: Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

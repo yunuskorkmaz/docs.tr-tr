@@ -1,5 +1,5 @@
 ---
-title: "using statik yönergesi (C# Başvurusu)"
+title: using statik yönergesi (C# Başvurusu)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:

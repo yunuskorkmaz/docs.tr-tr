@@ -1,7 +1,7 @@
 ---
-title: "Genel Türler (F#)"
-description: "F # genel işlevler ve çeşitli türleri kod yinelenen olmadan çalışan kod yazmanıza olanak sağlayan türleri kullanmayı öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Genel Türler (F#)
+description: 'F # genel işlevler ve çeşitli türleri kod yinelenen olmadan çalışan kod yazmanıza olanak sağlayan türleri kullanmayı öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

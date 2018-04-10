@@ -1,7 +1,7 @@
 ---
-title: "Kapsayıcılar ve Docker giriş"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Kapsayıcılar ve Docker giriş"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Kapsayıcılar ve Docker giriş
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Kapsayıcılar ve Docker giriş
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

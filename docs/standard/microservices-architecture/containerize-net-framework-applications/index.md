@@ -1,7 +1,7 @@
 ---
-title: "Eski tek yapılı .NET Framework uygulamaları geçirme Windows kapsayıcıları"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Eski tek yapılı .NET Framework uygulamaları geçirme Windows kapsayıcıları"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Eski tek yapılı .NET Framework uygulamaları geçirme Windows kapsayıcıları
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Eski tek yapılı .NET Framework uygulamaları geçirme Windows kapsayıcıları
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

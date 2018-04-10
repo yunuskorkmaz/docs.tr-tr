@@ -1,7 +1,7 @@
 ---
-title: "Değerler (F#)"
-description: "F # değerleri belirli bir türe sahip miktarları nasıl olduğunu öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Değerler (F#)
+description: 'F # değerleri belirli bir türe sahip miktarları nasıl olduğunu öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

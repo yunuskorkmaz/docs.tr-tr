@@ -1,7 +1,7 @@
 ---
-title: "Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

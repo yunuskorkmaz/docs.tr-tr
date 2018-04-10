@@ -1,7 +1,7 @@
 ---
-title: "F # kullanmaya Başlarken"
-description: "F # .NET dilinde programlama kullanmaya başlayacağınızı öğrenin."
-keywords: "Visual f #, f #, işlev, .NET, .NET Core programlama"
+title: 'F # kullanmaya Başlarken'
+description: 'F # .NET dilinde programlama kullanmaya başlayacağınızı öğrenin.'
+keywords: 'Visual f #, f #, işlev, .NET, .NET Core programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

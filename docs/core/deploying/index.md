@@ -1,7 +1,7 @@
 ---
-title: ".NET core uygulama dağıtımı"
-description: ".NET Core uygulama dağıtma."
-keywords: ".NET, .NET core, .NET Core dağıtım"
+title: .NET core uygulama dağıtımı
+description: .NET Core uygulama dağıtma.
+keywords: .NET, .NET core, .NET Core dağıtım
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: 87a70ac246e37c646f9be578a03dda7037cfdd2d
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
