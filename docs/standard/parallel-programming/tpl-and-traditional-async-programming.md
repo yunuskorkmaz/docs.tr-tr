@@ -1,12 +1,12 @@
 ---
 title: TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2acfb9a564f3a7bc96ed303f49349afe56ca7fe4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
 .NET Framework g/Ç-bağlı ve işlem bağlı zaman uyumsuz işlemleri gerçekleştirmek için aşağıdaki iki standart desenler sağlar:  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/23/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>StreamExtensions Örnek Kodunu Kullanma  
- Streamextensions.cs dosya [paralel programlama ile .NET Framework 4 için örnek](http://go.microsoft.com/fwlink/?LinkID=165717) MSDN Web sitesinde görev nesneleri için zaman uyumsuz dosyasını kullanın ve ağ g/ç çeşitli başvuru uygulamalarını içerir.  
+ Streamextensions.cs dosya [paralel programlama ile .NET Framework 4 için örnek](https://code.msdn.microsoft.com/ParExtSamples), görev nesneleri için zaman uyumsuz dosyasını kullanın ve ağ g/ç çeşitli başvuru uygulamalarını içerir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

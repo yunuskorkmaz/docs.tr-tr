@@ -1,6 +1,6 @@
 ---
-title: "Kaldırın ve mevcut uygulamalar DevOps kaydırma"
-description: "Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize."
+title: Kaldırın ve mevcut uygulamalar DevOps kaydırma
+description: Azure Bulut ve Windows kapsayıcılarla varolan .NET uygulamaları modernize.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

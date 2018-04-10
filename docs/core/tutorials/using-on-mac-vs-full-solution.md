@@ -1,6 +1,6 @@
 ---
-title: "Mac için Visual Studio kullanarak macOS üzerinde tam bir .NET Core çözümü oluşturma"
-description: "Bu konu, yeniden kullanılabilir kitaplık ve birim testleri içeren bir .NET Core çözümü oluşturma sürecinde açıklanmaktadır."
+title: Mac için Visual Studio kullanarak macOS üzerinde tam bir .NET Core çözümü oluşturma
+description: Bu konu, yeniden kullanılabilir kitaplık ve birim testleri içeren bir .NET Core çözümü oluşturma sürecinde açıklanmaktadır.
 keywords: .NET, .NET core macOS, Mac
 author: guardrex
 ms.author: mairaw
@@ -11,17 +11,17 @@ ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d8f89af14167e57b7f1b3b1d6ddce5cae8f6446
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS üzerinde tam bir .NET Core çözümü oluşturma
 
 Mac için Visual Studio .NET Core uygulamaları geliştirmek için bir tam özellikli tümleşik geliştirme ortamı (IDE) sağlar. Bu konu, yeniden kullanılabilir kitaplık ve birim testleri içeren bir .NET Core çözümü oluşturma sürecinde açıklanmaktadır.
 
-Bu öğretici, bir arama sözcüğü ve kullanıcıdan bir metin dizesi kabul eder, arama Word'ün bir sınıf kitaplığı'nda bir yöntem kullanarak dize görünür ve kullanıcıya sonucu döndürür sayısını sayar bir uygulama oluşturmak nasıl gösterir. Çözüm ayrıca birim teste dayalı geliştirme (TDD) kavramları giriş olarak için sınıf kitaplığı testi içerir. Bu öğreticiyi tam bir örnek üzerinden geçmek isterseniz, indirme [örnek çözümü](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğretici, bir arama sözcüğü ve kullanıcıdan bir metin dizesi kabul eder, arama Word'ün bir sınıf kitaplığı'nda bir yöntem kullanarak dize görünür ve kullanıcıya sonucu döndürür sayısını sayar bir uygulama oluşturmak nasıl gösterir. Çözüm ayrıca birim teste dayalı geliştirme (TDD) kavramları giriş olarak için sınıf kitaplığı testi içerir. Bu öğreticiyi tam bir örnek üzerinden geçmek isterseniz, indirme [örnek çözümü](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Geri bildiriminiz yüksek değerli. Mac için Visual Studio geliştirme ekibine geribildirim sağlayabilir iki yolu vardır:
@@ -50,7 +50,7 @@ Bu öğretici, bir arama sözcüğü ve kullanıcıdan bir metin dizesi kabul ed
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Üç farklı yöntemlerden birini kullanarak dosyayı kaydedin: klavye kısayolunu kullanın <kbd>&#8984;</kbd> + <kbd>s</kbd>seçin **dosya** > **kaydetmek** menüsünden veya sağ tıklatın dosyanın sekmesi ve select **kaydetmek**bağlam menüsünde. Aşağıdaki resimde IDE penceresi gösterilir:
+1. Üç farklı yöntemlerden birini kullanarak dosyayı kaydedin: klavye kısayolunu kullanın <kbd> &#8984; </kbd> + <kbd>s</kbd>seçin **dosya**  >  **Kaydetmek** menüsünden veya sağ tıklatın dosyanın sekmesi ve select **kaydetmek** bağlam menüsünde. Aşağıdaki resimde IDE penceresi gösterilir:
 
    ![IDE pencere TextUtils gösteren sınıf kitaplığı, WordCount sınıf dosyası, statik sınıf WordCount ve GetWordCount yöntemi](./media/using-on-mac-vs-full-solution/vsmacfull03.png)
 
@@ -128,7 +128,7 @@ Birim testleri, geliştirme sırasında sınama ve yayımlama otomatik yazılım
 
    ![Sınama hatası](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
 
-1. Değiştirme `IgnoreCasing` test yöntemi değiştirerek `Assert.NotEqual` için `Assert.Equal`. Klavye kısayolunu kullanarak dosyayı kaydedin <kbd>&#8984;</kbd> + <kbd>s</kbd>, **dosya** > **kaydetmek** menüsünden veya dosyanın sekmesinde sağ tıklayarak ve seçme **kaydetmek**ve bağlam menüsünden.
+1. Değiştirme `IgnoreCasing` test yöntemi değiştirerek `Assert.NotEqual` için `Assert.Equal`. Klavye kısayolunu kullanarak dosyayı kaydedin <kbd> &#8984; </kbd> + <kbd>s</kbd>, **dosya** > **kaydetmek** menüsünde veya dosyanın sekmesinde sağ tıklayıp seçerek **kaydetmek** ve bağlam menüsünden.
 
    Beklediğiniz `searchWord` "Prizine" döndürür iki örnekleriyle `inputString` "Prizine prizine" geçirildi `GetWordCount`. Tıklayarak test yeniden çalıştırın **Testleri Çalıştır** düğmesini **birim testleri** Masası veya **yeniden çalıştır testleri** düğmesini **Test sonuçları** paneli ekranın alt kısmında. Test başarılı olur. "(Büyük/küçük harf yoksayar) prizine prizine" dizesindeki "Prizine" iki örneği vardır ve test onayı ifade eder `true`.
 

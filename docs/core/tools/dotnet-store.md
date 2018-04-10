@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 80ea40dfbedba3dca0e767b66e14f5de22374d4f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-store"></a>DotNet deposu
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Ad
 
-`dotnet store`-Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md).
+`dotnet store` -Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md).
 
 ## <a name="synopsis"></a>Özet
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="description"></a>Açıklama
 
-`dotnet store`Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md). Varsayılan olarak, derlemeleri hedef çalışma zamanı ve framework için getirilmiştir. Daha fazla bilgi için bkz: [çalışma zamanı Paket Deposu](../deploying/runtime-store.md) konu.
+`dotnet store` Belirtilen derlemelerde depolar [çalışma zamanı Paket Deposu](../deploying/runtime-store.md). Varsayılan olarak, derlemeleri hedef çalışma zamanı ve framework için getirilmiştir. Daha fazla bilgi için bkz: [çalışma zamanı Paket Deposu](../deploying/runtime-store.md) konu.
 
 ## <a name="required-options"></a>Gerekli seçenekler
 
@@ -42,7 +43,7 @@ Belirtir [hedef framework](../../standard/frameworks.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Hedef çalışma zamanı tanımlayıcısı.
+[Çalışma zamanı tanımlayıcı](../rid-catalog.md) hedef.
 
 ## <a name="optional-options"></a>İsteğe bağlı seçenekleri
 

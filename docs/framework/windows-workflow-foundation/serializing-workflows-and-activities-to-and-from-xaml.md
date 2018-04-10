@@ -1,23 +1,24 @@
 ---
-title: "İş akışları ve etkinlikler XAML seri hale getirme"
-ms.custom: 
+title: İş akışları ve etkinlikler XAML seri hale getirme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c1954f02aef13599f7bd24f8e2d136f0f876256
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>İş akışları ve etkinlikler XAML seri hale getirme
 Derlemelerde bulunan türlerine derlenmiş ek olarak, iş akışı tanımları da XAML için seri hale getirilebilir. Bu seri hale getirilmiş tanımları düzenleme için yeniden yüklenmesi veya denetleme, derleme için bir yapı sistemi geçirilen veya yüklenen ve çağrılır. Bu konu, iş akışı tanımları seri hale getirme ve XAML iş akışı tanımları ile çalışmaya genel bir bakış sağlar.  
@@ -27,9 +28,9 @@ Derlemelerde bulunan türlerine derlenmiş ek olarak, iş akışı tanımları d
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Her biri <xref:System.Activities.DynamicActivityProperty> örnekleri temsil eden iş akışına giriş bağımsız değişkenlerinde birini ve <xref:System.Activities.ActivityBuilder.Implementation%2A> iş akışı mantığı oluşturan etkinlikler içerir. Bu örnekte r değeri ifadeleri Visual Basic ifadeleri olduğuna dikkat edin. Lambda ifadeleri için XAML serileştirilebilir olmayan sürece <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> kullanılır. Serileştirilmiş iş akışları açılacak veya iş akışı Tasarımcısı'nda düzenlenebilir yönelikse Visual Basic ifadeleri kullanılmalıdır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Her biri <xref:System.Activities.DynamicActivityProperty> örnekleri temsil eden iş akışına giriş bağımsız değişkenlerinde birini ve <xref:System.Activities.ActivityBuilder.Implementation%2A> iş akışı mantığı oluşturan etkinlikler içerir. Bu örnekte r değeri ifadeleri Visual Basic ifadeleri olduğuna dikkat edin. Lambda ifadeleri için XAML serileştirilebilir olmayan sürece <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> kullanılır. Serileştirilmiş iş akışları açılacak veya iş akışı Tasarımcısı'nda düzenlenebilir yönelikse Visual Basic ifadeleri kullanılmalıdır. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [İş akışları, etkinlikler ve ifadeler kesinlik temelli kod kullanarak geliştirme](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
- Tarafından temsil edilen iş akışı tanımı serileştirmek için <xref:System.Activities.ActivityBuilder> XAML, kullanım örneğine <xref:System.Activities.XamlIntegration.ActivityXamlServices> oluşturmak için bir <xref:System.Xaml.XamlWriter>ve ardından <xref:System.Xaml.XamlServices> kullanarak iş akışı tanımı serileştirmek için <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices>eşleme için yöntemleri vardır <xref:System.Activities.ActivityBuilder> örnekleri ve XAML ve XAML iş akışları yükleme ve döndürmek için bir <xref:System.Activities.DynamicActivity> , çağrılabilir. Aşağıdaki örnekte, <xref:System.Activities.ActivityBuilder> örneğinin önceki örnekten bir dizeye sıralanabilir ve ayrıca bir dosyaya kaydedilir.  
+ Tarafından temsil edilen iş akışı tanımı serileştirmek için <xref:System.Activities.ActivityBuilder> XAML, kullanım örneğine <xref:System.Activities.XamlIntegration.ActivityXamlServices> oluşturmak için bir <xref:System.Xaml.XamlWriter>ve ardından <xref:System.Xaml.XamlServices> kullanarak iş akışı tanımı serileştirmek için <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> eşleme için yöntemleri vardır <xref:System.Activities.ActivityBuilder> örnekleri ve XAML ve XAML iş akışları yükleme ve döndürmek için bir <xref:System.Activities.DynamicActivity> , çağrılabilir. Aşağıdaki örnekte, <xref:System.Activities.ActivityBuilder> örneğinin önceki örnekten bir dizeye sıralanabilir ve ayrıca bir dosyaya kaydedilir.  
   
 ```csharp  
 // Serialize the workflow to XAML and store it in a string.  
@@ -74,7 +75,7 @@ sw.Close();
 </Activity>  
 ```  
   
- Seri hale getirilmiş bir iş akışını yüklemek için <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> yöntemi kullanılır. Bu seri hale getirilmiş iş akışı tanımı alıp döndüren bir <xref:System.Activities.DynamicActivity> , iş akışı tanımını temsil eder. XAML kadar serisi yok Not <xref:System.Activities.Activity.CacheMetadata%2A> gövdesi adlı <xref:System.Activities.DynamicActivity> doğrulama işlemi sırasında. Doğrulama açıkça çağrılmazsa iş akışı çağrıldığında sonra onu gerçekleştirilir. XAML iş akışı tanımı geçersizse, sonra bir <xref:System.Argument> özel durumu oluşur. Gelen karşılaşılan özel durumlar <xref:System.Activities.Activity.CacheMetadata%2A> çağrıya kaçış <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından yapılması gerekir. Aşağıdaki örnekte, önceki örnekte serileştirilmiş iş akışını yüklendiğinde ve kullanılarak <xref:System.Activities.WorkflowInvoker>.  
+ Seri hale getirilmiş bir iş akışını yüklemek için <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> yöntemi kullanılır. Bu seri hale getirilmiş iş akışı tanımı alıp döndüren bir <xref:System.Activities.DynamicActivity> , iş akışı tanımını temsil eder. XAML kadar serisi yok Not <xref:System.Activities.Activity.CacheMetadata%2A> gövdesi adlı <xref:System.Activities.DynamicActivity> doğrulama işlemi sırasında. Doğrulama açıkça çağrılmazsa iş akışı çağrıldığında sonra onu gerçekleştirilir. XAML iş akışı tanımı geçersizse, sonra bir <xref:System.ArgumentException> özel durumu oluşur. Gelen karşılaşılan özel durumlar <xref:System.Activities.Activity.CacheMetadata%2A> çağrıya kaçış <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından yapılması gerekir. Aşağıdaki örnekte, önceki örnekte serileştirilmiş iş akışını yüklendiğinde ve kullanılarak <xref:System.Activities.WorkflowInvoker>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#43](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
   
@@ -83,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Giriş ve çıkış bağımsız değişkenleri iş akışlarıyla çağrılırken, bkz: [kullanarak WorkflowInvoker ve WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) ve <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Giriş ve çıkış bağımsız değişkenleri iş akışlarıyla çağrılırken, bkz: [kullanarak WorkflowInvoker ve WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) ve <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  C# ifadeler, sıralı iş akışı içeriyorsa, sonra bir <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> örneği kendi <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> özelliğini `true` bir parametre olarak geçirilmelidir <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, aksi takdirde bir <xref:System.NotSupportedException> benzer bir ileti ile oluşturulur Aşağıdaki: `Expression Activity type 'CSharpValue`1' derleme çalıştırmak için gereklidir.  Lütfen iş akışının derlendikten olduğundan emin olun.'  
   
@@ -96,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# ifadeleri](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Serileştirilmiş iş akışı tanımı ayrıca içine yüklenebilir bir <xref:System.Activities.ActivityBuilder> kullanarak örnek <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> yöntemi. Serileştirilmiş bir iş akışı içine yüklendikten sonra bir <xref:System.Activities.ActivityBuilder> Denetlenmekte ve değiştiren örneği. Bu, özel iş akışı Tasarımcısı yazarlar için yararlıdır ve kaydetme ve iş akışı tanımları tasarım işlemi sırasında yeniden yükleme için bir mekanizma sağlar. Aşağıdaki örnekte, önceki örnekten serileştirilmiş iş akışı tanımı yüklendi ve özelliklerini denetlenir.  
   

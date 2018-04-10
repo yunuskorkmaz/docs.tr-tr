@@ -1,13 +1,13 @@
 ---
-title: "Sertifikalarla Çalışma"
-ms.custom: 
+title: Sertifikalarla Çalışma
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.509 dijital sertifikalar genellikle istemcilerin ve sunucuların kimliğini doğrulamak için kullanılan, şifrelemek ve iletileri dijital olarak imzala. Bu konu kısaca X.509 dijital sertifika özelliklerini ve bunların içinde nasıl kullanılacağını açıklamaktadır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]ve bu kavramları daha fazla açıklamak veya kullanarak ortak görevleri gerçekleştirmek nasıl Göster konulara bağlantılar içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve sertifikalar.  
   
- Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]X.509 sertifikaları bkz [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] beyanlar ve yetkilendirmeyi WCF'de bkz [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Bir PKI'yı uygulamadan bkz [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 sertifikaları bkz [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] beyanlar ve yetkilendirmeyi WCF'de bkz [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Bir PKI'yı uygulamadan bkz [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Bir birincil sertifikanın başkalarına sertifika sahibinin kimliğini doğrulamak için işlevdir. Bir sertifikayı içeren *ortak anahtar* sahibi özel anahtarı tutarken sahibinin. Ortak anahtar sertifika sahibinin gönderilen iletileri şifrelemek için kullanılabilir. Sahibi özel anahtar erişimi yalnızca sahibi bu iletilerin şifresini çözebilir yalnızca bunu.  
   
  Sertifika bir üçüncü taraf veren sertifikalarının görülür bir sertifika yetkilisi tarafından verilmelidir. Bir Windows etki alanında bir sertifika yetkilisi dahil etki alanındaki bilgisayarların sertifika vermek için kullanılabilir.  
   
 ## <a name="viewing-certificates"></a>Sertifikaları görüntüleme  
- Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Sertifikalar ile çalışmak için genellikle bunları görüntülemek ve bunların özelliklerini incelemek gereklidir. Bu, Microsoft Yönetim Konsolu (MMC) ek bileşenini aracıyla kolayca gerçekleştirilir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüle](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Sertifika depoları  
  Sertifika deposunda bulunamadı. Daha fazla alt depoları ayrılır iki ana deposu konum yok. Bir bilgisayarda yöneticisiyseniz, MMC ek bileşen aracını kullanarak her iki ana depoları görüntüleyebilirsiniz. Yönetici olmayanlar yalnızca geçerli kullanıcı deposunda görüntüleyebilirsiniz.  
@@ -55,7 +55,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
   
 -   **Kişisel**. Bu depo, bir bilgisayarın bir kullanıcıyla ilişkili sertifikalar için kullanılır. Genellikle bu depo güvenilen kök sertifika yetkilileri deposunda bulunan sertifika yetkilisi sertifikalarını biri tarafından verilen sertifikalar için kullanılır. Alternatif olarak, burada bulunan bir sertifika kendi kendine verilen ve bir uygulama tarafından güvenilir.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Sertifika depoları, bkz: [sertifika depolarını](http://go.microsoft.com/fwlink/?LinkId=88912).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Sertifika depoları, bkz: [sertifika depolarını](http://go.microsoft.com/fwlink/?LinkId=88912).  
   
 ### <a name="selecting-a-store"></a>Bir mağaza seçme  
  Bir sertifikanın depolanacağı yeri seçme bağlıdır nasıl ve ne zaman hizmeti veya istemci çalıştırır. Aşağıdaki genel kurallar geçerlidir:  
@@ -65,7 +65,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
 -   Hizmet veya istemci bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcı** depolar.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
- Depoları, bir bilgisayardaki klasörleri gibi erişim denetim listeleriyle (ACL) korunur. Internet Information Services (IIS) tarafından barındırılan bir hizmet oluştururken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemi çalıştırılan altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren deposuna erişimine sahip olmalıdır, bir hizmet kullanır. Ana mağazaların her biri bir varsayılan erişim listesiyle korunur, ancak listeler değiştirilebilir. Bir deposuna erişim için ayrı bir rolü oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirmek öğrenmek için bkz: [nasıl yapılır: geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]İstemci sertifikaları IIS'ye kullanarak, bkz: [kimlik doğrulaması için bir ASP.NET Web uygulaması ile bir istemci sertifikasını kullanarak bir Web hizmetini çağırmak nasıl](http://go.microsoft.com/fwlink/?LinkId=88914).  
+ Depoları, bir bilgisayardaki klasörleri gibi erişim denetim listeleriyle (ACL) korunur. Internet Information Services (IIS) tarafından barındırılan bir hizmet oluştururken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemi çalıştırılan altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren deposuna erişimine sahip olmalıdır, bir hizmet kullanır. Ana mağazaların her biri bir varsayılan erişim listesiyle korunur, ancak listeler değiştirilebilir. Bir deposuna erişim için ayrı bir rolü oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirmek öğrenmek için bkz: [nasıl yapılır: geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] İstemci sertifikaları IIS'ye kullanarak, bkz: [kimlik doğrulaması için bir ASP.NET Web uygulaması ile bir istemci sertifikasını kullanarak bir Web hizmetini çağırmak nasıl](http://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, her bir sertifika sertifika veren CA için burada bağlı olduğu bir hiyerarşideki oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın sertifika sonra CA'ın yedeği sertifika veren CA bağlantılar. Kök CA'ın sertifikasını ulaşılana kadar bu işlem yinelenir. Doğası gereği güvenilir kök CA'ın sertifika yok.  
@@ -89,14 +89,14 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
   
 -   [\<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Özel kimlik doğrulama  
  `CertificateValidationMode` Özelliği de sertifikaları nasıl doğrulanır özelleştirme olanak sağlar. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`. Kullanılacak <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> değeri de ayarlamanız gerekir `CustomCertificateValidatorType` özniteliği bir derleme ve sertifikayı doğrulamak için kullanılan türü. Özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
   
- Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama bir örnek için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Özel kimlik bilgileri ve kimlik bilgileri doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Özel bir kimlik doğrulayıcı oluştururken, geçersiz kılmak için en önemli yöntemdir <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> yöntemi. Özel kimlik doğrulama bir örnek için bkz: [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) örnek. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Özel kimlik bilgileri ve kimlik bilgileri doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Bir sertifika zinciri oluşturmak için MakeCert.exe kullanma  
  Sertifika Oluşturma Aracı'nı (Makecert.exe) X.509 sertifikaları ve özel anahtarı/ortak anahtar çifti oluşturur. Disk ve vermek ve yeni sertifikaları imzalamak için kullanmak üzere özel anahtarı böylece zincirleme sertifika hiyerarşisini benzetimi kaydedebilirsiniz. Hizmetleri ve hiçbir zaman gerçek dağıtım sertifikalarını oluşturmak için kullanılması gereken geliştirme aracı yalnızca bir yardımcı olarak kullanıma yöneliktir. Geliştirirken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, bir Makecert.exe ile güven zinciri oluşturmak için aşağıdaki adımları kullanın.  
@@ -115,7 +115,7 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  Sertifikalar hakkında sık sorulan sorular, hangi sertifikanın kullanılacağını olan ve neden. Yanıt, istemci veya hizmet programlama üzerinde bağlıdır. Aşağıdaki bilgiler genel bir kılavuz sağlar ve bu soruların kapsamlı bir çözüm değildir.  
   
 ### <a name="service-certificates"></a>Hizmet sertifikaları  
- Hizmet sertifikaları istemcileri için sunucu kimlik doğrulaması birincil görevi vardır. Bir istemci bir sunucu kimlik doğrulaması gerçekleştirdiğinde ilk denetimlerden biridir değerini karşılaştırmak için **konu** alan Tekdüzen Kaynak Tanımlayıcısı (URI) için kullanılan hizmetiyle iletişim kurulamadı: hem DNS eşleşmesi gerekir. Örneğin, hizmet URI'si "http://www.contoso.com/endpoint/" ise sonra **konu** alan "www.contoso.com" değeri de içermesi gerekir.  
+ Hizmet sertifikaları istemcileri için sunucu kimlik doğrulaması birincil görevi vardır. Bir istemci bir sunucu kimlik doğrulaması gerçekleştirdiğinde ilk denetimlerden biridir değerini karşılaştırmak için **konu** alan Tekdüzen Kaynak Tanımlayıcısı (URI) için kullanılan hizmetiyle iletişim kurulamadı: hem DNS eşleşmesi gerekir. Örneğin, hizmet URI'si ise "http://www.contoso.com/endpoint/" sonra **konu** alan "www.contoso.com" değeri de içermesi gerekir.  
   
  Alan çeşitli değerleri içerebilir, her değeri belirtmek için bir başlatma önekli dikkat edin. En yaygın olarak, başlatma "CN =" ortak adı, örneğin, işlemi "CN = www.contoso.com". Ayrıca mümkündür **konu** ; bu durumda, boş olması için alan **konu diğer adı** alan içerebilir **DNS adı** değeri.  
   
@@ -153,15 +153,15 @@ Programa [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] güvenlik, X.50
  [!code-vb[c_WorkingWithCertificates#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_workingwithcertificates/vb/source.vb#1)]  
   
 ### <a name="multiple-certificates-with-the-same-value"></a>Aynı değere sahip birden çok sertifika  
- Bir mağaza aynı konu adına sahip birden çok sertifika içerebilir. Bunun anlamı belirtirseniz `x509FindType` olan <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> veya <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>ve birden fazla sertifika aynı değere sahip, hangi sertifikanın gereklidir ayırt etmek için becausethereisno yolu özel durum oluşur. Bu ayarlayarak azaltmak `x509FindType` için <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. Parmak izi alan belirli bir Sertifika Mağazası'nda bulmak için kullanılan benzersiz bir değer içerir. Kendi dezavantajı değiştirilirse: sertifika iptal veya yenilenmiş, `SetCertificate` parmak izi de kaldırılmıştır olduğundan yöntem başarısız olur. Veya, sertifika artık geçerli değilse, kimlik doğrulaması başarısız olur. Bu durumu iyileştirmek için ayarlanacak yoludur `x590FindType` parametresi <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> ve verenin adı belirtin. Belirli bir veren gerekiyorsa, ayrıca diğer birini ayarlayabilirsiniz <xref:System.Security.Cryptography.X509Certificates.X509FindType> gibi numaralandırma değerleri <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
+ Bir mağaza aynı konu adına sahip birden çok sertifika içerebilir. Bunun anlamı belirtirseniz `x509FindType` olan <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> veya <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>ve birden fazla sertifika aynı değere sahip, hangi sertifika gerekiyor ayırt etmek mümkün olduğundan özel durum oluşur. Bu ayarlayarak azaltmak `x509FindType` için <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. Parmak izi alan belirli bir Sertifika Mağazası'nda bulmak için kullanılan benzersiz bir değer içerir. Kendi dezavantajı değiştirilirse: sertifika iptal veya yenilenmiş, `SetCertificate` parmak izi de kaldırılmıştır olduğundan yöntem başarısız olur. Veya, sertifika artık geçerli değilse, kimlik doğrulaması başarısız olur. Bu durumu iyileştirmek için ayarlanacak yoludur `x590FindType` parametresi <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> ve verenin adı belirtin. Belirli bir veren gerekiyorsa, ayrıca diğer birini ayarlayabilirsiniz <xref:System.Security.Cryptography.X509Certificates.X509FindType> gibi numaralandırma değerleri <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
   
 ## <a name="certificates-in-configuration"></a>Sertifikaları yapılandırma  
  Yapılandırmayı kullanarak sertifikaları de ayarlayabilirsiniz. Bir hizmet oluşturuyorsanız, kimlik, sertifikalar dahil altında belirtilen [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Bir istemci programlamada sertifikaları altında belirtilen [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Bir kullanıcı hesabına bir sertifika eşlemesi  
- Bir IIS ve Active Directory bir Windows kullanıcı hesabı için bir sertifika eşleme özelliğini özelliğidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]özellik bkz [sertifikaları kullanıcı hesaplarına eşleme](http://go.microsoft.com/fwlink/?LinkId=88917).  
+ Bir IIS ve Active Directory bir Windows kullanıcı hesabı için bir sertifika eşleme özelliğini özelliğidir. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] özellik bkz [sertifikaları kullanıcı hesaplarına eşleme](http://go.microsoft.com/fwlink/?LinkId=88917).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]bkz: Active Directory eşlemesi kullanma, [dizin hizmeti eşlemesi ile eşleme istemci sertifikalarının](http://go.microsoft.com/fwlink/?LinkId=88918).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] bkz: Active Directory eşlemesi kullanma, [dizin hizmeti eşlemesi ile eşleme istemci sertifikalarının](http://go.microsoft.com/fwlink/?LinkId=88918).  
   
  Bu özelliği etkin, ayarladığınız <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> özelliği <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfının `true`. Yapılandırmada, ayarladığınız `mapClientCertificateToWindowsAccount` özniteliği [ \<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesine `true`aşağıdaki kodda gösterildiği gibi.  
   

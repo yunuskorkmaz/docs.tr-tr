@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e8107fb22fcc8afee8723c77868b0c1e5a404e3f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -514,7 +514,8 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **DataContractJsonSerializer sınıfı tarafından birden çok gün ışığından yararlanma saati ayarlama kuralları için daha iyi destek** müşterileri belirlemek için bir uygulama yapılandırma ayarı kullanabilir olup olmadığını <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfı destekleyen birden çok ayarlama tek bir saat dilimi için kuralları. Bu bir katılımı özelliğidir. Etkinleştirmek için app.config dosyasına aşağıdaki ayarı ekleyin:
+ **DataContractJsonSerializer sınıfı tarafından birden çok gün ışığından yararlanma saati ayarlama kuralları için daha iyi destek**   
+ Müşterilerin bir uygulama yapılandırma ayarı belirlemek için kullanabileceğiniz olup olmadığını <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıfı için tek bir saat dilimi birden çok ayarlama kuralları destekler. Bu bir katılımı özelliğidir. Etkinleştirmek için app.config dosyasına aşağıdaki ayarı ekleyin:
 
 ```xml
 <runtime>
@@ -526,32 +527,8 @@ Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.
 
 Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzeltmeleri, bkz: [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).
 
-**Bir UTC koruma desteği zaman seri hale getirme ve seri XMLSerializer sınıfıyla** normalde, ne zaman <xref:System.Xml.Serialization.XmlSerializer> sınıfı bir UTC serileştirmek için kullanılır <xref:System.DateTime> değerini korur serileştirilmiş saat dizesi oluşturur Tarih ve saat ancak zaman yerel olduğunu varsayar.  Örneğin, aşağıdaki kodu çağırarak UTC tarihi ve saati örneği varsa:
-
-```csharp
-DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
-```
-
-```vb
-Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
-```
-
-Sonuç serileştirilmiş zaman dizedir "03:00:00.0000000-08:00" sekiz saat geride UTC sistemi.  Ve seri değerlerini her zaman yerel tarih ve saat değerleri seri.
-
- Bir uygulama yapılandırma ayarı belirlemek için kullanabileceğiniz olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> serileştirilirken UTC saat dilimi bilgilerini ve seri durumdan korur <xref:System.DateTime> değerler:
-
-```xml 
-<runtime>
-     <AppContextSwitchOverrides 
-          value="Switch.System.Runtime.Serialization.DisableSerializeUTCDateTimeToTimeAndDeserializeUTCTimeToUTCDateTime=false" />
-</runtime>
-```
-
-Bu özellik etkinleştirildiğinde, bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne kullanır <xref:System.TimeZoneInfo> yerine tür <xref:System.TimeZone> tarih ve saat verilerini seri durumdan çıkarılacak türü. <xref:System.TimeZoneInfo> birden çok ayarlama kuralları, geçmiş saat dilimi verilerle çalışmak mümkün destekler;   <xref:System.TimeZone> desteklemez.
-
-Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzeltmeleri, bkz: [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md).
-
- **NetNamedPipeBinding en iyi eşleşmeyi** WCF her zaman bağlandıkları istediklerinde bir en iyi karşılayan URI üzerinde dinleme hizmeti emin olmak için istemci uygulamaları ayarlanabilen yeni bir uygulama ayarı vardır. Ayarlamak bu uygulama ayarı ile `false` (varsayılan) kullanan istemciler için olası <xref:System.ServiceModel.NetNamedPipeBinding> istenen URI'yi bir dizenin bir URI üzerinde dinleme bir hizmete bağlanmak için.
+ **NetNamedPipeBinding en iyi eşleşme**   
+ WCF istemci uygulamaları her zaman en iyi şekilde istediklerinde bir eşleşen URI üzerinde dinleme hizmeti bağlandıkları emin olmak için ayarlanabilen yeni bir uygulama ayarı vardır. Ayarlamak bu uygulama ayarı ile `false` (varsayılan) kullanan istemciler için olası <xref:System.ServiceModel.NetNamedPipeBinding> istenen URI'yi bir dizenin bir URI üzerinde dinleme bir hizmete bağlanmak için.
 
  Örneğin, bir istemci bir hizmet adresinde dinlemede için bağlanmaya `net.pipe://localhost/Service1`, ancak bu makinede yönetici ayrıcalığıyla çalıştıran farklı bir hizmet adresinde dinlemede `net.pipe://localhost`. Ayarlamak bu uygulama ayarı ile `false`, istemci yanlış hizmete bağlanma girişiminde. Uygulama ayarı ayarını sonra `true`, istemci her zaman en iyi hizmet eşleşen bağlanır.
 

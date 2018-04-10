@@ -1,20 +1,20 @@
 ---
-title: "Simge ve İşleç Başvurusu (F#)"
-description: "Simgeler ve F # programlama dili kullanılan işleçler hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Simge ve İşleç Başvurusu (F#)
+description: 'Simgeler ve F # programlama dili kullanılan işleçler hakkında bilgi edinin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Simge ve İşleç Başvurusu
 
@@ -34,9 +34,9 @@ Aşağıdaki tabloda F # dilinde kullanılan simgeler açıklar, daha fazla bilg
 |`"""`|[Dizeler](../strings.md)|Harfi harfine metin dizesini sınırlandırır. Farklı `@"..."` içeren bir tırnak işareti karakteri dizede tek tırnak işareti kullanarak belirtebilirsiniz.|
 |`#`|[Derleyici Yönergeleri](../compiler-directives.md)<br /><br />[Esnek Türler](../flexible-types.md)|<ul><li>Önişlemci veya derleyici yönergesi gibi önekleri `#light`.<br /></li><li>Bir türü ile kullanıldığında, gösteren bir *esnek türü*, bir tür veya türetilmiş türlerinden birini başvuruyor.<br /></li><ul/>|
 |`$`|Daha fazla bilgi yok.|<ul><li>Belirli derleyicinin ürettiği değişken ve işlev adları için dahili olarak kullanılır.<br /></li><ul/>|
-|`%`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Kod Alıntıları](../code-quotations.md)|<ul><li>Tamsayı modulus hesaplar.<br /></li><li>Yazılan kod tırnak işaretleri boşluklarına ayıran ifadelere için kullanılır.<br /></li><ul/>|
+|`%`|[Aritmetik İşleçler](arithmetic-operators.md)<br /><br />[Kod Alıntıları](../code-quotations.md)|<ul><li>Tamsayı kalanı hesaplar.<br /></li><li>Yazılan kod tırnak işaretleri boşluklarına ayıran ifadelere için kullanılır.<br /></li><ul/>|
 |`%%`|[Kod Alıntıları](../code-quotations.md)|<ul><li>İfadeler türsüz kod tırnak işaretleri içine boşluklarına ayıran için kullanılır.<br /></li><ul/>|
-|`%?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda tamsayı modulus hesaplar.<br /></li><ul/>|
+|`%?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda tamsayı kalanı hesaplar.<br /></li><ul/>|
 |`&`|[Eşleşme İfadeleri](../match-expressions.md)|<ul><li>Diğer dilleri ile birlikte çalışırken kullanmak için bir değişken değeri adresini hesaplar.<br /></li><li>VE düzenleri kullanılır.<br /></li><ul/>|
 |`&&`|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boolean ve işlem hesaplar.<br /></li><ul/>|
 |`&&&`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde AND işlemi hesaplar.<br /></li><ul/>|
@@ -81,8 +81,8 @@ Aşağıdaki tabloda F # dilinde kullanılan simgeler açıklar, daha fazla bilg
 |`<=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafındaki sağ tarafında; eşit veya daha az ise, aksi takdirde döndürür `false`.<br /></li><ul/>|
 |`<=?`|[Null Değer Atanabilir İşleçler](nullable-operators.md)|<ul><li>Sağ tarafında boş değer atanabilir bir tür olduğunda "değerinden küçük veya eşit" işlemi hesaplar.<br /></li><ul/>|
 |<code>&lt;&#124;</code>|[İşlevler](../functions/index.md)|<ul><li>İfadenin sonucu sağ tarafta işlevi (geriye dönük kanal işleci) sol tarafındaki geçirir.<br /></li><ul/>|
-|<code>&lt;&#124;&#124;</code>|[Operators. &#40; &#60; &#124; &#124; &#41; &#60;' T1, 'T2,' U &#62; İşlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tuple sağ tarafta sol tarafında işlevi geçirir.<br /></li><ul/>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operators. &#40; &#60; &#124; &#124; &#124; &#41; &#60;' T1,'T2, 'T3,' U &#62; İşlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken tuple sağ tarafta sol tarafında işlevi geçirir.<br /></li><ul/>|
+|<code>&lt;&#124;&#124;</code>|[İşleçler. &#40; &#60; &#124; &#124; &#41; &#60;' T1, 'T2' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tuple sağ tarafta sol tarafında işlevi geçirir.<br /></li><ul/>|
+|<code>&lt;&#124;&#124;&#124;</code>|[İşleçler. &#40; &#60; &#124; &#124; &#124; &#41; &#60;'T1, 'T2,' T3,' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken tuple sağ tarafta sol tarafında işlevi geçirir.<br /></li><ul/>|
 |`<@...@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Yazılan kod tırnak sınırlandırır.<br /></li><ul/>|
 |`<@@...@@>`|[Kod Alıntıları](../code-quotations.md)|<ul><li>Türsüz kod tırnak sınırlandırır.<br /></li><ul/>|
 |`=`|[Aritmetik İşleçler](arithmetic-operators.md)|<ul><li>Döndürür `true` sol tarafındaki sağ tarafı; eşitse, aksi takdirde, döndürür `false`.<br /></li><ul/>|
@@ -113,8 +113,8 @@ Aşağıdaki tabloda F # dilinde kullanılan simgeler açıklar, daha fazla bilg
 |<code>&#124;&#124;</code>|[Boole İşleçleri](boolean-operators.md)|<ul><li>Boole değeri veya işlemi hesaplar.<br /></li><ul/>|
 |<code>&#124;&#124;&#124;</code>|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde OR işlemi hesaplar.<br /></li><ul/>|
 |<code>&#124;></code>|[İşlevler](../functions/index.md)|<ul><li>Sol tarafındaki sonucunu işlev için sağ tarafta (iletme kanal işleci) iletir.<br /></li><ul/>|
-|<code>&#124;&#124;></code>|[Operators. &#40; &#124; &#124; &#62; &#41; &#60;' T1, 'T2,' U &#62; İşlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tuple sağ tarafında işlevi sol taraftaki geçirir.<br /></li><ul/>|
-|<code>&#124;&#124;&#124;></code>|[Operators. &#40; &#124; &#124; &#124; &#62; &#41; &#60;' T1,'T2, 'T3,' U &#62; İşlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken tuple sağ tarafında işlevi sol taraftaki geçirir.<br /></li><ul/>|
+|<code>&#124;&#124;></code>|[İşleçler. &#40; &#124; &#124; &#62; &#41; &#60;' T1, 'T2' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>İki bağımsız değişken tuple sağ tarafında işlevi sol taraftaki geçirir.<br /></li><ul/>|
+|<code>&#124;&#124;&#124;></code>|[İşleçler. &#40; &#124; &#124; &#124; &#62; &#41; &#60;'T1, 'T2,' T3,' U&#62; işlevi](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Üç bağımsız değişken tuple sağ tarafında işlevi sol taraftaki geçirir.<br /></li><ul/>|
 |`~~`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Tekli değilleme işleci için bir aşırı bildirmek için kullanılır.<br /></li><ul/>|
 |`~~~`|[Bit Düzeyinde İşleçler](bitwise-operators.md)|<ul><li>Bit düzeyinde hesaplar değil işlemi.<br /></li><ul/>|
 |`~-`|[İşleç Aşırı Yüklemesi](../operator-overloading.md)|<ul><li>Birli işleç eksi için bir aşırı bildirmek için kullanılır.<br /></li><ul/>|
@@ -127,7 +127,7 @@ Aşağıdaki tabloda en düşük önceliğe siparişe en yüksek önceliğe F # 
 |--------|-------------|
 |`as`|Sağ|
 |`when`|Sağ|
-|<code>&#124;</code>(kanal)|Sol|
+|<code>&#124;</code> (kanal)|Sol|
 |`;`|Sağ|
 |`let`|Nonassociative|
 |`function`, `fun`, `match`, `try`|Nonassociative|
@@ -138,19 +138,19 @@ Aşağıdaki tabloda en düşük önceliğe siparişe en yüksek önceliğe F # 
 |`or`, <code>&#124;&#124;</code>|Sol|
 |`&`, `&&`|Sol|
 |`:>`, `:?>`|Sağ|
-|`!=`*OP*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *OP*,`&`<br /><br />(de dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(de dahil olmak üzere `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sol|
 |`^`*OP*<br /><br />(de dahil olmak üzere `^^^`)|Sağ|
 |`::`|Sağ|
 |`:?`|Değil ilişkilendirilebilir|
-|`-`*OP*, `+` *op*|Bu simgeleri kullanımlarını infix uygular|
-|`*`*OP*, `/` *op*, `%` *op*|Sol|
+|`-`*op*, `+`*op*|Bu simgeleri kullanımlarını infix uygular|
+|`*`*op*, `/`*op*, `%`*op*|Sol|
 |`**`*OP*|Sağ|
-|`f x`(işlev uygulaması)|Sol|
-|<code>&#124;</code>(Desen eşleştirmesi)|Sağ|
+|`f x` (işlev uygulaması)|Sol|
+|<code>&#124;</code> (Desen eşleştirmesi)|Sağ|
 |önek işleçleri (`+`*op*, `-` *op*, `%`, `%%`, `&`, `&&`, `!` *op*, `~` *op*)|Sol|
 |`.`|Sol|
 |`f(x)`|Sol|
-|`f<`*türler*`>`|Sol|
+|`f<`*Türler*`>`|Sol|
 F # özel İşleç aşırı yüklemesi destekler. Başka bir deyişle, kendi işleçleri tanımlayabilirsiniz. Önceki tabloda *op* tüm geçerli (büyük olasılıkla boş) karakterlerin sırasının yerleşimini işleci, yerleşik veya kullanıcı tanımlı olabilir. Bu nedenle, hangi karakterlerin sırasının yerleşimini öncelik istenen düzeyine ulaşmak için özel bir işleç kullanılacağını belirlemek için bu tabloyu kullanın. Önde gelen `.` karakter derleyici öncelik belirlediğinde yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.

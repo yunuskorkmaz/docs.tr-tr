@@ -1,8 +1,9 @@
 ---
-title: "Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)"
+title: 'Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - conversions [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3dc67bc2f25bba14df0e3ce6859bb8bc9094871c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5cecfdf822352d22713985d84cdd7025d0665c8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme (C# Programlama Kılavuzu)
 Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string.md) yöntemleri kullanarak bir sayıya <xref:System.Convert> kullanarak veya sınıf `TryParse` yöntemi (int, uzun, float, vb.) çeşitli sayısal türler üzerinde bulunamadı.  
@@ -27,7 +28,7 @@ Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string
  Kullanabileceğiniz `Parse` veya `TryParse` beklediğiniz gibi dizesini içeren sayısal türündeki yöntemlere <xref:System.Int32?displayProperty=nameWithType> türü.  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> Yöntemi kullanan <xref:System.Int32.Parse%2A> dahili olarak.  Dizesi geçerli bir biçimde değilse `Parse` ancak aykırı `TryParse` döndürür [false](../../../csharp/language-reference/keywords/false.md).  
   
 ## <a name="example"></a>Örnek  
- `Parse` Ve `TryParse` yöntemleri yoksay başında ve dizenin sonunda boşluk, ancak diğer tüm karakterler uygun sayısal türün form karakter olmalıdır (int, uzun, ulong, float, ondalık, vs.).  Hiçbir boşluk form numarayı bir hata neden karakter içinde.  Örneğin, kullanabileceğiniz `decimal.TryParse` "10", "10.3", "10", ancak ayrıştırmak için bu yöntemi "10 X", 10 ayrıştırmak için kullanamazsınız "1 0" (Not alanı), "10. 3" (Not alanı), "10e1" (`float.TryParse` burada çalışır) ve benzeri.  
+ `Parse` Ve `TryParse` yöntemleri beyaz alan başında ve sonunda dizesinin yoksay, ancak diğer tüm karakterler uygun sayısal türün form karakter olmalıdır (int, uzun, ulong, float, ondalık, vs.).  Sayı form karakterleri içinde herhangi bir boşluk neden bir hata oluştu.  Örneğin, kullanabileceğiniz `decimal.TryParse` "10", "10.3", "10", ancak ayrıştırmak için bu yöntemi "10 X", 10 ayrıştırmak için kullanamazsınız "1 0" (Not alanı), "10. 3" (Not alanı), "10e1" (`float.TryParse` burada çalışır) ve benzeri.  
   
  Aşağıdaki örneklerde başarılı ve başarısız çağrılar göstermek `Parse` ve `TryParse`.  
   
@@ -60,5 +61,5 @@ Dönüştürebilir bir [dize](../../../csharp/language-reference/keywords/string
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Türler](../../../csharp/programming-guide/types/index.md)  
- [Nasıl yapılır: bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+ [Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
  [.NET framework 4 biçimlendirme yardımcı programı](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -1,7 +1,7 @@
 ---
-title: "Desen eşleştirme C# Kılavuzu"
-description: "C# ' ifadelerin eşleşen kalıbı hakkında bilgi edinin"
-keywords: .NET, .NET core, C#
+title: Desen eşleştirme C# Kılavuzu
+description: C# ' ifadelerin eşleşen kalıbı hakkında bilgi edinin
+keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme #
 
@@ -87,7 +87,7 @@ Birden fazla sabit değerleri için sınırlı olduğunda `case` etiket değeri 
 Şimdi, genelleştirilmiş daha fazla ile `switch` ifadeleri, her bölüm sırası önemlidir. `switch` İfadeleri metinsel sırayla değerlendirilir. Yürütme aktarır ilk `switch` eşleşen etiket `switch` ifade.  
 Unutmayın `default` durumda, yalnızca diğer durum etiketi eşleşiyorsa yürütülür. `default` Durumda son olarak, kendi metinsel sipariş bağımsız olarak değerlendirildi. Varsa hiçbir `default` çalışması ve diğer hiçbiri `case` deyimleri eşleşmesi, deyimi aşağıdaki yürütülmeye `switch` deyimi. Hiçbiri `case` etiketleri kod gerçekleştirilir.
 
-## <a name="when-clauses-in-case-expressions"></a>`when`yan tümcelerinde `case` ifadeleri
+## <a name="when-clauses-in-case-expressions"></a>`when` yan tümcelerinde `case` ifadeleri
 
 Özel durumlar kullanarak 0 alanı olan bu şekiller için yapabileceğiniz bir `when` yan tümcesi `case` etiketi. Bir kare yan uzunluğu 0 ile ya da RADIUS 0 olan bir daire 0 bir alana sahip. Bu koşul kullanarak belirttiğiniz bir `when` yan tümcesi `case` etiketi:  
 
@@ -112,7 +112,7 @@ Son olarak, ekleyebileceğiniz bir `null` bağımsız değişken değil emin olm
 
 İçin özel bir davranış `null` düzeni ilginç çünkü sabiti `null` desende bir türe sahip değil, ancak herhangi bir başvuru türü veya boş değer atanabilir tür dönüştürülebilir. Yerine Dönüştür bir `null` herhangi bir türü için dili tanımlayan bir `null` değer değişkenin derleme zamanı türünden bağımsız olarak herhangi bir tür modeliyle eşleşmez. Bu davranış yeni yapar `switch` türü desenine ile tutarlı `is` deyimi: `is` deyimleri her zaman geri `false` denetlenen değer olduğunda `null`. Ayrıca basittir: türü işaretlendiğinde, ek bir null denetimi gerekmez. Hiçbir null bulunmasına yukarıdaki örnekleri servis talebi bloklarını hiçbirinde denetler görebilirsiniz: boş olmayan bir değer türü desen eşleştirme garanti beri gerekli değildir.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`bildirimlerinde `case` ifadeleri
+## <a name="var-declarations-in-case-expressions"></a>`var` bildirimlerinde `case` ifadeleri
 
 Giriş `var` gibi bir eşleşme ifadeleri desen eşleştirme yeni kurallar tanıtır.
 
@@ -130,7 +130,7 @@ Herhangi bir varsayılan olmayan durumu için tercih edilen olduğundan `default
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-`var` Durumda eşleşmeleri `null`, boş dize veya yalnızca boşluk içeren herhangi bir dize. Önceki kod kullanan bildirimi `?.` onu değil yanlışlıkla throw emin olmak için işleci bir <xref:System.NullReferenceException>. `default` Durumunu işler bu komutu ayrıştırıcı tarafından anlaşılmayan herhangi bir dize değeri.
+`var` Durumda eşleşmeleri `null`, boş dize veya yalnızca boşluk içeriyor herhangi bir dize. Önceki kod kullanan bildirimi `?.` onu değil yanlışlıkla throw emin olmak için işleci bir <xref:System.NullReferenceException>. `default` Durumunu işler bu komutu ayrıştırıcı tarafından anlaşılmayan herhangi bir dize değeri.
 
 Bu bir yere göz önünde bulundurun isteyebilirsiniz örnektir bir `var` durumda farklıdır ifade bir `default` ifade.
 

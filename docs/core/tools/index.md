@@ -1,6 +1,6 @@
 ---
-title: ".NET core komut satırı arabirimi (CLI) araçları"
-description: ".NET Core komut satırı arabirimi (CLI) araçları ve özelliklerinin genel bakış."
+title: .NET core komut satırı arabirimi (CLI) araçları
+description: .NET Core komut satırı arabirimi (CLI) araçları ve özelliklerinin genel bakış.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

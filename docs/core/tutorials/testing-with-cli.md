@@ -1,6 +1,6 @@
 ---
-title: "Düzenleme ve projeleri .NET Core komut satırı ile test etme"
-description: "Bu öğretici, düzenlemek ve .NET Core projeleri komut satırından test açıklanmaktadır."
+title: Düzenleme ve projeleri .NET Core komut satırı ile test etme
+description: Bu öğretici, düzenlemek ve .NET Core projeleri komut satırından test açıklanmaktadır.
 keywords: .NET, .NET core birim testi, .NET Core CLI, xUnit
 author: cartermp
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.workload: dotnetcore
-ms.openlocfilehash: 4b8728a175d67cc532866d4de41d412e459f0291
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c68b7cb7dac069093e2e849543c5b5c21b4ffe3a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve projeleri .NET Core komut satırı ile test etme
 
@@ -52,7 +53,7 @@ Mantıksal Grup dosyaları klasörlere gidin ve bakımını kolay projeleri. Son
 
 ### <a name="building-the-sample"></a>Örnek oluşturma
 
-Aşağıdaki adımlar için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun. Türlerinin eklenmesi daha fazla türleri daha sonra izin veren bir klasör yapısı içinde mantıksal olarak düzenlenir ve testleri mantıksal olarak da daha fazla test daha sonra eklenmesi sorgulamasına klasörlerde yerleştirilir.
+Aşağıdaki adımlar için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun. Türlerinin eklenmesi daha fazla türleri daha sonra izin veren bir klasör yapısı içinde mantıksal olarak düzenlenir ve testleri mantıksal olarak da daha fazla test daha sonra eklenmesi sorgulamasına klasörlerde yerleştirilir.
 
 İki tür örnek içeriyor `Dog` ve `Cat`ve ortak bir arabirim uygulamalarına sahip `IPet`. İçin `NewTypes` , amacınız projedir evcil hayvan ilgili türler halinde düzenlemek için bir *Evcil Hayvanlar* klasör. Başka bir dizi türlerini sonradan, eklenirse *WildAnimals* Örneğin, bunlar içinde yerleştirilir *NewTypes* yanında klasörü *Evcil Hayvanlar* klasör. *WildAnimals* klasörü Evcil Hayvanlar, gibi olmayan hayvanlar türlerinde içerebilir `Squirrel` ve `Rabbit` türleri. Bu şekilde türleri eklendikçe proje iyi düzenli olarak kalır. 
 
@@ -103,7 +104,7 @@ Woof!
 Meow!
 ```
 
-İsteğe bağlı alıştırma: yeni bir evcil hayvan türü gibi ekleyebileceğiniz bir `Bird`, bu proje genişletme tarafından. Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine. Uygulamayı yeniden çalıştırın. Çıktıyı içerir`Tweet!`
+İsteğe bağlı alıştırma: yeni bir evcil hayvan türü gibi ekleyebileceğiniz bir `Bird`, bu proje genişletme tarafından. Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine. Uygulamayı yeniden çalıştırın. Çıktıyı içerir `Tweet!`
 
 ### <a name="testing-the-sample"></a>Örnek test etme
 

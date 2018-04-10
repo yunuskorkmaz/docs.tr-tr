@@ -1,6 +1,6 @@
 ---
-title: "Dil ile tümleşik sorgu (LINQ)"
-description: "C# dil ile tümleşik sorgu (LINQ) sunar"
+title: Dil ile tümleşik sorgu (LINQ)
+description: C# dil ile tümleşik sorgu (LINQ) sunar
 keywords: .NET, .NET core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn

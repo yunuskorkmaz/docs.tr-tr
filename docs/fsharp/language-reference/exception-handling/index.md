@@ -1,7 +1,7 @@
 ---
-title: "Özel Durum İşleme (F#)"
+title: Özel Durum İşleme (F#)
 description: "Özel durum işleme F #'de temel bilgileri öğrenmek ve özel durum işleme deyimleri ve işlevleri bağlantılarını bulabilirsiniz."
-keywords: "Visual f #, f # işlevsel programlama"
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

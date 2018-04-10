@@ -1,19 +1,19 @@
 ---
-title: "Docker çalışan konsol uygulamaları"
-description: "Varolan bir .NET Framework konsol uygulaması almak ve bir Windows Docker kapsayıcısı çalıştırmak öğrenin."
+title: Docker çalışan konsol uygulamaları
+description: Varolan bir .NET Framework konsol uygulaması almak ve bir Windows Docker kapsayıcısı çalıştırmak öğrenin.
 author: spboyer
-keywords: ".NET, kapsayıcı, konsol, uygulamaları"
+keywords: .NET, kapsayıcı, konsol, uygulamaları
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcılarında çalışan konsol uygulamaları
 
@@ -25,7 +25,7 @@ Docker ve Windows Server kullanmak için konsol uygulamaları taşıma kapsayıc
 
 Yanıt yanı sıra `Environment.MachineName` uygulama yerel olarak ve bir Windows kapsayıcıda çalışan arasındaki farkı göstermek için yanıta eklenir. Uygulamayı yerel olarak çalışırken, yerel makine adınızı döndürülmelidir ve bir Windows kapsayıcısında; çalıştırırken kapsayıcı oturum kimliği döndürülür.
 
-[Tam örnek](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) github'da dotnet/docs Havuzda kullanılabilir. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Tam örnek](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) github'da dotnet/samples Havuzda kullanılabilir. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Bir kapsayıcı uygulamanıza taşıma çalışmaya başlamadan önce koşulları bazı Docker ile ilgili bilgi sahibi olmanız gerekir.
 

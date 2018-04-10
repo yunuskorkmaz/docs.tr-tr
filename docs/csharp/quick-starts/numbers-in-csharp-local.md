@@ -1,6 +1,6 @@
 ---
-title: "C# Öğreticisi - C# yerel quickstarts numaraları"
-description: "C# sayısal türler, özellikleri ve yöntemleri keşfetme öğrenin."
+title: C# Öğreticisi - C# yerel quickstarts numaraları
+description: C# sayısal türler, özellikleri ve yöntemleri keşfetme öğrenin.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>C# hızlı başlangıç numaraları
 
@@ -315,7 +315,7 @@ Decimal türü kullanarak matematik ondalık konumun sağında daha fazla basama
 Farklı sayısal türler gördüğünüze göre 2.50 santimetreden, RADIUS olduğu dairenin alanı hesaplar kod yazın. Unutmayın PI ile çarpılmış dairenin alanı kare RADIUS olduğunu. Bir ipucu: .NET PI için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz. 
 
 19 ve 20 arasında bir yanıt almanız gerekir.
-Yanıtınız tarafından kontrol edebilirsiniz [Github'da tamamlanmış örnek kodu incelemeden](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+Yanıtınız tarafından kontrol edebilirsiniz [Github'da tamamlanmış örnek kodu incelemeden](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 İsterseniz başka bir formüller deneyin. 
 

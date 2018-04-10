@@ -1,7 +1,7 @@
 ---
-title: ".NET platform Kılavuzu"
-description: ".NET platformu hakkında bilgi edinin."
-keywords: .NET, .NET core
+title: .NET platform Kılavuzu
+description: .NET platformu hakkında bilgi edinin.
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: ronpet
 ms.date: 05/02/2017
@@ -13,11 +13,11 @@ ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9b4ae0f845d3e290df66b85548b697d9be002a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e363eac2c26e51ccd880227fe56c619f8c39aea3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-guide"></a>.NET Kılavuzu
 
@@ -68,4 +68,4 @@ Ayrıca, üç ana .NET dilleri hakkında bilgi edinmek için her dil Kılavuzu g
 
 ## <a name="api-reference"></a>API Başvurusu
 
-Kullanıma [.NET API Başvurusu](../../api/index.md) API'leri avaialable derecesini görmek için.
+Kullanıma [.NET API Başvurusu](../../api/index.md) API'leri kullanılabilir derecesini görmek için.

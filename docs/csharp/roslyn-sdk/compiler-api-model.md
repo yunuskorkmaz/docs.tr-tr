@@ -1,6 +1,6 @@
 ---
-title: ".NET derleme Platform SDK'sı kavramları ve nesne modeli"
-description: "Bu genel bakışta .NET derleyicisi SDK ile etkin şekilde çalışması için gereken arka plan sağlar. API katmanlar, söz konusu ana türleri ve genel nesne modeli öğreneceksiniz."
+title: .NET derleme Platform SDK'sı kavramları ve nesne modeli
+description: Bu genel bakışta .NET derleyicisi SDK ile etkin şekilde çalışması için gereken arka plan sağlar. API katmanlar, söz konusu ana türleri ve genel nesne modeli öğreneceksiniz.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET derleme Platform SDK modelini anlama
 
@@ -22,15 +22,15 @@ Derleyicileri genellikle yolu insanlar farklı aşağıdaki yapılandırılmış
 
 .NET derleme Platform SDK'sı, geleneksel derleyici ardışık düzen yansıtan bir API katmanı sağlayarak, C# ve Visual Basic derleyicileri Kod Analizi tüketici olarak kullanıma sunar.
 
-![nesne kodu kaynak koduna işleme derleyici ardışık adımları](media/compiler-pipeline.png)
+![nesne kodu kaynak koduna işleme derleyici ardışık adımları](media/compiler-api-model/compiler-pipeline.png)
 
 Bu ardışık düzen her bir aşaması ayrı bir bileşendir. İlk olarak, ayrıştırma aşaması tokenizes ve kaynak metin Dili Dilbilgisi izleyen sözdizimine ayrıştırır. İkinci olarak, kaynak ve içeri aktarılan meta veri simgeleri adlı forma bildirimi aşaması çözümler. Ardından, BIND aşaması simgeleri koda tanımlayıcılarının eşleşir. Son olarak, emit aşaması derleyicisi tarafından derlenen tüm bilgileri ile bir derlemeyi yayar.
 
-![Derleyici ardışık düzen API derleyici pipelien parçası olan her adım erişim sağlar](media/compiler-pipeline-api.png)
+![Derleyici ardışık düzen API derleyici pipelien parçası olan her adım erişim sağlar](media/compiler-api-model/compiler-pipeline-api.png)
 
 Her Bu aşamalar karşılık gelen, .NET derleme Platform SDK'sı bu aşamada bilgilerine erişmesini sağlayan bir nesne modeli sunar. Sözdizimi ağacı ayrıştırma aşaması gösterir, bildirimi aşaması hiyerarşik sembol tablosunu gösterir, bağlama aşaması derleyicinin semantik analizi sonucunu gösterir ve emit aşaması IL bayt kodları üreten bir API'dir.
 
-![Derleyiciden kullanılabilen dil hizmetler derleyici ardışık her adımında API](media/compiler-pipeline-lang-svc.png)
+![Derleyiciden kullanılabilen dil hizmetler derleyici ardışık her adımında API](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Her derleyici bu bileşenlerin birlikte tek bir uçtan uca bütün olarak birleştirir.
 
@@ -40,7 +40,7 @@ Bu API, Visual Studio tarafından kullanılan aynı olanlardır. Örneği için 
 
 SDK oluşan iki ana katmanları API'leri, .NET derleyici: derleyici API'leri ve çalışma alanları API'leri.
 
-![Derleyici tarafından temsil edilen API Katmanlar API'leri kanalı](media/api-layers.png)
+![Derleyici tarafından temsil edilen API Katmanlar API'leri kanalı](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>Derleyici API'leri
 

@@ -1,24 +1,26 @@
 ---
 title: FILESTREAM verileri
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 898fb6072742c745e7e86d2ea543803dc65ae014
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM verileri
 FILESTREAM depolama varbinary(max) sütunda depolanan ikili (BLOB) veriler için özniteliğidir. FILESTREAM önce ikili veri depolama özel olarak işlenmesi gerekli. Metin belgeleri, görüntüler ve video gibi yapılandırılmamış veriler genellikle yönetmek zorlaşır veritabanı dışında depolanır.  
@@ -29,7 +31,7 @@ FILESTREAM depolama varbinary(max) sütunda depolanan ikili (BLOB) veriler için
  Bir varbinary(max) sütunu FILESTREAM özniteliğine belirtme neden [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] yerel NTFS dosya sistemi yerine veritabanı dosyasında verileri depolamak için. Ayrı olarak depolanır, ancak aynı kullanabilirsiniz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri veritabanında depolanan varbinary(max) verilerle çalışmak için desteklenir.  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM SqlClient desteği  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] İçin veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], <xref:System.Data.SqlClient>, okuma ve yazma FILESTREAM verileri kullanarak için destekler <xref:System.Data.SqlTypes.SqlFileStream> tanımlanan sınıfı <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream`öğesinden devralınan <xref:System.IO.Stream> okuma ve verileri akışlara yazma yöntemleri sağlayan sınıf. Bir akışından okuma bayt dizisi gibi bir veri yapıda akıştan veri aktarır. Yazma verileri veri yapısından bir akışa aktarır.  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] İçin veri sağlayıcı [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], <xref:System.Data.SqlClient>, okuma ve yazma FILESTREAM verileri kullanarak için destekler <xref:System.Data.SqlTypes.SqlFileStream> tanımlanan sınıfı <xref:System.Data.SqlTypes> ad alanı. `SqlFileStream` öğesinden devralınan <xref:System.IO.Stream> okuma ve verileri akışlara yazma yöntemleri sağlayan sınıf. Bir akışından okuma bayt dizisi gibi bir veri yapıda akıştan veri aktarır. Yazma verileri veri yapısından bir akışa aktarır.  
   
 ### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>Oluşturma [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] tablosu  
  Aşağıdaki [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri Çalışanlar adlı bir tablo oluşturur ve bir veri satırı ekler. FILESTREAM depolama etkinleştirdikten sonra bu tablo izleyin kod örnekleri ile birlikte kullanabilirsiniz. Kaynaklara bağlantılar [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online bu konunun sonunda yer.  
@@ -160,7 +162,7 @@ namespace FileStreamTest
                         string path = reader.GetString(0);  
                         byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
   
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
                         {  
                             // Seek to the end of the file  
                             fileStream.Seek(0, SeekOrigin.End);  
@@ -175,42 +177,7 @@ namespace FileStreamTest
   
         }  
     }  
-} using (SqlConnection connection = new SqlConnection(  
-    connStringBuilder.ToString()))  
-{  
-    connection.Open();  
-  
-    SqlCommand command = new SqlCommand("", connection);  
-    command.CommandText = "select Top(1) Photo.PathName(), "  
-    + "GET_FILESTREAM_TRANSACTION_CONTEXT () from employees";  
-  
-    SqlTransaction tran = connection.BeginTransaction(  
-        System.Data.IsolationLevel.ReadCommitted);  
-    command.Transaction = tran;  
-  
-    using (SqlDataReader reader = command.ExecuteReader())  
-    {  
-        while (reader.Read())  
-        {  
-            // Get the pointer for file  
-            string path = reader.GetString(0);  
-            byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-            FileStream fileStream = new SqlFileStream(path,  
-                (byte[])reader.GetValue(1),  
-                FileAccess.ReadWrite,  
-                FileOptions.SequentialScan, 0);  
-  
-            // Seek to the end of the file  
-            fs.Seek(0, SeekOrigin.End);  
-  
-            // Append a single byte   
-            fileStream.WriteByte(0x01);  
-            fileStream.Close();  
-        }  
-    }  
-    tran.Commit();  
-}  
+}
 ```  
   
  Başka bir örnek için bkz: [nasıl depolanacağını ve bir dosya akışı sütuna ikili veri getirecek şekilde](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  

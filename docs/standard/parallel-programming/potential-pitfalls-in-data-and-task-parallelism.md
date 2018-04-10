@@ -1,12 +1,12 @@
 ---
-title: "Veri ve Görev Paralelliğinde Olası Tuzaklar"
-ms.custom: 
+title: Veri ve Görev Paralelliğinde Olası Tuzaklar
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngüler sağlayabilir. Ancak, döngü parallelizing iş, sıralı kodda olarak ortak olmayan ya da hiç karşılaşılan değil sorunlara yol açabilir karmaşıklık getirir. Bu konuda paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  
@@ -93,4 +93,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
  [PLINQ'te Olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Paralel programlama için desenleri: anlama ve uygulama paralel .NET Framework 4 desenler](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Paralel programlama için desenleri: anlama ve uygulama paralel .NET Framework 4 desenler](https://www.microsoft.com/download/details.aspx?id=19222)

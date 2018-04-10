@@ -1,7 +1,7 @@
 ---
-title: "F# Dili Başvurusu"
-description: "F # dili özelliği dili belirteçleri, kavramlar, türleri, ifadeler ve derleyici desteklenen yapı konuları için bu başvurusundan bilgi."
-keywords: "Visual f #, f # işlevsel programlama"
+title: F# Dili Başvurusu
+description: 'F # dili özelliği dili belirteçleri, kavramlar, türleri, ifadeler ve derleyici desteklenen yapı konuları için bu başvurusundan bilgi.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

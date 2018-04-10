@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlam Analizi ile çalışmaya başlama
 
@@ -36,7 +36,7 @@ Gibi <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 
 Bu öğreticide, "Hello World" programı yeniden bakın. Bu süre, programın ne bu simgeleri göstermek türlerini anlamak için sembolleri sorgu. Bir ad alanındaki türler için sorgular ve bir türünde kullanılabilen yöntemler bulmayı öğrenin.
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
+Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Sözdizimi ağacı türleri devralma programı farklı konumlarda geçerli farklı söz dizimi öğeleri tanımlamak için kullanın. Genellikle bu API'leri kullanarak atama özellikleri veya belirli türetilmiş türler için koleksiyon üyeleri anlamına gelir. Aşağıdaki örneklerde, atama ve atamalar açıkça yazılan değişkenler kullanılarak ayrı deyim ' dir. Dönüş türleri API ve çalışma zamanı türü, döndürülen nesnelerin görmek için kodu okuyabilir. Uygulamada, incelenmesi nesnelerin türünü tanımlamak için API adları kullanır ve örtük olarak yazılan değişkenler kullanmak için daha yaygın bir durumdur.

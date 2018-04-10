@@ -1,6 +1,6 @@
 ---
-title: ".NET core ek araçlar"
-description: "Destekleyen ve .NET çekirdek işlevselliğini genişleten ek araçlar genel bakış."
+title: .NET core ek araçlar
+description: Destekleyen ve .NET çekirdek işlevselliğini genişleten ek araçlar genel bakış.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

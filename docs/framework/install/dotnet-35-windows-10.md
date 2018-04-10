@@ -1,18 +1,18 @@
 ---
-title: ".NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yükleme"
-description: ".NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yüklemek öğrenin."
+title: .NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yükleme
+description: .NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yüklemek öğrenin.
 author: rlander
 ms.author: mairaw
-ms.date: 11/27/2017
+ms.date: 03/30/2018
 ms.topic: article
 ms.prod: .net-framework
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 09c4f81da76bb6608c3e579c442cf686ffab1688
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>.NET Framework 3.5 Windows 10, Windows 8.1 ve Windows 8 yükleme
 
@@ -23,6 +23,10 @@ Windows 10, Windows 8.1 ve Windows 8 uygulama çalıştırmak için .NET Framewo
 .NET Framework 3.5 gerektiren bir uygulama çalıştırmayı denerseniz aşağıdaki yapılandırma iletişim kutusu görebilirsiniz. Seçin **bu özelliği yüklemek** .NET Framework 3.5 etkinleştirmek için. Bu seçenek, bir Internet bağlantısı gerektirir.
 
 ![.NET framework yükleme iletişim kutusu](./media/dotnet-framework-installation-dialog.jpg)
+
+### <a name="why-am-i-getting-this-pop-up"></a>Neden bu açılır alıyorum?
+
+.NET Framework Microsoft tarafından oluşturulan ve uygulamaları çalıştırmak için bir ortam sağlar. Farklı sürümlerinde kullanılabilir. Birçok şirket .NET Framework kullanılarak çalıştırmak için uygulamalarını geliştirmek ve belirli bir sürümü bu uygulamaları hedefleyebilirsiniz. Bu açılır pencere görürseniz, .NET Framework sürüm 3.5 gerektiren bir uygulamayı çalıştırmak çalıştığınız, ancak bu sürümü, sisteminizde yüklü değil.
 
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>Denetim Masası'ndaki .NET Framework 3.5 etkinleştir
 
@@ -40,4 +44,4 @@ Windows 10, Windows 8.1 ve Windows 8 uygulama çalıştırmak için .NET Framewo
 
 Yükleme sırasında hata 0x800f0906, 0x800f0907, 0x800f081f veya 0x800F0922 bakın; bu durumda, karşılaşabileceğiniz [.NET Framework 3.5 yükleme hatası: 0x800f0906, 0x800f0907 veya 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) bunları gidermek nasıl görmek için sorunları.
 
-Önceki makalede açıklanan yöntemlerden herhangi birini başarısız olursa veya bir Internet bağlantısı yoksa, Windows yükleme medyasını kullanmak gereklidir. Daha fazla bilgi için bkz: [Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) kullanarak .NET Framework 3.5 dağıtmak](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Yükleme medyasının yoksa bkz [yükleme medyasını oluşturmak için Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Yükleme sorununuzu hala çözümlenemiyor veya bir Internet bağlantısı yoksa, Windows yükleme medyasını kullanarak yüklemeyi deneyebilirsiniz. Daha fazla bilgi için bkz: [Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) kullanarak .NET Framework 3.5 dağıtmak](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Yükleme medyasının yoksa bkz [yükleme medyasını oluşturmak için Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

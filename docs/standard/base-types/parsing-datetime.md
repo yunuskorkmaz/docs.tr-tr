@@ -1,6 +1,6 @@
 ---
-title: "Nasıl yapılır: dizeleri DateTime olarak dönüştürme"
-description: "Tarihler ve saatler DateTime tarih ve saat dizesi oluşturmak için temsil eden dizeleri ayrıştırma teknikleri hakkında bilgi edinin."
+title: 'Nasıl yapılır: dizeleri DateTime olarak dönüştürme'
+description: Tarihler ve saatler DateTime tarih ve saat dizesi oluşturmak için temsil eden dizeleri ayrıştırma teknikleri hakkında bilgi edinin.
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve saat dizelerini .NET ayrıştırma
 
@@ -64,7 +64,7 @@ Aşağıdaki örnek kullanımını göstermektedir <xref:System.DateTime.Parse%2
 > Tüm C# örnekleri bu makalede, tarayıcınızda çalıştırın. Tuşuna **çalıştırmak** çıkışı görmek düğmesi. Ayrıca, bunları kendiniz denemeler yapmak için de düzenleyebilirsiniz.
 
 > [!NOTE]
-> Bu örnekler GitHub belgeleri depo her ikisi için de kullanılabilir olan [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) ve [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions). Veya zipfile için olarak proje indirebilirsiniz [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) veya [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
+> Bu örnekler GitHub belgeleri depo her ikisi için de kullanılabilir olan [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) ve [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Veya zipfile için olarak proje indirebilirsiniz [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) veya [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

@@ -1,7 +1,7 @@
 ---
-title: ".NET Core barındırma"
-description: "Yerel koddan .NET çekirdeği çalışma zamanı barındırma"
-keywords: ".NET, .NET core, barındırma, .NET Core barındırma"
+title: .NET Core barındırma
+description: Yerel koddan .NET çekirdeği çalışma zamanı barındırma
+keywords: .NET, .NET core, barındırma, .NET Core barındırma
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>.NET Core barındırma
 
@@ -35,7 +35,7 @@ Bu öğretici ve onun ilişkili örnek bir Windows konağının oluşturun; üze
 
 ## <a name="creating-the-host"></a>Konak oluşturma
 
-A [örnek konak](https://github.com/dotnet/docs/tree/master/samples/core/hosting) bu makalede açıklanan adımları gösteren kullanılabilir dotnet/belgeler GitHub deposunda. Örnek ait açıklamaları *host.cpp* numaralı adımlar burada bunlar örnekte gerçekleştirilen ile bu öğreticiden açıkça ilişkilendirme dosya. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+A [örnek konak](https://github.com/dotnet/samples/tree/master/core/hosting) bu makalede açıklanan adımları gösteren kullanılabilir dotnet/samples GitHub deposunda. Örnek ait açıklamaları *host.cpp* numaralı adımlar burada bunlar örnekte gerçekleştirilen ile bu öğreticiden açıkça ilişkilendirme dosya. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Örnek konak amacıyla, böylece hata denetimi üzerinde açık olduğundan ve verimliliği okunabilirlik vurgulamak için tasarlanmış öğrenme için kullanılması amaçlanmıştır aklınızda bulundurun. Daha fazla gerçek ana bilgisayar örnekleri kullanılabilir [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) deposu. [CoreRun konak](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), özellikle, daha basit örnek okuduktan sonra incelemek için iyi bir genel amaçlı ana bilgisayardır.
 
@@ -90,7 +90,7 @@ Ortak AppDomain özellikleri şunlardır:
 *  `PLATFORM_RESOURCE_ROOTS` Bu liste kaynak uydu derlemeleri (kültüre özgü alt dizinlerde) için araştırma yolları içerir.
 *  `AppDomainCompatSwitch` Bu dize, açık bir hedef Framework ad (derleme karşı çalıştırmak için tasarlanmıştır hangi Framework gösteren bir derleme düzeyi öznitelik) olmadan derlemeler için hangi uyumluluk quirks kullanılması gerektiğini belirtir. Genellikle, bu ayarlanmalı `"UseLatestBehaviorWhenTFMNotSpecified"` ancak bazı ana bilgisayarlar eski Silverlight veya Windows Phone uyumluluk quirks, bunun yerine almak isteyebilirsiniz.
 
-İçinde bizim [basit örnek konak](https://github.com/dotnet/docs/tree/master/samples/core/hosting), bu özellikleri şu şekilde ayarlanır:
+İçinde bizim [basit örnek konak](https://github.com/dotnet/samples/tree/master/core/hosting), bu özellikleri şu şekilde ayarlanır:
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

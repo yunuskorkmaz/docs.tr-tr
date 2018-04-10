@@ -1,6 +1,6 @@
 ---
-title: "ASP.NET Core ve Azure ile Mimarı modern web uygulamaları"
-description: "ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Giriş"
+title: ASP.NET Core ve Azure ile Mimarı modern web uygulamaları
+description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Giriş
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

@@ -3,17 +3,17 @@ title: DotNet yeni komutu - .NET Core CLI
 description: Dotnet yeni komut belirtilen şablona dayalı yeni .NET Core projelerini oluşturur.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -42,7 +42,7 @@ dotnet new [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet new` Komutu geçerli bir .NET Core projeyi başlatmak için kolay bir yol sağlar. 
+`dotnet new` Komutu geçerli bir .NET Core projeyi başlatmak için kolay bir yol sağlar.
 
 Komut çağrıları [şablon motoru](https://github.com/dotnet/templating) yapıları belirtilen şablonu ve seçenekleri bağlı disk oluşturmak için.
 
@@ -122,6 +122,9 @@ Belirtilen ad içeren şablonlarını listeler. İçin başlatılırsa `dotnet n
 
 Oluşturmak için şablon dili. Dil kabul değişir şablon tarafından (varsayılan ayarlarında bkz [bağımsız değişkenleri](#arguments) bölümü). Bazı şablonlar için geçerli değil.
 
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+
 `-n|--name <OUTPUT_NAME>`
 
 Oluşturulan çıktı adı. Ad belirtilmezse, geçerli dizin adı kullanılır.
@@ -159,6 +162,9 @@ Belirtilen ad içeren şablonlarını listeler. İçin başlatılırsa `dotnet n
 `-lang|--language {C#|F#}`
 
 Oluşturmak için şablon dili. Dil kabul değişir şablon tarafından (varsayılan ayarlarında bkz [bağımsız değişkenleri](#arguments) bölümü). Bazı şablonlar için geçerli değil.
+
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -304,7 +310,7 @@ Her proje şablonu ek seçenekleri olabilir. Çekirdek şablonları aşağıdaki
 
 Geçerli dizinde bir F # konsol uygulama projesi oluşturun:
 
-`dotnet new console -lang f#`
+`dotnet new console -lang F#`
 
 (Yalnızca .NET çekirdeği 2.0 SDK veya sonraki sürümleriyle kullanılabilir) belirtilen dizindeki .NET standart bir sınıf kitaplığı projesi oluşturun:
 

@@ -1,6 +1,6 @@
 ---
-title: "Çalıştırmak, yönetmek ve Docker üretim ortamlarını izlemek"
-description: "Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü"
+title: Çalıştırmak, yönetmek ve Docker üretim ortamlarını izlemek
+description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

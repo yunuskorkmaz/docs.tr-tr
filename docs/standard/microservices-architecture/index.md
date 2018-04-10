@@ -1,6 +1,6 @@
 ---
-title: ".NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ön konular"
+title: .NET Microservices. Kapsayıcılı .NET uygulamaları için mimarisi
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ön konular
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

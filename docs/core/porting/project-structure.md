@@ -1,7 +1,7 @@
 ---
-title: "Projeniz .NET Framework ve .NET Core desteklemek için düzenleme"
-description: ".NET Framework ve .NET Core yan yana karşı kendi çözümünü derlemek için isteyen proje sahipleri için yardımcı olur."
-keywords: ".NET, .NET core, .NET Framework, proje düzeni, birden çok çerçeveyi"
+title: Projeniz .NET Framework ve .NET Core desteklemek için düzenleme
+description: .NET Framework ve .NET Core yan yana karşı kendi çözümünü derlemek için isteyen proje sahipleri için yardımcı olur.
+keywords: .NET, .NET core, .NET Framework, proje düzeni, birden çok çerçeveyi
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.workload: dotnetcore
-ms.openlocfilehash: 08fe18233c13410f0fb970020bce090d3345ca84
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2392c6e477138e21dc98055fe7ecca84789f07af
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Projeniz .NET Framework ve .NET Core desteklemek için düzenleme
 
@@ -76,14 +77,14 @@ Lütfen bakın [.NET Core belgeleri taşıma] [ porting-doc] .NET Core geçirme 
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Mevcut proje"
-[example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
+[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
 
 [example-csproj]: media/project-structure/project.csproj.png "Birden çok çerçeveyi hedefleyen bir csproj oluşturma"
-[example-csproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
+[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
+[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 
 [example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Farklı bir klasör içinde varolan PCL .NET core projeyle"
-[example-csproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj-keep-existing/
+[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
 
 [option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
 [option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project

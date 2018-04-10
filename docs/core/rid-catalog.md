@@ -1,17 +1,18 @@
 ---
-title: ".NET çekirdeği çalışma zamanı tanımlayıcı (RID) Kataloğu"
-description: "Çalışma zamanı tanımlayıcı (RID) ve RID .NET Core nasıl kullanıldığı hakkında bilgi edinin."
+title: .NET çekirdeği çalışma zamanı tanımlayıcı (RID) Kataloğu
+description: Çalışma zamanı tanımlayıcı (RID) ve RID .NET Core nasıl kullanıldığı hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID Kataloğu
 
@@ -19,7 +20,7 @@ RID kısaltması *çalışma zamanı tanımlayıcı*. RID değerler, uygulamanı
 .NET paketleri tarafından bunlar NuGet paketlerini platforma özgü varlıkları temsil etmek için kullanılır. Aşağıdaki değerleri RID örnekleri şunlardır: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, veya `osx.10.12-x64`.
 Yerel bağımlılıkları olan paketleri için hangi platformlarda paketi geri yüklemesi RID belirler.
 
-RID ayarlanabilir `<RuntimeIdentifier>` proje dosyanızı öğesidir. Ayrıca aracılığıyla kullanıldıklarından `--runtime` aşağıdaki seçeneğiyle [.NET Core CLI komutları](./tools/index.md):
+Tek bir RID ayarlanabilir ' `<RuntimeIdentifier>` proje dosyanızı öğesidir. Birden fazla RID proje dosyasının bir noktalı virgülle ayrılmış liste olarak tanımlanabilir `<RuntimeIdentifiers>` öğesi. Ayrıca aracılığıyla kullanıldıklarından `--runtime` aşağıdaki seçeneğiyle [.NET Core CLI komutları](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -31,15 +32,15 @@ RID ayarlanabilir `<RuntimeIdentifier>` proje dosyanızı öğesidir. Ayrıca ar
 
 Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: `[os].[version]-[architecture]-[additional qualifiers]` burada:
 
-- `[os]`platform/işletim sistemi addır. Örneğin, `ubuntu`.
+- `[os]` platform/işletim sistemi addır. Örneğin, `ubuntu`.
 
-- `[version]`işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası. Örneğin, `15.10`.
+- `[version]` işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası. Örneğin, `15.10`.
 
   - Sürüm **döndürmemelidir** pazarlama sürümleri, bunlar genellikle birden fazla ayrı platform API yüzey alanını değişen ile işletim sistemi sürümünü temsil.
 
-- `[architecture]`İşlemci mimarisi ' dir. Örneğin: `x86`, `x64`, `arm`, veya `arm64`.
+- `[architecture]` İşlemci mimarisi ' dir. Örneğin: `x86`, `x64`, `arm`, veya `arm64`.
 
-- `[additional qualifiers]`Daha fazla farklı platformlarda ayırt. Örneğin: `aot` veya `corert`.
+- `[additional qualifiers]` Daha fazla farklı platformlarda ayırt. Örneğin: `aot` veya `corert`.
 
 ## <a name="rid-graph"></a>RID grafiği
 
@@ -90,7 +91,7 @@ En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/core
 
 Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID gösterir. Bu kapsamıyordur `arm` veya `corert` değerleri.
 
-## <a name="windows-rids"></a>Windows RID
+## <a name="windows-rids"></a>Windows RIDs
 
 - Taşınabilir
   - `win-x86`
@@ -114,7 +115,7 @@ Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID göste
 
 Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bilgi için.
 
-## <a name="linux-rids"></a>Linux RID
+## <a name="linux-rids"></a>Linux RIDs
 
 - Taşınabilir
   - `linux-x64`
@@ -127,8 +128,8 @@ Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bil
 - Fedora
   - `fedora-x64`
   - `fedora.24-x64`
-  - `fedora.25-x64`(.NET core 2.0 veya sonraki sürümler)
-  - `fedora.26-x64`(.NET core 2.0 veya sonraki sürümler)
+  - `fedora.25-x64` (.NET core 2.0 veya sonraki sürümler)
+  - `fedora.26-x64` (.NET core 2.0 veya sonraki sürümler)
 - Gentoo (.NET Core 2.0 veya sonraki sürümler)
   - `gentoo-x64`
 - openSUSE
@@ -142,12 +143,12 @@ Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bil
   - `ol.7.2-x64`
 - Red Hat Enterprise Linux
   - `rhel-x64`
-  - `rhel.6-x64`(.NET core 2.0 veya sonraki sürümler)
+  - `rhel.6-x64` (.NET core 2.0 veya sonraki sürümler)
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - `rhel.7.3-x64`(.NET core 2.0 veya sonraki sürümler)
-  - `rhel.7.4-x64`(.NET core 2.0 veya sonraki sürümler)
+  - `rhel.7.3-x64` (.NET core 2.0 veya sonraki sürümler)
+  - `rhel.7.4-x64` (.NET core 2.0 veya sonraki sürümler)
 - Tizen (.NET Core 2.0 veya sonraki sürümler)
   - `tizen`
 - Ubuntu
@@ -164,18 +165,18 @@ Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bil
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
   - `linuxmint.18-x64`
-  - `linuxmint.18.1-x64`(.NET core 2.0 veya sonraki sürümler)
+  - `linuxmint.18.1-x64` (.NET core 2.0 veya sonraki sürümler)
 
 Bkz: [.NET Core Linux önkoşulları](linux-prerequisites.md) daha fazla bilgi için.
 
-## <a name="macos-rids"></a>macOS RID
+## <a name="macos-rids"></a>macOS RIDs
 
 macOS RID eski markalama "OSX" kullanın.
 
-- `osx-x64`(.NET core 2.0 veya sonraki sürümler, en düşük sürüm olan `osx.10.12-x64`)
+- `osx-x64` (.NET core 2.0 veya sonraki sürümler, en düşük sürüm olan `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- `osx.10.12-x64`(.NET core 1.1 veya sonraki sürümler)
+- `osx.10.12-x64` (.NET core 1.1 veya sonraki sürümler)
 - `osx.10.13-x64`
 
 Bkz: [.NET Core üzerinde macOS önkoşulları](macos-prerequisites.md) daha fazla bilgi için.

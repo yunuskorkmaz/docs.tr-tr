@@ -1,21 +1,22 @@
 ---
-title: "Genel Türler ve Yansıma (C# Programlama Kılavuzu)"
+title: Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri için olduğu gibi aynı şekilde genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için bkz: [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,19 +39,19 @@ Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere er
 |<xref:System.Type.DeclaringMethod%2A>|Geçerli genel tanımlanan genel yöntem tür parametresi ya da genel bir yöntemle tür parametresi tanımlı değil yoksa null değerini döndürür.|  
 |<xref:System.Type.MakeGenericType%2A>|Tür parametreleri için geçerli genel tür tanımı türleri dizisi öğelerini değiştirir ve döndürür bir <xref:System.Type> oluşturulan türü elde edilen temsil eden nesne.|  
   
- Ayrıca, yeni üyeler eklenir <xref:System.Reflection.MethodInfo> sınıfı çalışma zamanı bilgileri genel yöntemler için etkinleştir. Bkz: <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> özelliği açıklamalar üzerinde genel yöntemler yansıtmak için kullanılan terimler için değişmez koşullar listesi.  
+ Ayrıca, üyeleri <xref:System.Reflection.MethodInfo> sınıfı çalışma zamanı bilgileri genel yöntemler için etkinleştir. Bkz: <xref:System.Reflection.MethodBase.IsGenericMethod%2A> özelliği açıklamalar üzerinde genel yöntemler yansıtmak için kullanılan terimler için değişmez koşullar listesi.  
   
 |System.Reflection.MemberInfo üye adı|Açıklama|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Bir yöntem genel ise true, aksi durumda değeri döndürür.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Bir yöntem genel ise true, aksi durumda değeri döndürür.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Oluşturulan genel yönteminin tür bağımsız değişkenleri veya genel yöntem tanımını tür parametrelerini temsil eden tür nesneleri içeren bir dizi döndürür.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Geçerli yapılandırılmış yöntemi için temel alınan genel yöntem tanımını döndürür.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Kendisi için değil belirli türleri sağlanmadı herhangi bir tür parametre yöntemi veya kapsayan türlerinden herhangi birini içeriyorsa, true döndürür.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Varsa true değerini döndürür geçerli <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Kendisi için değil belirli türleri sağlanmadı herhangi bir tür parametre yöntemi veya kapsayan türlerinden herhangi birini içeriyorsa, true döndürür.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Varsa true değerini döndürür geçerli <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Tür parametreleri için geçerli genel yöntem tanımını türleri dizisi öğeleri değiştirir ve döndürür bir <xref:System.Reflection.MethodInfo> oluşturulan yöntemi elde edilen temsil eden nesne.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel türler](../../../csharp/programming-guide/generics/index.md)  
- [Yansıma ve genel türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Genel türler](~/docs/standard/generics/index.md)
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+ [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
+ [Yansıma ve Genel Türler](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+ [Genel Türler](~/docs/standard/generics/index.md)

@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core'u kullanmaya başlama
 
@@ -34,7 +34,7 @@ Visual Studio Code açarak ve tuşuna basarak Visual Studio kod C# uzantısını
 
 ## <a name="getting-started"></a>Başlarken
 
-Bu öğreticide, üç projeleri oluşturma: bir kitaplık projesine testleri kitaplığı proje ve bir konsol uygulaması yapar kitaplığını kullanın. Yapabilecekleriniz [görüntülemek veya kaynak indirme](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) github'da dotnet/docs deposunda Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, üç projeleri oluşturma: bir kitaplık projesine testleri kitaplığı proje ve bir konsol uygulaması yapar kitaplığını kullanın. Yapabilecekleriniz [görüntülemek veya kaynak indirme](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) github'da dotnet/samples deposunda Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Visual Studio Code başlatın. Tuşuna <kbd>Ctrl</kbd> + <kbd> \` </kbd> (ters tırnak veya backtick karakter) ya da seçin **Görünüm > tümleşik Terminal** katıştırılmış açmak için menüden Visual Studio Code terminale. Dış bir kabuk Gezgini ile yine de açabilirsiniz **bir komut istemi açın** komutu (**içinde Terminali açın** Mac veya Linux) dışında Visual Studio Code çalışmayı tercih ederseniz.
 

@@ -1,12 +1,11 @@
 ---
 title: "İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480d61f6ca2aa67e0de48030655a6368c70554f4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f3129b4128444530b1277299f3f95ce49232421
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme
 Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzenlemek için Düzen özelliklerinin [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] karma uygulama denetimlerinde.  
@@ -161,26 +160,17 @@ Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclie
 5.  Tıklatın **Click me** düğmesi. `button1_Click` Olay işleyicisi kümeleri <xref:System.Windows.Forms.Control.Top%2A> ve <xref:System.Windows.Forms.Control.Left%2A> barındırılan denetim özellikleri. Bu içinde konumlandırılmasına denetimden neden <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi. Ana bilgisayar aynı ekran alanını korur, ancak barındırılan denetim kırpılır. Bunun yerine, barındırılan denetim daima doldurmanız <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi.  
   
 ## <a name="understanding-z-order-limitations"></a>Z düzeni sınırlamalarını anlama  
- Varsayılan olarak görünür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri her zaman çizilir diğer üstünde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri ve z düzeni tarafından etkilenmez. Z sıralamasını etkinleştirmek için ayarlanmış <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> özelliği <xref:System.Windows.Forms.Integration.WindowsFormsHost> true ve <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> özelliğine <xref:System.Windows.Interop.CompositionMode.Full> veya <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
-#### <a name="to-see-the-default-z-order-behavior"></a>Z düzeni davranışı görmek için  
-  
-1.  Aşağıdaki XAML içine kopyalamak <xref:System.Windows.Controls.Grid> öğesi.  
-  
+ Görünür <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğeleri her zaman en üstünde diğer WPF öğeleri çizileceğini ve z düzeni tarafından etkilenmez. Bu z düzeni davranışı görmek için aşağıdakileri yapın:
+
+1.  Aşağıdaki XAML içine kopyalamak <xref:System.Windows.Controls.Grid> öğesi.
+
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
-  
+ 
 2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi etiket öğesinde boyanır.  
-  
-#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>Z düzeni davranışını IsRedirected true olduğunda görmek için  
-  
-1.  Önceki z düzeni örnek aşağıdaki XAML ile değiştirin.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
-  
-     Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Label öğesi üzerinden boyanır <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi.  
-  
+
+
 ## <a name="docking"></a>Yerleştirme  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>öğesi tarafından desteklenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerleştirme. Ayarlama <xref:System.Windows.Controls.DockPanel.Dock%2A> barındırılan denetimi sabitlemek için özelliği eklenmiş bir <xref:System.Windows.Controls.DockPanel> öğesi.  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi tarafından desteklenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerleştirme. Ayarlama <xref:System.Windows.Controls.DockPanel.Dock%2A> barındırılan denetimi sabitlemek için özelliği eklenmiş bir <xref:System.Windows.Controls.DockPanel> öğesi.  
   
 #### <a name="to-dock-a-hosted-control"></a>Barındırılan denetimi sabitlemek için  
   
@@ -222,7 +212,7 @@ Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclie
 2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi kılavuz satırında ortalanır, ancak bunu kullanılabilir alanı dolduracak şekilde genişletilir değil. Pencere yeterince büyük ise, barındırılan tarafından görüntülenen iki veya daha fazla ayı görebilirsiniz <xref:System.Windows.Forms.MonthCalendar> denetimi, ancak bunlar satır içinde ortalanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Yerleşim altyapısı merkezleri kullanılabilir alanı dolduracak şekilde boyutlandırılmış olamaz öğeleri.  
   
 ## <a name="scaling"></a>ölçeklendirme  
- Farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeler, çoğu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri sürekli ölçeklenebilir değildir. Varsayılan olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, barındırılan denetimi mümkün olduğunda ölçeklendirir.  Tam özellikli ölçeklendirmeyi etkinleştirmek için ayarlanmış <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> özelliği <xref:System.Windows.Forms.Integration.WindowsFormsHost> true ve <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> özelliğine <xref:System.Windows.Interop.CompositionMode.Full> veya <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
+ WPF öğelerinden farklı olarak, çoğu Windows Forms denetimleri sürekli ölçeklenebilir değildir. Özel ölçeklendirme sağlamak için geçersiz kılma <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> yöntemi. 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Varsayılan davranış kullanarak barındırılan denetimi ölçeklendirmek için  
   
@@ -230,19 +220,13 @@ Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclie
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Barındırılan denetim ve onun çevresindeki öğeler 0,5 faktörüyle ölçeklendirilir. Ancak, barındırılan denetimin yazı tipi ölçeklenmez.  
-  
-#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>IsRedirected true olarak ayarlayarak barındırılan denetimi ölçeklendirmek için  
-  
-1.  Önceki ölçeklendirme örnek aşağıdaki XAML ile değiştirin.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
-  
-2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Barındırılan denetimi, çevreleyen öğeleri ve barındırılan denetimin yazı tipi 0,5 faktörüyle ölçeklendirilir.  
-  
+2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Barındırılan denetim ve onun çevresindeki öğeler 0,5 faktörüyle ölçeklendirilir. Ancak, barındırılan denetimin yazı tipi ölçeklenmez.
+
+<!-- This could use an example of custom scaling. -->
+
 ## <a name="rotating"></a>Döndürme  
- Farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri döndürmeyi desteklemez. Varsayılan olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi diğer döndürülmez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] döndürme dönüşümü uygulandığında öğeleri. 180 derece başlatır dışındaki herhangi bir döndürme değeri <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olay.  Herhangi bir açıyla döndürme etkinleştirmek için ayarlanmış <xref:System.Windows.Interop.HwndHost.IsRedirected%2A> özelliği <xref:System.Windows.Forms.Integration.WindowsFormsHost> true ve <xref:System.Windows.Interop.HwndHost.CompositionMode%2A> özelliğine <xref:System.Windows.Interop.CompositionMode.Full> veya <xref:System.Windows.Interop.CompositionMode.OutputOnly>.  
-  
+ WPF öğelerinden farklı olarak, Windows Forms denetimleri döndürmeyi desteklemez. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi döndürme dönüşümü uygulandığında diğer WPF öğelerle döndürülmez. 180 derece başlatır dışındaki herhangi bir döndürme değeri <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> olay.
+ 
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Karma uygulamada döndürme etkisini görmek için  
   
 1.  Aşağıdaki XAML içine kopyalamak <xref:System.Windows.Controls.Grid> öğesi.  
@@ -250,15 +234,8 @@ Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclie
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
 2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Barındırılan denetim değil döndürülür, ancak çevreleyen öğeleri 180 derece açının tarafından döndürülür. Öğeleri görmek için pencereyi yeniden boyutlandırmak olabilir.  
-  
-#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>IsRedirected true olduğunda karma uygulamada döndürme etkisini görmek için  
-  
-1.  Önceki döndürme örneği aşağıdaki XAML ile değiştirin.  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
-  
-2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Barındırılan denetim döndürülür.  Unutmayın <xref:System.Windows.Media.RotateTransform.Angle%2A> özelliği herhangi bir değere ayarlanabilir. Öğeleri görmek için pencereyi yeniden boyutlandırmak olabilir.  
-  
+ 
+
 ## <a name="setting-padding-and-margins"></a>Ayar doldurma ve kenar boşlukları  
  Doldurma ve kenar boşlukları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzeni doldurma ve kenar boşlukları benzer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Basitçe <xref:System.Windows.Controls.Control.Padding%2A> ve <xref:System.Windows.FrameworkElement.Margin%2A> özellikleri <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi.  
   
@@ -272,7 +249,7 @@ Bu kılavuz size nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_winclie
 2.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın. Doldurma ve kenar boşluğu ayarlar uygulanır barındırılan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri bunların uygulanacağı aynı şekilde [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="using-dynamic-layout-containers"></a>Dinamik düzen kapsayıcılarını kullanma  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]iki dinamik düzeni kapsayıcıyı sağlar <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>. Bu kapsayıcı de kullanabilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzenler.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] iki dinamik düzeni kapsayıcıyı sağlar <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>. Bu kapsayıcı de kullanabilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzenler.  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>Dinamik düzen kapsayıcısını kullanmak için  
   

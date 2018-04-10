@@ -1,7 +1,7 @@
 ---
-title: "Üyeler (F#)"
-description: "Nesne üyeleri F # programlama dili hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Üyeler (F#)
+description: 'Nesne üyeleri F # programlama dili hakkında bilgi edinin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

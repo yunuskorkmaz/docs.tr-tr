@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; Element'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> sınıfı yeni işlevsellik için vazgeçme mekanizma sağlar.  
@@ -94,6 +91,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|SystemDefault TLS sürümleri geri Tls12, Tls11, Tls varsayılan olarak geri alma devre dışı bırakır.|.NET framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|SslStream TLS sunucu tarafı uyarıları devre dışı bırakır.|.NET framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Denetimleri olup olmadığını [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) ECMAScript V6 ve V8 standartlarını temel bazı denetim karakterleri serileştirir. Daha fazla bilgi için bkz: [azaltma: DataContractJsonSerializer ile denetim karakterleri seri hale getirme](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Denetimleri olup olmadığını <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> birden çok ayarlamaları veya yalnızca tek bir düzeltme için bir saat dilimi destekler. Varsa `true`, kullandığı <xref:System.TimeZoneInfo> serileştirilecek yazın ve tarih ve saat verilerini seri durumdan; Aksi takdirde kullanır <xref:System.TimeZone> birden çok ayarlama kuralları desteklemiyor türü.|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Denetimleri olup olmadığını <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Oluşturucusu ayarlar yeni nesnenin <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> var olan bir nesne başvuruyu özelliğiyle. Daha fazla bilgi için bkz: [azaltma: Claimsıdentity Oluşturucusu](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Denetimleri olup olmadığını yeniden denemesi bir <xref:System.Security.Cryptography.AesCryptoServiceProvider> şifre çözücü oluşturur bir <xref:System.Security.Cryptography.CryptographicException>. Daha fazla bilgi için bkz: AesCryptoServiceProvider şifre çözücü yeniden kullanılabilir transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform) sağlar.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Denetimleri olup olmadığını değerini [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliği bir [IntPtr](xref:System.IntPtr) gösteren bir pencere bellek konumunu işlemek veya pencere işleyicisi (HWND) olup. Daha fazla bilgi için bkz: [azaltma: CspParameters.ParentWindowHandle bekliyor HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET framework 4.7|   
@@ -109,6 +107,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Hizmet başlatma sırasında oluşturulan özel durumları çağırana yayılır olup olmadığını denetler <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> yöntemi.|.NET framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation eski bir algoritma geçerli olup olmadığını belirler (`true`) ya da yeni bir algoritma (`false`) için alan ayırma içinde \*-sütun. Daha fazla bilgi için bkz: [azaltma: kılavuz denetimin alanı ayırma yıldız sütunlara](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Değişti olayı denetimleri olup bir seçici veya bir sekme denetimini her zaman kendi seçili değer özelliğinin değeri seçimi tetiklenmeden önce güncelleştirir.|.NET framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|DPI bir sistem üzerinde değişiklikler olup olmadığını belirler (değeri `false`) veya İzleyici başına temelinde (değerini `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Özel bir veren kod dışında çevrilir <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> bir özel durum oluşturmadan iletileri güvenli bir şekilde filtrelemek için uygulama zaman <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrılır. Daha fazla bilgi için bkz: [azaltma: özel IMessageFilter.PreFilterMessage uygulamaları](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|İsteğe bağlı olup olmadığını belirleyen `WM_POINTER`-tabanlı dokunma/kalem yığını WPF uygulamalarında etkindir. Daha fazla bilgi için bkz: [azaltma: işaretçi tabanlı dokunma ve Kalem desteği](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Eski olup olmadığını denetler [NullReferenceException](xref:System.NullReferenceException) daha açık belirtmek gerekirse özel durumun nedeni gösteren durum yerine (gibi bir [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) veya bir [ FileNotFoundException](xref:System.IO.FileNotFoundException). İşleme üzerinde bağımlı kod tarafından kullanılması amaçlanmıştır [NullReferenceException](xref:System.NullReferenceException). | .NET framework 4.7 |

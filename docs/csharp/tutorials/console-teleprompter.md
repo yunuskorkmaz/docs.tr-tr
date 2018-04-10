@@ -1,7 +1,7 @@
 ---
-title: "Konsol Uygulaması"
-description: "Bu öğretici bir dizi özellik .NET Core ve C# dili öğretir."
-keywords: .NET, .NET core
+title: Konsol Uygulaması
+description: Bu öğretici bir dizi özellik .NET Core ve C# dili öğretir.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.openlocfilehash: cc8645f9eef070d800627ea1c47cf7de1e877783
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="console-application"></a>Konsol Uygulaması
 
@@ -52,7 +52,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Okuma ve dosyayı Yankı
-Metin dosyası okuma ve tüm metni konsola görüntüleme olanağı eklemek için ilk özelliğidir. İlk olarak, bir metin dosyası ekleyelim. Kopya [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) GitHub deposuna bir dosyadan bu [örnek](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) proje dizinine. Bu, uygulamanız için komut dosyası olarak hizmet verecektir. Bu konu için örnek uygulama indirme hakkında bilgi edinmek istiyorsanız deki yönergelere bakın [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) konu.
+Metin dosyası okuma ve tüm metni konsola görüntüleme olanağı eklemek için ilk özelliğidir. İlk olarak, bir metin dosyası ekleyelim. Kopya [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) GitHub deposuna bir dosyadan bu [örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) proje dizinine. Bu, uygulamanız için komut dosyası olarak hizmet verecektir. Bu konu için örnek uygulama indirme hakkında bilgi edinmek istiyorsanız deki yönergelere bakın [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) konu.
 
 Ardından, programı sınıfınıza aşağıdaki yöntemi ekleyin (hemen altında `Main` yöntemi):
 
@@ -83,7 +83,7 @@ Bu yöntem çağrılır C# yöntemi özel türünde bir *Numaralandırıcı yön
 
 Size yeni olabilecek iki C# sözdizimi öğe vardır. `using` Bu yöntem deyiminde kaynak temizleme yönetir. İçinde başlatılan değişkeni `using` deyimi (`reader`, bu örnekte) uygulamalıdır `IDisposable` arabirimi. <xref:System.IDisposable> Arabirimi tanımlar tek bir yöntem `Dispose`, çağrılabilir kaynak yayımlandığı zaman. Yürütme kapanış ayracı ulaştığında derleyici bu çağrı üretir `using` deyimi. Derleyici tarafından üretilen kod kullanılarak tanımlanmış bloğundaki koddan bir özel durum olsa bile, kaynak yayımlanan sağlar deyimi.
 
-`reader` Değişkeni kullanılarak tanımlanmış `var` anahtar sözcüğü. `var`tanımlayan bir *türü örtük olarak belirlenmiş yerel değişken*. Değişken türü, derleme zamanı tür değişkenine atanan nesnesinin tarafından belirlenir anlamına gelir. Dönüş değeri Buraya, <xref:System.IO.File.OpenText(System.String)> olan yöntemini bir <xref:System.IO.StreamReader> nesnesi.
+`reader` Değişkeni kullanılarak tanımlanmış `var` anahtar sözcüğü. `var` tanımlayan bir *türü örtük olarak belirlenmiş yerel değişken*. Değişken türü, derleme zamanı tür değişkenine atanan nesnesinin tarafından belirlenir anlamına gelir. Dönüş değeri Buraya, <xref:System.IO.File.OpenText(System.String)> olan yöntemini bir <xref:System.IO.StreamReader> nesnesi.
  
 Şimdi, şimdi dosyayı okumak için kod doldurun `Main` yöntemi: 
 

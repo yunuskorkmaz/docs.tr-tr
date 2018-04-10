@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio'da Roslyn sözdizimi Görselleştirici ile kod keşfetme
 
@@ -28,16 +28,17 @@ Bu makalede, .NET derleme Platformu ("Roslyn") SDK'sı bir parçası olarak gön
 
 Bu komut sözdizimi Görselleştirici kayan araç penceresi açar. Açık bir kod düzenleyicisi pencere yoksa, görüntü aşağıdaki resimde gösterildiği gibi boştur. 
 
-![Sözdizimi Görselleştirici araç penceresi](media/syntax-visualizer.png)
+![Sözdizimi Görselleştirici araç penceresi](media/syntax-visualizer/syntax-visualizer.png)
 
 Bu araç penceresi Visual Studio içinde sol tarafındaki gibi uygun bir konuma yerleştir. Görselleştirici geçerli kod dosyası hakkındaki bilgileri gösterir.
 
 Kullanarak yeni bir proje oluşturmak **dosya** > **yeni proje** komutu. VB veya C# projesi oluşturabilirsiniz. Visual Studio bu proje için ana kod dosya açıldığında Görselleştirici sözdizimi ağacı için gösterir. Tüm mevcut C# açabilirsiniz / VB dosyasında bu Visual Studio örneği ve Görselleştirici dosyanın sözdizimi ağacı görüntüler. Visual Studio içinde açık birden çok kod dosyaları varsa, Görselleştirici (klavye odağı olan kod dosyası.) şu anda etkin olan kod dosyasının sözdizimi ağacı görüntüler.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![C# sözdizimi ağacı Görselleştirme](media/visualize-csharp.png)
+![C# sözdizimi ağacı Görselleştirme](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![VB sözdizimi ağacı Görselleştirme](media/visualize-visual-basic.png)
+![VB sözdizimi ağacı Görselleştirme](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 Görselleştirici araç penceresi sözdizimi ağacı önceki görüntüleri gösterildiği gibi üst ve alt özellik Kılavuzu görüntüler. Özellik Kılavuzu .NET dahil olmak üzere ağacında seçili olan öğenin özelliklerini görüntüler *türü* ve *türü* (SyntaxKind) öğenin.
@@ -60,13 +61,18 @@ Bir kez yazdığınız Duraklat yazılan `Console.`. Ağaç Pembe olarak renkli 
 
 Ağacındaki herhangi bir öğeyi sağ tıklayın ve tıklayın **görünüm yönlendirilmiş sözdizimi grafik**. 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 Seçili öğeyi kökü alt ağacı grafik gösterimi Görselleştirici görüntüler. İçin aşağıdaki adımları deneyin **MethodDeclaration** düğümü karşılık gelen `Main()` C# örnek yöntemi. Görselleştirici aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
 
-![Bir C# sözdizimi grafik görüntüleme](media/csharp-syntax-graph.png)
+![Bir C# sözdizimi grafik görüntüleme](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 Aynı deneyin **SubBlock** düğümü karşılık gelen `Main()` önceki VB örnekte yöntemi. Görselleştirici aşağıdaki gibi görünen bir sözdizimi grafiği görüntüler:
 
-![VB sözdizimi grafik görüntüleme](media/visual-basic-syntax-graph.png)
+![VB sözdizimi grafik görüntüleme](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 Sözdizimi grafik Görüntüleyicisi'ni renklendirme düzenini bir gösterge görüntüleme seçeneği vardır. Bu öğeye karşılık gelen özelliklerini görüntülemek için fare ile sözdizimi grafik öğeleri ayrı ayrı üzerinden gelebilirsiniz.
 
@@ -74,7 +80,7 @@ Grafikleri always Visual Studio içinde aynı pencerede görüntülenir ve art a
 
 Görselleştirici araç penceresi ve sözdizimi grafik penceresi ile kullanılacak yerleştirme düzenini şöyledir:
 
-![Görselleştirici ve sözdizimi grafik penceresi için bir yerleştirme düzeni](media/docking-layout.png)
+![Görselleştirici ve sözdizimi grafik penceresi için bir yerleştirme düzeni](media/syntax-visualizer/docking-layout.png)
 
 Bir çift monitör kurulumunda bir ikinci monitörde sözdizimi grafiği pencere put başka bir seçenektir.
 
@@ -84,19 +90,19 @@ Sözdizimi Görselleştirici sembolleri ve anlamsal bilgilerin ilkel incelemesin
 
 Görselleştirici özellik kılavuzunda aşağıdaki çizimde gösterildiği gibi güncelleştirir: simge ifadesi için bir **SynthesizedIntrinsicOperatorSymbol** ile **türü = yöntemi**.
 
-![Sembol Özellikleri](media/symbol-properties.png)
+![Sembol Özellikleri](media/syntax-visualizer/symbol-properties.png)
 
 Deneyin **görünüm TypeSymbol (varsa)** aynı için **AddExpression** düğümü. Görselleştirici özellik kılavuzunda, seçilen ifade türü olduğunu gösteren aşağıdaki şekilde gösterildiği gibi güncelleştirmeleri `Int32`.
 
-![TypeSymbol özellikleri](media/type-symbol-properties.png)
+![TypeSymbol özellikleri](media/syntax-visualizer/type-symbol-properties.png)
 
 Deneyin **görünüm dönüştürülen TypeSymbol'nı (varsa)** aynı için **AddExpression** düğümü. Özellik Kılavuzu güncelleştirmeleri ifade türü olmasına karşın gösteren `Int32`, dönüştürülmüş ifade türüdür `Double` aşağıdaki resimde gösterildiği gibi. Bu düğüm olduğundan dönüştürülen türü sembol bilgilerini içerir `Int32` ifade oluşur burada bunu dönüştürülmesi gerekir bağlamda bir `Double`. Bu dönüştürme karşılayan `Double` değişken için belirtilen türü `x` atama işlecinin sol tarafındaki.
 
-![Dönüştürülen TypeSymbol özellikleri](media/converted-type-symbol-properties.png)
+![Dönüştürülen TypeSymbol özellikleri](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 Son olarak, deneyin **görünüm sabit değer (varsa)** aynı için **AddExpression** düğümü. Özellik Kılavuzu ifadesinin değerini değerine sahip bir derleme zamanı sabiti gösterir `2`.
 
-![Sabit bir değer](media/constant-value.png)
+![Sabit bir değer](media/syntax-visualizer/constant-value.png)
 
 Önceki örnekte de VB'de çoğaltılabilir Tür `Dim x As Double = 1 + 1` VB dosyasında. İfadeyi seçin `1 + 1` Kod Düzenleyicisi penceresinde. Karşılık gelen Görselleştirici vurgular **AddExpression** Görselleştirici düğümünde. Bunun için önceki adımları yineleyin **AddExpression** ve aynı sonuçları görmeniz gerekir.
 
@@ -114,15 +120,15 @@ End Module
 
 Bu kod bir diğer ad adlandırılmış tanıtır `C` türüne eşlenir `System.Console` dosyasının üst ve bu diğer adı içinde kullanır `Main()`. Bu diğer adı kullanın `C` içinde `C.WriteLine()`içine `Main()` yöntemi. Karşılık gelen Görselleştirici seçer **IdentifierName** Görselleştirici düğümünde. Bu düğüme sağ tıklayın ve tıklayın **görünümü simgesi (varsa)**. Bu tanımlayıcı türüne bağlıdır ve özellik ızgarasının gösterir `System.Console` aşağıdaki resimde gösterildiği gibi:
 
-![Sembol Özellikleri](media/symbol-visual-basic.png)
+![Sembol Özellikleri](media/syntax-visualizer/symbol-visual-basic.png)
 
 Deneyin **görünüm AliasSymbol (varsa)** aynı için **IdentifierName** düğümü. Özellik Kılavuzu tanımlayıcı adı içeren bir diğer ad gösterir `C` için bağlı `System.Console` hedef. Diğer bir deyişle, özellik Kılavuzu bilgilerini sağlar ilgili **AliasSymbol** tanımlayıcısına karşılık gelen `C`.
 
-![AliasSymbol özellikleri](media/alias-symbol.png)
+![AliasSymbol özellikleri](media/syntax-visualizer/alias-symbol.png)
 
 Karşılık gelen hiçbir bildirilen türü, yöntemi, özelliği simgesi inceleyin. Görselleştirici karşılık gelen düğümü seçin ve tıklayın **görünümü simgesi (varsa)**. Yöntem `Sub Main()`, yönteminin gövdesi dahil olmak üzere. Tıklayın **görünümü simgesi (varsa)** karşılık gelen için **SubBlock** Görselleştirici düğümünde. Özellik Kılavuzu gösterir **MethodSymbol** bu **SubBlock** adına sahip `Main` ile dönüş türü `Void`.
 
-![Simge bir yöntem bildirimi için görüntüleme](media/method-symbol.png)
+![Simge bir yöntem bildirimi için görüntüleme](media/syntax-visualizer/method-symbol.png)
 
 Yukarıdaki VB örnekleri kolayca C# ' ta çoğaltılabilir. Tür `using C = System.Console;` yerine `Imports C = System.Console` diğer. Önceki adımlarda C# Görselleştirici penceresinde aynı sonuçlar.
 

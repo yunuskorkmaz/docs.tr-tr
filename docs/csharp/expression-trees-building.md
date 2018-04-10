@@ -1,7 +1,7 @@
 ---
-title: "Yapı ifade ağaçları"
-description: "İfade ağaçları oluşturma teknikleri hakkında bilgi edinin."
-keywords: .NET, .NET core
+title: Building Expression Trees
+description: İfade ağaçları oluşturma teknikleri hakkında bilgi edinin.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="building-expression-trees"></a>Yapı ifade ağaçları
+# <a name="building-expression-trees"></a>Building Expression Trees
 
 [Önceki--İfadeleri yorumlama](expression-trees-interpreting.md)
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 Daha karmaşık, ifade ağacına Faktöriyel işlevi için yapı için kodu oldukça biraz daha uzun ve etiketleri ve sonu deyimleri ve diğer öğeleri önlemek için görevler kodlama bizim her gün içinde isteriz ile riddled. 
 
-Bu bölümde, t her düğüm bu ifade ağacına ziyaret edin ve bu örnekte oluşturulan düğümleri hakkında bilgi yazmak için ziyaretçi kod güncelleştirdik. Yapabilecekleriniz [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) dotnet/belgeler GitHub deposunda. Kendiniz oluşturmak ve örnekleri çalıştırmak denemeler yapın. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu bölümde, t her düğüm bu ifade ağacına ziyaret edin ve bu örnekte oluşturulan düğümleri hakkında bilgi yazmak için ziyaretçi kod güncelleştirdik. Yapabilecekleriniz [görüntülemek veya karşıdan örnek kod](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dotnet/belgeler GitHub deposunda. Kendiniz oluşturmak ve örnekleri çalıştırmak denemeler yapın. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>API'ler inceleniyor
 

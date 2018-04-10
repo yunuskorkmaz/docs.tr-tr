@@ -1,7 +1,7 @@
 ---
-title: "Docker içinde - C# barındırılan mikro"
-description: "ASP.NET Docker kapsayıcılarında çalıştırmak Çekirdek Hizmetleri oluşturmayı öğrenin"
-keywords: .NET, .NET core, Docker, C#, ASP.NET, mikro hizmet
+title: Docker içinde - C# barındırılan mikro
+description: ASP.NET Docker kapsayıcılarında çalıştırmak Çekirdek Hizmetleri oluşturmayı öğrenin
+keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker içinde barındırılan mikro
 
@@ -32,7 +32,7 @@ Yol boyunca bazı C# dil özellikleri görürsünüz:
 * Gelen HTTP isteklerini işleyen ve HTTP yanıtı oluşturmak nasıl
 * Boş değer atanabilen değer türleri ile çalışma
 
-Yapabilecekleriniz [görüntüleyebilir veya örnek uygulama indirebilirsiniz](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Yapabilecekleriniz [görüntüleyebilir veya örnek uygulama indirebilirsiniz](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Neden Docker?
 
@@ -71,9 +71,9 @@ Bu komutun ne tür bir uygulama oluşturmak istediğiniz seçmenizi ister. Bu mi
 * ASP.NET Core uygulamaları için özelleştirilmiş bir .gitignore.
 * Haline dosya. Bu uygulamanın temel içerir.
 * Program.cs dosyasının. Bu uygulama giriş noktasını içerir.
-* Bir WeatherMicroservice.csproj dosyası. Bu uygulama için yapı dosyasıdır.
-* Bir Dockerfile. Bu komut, uygulama için bir Docker görüntü oluşturur.
-* Bir README.md. Bu, diğer ASP.NET Core kaynaklarına bağlantılar içerir.
+* A WeatherMicroservice.csproj file. Bu uygulama için yapı dosyasıdır.
+* A Dockerfile. Bu komut, uygulama için bir Docker görüntü oluşturur.
+* A README.md. Bu, diğer ASP.NET Core kaynaklarına bağlantılar içerir.
 * Bir web.config dosyası. Bu, temel yapılandırma bilgilerini içerir.
 * Bir runtimeconfig.template.json dosyası. IDE tarafından kullanılan hata ayıklama ayarları içerir.
 
@@ -98,7 +98,7 @@ Ve uygulama yapı sonra komut satırından çalıştırın:
 dotnet run
 ```
 
-Varsayılan yapılandırma http://localhost: 5000 için dinler. Bir tarayıcıda açabilir ve bu sayfaya gidin ve bir "Hello World!" konusuna bakın İleti.
+Varsayılan yapılandırma dinler `http://localhost:5000`. Bir tarayıcıda açabilir ve bu sayfaya gidin ve bir "Hello World!" konusuna bakın İleti.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Bir ASP.NET Core uygulama anatomisi
 

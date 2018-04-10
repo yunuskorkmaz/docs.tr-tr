@@ -1,57 +1,55 @@
 ---
-title: "F # ile komut satırı araçları ile çalışmaya başlama"
-description: "F # herhangi bir işletim sistemi üzerinde (Windows, MacOS, Linux) kullanmayı ile platformlar arası .NET Core CLI öğrenin."
-keywords: "Visual f #, f #, işlev, .NET, .NET Core programlama"
+title: 'F # ile komut satırı araçları ile çalışmaya başlama'
+description: 'F # .NET Core CLI kullanarak bir işletim sistemine (Windows, macOs veya Linux) üzerinde bir basit birden çok proje çözümü oluşturmayı öğrenin.'
 author: cartermp
 ms.author: phcart
-ms.date: 06/14/2017
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: e48e1291bbe91da0d9ca2adbb08662bd106c8fb4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>F # .NET Core CLI ile kullanmaya başlama
 
-Bu makalede ele alınmaktadır nasıl, herhangi bir işletim sistemi üzerinde (Windows, macOS veya Linux) F # .NET Core CLI ile kullanarak başlayabiliriz. Bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile birden çok proje çözümü oluşturma üzerinden geçer.
+Bu makalede, nasıl, F # ile .NET Core CLI ile herhangi bir işletim sistemine (Windows, macOS veya Linux) kullanmaya başlayabilir yer almaktadır. Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile birden çok proje çözümü oluşturma üzerinden gider.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Başlamak için yüklemelisiniz [.NET Core SDK 1.0 veya üstü](https://dot.net/core). Yan yana yüklemeler desteklediği .NET Core SDK ' nın önceki bir sürümünü kaldırmak için gerek yoktur.
+Başlamak için yüklemelisiniz [.NET Core SDK 1.0 veya üstü](https://www.microsoft.com/net/download/). Yan yana yüklemeler desteklediği .NET Core SDK ' nın önceki bir sürümünü kaldırmak için gerek yoktur.
 
 Bu makalede, nasıl bir komut satırını kullanın ve tercih edilen bir metin Düzenleyicisi'ni bildiğinizi varsayar. Zaten, kullanmazsanız [Visual Studio Code](https://code.visualstudio.com) olarak bir metin düzenleyicisi F # için kullanışlı bir seçenektir. IntelliSense, daha iyi söz dizimi vurgulama ve diğerleri gibi harika özellikler almak için indirebilirsiniz [Ionide uzantısı](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).
 
-## <a name="building-a-simple-multi-project-solution"></a>Basit bir birden çok proje çözümü oluşturma
+## <a name="build-a-simple-multi-project-solution"></a>Basit bir birden çok proje çözümü oluşturma
 
-Bir komut istemi/Terminali açın ve kullanmak `dotnet new` adlı yeni çözüm dosyasını oluşturmak için komutu `FSNetCore`:
+Bir komut istemi/Terminali açın ve kullanmak [dotnet yeni](../../core/tools/dotnet-new.md) adlı yeni çözüm dosyasını oluşturmak için komutu `FSNetCore`:
 
 ```
 dotnet new sln -o FSNetCore
 ```
 
-Ayarlayamadı dizin yapısını komutu Tamamlanıyor sonucunda oluşturulur:
+Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:
 
 ```
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-Değiştirme dizinleri *FSNetCore* ve projeleri çözüm klasörüne eklemeye başlayın.
- 
-### <a name="writing-a-class-library"></a>Bir sınıf kitaplığı yazma
+### <a name="write-a-class-library"></a>Bir sınıf kitaplığı yazma
 
-Kullanım `dotnet new` komutu, bir sınıf kitaplığı proje oluştur **src** kitaplığı adlı klasörü. 
+Değiştirme dizinleri *FSNetCore*.
 
-```bash
-dotnet new lib -lang F# -o src/Library 
+Kullanım `dotnet new` komutu, bir sınıf kitaplığı projesi oluştur **src** kitaplığı adlı klasörü.
+
+```
+dotnet new lib -lang F# -o src/Library
 ```
 
-Aşağıdaki dizin yapısını komutu Tamamlanıyor sonucunda oluşturulur:
+Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:
 
 ```
 └── FSNetCore
@@ -62,40 +60,40 @@ Aşağıdaki dizin yapısını komutu Tamamlanıyor sonucunda oluşturulur:
             └── Library.fsproj
 ```
 
-Değiştir `Library.fs` aşağıdaki:
+Değiştir `Library.fs` aşağıdaki kod ile:
 
 ```fsharp
 module Library
 
 open Newtonsoft.Json
 
-let getJsonNetJson value = 
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value  (JsonConvert.SerializeObject(value))
+let getJsonNetJson value =
+    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
 Newtonsoft.Json NuGet paketi kitaplığı projeye ekleyin.
 
-```bash
+```
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Ekleme `Library` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` komutu:
+Ekleme `Library` için proje `FSNetCore` çözümünü kullanarak [dotnet sln ekleme](../../core/tools/dotnet-sln.md) komutu:
 
-```bash
+```
 dotnet sln add src/Library/Library.fsproj
 ```
 
-NuGet bağımlılıkları geri `dotnet restore` ([nota bakın](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.
+Kullanarak NuGet bağımlılıkları geri `dotnet restore` komutu ([nota bakın](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.
 
-### <a name="writing-a-console-application-which-consumes-the-class-library"></a>Sınıf kitaplığı tüketir bir konsol uygulaması yazma
+### <a name="write-a-console-application-that-consumes-the-class-library"></a>Sınıf kitaplığı tüketen bir konsol uygulaması yazma
 
-Kullanım `dotnet new` komutu, bir konsol uygulaması oluşturmak **src** uygulama adlı klasörü. 
+Kullanım `dotnet new` komutu, bir konsol uygulaması oluşturun **src** uygulama adlı klasörü.
 
-```bash
-dotnet new console -lang F# -o src/App 
+```
+dotnet new console -lang F# -o src/App
 ```
 
-Aşağıdaki dizin yapısını komutu Tamamlanıyor sonucunda oluşturulur:
+Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:
 
 ```
 └── FSNetCore
@@ -109,14 +107,14 @@ Aşağıdaki dizin yapısını komutu Tamamlanıyor sonucunda oluşturulur:
             └── Library.fsproj
 ```
 
-Değişiklik `Program.fs` için:
+Değiştir `Program.fs` aşağıdaki kod ile dosya:
 
 ```fsharp
 open System
 open Library
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
 
     argv
@@ -126,26 +124,26 @@ let main argv =
     0 // return an integer exit code
 ```
 
-Bir başvuru ekleyin `Library` kullanarak proje `dotnet add reference`.
+Bir başvuru ekleyin `Library` kullanarak proje [dotnet Başvuru Ekle](../../core/tools/dotnet-add-reference.md).
 
-```bash
+```
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
 Ekleme `App` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` komutu:
 
-```bash
+```
 dotnet sln add src/App/App.fsproj
 ```
 
 NuGet bağımlılıkları geri `dotnet restore` ([nota bakın](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.
 
-Değişiklik dizinine `src/App` konsol projesi ve geçirme projeyi `Hello World` bağımsız değişken olarak.
+Değişiklik dizinine `src/App` konsol projesi ve geçirme projeyi `Hello World` bağımsız değişken olarak:
 
-```bash
+```
 cd src/App
 dotnet run Hello World
-``` 
+```
 
 Aşağıdaki sonuçları görmeniz gerekir:
 
@@ -155,5 +153,6 @@ Nice command-line arguments! Here's what JSON.NET has to say about them:
 I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
+
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

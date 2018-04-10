@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamalar için geliştirme iş akışı
 
@@ -107,7 +107,7 @@ Docker hub'a resmi bir .NET görüntü deposundan sürüm numarasıyla kullanara
 
 Aşağıdaki örnek, bir ASP.NET Core kapsayıcı için bir örnek Dockerfile gösterir.
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0
   
 ARG source
@@ -296,7 +296,7 @@ Uygulamanız yalnızca tek bir kapsayıcı varsa, Docker ana (VM veya fiziksel s
 
 Komutu, Şekil 5-9'olduğu gibi çalıştırın docker kullanarak bir Docker kapsayıcısı çalıştırabilirsiniz:
 
-```
+```console
   docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
@@ -405,7 +405,7 @@ Ayrıca, adım 2 (Docker destek eklenmesi projelerinize) yalnızca bir kez gerç
 
 [Windows kapsayıcıları](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) var olan Windows uygulamalarınız Docker görüntülere dönüştürmek ve Docker ekosistemi geri kalanı ile aynı araçlarıyla dağıtmadan olanak sağlar. Windows kapsayıcılar kullanmak için aşağıdaki örnekte gösterildiği gibi Dockerfile, PowerShell komutlarını çalıştırın:
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
   
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
@@ -417,7 +417,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 Bu durumda, biz bir Windows Server Core temel görüntü (FROM ayarı) kullanarak ve PowerShell komutuyla (çalışma ayarı) IIS yükleniyor. Benzer şekilde, ASP.NET 4.x, .NET 4.6 veya herhangi bir Windows yazılımı gibi ek bileşenleri ayarlamak için PowerShell komutlarını kullanabilirsiniz. Örneğin, bir Dockerfile aşağıdaki komutta ASP.NET 4.5 ayarlar:
 
-```
+```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

@@ -1,20 +1,20 @@
 ---
-title: "Aritmetik İşleçler (F#)"
-description: "F # programlama dili kullanılabilen aritmetik işleçler hakkında bilgi edinin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Aritmetik İşleçler (F#)
+description: 'F # programlama dili kullanılabilen aritmetik işleçler hakkında bilgi edinin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 75ddcfa3-564e-4382-80a3-f9da73d0f0ea
-ms.openlocfilehash: 237b97c24f207b3a9b4661d66f029f1b18b8fec7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f11e77457bed40cff081a73181689610871e654
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
@@ -25,12 +25,12 @@ Aşağıdaki tabloda sarmalanmamış ayrılmaz ve kayan nokta türleri için kul
 
 |İkili işleç|Notlar|
 |---------------|-----|
-|`+`(Ayrıca, artı)|İşaretli. Sayılar birlikte eklendiğinde olası taşma koşulunu ve toplamını türü tarafından desteklenen en fazla mutlak değerini aşıyor.|
-|`-`(çıkarma, eksi)|İşaretli. Olası underflow imzasız türler çıkarılan veya kayan nokta değer türü tarafından gösterilemeyecek kadar küçük olduğunda koşul.|
-|`*`(çarpma, saatler)|İşaretli. Sayı çarpıldığı zaman olası taşma koşulunu ve ürün türü tarafından desteklenen en fazla mutlak değerini aşıyor.|
-|`/`(bölü bölme)|Sıfır nedenler bölme bir <xref:System.DivideByZeroException> tam sayı türleri için. Kayan nokta türleri için özel kayan nokta değerlerini verir sıfıra bölme `+Infinity` veya `-Infinity`. Aynı zamanda bir kayan noktalı sayı türü tarafından gösterilemeyecek kadar küçük olduğunda da olası underflow koşulu yoktur.|
-|`%`(modül, mod)|Bölme işlemi geri kalanı döndürür. Sonucun oturum ilk işlenen oturum ile aynıdır.|
-|`**`(üs, üzeri)|Sonuç türü için en fazla mutlak değeri aştığında olası taşma koşulu.<br /><br />Üs işleci kayan nokta türleri ile çalışır.|
+|`+` (Ayrıca, artı)|İşaretli. Sayılar birlikte eklendiğinde olası taşma koşulunu ve toplamını türü tarafından desteklenen en fazla mutlak değerini aşıyor.|
+|`-` (çıkarma, eksi)|İşaretli. Olası underflow imzasız türler çıkarılan veya kayan nokta değer türü tarafından gösterilemeyecek kadar küçük olduğunda koşul.|
+|`*` (çarpma, saatler)|İşaretli. Sayı çarpıldığı zaman olası taşma koşulunu ve ürün türü tarafından desteklenen en fazla mutlak değerini aşıyor.|
+|`/` (bölü bölme)|Sıfır nedenler bölme bir <xref:System.DivideByZeroException> tam sayı türleri için. Kayan nokta türleri için özel kayan nokta değerlerini verir sıfıra bölme `+Infinity` veya `-Infinity`. Aynı zamanda bir kayan noktalı sayı türü tarafından gösterilemeyecek kadar küçük olduğunda da olası underflow koşulu yoktur.|
+|`%` (kalan, rem)|Bölme işlemi geri kalanı döndürür. Sonucun oturum ilk işlenen oturum ile aynıdır.|
+|`**` (üs, üzeri)|Sonuç türü için en fazla mutlak değeri aştığında olası taşma koşulu.<br /><br />Üs işleci kayan nokta türleri ile çalışır.|
 
 ## <a name="summary-of-unary-arithmetic-operators"></a>Birli aritmetik işleçler özeti
 Tam sayı ve kayan nokta türleri için kullanılabilen birli aritmetik işleçler aşağıdaki tabloda özetlenmiştir.
@@ -38,8 +38,8 @@ Tam sayı ve kayan nokta türleri için kullanılabilen birli aritmetik işleçl
 
 |Birli işleç|Notlar|
 |--------------|-----|
-|`+`(pozitif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirmez.|
-|`-`(değilleme, negatif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirir.|
+|`+` (pozitif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirmez.|
+|`-` (değilleme, negatif)|Herhangi bir aritmetik ifade uygulanabilir. Değerin oturum değiştirir.|
 Davranış taşması veya tam sayı türleri için yetersiz sarma yüklemektir. Bu, hatalı bir sonuç neden olur. Tamsayı taşma yazılım için hesap için değil yazıldığında, güvenlik sorunları katkıda bulunabilirsiniz ciddi olabilecek bir sorundur. Bu, uygulamanız için önemliyse, checked işleçleri kullanmayı `Microsoft.FSharp.Core.Operators.Checked`.
 
 
@@ -52,12 +52,12 @@ IEEE kayan Noktası temsili bir tam eşitlik işlemi desteklemediği için kayan
 
 |İşleç|Notlar|
 |--------|-----|
-|`=`(eşitlik, eşittir)|Bu atama işleci değildir. Yalnızca karşılaştırma için kullanılır. Bu genel bir işlecidir.|
-|`>`(büyük)|Bu genel bir işlecidir.|
-|`<`(küçüktür)|Bu genel bir işlecidir.|
-|`>=`(büyüktür veya eşittir)|Bu genel bir işlecidir.|
-|`<=`(küçüktür veya eşittir)|Bu genel bir işlecidir.|
-|`<>`(eşit değildir)|Bu genel bir işlecidir.|
+|`=` (eşitlik, eşittir)|Bu atama işleci değildir. Yalnızca karşılaştırma için kullanılır. Bu genel bir işlecidir.|
+|`>` (büyük)|Bu genel bir işlecidir.|
+|`<` (küçüktür)|Bu genel bir işlecidir.|
+|`>=` (büyüktür veya eşittir)|Bu genel bir işlecidir.|
+|`<=` (küçüktür veya eşittir)|Bu genel bir işlecidir.|
+|`<>` (eşit değildir)|Bu genel bir işlecidir.|
 
 ## <a name="overloaded-and-generic-operators"></a>Aşırı yüklenmiş ve genel işleçler
 Bu konuda tartışılan işleçleri tümünün içinde tanımlanan **Microsoft.FSharp.Core.Operators** ad alanı. İşleçlerin bazıları statik olarak çözümlenmiş tür parametreleri kullanılarak tanımlanır. Bu, bu işleç ile çalışır belirli her tür için tek tek tanımları olduğunu gösterir. Tüm ikili aritmetik ve bit düzeyinde işleçler ve birli Bu kategoride bulunan. Karşılaştırma işleçleri genel ve bu nedenle, her tür ile yalnızca basit aritmetik türler çalışabilirsiniz. Ayrılmış birleşim ve kayıt türleri F # derleyici tarafından üretilen kendi özel uygulamalar vardır. Sınıf türleri yöntemi kullanın <xref:System.Object.Equals%2A>.
@@ -71,10 +71,10 @@ Tür çıkarımı işleç üzerinde bir ifadede bir işleç kullanımını kıs�
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
     
 ## <a name="see-also"></a>Ayrıca Bkz.
-[Simge ve işleç başvurusu](index.md)
+[Simge ve İşleç Başvurusu](index.md)
 
-[İşleç aşırı yüklemesi](../operator-overloading.md)
+[İşleç Aşırı Yüklemesi](../operator-overloading.md)
 
-[Bit düzeyinde işleçler](bitwise-operators.md)
+[Bit Düzeyinde İşleçler](bitwise-operators.md)
 
-[Boole işleçleri](boolean-operators.md)
+[Boole İşleçleri](boolean-operators.md)

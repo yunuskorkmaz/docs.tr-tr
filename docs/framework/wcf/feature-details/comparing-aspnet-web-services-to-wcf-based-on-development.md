@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] etkinleştirmek için bir ASP.NET uyumluluk modu seçeneği sahip [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programlanmış ve yapılandırılmış olması uygulamalar gibi ASP.NET Web Hizmetleri ve davranışlarını taklit etmek. Aşağıdaki bölümlerde ASP.NET Web Hizmetleri karşılaştırın ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne iki teknolojiyi kullanarak uygulamaları geliştirmek için gerekli olduğuna bağlı olarak.  
@@ -187,7 +187,7 @@ public class LineItem
   
 -   XML ortak olmayan üyeler türleri serileştirmek çalışabilme gruplarındaki sonucu olarak <xref:System.Runtime.Serialization.DataContractSerializer> çeşitli XML serileştirebilen .NET türleri üzerinde daha az kısıtlamaları vardır. Özellikle, XML türleri gibi içine çevirebilir <xref:System.Collections.Hashtable> uygulayan <xref:System.Collections.IDictionary> arabirimi. <xref:System.Runtime.Serialization.DataContractSerializer> Türü tanımını değiştirin ya da bir sarmalayıcı için geliştirme gerek kalmadan XML halinde önceden var olan tüm .NET türünün örneklerini serileştirmek çok daha yüksektir.  
   
--   Başka bir sonucu <xref:System.Runtime.Serialization.DataContractSerializer> bir türün genel olmayan üyeleri erişebildiklerinden olduğundan tam güven gerektirir ancak <xref:System.Xml.Serialization.XmlSerializer> desteklemez. Tam güven kodu erişim izni altında kod yürütüyor kimlik bilgilerini kullanarak erişim olabilir bir makine üzerindeki tüm kaynaklara tam erişim verin. Tüm kaynaklar için makinenizdeki tam olarak güvenilen kod erişir gibi bu seçenekleri dikkatli kullanılmalıdır.  
+-   Başka bir sonucu <xref:System.Runtime.Serialization.DataContractSerializer> bir türün genel olmayan üyeleri erişebildiklerinden olduğundan tam güven gerektirir ancak <xref:System.Xml.Serialization.XmlSerializer> desteklemez. Tam güven kodu erişim izni altında kod yürütüyor kimlik bilgileri kullanılarak erişilebilir bir makine tüm kaynaklara tam erişim sağlar. Bu seçenek tam olarak güvenilen kod makinenizde tüm kaynakları erişir gibi dikkatli kullanılmalıdır.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> Sürüm oluşturma için bazı destek içerir:  
   
@@ -195,7 +195,7 @@ public class LineItem
   
     -   Uygulayan bir veri sözleşmesi sahip <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi, bir izin verebilir <xref:System.Runtime.Serialization.DataContractSerializer> veri sözleşmesi uygulamalarıyla daha yeni sürümlerinde sözleşme önceki sürümleriyle tanımlanan üyeleri geçirmek için.  
   
- Tüm farklılıklar, XML, öğesine rağmen <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlam olarak hangi içine XML aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir tür serileştirir. Öznitelikleri serileştiricileri her ikisi de ile kullanmak için aşağıdaki sınıf tarafından anlamsal olarak aynı XML içine çevrilen <xref:System.Xml.Serialization.XmlSerializer> ve göre <xref:System.Runtime.Serialization.DataContractAttribute>:  
+ Tüm farklılıklar, XML, öğesine rağmen <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlam olarak hangi içine XML aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir tür serileştirir. Öznitelikleri serileştiricileri her ikisi de ile kullanmak için aşağıdaki sınıf tarafından anlamsal olarak aynı XML veri dönüştürülür <xref:System.Xml.Serialization.XmlSerializer> ve göre <xref:System.Runtime.Serialization.DataContractAttribute>:  
   
 ```  
 [Serializable]  
@@ -212,7 +212,7 @@ public class LineItem
 }  
 ```  
   
- Windows Yazılım Geliştirme Seti (SDK) adlı bir komut satırı aracı içerir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). ASP.NET Web Hizmetleri ile kullanılan XSD.exe'nin aracı gibi Svcutil.exe XML şemasından .NET veri türlerinin tanımlarını oluşturabilir. Veri sözleşmeleri varsa türleridir <xref:System.Runtime.Serialization.DataContractSerializer> XML XML şeması tarafından tanımlanan biçimde yayma; Aksi halde, bunlar serileştirme kullanmak için tasarlanmıştır <xref:System.Xml.Serialization.XmlSerializer>. Aracı, Svcutil.exe, XML şeması kullanarak veri sözleşmelerinden oluşturmak için de yapılabilir, `/dataContractOnly` geçin.  
+ Windows Yazılım Geliştirme Seti (SDK) adlı bir komut satırı aracı içerir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). ASP.NET Web Hizmetleri ile kullanılan XSD.exe'nin aracı gibi Svcutil.exe XML şemasından .NET veri türlerinin tanımlarını oluşturabilir. Veri sözleşmeleri varsa türleridir <xref:System.Runtime.Serialization.DataContractSerializer> XML XML şeması tarafından tanımlanan biçimde yayma; Aksi halde, bunlar serileştirme kullanmak için tasarlanmıştır <xref:System.Xml.Serialization.XmlSerializer>. Svcutil.exe de üretebilir XML Şeması veri sözleşmelerinden kullanarak kendi `dataContractOnly` geçin.  
   
 > [!NOTE]
 >  Kullanım ASP.NET Web Hizmetleri olsa da <xref:System.Xml.Serialization.XmlSerializer>, ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET uyumluluk modu yapar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, ASP.NET Web Hizmetleri davranışını taklit eden, ASP.NET uyumluluğu seçeneği kullanılarak birine kısıtlamaz <xref:System.Xml.Serialization.XmlSerializer>. Bir kullanmaya devam edebilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> ASP.NET uyumluluk modunda çalışan hizmetleri ile.  

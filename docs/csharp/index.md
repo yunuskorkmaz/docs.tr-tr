@@ -1,6 +1,6 @@
 ---
-title: "C# Kılavuzu"
-description: "Yeni bir uygulama geliştiricisi veya dönemlik Uzman olsanız nasıl C# Kılavuzu, C# ' ta hakkında kapsamlı bilgi kazanmanıza yardımcı olabileceğini öğrenin."
+title: C# Kılavuzu
+description: Yeni bir uygulama geliştiricisi veya dönemlik Uzman olsanız nasıl C# Kılavuzu, C# ' ta hakkında kapsamlı bilgi kazanmanıza yardımcı olabileceğini öğrenin.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

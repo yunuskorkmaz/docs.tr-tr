@@ -1,7 +1,7 @@
 ---
-title: "Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

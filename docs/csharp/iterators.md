@@ -1,7 +1,7 @@
 ---
 title: Yineleyiciler
-description: "Yerleşik C# yineleyiciler kullanmayı ve kendi özel yineleyici metotları oluşturulacağını öğrenin."
-keywords: .NET, .NET core
+description: Yerleşik C# yineleyiciler kullanmayı ve kendi özel yineleyici metotları oluşturulacağını öğrenin.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 403a286e9b1168b9e913b3cb2764e7fe262017d4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="iterators"></a>Yineleyiciler
 
@@ -29,7 +29,7 @@ Yineleyici o sınıfın öğelerin üreten yöntemleri yineleyici metotları da 
 
 C# dili için bu iki senaryoya özellikleri sağlar. Bu makalede bu özelliklere genel bakış sağlar.
 
-Bu öğretici, birden çok adım vardır. Her adımdan sonra uygulamayı çalıştırın ve ilerleme bakın. Ayrıca [görüntülemek veya tamamlanan örnek indirme](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğretici, birden çok adım vardır. Her adımdan sonra uygulamayı çalıştırın ve ilerleme bakın. Ayrıca [görüntülemek veya tamamlanan örnek indirme](https://github.com/dotnet/samples/blob/master/csharp/iterators) Bu konu için. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Foreach ile yineleme
 
@@ -169,7 +169,7 @@ private IEnumerable<int> IteratorMethod()
  
 Yöntemleri yukarıdaki arayın. İlk standardını kullanır `return` boş bir koleksiyon ya da ikinci yöntemi tarafından oluşturulan yineleyici döndürülecek deyimi. İkinci bir yöntem `yield return` istenen dizisi oluşturmak için ifade.
 
-## <a name="deeper-dive-into-foreach"></a>Derin Dalış içine`foreach`
+## <a name="deeper-dive-into-foreach"></a>Derin Dalış içine `foreach`
 
 `foreach` Deyimi genişletir kullanan standart bir deyim `IEnumerable<T>` ve `IEnumerator<T>` bir koleksiyonun tüm öğeler arasında yinelemek için arabirim. Ayrıca düzgün kaynakları yöneterek geliştiriciler olun hatalar en aza indirir. 
 

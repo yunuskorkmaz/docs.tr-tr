@@ -1,7 +1,7 @@
 ---
-title: "Geliştirme işlemi için Docker tabanlı uygulamaları"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Geliştirme işlemi için Docker tabanlı uygulamaları"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Geliştirme işlemi için Docker tabanlı uygulamaları
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Geliştirme işlemi için Docker tabanlı uygulamaları
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017

@@ -1,7 +1,7 @@
 ---
-title: "Tür Sağlayıcıları"
-description: "Nasıl bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızı kullanmak için sağlayan bir bileşendir öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Tür Sağlayıcıları
+description: 'Nasıl bir F # tür sağlayıcısı türleri, özellikleri ve yöntemleri programlarınızı kullanmak için sağlayan bir bileşendir öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

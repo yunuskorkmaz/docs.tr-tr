@@ -1,6 +1,6 @@
 ---
-title: "C# öğreticileri"
-description: "C# programları derleme ve C# dil özellikleri öğrenin öğrenmek için bu C# öğreticileri keşfedin."
+title: C# öğreticileri
+description: C# programları derleme ve C# dil özellikleri öğrenin öğrenmek için bu C# öğreticileri keşfedin.
 keywords: .NET, .NET core
 author: BillWagner
 ms.author: wiwagn

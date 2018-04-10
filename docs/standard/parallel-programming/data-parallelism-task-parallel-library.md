@@ -1,12 +1,12 @@
 ---
-title: "Veri Paralelliği (Görev Paralel Kitaplığı)"
-ms.custom: 
+title: Veri Paralelliği (Görev Paralel Kitaplığı)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 68c04f02c4e173676d2b64d4180b1204f5466f35
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
 *Veri paralelliği* , aynı işlemi gerçekleştirilir eşzamanlı olarak senaryoları için ifade eder (diğer bir deyişle, içinde paralel) bir kaynak koleksiyonu veya dizideki öğeler üzerinde. Böylece birden çok iş parçacığı farklı parçaları üzerinde aynı anda çalışabilir verileri paralel işlemlerinde kaynak koleksiyonu bölümlenmiş.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/19/2018
   
  Hem <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemleri, durdurmak veya döngü yürütmeyi kesme, başka bir iş parçacığı üzerinde döngü durumunu izlemek, iş parçacığı yerel durumunu korumak, iş parçacığı yerel nesneleri Sonlandır, eşzamanlılık, derecesini kontrol olanak sağlayan birçok aşırı yüklemeye sahip ve benzeri. Bu işlevselliği etkinleştirmek yardımcı türler <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, ve <xref:System.Threading.CancellationTokenSource>.  
   
- Daha fazla bilgi için bkz: [, desenleri paralel programlama](http://go.microsoft.com/fwlink/p/?LinkId=265491).  
+ Daha fazla bilgi için bkz: [paralel programlama desenleri: anlama ve .NET Framework 4 paralel desenlerle uygulama](https://www.microsoft.com/download/details.aspx?id=19222).  
   
  Veri paralelliği bildirim temelli veya sorgu benzeri sözdizimi ile PLINQ tarafından desteklenir. Daha fazla bilgi için bkz: [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
 |[Nasıl yapılır: durdurun ya da bir Parallel.For döngüden bölün](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Böylece tüm iş parçacıklarının eylemini bildirilir paralel bir döngüden bölün veya durdurmak açıklar.|  
 |[Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü her iş parçacığı başka bir iş parçacığı ve döngü tamamlandığında tüm iş parçacıklarının sonuçlarından eşitlemeye nasıl görünür değil özel bir değişkene korur.|  
 |[Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü her iş parçacığı başka bir iş parçacığı ve döngü tamamlandığında tüm iş parçacıklarının sonuçlarından eşitlemeye nasıl görünür değil özel bir değişkene korur.|  
-|[Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Paralel bir döngüden kullanarak iptal etmeyi açıklar bir<xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
+|[Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Paralel bir döngüden kullanarak iptal etmeyi açıklar bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
 |[Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|Döngü gövdesine çok küçük olduğunda yürütmesini kurma hızı yollarından biri açıklanır.|  
 |[Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Görev paralel kitaplığı genel bir bakış sağlar.|  
 |[Paralel Programlama](../../../docs/standard/parallel-programming/index.md)|.NET Framework'te paralel programlama tanıtır.|  

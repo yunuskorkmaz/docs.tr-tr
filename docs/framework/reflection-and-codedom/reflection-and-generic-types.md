@@ -1,12 +1,13 @@
 ---
-title: "Yansıma ve Genel Türler"
-ms.custom: 
+title: Yansıma ve Genel Türler
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>Yansıma ve Genel Türler
-<a name="top"></a>Yansıma point of görünümünü genel bir tür bir sıradan türü arasındaki fark (genel tür tanımında ise) genel bir tür ile türü parametreleri kümesini ilişkili olduğunu olan veya tür bağımsız değişkenleri (yapılandırılmış bir tür ise). Genel yöntem aynı şekilde bir sıradan yönteminden farklıdır.  
+<a name="top"></a> Yansıma point of görünümünü genel bir tür bir sıradan türü arasındaki fark (genel tür tanımında ise) genel bir tür ile türü parametreleri kümesini ilişkili olduğunu olan veya tür bağımsız değişkenleri (yapılandırılmış bir tür ise). Genel yöntem aynı şekilde bir sıradan yönteminden farklıdır.  
   
  Genel türler ve yöntemleri yansıma nasıl işlediğini anlamak için iki anahtar vardır:  
   
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>Bu genel türü veya yöntemi mi?  
- Bir örneği tarafından temsil edilen bilinmeyen bir türe incelemek için yansıma kullandığınızda <xref:System.Type>, kullanın <xref:System.Type.IsGenericType%2A> bilinmeyen tür genel olup olmadığını belirlemek için özellik. Döndürdüğü `true` tür genel ise. Benzer şekilde, bir örneği tarafından temsil edilen bir bilinmeyen yöntem incelediğinizde <xref:System.Reflection.MethodInfo> sınıfı, kullanın <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> yöntemi genel olup olmadığını belirlemek için özellik.  
+ Bir örneği tarafından temsil edilen bilinmeyen bir türe incelemek için yansıma kullandığınızda <xref:System.Type>, kullanın <xref:System.Type.IsGenericType%2A> bilinmeyen tür genel olup olmadığını belirlemek için özellik. Döndürdüğü `true` tür genel ise. Benzer şekilde, bir örneği tarafından temsil edilen bir bilinmeyen yöntem incelediğinizde <xref:System.Reflection.MethodInfo> sınıfı, kullanın <xref:System.Reflection.MethodBase.IsGenericMethod%2A> yöntemi genel olup olmadığını belirlemek için özellik.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>Bu, bir genel tür veya yöntem tanımını mi?  
- Kullanmak <xref:System.Type.IsGenericTypeDefinition%2A> belirlemek için özellik isteyip bir <xref:System.Type> nesnesini temsil eden bir genel tür tanımı ve kullanımı <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> belirlemek amacıyla yöntemi olup olmadığını bir <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.  
+ Kullanmak <xref:System.Type.IsGenericTypeDefinition%2A> belirlemek için özellik isteyip bir <xref:System.Type> nesnesini temsil eden bir genel tür tanımı ve kullanımı <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> belirlemek amacıyla yöntemi olup olmadığını bir <xref:System.Reflection.MethodInfo> genel yöntem tanımını temsil eder.  
   
  Genel tür ve yöntemi tanımları instantiable türleri oluşturulduğu şablonlarıdır. Genel türleri .NET Framework Sınıf Kitaplığı'nda gibi <xref:System.Collections.Generic.Dictionary%602>, genel tür tanımlar.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Türü veya yöntemi açık veya kapalı?  
- İnstantiable türleri tüm kapsayan türlerinin tüm tür parametreleri de dahil olmak üzere tüm türü parametreleri için değiştirilen durumunda bir genel türü veya yöntemi kapalı. Kapalıysa, yalnızca genel bir tür örneği oluşturabilirsiniz. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> Özelliği döndürür `true` türü açıksa. Yöntemleri için <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> yöntemi aynı işlevi gerçekleştirir.  
+ İnstantiable türleri tüm kapsayan türlerinin tüm tür parametreleri de dahil olmak üzere tüm türü parametreleri için değiştirilen durumunda bir genel türü veya yöntemi kapalı. Kapalıysa, yalnızca genel bir tür örneği oluşturabilirsiniz. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> Özelliği döndürür `true` türü açıksa. Yöntemleri için <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> yöntemi aynı işlevi gerçekleştirir.  
   
  [Başa dön](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>İnvariants  
- Yansıma genel türleri için genel koşulları değişmez koşullarını tablo için bkz: <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Genel yöntemler için ilgili ek koşullar için bkz: <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>.  
+ Yansıma genel türleri için genel koşulları değişmez koşullarını tablo için bkz: <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Genel yöntemler için ilgili ek koşullar için bkz: <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
   
  [Başa dön](#top)  
   

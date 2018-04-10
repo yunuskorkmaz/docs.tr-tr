@@ -1,5 +1,5 @@
 ---
-title: "Veri Akışı (Görev Paralel Kitaplığı)"
+title: Veri Akışı (Görev Paralel Kitaplığı)
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 763d74356c7e6bfdeafa28ff595f87d4c2acf3d0
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
-<a name="top"></a>Görev paralel kitaplığı (TPL) eşzamanlılık özellikli uygulamalar'ların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri topluca denir *TPL veri akışı Kitaplığı*. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri TPL'nin türleri ve zamanlama altyapısı üzerine kuruludur ve zaman uyumsuz programlama için C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve F# dil desteğiyle tümleşiktir. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntüsü çerçeveler geliştirir, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek oluşturabileceğiniz bir *ardışık düzen* veri akışı bileşenleri. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
+<a name="top"></a> Görev paralel kitaplığı (TPL) eşzamanlılık özellikli uygulamalar'ların sağlamlığını artırmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri topluca denir *TPL veri akışı Kitaplığı*. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri TPL'nin türleri ve zamanlama altyapısı üzerine kuruludur ve zaman uyumsuz programlama için C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ve F# dil desteğiyle tümleşiktir. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntüsü çerçeveler geliştirir, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek oluşturabileceğiniz bir *ardışık düzen* veri akışı bileşenleri. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
   
  Bu belge, TPL Veri Akışı Kitaplığı'nın ana hatlarını sunmaktadır. Programlama modelini, önceden tanımlı veri akışı bloğu türlerini ve veri akışı bloklarının uygulamanızın özel gereksinimlerini karşılaması için nasıl yapılandırılabileceğini açıklar.  
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/19/2018
   
  Kaynak blokları çağırarak hedef blokları veri teklif <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> yöntemi. Hedef blok, sunulan bir iletiye üç şekilde cevap verebilir: İletiyi kabul edebilir, iletiyi reddedebilir veya iletiyi erteleyebilir. Hedef iletiyi kabul ettiğinde, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>. Hedef iletiyi reddettiğinde, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>. Hedef, kaynaktan daha fazla ileti almak istemediğinde <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> değeri döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>. Önceden tanımlı kaynak blok türleri bu tür bir dönüş değeri alındığında bağlantılı hedeflere ileti sunmaz ve bu tür hedeflerle otomatik olarak bağlantılarını keserler.  
   
- Bir hedef bloğu iletiyi daha sonra kullanmak üzere ertelerse, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>. Bir ileti erteler hedef blok için sonraki çağrılar <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> yöntemi sunulan ileti ayrılacak deneyin. Bu noktada, ileti ya hala geçerlidir ve hedef blok tarafından kullanılabilir ya da başka bir hedef tarafından alınmıştır. Hedef blok ileti artık ihtiyaç veya iletiyi daha sonra gerektirir, çağıran <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> yöntemi, sırasıyla. İleti ayırma işlemi, genellikle doyumsuz olmayan modda çalışan veri akışı bloğu türleri tarafından kullanılır. Doyumsuz olmayan mod, bu belgenin ilerleyen bölümlerinde açıklanmıştır. Bir hedef blok, ertelenmiş bir iletiyi ayırmak yerine, ertelenmiş iletiyi doğrudan tüketmeyi denemek için <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> yöntemini de kullanabilir.  
+ Bir hedef bloğu iletiyi daha sonra kullanmak üzere ertelerse, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> yöntemi döndürülür<xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>. Bir ileti erteler hedef blok daha sonra çağırabilirsiniz <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> yöntemi sunulan ileti ayrılacak deneyin. Bu noktada, ileti ya hala geçerlidir ve hedef blok tarafından kullanılabilir ya da başka bir hedef tarafından alınmıştır. Hedef blok ileti artık ihtiyaç veya iletiyi daha sonra gerektirir, çağıran <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> veya <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> yöntemi, sırasıyla. İleti ayırma işlemi, genellikle doyumsuz olmayan modda çalışan veri akışı bloğu türleri tarafından kullanılır. Doyumsuz olmayan mod, bu belgenin ilerleyen bölümlerinde açıklanmıştır. Bir hedef blok, ertelenmiş bir iletiyi ayırmak yerine, ertelenmiş iletiyi doğrudan tüketmeyi denemek için <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> yöntemini de kullanabilir.  
   
 ### <a name="dataflow-block-completion"></a>Veri Akışı Bloğunun Tamamlanması  
  Veri akışı blokları da kavramını destekler *tamamlama*. Tamamlanmış durumdaki bir veri akışı bloğu, daha fazla iş yapmaz. Her veri akışı bloğu ilişkili bir sahip <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> nesnesi olarak bilinen bir *tamamlama görev*, blok tamamlanma durumunu temsil eden. Bir <xref:System.Threading.Tasks.Task> nesnesinin tamamlanmasını bekleyebildiğinizden, tamamlanma görevlerini kullanarak bir veri akışı düğümündeki bir veya daha fazla terminal düğümün bitmesini de bekleyebilirsiniz. <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> arabirimi, veri akışı bloğuna tamamlanması yönünde bir istek olduğunu bildiren <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> yöntemini ve veri akışı bloğunu ilgilendiren tamamlanma görevini döndüren <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> özelliğini tanımlar. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> ve <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> öğelerinin her ikisi de <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> arabiriminden devralır.  
@@ -166,8 +166,8 @@ ms.lasthandoff: 01/19/2018
   
 |Tür|Zaman Uyumlu Temsilci Türü|Zaman Uyumsuz Temsilci Türü|  
 |----------|-------------------------------|--------------------------------|  
-|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func\<TInput, Task>`|  
-|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
+|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
+|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
  Yürütme bloğu türleriyle çalışırken lambda ifadeleri de kullanabilirsiniz. Lambda ifadesi bir yürütme bloğu ile kullanmak nasıl oluşturulduğunu gösteren örnek için bkz: [nasıl yapılır: gerçekleştirmek eylem, bir veri akışı blok aldığı verileri](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md).  
@@ -215,7 +215,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="configuring-dataflow--block-behavior"></a>Veri Akışı Bloğu Davranışını Yapılandırma  
  Veri akışı bloğu türlerinin oluşturucusuna bir <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions?displayProperty=nameWithType> sağlayarak ek seçenekleri etkinleştirebilirsiniz. Bu seçenekler, arkaplandaki görevi yöneten zamanlayıcı ve paralellik derecesi gibi davranışları denetler. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>, belirli veri akışı bloğu türlerine özel davranışları belirtmek için devralınmış özelliklere de sahiptir. Aşağıdaki tabloda, her veri akışı bloğu türüyle hangi seçenek türünün ilişkili olduğunu özetlenmektedir.  
   
-|Veri Akışı Bloğu Türü|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>türü|  
+|Veri Akışı Bloğu Türü|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions> Türü|  
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Threading.Tasks.Dataflow.BufferBlock%601>|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  
 |<xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601>|<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions>|  

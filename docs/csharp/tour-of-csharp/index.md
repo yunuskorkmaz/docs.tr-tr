@@ -1,7 +1,7 @@
 ---
-title: "C# ' ta - turu bir C# Kılavuzu"
-description: "C# yeni misiniz? Dil temelleri öğrenin."
-keywords: ".NET, .NET core, C#, C# Primer, C# Kılavuzu"
+title: C# ' ta - turu bir C# Kılavuzu
+description: C# yeni misiniz? Dil temelleri öğrenin.
+keywords: .NET, .NET core, C#, C# Primer, C# Kılavuzu
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

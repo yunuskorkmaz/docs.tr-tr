@@ -1,6 +1,6 @@
 ---
-title: "Roslyn .NET çözümleyiciler - temel"
-description: "Sorunları bulmak ve bu sorunları düzeltmelerin önerilen temel Roslyn Çözümleyicileri hakkında bilgi edinin."
+title: Roslyn .NET çözümleyiciler - temel
+description: Sorunları bulmak ve bu sorunları düzeltmelerin önerilen temel Roslyn Çözümleyicileri hakkında bilgi edinin.
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

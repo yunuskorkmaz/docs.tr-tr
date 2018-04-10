@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: arama dizeleri (C# Kılavuzu)"
+title: 'Nasıl yapılır: arama dizeleri (C# Kılavuzu)'
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>Nasıl yapılır: dizeleri arama
 
@@ -77,7 +77,7 @@ Aşağıdaki kod, bir dizideki her dizesinin biçimi doğrulamak için normal if
 
 Bu tek arama deseni birçok geçerli dizeler eşleştirir. Normal ifadeler için arama yapın ya da tek bir metin dizesi yerine bir desen karşı doğrulamak daha uygundur.
 
-Kodda bakarak bu örnekleri deneyebilirsiniz bizim [GitHub deposunu](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Veya örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Kodda bakarak bu örnekleri deneyebilirsiniz bizim [GitHub deposunu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Veya örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
 

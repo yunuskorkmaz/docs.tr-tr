@@ -1,6 +1,6 @@
 ---
-title: ".NET derleme Platform SDK çalışma modeli ile çalışmak"
-description: "Bu genel bakışta, sorgu ve çalışma ve projeler için kodunuzu değiştirmek için kullandığınız türünün bir anlayış sağlar."
+title: .NET derleme Platform SDK çalışma modeli ile çalışmak
+description: Bu genel bakışta, sorgu ve çalışma ve projeler için kodunuzu değiştirmek için kullandığınız türünün bir anlayış sağlar.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>Bir çalışma alanı ile çalışma
 
@@ -40,7 +40,7 @@ Bir belge ayrıca genel değişmez çözüm modeli parçasıdır. Belgeye metin 
 
 Aşağıdaki diyagramda çalışma konağa ilişkilendirilme şekli gösterimidir ortamı, Araçlar ve düzenlemeler nasıl yapılır.
 
-![Projeler ve kaynak dosyaları içeren bir çalışma alanının farklı öğeler arasındaki ilişkileri](media/workspace-obj-relations.png)
+![Projeler ve kaynak dosyaları içeren bir çalışma alanının farklı öğeler arasındaki ilişkileri](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Özet
 

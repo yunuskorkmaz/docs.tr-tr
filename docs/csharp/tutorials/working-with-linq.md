@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -32,7 +32,7 @@ Magicians her karttır sonra her karışık bilinen bir konumda ve yinelenen bir
 
 Bizim, bu veri dizisi düzenleme bir ışık hearted göz amaçlıdır. Oluşturacağınız uygulama kartı deste oluşturun ve sonra her zaman sırası yazma seçeneği, bir dizi gerçekleştirin. Ayrıca orijinal siparişine güncelleştirilmiş sipariş karşılaştırın.
 
-Bu öğretici, birden çok adım vardır. Her adımdan sonra uygulamayı çalıştırın ve ilerleme bakın. Ayrıca bkz [tamamlanan örnek](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) dotnet/belgeler GitHub deposunda. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğretici, birden çok adım vardır. Her adımdan sonra uygulamayı çalıştırın ve ilerleme bakın. Ayrıca bkz [tamamlanan örnek](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) dotnet/samples GitHub deposunda. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
 

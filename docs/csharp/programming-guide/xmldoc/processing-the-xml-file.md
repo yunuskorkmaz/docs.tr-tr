@@ -1,21 +1,22 @@
 ---
-title: "XML Dosyasını İşleme (C# Programlama Kılavuzu)"
+title: XML Dosyasını İşleme (C# Programlama Kılavuzu)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketi hakkında daha fazla bilgi için bkz: [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi, yapı benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi belgelere uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğe tanımlamak için kullanabilirsiniz.  
@@ -52,7 +53,7 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
   
     -   ELEMENT_TYPE_PINNED olarak temsil edilir bir ' ^' değiştirilmiş türü aşağıdaki. C# Derleyici hiçbir zaman bu oluşturur.  
   
-    -   ELEMENT_TYPE_CMOD_REQ olarak temsil edilir bir ' &#124;' ve değiştirilen türü aşağıdaki değiştiricisi sınıfın tam adı. C# Derleyici hiçbir zaman bu oluşturur.  
+    -   ELEMENT_TYPE_CMOD_REQ olarak temsil edilir bir '&#124;' ve değiştirilen türü aşağıdaki değiştiricisi sınıfın tam adı. C# Derleyici hiçbir zaman bu oluşturur.  
   
     -   ELEMENT_TYPE_CMOD_OPT olarak temsil edilir bir '!' ve değiştirilen türü aşağıdaki değiştiricisi sınıfın tam adı.  
   
@@ -86,6 +87,6 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# programlama kılavuzu](../../../csharp/programming-guide/index.md)  
+ [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [/ doc (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [XML belgeleri yorumları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+ [XML Belge Açıklamaları](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

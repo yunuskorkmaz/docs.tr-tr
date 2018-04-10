@@ -1,7 +1,7 @@
 ---
-title: "Dizin Oluşturucular"
-description: "C# dizin oluşturucular ve bir veya daha fazla bağımsız değişken kullanarak başvurulan özelliklerdir Dizinli Özellikler nasıl uyguladıkları hakkında bilgi edinin."
-keywords: .NET, .NET core
+title: Dizin Oluşturucular
+description: C# dizin oluşturucular ve bir veya daha fazla bağımsız değişken kullanarak başvurulan özelliklerdir Dizinli Özellikler nasıl uyguladıkları hakkında bilgi edinin.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>Dizin Oluşturucular
 
@@ -51,7 +51,7 @@ Bir öğeyi öğeleri kümesi başvurmak için bağımsız değişken varlığı
 Tanımlayın *dizin oluşturucular* API'si tanımladığınız bağımsız değişkenler bu koleksiyon için bazı koleksiyonu modellediğinde, yazın. Dizin oluşturucular olabilir veya doğrudan .NET core framework parçası olan koleksiyon türleri için eşleşmeyebilir. Bir koleksiyon modelleme yanı sıra diğer sorumlulukları türünüz olabilir.
 Dizin oluşturucular bu soyutlama değerlerini nasıl depolanır veya hesaplanan iç ayrıntılarını sokmadan türünüz ait Özet eşleşen API sağlamak etkinleştirin.
 
-Şimdi kullanmaya yönelik yaygın senaryolardan bazıları rehberlik *dizin oluşturucular*. Erişebileceğiniz [dizin oluşturucular için örnek klasör](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Şimdi kullanmaya yönelik yaygın senaryolardan bazıları rehberlik *dizin oluşturucular*. Erişebileceğiniz [dizin oluşturucular için örnek klasör](https://github.com/dotnet/samples/tree/master/csharp/indexers). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Diziler ve vektörler
 

@@ -1,6 +1,6 @@
 ---
 title: Ortak web uygulama mimariler
-description: "ASP.NET Core ve Microsoft Azure ile modern web uygulamaları mimari | Ortak web uygulama mimariler"
+description: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları mimari | Ortak web uygulama mimariler
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
@@ -9,13 +9,13 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7e63f9ca8f13129959e609c824dad1b9b9e44d8d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
-#<a name="common-web-application-architectures"></a>Ortak Web uygulama mimariler
+# <a name="common-web-application-architectures"></a>Ortak Web uygulama mimariler
 
 > "İyi mimarisi pahalı olduğunu düşünüyorsanız, hatalı mimarisi deneyin."  
 > _-Brian altbilgi ve Joseph Yoder_
@@ -226,7 +226,7 @@ Tek yapılı uygulamaları Docker, ölçeklendirilebilir, alt sistemlerini tek y
 > <http://deviq.com/repository-pattern/>
 > - **Temiz mimarisi çözümü örneği**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Mikro e-kitap mimariden** <http://aka.ms/MicroservicesEbook>
+> - **Mikro e-kitap mimarisi oluşturma** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Önceki] (Mimari-principles.md) [sonraki] (ortak-istemci-tarafı-web-technologies.md)
