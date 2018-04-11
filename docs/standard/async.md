@@ -1,6 +1,6 @@
 ---
-title: "Zaman uyumsuz genel bakış"
-description: "Zaman uyumsuz programlama engelleme g/ç ve birden çok çekirdek eşzamanlı işlem işlemek basitleştirir anahtar bir yöntem nasıl olduğunu öğrenin."
+title: Zaman uyumsuz genel bakış
+description: Zaman uyumsuz programlama engelleme g/ç ve birden çok çekirdek eşzamanlı işlem işlemek basitleştirir anahtar bir yöntem nasıl olduğunu öğrenin.
 keywords: .NET, .NET core
 author: cartermp
 ms.author: wiwagn

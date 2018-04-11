@@ -1,7 +1,7 @@
 ---
-title: "Öznitelikler (F#)"
-description: "Nasıl F # öznitelikleri bir programlama yapısı uygulanacak meta verilerini etkinleştir öğrenin."
-keywords: "Visual f #, f # işlevsel programlama"
+title: Öznitelikler (F#)
+description: 'Nasıl F # öznitelikleri bir programlama yapısı uygulanacak meta verilerini etkinleştir öğrenin.'
+keywords: 'Visual f #, f # işlevsel programlama'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

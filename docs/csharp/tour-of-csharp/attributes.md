@@ -1,6 +1,6 @@
 ---
-title: "C# öznitelikleri - C# dili turu"
-description: "Öznitelikleri C# kullanarak bildirim temelli programlama hakkında bilgi edinin"
+title: C# öznitelikleri - C# dili turu
+description: Öznitelikleri C# kullanarak bildirim temelli programlama hakkında bilgi edinin
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
