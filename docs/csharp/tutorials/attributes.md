@@ -1,7 +1,7 @@
 ---
-title: "Öznitelikler - C#"
-description: "C# ' ta öznitelikleri nasıl çalıştığını öğrenin."
-keywords: ".NET, .NET core, C#, öznitelikleri"
+title: Öznitelikler - C#
+description: C# ' ta öznitelikleri nasıl çalıştığını öğrenin.
+keywords: .NET, .NET core, C#, öznitelikleri
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017

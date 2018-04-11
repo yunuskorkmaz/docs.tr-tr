@@ -1,6 +1,6 @@
 ---
 title: Zaman uyumsuz programlama
-description: ".NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz programlama modeli hakkında bilgi edinin."
+description: .NET Core tarafından sağlanan C# dil düzeyi zaman uyumsuz programlama modeli hakkında bilgi edinin.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

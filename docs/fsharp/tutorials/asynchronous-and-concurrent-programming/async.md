@@ -1,6 +1,6 @@
 ---
 title: 'F # zaman uyumsuz programlama'
-description: "F # zaman uyumsuz programlama kullanımı kolay ve doğal dil için bir dil düzeyi programlama modeli aracılığıyla nasıl yapıldığını öğrenin."
+description: 'F # zaman uyumsuz programlama kullanımı kolay ve doğal dil için bir dil düzeyi programlama modeli aracılığıyla nasıl yapıldığını öğrenin.'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart
