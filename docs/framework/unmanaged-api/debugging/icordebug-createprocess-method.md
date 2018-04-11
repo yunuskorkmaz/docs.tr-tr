@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess Yöntemi"
-ms.custom: 
+title: ICorDebug::CreateProcess Yöntemi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess Yöntemi
 Hata ayıklayıcı denetiminde birincil kendi iş parçacığı ve bir işlem başlatır.  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem parametrelerini Win32 aynıdır `CreateProcess` yöntemi.  
   
- Yönetilmeyen karışık mod hata ayıklamayı etkinleştirmek için ayarlanmış `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Yalnızca yönetilen hata ayıklama kullanmak istiyorsanız, bu bayraklar ayarlı değil.  
+ Yönetilmeyen karışık mod hata ayıklamayı etkinleştirmek için ayarlanmış `dwCreationFlags` DEBUG_PROCESS için &#124; DEBUG_ONLY_THIS_PROCESS. Yalnızca yönetilen hata ayıklama kullanmak istiyorsanız, bu bayraklar ayarlı değil.  
   
  Hata ayıklayıcı ve işlem olmasını (ekli işlemi) hata ayıklaması, tek bir konsol paylaşabilir ve birlikte çalışma hata ayıklama kullanılırsa, ekli işleminin konsol için kilitler ve hata ayıklama etkinlikte durdurmak mümkündür. Hata ayıklayıcı sonra Konsolu'nu kullanma girişimleri engellenir. Bu sorunu önlemek için CREATE_NEW_CONSOLE bayrağını ayarlayın `dwCreationFlags` parametresi.  
   
@@ -110,7 +110,7 @@ HRESULT CreateProcess (
   
  **Kitaplığı:** CorGuids.lib  
   
- **.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

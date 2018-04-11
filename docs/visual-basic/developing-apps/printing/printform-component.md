@@ -1,22 +1,22 @@
 ---
-title: "PrintForm Bileşeni (Visual Basic)"
+title: PrintForm Bileşeni (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm Bileşeni (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> İçin bileşen [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] çalışma zamanında bir Windows formunda bir görüntüsünü yazdırmanızı sağlar. ' Nın davranışını değiştirir `PrintForm` Visual Basic önceki sürümlerinde yöntemi.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="key-methods-properties-and-events"></a>Anahtar yöntemler, özellikler ve olaylar  
  Anahtar yöntemi <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> bileşeni <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> yazıcı, Baskı Önizleme penceresinden veya dosya biçimine görüntüsünü yazdırır yöntemi. İki sürümü vardır <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> yöntemi:  
   
--   Parametresiz bir temel sürüm:`Print()`  
+-   Parametresiz bir temel sürüm: `Print()`  
   
--   Aşırı yüklenmiş bir sürümünü parametrelerle yazdırma davranışını belirtin:`Print(printForm As Form, printFormOption As PrintOption)`  
+-   Aşırı yüklenmiş bir sürümünü parametrelerle yazdırma davranışını belirtin: `Print(printForm As Form, printFormOption As PrintOption)`  
   
      `PrintOption` Aşırı yüklenmiş yöntemin parametre form, formun başlık çubuğu, kaydırma çubukları ve kenarlık olup yazdırılır ve formun kaydırılabilir bölümleri olup yazdırılır yazdırmak için kullanılan temel uygulaması belirler.  
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 11/21/2017
   
  Anahtar için olayları <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> bileşen aşağıdakileri içerir:  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint>olay. Oluşur, <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> yöntemi çağrılır ve belge baskı siparişi'nın ilk sayfasında önce.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> olay. Oluşur, <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> yöntemi çağrılır ve belge baskı siparişi'nın ilk sayfasında önce.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint>olay. Son sayfayı yazdırılan sonra gerçekleşir.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> olay. Son sayfayı yazdırılan sonra gerçekleşir.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings>olay. Her bir sayfa hemen yazdırılır önce gerçekleşir.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> olay. Her bir sayfa hemen yazdırılır önce gerçekleşir.  
   
 ### <a name="remarks"></a>Açıklamalar  
  Bir form metin içeriyorsa veya tarafından çizilmiş grafik <xref:System.Drawing.Graphics> yöntemlerini kullanın temel <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) yazdırmak için yöntem. Grafik bazı işletim sistemlerinde değil işlemek, aşırı yüklenmiş <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> yöntemi kullanılır.  
@@ -76,7 +76,7 @@ pf.Print()
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- [Nasıl yapılır: PrintForm bileşenini kullanarak Form yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- [Nasıl yapılır: formun istemci alanını yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Nasıl yapılır: formun istemci alanlarını ve yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [Nasıl yapılır: kaydırılabilir Form yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+ [Nasıl Yapılır: PrintForm Bileşenini Kullanarak Form Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
+ [Nasıl Yapılır: Formun İstemci Alanını Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ [Nasıl Yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ [Nasıl Yapılır: Kaydırılabilir Form Yazdırma](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

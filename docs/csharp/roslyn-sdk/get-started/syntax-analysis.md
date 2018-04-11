@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Sözdizimi Analizi ile çalışmaya başlama
 
@@ -74,7 +74,7 @@ Herhangi bir şey sözdizimi API'lerini kullanarak bir kod dosyasında bulabilir
 
 ### <a name="manual-traversal"></a>El ile geçişi
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Sözdizimi ağacı türleri devralma programı farklı konumlarda geçerli farklı söz dizimi öğeleri tanımlamak için kullanın. Genellikle bu API'leri kullanarak atama özellikleri veya belirli türetilmiş türler için koleksiyon üyeleri anlamına gelir. Aşağıdaki örneklerde, atama ve atamalar açıkça yazılan değişkenler kullanılarak ayrı deyim ' dir. Dönüş türleri API ve çalışma zamanı türü, döndürülen nesnelerin görmek için kodu okuyabilir. Uygulamada, incelenmesi nesnelerin türünü tanımlamak için API adları kullanır ve örtük olarak yazılan değişkenler kullanmak için daha yaygın bir durumdur.
@@ -164,7 +164,7 @@ Bu örnek uygulayan bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 
 
 Yeni C# oluşturma **tek başına kod analizi aracı** proje; adlandırın "**SyntaxWalker**."
 
-Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Örnek github'daki Bu öğreticide açıklanan her iki proje içerir.
+Bu örnek için tamamlanmış kod görebilirsiniz [GitHub depomuzda](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). Örnek github'daki Bu öğreticide açıklanan her iki proje içerir.
 
 Önceki örnekte olduğu gibi analiz etmeyi deneyeceğimiz program metnin tutmak için bir dize sabitine tanımlayabilirsiniz:
 

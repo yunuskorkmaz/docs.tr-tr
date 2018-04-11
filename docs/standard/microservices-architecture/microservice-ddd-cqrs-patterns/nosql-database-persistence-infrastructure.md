@@ -1,7 +1,7 @@
 ---
-title: "NoSQL veritabanı olarak Kalıcılık altyapısı kullanma"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | NoSQL veritabanı olarak Kalıcılık altyapısı kullanma"
-keywords: Docker, Microservices, ASP.NET, Container
+title: NoSQL veritabanı olarak Kalıcılık altyapısı kullanma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | NoSQL veritabanı olarak Kalıcılık altyapısı kullanma
+keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanı olarak Kalıcılık altyapısı kullanma
 
@@ -310,14 +310,14 @@ Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, 
 -   **Belge verileri NoSQL veritabanları için modelleme**
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon. Ideal etki alanı tabanlı tasarım toplama deposu? ** 
-     [ *https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+-   **Vaughn Vernon. Ideal etki alanı tabanlı tasarım toplama deposu?**
+    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
 -   **Azure Cosmos DB giriş: API MongoDB için** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
 -   **Azure Cosmos DB: MongoDB API web uygulaması .NET ve Azure portal derleme** 
-    [* https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **Yerel geliştirme ve sınama için Azure Cosmos DB öykünücüsünü kullanma** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
@@ -331,7 +331,7 @@ Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, 
 -   **MongoDB Docker görüntünün (Linux ve Windows kapsayıcı)** 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
--   **Bir Azure Cosmos DB ile MongoChef (Studio 3T) kullanın: API MongoDB hesabı için** 
+-   **Bir Azure Cosmos DB ile MongoChef (Studio 3T) kullanın: API MongoDB hesabı** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 

@@ -1,28 +1,28 @@
 ---
-title: "İleti Filtreleri"
-ms.custom: 
+title: İleti Filtreleri
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı veya belirli bir XPath ifadesi gibi bir ileti belirli bölümlerine incelemek uygulamaları. İleti filtreleri hiçbiri ile sağladıysanız [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, yeni bir uygulama taban oluşturarak özel filtre oluşturabilirsiniz <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  
@@ -38,14 +38,14 @@ ms.lasthandoff: 12/22/2017
   
 |Filtre türü|Açıklama|Filtre veri anlama|Örnek filtresi|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Eylem|Kullanan <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> belirli bir eylemi içeren iletileri eşleşecek şekilde sınıfı.|Üzerine filtre eylemi.|\<Filtre adı "action1" filterType = "Eylem" filterData = = "http://namespace/contract/operation" / >|  
-|EndpointAddress|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli bir adresi içeren iletileri eşleşecek şekilde.|Bağlı (Kime üstbilgisinde) filtre adresi.|\<Filtre adı "Adresi1" filterType = "EndpointAddress" filterData = = "http://host/vdir/s.svc/b" / >|  
-|EndpointAddressPrefix|Kullanan <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli adres ön eki içeren iletileri eşleşecek şekilde.|En uzun önek eşleştirme kullanılarak üzerine filtre adresi.|\<Filtre adı "prefix1" filterType = "EndpointAddressPrefix" filterData = = "http://host/" / >|  
-|Ve|Kullanan <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> koşulların her ikisi de döndürmeden önce her zaman değerlendirir sınıfı.|Filtre veri kullanılmaz; Bunun yerine filter1 ve Filtre2 olması gereken karşılık gelen ileti filtreleri (aynı zamanda tabloda) adlarını sahip **ve**ed birlikte.|\<Filtre adı "and1" filterType = = "Ve" filter1 "Adresi1" Filtre2 = = "action1" / >|  
+|Eylem|Kullanan <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> belirli bir eylemi içeren iletileri eşleşecek şekilde sınıfı.|Üzerine filtre eylemi.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli bir adresi içeren iletileri eşleşecek şekilde.|Bağlı (Kime üstbilgisinde) filtre adresi.|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|Kullanan <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli adres ön eki içeren iletileri eşleşecek şekilde.|En uzun önek eşleştirme kullanılarak üzerine filtre adresi.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|Ve|Kullanan <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> koşulların her ikisi de döndürmeden önce her zaman değerlendirir sınıfı.|Filtre veri kullanılmaz; Bunun yerine filter1 ve Filtre2 olması gereken karşılık gelen ileti filtreleri (aynı zamanda tabloda) adlarını sahip **ve**ed birlikte.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Özel|Genişletir kullanıcı tanımlı bir tür <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı ve bir dize alan bir oluşturucuya sahip.|Sınıf oluşturmak için tam olarak nitelenmiş tür adını customType özniteliktir; filterData filtre oluştururken oluşturucuya geçmesine dizesidir.|\<Filtre adı "custom1" filterType = "Özel" customType="CustomAssembly.CustomMsgFilter, CustomAssembly =" filterData = "Özel veri" / >|  
-|endpointName|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> bunlar gelen hizmet uç noktası adını temel iletileri eşleşecek şekilde sınıfı.|Hizmet uç noktası adı örneğin: "serviceEndpoint1".  Bu yönlendirme hizmette sunulan uç noktalardan biri olmalıdır.|\<Filtre adı "stock1" filterType = "Bitiş" filterData = = "SvcEndpoint" / >|  
-|MatchAll|Kullanan <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı. Bu filtre ile eşleşen tüm gelen iletileri.|filterData kullanılmaz. Bu filtre, her zaman tüm iletileri ile eşleşir.|\<Filtre adı "matchAll1" filterType = = "MatchAll" / >|  
-|XPath|Kullanan <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> belirli XPath sorguları iletideki eşleşecek şekilde sınıfı.|İletileri eşleştirme yapılırken kullanılacak XPath sorgusu.|\<Filtre adı "XPath1" filterType = "XPath" filterData = = "//ns:element" / >|  
+|EndpointName|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> bunlar gelen hizmet uç noktası adını temel iletileri eşleşecek şekilde sınıfı.|Hizmet uç noktası adı örneğin: "serviceEndpoint1".  Bu yönlendirme hizmette sunulan uç noktalardan biri olmalıdır.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|Kullanan <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı. Bu filtre ile eşleşen tüm gelen iletileri.|filterData kullanılmaz. Bu filtre, her zaman tüm iletileri ile eşleşir.|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|Kullanan <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> belirli XPath sorguları iletideki eşleşecek şekilde sınıfı.|İletileri eşleştirme yapılırken kullanılacak XPath sorgusu.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  Aşağıdaki örnek, XPath, EndpointName ve PrefixEndpointAddress ileti filtreleri kullanan filtre girişler tanımlar. Bu örnek ayrıca RoundRobinFilter1 ve RoundRobinFilter2 girişleri için özel bir filtre kullanarak gösterir.  
   
@@ -76,15 +76,15 @@ ms.lasthandoff: 12/22/2017
   
 |önek|Ad Alanı|  
 |------------|---------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/Envelope|  
-|s12|http://www.w3.org/2003/05/SOAP-Envelope|  
-|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/Addressing|  
-|wsa10|http://www.w3.org/2005/08/Addressing|  
-|SM|http://schemas.microsoft.com/ServiceModel/2004/05/xpathfunctions|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|s12|http://www.w3.org/2003/05/soap-envelope|  
+|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
+|wsa10|http://www.w3.org/2005/08/addressing|  
+|SM|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
 |tempuri|http://tempuri.org|  
 |Ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- XPath sorgularınızda belirli bir ad kullanarak bildiğiniz durumlarda bir benzersiz ad alanı öneki ile birlikte ad alanı tabloya ekleyin ve herhangi bir XPath sorgusu yerine tam ad alanı önekini kullanın. Aşağıdaki örnek, ardından filterData içinde yer alan XPath sorgusunda kullanılan "http://my.custom.namespace" ad alanı için "özel" öneki tanımlar.  
+ XPath sorgularınızda belirli bir ad kullanarak bildiğiniz durumlarda bir benzersiz ad alanı öneki ile birlikte ad alanı tabloya ekleyin ve herhangi bir XPath sorgusu yerine tam ad alanı önekini kullanın. Aşağıdaki örnek, ad alanı için "özel" öneki tanımlar "http://my.custom.namespace", ardından kullanılan filterData içinde yer alan XPath sorgusunda.  
   
 ```xml  
 <namespaceTable>  
