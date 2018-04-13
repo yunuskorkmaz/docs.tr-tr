@@ -70,7 +70,7 @@ Belirgin gecikmeler maruz kalabilirsiniz bazı işlemler sınıfıyla yazıyorsa
 -   Adlı bir sınıf oluşturmak `PrimeNumberCalculator` devraldığı <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olaylar ve temsilciler tanımlama  
- Bileşeniniz olayları kullanan istemciler için iletişim kurar. *MethodName *** tamamlandı** olay uyarıları bir zaman uyumsuz görev tamamlandığında istemcilere ve *MethodName *** ProgressChanged** olay zaman uyumsuz bir görevi ilerlemesini istemcileri bildirir.  
+ Bileşeniniz olayları kullanan istemciler için iletişim kurar. *MethodName***tamamlandı** olay uyarıları bir zaman uyumsuz görev tamamlandığında istemcilere ve *MethodName***ProgressChanged** olay zaman uyumsuz bir görevi ilerlemesini istemcileri bildirir.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeniniz istemciler için zaman uyumsuz olayları tanımlamak için:  
   
